@@ -4,10 +4,8 @@ Hamrah guides facilitators and applicants through immigration intake, profile no
 
 ## Install
 
-Replace `OWNER` with the GitHub account that publishes this repository:
-
 ```sh
-codex plugin marketplace add OWNER/hamrah-plugin-marketplace --ref main
+codex plugin marketplace add bahramdrv/hamrah-plugin-marketplace --ref main
 codex plugin add hamrah@hamrah-marketplace
 ```
 
