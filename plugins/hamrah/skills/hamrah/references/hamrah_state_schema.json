@@ -1,0 +1,235 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hamrah.local/schemas/hamrah-state.schema.json",
+  "title": "Hamrah Orchestrator State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "state_version",
+    "stage",
+    "applicant_profile",
+    "candidate_routes",
+    "official_context",
+    "community_context",
+    "scorecard",
+    "preferences",
+    "next_question",
+    "warnings",
+    "assumptions"
+  ],
+  "properties": {
+    "state_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "goal_discovery",
+        "core_intake",
+        "route_specific_intake",
+        "ready_for_screening",
+        "official_screening",
+        "scorecard",
+        "academic_matching",
+        "scorecard_visual",
+        "refinement"
+      ]
+    },
+    "applicant_profile": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Canonical output from hamrah-profile-normalizer."
+    },
+    "candidate_routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "country_code",
+          "route_code",
+          "reason_for_screening",
+          "screening_status"
+        ],
+        "properties": {
+          "country_code": {
+            "type": "string"
+          },
+          "route_code": {
+            "type": "string"
+          },
+          "reason_for_screening": {
+            "type": "string"
+          },
+          "screening_status": {
+            "type": "string",
+            "enum": [
+              "candidate",
+              "screened",
+              "excluded"
+            ]
+          }
+        }
+      }
+    },
+    "official_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "routes"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "not_requested",
+            "partial",
+            "ready"
+          ]
+        },
+        "routes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "community_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "coverage_status",
+        "dataset_version",
+        "countries_available",
+        "applicable_signal_ids",
+        "coverage_note"
+      ],
+      "properties": {
+        "coverage_status": {
+          "type": "string",
+          "enum": [
+            "available",
+            "partial",
+            "unavailable"
+          ]
+        },
+        "dataset_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "countries_available": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "applicable_signal_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "coverage_note": {
+          "type": "string"
+        }
+      }
+    },
+    "scorecard": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Canonical output from hamrah-scorecard-engine."
+    },
+    "academic_matches": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Validated output from hamrah-program-finder when requested."
+    },
+    "scorecard_visual": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Validated visual model and generated artifact reference when requested."
+    },
+    "signal_store": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Local signal catalog path and selected dataset references."
+    },
+    "preferences": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "preferred_countries",
+        "excluded_countries",
+        "notes"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "not_collected",
+            "partial",
+            "available"
+          ]
+        },
+        "preferred_countries": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "excluded_countries": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "next_question": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

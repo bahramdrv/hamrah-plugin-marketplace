@@ -1,0 +1,6 @@
+interface:
+  display_name: "Hamrah Program Finder | رشته و دانشگاه"
+  short_description: "رشته و دانشگاه را با منبع رسمی پیدا می‌کند"
+  default_prompt: "Use $hamrah-program-finder to find current university programs for this Hamrah profile."
+policy:
+  allow_implicit_invocation: true

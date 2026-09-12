@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-11T00:00:00Z",
+  "engine_version": "1.0",
+  "applicant_profile_reference": {
+    "profile_schema_version": "1.0",
+    "profile_generated_at": "2026-09-11T00:00:00Z"
+  },
+  "assessment_scope": {
+    "goal": "Skilled migration",
+    "countries": [
+      "Germany"
+    ],
+    "route_codes": [
+      "opportunity_card"
+    ]
+  },
+  "route_scorecards": [
+    {
+      "country": {
+        "name": "Germany",
+        "code": "DEU"
+      },
+      "route": {
+        "code": "opportunity_card",
+        "name": "Opportunity Card",
+        "family": "EMPLOYMENT / WORK"
+      },
+      "official_eligibility": {
+        "status": "FAIL",
+        "reasons": [
+          {
+            "requirement_id": "official-1",
+            "title": "Core route requirements",
+            "result": "met",
+            "explanation": "Current supplied profile satisfies the checked core route requirements.",
+            "source_url": "https://example.gov/route",
+            "source_title": "Official route requirements",
+            "checked_at": "2026-09-11"
+          }
+        ],
+        "missing_requirements": [],
+        "blockers": [
+          "Mandatory route requirement not met."
+        ],
+        "official_data_quality": {
+          "status": "current",
+          "as_of": "2026-09-11",
+          "freshness_note": "Current primary source checked."
+        }
+      },
+      "base_fit": {
+        "score": 54,
+        "max_score": 100,
+        "components": {
+          "eligibility_fit": {
+            "score": 0,
+            "max_score": 30,
+            "reason": "Clear official pass."
+          },
+          "career_profile_fit": {
+            "score": 17,
+            "max_score": 20,
+            "reason": "Strong relevant experience."
+          },
+          "financial_fit": {
+            "score": 13,
+            "max_score": 15,
+            "reason": "Budget appears adequate for initial execution."
+          },
+          "process_practicality": {
+            "score": 7,
+            "max_score": 10,
+            "reason": "Some operational friction remains."
+          },
+          "long_term_potential": {
+            "score": 8,
+            "max_score": 10,
+            "reason": "Good long-term alignment."
+          },
+          "goal_alignment": {
+            "score": 6,
+            "max_score": 10,
+            "reason": "Route fits the work-migration goal."
+          },
+          "evidence_quality": {
+            "score": 3,
+            "max_score": 5,
+            "reason": "Most core facts are documented."
+          }
+        }
+      },
+      "community_adjustment": {
+        "total": -5,
+        "applied_signals": [
+          {
+            "signal_id": "DEU-WORK-EXAMPLE",
+            "root_cause_id": "DEU-WORK-EXAMPLE",
+            "adjustment": -5,
+            "reason": "Recent repeated execution friction applies to this applicant.",
+            "applicability": "matched"
+          }
+        ],
+        "ignored_signals": []
+      },
+      "practical_fit": {
+        "score": 49,
+        "formula": "base_fit + community_adjustment",
+        "usable_for_ranking": true,
+        "interpretation": "Strong practical fit with moderate execution friction."
+      },
+      "confidence": {
+        "level": "high",
+        "reasons": [
+          "Applicant profile is sufficiently complete.",
+          "Official route data is current."
+        ]
+      },
+      "warnings": [],
+      "assumptions": [],
+      "missing_information": [],
+      "decision_summary": "Viable route for initial ranking."
+    }
+  ],
+  "portfolio_summary": {
+    "viable_route_count": 1,
+    "strongest_routes": [
+      {
+        "country_code": "DEU",
+        "route_code": "opportunity_card",
+        "practical_fit_score": 79
+      }
+    ],
+    "blocked_routes": [],
+    "notes": []
+  }
+}

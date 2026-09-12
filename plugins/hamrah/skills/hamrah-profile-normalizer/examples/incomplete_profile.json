@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-11T00:00:00Z",
+  "intake_status": "insufficient_for_screening",
+  "applicant": {
+    "age": 31,
+    "date_of_birth": null,
+    "nationalities": [
+      "Iran"
+    ],
+    "citizenships": null,
+    "current_country_of_residence": null,
+    "current_immigration_status": null,
+    "applying_from": null
+  },
+  "household": {
+    "relationship_status": null,
+    "accompanying_partner": null,
+    "dependants": null,
+    "partner_profile": null
+  },
+  "education": null,
+  "languages": null,
+  "employment": {
+    "declared_total_years": null,
+    "roles": null
+  },
+  "research": {
+    "publications": null,
+    "citation_count": null,
+    "h_index": null,
+    "patents": null,
+    "grants": null,
+    "awards": null,
+    "peer_review": null,
+    "invited_talks": null,
+    "research_leadership": null,
+    "teaching_experience": null,
+    "major_projects": null,
+    "recommenders": null
+  },
+  "professional": {
+    "regulated_profession": null,
+    "licences": null,
+    "skills_assessments": null,
+    "certifications": null,
+    "memberships": null,
+    "portfolio": null,
+    "major_achievements": null
+  },
+  "finances": {
+    "available_budget": null,
+    "maximum_budget": null,
+    "annual_income": null,
+    "source_of_funds": null,
+    "scholarship_or_funding": null,
+    "financial_sponsor": null,
+    "can_pay_deposit": null
+  },
+  "immigration_history": {
+    "previous_visas": null,
+    "previous_refusals": null,
+    "previous_residence_abroad": null,
+    "overstay_or_status_breach": null,
+    "removal_or_deportation": null
+  },
+  "admissibility_declarations": {
+    "criminal_conviction_declared": null,
+    "serious_immigration_breach_declared": null,
+    "health_admissibility_concern_declared": null
+  },
+  "goals": {
+    "primary_goal": "I want to move abroad, preferably through work or study",
+    "desired_route_families": null,
+    "target_study_level": null,
+    "desired_field": null,
+    "target_occupation": null,
+    "long_term_settlement": null,
+    "target_start_date": null,
+    "temporary_route_acceptable": null
+  },
+  "constraints": {
+    "hard_deadline": null,
+    "must_work_while_studying": null,
+    "must_relocate_with_family": null,
+    "third_country_travel_possible": null,
+    "biometrics_travel_limitations": null,
+    "licensing_constraints": null,
+    "other_constraints": null
+  },
+  "preferences": {
+    "preferred_countries": [
+      "Germany"
+    ],
+    "excluded_countries": null,
+    "preferred_languages": null,
+    "climate_preferences": null,
+    "city_size_preferences": null,
+    "other_preferences": null
+  },
+  "missing_information": [
+    {
+      "field_path": "applicant.current_country_of_residence",
+      "importance": "critical",
+      "reason": "Applying location can change available visa procedures and operational feasibility.",
+      "affected_route_families": [
+        "ALL"
+      ],
+      "suggested_question": "الان در کدام کشور اقامت دارید؟"
+    },
+    {
+      "field_path": "education",
+      "importance": "critical",
+      "reason": "Education level and field are needed for both study and many skilled routes.",
+      "affected_route_families": [
+        "STUDY / ACADEMIC",
+        "EMPLOYMENT / WORK"
+      ],
+      "suggested_question": "بالاترین مدرک، رشته و معدل شما چیست؟"
+    },
+    {
+      "field_path": "employment",
+      "importance": "critical",
+      "reason": "Work-route screening requires at least approximate occupation and experience.",
+      "affected_route_families": [
+        "EMPLOYMENT / WORK"
+      ],
+      "suggested_question": "شغل فعلی/اصلی شما چیست و تقریباً چند سال سابقه مرتبط دارید؟"
+    },
+    {
+      "field_path": "languages",
+      "importance": "high",
+      "reason": "Language ability materially affects both work and study routes.",
+      "affected_route_families": [
+        "STUDY / ACADEMIC",
+        "EMPLOYMENT / WORK"
+      ],
+      "suggested_question": "مدرک زبان دارید؟ اگر بله، آزمون و نمره‌ها را بگویید."
+    },
+    {
+      "field_path": "finances.available_budget",
+      "importance": "high",
+      "reason": "Budget can rule out otherwise viable study or relocation paths.",
+      "affected_route_families": [
+        "STUDY / ACADEMIC",
+        "EMPLOYMENT / WORK"
+      ],
+      "suggested_question": "برای مهاجرت یا تحصیل حدوداً چه بودجه‌ای در دسترس دارید و با چه ارزی؟"
+    }
+  ],
+  "ambiguities": [],
+  "contradictions": [],
+  "normalization_log": [],
+  "data_quality": {
+    "overall_confidence": "low",
+    "critical_missing_count": 3,
+    "high_missing_count": 2,
+    "ambiguity_count": 0,
+    "contradiction_count": 0
+  }
+}

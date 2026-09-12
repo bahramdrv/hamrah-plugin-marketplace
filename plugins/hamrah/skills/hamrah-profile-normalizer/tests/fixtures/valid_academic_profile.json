@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-11T00:00:00Z",
+  "intake_status": "ready_for_initial_screening",
+  "applicant": {
+    "age": 29,
+    "date_of_birth": null,
+    "nationalities": [
+      "Iran"
+    ],
+    "citizenships": [
+      "Iran"
+    ],
+    "current_country_of_residence": "Iran",
+    "current_immigration_status": null,
+    "applying_from": "Iran"
+  },
+  "household": {
+    "relationship_status": "single",
+    "accompanying_partner": false,
+    "dependants": [],
+    "partner_profile": null
+  },
+  "education": [
+    {
+      "level": "masters",
+      "source_label": "MSc",
+      "field": "Mechanical Engineering",
+      "institution_name": "Example University",
+      "country": "Iran",
+      "start_date": "2021",
+      "end_date": "2023",
+      "completion_status": "completed",
+      "gpa": {
+        "value": 17.8,
+        "scale": 20,
+        "classification": null
+      },
+      "thesis_or_research_component": true
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "test": "IELTS",
+      "test_type": "Academic",
+      "overall_score": 7.0,
+      "components": {
+        "listening": 7.5,
+        "reading": 7.0,
+        "writing": 6.5,
+        "speaking": 7.0
+      },
+      "test_date": "2026-05",
+      "expiry_date": null,
+      "self_assessed_level": null
+    }
+  ],
+  "employment": {
+    "declared_total_years": 3.0,
+    "roles": null
+  },
+  "research": {
+    "publications": [
+      "Two peer-reviewed journal publications"
+    ],
+    "citation_count": 35,
+    "h_index": 3,
+    "patents": [],
+    "grants": [],
+    "awards": [],
+    "peer_review": [],
+    "invited_talks": [],
+    "research_leadership": [],
+    "teaching_experience": [],
+    "major_projects": [
+      "Master's thesis in advanced manufacturing"
+    ],
+    "recommenders": [
+      "Two academic recommenders available"
+    ]
+  },
+  "professional": {
+    "regulated_profession": null,
+    "licences": null,
+    "skills_assessments": null,
+    "certifications": null,
+    "memberships": null,
+    "portfolio": null,
+    "major_achievements": null
+  },
+  "finances": {
+    "available_budget": {
+      "amount": 25000,
+      "currency": "EUR",
+      "period": "total"
+    },
+    "maximum_budget": null,
+    "annual_income": null,
+    "source_of_funds": null,
+    "scholarship_or_funding": null,
+    "financial_sponsor": null,
+    "can_pay_deposit": null
+  },
+  "immigration_history": {
+    "previous_visas": null,
+    "previous_refusals": null,
+    "previous_residence_abroad": null,
+    "overstay_or_status_breach": null,
+    "removal_or_deportation": null
+  },
+  "admissibility_declarations": {
+    "criminal_conviction_declared": null,
+    "serious_immigration_breach_declared": null,
+    "health_admissibility_concern_declared": null
+  },
+  "goals": {
+    "primary_goal": "Funded PhD abroad with a long-term settlement option",
+    "desired_route_families": [
+      "STUDY / ACADEMIC"
+    ],
+    "target_study_level": "doctorate",
+    "desired_field": "Mechanical Engineering",
+    "target_occupation": null,
+    "long_term_settlement": true,
+    "target_start_date": "2027",
+    "temporary_route_acceptable": true
+  },
+  "constraints": {
+    "hard_deadline": null,
+    "must_work_while_studying": null,
+    "must_relocate_with_family": null,
+    "third_country_travel_possible": null,
+    "biometrics_travel_limitations": null,
+    "licensing_constraints": null,
+    "other_constraints": null
+  },
+  "preferences": {
+    "preferred_countries": [
+      "United Kingdom",
+      "Germany",
+      "Canada"
+    ],
+    "excluded_countries": null,
+    "preferred_languages": null,
+    "climate_preferences": null,
+    "city_size_preferences": null,
+    "other_preferences": null
+  },
+  "missing_information": [],
+  "ambiguities": [],
+  "contradictions": [],
+  "normalization_log": [
+    {
+      "field_path": "education[0].level",
+      "source_value": "MSc",
+      "normalized_value": "masters",
+      "rule": "Unambiguous degree-label normalization"
+    }
+  ],
+  "data_quality": {
+    "overall_confidence": "high",
+    "critical_missing_count": 0,
+    "high_missing_count": 0,
+    "ambiguity_count": 0,
+    "contradiction_count": 0
+  }
+}

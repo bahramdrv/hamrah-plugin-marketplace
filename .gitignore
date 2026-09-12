@@ -1,0 +1,5 @@
+.DS_Store
+.hamrah/
+__pycache__/
+.pytest_cache/
+*.pyc

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Hamrah Scorecard Visualizer | تصویر کارنامه"
+  short_description: "کارنامه مهاجرتی را در قالب تصویری یکسان می‌سازد"
+  default_prompt: "Use $hamrah-scorecard-visualizer to create a shareable image from this validated Hamrah scorecard."
+policy:
+  allow_implicit_invocation: true

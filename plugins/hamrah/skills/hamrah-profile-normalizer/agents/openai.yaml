@@ -1,0 +1,5 @@
+interface:
+  display_name: "hamrah profile normalizer"
+  short_description: "Normalize applicant facts and identify missing information."
+policy:
+  allow_implicit_invocation: true

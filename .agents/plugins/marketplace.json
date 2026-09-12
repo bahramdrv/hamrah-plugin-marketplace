@@ -1,0 +1,20 @@
+{
+  "name": "hamrah-marketplace",
+  "interface": {
+    "displayName": "Hamrah"
+  },
+  "plugins": [
+    {
+      "name": "hamrah",
+      "source": {
+        "source": "local",
+        "path": "./plugins/hamrah"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+interface:
+  display_name: "Hamrah Signal Builder | همراه سیگنال بیلدر"
+  short_description: Use when immigration-related community sources such as JSON exports,
+    forum threads, Reddit posts, URLs, pasted conversations, shared emails, or mixed
+    evidence need to be converted into normalized Visa Atlas Community Signals.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: true

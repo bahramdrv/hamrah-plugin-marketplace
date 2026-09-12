@@ -1,0 +1,9 @@
+interface:
+  display_name: hamrah scorecard engine
+  short_description: Use when a normalized Hamrah applicant profile must be evaluated
+    against current official immigration route data and applicable community signals
+    to produce an explainable route-by-route immigration scorecard.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: true

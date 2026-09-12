@@ -1,0 +1,30 @@
+{
+  "name": "hamrah",
+  "version": "0.1.0+codex.20260912171904",
+  "description": "Guide immigration intake, persist community signals, assess current routes, find academic programs, and create explainable scorecards and visuals.",
+  "homepage": "https://chatgpt.com/g/g-6aa416931f7c819182afa0360333e530-hamrah-main-gpt",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Hamrah",
+    "shortDescription": "Guided intake, signals, routes, programs, and scorecards.",
+    "longDescription": "Hamrah guides facilitators and applicants through adaptive intake, normalized profiles, current immigration-route assessment, reusable community-signal datasets, academic program matching, explainable scorecards, and shareable scorecard visuals.",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [
+      "Analyze",
+      "Browse",
+      "Write",
+      "Image generation"
+    ],
+    "defaultPrompt": [
+      "\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0645\u0646 \u0631\u0627 \u0628\u0647 \u067e\u0631\u0648\u0641\u0627\u06cc\u0644 \u0627\u0633\u062a\u0627\u0646\u062f\u0627\u0631\u062f Hamrah \u062a\u0628\u062f\u06cc\u0644 \u06a9\u0646.",
+      "\u0627\u0632 \u0627\u06cc\u0646 \u0645\u0646\u0627\u0628\u0639 \u0645\u0647\u0627\u062c\u0631\u062a\u06cc \u0633\u06cc\u06af\u0646\u0627\u0644\u200c\u0647\u0627\u06cc \u0627\u062c\u062a\u0645\u0627\u0639\u06cc \u0627\u0633\u062a\u062e\u0631\u0627\u062c \u06a9\u0646.",
+      "\u0628\u0627 \u067e\u0631\u0648\u0641\u0627\u06cc\u0644 \u0645\u0646 \u0648 \u0645\u0646\u0627\u0628\u0639 \u0631\u0633\u0645\u06cc \u0628\u0647\u200c\u0631\u0648\u0632\u060c \u06a9\u0627\u0631\u0646\u0627\u0645\u0647 Hamrah \u0628\u0633\u0627\u0632 \u0648 \u062a\u0635\u0648\u06cc\u0631\u0634 \u0631\u0627 \u0622\u0645\u0627\u062f\u0647 \u06a9\u0646."
+    ],
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg"
+  }
+}

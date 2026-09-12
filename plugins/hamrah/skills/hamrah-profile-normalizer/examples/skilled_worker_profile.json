@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-11T00:00:00Z",
+  "intake_status": "ready_for_initial_screening",
+  "applicant": {
+    "age": 34,
+    "date_of_birth": null,
+    "nationalities": [
+      "Iran"
+    ],
+    "citizenships": [
+      "Iran"
+    ],
+    "current_country_of_residence": "United Arab Emirates",
+    "current_immigration_status": "employment residence permit",
+    "applying_from": "United Arab Emirates"
+  },
+  "household": {
+    "relationship_status": "married",
+    "accompanying_partner": true,
+    "dependants": [
+      {
+        "relationship": "child",
+        "age": 4,
+        "accompanying": true
+      }
+    ],
+    "partner_profile": {
+      "age": 32,
+      "education_level": "masters",
+      "occupation": "Accountant",
+      "language_test": null,
+      "plans_to_work": true,
+      "plans_to_study": false
+    }
+  },
+  "education": [
+    {
+      "level": "bachelor",
+      "source_label": "BEng",
+      "field": "Software Engineering",
+      "institution_name": null,
+      "country": "Iran",
+      "start_date": null,
+      "end_date": "2014",
+      "completion_status": "completed",
+      "gpa": {
+        "value": 16.2,
+        "scale": 20,
+        "classification": null
+      },
+      "thesis_or_research_component": null
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "test": "IELTS",
+      "test_type": "General",
+      "overall_score": 7.5,
+      "components": {
+        "listening": 8.0,
+        "reading": 7.5,
+        "writing": 7.0,
+        "speaking": 7.0
+      },
+      "test_date": "2026-06",
+      "expiry_date": null,
+      "self_assessed_level": null
+    }
+  ],
+  "employment": {
+    "declared_total_years": 9.0,
+    "roles": [
+      {
+        "job_title": "Senior Software Engineer",
+        "occupation": "Software Engineer",
+        "sector": "Technology",
+        "employer_name": null,
+        "country": "United Arab Emirates",
+        "start_date": "2021",
+        "end_date": null,
+        "employment_type": "full_time",
+        "hours_per_week": 40,
+        "salary": {
+          "amount": 30000,
+          "currency": "AED",
+          "period": "month"
+        },
+        "responsibilities": [
+          "Backend systems",
+          "Technical leadership"
+        ],
+        "job_offer": false,
+        "sponsorship_available": null
+      }
+    ]
+  },
+  "research": {
+    "publications": null,
+    "citation_count": null,
+    "h_index": null,
+    "patents": null,
+    "grants": null,
+    "awards": null,
+    "peer_review": null,
+    "invited_talks": null,
+    "research_leadership": null,
+    "teaching_experience": null,
+    "major_projects": null,
+    "recommenders": null
+  },
+  "professional": {
+    "regulated_profession": null,
+    "licences": null,
+    "skills_assessments": null,
+    "certifications": null,
+    "memberships": null,
+    "portfolio": null,
+    "major_achievements": null
+  },
+  "finances": {
+    "available_budget": {
+      "amount": 35000,
+      "currency": "USD",
+      "period": "total"
+    },
+    "maximum_budget": null,
+    "annual_income": null,
+    "source_of_funds": null,
+    "scholarship_or_funding": null,
+    "financial_sponsor": null,
+    "can_pay_deposit": null
+  },
+  "immigration_history": {
+    "previous_visas": null,
+    "previous_refusals": [],
+    "previous_residence_abroad": null,
+    "overstay_or_status_breach": null,
+    "removal_or_deportation": null
+  },
+  "admissibility_declarations": {
+    "criminal_conviction_declared": null,
+    "serious_immigration_breach_declared": null,
+    "health_admissibility_concern_declared": null
+  },
+  "goals": {
+    "primary_goal": "Permanent skilled migration or employer-sponsored work",
+    "desired_route_families": [
+      "EMPLOYMENT / WORK",
+      "PERMANENT / LONG-TERM"
+    ],
+    "target_study_level": null,
+    "desired_field": null,
+    "target_occupation": "Software Engineer",
+    "long_term_settlement": true,
+    "target_start_date": "2027",
+    "temporary_route_acceptable": true
+  },
+  "constraints": {
+    "hard_deadline": null,
+    "must_work_while_studying": null,
+    "must_relocate_with_family": true,
+    "third_country_travel_possible": true,
+    "biometrics_travel_limitations": null,
+    "licensing_constraints": null,
+    "other_constraints": null
+  },
+  "preferences": {
+    "preferred_countries": null,
+    "excluded_countries": null,
+    "preferred_languages": null,
+    "climate_preferences": null,
+    "city_size_preferences": null,
+    "other_preferences": null
+  },
+  "missing_information": [],
+  "ambiguities": [],
+  "contradictions": [],
+  "normalization_log": [],
+  "data_quality": {
+    "overall_confidence": "high",
+    "critical_missing_count": 0,
+    "high_missing_count": 0,
+    "ambiguity_count": 0,
+    "contradiction_count": 0
+  }
+}

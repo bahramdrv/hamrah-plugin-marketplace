@@ -1,0 +1,6 @@
+interface:
+  display_name: "Hamrah | همراه"
+  short_description: "گفت‌وگوی مرحله‌ای برای ساخت کارنامه مهاجرتی قابل توضیح"
+  default_prompt: "با Hamrah کمکم کن مسیرهای مهاجرتی مناسب شرایط خودم را بررسی کنم."
+policy:
+  allow_implicit_invocation: true

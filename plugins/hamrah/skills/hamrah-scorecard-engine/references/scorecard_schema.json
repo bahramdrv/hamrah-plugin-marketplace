@@ -1,0 +1,576 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hamrah.local/schemas/scorecard.schema.json",
+  "title": "Hamrah Immigration Scorecard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "engine_version",
+    "applicant_profile_reference",
+    "assessment_scope",
+    "route_scorecards",
+    "portfolio_summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "engine_version": {
+      "type": "string"
+    },
+    "applicant_profile_reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile_schema_version",
+        "profile_generated_at"
+      ],
+      "properties": {
+        "profile_schema_version": {
+          "type": "string"
+        },
+        "profile_generated_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "assessment_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "goal",
+        "countries",
+        "route_codes"
+      ],
+      "properties": {
+        "goal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "countries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "route_codes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "route_scorecards": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/routeScorecard"
+      }
+    },
+    "portfolio_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "viable_route_count",
+        "strongest_routes",
+        "blocked_routes",
+        "notes"
+      ],
+      "properties": {
+        "viable_route_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "strongest_routes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "country_code",
+              "route_code",
+              "practical_fit_score"
+            ],
+            "properties": {
+              "country_code": {
+                "type": "string"
+              },
+              "route_code": {
+                "type": "string"
+              },
+              "practical_fit_score": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100
+              }
+            }
+          }
+        },
+        "blocked_routes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "country_code",
+              "route_code",
+              "reason"
+            ],
+            "properties": {
+              "country_code": {
+                "type": "string"
+              },
+              "route_code": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "component": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "score",
+        "max_score",
+        "reason"
+      ],
+      "properties": {
+        "score": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "max_score": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "requirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requirement_id",
+        "title",
+        "result",
+        "explanation",
+        "source_url",
+        "source_title",
+        "checked_at"
+      ],
+      "properties": {
+        "requirement_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "result": {
+          "type": "string",
+          "enum": [
+            "met",
+            "not_met",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "checked_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "communitySignal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signal_id",
+        "root_cause_id",
+        "adjustment",
+        "reason",
+        "applicability"
+      ],
+      "properties": {
+        "signal_id": {
+          "type": "string"
+        },
+        "root_cause_id": {
+          "type": "string"
+        },
+        "adjustment": {
+          "type": "integer",
+          "enum": [
+            0,
+            -5,
+            -10,
+            -15,
+            -20
+          ]
+        },
+        "reason": {
+          "type": "string"
+        },
+        "applicability": {
+          "type": "string",
+          "enum": [
+            "matched",
+            "partial_match"
+          ]
+        }
+      }
+    },
+    "ignoredSignal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signal_id",
+        "reason"
+      ],
+      "properties": {
+        "signal_id": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "routeScorecard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "country",
+        "route",
+        "official_eligibility",
+        "base_fit",
+        "community_adjustment",
+        "practical_fit",
+        "confidence",
+        "warnings",
+        "assumptions",
+        "missing_information",
+        "decision_summary"
+      ],
+      "properties": {
+        "country": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "code"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "code": {
+              "type": "string"
+            }
+          }
+        },
+        "route": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "code",
+            "name",
+            "family"
+          ],
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "family": {
+              "type": "string"
+            }
+          }
+        },
+        "official_eligibility": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "reasons",
+            "missing_requirements",
+            "blockers",
+            "official_data_quality"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "PASS",
+                "FAIL",
+                "POSSIBLE",
+                "UNKNOWN"
+              ]
+            },
+            "reasons": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/requirement"
+              }
+            },
+            "missing_requirements": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "blockers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "official_data_quality": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "as_of",
+                "freshness_note"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "current",
+                    "partial",
+                    "stale",
+                    "missing"
+                  ]
+                },
+                "as_of": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "freshness_note": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "base_fit": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score",
+            "max_score",
+            "components"
+          ],
+          "properties": {
+            "score": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "max_score": {
+              "type": "integer",
+              "const": 100
+            },
+            "components": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "eligibility_fit",
+                "career_profile_fit",
+                "financial_fit",
+                "process_practicality",
+                "long_term_potential",
+                "goal_alignment",
+                "evidence_quality"
+              ],
+              "properties": {
+                "eligibility_fit": {
+                  "$ref": "#/$defs/component"
+                },
+                "career_profile_fit": {
+                  "$ref": "#/$defs/component"
+                },
+                "financial_fit": {
+                  "$ref": "#/$defs/component"
+                },
+                "process_practicality": {
+                  "$ref": "#/$defs/component"
+                },
+                "long_term_potential": {
+                  "$ref": "#/$defs/component"
+                },
+                "goal_alignment": {
+                  "$ref": "#/$defs/component"
+                },
+                "evidence_quality": {
+                  "$ref": "#/$defs/component"
+                }
+              }
+            }
+          }
+        },
+        "community_adjustment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "total",
+            "applied_signals",
+            "ignored_signals"
+          ],
+          "properties": {
+            "total": {
+              "type": "integer",
+              "enum": [
+                0,
+                -5,
+                -10,
+                -15,
+                -20
+              ]
+            },
+            "applied_signals": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/communitySignal"
+              }
+            },
+            "ignored_signals": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ignoredSignal"
+              }
+            }
+          }
+        },
+        "practical_fit": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score",
+            "formula",
+            "usable_for_ranking",
+            "interpretation"
+          ],
+          "properties": {
+            "score": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "formula": {
+              "type": "string",
+              "const": "base_fit + community_adjustment"
+            },
+            "usable_for_ranking": {
+              "type": "boolean"
+            },
+            "interpretation": {
+              "type": "string"
+            }
+          }
+        },
+        "confidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "level",
+            "reasons"
+          ],
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "reasons": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_information": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "decision_summary": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-11T00:00:00Z",
+  "engine_version": "1.0",
+  "applicant_profile_reference": {
+    "profile_schema_version": "1.0",
+    "profile_generated_at": "2026-09-11T00:00:00Z"
+  },
+  "assessment_scope": {
+    "goal": "Work migration",
+    "countries": [
+      "Example Country"
+    ],
+    "route_codes": [
+      "example_route"
+    ]
+  },
+  "route_scorecards": [
+    {
+      "country": {
+        "name": "Example Country",
+        "code": "XXX"
+      },
+      "route": {
+        "code": "example_route",
+        "name": "Example Route",
+        "family": "EMPLOYMENT / WORK"
+      },
+      "official_eligibility": {
+        "status": "FAIL",
+        "reasons": [
+          {
+            "requirement_id": "mandatory-1",
+            "title": "Mandatory threshold",
+            "result": "not_met",
+            "explanation": "The applicant does not meet a current mandatory requirement.",
+            "source_url": "https://example.gov/route",
+            "source_title": "Official route requirements",
+            "checked_at": "2026-09-11"
+          }
+        ],
+        "missing_requirements": [],
+        "blockers": [
+          "Mandatory route threshold is not met."
+        ],
+        "official_data_quality": {
+          "status": "current",
+          "as_of": "2026-09-11",
+          "freshness_note": "Current primary source checked."
+        }
+      },
+      "base_fit": {
+        "score": 59,
+        "max_score": 100,
+        "components": {
+          "eligibility_fit": {
+            "score": 0,
+            "max_score": 30,
+            "reason": "Current mandatory requirement not met."
+          },
+          "career_profile_fit": {
+            "score": 18,
+            "max_score": 20,
+            "reason": "Strong relevant experience."
+          },
+          "financial_fit": {
+            "score": 13,
+            "max_score": 15,
+            "reason": "Budget appears adequate for initial execution."
+          },
+          "process_practicality": {
+            "score": 7,
+            "max_score": 10,
+            "reason": "Some operational friction remains."
+          },
+          "long_term_potential": {
+            "score": 8,
+            "max_score": 10,
+            "reason": "Good long-term alignment."
+          },
+          "goal_alignment": {
+            "score": 8,
+            "max_score": 10,
+            "reason": "Route fits the work-migration goal."
+          },
+          "evidence_quality": {
+            "score": 5,
+            "max_score": 5,
+            "reason": "Most core facts are documented."
+          }
+        }
+      },
+      "community_adjustment": {
+        "total": 0,
+        "applied_signals": [],
+        "ignored_signals": []
+      },
+      "practical_fit": {
+        "score": 59,
+        "formula": "base_fit + community_adjustment",
+        "usable_for_ranking": false,
+        "interpretation": "Diagnostic fit only; official eligibility currently fails."
+      },
+      "confidence": {
+        "level": "high",
+        "reasons": [
+          "Current official source confirms the blocker."
+        ]
+      },
+      "warnings": [
+        "A strong profile fit cannot override an official eligibility failure."
+      ],
+      "assumptions": [],
+      "missing_information": [],
+      "decision_summary": "Not currently viable because of an official mandatory blocker."
+    }
+  ],
+  "portfolio_summary": {
+    "viable_route_count": 0,
+    "strongest_routes": [],
+    "blocked_routes": [
+      {
+        "country_code": "XXX",
+        "route_code": "example_route",
+        "reason": "Mandatory route threshold is not met."
+      }
+    ],
+    "notes": []
+  }
+}

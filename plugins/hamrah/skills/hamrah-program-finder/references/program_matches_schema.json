@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hamrah Academic Program Matches",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "profile_reference", "search_scope", "programs", "warnings"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "generated_at": {"type": "string"},
+    "profile_reference": {"type": "object"},
+    "search_scope": {"type": "object"},
+    "programs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["program_id", "institution", "country", "program_title", "degree_level", "field", "official_program_url", "match_status", "match_reasons", "gaps", "admissions", "funding", "immigration_context", "preference_match", "sources", "checked_at"],
+        "properties": {
+          "program_id": {"type": "string", "minLength": 1},
+          "institution": {"type": "string", "minLength": 1},
+          "country": {"type": "string", "minLength": 1},
+          "program_title": {"type": "string", "minLength": 1},
+          "degree_level": {"type": "string", "minLength": 1},
+          "field": {"type": "string", "minLength": 1},
+          "official_program_url": {"type": "string", "format": "uri"},
+          "match_status": {"enum": ["supported_fit", "conditional_fit", "insufficient_evidence"]},
+          "match_reasons": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "gaps": {"type": "array", "items": {"type": "string"}},
+          "admissions": {"type": "object"},
+          "funding": {"type": "object"},
+          "immigration_context": {"type": "object"},
+          "preference_match": {"type": "object"},
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["title", "url", "checked_at"],
+              "properties": {
+                "title": {"type": "string"},
+                "url": {"type": "string", "format": "uri"},
+                "checked_at": {"type": "string"}
+              }
+            }
+          },
+          "checked_at": {"type": "string"}
+        }
+      }
+    },
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  }
+}

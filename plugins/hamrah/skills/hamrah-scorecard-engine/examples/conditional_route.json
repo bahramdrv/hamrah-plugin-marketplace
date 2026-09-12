@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-11T00:00:00Z",
+  "engine_version": "1.0",
+  "applicant_profile_reference": {
+    "profile_schema_version": "1.0",
+    "profile_generated_at": "2026-09-11T00:00:00Z"
+  },
+  "assessment_scope": {
+    "goal": "Research talent migration",
+    "countries": [
+      "United Kingdom"
+    ],
+    "route_codes": [
+      "global_talent"
+    ]
+  },
+  "route_scorecards": [
+    {
+      "country": {
+        "name": "United Kingdom",
+        "code": "GBR"
+      },
+      "route": {
+        "code": "global_talent",
+        "name": "Global Talent",
+        "family": "EMPLOYMENT / WORK"
+      },
+      "official_eligibility": {
+        "status": "POSSIBLE",
+        "reasons": [
+          {
+            "requirement_id": "official-1",
+            "title": "Core route requirements",
+            "result": "met",
+            "explanation": "Current supplied profile satisfies the checked core route requirements.",
+            "source_url": "https://example.gov/route",
+            "source_title": "Official route requirements",
+            "checked_at": "2026-09-11"
+          }
+        ],
+        "missing_requirements": [
+          "Endorsement is not yet secured."
+        ],
+        "blockers": [],
+        "official_data_quality": {
+          "status": "current",
+          "as_of": "2026-09-11",
+          "freshness_note": "Current primary source checked."
+        }
+      },
+      "base_fit": {
+        "score": 77,
+        "max_score": 100,
+        "components": {
+          "eligibility_fit": {
+            "score": 20,
+            "max_score": 30,
+            "reason": "Potentially eligible but endorsement is not yet secured."
+          },
+          "career_profile_fit": {
+            "score": 18,
+            "max_score": 20,
+            "reason": "Strong relevant experience."
+          },
+          "financial_fit": {
+            "score": 12,
+            "max_score": 15,
+            "reason": "Budget appears adequate for initial execution."
+          },
+          "process_practicality": {
+            "score": 6,
+            "max_score": 10,
+            "reason": "Some operational friction remains."
+          },
+          "long_term_potential": {
+            "score": 8,
+            "max_score": 10,
+            "reason": "Good long-term alignment."
+          },
+          "goal_alignment": {
+            "score": 9,
+            "max_score": 10,
+            "reason": "Route fits the work-migration goal."
+          },
+          "evidence_quality": {
+            "score": 4,
+            "max_score": 5,
+            "reason": "Most core facts are documented."
+          }
+        }
+      },
+      "community_adjustment": {
+        "total": -10,
+        "applied_signals": [
+          {
+            "signal_id": "GBR-GT-R4-ENDORSEMENT-DELAY-EXAMPLE",
+            "root_cause_id": "GBR-GT-R4-ENDORSEMENT-DELAY-EXAMPLE",
+            "adjustment": -10,
+            "reason": "Current repeated endorsement-delay evidence applies to the selected peer-review path.",
+            "applicability": "matched"
+          }
+        ],
+        "ignored_signals": []
+      },
+      "practical_fit": {
+        "score": 67,
+        "formula": "base_fit + community_adjustment",
+        "usable_for_ranking": true,
+        "interpretation": "Moderate practical fit while endorsement remains unresolved."
+      },
+      "confidence": {
+        "level": "medium",
+        "reasons": [
+          "Official route data is current.",
+          "Endorsement has not yet been secured."
+        ]
+      },
+      "warnings": [],
+      "assumptions": [],
+      "missing_information": [
+        "Outcome of endorsement stage."
+      ],
+      "decision_summary": "Potentially viable but conditional on endorsement."
+    }
+  ],
+  "portfolio_summary": {
+    "viable_route_count": 1,
+    "strongest_routes": [
+      {
+        "country_code": "GBR",
+        "route_code": "global_talent",
+        "practical_fit_score": 67
+      }
+    ],
+    "blocked_routes": [],
+    "notes": [
+      "Route is conditional and not a confirmed PASS."
+    ]
+  }
+}

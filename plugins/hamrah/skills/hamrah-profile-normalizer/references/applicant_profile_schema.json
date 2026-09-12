@@ -1,0 +1,1367 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hamrah.local/schemas/applicant-profile.schema.json",
+  "title": "Hamrah Applicant Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "intake_status",
+    "applicant",
+    "household",
+    "education",
+    "languages",
+    "employment",
+    "research",
+    "professional",
+    "finances",
+    "immigration_history",
+    "admissibility_declarations",
+    "goals",
+    "constraints",
+    "preferences",
+    "missing_information",
+    "ambiguities",
+    "contradictions",
+    "normalization_log",
+    "data_quality"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "intake_status": {
+      "type": "string",
+      "enum": [
+        "ready_for_initial_screening",
+        "needs_more_information",
+        "insufficient_for_screening"
+      ]
+    },
+    "applicant": {
+      "$ref": "#/$defs/applicant"
+    },
+    "household": {
+      "$ref": "#/$defs/household"
+    },
+    "education": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/$defs/education"
+      }
+    },
+    "languages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/$defs/language"
+      }
+    },
+    "employment": {
+      "$ref": "#/$defs/employment"
+    },
+    "research": {
+      "$ref": "#/$defs/research"
+    },
+    "professional": {
+      "$ref": "#/$defs/professional"
+    },
+    "finances": {
+      "$ref": "#/$defs/finances"
+    },
+    "immigration_history": {
+      "$ref": "#/$defs/immigrationHistory"
+    },
+    "admissibility_declarations": {
+      "$ref": "#/$defs/admissibility"
+    },
+    "goals": {
+      "$ref": "#/$defs/goals"
+    },
+    "constraints": {
+      "$ref": "#/$defs/constraints"
+    },
+    "preferences": {
+      "$ref": "#/$defs/preferences"
+    },
+    "missing_information": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/missingItem"
+      }
+    },
+    "ambiguities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ambiguity"
+      }
+    },
+    "contradictions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/contradiction"
+      }
+    },
+    "normalization_log": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/normalizationLog"
+      }
+    },
+    "data_quality": {
+      "$ref": "#/$defs/dataQuality"
+    }
+  },
+  "$defs": {
+    "money": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "amount",
+        "currency",
+        "period"
+      ],
+      "properties": {
+        "amount": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "period": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "applicant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "age",
+        "date_of_birth",
+        "nationalities",
+        "citizenships",
+        "current_country_of_residence",
+        "current_immigration_status",
+        "applying_from"
+      ],
+      "properties": {
+        "age": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 120
+        },
+        "date_of_birth": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "nationalities": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "citizenships": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "current_country_of_residence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "current_immigration_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "applying_from": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "household": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relationship_status",
+        "accompanying_partner",
+        "dependants",
+        "partner_profile"
+      ],
+      "properties": {
+        "relationship_status": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "single",
+            "married",
+            "partnered",
+            "engaged",
+            "divorced",
+            "widowed",
+            "other",
+            null
+          ]
+        },
+        "accompanying_partner": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "dependants": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "relationship",
+              "age",
+              "accompanying"
+            ],
+            "properties": {
+              "relationship": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "age": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 120
+              },
+              "accompanying": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "partner_profile": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "required": [
+            "age",
+            "education_level",
+            "occupation",
+            "language_test",
+            "plans_to_work",
+            "plans_to_study"
+          ],
+          "properties": {
+            "age": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 120
+            },
+            "education_level": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "occupation": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "language_test": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "plans_to_work": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "plans_to_study": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "gpa": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "scale",
+        "classification"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "scale": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "classification": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "education": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "source_label",
+        "field",
+        "institution_name",
+        "country",
+        "start_date",
+        "end_date",
+        "completion_status",
+        "gpa",
+        "thesis_or_research_component"
+      ],
+      "properties": {
+        "level": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "secondary",
+            "diploma",
+            "associate",
+            "bachelor",
+            "postgraduate_diploma",
+            "masters",
+            "doctorate",
+            "professional_degree",
+            "other",
+            null
+          ]
+        },
+        "source_label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "field": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "institution_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "country": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "start_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "end_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "completion_status": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "completed",
+            "in_progress",
+            "incomplete",
+            "other",
+            null
+          ]
+        },
+        "gpa": {
+          "$ref": "#/$defs/gpa"
+        },
+        "thesis_or_research_component": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "language": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "language",
+        "test",
+        "test_type",
+        "overall_score",
+        "components",
+        "test_date",
+        "expiry_date",
+        "self_assessed_level"
+      ],
+      "properties": {
+        "language": {
+          "type": "string"
+        },
+        "test": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "test_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "overall_score": {
+          "type": [
+            "number",
+            "string",
+            "null"
+          ]
+        },
+        "components": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "type": [
+              "number",
+              "string",
+              "null"
+            ]
+          }
+        },
+        "test_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "expiry_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "self_assessed_level": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "job": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "job_title",
+        "occupation",
+        "sector",
+        "employer_name",
+        "country",
+        "start_date",
+        "end_date",
+        "employment_type",
+        "hours_per_week",
+        "salary",
+        "responsibilities",
+        "job_offer",
+        "sponsorship_available"
+      ],
+      "properties": {
+        "job_title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "occupation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sector": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "employer_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "country": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "start_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "end_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "employment_type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "full_time",
+            "part_time",
+            "contract",
+            "self_employed",
+            "internship",
+            "other",
+            null
+          ]
+        },
+        "hours_per_week": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "salary": {
+          "$ref": "#/$defs/money"
+        },
+        "responsibilities": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "job_offer": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "sponsorship_available": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "employment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "declared_total_years",
+        "roles"
+      ],
+      "properties": {
+        "declared_total_years": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "roles": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/job"
+          }
+        }
+      }
+    },
+    "research": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "publications",
+        "citation_count",
+        "h_index",
+        "patents",
+        "grants",
+        "awards",
+        "peer_review",
+        "invited_talks",
+        "research_leadership",
+        "teaching_experience",
+        "major_projects",
+        "recommenders"
+      ],
+      "properties": {
+        "publications": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "citation_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "h_index": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "patents": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "grants": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "awards": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "peer_review": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "invited_talks": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "research_leadership": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "teaching_experience": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "major_projects": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "recommenders": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "professional": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "regulated_profession",
+        "licences",
+        "skills_assessments",
+        "certifications",
+        "memberships",
+        "portfolio",
+        "major_achievements"
+      ],
+      "properties": {
+        "regulated_profession": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "licences": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "skills_assessments": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "certifications": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "memberships": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "portfolio": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "major_achievements": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "finances": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "available_budget",
+        "maximum_budget",
+        "annual_income",
+        "source_of_funds",
+        "scholarship_or_funding",
+        "financial_sponsor",
+        "can_pay_deposit"
+      ],
+      "properties": {
+        "available_budget": {
+          "$ref": "#/$defs/money"
+        },
+        "maximum_budget": {
+          "$ref": "#/$defs/money"
+        },
+        "annual_income": {
+          "$ref": "#/$defs/money"
+        },
+        "source_of_funds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "scholarship_or_funding": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "financial_sponsor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "can_pay_deposit": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "immigrationHistory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "previous_visas",
+        "previous_refusals",
+        "previous_residence_abroad",
+        "overstay_or_status_breach",
+        "removal_or_deportation"
+      ],
+      "properties": {
+        "previous_visas": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "previous_refusals": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "previous_residence_abroad": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "overstay_or_status_breach": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "removal_or_deportation": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "admissibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "criminal_conviction_declared",
+        "serious_immigration_breach_declared",
+        "health_admissibility_concern_declared"
+      ],
+      "properties": {
+        "criminal_conviction_declared": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "serious_immigration_breach_declared": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "health_admissibility_concern_declared": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "goals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_goal",
+        "desired_route_families",
+        "target_study_level",
+        "desired_field",
+        "target_occupation",
+        "long_term_settlement",
+        "target_start_date",
+        "temporary_route_acceptable"
+      ],
+      "properties": {
+        "primary_goal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "desired_route_families": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "target_study_level": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "desired_field": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_occupation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "long_term_settlement": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "target_start_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "temporary_route_acceptable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hard_deadline",
+        "must_work_while_studying",
+        "must_relocate_with_family",
+        "third_country_travel_possible",
+        "biometrics_travel_limitations",
+        "licensing_constraints",
+        "other_constraints"
+      ],
+      "properties": {
+        "hard_deadline": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "must_work_while_studying": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "must_relocate_with_family": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "third_country_travel_possible": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "biometrics_travel_limitations": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "licensing_constraints": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "other_constraints": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "preferences": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "preferred_countries",
+        "excluded_countries",
+        "preferred_languages",
+        "climate_preferences",
+        "city_size_preferences",
+        "other_preferences"
+      ],
+      "properties": {
+        "preferred_countries": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "excluded_countries": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "preferred_languages": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "climate_preferences": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "city_size_preferences": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "other_preferences": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "missingItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "field_path",
+        "importance",
+        "reason",
+        "affected_route_families",
+        "suggested_question"
+      ],
+      "properties": {
+        "field_path": {
+          "type": "string"
+        },
+        "importance": {
+          "type": "string",
+          "enum": [
+            "critical",
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        },
+        "affected_route_families": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggested_question": {
+          "type": "string"
+        }
+      }
+    },
+    "ambiguity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "field_path",
+        "issue",
+        "possible_values",
+        "suggested_question"
+      ],
+      "properties": {
+        "field_path": {
+          "type": "string"
+        },
+        "issue": {
+          "type": "string"
+        },
+        "possible_values": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggested_question": {
+          "type": "string"
+        }
+      }
+    },
+    "contradiction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "field_path",
+        "claims",
+        "suggested_question"
+      ],
+      "properties": {
+        "field_path": {
+          "type": "string"
+        },
+        "claims": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2
+        },
+        "suggested_question": {
+          "type": "string"
+        }
+      }
+    },
+    "normalizationLog": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "field_path",
+        "source_value",
+        "normalized_value",
+        "rule"
+      ],
+      "properties": {
+        "field_path": {
+          "type": "string"
+        },
+        "source_value": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "normalized_value": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "rule": {
+          "type": "string"
+        }
+      }
+    },
+    "dataQuality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "overall_confidence",
+        "critical_missing_count",
+        "high_missing_count",
+        "ambiguity_count",
+        "contradiction_count"
+      ],
+      "properties": {
+        "overall_confidence": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "critical_missing_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "high_missing_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ambiguity_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "contradiction_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}
