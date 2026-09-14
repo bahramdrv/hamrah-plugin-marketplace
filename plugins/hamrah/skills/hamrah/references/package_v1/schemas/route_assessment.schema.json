@@ -1,0 +1,290 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hamrah Route Assessment",
+  "type": "object",
+  "required": [
+    "country",
+    "route",
+    "official_eligibility",
+    "operational_status",
+    "scores",
+    "costs",
+    "processing",
+    "long_term",
+    "reception_context",
+    "sources"
+  ],
+  "properties": {
+    "country": {
+      "type": "object",
+      "required": [
+        "name",
+        "iso"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "iso": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "route": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "category": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "canonical_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        }
+      },
+      "additionalProperties": true
+    },
+    "official_eligibility": {
+      "type": "object",
+      "required": [
+        "status",
+        "hard_gates",
+        "blockers"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "PASS",
+            "LIKELY",
+            "UNCLEAR",
+            "FAIL"
+          ]
+        },
+        "hard_gates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "blockers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "operational_status": {
+      "enum": [
+        "OPEN",
+        "OPEN_WITH_FRICTION",
+        "MONITORING",
+        "TEMPORARILY_DISRUPTED",
+        "UNKNOWN"
+      ]
+    },
+    "scores": {
+      "type": "object",
+      "required": [
+        "base_fit",
+        "community_friction",
+        "practical_fit",
+        "confidence"
+      ],
+      "properties": {
+        "base_fit": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "community_friction": {
+          "enum": [
+            0,
+            -5,
+            -10,
+            -15,
+            -20
+          ]
+        },
+        "practical_fit": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "breakdown": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "community": {
+      "type": "object",
+      "properties": {
+        "applicable_signal_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "alert": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "root_causes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "costs": {
+      "type": "object",
+      "properties": {
+        "paid_away": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "proof_of_funds": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "monthly_living": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "processing": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "long_term": {
+      "type": "object",
+      "properties": {
+        "settlement_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "citizenship_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "reception_context": {
+      "type": "object",
+      "required": [
+        "rating",
+        "reasons"
+      ],
+      "properties": {
+        "rating": {
+          "enum": [
+            "High",
+            "Mixed",
+            "Restrictive",
+            "Insufficient evidence"
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "university_opportunities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "last_verified": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "label",
+          "url"
+        ],
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

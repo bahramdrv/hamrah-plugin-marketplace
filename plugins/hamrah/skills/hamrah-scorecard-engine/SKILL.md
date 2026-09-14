@@ -20,7 +20,7 @@ The engine produces an explainable scorecard. It does not collect the applicant 
 The engine expects:
 
 - a normalized Hamrah applicant profile;
-- current official route context from configured Actions/APIs or primary official sources;
+- current official route context from the Hamrah Visa Atlas MCP tools or primary official sources;
 - applicable normalized Community Signals.
 
 If official route context is unavailable, do not invent it. Mark official eligibility `UNKNOWN`.

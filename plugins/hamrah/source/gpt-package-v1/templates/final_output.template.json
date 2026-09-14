@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "profile_normalized": {},
+  "route_assessments": [],
+  "scorecard": {
+    "case_id": "CASE-...",
+    "status": "PROVISIONAL",
+    "generated_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "overall": {
+      "best_route": null,
+      "backup_route": null,
+      "biggest_blocker": null,
+      "confidence": 0
+    },
+    "ranked_routes": [],
+    "assumptions": [],
+    "data_gaps": []
+  },
+  "report_card": {
+    "title_fa": "کارنامه مسیر مهاجرت",
+    "executive_summary_fa": "",
+    "country_cards": [],
+    "next_30_days": [],
+    "warnings": []
+  },
+  "image_prompt": "",
+  "sources": [],
+  "generated_at": "YYYY-MM-DDTHH:MM:SSZ"
+}

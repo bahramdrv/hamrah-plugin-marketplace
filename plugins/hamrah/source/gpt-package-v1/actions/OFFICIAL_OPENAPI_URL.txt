@@ -1,0 +1,6 @@
+Official Visa Atlas OpenAPI 3.1:
+https://visaatlas.org/api/openapi.json
+
+Recommended for Hamrah Main GPT: use visaatlas_core_openapi.yaml to avoid irrelevant SEO/GEO endpoints.
+Authentication: None
+Privacy policy: https://visaatlas.org/privacy

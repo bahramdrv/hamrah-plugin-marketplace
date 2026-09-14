@@ -1,19 +1,23 @@
 {
   "name": "hamrah",
-  "version": "0.1.0+codex.20260912171904",
-  "description": "Guide immigration intake, persist community signals, assess current routes, find academic programs, and create explainable scorecards and visuals.",
+  "version": "0.1.0+codex.20260914055617",
+  "description": "Guide immigration intake, query the curated Visa Atlas API, assess current routes, find academic programs, and create explainable scorecards and visuals.",
   "homepage": "https://chatgpt.com/g/g-6aa416931f7c819182afa0360333e530-hamrah-main-gpt",
   "author": {
     "name": "Local developer"
   },
+  "repository": "https://github.com/bahramdrv/hamrah-plugin-marketplace",
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Hamrah",
     "shortDescription": "Guided intake, signals, routes, programs, and scorecards.",
-    "longDescription": "Hamrah guides facilitators and applicants through adaptive intake, normalized profiles, current immigration-route assessment, reusable community-signal datasets, academic program matching, explainable scorecards, and shareable scorecard visuals.",
+    "longDescription": "Hamrah guides facilitators and applicants through adaptive intake, normalized profiles, live Visa Atlas route data, reusable community-signal datasets, academic program matching, explainable scorecards, and shareable scorecard visuals.",
     "developerName": "Local developer",
     "category": "Productivity",
     "capabilities": [
+      "Interactive",
+      "Read",
       "Analyze",
       "Browse",
       "Write",

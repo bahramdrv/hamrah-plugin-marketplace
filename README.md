@@ -1,6 +1,6 @@
 # Hamrah plugin marketplace
 
-Hamrah guides facilitators and applicants through immigration intake, profile normalization, current route assessment, reusable community signals, academic program matching, explainable scorecards, and scorecard visuals.
+Hamrah guides facilitators and applicants through immigration intake, profile normalization, live Visa Atlas route assessment, reusable community signals, academic program matching, explainable scorecards, and scorecard visuals. The plugin now bundles a local MCP adapter for the curated Visa Atlas Core OpenAPI 1.3.0 contract.
 
 ## Install
 
@@ -18,4 +18,6 @@ codex plugin marketplace upgrade hamrah-marketplace
 codex plugin add hamrah@hamrah-marketplace
 ```
 
-Live route and academic searches require a host with web or HTTP access. Generated applicant profiles and community-signal stores remain local unless the user explicitly publishes them.
+The Visa Atlas MCP adapter uses only fixed endpoints under `https://visaatlas.org/api/public`. It applies optional filters locally so large datasets do not flood the conversation. Generated applicant profiles and community-signal stores remain local unless the user explicitly publishes them.
+
+The supplied OpenAPI currently lists `freshness`, `citation-packs`, and `answer-capsules`, but those endpoints returned HTTP 404 during the integration check on 2026-09-14. Hamrah reports those failures explicitly and falls back to catalog/record dates and primary sources without fabricating data.

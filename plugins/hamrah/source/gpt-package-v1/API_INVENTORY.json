@@ -1,0 +1,170 @@
+[
+  {
+    "method": "GET",
+    "endpoint": "/api/public",
+    "name": "Dataset catalog",
+    "use": "discovery",
+    "priority": "medium"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/visas",
+    "name": "Visa routes",
+    "use": "route requirements/sponsor/settlement",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/destinations",
+    "name": "Destinations",
+    "use": "country portals/regulators",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/policy-updates",
+    "name": "Policy updates",
+    "use": "recent policy changes",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/policy-claims",
+    "name": "Policy claims",
+    "use": "atomic source-backed claims",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/calculator-verdict-contexts",
+    "name": "Calculator contexts",
+    "use": "interpret calculator results",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/search-index",
+    "name": "Search index",
+    "use": "discover relevant Visa Atlas pages",
+    "priority": "medium"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/freshness",
+    "name": "Freshness report",
+    "use": "currentness/SLA",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/processing-reliability",
+    "name": "Processing reliability",
+    "use": "planning transparency",
+    "priority": "medium"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/skilled-migration-accessibility",
+    "name": "Skilled migration accessibility",
+    "use": "cross-route planning friction",
+    "priority": "medium"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/country-comparisons",
+    "name": "Country comparisons",
+    "use": "cross-country tradeoffs",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/fees",
+    "name": "Visa fees",
+    "use": "government fee lines",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/cost-to-complete",
+    "name": "Cost to complete",
+    "use": "sunk cost + proof-of-funds separation",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/salary-thresholds",
+    "name": "Salary thresholds",
+    "use": "route salary/income floors",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/processing-times",
+    "name": "Processing times",
+    "use": "official/qualified time bands",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/express-entry-draws",
+    "name": "Express Entry draws",
+    "use": "Canada CRS draw history",
+    "priority": "conditional"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/express-entry-categories",
+    "name": "Express Entry categories",
+    "use": "Canada category selection",
+    "priority": "conditional"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/fact-changes",
+    "name": "Fact changes",
+    "use": "fee/salary/processing diffs",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/monthly-figure-changes",
+    "name": "Monthly figure changes",
+    "use": "change archive",
+    "priority": "medium"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/citation-packs",
+    "name": "Citation packs",
+    "use": "compact sourced answer packets",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/answer-capsules",
+    "name": "Answer capsules",
+    "use": "verified short-answer layer",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/route-finder",
+    "name": "Route finder contract",
+    "use": "methodology/request schema",
+    "priority": "medium"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/public/route-finder",
+    "name": "Find routes",
+    "use": "deterministic profile-to-route shortlist",
+    "priority": "high"
+  },
+  {
+    "method": "GET",
+    "endpoint": "/api/public/widgets",
+    "name": "Widgets catalog",
+    "use": "not needed for core assessment",
+    "priority": "low"
+  }
+]

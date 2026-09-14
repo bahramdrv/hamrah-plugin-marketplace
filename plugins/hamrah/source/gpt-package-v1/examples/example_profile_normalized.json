@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "case_id": "DEMO-001",
+  "assessment_status": "PROVISIONAL",
+  "identity_context": {
+    "age": 31,
+    "age_band": "30-44",
+    "nationalities": [
+      "Iranian"
+    ],
+    "residence_country": "Iran",
+    "marital_status": "single",
+    "dependants": 0
+  },
+  "goals": {
+    "primary_intent": "work",
+    "preferred_countries": [
+      "Germany",
+      "Canada",
+      "United Kingdom"
+    ],
+    "avoid_countries": [],
+    "timeline_months": 12,
+    "settlement_priority": "high"
+  },
+  "education": [
+    {
+      "level": "Master",
+      "field": "Computer Science",
+      "institution": null,
+      "country": "Iran",
+      "graduation_year": 2022,
+      "gpa_value": null,
+      "gpa_scale": null,
+      "thesis": null
+    }
+  ],
+  "career": {
+    "current_role": "Software Engineer",
+    "occupation_family": "software",
+    "years_relevant_experience": 6,
+    "skills": [
+      "backend",
+      "cloud"
+    ],
+    "salary_band": null
+  },
+  "language": [
+    {
+      "language": "English",
+      "test": "IELTS",
+      "overall": 7.0,
+      "components": {},
+      "cefr": null
+    }
+  ],
+  "finances": {
+    "available_liquid_funds": 25000,
+    "currency": "EUR",
+    "monthly_living_budget": 2000,
+    "funding_needed": false,
+    "scholarship_priority": "low"
+  },
+  "route_assets": {
+    "job_offer": false,
+    "sponsor_available": "no",
+    "admission_offer": false,
+    "nomination": false,
+    "publications": 0,
+    "research_profile": null
+  },
+  "preferences": {
+    "willing_to_learn_language": true,
+    "third_country_travel_possible": true
+  },
+  "public_profile": {
+    "consented": false,
+    "urls": [],
+    "derived_facts": []
+  },
+  "consent": {
+    "route_finder_post": false,
+    "public_profile_search": false,
+    "university_search": false,
+    "calculator": false,
+    "deep_dive": false
+  },
+  "data_quality": {
+    "missing_critical_fields": [
+      "exact language subscores for some points-based routes"
+    ],
+    "assumptions": [],
+    "notes": [
+      "Demo only; not a real assessment"
+    ]
+  }
+}

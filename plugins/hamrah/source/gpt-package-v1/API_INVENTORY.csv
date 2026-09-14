@@ -1,0 +1,25 @@
+﻿method,endpoint,name,use,priority
+GET,/api/public,Dataset catalog,discovery,medium
+GET,/api/public/visas,Visa routes,route requirements/sponsor/settlement,high
+GET,/api/public/destinations,Destinations,country portals/regulators,high
+GET,/api/public/policy-updates,Policy updates,recent policy changes,high
+GET,/api/public/policy-claims,Policy claims,atomic source-backed claims,high
+GET,/api/public/calculator-verdict-contexts,Calculator contexts,interpret calculator results,high
+GET,/api/public/search-index,Search index,discover relevant Visa Atlas pages,medium
+GET,/api/public/freshness,Freshness report,currentness/SLA,high
+GET,/api/public/processing-reliability,Processing reliability,planning transparency,medium
+GET,/api/public/skilled-migration-accessibility,Skilled migration accessibility,cross-route planning friction,medium
+GET,/api/public/country-comparisons,Country comparisons,cross-country tradeoffs,high
+GET,/api/public/fees,Visa fees,government fee lines,high
+GET,/api/public/cost-to-complete,Cost to complete,sunk cost + proof-of-funds separation,high
+GET,/api/public/salary-thresholds,Salary thresholds,route salary/income floors,high
+GET,/api/public/processing-times,Processing times,official/qualified time bands,high
+GET,/api/public/express-entry-draws,Express Entry draws,Canada CRS draw history,conditional
+GET,/api/public/express-entry-categories,Express Entry categories,Canada category selection,conditional
+GET,/api/public/fact-changes,Fact changes,fee/salary/processing diffs,high
+GET,/api/public/monthly-figure-changes,Monthly figure changes,change archive,medium
+GET,/api/public/citation-packs,Citation packs,compact sourced answer packets,high
+GET,/api/public/answer-capsules,Answer capsules,verified short-answer layer,high
+GET,/api/public/route-finder,Route finder contract,methodology/request schema,medium
+POST,/api/public/route-finder,Find routes,deterministic profile-to-route shortlist,high
+GET,/api/public/widgets,Widgets catalog,not needed for core assessment,low

@@ -1,0 +1,738 @@
+{
+  "schema_version": "1.0",
+  "country": "United Kingdom",
+  "country_code": "GBR",
+  "generated_at": "2026-09-10",
+  "applicant_context": {
+    "origin_country": "Iran",
+    "nationality": "Iranian",
+    "scope": "Practical immigration friction for applicants connected to Iran"
+  },
+  "source_dataset": {
+    "name": "بریتانیا با پرگار",
+    "file": "result (2).json",
+    "coverage_start": "2025-03-09",
+    "coverage_end": "2026-09-09",
+    "role": "community_raw_archive"
+  },
+  "usage_rules": {
+    "community_is_not_legal_authority": true,
+    "downside_only": true,
+    "may_increase_score": false,
+    "may_change_official_eligibility": false,
+    "single_anecdote_penalty": 0,
+    "max_total_community_adjustment_per_route": -20,
+    "correlation_guardrail": "Do not stack penalties that arise from the same underlying delay or disruption. Apply the strongest justified adjustment for the same root cause.",
+    "resolution_guardrail": "Resolved or historical signals have zero current score impact.",
+    "institution_claim_guardrail": "Do not penalize a named university from a community list alone. Verify current institution-level evidence or find multiple independent recent reports first."
+  },
+  "current_operational_context": {
+    "uk_vac_tehran": {
+      "status": "open",
+      "last_verified": "2026-09-10",
+      "opening_hours": "Sunday–Thursday, 08:00–13:00",
+      "official_source": "https://visa.vfsglobal.com/irn/en/gbr/attend-centre",
+      "note": "The UK Visa Application Centre in Tehran is currently listed by VFS as open."
+    },
+    "british_embassy_tehran": {
+      "status": "operating_page_current; visa_service_not_at_embassy",
+      "last_verified": "2026-09-10",
+      "official_source": "https://www.gov.uk/world/iran/news",
+      "note": "UK visa services are not provided at the British Embassy. GOV.UK directs applicants to the UK Visa Application Centre in Tehran, which is described as open to all visa categories."
+    },
+    "visa_brake_guardrail": {
+      "iranian_nationals_currently_listed": false,
+      "last_verified": "2026-09-10",
+      "official_source": "https://www.gov.uk/guidance/visa-brake-changes-to-the-uk-visa-system",
+      "note": "The current visa-brake list covers other named nationalities, not Iranian nationals. Community discussion must not be used to imply that Iran is formally covered."
+    },
+    "student_visa_official_processing_baseline": {
+      "outside_uk": "3 weeks",
+      "last_verified": "2026-09-10",
+      "official_source": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk"
+    },
+    "digital_status": {
+      "status": "eVisa-based digital immigration system",
+      "last_verified": "2026-09-10",
+      "official_source": "https://www.gov.uk/study-uk-student-visa",
+      "note": "Successful Student visa applicants are directed to access an eVisa through a UKVI account."
+    }
+  },
+  "summary": {
+    "active": 5,
+    "monitoring": 1,
+    "uncertain": 0,
+    "resolved": 1,
+    "historical": 0,
+    "highest_active_severity": "high",
+    "default_country_level_adjustment": 0,
+    "note": "Most active signals are conditional. Apply them only when the user's route/profile actually depends on the affected process."
+  },
+  "signals": [
+    {
+      "signal_id": "GBR-IRN-REGIONAL-OPERATIONS-2026",
+      "title": "Iran travel and communications volatility can disrupt time-sensitive UK immigration steps",
+      "signal_type": "regional_operational_disruption",
+      "status": "active",
+      "severity": "high",
+      "confidence": "high",
+      "destination_country": "United Kingdom",
+      "origin_country": "Iran",
+      "nationality_specific": false,
+      "affected_routes": [
+        "all_routes"
+      ],
+      "affected_applicant_types": [
+        "applicants_physically_in_iran"
+      ],
+      "affected_process": [
+        "travel_to_vac_or_departure",
+        "online_interviews",
+        "document_verification",
+        "communications"
+      ],
+      "summary_en": "Official UK travel advice reports ongoing communications disruption in Iran and warns that ports and borders can close at short notice. Recent community reports also describe material flight delays and internet-related friction.",
+      "summary_fa": "اختلال ارتباطات و بی‌ثباتی سفر در ایران می‌تواند مراحل زمان‌حساس مهاجرت به بریتانیا را مختل کند. منابع رسمی از محدودیت اینترنت و احتمال تغییر ناگهانی وضعیت مرزها خبر می‌دهند و در کامیونیتی نیز تجربه تأخیر جدی پرواز گزارش شده است.",
+      "practical_impact": "Can cause missed connections, interviews, deadlines, or extra buffer/cost requirements.",
+      "operational_consequence": "Do not assume a tight travel or interview schedule is operationally safe from Iran.",
+      "recommended_action": "Add time buffer around travel and live interviews; keep backup connectivity and flexible travel plans where possible.",
+      "known_workaround": "Use larger connection buffers and alternative communication/travel plans when deadlines are close.",
+      "first_seen": "2026-06-01",
+      "last_seen": "2026-09-09",
+      "last_verified": "2026-09-10",
+      "recency_days": 0,
+      "evidence_count": 4,
+      "independent_report_count": 2,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": -5,
+        "apply_when": "The applicant has an imminent travel, biometric, interview, university or arrival deadline that depends on stable transport or connectivity from Iran."
+      },
+      "reason_for_adjustment": "The risk is operational and conditional rather than a UK eligibility restriction.",
+      "keywords": [
+        "Iran",
+        "flight delay",
+        "internet",
+        "communications",
+        "border",
+        "airspace",
+        "deadline"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-10",
+          "source_type": "official_government",
+          "source_name": "GOV.UK Iran travel advice",
+          "source_url": "https://www.gov.uk/foreign-travel-advice/iran",
+          "source_id": "official-govuk-iran-travel-advice",
+          "evidence_summary": "Current guidance notes ongoing communications disruption and warns that travel routes and borders may change or close at short notice.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        },
+        {
+          "date": "2026-09-07",
+          "source_type": "personal_experience",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1610091",
+          "evidence_summary": "A recent applicant reported a 16-hour flight delay and described short connections as risky in current conditions.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-09-17"
+    },
+    {
+      "signal_id": "GBR-STUDENT-PROCESSING-VARIABILITY-2026-SUMMER",
+      "title": "Student visa timelines show material real-world variability beyond the 3-week baseline",
+      "signal_type": "processing_delay",
+      "status": "active",
+      "severity": "moderate",
+      "confidence": "high",
+      "destination_country": "United Kingdom",
+      "origin_country": "Iran",
+      "nationality_specific": false,
+      "affected_routes": [
+        "student"
+      ],
+      "affected_applicant_types": [
+        "student_applicants"
+      ],
+      "affected_process": [
+        "visa_processing",
+        "interview",
+        "mandatory_checks"
+      ],
+      "summary_en": "The official outside-UK Student visa baseline is 3 weeks, but multiple recent direct community reports show cases around 6–10 weeks when interviews, additional documents or mandatory checks occur. Other recent cases still completed near the baseline.",
+      "summary_fa": "زمان رسمی معمول ویزای Student خارج از بریتانیا ۳ هفته است، اما چند تجربه مستقیم جدید نشان می‌دهد بعضی پرونده‌ها در صورت مصاحبه، درخواست مدرک اضافه یا mandatory checks حدود ۶ تا ۱۰ هفته طول کشیده‌اند. در مقابل، پرونده‌های دیگری نیز نزدیک بازه عادی نهایی شده‌اند.",
+      "practical_impact": "A student with a close course-start deadline can face deferral or costly last-minute travel decisions even when formally eligible.",
+      "operational_consequence": "The 3-week published time should not be treated as a guaranteed delivery date.",
+      "recommended_action": "Apply with meaningful buffer before the course start date and treat interview/check requests as potential timeline extensions.",
+      "known_workaround": "Where eligible and available, consider priority service; otherwise preserve course-start/defer flexibility.",
+      "first_seen": "2026-06-09",
+      "last_seen": "2026-09-09",
+      "last_verified": "2026-09-10",
+      "recency_days": 1,
+      "evidence_count": 8,
+      "independent_report_count": 8,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "suggested_fit_adjustment": -5,
+      "conditional_adjustment": {
+        "adjustment": -10,
+        "apply_when": "The applicant has a tight course-start deadline, already has a NOT/interview/check delay, or lacks a deferral buffer."
+      },
+      "reason_for_adjustment": "Repeated recent direct reports show a meaningful tail of processing times substantially longer than the published 3-week baseline.",
+      "keywords": [
+        "Student visa",
+        "processing",
+        "interview",
+        "mandatory checks",
+        "NOT",
+        "delay"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-10",
+          "source_type": "official_government",
+          "source_name": "GOV.UK visa processing times",
+          "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
+          "source_id": "official-govuk-processing",
+          "evidence_summary": "Student visas outside the UK are listed at 3 weeks; GOV.UK also states cases can take longer for document verification, interviews, further information, demand or technical outages.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        },
+        {
+          "date": "2026-09-02",
+          "source_type": "personal_experience",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1609224",
+          "evidence_summary": "A fully funded PhD applicant reported 72 days from Tehran biometrics to visa, with UKVI indicating mandatory checks.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        },
+        {
+          "date": "2026-09-03",
+          "source_type": "personal_experience",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1609471",
+          "evidence_summary": "A Student visa report described biometrics on 26 June, interview on 29 July and approval on 3 September.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        },
+        {
+          "date": "2026-08-06",
+          "source_type": "personal_experience",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1603725",
+          "evidence_summary": "A PhD Student visa applicant using VFS Tehran reported biometrics on 12 July and approval on 5 August without interview, showing that near-baseline outcomes still occur.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "contradicts"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-10-01"
+    },
+    {
+      "signal_id": "GBR-STUDENT-FLYWIRE-IRAN-PAYMENT-2026",
+      "title": "Flywire sanctions screening can block tuition/deposit payments connected to Iran",
+      "signal_type": "payment_restriction",
+      "status": "active",
+      "severity": "high",
+      "confidence": "high",
+      "destination_country": "United Kingdom",
+      "origin_country": "Iran",
+      "nationality_specific": false,
+      "affected_routes": [
+        "student"
+      ],
+      "affected_applicant_types": [
+        "students_using_flywire"
+      ],
+      "affected_process": [
+        "deposit_payment",
+        "tuition_payment",
+        "application_fee_payment"
+      ],
+      "summary_en": "Flywire states it is generally prohibited from facilitating transactions connected to comprehensively sanctioned jurisdictions including Iran. Recent UK-community reports include rejected or held payments even where payment was initiated outside Iran.",
+      "summary_fa": "محدودیت‌های تحریمی Flywire می‌تواند پرداخت دیپازیت یا شهریه مرتبط با ایران را متوقف یا رد کند. در تجربه‌های جدید کامیونیتی بریتانیا، حتی برخی پرداخت‌های انجام‌شده از خارج ایران نیز رد یا hold شده‌اند.",
+      "practical_impact": "Can prevent deposit/tuition deadlines from being met and may delay CAS issuance where the university offers no alternative channel.",
+      "operational_consequence": "A route can be practically blocked at the university-payment stage despite no UK visa eligibility issue.",
+      "recommended_action": "Before relying on Flywire, ask the institution in writing for permitted alternative payment methods and allow time for sanctions screening.",
+      "known_workaround": "Institution-provided direct/local payment alternatives may work when explicitly permitted; do not assume a third-country payer bypasses sanctions screening.",
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-09-07",
+      "last_verified": "2026-09-10",
+      "recency_days": 3,
+      "evidence_count": 6,
+      "independent_report_count": 4,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": -5,
+        "apply_when": "The chosen institution requires Flywire for a material payment and an alternative route is not yet confirmed.",
+        "severe_adjustment": -10,
+        "apply_severe_when": "A payment has already been rejected/held and the institution confirms it will not provide an alternative before a hard deadline."
+      },
+      "reason_for_adjustment": "This is institution/payment-path dependent, so it should not penalize every UK Student route.",
+      "keywords": [
+        "Flywire",
+        "OFAC",
+        "Iran",
+        "tuition",
+        "deposit",
+        "payment",
+        "sanctions"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-10",
+          "source_type": "official_provider",
+          "source_name": "Flywire sanctions screening guidance",
+          "source_url": "https://assets.flywire.com/documents/Flywire_SanctionsScreeningFAQ.pdf",
+          "source_id": "official-flywire-sanctions-faq",
+          "evidence_summary": "Flywire states that Iran is subject to comprehensive sanctions and it is generally prohibited from facilitating transactions with a connection to such jurisdictions.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        },
+        {
+          "date": "2026-09-07",
+          "source_type": "personal_experience",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1610068",
+          "evidence_summary": "A student reported that a tuition payment initiated outside Iran was rejected after roughly ten days and the university had not offered an alternative.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        },
+        {
+          "date": "2026-08-20",
+          "source_type": "personal_experience",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1606737",
+          "evidence_summary": "A user shared a Flywire message stating that an Iran-linked payment could not be processed because of OFAC comprehensive sanctions.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-10-10"
+    },
+    {
+      "signal_id": "GBR-IRN-TOEFL-GRE-ACCESS-2026-09",
+      "title": "TOEFL and GRE testing inside Iran is currently suspended",
+      "signal_type": "language_test_access",
+      "status": "active",
+      "severity": "high",
+      "confidence": "high",
+      "destination_country": "United Kingdom",
+      "origin_country": "Iran",
+      "nationality_specific": false,
+      "affected_routes": [
+        "student",
+        "research"
+      ],
+      "affected_applicant_types": [
+        "applicants_relying_on_TOEFL_or_GRE_from_inside_Iran"
+      ],
+      "affected_process": [
+        "admission",
+        "language_evidence",
+        "graduate_testing",
+        "score_reporting"
+      ],
+      "summary_en": "ETS says TOEFL and GRE testing services within Iran are suspended following an OFAC regulatory change. Iranian nationals may test outside Iran. ETS also states that after 8 September 2026 it cannot process new additional score-report requests for test takers located in Iran at this time.",
+      "summary_fa": "ETS اعلام کرده برگزاری TOEFL و GRE در داخل ایران به‌دلیل تغییر مقررات OFAC متوقف شده است. ایرانی‌ها می‌توانند خارج از ایران آزمون بدهند. همچنین برای متقاضیان حاضر در ایران محدودیت جدیدی در سفارش گزارش‌های اضافه نمره پس از ۸ سپتامبر ۲۰۲۶ اعلام شده است.",
+      "practical_impact": "May force travel abroad or require an alternative test accepted by the target university/route.",
+      "operational_consequence": "Can delay admission, CAS preparation, or application timelines for users who still need these tests/scores.",
+      "recommended_action": "Check whether the university accepts another available test; otherwise plan testing outside Iran and verify score-reporting rules before deadlines.",
+      "known_workaround": "ETS explicitly allows Iranian nationals to take TOEFL/GRE outside Iran, subject to local availability and registration rules.",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-09-08",
+      "last_verified": "2026-09-10",
+      "recency_days": 0,
+      "evidence_count": 4,
+      "independent_report_count": 2,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": -5,
+        "apply_when": "The applicant is in Iran and still needs a TOEFL/GRE test or new ETS score reporting to meet a near-term university requirement."
+      },
+      "reason_for_adjustment": "The restriction matters only when the applicant's institution/process depends on ETS testing or score delivery.",
+      "keywords": [
+        "TOEFL",
+        "GRE",
+        "ETS",
+        "Iran",
+        "OFAC",
+        "test cancellation",
+        "score report"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-10",
+          "source_type": "official_test_provider",
+          "source_name": "ETS Update on Testing in Iran",
+          "source_url": "https://www.ets.org/iran-testing-update.html",
+          "source_id": "official-ets-iran-testing",
+          "evidence_summary": "ETS confirms testing in Iran is stopped, future appointments in Iran are cancelled, testing outside Iran remains possible, and new additional score-report requests from Iran are restricted after 8 September 2026.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        },
+        {
+          "date": "2026-09-05",
+          "source_type": "community_member",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1609747",
+          "evidence_summary": "Community discussion flagged the 8 September ETS score-report deadline and asked how applicants still choosing universities should proceed.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "supports"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-09-24"
+    },
+    {
+      "signal_id": "GBR-ATAS-TIMELINE-RISK-2026",
+      "title": "ATAS can become a material timeline bottleneck for affected study/research routes",
+      "signal_type": "document_processing_delay",
+      "status": "active",
+      "severity": "moderate",
+      "confidence": "high",
+      "destination_country": "United Kingdom",
+      "origin_country": "Iran",
+      "nationality_specific": false,
+      "affected_routes": [
+        "student",
+        "research"
+      ],
+      "affected_applicant_types": [
+        "applicants_whose_course_or_research_requires_ATAS"
+      ],
+      "affected_process": [
+        "ATAS",
+        "CAS_timeline",
+        "visa_readiness"
+      ],
+      "summary_en": "GOV.UK states ATAS takes at least 30 working days (6 weeks), may take longer, and has no fast track. Recent community reports include waits of roughly 83, 100 and 103 days.",
+      "summary_fa": "طبق GOV.UK، بررسی ATAS حداقل ۳۰ روز کاری (حدود ۶ هفته) زمان می‌برد، ممکن است بیشتر طول بکشد و fast track ندارد. در کامیونیتی نیز نمونه‌هایی با حدود ۸۳، ۱۰۰ و ۱۰۳ روز انتظار گزارش شده است.",
+      "practical_impact": "ATAS can delay CAS and leave insufficient time for the visa process before course/research start.",
+      "operational_consequence": "A strong UK route may become timeline-risky if ATAS is required and the start date is close.",
+      "recommended_action": "Apply for ATAS as early as permitted and budget more than the minimum published timeline.",
+      "known_workaround": "No official fast-track service exists; preserve deferral flexibility where possible.",
+      "first_seen": "2026-06-01",
+      "last_seen": "2026-09-09",
+      "last_verified": "2026-09-10",
+      "recency_days": 1,
+      "evidence_count": 5,
+      "independent_report_count": 4,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": -5,
+        "apply_when": "ATAS is required and the available time before CAS/visa/course start is tight."
+      },
+      "reason_for_adjustment": "ATAS does not affect applicants whose route/course does not require it.",
+      "keywords": [
+        "ATAS",
+        "CAS",
+        "30 working days",
+        "6 weeks",
+        "delay",
+        "research"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-10",
+          "source_type": "official_government",
+          "source_name": "GOV.UK Academic Technology Approval Scheme",
+          "source_url": "https://www.gov.uk/guidance/academic-technology-approval-scheme",
+          "source_id": "official-govuk-atas",
+          "evidence_summary": "ATAS takes at least 30 working days, some complex cases take longer, and no fast-track service exists.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        },
+        {
+          "date": "2026-08-17",
+          "source_type": "personal_experience",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1605940",
+          "evidence_summary": "One applicant reported still waiting after 100 days.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        },
+        {
+          "date": "2026-08-17",
+          "source_type": "personal_experience",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1605941",
+          "evidence_summary": "Another applicant reported a 103-day ATAS timeline.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        },
+        {
+          "date": "2026-07-07",
+          "source_type": "personal_experience",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1598087",
+          "evidence_summary": "A separate applicant reported ATAS issuance after 83 days.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-10-10"
+    },
+    {
+      "signal_id": "GBR-UNI-CAS-IRAN-COMMUNITY-WATCH-2026",
+      "title": "Community reports of institution-level offer/CAS/payment friction for Iranian students",
+      "signal_type": "university_reluctance",
+      "status": "monitoring",
+      "severity": "high",
+      "confidence": "low",
+      "destination_country": "United Kingdom",
+      "origin_country": "Iran",
+      "nationality_specific": true,
+      "affected_routes": [
+        "student"
+      ],
+      "affected_applicant_types": [
+        "prospective_students"
+      ],
+      "affected_process": [
+        "admission",
+        "deposit",
+        "pre_CAS",
+        "CAS_issuance",
+        "refund"
+      ],
+      "summary_en": "The community maintains a recurring institution watchlist alleging offer withdrawals, CAS refusal/delay, full-tuition-before-CAS requirements and refund problems affecting some Iranian applicants. Recent community discussion also provides contradictory examples, including Iranian PhD students successfully entering institutions appearing on such lists.",
+      "summary_fa": "در کامیونیتی فهرست‌هایی از تجربه‌های منفی در بعضی دانشگاه‌ها منتشر می‌شود؛ از پس‌گرفتن آفر و عدم صدور CAS تا الزام پرداخت بیشتر یا مشکل ریفاند. با این حال شواهد متناقض هم وجود دارد و حتی برای بعضی دانشگاه‌های همان فهرست، نمونه موفق دانشجوی ایرانی گزارش شده است.",
+      "practical_impact": "May indicate institution-specific risk worth checking before paying a non-refundable deposit.",
+      "operational_consequence": "This is not evidence that UK universities generally reject Iranian students and must not create a country-level penalty.",
+      "recommended_action": "When a user names a specific university, search recent community evidence for that institution and verify the university's current written policy before using the signal.",
+      "known_workaround": "Request written confirmation of Iranian-applicant acceptance, CAS conditions, deposit/refund terms and payment routes before committing funds.",
+      "first_seen": "2026-04-01",
+      "last_seen": "2026-09-09",
+      "last_verified": "2026-09-10",
+      "recency_days": 1,
+      "evidence_count": 2,
+      "independent_report_count": 2,
+      "officially_confirmed": false,
+      "community_confirmed": false,
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": -5,
+        "apply_when": "Only after the same named institution has multiple independent recent reports or current written institution-level confirmation of the specific friction.",
+        "country_level_penalty_allowed": false
+      },
+      "reason_for_adjustment": "Current evidence is aggregated community reporting with contradictions; it is insufficient for a blanket UK or university penalty.",
+      "keywords": [
+        "CAS",
+        "offer withdrawal",
+        "deposit",
+        "refund",
+        "Iranian students",
+        "university policy"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-08",
+          "source_type": "community_compilation",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1610238",
+          "evidence_summary": "A community-maintained watchlist compiles alleged institution-level problems involving offers, CAS, deposits and refunds.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "supports"
+        },
+        {
+          "date": "2026-09-09",
+          "source_type": "community_member",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1610356",
+          "evidence_summary": "A community member cautioned that the list may not generalize to PhD applicants and noted successful recent Iranian PhD entry at institutions appearing on it.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "contradicts"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-09-24"
+    },
+    {
+      "signal_id": "GBR-VAC-TEHRAN-CLOSURE-2026-02",
+      "title": "UK Visa Application Centre Tehran temporary closure",
+      "signal_type": "visa_application_centre_status",
+      "status": "resolved",
+      "severity": "critical",
+      "confidence": "high",
+      "destination_country": "United Kingdom",
+      "origin_country": "Iran",
+      "nationality_specific": false,
+      "affected_routes": [
+        "all_routes"
+      ],
+      "affected_applicant_types": [
+        "applicants_using_tehran_vac"
+      ],
+      "affected_process": [
+        "biometrics",
+        "appointment",
+        "visa_application_centre_access"
+      ],
+      "summary_en": "VFS officially announced a temporary Tehran VAC closure from 28 February 2026. VFS later announced reopening and the current VFS centre page lists Tehran as open.",
+      "summary_fa": "VFS در ۲۸ فوریه ۲۰۲۶ تعطیلی موقت مرکز درخواست ویزای بریتانیا در تهران را اعلام کرد. این وضعیت بعداً رفع شد و صفحه فعلی VFS تهران را باز نشان می‌دهد.",
+      "practical_impact": "Historical disruption only; it should not lower a current UK route score.",
+      "operational_consequence": "Do not repeat the old closure as a current Iran blocker.",
+      "recommended_action": "Use the current VFS centre page for live operational status.",
+      "known_workaround": null,
+      "first_seen": "2026-02-28",
+      "last_seen": "2026-06-28",
+      "last_verified": "2026-09-10",
+      "recency_days": 0,
+      "evidence_count": 5,
+      "independent_report_count": 3,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "suggested_fit_adjustment": 0,
+      "reason_for_adjustment": "Resolved event.",
+      "keywords": [
+        "VFS Tehran",
+        "VAC",
+        "closure",
+        "reopening",
+        "biometrics"
+      ],
+      "evidence": [
+        {
+          "date": "2026-02-28",
+          "source_type": "official_vac",
+          "source_name": "VFS Global",
+          "source_url": "https://visa.vfsglobal.com/irn/fa/gbr/news/temporary-closure-of-the-uk-visa-application-centre-in-tehran",
+          "source_id": "official-vfs-closure",
+          "evidence_summary": "VFS announced the Tehran UK Visa Application Centre was temporarily closed until further notice.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports"
+        },
+        {
+          "date": "2026-06-03",
+          "source_type": "community_repost_of_official_notice",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1592120",
+          "evidence_summary": "The community circulated the VFS reopening notice stating that new applications would resume from 28 June 2026 at the new Tehran location.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "resolves"
+        },
+        {
+          "date": "2026-06-18",
+          "source_type": "community_member",
+          "source_name": "UK community dataset",
+          "source_url": null,
+          "source_id": "community-message-1594791",
+          "evidence_summary": "A user reported Tehran VFS appointment availability, with the first available appointment shown as 30 June.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves"
+        },
+        {
+          "date": "2026-09-10",
+          "source_type": "official_vac",
+          "source_name": "VFS Global - Attend a centre",
+          "source_url": "https://visa.vfsglobal.com/irn/en/gbr/attend-centre",
+          "source_id": "official-vfs-current-centre",
+          "evidence_summary": "The current VFS page lists Tehran with Sunday–Thursday opening hours of 08:00–13:00.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves"
+        }
+      ],
+      "resolution": {
+        "resolved": true,
+        "resolved_date": "2026-06-28",
+        "resolution_summary": "The Tehran UK Visa Application Centre reopened; current official VFS data confirms it is operating.",
+        "resolution_source": "https://visa.vfsglobal.com/irn/en/gbr/attend-centre"
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-09-17"
+    }
+  ],
+  "scoring_application": {
+    "order": [
+      "Calculate official/structured Base Fit first.",
+      "Check whether each active/monitoring signal actually applies to the user's route and current circumstances.",
+      "Ignore resolved/historical signals for current scoring.",
+      "Apply downside-only adjustments.",
+      "Do not double-count correlated frictions.",
+      "Cap total Community Friction Adjustment at -20.",
+      "Show a prominent Iran Operational Alert when a high/critical active signal materially affects execution."
+    ],
+    "example": {
+      "base_fit": 82,
+      "applicable_signals": [
+        {
+          "signal_id": "GBR-STUDENT-PROCESSING-VARIABILITY-2026-SUMMER",
+          "adjustment": -5
+        },
+        {
+          "signal_id": "GBR-STUDENT-FLYWIRE-IRAN-PAYMENT-2026",
+          "adjustment": 0,
+          "reason": "Do not apply unless this applicant's institution/payment path actually relies on Flywire."
+        }
+      ],
+      "community_friction_adjustment": -5,
+      "practical_fit": 77
+    }
+  },
+  "source_priority_note": "Where community and official evidence conflict, use the newest authoritative official evidence for current operational status. Community evidence remains useful for practical friction and tail-risk, not legal eligibility."
+}

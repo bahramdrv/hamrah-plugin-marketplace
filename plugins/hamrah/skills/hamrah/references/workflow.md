@@ -20,7 +20,7 @@ Read all supplied case material before asking. Use Hamrah Profile Normalizer aft
 
 ### 3. Screen current routes
 
-Use live Visa Atlas data and linked primary sources. Shortlist 3–5 plausible country/route combinations plus any route explicitly requested. Compare every mandatory condition with an explicit fact, unknown, or achievable dependency. Completion: every candidate has traceable sources and PASS, POSSIBLE, FAIL, or UNKNOWN.
+Use the bundled Visa Atlas MCP tools and linked primary sources. Start with `getVisaAtlasCatalog` when dataset availability is uncertain, and use only the smallest relevant operation. Use `findMatchingVisaRoutes` only after the consent gate in `api_access.md`. Shortlist 3–5 plausible country/route combinations plus any route explicitly requested. Compare every mandatory condition with an explicit fact, unknown, or achievable dependency. Completion: every candidate has traceable sources and PASS, POSSIBLE, FAIL, or UNKNOWN.
 
 ### 4. Apply community context
 

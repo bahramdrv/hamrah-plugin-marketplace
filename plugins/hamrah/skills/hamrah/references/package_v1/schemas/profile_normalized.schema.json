@@ -1,0 +1,423 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/profile_normalized.schema.json",
+  "title": "Hamrah Normalized Applicant Profile",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "case_id",
+    "assessment_status",
+    "identity_context",
+    "goals",
+    "education",
+    "career",
+    "language",
+    "finances",
+    "route_assets",
+    "preferences",
+    "consent",
+    "data_quality"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "assessment_status": {
+      "enum": [
+        "PROVISIONAL",
+        "FINAL_READY"
+      ]
+    },
+    "identity_context": {
+      "type": "object",
+      "properties": {
+        "age": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 16,
+          "maximum": 100
+        },
+        "age_band": {
+          "enum": [
+            "under-30",
+            "30-44",
+            "45-plus",
+            null
+          ]
+        },
+        "nationalities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "residence_country": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "marital_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "dependants": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        }
+      },
+      "additionalProperties": false
+    },
+    "goals": {
+      "type": "object",
+      "properties": {
+        "primary_intent": {
+          "enum": [
+            "work",
+            "study",
+            "research",
+            "family",
+            "remote-work",
+            "invest",
+            "citizenship",
+            "other",
+            null
+          ]
+        },
+        "preferred_countries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "avoid_countries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "timeline_months": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "settlement_priority": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            null
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "type": "string"
+          },
+          "field": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "institution": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "country": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "graduation_year": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "gpa_value": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "gpa_scale": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "thesis": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "level"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "career": {
+      "type": "object",
+      "properties": {
+        "current_role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "occupation_family": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "years_relevant_experience": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "salary_band": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "language": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string"
+          },
+          "test": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "overall": {
+            "type": [
+              "number",
+              "string",
+              "null"
+            ]
+          },
+          "components": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "cefr": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "language"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "finances": {
+      "type": "object",
+      "properties": {
+        "available_liquid_funds": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "monthly_living_budget": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "funding_needed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "scholarship_priority": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            null
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "route_assets": {
+      "type": "object",
+      "properties": {
+        "job_offer": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "sponsor_available": {
+          "enum": [
+            "yes",
+            "no",
+            "unsure",
+            null
+          ]
+        },
+        "admission_offer": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "nomination": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "publications": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "research_profile": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "preferences": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "public_profile": {
+      "type": "object",
+      "properties": {
+        "consented": {
+          "type": "boolean"
+        },
+        "urls": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "derived_facts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "consent": {
+      "type": "object",
+      "required": [
+        "route_finder_post",
+        "public_profile_search",
+        "university_search",
+        "calculator",
+        "deep_dive"
+      ],
+      "properties": {
+        "route_finder_post": {
+          "type": "boolean"
+        },
+        "public_profile_search": {
+          "type": "boolean"
+        },
+        "university_search": {
+          "type": "boolean"
+        },
+        "calculator": {
+          "type": "boolean"
+        },
+        "deep_dive": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "data_quality": {
+      "type": "object",
+      "properties": {
+        "missing_critical_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

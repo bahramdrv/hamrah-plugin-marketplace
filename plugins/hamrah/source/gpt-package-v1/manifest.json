@@ -1,0 +1,131 @@
+{
+  "package": "hamrah_main_gpt_package",
+  "version": "1.0",
+  "generated_at": "2026-09-13",
+  "files": [
+    {
+      "path": "01B_INSTRUCTIONS_COMPACT_FA.md",
+      "bytes": 3265
+    },
+    {
+      "path": "01_INSTRUCTIONS_HAMRAH_MAIN_GPT_FA.md",
+      "bytes": 9062
+    },
+    {
+      "path": "API_INVENTORY.csv",
+      "bytes": 2036
+    },
+    {
+      "path": "API_INVENTORY.json",
+      "bytes": 4184
+    },
+    {
+      "path": "ARCHITECTURE_NOTES_FA.md",
+      "bytes": 635
+    },
+    {
+      "path": "CONVERSATION_STARTERS_FA.txt",
+      "bytes": 667
+    },
+    {
+      "path": "GPT_SETUP_CHECKLIST_FA.md",
+      "bytes": 1361
+    },
+    {
+      "path": "QA_TEST_CASES_FA.md",
+      "bytes": 1651
+    },
+    {
+      "path": "README_FA.md",
+      "bytes": 5214
+    },
+    {
+      "path": "actions/OFFICIAL_OPENAPI_URL.txt",
+      "bytes": 244
+    },
+    {
+      "path": "actions/visaatlas_core_openapi.yaml",
+      "bytes": 8311
+    },
+    {
+      "path": "examples/example_profile_normalized.json",
+      "bytes": 2071
+    },
+    {
+      "path": "knowledge/02_VISA_ATLAS_ROUTING_REFERENCE.md",
+      "bytes": 4989
+    },
+    {
+      "path": "knowledge/03_FACILITATOR_INTERVIEW_PLAYBOOK_FA.md",
+      "bytes": 3039
+    },
+    {
+      "path": "knowledge/04_SCORECARD_METHODOLOGY_FA.md",
+      "bytes": 2996
+    },
+    {
+      "path": "knowledge/05_COMMUNITY_SIGNAL_POLICY_FA.md",
+      "bytes": 2453
+    },
+    {
+      "path": "knowledge/06_WEB_AND_UNIVERSITY_SEARCH_POLICY_FA.md",
+      "bytes": 1916
+    },
+    {
+      "path": "knowledge/07_REPORT_CARD_SPEC_FA.md",
+      "bytes": 1962
+    },
+    {
+      "path": "knowledge/08_COST_OF_LIVING_METHOD_FA.md",
+      "bytes": 1448
+    },
+    {
+      "path": "knowledge/HAMRAH_KNOWLEDGE_COMBINED_FA.md",
+      "bytes": 18896
+    },
+    {
+      "path": "knowledge/community_signals/GBR.json",
+      "bytes": 36231
+    },
+    {
+      "path": "knowledge/community_signals/README_FA.md",
+      "bytes": 627
+    },
+    {
+      "path": "knowledge/community_signals/index.json",
+      "bytes": 503
+    },
+    {
+      "path": "schemas/community_signals_country.schema.json",
+      "bytes": 5205
+    },
+    {
+      "path": "schemas/final_bundle.schema.json",
+      "bytes": 985
+    },
+    {
+      "path": "schemas/profile_normalized.schema.json",
+      "bytes": 8472
+    },
+    {
+      "path": "schemas/route_assessment.schema.json",
+      "bytes": 5754
+    },
+    {
+      "path": "schemas/scorecard.schema.json",
+      "bytes": 2909
+    },
+    {
+      "path": "templates/final_output.template.json",
+      "bytes": 667
+    },
+    {
+      "path": "templates/report_card_image_prompt_fa.md",
+      "bytes": 2229
+    },
+    {
+      "path": "tools/community_signal_extractor_master_prompt.md",
+      "bytes": 17139
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hamrah Final Assessment Bundle",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "profile_normalized",
+    "route_assessments",
+    "scorecard",
+    "report_card",
+    "image_prompt"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "profile_normalized": {
+      "$ref": "profile_normalized.schema.json"
+    },
+    "route_assessments": {
+      "type": "array",
+      "items": {
+        "$ref": "route_assessment.schema.json"
+      }
+    },
+    "scorecard": {
+      "$ref": "scorecard.schema.json"
+    },
+    "report_card": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "image_prompt": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "generated_at": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

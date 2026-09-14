@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-13",
+  "description": "Runtime index for processed country Community Signal files. Only list countries with a processed/validated signal file.",
+  "countries": [
+    {
+      "country": "United Kingdom",
+      "country_code": "GBR",
+      "file": "GBR.json",
+      "generated_at": "2026-09-10",
+      "highest_active_severity": "high",
+      "active": 5,
+      "monitoring": 1,
+      "note": "Processed Community Signal file available."
+    }
+  ]
+}

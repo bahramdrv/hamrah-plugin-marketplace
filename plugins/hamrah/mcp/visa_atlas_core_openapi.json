@@ -1,0 +1,904 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Visa Atlas Core for Hamrah Main GPT",
+    "version": "1.3.0",
+    "description": "ChatGPT Actions-compatible curated Visa Atlas immigration API using OpenAPI 3.1.0 and explicit response schemas."
+  },
+  "servers": [
+    {
+      "url": "https://visaatlas.org"
+    }
+  ],
+  "paths": {
+    "/api/public": {
+      "get": {
+        "operationId": "getVisaAtlasCatalog",
+        "summary": "Get Visa Atlas public dataset catalog",
+        "responses": {
+          "200": {
+            "description": "Public dataset catalog",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicDatasetCatalog"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/visas": {
+      "get": {
+        "operationId": "getVisaRoutes",
+        "summary": "Get visa and residence routes",
+        "responses": {
+          "200": {
+            "description": "Visa routes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/destinations": {
+      "get": {
+        "operationId": "getDestinations",
+        "summary": "Get destination countries and official immigration portals",
+        "responses": {
+          "200": {
+            "description": "Destinations",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/policy-updates": {
+      "get": {
+        "operationId": "getPolicyUpdates",
+        "summary": "Get dated immigration policy updates",
+        "responses": {
+          "200": {
+            "description": "Policy updates",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/policy-claims": {
+      "get": {
+        "operationId": "getPolicyClaims",
+        "summary": "Get atomic source-backed policy claims",
+        "responses": {
+          "200": {
+            "description": "Policy claims",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/calculator-verdict-contexts": {
+      "get": {
+        "operationId": "getCalculatorVerdictContexts",
+        "summary": "Get dated context for calculator verdicts",
+        "responses": {
+          "200": {
+            "description": "Calculator contexts",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/search-index": {
+      "get": {
+        "operationId": "getVisaAtlasSearchIndex",
+        "summary": "Get Visa Atlas public site search index",
+        "responses": {
+          "200": {
+            "description": "Search index",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/freshness": {
+      "get": {
+        "operationId": "getSourceFreshness",
+        "summary": "Get source freshness and review SLA report",
+        "responses": {
+          "200": {
+            "description": "Freshness report",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericObjectResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/processing-reliability": {
+      "get": {
+        "operationId": "getProcessingReliability",
+        "summary": "Get processing-time planning reliability index",
+        "responses": {
+          "200": {
+            "description": "Processing reliability",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/skilled-migration-accessibility": {
+      "get": {
+        "operationId": "getSkilledMigrationAccessibility",
+        "summary": "Get skilled-migration planning accessibility index",
+        "responses": {
+          "200": {
+            "description": "Skilled migration accessibility",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/country-comparisons": {
+      "get": {
+        "operationId": "getCountryComparisons",
+        "summary": "Get country comparison data",
+        "responses": {
+          "200": {
+            "description": "Country comparisons",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/fees": {
+      "get": {
+        "operationId": "getVisaFees",
+        "summary": "Get visa and immigration fee breakdowns",
+        "responses": {
+          "200": {
+            "description": "Visa fees",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/cost-to-complete": {
+      "get": {
+        "operationId": "getCostToComplete",
+        "summary": "Get route cost-to-complete models",
+        "responses": {
+          "200": {
+            "description": "Cost models",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/salary-thresholds": {
+      "get": {
+        "operationId": "getSalaryThresholds",
+        "summary": "Get salary and income thresholds by destination and route",
+        "responses": {
+          "200": {
+            "description": "Salary thresholds",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/processing-times": {
+      "get": {
+        "operationId": "getProcessingTimes",
+        "summary": "Get published or qualified processing times",
+        "responses": {
+          "200": {
+            "description": "Processing times",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/express-entry-draws": {
+      "get": {
+        "operationId": "getExpressEntryDraws",
+        "summary": "Get Canada Express Entry draw history",
+        "responses": {
+          "200": {
+            "description": "Express Entry draws",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/express-entry-categories": {
+      "get": {
+        "operationId": "getExpressEntryCategories",
+        "summary": "Get current Canada Express Entry category tracker",
+        "responses": {
+          "200": {
+            "description": "Express Entry categories",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/fact-changes": {
+      "get": {
+        "operationId": "getFactChanges",
+        "summary": "Get recorded fee salary and processing-time changes",
+        "responses": {
+          "200": {
+            "description": "Fact changes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/monthly-figure-changes": {
+      "get": {
+        "operationId": "getMonthlyFigureChanges",
+        "summary": "Get monthly archive of immigration figure changes",
+        "responses": {
+          "200": {
+            "description": "Monthly changes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericArrayResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/citation-packs": {
+      "get": {
+        "operationId": "getCitationPacks",
+        "summary": "Get compact source-linked immigration answer packets",
+        "responses": {
+          "200": {
+            "description": "Citation packs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CitationPackResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/answer-capsules": {
+      "get": {
+        "operationId": "getAnswerCapsules",
+        "summary": "Get verified source-linked short answers",
+        "responses": {
+          "200": {
+            "description": "Answer capsules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnswerCapsuleResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/public/route-finder": {
+      "get": {
+        "operationId": "getRouteFinderContract",
+        "summary": "Get route finder contract and methodology",
+        "responses": {
+          "200": {
+            "description": "Route finder contract",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RouteFinderResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "findMatchingVisaRoutes",
+        "summary": "Find deterministic ranked visa route candidates from a coarse profile",
+        "description": "Informational route matching only. The ordering score is not an official eligibility score or approval probability.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RouteFinderRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ranked route candidates",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RouteFinderResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request body.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SourceRecord": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "authority": {
+            "type": "string"
+          },
+          "lastVerified": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "GenericRecord": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "destination": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "countryCode": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "canonicalUrl": {
+            "type": "string"
+          },
+          "datasetUrl": {
+            "type": "string"
+          },
+          "dateModified": {
+            "type": "string"
+          },
+          "lastReviewed": {
+            "type": "string"
+          },
+          "primarySource": {
+            "$ref": "#/components/schemas/SourceRecord"
+          }
+        },
+        "additionalProperties": true
+      },
+      "GenericArrayResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/GenericRecord"
+        }
+      },
+      "GenericObjectResponse": {
+        "type": "object",
+        "properties": {
+          "lastModified": {
+            "type": "string"
+          },
+          "dateModified": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "datasetUrl": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "attribution": {
+            "type": "string"
+          },
+          "legalNote": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GenericRecord"
+            }
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GenericRecord"
+            }
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GenericRecord"
+            }
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GenericRecord"
+            }
+          }
+        },
+        "additionalProperties": true
+      },
+      "PublicDataset": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "recordCount": {
+            "type": "integer"
+          },
+          "dateModified": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "humanPath": {
+            "type": "string"
+          },
+          "apiDocsPath": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "attribution": {
+            "type": "string"
+          },
+          "primarySourceNote": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "PublicDatasetCatalog": {
+        "type": "object",
+        "properties": {
+          "datasets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicDataset"
+            }
+          },
+          "catalogJsonld": {
+            "type": "object",
+            "properties": {
+              "@context": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          },
+          "jsonld": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GenericRecord"
+            }
+          }
+        },
+        "additionalProperties": true
+      },
+      "CitationPackResponse": {
+        "type": "object",
+        "properties": {
+          "lastModified": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "datasetUrl": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "attribution": {
+            "type": "string"
+          },
+          "legalNote": {
+            "type": "string"
+          },
+          "packs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GenericRecord"
+            }
+          }
+        },
+        "additionalProperties": true
+      },
+      "AnswerCapsuleResponse": {
+        "type": "object",
+        "properties": {
+          "lastModified": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "datasetUrl": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "attribution": {
+            "type": "string"
+          },
+          "legalNote": {
+            "type": "string"
+          },
+          "capsules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GenericRecord"
+            }
+          }
+        },
+        "additionalProperties": true
+      },
+      "RouteFinderRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "professionSlug": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "nationalityIso": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 20
+          },
+          "targetDestinations": {
+            "type": "array",
+            "maxItems": 12,
+            "items": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 80
+            }
+          },
+          "sponsorshipAvailable": {
+            "type": "string",
+            "enum": [
+              "yes",
+              "no",
+              "unsure"
+            ]
+          },
+          "needsSettlement": {
+            "type": "boolean"
+          },
+          "hasHigherEducation": {
+            "type": "boolean"
+          },
+          "hasLanguageB2": {
+            "type": "boolean"
+          },
+          "capitalBand": {
+            "type": "string",
+            "enum": [
+              "none",
+              "under-50k",
+              "50k-250k",
+              "250k-plus"
+            ]
+          },
+          "ageBand": {
+            "type": "string",
+            "enum": [
+              "under-30",
+              "30-44",
+              "45-plus"
+            ]
+          },
+          "salaryBand": {
+            "type": "string",
+            "enum": [
+              "under-25k",
+              "25k-40k",
+              "40k-60k",
+              "60k-90k",
+              "90k-150k",
+              "150k-plus"
+            ]
+          },
+          "dependants": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10
+          },
+          "routeIntent": {
+            "type": "string",
+            "enum": [
+              "move",
+              "work",
+              "study",
+              "family",
+              "visit",
+              "business-trip",
+              "remote-work",
+              "invest",
+              "citizenship",
+              "protection"
+            ]
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 12,
+            "default": 8
+          }
+        }
+      },
+      "RouteFinderResult": {
+        "type": "object",
+        "properties": {
+          "rank": {
+            "type": "integer"
+          },
+          "score": {
+            "type": "number",
+            "description": "Ordering score only; not an official eligibility or approval score."
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "canonicalUrl": {
+            "type": "string"
+          },
+          "route": {
+            "$ref": "#/components/schemas/GenericRecord"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SourceRecord"
+            }
+          },
+          "sourceUrls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      },
+      "RouteFinderResponse": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "legalNote": {
+            "type": "string"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "count": {
+            "type": "integer"
+          },
+          "returned": {
+            "type": "integer"
+          },
+          "dateModified": {
+            "type": "string"
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RouteFinderResult"
+            }
+          },
+          "exampleRequest": {
+            "$ref": "#/components/schemas/RouteFinderRequest"
+          }
+        },
+        "additionalProperties": true
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "issues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GenericRecord"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  }
+}

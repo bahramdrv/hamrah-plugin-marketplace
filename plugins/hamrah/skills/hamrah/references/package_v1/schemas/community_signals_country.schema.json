@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Country Community Signals",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "country",
+    "country_code",
+    "generated_at",
+    "source_dataset",
+    "summary",
+    "signals",
+    "quality_control"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "source_dataset": {
+      "type": "object",
+      "required": [
+        "name",
+        "coverage_start",
+        "coverage_end"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "community_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "coverage_start": {
+          "type": "string"
+        },
+        "coverage_end": {
+          "type": "string"
+        },
+        "messages_processed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "signals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "signal_id",
+          "title",
+          "status",
+          "severity",
+          "confidence",
+          "suggested_fit_adjustment"
+        ],
+        "properties": {
+          "signal_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "signal_class": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "signal_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "root_cause_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "active",
+              "monitoring",
+              "uncertain",
+              "resolved",
+              "historical"
+            ]
+          },
+          "severity": {
+            "enum": [
+              "low",
+              "moderate",
+              "high",
+              "critical"
+            ]
+          },
+          "confidence": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "nationality_specific": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "affected_routes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "summary_fa": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "practical_impact": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_seen": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "evidence_count": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "independent_report_count": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "officially_confirmed": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "suggested_fit_adjustment": {
+            "enum": [
+              0,
+              -5,
+              -10,
+              -15,
+              -20
+            ]
+          },
+          "conditional_adjustment": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "resolution": {
+            "type": [
+              "object",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "watchlist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "quality_control": {
+      "type": "object",
+      "required": [
+        "full_file_processed",
+        "duplicates_merged",
+        "contradictions_checked",
+        "resolved_events_removed_from_current_penalty",
+        "personal_identifiers_removed"
+      ],
+      "properties": {
+        "full_file_processed": {
+          "type": "boolean"
+        },
+        "reply_chains_considered": {
+          "type": "boolean"
+        },
+        "duplicates_merged": {
+          "type": "boolean"
+        },
+        "contradictions_checked": {
+          "type": "boolean"
+        },
+        "resolved_events_removed_from_current_penalty": {
+          "type": "boolean"
+        },
+        "personal_identifiers_removed": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
