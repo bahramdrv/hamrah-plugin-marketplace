@@ -1,0 +1,19 @@
+{
+  "name": "hamrah-chatgpt-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Remote MCP endpoint for the Hamrah ChatGPT app.",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test plugins/hamrah/mcp/tests/*.test.mjs web/*.test.mjs"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "express": "5.2.1",
+    "zod": "4.6.5"
+  }
+}

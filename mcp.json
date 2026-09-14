@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "visa-atlas": {
+      "type": "streamable-http",
+      "url": "https://hamrah-plugin-marketplace.vercel.app/mcp"
+    }
+  }
+}

@@ -35,8 +35,37 @@ const FILTER_SCHEMA = {
 
 const ROUTE_FINDER_SCHEMA = OPENAPI.components.schemas.RouteFinderRequest;
 
+const STANDARD_DISCOVERY_TOOLS = [
+  {
+    name: "search",
+    title: "Search Visa Atlas",
+    description: "Use this when the user wants to find current Visa Atlas routes, guides, calculators, policy pages, or research by keyword.",
+    inputSchema: {
+      type: "object",
+      additionalProperties: false,
+      required: ["query"],
+      properties: { query: { type: "string", minLength: 1, maxLength: 200 } }
+    },
+    annotations: { readOnlyHint: true, openWorldHint: true, destructiveHint: false }
+  },
+  {
+    name: "fetch",
+    title: "Fetch Visa Atlas result",
+    description: "Use this after search when the user needs the full citation-ready details for one Visa Atlas result ID.",
+    inputSchema: {
+      type: "object",
+      additionalProperties: false,
+      required: ["id"],
+      properties: { id: { type: "string", minLength: 1, maxLength: 240 } }
+    },
+    annotations: { readOnlyHint: true, openWorldHint: true, destructiveHint: false }
+  }
+];
+
 export const TOOLS = [
+  ...STANDARD_DISCOVERY_TOOLS,
   ...GET_OPERATIONS.map(([name, path, description]) => ({
+    title: description,
     name,
     description: `${description} Reads only ${BASE_URL}${path}. Optional filters are applied locally after retrieval. Visa Atlas is a source-linked compilation, not an issuing authority.`,
     inputSchema: FILTER_SCHEMA,
@@ -152,6 +181,43 @@ function toolResult(payload, isError = false) {
 
 export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch) {
   try {
+    if (name === "search") {
+      if (typeof args.query !== "string" || !args.query.trim()) throw new Error("search requires a non-empty query.");
+      const raw = await fetchJson("/api/public/search-index", {}, fetchImpl);
+      const filtered = filterResponse(raw, { query: args.query.trim(), limit: 25 });
+      const { records } = pickRecordArray(filtered.data);
+      const payload = {
+        results: (records || []).map((record) => ({
+          id: String(record.id),
+          title: String(record.title || record.id),
+          url: String(record.url)
+        }))
+      };
+      return { content: [{ type: "text", text: JSON.stringify(payload) }], structuredContent: payload };
+    }
+
+    if (name === "fetch") {
+      if (typeof args.id !== "string" || !args.id.trim()) throw new Error("fetch requires a non-empty id.");
+      const id = args.id.trim();
+      const raw = await fetchJson("/api/public/search-index", {}, fetchImpl);
+      const { records } = pickRecordArray(raw);
+      const record = (records || []).find((item) => item?.id === id);
+      if (!record) throw new Error(`Visa Atlas search result not found: ${id}`);
+      const payload = {
+        id: String(record.id),
+        title: String(record.title || record.id),
+        text: [record.description, Array.isArray(record.keywords) ? `Keywords: ${record.keywords.join(", ")}` : null]
+          .filter(Boolean)
+          .join("\n"),
+        url: String(record.url),
+        metadata: {
+          kind: record.kind ?? null,
+          sourceDatasets: record.sourceDatasets ?? []
+        }
+      };
+      return { content: [{ type: "text", text: JSON.stringify(payload) }], structuredContent: payload };
+    }
+
     if (operationByName.has(name)) {
       const path = operationByName.get(name);
       const raw = await fetchJson(path, {}, fetchImpl);

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hamrah",
+  "version": "0.1.0+codex.20260914095353",
+  "description": "Facilitated immigration intake, profile normalization, live route research, community signals, academic matching, and explainable scorecards.",
+  "author": {
+    "name": "Bahram"
+  },
+  "homepage": "https://hamrah-plugin-marketplace.vercel.app",
+  "repository": "https://github.com/bahramdrv/hamrah-plugin-marketplace",
+  "keywords": [
+    "immigration",
+    "facilitation",
+    "scorecard",
+    "visa-atlas"
+  ]
+}

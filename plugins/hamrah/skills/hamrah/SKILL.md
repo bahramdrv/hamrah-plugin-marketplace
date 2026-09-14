@@ -16,7 +16,7 @@ Use the named Skill as the implementation contract for each output:
 - Current route evidence → `references/api_access.md` and `references/case_to_scorecard.md`; prefer the bundled Visa Atlas MCP tools.
 - Immigration scorecard → `../hamrah-scorecard-engine/SKILL.md`, then `references/scorecard_presentation.md`.
 - Academic program shortlist → `../hamrah-program-finder/SKILL.md`, after a relevant study/research route assessment.
-- Shareable scorecard image → `../hamrah-scorecard-visualizer/SKILL.md`, after scorecard validation.
+- Shareable scorecard image → `../hamrah-scorecard-visualizer/SKILL.md`, after scorecard validation. In ChatGPT web skill imports, where only five top-level skills are accepted, use the bundled equivalent at `references/web_scorecard_visualizer.md` and ChatGPT's image-generation capability.
 
 Track progress with `references/hamrah_state_schema.json`. Reevaluate only affected downstream outputs when facts change.
 
