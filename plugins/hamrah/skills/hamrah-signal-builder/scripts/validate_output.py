@@ -1,25 +1,11 @@
 #!/usr/bin/env python3
-"""
-Validate Visa Atlas Community Signals output.
-
-Usage:
-    python scripts/validate_output.py path/to/immigration_community_signals.json
-    python scripts/validate_output.py path/to/file.json --schema references/output_schema.json
-    python scripts/validate_output.py path/to/file.json --strict
-"""
-
 from __future__ import annotations
-
 import argparse
 import json
 import sys
 from pathlib import Path
 
-ALLOWED_ADJUSTMENTS = {0, -5, -10, -15, -20}
-STATUS_VALUES = {"active", "monitoring", "uncertain", "resolved", "historical"}
-SEVERITY_VALUES = {"low", "moderate", "high", "critical"}
-CONFIDENCE_VALUES = {"low", "medium", "high"}
-
+FORBIDDEN_SIGNAL_FIELDS = {"suggested_fit_adjustment", "conditional_adjustment"}
 
 def load_json(path: Path):
     try:
@@ -29,206 +15,57 @@ def load_json(path: Path):
     except json.JSONDecodeError as exc:
         raise SystemExit(f"ERROR: invalid JSON in {path}: {exc}")
 
-
 def schema_validate(data, schema_path: Path):
-    errors = []
-    warnings = []
     try:
         import jsonschema
     except ImportError:
-        warnings.append(
-            "jsonschema package is not installed; full JSON-Schema validation was skipped."
-        )
-        return errors, warnings
-
+        return ["jsonschema package is required; validation fails closed when unavailable."]
     schema = load_json(schema_path)
-    validator = jsonschema.Draft202012Validator(schema)
-    for err in sorted(validator.iter_errors(data), key=lambda e: list(e.absolute_path)):
-        loc = ".".join(str(x) for x in err.absolute_path) or "<root>"
-        errors.append(f"schema: {loc}: {err.message}")
-    return errors, warnings
-
+    validator = jsonschema.Draft202012Validator(schema, format_checker=jsonschema.FormatChecker())
+    return [f"schema: {'.'.join(str(x) for x in err.absolute_path) or '<root>'}: {err.message}" for err in sorted(validator.iter_errors(data), key=lambda e: list(e.absolute_path))]
 
 def semantic_validate(data):
     errors = []
-    warnings = []
-
-    if data.get("schema_version") != "2.0":
-        errors.append("schema_version must be '2.0'.")
-
-    signals = data.get("signals")
-    if not isinstance(signals, list):
-        return ["signals must be an array."], warnings
-
-    ids = [s.get("signal_id") for s in signals]
-    if any(not x for x in ids):
-        errors.append("every signal must have a non-empty signal_id.")
-    duplicates = sorted({x for x in ids if x and ids.count(x) > 1})
-    if duplicates:
-        errors.append(f"duplicate signal_id values: {duplicates}")
-
-    known_ids = {x for x in ids if x}
+    if data.get("schema_version") != "3.0.0": errors.append("schema_version must be '3.0.0'.")
+    if data.get("quality", {}).get("checks", {}).get("privacy", {}).get("status") != "pass": errors.append("quality.checks.privacy.status must be 'pass'.")
+    source_ids = set()
+    for source in data.get("sources", []):
+        sid = source.get("source_id")
+        if sid in source_ids: errors.append(f"duplicate source_id: {sid}")
+        source_ids.add(sid)
     evidence_ids = set()
-
-    counts = {k: 0 for k in STATUS_VALUES}
-    highest_order = {"low": 1, "moderate": 2, "high": 3, "critical": 4}
-    highest_active = "none"
-
-    for idx, signal in enumerate(signals):
-        label = signal.get("signal_id") or f"signals[{idx}]"
-        status = signal.get("status")
-        severity = signal.get("severity")
-        confidence = signal.get("confidence")
-        adjustment = signal.get("suggested_fit_adjustment")
-        conditional = signal.get("conditional_adjustment", {}).get("adjustment")
-
-        if status not in STATUS_VALUES:
-            errors.append(f"{label}: invalid status {status!r}.")
-        else:
-            counts[status] += 1
-
-        if severity not in SEVERITY_VALUES:
-            errors.append(f"{label}: invalid severity {severity!r}.")
-        if confidence not in CONFIDENCE_VALUES:
-            errors.append(f"{label}: invalid confidence {confidence!r}.")
-
-        if adjustment not in ALLOWED_ADJUSTMENTS:
-            errors.append(f"{label}: invalid suggested_fit_adjustment {adjustment!r}.")
-        if conditional not in ALLOWED_ADJUSTMENTS:
-            errors.append(f"{label}: invalid conditional adjustment {conditional!r}.")
-
-        if status in {"resolved", "historical"} and adjustment != 0:
-            errors.append(f"{label}: resolved/historical signals must have adjustment 0.")
-
-        if signal.get("impact_direction") == "positive_resolution" and adjustment != 0:
-            errors.append(f"{label}: positive_resolution signals must have adjustment 0.")
-
-        if status == "monitoring" and adjustment not in (0, None):
-            warnings.append(f"{label}: monitoring signal has a non-zero current adjustment.")
-
-        ev = signal.get("evidence", [])
-        ec = signal.get("evidence_count")
-        irc = signal.get("independent_report_count")
-
-        if isinstance(ec, int) and ec < len(ev):
-            errors.append(
-                f"{label}: evidence_count ({ec}) cannot be lower than listed evidence ({len(ev)})."
-            )
-        elif isinstance(ec, int) and ec != len(ev):
-            warnings.append(
-                f"{label}: evidence_count ({ec}) differs from listed evidence length ({len(ev)}); "
-                "acceptable only if evidence list is intentionally representative."
-            )
-
-        if isinstance(ec, int) and isinstance(irc, int) and irc > ec:
-            errors.append(
-                f"{label}: independent_report_count ({irc}) cannot exceed evidence_count ({ec})."
-            )
-
-        local_groups = set()
-        for evidence in ev:
-            eid = evidence.get("evidence_id")
-            if not eid:
-                errors.append(f"{label}: evidence item missing evidence_id.")
-            elif eid in evidence_ids:
-                errors.append(f"{label}: duplicate evidence_id {eid}.")
-            else:
-                evidence_ids.add(eid)
-
-            group = evidence.get("independence_group")
-            if group:
-                local_groups.add(group)
-
-        if isinstance(irc, int) and local_groups and irc > len(local_groups):
-            warnings.append(
-                f"{label}: independent_report_count ({irc}) exceeds distinct listed "
-                f"independence_group values ({len(local_groups)})."
-            )
-
-        for corr in signal.get("correlated_signal_ids", []):
-            if corr not in known_ids:
-                warnings.append(
-                    f"{label}: correlated_signal_id {corr!r} is not present in this file."
-                )
-
-        resolution = signal.get("resolution", {})
-        if resolution.get("resolved") is True and status != "resolved":
-            warnings.append(
-                f"{label}: resolution.resolved=true but status is {status!r}, not 'resolved'."
-            )
-        if status == "resolved" and resolution.get("resolved") is not True:
-            errors.append(f"{label}: status='resolved' requires resolution.resolved=true.")
-
-        if status == "active" and severity in highest_order:
-            if highest_active == "none" or highest_order[severity] > highest_order[highest_active]:
-                highest_active = severity
-
-    summary = data.get("summary", {})
-    if summary.get("total_signals") != len(signals):
-        errors.append(
-            f"summary.total_signals={summary.get('total_signals')} but actual={len(signals)}."
-        )
-
-    for status in STATUS_VALUES:
-        if summary.get(status) != counts[status]:
-            errors.append(
-                f"summary.{status}={summary.get(status)} but actual={counts[status]}."
-            )
-
-    if summary.get("highest_active_severity") != highest_active:
-        errors.append(
-            "summary.highest_active_severity="
-            f"{summary.get('highest_active_severity')!r} but actual={highest_active!r}."
-        )
-
-    coverage = data.get("source_coverage", [])
-    qc = data.get("quality_control", {})
-    if qc.get("full_sources_processed") is True:
-        incomplete = [x.get("source_id") for x in coverage if x.get("coverage_complete") is False]
-        if incomplete:
-            errors.append(
-                "quality_control.full_sources_processed=true but these sources are incomplete: "
-                + ", ".join(str(x) for x in incomplete)
-            )
-
-    return errors, warnings
-
+    for item in data.get("evidence", []):
+        eid = item.get("evidence_id")
+        if eid in evidence_ids: errors.append(f"duplicate evidence_id: {eid}")
+        evidence_ids.add(eid)
+        if item.get("source_id") not in source_ids: errors.append(f"{eid}: unknown source_id {item.get('source_id')}")
+    signal_ids = set()
+    for signal in data.get("signals", []):
+        sid = signal.get("signal_id")
+        if sid in signal_ids: errors.append(f"duplicate signal_id: {sid}")
+        signal_ids.add(sid)
+        forbidden = FORBIDDEN_SIGNAL_FIELDS.intersection(signal)
+        if forbidden: errors.append(f"{sid}: forbidden scoring fields: {sorted(forbidden)}")
+        for link in signal.get("evidence_links", []):
+            if link.get("evidence_id") not in evidence_ids: errors.append(f"{sid}: unknown evidence_id {link.get('evidence_id')}")
+    for signal in data.get("signals", []):
+        for rel in signal.get("relationships", []):
+            if rel.get("signal_id") not in signal_ids: errors.append(f"{signal.get('signal_id')}: relationship target not present: {rel.get('signal_id')}")
+    return errors
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("file", type=Path)
     parser.add_argument("--schema", type=Path, default=None)
-    parser.add_argument(
-        "--strict",
-        action="store_true",
-        help="Treat warnings as validation failures.",
-    )
     args = parser.parse_args()
-
     data = load_json(args.file)
-    default_schema = Path(__file__).resolve().parents[1] / "references" / "output_schema.json"
-    schema_path = args.schema or default_schema
-
-    errors, warnings = schema_validate(data, schema_path)
-    sem_errors, sem_warnings = semantic_validate(data)
-    errors.extend(sem_errors)
-    warnings.extend(sem_warnings)
-
-    for warning in warnings:
-        print(f"WARNING: {warning}", file=sys.stderr)
-    for error in errors:
-        print(f"ERROR: {error}", file=sys.stderr)
-
-    if errors or (args.strict and warnings):
-        print(
-            f"FAILED: {len(errors)} error(s), {len(warnings)} warning(s).",
-            file=sys.stderr,
-        )
+    schema_path = args.schema or Path(__file__).resolve().parents[1] / "references" / "output_schema.json"
+    errors = schema_validate(data, schema_path) + semantic_validate(data)
+    for error in errors: print(f"ERROR: {error}", file=sys.stderr)
+    if errors:
+        print(f"FAILED: {len(errors)} error(s).", file=sys.stderr)
         return 1
-
-    print(f"VALID: {args.file} ({len(warnings)} warning(s))")
+    print(f"VALID: {args.file}")
     return 0
 
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+if __name__ == "__main__": raise SystemExit(main())

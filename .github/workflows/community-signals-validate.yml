@@ -1,0 +1,31 @@
+name: community-signals-validate
+
+on:
+  push:
+    branches:
+      - community-signals-v3
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: npm ci
+      - run: npm test
+      - run: node plugins/hamrah/mcp/scripts/validate-community-datasets.mjs
+      - run: python -m pip install jsonschema
+      - run: python plugins/hamrah/skills/hamrah-signal-builder/scripts/validate_output.py plugins/hamrah/skills/hamrah-signal-builder/examples/gold_standard.json
