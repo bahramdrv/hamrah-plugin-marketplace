@@ -73,6 +73,8 @@ Weights:
 Do not hide component reasoning.
 
 ### 4. Apply Community Adjustment
+Call `searchCommunitySignals` for every candidate route with the narrowest known country, route, process stage, entity, and applicant scope. Use `getCommunitySignalDataset` to inspect the full evidence and quality controls for any candidate signals before scoring. Record the dataset ID and applicable signal IDs. If the tools report no valid coverage or a dataset error, use adjustment `0` and explicitly label community coverage unavailable; never treat missing coverage as evidence of no friction.
+
 Match only signals that actually apply to the applicant, route, process stage, institution/provider, location, and timing.
 
 Allowed total adjustment:

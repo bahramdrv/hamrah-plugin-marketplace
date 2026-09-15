@@ -4,6 +4,11 @@ import readline from "node:readline";
 import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 
+import {
+  getCommunitySignalDataset,
+  searchCommunitySignals
+} from "./community-signals.mjs";
+
 export const OPENAPI = JSON.parse(
   readFileSync(new URL("./visa_atlas_core_openapi.json", import.meta.url), "utf8")
 );
@@ -62,8 +67,62 @@ const STANDARD_DISCOVERY_TOOLS = [
   }
 ];
 
+const COMMUNITY_SIGNAL_TOOLS = [
+  {
+    name: "searchCommunitySignals",
+    title: "Search Hamrah Community Signals",
+    description: "Use this when evaluating an immigration route or preparing a scorecard to find current, validated community-friction signals from Hamrah's versioned GitHub dataset store. Search with the narrowest known country, route, stage, topic, or applicant scope. Results are practical context, not official eligibility.",
+    inputSchema: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+        countryCode: { type: "string", minLength: 2, maxLength: 3, description: "Destination ISO country code, preferably ISO 3166-1 alpha-3 such as GBR or DEU." },
+        country: { type: "string", minLength: 2, maxLength: 80, description: "Destination country name when its code is unknown." },
+        route: { type: "string", minLength: 1, maxLength: 100, description: "Normalized migration route or route family, such as skilled_worker or EMPLOYMENT / WORK." },
+        topic: { type: "string", minLength: 1, maxLength: 120, description: "Community topic, signal type, keyword, or free-text issue such as processing delay." },
+        processStage: { type: "string", minLength: 1, maxLength: 100, description: "Normalized process stage such as biometrics or visa_application." },
+        originCountry: { type: "string", minLength: 2, maxLength: 80, description: "Applicant origin, residence, or applying-from country when relevant." },
+        nationality: { type: "string", minLength: 2, maxLength: 80, description: "Applicant nationality when the signal is nationality-specific." },
+        entity: { type: "string", minLength: 2, maxLength: 120, description: "Institution, employer, VAC, regulator, test provider, or other named entity." },
+        statuses: {
+          type: "array",
+          minItems: 1,
+          maxItems: 5,
+          uniqueItems: true,
+          items: { type: "string", enum: ["active", "monitoring", "uncertain", "resolved", "historical"] },
+          description: "Defaults to active, monitoring, and uncertain. Request resolved or historical only for audit or contradiction checks."
+        },
+        limit: { type: "integer", minimum: 1, maximum: 50, default: 20 }
+      }
+    },
+    annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+  },
+  {
+    name: "getCommunitySignalDataset",
+    title: "Get Hamrah Community Signal Dataset",
+    description: "Use this after searchCommunitySignals when the scorecard needs full evidence, source coverage, quality controls, resolution details, or watchlist entries from one validated Hamrah dataset. Use the exact datasetId returned by search.",
+    inputSchema: {
+      type: "object",
+      additionalProperties: false,
+      required: ["datasetId"],
+      properties: {
+        datasetId: { type: "string", minLength: 1, maxLength: 240 },
+        signalIds: {
+          type: "array",
+          maxItems: 50,
+          uniqueItems: true,
+          items: { type: "string", minLength: 1, maxLength: 200 },
+          description: "Optional signal IDs to return. Omit to retrieve the full validated dataset."
+        }
+      }
+    },
+    annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+  }
+];
+
 export const TOOLS = [
   ...STANDARD_DISCOVERY_TOOLS,
+  ...COMMUNITY_SIGNAL_TOOLS,
   ...GET_OPERATIONS.map(([name, path, description]) => ({
     title: description,
     name,
@@ -179,7 +238,7 @@ function toolResult(payload, isError = false) {
   };
 }
 
-export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch) {
+export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch, options = {}) {
   try {
     if (name === "search") {
       if (typeof args.query !== "string" || !args.query.trim()) throw new Error("search requires a non-empty query.");
@@ -218,6 +277,14 @@ export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch)
       return { content: [{ type: "text", text: JSON.stringify(payload) }], structuredContent: payload };
     }
 
+    if (name === "searchCommunitySignals") {
+      return toolResult(searchCommunitySignals(args, options.signalStoreRoot));
+    }
+
+    if (name === "getCommunitySignalDataset") {
+      return toolResult(getCommunitySignalDataset(args, options.signalStoreRoot));
+    }
+
     if (operationByName.has(name)) {
       const path = operationByName.get(name);
       const raw = await fetchJson(path, {}, fetchImpl);
@@ -239,12 +306,15 @@ export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch)
 
     return toolResult({ error: "unknown_tool", message: `Unknown tool: ${name}` }, true);
   } catch (error) {
+    const isCommunityTool = name === "searchCommunitySignals" || name === "getCommunitySignalDataset";
     return toolResult({
-      error: "visa_atlas_request_failed",
+      error: isCommunityTool ? "community_signal_store_failed" : "visa_atlas_request_failed",
       message: error instanceof Error ? error.message : String(error),
       status: error?.status ?? null,
       details: error?.body ?? null,
-      guidance: "Do not infer missing data. Mark affected claims UNKNOWN and use a current primary source or another documented endpoint."
+      guidance: isCommunityTool
+        ? "Do not infer community coverage. Report the dataset error and use Community Adjustment 0 with coverage unavailable until the store is corrected."
+        : "Do not infer missing data. Mark affected claims UNKNOWN and use a current primary source or another documented endpoint."
     }, true);
   }
 }
@@ -258,8 +328,8 @@ export async function handleRequest(message, fetchImpl = globalThis.fetch) {
       result: {
         protocolVersion: params.protocolVersion || "2025-06-18",
         capabilities: { tools: { listChanged: false } },
-        serverInfo: { name: "hamrah-visa-atlas", version: "1.0.0" },
-        instructions: "Use the smallest relevant Visa Atlas tool. Treat returned route scores as discovery aids and verify decisive requirements with primary sources."
+        serverInfo: { name: "hamrah-visa-atlas", version: "1.1.0" },
+        instructions: "Use the smallest relevant Visa Atlas tool. Before applying a community adjustment, use searchCommunitySignals and getCommunitySignalDataset. Treat route scores as discovery aids, community signals as practical context, and verify decisive requirements with primary sources."
       }
     };
   }

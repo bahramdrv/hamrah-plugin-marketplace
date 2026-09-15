@@ -46,4 +46,4 @@ Internal JSON remains available for validation and user-requested export. Normal
 
 ## Reuse across conversations
 
-Within the current conversation, retain canonical state and references to available validated community datasets. For another device or conversation, use user-supplied state/profile and dataset files. Installing the plugin does not synchronize applicant records or newly generated community datasets. Offer export when the user wants to resume elsewhere; avoid claiming persistent storage or a shared database exists.
+Within the current conversation, retain canonical applicant state and references to validated community datasets. Shared datasets published under the plugin repository's `plugins/hamrah/data/community-signals/datasets/` become available across devices through the read-only MCP tools after a successful deployment. Applicant records, raw exports, and newly generated local datasets are not synchronized automatically. Offer applicant-state export when the user wants to resume elsewhere; never imply that personal case data is stored in the shared signal repository.

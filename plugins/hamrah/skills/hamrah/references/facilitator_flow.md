@@ -243,6 +243,8 @@ Community Signal Builder در این مرحله اجرا نمی‌شود.
 
 Hamrah فقط **Community Signal dataset از قبل ساخته‌شده** را مصرف می‌کند.
 
+برای هر مسیر ابتدا `searchCommunitySignals` را با محدودترین فیلترهای معلوم اجرا کن. سپس برای سیگنال‌های کاندید، `getCommunitySignalDataset` را با `datasetId` و `signalIds` خروجی جست‌وجو اجرا کن تا پوشش منبع، کنترل کیفیت، شواهد و وضعیت resolution بررسی شود. خطای فایل یا نبود پوشش را صریح گزارش کن.
+
 ### اگر dataset برای کشور/route موجود است
 
 - فقط signalهای applicable را به Scorecard Engine بده.

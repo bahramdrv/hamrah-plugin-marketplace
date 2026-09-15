@@ -10,7 +10,22 @@ Production MCP URL:
 https://hamrah-plugin-marketplace.vercel.app/mcp
 ```
 
-In ChatGPT Web, enable Developer mode, add a new plugin/app with the URL above, and run **Scan Tools**. The server exposes 25 read-only tools and five importable Hamrah skills. The main imported skill also contains the scorecard-image workflow so ChatGPT can use its image-generation capability after validating a scorecard.
+In ChatGPT Web, enable Developer mode, add a new plugin/app with the URL above, and run **Scan Tools**. The server exposes 27 read-only tools and five importable Hamrah skills. The main imported skill also contains the scorecard-image workflow so ChatGPT can use its image-generation capability after validating a scorecard.
+
+## Shared Community Signals
+
+Validated Signal Builder outputs committed below `plugins/hamrah/data/community-signals/datasets/` are indexed automatically by the deployed MCP server. The `searchCommunitySignals` tool finds current candidate signals and `getCommunitySignalDataset` retrieves their full evidence and quality controls. Raw Telegram/forum exports and applicant data must never be committed; only schema-version 2.0 datasets with `quality_control.personal_identifiers_removed: true` are accepted. Invalid files are excluded and reported in search coverage diagnostics.
+
+From the repository root, publish a validated dataset with:
+
+```sh
+python plugins/hamrah/skills/hamrah-signal-builder/scripts/store_signals.py \
+  immigration_community_signals.json \
+  --store-root plugins/hamrah/data/community-signals \
+  --label telegram-de-student
+```
+
+Commit and push the generated dataset. The connected Vercel project deploys the new repository revision; Hamrah reads the new data after that deployment completes.
 
 The remote service stores no applicant profiles. The optional route-finder sends only documented coarse fields to Visa Atlas after explicit consent.
 

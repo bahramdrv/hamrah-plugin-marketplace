@@ -1,22 +1,32 @@
 import assert from "node:assert/strict";
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import path from "node:path";
 import test from "node:test";
 
 import { executeTool, filterResponse, handleRequest, OPENAPI, TOOLS } from "../server.mjs";
 
 test("publishes every curated OpenAPI operation", async () => {
-  assert.equal(TOOLS.length, 25);
+  assert.equal(TOOLS.length, 27);
   assert.equal(OPENAPI.info.version, "1.3.0");
   const contractOperationIds = Object.values(OPENAPI.paths).flatMap((methods) =>
     Object.values(methods).map((operation) => operation.operationId)
   );
   assert.deepEqual(
-    TOOLS.map((tool) => tool.name).filter((name) => !["search", "fetch"].includes(name)).sort(),
+    TOOLS.map((tool) => tool.name).filter((name) => ![
+      "search",
+      "fetch",
+      "searchCommunitySignals",
+      "getCommunitySignalDataset"
+    ].includes(name)).sort(),
     contractOperationIds.sort()
   );
   assert.ok(TOOLS.some((tool) => tool.name === "search"));
   assert.ok(TOOLS.some((tool) => tool.name === "fetch"));
   assert.ok(TOOLS.some((tool) => tool.name === "getVisaRoutes"));
   assert.ok(TOOLS.some((tool) => tool.name === "findMatchingVisaRoutes"));
+  assert.ok(TOOLS.some((tool) => tool.name === "searchCommunitySignals"));
+  assert.ok(TOOLS.some((tool) => tool.name === "getCommunitySignalDataset"));
 });
 
 test("rejects unsupported route-finder fields before transmission", async () => {
@@ -85,7 +95,7 @@ test("supports MCP initialize and tools/list", async () => {
   const initialized = await handleRequest({ jsonrpc: "2.0", id: 1, method: "initialize", params: { protocolVersion: "2025-06-18" } });
   assert.equal(initialized.result.serverInfo.name, "hamrah-visa-atlas");
   const listed = await handleRequest({ jsonrpc: "2.0", id: 2, method: "tools/list" });
-  assert.equal(listed.result.tools.length, 25);
+  assert.equal(listed.result.tools.length, 27);
 });
 
 test("implements citation-ready standard search and fetch tools", async () => {
@@ -109,4 +119,53 @@ test("implements citation-ready standard search and fetch tools", async () => {
   });
   const fetched = await executeTool("fetch", { id: "visa-uk-skilled-worker" }, fakeFetch);
   assert.equal(JSON.parse(fetched.content[0].text).title, "UK Skilled Worker visa");
+});
+
+test("indexes valid Git-backed community datasets and reports invalid files", async (t) => {
+  const signalStoreRoot = mkdtempSync(path.join(tmpdir(), "hamrah-signals-"));
+  t.after(() => rmSync(signalStoreRoot, { recursive: true, force: true }));
+  const fixture = JSON.parse(readFileSync(
+    new URL("../../skills/hamrah-signal-builder/examples/gold_standard.json", import.meta.url),
+    "utf8"
+  ));
+  mkdirSync(path.join(signalStoreRoot, "2026", "09"), { recursive: true });
+  writeFileSync(path.join(signalStoreRoot, "2026", "09", "uk.json"), JSON.stringify(fixture));
+  writeFileSync(path.join(signalStoreRoot, "invalid.json"), JSON.stringify({ schema_version: "2.0" }));
+
+  const searched = await executeTool(
+    "searchCommunitySignals",
+    { countryCode: "GBR", route: "global_talent" },
+    globalThis.fetch,
+    { signalStoreRoot }
+  );
+  assert.equal(searched.isError, false);
+  assert.equal(searched.structuredContent.coverage.filesScanned, 2);
+  assert.equal(searched.structuredContent.coverage.validDatasets, 1);
+  assert.equal(searched.structuredContent.coverage.invalidDatasets.length, 1);
+  assert.equal(searched.structuredContent.resultCount, 2);
+  assert.equal(searched.structuredContent.signals[0].datasetId, "2026/09/uk");
+
+  const fetched = await executeTool(
+    "getCommunitySignalDataset",
+    { datasetId: "2026/09/uk", signalIds: ["GBR-GT-R4-ENDORSEMENT-DELAY-EXAMPLE"] },
+    globalThis.fetch,
+    { signalStoreRoot }
+  );
+  assert.equal(fetched.isError, false);
+  assert.equal(fetched.structuredContent.signals.length, 1);
+  assert.equal(fetched.structuredContent.qualityControl.personal_identifiers_removed, true);
+});
+
+test("refuses invalid or unknown community datasets", async (t) => {
+  const signalStoreRoot = mkdtempSync(path.join(tmpdir(), "hamrah-signals-empty-"));
+  t.after(() => rmSync(signalStoreRoot, { recursive: true, force: true }));
+  const result = await executeTool(
+    "getCommunitySignalDataset",
+    { datasetId: "missing" },
+    globalThis.fetch,
+    { signalStoreRoot }
+  );
+  assert.equal(result.isError, true);
+  assert.equal(result.structuredContent.error, "community_signal_store_failed");
+  assert.match(result.structuredContent.guidance, /coverage unavailable/);
 });

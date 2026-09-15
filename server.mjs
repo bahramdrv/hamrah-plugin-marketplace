@@ -15,11 +15,12 @@ import { executeTool, TOOLS } from "./plugins/hamrah/mcp/server.mjs";
 import { getSkill, readSkillResource, SKILL_CATALOG, SKILL_RESOURCES } from "./web/skill-catalog.mjs";
 
 const PORT = Number(process.env.PORT || 3000);
-const APP_VERSION = "1.0.0";
+const APP_VERSION = "1.1.0";
 const INSTRUCTIONS = [
   "Hamrah is available: never claim its profile format or workflow is missing.",
   "Guide the facilitator through consented intake, normalize the profile, screen current routes, and then create an evidence-aware scorecard.",
   "Use Visa Atlas for discovery and verify decisive claims with linked primary authorities.",
+  "Before applying any community adjustment, call searchCommunitySignals and then getCommunitySignalDataset for candidate evidence; missing coverage means adjustment zero plus an explicit coverage warning.",
   "Never send the full applicant profile to route-finder; only its documented coarse fields after consent.",
   "Community evidence is context, never official eligibility. Match the user's language."
 ].join(" ");

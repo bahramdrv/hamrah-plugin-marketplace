@@ -24,7 +24,7 @@ Use the bundled Visa Atlas MCP tools and linked primary sources. Start with `get
 
 ### 4. Apply community context
 
-Query the local signal store for each candidate and recheck applicability at signal level. Without a matching dataset, use adjustment 0 and label coverage unavailable; this is not evidence of zero friction. Completion: coverage status and applicable IDs are recorded for every candidate.
+Call `searchCommunitySignals` for each candidate using the narrowest known destination, route, stage, topic, entity, and applicant scope. Then call `getCommunitySignalDataset` for the selected dataset and signal IDs before applying any adjustment. Recheck applicability at signal level. Without a matching valid dataset, use adjustment 0 and label coverage unavailable; this is not evidence of zero friction. Record coverage status, dataset ID, and applicable signal IDs for every candidate.
 
 ### 5. Score and explain
 
