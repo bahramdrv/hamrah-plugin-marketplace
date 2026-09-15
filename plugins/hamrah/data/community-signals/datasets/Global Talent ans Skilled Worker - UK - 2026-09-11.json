@@ -1,0 +1,2655 @@
+{
+  "schema_version": "2.0",
+  "generated_at": "2026-09-11T06:49:00Z",
+  "source_coverage": [
+    {
+      "source_id": "src_result_3_json",
+      "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+      "source_type": "json",
+      "source_url": null,
+      "coverage_start": "2025-01-02T10:58:53",
+      "coverage_end": "2026-09-11T08:00:08",
+      "records_processed": 4994,
+      "coverage_complete": true
+    }
+  ],
+  "summary": {
+    "countries_detected": [
+      "United Kingdom"
+    ],
+    "total_signals": 17,
+    "active": 9,
+    "monitoring": 2,
+    "uncertain": 0,
+    "resolved": 2,
+    "historical": 4,
+    "highest_active_severity": "critical"
+  },
+  "signals": [
+    {
+      "signal_id": "GBR-GT-R4-ENDORSEMENT-DELAY-2026",
+      "root_cause_id": "GBR-GT-R4-ENDORSEMENT-DELAY-2026",
+      "correlated_signal_ids": [
+        "GBR-GT-ENDORSEMENT-LEAVE-PROTECTION-2026"
+      ],
+      "title": "Peer-review Global Talent endorsements repeatedly exceeding usual assessment timing",
+      "signal_family": "E2_APPLICATION_PROCESSING",
+      "signal_type": "processing_delay",
+      "signal_class": "processing",
+      "impact_direction": "negative",
+      "status": "active",
+      "trend": "worsening",
+      "severity": "high",
+      "confidence": "high",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [
+          "science",
+          "medicine",
+          "engineering",
+          "technology",
+          "humanities",
+          "social science"
+        ],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Global Talent Route 4 / full peer-review endorsement via Royal Academy of Engineering or Royal Society"
+        ]
+      },
+      "migration_routes": [
+        "global_talent"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK"
+      ],
+      "process_stages": [
+        "endorsement_stage_1",
+        "peer_review"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "Royal Academy of Engineering"
+        },
+        {
+          "entity_type": "other",
+          "name": "Royal Society"
+        }
+      ],
+      "summary_en": "Multiple independent 2026 applicants reported Route 4 peer-review endorsement waits of roughly 8–14 weeks, especially through the Royal Academy of Engineering and also the Royal Society. This is narrower than Global Talent overall and does not apply to fast-track Routes 1–3.",
+      "summary_fa": "چند متقاضی مستقل در سال ۲۰۲۶ برای اندورسمنت روت ۴ (Peer Review)، به‌ویژه در Royal Academy of Engineering و نیز Royal Society، انتظار حدود ۸ تا ۱۴ هفته را گزارش کرده‌اند. این سیگنال مربوط به کل ویزای Global Talent یا روت‌های سریع ۱ تا ۳ نیست.",
+      "practical_impact": "A fixed job start, funding start, current-visa expiry, or travel plan can become difficult if the applicant budgets only the usual five-week endorsement timing.",
+      "who_should_care": "Global Talent Route 4 applicants whose endorsing body is the Royal Academy of Engineering or Royal Society, especially applicants with immovable start or immigration-status deadlines.",
+      "recommended_action": "Budget for a longer Stage 1 window, avoid making non-refundable commitments around the nominal five-week timing, and use official follow-up channels after the stated window.",
+      "known_workaround": "If lawful stay is close to expiry, assess the separate Stage 2 timing rules; endorsement alone does not extend UK permission.",
+      "first_seen": "2026-02-13",
+      "last_seen": "2026-09-05",
+      "last_verified": "2026-09-11",
+      "recency_class": "very_current",
+      "evidence_count": 12,
+      "independent_report_count": 10,
+      "officially_confirmed": false,
+      "community_confirmed": true,
+      "official_verification": {
+        "status": "partly_confirmed",
+        "source_url": "https://www.gov.uk/global-talent-researcher-academic/peer-review",
+        "source_title": "GOV.UK — Global Talent peer review",
+        "verified_at": "2026-09-11",
+        "note": "Official sources confirm the nominal timing (usually 5 weeks; Royal Society says Route 4 Stage 1 can take up to 8 weeks), but do not publish a current 8–14 week backlog. The extended waits are community-observed."
+      },
+      "suggested_fit_adjustment": -10,
+      "conditional_adjustment": {
+        "adjustment": -10,
+        "apply_when": "Apply only when the applicant is using Route 4 peer review through the Royal Academy of Engineering or Royal Society and a fixed deadline cannot absorb an approximately 8–14+ week Stage 1 wait."
+      },
+      "reason_for_adjustment": "Repeated recent independent direct reports show material schedule risk. The penalty is timing/feasibility only, not an approval-rate estimate.",
+      "keywords": [
+        "Global Talent",
+        "Route 4",
+        "peer review",
+        "Royal Academy of Engineering",
+        "Royal Society",
+        "endorsement delay",
+        "Stage 1"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-GT-R4-001",
+          "date": "2026-02-13",
+          "source_type": "second_hand_report",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "14919",
+          "evidence_summary": "Community report says recent Royal Academy peer-review cases were taking more than three months from submission to Home Office response.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "supports",
+          "independence_group": "r1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R4-002",
+          "date": "2026-05-27",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "16514",
+          "evidence_summary": "Applicant reports Royal Academy of Engineering endorsement arrived at the start of week 9 after Home Office referral.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "r2"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R4-003",
+          "date": "2026-06-18",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "16847",
+          "evidence_summary": "Applicant reports 9 weeks since referral to the Royal Society with no decision; this is the same reporter who had already reported waiting at weeks 5 and 8.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "r3"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R4-004",
+          "date": "2026-06-19",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "16855",
+          "evidence_summary": "Applicant reports passing week 11 with no endorsement decision after two Home Office follow-ups; Home Office said it was still awaiting the endorsing body.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "r4"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R4-005",
+          "date": "2026-06-19",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "16857",
+          "evidence_summary": "Independent applicant reports more than 11 weeks waiting for Royal Academy of Engineering endorsement despite two follow-ups.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "r5"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R4-006",
+          "date": "2026-07-30",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17491",
+          "evidence_summary": "Independent applicant reports 13 weeks waiting for Royal Academy of Engineering Stage 1.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "r6"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R4-007",
+          "date": "2026-08-20",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17793",
+          "evidence_summary": "Independent applicant reports 14 weeks waiting for Royal Academy of Engineering exceptional-promise assessment.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "r7"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R4-008",
+          "date": "2026-08-30",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17959",
+          "evidence_summary": "Independent applicant reports 8 weeks since documents were referred to the Royal Society with no decision.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "r8"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R4-009",
+          "date": "2026-08-30",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17960",
+          "evidence_summary": "Independent applicant reports 12 weeks waiting for Royal Academy of Engineering and says delay emails are now common.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "r9"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R4-010",
+          "date": "2026-09-05",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "18087",
+          "evidence_summary": "Independent applicant reports 9 weeks waiting for Royal Academy of Engineering Route 4 endorsement.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "r10"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R4-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Global Talent peer review",
+          "source_url": "https://www.gov.uk/global-talent-researcher-academic/peer-review",
+          "source_message_id": null,
+          "evidence_summary": "Current GOV.UK guidance says peer-review endorsement applications usually take 5 weeks.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "E-GBR-GT-R4-O01"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R4-O02",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "Royal Society — Global Talent visa FAQ",
+          "source_url": "https://www.royalsociety.org/grants/global-talent-visa-overview/frequently-asked-questions/",
+          "source_message_id": null,
+          "evidence_summary": "Royal Society states Route 4 Stage 1 can take up to 8 weeks from Home Office receipt and the endorsing body usually returns a decision within 5 weeks.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "E-GBR-GT-R4-O02"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-09-25"
+    },
+    {
+      "signal_id": "GBR-IRN-TEHRAN-VAC-CLOSURE-2026",
+      "root_cause_id": "GBR-IRN-TEHRAN-VAC-CLOSURE-2026",
+      "correlated_signal_ids": [],
+      "title": "Tehran UK Visa Application Centre closure resolved; centre reopened",
+      "signal_family": "E4_EMBASSY_CONSULATE_VAC_BIOMETRICS",
+      "signal_type": "vac_status",
+      "signal_class": "operational",
+      "impact_direction": "positive_resolution",
+      "status": "resolved",
+      "trend": "resolved",
+      "severity": "critical",
+      "confidence": "high",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [
+          "Iran"
+        ],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Applicants intending to enrol biometrics or submit through the UK Visa Application Centre in Tehran"
+        ]
+      },
+      "migration_routes": [
+        "global_talent",
+        "skilled_worker",
+        "student_masters_taught",
+        "student_phd",
+        "spouse_partner",
+        "dependent",
+        "visitor",
+        "other"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK",
+        "STUDY / ACADEMIC",
+        "FAMILY / DEPENDANTS",
+        "MOBILITY / OTHER"
+      ],
+      "process_stages": [
+        "biometrics",
+        "visa_application_centre"
+      ],
+      "entities": [
+        {
+          "entity_type": "vac",
+          "name": "VFS Global — Tehran UK Visa Application Centre"
+        }
+      ],
+      "summary_en": "The Tehran UK Visa Application Centre was reported closed in early 2026, creating a temporary biometrics/submission barrier. Official VFS and GOV.UK sources now show the centre reopened and currently serves all UK visa categories. The British Embassy itself does not provide visa services.",
+      "summary_fa": "مرکز درخواست ویزای بریتانیا در تهران در اوایل ۲۰۲۶ به‌طور موقت بسته گزارش شد و دسترسی به بیومتریک/سابمیت را مختل کرد. منابع رسمی VFS و GOV.UK اکنون بازگشایی مرکز و ارائه خدمات برای همه دسته‌های ویزا را تأیید می‌کنند. سفارت بریتانیا خودِ خدمات ویزا ارائه نمی‌دهد.",
+      "practical_impact": "The past closure could force travel to a third country, but this specific barrier is not currently active.",
+      "who_should_care": "Applicants planning to use the Tehran UK Visa Application Centre.",
+      "recommended_action": "Use the current VFS UK-Iran centre page to confirm appointment availability before travel; do not treat the historical closure as current.",
+      "known_workaround": "During the closure applicants discussed using UK VACs in Türkiye or the UAE; that workaround is not currently required solely because of the historical closure.",
+      "first_seen": "2026-01-30",
+      "last_seen": "2026-09-11",
+      "last_verified": "2026-09-11",
+      "recency_class": "very_current",
+      "evidence_count": 4,
+      "independent_report_count": 2,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "official_verification": {
+        "status": "confirmed",
+        "source_url": "https://www.gov.uk/world/iran/news",
+        "source_title": "GOV.UK — Iran and the UK",
+        "verified_at": "2026-09-11",
+        "note": "Current GOV.UK explicitly distinguishes the Embassy from the UKVI Visa Application Centre and states the Tehran VAC is open to all visa categories."
+      },
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": 0,
+        "apply_when": "Never apply a current route penalty from this resolved closure."
+      },
+      "reason_for_adjustment": "Resolved operational events must not reduce current fit unless a new closure is independently confirmed.",
+      "keywords": [
+        "Tehran",
+        "VFS",
+        "VAC",
+        "biometrics",
+        "reopening",
+        "Iran",
+        "UK visa"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-IRN-VAC-001",
+          "date": "2026-01-30",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "14637",
+          "evidence_summary": "Applicant states the Tehran VFS centre was closed and asks whether biometrics could instead be completed in Istanbul.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "v1"
+        },
+        {
+          "evidence_id": "E-GBR-IRN-VAC-002",
+          "date": "2026-02-07",
+          "source_type": "community_admin",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "14800",
+          "evidence_summary": "Community-admin notice reports temporary suspension of UK biometrics/document submission at the Tehran VFS centre and points applicants to centres in Türkiye or the UAE.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "supports",
+          "independence_group": "v2"
+        },
+        {
+          "evidence_id": "E-GBR-IRN-VAC-O01",
+          "date": "2026-09-11",
+          "source_type": "official_vac_or_service_provider",
+          "source_name": "VFS Global — UK in Iran",
+          "source_url": "https://visa.vfsglobal.com/irn/en/gbr/",
+          "source_message_id": null,
+          "evidence_summary": "Official VFS Global UK-Iran page lists a 2 June 2026 news item announcing reopening of the UK Visa Application Centre in Tehran.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "E-GBR-IRN-VAC-O01"
+        },
+        {
+          "evidence_id": "E-GBR-IRN-VAC-O02",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Iran and the UK",
+          "source_url": "https://www.gov.uk/world/iran/news",
+          "source_message_id": null,
+          "evidence_summary": "Current GOV.UK page states visa services are not provided at the British Embassy and that the UKVI Visa Application Centre in Tehran is open to all visa categories.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "E-GBR-IRN-VAC-O02"
+        }
+      ],
+      "resolution": {
+        "resolved": true,
+        "resolved_date": "2026-06-02",
+        "resolution_summary": "VFS Global announced reopening of the UK Visa Application Centre in Tehran on 2 June 2026; current GOV.UK states it is open to all visa categories.",
+        "resolution_source": "https://visa.vfsglobal.com/irn/en/gbr/"
+      },
+      "needs_recheck": false,
+      "suggested_recheck_date": ""
+    },
+    {
+      "signal_id": "GBR-GT-R4-EQUIVALENT-RESEARCH-SCRUTINY-2026",
+      "root_cause_id": "GBR-GT-R4-EQUIVALENT-RESEARCH-SCRUTINY-2026",
+      "correlated_signal_ids": [],
+      "title": "Route 4 applicants without a completed PhD face evidence risk, not a formal PhD-only rule",
+      "signal_family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+      "signal_type": "practical_research_threshold",
+      "signal_class": "practical_selection",
+      "impact_direction": "mixed",
+      "status": "active",
+      "trend": "stable",
+      "severity": "high",
+      "confidence": "high",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [
+          "doctoral candidate",
+          "researcher without completed PhD"
+        ],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Global Talent Route 4 peer review applicant relying on equivalent research experience rather than a completed PhD"
+        ]
+      },
+      "migration_routes": [
+        "global_talent"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK"
+      ],
+      "process_stages": [
+        "endorsement_stage_1",
+        "peer_review",
+        "eligibility_evidence"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "Royal Society"
+        },
+        {
+          "entity_type": "other",
+          "name": "Royal Academy of Engineering"
+        },
+        {
+          "entity_type": "other",
+          "name": "British Academy"
+        }
+      ],
+      "summary_en": "A completed PhD is not an official Route 4 prerequisite: current rules allow equivalent research experience. Community evidence nevertheless shows meaningful scrutiny where applicants rely on that alternative. A successful 2026 counterexample demonstrates that a strong, well-documented equivalent-research case can succeed.",
+      "summary_fa": "مدرک دکتری تکمیل‌شده شرط رسمی مطلق برای روت ۴ نیست و مقررات فعلی «دکتری یا سابقه پژوهشی معادل» را می‌پذیرند. با این حال، شواهد جامعه نشان می‌دهد پرونده‌هایی که به سابقه معادل تکیه می‌کنند ممکن است با بررسی جدی مواجه شوند. یک نمونه موفق در ۲۰۲۶ نیز نشان می‌دهد اثبات قوی و مستندِ سابقه معادل می‌تواند موفق باشد.",
+      "practical_impact": "Applicants without a PhD should expect the quality and clarity of evidence for equivalent research experience to matter materially.",
+      "who_should_care": "Route 4 peer-review applicants who do not yet hold a PhD or who rely on industrial, clinical or other equivalent research experience.",
+      "recommended_action": "Frame the application around the official 'PhD or equivalent research experience' criterion and document research duration, outputs, role, independence and impact directly.",
+      "known_workaround": "A completed PhD is not required if equivalent research experience can be evidenced; do not delay automatically solely because the doctorate is unfinished.",
+      "first_seen": "2025-04-01",
+      "last_seen": "2026-09-11",
+      "last_verified": "2026-09-11",
+      "recency_class": "very_current",
+      "evidence_count": 7,
+      "independent_report_count": 3,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "official_verification": {
+        "status": "partly_confirmed",
+        "source_url": "https://www.gov.uk/global-talent-researcher-academic/peer-review",
+        "source_title": "GOV.UK — Global Talent peer review",
+        "verified_at": "2026-09-11",
+        "note": "Official rules confirm the alternative to a PhD. They do not publish a practical refusal rate for applicants relying on equivalent experience; that scrutiny pattern remains community-derived."
+      },
+      "suggested_fit_adjustment": -5,
+      "conditional_adjustment": {
+        "adjustment": -5,
+        "apply_when": "Apply only when the applicant lacks a completed PhD and cannot clearly document equivalent research experience and research outputs. Do not apply merely because the PhD is unfinished."
+      },
+      "reason_for_adjustment": "The adjustment reflects practical evidence risk, not a new legal requirement. Direct successful evidence prevents treating unfinished PhD status as a route blocker.",
+      "keywords": [
+        "Global Talent",
+        "Route 4",
+        "PhD",
+        "equivalent research experience",
+        "peer review",
+        "exceptional promise"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-GT-EQRE-001",
+          "date": "2025-04-01",
+          "source_type": "second_hand_report",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "6850",
+          "evidence_summary": "Second-hand community report says several recent Route 4 applicants without a PhD had been refused.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "supports",
+          "independence_group": "q1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-EQRE-002",
+          "date": "2025-05-15",
+          "source_type": "second_hand_report",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "7623",
+          "evidence_summary": "Same community reporter says some PhD students were recently refused because their doctorate was not yet completed.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "supports",
+          "independence_group": "q1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-EQRE-003",
+          "date": "2025-08-20",
+          "source_type": "second_hand_report",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "10363",
+          "evidence_summary": "Second-hand report of a strong-profile refusal led the writer to infer that a PhD was mandatory; this inference is contradicted by the official rule and later successful direct evidence.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "contradicts",
+          "independence_group": "q2"
+        },
+        {
+          "evidence_id": "E-GBR-GT-EQRE-004",
+          "date": "2026-05-27",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "16512",
+          "evidence_summary": "Direct applicant reports receiving Route 4 exceptional-promise endorsement before completing a PhD.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "q3"
+        },
+        {
+          "evidence_id": "E-GBR-GT-EQRE-005",
+          "date": "2026-05-27",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "16527",
+          "evidence_summary": "Same successful applicant reports being a third-year PhD student and relying on publications, citations and three years of R&D experience.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "q3"
+        },
+        {
+          "evidence_id": "E-GBR-GT-EQRE-006",
+          "date": "2026-05-28",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "16552",
+          "evidence_summary": "Same applicant identifies 'equivalent research experience' as the issue to prove and reports using publication history plus research-assistant experience and recommendation evidence.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "q3"
+        },
+        {
+          "evidence_id": "E-GBR-GT-EQRE-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Global Talent peer review",
+          "source_url": "https://www.gov.uk/global-talent-researcher-academic/peer-review",
+          "source_message_id": null,
+          "evidence_summary": "Current eligibility requires a PhD or equivalent research experience, including industrial or clinical research; a completed PhD is therefore not a blanket requirement.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "E-GBR-GT-EQRE-O01"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-10-11"
+    },
+    {
+      "signal_id": "GBR-GT-DIGITAL-RECOMMENDER-SCRUTINY-2026",
+      "root_cause_id": "GBR-GT-DIGITAL-RECOMMENDER-SCRUTINY-2026",
+      "correlated_signal_ids": [],
+      "title": "Digital Technology endorsement can scrutinize recommender standing beyond job title",
+      "signal_family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+      "signal_type": "profile_selection_pattern",
+      "signal_class": "practical_selection",
+      "impact_direction": "negative",
+      "status": "active",
+      "trend": "stable",
+      "severity": "high",
+      "confidence": "medium",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [
+          "digital technology"
+        ],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Global Talent digital technology applicant relying on recommendation letters"
+        ]
+      },
+      "migration_routes": [
+        "global_talent"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK"
+      ],
+      "process_stages": [
+        "endorsement_stage_1",
+        "recommendation_letters",
+        "digital_technology_assessment"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "Tech Nation"
+        }
+      ],
+      "summary_en": "A direct 2026 refusal report says Tech Nation questioned whether the applicant's recommenders were sufficiently recognized in the technology field. This aligns with the official requirement that each recommender be an established digital-technology expert; senior titles alone do not establish that criterion.",
+      "summary_fa": "در یک گزارش مستقیم رد شدن در ۲۰۲۶، Tech Nation جایگاه و شناخته‌شدگی توصیه‌کنندگان در حوزه فناوری را محل ایراد دانسته است. این با معیار رسمی «متخصص تثبیت‌شده در فناوری دیجیتال» هم‌راستاست؛ صرف داشتن عنوان مدیریتی بالا لزوماً این معیار را ثابت نمی‌کند.",
+      "practical_impact": "Weakly matched or insufficiently established recommenders can undermine an otherwise strong digital-technology endorsement package.",
+      "who_should_care": "Global Talent digital-technology applicants preparing the three required recommendation letters.",
+      "recommended_action": "Choose recommenders whose digital-technology expertise and standing are independently demonstrable and who have known the applicant's work for at least 12 months; make the relationship and concrete examples explicit.",
+      "known_workaround": "If a refusal is based on evidence quality and new evidence is needed, a fresh application may be more suitable than an endorsement review, because reviews cannot accept new evidence.",
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-09-11",
+      "last_verified": "2026-09-11",
+      "recency_class": "very_current",
+      "evidence_count": 5,
+      "independent_report_count": 2,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "official_verification": {
+        "status": "partly_confirmed",
+        "source_url": "https://www.gov.uk/global-talent-digital-technology/documents-you-need-to-apply-endorsement",
+        "source_title": "GOV.UK — Global Talent digital technology documents",
+        "verified_at": "2026-09-11",
+        "note": "The official criterion is confirmed; the frequency of refusals specifically for recommender standing is not published."
+      },
+      "suggested_fit_adjustment": -5,
+      "conditional_adjustment": {
+        "adjustment": -5,
+        "apply_when": "Apply only if one or more recommenders do not clearly meet the official established-expert standard, have not known the applicant's work for at least 12 months, or the letters poorly evidence those points."
+      },
+      "reason_for_adjustment": "One directly reasoned refusal plus the explicit official criterion makes this a material selection risk, but not a general refusal-rate signal.",
+      "keywords": [
+        "Global Talent",
+        "digital technology",
+        "Tech Nation",
+        "recommendation letters",
+        "established expert",
+        "refusal"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-GT-DIGREC-001",
+          "date": "2026-07-15",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17233",
+          "evidence_summary": "Applicant reports a Tech Nation exceptional-talent endorsement refusal.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "t1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-DIGREC-002",
+          "date": "2026-07-15",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17240",
+          "evidence_summary": "Same applicant says written feedback questioned whether the three recommenders were sufficiently prominent in the technology field, despite their senior corporate titles.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "t1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-DIGREC-003",
+          "date": "2026-07-15",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17245",
+          "evidence_summary": "Independent applicant reports a Tech Nation endorsement refusal submitted through an agency, but does not provide the refusal reason.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "t2"
+        },
+        {
+          "evidence_id": "E-GBR-GT-DIGREC-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Global Talent digital technology documents",
+          "source_url": "https://www.gov.uk/global-talent-digital-technology/documents-you-need-to-apply-endorsement",
+          "source_message_id": null,
+          "evidence_summary": "Current rules require three recommendation writers who are established experts in digital technology, as judged by the endorsing body, and who have known the applicant's work for at least 12 months.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "E-GBR-GT-DIGREC-O01"
+        },
+        {
+          "evidence_id": "E-GBR-GT-DIGREC-O02",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Global Talent digital technology eligibility",
+          "source_url": "https://www.gov.uk/global-talent-digital-technology/eligibility",
+          "source_message_id": null,
+          "evidence_summary": "Assessment expressly considers the strength of recommendation statements and supporting evidence.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "E-GBR-GT-DIGREC-O02"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-10-11"
+    },
+    {
+      "signal_id": "GBR-GT-ENDORSEMENT-REAPPLICATION-SUCCESS",
+      "root_cause_id": "GBR-GT-ENDORSEMENT-REAPPLICATION-SUCCESS",
+      "correlated_signal_ids": [],
+      "title": "A first Global Talent endorsement refusal does not create a permanent route bar",
+      "signal_family": "E22_POSITIVE_RESOLUTION_SIGNALS",
+      "signal_type": "successful_counterexample",
+      "signal_class": "adjudication",
+      "impact_direction": "positive_resolution",
+      "status": "active",
+      "trend": "stable",
+      "severity": "moderate",
+      "confidence": "high",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Global Talent applicant previously refused at endorsement Stage 1"
+        ]
+      },
+      "migration_routes": [
+        "global_talent"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK"
+      ],
+      "process_stages": [
+        "endorsement_refusal",
+        "endorsement_review",
+        "fresh_endorsement_application"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "UK Home Office"
+        }
+      ],
+      "summary_en": "Multiple direct experiences show successful fresh endorsement applications after an earlier refusal. Official guidance also allows a fresh application and distinguishes it from a review, which cannot introduce new evidence.",
+      "summary_fa": "چند تجربه مستقیم نشان می‌دهد پس از رد شدن اندورسمنت، امکان ثبت درخواست جدید و موفقیت وجود دارد. راهنمای رسمی نیز درخواست جدید را مجاز می‌داند و آن را از review جدا می‌کند؛ در review امکان ارائه مدرک جدید وجود ندارد.",
+      "practical_impact": "A prior Stage 1 refusal should trigger diagnosis of the refusal reasons, not an automatic permanent exclusion from Global Talent.",
+      "who_should_care": "Global Talent applicants deciding between endorsement review, a corrected fresh application, or abandoning the route after refusal.",
+      "recommended_action": "Use review when the issue is an assessment/process error; use a fresh application if material evidence or framing must be changed.",
+      "known_workaround": "Fresh endorsement application after correcting substantive weaknesses.",
+      "first_seen": "2025-07-20",
+      "last_seen": "2026-09-11",
+      "last_verified": "2026-09-11",
+      "recency_class": "very_current",
+      "evidence_count": 4,
+      "independent_report_count": 2,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "official_verification": {
+        "status": "confirmed",
+        "source_url": "https://www.gov.uk/global-talent-researcher-academic/if-your-endorsement-application-is-refused",
+        "source_title": "GOV.UK — If your Global Talent endorsement is refused",
+        "verified_at": "2026-09-11",
+        "note": "Official guidance confirms the procedural option; community reports provide successful counterexamples."
+      },
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": 0,
+        "apply_when": "Positive resolution evidence may remove an earlier 'permanent bar' penalty but must never add eligibility points or imply likely approval."
+      },
+      "reason_for_adjustment": "This signal corrects an overly negative inference; it does not increase official eligibility.",
+      "keywords": [
+        "Global Talent",
+        "endorsement refusal",
+        "reapply",
+        "review",
+        "fresh application"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-GT-REAPP-001",
+          "date": "2025-07-20",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "9209",
+          "evidence_summary": "Applicant reports a 2022 endorsement refusal followed by a fresh application after correcting the cited issues; the second application was endorsed 31 days later.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "u1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-REAPP-002",
+          "date": "2025-09-01",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "11021",
+          "evidence_summary": "Same reporter reiterates that a first refusal was followed by a successful second application.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "u1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-REAPP-003",
+          "date": "2026-08-03",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17543",
+          "evidence_summary": "Independent applicant reports reapplying about one month after a prior refusal and obtaining endorsement without using a lawyer or agency.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "u2"
+        },
+        {
+          "evidence_id": "E-GBR-GT-REAPP-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — If your Global Talent endorsement is refused",
+          "source_url": "https://www.gov.uk/global-talent-researcher-academic/if-your-endorsement-application-is-refused",
+          "source_message_id": null,
+          "evidence_summary": "Current guidance allows a review within 28 days for alleged assessment/process error, bars new evidence in review, and says a fresh application can be made with a new fee if refusal remains.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "E-GBR-GT-REAPP-O01"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-12-11"
+    },
+    {
+      "signal_id": "GBR-WORK-VISA-PRIORITY-OVERRUN-2026",
+      "root_cause_id": "GBR-WORK-VISA-PRIORITY-OVERRUN-2026",
+      "correlated_signal_ids": [],
+      "title": "Priority visa service is not a guaranteed five-working-day decision",
+      "signal_family": "E2_APPLICATION_PROCESSING",
+      "signal_type": "processing_delay",
+      "signal_class": "processing",
+      "impact_direction": "mixed",
+      "status": "monitoring",
+      "trend": "unknown",
+      "severity": "high",
+      "confidence": "medium",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Applicant paying for UKVI priority/faster decision service on an eligible work-route application"
+        ]
+      },
+      "migration_routes": [
+        "global_talent",
+        "skilled_worker"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK"
+      ],
+      "process_stages": [
+        "visa_stage_2",
+        "priority_processing"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "UK Visas and Immigration"
+        }
+      ],
+      "summary_en": "Two 2026 work-route applicants reported priority processing materially exceeding the expected fast-track window, while another Global Talent applicant received a decision on schedule. Official guidance says priority timing is usual rather than guaranteed and can be extended for additional checks.",
+      "summary_fa": "دو متقاضی مسیرهای کاری در ۲۰۲۶ از طولانی‌تر شدن محسوس پردازش Priority نسبت به بازه مورد انتظار خبر داده‌اند، در حالی که یک متقاضی Global Talent در همان بازه زمانی پاسخ گرفته است. راهنمای رسمی نیز زمان Priority را تضمین قطعی نمی‌داند و امکان تأخیر برای بررسی‌های اضافی را ذکر می‌کند.",
+      "practical_impact": "Applicants with a fixed start date can still miss that date even after paying for priority service.",
+      "who_should_care": "Eligible Global Talent or Skilled Worker applicants relying on priority timing for a fixed start, travel, or status deadline.",
+      "recommended_action": "Treat priority as a shorter target, not a guarantee; preserve contingency time and watch for requests for information or delay notices.",
+      "known_workaround": "Where available and appropriate, apply earlier rather than relying solely on priority service.",
+      "first_seen": "2026-04-21",
+      "last_seen": "2026-09-11",
+      "last_verified": "2026-09-11",
+      "recency_class": "very_current",
+      "evidence_count": 4,
+      "independent_report_count": 3,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "official_verification": {
+        "status": "confirmed",
+        "source_url": "https://www.gov.uk/faster-decision-visa-settlement/applying-inside-the-uk",
+        "source_title": "GOV.UK — Faster visa decisions",
+        "verified_at": "2026-09-11",
+        "note": "Official guidance confirms that priority decisions can take longer. Community evidence is mixed and too small to infer a current general backlog."
+      },
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": -5,
+        "apply_when": "Apply only when a route plan has an immovable deadline and its feasibility assumes the priority-service target will always be met."
+      },
+      "reason_for_adjustment": "Mixed evidence supports a contingency penalty only for deadline-sensitive plans, not a blanket route penalty.",
+      "keywords": [
+        "priority service",
+        "fast track",
+        "Global Talent",
+        "Skilled Worker",
+        "processing time"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-PRIO-001",
+          "date": "2026-04-21",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "15744",
+          "evidence_summary": "Global Talent applicant applying via Rome reports paying for a five-day fast-track service but still having no decision after 21 days; the planned work start had already passed.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "p1"
+        },
+        {
+          "evidence_id": "E-GBR-PRIO-002",
+          "date": "2026-07-03",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17104",
+          "evidence_summary": "Skilled Worker applicant reports employer-paid faster processing expected around one week, but the visa decision arrived about 24 days after biometrics.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "p2"
+        },
+        {
+          "evidence_id": "E-GBR-PRIO-003",
+          "date": "2026-08-10",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17664",
+          "evidence_summary": "Global Talent Stage 2 applicant reports a priority application on 3 August with a decision on 10 August, providing a successful counterexample to a blanket-delay claim.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "contradicts",
+          "independence_group": "p3"
+        },
+        {
+          "evidence_id": "E-GBR-PRIO-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Faster visa decisions",
+          "source_url": "https://www.gov.uk/faster-decision-visa-settlement/applying-inside-the-uk",
+          "source_message_id": null,
+          "evidence_summary": "Priority service usually means a decision within 5 working days for most eligible applications, but official guidance states cases can take longer when further information or checks are needed.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "E-GBR-PRIO-O01"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-10-11"
+    },
+    {
+      "signal_id": "GBR-GT-PHD-ATAS-CONTINUITY-2026",
+      "root_cause_id": "GBR-GT-PHD-ATAS-CONTINUITY-2026",
+      "correlated_signal_ids": [
+        "GBR-SW-STUDY-INSTITUTION-FRICTION-2026"
+      ],
+      "title": "Switching to Global Talent does not automatically remove ATAS obligations for relevant study",
+      "signal_family": "E12_RESEARCH_PHD_POSTDOC",
+      "signal_type": "research_security_clearance",
+      "signal_class": "institution",
+      "impact_direction": "negative",
+      "status": "active",
+      "trend": "stable",
+      "severity": "high",
+      "confidence": "high",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [
+          "PhD",
+          "postgraduate"
+        ],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Non-ATAS-exempt nationality",
+          "ATAS-listed course or research",
+          "Global Talent or other permission allowing study"
+        ]
+      },
+      "migration_routes": [
+        "global_talent",
+        "student_phd"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK",
+        "STUDY / ACADEMIC"
+      ],
+      "process_stages": [
+        "post_switch_study",
+        "atas_clearance",
+        "university_registration"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "Academic Technology Approval Scheme (ATAS)"
+        }
+      ],
+      "summary_en": "A PhD applicant reported a study interruption after switching to Global Talent because the university still required ATAS. Current official rules confirm that Global Talent permission can carry an ATAS condition for relevant study/research. This is not a blanket ATAS requirement for every Global Talent holder.",
+      "summary_fa": "یک دانشجوی دکتری پس از تغییر ویزا به Global Talent به‌دلیل نیاز دانشگاه به ATAS با وقفه در تحصیل مواجه شد. مقررات فعلی نیز تأیید می‌کند که برای برخی تحصیل‌ها/پژوهش‌های مشمول ATAS، دارنده Global Talent همچنان ممکن است نیاز به گواهی داشته باشد. این الزام برای همه دارندگان Global Talent عمومی نیست.",
+      "practical_impact": "A visa switch can leave an applicant unable to resume an ATAS-controlled course or research activity until a valid certificate is in place.",
+      "who_should_care": "Non-exempt nationals on Global Talent who intend to continue or start ATAS-listed postgraduate study or research.",
+      "recommended_action": "Check the current ATAS nationality, subject and activity rules before switching or resuming study; coordinate with the education provider in advance.",
+      "known_workaround": "Obtain or renew the required ATAS certificate before the planned return to study/research.",
+      "first_seen": "2026-05-31",
+      "last_seen": "2026-09-11",
+      "last_verified": "2026-09-11",
+      "recency_class": "very_current",
+      "evidence_count": 5,
+      "independent_report_count": 2,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "official_verification": {
+        "status": "confirmed",
+        "source_url": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-atas-academic-technology-approval-scheme-atas",
+        "source_title": "GOV.UK — Appendix ATAS",
+        "verified_at": "2026-09-11",
+        "note": "Official rules confirm the scoped ATAS condition. The reported one-month interruption is an individual operational experience."
+      },
+      "suggested_fit_adjustment": -5,
+      "conditional_adjustment": {
+        "adjustment": -5,
+        "apply_when": "Apply only when the applicant is non-exempt, the planned study/research is ATAS-controlled, and the required certificate is not already valid."
+      },
+      "reason_for_adjustment": "The risk can stop study/research execution temporarily but does not create a blanket Global Talent eligibility penalty.",
+      "keywords": [
+        "ATAS",
+        "Global Talent",
+        "PhD",
+        "research security clearance",
+        "visa switch"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-ATAS-001",
+          "date": "2026-05-31",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "16581",
+          "evidence_summary": "PhD student who switched from Student to Global Talent reports that the university required ATAS before returning to study.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "a1"
+        },
+        {
+          "evidence_id": "E-GBR-ATAS-002",
+          "date": "2026-06-01",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "16606",
+          "evidence_summary": "Same applicant says the ATAS issue caused roughly a one-month interruption in doctoral study after the visa switch.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "a1"
+        },
+        {
+          "evidence_id": "E-GBR-ATAS-003",
+          "date": "2026-06-01",
+          "source_type": "community_opinion",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "16613",
+          "evidence_summary": "Independent community response correctly distinguishes visa type from ATAS-relevant study and notes that Global Talent holders may still need ATAS depending on nationality and field.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "supports",
+          "independence_group": "a2"
+        },
+        {
+          "evidence_id": "E-GBR-ATAS-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Appendix ATAS",
+          "source_url": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-atas-academic-technology-approval-scheme-atas",
+          "source_message_id": null,
+          "evidence_summary": "Current Appendix ATAS states that a person subject to the ATAS condition must obtain a valid certificate before commencing specified study or research; exempt nationalities are listed separately.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "E-GBR-ATAS-O01"
+        },
+        {
+          "evidence_id": "E-GBR-ATAS-O02",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Academic Technology Approval Scheme",
+          "source_url": "https://www.gov.uk/guidance/academic-technology-approval-scheme",
+          "source_message_id": null,
+          "evidence_summary": "Current ATAS guidance expressly includes Global Talent holders who later study an ATAS-relevant course.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "E-GBR-ATAS-O02"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-10-11"
+    },
+    {
+      "signal_id": "GBR-SW-ECCTIS-VERIFICATION-2026",
+      "root_cause_id": "GBR-SW-ECCTIS-VERIFICATION-2026",
+      "correlated_signal_ids": [],
+      "title": "Ecctis document correction can create Skilled Worker timeline risk",
+      "signal_family": "E6_DOCUMENTS_EVIDENCE",
+      "signal_type": "document_verification_delay",
+      "signal_class": "processing",
+      "impact_direction": "negative",
+      "status": "monitoring",
+      "trend": "unknown",
+      "severity": "moderate",
+      "confidence": "low",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Skilled Worker applicant relying on an overseas English-taught degree and Ecctis assessment to meet the English requirement"
+        ]
+      },
+      "migration_routes": [
+        "skilled_worker"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK"
+      ],
+      "process_stages": [
+        "english_language_evidence",
+        "credential_verification"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "Ecctis"
+        }
+      ],
+      "summary_en": "One detailed 2026 Skilled Worker experience shows that a document-format correction in Ecctis assessment can restart a substantial review period. The applicant used an approved UKVI English test instead. This is a single-case operational warning, not evidence of a general Ecctis backlog.",
+      "summary_fa": "یک تجربه جزئی‌نگر در ۲۰۲۶ نشان می‌دهد نقص شکلی مدارک در ارزیابی Ecctis می‌تواند زمان بررسی را طولانی کند. متقاضی برای حفظ زمان‌بندی به آزمون زبان مورد تأیید UKVI روی آورد. این یک هشدار تک‌موردی است و نشانه بک‌لاگ عمومی Ecctis نیست.",
+      "practical_impact": "If English evidence is left late, a verification correction can threaten a sponsorship or current-status deadline.",
+      "who_should_care": "Skilled Worker applicants using an overseas degree rather than a SELT to satisfy English.",
+      "recommended_action": "Start Ecctis early and verify transcript/document requirements before upload; compare approved SELT availability if the deadline is tight.",
+      "known_workaround": "Use an approved SELT if eligible and operationally faster.",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-09-11",
+      "last_verified": "2026-09-11",
+      "recency_class": "very_current",
+      "evidence_count": 2,
+      "independent_report_count": 1,
+      "officially_confirmed": true,
+      "community_confirmed": false,
+      "official_verification": {
+        "status": "partly_confirmed",
+        "source_url": "https://www.gov.uk/skilled-worker-visa/knowledge-of-english",
+        "source_title": "GOV.UK — Skilled Worker knowledge of English",
+        "verified_at": "2026-09-11",
+        "note": "Official guidance confirms Ecctis and SELT pathways, but not the reported restart timing or any generalized delay."
+      },
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": 0,
+        "apply_when": "Single anecdote: do not apply a route penalty. Use only as a document-timeline warning."
+      },
+      "reason_for_adjustment": "The evidence does not establish a repeatable backlog or refusal pattern.",
+      "keywords": [
+        "Skilled Worker",
+        "Ecctis",
+        "English language",
+        "SELT",
+        "document verification"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-SW-ECCTIS-001",
+          "date": "2026-07-03",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17104",
+          "evidence_summary": "Applicant reports Ecctis requested a re-upload because the transcript lacked a university seal and then restarted an approximately one-month assessment window; the applicant instead used a UKVI-approved PTE test to protect the visa timeline.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "e1"
+        },
+        {
+          "evidence_id": "E-GBR-SW-ECCTIS-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Skilled Worker knowledge of English",
+          "source_url": "https://www.gov.uk/skilled-worker-visa/knowledge-of-english",
+          "source_message_id": null,
+          "evidence_summary": "Current guidance states that an overseas degree taught in English can be assessed by Ecctis and that an approved Secure English Language Test is another route to prove English.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "E-GBR-SW-ECCTIS-O01"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-11-11"
+    },
+    {
+      "signal_id": "GBR-SW-STUDY-INSTITUTION-FRICTION-2026",
+      "root_cause_id": "GBR-SW-STUDY-INSTITUTION-FRICTION-2026",
+      "correlated_signal_ids": [
+        "GBR-GT-PHD-ATAS-CONTINUITY-2026"
+      ],
+      "title": "Skilled Worker status allows study, but university/funder/employer constraints can still matter",
+      "signal_family": "E11_UNIVERSITY_COLLEGE_ACADEMIC_INSTITUTION",
+      "signal_type": "profile_selection_pattern",
+      "signal_class": "institution",
+      "impact_direction": "mixed",
+      "status": "active",
+      "trend": "stable",
+      "severity": "moderate",
+      "confidence": "high",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Skilled Worker holder considering full-time study or PhD alongside sponsored work"
+        ]
+      },
+      "migration_routes": [
+        "skilled_worker",
+        "student_masters_taught",
+        "student_phd"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK",
+        "STUDY / ACADEMIC"
+      ],
+      "process_stages": [
+        "study_while_working",
+        "university_enrolment",
+        "funding"
+      ],
+      "entities": [],
+      "summary_en": "Current immigration guidance allows Skilled Workers to study if it does not interfere with the sponsored job, subject to ATAS where relevant. Community discussion shows that universities, doctoral funders, or employers may still impose separate workload or funding constraints. A direct full-time master's counterexample disproves the blanket claim that Skilled Worker status itself forbids study.",
+      "summary_fa": "راهنمای فعلی مهاجرت اجازه تحصیل به دارنده Skilled Worker را می‌دهد، به شرط آنکه با شغل اسپانسری تداخل نداشته باشد و در صورت لزوم ATAS رعایت شود. با این حال دانشگاه، فاند دکتری یا کارفرما ممکن است محدودیت‌های جداگانه داشته باشند. یک تجربه مستقیم تحصیل تمام‌وقت، ادعای «ممنوعیت کلی تحصیل با Skilled Worker» را رد می‌کند.",
+      "practical_impact": "Legal permission to study does not guarantee that a particular university, funding package, or employment contract is operationally compatible with full-time study.",
+      "who_should_care": "Skilled Worker holders considering a master's or PhD, especially funded full-time PhD programmes.",
+      "recommended_action": "Check the specific university enrolment policy, funder/stipend terms and employer workload rules separately from immigration permission.",
+      "known_workaround": "Part-time study or a programme/funding arrangement compatible with sponsored work may resolve institution-specific conflicts.",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-09-11",
+      "last_verified": "2026-09-11",
+      "recency_class": "very_current",
+      "evidence_count": 4,
+      "independent_report_count": 3,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "official_verification": {
+        "status": "confirmed",
+        "source_url": "https://www.gov.uk/government/publications/skilled-worker-visa-caseworker-guidance/skilled-worker-caseworker-guidance-accessible",
+        "source_title": "GOV.UK — Skilled Worker caseworker guidance",
+        "verified_at": "2026-09-11",
+        "note": "The legal permission to study is officially confirmed. Institution/funder friction remains case-specific community evidence."
+      },
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": -5,
+        "apply_when": "Apply only when a specific university, funder or employer has a documented condition that conflicts with the proposed study/work combination."
+      },
+      "reason_for_adjustment": "No country-level or route-level penalty is justified from institution-specific constraints.",
+      "keywords": [
+        "Skilled Worker",
+        "study",
+        "PhD",
+        "master's",
+        "university",
+        "ATAS"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-SW-STUDY-001",
+          "date": "2026-07-24",
+          "source_type": "community_opinion",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17404",
+          "evidence_summary": "Community response says immigration rules permit study but practical university and employer coordination can be difficult, especially for full-time PhD study.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "supports",
+          "independence_group": "s1"
+        },
+        {
+          "evidence_id": "E-GBR-SW-STUDY-002",
+          "date": "2026-07-24",
+          "source_type": "community_opinion",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17407",
+          "evidence_summary": "Another reply incorrectly asserts that Skilled Worker status itself prevents study and universities will not accept it.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "contradicts",
+          "independence_group": "s2"
+        },
+        {
+          "evidence_id": "E-GBR-SW-STUDY-003",
+          "date": "2026-07-27",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17423",
+          "evidence_summary": "Direct counterexample: a Skilled Worker holder reports completing a full-time master's while working full-time and notes that doctoral funding or university conditions may still impose separate restrictions.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "s3"
+        },
+        {
+          "evidence_id": "E-GBR-SW-STUDY-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Skilled Worker caseworker guidance",
+          "source_url": "https://www.gov.uk/government/publications/skilled-worker-visa-caseworker-guidance/skilled-worker-caseworker-guidance-accessible",
+          "source_message_id": null,
+          "evidence_summary": "Current guidance explicitly permits study with no limit on study hours if it does not interfere with the sponsored job, subject to ATAS where applicable.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "E-GBR-SW-STUDY-O01"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-12-11"
+    },
+    {
+      "signal_id": "GBR-GT-R3-STATEMENT-GUARANTEE-DOCUMENT-RISK-2025",
+      "root_cause_id": "GBR-GT-R3-STATEMENT-GUARANTEE-DOCUMENT-RISK-2025",
+      "correlated_signal_ids": [],
+      "title": "Historical Route 3 host-document delays and Statement of Guarantee rework",
+      "signal_family": "E11_UNIVERSITY_COLLEGE_ACADEMIC_INSTITUTION",
+      "signal_type": "visa_document_delay",
+      "signal_class": "institution",
+      "impact_direction": "negative",
+      "status": "historical",
+      "trend": "unknown",
+      "severity": "high",
+      "confidence": "medium",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Global Talent Route 3 / UKRI endorsed-funder applicant relying on host-organisation documentation"
+        ]
+      },
+      "migration_routes": [
+        "global_talent"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK"
+      ],
+      "process_stages": [
+        "endorsement_stage_1",
+        "host_document_preparation"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "UK Research and Innovation (UKRI)"
+        }
+      ],
+      "summary_en": "Two independent early-2025 Route 3 experiences show host-university document preparation taking about one to six weeks; one applicant then lost roughly another month because the Statement of Guarantee did not contain the expected information/format. The applicant ultimately succeeded.",
+      "summary_fa": "دو تجربه مستقل در اوایل ۲۰۲۵ نشان می‌دهد آماده‌سازی مدارک دانشگاه میزبان برای روت ۳ حدود یک تا شش هفته زمان برده و در یک مورد، نقص Statement of Guarantee حدود یک ماه تأخیر اضافی ایجاد کرده است. آن پرونده در نهایت موفق شد.",
+      "practical_impact": "Host-generated documentation can become the critical path even on a fast-track endorsement route.",
+      "who_should_care": "Global Talent Route 3 / UKRI endorsed-funder applicants whose host organisation prepares the endorsement evidence.",
+      "recommended_action": "Ask the host organisation to use current UKRI/Home Office requirements and verify all mandatory letter contents before submission.",
+      "known_workaround": "Early host-document preparation and internal sense-checking can reduce rework.",
+      "first_seen": "2025-01-02",
+      "last_seen": "2025-03-01",
+      "last_verified": "",
+      "recency_class": "historical",
+      "evidence_count": 4,
+      "independent_report_count": 2,
+      "officially_confirmed": false,
+      "community_confirmed": true,
+      "official_verification": {
+        "status": "not_verified",
+        "source_url": null,
+        "source_title": null,
+        "verified_at": null,
+        "note": "Historical community pattern was not used to infer a current UK-wide problem."
+      },
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": 0,
+        "apply_when": "Historical signal: no current fit adjustment."
+      },
+      "reason_for_adjustment": "The issue is old and host-specific; it should not penalize current route ranking without new corroboration.",
+      "keywords": [
+        "Global Talent",
+        "Route 3",
+        "UKRI",
+        "Statement of Guarantee",
+        "university letter",
+        "document delay"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-GT-R3SG-001",
+          "date": "2025-01-02",
+          "source_type": "shared_direct_institution_email",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "5006",
+          "evidence_summary": "Applicant shares a university communication saying a draft Statement of Guarantee and grant award had been sent to UKRI for sense-checking; the applicant had already waited several weeks for host documents.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "g1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R3SG-002",
+          "date": "2025-01-02",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "5008",
+          "evidence_summary": "Same applicant says the wait for the university documents was about one month.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "g1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R3SG-003",
+          "date": "2025-01-02",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "5009",
+          "evidence_summary": "Independent applicant reports the university took about six weeks to issue a Statement of Guarantee, after which Home Office said it was not in the correct format and the process had to be repeated.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "g2"
+        },
+        {
+          "evidence_id": "E-GBR-GT-R3SG-004",
+          "date": "2025-03-01",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "6274",
+          "evidence_summary": "Same second applicant later reports successful Route 3 visa completion but says correcting the deficient Statement of Guarantee cost about one additional month.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "g2"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": false,
+      "suggested_recheck_date": ""
+    },
+    {
+      "signal_id": "GBR-GT-DIGITAL-IRAN-SUBMISSION-ACCESS-2025",
+      "root_cause_id": "GBR-GT-DIGITAL-IRAN-SUBMISSION-ACCESS-2025",
+      "correlated_signal_ids": [],
+      "title": "Historical Iran-origin digital endorsement submission access failure",
+      "signal_family": "E5_DIGITAL_SYSTEM_PORTAL_APPOINTMENT_PLATFORM",
+      "signal_type": "account_access_problem",
+      "signal_class": "other",
+      "impact_direction": "negative",
+      "status": "historical",
+      "trend": "unknown",
+      "severity": "high",
+      "confidence": "low",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [
+          "Iran"
+        ],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [
+          "digital technology"
+        ],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Global Talent digital technology endorsement submission from Iran"
+        ]
+      },
+      "migration_routes": [
+        "global_talent"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK"
+      ],
+      "process_stages": [
+        "endorsement_document_submission",
+        "digital_portal"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "Tech Nation"
+        },
+        {
+          "entity_type": "other",
+          "name": "UK Home Office"
+        }
+      ],
+      "summary_en": "One 2025 applicant reported being unable to use the digital-technology endorsement submission links from Iran, eventually relying on a contact abroad. The missing confirmation then led to cancellation for missed document submission, with fee refund. No current recurrence was established.",
+      "summary_fa": "یک متقاضی در ۲۰۲۵ گزارش کرده از داخل ایران به لینک‌های سابمیت اندورسمنت دیجیتال دسترسی عملی نداشته و نهایتاً از فردی خارج از ایران کمک گرفته است. به‌دلیل ثبت‌نشدن ارسال مدارک، درخواست لغو و هزینه بازپرداخت شد. تکرار فعلی این مشکل تأیید نشده است.",
+      "practical_impact": "If such access failure recurs, an otherwise eligible case can fail operationally before substantive assessment.",
+      "who_should_care": "Digital-technology Global Talent applicants submitting from Iran.",
+      "recommended_action": "Do not rely on this old incident as a current condition; confirm the present submission workflow and preserve submission confirmation/reference immediately.",
+      "known_workaround": "Use official support channels promptly if no submission confirmation is generated.",
+      "first_seen": "2025-07-04",
+      "last_seen": "2025-07-04",
+      "last_verified": "",
+      "recency_class": "historical",
+      "evidence_count": 2,
+      "independent_report_count": 1,
+      "officially_confirmed": false,
+      "community_confirmed": false,
+      "official_verification": {
+        "status": "not_verified",
+        "source_url": null,
+        "source_title": null,
+        "verified_at": null,
+        "note": "Single historical anecdote; current workflow may differ."
+      },
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": 0,
+        "apply_when": "Historical single anecdote: no current score impact."
+      },
+      "reason_for_adjustment": "No evidence supports a current Iran-wide portal barrier.",
+      "keywords": [
+        "Global Talent",
+        "digital technology",
+        "Iran",
+        "portal",
+        "submission confirmation"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-GT-IRPORT-001",
+          "date": "2025-07-04",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "8569",
+          "evidence_summary": "Applicant reports that the special-country submission link produced no output and the main digital-technology submission link was inaccessible from Iran; a contact abroad eventually submitted it. The applicant says repeated emails were needed to obtain extra time.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "i1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-IRPORT-002",
+          "date": "2025-07-04",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "8602",
+          "evidence_summary": "Same applicant reports the Home Office treated the documents as not submitted within the 15-day window, cancelled the application and refunded the fee.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "i1"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": false,
+      "suggested_recheck_date": ""
+    },
+    {
+      "signal_id": "GBR-EVISA-BRP-TRANSITION-2025",
+      "root_cause_id": "GBR-EVISA-BRP-TRANSITION-2025",
+      "correlated_signal_ids": [],
+      "title": "BRP non-issuance after eVisa transition is now normal, not an application defect",
+      "signal_family": "E5_DIGITAL_SYSTEM_PORTAL_APPOINTMENT_PLATFORM",
+      "signal_type": "evisa_system_issue",
+      "signal_class": "official_implementation",
+      "impact_direction": "positive_resolution",
+      "status": "resolved",
+      "trend": "resolved",
+      "severity": "moderate",
+      "confidence": "high",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "UK immigration-status holders transitioning from physical BRP to eVisa"
+        ]
+      },
+      "migration_routes": [
+        "global_talent",
+        "skilled_worker",
+        "dependent",
+        "other"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK",
+        "FAMILY / DEPENDANTS",
+        "MOBILITY / OTHER"
+      ],
+      "process_stages": [
+        "post_arrival_status_proof",
+        "evisa_account"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "UK Visas and Immigration"
+        }
+      ],
+      "summary_en": "Early-2025 community confusion about not receiving a BRP after obtaining eVisa/share codes has been resolved by the digital-status transition. Current GOV.UK says eVisas have replaced physical immigration documents and all BRPs have expired.",
+      "summary_fa": "ابهام‌های اوایل ۲۰۲۵ درباره صادر نشدن BRP پس از فعال شدن eVisa با گذار رسمی به وضعیت دیجیتال برطرف شده است. GOV.UK اکنون اعلام می‌کند eVisa جایگزین مدارک فیزیکی شده و BRPها منقضی شده‌اند.",
+      "practical_impact": "Applicants should not interpret absence of a newly issued physical BRP as a current processing failure when their eVisa is valid.",
+      "who_should_care": "UK visa holders using eVisa/share codes, especially people relying on older BRP expectations.",
+      "recommended_action": "Use the UKVI account/eVisa and share-code process; keep identity-document details current.",
+      "known_workaround": "Use current GOV.UK eVisa troubleshooting if access itself fails.",
+      "first_seen": "2025-01-07",
+      "last_seen": "2026-09-11",
+      "last_verified": "2026-09-11",
+      "recency_class": "very_current",
+      "evidence_count": 5,
+      "independent_report_count": 3,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "official_verification": {
+        "status": "confirmed",
+        "source_url": "https://www.gov.uk/evisa",
+        "source_title": "GOV.UK — eVisas",
+        "verified_at": "2026-09-11",
+        "note": "The current digital-status model is officially confirmed."
+      },
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": 0,
+        "apply_when": "Resolved implementation transition: no negative fit adjustment."
+      },
+      "reason_for_adjustment": "The signal exists to remove an obsolete operational concern, not to add route points.",
+      "keywords": [
+        "eVisa",
+        "BRP",
+        "share code",
+        "UKVI account",
+        "digital status"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-EVISA-001",
+          "date": "2025-01-07",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "5075",
+          "evidence_summary": "New arrival reports being able to obtain eVisa share codes but being confused because no BRP or 'BRP code' had arrived.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "b1"
+        },
+        {
+          "evidence_id": "E-GBR-EVISA-002",
+          "date": "2025-01-07",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "5092",
+          "evidence_summary": "Independent eVisa user reports that a replacement physical BRP was not issued after transition.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "b2"
+        },
+        {
+          "evidence_id": "E-GBR-EVISA-003",
+          "date": "2025-01-07",
+          "source_type": "community_opinion",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "5100",
+          "evidence_summary": "Another community member explains that BRP was a physical card and the system was moving to eVisa.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "b3"
+        },
+        {
+          "evidence_id": "E-GBR-EVISA-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — eVisas",
+          "source_url": "https://www.gov.uk/evisa",
+          "source_message_id": null,
+          "evidence_summary": "Current GOV.UK states that eVisas have replaced physical immigration documents and can be used to obtain share codes.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "E-GBR-EVISA-O01"
+        },
+        {
+          "evidence_id": "E-GBR-EVISA-O02",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Biometric residence permits",
+          "source_url": "https://www.gov.uk/biometric-residence-permits",
+          "source_message_id": null,
+          "evidence_summary": "Current GOV.UK states all BRPs have expired and been replaced by eVisas.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "E-GBR-EVISA-O02"
+        }
+      ],
+      "resolution": {
+        "resolved": true,
+        "resolved_date": "2026-09-11",
+        "resolution_summary": "Current official guidance confirms eVisa replacement of physical BRPs.",
+        "resolution_source": "https://www.gov.uk/evisa"
+      },
+      "needs_recheck": false,
+      "suggested_recheck_date": ""
+    },
+    {
+      "signal_id": "GBR-IHS-REFUND-RULE-CLARIFICATION-2026",
+      "root_cause_id": "GBR-IHS-REFUND-RULE-CLARIFICATION-2026",
+      "correlated_signal_ids": [],
+      "title": "IHS overlap refunds are automatic; ILR itself does not refund unused IHS",
+      "signal_family": "E9_MONEY_BANKING_SANCTIONS_PAYMENTS",
+      "signal_type": "refund_problem",
+      "signal_class": "financial",
+      "impact_direction": "mixed",
+      "status": "active",
+      "trend": "stable",
+      "severity": "moderate",
+      "confidence": "high",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "In-country visa switch or extension with overlapping IHS periods",
+          "Applicant considering ILR with unused time remaining on a prior visa"
+        ]
+      },
+      "migration_routes": [
+        "global_talent",
+        "skilled_worker",
+        "dependent",
+        "long_term_residence"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK",
+        "FAMILY / DEPENDANTS",
+        "PERMANENT / LONG-TERM MIGRATION"
+      ],
+      "process_stages": [
+        "visa_switch",
+        "ihs_payment",
+        "settlement"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "UK Visas and Immigration"
+        }
+      ],
+      "summary_en": "Community advice was mixed on IHS refunds. Current official guidance clarifies that qualifying overlapping IHS after an in-country switch/extension is refunded automatically in six-month blocks, while applying for ILR does not itself generate a refund of unused IHS.",
+      "summary_fa": "در جامعه درباره بازپرداخت IHS پاسخ‌های متناقض وجود داشت. راهنمای رسمی فعلی روشن می‌کند که در صورت پرداخت هم‌پوشان IHS پس از تمدید/تغییر ویزا در داخل بریتانیا، بازپرداخت واجد شرایط به‌صورت خودکار و در بازه‌های شش‌ماهه انجام می‌شود؛ اما درخواست ILR به‌خودی‌خود باعث بازپرداخت IHS استفاده‌نشده نمی‌شود.",
+      "practical_impact": "Incorrect refund assumptions can materially distort the cost of switching routes or settling.",
+      "who_should_care": "Applicants comparing the financial cost of an in-country switch, extension, or ILR application.",
+      "recommended_action": "Model IHS cash flow using the official overlap and six-month rules; do not assume an ILR application refunds remaining IHS.",
+      "known_workaround": "If a qualifying automatic refund is not received within the official timeframe, use UKVI's refund contact process.",
+      "first_seen": "2025-04-18",
+      "last_seen": "2026-09-11",
+      "last_verified": "2026-09-11",
+      "recency_class": "very_current",
+      "evidence_count": 4,
+      "independent_report_count": 2,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "official_verification": {
+        "status": "confirmed",
+        "source_url": "https://www.gov.uk/healthcare-immigration-application/refunds",
+        "source_title": "GOV.UK — IHS refunds",
+        "verified_at": "2026-09-11",
+        "note": "Current official refund rules resolve the conflicting community advice."
+      },
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": 0,
+        "apply_when": "Cost clarification only; do not alter official eligibility or route fit from this signal alone."
+      },
+      "reason_for_adjustment": "This affects budgeting rather than eligibility.",
+      "keywords": [
+        "IHS",
+        "refund",
+        "visa switch",
+        "overlap",
+        "ILR",
+        "health surcharge"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-IHS-001",
+          "date": "2025-04-18",
+          "source_type": "community_opinion",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "7112",
+          "evidence_summary": "Community advice says overlapping IHS after a switch can be refunded but incorrectly suggests the applicant must request it.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "contradicts",
+          "independence_group": "h1"
+        },
+        {
+          "evidence_id": "E-GBR-IHS-002",
+          "date": "2025-05-26",
+          "source_type": "community_opinion",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "7848",
+          "evidence_summary": "Community discussion distinguishes switching from settlement and states unused IHS is not refunded simply because the applicant obtains ILR.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "supports",
+          "independence_group": "h1"
+        },
+        {
+          "evidence_id": "E-GBR-IHS-003",
+          "date": "2025-05-26",
+          "source_type": "community_opinion",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "7853",
+          "evidence_summary": "Independent community reply notes six-month rounding/threshold behavior for overlapping IHS after a visa change.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "supports",
+          "independence_group": "h2"
+        },
+        {
+          "evidence_id": "E-GBR-IHS-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — IHS refunds",
+          "source_url": "https://www.gov.uk/healthcare-immigration-application/refunds",
+          "source_message_id": null,
+          "evidence_summary": "Current GOV.UK states overlapping IHS of 6 months or more after an in-country extension/switch is partially refunded automatically, rounded down to six-month blocks; no refund is due merely for applying for ILR.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "E-GBR-IHS-O01"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-12-11"
+    },
+    {
+      "signal_id": "GBR-GT-SETTLEMENT-INCOME-RUMOR-CLARIFICATION-2026",
+      "root_cause_id": "GBR-GT-SETTLEMENT-INCOME-RUMOR-CLARIFICATION-2026",
+      "correlated_signal_ids": [],
+      "title": "Proposed fixed settlement-income threshold is not the current Global Talent rule",
+      "signal_family": "E1_POLICY_REGULATORY_IMPLEMENTATION",
+      "signal_type": "policy_implementation",
+      "signal_class": "official_implementation",
+      "impact_direction": "positive_resolution",
+      "status": "active",
+      "trend": "stable",
+      "severity": "high",
+      "confidence": "high",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Global Talent holder planning settlement / ILR"
+        ]
+      },
+      "migration_routes": [
+        "global_talent",
+        "settlement"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK",
+        "PERMANENT / LONG-TERM MIGRATION"
+      ],
+      "process_stages": [
+        "settlement_planning",
+        "ilr"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "UK Home Office"
+        }
+      ],
+      "summary_en": "The community repeatedly treated a fixed annual income threshold under Earned Settlement reform as a proposal rather than a current rule. Current GOV.UK Global Talent settlement evidence guidance says applicants must show UK earnings linked to their expert field and that there is no minimum earnings level. The Earned Settlement page remains a closed consultation.",
+      "summary_fa": "بحث‌های گروه، آستانه درآمد سالانه در طرح Earned Settlement را «پیشنهاد» و نه قانون جاری دانسته‌اند. راهنمای فعلی GOV.UK برای ILR در Global Talent می‌گوید باید درآمد مرتبط با حوزه تخصص در بریتانیا نشان داده شود و حداقل مبلغ درآمدی تعیین نشده است. صفحه Earned Settlement همچنان مشاوره بسته‌شده است.",
+      "practical_impact": "Treating consultation proposals as current law can wrongly downgrade Global Talent settlement feasibility.",
+      "who_should_care": "Global Talent holders planning ILR and comparing settlement pathways.",
+      "recommended_action": "Use the current Immigration Rules and official Global Talent settlement evidence guidance, and recheck if/when Earned Settlement reforms are formally implemented.",
+      "known_workaround": "None needed under the current fixed-minimum-income question; continue preserving evidence of UK earnings linked to the expert field.",
+      "first_seen": "2025-12-09",
+      "last_seen": "2026-09-11",
+      "last_verified": "2026-09-11",
+      "recency_class": "very_current",
+      "evidence_count": 5,
+      "independent_report_count": 1,
+      "officially_confirmed": true,
+      "community_confirmed": true,
+      "official_verification": {
+        "status": "confirmed",
+        "source_url": "https://www.gov.uk/government/publications/send-evidence-for-your-global-talent-extension-or-settlement-application/send-evidence-for-your-global-talent-extension-or-settlement-application",
+        "source_title": "GOV.UK — Global Talent extension or settlement evidence",
+        "verified_at": "2026-09-11",
+        "note": "Current official guidance explicitly says there is no minimum earnings level for the existing Global Talent earnings evidence requirement. Future reform remains monitorable."
+      },
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": 0,
+        "apply_when": "Do not apply a penalty based on the proposed fixed income threshold unless a future Immigration Rule makes it operative for this route and applicant cohort."
+      },
+      "reason_for_adjustment": "This signal prevents a proposal from being converted into a current legal requirement.",
+      "keywords": [
+        "Global Talent",
+        "ILR",
+        "settlement",
+        "earned settlement",
+        "income threshold",
+        "consultation"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-GT-SETTLE-001",
+          "date": "2025-12-09",
+          "source_type": "community_opinion",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "13792",
+          "evidence_summary": "Community message describes a proposed annual earnings threshold for settlement and explicitly says it had not been approved.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "supports",
+          "independence_group": "l1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-SETTLE-002",
+          "date": "2026-05-14",
+          "source_type": "community_opinion",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "16192",
+          "evidence_summary": "Community message again says the proposed settlement work/income change had not been approved.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "supports",
+          "independence_group": "l1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-SETTLE-003",
+          "date": "2026-06-21",
+          "source_type": "community_opinion",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "16922",
+          "evidence_summary": "Community message discusses a proposed three-year work/income requirement and again marks it as not yet approved.",
+          "direct_or_second_hand": "second_hand",
+          "supports_or_contradicts": "supports",
+          "independence_group": "l1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-SETTLE-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Earned settlement consultation",
+          "source_url": "https://www.gov.uk/government/consultations/earned-settlement",
+          "source_message_id": null,
+          "evidence_summary": "The Earned Settlement page is currently marked as a closed consultation, not itself a current Immigration Rule.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "E-GBR-GT-SETTLE-O01"
+        },
+        {
+          "evidence_id": "E-GBR-GT-SETTLE-O02",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Global Talent extension or settlement evidence",
+          "source_url": "https://www.gov.uk/government/publications/send-evidence-for-your-global-talent-extension-or-settlement-application/send-evidence-for-your-global-talent-extension-or-settlement-application",
+          "source_message_id": null,
+          "evidence_summary": "Current guidance says Global Talent applicants must show UK earnings linked to their expert field during the most recent grant and explicitly says there is no minimum level of earnings needed.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "resolves",
+          "independence_group": "E-GBR-GT-SETTLE-O02"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-10-11"
+    },
+    {
+      "signal_id": "GBR-GT-ENDORSEMENT-LEAVE-PROTECTION-2026",
+      "root_cause_id": "GBR-GT-ENDORSEMENT-LEAVE-PROTECTION-2026",
+      "correlated_signal_ids": [
+        "GBR-GT-R4-ENDORSEMENT-DELAY-2026"
+      ],
+      "title": "Pending Global Talent endorsement alone does not protect expiring UK permission",
+      "signal_family": "E1_POLICY_REGULATORY_IMPLEMENTATION",
+      "signal_type": "policy_implementation",
+      "signal_class": "official_implementation",
+      "impact_direction": "negative",
+      "status": "active",
+      "trend": "stable",
+      "severity": "critical",
+      "confidence": "high",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Applicant already in the UK whose current permission may expire while Global Talent endorsement is pending"
+        ]
+      },
+      "migration_routes": [
+        "global_talent"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK"
+      ],
+      "process_stages": [
+        "endorsement_stage_1",
+        "visa_stage_2",
+        "in_country_switch",
+        "lawful_status"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "UK Home Office"
+        }
+      ],
+      "summary_en": "For an applicant already in the UK, a pending Global Talent endorsement or endorsement review does not by itself extend immigration permission. Current GOV.UK states that the visa/permission application is the step that can extend leave while a decision is pending. This is a legal-status distinction, not a community-derived rule.",
+      "summary_fa": "برای متقاضی داخل بریتانیا، صرفِ در انتظار بودن اندورسمنت یا endorsement review باعث تمدید اجازه اقامت نمی‌شود. GOV.UK فعلی تصریح می‌کند که درخواست ویزا/permission است که می‌تواند تا زمان تصمیم، وضعیت را تمدید کند. این تفاوت یک قاعده رسمی است، نه برداشت جامعه.",
+      "practical_impact": "Misunderstanding this distinction can lead to loss of lawful status even if the endorsement case is still pending.",
+      "who_should_care": "In-country Global Talent applicants whose existing permission will expire before Stage 1 is likely to finish.",
+      "recommended_action": "Use current GOV.UK guidance and obtain qualified immigration advice if needed before the existing permission expires; do not rely on Stage 1 alone to preserve status.",
+      "known_workaround": "Where the route and timing permit, GOV.UK allows the Global Talent visa application to be made at the same time as the endorsement application, but refusal of endorsement can affect Stage 2.",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-09-11",
+      "last_verified": "2026-09-11",
+      "recency_class": "very_current",
+      "evidence_count": 3,
+      "independent_report_count": 1,
+      "officially_confirmed": true,
+      "community_confirmed": false,
+      "official_verification": {
+        "status": "confirmed",
+        "source_url": "https://www.gov.uk/global-talent-researcher-academic",
+        "source_title": "GOV.UK — Global Talent researcher or academic overview",
+        "verified_at": "2026-09-11",
+        "note": "Official guidance expressly distinguishes endorsement from the visa application for leave-extension purposes."
+      },
+      "suggested_fit_adjustment": -15,
+      "conditional_adjustment": {
+        "adjustment": -15,
+        "apply_when": "Apply only when the person is physically in the UK, their existing immigration permission may expire before Stage 1 finishes, and they have not made a valid visa/permission application that protects their status."
+      },
+      "reason_for_adjustment": "This can directly prevent lawful continuation of the process. Do not double-count with the endorsement-delay penalty; use the larger status-risk penalty when this condition is met.",
+      "keywords": [
+        "Global Talent",
+        "Stage 1",
+        "Stage 2",
+        "visa expiry",
+        "lawful status",
+        "endorsement"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-GT-LEAVE-001",
+          "date": "2026-07-04",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "17116",
+          "evidence_summary": "Applicant waiting for endorsement says a Stage 2 visa application may be needed within two weeks to remain lawfully in the UK.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "c1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-LEAVE-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Global Talent researcher or academic overview",
+          "source_url": "https://www.gov.uk/global-talent-researcher-academic",
+          "source_message_id": null,
+          "evidence_summary": "Current GOV.UK states that applying for the visa can extend permission while a decision is pending, while applying for endorsement or an endorsement review does not.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "E-GBR-GT-LEAVE-O01"
+        },
+        {
+          "evidence_id": "E-GBR-GT-LEAVE-O02",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Global Talent endorsement review guidance",
+          "source_url": "https://www.gov.uk/government/publications/endorsement-review-for-global-talent/endorsement-review-guidance",
+          "source_message_id": null,
+          "evidence_summary": "Official guidance states endorsement Stage 1 is not a valid leave application and an endorsement review does not extend immigration leave.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "E-GBR-GT-LEAVE-O02"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-10-11"
+    },
+    {
+      "signal_id": "GBR-GT-ARTS-ENDORSEMENT-SLIGHT-OVERRUN-2025",
+      "root_cause_id": "GBR-GT-ARTS-ENDORSEMENT-SLIGHT-OVERRUN-2025",
+      "correlated_signal_ids": [],
+      "title": "Historical Arts Council endorsement case slightly exceeded the eight-week window",
+      "signal_family": "E2_APPLICATION_PROCESSING",
+      "signal_type": "processing_delay",
+      "signal_class": "processing",
+      "impact_direction": "neutral",
+      "status": "historical",
+      "trend": "unknown",
+      "severity": "low",
+      "confidence": "low",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [
+          "visual arts",
+          "arts and culture"
+        ],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Global Talent arts and culture endorsement via Arts Council England"
+        ]
+      },
+      "migration_routes": [
+        "global_talent"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK"
+      ],
+      "process_stages": [
+        "endorsement_stage_1",
+        "arts_and_culture"
+      ],
+      "entities": [
+        {
+          "entity_type": "other",
+          "name": "Arts Council England"
+        }
+      ],
+      "summary_en": "One successful 2025 arts-and-culture applicant reported endorsement taking slightly more than eight weeks. This single historical case is not enough to infer a current backlog.",
+      "summary_fa": "یک متقاضی موفق هنر و فرهنگ در ۲۰۲۵ گزارش کرده اندورسمنت کمی بیش از هشت هفته طول کشیده است. این تک‌مورد تاریخی برای نتیجه‌گیری درباره بک‌لاگ فعلی کافی نیست.",
+      "practical_impact": "Small schedule slippage beyond the stated window is possible, but current route fit should not be penalized from this evidence.",
+      "who_should_care": "Arts-and-culture Global Talent applicants using Arts Council England.",
+      "recommended_action": "Use the official eight-week window as a planning baseline and keep modest contingency time.",
+      "known_workaround": "None established.",
+      "first_seen": "2025-09-09",
+      "last_seen": "2025-09-09",
+      "last_verified": "2026-09-11",
+      "recency_class": "historical",
+      "evidence_count": 2,
+      "independent_report_count": 1,
+      "officially_confirmed": true,
+      "community_confirmed": false,
+      "official_verification": {
+        "status": "confirmed",
+        "source_url": "https://www.gov.uk/global-talent-arts-culture/combined-arts-dance-literature-music-theatre-or-visual-arts",
+        "source_title": "GOV.UK — Global Talent arts and culture",
+        "verified_at": "2026-09-11",
+        "note": "Official timing baseline is confirmed; no current delay pattern is established."
+      },
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": 0,
+        "apply_when": "Historical single case: no current fit adjustment."
+      },
+      "reason_for_adjustment": "No repeated recent evidence.",
+      "keywords": [
+        "Global Talent",
+        "Arts Council England",
+        "arts and culture",
+        "endorsement timing"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-GT-ARTS-001",
+          "date": "2025-09-09",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "11475",
+          "evidence_summary": "Successful applicant reports Arts Council England exceptional-talent endorsement from 3 July to 3 September 2025, described as about four days beyond eight weeks; Stage 2 then completed quickly.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "ar1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-ARTS-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Global Talent arts and culture",
+          "source_url": "https://www.gov.uk/global-talent-arts-culture/combined-arts-dance-literature-music-theatre-or-visual-arts",
+          "source_message_id": null,
+          "evidence_summary": "Current GOV.UK states arts-and-culture endorsement decisions are expected within 8 weeks.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "E-GBR-GT-ARTS-O01"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": false,
+      "suggested_recheck_date": ""
+    },
+    {
+      "signal_id": "GBR-GT-R4-RECOMMENDER-ACCESS-2025",
+      "root_cause_id": "GBR-GT-R4-RECOMMENDER-ACCESS-2025",
+      "correlated_signal_ids": [],
+      "title": "Cold outreach may be ineffective for obtaining the required Route 4 recommendation",
+      "signal_family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+      "signal_type": "profile_selection_pattern",
+      "signal_class": "practical_selection",
+      "impact_direction": "negative",
+      "status": "historical",
+      "trend": "unknown",
+      "severity": "moderate",
+      "confidence": "low",
+      "destination": {
+        "country": "United Kingdom",
+        "country_code": "GBR",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [],
+        "residence_countries": [],
+        "applying_from": [],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [
+          "academic research"
+        ],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": [
+          "Route 4 applicant without an existing relationship to an eminent UK-resident expert who can write the required recommendation"
+        ]
+      },
+      "migration_routes": [
+        "global_talent"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK"
+      ],
+      "process_stages": [
+        "endorsement_stage_1",
+        "recommendation_letter"
+      ],
+      "entities": [],
+      "summary_en": "One detailed 2025 experience reports very low response from roughly 100 cold approaches to academics for a Route 4 recommendation. The official requirement that the recommender be an eminent UK-resident person who knows the applicant and their work makes pure cold outreach structurally difficult, but one case is not enough to infer a broad access rate.",
+      "summary_fa": "یک تجربه در ۲۰۲۵ از پاسخ بسیار کم به حدود ۱۰۰ تماس سرد با اساتید برای توصیه‌نامه روت ۴ خبر می‌دهد. با توجه به الزام رسمی که توصیه‌کننده فردی برجسته، مقیم بریتانیا و آشنا با کار متقاضی باشد، تماس سرد می‌تواند دشوار باشد؛ اما این تک‌مورد برای تعمیم کافی نیست.",
+      "practical_impact": "Applicants without an existing scholarly relationship may underestimate the lead time required to secure a compliant recommendation.",
+      "who_should_care": "Route 4 peer-review applicants with no existing relationship to a suitable UK-resident expert.",
+      "recommended_action": "Prioritize genuine professional/research relationships and start recommender planning early; do not ask strangers merely to sign a letter.",
+      "known_workaround": "Develop a legitimate collaboration/network connection before filing if no suitable recommender already knows the work.",
+      "first_seen": "2025-08-10",
+      "last_seen": "2025-08-10",
+      "last_verified": "2026-09-11",
+      "recency_class": "historical",
+      "evidence_count": 2,
+      "independent_report_count": 1,
+      "officially_confirmed": true,
+      "community_confirmed": false,
+      "official_verification": {
+        "status": "partly_confirmed",
+        "source_url": "https://www.gov.uk/global-talent-researcher-academic/peer-review",
+        "source_title": "GOV.UK — Global Talent peer review",
+        "verified_at": "2026-09-11",
+        "note": "Official recommender criteria are confirmed; the low response rate is a single historical anecdote."
+      },
+      "suggested_fit_adjustment": 0,
+      "conditional_adjustment": {
+        "adjustment": 0,
+        "apply_when": "Historical single anecdote: no fit penalty."
+      },
+      "reason_for_adjustment": "The signal is useful for planning lead time, not for legal eligibility scoring.",
+      "keywords": [
+        "Global Talent",
+        "Route 4",
+        "recommendation",
+        "eminent person",
+        "academic networking"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-GBR-GT-RECOMACC-001",
+          "date": "2025-08-10",
+          "source_type": "first_hand_applicant_experience",
+          "source_name": "result(3).json / UK 🇬🇧 Global Talent and Skilled Worker",
+          "source_url": null,
+          "source_message_id": "9991",
+          "evidence_summary": "Applicant reports contacting roughly 100 academics seeking a Global Talent recommendation for a strong-profile spouse and receiving almost no response.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "rr1"
+        },
+        {
+          "evidence_id": "E-GBR-GT-RECOMACC-O01",
+          "date": "2026-09-11",
+          "source_type": "official_immigration_authority",
+          "source_name": "GOV.UK — Global Talent peer review",
+          "source_url": "https://www.gov.uk/global-talent-researcher-academic/peer-review",
+          "source_message_id": null,
+          "evidence_summary": "Current Route 4 guidance requires a recommendation from an eminent person living in the UK who knows the applicant and their work.",
+          "direct_or_second_hand": "direct",
+          "supports_or_contradicts": "supports",
+          "independence_group": "E-GBR-GT-RECOMACC-O01"
+        }
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": false,
+      "suggested_recheck_date": ""
+    }
+  ],
+  "watchlist": [
+    {
+      "watch_id": "WATCH-GBR-GT-CONSULTANCY-CONTRACTS-2026",
+      "country": "United Kingdom",
+      "topic": "High-fee Global Talent consultancy contract and refund disputes",
+      "reason": "Recent community posts include a direct £5,500 contract/refund dispute plus another applicant reporting a similar poor experience and a separate £10,000 quote with refund exclusions. No named public entity is safely verifiable from the evidence, so this is not classified as fraud or given a fit penalty.",
+      "current_evidence": "Two recent complaint strands and one high-fee quote; allegations are private, unadjudicated and not enough to identify a provider safely.",
+      "what_would_confirm_it": "Multiple independent documented complaints about the same publicly identifiable provider, a regulator/consumer-law finding, or verifiable contract/policy evidence.",
+      "last_checked": "2026-09-11"
+    },
+    {
+      "watch_id": "WATCH-GBR-IRN-TEHRAN-PRIORITY-2026",
+      "country": "United Kingdom",
+      "topic": "Priority-service availability at the Tehran UK Visa Application Centre",
+      "reason": "One August 2026 community post says priority is unavailable when selecting VFS Iran, but no Tehran-specific current official service list was found that confirms this claim.",
+      "current_evidence": "Single community report; current official VFS pages confirm the Tehran centre is open but do not establish the specific priority-service availability in the retrieved material.",
+      "what_would_confirm_it": "A current VFS Tehran premium-services page, booking-flow evidence, or UKVI/VFS notice explicitly stating priority availability or unavailability.",
+      "last_checked": "2026-09-11"
+    },
+    {
+      "watch_id": "WATCH-GBR-IRN-EVISA-SMS-2025",
+      "country": "United Kingdom",
+      "topic": "UKVI/eVisa verification SMS delivery to Iranian mobile numbers",
+      "reason": "One September 2025 applicant reported that a UKVI login verification code was not reaching an Iranian mobile operator. No corroborating current reports or official outage notice were established.",
+      "current_evidence": "Single unresolved direct report; older than 11 months at extraction.",
+      "what_would_confirm_it": "Two or more recent independent Iran-based reports, or an official UKVI communications/service notice acknowledging delivery problems.",
+      "last_checked": "2026-09-11"
+    },
+    {
+      "watch_id": "WATCH-GBR-EARNED-SETTLEMENT-IMPLEMENTATION",
+      "country": "United Kingdom",
+      "topic": "Implementation of Earned Settlement reforms",
+      "reason": "Community discussion correctly identified income/work proposals as not yet current rules. The government consultation is closed, so future Immigration Rule changes could materially alter settlement feasibility.",
+      "current_evidence": "Closed official consultation; current Global Talent guidance still says no minimum earnings level for the existing earnings evidence requirement.",
+      "what_would_confirm_it": "A Statement of Changes to the Immigration Rules or updated route-specific settlement rules bringing the reform into force with effective dates and transitional provisions.",
+      "last_checked": "2026-09-11"
+    }
+  ],
+  "quality_control": {
+    "full_sources_processed": true,
+    "reply_chains_considered": true,
+    "duplicates_merged": true,
+    "contradictions_checked": true,
+    "resolutions_checked": true,
+    "country_scope_checked": true,
+    "route_scope_checked": true,
+    "institution_scope_checked": true,
+    "correlated_penalties_checked": true,
+    "personal_identifiers_removed": true
+  }
+}
