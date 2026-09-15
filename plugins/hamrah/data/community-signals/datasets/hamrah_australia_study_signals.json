@@ -1,0 +1,178 @@
+{
+  "dataset": {
+    "name": "Hamrah Community Signal Candidates - Australia Study",
+    "destination": {
+      "country": "Australia",
+      "country_code": "AUS"
+    },
+    "origin_country": "Iran",
+    "route": "study",
+    "generated_from": "uploaded Telegram export",
+    "hamrah_validated_store_match_count": 0,
+    "note": "These are candidate community signals extracted from the uploaded source. They are not official eligibility rules or validated Hamrah Store signals."
+  },
+  "signals": [
+    {
+      "signal_id": "AUS-STUDY-IRN-VISA-DELAY-001",
+      "country_code": "AUS",
+      "route": "study",
+      "process_stage": "visa_application",
+      "topic": "processing_time_variance",
+      "entity": null,
+      "applicant_scope": {
+        "origin_country": "Iran",
+        "nationality": "Iranian"
+      },
+      "status": "monitoring",
+      "confidence": "medium_high",
+      "signal": "Student visa processing for Iranian applicants appears highly variable and difficult to predict.",
+      "evidence": [
+        {
+          "date": "2026-06-29",
+          "summary": "An applicant reported approximately 100 days since lodgement with no update.",
+          "citation": "fileciteturn6file2L87-L97"
+        }
+      ],
+      "counter_evidence": [
+        {
+          "date": "2026-06-07",
+          "summary": "Another community member reported that their visa had recently been granted.",
+          "citation": "fileciteturn7file1L43-L56"
+        },
+        {
+          "date": "2026-07-29",
+          "summary": "A community member stated that multiple applicants had received grants in under one month.",
+          "citation": "fileciteturn7file2L82-L108"
+        }
+      ],
+      "interpretation": "The available evidence supports high variance and uncertainty rather than a general visa freeze or universal long delay."
+    },
+    {
+      "signal_id": "AUS-MONASH-EOI-GPA-002",
+      "country_code": "AUS",
+      "route": "study",
+      "process_stage": "eoi",
+      "topic": "academic_prescreen",
+      "entity": "Monash University",
+      "applicant_scope": {
+        "origin_country": "Iran"
+      },
+      "status": "monitoring",
+      "confidence": "medium",
+      "signal": "Monash EOI screening may apply strict academic filters and can produce very rapid rejections.",
+      "evidence": [
+        {
+          "date": "2025-03-10",
+          "summary": "An applicant with GPA 17.5/20 reported rejection within about 10 minutes and said follow-up indicated GPA was the reason.",
+          "citation": "fileciteturn6file0L10-L22"
+        },
+        {
+          "date": "2025-08-18",
+          "summary": "Another applicant reported an EOI rejection approximately 20 minutes after submission.",
+          "citation": "fileciteturn6file1L47-L60"
+        }
+      ],
+      "counter_evidence": [],
+      "interpretation": "The reports are consistent with a fast pre-screen process, but they do not establish a universal GPA threshold across all Monash faculties or supervisors."
+    },
+    {
+      "signal_id": "AUS-RMIT-VISA-FEASIBILITY-003",
+      "country_code": "AUS",
+      "route": "study",
+      "process_stage": "admission",
+      "topic": "visa_feasibility_screening",
+      "entity": "RMIT University",
+      "applicant_scope": {
+        "origin_country": "Iran"
+      },
+      "status": "uncertain",
+      "confidence": "low_medium",
+      "signal": "Visa feasibility may, in some cases, affect university admission decisions before the visa stage.",
+      "evidence": [
+        {
+          "date": "2026-08-03",
+          "summary": "A master's applicant reported that RMIT told them the rejection was not due to GPA or CV but because they were unlikely to obtain a visa.",
+          "citation": "fileciteturn7file0L7-L20"
+        }
+      ],
+      "counter_evidence": [],
+      "interpretation": "This is a single self-report and should not be treated as a general RMIT admissions policy."
+    },
+    {
+      "signal_id": "AUS-DIRECT-PHD-HONOURS-004",
+      "country_code": "AUS",
+      "route": "study",
+      "process_stage": "eligibility",
+      "topic": "direct_phd",
+      "entity": null,
+      "applicant_scope": {
+        "origin_country": "Iran",
+        "prior_education": "bachelor"
+      },
+      "status": "monitoring",
+      "confidence": "medium",
+      "signal": "Direct PhD entry from an Iranian bachelor's degree may face structural difficulty where an Honours-equivalent qualification is expected.",
+      "evidence": [
+        {
+          "date": "2025-03-09",
+          "summary": "A channel adviser stated that direct PhD exists but commonly requires a bachelor's Honours qualification and described this as difficult for applicants educated in Iran.",
+          "citation": "fileciteturn6file3L117-L131"
+        }
+      ],
+      "counter_evidence": [],
+      "interpretation": "This is a community/adviser statement and not a verified rule applying identically to every Australian university or PhD program."
+    },
+    {
+      "signal_id": "AUS-MASTERS-FUNDING-005",
+      "country_code": "AUS",
+      "route": "study",
+      "process_stage": "scholarship",
+      "topic": "masters_full_funding",
+      "entity": null,
+      "applicant_scope": {
+        "origin_country": "Iran",
+        "study_level": "masters"
+      },
+      "status": "monitoring",
+      "confidence": "medium",
+      "signal": "Full funding for master's study appears high-friction and strongly dependent on research profile and research-master eligibility.",
+      "evidence": [
+        {
+          "date": "2025-03-30",
+          "summary": "A channel adviser stated that full funding at master's level is very difficult and requires a strong profile, with funding concentrated in research-oriented master's routes.",
+          "citation": "fileciteturn9file0L7-L20"
+        },
+        {
+          "date": "2025-03-09",
+          "summary": "The same adviser suggested applicants with strong research experience try research master's programs, otherwise self-funded master's study may be the practical alternative.",
+          "citation": "fileciteturn9file1L46-L59"
+        }
+      ],
+      "counter_evidence": [],
+      "interpretation": "The source supports 'difficult and profile-sensitive', not 'impossible'."
+    },
+    {
+      "signal_id": "AUS-DOCUMENT-COMPLETENESS-006",
+      "country_code": "AUS",
+      "route": "study",
+      "process_stage": "admission",
+      "topic": "document_completeness",
+      "entity": null,
+      "applicant_scope": {
+        "origin_country": "Iran"
+      },
+      "status": "uncertain",
+      "confidence": "low_medium",
+      "signal": "Incomplete documentation may create significant friction because university admissions teams may provide limited flexibility when stated requirements are not met.",
+      "evidence": [
+        {
+          "date": "2025-03-10",
+          "summary": "A channel adviser stated that Australian university admissions offices are not very accommodating when required documents are incomplete.",
+          "citation": "fileciteturn6file4L151-L165"
+        }
+      ],
+      "counter_evidence": [],
+      "interpretation": "This is operational community guidance rather than an official universal admissions rule."
+    }
+  ]
+}
