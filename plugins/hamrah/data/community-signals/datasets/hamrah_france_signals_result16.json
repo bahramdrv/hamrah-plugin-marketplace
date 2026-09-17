@@ -1,0 +1,388 @@
+{
+  "source": "Hamrah Community Signal Candidate Extraction",
+  "generatedAt": "2026-09-16T12:30:30Z",
+  "input": {
+    "fileName": "result(20260916-122603).json",
+    "groupName": "فرانسه با پرگار",
+    "groupType": "private_supergroup",
+    "messageCount": 19181,
+    "dateRange": {
+      "from": "2025-01-01T13:35:32",
+      "to": "2026-09-16T15:43:14"
+    }
+  },
+  "coverage": {
+    "filesScanned": 1,
+    "messagesScanned": 19181,
+    "signalsExtracted": 6,
+    "validationStatus": "candidate_only",
+    "truncated": false
+  },
+  "filters": {
+    "countryCode": "FRA",
+    "originCountry": "Iran",
+    "nationality": "Iranian",
+    "priorityWindow": "2026-06-01 through 2026-09-16"
+  },
+  "extractionMethod": {
+    "description": "Candidate signals were retained when supported by repeated practical reports across multiple participants or by a concrete operational/process pattern. Conflicting guidance in the source was preserved as ambiguity rather than converted into a rule.",
+    "privacy": "Participant names and user IDs are omitted. Evidence uses source message IDs, dates, claims, and short excerpts only.",
+    "validation": "These are source-derived candidate community signals. They are not official immigration rules and have not been promoted to Hamrah's validated Community Signal Store."
+  },
+  "resultCount": 6,
+  "signals": [
+    {
+      "datasetId": "candidate:fra-study-iran-pargar-2026",
+      "signalId": "fra-study-irn-vfs-operational-instability-and-appointment-variability-2026",
+      "countryCode": "FRA",
+      "route": "study",
+      "topic": "VFS operational disruption and appointment variability",
+      "processStage": "visa_application",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "VFS France / Embassy of France in Tehran",
+      "status": "monitoring",
+      "firstObservedAt": "2026-06-01",
+      "lastObservedAt": "2026-09-15",
+      "communityEvidence": {
+        "matchedMessages": 45,
+        "distinctAuthors": 31,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages mentioning VFS together with appointment, waitlist, closure, queue, email-response, or scheduling language."
+      },
+      "summary": "The group shows operational instability around the France visa intake channel during 2026. Applicants reported periods when VFS was closed and files were handled directly by the embassy, followed by reopening and variable appointment timing. Some users reported VFS replying within two to three days after Campus France interviews, while others later reported waiting about two weeks for an appointment, so the signal is appointment unpredictability rather than a constant shortage.",
+      "assessment": {
+        "signalType": "appointment_and_channel_instability",
+        "severity": "medium",
+        "confidence": "high",
+        "currentApplicability": "monitoring",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 513323,
+          "sourceDate": "2026-06-23",
+          "claim": "Applicant reported submitting directly to the embassy while VFS was closed and still waiting after 27 days.",
+          "excerpt": "مستقیما از طریق سفارت (vfs بسته بود)"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 513780,
+          "sourceDate": "2026-06-30",
+          "claim": "Applicant asked how long VFS appointment assignment currently takes after requesting a slot."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 515797,
+          "sourceDate": "2026-07-28",
+          "claim": "A first-hand process description said VFS often replied within two to three days after an appointment request following Campus France interview.",
+          "excerpt": "نهایت دو سه روزه جوابتون رو میدن"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 518072,
+          "sourceDate": "2026-09-01",
+          "claim": "Applicant reported waiting two weeks after a visa/appointment request without receiving an appointment.",
+          "excerpt": "من دو هفتست درخواست ویزا دادم هنوز وقت ندادن"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:fra-study-iran-pargar-2026",
+      "signalId": "fra-study-student-visa-processing-delay-summer-2026",
+      "countryCode": "FRA",
+      "route": "study",
+      "topic": "student visa processing delays close to university start dates",
+      "processStage": "visa_processing",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "Embassy of France in Tehran",
+      "status": "active",
+      "firstObservedAt": "2026-06-01",
+      "lastObservedAt": "2026-09-05",
+      "communityEvidence": {
+        "matchedMessages": 41,
+        "distinctAuthors": 36,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages mentioning visa results together with waiting periods, days/weeks/months, VFS/embassy submission, or delayed results."
+      },
+      "summary": "During the summer 2026 intake, multiple applicants reported visa decisions taking roughly 25 to 35 days, with some master applicants reporting waits of around two months. Several messages explicitly connected the delay to approaching course-start dates. Processing time was highly variable because other applicants also reported much faster outcomes, so this should be treated as a delay-risk signal rather than a fixed processing-time estimate.",
+      "assessment": {
+        "signalType": "processing_delay",
+        "severity": "high",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 513608,
+          "sourceDate": "2026-06-28",
+          "claim": "Applicant reported no decision roughly 26 days after document submission.",
+          "excerpt": "نزدیک ۲۶ روز از تحویل مدارکم میگذره ولی خبری نیست"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 515270,
+          "sourceDate": "2026-07-22",
+          "claim": "Master applicant reported waiting two months and said other master applicants were experiencing the same issue.",
+          "excerpt": "الان دو ماه شده که منتظر ویزا هستم"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 516914,
+          "sourceDate": "2026-08-14",
+          "claim": "Master applicant reported a 32-day wait while the academic term was about to start.",
+          "excerpt": "۳۲ روز پیش مدارکم رو تحویل vfs دادم ... ترم تحصیلیم ۲۴ آگوست شروع میشه"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 517299,
+          "sourceDate": "2026-08-20",
+          "claim": "A first-hand report said a visa result arrived after 35 days and attributed the delay to workload.",
+          "excerpt": "ویزا من ... بعد از ۳۵ روز اومد"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:fra-study-iran-pargar-2026",
+      "signalId": "fra-study-campus-france-lead-time-rule-ambiguity-2026",
+      "countryCode": "FRA",
+      "route": "study",
+      "topic": "Campus France submission lead-time and deadline ambiguity",
+      "processStage": "campus_france_previsa",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "Campus France Iran / Études en France",
+      "status": "monitoring",
+      "firstObservedAt": "2026-06-06",
+      "lastObservedAt": "2026-09-10",
+      "communityEvidence": {
+        "matchedMessages": 29,
+        "distinctAuthors": 21,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages discussing Campus France together with 90-day/three-month/two-month lead times, deadlines, or course-start timing."
+      },
+      "summary": "Applicants repeatedly discussed a required lead time between Campus France file submission and the course start date. Multiple messages cited a 90-day/three-month rule, while at least one message cited a two-month requirement for master's and PhD applicants. Because the source export itself contains conflicting timing guidance, the reliable signal is a meaningful planning constraint and deadline ambiguity, not a validated single deadline.",
+      "assessment": {
+        "signalType": "process_deadline_ambiguity",
+        "severity": "high",
+        "confidence": "medium",
+        "currentApplicability": "monitoring",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 513549,
+          "sourceDate": "2026-06-26",
+          "claim": "A circulated notice stated that student-visa applicants should create and submit their online file three months before course start.",
+          "excerpt": "پرونده ی آنلاین خود را ۳ ماه قبل از تاریخ شروع دوره ... ارسال نمایند"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 517101,
+          "sourceDate": "2026-08-17",
+          "claim": "Community guidance attributed to Campus France said the file should be submitted more than 90 days before course start.",
+          "excerpt": "بیش از ۹۰ روز قبل از شروع دوره پرونده رو سابمیت کرده باشین"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 516672,
+          "sourceDate": "2026-08-10",
+          "claim": "A conflicting message said the Campus France site required master's and PhD applicants to open/activate the file at least two months before classes.",
+          "excerpt": "بچه های مستر و دکترا باید حتما دو ماه قبل از شروع کلاس ها"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:fra-study-iran-pargar-2026",
+      "signalId": "fra-study-three-month-bank-history-documentation-friction-2026",
+      "countryCode": "FRA",
+      "route": "study",
+      "topic": "three-month bank transaction history and proof-of-funds documentation",
+      "processStage": "visa_application",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "Campus France Iran / Embassy of France in Tehran",
+      "status": "active",
+      "firstObservedAt": "2026-06-01",
+      "lastObservedAt": "2026-09-16",
+      "communityEvidence": {
+        "matchedMessages": 165,
+        "distinctAuthors": 84,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages discussing proof of funds, transaction history, sponsor accounts, rial/foreign-currency accounts, or three-month bank history."
+      },
+      "summary": "Proof-of-funds preparation was one of the most persistent practical frictions in the group. Applicants repeatedly asked about a three-month transaction history even when the funds were in their own account, whether newly opened accounts were acceptable, whether proof of funds and transaction history could come from different accounts, and how sponsor or foreign-currency accounts should be documented. One first-hand report said both Campus France and the visa-side contact had requested three months of history and that omitting it later resulted in a document-deficiency issue.",
+      "assessment": {
+        "signalType": "financial_documentation_friction",
+        "severity": "high",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 511654,
+          "sourceDate": "2026-06-01",
+          "claim": "Applicant asked whether the embassy's three-month transaction-history requirement was new.",
+          "excerpt": "این داستان گردش حساب سه ماه سفارت جدیده؟"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 513210,
+          "sourceDate": "2026-06-21",
+          "claim": "Applicant reported hearing that even self-funded applicants were being asked to provide three months of account history and worried that a newly opened account would not satisfy it."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 516746,
+          "sourceDate": "2026-08-12",
+          "claim": "A first-hand report said Campus France and the visa-side call both requested three months of account history; the applicant later learned their file had a document deficiency because it was missing.",
+          "excerpt": "گفتن گردش هم بیار 3 ماهه ... گفتن نقص مدرک داشتی به خاطر گردش"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:fra-study-iran-pargar-2026",
+      "signalId": "fra-study-accommodation-proof-previsa-friction-2026",
+      "countryCode": "FRA",
+      "route": "study",
+      "topic": "proof-of-accommodation preparation for visa",
+      "processStage": "visa_application",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "France student visa accommodation evidence",
+      "status": "active",
+      "firstObservedAt": "2026-06-09",
+      "lastObservedAt": "2026-09-01",
+      "communityEvidence": {
+        "matchedMessages": 32,
+        "distinctAuthors": 23,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages discussing Booking/Airbnb/CROUS/host accommodation together with visa, VFS, embassy, reservation, or document requirements."
+      },
+      "summary": "Applicants repeatedly treated accommodation evidence as a practical visa-file bottleneck. Common issues included whether an unpaid or free-cancellation Booking reservation was safe, how long the reservation should cover, delays in CROUS housing confirmation, what to submit when no dormitory was available, and whether a host/acquaintance accommodation letter would be accepted.",
+      "assessment": {
+        "signalType": "accommodation_documentation_friction",
+        "severity": "medium",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 513302,
+          "sourceDate": "2026-06-22",
+          "claim": "Applicant asked whether a one-month Booking reservation with no payment created visa risk."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 514821,
+          "sourceDate": "2026-07-15",
+          "claim": "Applicant asked how to provide accommodation evidence, where to reserve affordably, and whether one month was sufficient."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 515706,
+          "sourceDate": "2026-07-26",
+          "claim": "Applicant without dormitory housing asked for the fastest way to obtain logement evidence for VFS."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 515801,
+          "sourceDate": "2026-07-28",
+          "claim": "Applicant sought first-hand experience obtaining a visa using an accommodation letter from acquaintances."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:fra-study-iran-pargar-2026",
+      "signalId": "irn-study-english-test-access-disruption-france-applicants-2026",
+      "countryCode": "FRA",
+      "route": "study",
+      "topic": "English-language test access disruption for Iranian applicants",
+      "processStage": "language_requirement",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entities": [
+        "ETS TOEFL",
+        "Duolingo English Test",
+        "TCF",
+        "TEF"
+      ],
+      "status": "monitoring",
+      "firstObservedAt": "2026-06-15",
+      "lastObservedAt": "2026-09-10",
+      "communityEvidence": {
+        "matchedMessages": 11,
+        "distinctAuthors": 11,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages mentioning TOEFL/Duolingo/IELTS together with Iran/Iranian, cancellation, closure, or test-access concerns."
+      },
+      "summary": "Late-August discussions in the France group reported that TOEFL and Duolingo testing access had been cancelled for Iranian users, including already-booked tests. This created uncertainty for applicants to English-taught French programs. Separate September discussion suggested that French-language alternatives such as TCF/TEF remained available in Iran, so the disruption is material but does not affect every France study route.",
+      "assessment": {
+        "signalType": "test_access",
+        "severity": "medium",
+        "confidence": "medium",
+        "currentApplicability": "monitoring",
+        "needsFreshnessCheck": true,
+        "scopeNote": "Cross-destination signal retained because it directly affects Iranian applicants to English-taught French programs."
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 517759,
+          "sourceDate": "2026-08-29",
+          "claim": "Applicant asked about reports that Iranians could no longer take TOEFL/IELTS."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 517760,
+          "sourceDate": "2026-08-29",
+          "claim": "Community reply stated that TOEFL and Duolingo tests had been cancelled for Iranians, including previously booked tests.",
+          "excerpt": "تافل و دولینگو ازمون هاشونو واسه ایرانیا لغو کردن"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "فرانسه با پرگار",
+          "sourceMessageId": 518243,
+          "sourceDate": "2026-09-03",
+          "claim": "Community response said TCF could still be taken in Tehran, online or in person, based on the respondent's recent knowledge."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    }
+  ],
+  "usageNote": "Use these records as community evidence only. Time-sensitive Campus France, VFS, visa, financial-document, accommodation, and language-test requirements should be checked against current official sources before decisions are made."
+}

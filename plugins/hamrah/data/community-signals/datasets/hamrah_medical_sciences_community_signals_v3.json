@@ -1,0 +1,2651 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_medical_sciences_signals_candidate",
+    "generated_at": "2026-09-17T07:15:13Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "name": "result(20260917-071027).json / Telegram export «علوم پزشکی با پرگار»",
+      "source_type": "private_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-17",
+        "records_available": 3365,
+        "records_processed": 3365,
+        "message_records": 3364
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "multi_country": true,
+        "multi_profession_healthcare": true,
+        "contains_first_hand_applicant_experience": true,
+        "contains_professional_regulation_discussion": true,
+        "contains_promotional_posts": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "MED-IR-DEGREE-RELEASE-001-E1",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "446947"
+      },
+      "published_at": "2025-01-17",
+      "event_date": "2025-01-17",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_policy_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "Early 2025 discussion focused on whether the ban on buying out Ministry of Health service obligations had changed, showing degree release as a central migration dependency.",
+        "fa": "در ابتدای ۲۰۲۵ بحث گروه روی این بود که آیا ممنوعیت خرید تعهدات وزارت بهداشت تغییر کرده یا نه؛ یعنی آزادسازی مدرک یک وابستگی اصلی مهاجرت بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-IR-DEGREE-RELEASE-001-E2",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "446955"
+      },
+      "published_at": "2025-01-18",
+      "event_date": "2025-01-18",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A health graduate asked whether even after completing mandatory service, lack of an original/temporary degree could block study applications under the newer rules.",
+        "fa": "یک فارغ‌التحصیل علوم پزشکی پرسیده بعد از گذراندن طرح اجباری، نبود دسترسی به مدرک موقت/اصلی با قواعد جدید آیا اپلای تحصیلی را مختل می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-IR-DEGREE-RELEASE-001-E3",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "447173"
+      },
+      "published_at": "2025-01-27",
+      "event_date": "2025-01-27",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_historical_comparison",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply contrasted older cases that could promise delivery of the original degree after admission with the newer environment where buying out obligations was said to be restricted.",
+        "fa": "پاسخ گروه کیس‌های قدیمی تحویل دیرتر اصل مدرک را با فضای جدیدی مقایسه کرده که خرید تعهدات در آن محدود گزارش شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-IR-DEGREE-RELEASE-001-E4",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "455795"
+      },
+      "published_at": "2025-09-09",
+      "event_date": "2025-09-09",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "first_hand_processing_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user who completed collateral-based release steps reported a three-week hold because the university said the Ministry of Health was waiting for a new circular.",
+        "fa": "یک کاربر که مراحل آزادسازی با وثیقه را انجام داده بود گزارش کرده پرونده سه هفته متوقف مانده چون دانشگاه گفته وزارت بهداشت منتظر بخشنامه جدید است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-IR-DEGREE-RELEASE-001-E5",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "456140"
+      },
+      "published_at": "2025-09-25",
+      "event_date": "2025-09-25",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A September 2025 reply said the service-obligation period could not simply be bought out and tied release to post-graduation work history in the case discussed.",
+        "fa": "پاسخ سپتامبر ۲۰۲۵ گفته در کیس موردبحث دوران تعهد را نمی‌توان ساده خرید و آزادسازی را به سابقه کار پس از فارغ‌التحصیلی گره زده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-IR-DEGREE-RELEASE-001-E6",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "463410"
+      },
+      "published_at": "2026-06-29",
+      "event_date": "2026-06-29",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A June 2026 reply distinguished optional-service fields from mandatory-service fields and said mandatory-service graduates could face both payment and service before release.",
+        "fa": "پاسخ ژوئن ۲۰۲۶ رشته‌های طرح اختیاری را از طرح اجباری جدا کرده و گفته برای طرح اجباری ممکن است هم پرداخت و هم گذراندن طرح لازم باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-IR-COLLATERAL-002-E1",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "448974"
+      },
+      "published_at": "2025-03-15",
+      "event_date": "2025-03-15",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A graduate asked whether a document released with property collateral could be used broadly for applications or only for specific study purposes.",
+        "fa": "یک فارغ‌التحصیل پرسیده مدرکی که با وثیقه ملکی تحویل می‌شود برای همه کشورها/دانشگاه‌ها قابل استفاده است یا فقط برای اهداف تحصیلی مشخص."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-IR-COLLATERAL-002-E2",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "448831"
+      },
+      "published_at": "2025-03-10",
+      "event_date": "2025-03-10",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply warned against calling the collateral process permanent 'release' and framed it as receiving the document for further study.",
+        "fa": "پاسخ گروه هشدار داده این فرایند وثیقه‌ای را آزادسازی دائمی ننامند و آن را تحویل مدرک برای ادامه تحصیل توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-IR-COLLATERAL-002-E3",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "449237"
+      },
+      "published_at": "2025-03-23",
+      "event_date": "2025-03-23",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant explicitly asked whether a collateral-released degree could be used for work migration and whether the document would show that it was released for study.",
+        "fa": "یک متقاضی صریحاً پرسیده مدرک وثیقه‌ای برای مهاجرت کاری قابل استفاده است یا روی خود مدرک تحصیلی‌بودن هدف درج می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-IR-COLLATERAL-002-E4",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "449239"
+      },
+      "published_at": "2025-03-23",
+      "event_date": "2025-03-23",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The reply said the document itself was not marked as study-only but described a two-year deadline to show foreign university admission, otherwise collateral could be forfeited.",
+        "fa": "پاسخ گفته روی مدرک قید «تحصیلی» نمی‌شود اما برای ارائه پذیرش دانشگاه خارجی یک مهلت دو ساله مطرح کرده و عدم ارائه را با خطر ضبط وثیقه مرتبط دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-CLINICAL-LICENSING-003-E1",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "446803"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "professional_licensing_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A pharmacist asked specifically about the German Approbation licence, illustrating that clinical practice requires a separate destination-country licensing layer.",
+        "fa": "یک داروساز مشخصاً درباره مجوز Approbation آلمان پرسیده که نشان می‌دهد کار بالینی یک لایه لایسنس مستقل در کشور مقصد دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-CLINICAL-LICENSING-003-E2",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "456159"
+      },
+      "published_at": "2025-09-25",
+      "event_date": "2025-09-25",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "professional_registration_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A nurse/midwife asked whether a temporary bachelor's degree could be used for UK healthcare registration through NMC.",
+        "fa": "یک پرستار/ماما پرسیده آیا با مدرک موقت کارشناسی می‌توان از طریق NMC در بریتانیا رجیستر شد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-CLINICAL-LICENSING-003-E3",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "456681"
+      },
+      "published_at": "2025-10-09",
+      "event_date": "2025-10-09",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "professional_recognition_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A physiotherapy graduate asked about degree recognition and job offers in Germany or the Netherlands rather than assuming the Iranian degree transferred automatically.",
+        "fa": "یک فارغ‌التحصیل فیزیوتراپی درباره تطبیق مدرک و جاب‌آفر در آلمان/هلند پرسیده و انتقال خودکار مدرک را مفروض نگرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-CLINICAL-LICENSING-003-E4",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "462879"
+      },
+      "published_at": "2026-06-06",
+      "event_date": "2026-06-06",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "first_hand_nursing_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A nursing graduate described destination-country registration and local-language requirements as a major time-consuming stage after obtaining the Iranian degree.",
+        "fa": "یک فارغ‌التحصیل پرستاری رجیستریشن کشور مقصد و زبان همان کشور را مرحله‌ای زمان‌بر پس از گرفتن مدرک ایران توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-CLINICAL-LICENSING-003-E5",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "462881"
+      },
+      "published_at": "2026-06-06",
+      "event_date": "2026-06-06",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_counterpoint",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another nurse agreed that registration/testing is inherent to patient-facing work and argued applicants should plan for a multi-year pathway rather than expect direct transfer.",
+        "fa": "پرستار دیگری تأیید کرده رجیستریشن/آزمون ذات کار درمانی است و باید مسیر را چندساله دید، نه انتقال مستقیم مدرک."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-NURSING-MIGRATION-004-E1",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "462879"
+      },
+      "published_at": "2026-06-06",
+      "event_date": "2026-06-06",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "first_hand_nursing_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A nursing graduate said affordable English-taught graduate options were limited, many programmes were self-funded, and work migration required Ministry of Health document release before destination registration.",
+        "fa": "یک فارغ‌التحصیل پرستاری گفته گزینه‌های تحصیلی انگلیسی‌زبان ارزان محدودند، بسیاری self-funded هستند و مسیر کاری قبل از رجیستریشن کشور مقصد به آزادسازی مدرک وزارت بهداشت وابسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-NURSING-MIGRATION-004-E2",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "462882"
+      },
+      "published_at": "2026-06-07",
+      "event_date": "2026-06-07",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "first_hand_nursing_analysis",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same thread emphasized that low-tuition nursing programmes often require a third language, while English-taught options can be expensive.",
+        "fa": "در همان گفتگو تأکید شده برنامه‌های کم‌شهریه پرستاری اغلب زبان سوم می‌خواهند و گزینه‌های انگلیسی‌زبان می‌توانند گران باشند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-NURSING-MIGRATION-004-E3",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "462883"
+      },
+      "published_at": "2026-06-07",
+      "event_date": "2026-06-07",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "first_hand_nursing_counterpoint",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another nurse argued that work migration remains viable but requires service/work experience and realistic multi-year planning.",
+        "fa": "پرستار دیگری گفته مهاجرت کاری همچنان شدنی است اما به طرح/سابقه کار و برنامه‌ریزی چندساله نیاز دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-NURSING-MIGRATION-004-E4",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "456136"
+      },
+      "published_at": "2025-09-25",
+      "event_date": "2025-09-25",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "professional_registration_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "UK-focused nursing discussion centered on NMC registration rather than only job search.",
+        "fa": "بحث پرستاری بریتانیا حول NMC registration بوده، نه صرفاً پیدا کردن شغل."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-NURSING-MIGRATION-004-E5",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "463998"
+      },
+      "published_at": "2026-08-01",
+      "event_date": "2026-08-01",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "destination_comparison_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "In 2026 nurses were still comparing Australia, the UK and Germany as separate work-migration systems, implying materially different registration/language pathways.",
+        "fa": "در ۲۰۲۶ پرستاران همچنان استرالیا، انگلیس و آلمان را به‌عنوان سه سیستم متفاوت مهاجرت کاری مقایسه می‌کردند که تفاوت واقعی در رجیستریشن/زبان را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-OET-005-E1",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "450813"
+      },
+      "published_at": "2025-05-11",
+      "event_date": "2025-05-11",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "test_preparation_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A physician preparing for OET looked for a study group, showing OET as an active healthcare-specific language-testing path.",
+        "fa": "یک پزشک در حال آمادگی OET دنبال گروه همخوانی بوده و OET را به‌عنوان مسیر فعال آزمون زبان کادر درمان نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-OET-005-E2",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "456096"
+      },
+      "published_at": "2025-09-21",
+      "event_date": "2025-09-21",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "test_information_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Healthcare applicants continued to seek OET-specific guidance later in 2025.",
+        "fa": "متقاضیان حوزه درمان در اواخر ۲۰۲۵ همچنان راهنمایی اختصاصی OET می‌خواستند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-OET-005-E3",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "464093"
+      },
+      "published_at": "2026-08-06",
+      "event_date": "2026-08-06",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "test_comparison_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A 2026 applicant with an IELTS score considered switching to OET after repeated peer advice that OET felt more suitable for healthcare candidates.",
+        "fa": "یک متقاضی ۲۰۲۶ با نمره IELTS به‌دلیل توصیه تکرارشونده دیگران به تغییر به OET فکر می‌کرد چون آن را مناسب‌تر برای کادر درمان می‌دانستند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-OET-005-E4",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "464094"
+      },
+      "published_at": "2026-08-06",
+      "event_date": "2026-08-06",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "first_hand_test_preparation_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A direct respondent who had prepared with private classes described OET as easier/more logical for them than IELTS.",
+        "fa": "یک فرد با تجربه مستقیم که با کلاس خصوصی آماده شده بود OET را برای خودش آسان‌تر/منطقی‌تر از IELTS توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-ITALY-IMAT-006-E1",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "446820"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A prospective Italian medical student had neither language proof nor IMAT preparation ready and asked whether the application cycle was already too late.",
+        "fa": "متقاضی پزشکی ایتالیا نه مدرک زبان آماده داشت و نه برای IMAT خوانده بود و درباره دیرشدن سیکل اپلای پرسیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-ITALY-IMAT-006-E2",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "446826"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "first_hand_study_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A peer said late preparation could still work based on their own experience, but stressed starting quickly.",
+        "fa": "یک فرد بر اساس تجربه خودش گفته شروع دیرتر هم ممکن بوده اما روی شروع سریع تأکید کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-ITALY-IMAT-006-E3",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "446852"
+      },
+      "published_at": "2025-01-03",
+      "event_date": "2025-01-03",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_timeline_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same thread framed the usable preparation window as extending into roughly September for that cycle.",
+        "fa": "همان گفتگو بازه آمادگی را برای آن سیکل تا حوالی سپتامبر قابل استفاده دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-ITALY-IMAT-006-E4",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "447651"
+      },
+      "published_at": "2025-02-12",
+      "event_date": "2025-02-12",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "first_hand_country_comparison",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A member with experience in Italy and Hungary described Italian medicine as English-accessible through an entrance-exam route but increasingly competitive.",
+        "fa": "عضوی با تجربه ایتالیا و مجارستان، پزشکی ایتالیا را مسیر انگلیسی‌زبان مبتنی بر آزمون ورودی و با رقابت رو‌به‌رشد توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-ITALY-IMAT-006-E5",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "463732"
+      },
+      "published_at": "2026-07-15",
+      "event_date": "2026-07-15",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "IMAT remained an active recurring concern in mid-2026, with applicants explicitly seeking first-hand exam experience.",
+        "fa": "در میانه ۲۰۲۶ IMAT همچنان موضوع پرتکرار بوده و متقاضیان مشخصاً تجربه مستقیم آزمون را می‌خواستند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-IR-RETURN-RECOGNITION-007-E1",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "456188"
+      },
+      "published_at": "2025-09-26",
+      "event_date": "2025-09-26",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_country_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community reply warned that some Gulf-region medical universities might not be approved by Iran's Ministry of Health, creating return-to-Iran work problems.",
+        "fa": "پاسخ گروه هشدار داده بعضی دانشگاه‌های پزشکی حوزه خلیج فارس ممکن است مورد تأیید وزارت بهداشت ایران نباشند و برای بازگشت به کار در ایران دردسر ایجاد کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-IR-RETURN-RECOGNITION-007-E2",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "456790"
+      },
+      "published_at": "2025-10-13",
+      "event_date": "2025-10-13",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user explicitly asked for an authoritative way to check whether medical/paramedical study in China would remain usable for work in Iran.",
+        "fa": "یک کاربر صریحاً دنبال مرجع معتبر برای بررسی قابل‌استفاده‌بودن تحصیل پزشکی/پیراپزشکی چین برای کار بعدی در ایران بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-IR-RETURN-RECOGNITION-007-E3",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "458709"
+      },
+      "published_at": "2025-12-03",
+      "event_date": "2025-12-03",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant questioned whether even branches of U.S./UK universities in the UAE were approved by Iran's Ministry of Health.",
+        "fa": "متقاضی دیگری پرسیده حتی شعب دانشگاه‌های آمریکایی/انگلیسی در امارات مورد تأیید وزارت بهداشت ایران هستند یا نه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-IR-RETURN-RECOGNITION-007-E4",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "458710"
+      },
+      "published_at": "2025-12-03",
+      "event_date": "2025-12-03",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "applicant_source_check",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The same user said the UAE did not appear in the ministry-approved list they were consulting and cited an exclusion note, showing how approval lists drive destination selection.",
+        "fa": "همان کاربر گفته امارات در لیست مورد بررسی‌اش نبود و به یادداشت حذفی اشاره کرده؛ یعنی فهرست‌های تأیید در انتخاب مقصد اثر مستقیم دارند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-CREDENTIAL-VERIFY-008-E1",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "446850"
+      },
+      "published_at": "2025-01-03",
+      "event_date": "2025-01-03",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "credential_evaluation_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A graduate asked whether their Iranian medical university would send documents to WES remotely or require an in-person request.",
+        "fa": "یک فارغ‌التحصیل پرسیده دانشگاه علوم پزشکی ایران مدارک را برای WES با درخواست غیرحضوری می‌فرستد یا مراجعه حضوری لازم است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-CREDENTIAL-VERIFY-008-E2",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "447373"
+      },
+      "published_at": "2025-02-01",
+      "event_date": "2025-02-01",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "document_legalisation_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A graduate asked whether official transcript/degree translation required Ministry of Health authentication and what documents were needed.",
+        "fa": "یک فارغ‌التحصیل درباره نیاز ترجمه رسمی دانشنامه/ریز‌نمرات به مهر تأیید وزارت بهداشت و مدارک لازم پرسیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-CREDENTIAL-VERIFY-008-E3",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "447374"
+      },
+      "published_at": "2025-02-01",
+      "event_date": "2025-02-01",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The reply said Ministry of Health authentication was required in the case discussed.",
+        "fa": "پاسخ گروه گفته در کیس موردبحث مهر تأیید وزارت بهداشت لازم بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-CREDENTIAL-VERIFY-008-E4",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "450658"
+      },
+      "published_at": "2025-05-06",
+      "event_date": "2025-05-06",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "first_hand_processing_problem",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user reported being stuck for a long time in WES document verification.",
+        "fa": "یک کاربر گزارش کرده مدت زیادی درگیر تاییدیه WES مدارکش بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-CREDENTIAL-VERIFY-008-E5",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "464806"
+      },
+      "published_at": "2026-09-12",
+      "event_date": "2026-09-12",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "current_uncertainty_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "In September 2026 a user asked whether WES had recently stopped evaluating documents for Iranian residents, showing renewed access uncertainty.",
+        "fa": "در سپتامبر ۲۰۲۶ کاربری پرسیده آیا WES اخیراً ارزیابی مدارک افراد مقیم ایران را متوقف کرده؛ نشانه‌ای از ابهام جدید در دسترسی."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-USA-USMLE-009-E1",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "447011"
+      },
+      "published_at": "2025-01-19",
+      "event_date": "2025-01-19",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An Iranian medical student asked how undergraduate medical GPA affects the U.S. residency/USMLE route.",
+        "fa": "یک دانشجوی پزشکی ایرانی درباره اثر معدل پزشکی عمومی بر مسیر رزیدنتی آمریکا/USMLE پرسیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-USA-USMLE-009-E2",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "447017"
+      },
+      "published_at": "2025-01-19",
+      "event_date": "2025-01-19",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "applicant_planning_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same thread moved quickly to when to take USMLE steps, showing the route is planned around a sequence of standardized exams.",
+        "fa": "همان گفتگو سریعاً به زمان‌بندی stepهای USMLE رسیده که نشان می‌دهد مسیر حول زنجیره آزمون‌های استاندارد برنامه‌ریزی می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-USA-USMLE-009-E3",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "450091"
+      },
+      "published_at": "2025-04-23",
+      "event_date": "2025-04-23",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_route_explanation",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply described internationally trained physicians as needing U.S. medical licensing exams before competing for residency match.",
+        "fa": "پاسخ گروه پزشکان آموزش‌دیده خارج آمریکا را نیازمند آزمون‌های لایسنس پزشکی پیش از رقابت برای residency match توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-USA-USMLE-009-E4",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "460740"
+      },
+      "published_at": "2026-02-15",
+      "event_date": "2026-02-15",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A February 2026 reply again characterized the USMLE route as exam-heavy and highly competitive.",
+        "fa": "پاسخ فوریه ۲۰۲۶ دوباره مسیر USMLE را آزمون‌محور و بسیار رقابتی توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-ACADEMIC-ALT-010-E1",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "447246"
+      },
+      "published_at": "2025-01-28",
+      "event_date": "2025-01-28",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "dual_route_planning",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A physician/research household compared an academic/research immigration route for one partner with clinical/continuing-study options for the physician, showing route splitting within medical families.",
+        "fa": "یک خانواده پزشک/پژوهشگر مسیر آکادمیک/ریسرچ یکی از زوجین را کنار گزینه بالینی/تحصیلی پزشک مقایسه کرده و تفکیک route را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-ACADEMIC-ALT-010-E2",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "449947"
+      },
+      "published_at": "2025-04-18",
+      "event_date": "2025-04-18",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_strategy_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply recommended investing in language and research output rather than automatically adding another master's degree, because another health degree could create further document-release obligations.",
+        "fa": "پاسخ گروه پیشنهاد کرده به‌جای ارشد مجدد، روی زبان و مقاله سرمایه‌گذاری شود چون مدرک علوم پزشکی جدید می‌تواند تعهدات آزادسازی بیشتری بسازد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-ACADEMIC-ALT-010-E3",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "464079"
+      },
+      "published_at": "2026-08-05",
+      "event_date": "2026-08-05",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "first_hand_pharmacist_planning",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An Iranian pharmacist with industry experience and German B2 preparation explicitly compared funded PhD/master routes against direct market entry to avoid immediate equivalency exams.",
+        "fa": "یک داروساز ایرانی با سابقه صنعت و در حال خواندن B2 آلمانی، مسیر PhD/مستر فانددار را با ورود مستقیم بازار کار مقایسه کرده تا در صورت امکان از معادل‌سازی فوری دور بماند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-ACADEMIC-ALT-010-E4",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "464082"
+      },
+      "published_at": "2026-08-06",
+      "event_date": "2026-08-06",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_academic_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The reply said a funded PhD could be a viable route for that pharmacist profile if English and research fit were strong.",
+        "fa": "پاسخ گروه برای همان پروفایل داروساز، PhD فانددار را در صورت انگلیسی و فیت پژوهشی مناسب مسیر قابل‌بررسی دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MED-ACADEMIC-ALT-010-E5",
+      "source_id": "medical-sciences-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "462703"
+      },
+      "published_at": "2026-05-30",
+      "event_date": "2026-05-30",
+      "collected_at": "2026-09-17T07:15:13Z",
+      "source_type": "community_route_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A medical-student discussion explicitly presented graduate/research study abroad as a way to relocate while continuing to prepare for later medical equivalency exams.",
+        "fa": "در یک بحث پزشکی، پذیرش ارشد/دکتری خارج به‌عنوان راه جابه‌جایی همزمان با ادامه آمادگی برای آزمون‌های معادل‌سازی پزشکی مطرح شده است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "MED-IR-DEGREE-RELEASE-001",
+      "issue_cluster_id": "IR-MOH-DEGREE-RELEASE-SERVICE-OBLIGATION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MED-IR-COLLATERAL-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "MED-CREDENTIAL-VERIFY-008"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "ministry_health_degree_release_bottleneck",
+        "class": "source_country_document"
+      },
+      "scope": {
+        "destination": {
+          "country": "Iran",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "medicine",
+            "nursing",
+            "pharmacy",
+            "allied health",
+            "medical sciences"
+          ],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Iranian Ministry of Health graduate"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "PROFESSIONAL LICENSING"
+          ],
+          "codes": [
+            "degree_release",
+            "mandatory_service",
+            "service_obligation"
+          ]
+        },
+        "process_stages": [
+          "graduation",
+          "document_release",
+          "application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For Iranian health graduates, Ministry of Health service obligations and degree release are a migration bottleneck independent of destination-country admission or licensing",
+          "fa": "برای فارغ‌التحصیل علوم پزشکی ایران، طرح/تعهد و آزادسازی مدرک یک گلوگاه مهاجرتی مستقل از پذیرش یا لایسنس کشور مقصد است"
+        },
+        "summary": {
+          "en": "Across 2025-2026 the group repeatedly reports uncertainty about buying out obligations, mandatory service, access to original/temporary degrees and pauses caused by new ministry circulars. The practical rule is unstable and field-specific in this source.",
+          "fa": "در ۲۰۲۵–۲۰۲۶ گروه بارها درباره خرید تعهد، طرح اجباری، دسترسی به دانشنامه/مدرک موقت و توقف فرایند به‌خاطر بخشنامه جدید بحث کرده است. قاعده عملی در خود فایل ناپایدار و رشته‌محور است."
+        },
+        "practical_impact": {
+          "en": "An applicant can be academically eligible abroad but still miss deadlines because the Iranian degree cannot be released or verified on time.",
+          "fa": "فرد ممکن است از نظر دانشگاه مقصد واجدشرایط باشد اما به‌دلیل نرسیدن دانشنامه/تأییدیه ایران ددلاین را از دست بدهد."
+        },
+        "who_should_care": {
+          "en": "Iranian medical, nursing, pharmacy and allied-health graduates.",
+          "fa": "فارغ‌التحصیلان پزشکی، پرستاری، داروسازی و پیراپزشکی ایران."
+        },
+        "recommended_action": {
+          "en": "Treat degree-release status, mandatory service and service-obligation evidence as a separate critical path from the destination application.",
+          "fa": "وضعیت دانشنامه، طرح و تعهد را یک critical path جدا از اپلای مقصد مدیریت کنید."
+        },
+        "known_workaround": "Collateral-based temporary document release appears in the community, but its use and conditions vary and are not treated as a universal solution."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MED-IR-DEGREE-RELEASE-001-E1",
+          "relation": "supports",
+          "independence_group": "MED-IR-DEGREE-RELEASE-001-E1"
+        },
+        {
+          "evidence_id": "MED-IR-DEGREE-RELEASE-001-E2",
+          "relation": "supports",
+          "independence_group": "MED-IR-DEGREE-RELEASE-001-E2"
+        },
+        {
+          "evidence_id": "MED-IR-DEGREE-RELEASE-001-E3",
+          "relation": "supports",
+          "independence_group": "MED-IR-DEGREE-RELEASE-001-E3"
+        },
+        {
+          "evidence_id": "MED-IR-DEGREE-RELEASE-001-E4",
+          "relation": "supports",
+          "independence_group": "MED-IR-DEGREE-RELEASE-001-E4"
+        },
+        {
+          "evidence_id": "MED-IR-DEGREE-RELEASE-001-E5",
+          "relation": "supports",
+          "independence_group": "MED-IR-DEGREE-RELEASE-001-E5"
+        },
+        {
+          "evidence_id": "MED-IR-DEGREE-RELEASE-001-E6",
+          "relation": "supports",
+          "independence_group": "MED-IR-DEGREE-RELEASE-001-E6"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated across the full period with direct stalled cases and changing guidance."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Iranian Ministry of Health release/service rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MED-IR-DEGREE-RELEASE-001-E1",
+            "MED-IR-DEGREE-RELEASE-001-E2",
+            "MED-IR-DEGREE-RELEASE-001-E3",
+            "MED-IR-DEGREE-RELEASE-001-E4",
+            "MED-IR-DEGREE-RELEASE-001-E5",
+            "MED-IR-DEGREE-RELEASE-001-E6"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded medical-sciences Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Source-country release rules and circulars can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Ministry of Health",
+        "degree release",
+        "mandatory service",
+        "service obligation",
+        "Iran"
+      ],
+      "first_seen": "2025-01-17",
+      "last_seen": "2026-06-29"
+    },
+    {
+      "signal_id": "MED-IR-COLLATERAL-002",
+      "issue_cluster_id": "IR-MOH-COLLATERAL-STUDY-RELEASE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MED-IR-DEGREE-RELEASE-001"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "collateral_conditional_degree_release",
+        "class": "source_country_document"
+      },
+      "scope": {
+        "destination": {
+          "country": "Iran",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "medicine",
+            "nursing",
+            "pharmacy",
+            "allied health",
+            "medical sciences"
+          ],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Collateral-based release"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "PROFESSIONAL LICENSING"
+          ],
+          "codes": [
+            "collateral_degree_release"
+          ]
+        },
+        "process_stages": [
+          "document_release",
+          "study_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Collateral-based receipt of a health degree is described as conditional and study-linked rather than equivalent to unrestricted permanent release",
+          "fa": "تحویل مدرک علوم پزشکی با وثیقه در گروه مشروط و تحصیل‌محور توصیف شده، نه معادل آزادسازی دائمی و بدون محدودیت"
+        },
+        "summary": {
+          "en": "Applicants repeatedly ask whether collateral-released documents can be used for work migration. A community reply says the document itself may not be marked study-only but describes a time-limited obligation to show foreign university admission.",
+          "fa": "متقاضیان بارها می‌پرسند مدرک وثیقه‌ای برای مهاجرت کاری هم قابل استفاده است یا نه. یک پاسخ می‌گوید روی مدرک محدودیت درج نمی‌شود اما تعهد زمانی برای ارائه پذیرش دانشگاه خارجی وجود دارد."
+        },
+        "practical_impact": {
+          "en": "Using collateral as a generic workaround for work migration may create legal/financial risk if the release was granted for study purposes.",
+          "fa": "استفاده از وثیقه به‌عنوان workaround عمومی مهاجرت کاری ممکن است در صورت تحصیل‌محور بودن مجوز، ریسک حقوقی/مالی بسازد."
+        },
+        "who_should_care": {
+          "en": "Health graduates who cannot permanently release their degree before an overseas deadline.",
+          "fa": "فارغ‌التحصیلان علوم پزشکی که قبل از ددلاین قادر به آزادسازی دائمی مدرک نیستند."
+        },
+        "recommended_action": {
+          "en": "Confirm the exact written conditions of the collateral release and destination document requirement before relying on it.",
+          "fa": "قبل از اتکا به وثیقه، شرایط کتبی آن و نیاز مدرکی مقصد را دقیق بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MED-IR-COLLATERAL-002-E1",
+          "relation": "supports",
+          "independence_group": "MED-IR-COLLATERAL-002-E1"
+        },
+        {
+          "evidence_id": "MED-IR-COLLATERAL-002-E2",
+          "relation": "supports",
+          "independence_group": "MED-IR-COLLATERAL-002-E2"
+        },
+        {
+          "evidence_id": "MED-IR-COLLATERAL-002-E3",
+          "relation": "supports",
+          "independence_group": "MED-IR-COLLATERAL-002-E3"
+        },
+        {
+          "evidence_id": "MED-IR-COLLATERAL-002-E4",
+          "relation": "supports",
+          "independence_group": "MED-IR-COLLATERAL-002-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The community has concrete process descriptions, but exact legal conditions remain unverified and potentially changing."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Collateral-release conditions were not independently checked with the Ministry of Health."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MED-IR-COLLATERAL-002-E1",
+            "MED-IR-COLLATERAL-002-E2",
+            "MED-IR-COLLATERAL-002-E3",
+            "MED-IR-COLLATERAL-002-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded medical-sciences Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Collateral procedures are policy-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "collateral",
+        "degree",
+        "study-only",
+        "document release"
+      ],
+      "first_seen": "2025-03-15",
+      "last_seen": "2025-03-23"
+    },
+    {
+      "signal_id": "MED-CLINICAL-LICENSING-003",
+      "issue_cluster_id": "HEALTH-PROFESSIONAL-DESTINATION-LICENSING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MED-NURSING-MIGRATION-004"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "MED-ACADEMIC-ALT-010"
+        }
+      ],
+      "classification": {
+        "family": "E12_PROFESSIONAL_REGULATION",
+        "type": "destination_registration_required",
+        "class": "professional_licensing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "physician",
+            "nurse",
+            "midwife",
+            "pharmacist",
+            "physiotherapist"
+          ],
+          "fields": [
+            "medicine",
+            "nursing",
+            "pharmacy",
+            "allied health",
+            "medical sciences"
+          ],
+          "education_levels": [],
+          "regulated_professions": [
+            "physician",
+            "nurse",
+            "midwife",
+            "pharmacist",
+            "physiotherapist"
+          ],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "PROFESSIONAL LICENSING"
+          ],
+          "codes": [
+            "professional_registration",
+            "Approbation",
+            "NMC",
+            "recognition"
+          ]
+        },
+        "process_stages": [
+          "credential_recognition",
+          "registration",
+          "licensing"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Clinical migration is a two-system problem: first obtain/verify the Iranian credential, then satisfy destination-country professional registration",
+          "fa": "مهاجرت بالینی یک مسئله دو‌سیستمی است: اول مدرک ایران را بگیرید/تأیید کنید، بعد رجیستریشن حرفه‌ای کشور مقصد را بگذرانید"
+        },
+        "summary": {
+          "en": "The group separately discusses German Approbation, UK NMC registration, physiotherapy recognition and nursing registration/language. This pattern is broader than any single country.",
+          "fa": "گروه جداگانه درباره Approbation آلمان، NMC انگلیس، تطبیق فیزیوتراپی و رجیستریشن/زبان پرستاری بحث می‌کند؛ یعنی مسئله فراتر از یک کشور خاص است."
+        },
+        "practical_impact": {
+          "en": "Admission, visa or possession of an Iranian degree does not itself authorize patient-facing practice abroad.",
+          "fa": "پذیرش، ویزا یا داشتن مدرک ایران به‌تنهایی مجوز کار بالینی در مقصد نمی‌دهد."
+        },
+        "who_should_care": {
+          "en": "All patient-facing Iranian healthcare professionals.",
+          "fa": "تمام کادر درمان ایرانی که قصد کار بالینی دارند."
+        },
+        "recommended_action": {
+          "en": "Map source-country document release and destination licensing as two separate checklists with separate timelines.",
+          "fa": "آزادسازی مدرک ایران و لایسنس مقصد را دو چک‌لیست و timeline جدا ببینید."
+        },
+        "known_workaround": "Academic/research routes are repeatedly considered when immediate clinical registration is too slow."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MED-CLINICAL-LICENSING-003-E1",
+          "relation": "supports",
+          "independence_group": "MED-CLINICAL-LICENSING-003-E1"
+        },
+        {
+          "evidence_id": "MED-CLINICAL-LICENSING-003-E2",
+          "relation": "supports",
+          "independence_group": "MED-CLINICAL-LICENSING-003-E2"
+        },
+        {
+          "evidence_id": "MED-CLINICAL-LICENSING-003-E3",
+          "relation": "supports",
+          "independence_group": "MED-CLINICAL-LICENSING-003-E3"
+        },
+        {
+          "evidence_id": "MED-CLINICAL-LICENSING-003-E4",
+          "relation": "supports",
+          "independence_group": "MED-CLINICAL-LICENSING-003-E4"
+        },
+        {
+          "evidence_id": "MED-CLINICAL-LICENSING-003-E5",
+          "relation": "supports",
+          "independence_group": "MED-CLINICAL-LICENSING-003-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated across professions and destinations with direct applicant questions and first-hand nursing experience."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Exact current registration requirements were not verified with destination regulators."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MED-CLINICAL-LICENSING-003-E1",
+            "MED-CLINICAL-LICENSING-003-E2",
+            "MED-CLINICAL-LICENSING-003-E3",
+            "MED-CLINICAL-LICENSING-003-E4",
+            "MED-CLINICAL-LICENSING-003-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded medical-sciences Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Professional registration rules vary by regulator and country.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "registration",
+        "licensing",
+        "Approbation",
+        "NMC",
+        "recognition"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2026-06-07"
+    },
+    {
+      "signal_id": "MED-NURSING-MIGRATION-004",
+      "issue_cluster_id": "NURSING-MIGRATION-MULTISTAGE-FRICTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MED-CLINICAL-LICENSING-003"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "MED-IR-DEGREE-RELEASE-001"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "nursing_migration_multistage",
+        "class": "nursing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "nurse"
+          ],
+          "fields": [
+            "medicine",
+            "nursing",
+            "pharmacy",
+            "allied health",
+            "medical sciences"
+          ],
+          "education_levels": [],
+          "regulated_professions": [
+            "nurse"
+          ],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "PROFESSIONAL LICENSING"
+          ],
+          "codes": [
+            "nursing_work",
+            "nursing_study"
+          ]
+        },
+        "process_stages": [
+          "degree_release",
+          "work_experience",
+          "language",
+          "registration",
+          "job_search"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Nursing migration is repeatedly described as a multi-year sequence, not an 'easy migration' shortcut",
+          "fa": "مهاجرت پرستاری در تجربه گروه یک زنجیره چندساله است، نه میانبر «مهاجرت آسان»"
+        },
+        "summary": {
+          "en": "Direct nursing discussion combines Iranian degree-release/service friction, limited or expensive English-taught study options, local-language requirements, destination registration and the need for clinical experience.",
+          "fa": "بحث مستقیم پرستاران ترکیبی از گیر آزادسازی/طرح ایران، محدود یا گران بودن تحصیل انگلیسی، زبان محلی، رجیستریشن مقصد و نیاز به سابقه بالینی را نشان می‌دهد."
+        },
+        "practical_impact": {
+          "en": "Choosing nursing primarily for migration can understate the time, language and regulatory burden after graduation.",
+          "fa": "انتخاب پرستاری صرفاً با هدف مهاجرت می‌تواند زمان، زبان و بار regulatory بعد از فارغ‌التحصیلی را دست‌کم بگیرد."
+        },
+        "who_should_care": {
+          "en": "Current/prospective Iranian nursing students and graduates.",
+          "fa": "دانشجویان و فارغ‌التحصیلان پرستاری ایران."
+        },
+        "recommended_action": {
+          "en": "Build a destination-specific sequence for degree release, clinical experience, language and regulator registration before estimating migration time.",
+          "fa": "قبل از تخمین زمان مهاجرت، توالی کشورمحور آزادسازی مدرک، سابقه بالینی، زبان و رجیستریشن را بسازید."
+        },
+        "known_workaround": "Some members prefer direct work migration after accumulating clinical experience rather than expensive study programmes."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MED-NURSING-MIGRATION-004-E1",
+          "relation": "supports",
+          "independence_group": "MED-NURSING-MIGRATION-004-E1"
+        },
+        {
+          "evidence_id": "MED-NURSING-MIGRATION-004-E2",
+          "relation": "supports",
+          "independence_group": "MED-NURSING-MIGRATION-004-E2"
+        },
+        {
+          "evidence_id": "MED-NURSING-MIGRATION-004-E3",
+          "relation": "supports",
+          "independence_group": "MED-NURSING-MIGRATION-004-E3"
+        },
+        {
+          "evidence_id": "MED-NURSING-MIGRATION-004-E4",
+          "relation": "supports",
+          "independence_group": "MED-NURSING-MIGRATION-004-E4"
+        },
+        {
+          "evidence_id": "MED-NURSING-MIGRATION-004-E5",
+          "relation": "supports",
+          "independence_group": "MED-NURSING-MIGRATION-004-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "A detailed first-hand nursing thread and repeated regulator/destination questions support the pattern."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Country-specific nursing requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MED-NURSING-MIGRATION-004-E1",
+            "MED-NURSING-MIGRATION-004-E2",
+            "MED-NURSING-MIGRATION-004-E3",
+            "MED-NURSING-MIGRATION-004-E4",
+            "MED-NURSING-MIGRATION-004-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded medical-sciences Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Nursing registration and recruitment change by country.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "nursing",
+        "registration",
+        "NMC",
+        "work migration",
+        "clinical experience"
+      ],
+      "first_seen": "2025-09-25",
+      "last_seen": "2026-08-01"
+    },
+    {
+      "signal_id": "MED-OET-005",
+      "issue_cluster_id": "HEALTH-OET-VS-IELTS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MED-CLINICAL-LICENSING-003"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "healthcare_specific_language_test",
+        "class": "language_test"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "physician",
+            "nurse",
+            "healthcare professional"
+          ],
+          "fields": [
+            "medicine",
+            "nursing",
+            "pharmacy",
+            "allied health",
+            "medical sciences"
+          ],
+          "education_levels": [],
+          "regulated_professions": [
+            "physician",
+            "nurse",
+            "healthcare professional"
+          ],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "PROFESSIONAL LICENSING"
+          ],
+          "codes": [
+            "OET",
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "test_selection",
+          "test_preparation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "OET is treated by healthcare applicants as a profession-aligned alternative to IELTS, but perceived ease is personal rather than universal",
+          "fa": "OET در بین کادر درمان به‌عنوان جایگزین حرفه‌محور IELTS مطرح است، اما «آسان‌تر بودن» تجربه شخصی است نه قاعده عمومی"
+        },
+        "summary": {
+          "en": "OET study-group requests recur from 2025 into 2026. A direct respondent said OET felt easier and more logical than IELTS for them, while another applicant was considering switching despite already holding IELTS.",
+          "fa": "درخواست‌های OET از ۲۰۲۵ تا ۲۰۲۶ تکرار شده است. یک فرد با تجربه مستقیم OET را برای خودش آسان‌تر/منطقی‌تر از IELTS دانسته و فرد دیگری با وجود داشتن IELTS به تغییر فکر کرده است."
+        },
+        "practical_impact": {
+          "en": "Test choice can affect preparation efficiency, but only if the destination regulator accepts that test and required score.",
+          "fa": "انتخاب آزمون می‌تواند بهره‌وری آمادگی را تغییر دهد، به شرط اینکه regulator مقصد همان آزمون و نمره را بپذیرد."
+        },
+        "who_should_care": {
+          "en": "Healthcare professionals choosing between English tests.",
+          "fa": "کادر درمان در حال انتخاب آزمون زبان."
+        },
+        "recommended_action": {
+          "en": "Choose OET versus IELTS based on regulator acceptance and personal fit, not peer difficulty claims alone.",
+          "fa": "OET یا IELTS را بر اساس پذیرش regulator و فیت شخصی انتخاب کنید، نه صرفاً ادعای آسان‌تر بودن."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MED-OET-005-E1",
+          "relation": "supports",
+          "independence_group": "MED-OET-005-E1"
+        },
+        {
+          "evidence_id": "MED-OET-005-E2",
+          "relation": "supports",
+          "independence_group": "MED-OET-005-E2"
+        },
+        {
+          "evidence_id": "MED-OET-005-E3",
+          "relation": "supports",
+          "independence_group": "MED-OET-005-E3"
+        },
+        {
+          "evidence_id": "MED-OET-005-E4",
+          "relation": "supports",
+          "independence_group": "MED-OET-005-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "medium",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated interest plus direct comparative experience supports a preparation signal, not an acceptance rule."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current regulator acceptance of OET/IELTS was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MED-OET-005-E1",
+            "MED-OET-005-E2",
+            "MED-OET-005-E3",
+            "MED-OET-005-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded medical-sciences Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Test acceptance and score thresholds can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "OET",
+        "IELTS",
+        "healthcare English",
+        "language test"
+      ],
+      "first_seen": "2025-05-11",
+      "last_seen": "2026-08-06"
+    },
+    {
+      "signal_id": "MED-ITALY-IMAT-006",
+      "issue_cluster_id": "ITALY-ENGLISH-MEDICINE-IMAT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MED-IR-RETURN-RECOGNITION-007"
+        }
+      ],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "italy_medicine_entrance_exam_timeline",
+        "class": "medical_admission"
+      },
+      "scope": {
+        "destination": {
+          "country": "Italy",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "medical student"
+          ],
+          "fields": [
+            "medicine",
+            "nursing",
+            "pharmacy",
+            "allied health",
+            "medical sciences"
+          ],
+          "education_levels": [],
+          "regulated_professions": [
+            "medical student"
+          ],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "PROFESSIONAL LICENSING"
+          ],
+          "codes": [
+            "medicine",
+            "IMAT"
+          ]
+        },
+        "process_stages": [
+          "entrance_exam",
+          "application_timing",
+          "admission"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "English-taught medicine in Italy is repeatedly planned around an entrance-exam timeline rather than a simple document-only admission",
+          "fa": "پزشکی انگلیسی ایتالیا در گروه حول timeline آزمون ورودی برنامه‌ریزی می‌شود، نه پذیرش صرفاً مدرک‌محور"
+        },
+        "summary": {
+          "en": "Applicants repeatedly ask whether they still have time to prepare for IMAT and seek first-hand exam experience. Community experience describes the route as English-accessible but increasingly competitive.",
+          "fa": "متقاضیان بارها درباره زمان باقی‌مانده برای IMAT و تجربه مستقیم آزمون می‌پرسند. تجربه گروه مسیر را انگلیسی‌زبان اما با رقابت رو‌به‌رشد توصیف می‌کند."
+        },
+        "practical_impact": {
+          "en": "Late test preparation can become the limiting factor even before visa or enrolment stages.",
+          "fa": "آمادگی دیرهنگام آزمون می‌تواند قبل از ویزا یا ثبت‌نام، گلوگاه اصلی شود."
+        },
+        "who_should_care": {
+          "en": "Applicants targeting English-taught medicine in Italy.",
+          "fa": "متقاضیان پزشکی انگلیسی ایتالیا."
+        },
+        "recommended_action": {
+          "en": "Build the application calendar backward from the current entrance-exam and university deadlines.",
+          "fa": "تقویم اپلای را از تاریخ آزمون ورودی و deadline دانشگاه به عقب بچینید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MED-ITALY-IMAT-006-E1",
+          "relation": "supports",
+          "independence_group": "MED-ITALY-IMAT-006-E1"
+        },
+        {
+          "evidence_id": "MED-ITALY-IMAT-006-E2",
+          "relation": "supports",
+          "independence_group": "MED-ITALY-IMAT-006-E2"
+        },
+        {
+          "evidence_id": "MED-ITALY-IMAT-006-E3",
+          "relation": "supports",
+          "independence_group": "MED-ITALY-IMAT-006-E3"
+        },
+        {
+          "evidence_id": "MED-ITALY-IMAT-006-E4",
+          "relation": "supports",
+          "independence_group": "MED-ITALY-IMAT-006-E4"
+        },
+        {
+          "evidence_id": "MED-ITALY-IMAT-006-E5",
+          "relation": "supports",
+          "independence_group": "MED-ITALY-IMAT-006-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "IMAT/timing recurs across 2025-2026 with first-hand country experience."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Italian medical entrance-exam rules and deadlines were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MED-ITALY-IMAT-006-E1",
+            "MED-ITALY-IMAT-006-E2",
+            "MED-ITALY-IMAT-006-E3",
+            "MED-ITALY-IMAT-006-E4",
+            "MED-ITALY-IMAT-006-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded medical-sciences Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Medical admission/exam calendars are annual.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Italy",
+        "medicine",
+        "IMAT",
+        "entrance exam"
+      ],
+      "first_seen": "2025-01-02",
+      "last_seen": "2026-07-15"
+    },
+    {
+      "signal_id": "MED-IR-RETURN-RECOGNITION-007",
+      "issue_cluster_id": "IR-MOH-APPROVED-FOREIGN-UNIVERSITY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MED-ITALY-IMAT-006"
+        }
+      ],
+      "classification": {
+        "family": "E12_PROFESSIONAL_REGULATION",
+        "type": "iran_return_recognition_destination_choice",
+        "class": "return_recognition"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "physician",
+            "dentist",
+            "pharmacist",
+            "allied health"
+          ],
+          "fields": [
+            "medicine",
+            "nursing",
+            "pharmacy",
+            "allied health",
+            "medical sciences"
+          ],
+          "education_levels": [],
+          "regulated_professions": [
+            "physician",
+            "dentist",
+            "pharmacist",
+            "allied health"
+          ],
+          "other_conditions": [
+            "Possible return to Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "PROFESSIONAL LICENSING"
+          ],
+          "codes": [
+            "foreign_medical_degree",
+            "iran_return"
+          ]
+        },
+        "process_stages": [
+          "university_selection",
+          "return_recognition"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For applicants who may return to Iran, foreign-university approval by Iran's Ministry of Health is a first-order destination-selection constraint",
+          "fa": "برای کسی که احتمال بازگشت به ایران دارد، تأیید دانشگاه خارجی توسط وزارت بهداشت ایران یک معیار درجه‌اول انتخاب مقصد است"
+        },
+        "summary": {
+          "en": "The group repeatedly asks whether Chinese, UAE and other foreign medical institutions are ministry-approved and links non-approval to future work/equivalency problems in Iran.",
+          "fa": "گروه بارها درباره تأیید دانشگاه‌های چین، امارات و سایر کشورها توسط وزارت بهداشت پرسیده و عدم تأیید را به مشکل آینده کار/معادل‌سازی در ایران ربط داده است."
+        },
+        "practical_impact": {
+          "en": "A clinically valid foreign degree may still be a poor choice for someone who wants an Iran fallback if the institution is not on the relevant approved list.",
+          "fa": "حتی مدرک معتبر خارجی ممکن است برای فردی که بازگشت به ایران را fallback می‌داند انتخاب بدی باشد اگر دانشگاه در فهرست مربوطه نباشد."
+        },
+        "who_should_care": {
+          "en": "Medical/health applicants who want to preserve the option of working in Iran later.",
+          "fa": "متقاضیان پزشکی/علوم سلامت که می‌خواهند امکان کار بعدی در ایران را حفظ کنند."
+        },
+        "recommended_action": {
+          "en": "Check the official approval list for the exact university, programme and entry year before enrolment.",
+          "fa": "پیش از ثبت‌نام، فهرست رسمی را برای دانشگاه، برنامه و سال ورود دقیق بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MED-IR-RETURN-RECOGNITION-007-E1",
+          "relation": "supports",
+          "independence_group": "MED-IR-RETURN-RECOGNITION-007-E1"
+        },
+        {
+          "evidence_id": "MED-IR-RETURN-RECOGNITION-007-E2",
+          "relation": "supports",
+          "independence_group": "MED-IR-RETURN-RECOGNITION-007-E2"
+        },
+        {
+          "evidence_id": "MED-IR-RETURN-RECOGNITION-007-E3",
+          "relation": "supports",
+          "independence_group": "MED-IR-RETURN-RECOGNITION-007-E3"
+        },
+        {
+          "evidence_id": "MED-IR-RETURN-RECOGNITION-007-E4",
+          "relation": "supports",
+          "independence_group": "MED-IR-RETURN-RECOGNITION-007-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated destination-selection questions show the approval list has durable practical impact."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The current Iranian Ministry of Health approved-university list was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MED-IR-RETURN-RECOGNITION-007-E1",
+            "MED-IR-RETURN-RECOGNITION-007-E2",
+            "MED-IR-RETURN-RECOGNITION-007-E3",
+            "MED-IR-RETURN-RECOGNITION-007-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded medical-sciences Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Approved lists are year-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Ministry of Health approved university",
+        "Iran return",
+        "recognition",
+        "UAE",
+        "China"
+      ],
+      "first_seen": "2025-09-26",
+      "last_seen": "2025-12-03"
+    },
+    {
+      "signal_id": "MED-CREDENTIAL-VERIFY-008",
+      "issue_cluster_id": "MEDICAL-CREDENTIAL-VERIFICATION-WES",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MED-IR-DEGREE-RELEASE-001"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "credential_verification_transmission_friction",
+        "class": "credential_evaluation"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "medicine",
+            "nursing",
+            "pharmacy",
+            "allied health",
+            "medical sciences"
+          ],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "PROFESSIONAL LICENSING"
+          ],
+          "codes": [
+            "WES",
+            "official_transcript",
+            "translation_authentication"
+          ]
+        },
+        "process_stages": [
+          "credential_evaluation",
+          "document_transmission",
+          "legalisation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Credential evaluation is not a simple upload step for Iranian medical graduates; university transmission and Ministry authentication create recurring friction",
+          "fa": "ارزیابی مدرک برای فارغ‌التحصیل علوم پزشکی ایران صرفاً آپلود فایل نیست؛ ارسال دانشگاه و مهر/تأیید وزارت بهداشت اصطکاک تکرارشونده می‌سازد"
+        },
+        "summary": {
+          "en": "The source includes questions about whether universities can send records remotely to WES, whether Ministry authentication is needed for official translations, long-running WES verification delays and a new 2026 access concern.",
+          "fa": "فایل درباره ارسال غیرحضوری مدارک دانشگاه به WES، نیاز مهر وزارت بهداشت برای ترجمه رسمی، گیر طولانی WES و یک ابهام جدید دسترسی در ۲۰۲۶ پیام دارد."
+        },
+        "practical_impact": {
+          "en": "Credential evaluation can delay immigration or academic files even after the degree itself is available.",
+          "fa": "حتی بعد از در دسترس بودن مدرک، ارزیابی credential می‌تواند پرونده مهاجرتی/تحصیلی را عقب بیندازد."
+        },
+        "who_should_care": {
+          "en": "Health graduates needing WES or official third-party credential evaluation.",
+          "fa": "فارغ‌التحصیلان سلامت که WES یا ارزیابی رسمی شخص ثالث لازم دارند."
+        },
+        "recommended_action": {
+          "en": "Test the university-to-evaluator transmission workflow and required authentication early.",
+          "fa": "workflow ارسال دانشگاه به evaluator و تأییدهای لازم را زود تست کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MED-CREDENTIAL-VERIFY-008-E1",
+          "relation": "supports",
+          "independence_group": "MED-CREDENTIAL-VERIFY-008-E1"
+        },
+        {
+          "evidence_id": "MED-CREDENTIAL-VERIFY-008-E2",
+          "relation": "supports",
+          "independence_group": "MED-CREDENTIAL-VERIFY-008-E2"
+        },
+        {
+          "evidence_id": "MED-CREDENTIAL-VERIFY-008-E3",
+          "relation": "supports",
+          "independence_group": "MED-CREDENTIAL-VERIFY-008-E3"
+        },
+        {
+          "evidence_id": "MED-CREDENTIAL-VERIFY-008-E4",
+          "relation": "supports",
+          "independence_group": "MED-CREDENTIAL-VERIFY-008-E4"
+        },
+        {
+          "evidence_id": "MED-CREDENTIAL-VERIFY-008-E5",
+          "relation": "supports",
+          "independence_group": "MED-CREDENTIAL-VERIFY-008-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Recurring direct process problems span early 2025 through September 2026."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current WES service availability and exact Ministry authentication requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MED-CREDENTIAL-VERIFY-008-E1",
+            "MED-CREDENTIAL-VERIFY-008-E2",
+            "MED-CREDENTIAL-VERIFY-008-E3",
+            "MED-CREDENTIAL-VERIFY-008-E4",
+            "MED-CREDENTIAL-VERIFY-008-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded medical-sciences Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Evaluator access and document procedures can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "WES",
+        "credential evaluation",
+        "official transcript",
+        "Ministry authentication"
+      ],
+      "first_seen": "2025-01-03",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "signal_id": "MED-USA-USMLE-009",
+      "issue_cluster_id": "USA-IMG-USMLE-RESIDENCY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MED-ACADEMIC-ALT-010"
+        }
+      ],
+      "classification": {
+        "family": "E12_PROFESSIONAL_REGULATION",
+        "type": "usmle_residency_exam_path",
+        "class": "physician_licensing"
+      },
+      "scope": {
+        "destination": {
+          "country": "United States",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "physician"
+          ],
+          "fields": [
+            "medicine",
+            "nursing",
+            "pharmacy",
+            "allied health",
+            "medical sciences"
+          ],
+          "education_levels": [],
+          "regulated_professions": [
+            "physician"
+          ],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "PROFESSIONAL LICENSING"
+          ],
+          "codes": [
+            "USMLE",
+            "residency_match"
+          ]
+        },
+        "process_stages": [
+          "exam",
+          "residency",
+          "clinical_entry"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The U.S. physician route is consistently understood in the community as an exam-and-match pathway rather than direct degree recognition",
+          "fa": "مسیر پزشک در آمریکا در کامیونیتی به‌طور پایدار آزمون+Match دیده می‌شود، نه شناسایی مستقیم مدرک"
+        },
+        "summary": {
+          "en": "Applicants ask about GPA, USMLE step timing and residency competitiveness. Repeated replies frame internationally trained physicians as needing U.S. exams before competing for residency.",
+          "fa": "متقاضیان درباره معدل، زمان‌بندی stepهای USMLE و رقابت رزیدنتی سؤال می‌کنند و پاسخ‌های تکرارشونده پزشک آموزش‌دیده خارج را نیازمند آزمون‌های آمریکا پیش از رقابت برای رزیدنتی می‌دانند."
+        },
+        "practical_impact": {
+          "en": "Foreign medical education alone does not create a short direct path into U.S. clinical practice.",
+          "fa": "مدرک پزشکی خارجی به‌تنهایی مسیر کوتاه و مستقیم برای کار بالینی آمریکا نمی‌سازد."
+        },
+        "who_should_care": {
+          "en": "Iranian medical students/doctors considering U.S. residency.",
+          "fa": "دانشجویان و پزشکان ایرانی متقاضی رزیدنتی آمریکا."
+        },
+        "recommended_action": {
+          "en": "Treat USMLE preparation, residency competitiveness and document-release timing as separate long-horizon workstreams.",
+          "fa": "آمادگی USMLE، رقابت رزیدنتی و زمان آزادسازی مدرک را سه workstream بلندمدت جدا ببینید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MED-USA-USMLE-009-E1",
+          "relation": "supports",
+          "independence_group": "MED-USA-USMLE-009-E1"
+        },
+        {
+          "evidence_id": "MED-USA-USMLE-009-E2",
+          "relation": "supports",
+          "independence_group": "MED-USA-USMLE-009-E2"
+        },
+        {
+          "evidence_id": "MED-USA-USMLE-009-E3",
+          "relation": "supports",
+          "independence_group": "MED-USA-USMLE-009-E3"
+        },
+        {
+          "evidence_id": "MED-USA-USMLE-009-E4",
+          "relation": "supports",
+          "independence_group": "MED-USA-USMLE-009-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same exam/match structure is repeated across 2025-2026, though exact exam details are not independently verified."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current USMLE/ECFMG/residency rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MED-USA-USMLE-009-E1",
+            "MED-USA-USMLE-009-E2",
+            "MED-USA-USMLE-009-E3",
+            "MED-USA-USMLE-009-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded medical-sciences Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "US medical licensing and residency rules can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "USMLE",
+        "residency",
+        "IMG",
+        "physician"
+      ],
+      "first_seen": "2025-01-19",
+      "last_seen": "2026-02-15"
+    },
+    {
+      "signal_id": "MED-ACADEMIC-ALT-010",
+      "issue_cluster_id": "HEALTH-ACADEMIC-ROUTE-VS-CLINICAL",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MED-CLINICAL-LICENSING-003"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "MED-USA-USMLE-009"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "academic_research_route_as_alternative",
+        "class": "academic_mobility"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "physician",
+            "pharmacist",
+            "medical scientist"
+          ],
+          "fields": [
+            "medicine",
+            "nursing",
+            "pharmacy",
+            "allied health",
+            "medical sciences"
+          ],
+          "education_levels": [],
+          "regulated_professions": [
+            "physician",
+            "pharmacist",
+            "medical scientist"
+          ],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "PROFESSIONAL LICENSING"
+          ],
+          "codes": [
+            "PhD",
+            "masters_research",
+            "postdoc",
+            "clinical_licensing"
+          ]
+        },
+        "process_stages": [
+          "route_selection",
+          "funding",
+          "research_profile"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Health professionals repeatedly use funded academic/research routes as an alternative first move when immediate clinical licensing is too slow or uncertain",
+          "fa": "کادر درمان بارها از PhD/مستر پژوهشی/پست‌داک فانددار به‌عنوان حرکت اول جایگزین استفاده می‌کنند وقتی لایسنس بالینی فوری کند یا نامطمئن است"
+        },
+        "summary": {
+          "en": "The file contains physicians/pharmacists explicitly comparing academic routes with direct clinical entry, partly to relocate first, build research credentials and postpone equivalency exams.",
+          "fa": "فایل پزشک و داروسازی دارد که صریحاً مسیر آکادمیک را با ورود مستقیم بالینی مقایسه می‌کنند؛ بخشی از منطق، جابه‌جایی اولیه، ساخت رزومه پژوهشی و عقب‌انداختن آزمون معادل‌سازی است."
+        },
+        "practical_impact": {
+          "en": "Academic mobility can solve relocation/funding earlier but does not itself grant clinical practice rights.",
+          "fa": "مهاجرت آکادمیک می‌تواند جابه‌جایی/فاند را زودتر حل کند اما خودبه‌خود حق کار بالینی نمی‌دهد."
+        },
+        "who_should_care": {
+          "en": "Health professionals with research profiles who are not ready for destination licensing.",
+          "fa": "کادر درمان دارای رزومه پژوهشی که هنوز برای لایسنس مقصد آماده نیستند."
+        },
+        "recommended_action": {
+          "en": "Compare academic and clinical routes as separate objectives and avoid assuming a PhD automatically converts into professional registration.",
+          "fa": "مسیر آکادمیک و بالینی را دو هدف جدا مقایسه کنید و فرض نکنید PhD خودکار به رجیستریشن حرفه‌ای تبدیل می‌شود."
+        },
+        "known_workaround": "A funded academic route can provide a legal/financial base while the applicant later completes licensing steps."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MED-ACADEMIC-ALT-010-E1",
+          "relation": "supports",
+          "independence_group": "MED-ACADEMIC-ALT-010-E1"
+        },
+        {
+          "evidence_id": "MED-ACADEMIC-ALT-010-E2",
+          "relation": "supports",
+          "independence_group": "MED-ACADEMIC-ALT-010-E2"
+        },
+        {
+          "evidence_id": "MED-ACADEMIC-ALT-010-E3",
+          "relation": "supports",
+          "independence_group": "MED-ACADEMIC-ALT-010-E3"
+        },
+        {
+          "evidence_id": "MED-ACADEMIC-ALT-010-E4",
+          "relation": "supports",
+          "independence_group": "MED-ACADEMIC-ALT-010-E4"
+        },
+        {
+          "evidence_id": "MED-ACADEMIC-ALT-010-E5",
+          "relation": "supports",
+          "independence_group": "MED-ACADEMIC-ALT-010-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple health-professional profiles explicitly compare research/academic migration with clinical licensing."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Funding availability and later clinical-registration implications were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MED-ACADEMIC-ALT-010-E1",
+            "MED-ACADEMIC-ALT-010-E2",
+            "MED-ACADEMIC-ALT-010-E3",
+            "MED-ACADEMIC-ALT-010-E4",
+            "MED-ACADEMIC-ALT-010-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded medical-sciences Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Academic funding and licensing transitions vary by programme/country.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "PhD",
+        "research",
+        "postdoc",
+        "funding",
+        "clinical licensing"
+      ],
+      "first_seen": "2025-01-28",
+      "last_seen": "2026-08-06"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram usernames/IDs, phone numbers and contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 3,365 records in the uploaded JSON export."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the full conversation graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Consultancy ads, paid-paper offers, generic promotions and unrelated posts were excluded."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated degree-release, licensing, nursing, OET, Italy medicine, return-recognition, WES, USMLE and academic-route discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Conflicting/ evolving degree-release and collateral guidance is preserved as policy instability rather than forced into one universal rule."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "All Ministry, regulator, WES, IMAT, NMC, OET and USMLE claims remain source-reported; no independent official verification was performed."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote-store deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community planning signals only. They are not official Ministry of Health, university, professional-regulator, credential-evaluator, language-test or medical-licensing rules. Verify current requirements with the relevant authority before acting."
+}

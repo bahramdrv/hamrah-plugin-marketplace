@@ -1,0 +1,2396 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_humanities_signals_candidate",
+    "generated_at": "2026-09-17T07:37:12Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "humanities-pargar-telegram-export",
+      "name": "result(20260917-073159).json / Telegram export «علوم انسانی با پرگار»",
+      "source_type": "private_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-16",
+        "records_available": 1424,
+        "records_processed": 1424,
+        "message_records": 1423
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "humanities_social_sciences_focused": true,
+        "contains_first_hand_applicant_experience": true,
+        "contains_forwarded_promotional_posts": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "HUM-FIT-001-E1",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147458"
+      },
+      "published_at": "2025-01-03",
+      "event_date": "2025-01-03",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_method",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A detailed programme-search method ranked funding/country first, then programme description and department members, rejecting attractive programmes when faculty/research direction did not match the applicant.",
+        "fa": "یک روش جست‌وجوی تفصیلی ابتدا کشور/فاند و بعد توضیحات برنامه و اعضای دپارتمان را بررسی می‌کند و برنامه جذاب اما بدون فیت پژوهشی را گزینه مناسب نمی‌داند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-FIT-001-E2",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147509"
+      },
+      "published_at": "2025-01-06",
+      "event_date": "2025-01-06",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For social-science applicants, a reply recommended defining the precise subfield and research expertise, then comparing universities by faculty overlap, funding and other priorities before contacting aligned professors.",
+        "fa": "برای علوم اجتماعی توصیه شده ابتدا زیررشته و حوزه پژوهشی دقیق مشخص شود، سپس دانشگاه‌ها بر اساس اشتراک پژوهشی استادان، فاند و عوامل دیگر مقایسه و با استاد هم‌راستا مکاتبه شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-FIT-001-E3",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "148012"
+      },
+      "published_at": "2025-02-18",
+      "event_date": "2025-02-18",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A funding discussion emphasized applicant distinctiveness and being selectable by a professor rather than choosing a degree label solely because it is perceived as easier to fund.",
+        "fa": "در بحث فاند روی متمایزبودن پروفایل و انتخاب‌شدنی‌بودن توسط استاد تأکید شده، نه انتخاب رشته صرفاً با تصور فاند آسان‌تر."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-FIT-001-E4",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "155558"
+      },
+      "published_at": "2026-06-18",
+      "event_date": "2026-06-18",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In a psychology PhD profile, hospital training was described as useful only when it aligned with the prospective supervisor's research.",
+        "fa": "در یک پروفایل دکتری روانشناسی، دوره بیمارستانی فقط وقتی مفید دانسته شده که با پژوهش سوپروایزر مرتبط باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-PHD-ROUTE-002-E1",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147567"
+      },
+      "published_at": "2025-01-15",
+      "event_date": "2025-01-15",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_route_explanation",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A Persian-literature applicant was told that U.S. and European doctoral routes can structure research evidence differently, with European programmes described as more explicitly thesis/proposal scoped in the example.",
+        "fa": "برای متقاضی ادبیات فارسی، تفاوت ساختاری مسیر دکتری آمریکا و اروپا در نوع evidence پژوهشی مطرح شده و در مثال اروپا proposal/thesis scope پررنگ‌تر توصیف شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-PHD-ROUTE-002-E2",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "154273"
+      },
+      "published_at": "2025-12-21",
+      "event_date": "2025-12-21",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A new PhD applicant explicitly asked whether Europe is position-first while Canada/U.S. are professor/program-contact routes, reflecting recurring confusion about route architecture.",
+        "fa": "یک متقاضی تازه‌کار صریحاً پرسیده اروپا position-first است یا نه و کانادا/آمریکا استاد/برنامه‌محورند؛ نشانه ابهام تکرارشونده در معماری مسیر."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-PHD-ROUTE-002-E3",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "154274"
+      },
+      "published_at": "2025-12-21",
+      "event_date": "2025-12-21",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The reply said supervisor influence can range from decisive to minimal depending on the department, indicating that professor contact does not have one universal effect.",
+        "fa": "پاسخ گفته اثر استاد بسته به دپارتمان می‌تواند بسیار زیاد یا بسیار کم باشد؛ یعنی مکاتبه استاد اثر یکسان و عمومی ندارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-PHD-ROUTE-002-E4",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "154280"
+      },
+      "published_at": "2025-12-21",
+      "event_date": "2025-12-21",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply said some universities attach funding automatically to doctoral admission while others require a separate funding application.",
+        "fa": "پاسخ بعدی گفته بعضی دانشگاه‌ها فاند دکتری را همراه admission می‌دهند و بعضی درخواست جداگانه می‌خواهند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-FUNDING-003-E1",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "148006"
+      },
+      "published_at": "2025-02-18",
+      "event_date": "2025-02-18",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The community characterized full funding in humanities as highly competitive and more commonly encountered at doctoral level than master's level.",
+        "fa": "گروه فول‌فاند علوم انسانی را بسیار رقابتی و در مقطع دکتری پرتکرارتر از مستر توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-FUNDING-003-E2",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "148014"
+      },
+      "published_at": "2025-02-18",
+      "event_date": "2025-02-18",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply stressed that funding availability changes by field, country and degree level and cited a funded law case despite law being viewed as difficult.",
+        "fa": "پاسخ تأکید کرده وضعیت فاند با رشته، کشور و مقطع تغییر می‌کند و حتی برای حقوق که سخت تلقی می‌شود نمونه فاند دیده شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-FUNDING-003-E3",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147841"
+      },
+      "published_at": "2025-02-11",
+      "event_date": "2025-02-11",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "applicant_research",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A master's applicant reported finding a programme that offered only a limited tuition reduction despite a high overall cost, illustrating that master's support may remain partial.",
+        "fa": "یک متقاضی مستر گزارش کرده برنامه‌ای با وجود هزینه بالا فقط تخفیف محدود شهریه ارائه می‌کرد؛ نمونه‌ای از partial بودن حمایت در مستر."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-FUNDING-003-E4",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "156084"
+      },
+      "published_at": "2026-08-24",
+      "event_date": "2026-08-24",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A late-2026 finance-related reply described master's funding as difficult and suggested research-oriented programmes and low-tuition destinations rather than assuming full funding.",
+        "fa": "پاسخ اواخر ۲۰۲۶ در حوزه مالی، فاند مستر را دشوار توصیف کرده و به‌جای فرض فول‌فاند روی برنامه‌های research-oriented و مقصدهای کم‌شهریه تأکید کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-PUBLICATION-004-E1",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147809"
+      },
+      "published_at": "2025-02-11",
+      "event_date": "2025-02-11",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply framed admission as a package of language, GPA, proposal, thesis interview and publications rather than a single decisive metric.",
+        "fa": "پاسخ، پذیرش را ترکیبی از زبان، معدل، پروپوزال، ارائه تز و مقاله دانسته و نه وابسته به یک آیتم منفرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-PUBLICATION-004-E2",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147829"
+      },
+      "published_at": "2025-02-11",
+      "event_date": "2025-02-11",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_research",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "After checking communication/media programmes, a member rejected the claim that no publication means no funding and said publications mainly improve chances in the programmes they reviewed.",
+        "fa": "عضوی پس از بررسی برنامه‌های ارتباطات/رسانه، ادعای «بدون مقاله فاند نمی‌شود» را رد کرده و مقاله را بیشتر تقویت‌کننده شانس دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-PUBLICATION-004-E3",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "148297"
+      },
+      "published_at": "2025-02-25",
+      "event_date": "2025-02-25",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "reported_expert_view",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A member relayed an anthropology professor's workshop comment that journal publication is not automatically required for U.S. humanities PhD entry and may rank below other factors.",
+        "fa": "یکی از اعضا از کارگاه یک استاد انسان‌شناسی نقل کرده که مقاله ژورنالی الزام خودکار ورود به دکتری علوم انسانی آمریکا نیست و ممکن است بعد از عوامل دیگر قرار گیرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-PUBLICATION-004-E4",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147846"
+      },
+      "published_at": "2025-02-11",
+      "event_date": "2025-02-11",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said publication expectations differ by destination, describing Australia as more publication-sensitive in the cases discussed while U.S./Canada/Europe could sometimes admit without a paper.",
+        "fa": "پاسخ گفته انتظار مقاله مقصد‌محور است و در کیس‌های موردبحث استرالیا مقاله‌محورتر توصیف شده، در حالی که آمریکا/کانادا/اروپا گاهی بدون مقاله هم پذیرش می‌دهند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-PUBLICATION-004-E5",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "154275"
+      },
+      "published_at": "2025-12-21",
+      "event_date": "2025-12-21",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A late-2025 doctoral discussion elevated a strong, current-reference proposal as the central differentiator.",
+        "fa": "در بحث دکتری اواخر ۲۰۲۵، پروپوزال قوی با رفرنس‌های به‌روز به‌عنوان تمایز اصلی برجسته شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-DEU-LANGUAGE-005-E1",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147445"
+      },
+      "published_at": "2025-01-03",
+      "event_date": "2025-01-03",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A humanities/social-science reply warned that some programmes require competence in an additional language beyond both the programme language and the applicant's mother tongue.",
+        "fa": "در علوم انسانی/اجتماعی گفته شده بعضی برنامه‌ها علاوه بر زبان برنامه و زبان مادری، تسلط متوسط یا پیشرفته به زبان دیگری هم می‌خواهند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-DEU-LANGUAGE-005-E2",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147484"
+      },
+      "published_at": "2025-01-04",
+      "event_date": "2025-01-04",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said German public universities can offer English or bilingual programmes without tuition and separated tuition status from the language of instruction.",
+        "fa": "پاسخ گفته دانشگاه‌های دولتی آلمان می‌توانند برنامه انگلیسی یا دوزبانه بدون شهریه داشته باشند و زبان آموزش را از وضعیت شهریه جدا کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-DEU-LANGUAGE-005-E3",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147442"
+      },
+      "published_at": "2025-01-03",
+      "event_date": "2025-01-03",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For an English-taught programme, a reply treated German language as not automatically relevant to admission while noting publications can strengthen the profile; the same message included time-sensitive cost/funds claims.",
+        "fa": "برای برنامه انگلیسی‌زبان، پاسخ آلمانی را الزام خودکار پذیرش ندانسته و مقاله را تقویت‌کننده رزومه معرفی کرده؛ همان پیام ادعاهای زمان‌حساس هزینه/تمکن هم داشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-DEU-LANGUAGE-005-E4",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "155211"
+      },
+      "published_at": "2026-05-09",
+      "event_date": "2026-05-09",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A clinical-psychology graduate considering a second master's in Germany explicitly separated English-vs-German programme availability and cost from their ability to learn the language.",
+        "fa": "فارغ‌التحصیل روانشناسی بالینی برای مستر مجدد آلمان، availability و هزینه برنامه انگلیسی/آلمانی را جدا از توان یادگیری زبان بررسی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-PSYCH-006-E1",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "149173"
+      },
+      "published_at": "2025-03-26",
+      "event_date": "2025-03-26",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "professional_recognition_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A UK psychology applicant explicitly asked whether their bachelor's degree had been recognized by BPS, showing that academic admission can intersect with professional recognition.",
+        "fa": "یک متقاضی روانشناسی بریتانیا صریحاً درباره تأیید مدرک کارشناسی توسط BPS پرسیده؛ یعنی پذیرش آکادمیک می‌تواند با recognition حرفه‌ای تلاقی داشته باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-PSYCH-006-E2",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "150582"
+      },
+      "published_at": "2025-05-28",
+      "event_date": "2025-05-28",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said psychology admission/funding can be difficult and that knowledge of the destination language matters more in psychology than in many other fields.",
+        "fa": "پاسخ گفته پذیرش/فاند روانشناسی می‌تواند سخت باشد و آشنایی با زبان کشور مقصد در این رشته نسبت به بسیاری رشته‌ها اهمیت بیشتری دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-PSYCH-006-E3",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "153961"
+      },
+      "published_at": "2025-12-02",
+      "event_date": "2025-12-02",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For someone considering patient-facing clinical work, the reply emphasized that language proficiency would need to be very strong.",
+        "fa": "برای فردی که کار درمانی patient-facing را در نظر داشت، پاسخ روی نیاز به زبان بسیار قوی تأکید کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-PSYCH-006-E4",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "155558"
+      },
+      "published_at": "2026-06-18",
+      "event_date": "2026-06-18",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A psychology PhD reply said clinical/hospital training strengthens the academic application only when it aligns with the intended supervisor's research.",
+        "fa": "پاسخ دکتری روانشناسی گفته دوره بالینی/بیمارستانی فقط وقتی اپلیکیشن آکادمیک را تقویت می‌کند که با پژوهش سوپروایزر هم‌راستا باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-LAW-FEES-007-E1",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147402"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A law applicant asked whether LSAC charges beyond the university application fee recur for every university or only once.",
+        "fa": "یک متقاضی حقوق پرسیده هزینه‌های LSAC علاوه بر application fee برای هر دانشگاه تکرار می‌شود یا یک‌بار است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-LAW-FEES-007-E2",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147404"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "first_hand_application_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same applicant said a university had waived its application fee, but LSAC still displayed a separate document-assembly charge.",
+        "fa": "همان متقاضی گفته دانشگاه application fee را waive کرده اما LSAC همچنان هزینه جداگانه مونتاژ مدارک نشان داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-LAW-FEES-007-E3",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147915"
+      },
+      "published_at": "2025-02-16",
+      "event_date": "2025-02-16",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A later user separately sought help with sending documents through LSAC, confirming that centralized-service handling remained a practical step.",
+        "fa": "کاربر دیگری بعداً درباره ارسال مدارک از طریق LSAC کمک خواسته که نشان می‌دهد خود سرویس متمرکز یک مرحله عملی مستقل است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-DEGREE-RELEASE-008-E1",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "153734"
+      },
+      "published_at": "2025-11-15",
+      "event_date": "2025-11-15",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant sought a registered employment office in Tehran specifically for degree release.",
+        "fa": "یک متقاضی مشخصاً برای آزادسازی مدرک دنبال کاریابی معتبر در تهران بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-DEGREE-RELEASE-008-E2",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "154428"
+      },
+      "published_at": "2025-12-29",
+      "event_date": "2025-12-29",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "first_hand_process_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An employed graduate who had already released a bachelor's degree through service history asked how to complete the obligation-cancellation/verification path in Sajjad.",
+        "fa": "فارغ‌التحصیل شاغلی که با سابقه خدمت مدرک کارشناسی را آزاد کرده بود، درباره تکمیل لغو تعهد/تأیید در سجاد پرسیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-DEGREE-RELEASE-008-E3",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "154458"
+      },
+      "published_at": "2025-12-29",
+      "event_date": "2025-12-29",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "first_hand_historical_process",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user described a prior paid/service-credit release route involving university documents, Sajjad upload, sending the original degree for ministry stamping and later official translation.",
+        "fa": "یک تجربه قبلی مسیر پرداخت/سابقه خدمت را با مدارک دانشگاه، بارگذاری در سجاد، ارسال اصل مدرک برای مهر و سپس ترجمه رسمی توضیح داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-DEGREE-RELEASE-008-E4",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "154707"
+      },
+      "published_at": "2026-02-01",
+      "event_date": "2026-02-01",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "first_hand_current_process",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A February 2026 applicant who had obtained the unemployment letter was still in university administrative processing and was asked to clear debts/administrative holds.",
+        "fa": "یک متقاضی فوریه ۲۰۲۶ با نامه عدم کاریابی هنوز درگیر روند اداری دانشگاه بود و از او تسویه بدهی/مراحل اداری خواسته شده بود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-FIELD-SWITCH-009-E1",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "151202"
+      },
+      "published_at": "2025-06-26",
+      "event_date": "2025-06-26",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An architecture graduate wanted to pivot into criminology, sociology or philosophy and asked how to compensate beyond GPA and IELTS.",
+        "fa": "فارغ‌التحصیل معماری قصد تغییر به جرم‌شناسی، جامعه‌شناسی یا فلسفه داشت و پرسیده بود فراتر از GPA و IELTS چگونه فاصله بک‌گراند را جبران کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-FIELD-SWITCH-009-E2",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "151204"
+      },
+      "published_at": "2025-06-26",
+      "event_date": "2025-06-26",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The reply recommended narrowing to one target field and building concrete related activity such as courses, seminars and workshops.",
+        "fa": "پاسخ پیشنهاد کرده یک فیلد هدف مشخص انتخاب شود و سابقه مرتبط واقعی مثل دوره، سمینار و کارگاه ساخته شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-FIELD-SWITCH-009-E3",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "151214"
+      },
+      "published_at": "2025-06-26",
+      "event_date": "2025-06-26",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A follow-up said GRE and SOP alone were insufficient to justify an unrelated-background switch; the narrative needed supporting related activities.",
+        "fa": "پاسخ بعدی گفته برای تغییر از بک‌گراند نامرتبط، GRE و SOP به‌تنهایی کافی نیست و روایت باید با فعالیت‌های مرتبط پشتیبانی شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-FIELD-SWITCH-009-E4",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "154639"
+      },
+      "published_at": "2026-01-07",
+      "event_date": "2026-01-07",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later discussion added that full funding can become harder during a field switch, making destination cost/work options part of the decision.",
+        "fa": "گفتگوی بعدی اضافه کرده در تغییر رشته فول‌فاند می‌تواند سخت‌تر شود و بنابراین هزینه مقصد و امکان کار دانشجویی وارد تصمیم می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-AREA-STUDIES-010-E1",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "147567"
+      },
+      "published_at": "2025-01-15",
+      "event_date": "2025-01-15",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_route_explanation",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A Persian-literature applicant was advised to map their background into Middle Eastern/Iranian or comparative-literature programmes rather than search only for an identically named degree.",
+        "fa": "به متقاضی ادبیات فارسی پیشنهاد شده به‌جای جست‌وجوی صرفاً نام یکسان رشته، بک‌گراندش را به مطالعات خاورمیانه/ایران یا ادبیات تطبیقی map کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-AREA-STUDIES-010-E2",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "154219"
+      },
+      "published_at": "2025-12-18",
+      "event_date": "2025-12-18",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A humanities discussion said culture-dependent fields can be harder to transfer directly but suggested region/topic framing such as Middle East work in politics/history.",
+        "fa": "در بحث علوم انسانی گفته شده رشته‌های فرهنگ‌محور انتقال مستقیم سخت‌تری دارند اما framing منطقه‌ای/موضوعی مثل خاورمیانه در سیاست/تاریخ می‌تواند مسیر بسازد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-AREA-STUDIES-010-E3",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "154259"
+      },
+      "published_at": "2025-12-20",
+      "event_date": "2025-12-20",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "first_hand_application_reflection",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant reflecting on many full-funding contacts said proposal topic dominated their outcome more than prior publications in their own experience.",
+        "fa": "یک متقاضی با سابقه مکاتبه زیاد برای فول‌فاند گفته در تجربه خودش موضوع پروپوزال از مقالات قبلی تعیین‌کننده‌تر بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUM-AREA-STUDIES-010-E4",
+      "source_id": "humanities-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "154260"
+      },
+      "published_at": "2025-12-20",
+      "event_date": "2025-12-20",
+      "collected_at": "2026-09-17T07:37:12Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same thread suggested that an Iran-informed perspective can itself become part of the research value proposition in some humanities applications.",
+        "fa": "در همان بحث گفته شده نگاه مبتنی بر تجربه/دانش ایران می‌تواند در بعضی اپلیکیشن‌های علوم انسانی بخشی از ارزش پژوهشی proposal باشد."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "HUM-FIT-001",
+      "issue_cluster_id": "HUMANITIES-RESEARCH-FIT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUM-PHD-ROUTE-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "HUM-PUBLICATION-004"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "research_fit_over_degree_label",
+        "class": "academic_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "humanities_graduate_admission"
+          ]
+        },
+        "process_stages": [
+          "programme_search",
+          "faculty_fit",
+          "supervisor_contact"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "In humanities/social sciences, research fit with programme and faculty is a stronger planning unit than the broad degree label alone",
+          "fa": "در علوم انسانی/اجتماعی، فیت پژوهشی با program و استاد واحد برنامه‌ریزی قوی‌تری از اسم کلی رشته است"
+        },
+        "summary": {
+          "en": "The source repeatedly recommends defining the subfield, reading programme/faculty direction and contacting aligned academics rather than choosing a field solely because it is thought easier to fund.",
+          "fa": "فایل بارها توصیه می‌کند زیررشته مشخص، جهت برنامه/استاد بررسی و با افراد هم‌راستا مکاتبه شود؛ نه اینکه رشته صرفاً به امید فاند آسان‌تر انتخاب شود."
+        },
+        "practical_impact": {
+          "en": "A strong generic profile can still be a poor application if the department does not match the applicant's research direction.",
+          "fa": "پروفایل عمومی قوی هم اگر با جهت پژوهشی دپارتمان نخورد می‌تواند اپلیکیشن ضعیفی باشد."
+        },
+        "who_should_care": {
+          "en": "Humanities and social-science master's/PhD applicants.",
+          "fa": "متقاضیان ارشد/دکتری علوم انسانی و اجتماعی."
+        },
+        "recommended_action": {
+          "en": "Shortlist by research question, faculty overlap and programme structure before ranking by prestige alone.",
+          "fa": "قبل از رتبه/شهرت، shortlist را بر اساس سؤال پژوهشی، overlap استادان و ساختار program بسازید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUM-FIT-001-E1",
+          "relation": "supports",
+          "independence_group": "HUM-FIT-001-E1"
+        },
+        {
+          "evidence_id": "HUM-FIT-001-E2",
+          "relation": "supports",
+          "independence_group": "HUM-FIT-001-E2"
+        },
+        {
+          "evidence_id": "HUM-FIT-001-E3",
+          "relation": "supports",
+          "independence_group": "HUM-FIT-001-E3"
+        },
+        {
+          "evidence_id": "HUM-FIT-001-E4",
+          "relation": "supports",
+          "independence_group": "HUM-FIT-001-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated across disciplines and over time, with concrete programme-search methodology."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "This is a community selection signal, not an official admission weighting rule."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUM-FIT-001-E1",
+            "HUM-FIT-001-E2",
+            "HUM-FIT-001-E3",
+            "HUM-FIT-001-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Humanities Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Programme/faculty fit changes as faculty move and programmes change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "research fit",
+        "faculty",
+        "programme",
+        "supervisor"
+      ],
+      "first_seen": "2025-01-03",
+      "last_seen": "2026-06-18"
+    },
+    {
+      "signal_id": "HUM-PHD-ROUTE-002",
+      "issue_cluster_id": "HUMANITIES-PHD-ROUTE-ARCHITECTURE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUM-FIT-001"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "HUM-FUNDING-003"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "phd_route_architecture_variance",
+        "class": "doctoral_admission"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "PhD"
+          ]
+        },
+        "process_stages": [
+          "position_search",
+          "programme_application",
+          "supervisor_contact",
+          "funding_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Humanities PhD application architecture varies by country, department and programme; professor contact, posted positions and funding applications are not interchangeable",
+          "fa": "معماری اپلای PhD علوم انسانی با کشور/دپارتمان/program فرق دارد؛ مکاتبه استاد، پوزیشن آگهی‌شده و درخواست فاند یک چیز نیستند"
+        },
+        "summary": {
+          "en": "The file repeatedly asks whether Europe is position-led and North America programme/supervisor-led. Replies say supervisor influence and funding mechanics vary substantially by department and university.",
+          "fa": "فایل بارها درباره position-led بودن اروپا و program/supervisor-led بودن آمریکای شمالی سؤال دارد. پاسخ‌ها می‌گویند اثر استاد و مکانیزم فاند با دپارتمان/دانشگاه به‌شدت متفاوت است."
+        },
+        "practical_impact": {
+          "en": "Using one country's PhD playbook in another system can waste outreach or miss separate funding steps.",
+          "fa": "استفاده از playbook یک کشور در سیستم دیگر می‌تواند مکاتبه را هدر دهد یا مرحله جداگانه فاند را جا بیندازد."
+        },
+        "who_should_care": {
+          "en": "Humanities PhD applicants applying across multiple countries.",
+          "fa": "متقاضیان PhD علوم انسانی در چند کشور."
+        },
+        "recommended_action": {
+          "en": "Map each programme as position-based, programme-based, supervisor-led and/or separately funded before outreach.",
+          "fa": "هر program را قبل از outreach از نظر position/program/supervisor/funding جدا map کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUM-PHD-ROUTE-002-E1",
+          "relation": "supports",
+          "independence_group": "HUM-PHD-ROUTE-002-E1"
+        },
+        {
+          "evidence_id": "HUM-PHD-ROUTE-002-E2",
+          "relation": "supports",
+          "independence_group": "HUM-PHD-ROUTE-002-E2"
+        },
+        {
+          "evidence_id": "HUM-PHD-ROUTE-002-E3",
+          "relation": "supports",
+          "independence_group": "HUM-PHD-ROUTE-002-E3"
+        },
+        {
+          "evidence_id": "HUM-PHD-ROUTE-002-E4",
+          "relation": "supports",
+          "independence_group": "HUM-PHD-ROUTE-002-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple threads explicitly compare route architecture and department-level variation."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current programme-specific PhD and funding processes were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUM-PHD-ROUTE-002-E1",
+            "HUM-PHD-ROUTE-002-E2",
+            "HUM-PHD-ROUTE-002-E3",
+            "HUM-PHD-ROUTE-002-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Humanities Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Doctoral programme structures change by department and cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "PhD",
+        "position",
+        "programme",
+        "supervisor",
+        "funding"
+      ],
+      "first_seen": "2025-01-15",
+      "last_seen": "2025-12-21"
+    },
+    {
+      "signal_id": "HUM-FUNDING-003",
+      "issue_cluster_id": "HUMANITIES-FUNDING-COMPETITION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUM-PUBLICATION-004"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "phd_vs_masters_funding_gap",
+        "class": "funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "masters",
+            "PhD"
+          ]
+        },
+        "process_stages": [
+          "scholarship",
+          "full_funding",
+          "tuition_support"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Full funding in humanities is highly competitive and more consistently discussed at PhD level; master's funding is often partial or programme-specific",
+          "fa": "فول‌فاند علوم انسانی بسیار رقابتی است و در PhD پایدارتر دیده می‌شود؛ فاند مستر اغلب partial یا program-specific است"
+        },
+        "summary": {
+          "en": "Community replies repeatedly reject the idea of an 'easy-funding humanities major'. Funding changes by field/country/degree, and master's examples often involve limited tuition support rather than full coverage.",
+          "fa": "پاسخ‌ها بارها ایده «رشته انسانی با فاند آسان» را رد می‌کنند. فاند با رشته/کشور/مقطع تغییر می‌کند و نمونه‌های مستر اغلب حمایت محدود شهریه‌اند نه پوشش کامل."
+        },
+        "practical_impact": {
+          "en": "Choosing a degree only for perceived funding likelihood can produce poor academic fit and still fail financially.",
+          "fa": "انتخاب رشته فقط بر اساس تصور فاند می‌تواند هم فیت ضعیف بسازد و هم مشکل مالی را حل نکند."
+        },
+        "who_should_care": {
+          "en": "Applicants who require near-full funding.",
+          "fa": "متقاضیانی که به فاند نزدیک به کامل نیاز دارند."
+        },
+        "recommended_action": {
+          "en": "Evaluate the exact programme's funding package and degree level instead of using a field-wide assumption.",
+          "fa": "به‌جای فرض کلی درباره رشته، بسته فاند program و مقطع دقیق را بررسی کنید."
+        },
+        "known_workaround": "Low-tuition/research-oriented master's programmes are repeatedly treated as alternatives when full funding is unlikely."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUM-FUNDING-003-E1",
+          "relation": "supports",
+          "independence_group": "HUM-FUNDING-003-E1"
+        },
+        {
+          "evidence_id": "HUM-FUNDING-003-E2",
+          "relation": "supports",
+          "independence_group": "HUM-FUNDING-003-E2"
+        },
+        {
+          "evidence_id": "HUM-FUNDING-003-E3",
+          "relation": "supports",
+          "independence_group": "HUM-FUNDING-003-E3"
+        },
+        {
+          "evidence_id": "HUM-FUNDING-003-E4",
+          "relation": "supports",
+          "independence_group": "HUM-FUNDING-003-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The pattern recurs from early 2025 through 2026 across humanities fields."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current scholarship amounts and funding availability were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUM-FUNDING-003-E1",
+            "HUM-FUNDING-003-E2",
+            "HUM-FUNDING-003-E3",
+            "HUM-FUNDING-003-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Humanities Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Funding budgets vary by intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "funding",
+        "full funding",
+        "masters",
+        "PhD",
+        "humanities"
+      ],
+      "first_seen": "2025-02-11",
+      "last_seen": "2026-08-24"
+    },
+    {
+      "signal_id": "HUM-PUBLICATION-004",
+      "issue_cluster_id": "HUMANITIES-PUBLICATION-VS-PROPOSAL",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUM-FIT-001"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "HUM-FUNDING-003"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "publication_not_universal_gate",
+        "class": "research_profile"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "masters",
+            "PhD"
+          ]
+        },
+        "process_stages": [
+          "publication",
+          "proposal",
+          "profile_review"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "A publication is not a universal gate for humanities admission/funding; proposal quality, fit and the overall research package can matter as much or more",
+          "fa": "مقاله gate سراسری پذیرش/فاند علوم انسانی نیست؛ کیفیت پروپوزال، فیت و کل بسته پژوهشی می‌تواند هم‌اندازه یا مهم‌تر باشد"
+        },
+        "summary": {
+          "en": "The source directly pushes back on consultancy claims that no publication means no funding. It also preserves destination differences and repeated advice that proposal quality and overall profile matter.",
+          "fa": "فایل مستقیماً ادعای مؤسسات مبنی بر «بدون مقاله فاند نمی‌شود» را رد می‌کند و هم‌زمان تفاوت مقصد و اهمیت پروپوزال/کل پروفایل را حفظ می‌کند."
+        },
+        "practical_impact": {
+          "en": "Applicants without a paper should not self-reject, but should strengthen proposal, writing sample, fit and other evidence.",
+          "fa": "متقاضی بدون مقاله نباید خودحذفی کند، اما باید پروپوزال، writing sample، فیت و سایر evidenceها را تقویت کند."
+        },
+        "who_should_care": {
+          "en": "Humanities applicants worried about missing publications.",
+          "fa": "متقاضیان علوم انسانی بدون مقاله یا با publication محدود."
+        },
+        "recommended_action": {
+          "en": "Check whether the exact programme requires publications; otherwise prioritize proposal/writing sample/fit while treating publications as profile strength.",
+          "fa": "ببینید program دقیق مقاله را الزام کرده یا نه؛ در غیر این صورت پروپوزال/writing sample/fit را اولویت دهید و مقاله را تقویت‌کننده پروفایل ببینید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUM-PUBLICATION-004-E1",
+          "relation": "supports",
+          "independence_group": "HUM-PUBLICATION-004-E1"
+        },
+        {
+          "evidence_id": "HUM-PUBLICATION-004-E2",
+          "relation": "supports",
+          "independence_group": "HUM-PUBLICATION-004-E2"
+        },
+        {
+          "evidence_id": "HUM-PUBLICATION-004-E3",
+          "relation": "supports",
+          "independence_group": "HUM-PUBLICATION-004-E3"
+        },
+        {
+          "evidence_id": "HUM-PUBLICATION-004-E4",
+          "relation": "supports",
+          "independence_group": "HUM-PUBLICATION-004-E4"
+        },
+        {
+          "evidence_id": "HUM-PUBLICATION-004-E5",
+          "relation": "supports",
+          "independence_group": "HUM-PUBLICATION-004-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple independent community reports directly address the same misconception."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Publication requirements remain programme-specific and were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUM-PUBLICATION-004-E1",
+            "HUM-PUBLICATION-004-E2",
+            "HUM-PUBLICATION-004-E3",
+            "HUM-PUBLICATION-004-E4",
+            "HUM-PUBLICATION-004-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Humanities Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Programme criteria vary by destination and cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "publication",
+        "paper",
+        "proposal",
+        "writing sample"
+      ],
+      "first_seen": "2025-02-11",
+      "last_seen": "2025-12-21"
+    },
+    {
+      "signal_id": "HUM-DEU-LANGUAGE-005",
+      "issue_cluster_id": "GERMANY-HUMANITIES-LANGUAGE-PROGRAMME",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUM-PSYCH-006"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "programme_language_vs_local_language",
+        "class": "Germany"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "masters",
+            "PhD"
+          ]
+        },
+        "process_stages": [
+          "language_requirement",
+          "tuition",
+          "programme_selection"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For Germany, programme language, additional-language requirements and tuition status should be checked separately rather than inferred from one another",
+          "fa": "برای آلمان، زبان program، زبان‌های اضافه موردنیاز و وضعیت شهریه را باید جدا بررسی کرد و از یکی درباره دیگری نتیجه نگرفت"
+        },
+        "summary": {
+          "en": "Community messages distinguish English/bilingual public programmes from private tuition, while also noting that some humanities programmes require an additional language beyond the programme language.",
+          "fa": "پیام‌ها برنامه‌های انگلیسی/دوزبانه دولتی را از دانشگاه خصوصی شهریه‌دار جدا می‌کنند و هم‌زمان می‌گویند بعضی برنامه‌های علوم انسانی زبان اضافه‌ای فراتر از زبان آموزش می‌خواهند."
+        },
+        "practical_impact": {
+          "en": "An English-taught degree can still have extra language requirements, while English instruction does not automatically imply high tuition.",
+          "fa": "برنامه انگلیسی‌زبان ممکن است شرط زبان اضافه داشته باشد و انگلیسی بودن هم خودکار به معنی شهریه بالا نیست."
+        },
+        "who_should_care": {
+          "en": "Humanities/social-science applicants to Germany.",
+          "fa": "متقاضیان علوم انسانی/اجتماعی آلمان."
+        },
+        "recommended_action": {
+          "en": "Check programme language, extra-language prerequisites and tuition/fees as separate fields for every programme.",
+          "fa": "برای هر program زبان آموزش، زبان‌های پیش‌نیاز و شهریه/fees را سه فیلد جدا بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUM-DEU-LANGUAGE-005-E1",
+          "relation": "supports",
+          "independence_group": "HUM-DEU-LANGUAGE-005-E1"
+        },
+        {
+          "evidence_id": "HUM-DEU-LANGUAGE-005-E2",
+          "relation": "supports",
+          "independence_group": "HUM-DEU-LANGUAGE-005-E2"
+        },
+        {
+          "evidence_id": "HUM-DEU-LANGUAGE-005-E3",
+          "relation": "supports",
+          "independence_group": "HUM-DEU-LANGUAGE-005-E3"
+        },
+        {
+          "evidence_id": "HUM-DEU-LANGUAGE-005-E4",
+          "relation": "supports",
+          "independence_group": "HUM-DEU-LANGUAGE-005-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Repeated community guidance supports the separation, but current German fees/funds rules are time-sensitive."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current German tuition, blocked-account and programme-language rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUM-DEU-LANGUAGE-005-E1",
+            "HUM-DEU-LANGUAGE-005-E2",
+            "HUM-DEU-LANGUAGE-005-E3",
+            "HUM-DEU-LANGUAGE-005-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Humanities Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "German financial/language requirements are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Germany",
+        "English programme",
+        "German",
+        "tuition",
+        "additional language"
+      ],
+      "first_seen": "2025-01-03",
+      "last_seen": "2026-05-09"
+    },
+    {
+      "signal_id": "HUM-PSYCH-006",
+      "issue_cluster_id": "PSYCHOLOGY-ACADEMIC-VS-CLINICAL",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUM-DEU-LANGUAGE-005"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "HUM-FIT-001"
+        }
+      ],
+      "classification": {
+        "family": "E12_PROFESSIONAL_REGULATION",
+        "type": "psychology_academic_clinical_split",
+        "class": "psychology"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "psychology"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Potential patient-facing clinical work"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "psychology_masters",
+            "psychology_PhD",
+            "clinical_psychology"
+          ]
+        },
+        "process_stages": [
+          "degree_recognition",
+          "language",
+          "research_fit"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Psychology planning needs a clear split between academic admission/research fit and clinical employability, where language and recognition become more important",
+          "fa": "در روانشناسی باید پذیرش آکادمیک/فیت پژوهشی را از امکان کار بالینی جدا کرد؛ در بخش بالینی زبان و recognition مهم‌تر می‌شوند"
+        },
+        "summary": {
+          "en": "The file includes BPS-recognition questions, repeated emphasis on destination-language importance in psychology and a direct warning that patient-facing therapeutic work requires very strong language. Research experience is still useful only when aligned with the intended supervisor.",
+          "fa": "فایل سؤال BPS، تأکید تکرارشونده بر زبان کشور مقصد در روانشناسی و هشدار مستقیم درباره نیاز زبان بسیار قوی برای کار درمانی دارد. تجربه بالینی هم برای اپلای پژوهشی زمانی مفید است که با سوپروایزر هم‌راستا باشد."
+        },
+        "practical_impact": {
+          "en": "An academically admissible psychology degree does not by itself establish readiness for clinical practice.",
+          "fa": "پذیرش آکادمیک روانشناسی به‌تنهایی آمادگی/امکان کار درمانی را ثابت نمی‌کند."
+        },
+        "who_should_care": {
+          "en": "Psychology applicants who may want patient-facing work after graduation.",
+          "fa": "متقاضیان روانشناسی که بعد از تحصیل کار patient-facing می‌خواهند."
+        },
+        "recommended_action": {
+          "en": "Track academic admission, professional recognition and local-language readiness as separate workstreams.",
+          "fa": "پذیرش آکادمیک، recognition حرفه‌ای و آمادگی زبان محلی را سه workstream جدا ببینید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUM-PSYCH-006-E1",
+          "relation": "supports",
+          "independence_group": "HUM-PSYCH-006-E1"
+        },
+        {
+          "evidence_id": "HUM-PSYCH-006-E2",
+          "relation": "supports",
+          "independence_group": "HUM-PSYCH-006-E2"
+        },
+        {
+          "evidence_id": "HUM-PSYCH-006-E3",
+          "relation": "supports",
+          "independence_group": "HUM-PSYCH-006-E3"
+        },
+        {
+          "evidence_id": "HUM-PSYCH-006-E4",
+          "relation": "supports",
+          "independence_group": "HUM-PSYCH-006-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The pattern is coherent, but exact regulator/licensing rules are not provided by the source."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current BPS/German/other psychology professional-recognition rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUM-PSYCH-006-E1",
+            "HUM-PSYCH-006-E2",
+            "HUM-PSYCH-006-E3",
+            "HUM-PSYCH-006-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Humanities Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Professional recognition and language requirements vary by destination.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "psychology",
+        "clinical",
+        "BPS",
+        "language",
+        "recognition"
+      ],
+      "first_seen": "2025-03-26",
+      "last_seen": "2026-06-18"
+    },
+    {
+      "signal_id": "HUM-LAW-FEES-007",
+      "issue_cluster_id": "LAW-LSAC-APPLICATION-FEE-STACK",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "centralized_application_service_fee_stack",
+        "class": "law_application"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "law"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "law_admission",
+            "JD",
+            "LLM"
+          ]
+        },
+        "process_stages": [
+          "LSAC",
+          "document_assembly",
+          "application_fee"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "In law applications, a university fee waiver does not necessarily remove separate centralized-service/document-processing charges",
+          "fa": "در اپلای حقوق، waiver دانشگاه لزوماً هزینه جداگانه سرویس متمرکز/پردازش مدارک را حذف نمی‌کند"
+        },
+        "summary": {
+          "en": "A direct LSAC user reported a waived university fee while still seeing a separate document-assembly charge, and later users continued to need LSAC-specific document handling guidance.",
+          "fa": "یک کاربر LSAC با وجود waiver دانشگاه هنوز هزینه جداگانه مونتاژ مدارک دیده و کاربران بعدی نیز برای ارسال مدارک LSAC راهنمایی جدا لازم داشته‌اند."
+        },
+        "practical_impact": {
+          "en": "Applicants can underestimate the true per-school cost even after obtaining university waivers.",
+          "fa": "متقاضی حتی بعد از waiver دانشگاه ممکن است هزینه واقعی هر اپلیکیشن را کم‌برآورد کند."
+        },
+        "who_should_care": {
+          "en": "Iranian applicants using LSAC/centralized law application services.",
+          "fa": "متقاضیان ایرانی حقوق که از LSAC/سرویس متمرکز استفاده می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Budget university fee and centralized-service/document fees as separate line items until confirmed otherwise.",
+          "fa": "application fee دانشگاه و هزینه سرویس/مدارک متمرکز را جدا بودجه‌بندی کنید مگر خلافش تأیید شود."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUM-LAW-FEES-007-E1",
+          "relation": "supports",
+          "independence_group": "HUM-LAW-FEES-007-E1"
+        },
+        {
+          "evidence_id": "HUM-LAW-FEES-007-E2",
+          "relation": "supports",
+          "independence_group": "HUM-LAW-FEES-007-E2"
+        },
+        {
+          "evidence_id": "HUM-LAW-FEES-007-E3",
+          "relation": "supports",
+          "independence_group": "HUM-LAW-FEES-007-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "medium",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct user experience clearly distinguishes the two fee layers."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current LSAC/CAS fees and waiver policies were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUM-LAW-FEES-007-E1",
+            "HUM-LAW-FEES-007-E2",
+            "HUM-LAW-FEES-007-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Humanities Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Centralized-application fees can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "LSAC",
+        "application fee",
+        "waiver",
+        "document assembly"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-02-16"
+    },
+    {
+      "signal_id": "HUM-DEGREE-RELEASE-008",
+      "issue_cluster_id": "IRAN-HUMANITIES-DEGREE-RELEASE",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "iran_free_education_obligation_release",
+        "class": "source_country_document"
+      },
+      "scope": {
+        "destination": {
+          "country": "Iran",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "degree_release",
+            "free_education_obligation"
+          ]
+        },
+        "process_stages": [
+          "employment_office",
+          "Sajjad",
+          "unemployment_letter",
+          "ministry_verification"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Iranian degree release remains a multi-step administrative dependency involving employment/service evidence, Sajjad and university clearance",
+          "fa": "آزادسازی مدرک ایران همچنان وابستگی اداری چندمرحله‌ای شامل سابقه کار/عدم کاریابی، سجاد و تسویه دانشگاه است"
+        },
+        "summary": {
+          "en": "The source includes unemployment-letter routes, service-history cancellation, Sajjad uploads, ministry stamping and university clearance. A February 2026 applicant still had administrative steps after obtaining the unemployment letter.",
+          "fa": "فایل مسیر نامه عدم کاریابی، سابقه خدمت، بارگذاری سجاد، مهر وزارت و تسویه دانشگاه را دارد. یک متقاضی فوریه ۲۰۲۶ حتی بعد از گرفتن نامه عدم کاریابی هنوز درگیر مراحل اداری بود."
+        },
+        "practical_impact": {
+          "en": "Foreign admission timelines can be delayed even after the eligibility basis for release is established.",
+          "fa": "حتی بعد از داشتن مبنای لغو تعهد، timeline اپلای خارجی ممکن است به‌خاطر مراحل اداری عقب بیفتد."
+        },
+        "who_should_care": {
+          "en": "Iranian public-university graduates who need official degree/transcripts for overseas applications.",
+          "fa": "فارغ‌التحصیلان دانشگاه دولتی ایران که دانشنامه/ریز‌نمرات رسمی برای خارج نیاز دارند."
+        },
+        "recommended_action": {
+          "en": "Start release/verification early and confirm the live Sajjad/university workflow before translation deadlines.",
+          "fa": "آزادسازی/تأیید را زود شروع کنید و قبل از deadline ترجمه، workflow روز سجاد/دانشگاه را چک کنید."
+        },
+        "known_workaround": "The source shows both unemployment-letter and paid/service-credit paths, but does not establish universal eligibility."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUM-DEGREE-RELEASE-008-E1",
+          "relation": "supports",
+          "independence_group": "HUM-DEGREE-RELEASE-008-E1"
+        },
+        {
+          "evidence_id": "HUM-DEGREE-RELEASE-008-E2",
+          "relation": "supports",
+          "independence_group": "HUM-DEGREE-RELEASE-008-E2"
+        },
+        {
+          "evidence_id": "HUM-DEGREE-RELEASE-008-E3",
+          "relation": "supports",
+          "independence_group": "HUM-DEGREE-RELEASE-008-E3"
+        },
+        {
+          "evidence_id": "HUM-DEGREE-RELEASE-008-E4",
+          "relation": "supports",
+          "independence_group": "HUM-DEGREE-RELEASE-008-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "evolving",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple direct process reports span late 2025 to 2026."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Iranian Ministry/University degree-release rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUM-DEGREE-RELEASE-008-E1",
+            "HUM-DEGREE-RELEASE-008-E2",
+            "HUM-DEGREE-RELEASE-008-E3",
+            "HUM-DEGREE-RELEASE-008-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Humanities Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Degree-release procedures can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Sajjad",
+        "degree release",
+        "unemployment letter",
+        "free education obligation"
+      ],
+      "first_seen": "2025-11-15",
+      "last_seen": "2026-02-01"
+    },
+    {
+      "signal_id": "HUM-FIELD-SWITCH-009",
+      "issue_cluster_id": "HUMANITIES-FIELD-SWITCH-EVIDENCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUM-FIT-001"
+        }
+      ],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "field_switch_requires_evidence",
+        "class": "background_change"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "masters"
+          ]
+        },
+        "process_stages": [
+          "background_match",
+          "SOP",
+          "related_activity"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "A humanities field switch needs evidence of the transition, not only a high GPA, test score or persuasive SOP",
+          "fa": "تغییر رشته در علوم انسانی به evidence واقعی از گذار نیاز دارد، نه فقط معدل/آزمون بالا یا SOP قانع‌کننده"
+        },
+        "summary": {
+          "en": "For an architecture-to-criminology/sociology/philosophy switch, replies advised narrowing the target and building courses, workshops and other related activity. Another message explicitly said GRE+SOP alone were insufficient.",
+          "fa": "برای تغییر معماری به جرم‌شناسی/جامعه‌شناسی/فلسفه، توصیه شده یک هدف مشخص انتخاب و دوره/کارگاه/فعالیت مرتبط ساخته شود. پیام دیگری صریحاً GRE+SOP را به‌تنهایی ناکافی دانسته است."
+        },
+        "practical_impact": {
+          "en": "A broad, unsupported switch can look incoherent to an admissions committee and can also reduce funding options.",
+          "fa": "تغییر گسترده و بدون evidence می‌تواند برای کمیته نامنسجم به نظر برسد و گزینه‌های فاند را هم کم کند."
+        },
+        "who_should_care": {
+          "en": "Applicants changing into a substantially different humanities/social-science field.",
+          "fa": "متقاضیانی که به یک حوزه متفاوت علوم انسانی/اجتماعی تغییر می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Choose one target field and build verifiable coursework/research/activity that supports the transition narrative.",
+          "fa": "یک فیلد هدف انتخاب کنید و coursework/research/activity قابل‌اثبات برای پشتیبانی روایت تغییر بسازید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUM-FIELD-SWITCH-009-E1",
+          "relation": "supports",
+          "independence_group": "HUM-FIELD-SWITCH-009-E1"
+        },
+        {
+          "evidence_id": "HUM-FIELD-SWITCH-009-E2",
+          "relation": "supports",
+          "independence_group": "HUM-FIELD-SWITCH-009-E2"
+        },
+        {
+          "evidence_id": "HUM-FIELD-SWITCH-009-E3",
+          "relation": "supports",
+          "independence_group": "HUM-FIELD-SWITCH-009-E3"
+        },
+        {
+          "evidence_id": "HUM-FIELD-SWITCH-009-E4",
+          "relation": "supports",
+          "independence_group": "HUM-FIELD-SWITCH-009-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The guidance is explicit and repeated across the transition thread."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Programme prerequisite rules for field-switchers were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUM-FIELD-SWITCH-009-E1",
+            "HUM-FIELD-SWITCH-009-E2",
+            "HUM-FIELD-SWITCH-009-E3",
+            "HUM-FIELD-SWITCH-009-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Humanities Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Background/prerequisite rules vary by programme.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "field switch",
+        "SOP",
+        "GRE",
+        "related activity"
+      ],
+      "first_seen": "2025-06-26",
+      "last_seen": "2026-01-07"
+    },
+    {
+      "signal_id": "HUM-AREA-STUDIES-010",
+      "issue_cluster_id": "HUMANITIES-AREA-STUDIES-REFRAMING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUM-FIT-001"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "HUM-PUBLICATION-004"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "area_studies_reframing",
+        "class": "research_positioning"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "PhD",
+            "research_masters"
+          ]
+        },
+        "process_stages": [
+          "topic_framing",
+          "area_studies",
+          "proposal"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Culture-bound Iranian humanities backgrounds can sometimes be repositioned through area-studies/comparative framing rather than searching for an identical degree title abroad",
+          "fa": "بک‌گراندهای فرهنگ‌محور ایرانی گاهی با framing مطالعات منطقه‌ای/تطبیقی بهتر منتقل می‌شوند تا جست‌وجوی نام دقیق همان رشته در خارج"
+        },
+        "summary": {
+          "en": "Persian literature was mapped to Iranian/Middle Eastern/comparative studies; later discussion similarly suggested regional framing in politics/history. A proposal informed by Iranian context was described as potentially valuable research positioning.",
+          "fa": "ادبیات فارسی به مطالعات ایران/خاورمیانه/تطبیقی map شده و در بحث‌های بعدی نیز framing منطقه‌ای برای سیاست/تاریخ مطرح است. proposal با perspective ایرانی نیز به‌عنوان positioning پژوهشی بالقوه ارزشمند دیده شده است."
+        },
+        "practical_impact": {
+          "en": "Applicants may find more viable programmes by searching for the research problem and regional frame instead of the exact Iranian degree name.",
+          "fa": "متقاضی ممکن است با جست‌وجوی مسئله پژوهشی و frame منطقه‌ای به programهای مناسب‌تری برسد تا نام دقیق مدرک ایرانی."
+        },
+        "who_should_care": {
+          "en": "Applicants in Persian literature, history, politics, sociology and other culture-dependent humanities fields.",
+          "fa": "متقاضیان ادبیات فارسی، تاریخ، سیاست، جامعه‌شناسی و سایر رشته‌های فرهنگ‌محور."
+        },
+        "recommended_action": {
+          "en": "Translate the home-discipline background into research themes, regions and methods used by destination departments.",
+          "fa": "بک‌گراند رشته داخلی را به theme، region و method مورد استفاده دپارتمان مقصد ترجمه کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUM-AREA-STUDIES-010-E1",
+          "relation": "supports",
+          "independence_group": "HUM-AREA-STUDIES-010-E1"
+        },
+        {
+          "evidence_id": "HUM-AREA-STUDIES-010-E2",
+          "relation": "supports",
+          "independence_group": "HUM-AREA-STUDIES-010-E2"
+        },
+        {
+          "evidence_id": "HUM-AREA-STUDIES-010-E3",
+          "relation": "supports",
+          "independence_group": "HUM-AREA-STUDIES-010-E3"
+        },
+        {
+          "evidence_id": "HUM-AREA-STUDIES-010-E4",
+          "relation": "supports",
+          "independence_group": "HUM-AREA-STUDIES-010-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Several threads converge on reframing, but the evidence remains discipline-specific."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "This is a community research-positioning signal, not an official admissions rule."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUM-AREA-STUDIES-010-E1",
+            "HUM-AREA-STUDIES-010-E2",
+            "HUM-AREA-STUDIES-010-E3",
+            "HUM-AREA-STUDIES-010-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Humanities Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2027-01-15",
+        "reason": "Faculty/topic availability changes.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "area studies",
+        "Middle East",
+        "Iran studies",
+        "proposal",
+        "comparative"
+      ],
+      "first_seen": "2025-01-15",
+      "last_seen": "2025-12-20"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram usernames/IDs, emails and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 1,424 records from the uploaded JSON."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the entire graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Consultancy advertisements, payment promotions and generic marketing posts were excluded from core signals."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated research-fit, funding, publication, Germany, psychology, LSAC, degree-release, field-switch and area-studies discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Destination-specific publication expectations and funding variability are preserved instead of forcing universal rules."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "No current German, LSAC, BPS, degree-release, scholarship or university policy was independently verified."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community planning evidence only. This is not an official source for university admission, scholarships, German study rules, psychology professional recognition, LSAC fees or Iranian degree-release procedures. Verify current programme/authority requirements before acting."
+}

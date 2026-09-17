@@ -1,0 +1,2003 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_testinno_ielts_signals_candidate",
+    "generated_at": "2026-09-16T10:50:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "testinno-ielts-telegram-export",
+      "name": "result (5).json / Telegram export «Testinno IELTS | تستینو آیلتس»",
+      "source_type": "public_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-03-09",
+        "to": "2026-09-09",
+        "records_available": 254030,
+        "records_processed": 254030
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "contains_testinno_admin_responses": true,
+        "contains_first_hand_test_reports": true,
+        "contains_reposted_provider_or_centre_notices": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "TESTINNO-IELTS-IRAN-ACCESS-001-E1",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "33341"
+      },
+      "published_at": "2025-03-30",
+      "event_date": "2025-03-30",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "reposted_test_center_notice",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A forwarded Iranian test-centre notice said IDP had sharply limited IELTS capacity across centres in Iran and introduced a centre-side first registration step.",
+        "fa": "اطلاعیه بازنشرشده یک سنتر ایرانی گفته IDP ظرفیت آزمون را در مراکز ایران شدیداً محدود کرده و ثبت‌نام مرحله اول باید از سایت خود مؤسسه انجام شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-IRAN-ACCESS-001-E2",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "52845"
+      },
+      "published_at": "2025-05-04",
+      "event_date": "2025-05-04",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_collective_action",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "Candidates circulated a request saying all test dates were fully booked through 30 June 2025 and asked IDP to add more dates.",
+        "fa": "داوطلبان درخواست جمعی منتشر کردند که طبق آن تا ۳۰ ژوئن ۲۰۲۵ ظرفیت‌ها پر بوده و از IDP تاریخ‌های بیشتری خواسته شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-IRAN-ACCESS-001-E3",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "223557"
+      },
+      "published_at": "2026-01-24",
+      "event_date": "2026-01-24",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "first_hand_applicant_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A January 2026 candidate said a cancelled test might be replaced in February if IDP approved, otherwise the fee would be refunded.",
+        "fa": "یک داوطلب در ژانویه ۲۰۲۶ گفته آزمون لغوشده در صورت تأیید IDP شاید در فوریه جایگزین شود و در غیر این صورت هزینه ریفاند می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-IRAN-ACCESS-001-E4",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "247574"
+      },
+      "published_at": "2026-02-20",
+      "event_date": "2026-02-20",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "first_hand_applicant_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A February 2026 user described a cancelled test disrupting deadlines and forcing extra preparation costs.",
+        "fa": "یک کاربر در فوریه ۲۰۲۶ از لغو آزمون، به‌هم‌خوردن ددلاین و هزینه اضافه آمادگی خبر داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-REGISTRATION-COST-002-E1",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "44137"
+      },
+      "published_at": "2025-04-15",
+      "event_date": "2025-04-15",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_collective_action",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "Candidates complained that confirmed bookings were later charged an additional price difference after domestic fee changes.",
+        "fa": "داوطلبان اعتراض کرده‌اند که بعد از رزرو قطعی، به‌دلیل تغییر قیمت داخلی از آن‌ها مابه‌التفاوت جدید خواسته شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-REGISTRATION-COST-002-E2",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "52774"
+      },
+      "published_at": "2025-05-04",
+      "event_date": "2025-05-04",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user described a two-stage Iranian booking flow: centre payment/slot selection first, then handoff to IDP to complete the account.",
+        "fa": "یک کاربر روند دومرحله‌ای رزرو در ایران را توضیح داده: ابتدا پرداخت و انتخاب زمان در سایت سنتر و سپس انتقال به IDP برای تکمیل اکانت."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-REGISTRATION-COST-002-E3",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "211794"
+      },
+      "published_at": "2025-12-30",
+      "event_date": "2025-12-30",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "Late-2025 candidates were still asking whether already-booked tests required further price-difference payments after fee changes.",
+        "fa": "تا اواخر ۲۰۲۵ داوطلبان همچنان درباره پرداخت مابه‌التفاوت برای آزمون‌های از قبل رزروشده سؤال می‌کردند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-CROSSBORDER-003-E1",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "301165"
+      },
+      "published_at": "2026-08-29",
+      "event_date": "2026-08-29",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_admin_update",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A late-August 2026 community update said IELTS inside Iran was cancelled and Iranian candidates could book in other countries subject to centre availability.",
+        "fa": "آپدیت اواخر اوت ۲۰۲۶ گروه گفته IELTS داخل ایران لغو شده و داوطلب ایرانی می‌تواند در کشورهای دیگر در صورت ظرفیت رزرو کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-CROSSBORDER-003-E2",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "287530"
+      },
+      "published_at": "2026-08-03",
+      "event_date": "2026-08-03",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A candidate reported taking IELTS in Van, Turkey and then considering EOR for Writing/Speaking.",
+        "fa": "یک داوطلب از آزمون در وان ترکیه و سپس بررسی اعتراض روی Writing/Speaking خبر داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-CROSSBORDER-003-E3",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "310320"
+      },
+      "published_at": "2026-09-08",
+      "event_date": "2026-09-08",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "first_hand_travel_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A candidate described multiple flight changes caused by cancellations while travelling to Istanbul for the test.",
+        "fa": "یک داوطلب از چند بار تغییر پرواز به‌دلیل لغوها در مسیر استانبول برای آزمون گفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-EOR-004-E1",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "296885"
+      },
+      "published_at": "2026-08-20",
+      "event_date": "2026-08-20",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "first_hand_success_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A candidate said a Speaking EOR increased the score enough to lift overall from 6.0 to 6.5.",
+        "fa": "یک داوطلب گفته اعتراض به Speaking نتیجه داده و Overall را از 6.0 به 6.5 رسانده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-EOR-004-E2",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "309627"
+      },
+      "published_at": "2026-09-07",
+      "event_date": "2026-09-07",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Tbilisi candidate had 7.5 in a prior Speaking mock, received 6.0 in the real test, and EOR did not change the score.",
+        "fa": "یک داوطلب تفلیس با ماک Speaking برابر 7.5 در آزمون اصلی 6.0 گرفته و اعتراض هم نمره را تغییر نداده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-EOR-004-E3",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "210554"
+      },
+      "published_at": "2025-12-27",
+      "event_date": "2025-12-27",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance said Writing/Speaking can change after EOR but there is no reliable success percentage; compare against trusted feedback first.",
+        "fa": "راهنمایی گروه گفته Writing/Speaking گاهی با EOR تغییر می‌کند اما درصد موفقیت قابل اتکا نیست و بهتر است قبل از اعتراض با ارزیابی معتبر مقایسه شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-EOR-004-E4",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "303604"
+      },
+      "published_at": "2026-08-31",
+      "event_date": "2026-08-31",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later explanation treated EOR as more relevant to Writing/Speaking than Listening/Reading, where changes are rare.",
+        "fa": "توضیح بعدی EOR را برای Writing/Speaking کاربردی‌تر از Listening/Reading دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-MOCK-005-E1",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "297753"
+      },
+      "published_at": "2026-08-22",
+      "event_date": "2026-08-22",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community message said Cambridge averages are more reliable than mock scores and mocks are mainly useful for environment familiarity.",
+        "fa": "یک پیام گروه گفته میانگین کمبریج از نمره ماک قابل اتکاتر است و ماک بیشتر برای آشنایی با فضای آزمون مفید است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-MOCK-005-E2",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "309871"
+      },
+      "published_at": "2026-09-08",
+      "event_date": "2026-09-08",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later message said many candidates score about 0.5 band higher in the real test than in mocks, with exceptions.",
+        "fa": "پیام بعدی گفته بسیاری از داوطلبان در آزمون اصلی حدود نیم‌نمره بهتر از ماک می‌شوند، اما استثنا هم وجود دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-MOCK-005-C1",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "310031"
+      },
+      "published_at": "2026-09-08",
+      "event_date": "2026-09-08",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A counterexample reported two mock overall scores of 7.0 followed by a 5.5 real IELTS result in Armenia.",
+        "fa": "یک ضدنمونه گزارش کرده دو ماک Overall 7.0 داشته اما در آزمون اصلی ارمنستان 5.5 گرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-CAMBRIDGE-006-E1",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "305767"
+      },
+      "published_at": "2026-09-02",
+      "event_date": "2026-09-02",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A response said mock and AI scores are less dependable and Cambridge averages better matched many real outcomes.",
+        "fa": "یک پاسخ گروه گفته نمره‌های ماک و AI کمتر قابل اتکاست و میانگین کمبریج برای بسیاری از نتایج واقعی تطابق بهتری داشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-CAMBRIDGE-006-E2",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "309192"
+      },
+      "published_at": "2026-09-07",
+      "event_date": "2026-09-07",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later recommendation used the average of the last six Cambridge tests as the final readiness benchmark.",
+        "fa": "توصیه بعدی میانگین شش تست آخر کمبریج را معیار نهایی آمادگی معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-CAMBRIDGE-006-E3",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "308787"
+      },
+      "published_at": "2026-09-06",
+      "event_date": "2026-09-06",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another message emphasized Cambridge practice because the tests were viewed as standardized.",
+        "fa": "پیام دیگری به‌دلیل استاندارد بودن تست‌های کمبریج بر تمرین آن‌ها تأکید کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-AI-007-E1",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "308216"
+      },
+      "published_at": "2026-09-05",
+      "event_date": "2026-09-05",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A response explicitly said AI band scores are not precise and recommended using descriptors and AI mainly to diagnose lost points.",
+        "fa": "یک پاسخ صریحاً گفته نمره band هوش مصنوعی دقیق نیست و بهتر است از descriptorها و AI برای پیدا کردن علت از دست رفتن نمره استفاده شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-AI-007-E2",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "308886"
+      },
+      "published_at": "2026-09-06",
+      "event_date": "2026-09-06",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "testinno_admin_guidance",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "Testinno explained that AI scoring changes with prompt strictness and should not be treated as fully authoritative.",
+        "fa": "تستینو توضیح داده نمره‌دهی AI با سختگیری پرامپت تغییر می‌کند و نباید مرجع قطعی دانسته شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-AI-007-E3",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "309867"
+      },
+      "published_at": "2026-09-08",
+      "event_date": "2026-09-08",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A test taker reported ChatGPT giving 6.0-6.5 during practice while real Writing task scores were 6.5 and 7.0.",
+        "fa": "یک آزمون‌دهنده گفته ChatGPT در تمرین 6 تا 6.5 می‌داده اما در آزمون واقعی Writing برای تسک‌ها 6.5 و 7.0 گرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-FORMAT-008-E1",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "306420"
+      },
+      "published_at": "2026-09-03",
+      "event_date": "2026-09-03",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A candidate said paper IELTS in Turkey was limited to residents, while computer IELTS remained bookable; they also saw a hybrid paper-Writing option.",
+        "fa": "یک داوطلب گفته paper IELTS در ترکیه به افراد مقیم محدود بوده، در حالی که computer قابل رزرو بوده و گزینه Writing کاغذی هم دیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-FORMAT-008-E2",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "308573"
+      },
+      "published_at": "2026-09-06",
+      "event_date": "2026-09-06",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance again said paper Writing in Turkey was for Turkish residents/citizens and non-residents should expect computer delivery.",
+        "fa": "راهنمایی گروه دوباره گفته Writing کاغذی در ترکیه برای افراد دارای اقامت/تابعیت ترکیه است و غیرمقیم‌ها باید انتظار آزمون کامپیوتری داشته باشند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-FORMAT-008-E3",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "308676"
+      },
+      "published_at": "2026-09-06",
+      "event_date": "2026-09-06",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "reposted_provider_response",
+      "firsthandness": "direct_quote",
+      "summary": {
+        "en": "A British Council response shared in the group said computer-test takers receive downloadable eTRF and no additional paper TRF.",
+        "fa": "پاسخ British Council منتشرشده در گروه گفته برای آزمون کامپیوتری eTRF قابل دانلود است و TRF کاغذی اضافه صادر نمی‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-PRACTICE-009-E1",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "23356"
+      },
+      "published_at": "2025-03-09",
+      "event_date": "2025-03-09",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user recommended technique/test practice plus a teacher for Writing and a teacher or partner for Speaking.",
+        "fa": "یک کاربر تکنیک و تست به‌علاوه مدرس برای Writing و مدرس یا پارتنر برای Speaking را توصیه کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-PRACTICE-009-E2",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "23340"
+      },
+      "published_at": "2025-03-09",
+      "event_date": "2025-03-09",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For Listening, a user recommended intensive transcription/dictation practice rather than passive listening alone.",
+        "fa": "برای Listening توصیه شده تمرین transcription/dictation فعال انجام شود نه فقط گوش‌دادن منفعل."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-PRACTICE-009-E3",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "23366"
+      },
+      "published_at": "2025-03-09",
+      "event_date": "2025-03-09",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another user suggested writing what is heard and checking against the transcript to reduce spelling/listening errors.",
+        "fa": "کاربر دیگری پیشنهاد کرده متن شنیده‌شده نوشته و بعد با transcript مقایسه شود تا خطاهای شنیداری و املایی کم شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-CENTRE-010-E1",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "309627"
+      },
+      "published_at": "2026-09-07",
+      "event_date": "2026-09-07",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Tbilisi candidate liked the centre environment but received a much lower-than-expected Speaking score, with no change after EOR.",
+        "fa": "یک داوطلب تفلیس سنتر را آرام دانسته اما Speaking بسیار پایین‌تر از انتظار گرفته و EOR هم تغییری ایجاد نکرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-CENTRE-010-E2",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "310819"
+      },
+      "published_at": "2026-09-09",
+      "event_date": "2026-09-09",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A later test taker said the exam itself felt highly standardized and similar to recent Cambridge books.",
+        "fa": "آزمون‌دهنده دیگری خود تست را بسیار استاندارد و شبیه کمبریج‌های جدید توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TESTINNO-IELTS-CENTRE-010-E3",
+      "source_id": "testinno-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "23346"
+      },
+      "published_at": "2025-03-09",
+      "event_date": "2025-03-09",
+      "collected_at": "2026-09-16T10:50:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An early community response cautioned that centres are expected to follow a common standard.",
+        "fa": "یک پاسخ قدیمی گروه تأکید کرده سنترها باید استاندارد مشترک را رعایت کنند."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "TESTINNO-IELTS-IRAN-ACCESS-001",
+      "issue_cluster_id": "IELTS-IRAN-TEST-ACCESS",
+      "relationships": [],
+      "classification": {
+        "family": "E13_EXTERNAL_TEST_SERVICE",
+        "type": "test_capacity_disruption",
+        "class": "access"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "booking",
+          "test_delivery",
+          "rescheduling"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "IELTS access in Iran showed persistent capacity and cancellation risk across 2025-2026",
+          "fa": "دسترسی به IELTS در ایران طی ۲۰۲۵ تا ۲۰۲۶ با ریسک پایدار کمبود ظرفیت و لغو همراه بوده است"
+        },
+        "summary": {
+          "en": "The source moves from sharp capacity restriction and fully booked dates in 2025 to cancelled-test uncertainty and refund/replacement handling in 2026.",
+          "fa": "منبع از محدودیت شدید ظرفیت و پر بودن تاریخ‌ها در ۲۰۲۵ به ابهام لغو آزمون و ریفاند/جایگزینی در ۲۰۲۶ می‌رسد."
+        },
+        "practical_impact": {
+          "en": "Iran-based candidates cannot safely plan around one domestic date close to a hard deadline.",
+          "fa": "داوطلب داخل ایران نمی‌تواند نزدیک ددلاین فقط روی یک تاریخ داخلی حساب کند."
+        },
+        "who_should_care": {
+          "en": "Iran-based IELTS candidates with hard deadlines.",
+          "fa": "داوطلبان IELTS داخل ایران با ددلاین قطعی."
+        },
+        "recommended_action": {
+          "en": "Book early and maintain a cross-border fallback.",
+          "fa": "زود رزرو کنید و پلن آزمون در کشور جایگزین داشته باشید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TESTINNO-IELTS-IRAN-ACCESS-001-E1",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-IRAN-ACCESS-001-E1"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-IRAN-ACCESS-001-E2",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-IRAN-ACCESS-001-E2"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-IRAN-ACCESS-001-E3",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-IRAN-ACCESS-001-E3"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-IRAN-ACCESS-001-E4",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-IRAN-ACCESS-001-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated centre/community evidence spans capacity restriction, scarcity and cancellations."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Primary provider rules were not independently verified unless explicitly stated otherwise."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TESTINNO-IELTS-IRAN-ACCESS-001-E1",
+            "TESTINNO-IELTS-IRAN-ACCESS-001-E2",
+            "TESTINNO-IELTS-IRAN-ACCESS-001-E3",
+            "TESTINNO-IELTS-IRAN-ACCESS-001-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Testinno IELTS Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-23",
+        "reason": "Recheck because test/provider conditions can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "IELTS Iran",
+        "capacity",
+        "cancellation",
+        "IDP"
+      ],
+      "first_seen": "2025-03-30",
+      "last_seen": "2026-02-20"
+    },
+    {
+      "signal_id": "TESTINNO-IELTS-REGISTRATION-COST-002",
+      "issue_cluster_id": "IELTS-IRAN-REGISTRATION-COST",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "registration_fee_volatility",
+        "class": "financial"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "booking",
+          "payment"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Iran IELTS booking showed operational and fee volatility",
+          "fa": "رزرو IELTS در ایران با نوسان فرایندی و مالی همراه بوده است"
+        },
+        "summary": {
+          "en": "The source records two-stage booking flows and complaints about additional price differences after prior reservation.",
+          "fa": "فایل هم فرایند ثبت‌نام دومرحله‌ای و هم اعتراض به مابه‌التفاوت بعد از رزرو را ثبت کرده است."
+        },
+        "practical_impact": {
+          "en": "A confirmed-looking booking may still require another operational or payment step.",
+          "fa": "رزروی که قطعی به نظر می‌رسد ممکن است هنوز مرحله عملیاتی یا پرداخت اضافه داشته باشد."
+        },
+        "who_should_care": {
+          "en": "Candidates booking through Iranian IELTS centres.",
+          "fa": "داوطلبان رزرو از سنترهای IELTS داخل ایران."
+        },
+        "recommended_action": {
+          "en": "Save booking/payment evidence and verify both centre-side and provider-side completion.",
+          "fa": "مدرک رزرو/پرداخت را نگه دارید و تکمیل هر دو مرحله سنتر و ارائه‌دهنده را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TESTINNO-IELTS-REGISTRATION-COST-002-E1",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-REGISTRATION-COST-002-E1"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-REGISTRATION-COST-002-E2",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-REGISTRATION-COST-002-E2"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-REGISTRATION-COST-002-E3",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-REGISTRATION-COST-002-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Multiple operational reports support the pattern."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Primary provider rules were not independently verified unless explicitly stated otherwise."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TESTINNO-IELTS-REGISTRATION-COST-002-E1",
+            "TESTINNO-IELTS-REGISTRATION-COST-002-E2",
+            "TESTINNO-IELTS-REGISTRATION-COST-002-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Testinno IELTS Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Recheck because test/provider conditions can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "registration",
+        "price difference",
+        "Iran IELTS"
+      ],
+      "first_seen": "2025-04-15",
+      "last_seen": "2025-12-30"
+    },
+    {
+      "signal_id": "TESTINNO-IELTS-CROSSBORDER-003",
+      "issue_cluster_id": "IELTS-CROSSBORDER-TESTING",
+      "relationships": [],
+      "classification": {
+        "family": "E13_EXTERNAL_TEST_SERVICE",
+        "type": "cross_border_testing",
+        "class": "access"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "booking",
+          "travel",
+          "test_delivery"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Cross-border IELTS became a practical fallback for Iranian candidates",
+          "fa": "آزمون برون‌مرزی به fallback عملی ایرانیان تبدیل شده است"
+        },
+        "summary": {
+          "en": "The source shows candidates using nearby countries after domestic disruption, while travel cancellations add risk.",
+          "fa": "فایل استفاده از کشورهای نزدیک بعد از اختلال داخلی را نشان می‌دهد و لغو سفر نیز ریسک اضافه ایجاد می‌کند."
+        },
+        "practical_impact": {
+          "en": "Exam planning becomes a combined test, travel and payment problem.",
+          "fa": "برنامه آزمون به ترکیبی از آزمون، سفر و پرداخت تبدیل می‌شود."
+        },
+        "who_should_care": {
+          "en": "Iranian candidates booking abroad.",
+          "fa": "داوطلبان ایرانی که خارج از کشور رزرو می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Confirm centre availability and travel contingency before paying non-refundable costs.",
+          "fa": "پیش از هزینه غیرقابل‌برگشت، ظرفیت سنتر و پلن جایگزین سفر را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TESTINNO-IELTS-CROSSBORDER-003-E1",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-CROSSBORDER-003-E1"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-CROSSBORDER-003-E2",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-CROSSBORDER-003-E2"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-CROSSBORDER-003-E3",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-CROSSBORDER-003-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct reports show cross-border testing and travel friction."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Primary provider rules were not independently verified unless explicitly stated otherwise."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TESTINNO-IELTS-CROSSBORDER-003-E1",
+            "TESTINNO-IELTS-CROSSBORDER-003-E2",
+            "TESTINNO-IELTS-CROSSBORDER-003-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Testinno IELTS Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Recheck because test/provider conditions can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Turkey",
+        "Van",
+        "Istanbul",
+        "cross-border IELTS"
+      ],
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-09-08"
+    },
+    {
+      "signal_id": "TESTINNO-IELTS-EOR-004",
+      "issue_cluster_id": "IELTS-EOR-OUTCOMES",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "score_review_eor",
+        "class": "review"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "score_release",
+          "EOR"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "EOR can recover borderline Writing/Speaking scores, but outcomes are case-specific",
+          "fa": "EOR می‌تواند بعضی نمره‌های مرزی Writing/Speaking را اصلاح کند اما نتیجه کیس‌محور است"
+        },
+        "summary": {
+          "en": "The source contains both a successful Speaking EOR that lifted overall band and a no-change Speaking EOR.",
+          "fa": "فایل هم نمونه موفق اعتراض Speaking با افزایش Overall دارد و هم نمونه بدون تغییر."
+        },
+        "practical_impact": {
+          "en": "EOR can sometimes avoid a full retest but is not predictable.",
+          "fa": "EOR گاهی می‌تواند نیاز به آزمون مجدد را حذف کند اما قابل پیش‌بینی نیست."
+        },
+        "who_should_care": {
+          "en": "Candidates narrowly missing a requirement.",
+          "fa": "داوطلبانی که با اختلاف کم به حد لازم نرسیده‌اند."
+        },
+        "recommended_action": {
+          "en": "Compare the result with trusted teacher/mock evidence before filing.",
+          "fa": "قبل از اعتراض نتیجه را با ارزیابی معتبر مدرس یا ماک مقایسه کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TESTINNO-IELTS-EOR-004-E1",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-EOR-004-E1"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-EOR-004-E2",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-EOR-004-E2"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-EOR-004-E3",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-EOR-004-E3"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-EOR-004-E4",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-EOR-004-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Both success and failure cases are present."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Primary provider rules were not independently verified unless explicitly stated otherwise."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TESTINNO-IELTS-EOR-004-E1",
+            "TESTINNO-IELTS-EOR-004-E2",
+            "TESTINNO-IELTS-EOR-004-E3",
+            "TESTINNO-IELTS-EOR-004-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Testinno IELTS Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Recheck because test/provider conditions can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "EOR",
+        "Writing",
+        "Speaking"
+      ],
+      "first_seen": "2025-12-27",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "signal_id": "TESTINNO-IELTS-MOCK-005",
+      "issue_cluster_id": "IELTS-MOCK-CALIBRATION",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "mock_score_calibration",
+        "class": "practice"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "preparation",
+          "mock_test"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Mock scores are useful for conditions practice but not a reliable single-point predictor",
+          "fa": "ماک برای تمرین شرایط آزمون مفید است اما پیش‌بینی تک‌نقطه‌ای قابل اتکایی نیست"
+        },
+        "summary": {
+          "en": "Community guidance often says real results can be about 0.5 higher than mocks, but the source also contains a 7.0-to-5.5 counterexample.",
+          "fa": "راهنمایی گروه اغلب از حدود نیم‌نمره بهتر شدن آزمون اصلی می‌گوید اما فایل ضدنمونه 7.0 به 5.5 هم دارد."
+        },
+        "practical_impact": {
+          "en": "One mock can create false confidence or unnecessary discouragement.",
+          "fa": "یک ماک می‌تواند اعتمادبه‌نفس کاذب یا ناامیدی بی‌مورد ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Candidates using mock results to decide readiness.",
+          "fa": "داوطلبانی که با ماک درباره آمادگی تصمیم می‌گیرند."
+        },
+        "recommended_action": {
+          "en": "Use multiple data points and Cambridge averages.",
+          "fa": "از چند داده و میانگین کمبریج استفاده کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TESTINNO-IELTS-MOCK-005-E1",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-MOCK-005-E1"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-MOCK-005-E2",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-MOCK-005-E2"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-MOCK-005-C1",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-MOCK-005-C1"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Common heuristic plus a strong contrary case supports variance."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Primary provider rules were not independently verified unless explicitly stated otherwise."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TESTINNO-IELTS-MOCK-005-E1",
+            "TESTINNO-IELTS-MOCK-005-E2",
+            "TESTINNO-IELTS-MOCK-005-C1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Testinno IELTS Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Recheck because test/provider conditions can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "mock",
+        "real IELTS",
+        "score gap"
+      ],
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-09-08"
+    },
+    {
+      "signal_id": "TESTINNO-IELTS-CAMBRIDGE-006",
+      "issue_cluster_id": "IELTS-CAMBRIDGE-BENCHMARK",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "standardized_practice_benchmark",
+        "class": "practice"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "preparation",
+          "Listening",
+          "Reading"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Recent Cambridge IELTS tests are treated as the most stable community benchmark",
+          "fa": "تست‌های جدید Cambridge IELTS پایدارترین benchmark کامیونیتی تلقی می‌شوند"
+        },
+        "summary": {
+          "en": "Repeated guidance prefers averages across several Cambridge tests over mock or AI estimates.",
+          "fa": "راهنمایی‌های تکرارشونده میانگین چند تست کمبریج را به ماک یا AI ترجیح می‌دهند."
+        },
+        "practical_impact": {
+          "en": "Irregular practice can distort readiness decisions.",
+          "fa": "تمرین نامنظم می‌تواند تصمیم درباره آمادگی را منحرف کند."
+        },
+        "who_should_care": {
+          "en": "Candidates deciding when to book the real exam.",
+          "fa": "داوطلبانی که زمان رزرو آزمون اصلی را تعیین می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Use the average of several recent Cambridge tests and analyze errors.",
+          "fa": "میانگین چند تست اخیر کمبریج را بگیرید و خطاها را تحلیل کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TESTINNO-IELTS-CAMBRIDGE-006-E1",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-CAMBRIDGE-006-E1"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-CAMBRIDGE-006-E2",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-CAMBRIDGE-006-E2"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-CAMBRIDGE-006-E3",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-CAMBRIDGE-006-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "The recommendation is repeated and used as the main readiness anchor."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Primary provider rules were not independently verified unless explicitly stated otherwise."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TESTINNO-IELTS-CAMBRIDGE-006-E1",
+            "TESTINNO-IELTS-CAMBRIDGE-006-E2",
+            "TESTINNO-IELTS-CAMBRIDGE-006-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Testinno IELTS Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2027-01-14",
+        "reason": "Recheck because test/provider conditions can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Cambridge IELTS",
+        "benchmark",
+        "Listening",
+        "Reading"
+      ],
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "signal_id": "TESTINNO-IELTS-AI-007",
+      "issue_cluster_id": "IELTS-AI-SCORING",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "ai_scoring_variance",
+        "class": "practice"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "Writing",
+          "Speaking",
+          "feedback"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "AI is useful for diagnosis and revision, but band scoring is prompt-sensitive and inconsistent",
+          "fa": "AI برای تحلیل و اصلاح مفید است اما band نمره به پرامپت حساس و ناپایدار است"
+        },
+        "summary": {
+          "en": "The source notes prompt sensitivity and direct differences between AI practice scores and real Writing performance.",
+          "fa": "فایل به حساسیت پرامپت و اختلاف بین نمره AI تمرینی و Writing واقعی اشاره می‌کند."
+        },
+        "practical_impact": {
+          "en": "Treating AI output as authoritative can misjudge readiness.",
+          "fa": "قطعی فرض کردن نمره AI می‌تواند آمادگی را اشتباه برآورد کند."
+        },
+        "who_should_care": {
+          "en": "Self-study candidates using AI for Writing/Speaking scoring.",
+          "fa": "داوطلبان خودخوانی که از AI برای نمره‌دهی Writing/Speaking استفاده می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Use AI for error diagnosis and calibrate with human marking and real/mock outcomes.",
+          "fa": "AI را برای تشخیص خطا استفاده و با تصحیح انسانی و نتایج واقعی/ماک کالیبره کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TESTINNO-IELTS-AI-007-E1",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-AI-007-E1"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-AI-007-E2",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-AI-007-E2"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-AI-007-E3",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-AI-007-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Admin guidance and direct outcomes converge on imperfect calibration."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Primary provider rules were not independently verified unless explicitly stated otherwise."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TESTINNO-IELTS-AI-007-E1",
+            "TESTINNO-IELTS-AI-007-E2",
+            "TESTINNO-IELTS-AI-007-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Testinno IELTS Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Recheck because test/provider conditions can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "ChatGPT",
+        "AI scoring",
+        "Writing",
+        "prompt"
+      ],
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-08"
+    },
+    {
+      "signal_id": "TESTINNO-IELTS-FORMAT-008",
+      "issue_cluster_id": "IELTS-COMPUTER-PAPER-TRANSITION",
+      "relationships": [],
+      "classification": {
+        "family": "E13_EXTERNAL_TEST_SERVICE",
+        "type": "computer_paper_residency_trf",
+        "class": "test_format"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "booking",
+          "test_format",
+          "TRF"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Cross-border paper IELTS options are more constrained for non-residents, while computer tests rely on eTRF",
+          "fa": "گزینه paper IELTS برون‌مرزی برای غیرمقیم‌ها محدودتر است و آزمون کامپیوتری بیشتر به eTRF متکی است"
+        },
+        "summary": {
+          "en": "The source repeatedly describes residency limits on paper testing in Turkey and shares a British Council response about eTRF for computer tests.",
+          "fa": "فایل چند بار از محدودیت اقامتی paper در ترکیه گفته و پاسخ British Council درباره eTRF آزمون کامپیوتری را نقل کرده است."
+        },
+        "practical_impact": {
+          "en": "Iranian travellers may need to accept computer delivery and digital result documents.",
+          "fa": "داوطلب ایرانی مسافر ممکن است مجبور باشد آزمون کامپیوتری و نتیجه دیجیتال را بپذیرد."
+        },
+        "who_should_care": {
+          "en": "Candidates travelling specifically for paper IELTS.",
+          "fa": "داوطلبانی که مشخصاً برای paper IELTS سفر می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Confirm residency eligibility, delivery mode and TRF format before payment.",
+          "fa": "پیش از پرداخت، شرط اقامت، فرمت برگزاری و نوع TRF را تأیید کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TESTINNO-IELTS-FORMAT-008-E1",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-FORMAT-008-E1"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-FORMAT-008-E2",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-FORMAT-008-E2"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-FORMAT-008-E3",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-FORMAT-008-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Multiple operational reports align, but country-specific rules were not independently checked."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Primary provider rules were not independently verified unless explicitly stated otherwise."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TESTINNO-IELTS-FORMAT-008-E1",
+            "TESTINNO-IELTS-FORMAT-008-E2",
+            "TESTINNO-IELTS-FORMAT-008-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Testinno IELTS Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Recheck because test/provider conditions can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "paper IELTS",
+        "computer IELTS",
+        "eTRF",
+        "Turkey"
+      ],
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "signal_id": "TESTINNO-IELTS-PRACTICE-009",
+      "issue_cluster_id": "IELTS-ACTIVE-FEEDBACK-PRACTICE",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "active_feedback_loop",
+        "class": "practice"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "preparation",
+          "Speaking",
+          "Writing",
+          "Listening"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Active production plus feedback is repeatedly preferred over passive study",
+          "fa": "تولید فعال همراه فیدبک به مطالعه منفعل ترجیح داده می‌شود"
+        },
+        "summary": {
+          "en": "The source repeatedly recommends teacher/partner feedback and transcription/error checking.",
+          "fa": "فایل بارها فیدبک مدرس/پارتنر و transcription/تحلیل خطا را توصیه می‌کند."
+        },
+        "practical_impact": {
+          "en": "Candidates can plateau if they only consume content without producing and correcting errors.",
+          "fa": "فقط مصرف محتوا بدون تولید و اصلاح خطا می‌تواند باعث plateau شود."
+        },
+        "who_should_care": {
+          "en": "Candidates whose productive/listening skills lag.",
+          "fa": "داوطلبانی که مهارت‌های تولیدی یا Listening عقب‌تر است."
+        },
+        "recommended_action": {
+          "en": "Create a loop of production, correction, mistake logging and repetition.",
+          "fa": "چرخه تولید، تصحیح، ثبت خطا و تکرار بسازید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TESTINNO-IELTS-PRACTICE-009-E1",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-PRACTICE-009-E1"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-PRACTICE-009-E2",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-PRACTICE-009-E2"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-PRACTICE-009-E3",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-PRACTICE-009-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same active-feedback pattern appears repeatedly."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Primary provider rules were not independently verified unless explicitly stated otherwise."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TESTINNO-IELTS-PRACTICE-009-E1",
+            "TESTINNO-IELTS-PRACTICE-009-E2",
+            "TESTINNO-IELTS-PRACTICE-009-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Testinno IELTS Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2027-03-15",
+        "reason": "Recheck because test/provider conditions can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "feedback",
+        "partner",
+        "transcription",
+        "dictation"
+      ],
+      "first_seen": "2025-03-09",
+      "last_seen": "2025-03-09"
+    },
+    {
+      "signal_id": "TESTINNO-IELTS-CENTRE-010",
+      "issue_cluster_id": "IELTS-CENTRE-EXPERIENCE-SCORING",
+      "relationships": [],
+      "classification": {
+        "family": "E13_EXTERNAL_TEST_SERVICE",
+        "type": "centre_experience_vs_scoring",
+        "class": "test_centre"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "test_delivery",
+          "Speaking",
+          "centre_selection"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Centre environment can differ, but the source does not support a reliable easy-scoring-centre rule",
+          "fa": "کیفیت محیط سنتر متفاوت است اما فایل از قاعده قابل اتکای سنتر آسان‌نمره حمایت نمی‌کند"
+        },
+        "summary": {
+          "en": "One candidate liked the Tbilisi environment but received a much lower-than-expected Speaking result; other reports describe standardized content.",
+          "fa": "یک داوطلب محیط تفلیس را خوب دانسته اما Speaking پایین‌تر از انتظار گرفته و گزارش‌های دیگر خود آزمون را استاندارد توصیف کرده‌اند."
+        },
+        "practical_impact": {
+          "en": "Scoring rumours can distract from logistics and real test conditions.",
+          "fa": "شایعه نمره‌دهی می‌تواند توجه را از لجستیک و شرایط واقعی آزمون منحرف کند."
+        },
+        "who_should_care": {
+          "en": "Candidates comparing centres abroad.",
+          "fa": "داوطلبانی که سنترهای خارج را مقایسه می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Choose centres for reliability, equipment, travel and environment—not promised score advantage.",
+          "fa": "سنتر را بر اساس اعتبار، تجهیزات، سفر و محیط انتخاب کنید نه وعده نمره بهتر."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TESTINNO-IELTS-CENTRE-010-E1",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-CENTRE-010-E1"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-CENTRE-010-E2",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-CENTRE-010-E2"
+        },
+        {
+          "evidence_id": "TESTINNO-IELTS-CENTRE-010-E3",
+          "relation": "supports",
+          "independence_group": "TESTINNO-IELTS-CENTRE-010-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Centre-experience evidence exists, but scoring conclusions remain anecdotal."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Primary provider rules were not independently verified unless explicitly stated otherwise."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TESTINNO-IELTS-CENTRE-010-E1",
+            "TESTINNO-IELTS-CENTRE-010-E2",
+            "TESTINNO-IELTS-CENTRE-010-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Testinno IELTS Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Recheck because test/provider conditions can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "test centre",
+        "Speaking score",
+        "Tbilisi"
+      ],
+      "first_seen": "2025-03-09",
+      "last_seen": "2026-09-09"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names and Telegram user IDs are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded all 254,030 messages from the uploaded JSON and scanned the full export programmatically."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected evidence; the entire reply graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Discount codes, course promotions and generic product support were excluded unless directly relevant."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated capacity, EOR, mock, Cambridge, AI and format discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Successful and unsuccessful EOR and mock outcomes are both preserved; centre-scoring claims remain qualified."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "Provider/centre messages reposted in Telegram remain source-reported until independently verified."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal connector was disabled during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals are practical test-access and preparation evidence only. They are not official IELTS/IDP/British Council rules, guaranteed score predictions, or substitutes for current provider guidance."
+}

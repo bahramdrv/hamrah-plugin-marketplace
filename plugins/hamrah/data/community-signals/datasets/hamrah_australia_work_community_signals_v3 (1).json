@@ -1,0 +1,1915 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_australia_work_community_signals_candidate",
+    "generated_at": "2026-09-16T08:00:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "australia-work-telegram-export",
+      "name": "Work in Australia.json / Telegram export «کار در استرالیا با پرگار»",
+      "source_type": "json",
+      "source_url": null,
+      "coverage": {
+        "status": "full",
+        "from": "2025-01-01",
+        "to": "2026-09-10",
+        "records_available": 2374,
+        "records_processed": 2374
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "AUS-WORK-INVITATION-VARIANCE-001-E1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:9206"
+      },
+      "published_at": "2025-02-22",
+      "event_date": "2025-02-22",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Civil Engineering applicant reported 95 net points for NSW 190 and 189 but had still not received an invitation.",
+        "fa": "یک متقاضی عمران گزارش کرده با ۹۵ امتیاز خالص برای NSW 190 و 189 هنوز دعوتنامه نگرفته بود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-INVITATION-VARIANCE-001-E2",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:9389"
+      },
+      "published_at": "2025-02-28",
+      "event_date": "2025-02-28",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community post listed successful invitation points varying materially by occupation and route, including examples from the mid-50s to mid-80s across 190 and 491.",
+        "fa": "یک پست گروه امتیازهای موفق دعوتنامه را برحسب شغل و ساب‌کلس متفاوت گزارش کرده؛ از محدوده ۵۵ تا ۸۵ برای نمونه‌های 190 و 491."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-INVITATION-VARIANCE-001-E3",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:21683"
+      },
+      "published_at": "2026-08-29",
+      "event_date": "2026-08-29",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser said a 65-point profile in the described network-computing case did not have a high chance.",
+        "fa": "مشاور درباره کیس شبکه کامپیوتری با ۶۵ امتیاز گفته شانس زیادی ندارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-INVITATION-VARIANCE-001-E4",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:21693"
+      },
+      "published_at": "2026-08-30",
+      "event_date": "2026-08-30",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In the same thread, the adviser suggested that more than 80 points would be a more practical target for that specific case.",
+        "fa": "در همان گفتگو مشاور برای همان کیس، امتیاز بالای ۸۰ را هدف عملی‌تری دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-ONSHORE-PRIORITY-002-E1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:20958"
+      },
+      "published_at": "2026-07-04",
+      "event_date": "2026-07-04",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In July 2026 an adviser said Australia was prioritizing onshore applicants that year and explicitly said the issue was not nationality-specific.",
+        "fa": "در جولای ۲۰۲۶ مشاور گفته اولویت آن سال با متقاضیان آنشور است و صراحتاً آن را مرتبط با ملیت ندانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-ONSHORE-PRIORITY-002-E2",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:21097"
+      },
+      "published_at": "2026-07-12",
+      "event_date": "2026-07-12",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later adviser response again characterized the prioritization as onshore-based.",
+        "fa": "پاسخ بعدی همان مشاور نیز اولویت‌بندی را آنشور توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-ONSHORE-PRIORITY-002-C1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:20147"
+      },
+      "published_at": "2026-05-08",
+      "event_date": "2026-05-08",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community member said they had checked Iranian groups and, although the number of grants was small, skilled-worker grants were still occurring.",
+        "fa": "یک عضو گروه گفته با بررسی گروه‌های ایرانی، تعداد گرنت‌ها کم بوده اما گرنت اسکیل‌ورکر همچنان وجود داشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-ONSHORE-PRIORITY-002-C2",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:20168"
+      },
+      "published_at": "2026-05-09",
+      "event_date": "2026-05-09",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same member rejected the idea of a total stop, saying grants were still being reported despite very low volume.",
+        "fa": "همان کاربر فرض توقف کامل را رد کرده و گفته با وجود حجم پایین، همچنان گرنت گزارش می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-SPONSORSHIP-FRICTION-003-E1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:7967"
+      },
+      "published_at": "2025-01-03",
+      "event_date": "2025-01-03",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser described finding employer sponsorship for the user's case as difficult.",
+        "fa": "مشاور پیدا کردن اسپانسر کارفرما برای کیس مطرح‌شده را تقریباً دشوار توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-SPONSORSHIP-FRICTION-003-E2",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:8195"
+      },
+      "published_at": "2025-01-11",
+      "event_date": "2025-01-11",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In another employer-sponsorship question, the adviser said the probability of being sponsored was low.",
+        "fa": "در پرسش دیگری درباره اسپانسر کارفرما، مشاور احتمال اسپانسر شدن را پایین دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-SPONSORSHIP-FRICTION-003-C1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:21755"
+      },
+      "published_at": "2026-09-05",
+      "event_date": "2026-09-05",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A community member said they had personally been in the employer-sponsored visa process, showing the route is possible rather than closed.",
+        "fa": "یک عضو گروه گفته شخصاً در فرایند ویزای اسپانسری بوده است؛ بنابراین مسیر بسته یا غیرممکن نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-EMPLOYMENT-EVIDENCE-004-E1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:8009"
+      },
+      "published_at": "2025-01-05",
+      "event_date": "2025-01-05",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser said social-insurance history is not necessarily mandatory and that payslips and other evidence can demonstrate employment.",
+        "fa": "مشاور گفته سابقه بیمه الزام مطلق نیست و فیش حقوقی و مدارک دیگر می‌توانند اشتغال را اثبات کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-EMPLOYMENT-EVIDENCE-004-E2",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:19260"
+      },
+      "published_at": "2026-01-24",
+      "event_date": "2026-01-24",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A recent VETASSESS applicant reported receiving an assessment and said payment evidence could be provided through one of payslips, insurance, bank records, or tax evidence, with employer and employee identity clearly shown.",
+        "fa": "یک متقاضی که به‌تازگی از VETASSESS اسسمنت گرفته بود گفته برای payment evidence یکی از فیش حقوقی، بیمه، پرینت حساب یا مالیات قابل استفاده بوده و نام کارفرما و کارمند باید روشن باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-EMPLOYMENT-EVIDENCE-004-E3",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:13227"
+      },
+      "published_at": "2025-07-01",
+      "event_date": "2025-07-01",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community response stated that a positive skills assessment can be possible without insurance where payslips are available.",
+        "fa": "یک پاسخ کامیونیتی گفته در صورت وجود فیش حقوقی، گرفتن اسسمنت مثبت بدون بیمه هم ممکن است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005-C1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:8165"
+      },
+      "published_at": "2025-01-10",
+      "event_date": "2025-01-10",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A postgraduate applicant said employment during a Master's degree was declared as part-time for assessment despite insurance and full-time work, with weekly hours treated as important.",
+        "fa": "یک متقاضی گفته سابقه کار همزمان با ارشد را برای اسس به‌صورت پارت‌تایم اعلام کرده، با وجود بیمه و کار فول‌تایم، و تعداد ساعات هفتگی مهم بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005-C2",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:8168"
+      },
+      "published_at": "2025-01-10",
+      "event_date": "2025-01-10",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same applicant said the experience was accepted when weekly hours were documented around 22-24 hours.",
+        "fa": "همان متقاضی گفته سابقه با اعلام حدود ۲۲ تا ۲۴ ساعت در هفته پذیرفته شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005-E1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:21605"
+      },
+      "published_at": "2026-08-23",
+      "event_date": "2026-08-23",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser said work experience gained while studying is usually not accepted in the accounting case being discussed.",
+        "fa": "مشاور در کیس حسابداری مطرح‌شده گفته سابقه کاری هنگام تحصیل معمولاً پذیرفته نمی‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005-E2",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:21615"
+      },
+      "published_at": "2026-08-23",
+      "event_date": "2026-08-23",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser later narrowed the statement: work during a bachelor's degree is usually problematic, while Master's/PhD concurrent work may be acceptable.",
+        "fa": "مشاور بعداً تفکیک کرده که سابقه حین کارشناسی معمولاً مشکل‌دار است، اما ارشد و دکتری می‌تواند قابل قبول باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-OCCUPATION-ALIGNMENT-006-E1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:16280"
+      },
+      "published_at": "2025-09-28",
+      "event_date": "2025-09-28",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser explained that the nominated occupation needs genuine alignment with qualifications and work history; choosing a lower-point occupation without matching evidence can make a positive skills assessment very difficult.",
+        "fa": "مشاور توضیح داده کد شغلی انتخابی باید با تحصیلات و سابقه کار تطابق واقعی داشته باشد و انتخاب شغل کم‌امتیازتر بدون مدارک مرتبط می‌تواند اسسمنت مثبت را بسیار دشوار کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-OCCUPATION-ALIGNMENT-006-E2",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:16472"
+      },
+      "published_at": "2025-10-04",
+      "event_date": "2025-10-04",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another adviser message emphasized that each ANZSCO occupation maps to a specific assessing authority and applicants must follow that authority's requirements.",
+        "fa": "پیام دیگری از مشاور تأکید کرده هر کد ANZSCO سازمان ارزیاب مشخصی دارد و مدارک و شرایط باید طبق همان سازمان بررسی شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-OCCUPATION-ALIGNMENT-006-E3",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:10562"
+      },
+      "published_at": "2025-04-02",
+      "event_date": "2025-04-02",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For an Industrial Engineering graduate targeting AI-related migration through ACS, the adviser recommended first building several years of AI-related work experience.",
+        "fa": "برای فارغ‌التحصیل مهندسی صنایع که قصد مسیر مرتبط با AI از طریق ACS داشت، مشاور توصیه کرده ابتدا چند سال سابقه مرتبط با هوش مصنوعی ایجاد شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-PROCESSING-TIMELINE-007-E1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:9386"
+      },
+      "published_at": "2025-02-28",
+      "event_date": "2025-02-28",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community post reported a Civil Engineering Draftsperson case with 80 net points receiving the visa around 15 months after application.",
+        "fa": "یک گزارش کامیونیتی برای Civil Engineering Draftsperson با ۸۰ امتیاز خالص، صدور ویزا را حدود ۱۵ ماه پس از اپلیکیشن ذکر کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-PROCESSING-TIMELINE-007-E2",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:9388"
+      },
+      "published_at": "2025-02-28",
+      "event_date": "2025-02-28",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same source reported a Web Administrator case with 65 net points taking around 19 months.",
+        "fa": "همان منبع برای Web Administrator با ۶۵ امتیاز خالص حدود ۱۹ ماه زمان گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-PROCESSING-TIMELINE-007-E3",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:17022"
+      },
+      "published_at": "2025-10-21",
+      "event_date": "2025-10-21",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later community estimate suggested roughly 1.5-2 years from language preparation to grant for 189 and 2.5-3 years for state-nominated routes under then-current conditions.",
+        "fa": "یک برآورد بعدی در گروه، برای 189 حدود ۱.۵ تا ۲ سال و برای مسیرهای ایالتی حدود ۲.۵ تا ۳ سال از مرحله زبان تا گرنت ذکر کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-PTE-ACCESS-008-C1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:21706"
+      },
+      "published_at": "2026-08-31",
+      "event_date": "2026-08-31",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "On 31 August 2026 an adviser said PTE was currently the more workable English-test option.",
+        "fa": "در ۳۱ اوت ۲۰۲۶ مشاور گفته PTE فعلاً گزینه عملی‌تری برای آزمون زبان است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-PTE-ACCESS-008-E1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:21740"
+      },
+      "published_at": "2026-09-04",
+      "event_date": "2026-09-04",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "first_hand_community_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "On 4 September 2026 a user reported a Pearson-related restriction affecting exams for Iranian applicants and circulated a petition.",
+        "fa": "در ۴ سپتامبر ۲۰۲۶ یک کاربر از محدودیت مرتبط با Pearson برای آزمون‌های متقاضیان ایرانی خبر داده و پتیشن منتشر کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-PTE-ACCESS-008-W1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:21711"
+      },
+      "published_at": "2026-09-01",
+      "event_date": "2026-09-01",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A nearby discussion identified Turkey as a practical location for taking PTE outside Iran.",
+        "fa": "در گفتگوی همان بازه، ترکیه به‌عنوان محل عملی برای شرکت در PTE خارج از ایران مطرح شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-BIOMETRICS-TEHRAN-009-E1",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:20855"
+      },
+      "published_at": "2026-06-27",
+      "event_date": "2026-06-27",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "first_hand_community_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A community member said biometrics could be completed in Tehran while the local VFS service was open.",
+        "fa": "یک عضو گروه گفته تا زمانی که دفتر VFS ایران باز باشد، بایومتریک در تهران قابل انجام است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-BIOMETRICS-TEHRAN-009-E2",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:20879"
+      },
+      "published_at": "2026-06-28",
+      "event_date": "2026-06-28",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser said a separate appointment was not required for the biometrics step being discussed.",
+        "fa": "مشاور گفته برای مرحله بایومتریک مورد بحث، گرفتن وقت جداگانه لازم نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-WORK-BIOMETRICS-TEHRAN-009-E3",
+      "source_id": "australia-work-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:21778"
+      },
+      "published_at": "2026-09-07",
+      "event_date": "2026-09-07",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In September 2026 the adviser again said no appointment was required for biometrics.",
+        "fa": "در سپتامبر ۲۰۲۶ مشاور مجدداً گفته برای بایومتریک نیاز به وقت نیست."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "AUS-WORK-INVITATION-VARIANCE-001",
+      "issue_cluster_id": "AUS-WORK-INVITATION-VARIANCE-001",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "invitation_threshold_variance",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "189",
+            "190",
+            "491"
+          ]
+        },
+        "process_stages": [
+          "eoi",
+          "invitation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Invitation competitiveness varies sharply by occupation, state and round",
+          "fa": "رقابت دعوتنامه به‌شدت به کد شغلی، ایالت و راند وابسته است"
+        },
+        "summary": {
+          "en": "The export does not support treating 65 points as a reliable practical invitation threshold. Reported outcomes range widely by occupation and subclass, and at least one Civil Engineering applicant reported waiting without invitation despite 95 net points.",
+          "fa": "این فایل از فرض «۶۵ امتیاز = آستانه عملی مطمئن دعوتنامه» پشتیبانی نمی‌کند. نتایج گزارش‌شده برحسب شغل و ساب‌کلس تفاوت زیادی دارند و یک متقاضی عمران حتی با ۹۵ امتیاز خالص نیز بدون دعوتنامه مانده بود."
+        },
+        "practical_impact": {
+          "en": "A points total is only meaningful when interpreted against the nominated occupation, current round history and state criteria.",
+          "fa": "عدد امتیاز فقط وقتی معنا دارد که کنار کد شغلی، راندهای اخیر و معیارهای ایالت بررسی شود."
+        },
+        "who_should_care": {
+          "en": "189, 190 and 491 applicants estimating invitation prospects from points alone.",
+          "fa": "متقاضیان ۱۸۹، ۱۹۰ و ۴۹۱ که شانس دعوتنامه را فقط از روی مجموع امتیاز تخمین می‌زنند."
+        },
+        "recommended_action": {
+          "en": "Check recent invitation results for the exact occupation and route instead of planning from the nominal minimum score.",
+          "fa": "به‌جای اتکا به حداقل اسمی امتیاز، نتایج راندهای اخیر همان کد شغلی و همان ساب‌کلس را بررسی کنید."
+        },
+        "known_workaround": "Improving English/other points and considering multiple eligible state or regional routes were repeatedly discussed."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-WORK-INVITATION-VARIANCE-001-E1",
+          "relation": "supports",
+          "independence_group": "invite-r1"
+        },
+        {
+          "evidence_id": "AUS-WORK-INVITATION-VARIANCE-001-E2",
+          "relation": "supports",
+          "independence_group": "invite-r2"
+        },
+        {
+          "evidence_id": "AUS-WORK-INVITATION-VARIANCE-001-E3",
+          "relation": "supports",
+          "independence_group": "invite-r3"
+        },
+        {
+          "evidence_id": "AUS-WORK-INVITATION-VARIANCE-001-E4",
+          "relation": "supports",
+          "independence_group": "invite-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple independent reports show large occupation/route differences and a high-points case without invitation."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Invitation-round data in the export was not independently reconciled with current official SkillSelect/state publications."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "AUS-WORK-INVITATION-VARIANCE-001-E1",
+            "AUS-WORK-INVITATION-VARIANCE-001-E2",
+            "AUS-WORK-INVITATION-VARIANCE-001-E3",
+            "AUS-WORK-INVITATION-VARIANCE-001-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Invitation thresholds can change each round and financial year.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "189",
+        "190",
+        "491",
+        "EOI",
+        "invitation",
+        "points",
+        "occupation"
+      ],
+      "first_seen": "2025-02-22",
+      "last_seen": "2026-08-30"
+    },
+    {
+      "signal_id": "AUS-WORK-ONSHORE-PRIORITY-002",
+      "issue_cluster_id": "AUS-WORK-ONSHORE-PRIORITY-002",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "AUS-WORK-INVITATION-VARIANCE-001"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "onshore_priority_pattern",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Onshore versus offshore applicants"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "189",
+            "190",
+            "491"
+          ]
+        },
+        "process_stages": [
+          "eoi",
+          "invitation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "2026 community guidance points to onshore prioritization rather than an Iran-wide skilled-visa freeze",
+          "fa": "راهنمایی‌های ۲۰۲۶ بیشتر از اولویت آنشور خبر می‌دهند تا توقف سراسری ویزای مهارتی برای ایرانیان"
+        },
+        "summary": {
+          "en": "An adviser repeatedly described 2026 prioritization as favoring onshore applicants and explicitly said it was not nationality-based. Community members also continued to report some Iranian skilled grants, albeit at low volume.",
+          "fa": "مشاور در چند پیام، اولویت ۲۰۲۶ را به نفع آنشورها توصیف کرده و آن را ملیت‌محور ندانسته است. همزمان اعضای گروه از ادامه برخی گرنت‌های ایرانی، هرچند با حجم پایین، گفته‌اند."
+        },
+        "practical_impact": {
+          "en": "Offshore applicants may face a practical selection disadvantage without evidence of a universal nationality ban.",
+          "fa": "متقاضی آفشور ممکن است با اصطکاک انتخابی بیشتری مواجه باشد، بدون اینکه این فایل توقف عمومی بر مبنای ملیت را ثابت کند."
+        },
+        "who_should_care": {
+          "en": "Iran-origin offshore skilled applicants comparing their position with applicants already in Australia.",
+          "fa": "متقاضیان مهارتی ایرانی خارج از استرالیا که شرایط خود را با آنشورها مقایسه می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Model onshore/offshore status as a selection variable and avoid interpreting low grant volume as proof of a nationality-wide shutdown.",
+          "fa": "وضعیت آنشور/آفشور را متغیر انتخابی در نظر بگیرید و حجم پایین گرنت را به‌تنهایی به‌عنوان توقف ملیتی تفسیر نکنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-WORK-ONSHORE-PRIORITY-002-E1",
+          "relation": "supports",
+          "independence_group": "onshore-adviser"
+        },
+        {
+          "evidence_id": "AUS-WORK-ONSHORE-PRIORITY-002-E2",
+          "relation": "supports",
+          "independence_group": "onshore-adviser"
+        },
+        {
+          "evidence_id": "AUS-WORK-ONSHORE-PRIORITY-002-C1",
+          "relation": "contradicts",
+          "independence_group": "grant-r1"
+        },
+        {
+          "evidence_id": "AUS-WORK-ONSHORE-PRIORITY-002-C2",
+          "relation": "contradicts",
+          "independence_group": "grant-r1"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The onshore-priority claim comes mainly from one adviser, while independent community discussion supports continued grants rather than a total freeze."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No current official policy establishing a blanket onshore preference was independently verified during this extraction."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "AUS-WORK-ONSHORE-PRIORITY-002-E1",
+            "AUS-WORK-ONSHORE-PRIORITY-002-E2",
+            "AUS-WORK-ONSHORE-PRIORITY-002-C1",
+            "AUS-WORK-ONSHORE-PRIORITY-002-C2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "This is time-sensitive and may change by state, occupation and program year.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "onshore",
+        "offshore",
+        "Iran",
+        "priority",
+        "skilled visa"
+      ],
+      "first_seen": "2026-05-08",
+      "last_seen": "2026-07-12"
+    },
+    {
+      "signal_id": "AUS-WORK-SPONSORSHIP-FRICTION-003",
+      "issue_cluster_id": "AUS-WORK-SPONSORSHIP-FRICTION-003",
+      "relationships": [],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "employer_sponsorship_friction",
+        "class": "employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "482",
+            "186",
+            "employer_sponsored"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "sponsorship"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Employer sponsorship is described as a high-friction route, especially before a sponsor is secured",
+          "fa": "مسیر اسپانسر کارفرما، به‌خصوص پیش از پیدا شدن کارفرما، پر اصطکاک توصیف می‌شود"
+        },
+        "summary": {
+          "en": "Adviser responses repeatedly described sponsorship chances as difficult or low in generic offshore-style cases, while at least one user reported personally being in the sponsored-visa process.",
+          "fa": "پاسخ‌های مشاور در کیس‌های عمومی، پیدا کردن اسپانسر را دشوار یا کم‌احتمال توصیف کرده‌اند؛ در عین حال حداقل یک کاربر گفته شخصاً در فرایند ویزای اسپانسری بوده است."
+        },
+        "practical_impact": {
+          "en": "The job-offer step can be the bottleneck; employer-sponsored visas should not be treated as an easy fallback from points-tested migration.",
+          "fa": "مرحله گرفتن جاب‌آفر می‌تواند گلوگاه اصلی باشد و مسیر اسپانسری نباید جایگزین ساده‌ای برای مسیر امتیازی فرض شود."
+        },
+        "who_should_care": {
+          "en": "Offshore applicants considering 482/186 or another employer-sponsored route.",
+          "fa": "متقاضیان آفشور که به ۴۸۲، ۱۸۶ یا سایر مسیرهای اسپانسری فکر می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Evaluate sponsor availability separately from visa eligibility and target employers/recruiters already familiar with sponsorship.",
+          "fa": "امکان پیدا کردن اسپانسر را جدا از واجدشرایط‌بودن ویزا بسنجید و روی کارفرما/ریکروترهای آشنا با اسپانسرشیپ تمرکز کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-WORK-SPONSORSHIP-FRICTION-003-E1",
+          "relation": "supports",
+          "independence_group": "sponsor-adviser"
+        },
+        {
+          "evidence_id": "AUS-WORK-SPONSORSHIP-FRICTION-003-E2",
+          "relation": "supports",
+          "independence_group": "sponsor-adviser"
+        },
+        {
+          "evidence_id": "AUS-WORK-SPONSORSHIP-FRICTION-003-C1",
+          "relation": "contradicts",
+          "independence_group": "sponsor-r2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Two adviser responses point to difficulty, but successful entry into the process is also reported and occupation/employer conditions vary heavily."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No labour-market-wide sponsorship success rate was verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "AUS-WORK-SPONSORSHIP-FRICTION-003-E1",
+            "AUS-WORK-SPONSORSHIP-FRICTION-003-E2",
+            "AUS-WORK-SPONSORSHIP-FRICTION-003-C1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Employer demand and sponsor rules are occupation- and time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "482",
+        "186",
+        "sponsor",
+        "job offer",
+        "offshore"
+      ],
+      "first_seen": "2025-01-03",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "signal_id": "AUS-WORK-EMPLOYMENT-EVIDENCE-004",
+      "issue_cluster_id": "AUS-WORK-EMPLOYMENT-EVIDENCE-004",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "employment_evidence_flexibility",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "189",
+            "190",
+            "491",
+            "skills_assessment"
+          ]
+        },
+        "process_stages": [
+          "skills_assessment",
+          "evidence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Employment evidence is assessor-specific; insurance is not always the only acceptable proof",
+          "fa": "مدارک اثبات سابقه کار وابسته به سازمان ارزیاب است و بیمه همیشه تنها مدرک قابل قبول نیست"
+        },
+        "summary": {
+          "en": "The strongest first-hand VETASSESS report in the export says payment evidence may be satisfied through one of several evidence types, while adviser/community responses also describe payslips and other records as possible alternatives to insurance.",
+          "fa": "قوی‌ترین تجربه مستقیم VETASSESS در فایل می‌گوید payment evidence می‌تواند با یکی از چند نوع مدرک تأمین شود؛ پاسخ‌های دیگر نیز فیش حقوقی و مدارک جایگزین بیمه را مطرح کرده‌اند."
+        },
+        "practical_impact": {
+          "en": "Applicants without complete Iranian social-insurance history may still have a document path, but evidence requirements cannot be generalized across assessors.",
+          "fa": "نداشتن سابقه کامل بیمه لزوماً پایان مسیر نیست، اما شرایط مدارک را نباید بین سازمان‌های ارزیاب تعمیم داد."
+        },
+        "who_should_care": {
+          "en": "Applicants proving overseas work experience for VETASSESS or other skills-assessment bodies.",
+          "fa": "متقاضیانی که باید سابقه کار خارج از استرالیا را برای VETASSESS یا سایر سازمان‌های ارزیاب اثبات کنند."
+        },
+        "recommended_action": {
+          "en": "Follow the exact assessing authority's evidence rules and build redundant proof such as employer letters, payslips, bank/tax/insurance records where possible.",
+          "fa": "گایدلاین همان سازمان ارزیاب را مبنا قرار دهید و در صورت امکان چند نوع مدرک مستقل مثل نامه کارفرما، فیش، بانک، مالیات یا بیمه جمع کنید."
+        },
+        "known_workaround": "Alternative payment evidence may substitute for missing insurance in some assessing-authority workflows."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-WORK-EMPLOYMENT-EVIDENCE-004-E1",
+          "relation": "supports",
+          "independence_group": "docs-adviser"
+        },
+        {
+          "evidence_id": "AUS-WORK-EMPLOYMENT-EVIDENCE-004-E2",
+          "relation": "supports",
+          "independence_group": "docs-r2"
+        },
+        {
+          "evidence_id": "AUS-WORK-EMPLOYMENT-EVIDENCE-004-E3",
+          "relation": "supports",
+          "independence_group": "docs-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "A recent first-hand successful VETASSESS case plus independent guidance supports evidence flexibility, while also showing that exact requirements are assessor-specific."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The export supports document flexibility but does not establish identical rules for every assessing authority."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "AUS-WORK-EMPLOYMENT-EVIDENCE-004-E1",
+            "AUS-WORK-EMPLOYMENT-EVIDENCE-004-E2",
+            "AUS-WORK-EMPLOYMENT-EVIDENCE-004-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Assessing-authority evidence requirements can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "VETASSESS",
+        "employment evidence",
+        "insurance",
+        "payslip",
+        "bank statement",
+        "tax"
+      ],
+      "first_seen": "2025-01-05",
+      "last_seen": "2026-01-24"
+    },
+    {
+      "signal_id": "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005",
+      "issue_cluster_id": "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "AUS-WORK-EMPLOYMENT-EVIDENCE-004"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "study_concurrent_employment",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "189",
+            "190",
+            "491",
+            "skills_assessment"
+          ]
+        },
+        "process_stages": [
+          "skills_assessment",
+          "work_experience"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Work experience gained during study is a high-friction evidence area, with different treatment by study level and hours",
+          "fa": "سابقه کار همزمان با تحصیل یک حوزه پرریسک است و پذیرش آن به مقطع و ساعات کار وابسته گزارش شده است"
+        },
+        "summary": {
+          "en": "One first-hand postgraduate case says concurrent Master's work was accepted when reported as part-time with weekly hours. Later adviser guidance says undergraduate concurrent work is usually problematic while Master's/PhD work may be acceptable.",
+          "fa": "یک تجربه مستقیم می‌گوید سابقه همزمان با ارشد با اعلام پارت‌تایم و ساعات هفتگی پذیرفته شده؛ راهنمایی بعدی مشاور نیز کار همزمان با کارشناسی را پرریسک‌تر و ارشد/دکتری را قابل‌قبول‌تر دانسته است."
+        },
+        "practical_impact": {
+          "en": "Applicants should not assume all paid work during study will generate migration work-experience points.",
+          "fa": "نباید فرض کرد هر سابقه کار پولی حین تحصیل حتماً برای امتیاز سابقه کار پذیرفته می‌شود."
+        },
+        "who_should_care": {
+          "en": "Applicants relying on employment performed during bachelor's, Master's or PhD study.",
+          "fa": "متقاضیانی که برای امتیاز یا اسسمنت به سابقه کار حین کارشناسی، ارشد یا دکتری تکیه دارند."
+        },
+        "recommended_action": {
+          "en": "Check the assessor's rules on concurrent study, full-time/part-time hours and the skilled-date calculation before claiming points.",
+          "fa": "پیش از ادعای امتیاز، قواعد سازمان ارزیاب درباره همزمانی تحصیل، ساعات کار و skilled date را بررسی کنید."
+        },
+        "known_workaround": "Where allowed, documenting genuine weekly hours and treating concurrent work as part-time may be relevant."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005-C1",
+          "relation": "contradicts",
+          "independence_group": "studywork-r1"
+        },
+        {
+          "evidence_id": "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005-C2",
+          "relation": "contradicts",
+          "independence_group": "studywork-r1"
+        },
+        {
+          "evidence_id": "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005-E1",
+          "relation": "supports",
+          "independence_group": "studywork-adviser"
+        },
+        {
+          "evidence_id": "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005-E2",
+          "relation": "supports",
+          "independence_group": "studywork-adviser"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The evidence is mixed but coherent: undergraduate and postgraduate concurrent work appear to be treated differently, and actual assessor rules matter."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No universal assessing-authority rule was inferred from the community export."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005-C1",
+            "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005-C2",
+            "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005-E1",
+            "AUS-WORK-STUDY-CONCURRENT-EMPLOYMENT-005-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Requires assessor-specific verification before use in scoring.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "work during study",
+        "part-time",
+        "skills assessment",
+        "work experience points"
+      ],
+      "first_seen": "2025-01-10",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "signal_id": "AUS-WORK-OCCUPATION-ALIGNMENT-006",
+      "issue_cluster_id": "AUS-WORK-OCCUPATION-ALIGNMENT-006",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "AUS-WORK-INVITATION-VARIANCE-001"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "occupation_assessment_fit",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "189",
+            "190",
+            "491",
+            "skills_assessment"
+          ]
+        },
+        "process_stages": [
+          "occupation_selection",
+          "skills_assessment"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Applicants cannot safely optimize for a lower invitation score by choosing an occupation that does not fit their qualifications and experience",
+          "fa": "نمی‌توان صرفاً برای امتیاز دعوتنامه کمتر، کد شغلی نامرتبط با تحصیلات و سابقه را انتخاب کرد"
+        },
+        "summary": {
+          "en": "Adviser guidance repeatedly emphasizes that the nominated ANZSCO occupation maps to a specific assessing authority and must be supported by genuine qualification/experience alignment.",
+          "fa": "راهنمایی‌های مشاور تأکید می‌کنند هر کد ANZSCO سازمان ارزیاب مشخصی دارد و باید با تحصیلات و سابقه واقعی متقاضی قابل دفاع باشد."
+        },
+        "practical_impact": {
+          "en": "A lower invitation threshold in another occupation is not useful if the applicant cannot obtain a positive skills assessment for that occupation.",
+          "fa": "کمتر بودن امتیاز دعوتنامه در یک کد دیگر، اگر اسسمنت مثبت آن کد قابل اخذ نباشد، مزیت عملی ایجاد نمی‌کند."
+        },
+        "who_should_care": {
+          "en": "Applicants choosing between related ANZSCO codes or considering a career-pivot occupation for migration.",
+          "fa": "متقاضیانی که بین چند کد شغلی نزدیک انتخاب می‌کنند یا قصد تغییر حوزه برای مهاجرت دارند."
+        },
+        "recommended_action": {
+          "en": "Choose the occupation by evidence fit first, then compare invitation competitiveness among the occupations for which a positive assessment is realistically defensible.",
+          "fa": "اول کد شغلی را بر اساس قابلیت دفاع مدارک انتخاب کنید، سپس بین کدهایی که واقعاً اسسمنت مثبت‌شان ممکن است رقابت دعوتنامه را مقایسه کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-WORK-OCCUPATION-ALIGNMENT-006-E1",
+          "relation": "supports",
+          "independence_group": "align-adviser"
+        },
+        {
+          "evidence_id": "AUS-WORK-OCCUPATION-ALIGNMENT-006-E2",
+          "relation": "supports",
+          "independence_group": "align-adviser"
+        },
+        {
+          "evidence_id": "AUS-WORK-OCCUPATION-ALIGNMENT-006-E3",
+          "relation": "supports",
+          "independence_group": "align-adviser"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The selected evidence is detailed but comes mainly from one adviser source; occupation/assessor fit should be officially checked for each case."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No occupation-specific assessment standard was independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "AUS-WORK-OCCUPATION-ALIGNMENT-006-E1",
+            "AUS-WORK-OCCUPATION-ALIGNMENT-006-E2",
+            "AUS-WORK-OCCUPATION-ALIGNMENT-006-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Occupation lists and assessing-authority criteria can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "ANZSCO",
+        "skills assessment",
+        "occupation alignment",
+        "ACS",
+        "VETASSESS",
+        "Engineers Australia"
+      ],
+      "first_seen": "2025-04-02",
+      "last_seen": "2025-10-04"
+    },
+    {
+      "signal_id": "AUS-WORK-PROCESSING-TIMELINE-007",
+      "issue_cluster_id": "AUS-WORK-PROCESSING-TIMELINE-007",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "AUS-WORK-INVITATION-VARIANCE-001"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "end_to_end_delay",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "189",
+            "190",
+            "491"
+          ]
+        },
+        "process_stages": [
+          "eoi",
+          "invitation",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "End-to-end skilled-migration timelines are long and highly uncertain",
+          "fa": "زمان صفر تا صد مهاجرت مهارتی طولانی و بسیار نامطمئن گزارش شده است"
+        },
+        "summary": {
+          "en": "Community reports include individual visa outcomes around 15-19 months after application, while a later estimate put the overall 189 journey around 1.5-2 years and state-nominated routes around 2.5-3 years under then-current conditions.",
+          "fa": "گزارش‌های گروه شامل نمونه‌های صدور ویزا حدود ۱۵ تا ۱۹ ماه پس از اپلیکیشن است و یک برآورد بعدی، مسیر ۱۸۹ را حدود ۱.۵ تا ۲ سال و مسیرهای ایالتی را حدود ۲.۵ تا ۳ سال دانسته است."
+        },
+        "practical_impact": {
+          "en": "Applicants should separate skills-assessment, EOI/invitation waiting and post-lodgement processing rather than treating one published visa-processing number as the whole timeline.",
+          "fa": "باید زمان اسسمنت، انتظار دعوتنامه و بررسی پس از لاج را جداگانه دید و یک عدد processing time را معادل کل مسیر ندانست."
+        },
+        "who_should_care": {
+          "en": "Applicants making career, age, language-score or relocation decisions around expected Australian skilled-migration timing.",
+          "fa": "متقاضیانی که تصمیم شغلی، سنی، زبان یا جابه‌جایی را بر اساس زمان مورد انتظار مهاجرت مهارتی استرالیا می‌گیرند."
+        },
+        "recommended_action": {
+          "en": "Plan in stages and model a wide range, especially for invitation-dependent state routes.",
+          "fa": "مسیر را مرحله‌ای برنامه‌ریزی کنید و مخصوصاً برای مسیرهای ایالتی وابسته به دعوتنامه، بازه زمانی گسترده در نظر بگیرید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-WORK-PROCESSING-TIMELINE-007-E1",
+          "relation": "supports",
+          "independence_group": "timeline-r1"
+        },
+        {
+          "evidence_id": "AUS-WORK-PROCESSING-TIMELINE-007-E2",
+          "relation": "supports",
+          "independence_group": "timeline-r1"
+        },
+        {
+          "evidence_id": "AUS-WORK-PROCESSING-TIMELINE-007-E3",
+          "relation": "supports",
+          "independence_group": "timeline-r2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The export consistently describes long timelines but exact durations rely on community reports rather than a controlled current sample."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official processing-time statistics were not independently checked; invitation wait is distinct from visa processing."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "AUS-WORK-PROCESSING-TIMELINE-007-E1",
+            "AUS-WORK-PROCESSING-TIMELINE-007-E2",
+            "AUS-WORK-PROCESSING-TIMELINE-007-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Processing and invitation speeds are highly time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "processing time",
+        "189",
+        "190",
+        "491",
+        "invitation wait",
+        "grant"
+      ],
+      "first_seen": "2025-02-28",
+      "last_seen": "2025-10-21"
+    },
+    {
+      "signal_id": "AUS-WORK-PTE-ACCESS-008",
+      "issue_cluster_id": "AUS-WORK-PTE-ACCESS-008",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "language_test_access_friction",
+        "class": "external_service"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "189",
+            "190",
+            "491",
+            "482"
+          ]
+        },
+        "process_stages": [
+          "language_test"
+        ],
+        "entities": [
+          {
+            "entity_type": "test_provider",
+            "name": "Pearson PTE"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "A sudden Pearson/PTE access disruption for Iran-origin applicants was reported in early September 2026",
+          "fa": "در اوایل سپتامبر ۲۰۲۶ اختلال ناگهانی دسترسی متقاضیان ایرانی به Pearson/PTE گزارش شده است"
+        },
+        "summary": {
+          "en": "The export shows a rapid change in discussion: PTE was described as workable at the end of August, but by 4 September a user reported a Pearson restriction affecting exams and circulated a petition; Turkey was discussed as an external test location.",
+          "fa": "گفتگوها تغییر سریع شرایط را نشان می‌دهند: در پایان اوت PTE گزینه عملی معرفی شده، اما تا ۴ سپتامبر یک کاربر از محدودیت Pearson روی آزمون‌ها خبر داده و ترکیه نیز به‌عنوان محل آزمون خارج از ایران مطرح شده است."
+        },
+        "practical_impact": {
+          "en": "Applicants depending on PTE for invitation points may face sudden scheduling/travel friction.",
+          "fa": "متقاضیانی که برای امتیاز دعوتنامه به PTE تکیه دارند ممکن است ناگهان با مشکل زمان‌بندی یا سفر برای آزمون مواجه شوند."
+        },
+        "who_should_care": {
+          "en": "Iran-based skilled applicants planning English-test points through PTE.",
+          "fa": "متقاضیان مهارتی داخل ایران که قصد کسب امتیاز زبان از PTE دارند."
+        },
+        "recommended_action": {
+          "en": "Verify current Pearson eligibility and test-centre availability before paying or planning around a PTE date, and keep an alternative test/location plan.",
+          "fa": "پیش از پرداخت یا برنامه‌ریزی روی تاریخ PTE، وضعیت فعلی Pearson و سنترها را بررسی کنید و پلن جایگزین آزمون/کشور داشته باشید."
+        },
+        "known_workaround": "Turkey was discussed as a practical nearby testing location."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-WORK-PTE-ACCESS-008-C1",
+          "relation": "contradicts",
+          "independence_group": "pte-adviser"
+        },
+        {
+          "evidence_id": "AUS-WORK-PTE-ACCESS-008-E1",
+          "relation": "supports",
+          "independence_group": "pte-r2"
+        },
+        {
+          "evidence_id": "AUS-WORK-PTE-ACCESS-008-W1",
+          "relation": "supports",
+          "independence_group": "pte-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "anecdotal",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "low",
+          "rationale": "The restriction claim is based on one direct community reporter and needs current provider verification; the sharp timing change makes it important but uncertain."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Pearson's current official country-access rules were not independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "AUS-WORK-PTE-ACCESS-008-C1",
+            "AUS-WORK-PTE-ACCESS-008-E1",
+            "AUS-WORK-PTE-ACCESS-008-W1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-23",
+        "reason": "Fast-changing test-provider issue; recheck frequently.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "PTE",
+        "Pearson",
+        "Iran",
+        "test access",
+        "Turkey"
+      ],
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-04"
+    },
+    {
+      "signal_id": "AUS-WORK-BIOMETRICS-TEHRAN-009",
+      "issue_cluster_id": "AUS-WORK-BIOMETRICS-TEHRAN-009",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "biometrics_access",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "skilled_worker",
+            "482",
+            "189",
+            "190",
+            "491"
+          ]
+        },
+        "process_stages": [
+          "biometrics"
+        ],
+        "entities": [
+          {
+            "entity_type": "vac",
+            "name": "VFS Tehran"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "Community reports indicate biometrics could be completed in Tehran without a separate appointment while the local service was operating",
+          "fa": "گزارش‌های گروه می‌گویند تا زمان فعال بودن سرویس محلی، بایومتریک در تهران بدون وقت جداگانه قابل انجام بوده است"
+        },
+        "summary": {
+          "en": "A community report said biometrics were being handled in Tehran, and adviser responses in June and September 2026 said a separate appointment was not required.",
+          "fa": "یک گزارش کامیونیتی انجام بایومتریک در تهران را تأیید کرده و پاسخ‌های مشاور در ژوئن و سپتامبر ۲۰۲۶ گفته‌اند وقت جداگانه لازم نیست."
+        },
+        "practical_impact": {
+          "en": "This can remove a third-country travel step, but local service availability can change abruptly.",
+          "fa": "این موضوع می‌تواند نیاز به سفر کشور ثالث را حذف کند، اما وضعیت سرویس محلی ممکن است ناگهانی تغییر کند."
+        },
+        "who_should_care": {
+          "en": "Iran-based Australian visa applicants approaching the biometrics stage.",
+          "fa": "متقاضیان ویزای استرالیا در ایران که به مرحله بایومتریک می‌رسند."
+        },
+        "recommended_action": {
+          "en": "Confirm that the Tehran service is open immediately before attending; do not assume historical availability remains current.",
+          "fa": "درست پیش از مراجعه فعال بودن سرویس تهران را بررسی کنید و دسترسی تاریخی را به زمان فعلی تعمیم ندهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-WORK-BIOMETRICS-TEHRAN-009-E1",
+          "relation": "supports",
+          "independence_group": "bio-r1"
+        },
+        {
+          "evidence_id": "AUS-WORK-BIOMETRICS-TEHRAN-009-E2",
+          "relation": "supports",
+          "independence_group": "bio-adviser"
+        },
+        {
+          "evidence_id": "AUS-WORK-BIOMETRICS-TEHRAN-009-E3",
+          "relation": "supports",
+          "independence_group": "bio-adviser"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The workflow is supported by one community report and repeated adviser guidance, but VAC availability is operational and can change."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current VFS operational status was not independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "AUS-WORK-BIOMETRICS-TEHRAN-009-E1",
+            "AUS-WORK-BIOMETRICS-TEHRAN-009-E2",
+            "AUS-WORK-BIOMETRICS-TEHRAN-009-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "VAC operations are highly changeable.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "biometrics",
+        "VFS",
+        "Tehran",
+        "Australia visa"
+      ],
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-09-07"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names and user IDs are omitted from evidence summaries."
+      },
+      "full_sources_processed": {
+        "status": "pass",
+        "note": "Parsed all 2,374 messages in the uploaded JSON export."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were reconstructed for selected candidate signals, not exhaustively for every message."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated statements by the same adviser/user are grouped under shared independence groups."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Contradictory evidence is preserved where it changes the claim, especially invitation outcomes, grant continuity, study-concurrent work and PTE access."
+      },
+      "resolutions_checked": {
+        "status": "partial",
+        "note": "Fast-changing operational signals remain monitoring/recheck candidates."
+      },
+      "country_scope_checked": {
+        "status": "pass",
+        "note": null
+      },
+      "route_scope_checked": {
+        "status": "pass",
+        "note": "Signals are scoped to employment/work or work-visa operational stages."
+      },
+      "institution_scope_checked": {
+        "status": "pass",
+        "note": "Assessing-authority examples are not generalized into universal rules."
+      },
+      "correlated_penalties_checked": {
+        "status": "pass",
+        "note": "Invitation competitiveness, onshore priority and processing delay are kept as distinct mechanisms."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah community-signal connector was unavailable during this run, so duplicates against the remote validated store could not be merged."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Candidate community signals extracted from the uploaded source. They are practical evidence, not official eligibility rules, approval probabilities, or substitutes for current Home Affairs, state, assessing-authority, test-provider or VAC guidance."
+}

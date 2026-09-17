@@ -1,0 +1,178 @@
+{
+  "source": "Hamrah Community Signal Candidate Extraction",
+  "generatedAt": "2026-09-16T11:03:31Z",
+  "coverage": {
+    "filesScanned": 1,
+    "validDatasets": 0,
+    "invalidDatasets": [],
+    "truncated": false,
+    "validationStatus": "candidate_only"
+  },
+  "filters": {
+    "countryCode": "ITA",
+    "route": "study",
+    "originCountry": "Iran",
+    "nationality": "Iranian"
+  },
+  "resultCount": 4,
+  "signals": [
+    {
+      "datasetId": "candidate:ita-study-iran-pargar-2025-2026",
+      "signalId": "ita-study-irn-visa-appointment-friction-2025-11",
+      "countryCode": "ITA",
+      "route": "study",
+      "topic": "student visa appointment delay",
+      "processStage": "visa_application",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "Embassy of Italy in Tehran / VisaMetric",
+      "status": "historical",
+      "firstObservedAt": "2025-11-15",
+      "lastObservedAt": "2025-11-23",
+      "summary": "Iranian students were reported to face continuing difficulty obtaining Italian student-visa appointments in Tehran. A Turin court order concerning appointment access was reported, followed later by a limited VisaMetric appointment-registration opening for 24 November 2025.",
+      "assessment": {
+        "signalType": "process_friction",
+        "severity": "high",
+        "confidence": "medium",
+        "currentApplicability": "unknown",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_channel_export",
+          "sourceName": "اخبار ایتالیا با پرگار",
+          "sourceMessageId": 505,
+          "sourceDate": "2025-11-15",
+          "sourceFile": "result(7).json",
+          "claim": "Problems with student-visa appointment access for Iranian students were reported as continuing despite a Turin court order."
+        },
+        {
+          "sourceType": "community_channel_export",
+          "sourceName": "اخبار ایتالیا با پرگار",
+          "sourceMessageId": 508,
+          "sourceDate": "2025-11-23",
+          "sourceFile": "result(7).json",
+          "claim": "A VisaMetric registration window for Italian student-visa requests was announced for 24 November 2025."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:ita-study-iran-pargar-2025-2026",
+      "signalId": "ita-study-edisu-scholarship-payment-delay-2025-01",
+      "countryCode": "ITA",
+      "route": "study",
+      "topic": "regional scholarship payment delay",
+      "processStage": "post_enrollment_funding",
+      "entity": "EDISU Piemonte",
+      "status": "historical",
+      "firstObservedAt": "2025-01-31",
+      "lastObservedAt": "2025-02-06",
+      "summary": "A significant delay in the first scholarship installment for students in Turin was reported. A later channel update stated that EDISU had announced payment of the first installment for the following week.",
+      "assessment": {
+        "signalType": "funding_delay",
+        "severity": "medium",
+        "confidence": "medium",
+        "currentApplicability": "historical_only",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_channel_export",
+          "sourceName": "اخبار ایتالیا با پرگار",
+          "sourceMessageId": 374,
+          "sourceDate": "2025-01-31",
+          "sourceFile": "result(7).json",
+          "claim": "An unprecedented delay in the initial scholarship installment for many students in Turin was reported."
+        },
+        {
+          "sourceType": "community_channel_export",
+          "sourceName": "اخبار ایتالیا با پرگار",
+          "sourceMessageId": 379,
+          "sourceDate": "2025-02-06",
+          "sourceFile": "result(7).json",
+          "claim": "The channel reported that EDISU had announced first-installment payment during the following week."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:ita-study-iran-pargar-2025-2026",
+      "signalId": "ita-study-regional-scholarship-budget-variability-2025",
+      "countryCode": "ITA",
+      "route": "study",
+      "topic": "regional scholarship budget constraints",
+      "processStage": "scholarship_application",
+      "entity": "Italian regional right-to-study scholarship systems",
+      "status": "uncertain",
+      "firstObservedAt": "2025-02-08",
+      "lastObservedAt": "2025-02-08",
+      "summary": "The channel reported scholarship limitations or budget pressure affecting several locations, including Pavia and universities in Veneto, while explicitly warning that conditions can change by academic year.",
+      "scope": {
+        "locationsMentioned": [
+          "Marche",
+          "Tuscany",
+          "Pavia",
+          "Veneto",
+          "Venice",
+          "Verona",
+          "Padua",
+          "Bolzano",
+          "Trento"
+        ]
+      },
+      "assessment": {
+        "signalType": "funding_availability",
+        "severity": "medium",
+        "confidence": "low",
+        "currentApplicability": "uncertain",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_channel_export",
+          "sourceName": "اخبار ایتالیا با پرگار",
+          "sourceMessageId": 382,
+          "sourceDate": "2025-02-08",
+          "sourceFile": "result(7).json",
+          "claim": "The post described scholarship funding constraints across several regions and explicitly stated that the situation may change from year to year."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:ita-study-iran-pargar-2025-2026",
+      "signalId": "irn-study-duolingo-det-id-restriction-2026-08",
+      "countryCode": "ITA",
+      "route": "study",
+      "topic": "English language test access restriction",
+      "processStage": "language_requirement",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "Duolingo English Test",
+      "status": "monitoring",
+      "firstObservedAt": "2026-08-27",
+      "lastObservedAt": "2026-08-27",
+      "summary": "The channel reported that the Duolingo English Test was unavailable in Iran and for users authenticating with Iranian identification documents. This is not Italy-specific but may affect Iranian applicants whose intended Italian program accepts DET.",
+      "assessment": {
+        "signalType": "test_access",
+        "severity": "medium",
+        "confidence": "medium",
+        "currentApplicability": "potentially_current",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_channel_export",
+          "sourceName": "اخبار ایتالیا با پرگار",
+          "sourceMessageId": 584,
+          "sourceDate": "2026-08-27",
+          "sourceFile": "result(7).json",
+          "claim": "The post stated that DET access had been stopped in Iran and for users with Iranian IDs."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    }
+  ],
+  "usageNote": "These records were extracted from the uploaded community-channel export. They are candidate community signals and have not been promoted to Hamrah's validated Community Signal Store. Historical and uncertain signals must not be treated as current official immigration rules without freshness and source validation."
+}

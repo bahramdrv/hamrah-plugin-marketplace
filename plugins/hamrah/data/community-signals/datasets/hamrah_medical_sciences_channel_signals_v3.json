@@ -1,0 +1,1346 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_medical_sciences_public_channel_signals_candidate",
+    "generated_at": "2026-09-17T07:23:02Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "medical-sciences-pargar-public-channel",
+      "name": "result(20260917-071916).json / Telegram export «کانال علوم پزشکی با پرگار»",
+      "source_type": "public_channel_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-06-30",
+        "to": "2026-05-29",
+        "records_available": 28,
+        "records_processed": 28,
+        "message_records": 28
+      },
+      "source_characteristics": {
+        "public_channel": true,
+        "healthcare_migration_brand_channel": true,
+        "contains_forwarded_posts": true,
+        "contains_promotional_posts": true,
+        "contains_analysis_and_predictions": true,
+        "contains_operational_service_updates": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "MEDCH-US-ACCESS-001-E1",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "378"
+      },
+      "published_at": "2025-06-30",
+      "event_date": "2025-06-30",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "channel_live_topic",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The channel framed the Iran-Israel conflict and U.S. travel restrictions as direct migration-planning issues for Iranians and advertised a session on ways applicants might respond.",
+        "fa": "کانال جنگ ایران و اسرائیل و محدودیت سفر آمریکا را مستقیماً مسئله برنامه‌ریزی مهاجرت ایرانی‌ها معرفی کرده و درباره راه‌های واکنش متقاضیان لایو گذاشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-US-ACCESS-001-E2",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "380"
+      },
+      "published_at": "2025-07-08",
+      "event_date": "2025-07-08",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "channel_live_topic",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A later post again centered U.S. planning on the history of the Travel Ban, visa backlog and the future of U.S. study access.",
+        "fa": "پست بعدی دوباره برنامه‌ریزی آمریکا را حول Travel Ban، بک‌لاگ و آینده دسترسی تحصیلی به آمریکا قرار داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-US-ACCESS-001-E3",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "383"
+      },
+      "published_at": "2025-09-06",
+      "event_date": "2025-09-06",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "promotional_case_claim",
+      "firsthandness": "reported",
+      "evidence_quality": "low_due_to_promotional_context",
+      "summary": {
+        "en": "The channel presented an EB-3 immigrant-visa case as evidence that some immigrant-visa issuance continued during the restriction period and attributed it to a claimed religious-minority instruction.",
+        "fa": "کانال یک کیس ویزای مهاجرتی EB-3 را شاهدی برای ادامه صدور بعضی ویزاها در دوره محدودیت معرفی کرده و آن را به دستورالعمل ادعایی مربوط به اقلیت‌های دینی نسبت داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-EU-SPILLOVER-002-E1",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "381"
+      },
+      "published_at": "2025-08-13",
+      "event_date": "2025-08-13",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "channel_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "low_single_source_analysis",
+      "summary": {
+        "en": "The channel claimed that harder U.S. conditions were shifting more migration demand toward Europe and that rising demand plus anti-immigration sentiment could make European visa issuance harder.",
+        "fa": "کانال ادعا کرده سخت‌ترشدن شرایط آمریکا تقاضای مهاجرت را به اروپا منتقل کرده و افزایش تقاضا همراه با فضای ضد مهاجرت می‌تواند ویزادهی اروپا را سخت‌تر کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-EU-SPILLOVER-002-E2",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "398"
+      },
+      "published_at": "2025-11-14",
+      "event_date": "2025-11-14",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "channel_strategy_post",
+      "firsthandness": "reported",
+      "evidence_quality": "low_promotional_opinion",
+      "summary": {
+        "en": "A later strategy post recommended diversifying toward countries such as New Zealand, Australia, China, Canada and selected Asian destinations rather than relying on one Western route.",
+        "fa": "یک پست راهبردی بعدی پیشنهاد کرده به‌جای اتکا به یک مسیر غربی، مقصدهایی مثل نیوزیلند، استرالیا، چین، کانادا و بعضی کشورهای آسیایی هم در برنامه باشند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-IR-DISRUPTION-003-E1",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "403"
+      },
+      "published_at": "2026-03-14",
+      "event_date": "2026-03-14",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "source_direct_operation",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "During a period when internet access in Iran was disrupted, the channel said it had temporarily offered a support service so applicants could complete migration tasks such as interviews.",
+        "fa": "در دوره‌ای که اینترنت ایران قطع/مختل بود، کانال گفته برای اینکه متقاضیان بتوانند کارهای مهاجرتی مثل مصاحبه را انجام دهند موقتاً سرویس حمایتی راه انداخته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-IR-DISRUPTION-003-E2",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "404"
+      },
+      "published_at": "2026-03-16",
+      "event_date": "2026-03-16",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "channel_resource_summary",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Two days later the channel grouped practical resources around family communication without internet, land-border exit experiences, and getting online inside Iran.",
+        "fa": "دو روز بعد کانال منابع عملی را در سه دسته ارتباط با خانواده بدون اینترنت، تجربه خروج زمینی از مرزها و اتصال به اینترنت داخل ایران جمع‌بندی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-PHYSICIAN-PIVOT-004-E1",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "405"
+      },
+      "published_at": "2026-05-29",
+      "event_date": "2026-05-29",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "promotional_route_claim",
+      "firsthandness": "reported",
+      "evidence_quality": "low_promotional_single_post",
+      "summary": {
+        "en": "In May 2026 the channel claimed that conventional physician-migration routes had changed substantially over the prior two years and described only limited routes such as UK Global Talent as remaining, while promoting Chile as a new route.",
+        "fa": "در مه ۲۰۲۶ کانال ادعا کرده مسیرهای مرسوم مهاجرت پزشکان طی دو سال قبل تغییر اساسی کرده و فقط مسیرهای محدودی مثل Global Talent بریتانیا باقی مانده‌اند؛ همزمان شیلی را به‌عنوان مسیر جدید تبلیغ کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-PHYSICIAN-PIVOT-004-E2",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "379"
+      },
+      "published_at": "2025-07-05",
+      "event_date": "2025-07-05",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "channel_expert_event",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The channel highlighted a China-based PhD/postdoc/industry profile as a source for questions about study, work and life in China, showing active promotion of non-clinical China pathways.",
+        "fa": "کانال یک پروفایل دکتری/پست‌داک/صنعت در چین را منبع پاسخ‌گویی درباره تحصیل، کار و زندگی چین معرفی کرده و روی مسیرهای غیرکلینیکی چین تمرکز نشان داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-PHYSICIAN-PIVOT-004-E3",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "380"
+      },
+      "published_at": "2025-07-08",
+      "event_date": "2025-07-08",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "channel_expert_event",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The same period promoted postgraduate and postdoctoral admission routes in Australia and across Europe, alongside U.S. visa-risk discussions.",
+        "fa": "در همان دوره کانال مسیرهای ارشد، دکتری و پست‌داک استرالیا و اروپا را در کنار بحث ریسک ویزای آمریکا برجسته کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-ACADEMIC-005-E1",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "379"
+      },
+      "published_at": "2025-07-05",
+      "event_date": "2025-07-05",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "channel_expert_event",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "China was presented through a profile spanning PhD, postdoc, teaching and pharmaceutical-industry experience, suggesting academic/research mobility as a durable alternative for medical-science profiles.",
+        "fa": "چین با پروفایلی شامل دکتری، پست‌داک، تدریس و صنعت دارویی معرفی شده که مسیر آکادمیک/پژوهشی را برای پروفایل علوم پزشکی برجسته می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-ACADEMIC-005-E2",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "380"
+      },
+      "published_at": "2025-07-08",
+      "event_date": "2025-07-08",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "channel_expert_event",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Australia and multiple European countries were explicitly framed around master's, PhD and postdoc admission rather than clinical licensing.",
+        "fa": "استرالیا و چند کشور اروپایی صریحاً حول پذیرش ارشد، دکتری و پست‌داک مطرح شده‌اند، نه لایسنس بالینی."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-ACADEMIC-005-E3",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "405"
+      },
+      "published_at": "2026-05-29",
+      "event_date": "2026-05-29",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "promotional_route_claim",
+      "firsthandness": "reported",
+      "evidence_quality": "low_promotional_context",
+      "summary": {
+        "en": "The later physician-route post reinforces a channel-level shift toward alternative/niche routes when conventional migration pathways are described as constrained.",
+        "fa": "پست بعدی درباره پزشکان نیز تغییر جهت کانال به مسیرهای جایگزین/niche را وقتی مسیرهای مرسوم محدود توصیف می‌شوند تقویت می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-FX-PAYMENT-006-E1",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "396"
+      },
+      "published_at": "2025-11-06",
+      "event_date": "2025-11-06",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "service_promotion",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_but_operational",
+      "summary": {
+        "en": "The channel repeatedly marketed foreign-currency payment support specifically for university and embassy application payments.",
+        "fa": "کانال مکرراً سرویس پرداخت ارزی را مشخصاً برای پرداخت‌های دانشگاه و سفارت تبلیغ کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-FX-PAYMENT-006-E2",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "402"
+      },
+      "published_at": "2026-01-17",
+      "event_date": "2026-01-17",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "service_promotion",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_but_operational",
+      "summary": {
+        "en": "The same infrastructure was later marketed for sending foreign currency to spouses and children abroad while paying in Iranian rials domestically.",
+        "fa": "همان زیرساخت بعداً برای ارسال ارز به همسر/فرزند خارج کشور در برابر پرداخت ریالی داخل ایران تبلیغ شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "MEDCH-FX-PAYMENT-006-E3",
+      "source_id": "medical-sciences-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "403"
+      },
+      "published_at": "2026-03-14",
+      "event_date": "2026-03-14",
+      "collected_at": "2026-09-17T07:23:02Z",
+      "source_type": "source_direct_operation",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Even while other support services were being reduced during disruption, the channel said outbound foreign-currency payment and migration-consultation services remained active.",
+        "fa": "حتی هنگام کاهش بعضی سرویس‌ها در دوره اختلال، کانال گفته پرداخت ارزی به خارج و مشاوره مهاجرتی همچنان فعال مانده است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "MEDCH-US-ACCESS-001",
+      "issue_cluster_id": "IRAN-US-TRAVEL-RESTRICTION-VISA-FRAGMENTATION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MEDCH-EU-SPILLOVER-002"
+        }
+      ],
+      "classification": {
+        "family": "E3_VISA_ADJUDICATION",
+        "type": "travel_restriction_and_exception_fragmentation",
+        "class": "US_access"
+      },
+      "scope": {
+        "destination": {
+          "country": "United States",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "physician",
+            "healthcare professional",
+            "medical-science researcher"
+          ],
+          "fields": [
+            "medicine",
+            "medical sciences",
+            "healthcare"
+          ],
+          "education_levels": [],
+          "regulated_professions": [
+            "physician",
+            "healthcare professional"
+          ],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "IMMIGRANT VISA"
+          ],
+          "codes": [
+            "student_visa",
+            "immigrant_visa",
+            "EB3",
+            "NIW"
+          ]
+        },
+        "process_stages": [
+          "visa_strategy",
+          "backlog",
+          "consular_processing"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel treats U.S. access for Iranians as fragmented by travel restrictions, backlog and route-specific exceptions rather than uniformly open or closed",
+          "fa": "کانال دسترسی ایرانی‌ها به آمریکا را تحت Travel Ban، بک‌لاگ و استثناهای route-specific تکه‌تکه می‌بیند، نه کاملاً باز یا کاملاً بسته"
+        },
+        "summary": {
+          "en": "From June to September 2025, U.S. travel restrictions and backlog repeatedly appeared as planning topics. A later promotional case post claimed some immigrant-visa issuance continued under an exception, but this was not independently verified.",
+          "fa": "از ژوئن تا سپتامبر ۲۰۲۵ Travel Ban و بک‌لاگ آمریکا چند بار موضوع برنامه‌ریزی بوده‌اند. یک پست تبلیغاتی بعدی نیز مدعی ادامه صدور بعضی ویزاهای مهاجرتی تحت یک استثنا شده، اما مستقلاً راستی‌آزمایی نشده است."
+        },
+        "practical_impact": {
+          "en": "Applicants cannot infer access from the country alone; visa category and current exception/consular conditions matter.",
+          "fa": "متقاضی نمی‌تواند فقط از «آمریکا» نتیجه بگیرد؛ کتگوری ویزا و استثنا/شرایط کنسولی روز تعیین‌کننده است."
+        },
+        "who_should_care": {
+          "en": "Iranian medical-science applicants considering U.S. study or immigrant routes.",
+          "fa": "متقاضیان ایرانی علوم پزشکی برای تحصیل یا ویزاهای مهاجرتی آمریکا."
+        },
+        "recommended_action": {
+          "en": "Treat all route-specific exception claims as requiring current official confirmation before acting.",
+          "fa": "هر ادعای استثنای route-specific را قبل از اقدام با منبع رسمی روز تأیید کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MEDCH-US-ACCESS-001-E1",
+          "relation": "supports",
+          "independence_group": "MEDCH-US-ACCESS-001-E1"
+        },
+        {
+          "evidence_id": "MEDCH-US-ACCESS-001-E2",
+          "relation": "supports",
+          "independence_group": "MEDCH-US-ACCESS-001-E2"
+        },
+        {
+          "evidence_id": "MEDCH-US-ACCESS-001-E3",
+          "relation": "supports",
+          "independence_group": "MEDCH-US-ACCESS-001-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Travel restriction/backlog is repeated, but the exception evidence is promotional and not independently verified."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No current U.S. travel-ban, waiver, immigrant-visa exception or consular rule was independently verified in this extraction run."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MEDCH-US-ACCESS-001-E1",
+            "MEDCH-US-ACCESS-001-E2",
+            "MEDCH-US-ACCESS-001-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Channel posts can mix analysis, promotion and reported cases."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "U.S. entry and visa restrictions are highly time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "United States",
+        "Travel Ban",
+        "backlog",
+        "Iranian applicants",
+        "EB3"
+      ],
+      "first_seen": "2025-06-30",
+      "last_seen": "2025-09-06"
+    },
+    {
+      "signal_id": "MEDCH-EU-SPILLOVER-002",
+      "issue_cluster_id": "EUROPE-DEMAND-SPILLOVER-FROM-US",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MEDCH-US-ACCESS-001"
+        }
+      ],
+      "classification": {
+        "family": "E3_VISA_ADJUDICATION",
+        "type": "destination_demand_spillover",
+        "class": "Europe_visa_pressure"
+      },
+      "scope": {
+        "destination": {
+          "country": "Europe",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "physician",
+            "healthcare professional",
+            "medical-science researcher"
+          ],
+          "fields": [
+            "medicine",
+            "medical sciences",
+            "healthcare"
+          ],
+          "education_levels": [],
+          "regulated_professions": [
+            "physician",
+            "healthcare professional"
+          ],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "IMMIGRANT VISA"
+          ],
+          "codes": [
+            "study",
+            "work"
+          ]
+        },
+        "process_stages": [
+          "destination_selection",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel links harder U.S. conditions to more demand for Europe and warns that European visa conditions may also tighten",
+          "fa": "کانال سخت‌ترشدن آمریکا را به افزایش تقاضا برای اروپا وصل می‌کند و درباره سخت‌ترشدن احتمالی ویزای اروپا هشدار می‌دهد"
+        },
+        "summary": {
+          "en": "This is a channel analysis rather than verified policy data. A later strategy post also pushes applicants toward broader destination diversification.",
+          "fa": "این یک تحلیل کانال است نه داده رسمی سیاستی. پست راهبردی بعدی نیز متقاضیان را به تنوع مقصد تشویق می‌کند."
+        },
+        "practical_impact": {
+          "en": "Applicants relying on Europe as an automatic fallback to U.S. restrictions may face capacity or visa friction as demand shifts.",
+          "fa": "اتکا به اروپا به‌عنوان fallback خودکار آمریکا ممکن است با فشار ظرفیت یا ویزا روبه‌رو شود."
+        },
+        "who_should_care": {
+          "en": "Iranian applicants pivoting from the U.S. to Europe.",
+          "fa": "متقاضیان ایرانی که از آمریکا به اروپا pivot می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Treat destination switching as a fresh application strategy, not as a guaranteed easier fallback.",
+          "fa": "تغییر مقصد را یک استراتژی اپلای جدید ببینید، نه fallback تضمیناً آسان‌تر."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MEDCH-EU-SPILLOVER-002-E1",
+          "relation": "supports",
+          "independence_group": "MEDCH-EU-SPILLOVER-002-E1"
+        },
+        {
+          "evidence_id": "MEDCH-EU-SPILLOVER-002-E2",
+          "relation": "supports",
+          "independence_group": "MEDCH-EU-SPILLOVER-002-E2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "low",
+          "rationale": "The core claim comes from one channel-analysis post and a later promotional strategy post."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No European visa issuance statistics or policy changes were independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MEDCH-EU-SPILLOVER-002-E1",
+            "MEDCH-EU-SPILLOVER-002-E2"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Channel posts can mix analysis, promotion and reported cases."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Demand and visa policy vary by country and intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Europe",
+        "visa",
+        "demand",
+        "US restrictions",
+        "destination shift"
+      ],
+      "first_seen": "2025-08-13",
+      "last_seen": "2025-11-14"
+    },
+    {
+      "signal_id": "MEDCH-IR-DISRUPTION-003",
+      "issue_cluster_id": "IRAN-CONNECTIVITY-BORDER-MIGRATION-OPERATIONS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MEDCH-FX-PAYMENT-006"
+        }
+      ],
+      "classification": {
+        "family": "E20_LIFE_MOBILITY_OPERATIONS",
+        "type": "connectivity_and_border_disruption",
+        "class": "operational_continuity"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "physician",
+            "healthcare professional",
+            "medical-science researcher"
+          ],
+          "fields": [
+            "medicine",
+            "medical sciences",
+            "healthcare"
+          ],
+          "education_levels": [],
+          "regulated_professions": [
+            "physician",
+            "healthcare professional"
+          ],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "IMMIGRANT VISA"
+          ],
+          "codes": [
+            "study",
+            "work",
+            "visa"
+          ]
+        },
+        "process_stages": [
+          "interview",
+          "communication",
+          "border_exit",
+          "internet_access"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Internet disruption in Iran became a direct migration-execution risk, extending from online interviews to family communication and land-border exit planning",
+          "fa": "اختلال اینترنت ایران مستقیماً به ریسک اجرای پرونده مهاجرتی تبدیل شده؛ از مصاحبه آنلاین تا ارتباط خانواده و برنامه خروج زمینی"
+        },
+        "summary": {
+          "en": "In March 2026 the channel said it had temporarily supported applicants who needed to complete migration tasks during internet disruption, and then consolidated resources for no-internet family contact, land-border exits and connectivity.",
+          "fa": "در مارس ۲۰۲۶ کانال گفته برای متقاضیانی که هنگام اختلال اینترنت کارهایی مثل مصاحبه داشتند سرویس موقت ارائه کرده و بعد منابع ارتباط بدون اینترنت، خروج زمینی و اتصال را جمع‌بندی کرده است."
+        },
+        "practical_impact": {
+          "en": "A valid admission or appointment can still fail operationally if connectivity, communication or physical exit routes break down.",
+          "fa": "حتی پذیرش یا وقت معتبر ممکن است در عمل به‌خاطر اینترنت، ارتباط یا مسیر خروج دچار مشکل شود."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants with time-sensitive interviews, travel or consular steps.",
+          "fa": "متقاضیان داخل ایران با مصاحبه، سفر یا مرحله کنسولی زمان‌حساس."
+        },
+        "recommended_action": {
+          "en": "Maintain backup connectivity, communication and travel-continuity plans for deadline-critical steps.",
+          "fa": "برای مراحل deadline-critical، اینترنت جایگزین، کانال ارتباطی و پلن تداوم سفر داشته باشید."
+        },
+        "known_workaround": "The source collected no-internet communication and land-border experience links as temporary operational fallbacks."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MEDCH-IR-DISRUPTION-003-E1",
+          "relation": "supports",
+          "independence_group": "MEDCH-IR-DISRUPTION-003-E1"
+        },
+        {
+          "evidence_id": "MEDCH-IR-DISRUPTION-003-E2",
+          "relation": "supports",
+          "independence_group": "MEDCH-IR-DISRUPTION-003-E2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "episodic",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source directly describes an outage-driven support need and immediate border/connectivity resources."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "This is an operational source signal, not a claim about current internet or border status."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MEDCH-IR-DISRUPTION-003-E1",
+            "MEDCH-IR-DISRUPTION-003-E2"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Channel posts can mix analysis, promotion and reported cases."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "Connectivity and border conditions can change immediately.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Iran",
+        "internet outage",
+        "interview",
+        "land border",
+        "connectivity"
+      ],
+      "first_seen": "2026-03-14",
+      "last_seen": "2026-03-16"
+    },
+    {
+      "signal_id": "MEDCH-PHYSICIAN-PIVOT-004",
+      "issue_cluster_id": "PHYSICIAN-MIGRATION-ROUTE-PIVOT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MEDCH-ACADEMIC-005"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "channel_claimed_route_pivot",
+        "class": "physician_migration"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "physician",
+            "healthcare professional",
+            "medical-science researcher"
+          ],
+          "fields": [
+            "medicine",
+            "medical sciences",
+            "healthcare"
+          ],
+          "education_levels": [],
+          "regulated_professions": [
+            "physician",
+            "healthcare professional"
+          ],
+          "other_conditions": [
+            "Physicians / specialists"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "IMMIGRANT VISA"
+          ],
+          "codes": [
+            "Global_Talent",
+            "physician_migration",
+            "academic_route"
+          ]
+        },
+        "process_stages": [
+          "route_selection"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "By May 2026 the channel was explicitly pivoting physicians away from 'conventional' migration routes toward niche or alternative destinations",
+          "fa": "تا مه ۲۰۲۶ کانال صریحاً پزشکان را از «مسیرهای مرسوم» به سمت مسیرهای niche یا مقصدهای جایگزین سوق می‌دهد"
+        },
+        "summary": {
+          "en": "The source claims conventional physician routes had changed substantially, names UK Global Talent as a limited remaining example and promotes Chile. Earlier posts also promoted China, Australia and Europe for academic mobility.",
+          "fa": "منبع مدعی تغییر اساسی مسیرهای مرسوم پزشکان است، Global Talent بریتانیا را نمونه محدود باقی‌مانده می‌نامد و شیلی را تبلیغ می‌کند. پست‌های قبلی نیز چین، استرالیا و اروپا را برای mobility آکادمیک برجسته کرده‌اند."
+        },
+        "practical_impact": {
+          "en": "Healthcare applicants are being pushed toward route diversification rather than assuming one legacy clinical-migration playbook still works.",
+          "fa": "متقاضی سلامت به سمت تنوع route هل داده می‌شود و نباید فرض کند playbook قدیمی مهاجرت بالینی همچنان برقرار است."
+        },
+        "who_should_care": {
+          "en": "Iranian physicians and specialists evaluating 2026 migration options.",
+          "fa": "پزشکان و متخصصان ایرانی در حال بررسی گزینه‌های ۲۰۲۶."
+        },
+        "recommended_action": {
+          "en": "Treat Chile/Global Talent claims as leads to verify, not validated eligibility conclusions.",
+          "fa": "ادعای شیلی/Global Talent را lead برای بررسی بدانید، نه نتیجه تأییدشده eligibility."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MEDCH-PHYSICIAN-PIVOT-004-E1",
+          "relation": "supports",
+          "independence_group": "MEDCH-PHYSICIAN-PIVOT-004-E1"
+        },
+        {
+          "evidence_id": "MEDCH-PHYSICIAN-PIVOT-004-E2",
+          "relation": "supports",
+          "independence_group": "MEDCH-PHYSICIAN-PIVOT-004-E2"
+        },
+        {
+          "evidence_id": "MEDCH-PHYSICIAN-PIVOT-004-E3",
+          "relation": "supports",
+          "independence_group": "MEDCH-PHYSICIAN-PIVOT-004-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "low",
+          "rationale": "The key 2026 physician claim is a single promotional post; earlier posts only establish broader alternative-route emphasis."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Chile physician routes, UK Global Talent eligibility and the claim that conventional routes have 'ended' were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MEDCH-PHYSICIAN-PIVOT-004-E1",
+            "MEDCH-PHYSICIAN-PIVOT-004-E2",
+            "MEDCH-PHYSICIAN-PIVOT-004-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Channel posts can mix analysis, promotion and reported cases."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Route claims are both time-sensitive and promotional.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "physician",
+        "Chile",
+        "UK Global Talent",
+        "alternative route"
+      ],
+      "first_seen": "2025-07-05",
+      "last_seen": "2026-05-29"
+    },
+    {
+      "signal_id": "MEDCH-ACADEMIC-005",
+      "issue_cluster_id": "MEDICAL-SCIENCE-ACADEMIC-MOBILITY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MEDCH-PHYSICIAN-PIVOT-004"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "academic_research_mobility_focus",
+        "class": "academic_route"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "physician",
+            "healthcare professional",
+            "medical-science researcher"
+          ],
+          "fields": [
+            "medicine",
+            "medical sciences",
+            "healthcare"
+          ],
+          "education_levels": [],
+          "regulated_professions": [
+            "physician",
+            "healthcare professional"
+          ],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "IMMIGRANT VISA"
+          ],
+          "codes": [
+            "masters",
+            "PhD",
+            "postdoc",
+            "research"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "research_route",
+          "career_transition"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel repeatedly presents master's/PhD/postdoc and research mobility as a cross-country alternative for medical-science profiles",
+          "fa": "کانال مکرراً ارشد/PhD/پست‌داک و mobility پژوهشی را به‌عنوان مسیر چندکشوری برای پروفایل علوم پزشکی مطرح می‌کند"
+        },
+        "summary": {
+          "en": "China is represented through a PhD/postdoc/industry profile, while Australia and Europe are explicitly promoted for graduate and postdoctoral admission. This is an academic route signal, not a clinical-licensing signal.",
+          "fa": "چین با پروفایل دکتری/پست‌داک/صنعت و استرالیا/اروپا صریحاً با پذیرش تحصیلات تکمیلی و پست‌داک معرفی شده‌اند. این سیگنال آکادمیک است، نه لایسنس بالینی."
+        },
+        "practical_impact": {
+          "en": "Medical-science applicants with research profiles can consider academic mobility separately from patient-facing professional registration.",
+          "fa": "متقاضی علوم پزشکی با رزومه پژوهشی می‌تواند mobility آکادمیک را جدا از رجیستریشن بالینی بررسی کند."
+        },
+        "who_should_care": {
+          "en": "Medical-science graduates with research/PhD/postdoc profiles.",
+          "fa": "فارغ‌التحصیلان علوم پزشکی با پروفایل پژوهش/PhD/پست‌داک."
+        },
+        "recommended_action": {
+          "en": "Keep academic admission and clinical-practice licensing as separate route maps.",
+          "fa": "نقشه پذیرش آکادمیک و مجوز کار بالینی را جدا نگه دارید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MEDCH-ACADEMIC-005-E1",
+          "relation": "supports",
+          "independence_group": "MEDCH-ACADEMIC-005-E1"
+        },
+        {
+          "evidence_id": "MEDCH-ACADEMIC-005-E2",
+          "relation": "supports",
+          "independence_group": "MEDCH-ACADEMIC-005-E2"
+        },
+        {
+          "evidence_id": "MEDCH-ACADEMIC-005-E3",
+          "relation": "supports",
+          "independence_group": "MEDCH-ACADEMIC-005-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The channel repeatedly programs content around academic mobility across multiple destinations, but no programme-level funding/eligibility was verified."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No university-specific admission, funding or visa rule was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MEDCH-ACADEMIC-005-E1",
+            "MEDCH-ACADEMIC-005-E2",
+            "MEDCH-ACADEMIC-005-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Channel posts can mix analysis, promotion and reported cases."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Programme availability changes by intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "PhD",
+        "postdoc",
+        "China",
+        "Australia",
+        "Europe",
+        "medical science"
+      ],
+      "first_seen": "2025-07-05",
+      "last_seen": "2026-05-29"
+    },
+    {
+      "signal_id": "MEDCH-FX-PAYMENT-006",
+      "issue_cluster_id": "IRAN-CROSSBORDER-APPLICATION-PAYMENTS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "MEDCH-IR-DISRUPTION-003"
+        }
+      ],
+      "classification": {
+        "family": "E15_FINANCIAL_INFRASTRUCTURE",
+        "type": "third_party_fx_payment_dependency",
+        "class": "payment_infrastructure"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "physician",
+            "healthcare professional",
+            "medical-science researcher"
+          ],
+          "fields": [
+            "medicine",
+            "medical sciences",
+            "healthcare"
+          ],
+          "education_levels": [],
+          "regulated_professions": [
+            "physician",
+            "healthcare professional"
+          ],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "IMMIGRANT VISA"
+          ],
+          "codes": [
+            "study",
+            "visa",
+            "family_support"
+          ]
+        },
+        "process_stages": [
+          "application_payment",
+          "embassy_payment",
+          "remittance"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Cross-border payment rails remain an operational dependency for Iran-based applicants paying universities/embassies or supporting family abroad",
+          "fa": "ریل پرداخت برون‌مرزی برای متقاضی داخل ایران—پرداخت دانشگاه/سفارت یا حمایت مالی خانواده خارج—یک وابستگی عملی باقی مانده است"
+        },
+        "summary": {
+          "en": "The channel repeatedly markets third-party FX payments for university/embassy fees, family remittances and outbound foreign-currency transfers, including during service disruption. Promotional savings claims were excluded from the signal.",
+          "fa": "کانال مکرراً پرداخت ارزی شخص ثالث برای دانشگاه/سفارت، حواله خانواده و انتقال ارز به خارج را تبلیغ کرده و این سرویس را حتی در دوره اختلال فعال دانسته است. ادعاهای تبلیغاتی صرفه‌جویی مالی وارد سیگنال نشده‌اند."
+        },
+        "practical_impact": {
+          "en": "Applicants can face a process bottleneck even when the application itself is ready if compliant payment access is unavailable.",
+          "fa": "حتی با آماده‌بودن پرونده، نبود دسترسی compliant به پرداخت می‌تواند گلوگاه ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants with foreign application, test, university or embassy payments.",
+          "fa": "متقاضیان داخل ایران با هزینه اپلیکیشن، آزمون، دانشگاه یا سفارت خارجی."
+        },
+        "recommended_action": {
+          "en": "Confirm a compliant payment route before fee deadlines and avoid relying on unverified promotional savings claims.",
+          "fa": "قبل از deadline پرداخت، مسیر compliant را قطعی کنید و به ادعاهای تبلیغاتی صرفه‌جویی اتکا نکنید."
+        },
+        "known_workaround": "Third-party payment intermediaries are the recurring workaround in this source."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "MEDCH-FX-PAYMENT-006-E1",
+          "relation": "supports",
+          "independence_group": "MEDCH-FX-PAYMENT-006-E1"
+        },
+        {
+          "evidence_id": "MEDCH-FX-PAYMENT-006-E2",
+          "relation": "supports",
+          "independence_group": "MEDCH-FX-PAYMENT-006-E2"
+        },
+        {
+          "evidence_id": "MEDCH-FX-PAYMENT-006-E3",
+          "relation": "supports",
+          "independence_group": "MEDCH-FX-PAYMENT-006-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Repeated service posts show persistent demand, though all provider-specific claims come from the provider itself."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No payment-provider compliance, availability, fees or savings claim was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "MEDCH-FX-PAYMENT-006-E1",
+            "MEDCH-FX-PAYMENT-006-E2",
+            "MEDCH-FX-PAYMENT-006-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Channel posts can mix analysis, promotion and reported cases."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Payment access can change rapidly under banking/compliance constraints.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "foreign currency payment",
+        "university fee",
+        "embassy fee",
+        "Iran",
+        "remittance"
+      ],
+      "first_seen": "2025-11-06",
+      "last_seen": "2026-03-14"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Names, emails, Telegram handles and promotional contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 28 records from the uploaded JSON export."
+      },
+      "source_type_classification": {
+        "status": "pass",
+        "note": "This is treated as a public branded channel, not a first-hand community discussion group."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Webinar sales, discount codes, generic consultancy advertising, exaggerated second-passport claims and payment-price claims were excluded as standalone migration signals."
+      },
+      "political_prediction_filtered": {
+        "status": "pass",
+        "note": "Political/geopolitical predictions and characterizations were not converted into factual migration signals."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated U.S.-restriction, destination-diversification, second-passport, payment and academic-route posts were clustered or filtered."
+      },
+      "official_vs_channel_separated": {
+        "status": "pass",
+        "note": "No channel claim is treated as an independently verified immigration, visa, citizenship or professional rule."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote-store deduplication/merge was not completed."
+      }
+    }
+  },
+  "excluded_content": {
+    "high_volume_promotional_theme": "Second-passport / short-citizenship webinar campaign",
+    "reason": "Repeated commercial claims about 2-5 year citizenship, passport strength, costs and guaranteed outcomes were not independently verified and were primarily sales content.",
+    "policy": "Excluded from core actionable signals; retained only as source-characteristic context."
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Source-derived channel signals only. They are not official U.S./European/UK/Chile immigration rules, citizenship rules, healthcare-licensing rules or payment-provider guarantees. Verify current requirements with the relevant authority before acting."
+}

@@ -1,0 +1,2344 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_build_abroad_signals_candidate",
+    "generated_at": "2026-09-17T06:55:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "build-abroad-telegram-export",
+      "name": "result(20260917-063409).json / Telegram export «Build Abroad»",
+      "source_type": "public_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2026-04-03",
+        "to": "2026-09-17",
+        "records_available": 10998,
+        "records_processed": 10998,
+        "message_records": 8296
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "multi_country": true,
+        "contains_first_hand_expat_experience": true,
+        "contains_job_posts_and_referrals": true,
+        "contains_service_ads": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "BUILD-MOBILITY-SHORTSTAY-001-E1",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "52"
+      },
+      "published_at": "2026-04-03",
+      "event_date": "2026-04-03",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_community_pattern",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A group organizer said many members were relying on short-term visas and moving among nearby countries, encountering a new operational challenge in each destination.",
+        "fa": "یکی از اعضای محوری گروه گفته بسیاری از اعضا با ویزاهای کوتاه‌مدت بین کشورهای اطراف جابه‌جا می‌شوند و در هر کشور با چالش عملی جدیدی روبه‌رو می‌شوند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-MOBILITY-SHORTSTAY-001-E2",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "60"
+      },
+      "published_at": "2026-04-03",
+      "event_date": "2026-04-03",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_coordination",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Members proposed rapid in-person meetups in cities such as Istanbul so people facing similar cross-border problems could share solutions.",
+        "fa": "اعضا پیشنهاد ایونت‌های سریع حضوری در شهرهایی مثل استانبول را داده‌اند تا افراد با چالش‌های مشابه راه‌حل‌های یکدیگر را به اشتراک بگذارند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-MOBILITY-SHORTSTAY-001-E3",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "344"
+      },
+      "published_at": "2026-04-05",
+      "event_date": "2026-04-05",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_residence_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A member described spending one month in one Turkish city and then moving to Istanbul while starting a student-residence route, illustrating temporary-base switching before a more stable status.",
+        "fa": "یک عضو از یک ماه اقامت در یک شهر ترکیه و سپس انتقال به استانبول همراه با شروع مسیر اقامت دانشجویی گفته که الگوی base موقت پیش از تثبیت وضعیت را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-ARM-REMOTE-BASE-002-E1",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "155"
+      },
+      "published_at": "2026-04-05",
+      "event_date": "2026-04-05",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply distinguished remote work from local employment in Armenia: a tourist can continue remote work, but local employment requires an appropriate work/residence basis.",
+        "fa": "پاسخ گروه بین کار ریموت و استخدام محلی در ارمنستان تفکیک کرده: توریست می‌تواند کار ریموت خود را ادامه دهد، اما استخدام محلی به مبنای کاری/اقامتی مناسب نیاز دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-ARM-REMOTE-BASE-002-E2",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "168"
+      },
+      "published_at": "2026-04-05",
+      "event_date": "2026-04-05",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_country_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A member described Armenia as relatively workable for online-business owners and freelancers, while noting local-language limits and stronger opportunities in internationally connected IT work.",
+        "fa": "یک عضو ارمنستان را برای صاحبان کسب‌وکار آنلاین و فریلنسرها نسبتاً عملی توصیف کرده و همزمان محدودیت زبان محلی و تمرکز فرصت بهتر در IT بین‌المللی را گفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-ARM-REMOTE-BASE-002-E3",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1558"
+      },
+      "published_at": "2026-04-09",
+      "event_date": "2026-04-09",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_summary",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply summarized Armenia's strongest perceived advantage as living there while working remotely with European or U.S. clients.",
+        "fa": "پاسخ دیگری مزیت اصلی ارمنستان را امکان حضور در آنجا و کار ریموت با اروپا یا آمریکا دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-ARM-REMOTE-BASE-002-E4",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1604"
+      },
+      "published_at": "2026-04-09",
+      "event_date": "2026-04-09",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A user considering a three-month Armenia stay asked whether the country could be used as a base to find remote work and open a bank account before obtaining residence.",
+        "fa": "کاربری که قصد سه ماه ماندن در ارمنستان داشت پرسیده آیا می‌تواند از آنجا برای کار ریموت اقدام کند و پیش از اقامت حساب بانکی باز کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-ARM-COMPANY-RESIDENCE-003-E1",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "207"
+      },
+      "published_at": "2026-04-05",
+      "event_date": "2026-04-05",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance said freelancers could use a real business/contract structure, accounting and tax reporting as part of a work/residence setup.",
+        "fa": "راهنمایی گروه گفته فریلنسر می‌تواند از ساختار کسب‌وکار واقعی، قرارداد، حسابداری و مالیات به‌عنوان بخشی از مسیر کار/اقامت استفاده کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-ARM-COMPANY-RESIDENCE-003-E2",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "677"
+      },
+      "published_at": "2026-04-06",
+      "event_date": "2026-04-06",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_residence_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A member reported registering a company and obtaining residence for themselves and a spouse through employment in that company.",
+        "fa": "یک عضو گزارش کرده شرکت ثبت کرده و برای خود و همسرش از طریق استخدام در همان شرکت اقامت گرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-ARM-COMPANY-RESIDENCE-003-E3",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "682"
+      },
+      "published_at": "2026-04-06",
+      "event_date": "2026-04-06",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_processing_time",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same thread reported that after the company's work-permit step, residence arrived roughly fifty days later.",
+        "fa": "در همان زنجیره گفته شده بعد از مرحله ورک‌پرمیت شرکت، اقامت حدود پنجاه روز بعد صادر شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-ARM-COMPANY-RESIDENCE-003-C1",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1881"
+      },
+      "published_at": "2026-04-10",
+      "event_date": "2026-04-10",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_rejection",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A group of five people reported that after nearly three months in Armenia, registering a new company and filing residence requests, all five applications were rejected.",
+        "fa": "گروهی پنج‌نفره گزارش کرده‌اند پس از نزدیک سه ماه حضور در ارمنستان، ثبت شرکت جدید و درخواست اقامت، هر پنج پرونده ریجکت شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-ARM-COMPANY-RESIDENCE-003-E4",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2096"
+      },
+      "published_at": "2026-04-12",
+      "event_date": "2026-04-12",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_risk_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later warning said paper-only/sham companies increase rejection risk and that authorities may look for real contracts, cash flow and sustained economic activity; even a real company is not a guarantee.",
+        "fa": "هشدار بعدی گفته شرکت صوری ریسک ریجکت را بالا می‌برد و ممکن است قرارداد واقعی، جریان مالی و فعالیت اقتصادی پایدار بررسی شود؛ حتی شرکت واقعی هم تضمین اقامت نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-ARM-HOUSING-ADDRESS-004-E1",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "223"
+      },
+      "published_at": "2026-04-05",
+      "event_date": "2026-04-05",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "long_term_resident_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A long-term Armenia resident advised prioritizing social-number and address registration after finding housing, and warned about housing friction affecting newcomers.",
+        "fa": "یک ساکن قدیمی ارمنستان توصیه کرده بعد از گرفتن خانه، social number و ثبت آدرس را زود پیگیری کنید و درباره اصطکاک اجاره برای تازه‌واردها هشدار داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-ARM-HOUSING-ADDRESS-004-E2",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "413"
+      },
+      "published_at": "2026-04-06",
+      "event_date": "2026-04-06",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_housing_guidance",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user said renters seeking residence should agree before signing that the landlord will cooperate with address confirmation and a formal lease when needed.",
+        "fa": "یک کاربر گفته متقاضی اقامت باید پیش از قرارداد مطمئن شود مالک برای تأیید آدرس و قرارداد رسمی همکاری می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-ARM-HOUSING-ADDRESS-004-E3",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "434"
+      },
+      "published_at": "2026-04-06",
+      "event_date": "2026-04-06",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_deposit_loss",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A member reported losing a substantial rental deposit after leaving early, illustrating weak renter leverage when documentation/terms are informal.",
+        "fa": "یک عضو از ازدست‌دادن مبلغ قابل‌توجهی از ودیعه پس از خروج زودتر گفته که ریسک اجاره غیرشفاف/غیررسمی را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-ARM-HOUSING-ADDRESS-004-E4",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1432"
+      },
+      "published_at": "2026-04-09",
+      "event_date": "2026-04-09",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "detailed_country_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A detailed Armenia housing post said many listings can be unreliable and that landlords may avoid formal contracts because of tax, even though formal address evidence can matter for residence.",
+        "fa": "یک راهنمای تفصیلی اجاره ارمنستان گفته بخشی از آگهی‌ها قابل اتکا نیست و بعضی مالکان به‌دلیل مالیات از قرارداد رسمی اجتناب می‌کنند، در حالی که مدرک آدرس برای اقامت اهمیت دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-BANKING-IRANIAN-005-E1",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1781"
+      },
+      "published_at": "2026-04-10",
+      "event_date": "2026-04-10",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_banking_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "After starting company registration in Armenia, an Iranian applicant immediately faced uncertainty over which bank/branch would open an account and whether housing evidence was required.",
+        "fa": "بعد از شروع ثبت شرکت در ارمنستان، یک متقاضی ایرانی فوراً با ابهام درباره بانک/شعبه مناسب و نیاز احتمالی به مدرک محل سکونت روبه‌رو شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-BANKING-IRANIAN-005-E2",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3189"
+      },
+      "published_at": "2026-04-16",
+      "event_date": "2026-04-16",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_country_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Malaysia resident said banking had been difficult for Iranians, while work-visa/contract holders had better access to banking and private payment products.",
+        "fa": "یک مقیم مالزی گفته بانک برای ایرانی‌ها سخت بوده اما دارندگان قرارداد و ویزای کاری دسترسی بهتری به حساب و ابزارهای پرداخت خصوصی دارند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-BANKING-IRANIAN-005-E3",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3540"
+      },
+      "published_at": "2026-04-17",
+      "event_date": "2026-04-17",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_transfer_failure",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An Iranian account holder reported receiving an IBAN and attempting a transfer from the Netherlands, but the transfer returned and the bank later attributed the failure to Iranian nationality.",
+        "fa": "یک دارنده حساب ایرانی گفته با وجود دریافت IBAN، انتقال پول از هلند برگشت خورده و بانک بعداً علت را ملیت ایرانی عنوان کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-BANKING-IRANIAN-005-E4",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "4764"
+      },
+      "published_at": "2026-04-20",
+      "event_date": "2026-04-20",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_cash_transfer_problem",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A member said banks would not release a MoneyGram transfer to them because they were Iranian and they did not yet have residence status.",
+        "fa": "یک عضو گفته بانک‌ها به‌دلیل ایرانی‌بودن پول MoneyGram را تحویل نمی‌دادند و او هنوز اقامت نداشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-BANKING-IRANIAN-005-C1",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6021"
+      },
+      "published_at": "2026-04-24",
+      "event_date": "2026-04-24",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_update",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later message warned that a Turkish bank previously suggested as accessible to Iranians might no longer open accounts using only an Iranian passport.",
+        "fa": "پیام بعدی هشدار داده بانکی در ترکیه که قبلاً برای ایرانیان پیشنهاد می‌شد ممکن است دیگر صرفاً با پاسپورت ایرانی حساب باز نکند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-DIGITAL-NOMAD-PROOF-006-E1",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1318"
+      },
+      "published_at": "2026-04-09",
+      "event_date": "2026-04-09",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_research_summary",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A member summarized digital-nomad/freelance visas across several countries as commonly requiring minimum income, contracts and bank-turnover proof, with Iranian banking/eligibility creating extra uncertainty.",
+        "fa": "یک عضو ویزاهای دیجیتال‌نومد/فریلنس چند کشور را عموماً وابسته به حداقل درآمد، قرارداد و گردش حساب دانسته و گفته بانک/eligibility ایرانی‌ها می‌تواند اصطکاک اضافه بسازد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-DIGITAL-NOMAD-PROOF-006-E2",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3189"
+      },
+      "published_at": "2026-04-16",
+      "event_date": "2026-04-16",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_country_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Malaysia resident said a freelance-visa option existed but was difficult, requiring high income and meaningful upfront cost.",
+        "fa": "یک مقیم مالزی گفته مسیر ویزای فریلنس وجود دارد اما سخت است و درآمد بالا و هزینه اولیه قابل‌توجه می‌خواهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-DIGITAL-NOMAD-PROOF-006-E3",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1617"
+      },
+      "published_at": "2026-04-09",
+      "event_date": "2026-04-09",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_route_mapping",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In Armenia-focused discussion, freelancing/digital-nomad activity was grouped under a personal-business/tax structure rather than a standalone visa category.",
+        "fa": "در بحث ارمنستان، فریلنس/دیجیتال نومد ذیل ساختار کسب‌وکار شخصی و مالیات قرار داده شده، نه یک ویزای مستقل."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-REMOTE-JOBS-SPONSOR-007-E1",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10920"
+      },
+      "published_at": "2026-07-09",
+      "event_date": "2026-07-09",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "direct_job_post",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A U.S.-client remote data role preferred candidates in Europe-adjacent time zones, offered no relocation or visa sponsorship, but would consider highly skilled candidates inside Iran; spoken English and U.S. business-hour availability were explicit requirements.",
+        "fa": "یک موقعیت ریموت Data برای کلاینت آمریکایی، تایم‌زون نزدیک اروپا را ترجیح داده، ریلوکیشن/اسپانسرشیپ نداشته اما افراد بسیار ماهر داخل ایران را هم بررسی می‌کرد؛ انگلیسی مکالمه و حضور در ساعات کاری آمریکا شرط صریح بود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-REMOTE-JOBS-SPONSOR-007-E2",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10041"
+      },
+      "published_at": "2026-06-06",
+      "event_date": "2026-06-06",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "direct_referral_post",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A separate Germany data hiring post offered both internal referral and visa sponsorship/relocation, showing sponsorship exists but is role- and employer-specific.",
+        "fa": "یک آگهی دیگر برای پوزیشن‌های Data در آلمان هم referral داخلی و هم اسپانسرشیپ/ریلوکیشن داشته که نشان می‌دهد حمایت ویزا employer-specific است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-REMOTE-JOBS-SPONSOR-007-E3",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10258"
+      },
+      "published_at": "2026-06-14",
+      "event_date": "2026-06-14",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "direct_referral_post",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A senior engineering role in Berlin was shared with referral and possible visa sponsorship for a strong CV.",
+        "fa": "یک موقعیت senior engineering در برلین با referral و امکان اسپانسرشیپ برای رزومه قوی به اشتراک گذاشته شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-REMOTE-JOBS-SPONSOR-007-E4",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "12006"
+      },
+      "published_at": "2026-09-14",
+      "event_date": "2026-09-14",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_tooling",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "By September 2026, a member had built an automated channel scraping multiple sources specifically for newly posted relocation jobs.",
+        "fa": "تا سپتامبر ۲۰۲۶ یکی از اعضا کانالی خودکار برای جمع‌آوری سریع پوزیشن‌های relocation از چند سایت ساخته بود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-NETWORK-REFERRAL-008-E1",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "60"
+      },
+      "published_at": "2026-04-03",
+      "event_date": "2026-04-03",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_coordination",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The group explicitly framed in-person events as a way to surface shared problems and match them with someone who already has a solution.",
+        "fa": "گروه ایونت حضوری را صریحاً راهی برای پیدا کردن چالش مشترک و فردی که راه‌حلش را دارد معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-NETWORK-REFERRAL-008-E2",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1954"
+      },
+      "published_at": "2026-04-11",
+      "event_date": "2026-04-11",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "cofounder_search",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A founder used the group to look for a marketing co-founder for an AI language-learning startup.",
+        "fa": "یک بنیان‌گذار از گروه برای پیدا کردن co-founder بازاریابی برای استارتاپ آموزش زبان با AI استفاده کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-NETWORK-REFERRAL-008-E3",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2538"
+      },
+      "published_at": "2026-04-14",
+      "event_date": "2026-04-14",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "event_coordination",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Members organized an in-person meetup through a calendar registration link as the group scaled.",
+        "fa": "اعضا با بزرگ‌شدن گروه، دورهمی حضوری را با لینک ثبت‌نام تقویمی سازمان‌دهی کرده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-NETWORK-REFERRAL-008-E4",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10041"
+      },
+      "published_at": "2026-06-06",
+      "event_date": "2026-06-06",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "direct_referral_post",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Internal employee referrals were repeatedly shared for urgent international roles, turning the community into a job-discovery/referral layer.",
+        "fa": "referral داخلی برای پوزیشن‌های فوری بین‌المللی به‌طور مستقیم در گروه به اشتراک گذاشته شده و کامیونیتی را به لایه کشف/معرفی شغل تبدیل کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-IRAN-SERVICE-ACCESS-009-E1",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "20"
+      },
+      "published_at": "2026-04-03",
+      "event_date": "2026-04-03",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_operational_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A member abroad asked how to activate/maintain Iranian mobile roaming so the Iranian number would remain usable.",
+        "fa": "یک عضو خارج کشور درباره فعال/حفظ‌کردن رومینگ خط ایرانی پرسیده تا شماره‌اش قابل استفاده بماند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-IRAN-SERVICE-ACCESS-009-E2",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1909"
+      },
+      "published_at": "2026-04-10",
+      "event_date": "2026-04-10",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_operational_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A member in Armenia asked for a way to reach Iran-only online services, even at very low speed, showing geo-access rather than bandwidth was the critical need.",
+        "fa": "یک عضو در ارمنستان برای دسترسی به سرویس‌های فقط-ایران راه‌حل خواسته و گفته حتی سرعت بسیار کم کافی است؛ یعنی مسئله اصلی geo-access بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-IRAN-SERVICE-ACCESS-009-E3",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5179"
+      },
+      "published_at": "2026-04-21",
+      "event_date": "2026-04-21",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_operational_problem",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user abroad could not open a link needed for an online class in Iran and asked for an Iran-endpoint VPN.",
+        "fa": "یک کاربر خارج کشور نتوانسته لینک کلاس داخل ایران را باز کند و VPN با endpoint ایران خواسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-IRAN-SERVICE-ACCESS-009-E4",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5861"
+      },
+      "published_at": "2026-04-24",
+      "event_date": "2026-04-24",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "first_hand_workaround",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user reported that an Iranian mobile roaming data package restored access to both domestic Iranian sites and mobile-banking apps from abroad.",
+        "fa": "یک کاربر گزارش کرده بسته اینترنت رومینگ خط ایرانی، دسترسی به سایت‌های داخلی و همراه‌بانک‌ها را از خارج برگردانده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-COMPANY-MOBILITY-010-E1",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "260"
+      },
+      "published_at": "2026-04-05",
+      "event_date": "2026-04-05",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_country_experience",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Oman company registration was described as a package that could produce both residence and banking access, with the company then used to generate salary/financial records for later visa applications.",
+        "fa": "ثبت شرکت عمان به‌عنوان مسیری برای گرفتن اقامت و بانک و سپس ساخت سابقه حقوق/مالی برای ویزاهای بعدی توصیف شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-COMPANY-MOBILITY-010-E2",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "837"
+      },
+      "published_at": "2026-04-06",
+      "event_date": "2026-04-06",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another thread described employer/work-permit or company routes as a way to obtain residence and then approach embassies from the new country of residence.",
+        "fa": "گفتگوی دیگری مسیر کارفرما/ورک‌پرمیت یا شرکت را راهی برای گرفتن اقامت و سپس اقدام از سفارت‌ها در کشور محل اقامت جدید دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-COMPANY-MOBILITY-010-C1",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "848"
+      },
+      "published_at": "2026-04-06",
+      "event_date": "2026-04-06",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "Members asked whether company registration in Dubai still produced residence, showing that the company-to-residence link was unstable and country-specific.",
+        "fa": "اعضا پرسیده‌اند آیا ثبت شرکت در دبی همچنان اقامت می‌دهد؛ نشانه‌ای از اینکه اتصال شرکت به اقامت پایدار و یکسان نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BUILD-COMPANY-MOBILITY-010-E3",
+      "source_id": "build-abroad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3355"
+      },
+      "published_at": "2026-04-16",
+      "event_date": "2026-04-16",
+      "collected_at": "2026-09-17T06:55:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "Later discussion again sought current cost and timing for Oman residence through company registration, confirming recurring use of company structures as mobility infrastructure.",
+        "fa": "گفتگوی بعدی دوباره درباره هزینه و زمان اقامت عمان از طریق ثبت شرکت پرسیده و استفاده تکرارشونده از ساختار شرکت به‌عنوان زیرساخت جابه‌جایی را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "BUILD-MOBILITY-SHORTSTAY-001",
+      "issue_cluster_id": "CROSSBORDER-SHORT-STAY-BASE-HOPPING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BUILD-NETWORK-REFERRAL-008"
+        }
+      ],
+      "classification": {
+        "family": "E20_LIFE_MOBILITY_OPERATIONS",
+        "type": "short_stay_country_hopping",
+        "class": "mobility"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "REMOTE / FREELANCE",
+            "RESIDENCE / MOBILITY"
+          ],
+          "codes": [
+            "short_stay",
+            "tourist",
+            "temporary_residence"
+          ]
+        },
+        "process_stages": [
+          "country_selection",
+          "temporary_stay",
+          "stabilisation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Short-term visa hopping is common in this community, but every new country adds fresh operational friction",
+          "fa": "چرخش بین کشورهای اطراف با ویزای کوتاه‌مدت در این کامیونیتی رایج است، اما هر کشور اصطکاک عملی تازه‌ای اضافه می‌کند"
+        },
+        "summary": {
+          "en": "Members explicitly describe using short-term visas and rotating among nearby countries before securing a more stable residence base. Housing, banking, work rights and access to Iran all reset with each move.",
+          "fa": "اعضا صریحاً از استفاده از ویزاهای کوتاه‌مدت و جابه‌جایی بین کشورهای اطراف پیش از تثبیت اقامت گفته‌اند. با هر جابه‌جایی، مسائل خانه، بانک، حق کار و دسترسی به ایران دوباره مطرح می‌شود."
+        },
+        "practical_impact": {
+          "en": "Frequent moves preserve flexibility but repeatedly restart local setup costs and uncertainty.",
+          "fa": "جابه‌جایی زیاد انعطاف می‌دهد اما هزینه و ابهام setup محلی را مدام از نو ایجاد می‌کند."
+        },
+        "who_should_care": {
+          "en": "Iranian remote workers and founders using nearby countries as temporary bases.",
+          "fa": "ریموت‌ورکرها و بنیان‌گذاران ایرانی که کشورهای اطراف را base موقت می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Choose a temporary base by banking, work-right, housing-address and next-visa usefulness—not only entry ease.",
+          "fa": "base موقت را فقط بر اساس ورود آسان انتخاب نکنید؛ بانک، حق کار، آدرس رسمی و ارزش آن برای اقدام بعدی را هم بسنجید."
+        },
+        "known_workaround": "Peer networks and local meetups are repeatedly used to solve country-specific setup problems."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BUILD-MOBILITY-SHORTSTAY-001-E1",
+          "relation": "supports",
+          "independence_group": "BUILD-MOBILITY-SHORTSTAY-001-E1"
+        },
+        {
+          "evidence_id": "BUILD-MOBILITY-SHORTSTAY-001-E2",
+          "relation": "supports",
+          "independence_group": "BUILD-MOBILITY-SHORTSTAY-001-E2"
+        },
+        {
+          "evidence_id": "BUILD-MOBILITY-SHORTSTAY-001-E3",
+          "relation": "supports",
+          "independence_group": "BUILD-MOBILITY-SHORTSTAY-001-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The pattern is explicitly stated by the group's organizer and reinforced by member movement between temporary bases."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Country-specific entry and residence rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BUILD-MOBILITY-SHORTSTAY-001-E1",
+            "BUILD-MOBILITY-SHORTSTAY-001-E2",
+            "BUILD-MOBILITY-SHORTSTAY-001-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Build Abroad Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Temporary-entry rules can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "short-term visa",
+        "country hopping",
+        "temporary base"
+      ],
+      "first_seen": "2026-04-03",
+      "last_seen": "2026-04-05"
+    },
+    {
+      "signal_id": "BUILD-ARM-REMOTE-BASE-002",
+      "issue_cluster_id": "ARM-REMOTE-FREELANCE-BASE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BUILD-ARM-COMPANY-RESIDENCE-003"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "remote_base_vs_local_employment",
+        "class": "remote_work"
+      },
+      "scope": {
+        "destination": {
+          "country": "Armenia",
+          "country_code": "ARM",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "REMOTE / FREELANCE",
+            "RESIDENCE / MOBILITY"
+          ],
+          "codes": [
+            "remote_work",
+            "freelance",
+            "local_employment"
+          ]
+        },
+        "process_stages": [
+          "work_rights",
+          "remote_work",
+          "job_search"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Armenia is treated as a practical base for remote/freelance work, but local employment is a different legal/market problem",
+          "fa": "ارمنستان در گروه base عملی برای فریلنس/ریموت است، اما استخدام محلی مسئله حقوقی و بازار متفاوتی دارد"
+        },
+        "summary": {
+          "en": "Members repeatedly separate continuing foreign remote work from taking a local Armenian job. Remote/freelance profiles are described more positively, while local employment requires proper status and can be language-limited.",
+          "fa": "اعضا بارها ادامه کار ریموت خارجی را از استخدام محلی ارمنستان جدا کرده‌اند. پروفایل ریموت/فریلنس مثبت‌تر توصیف می‌شود، در حالی که استخدام محلی به وضعیت مناسب و اغلب زبان نیاز دارد."
+        },
+        "practical_impact": {
+          "en": "Moving to Armenia without an existing remote income source can produce a much harder job-search experience than moving with one.",
+          "fa": "رفتن به ارمنستان بدون درآمد ریموت موجود می‌تواند تجربه کاریابی بسیار سخت‌تری از رفتن با درآمد آماده ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Freelancers, online-business owners and remote employees considering Armenia.",
+          "fa": "فریلنسرها، صاحبان کسب‌وکار آنلاین و کارمندان ریموت متقاضی ارمنستان."
+        },
+        "recommended_action": {
+          "en": "Separate the plan for foreign remote income from any plan to take local Armenian employment.",
+          "fa": "برنامه درآمد ریموت خارجی را از برنامه استخدام محلی ارمنستان جدا طراحی کنید."
+        },
+        "known_workaround": "International-client work is repeatedly presented as the more portable model."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BUILD-ARM-REMOTE-BASE-002-E1",
+          "relation": "supports",
+          "independence_group": "BUILD-ARM-REMOTE-BASE-002-E1"
+        },
+        {
+          "evidence_id": "BUILD-ARM-REMOTE-BASE-002-E2",
+          "relation": "supports",
+          "independence_group": "BUILD-ARM-REMOTE-BASE-002-E2"
+        },
+        {
+          "evidence_id": "BUILD-ARM-REMOTE-BASE-002-E3",
+          "relation": "supports",
+          "independence_group": "BUILD-ARM-REMOTE-BASE-002-E3"
+        },
+        {
+          "evidence_id": "BUILD-ARM-REMOTE-BASE-002-E4",
+          "relation": "supports",
+          "independence_group": "BUILD-ARM-REMOTE-BASE-002-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple independent messages converge on the remote-vs-local distinction."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Armenian work and residence law was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BUILD-ARM-REMOTE-BASE-002-E1",
+            "BUILD-ARM-REMOTE-BASE-002-E2",
+            "BUILD-ARM-REMOTE-BASE-002-E3",
+            "BUILD-ARM-REMOTE-BASE-002-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Build Abroad Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Work-right and residence practice can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Armenia",
+        "remote",
+        "freelance",
+        "local job"
+      ],
+      "first_seen": "2026-04-05",
+      "last_seen": "2026-04-09"
+    },
+    {
+      "signal_id": "BUILD-ARM-COMPANY-RESIDENCE-003",
+      "issue_cluster_id": "ARM-COMPANY-BASED-RESIDENCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BUILD-ARM-REMOTE-BASE-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "BUILD-ARM-HOUSING-ADDRESS-004"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "company_activity_residence_risk",
+        "class": "residence"
+      },
+      "scope": {
+        "destination": {
+          "country": "Armenia",
+          "country_code": "ARM",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "REMOTE / FREELANCE",
+            "RESIDENCE / MOBILITY"
+          ],
+          "codes": [
+            "company",
+            "freelance",
+            "work_residence"
+          ]
+        },
+        "process_stages": [
+          "company_registration",
+          "work_permit",
+          "residence_application",
+          "tax"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Company/freelance structures can support Armenian residence, but real economic activity matters and registration alone is not enough",
+          "fa": "ساختار شرکت/فریلنس می‌تواند مبنای اقامت ارمنستان باشد، اما فعالیت اقتصادی واقعی مهم است و صرف ثبت شرکت کافی نیست"
+        },
+        "summary": {
+          "en": "The dataset contains successful company-to-residence cases and roughly fifty-day post-work-permit timing, but also a five-person rejection after a newly registered company. Later guidance warns against paper-only companies and emphasizes real contracts, cash flow and ongoing business activity.",
+          "fa": "فایل هم کیس موفق شرکت→اقامت و زمان حدود پنجاه روز بعد از ورک‌پرمیت دارد و هم ریجکت پنج نفر پس از ثبت شرکت جدید. راهنمایی بعدی درباره شرکت صوری هشدار می‌دهد و قرارداد، جریان مالی و فعالیت پایدار را مهم می‌داند."
+        },
+        "practical_impact": {
+          "en": "Company registration should be treated as the start of an evidence-building process, not a guaranteed residence shortcut.",
+          "fa": "ثبت شرکت باید شروع ساختن شواهد اقتصادی باشد، نه میانبر تضمینی اقامت."
+        },
+        "who_should_care": {
+          "en": "Iranian freelancers/founders using an Armenian company for residence.",
+          "fa": "فریلنسرها/بنیان‌گذاران ایرانی که با شرکت ارمنی دنبال اقامت‌اند."
+        },
+        "recommended_action": {
+          "en": "Build a genuine operating record—contracts, invoicing, accounting and tax compliance—before relying on the company for residence.",
+          "fa": "قبل از اتکا به شرکت برای اقامت، سابقه عملی واقعی شامل قرارداد، فاکتور، حسابداری و مالیات بسازید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BUILD-ARM-COMPANY-RESIDENCE-003-E1",
+          "relation": "supports",
+          "independence_group": "BUILD-ARM-COMPANY-RESIDENCE-003-E1"
+        },
+        {
+          "evidence_id": "BUILD-ARM-COMPANY-RESIDENCE-003-E2",
+          "relation": "supports",
+          "independence_group": "BUILD-ARM-COMPANY-RESIDENCE-003-E2"
+        },
+        {
+          "evidence_id": "BUILD-ARM-COMPANY-RESIDENCE-003-E3",
+          "relation": "supports",
+          "independence_group": "BUILD-ARM-COMPANY-RESIDENCE-003-E3"
+        },
+        {
+          "evidence_id": "BUILD-ARM-COMPANY-RESIDENCE-003-C1",
+          "relation": "contradicts",
+          "independence_group": "BUILD-ARM-COMPANY-RESIDENCE-003-C1"
+        },
+        {
+          "evidence_id": "BUILD-ARM-COMPANY-RESIDENCE-003-E4",
+          "relation": "supports",
+          "independence_group": "BUILD-ARM-COMPANY-RESIDENCE-003-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source contains both successful and rejected first-hand cases, supporting a conditional rather than guaranteed route."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Armenian residence evidence requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BUILD-ARM-COMPANY-RESIDENCE-003-E1",
+            "BUILD-ARM-COMPANY-RESIDENCE-003-E2",
+            "BUILD-ARM-COMPANY-RESIDENCE-003-E3",
+            "BUILD-ARM-COMPANY-RESIDENCE-003-C1",
+            "BUILD-ARM-COMPANY-RESIDENCE-003-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Build Abroad Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Residence adjudication practice is case-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Armenia",
+        "company",
+        "residence",
+        "work permit",
+        "rejection"
+      ],
+      "first_seen": "2026-04-05",
+      "last_seen": "2026-04-12"
+    },
+    {
+      "signal_id": "BUILD-ARM-HOUSING-ADDRESS-004",
+      "issue_cluster_id": "ARM-HOUSING-ADDRESS-RESIDENCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BUILD-ARM-COMPANY-RESIDENCE-003"
+        }
+      ],
+      "classification": {
+        "family": "E20_LIFE_MOBILITY_OPERATIONS",
+        "type": "housing_address_verification",
+        "class": "housing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Armenia",
+          "country_code": "ARM",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "REMOTE / FREELANCE",
+            "RESIDENCE / MOBILITY"
+          ],
+          "codes": [
+            "residence",
+            "housing"
+          ]
+        },
+        "process_stages": [
+          "rental",
+          "address_registration",
+          "residence_evidence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Housing is not just a cost issue in Armenia; landlord cooperation and address evidence can become part of residence setup",
+          "fa": "خانه در ارمنستان فقط مسئله هزینه نیست؛ همکاری مالک و مدرک آدرس می‌تواند بخشی از setup اقامت شود"
+        },
+        "summary": {
+          "en": "Members report broker/deposit losses, unreliable listings and landlord reluctance to formalize leases because of tax. At the same time, address confirmation/registration is repeatedly described as important for longer stays and residence processes.",
+          "fa": "اعضا از ضرر بروکر/ودیعه، آگهی‌های غیرقابل‌اتکا و بی‌میلی مالک به قرارداد رسمی به‌خاطر مالیات گفته‌اند. همزمان تأیید/ثبت آدرس برای ماندن طولانی و اقامت بارها مهم گزارش شده است."
+        },
+        "practical_impact": {
+          "en": "The cheapest or easiest rental may fail later when formal address proof is needed.",
+          "fa": "ارزان‌ترین یا راحت‌ترین اجاره ممکن است بعداً وقتی مدرک آدرس رسمی لازم شد مشکل‌ساز شود."
+        },
+        "who_should_care": {
+          "en": "New arrivals to Armenia planning residence or banking.",
+          "fa": "تازه‌واردهای ارمنستان که اقامت یا بانک می‌خواهند."
+        },
+        "recommended_action": {
+          "en": "Confirm landlord cooperation on address registration/formal documentation before paying a large deposit.",
+          "fa": "پیش از پرداخت ودیعه سنگین، همکاری مالک برای ثبت آدرس/مدرک رسمی را روشن کنید."
+        },
+        "known_workaround": "Members recommend local listing channels and explicit pre-agreement on address confirmation."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BUILD-ARM-HOUSING-ADDRESS-004-E1",
+          "relation": "supports",
+          "independence_group": "BUILD-ARM-HOUSING-ADDRESS-004-E1"
+        },
+        {
+          "evidence_id": "BUILD-ARM-HOUSING-ADDRESS-004-E2",
+          "relation": "supports",
+          "independence_group": "BUILD-ARM-HOUSING-ADDRESS-004-E2"
+        },
+        {
+          "evidence_id": "BUILD-ARM-HOUSING-ADDRESS-004-E3",
+          "relation": "supports",
+          "independence_group": "BUILD-ARM-HOUSING-ADDRESS-004-E3"
+        },
+        {
+          "evidence_id": "BUILD-ARM-HOUSING-ADDRESS-004-E4",
+          "relation": "supports",
+          "independence_group": "BUILD-ARM-HOUSING-ADDRESS-004-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple first-hand housing losses and address-registration discussions converge on the same operational dependency."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current address-registration rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BUILD-ARM-HOUSING-ADDRESS-004-E1",
+            "BUILD-ARM-HOUSING-ADDRESS-004-E2",
+            "BUILD-ARM-HOUSING-ADDRESS-004-E3",
+            "BUILD-ARM-HOUSING-ADDRESS-004-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Build Abroad Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Housing practices are local and change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Armenia",
+        "rent",
+        "address registration",
+        "landlord",
+        "deposit"
+      ],
+      "first_seen": "2026-04-05",
+      "last_seen": "2026-04-09"
+    },
+    {
+      "signal_id": "BUILD-BANKING-IRANIAN-005",
+      "issue_cluster_id": "IRANIAN-CROSSBORDER-BANKING-FRICTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BUILD-DIGITAL-NOMAD-PROOF-006"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "BUILD-IRAN-SERVICE-ACCESS-009"
+        }
+      ],
+      "classification": {
+        "family": "E15_FINANCIAL_INFRASTRUCTURE",
+        "type": "nationality_banking_payment_friction",
+        "class": "banking"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "REMOTE / FREELANCE",
+            "RESIDENCE / MOBILITY"
+          ],
+          "codes": [
+            "banking",
+            "remote_income",
+            "freelance"
+          ]
+        },
+        "process_stages": [
+          "account_opening",
+          "international_transfer",
+          "payment_receipt"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For Iranian remote workers, getting a foreign account is only the first step—transfers and payment rails can still fail because of nationality/compliance",
+          "fa": "برای ریموت‌ورکر ایرانی، بازکردن حساب خارجی پایان مشکل نیست؛ انتقال پول و payment rail همچنان ممکن است به‌دلیل ملیت/compliance شکست بخورد"
+        },
+        "summary": {
+          "en": "Members report difficult account opening, transfers that returned after an IBAN was issued, cash-transfer services refusing payout, and bank policies changing over time for Iranian passport holders.",
+          "fa": "اعضا از سختی افتتاح حساب، برگشت انتقال بعد از دریافت IBAN، خودداری سرویس انتقال نقدی از پرداخت و تغییر سیاست بانک‌ها برای پاسپورت ایرانی گزارش داده‌اند."
+        },
+        "practical_impact": {
+          "en": "A remote contract can become unusable if the worker cannot reliably receive international funds.",
+          "fa": "قرارداد ریموت بدون مسیر پایدار دریافت پول ممکن است عملاً غیرقابل‌استفاده شود."
+        },
+        "who_should_care": {
+          "en": "Iranian freelancers, remote employees and founders abroad.",
+          "fa": "فریلنسرها، کارمندان ریموت و بنیان‌گذاران ایرانی خارج کشور."
+        },
+        "recommended_action": {
+          "en": "Test a small inbound transfer before relying on a new account for salary/client payments and keep a second compliant route.",
+          "fa": "قبل از اتکا به حساب جدید برای حقوق/کلاینت، یک انتقال کوچک واقعی تست کنید و مسیر دوم قانونی داشته باشید."
+        },
+        "known_workaround": "Residence/work documentation sometimes improves account/payment access, but no universal bank works everywhere."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BUILD-BANKING-IRANIAN-005-E1",
+          "relation": "supports",
+          "independence_group": "BUILD-BANKING-IRANIAN-005-E1"
+        },
+        {
+          "evidence_id": "BUILD-BANKING-IRANIAN-005-E2",
+          "relation": "supports",
+          "independence_group": "BUILD-BANKING-IRANIAN-005-E2"
+        },
+        {
+          "evidence_id": "BUILD-BANKING-IRANIAN-005-E3",
+          "relation": "supports",
+          "independence_group": "BUILD-BANKING-IRANIAN-005-E3"
+        },
+        {
+          "evidence_id": "BUILD-BANKING-IRANIAN-005-E4",
+          "relation": "supports",
+          "independence_group": "BUILD-BANKING-IRANIAN-005-E4"
+        },
+        {
+          "evidence_id": "BUILD-BANKING-IRANIAN-005-C1",
+          "relation": "contradicts",
+          "independence_group": "BUILD-BANKING-IRANIAN-005-C1"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Several direct failures across countries show a durable nationality/compliance problem and rapidly changing bank access."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current bank/KYC policies were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BUILD-BANKING-IRANIAN-005-E1",
+            "BUILD-BANKING-IRANIAN-005-E2",
+            "BUILD-BANKING-IRANIAN-005-E3",
+            "BUILD-BANKING-IRANIAN-005-E4",
+            "BUILD-BANKING-IRANIAN-005-C1"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Build Abroad Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Bank KYC and sanctions-compliance policies can change immediately.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "bank",
+        "Iranian passport",
+        "IBAN",
+        "MoneyGram",
+        "transfer"
+      ],
+      "first_seen": "2026-04-10",
+      "last_seen": "2026-04-24"
+    },
+    {
+      "signal_id": "BUILD-DIGITAL-NOMAD-PROOF-006",
+      "issue_cluster_id": "DIGITAL-NOMAD-INCOME-PROOF",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BUILD-BANKING-IRANIAN-005"
+        }
+      ],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "remote_income_documentation",
+        "class": "digital_nomad"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "REMOTE / FREELANCE",
+            "RESIDENCE / MOBILITY"
+          ],
+          "codes": [
+            "digital_nomad",
+            "freelance"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "income_proof",
+          "banking"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Digital-nomad/freelance residence is usually an evidence problem—income floor, contracts and bank history—not merely a remote-job label",
+          "fa": "اقامت دیجیتال‌نومد/فریلنس بیشتر مسئله اثبات است: کف درآمد، قرارداد و سابقه بانکی؛ نه صرفاً داشتن برچسب کار ریموت"
+        },
+        "summary": {
+          "en": "Community research across Portugal, Spain, Malaysia, Turkey and Armenia repeatedly centers on minimum income, contracts, transaction history and country eligibility. Iranian banking limitations can make those proofs harder even when income exists.",
+          "fa": "تحقیق کامیونیتی درباره پرتغال، اسپانیا، مالزی، ترکیه و ارمنستان بارها روی حداقل درآمد، قرارداد، گردش حساب و eligibility کشور تمرکز دارد. محدودیت بانکی ایرانی‌ها حتی در صورت وجود درآمد، اثبات را سخت‌تر می‌کند."
+        },
+        "practical_impact": {
+          "en": "A strong remote income stream may still fail residence eligibility if it cannot be documented in the accepted format.",
+          "fa": "درآمد ریموت خوب هم اگر با فرمت مورد قبول قابل اثبات نباشد ممکن است به eligibility اقامت تبدیل نشود."
+        },
+        "who_should_care": {
+          "en": "Iranian freelancers comparing digital-nomad destinations.",
+          "fa": "فریلنسرهای ایرانی در حال مقایسه مقصدهای دیجیتال نومد."
+        },
+        "recommended_action": {
+          "en": "Build clean contracts, invoices and bank statements before choosing a destination based on headline income thresholds.",
+          "fa": "قبل از انتخاب مقصد بر اساس عدد درآمد، قرارداد، فاکتور و گردش حساب تمیز بسازید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BUILD-DIGITAL-NOMAD-PROOF-006-E1",
+          "relation": "supports",
+          "independence_group": "BUILD-DIGITAL-NOMAD-PROOF-006-E1"
+        },
+        {
+          "evidence_id": "BUILD-DIGITAL-NOMAD-PROOF-006-E2",
+          "relation": "supports",
+          "independence_group": "BUILD-DIGITAL-NOMAD-PROOF-006-E2"
+        },
+        {
+          "evidence_id": "BUILD-DIGITAL-NOMAD-PROOF-006-E3",
+          "relation": "supports",
+          "independence_group": "BUILD-DIGITAL-NOMAD-PROOF-006-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The proof pattern is consistent, but exact thresholds and Iranian eligibility are country-specific and not independently verified."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No country-specific digital-nomad rule was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BUILD-DIGITAL-NOMAD-PROOF-006-E1",
+            "BUILD-DIGITAL-NOMAD-PROOF-006-E2",
+            "BUILD-DIGITAL-NOMAD-PROOF-006-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Build Abroad Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Digital-nomad programs change frequently.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "digital nomad",
+        "freelance visa",
+        "income proof",
+        "bank statement"
+      ],
+      "first_seen": "2026-04-09",
+      "last_seen": "2026-04-16"
+    },
+    {
+      "signal_id": "BUILD-REMOTE-JOBS-SPONSOR-007",
+      "issue_cluster_id": "REMOTE-WORK-VS-RELOCATION-SPONSORSHIP",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BUILD-NETWORK-REFERRAL-008"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "remote_role_sponsorship_split",
+        "class": "employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "REMOTE / FREELANCE",
+            "RESIDENCE / MOBILITY"
+          ],
+          "codes": [
+            "remote_work",
+            "relocation",
+            "visa_sponsorship"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "referral",
+          "sponsorship"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Remote hiring and relocation hiring are separate markets: many remote roles offer no visa help, while sponsorship clusters in specific employers and senior roles",
+          "fa": "استخدام ریموت و استخدام همراه ریلوکیشن دو بازار جدا هستند؛ بسیاری از remote roleها کمک ویزا ندارند و اسپانسرشیپ در کارفرماها/سطوح خاص متمرکز است"
+        },
+        "summary": {
+          "en": "A U.S.-client role accepted strong Iran-based candidates but explicitly offered no sponsorship, while Germany roles in the same community offered referral plus relocation/sponsorship. English, time-zone overlap and senior skill depth repeatedly matter.",
+          "fa": "یک نقش برای کلاینت آمریکایی افراد قوی داخل ایران را می‌پذیرفت اما صریحاً اسپانسرشیپ نداشت؛ در همان کامیونیتی پوزیشن‌های آلمان referral همراه با relocation/sponsorship داشتند. انگلیسی، overlap زمانی و seniority بارها مهم‌اند."
+        },
+        "practical_impact": {
+          "en": "Applying only to 'remote' jobs does not advance relocation unless sponsorship is explicitly part of the role.",
+          "fa": "اپلای صرفاً به شغل ریموت لزوماً مهاجرت را جلو نمی‌برد مگر اسپانسرشیپ صریحاً بخشی از پوزیشن باشد."
+        },
+        "who_should_care": {
+          "en": "Iran-based tech professionals deciding between remote income and relocation.",
+          "fa": "متخصصان تکنولوژی داخل ایران که بین درآمد ریموت و ریلوکیشن انتخاب می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Tag opportunities separately as remote-only, relocation-capable or sponsorship-confirmed and tailor the search accordingly.",
+          "fa": "پوزیشن‌ها را جداگانه remote-only، relocation-capable و sponsorship-confirmed برچسب بزنید و جست‌وجو را بر همان اساس تنظیم کنید."
+        },
+        "known_workaround": "Internal referrals are repeatedly used to surface sponsorship-capable roles."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BUILD-REMOTE-JOBS-SPONSOR-007-E1",
+          "relation": "supports",
+          "independence_group": "BUILD-REMOTE-JOBS-SPONSOR-007-E1"
+        },
+        {
+          "evidence_id": "BUILD-REMOTE-JOBS-SPONSOR-007-E2",
+          "relation": "supports",
+          "independence_group": "BUILD-REMOTE-JOBS-SPONSOR-007-E2"
+        },
+        {
+          "evidence_id": "BUILD-REMOTE-JOBS-SPONSOR-007-E3",
+          "relation": "supports",
+          "independence_group": "BUILD-REMOTE-JOBS-SPONSOR-007-E3"
+        },
+        {
+          "evidence_id": "BUILD-REMOTE-JOBS-SPONSOR-007-E4",
+          "relation": "supports",
+          "independence_group": "BUILD-REMOTE-JOBS-SPONSOR-007-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct job posts demonstrate both no-sponsorship remote hiring and sponsorship-capable relocation roles."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Individual vacancies may expire; this signal captures hiring structure, not current vacancy status."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BUILD-REMOTE-JOBS-SPONSOR-007-E1",
+            "BUILD-REMOTE-JOBS-SPONSOR-007-E2",
+            "BUILD-REMOTE-JOBS-SPONSOR-007-E3",
+            "BUILD-REMOTE-JOBS-SPONSOR-007-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Build Abroad Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Job availability changes quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "remote",
+        "relocation",
+        "visa sponsorship",
+        "referral",
+        "timezone"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-09-14"
+    },
+    {
+      "signal_id": "BUILD-NETWORK-REFERRAL-008",
+      "issue_cluster_id": "EXPAT-PEER-NETWORK-JOB-INFRASTRUCTURE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BUILD-REMOTE-JOBS-SPONSOR-007"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "peer_referral_network",
+        "class": "community"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "REMOTE / FREELANCE",
+            "RESIDENCE / MOBILITY"
+          ],
+          "codes": [
+            "employment",
+            "startup",
+            "freelance"
+          ]
+        },
+        "process_stages": [
+          "networking",
+          "referral",
+          "cofounder_search"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Peer networking functions as real employment/startup infrastructure, not just social support",
+          "fa": "شبکه هم‌وطنان خارج کشور در این گروه زیرساخت واقعی کار و استارتاپ است، نه صرفاً حمایت اجتماعی"
+        },
+        "summary": {
+          "en": "The community organizes city meetups, shares internal referrals, searches for co-founders and matches project needs with members' skills. The group's explicit purpose is mutual help around work and country-specific challenges.",
+          "fa": "کامیونیتی ایونت شهری می‌گذارد، referral داخلی به اشتراک می‌گذارد، co-founder پیدا می‌کند و نیاز پروژه را با مهارت اعضا match می‌کند. هدف صریح گروه کمک متقابل در کار و چالش‌های کشورهاست."
+        },
+        "practical_impact": {
+          "en": "Warm introductions and local peer knowledge can shorten both job discovery and practical setup.",
+          "fa": "معرفی گرم و دانش محلی peerها می‌تواند هم کشف شغل و هم setup زندگی را کوتاه‌تر کند."
+        },
+        "who_should_care": {
+          "en": "New arrivals and remote professionals without a local network.",
+          "fa": "تازه‌واردها و متخصصان ریموت بدون شبکه محلی."
+        },
+        "recommended_action": {
+          "en": "Use the network for specific asks—referral, co-founder, local service or meetup—rather than generic 'looking for work' posts.",
+          "fa": "از شبکه برای درخواست مشخص مثل referral، co-founder، سرویس محلی یا meetup استفاده کنید، نه فقط پیام کلی «دنبال کارم»."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BUILD-NETWORK-REFERRAL-008-E1",
+          "relation": "supports",
+          "independence_group": "BUILD-NETWORK-REFERRAL-008-E1"
+        },
+        {
+          "evidence_id": "BUILD-NETWORK-REFERRAL-008-E2",
+          "relation": "supports",
+          "independence_group": "BUILD-NETWORK-REFERRAL-008-E2"
+        },
+        {
+          "evidence_id": "BUILD-NETWORK-REFERRAL-008-E3",
+          "relation": "supports",
+          "independence_group": "BUILD-NETWORK-REFERRAL-008-E3"
+        },
+        {
+          "evidence_id": "BUILD-NETWORK-REFERRAL-008-E4",
+          "relation": "supports",
+          "independence_group": "BUILD-NETWORK-REFERRAL-008-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The community repeatedly converts social ties into events, cofounder matching and employee referrals."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Community-network effectiveness is observational, not an official rule."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BUILD-NETWORK-REFERRAL-008-E1",
+            "BUILD-NETWORK-REFERRAL-008-E2",
+            "BUILD-NETWORK-REFERRAL-008-E3",
+            "BUILD-NETWORK-REFERRAL-008-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Build Abroad Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2027-03-16",
+        "reason": "Stable community-behavior signal.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "networking",
+        "event",
+        "referral",
+        "cofounder",
+        "community"
+      ],
+      "first_seen": "2026-04-03",
+      "last_seen": "2026-06-06"
+    },
+    {
+      "signal_id": "BUILD-IRAN-SERVICE-ACCESS-009",
+      "issue_cluster_id": "IRAN-DIGITAL-SERVICE-ACCESS-ABROAD",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BUILD-BANKING-IRANIAN-005"
+        }
+      ],
+      "classification": {
+        "family": "E20_LIFE_MOBILITY_OPERATIONS",
+        "type": "iran_geo_service_access",
+        "class": "digital_access"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "REMOTE / FREELANCE",
+            "RESIDENCE / MOBILITY"
+          ],
+          "codes": [
+            "remote_life",
+            "banking"
+          ]
+        },
+        "process_stages": [
+          "roaming",
+          "sms",
+          "banking_access",
+          "geo_restricted_services"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Maintaining an Iranian phone/data path remains operationally important abroad because banking and domestic services can be geo- or SIM-dependent",
+          "fa": "حفظ مسیر تلفن/دیتای ایرانی در خارج مهم است چون بانک و سرویس‌های داخل ایران ممکن است به جغرافیا یا سیم‌کارت وابسته باشند"
+        },
+        "summary": {
+          "en": "Members repeatedly ask about roaming, Iran-endpoint VPNs, inaccessible domestic-class links and mobile banking. One direct report says Iranian roaming data restored access to both domestic sites and mobile-banking apps.",
+          "fa": "اعضا بارها درباره رومینگ، VPN ایران، لینک‌های داخلی غیرقابل‌دسترسی و همراه‌بانک پرسیده‌اند. یک تجربه مستقیم می‌گوید اینترنت رومینگ ایرانی دسترسی به سایت‌های داخلی و همراه‌بانک را برگردانده است."
+        },
+        "practical_impact": {
+          "en": "Losing the Iranian SIM or geo-access path can block authentication, banking and other essential tasks.",
+          "fa": "از دست‌دادن سیم‌کارت یا مسیر geo-access ایران می‌تواند احراز هویت، بانک و کارهای ضروری را مسدود کند."
+        },
+        "who_should_care": {
+          "en": "Iranians abroad who still depend on Iranian banking, phone numbers or domestic online services.",
+          "fa": "ایرانیان خارج کشور که هنوز به بانک، شماره تلفن یا سرویس‌های داخلی ایران وابسته‌اند."
+        },
+        "recommended_action": {
+          "en": "Before leaving Iran, secure roaming/SMS continuity and identify a lawful fallback for geo-restricted services.",
+          "fa": "قبل از خروج، تداوم رومینگ/SMS را آماده کنید و برای سرویس‌های محدود جغرافیایی fallback قانونی داشته باشید."
+        },
+        "known_workaround": "Iranian mobile roaming data is reported as one workable fallback for some domestic services."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BUILD-IRAN-SERVICE-ACCESS-009-E1",
+          "relation": "supports",
+          "independence_group": "BUILD-IRAN-SERVICE-ACCESS-009-E1"
+        },
+        {
+          "evidence_id": "BUILD-IRAN-SERVICE-ACCESS-009-E2",
+          "relation": "supports",
+          "independence_group": "BUILD-IRAN-SERVICE-ACCESS-009-E2"
+        },
+        {
+          "evidence_id": "BUILD-IRAN-SERVICE-ACCESS-009-E3",
+          "relation": "supports",
+          "independence_group": "BUILD-IRAN-SERVICE-ACCESS-009-E3"
+        },
+        {
+          "evidence_id": "BUILD-IRAN-SERVICE-ACCESS-009-E4",
+          "relation": "supports",
+          "independence_group": "BUILD-IRAN-SERVICE-ACCESS-009-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The problem recurs across communications, banking and education-service access, with a direct roaming workaround report."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Telecom and app access can change; no provider availability was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BUILD-IRAN-SERVICE-ACCESS-009-E1",
+            "BUILD-IRAN-SERVICE-ACCESS-009-E2",
+            "BUILD-IRAN-SERVICE-ACCESS-009-E3",
+            "BUILD-IRAN-SERVICE-ACCESS-009-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Build Abroad Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Telecom and geo-access conditions are unstable.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Iran",
+        "roaming",
+        "mobile banking",
+        "VPN",
+        "SMS"
+      ],
+      "first_seen": "2026-04-03",
+      "last_seen": "2026-04-24"
+    },
+    {
+      "signal_id": "BUILD-COMPANY-MOBILITY-010",
+      "issue_cluster_id": "COMPANY-AS-RESIDENCE-BANKING-INFRASTRUCTURE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BUILD-ARM-COMPANY-RESIDENCE-003"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "BUILD-BANKING-IRANIAN-005"
+        }
+      ],
+      "classification": {
+        "family": "E20_LIFE_MOBILITY_OPERATIONS",
+        "type": "company_based_mobility_infrastructure",
+        "class": "mobility"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "REMOTE / FREELANCE",
+            "RESIDENCE / MOBILITY"
+          ],
+          "codes": [
+            "company",
+            "residence",
+            "banking"
+          ]
+        },
+        "process_stages": [
+          "company_registration",
+          "residence",
+          "banking",
+          "future_visa"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Some members use company registration as mobility infrastructure—residence, banking and financial history for later moves—not only as a business decision",
+          "fa": "بعضی اعضا ثبت شرکت را زیرساخت جابه‌جایی می‌بینند: اقامت، بانک و سابقه مالی برای اقدام بعدی؛ نه صرفاً تصمیم بیزینسی"
+        },
+        "summary": {
+          "en": "Oman, Armenia and Dubai discussions show company formation being evaluated for residence cards, bank access and salary/financial records useful in later visa applications. But the company-to-residence link changes by country and period and is not guaranteed.",
+          "fa": "بحث‌های عمان، ارمنستان و دبی نشان می‌دهد ثبت شرکت برای کارت اقامت، دسترسی بانکی و ساخت سابقه حقوق/مالی جهت ویزاهای بعدی سنجیده می‌شود. اما اتصال شرکت به اقامت کشوربه‌کشور و زمان‌به‌زمان تغییر می‌کند و تضمینی نیست."
+        },
+        "practical_impact": {
+          "en": "The cheapest incorporation package may be poor value if it does not deliver usable residence, banking or compliant operating capability.",
+          "fa": "ارزان‌ترین پکیج ثبت شرکت اگر اقامت، بانک یا فعالیت compliant ندهد ممکن است ارزش عملی کمی داشته باشد."
+        },
+        "who_should_care": {
+          "en": "Iranian founders/freelancers comparing company-based residence options in nearby countries.",
+          "fa": "بنیان‌گذاران/فریلنسرهای ایرانی در حال مقایسه اقامت مبتنی بر شرکت در کشورهای اطراف."
+        },
+        "recommended_action": {
+          "en": "Evaluate company routes on four outputs separately: operating legality, residence, banking and future visa usefulness.",
+          "fa": "مسیر شرکت را روی چهار خروجی جدا بسنجید: فعالیت قانونی، اقامت، بانک و ارزش برای ویزای بعدی."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BUILD-COMPANY-MOBILITY-010-E1",
+          "relation": "supports",
+          "independence_group": "BUILD-COMPANY-MOBILITY-010-E1"
+        },
+        {
+          "evidence_id": "BUILD-COMPANY-MOBILITY-010-E2",
+          "relation": "supports",
+          "independence_group": "BUILD-COMPANY-MOBILITY-010-E2"
+        },
+        {
+          "evidence_id": "BUILD-COMPANY-MOBILITY-010-C1",
+          "relation": "contradicts",
+          "independence_group": "BUILD-COMPANY-MOBILITY-010-C1"
+        },
+        {
+          "evidence_id": "BUILD-COMPANY-MOBILITY-010-E3",
+          "relation": "supports",
+          "independence_group": "BUILD-COMPANY-MOBILITY-010-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The strategic pattern is repeated across countries, but costs and residence outcomes vary substantially and are community-reported."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Company/residence/banking rules in Oman, UAE and Armenia were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BUILD-COMPANY-MOBILITY-010-E1",
+            "BUILD-COMPANY-MOBILITY-010-E2",
+            "BUILD-COMPANY-MOBILITY-010-C1",
+            "BUILD-COMPANY-MOBILITY-010-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Build Abroad Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Company-residence rules and costs can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "company registration",
+        "residence",
+        "banking",
+        "Oman",
+        "Armenia",
+        "Dubai"
+      ],
+      "first_seen": "2026-04-05",
+      "last_seen": "2026-04-16"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram usernames/IDs, phone numbers and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically scanned all 10,998 records in the uploaded JSON export."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the full 10k+ message graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Generic service advertisements and self-promotion were excluded unless a post provided concrete hiring/referral evidence."
+      },
+      "unsafe_or_noncompliant_advice_filtered": {
+        "status": "pass",
+        "note": "Advice about evading tax, fabricating documents or sham arrangements was not converted into recommended actions."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated Armenia residence, banking, housing, remote-work, networking and Iran-access discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Successful and rejected company-residence cases are both preserved; bank access changes over time are also retained."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "All country-law, banking and residence claims remain community-reported and not independently verified."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote-store deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community operational signals only. They are not official immigration, banking, tax, employment or company-law rules. Verify current requirements with the responsible authority, bank, employer or licensed professional before acting."
+}

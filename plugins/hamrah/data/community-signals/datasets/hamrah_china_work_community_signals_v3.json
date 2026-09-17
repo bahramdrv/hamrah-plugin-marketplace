@@ -1,0 +1,2232 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_china_work_community_signals_candidate",
+    "generated_at": "2026-09-17T08:41:51Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "china-work-pargar-telegram-export",
+      "name": "result(20260917-083658).json / Telegram export «کار در چین با پرگار»",
+      "source_type": "private_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-06-04",
+        "to": "2026-09-15",
+        "records_available": 293,
+        "records_processed": 293,
+        "message_records": 291
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "china_work_focused": true,
+        "contains_first_hand_work_and_consular_experience": true,
+        "contains_admin_guidance": true,
+        "contains_unsafe_or_noncompliant_advice": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "CHN-WORK-DIRECT-001-E1",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "105"
+      },
+      "published_at": "2025-06-09",
+      "event_date": "2025-06-09",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "admin_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An admin advised that direct work migration is premature for a very junior profile and said a master's can be attempted but a PhD generally improves the chance.",
+        "fa": "ادمین به پروفایل خیلی junior گفته اقدام کاری زود است؛ با ارشد ممکن است اقدام شود اما دکتری معمولاً شانس را بیشتر می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-DIRECT-001-E2",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "108"
+      },
+      "published_at": "2025-06-09",
+      "event_date": "2025-06-09",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "admin_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "For energy-related work, the group said real work experience matters, but it matters together with an academic degree rather than replacing it.",
+        "fa": "برای حوزه انرژی، گروه گفته سابقه کاری مهم است اما در کنار مدرک تحصیلی، نه به‌جای آن."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-DIRECT-001-E3",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1960"
+      },
+      "published_at": "2026-05-28",
+      "event_date": "2026-05-28",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "peer_report",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A peer reported two Germany-based colleagues were recruited via LinkedIn, went through four interview rounds and one moved as a senior/team-lead profile with roughly seven years of experience.",
+        "fa": "یک عضو گزارش کرده دو همکار مستقر در آلمان از طریق LinkedIn جذب شدند، چهار مرحله مصاحبه رفتند و یکی با حدود هفت سال سابقه به‌عنوان senior/team lead منتقل شد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-DIRECT-001-E4",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1961"
+      },
+      "published_at": "2026-05-28",
+      "event_date": "2026-05-28",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "community_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "anecdotal_generalization",
+      "summary": {
+        "en": "A reply cautioned that direct hiring is hard and said having studied at a strong Chinese university is often seen as an advantage.",
+        "fa": "پاسخ دیگری هشدار داده جذب مستقیم سخت است و تحصیل در دانشگاه خوب چین را مزیت می‌داند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-LANGUAGE-002-E1",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "644"
+      },
+      "published_at": "2025-08-17",
+      "event_date": "2025-08-17",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An industrial-engineering applicant asked whether Chinese proficiency is needed for work migration to China.",
+        "fa": "یک متقاضی مهندسی صنایع پرسیده برای مهاجرت کاری چین دانستن زبان چینی لازم است یا نه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-LANGUAGE-002-E2",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "671"
+      },
+      "published_at": "2025-08-19",
+      "event_date": "2025-08-19",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "admin_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group admin said Chinese helps substantially in finding work and that graduating from a good Chinese university can improve employability versus applying directly from abroad.",
+        "fa": "ادمین گفته زبان چینی کمک جدی به پیدا کردن کار می‌کند و فارغ‌التحصیلی از دانشگاه خوب چین می‌تواند نسبت به اقدام مستقیم از خارج شانس را بالا ببرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-LANGUAGE-002-E3",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2172"
+      },
+      "published_at": "2026-08-15",
+      "event_date": "2026-08-15",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A later discussion said universities can be one of the easier employment environments for foreigners in non-English-speaking countries and added China's large domestic labour pool as another constraint.",
+        "fa": "در بحث بعدی گفته شده در کشورهای غیرانگلیسی‌زبان دانشگاه‌ها برای خارجی‌ها از محیط‌های نسبتاً آسان‌تر کاریابی‌اند و جمعیت بزرگ نیروی کار چین نیز محدودیت اضافه ایجاد می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-LANGUAGE-002-E4",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2140"
+      },
+      "published_at": "2026-08-06",
+      "event_date": "2026-08-06",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 applicant with industrial-engineering background and Chinese ability still asked whether work migration to China is difficult, showing language alone does not settle employability.",
+        "fa": "در ۲۰۲۶ متقاضی صنایع با دانش زبان چینی همچنان درباره سختی مهاجرت کاری پرسیده؛ یعنی زبان به‌تنهایی مسئله employability را حل نمی‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-DEGREE-003-E1",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "105"
+      },
+      "published_at": "2025-06-09",
+      "event_date": "2025-06-09",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "admin_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group said a higher degree, especially PhD, generally improves chances for direct work applications.",
+        "fa": "گروه گفته مدرک بالاتر، به‌ویژه دکتری، عموماً شانس اقدام کاری مستقیم را بیشتر می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-DEGREE-003-E2",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "672"
+      },
+      "published_at": "2025-08-19",
+      "event_date": "2025-08-19",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "admin_anecdote",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An admin reported a lab colleague found a job about one month after graduation at a salary of roughly 25k RMB, presenting one positive advanced-degree case.",
+        "fa": "ادمین از همکار آزمایشگاهی گفته که حدود یک ماه پس از فارغ‌التحصیلی با حقوق حدود ۲۵ هزار یوان کار پیدا کرده؛ یک کیس مثبت تحصیلات عالیه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-DEGREE-003-C1",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "914"
+      },
+      "published_at": "2025-09-13",
+      "event_date": "2025-09-13",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "community_caution",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A community reply warned that headline salaries do not indicate an individual's probability of getting the role and said even many PhD holders may not find a suitable job.",
+        "fa": "یک پاسخ هشدار داده حقوق‌های تیترشده احتمال گرفتن شغل را نشان نمی‌دهد و حتی افراد دارای دکتری هم ممکن است شغل مناسب پیدا نکنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-DEGREE-003-C2",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2170"
+      },
+      "published_at": "2026-08-15",
+      "event_date": "2026-08-15",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "In August 2026, a reply said finding work as a foreigner with only a master's is possible but likely very difficult.",
+        "fa": "در اوت ۲۰۲۶ پاسخ داده شده پیدا کردن کار برای خارجی با صرفاً ارشد ممکن است اما احتمالاً بسیار سخت است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-INDUSTRY-004-E1",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1957"
+      },
+      "published_at": "2026-05-28",
+      "event_date": "2026-05-28",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "peer_report",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A peer said two colleagues moved from Germany to China for automation jobs and were very satisfied.",
+        "fa": "یک عضو گفته دو همکارش از آلمان برای کار اتوماسیون به چین رفته‌اند و رضایت بالایی داشته‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-INDUSTRY-004-E2",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1960"
+      },
+      "published_at": "2026-05-28",
+      "event_date": "2026-05-28",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "peer_report",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The same thread said one recruit was a senior profile with about seven years of experience and moved as a team lead after four interview rounds.",
+        "fa": "در همان thread یکی از افراد پروفایل senior با حدود هفت سال سابقه بوده و بعد از چهار مرحله مصاحبه به‌عنوان team lead رفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-INDUSTRY-004-E3",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1966"
+      },
+      "published_at": "2026-05-29",
+      "event_date": "2026-05-29",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "industry_peer_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "single_peer_industry_view",
+      "summary": {
+        "en": "A participant working in a Volkswagen-linked company said China's automotive and automation sectors had expanded and created roles in engineering, R&D and project management.",
+        "fa": "عضوی که در شرکت مرتبط با Volkswagen کار می‌کند گفته بازار خودرو و اتوماسیون چین رشد کرده و فرصت‌هایی در مهندسی، R&D و مدیریت پروژه ایجاد کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-PERMIT-005-E1",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "667"
+      },
+      "published_at": "2025-08-19",
+      "event_date": "2025-08-19",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A user asked for recent first-hand experience obtaining a China work visa.",
+        "fa": "کاربری درباره تجربه جدید گرفتن ویزای کاری چین پرسیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-PERMIT-005-E2",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "668"
+      },
+      "published_at": "2025-08-19",
+      "event_date": "2025-08-19",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The same applicant asked what the embassy requires after the work permit is issued.",
+        "fa": "همان متقاضی پرسیده بعد از صدور work permit سفارت چه مدارکی می‌خواهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-PERMIT-005-E3",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "674"
+      },
+      "published_at": "2025-08-19",
+      "event_date": "2025-08-19",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "applicant_process_state",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The applicant later said they were waiting for the work permit and needed the embassy-document checklist.",
+        "fa": "متقاضی بعداً گفته منتظر work permit است و چک‌لیست مدارک سفارت را نیاز دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-PERMIT-005-E4",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1879"
+      },
+      "published_at": "2026-03-30",
+      "event_date": "2026-03-30",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "first_hand_consular_process",
+      "firsthandness": "direct",
+      "evidence_quality": "time_sensitive",
+      "summary": {
+        "en": "In March 2026, an applicant reported that the Turkey-side China visa process had been routed through visaforchina.cn and required an in-person printed form submission in Istanbul.",
+        "fa": "در مارس ۲۰۲۶ یک متقاضی گزارش کرده پروسه ویزای چین در ترکیه به visaforchina.cn سپرده شده و تحویل حضوری فرم چاپی در استانبول می‌خواسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-LEGALIZE-006-E1",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1976"
+      },
+      "published_at": "2026-06-02",
+      "event_date": "2026-06-02",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "During a 2026 disruption, an applicant asked how to authenticate education and police-clearance documents when the China consular route in Iran was unavailable.",
+        "fa": "در اختلال ۲۰۲۶ متقاضی پرسیده وقتی مسیر کنسولی چین در ایران در دسترس نیست، مدرک تحصیلی و سوءپیشینه را چگونه تأیید کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-LEGALIZE-006-E2",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1977"
+      },
+      "published_at": "2026-06-02",
+      "event_date": "2026-06-02",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "first_hand_legalization",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A participant reported Turkey did not handle the legalization and that they personally completed the process in Iraq.",
+        "fa": "یکی از اعضا گزارش کرده ترکیه legalization را انجام نداده و خودش فرایند را حضوری در عراق انجام داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-LEGALIZE-006-E3",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1982"
+      },
+      "published_at": "2026-06-02",
+      "event_date": "2026-06-02",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "reported_authority_call",
+      "firsthandness": "reported",
+      "evidence_quality": "reported_not_verified",
+      "summary": {
+        "en": "Another participant said they contacted Iran's foreign ministry and were told to wait for the Chinese embassy in Iran to reopen because third-country legalization was not generally available.",
+        "fa": "عضو دیگری گفته با وزارت خارجه ایران تماس گرفته و به او گفته شده برای بازشدن سفارت چین در ایران صبر کند چون legalization کشور ثالث عموماً در دسترس نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-LEGALIZE-006-E4",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2049"
+      },
+      "published_at": "2026-07-01",
+      "event_date": "2026-07-01",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "first_hand_embassy_legalization",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "After service resumed, a participant described Tehran legalization using a printed form, stamped translation copy and passport copy, with pickup several days later and fee on collection.",
+        "fa": "پس از بازگشت سرویس، یک عضو روند legalization تهران را با فرم چاپی، کپی ترجمه مهرخورده و کپی پاسپورت و تحویل چند روز بعد توضیح داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-LEGALIZE-006-E5",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2125"
+      },
+      "published_at": "2026-07-30",
+      "event_date": "2026-07-30",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "first_hand_embassy_legalization",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A late-July 2026 report said legalization at the embassy was straightforward and did not require an appointment, but the form had to be completed.",
+        "fa": "گزارش اواخر ژوئیه ۲۰۲۶ گفته legalization سفارت بدون وقت قبلی انجام شده اما فرم باید همراه فرد باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-TEACHING-007-E1",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "509"
+      },
+      "published_at": "2025-07-28",
+      "event_date": "2025-07-28",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "community_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A July 2025 reply said English-teaching employers mostly seek native speakers.",
+        "fa": "پاسخ ژوئیه ۲۰۲۵ گفته کارفرمایان تدریس انگلیسی بیشتر دنبال native speaker هستند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-TEACHING-007-E2",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "510"
+      },
+      "published_at": "2025-07-28",
+      "event_date": "2025-07-28",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "community_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "legal_claim_unverified",
+      "summary": {
+        "en": "Another message claimed work permits are not issued for non-native English teachers in the ordinary route.",
+        "fa": "پیام دیگری ادعا کرده برای مدرس انگلیسی non-native در مسیر عادی work permit صادر نمی‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-TEACHING-007-E3",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1934"
+      },
+      "published_at": "2026-05-15",
+      "event_date": "2026-05-15",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "In May 2026, an applicant again asked whether a non-native English teacher can obtain a Z visa, showing the issue remained unresolved in the community.",
+        "fa": "در مه ۲۰۲۶ دوباره درباره امکان Z visa برای مدرس انگلیسی non-native سؤال شده؛ یعنی این friction همچنان پابرجا بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-TEACHING-007-R1",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1940"
+      },
+      "published_at": "2026-05-18",
+      "event_date": "2026-05-18",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "unsafe_workaround_report",
+      "firsthandness": "reported",
+      "evidence_quality": "unsafe_noncompliant_report",
+      "summary": {
+        "en": "A reply described a practice of obtaining a work visa under another job title while actually teaching English and explicitly called it illegal.",
+        "fa": "یک پاسخ روشی را توضیح داده که فرد با عنوان شغلی دیگری ویزای کار می‌گیرد اما عملاً زبان تدریس می‌کند و خود پیام آن را غیرقانونی دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-RESIDENCE-008-E1",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "705"
+      },
+      "published_at": "2025-08-21",
+      "event_date": "2025-08-21",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A PhD-computer-science applicant explicitly separated the goal of working several years in China from wanting a passport, showing long-term stay is a distinct decision dimension.",
+        "fa": "متقاضی دکتری کامپیوتر صریحاً کار چندساله در چین را از گرفتن پاسپورت جدا کرده و اقامت بلندمدت را یک بعد مستقل تصمیم دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-RESIDENCE-008-E2",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1970"
+      },
+      "published_at": "2026-05-31",
+      "event_date": "2026-05-31",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "community_experience",
+      "firsthandness": "reported",
+      "evidence_quality": "single_peer_comparison",
+      "summary": {
+        "en": "A participant compared China with Germany and said job pay/cost of living can be attractive while long-term residence is harder to obtain than in Germany.",
+        "fa": "یک عضو چین را با آلمان مقایسه کرده و گفته حقوق/هزینه زندگی می‌تواند جذاب باشد اما گرفتن اقامت بلندمدت از آلمان سخت‌تر است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-RESIDENCE-008-E3",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2100"
+      },
+      "published_at": "2026-07-23",
+      "event_date": "2026-07-23",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "applicant_goal_conflict",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 applicant weighing a China PhD against Europe explicitly said citizenship mattered and worried that China would not meet that goal despite academic opportunity.",
+        "fa": "یک متقاضی ۲۰۲۶ بین PhD چین و اروپا گفته شهروندی برایش مهم است و نگران بوده چین با وجود فرصت آکادمیک آن هدف را محقق نکند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-RESIDENCE-008-E4",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2104"
+      },
+      "published_at": "2026-07-24",
+      "event_date": "2026-07-24",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "community_strategy",
+      "firsthandness": "second_hand",
+      "evidence_quality": "opinion_not_rule",
+      "summary": {
+        "en": "A reply suggested using China as a bridge and applying onward later, reflecting a community view of China as a career/academic platform rather than necessarily the final settlement destination.",
+        "fa": "پاسخی پیشنهاد کرده چین به‌عنوان پل استفاده شود و بعد برای کشور دیگری اقدام شود؛ بازتاب نگاه چین به‌عنوان platform علمی/شغلی نه لزوماً مقصد نهایی اقامت."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-SALARY-009-E1",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "672"
+      },
+      "published_at": "2025-08-19",
+      "event_date": "2025-08-19",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "admin_anecdote",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "One positive case reported a 25k RMB monthly salary shortly after advanced study, but this was a single anecdote.",
+        "fa": "یک کیس مثبت از حقوق ماهانه حدود ۲۵ هزار یوان پس از تحصیلات عالیه گفته، اما فقط یک تجربه است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-SALARY-009-C1",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "914"
+      },
+      "published_at": "2025-09-13",
+      "event_date": "2025-09-13",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "community_caution",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A participant warned that high salary examples are not useful without considering how likely a comparable applicant is to obtain that job.",
+        "fa": "یکی از اعضا هشدار داده مثال حقوق بالا بدون سنجش احتمال واقعی گرفتن همان شغل برای فرد مشابه گمراه‌کننده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-SALARY-009-C2",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2164"
+      },
+      "published_at": "2026-08-15",
+      "event_date": "2026-08-15",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "applicant_salary_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant asked whether a master's in computer science could realistically yield about $2,800 per month, indicating salary expectations were uncertain.",
+        "fa": "متقاضی پرسیده آیا با ارشد کامپیوتر درآمد حدود ۲۸۰۰ دلار در ماه واقع‌بینانه است یا نه، نشان‌دهنده عدم‌قطعیت expectation حقوق."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-WORK-SALARY-009-C3",
+      "source_id": "china-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2170"
+      },
+      "published_at": "2026-08-15",
+      "event_date": "2026-08-15",
+      "collected_at": "2026-09-17T08:41:51Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A reply said employment with only a master's is possible but likely very difficult, undercutting simple salary-based comparisons.",
+        "fa": "پاسخ گفته کار با صرفاً ارشد ممکن است اما احتمالاً خیلی سخت است و مقایسه صرفاً بر اساس حقوق را تضعیف می‌کند."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "CHN-WORK-DIRECT-001",
+      "issue_cluster_id": "CHINA-DIRECT-FOREIGN-HIRING-SENIORITY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-WORK-LANGUAGE-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "CHN-WORK-DEGREE-003"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "direct_foreign_hiring_seniority",
+        "class": "job_offer"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "technology",
+            "research",
+            "teaching"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK"
+          ],
+          "codes": [
+            "direct_job_offer"
+          ]
+        },
+        "process_stages": [
+          "profile_building",
+          "job_search",
+          "interview"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Direct China job offers are observed for strong senior profiles, while junior applicants are repeatedly pushed toward more education, experience or China-based positioning first",
+          "fa": "جاب‌آفر مستقیم چین برای پروفایل senior دیده می‌شود، اما juniorها مکرراً به سمت تحصیل بیشتر، سابقه قوی‌تر یا positioning داخل چین سوق داده می‌شوند"
+        },
+        "summary": {
+          "en": "The strongest direct-hire example is a senior/team-lead profile with about seven years of experience recruited from Germany through LinkedIn and four interview rounds. Earlier admin guidance says a junior profile is too early for direct work migration.",
+          "fa": "قوی‌ترین مثال جذب مستقیم یک senior/team lead با حدود هفت سال سابقه است که از آلمان از طریق LinkedIn و چهار مرحله مصاحبه جذب شده. راهنمایی قبلی گروه نیز پروفایل خیلی junior را برای مهاجرت کاری مستقیم زود می‌داند."
+        },
+        "practical_impact": {
+          "en": "Applicants should not model their odds on senior success stories if they lack comparable experience.",
+          "fa": "متقاضی junior نباید شانس خود را با کیس senior مقایسه کند."
+        },
+        "who_should_care": {
+          "en": "Iranian applicants seeking a China job offer from abroad.",
+          "fa": "متقاضیان ایرانی جاب‌آفر چین از خارج کشور."
+        },
+        "recommended_action": {
+          "en": "Build verifiable technical/work experience and target roles matching seniority; consider China study/research exposure when direct hiring is weak.",
+          "fa": "سابقه فنی/کاری قابل‌اثبات بسازید، نقش متناسب با seniority هدف بگیرید و اگر جذب مستقیم ضعیف است exposure تحصیلی/پژوهشی داخل چین را بررسی کنید."
+        },
+        "known_workaround": "China-based study/research and local network are repeatedly discussed as ways to improve employability."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-WORK-DIRECT-001-E1",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-DIRECT-001-E1"
+        },
+        {
+          "evidence_id": "CHN-WORK-DIRECT-001-E2",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-DIRECT-001-E2"
+        },
+        {
+          "evidence_id": "CHN-WORK-DIRECT-001-E3",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-DIRECT-001-E3"
+        },
+        {
+          "evidence_id": "CHN-WORK-DIRECT-001-E4",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-DIRECT-001-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The file contains both admin guidance for junior applicants and a concrete senior direct-hire example."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No current employer sponsorship threshold or foreign-worker eligibility rule was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-WORK-DIRECT-001-E1",
+            "CHN-WORK-DIRECT-001-E2",
+            "CHN-WORK-DIRECT-001-E3",
+            "CHN-WORK-DIRECT-001-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-work Telegram community export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Hiring conditions and employer sponsorship requirements change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "job offer",
+        "senior",
+        "LinkedIn",
+        "China",
+        "experience"
+      ],
+      "first_seen": "2025-06-09",
+      "last_seen": "2026-05-28"
+    },
+    {
+      "signal_id": "CHN-WORK-LANGUAGE-002",
+      "issue_cluster_id": "CHINA-WORK-CHINESE-LANGUAGE-LOCAL-POSITIONING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-WORK-DIRECT-001"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "chinese_language_employability",
+        "class": "employment_language"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "technology",
+            "research",
+            "teaching"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK"
+          ],
+          "codes": [
+            "employment"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "local_network",
+          "poststudy"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Chinese proficiency and China-based education/networking are repeatedly treated as employability multipliers, not absolute guarantees",
+          "fa": "زبان چینی و تحصیل/شبکه داخل چین مکرراً multiplier استخدام دیده می‌شوند، نه تضمین"
+        },
+        "summary": {
+          "en": "Admin guidance directly says Chinese helps and a good Chinese university improves chances versus applying directly. Later discussion says universities are among the easier employment settings for foreigners in a non-English-speaking market with a large domestic labour pool.",
+          "fa": "ادمین مستقیماً می‌گوید زبان چینی کمک می‌کند و دانشگاه خوب چین شانس را نسبت به اقدام مستقیم بالا می‌برد. بحث بعدی نیز دانشگاه را از محیط‌های نسبتاً آسان‌تر برای خارجی‌ها در بازار غیرانگلیسی با نیروی کار داخلی بزرگ می‌داند."
+        },
+        "practical_impact": {
+          "en": "English-only applicants may have narrower options outside internationally oriented employers and academia.",
+          "fa": "متقاضی English-only ممکن است بیرون از کارفرمای بین‌المللی و آکادمیا گزینه‌های محدودتری داشته باشد."
+        },
+        "who_should_care": {
+          "en": "Foreign applicants planning engineering, technology or academic work in China.",
+          "fa": "متقاضیان خارجی کار مهندسی، فناوری یا آکادمیک در چین."
+        },
+        "recommended_action": {
+          "en": "Treat Chinese-language development and local network as part of the employment plan, while still validating role-specific language needs.",
+          "fa": "یادگیری چینی و شبکه محلی را بخشی از پلن استخدام ببینید و نیاز زبان هر نقش را جدا بررسی کنید."
+        },
+        "known_workaround": "International/academic environments may be more workable for English-dominant profiles."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-WORK-LANGUAGE-002-E1",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-LANGUAGE-002-E1"
+        },
+        {
+          "evidence_id": "CHN-WORK-LANGUAGE-002-E2",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-LANGUAGE-002-E2"
+        },
+        {
+          "evidence_id": "CHN-WORK-LANGUAGE-002-E3",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-LANGUAGE-002-E3"
+        },
+        {
+          "evidence_id": "CHN-WORK-LANGUAGE-002-E4",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-LANGUAGE-002-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The pattern recurs from 2025 to 2026 and is consistent with multiple community discussions."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No occupation-specific Chinese-language requirement was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-WORK-LANGUAGE-002-E1",
+            "CHN-WORK-LANGUAGE-002-E2",
+            "CHN-WORK-LANGUAGE-002-E3",
+            "CHN-WORK-LANGUAGE-002-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-work Telegram community export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Employer language expectations vary by sector.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Chinese language",
+        "job search",
+        "university",
+        "local network"
+      ],
+      "first_seen": "2025-08-17",
+      "last_seen": "2026-08-15"
+    },
+    {
+      "signal_id": "CHN-WORK-DEGREE-003",
+      "issue_cluster_id": "CHINA-FOREIGN-WORK-DEGREE-PROFILE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-WORK-SALARY-009"
+        }
+      ],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "advanced_degree_profile_advantage",
+        "class": "foreign_employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "technology",
+            "research",
+            "teaching"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK"
+          ],
+          "codes": [
+            "employment",
+            "poststudy_work"
+          ]
+        },
+        "process_stages": [
+          "qualification",
+          "job_search"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Advanced degrees appear to improve foreign employability, but even a PhD is not a job guarantee and a master's-only route is described as difficult",
+          "fa": "مدرک بالاتر ظاهراً employability خارجی را بهتر می‌کند، اما حتی PhD تضمین شغل نیست و مسیر صرفاً ارشد سخت توصیف شده است"
+        },
+        "summary": {
+          "en": "The group prefers PhD over master's for stronger chances and reports one fast post-graduation hire, but also explicitly warns that many PhDs still fail to find suitable work.",
+          "fa": "گروه برای شانس بهتر دکتری را بر ارشد ترجیح می‌دهد و یک استخدام سریع پس از تحصیل گزارش می‌کند، اما صریحاً هشدار می‌دهد بسیاری از دارندگان دکتری هم شغل مناسب پیدا نمی‌کنند."
+        },
+        "practical_impact": {
+          "en": "Degree level should be treated as one factor alongside field, experience, language and network.",
+          "fa": "مقطع فقط یکی از عوامل کنار رشته، سابقه، زبان و شبکه است."
+        },
+        "who_should_care": {
+          "en": "Master's/PhD candidates using education as a China work pathway.",
+          "fa": "متقاضیان ارشد/دکتری که تحصیل را مسیر ورود به بازار کار چین می‌بینند."
+        },
+        "recommended_action": {
+          "en": "Do not pursue a degree solely as a work-visa shortcut; evaluate sector demand, supervisor/lab network and employable skills in parallel.",
+          "fa": "مدرک را صرفاً shortcut ویزای کار نبینید؛ همزمان تقاضای صنعت، شبکه استاد/lab و مهارت قابل‌استخدام را بسنجید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-WORK-DEGREE-003-E1",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-DEGREE-003-E1"
+        },
+        {
+          "evidence_id": "CHN-WORK-DEGREE-003-E2",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-DEGREE-003-E2"
+        },
+        {
+          "evidence_id": "CHN-WORK-DEGREE-003-C1",
+          "relation": "contradicts",
+          "independence_group": "CHN-WORK-DEGREE-003-C1"
+        },
+        {
+          "evidence_id": "CHN-WORK-DEGREE-003-C2",
+          "relation": "contradicts",
+          "independence_group": "CHN-WORK-DEGREE-003-C2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Positive and negative evidence are both present, supporting a conditional signal rather than a guarantee."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current degree/work-permit scoring or eligibility rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-WORK-DEGREE-003-E1",
+            "CHN-WORK-DEGREE-003-E2",
+            "CHN-WORK-DEGREE-003-C1",
+            "CHN-WORK-DEGREE-003-C2"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-work Telegram community export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Foreign-worker qualification rules can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "PhD",
+        "masters",
+        "foreign worker",
+        "employability"
+      ],
+      "first_seen": "2025-06-09",
+      "last_seen": "2026-08-15"
+    },
+    {
+      "signal_id": "CHN-WORK-INDUSTRY-004",
+      "issue_cluster_id": "CHINA-AUTOMATION-AUTO-RD-HIRING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-WORK-DIRECT-001"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "automation_auto_rd_demand",
+        "class": "industry_demand"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "automation",
+            "automotive",
+            "industrial engineering",
+            "R&D"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK"
+          ],
+          "codes": [
+            "automation",
+            "automotive",
+            "engineering",
+            "R&D",
+            "project_management"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "interview"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Automation, automotive and related R&D/project-management roles emerge as a concrete foreign-hiring pocket in the source",
+          "fa": "اتوماسیون، خودرو و نقش‌های R&D/مدیریت پروژه به‌عنوان pocket مشخص جذب خارجی در فایل دیده می‌شوند"
+        },
+        "summary": {
+          "en": "The source contains a direct peer report of Germany-to-China automation recruitment and a participant with Volkswagen-linked market exposure describing expansion in automotive/automation engineering, R&D and project management.",
+          "fa": "فایل گزارش مستقیم جذب اتوماسیون از آلمان به چین و تحلیل یک فرد با exposure به بازار مرتبط با Volkswagen درباره رشد مهندسی خودرو/اتوماسیون، R&D و مدیریت پروژه را دارد."
+        },
+        "practical_impact": {
+          "en": "Sector-specific demand can be materially stronger than the generic foreign-worker market.",
+          "fa": "تقاضای sector-specific می‌تواند از بازار عمومی کار خارجی به‌مراتب قوی‌تر باشد."
+        },
+        "who_should_care": {
+          "en": "Senior engineers and technical managers in automation/auto-related fields.",
+          "fa": "مهندسان senior و مدیران فنی حوزه اتوماسیون/خودرو."
+        },
+        "recommended_action": {
+          "en": "Search sector-specific multinational and China-linked employers rather than relying only on generic expat job boards.",
+          "fa": "به‌جای اتکا صرف به job board عمومی، کارفرمای sector-specific چندملیتی و China-linked را هدف بگیرید."
+        },
+        "known_workaround": "LinkedIn-based international recruitment is directly observed in the source for a senior profile."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-WORK-INDUSTRY-004-E1",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-INDUSTRY-004-E1"
+        },
+        {
+          "evidence_id": "CHN-WORK-INDUSTRY-004-E2",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-INDUSTRY-004-E2"
+        },
+        {
+          "evidence_id": "CHN-WORK-INDUSTRY-004-E3",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-INDUSTRY-004-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "There is one concrete recruitment case plus one informed industry view; broader market demand is not established."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No current labour-market vacancy data or employer sponsorship policy was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-WORK-INDUSTRY-004-E1",
+            "CHN-WORK-INDUSTRY-004-E2",
+            "CHN-WORK-INDUSTRY-004-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-work Telegram community export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Sector demand changes quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "automation",
+        "automotive",
+        "R&D",
+        "project management",
+        "LinkedIn"
+      ],
+      "first_seen": "2026-05-28",
+      "last_seen": "2026-05-29"
+    },
+    {
+      "signal_id": "CHN-WORK-PERMIT-005",
+      "issue_cluster_id": "CHINA-WORK-PERMIT-Z-VISA-EXECUTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-WORK-LEGALIZE-006"
+        }
+      ],
+      "classification": {
+        "family": "E3_VISA_ADJUDICATION",
+        "type": "work_permit_then_consular_visa",
+        "class": "work_visa"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "technology",
+            "research",
+            "teaching"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK"
+          ],
+          "codes": [
+            "work_permit",
+            "Z_visa"
+          ]
+        },
+        "process_stages": [
+          "employer_sponsorship",
+          "work_permit",
+          "embassy_visa"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The work route is operationally multi-stage: employer/work-permit processing is followed by a separate consular visa/document step",
+          "fa": "مسیر کاری چندمرحله‌ای است: پردازش employer/work permit با مرحله جداگانه ویزا/مدارک کنسولی ادامه پیدا می‌کند"
+        },
+        "summary": {
+          "en": "Applicants repeatedly ask what happens after the work permit arrives and what the embassy requires. A 2026 Turkey case also shows consular processing can move through an external visa-service platform and require in-person submission.",
+          "fa": "متقاضیان بارها می‌پرسند بعد از صدور work permit چه می‌شود و سفارت چه می‌خواهد. کیس ترکیه در ۲۰۲۶ نیز نشان می‌دهد پردازش کنسولی ممکن است از پلتفرم خدمات ویزا و تحویل حضوری عبور کند."
+        },
+        "practical_impact": {
+          "en": "Getting employer approval/work permit does not finish the migration process.",
+          "fa": "اوکی کارفرما/work permit پایان پروسه مهاجرت نیست."
+        },
+        "who_should_care": {
+          "en": "Applicants with a China employer or pending work permit.",
+          "fa": "افرادی که کارفرمای چینی یا work permit در جریان دارند."
+        },
+        "recommended_action": {
+          "en": "Maintain separate checklists for employer/work-permit, document authentication and embassy/visa issuance stages.",
+          "fa": "برای employer/work permit، تأیید مدارک و سفارت/صدور ویزا چک‌لیست‌های جدا داشته باشید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-WORK-PERMIT-005-E1",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-PERMIT-005-E1"
+        },
+        {
+          "evidence_id": "CHN-WORK-PERMIT-005-E2",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-PERMIT-005-E2"
+        },
+        {
+          "evidence_id": "CHN-WORK-PERMIT-005-E3",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-PERMIT-005-E3"
+        },
+        {
+          "evidence_id": "CHN-WORK-PERMIT-005-E4",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-PERMIT-005-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated applicant questions show a persistent stage-transition bottleneck."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current China work-permit, Z-visa and visa-centre procedures were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-WORK-PERMIT-005-E1",
+            "CHN-WORK-PERMIT-005-E2",
+            "CHN-WORK-PERMIT-005-E3",
+            "CHN-WORK-PERMIT-005-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-work Telegram community export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Work-visa procedures are time-sensitive and location-specific.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "work permit",
+        "Z visa",
+        "embassy",
+        "visaforchina"
+      ],
+      "first_seen": "2025-08-19",
+      "last_seen": "2026-03-30"
+    },
+    {
+      "signal_id": "CHN-WORK-LEGALIZE-006",
+      "issue_cluster_id": "CHINA-IRAN-DOCUMENT-LEGALIZATION-DISRUPTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-WORK-PERMIT-005"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "iran_document_legalization_consular_continuity",
+        "class": "work_documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "technology",
+            "research",
+            "teaching"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Documents issued in Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK"
+          ],
+          "codes": [
+            "work_visa"
+          ]
+        },
+        "process_stages": [
+          "degree_authentication",
+          "police_clearance",
+          "legalization",
+          "embassy"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For Iran-issued work documents, legalization became a major operational bottleneck during 2026 embassy disruption, with conflicting third-country fallback reports before Tehran service resumed",
+          "fa": "برای مدارک کاری صادرشده در ایران، legalization در اختلال سفارت ۲۰۲۶ به گلوگاه بزرگ تبدیل شد؛ پیش از بازگشت سرویس تهران، درباره fallback کشور ثالث گزارش‌های متناقض وجود داشت"
+        },
+        "summary": {
+          "en": "The file records unsuccessful Turkey fallback, one Iraq completion, a reported foreign-ministry instruction to wait for Tehran, and later direct Tehran legalization experiences without appointment.",
+          "fa": "فایل عدم موفقیت fallback ترکیه، یک تجربه انجام کار در عراق، نقل قول از وزارت خارجه برای صبر تا بازشدن تهران و سپس تجربه مستقیم legalization در تهران بدون وقت قبلی را حفظ کرده است."
+        },
+        "practical_impact": {
+          "en": "Document authentication can delay a work-visa case even after employer-side progress.",
+          "fa": "تأیید مدارک می‌تواند پرونده ویزای کار را حتی بعد از پیشرفت سمت کارفرما متوقف کند."
+        },
+        "who_should_care": {
+          "en": "Iranian applicants needing degree or police-clearance authentication for China work.",
+          "fa": "متقاضیان ایرانی نیازمند تأیید مدرک تحصیلی یا سوءپیشینه برای کار چین."
+        },
+        "recommended_action": {
+          "en": "Verify the currently competent legalization route before travelling to a third country; keep translated/stamped originals and embassy forms ready.",
+          "fa": "قبل از سفر به کشور ثالث، مسیر legalization روز را تأیید کنید و ترجمه‌های مهرخورده/فرم سفارت را آماده داشته باشید."
+        },
+        "known_workaround": "During the disruption one participant reported completing legalization in Iraq; later Tehran service resumed in source reports."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-WORK-LEGALIZE-006-E1",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-LEGALIZE-006-E1"
+        },
+        {
+          "evidence_id": "CHN-WORK-LEGALIZE-006-E2",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-LEGALIZE-006-E2"
+        },
+        {
+          "evidence_id": "CHN-WORK-LEGALIZE-006-E3",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-LEGALIZE-006-E3"
+        },
+        {
+          "evidence_id": "CHN-WORK-LEGALIZE-006-E4",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-LEGALIZE-006-E4"
+        },
+        {
+          "evidence_id": "CHN-WORK-LEGALIZE-006-E5",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-LEGALIZE-006-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple first-hand reports show disruption, fallback confusion and later resumption."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Chinese embassy legalization route for Iran-issued documents was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-WORK-LEGALIZE-006-E1",
+            "CHN-WORK-LEGALIZE-006-E2",
+            "CHN-WORK-LEGALIZE-006-E3",
+            "CHN-WORK-LEGALIZE-006-E4",
+            "CHN-WORK-LEGALIZE-006-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-work Telegram community export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "Consular/legalization arrangements can change immediately.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "legalization",
+        "Iran",
+        "China embassy",
+        "police clearance",
+        "degree"
+      ],
+      "first_seen": "2026-06-02",
+      "last_seen": "2026-07-30"
+    },
+    {
+      "signal_id": "CHN-WORK-TEACHING-007",
+      "issue_cluster_id": "CHINA-ENGLISH-TEACHING-NONNATIVE-RISK",
+      "relationships": [],
+      "classification": {
+        "family": "E12_PROFESSIONAL_REGULATION",
+        "type": "nonnative_english_teaching_work_authorization",
+        "class": "teaching"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "English teaching"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Non-native English speaker"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK"
+          ],
+          "codes": [
+            "English_teaching",
+            "Z_visa"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "work_permit"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "English teaching is a high-risk route for non-native applicants in this source; community reports favor native speakers and include an explicitly illegal job-title workaround",
+          "fa": "تدریس انگلیسی برای non-native در این فایل مسیر پرریسکی است؛ گزارش‌ها nativeها را ترجیح می‌دهند و حتی workaround صریحاً غیرقانونیِ عنوان شغلی دیگر مطرح شده است"
+        },
+        "summary": {
+          "en": "The community repeatedly questions whether non-native teachers can receive a Z visa. One reply describes visa sponsorship under another job title while teaching English and explicitly states this is illegal.",
+          "fa": "گروه چند بار درباره Z visa برای مدرس non-native سؤال دارد. یک پاسخ اسپانسرشدن با عنوان شغلی دیگر و تدریس واقعی زبان را توضیح داده و صریحاً آن را غیرقانونی می‌داند."
+        },
+        "practical_impact": {
+          "en": "Applicants can face visa cancellation, employment and immigration risk if the sponsored occupation does not match the actual work.",
+          "fa": "اگر عنوان اسپانسرشده با کار واقعی یکی نباشد، ریسک ویزا، اشتغال و مهاجرت ایجاد می‌شود."
+        },
+        "who_should_care": {
+          "en": "Iranian/non-native English teachers considering China.",
+          "fa": "مدرسان انگلیسی ایرانی/non-native متقاضی چین."
+        },
+        "recommended_action": {
+          "en": "Use only a work authorization that truthfully matches the actual teaching role; do not use proxy job titles or fabricated documents.",
+          "fa": "فقط مجوز کاری متناسب با شغل واقعی بگیرید؛ از عنوان شغلی صوری یا مدارک ساختگی استفاده نکنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-WORK-TEACHING-007-E1",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-TEACHING-007-E1"
+        },
+        {
+          "evidence_id": "CHN-WORK-TEACHING-007-E2",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-TEACHING-007-E2"
+        },
+        {
+          "evidence_id": "CHN-WORK-TEACHING-007-E3",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-TEACHING-007-E3"
+        },
+        {
+          "evidence_id": "CHN-WORK-TEACHING-007-R1",
+          "relation": "risk_warning",
+          "independence_group": "CHN-WORK-TEACHING-007-R1"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The issue recurs across 2025-2026 and the source itself labels the workaround illegal."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current non-native English-teacher work-permit eligibility was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-WORK-TEACHING-007-E1",
+            "CHN-WORK-TEACHING-007-E2",
+            "CHN-WORK-TEACHING-007-E3",
+            "CHN-WORK-TEACHING-007-R1"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-work Telegram community export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Teaching work-permit rules are regulated and time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "English teaching",
+        "non-native",
+        "Z visa",
+        "work permit"
+      ],
+      "first_seen": "2025-07-28",
+      "last_seen": "2026-05-18"
+    },
+    {
+      "signal_id": "CHN-WORK-RESIDENCE-008",
+      "issue_cluster_id": "CHINA-JOB-QUALITY-VS-SETTLEMENT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-WORK-DIRECT-001"
+        }
+      ],
+      "classification": {
+        "family": "E8_POSTSTUDY_TRANSITION",
+        "type": "career_value_vs_settlement_value",
+        "class": "long_term_residence"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "technology",
+            "research",
+            "teaching"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK"
+          ],
+          "codes": [
+            "employment",
+            "poststudy_work",
+            "long_term_stay"
+          ]
+        },
+        "process_stages": [
+          "career_planning",
+          "residence_planning"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The community repeatedly separates China's career/pay opportunity from settlement value; good jobs do not imply Germany-style permanent-residence or citizenship prospects",
+          "fa": "گروه فرصت شغلی/حقوق چین را از ارزش settlement جدا می‌کند؛ شغل خوب الزاماً به معنی مسیر اقامت دائم/شهروندی شبیه آلمان نیست"
+        },
+        "summary": {
+          "en": "One experienced participant praised pay and cost of living but cautioned that residence prospects differ from Germany. A later PhD applicant explicitly rejected China because citizenship/settlement did not match their goals, while another reply suggested using China as a bridge.",
+          "fa": "یک عضو باتجربه حقوق و هزینه زندگی را مثبت دانسته اما درباره اقامت در مقایسه با آلمان هشدار داده است. متقاضی PhD بعدی نیز به‌خاطر mismatch هدف شهروندی با چین مردد بوده و پاسخ دیگری چین را «پل» دیده است."
+        },
+        "practical_impact": {
+          "en": "Applicants optimizing for salary or research opportunity may reach a different decision from applicants optimizing for permanent settlement.",
+          "fa": "کسی که حقوق/پژوهش را بهینه می‌کند ممکن است تصمیمی متفاوت از کسی بگیرد که settlement دائمی می‌خواهد."
+        },
+        "who_should_care": {
+          "en": "Applicants comparing China with Europe for long-term migration.",
+          "fa": "متقاضیانی که چین را با اروپا برای مهاجرت بلندمدت مقایسه می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Score employment quality and settlement pathway as separate criteria before moving.",
+          "fa": "کیفیت شغل و مسیر settlement را قبل از مهاجرت دو معیار جدا امتیازدهی کنید."
+        },
+        "known_workaround": "Some community members view China as a temporary academic/career platform for later onward migration."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-WORK-RESIDENCE-008-E1",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-RESIDENCE-008-E1"
+        },
+        {
+          "evidence_id": "CHN-WORK-RESIDENCE-008-E2",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-RESIDENCE-008-E2"
+        },
+        {
+          "evidence_id": "CHN-WORK-RESIDENCE-008-E3",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-RESIDENCE-008-E3"
+        },
+        {
+          "evidence_id": "CHN-WORK-RESIDENCE-008-E4",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-RESIDENCE-008-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The pattern is repeated, but the legal residence rules themselves were not verified."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Chinese permanent-residence and citizenship rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-WORK-RESIDENCE-008-E1",
+            "CHN-WORK-RESIDENCE-008-E2",
+            "CHN-WORK-RESIDENCE-008-E3",
+            "CHN-WORK-RESIDENCE-008-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-work Telegram community export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Long-term residence categories can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "permanent residence",
+        "citizenship",
+        "Germany",
+        "China",
+        "career"
+      ],
+      "first_seen": "2025-08-21",
+      "last_seen": "2026-07-24"
+    },
+    {
+      "signal_id": "CHN-WORK-SALARY-009",
+      "issue_cluster_id": "CHINA-FOREIGN-SALARY-ATTAINABILITY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-WORK-DEGREE-003"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "CHN-WORK-INDUSTRY-004"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "salary_attainability_variance",
+        "class": "compensation"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "technology",
+            "research",
+            "teaching"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK"
+          ],
+          "codes": [
+            "employment"
+          ]
+        },
+        "process_stages": [
+          "salary_expectation",
+          "job_selection"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "High foreign-worker salary anecdotes exist, but the durable signal is attainability variance: role, seniority, field and profile matter more than headline pay",
+          "fa": "نمونه حقوق بالای خارجی وجود دارد، اما سیگنال پایدار variance در attainability است: نقش، seniority، رشته و پروفایل از عدد تیتر مهم‌ترند"
+        },
+        "summary": {
+          "en": "The source has a 25k-RMB positive example, but participants explicitly caution that many highly educated applicants do not obtain comparable roles. Master's-level salary expectations also remain uncertain.",
+          "fa": "فایل مثال مثبت ۲۵هزار یوان دارد، اما اعضا صریحاً هشدار می‌دهند بسیاری از افراد تحصیل‌کرده به نقش مشابه نمی‌رسند و expectation حقوق در سطح ارشد نیز نامطمئن است."
+        },
+        "practical_impact": {
+          "en": "Salary examples should not be used as budget forecasts without a realistic probability of landing the role.",
+          "fa": "مثال حقوق نباید بدون سنجش احتمال واقعی گرفتن شغل به‌عنوان forecast بودجه استفاده شود."
+        },
+        "who_should_care": {
+          "en": "Applicants comparing China offers or expected salaries.",
+          "fa": "متقاضیانی که offer یا حقوق موردانتظار چین را مقایسه می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Benchmark compensation by exact occupation, city, seniority and employer type, and separate achievable salary from best-case anecdotes.",
+          "fa": "حقوق را بر اساس شغل دقیق، شهر، seniority و نوع کارفرما benchmark کنید و achievable salary را از کیس best-case جدا کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-WORK-SALARY-009-E1",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-SALARY-009-E1"
+        },
+        {
+          "evidence_id": "CHN-WORK-SALARY-009-C1",
+          "relation": "contradicts",
+          "independence_group": "CHN-WORK-SALARY-009-C1"
+        },
+        {
+          "evidence_id": "CHN-WORK-SALARY-009-C2",
+          "relation": "supports",
+          "independence_group": "CHN-WORK-SALARY-009-C2"
+        },
+        {
+          "evidence_id": "CHN-WORK-SALARY-009-C3",
+          "relation": "contradicts",
+          "independence_group": "CHN-WORK-SALARY-009-C3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The file contains both positive salary anecdotes and explicit warnings against generalizing them."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No current salary dataset was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-WORK-SALARY-009-E1",
+            "CHN-WORK-SALARY-009-C1",
+            "CHN-WORK-SALARY-009-C2",
+            "CHN-WORK-SALARY-009-C3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-work Telegram community export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Compensation varies rapidly by sector/city.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "salary",
+        "25k RMB",
+        "masters",
+        "PhD",
+        "attainability"
+      ],
+      "first_seen": "2025-08-19",
+      "last_seen": "2026-08-15"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Names, Telegram usernames/IDs, phone numbers and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 293 records, including 291 message records."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the full graph was not exhaustively reconstructed."
+      },
+      "promotional_or_low_quality_claims_filtered": {
+        "status": "pass",
+        "note": "Unsupported destination rankings, simplistic country comparisons and isolated claims without useful operational content were excluded or down-weighted."
+      },
+      "unsafe_or_noncompliant_advice_filtered": {
+        "status": "pass",
+        "note": "Advice to fabricate resumes/documents or use a work visa under a false occupation was not converted into a recommended action; it is retained only as a risk warning."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated direct-hiring, Chinese-language, degree, industry, work-permit, legalization, teaching, residence and salary discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Positive senior/salary cases are preserved alongside explicit evidence that PhD/master's profiles can still struggle to find suitable work."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "No current China work-permit, Z-visa, legalization, teaching, permanent-residence or salary rule was independently verified."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote-store deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community employment signals only. They are not official China work-permit, Z-visa, document-legalization, teaching-employment, permanent-residence or labour-market rules. Verify current requirements with the relevant Chinese authority/employer before acting."
+}

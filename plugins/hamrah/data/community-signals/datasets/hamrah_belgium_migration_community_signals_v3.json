@@ -1,0 +1,2509 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_belgium_migration_community_signals_candidate",
+    "generated_at": "2026-09-17T09:01:07Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "belgium-migration-telegram-export",
+      "name": "result(20260917-085433).json / Telegram export «مهاجرت به بلژیک»",
+      "source_type": "public_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-17",
+        "records_available": 44230,
+        "records_processed": 44230,
+        "message_records": 41855
+      },
+      "source_characteristics": {
+        "public_supergroup": true,
+        "belgium_migration_focused": true,
+        "contains_first_hand_applicant_experience": true,
+        "contains_student_worker_resident_experience": true,
+        "contains_community_legal_claims": true,
+        "contains_promotional_offtopic_posts": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "BEL-VFS-LEGAL-001-E1",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "161609"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant asked exactly which pages of legalized civil documents had to be printed for VFS, showing document-pack ambiguity at the handoff stage.",
+        "fa": "متقاضی پرسیده دقیقاً کدام صفحات مدارک لگال‌شده باید برای VFS چاپ شود؛ نشانه ابهام در بسته مدارک مرحله تحویل."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-VFS-LEGAL-001-E2",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "161638"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "first_hand_vfs_experience",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A first-hand reply said all pages were carried to VFS but only the first legalization page was taken in that case.",
+        "fa": "یک تجربه مستقیم گفته همه صفحات را همراه برده اما VFS در آن کیس فقط صفحه اول لگال را گرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-VFS-LEGAL-001-E3",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "208656"
+      },
+      "published_at": "2026-07-03",
+      "event_date": "2026-07-03",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 reply described a specific pack of original translation, copy and legalization sheets for VFS.",
+        "fa": "پاسخ ۲۰۲۶ یک بسته مشخص شامل اصل ترجمه، کپی و برگه‌های لگال برای VFS شرح داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-VFS-LEGAL-001-E4",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "209915"
+      },
+      "published_at": "2026-07-21",
+      "event_date": "2026-07-21",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A later 2026 message described embassy legalization preparation as single-sided colour copies of the full translation pack plus originals and appointment printout.",
+        "fa": "پیام بعدی ۲۰۲۶ آماده‌سازی لگال سفارت را شامل کپی رنگی یک‌رو از کل پک ترجمه، اصل مدارک و پرینت وقت توضیح داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SINGLE-SPONSOR-002-E1",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "161618"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A detailed reply identified three post-study sponsorship frictions: junior salaries can fall below permit thresholds, local language can be a barrier, and the employer permit process is bureaucratic and uncertain.",
+        "fa": "یک پاسخ تفصیلی سه اصطکاک اسپانسر بعد از تحصیل را مطرح کرده: حقوق junior ممکن است زیر threshold مجوز باشد، زبان محلی مانع است و روند مجوز برای کارفرما بروکراتیک و نامطمئن است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SINGLE-SPONSOR-002-E2",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "169406"
+      },
+      "published_at": "2025-05-01",
+      "event_date": "2025-05-01",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "first_hand_single_permit_experience",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A worker described Single Permit as work-permit plus residence-permit processing and said many employers, including large companies, are reluctant to start it.",
+        "fa": "یک شاغل Single Permit را فرایند work permit به‌علاوه residence permit توصیف کرده و گفته بسیاری از شرکت‌ها حتی شرکت‌های بزرگ زیر بار شروع آن نمی‌روند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SINGLE-SPONSOR-002-E3",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "203655"
+      },
+      "published_at": "2026-04-25",
+      "event_date": "2026-04-25",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 reply again said the difficult part of direct work migration is finding a company willing to obtain the Single Permit.",
+        "fa": "پاسخ ۲۰۲۶ دوباره گفته سختی مهاجرت کاری مستقیم، پیدا کردن شرکتی است که حاضر به گرفتن Single Permit باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SINGLE-SPONSOR-002-E4",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "180099"
+      },
+      "published_at": "2025-07-28",
+      "event_date": "2025-07-28",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "group_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group summarized the work route as finding a sponsoring employer first, then work/Single Permit processing, then visa; local Dutch/French was described as materially improving job-search odds.",
+        "fa": "گروه مسیر کاری را ابتدا یافتن employer اسپانسر، سپس work/Single Permit و بعد ویزا خلاصه کرده و هلندی/فرانسوی را عامل مهم افزایش شانس کاریابی دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SINGLE-DELAY-003-E1",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "169957"
+      },
+      "published_at": "2025-05-09",
+      "event_date": "2025-05-09",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "first_hand_processing_timeline",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "One renewal case reported 63 days for the work permit and 142 days for the final Single Permit/Annex 46.",
+        "fa": "یک کیس تمدید، ۶۳ روز برای work permit و ۱۴۲ روز برای Single Permit/Annex 46 نهایی گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SINGLE-DELAY-003-E2",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "182521"
+      },
+      "published_at": "2025-08-19",
+      "event_date": "2025-08-19",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "first_hand_processing_delay",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant reported waiting about 17 weeks after the work permit while the Single Permit had still not arrived.",
+        "fa": "متقاضی گزارش کرده حدود ۱۷ هفته پس از work permit هنوز Single Permit صادر نشده بود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SINGLE-DELAY-003-E3",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "184499"
+      },
+      "published_at": "2025-09-01",
+      "event_date": "2025-09-01",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "first_hand_processing_delay",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Another applicant said the expected Single Permit timeline had moved from 11 to 14 to 17 weeks during summer.",
+        "fa": "متقاضی دیگری گفته برآورد زمان Single Permit در تابستان از ۱۱ به ۱۴ و سپس ۱۷ هفته افزایش یافته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SINGLE-DELAY-003-E4",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "187568"
+      },
+      "published_at": "2025-10-03",
+      "event_date": "2025-10-03",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "first_hand_processing_delay",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A later case reported a work permit within roughly two weeks while the Single Permit remained pending for months, with a stated 17-week queue.",
+        "fa": "کیس بعدی work permit را حدود دو هفته‌ای گرفته اما Single Permit ماه‌ها pending مانده و صف ۱۷ هفته‌ای گزارش شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SEARCHYEAR-004-E1",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "161612"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A reply said a post-study job-search year is available after study, but actually finding work within that year depends strongly on field and local-language ability.",
+        "fa": "پاسخ گفته سال جستجوی کار بعد از تحصیل وجود دارد، اما پیدا کردن شغل در همان سال به رشته و زبان محلی وابسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SEARCHYEAR-004-E2",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "191719"
+      },
+      "published_at": "2025-12-22",
+      "event_date": "2025-12-22",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A late-2025 reply advised applying for the status change to search year a few months before the student residence card expires.",
+        "fa": "پاسخ اواخر ۲۰۲۵ توصیه کرده چند ماه قبل از انقضای کارت دانشجویی برای تغییر وضعیت به search year اقدام شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SEARCHYEAR-004-E3",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "202119"
+      },
+      "published_at": "2026-04-01",
+      "event_date": "2026-04-01",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 reply described the search year as available after a one-year master's, but said the following extension still requires a job that can support a Single Permit and salary threshold.",
+        "fa": "پاسخ ۲۰۲۶ search year را بعد از مستر یک‌ساله ممکن دانسته، اما برای تمدید بعدی شغلی لازم دانسته که بتواند Single Permit و حداقل حقوق را پوشش دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SEARCHYEAR-004-E4",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "212540"
+      },
+      "published_at": "2026-08-21",
+      "event_date": "2026-08-21",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "first_hand_processing_delay",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A Ghent search-year applicant reported that the new residence card was still not ready after four months and advised applying early.",
+        "fa": "یک متقاضی search year در گنت گزارش کرده کارت جدید بعد از چهار ماه هنوز آماده نشده و توصیه کرده زود اقدام شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-LANGUAGE-005-E1",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "161612"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Local-language knowledge was explicitly cited as improving the probability of finding work during the search year.",
+        "fa": "دانستن زبان محلی صریحاً به‌عنوان عامل افزایش احتمال یافتن کار در search year مطرح شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-LANGUAGE-005-E2",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "161618"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Language was listed as one of the core post-study sponsorship barriers alongside salary threshold and bureaucracy.",
+        "fa": "زبان در کنار threshold حقوق و بروکراسی یکی از موانع اصلی اسپانسر بعد از تحصیل فهرست شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-LANGUAGE-005-E3",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "180099"
+      },
+      "published_at": "2025-07-28",
+      "event_date": "2025-07-28",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "group_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group said Dutch or French substantially improves the chance of finding a sponsoring employer.",
+        "fa": "گروه گفته هلندی یا فرانسوی شانس یافتن employer اسپانسر را به‌طور محسوس بهتر می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-LANGUAGE-005-E4",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "208201"
+      },
+      "published_at": "2026-06-26",
+      "event_date": "2026-06-26",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_comparison",
+      "firsthandness": "second_hand",
+      "evidence_quality": "comparative_anecdotal",
+      "summary": {
+        "en": "A 2026 comparison characterized Belgium's labour market as more Dutch-dependent than the Netherlands' international-English segment and linked this to employer reluctance around slower work-permit processing.",
+        "fa": "مقایسه ۲۰۲۶ بازار بلژیک را نسبت به بخش بین‌المللی هلند هلندی‌محورتر توصیف کرده و این را کنار کندی work permit و reluctance کارفرما گذاشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-RESIDENCE-COUNT-006-E1",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "161613"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_legal_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "legal_claim_unverified",
+      "summary": {
+        "en": "An early discussion warned that PhD years may not count like full employment years for long-term residence, especially when the doctorate is treated as tax-exempt study rather than taxed employment.",
+        "fa": "بحث اولیه هشدار داده سال‌های PhD ممکن است مثل سال‌های کامل کار برای اقامت بلندمدت محاسبه نشوند، خصوصاً وقتی دکتری به‌جای employment مالیات‌پرداز، وضعیت تحصیلی/معاف از مالیات دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-RESIDENCE-COUNT-006-E2",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "184007"
+      },
+      "published_at": "2025-08-28",
+      "event_date": "2025-08-28",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_legal_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "legal_claim_unverified",
+      "summary": {
+        "en": "A later reply said study residence can contribute to a five-year residence calculation but study time is counted at half weight.",
+        "fa": "پاسخ بعدی گفته اقامت تحصیلی می‌تواند در محاسبه پنج‌ساله نقش داشته باشد اما مدت تحصیل نصف محاسبه می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-RESIDENCE-COUNT-006-E3",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "184009"
+      },
+      "published_at": "2025-08-28",
+      "event_date": "2025-08-28",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_legal_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "legal_claim_unverified",
+      "summary": {
+        "en": "The same thread illustrated four study years as two counted years plus three work-residence years.",
+        "fa": "همان گفتگو چهار سال تحصیل را معادل دو سال محاسبه‌شده به‌علاوه سه سال اقامت کاری مثال زده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-RESIDENCE-COUNT-006-E4",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "203013"
+      },
+      "published_at": "2026-04-12",
+      "event_date": "2026-04-12",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_legal_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "legal_claim_unverified",
+      "summary": {
+        "en": "A 2026 reply said the search year itself counts as one year of residence and is taxed differently from student status.",
+        "fa": "پاسخ ۲۰۲۶ گفته search year خودش یک سال اقامت حساب می‌شود و از نظر مالیاتی با وضعیت دانشجویی فرق دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-DOMICILE-007-E1",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "188278"
+      },
+      "published_at": "2025-10-14",
+      "event_date": "2025-10-14",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A reply said a residence card or Annex is commonly needed for a bank account, and these documents follow registration of the place of residence.",
+        "fa": "پاسخ گفته برای حساب بانکی معمولاً کارت اقامت یا Annex لازم است و این مدارک بعد از ثبت محل سکونت به دست می‌آیند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-DOMICILE-007-E2",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "185546"
+      },
+      "published_at": "2025-09-12",
+      "event_date": "2025-09-12",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A residence-renewal checklist in the group included housing contract, proof of funds, insurance and integration evidence.",
+        "fa": "در چک‌لیست تمدید اقامت گروه، قرارداد مسکن، تمکن، بیمه و evidence اینتگریشن آمده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-DOMICILE-007-E3",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "187436"
+      },
+      "published_at": "2025-10-02",
+      "event_date": "2025-10-02",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "first_hand_municipality_friction",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A first-hand case described a circular dependency between municipality registration, Annex 15, national number and health insurance, with different handling between Brussels communes.",
+        "fa": "یک تجربه مستقیم از حلقه بین رجیستر شهرداری، Annex 15، شماره ملی و بیمه گفته و تفاوت برخورد بین communeهای بروکسل را نشان داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-DOMICILE-007-E4",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "208194"
+      },
+      "published_at": "2026-06-26",
+      "event_date": "2026-06-26",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "housing_registration_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 housing notice stated that residents could be entered in migration/foreigners registers but individual domicile in the National Register was not possible because all units shared one address.",
+        "fa": "یک اعلان خوابگاه در ۲۰۲۶ گفته ثبت در migration/foreigners register ممکن است اما domicile فردی در National Register به‌دلیل آدرس مشترک واحدها ممکن نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SOLVENCY-008-E1",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "185546"
+      },
+      "published_at": "2025-09-12",
+      "event_date": "2025-09-12",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group listed scholarship, blocked account, guarantor or sufficient salary as possible proof-of-funds forms for residence renewal.",
+        "fa": "گروه scholarship، blocked account، guarantor یا حقوق کافی را به‌عنوان شکل‌های ممکن تمکن برای تمدید اقامت فهرست کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SOLVENCY-008-E2",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "172049"
+      },
+      "published_at": "2025-06-01",
+      "event_date": "2025-06-01",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "first_hand_searchyear_solvency",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A participant said a work contract was accepted as proof of solvency for search year when annual income met the stated threshold, at least in Antwerp in that experience.",
+        "fa": "یک عضو گفته قرارداد کاری برای تمکن search year وقتی درآمد سالانه به حد لازم می‌رسید در تجربه او در آنتورپ پذیرفته شد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SOLVENCY-008-E3",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "191767"
+      },
+      "published_at": "2025-12-23",
+      "event_date": "2025-12-23",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "first_hand_solvency_experience",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A user reported twice using a part-time employment contract as financial proof—once for student residence and once for search year—when it covered the stay and met the monthly amount.",
+        "fa": "کاربری گزارش کرده دو بار قرارداد نیمه‌وقت را برای تمکن، یک بار دانشجویی و یک بار search year، با پوشش مدت اقامت و حداقل مبلغ ماهانه استفاده کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-SOLVENCY-008-E4",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "202119"
+      },
+      "published_at": "2026-04-01",
+      "event_date": "2026-04-01",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 reply said search year still requires financial coverage and gave blocked funds as the example before a sponsorable job is secured.",
+        "fa": "پاسخ ۲۰۲۶ گفته search year همچنان نیاز به پوشش مالی دارد و قبل از شغل sponsorable از پول بلوکه‌شده به‌عنوان مثال استفاده کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-WORKRIGHTS-009-E1",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "174309"
+      },
+      "published_at": "2025-06-19",
+      "event_date": "2025-06-19",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A reply distinguished student work permission, described as a 20-hour weekly limit, from a work permit and said an internship can be done during search year.",
+        "fa": "پاسخ، اجازه کار دانشجویی با سقف توصیف‌شده ۲۰ ساعت در هفته را از work permit جدا کرده و انجام internship در search year را ممکن دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-WORKRIGHTS-009-E2",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "191727"
+      },
+      "published_at": "2025-12-22",
+      "event_date": "2025-12-22",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A late-2025 reply said moving to search-year status removes the 20-hour student-work limit and allows unrestricted hours.",
+        "fa": "پاسخ اواخر ۲۰۲۵ گفته با تغییر به search year محدودیت ۲۰ ساعت کار دانشجویی برداشته می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-WORKRIGHTS-009-E3",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "202119"
+      },
+      "published_at": "2026-04-01",
+      "event_date": "2026-04-01",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 reply said both the graduate and spouse can work during search year, while extension beyond it depends on one of them obtaining a Single-Permit-eligible job.",
+        "fa": "پاسخ ۲۰۲۶ گفته در search year هم فارغ‌التحصیل و هم همسر می‌توانند کار کنند، اما تمدید بعدی به یافتن شغل واجد شرایط Single Permit توسط یکی از آن‌ها وابسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-WORKRIGHTS-009-E4",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "174762"
+      },
+      "published_at": "2025-06-22",
+      "event_date": "2025-06-22",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "legal_claim_unverified",
+      "summary": {
+        "en": "Another reply summarized search-year status as carrying work authorization, contrasting it with the student limitation.",
+        "fa": "پاسخ دیگری search year را دارای اجازه کار توصیف کرده و آن را از محدودیت دانشجویی جدا کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-ENTRY-RESIDENCE-010-E1",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "165734"
+      },
+      "published_at": "2025-03-03",
+      "event_date": "2025-03-03",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_process_explanation",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A process explanation distinguished the short student entry visa from the later municipality-issued residence card after arrival.",
+        "fa": "توضیح فرایند، ویزای کوتاه ورود دانشجویی را از کارت اقامت شهرداری بعد از ورود جدا کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-ENTRY-RESIDENCE-010-E2",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "210482"
+      },
+      "published_at": "2026-07-29",
+      "event_date": "2026-07-29",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "first_hand_process_experience",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 reply described a roughly four-month entry visa as permission to enter and remain while applying for the residence card, after which the card becomes the practical residence document.",
+        "fa": "پاسخ ۲۰۲۶ ویزای حدود چهارماهه را مجوز ورود/ماندن تا زمان درخواست کارت اقامت توصیف کرده و کارت را مدرک عملی اقامت بعدی دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-ENTRY-RESIDENCE-010-E3",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "186199"
+      },
+      "published_at": "2025-09-18",
+      "event_date": "2025-09-18",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "arrival_checklist",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An arrival checklist grouped university registration, bank account, rental contract and temporary municipality residence card as post-arrival tasks.",
+        "fa": "چک‌لیست ورود، ثبت‌نام دانشگاه، حساب بانکی، قرارداد اجاره و کارت اقامت موقت شهرداری را جزو کارهای بعد از ورود گذاشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "BEL-ENTRY-RESIDENCE-010-E4",
+      "source_id": "belgium-migration-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "188278"
+      },
+      "published_at": "2025-10-14",
+      "event_date": "2025-10-14",
+      "collected_at": "2026-09-17T09:01:07Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group linked address registration to obtaining the Annex/residence documents subsequently needed for banking and other setup.",
+        "fa": "گروه ثبت آدرس را به گرفتن Annex/مدارک اقامت و سپس کارهای بانکی و setup زندگی وصل کرده است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "BEL-VFS-LEGAL-001",
+      "issue_cluster_id": "BELGIUM-IRAN-VFS-LEGALIZATION-CHAIN",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BEL-ENTRY-RESIDENCE-010"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "vfs_legalization_document_pack_friction",
+        "class": "visa_documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Belgium",
+          "country_code": "BEL",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Belgium",
+            "other EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_visa",
+            "work_visa"
+          ]
+        },
+        "process_stages": [
+          "translation",
+          "legalization",
+          "VFS_submission"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "VFS/legalization is a recurring operational bottleneck: the exact document pack, copies and legalized pages matter and community practice changes over time",
+          "fa": "VFS/لگالایز گلوگاه عملیاتی تکرارشونده است؛ پک دقیق مدارک، کپی‌ها و صفحات لگال مهم‌اند و practice گروه در طول زمان تغییر کرده است"
+        },
+        "summary": {
+          "en": "The source repeatedly asks which legalized pages, originals and colour copies must go to VFS/embassy. First-hand and 2026 guidance differ in detail, so the durable signal is procedural sensitivity rather than one fixed checklist.",
+          "fa": "فایل بارها درباره صفحه لگال، اصل ترجمه و کپی رنگی برای VFS/سفارت سؤال دارد. تجربه مستقیم و راهنمایی‌های ۲۰۲۶ در جزئیات فرق دارند؛ پس سیگنال پایدار حساسیت فرایند است نه یک چک‌لیست ثابت."
+        },
+        "practical_impact": {
+          "en": "A correct admission file can still be delayed by an incomplete or wrongly prepared legalization/VFS pack.",
+          "fa": "پرونده پذیرش صحیح هم ممکن است به‌خاطر پک ناقص یا اشتباه لگال/VFS عقب بیفتد."
+        },
+        "who_should_care": {
+          "en": "Iran-based Belgium study/work visa applicants.",
+          "fa": "متقاضیان داخل ایران برای ویزای تحصیلی/کاری بلژیک."
+        },
+        "recommended_action": {
+          "en": "Recheck the live embassy/VFS checklist immediately before legalization and appointment; carry complete originals/copies rather than relying on old chat instructions.",
+          "fa": "بلافاصله قبل از لگال و وقت VFS چک‌لیست روز سفارت/VFS را دوباره بررسی کنید و به‌جای اتکا به پیام قدیمی، اصل و کپی کامل همراه داشته باشید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BEL-VFS-LEGAL-001-E1",
+          "relation": "supports",
+          "independence_group": "BEL-VFS-LEGAL-001-E1"
+        },
+        {
+          "evidence_id": "BEL-VFS-LEGAL-001-E2",
+          "relation": "supports",
+          "independence_group": "BEL-VFS-LEGAL-001-E2"
+        },
+        {
+          "evidence_id": "BEL-VFS-LEGAL-001-E3",
+          "relation": "supports",
+          "independence_group": "BEL-VFS-LEGAL-001-E3"
+        },
+        {
+          "evidence_id": "BEL-VFS-LEGAL-001-E4",
+          "relation": "supports",
+          "independence_group": "BEL-VFS-LEGAL-001-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "evolving",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The issue repeats from the first day of 2025 through mid-2026 with concrete submission experience."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Belgian embassy/VFS legalization checklist was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BEL-VFS-LEGAL-001-E1",
+            "BEL-VFS-LEGAL-001-E2",
+            "BEL-VFS-LEGAL-001-E3",
+            "BEL-VFS-LEGAL-001-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Belgium migration Telegram export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Document/VFS requirements are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "VFS",
+        "legalization",
+        "translation",
+        "colour copy"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2026-07-21"
+    },
+    {
+      "signal_id": "BEL-SINGLE-SPONSOR-002",
+      "issue_cluster_id": "BELGIUM-SINGLE-PERMIT-SPONSORSHIP-FRICTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BEL-SINGLE-DELAY-003"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "BEL-LANGUAGE-005"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "BEL-SEARCHYEAR-004"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "sponsorable_job_vs_any_job",
+        "class": "work_migration"
+      },
+      "scope": {
+        "destination": {
+          "country": "Belgium",
+          "country_code": "BEL",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Belgium",
+            "other EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "Single_Permit",
+            "work_permit"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "employer_sponsorship",
+          "permit_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "In Belgium, finding a job and finding a sponsorable Single-Permit job are not the same problem",
+          "fa": "در بلژیک «پیدا کردن کار» و «پیدا کردن کار قابل اسپانسر برای Single Permit» یک مسئله نیستند"
+        },
+        "summary": {
+          "en": "The source repeatedly cites salary thresholds, local language, employer paperwork and employer reluctance. Junior roles can be especially problematic when pay falls below the level needed for a work-permit route.",
+          "fa": "فایل مکرراً threshold حقوق، زبان محلی، paperwork کارفرما و reluctance شرکت‌ها را مطرح می‌کند. نقش‌های junior مخصوصاً وقتی حقوق زیر سطح لازم باشد مشکل‌ساز می‌شوند."
+        },
+        "practical_impact": {
+          "en": "A graduate may be employed during search year yet still fail to convert to longer-term work residence.",
+          "fa": "فارغ‌التحصیل ممکن است در search year شاغل باشد اما نتواند آن را به اقامت کاری بلندمدت تبدیل کند."
+        },
+        "who_should_care": {
+          "en": "Post-study and direct-work applicants.",
+          "fa": "متقاضیان post-study و مهاجرت کاری مستقیم."
+        },
+        "recommended_action": {
+          "en": "Screen jobs for permit eligibility, salary threshold and employer willingness before treating an offer as a migration solution.",
+          "fa": "قبل از اینکه offer را راه‌حل مهاجرتی بدانید، eligibility مجوز، threshold حقوق و willingness کارفرما را بررسی کنید."
+        },
+        "known_workaround": "Search-year status can let graduates work while an employer starts the Single-Permit process."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BEL-SINGLE-SPONSOR-002-E1",
+          "relation": "supports",
+          "independence_group": "BEL-SINGLE-SPONSOR-002-E1"
+        },
+        {
+          "evidence_id": "BEL-SINGLE-SPONSOR-002-E2",
+          "relation": "supports",
+          "independence_group": "BEL-SINGLE-SPONSOR-002-E2"
+        },
+        {
+          "evidence_id": "BEL-SINGLE-SPONSOR-002-E3",
+          "relation": "supports",
+          "independence_group": "BEL-SINGLE-SPONSOR-002-E3"
+        },
+        {
+          "evidence_id": "BEL-SINGLE-SPONSOR-002-E4",
+          "relation": "supports",
+          "independence_group": "BEL-SINGLE-SPONSOR-002-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated across 2025-2026 with first-hand and group-admin experience."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current regional Single-Permit salary thresholds and eligibility were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BEL-SINGLE-SPONSOR-002-E1",
+            "BEL-SINGLE-SPONSOR-002-E2",
+            "BEL-SINGLE-SPONSOR-002-E3",
+            "BEL-SINGLE-SPONSOR-002-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Belgium migration Telegram export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Salary thresholds and permit rules vary by region/year.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Single Permit",
+        "sponsor",
+        "salary threshold",
+        "employer"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2026-04-25"
+    },
+    {
+      "signal_id": "BEL-SINGLE-DELAY-003",
+      "issue_cluster_id": "BELGIUM-SINGLE-PERMIT-PROCESSING-DELAY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BEL-SINGLE-SPONSOR-002"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "single_permit_long_processing",
+        "class": "processing_delay"
+      },
+      "scope": {
+        "destination": {
+          "country": "Belgium",
+          "country_code": "BEL",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Belgium",
+            "other EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "Single_Permit"
+          ]
+        },
+        "process_stages": [
+          "work_permit",
+          "residence_permit",
+          "renewal"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Single-Permit processing can be materially longer than the work-permit step and creates months of residence/employment uncertainty",
+          "fa": "پردازش Single Permit می‌تواند بسیار طولانی‌تر از مرحله work permit باشد و ماه‌ها عدم‌قطعیت اقامتی/شغلی ایجاد کند"
+        },
+        "summary": {
+          "en": "First-hand cases report 142 days, around 17 weeks, and even much longer historical renewal experiences. Work-permit approval often arrived well before the final residence component.",
+          "fa": "تجربه‌های مستقیم ۱۴۲ روز، حدود ۱۷ هفته و حتی تجربه‌های تمدید بسیار طولانی‌تر را گزارش می‌کنند. work permit اغلب خیلی زودتر از بخش اقامتی نهایی آمده است."
+        },
+        "practical_impact": {
+          "en": "Start dates, travel and status transitions can be disrupted even after the employer-side permit progresses.",
+          "fa": "تاریخ شروع کار، سفر و تغییر وضعیت حتی بعد از پیشرفت مجوز سمت کارفرما می‌تواند مختل شود."
+        },
+        "who_should_care": {
+          "en": "Applicants and workers waiting for a first or renewed Single Permit.",
+          "fa": "افراد منتظر Single Permit اولیه یا تمدید آن."
+        },
+        "recommended_action": {
+          "en": "Build substantial processing buffer and avoid non-refundable travel/status assumptions based only on work-permit approval.",
+          "fa": "buffer زمانی جدی بگذارید و صرفاً بر اساس work permit برای سفر یا تغییر وضعیت غیرقابل‌برگشت برنامه‌ریزی نکنید."
+        },
+        "known_workaround": "Temporary Annex documents are reported during some pending-residence periods, but travel rights can still be constrained."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BEL-SINGLE-DELAY-003-E1",
+          "relation": "supports",
+          "independence_group": "BEL-SINGLE-DELAY-003-E1"
+        },
+        {
+          "evidence_id": "BEL-SINGLE-DELAY-003-E2",
+          "relation": "supports",
+          "independence_group": "BEL-SINGLE-DELAY-003-E2"
+        },
+        {
+          "evidence_id": "BEL-SINGLE-DELAY-003-E3",
+          "relation": "supports",
+          "independence_group": "BEL-SINGLE-DELAY-003-E3"
+        },
+        {
+          "evidence_id": "BEL-SINGLE-DELAY-003-E4",
+          "relation": "supports",
+          "independence_group": "BEL-SINGLE-DELAY-003-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple independent first-hand timelines show the same delay pattern."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official processing targets were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BEL-SINGLE-DELAY-003-E1",
+            "BEL-SINGLE-DELAY-003-E2",
+            "BEL-SINGLE-DELAY-003-E3",
+            "BEL-SINGLE-DELAY-003-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Belgium migration Telegram export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Processing backlogs can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Single Permit",
+        "processing delay",
+        "Annex 46",
+        "renewal"
+      ],
+      "first_seen": "2025-05-09",
+      "last_seen": "2025-10-03"
+    },
+    {
+      "signal_id": "BEL-SEARCHYEAR-004",
+      "issue_cluster_id": "BELGIUM-POSTSTUDY-SEARCH-YEAR",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BEL-SINGLE-SPONSOR-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "BEL-SOLVENCY-008"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "BEL-WORKRIGHTS-009"
+        }
+      ],
+      "classification": {
+        "family": "E8_POSTSTUDY_TRANSITION",
+        "type": "search_year_bridge_not_guaranteed_conversion",
+        "class": "poststudy"
+      },
+      "scope": {
+        "destination": {
+          "country": "Belgium",
+          "country_code": "BEL",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Belgium",
+            "other EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "search_year",
+            "poststudy_work"
+          ]
+        },
+        "process_stages": [
+          "graduation",
+          "status_change",
+          "job_search",
+          "work_residence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The Belgian search year is a useful bridge after study, but it is not itself a durable work-residence solution",
+          "fa": "Search Year بلژیک پل مفیدی بعد از تحصیل است، اما خودش راه‌حل پایدار اقامت کاری نیست"
+        },
+        "summary": {
+          "en": "The source treats search year as a post-study period to remain/work and find a qualifying job. Successful conversion still depends on field, language, financial proof and eventually a Single-Permit-eligible job.",
+          "fa": "فایل search year را دوره‌ای برای ماندن/کار و یافتن شغل مناسب می‌داند. تبدیل موفق همچنان به رشته، زبان، تمکن و در نهایت شغل واجد Single Permit وابسته است."
+        },
+        "practical_impact": {
+          "en": "Graduates can gain time and work flexibility, but may still have to leave or switch status if no qualifying job is found.",
+          "fa": "فارغ‌التحصیل زمان و flexibility کاری می‌گیرد، اما اگر شغل qualifying پیدا نشود ممکن است مجبور به خروج یا تغییر وضعیت شود."
+        },
+        "who_should_care": {
+          "en": "International graduates of Belgian higher education.",
+          "fa": "فارغ‌التحصیلان بین‌المللی دانشگاه‌های بلژیک."
+        },
+        "recommended_action": {
+          "en": "Start job search and status-change preparation before graduation/card expiry, and model the conversion requirement from day one.",
+          "fa": "کاریابی و آماده‌سازی تغییر status را قبل از فارغ‌التحصیلی/انقضای کارت شروع کنید و از روز اول شرط تبدیل به اقامت کاری را در نظر بگیرید."
+        },
+        "known_workaround": "Some applicants use employment income as solvency evidence when accepted by the municipality."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BEL-SEARCHYEAR-004-E1",
+          "relation": "supports",
+          "independence_group": "BEL-SEARCHYEAR-004-E1"
+        },
+        {
+          "evidence_id": "BEL-SEARCHYEAR-004-E2",
+          "relation": "supports",
+          "independence_group": "BEL-SEARCHYEAR-004-E2"
+        },
+        {
+          "evidence_id": "BEL-SEARCHYEAR-004-E3",
+          "relation": "supports",
+          "independence_group": "BEL-SEARCHYEAR-004-E3"
+        },
+        {
+          "evidence_id": "BEL-SEARCHYEAR-004-E4",
+          "relation": "supports",
+          "independence_group": "BEL-SEARCHYEAR-004-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated throughout 2025-2026, including timing and real processing experience."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current search-year eligibility, deadlines and work rights were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BEL-SEARCHYEAR-004-E1",
+            "BEL-SEARCHYEAR-004-E2",
+            "BEL-SEARCHYEAR-004-E3",
+            "BEL-SEARCHYEAR-004-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Belgium migration Telegram export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Post-study rules and municipal processing can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "search year",
+        "job search",
+        "post-study",
+        "Single Permit"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2026-08-21"
+    },
+    {
+      "signal_id": "BEL-LANGUAGE-005",
+      "issue_cluster_id": "BELGIUM-LOCAL-LANGUAGE-EMPLOYMENT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BEL-SINGLE-SPONSOR-002"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "dutch_french_employability",
+        "class": "labour_market"
+      },
+      "scope": {
+        "destination": {
+          "country": "Belgium",
+          "country_code": "BEL",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Belgium",
+            "other EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "employment",
+            "poststudy_work"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "employer_sponsorship"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Dutch/French proficiency is a recurring practical employment filter even when the academic programme itself is in English",
+          "fa": "هلندی/فرانسوی یک فیلتر عملی تکرارشونده برای استخدام است حتی اگر program تحصیلی انگلیسی باشد"
+        },
+        "summary": {
+          "en": "Across search-year and direct-work discussions, local language is repeatedly linked to finding employers and overcoming a labour market with many locally oriented roles.",
+          "fa": "در بحث search year و مهاجرت کاری مستقیم، زبان محلی مکرراً به یافتن employer و عبور از بازار کار محلی‌محور وصل شده است."
+        },
+        "practical_impact": {
+          "en": "English-only graduates can face a smaller pool of sponsorable jobs, especially outside highly international employers.",
+          "fa": "فارغ‌التحصیل English-only ممکن است pool کوچک‌تری از مشاغل sponsorable داشته باشد، مخصوصاً خارج از شرکت‌های بسیار بین‌المللی."
+        },
+        "who_should_care": {
+          "en": "Students choosing Belgium partly for post-study work.",
+          "fa": "دانشجویانی که بلژیک را با هدف کار بعد از تحصیل انتخاب می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Begin the relevant local language during study and choose Dutch/French based on target region and sector.",
+          "fa": "زبان محلی مرتبط را حین تحصیل شروع کنید و هلندی/فرانسوی را بر اساس region و sector هدف انتخاب کنید."
+        },
+        "known_workaround": "International companies and some research/academic roles may have more English-language openings."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BEL-LANGUAGE-005-E1",
+          "relation": "supports",
+          "independence_group": "BEL-LANGUAGE-005-E1"
+        },
+        {
+          "evidence_id": "BEL-LANGUAGE-005-E2",
+          "relation": "supports",
+          "independence_group": "BEL-LANGUAGE-005-E2"
+        },
+        {
+          "evidence_id": "BEL-LANGUAGE-005-E3",
+          "relation": "supports",
+          "independence_group": "BEL-LANGUAGE-005-E3"
+        },
+        {
+          "evidence_id": "BEL-LANGUAGE-005-E4",
+          "relation": "supports",
+          "independence_group": "BEL-LANGUAGE-005-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same employment-language friction is repeated across time and route types."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No occupation-specific language requirement was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BEL-LANGUAGE-005-E1",
+            "BEL-LANGUAGE-005-E2",
+            "BEL-LANGUAGE-005-E3",
+            "BEL-LANGUAGE-005-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Belgium migration Telegram export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Language demand varies by region, employer and occupation.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Dutch",
+        "French",
+        "local language",
+        "employment"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2026-06-26"
+    },
+    {
+      "signal_id": "BEL-RESIDENCE-COUNT-006",
+      "issue_cluster_id": "BELGIUM-STUDY-PHD-RESIDENCE-COUNTING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BEL-SEARCHYEAR-004"
+        }
+      ],
+      "classification": {
+        "family": "E8_POSTSTUDY_TRANSITION",
+        "type": "study_time_partial_residence_counting",
+        "class": "long_term_residence"
+      },
+      "scope": {
+        "destination": {
+          "country": "Belgium",
+          "country_code": "BEL",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Belgium",
+            "other EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_residence",
+            "PhD",
+            "search_year",
+            "work_residence"
+          ]
+        },
+        "process_stages": [
+          "long_term_residence",
+          "residence_counting"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Community evidence consistently warns not to assume study/PhD years count the same as full work-residence years toward long-term residence",
+          "fa": "شواهد کامیونیتی consistently هشدار می‌دهند سال‌های تحصیل/PhD را هم‌ارز کامل سال‌های اقامت کاری برای اقامت بلندمدت فرض نکنید"
+        },
+        "summary": {
+          "en": "Several discussions use a half-count model for study years and distinguish taxed employment-like doctoral contracts from study/scholarship status. Search year is separately described as a full residence year in community claims.",
+          "fa": "چند بحث مدل نصف‌شدن سال‌های تحصیل را مطرح کرده و قرارداد دکتری شبیه employment مالیات‌پرداز را از وضعیت study/scholarship جدا می‌کند. search year نیز جداگانه در ادعاهای گروه یک سال کامل توصیف شده است."
+        },
+        "practical_impact": {
+          "en": "A four-year doctorate may not translate into four years of qualifying long-term-residence time under the community's understanding.",
+          "fa": "دکتری چهار‌ساله ممکن است طبق برداشت گروه چهار سال کامل qualifying برای اقامت بلندمدت نسازد."
+        },
+        "who_should_care": {
+          "en": "PhD/study applicants whose main goal is permanent residence or nationality.",
+          "fa": "متقاضیان تحصیل/PhD که هدف اصلی‌شان اقامت دائم یا تابعیت است."
+        },
+        "recommended_action": {
+          "en": "Verify the legal counting rule for your exact residence/doctoral contract before choosing Belgium for settlement timing.",
+          "fa": "قبل از انتخاب بلژیک بر اساس زمان settlement، قاعده قانونی محاسبه برای نوع اقامت/قرارداد دکتری خودتان را رسمی بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BEL-RESIDENCE-COUNT-006-E1",
+          "relation": "supports",
+          "independence_group": "BEL-RESIDENCE-COUNT-006-E1"
+        },
+        {
+          "evidence_id": "BEL-RESIDENCE-COUNT-006-E2",
+          "relation": "supports",
+          "independence_group": "BEL-RESIDENCE-COUNT-006-E2"
+        },
+        {
+          "evidence_id": "BEL-RESIDENCE-COUNT-006-E3",
+          "relation": "supports",
+          "independence_group": "BEL-RESIDENCE-COUNT-006-E3"
+        },
+        {
+          "evidence_id": "BEL-RESIDENCE-COUNT-006-E4",
+          "relation": "supports",
+          "independence_group": "BEL-RESIDENCE-COUNT-006-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The pattern is repeated, but it is a legal-status claim and was not independently verified."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Belgian long-term-residence/nationality counting rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BEL-RESIDENCE-COUNT-006-E1",
+            "BEL-RESIDENCE-COUNT-006-E2",
+            "BEL-RESIDENCE-COUNT-006-E3",
+            "BEL-RESIDENCE-COUNT-006-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Belgium migration Telegram export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Residence/nationality law is time-sensitive and status-specific.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "PhD",
+        "study years",
+        "permanent residence",
+        "counting"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2026-04-12"
+    },
+    {
+      "signal_id": "BEL-DOMICILE-007",
+      "issue_cluster_id": "BELGIUM-DOMICILE-MUNICIPALITY-DEPENDENCY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BEL-ENTRY-RESIDENCE-010"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "BEL-SOLVENCY-008"
+        }
+      ],
+      "classification": {
+        "family": "E20_LIFE_MOBILITY_OPERATIONS",
+        "type": "address_registration_admin_dependency",
+        "class": "municipality_setup"
+      },
+      "scope": {
+        "destination": {
+          "country": "Belgium",
+          "country_code": "BEL",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Belgium",
+            "other EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_residence",
+            "work_residence",
+            "search_year"
+          ]
+        },
+        "process_stages": [
+          "housing",
+          "address_registration",
+          "residence_card",
+          "banking",
+          "insurance"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "A registrable address is an administrative foundation in Belgium: municipality registration connects housing to residence documents, banking and insurance",
+          "fa": "آدرس قابل رجیستر یک زیرساخت اداری پایه در بلژیک است: ثبت شهرداری، مسکن را به مدارک اقامت، بانک و بیمه وصل می‌کند"
+        },
+        "summary": {
+          "en": "The file repeatedly links address registration with Annex/residence-card issuance and banking. It also shows municipality-specific friction and housing offers where individual domicile is not possible.",
+          "fa": "فایل بارها ثبت آدرس را به Annex/کارت اقامت و بانک وصل می‌کند. همچنین friction شهرداری‌محور و خوابگاه‌هایی را نشان می‌دهد که domicile فردی در آن‌ها ممکن نیست."
+        },
+        "practical_impact": {
+          "en": "Choosing housing without checking registration/domicile conditions can block or delay other essential setup steps.",
+          "fa": "انتخاب مسکن بدون بررسی امکان رجیستر/domicile می‌تواند مراحل ضروری دیگر را متوقف یا عقب بیندازد."
+        },
+        "who_should_care": {
+          "en": "New students, workers and search-year residents arriving in Belgium.",
+          "fa": "دانشجویان، کارکنان و افراد search year تازه‌وارد."
+        },
+        "recommended_action": {
+          "en": "Before signing housing, confirm what register/municipality registration is possible and whether it supports the residence document you need.",
+          "fa": "قبل از امضای مسکن، نوع رجیستر ممکن در آن آدرس و کفایت آن برای مدرک اقامتی موردنیاز را روشن کنید."
+        },
+        "known_workaround": "Municipality-specific temporary documents/insurance handling appear in some cases, but should not be assumed transferable between communes."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BEL-DOMICILE-007-E1",
+          "relation": "supports",
+          "independence_group": "BEL-DOMICILE-007-E1"
+        },
+        {
+          "evidence_id": "BEL-DOMICILE-007-E2",
+          "relation": "supports",
+          "independence_group": "BEL-DOMICILE-007-E2"
+        },
+        {
+          "evidence_id": "BEL-DOMICILE-007-E3",
+          "relation": "supports",
+          "independence_group": "BEL-DOMICILE-007-E3"
+        },
+        {
+          "evidence_id": "BEL-DOMICILE-007-E4",
+          "relation": "supports",
+          "independence_group": "BEL-DOMICILE-007-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated practical evidence links address registration to multiple downstream systems."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current municipality-specific registration requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BEL-DOMICILE-007-E1",
+            "BEL-DOMICILE-007-E2",
+            "BEL-DOMICILE-007-E3",
+            "BEL-DOMICILE-007-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Belgium migration Telegram export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Commune practices can differ and change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "domicile",
+        "municipality",
+        "Annex",
+        "address registration",
+        "bank"
+      ],
+      "first_seen": "2025-09-12",
+      "last_seen": "2026-06-26"
+    },
+    {
+      "signal_id": "BEL-SOLVENCY-008",
+      "issue_cluster_id": "BELGIUM-PROOF-OF-SUBSISTENCE-MULTIPLE-FORMS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BEL-SEARCHYEAR-004"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "BEL-DOMICILE-007"
+        }
+      ],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "blocked_account_guarantor_income_solvency",
+        "class": "proof_of_funds"
+      },
+      "scope": {
+        "destination": {
+          "country": "Belgium",
+          "country_code": "BEL",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Belgium",
+            "other EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_residence",
+            "search_year"
+          ]
+        },
+        "process_stages": [
+          "visa",
+          "renewal",
+          "proof_of_funds"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Proof of subsistence is a recurring requirement beyond the initial student visa, but the accepted evidence can include blocked funds, guarantor, scholarship or qualifying employment income",
+          "fa": "تمکن فقط مسئله ویزای اولیه نیست؛ برای ادامه اقامت هم تکرار می‌شود و evidence پذیرفته‌شده می‌تواند blocked funds، guarantor، scholarship یا درآمد کاری کافی باشد"
+        },
+        "summary": {
+          "en": "The source repeatedly discusses solvency for residence renewal/search year. First-hand cases report employment contracts being accepted when they cover the stay and meet the monthly/annual amount, while other users rely on blocked accounts or guarantors.",
+          "fa": "فایل مکرراً تمکن تمدید/search year را مطرح می‌کند. تجربه‌های مستقیم پذیرش قرارداد کاری با پوشش مدت و مبلغ لازم را گزارش می‌کنند؛ دیگران از blocked account یا guarantor استفاده می‌کنند."
+        },
+        "practical_impact": {
+          "en": "Graduates may need substantial liquidity even before knowing whether a qualifying job will be found.",
+          "fa": "فارغ‌التحصیل ممکن است پیش از روشن‌شدن شغل qualifying به نقدینگی قابل‌توجه نیاز داشته باشد."
+        },
+        "who_should_care": {
+          "en": "Students renewing residence or moving into search year.",
+          "fa": "دانشجویان در تمدید اقامت یا ورود به search year."
+        },
+        "recommended_action": {
+          "en": "Confirm the exact municipality/university accepted solvency form and current minimum before transferring or blocking funds.",
+          "fa": "قبل از انتقال/بلوکه‌کردن پول، شکل تمکن پذیرفته‌شده و حداقل روز را با شهرداری/دانشگاه مربوطه چک کنید."
+        },
+        "known_workaround": "Qualifying work income has been accepted as solvency in multiple source-reported cases."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BEL-SOLVENCY-008-E1",
+          "relation": "supports",
+          "independence_group": "BEL-SOLVENCY-008-E1"
+        },
+        {
+          "evidence_id": "BEL-SOLVENCY-008-E2",
+          "relation": "supports",
+          "independence_group": "BEL-SOLVENCY-008-E2"
+        },
+        {
+          "evidence_id": "BEL-SOLVENCY-008-E3",
+          "relation": "supports",
+          "independence_group": "BEL-SOLVENCY-008-E3"
+        },
+        {
+          "evidence_id": "BEL-SOLVENCY-008-E4",
+          "relation": "supports",
+          "independence_group": "BEL-SOLVENCY-008-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple direct cases show alternative solvency forms across student/search-year stages."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current minimum subsistence amounts and municipality-specific evidence rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BEL-SOLVENCY-008-E1",
+            "BEL-SOLVENCY-008-E2",
+            "BEL-SOLVENCY-008-E3",
+            "BEL-SOLVENCY-008-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Belgium migration Telegram export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Subsistence amounts update regularly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "solvency",
+        "blocked account",
+        "guarantor",
+        "salary",
+        "search year"
+      ],
+      "first_seen": "2025-06-01",
+      "last_seen": "2026-04-01"
+    },
+    {
+      "signal_id": "BEL-WORKRIGHTS-009",
+      "issue_cluster_id": "BELGIUM-STUDENT-VS-SEARCHYEAR-WORK-RIGHTS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BEL-SEARCHYEAR-004"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "student_to_searchyear_work_rights_change",
+        "class": "work_rights"
+      },
+      "scope": {
+        "destination": {
+          "country": "Belgium",
+          "country_code": "BEL",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Belgium",
+            "other EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_work",
+            "search_year"
+          ]
+        },
+        "process_stages": [
+          "study",
+          "graduation",
+          "employment"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The source consistently distinguishes restricted student work from broader search-year work rights, but long-term stay still requires a qualifying residence route",
+          "fa": "فایل consistently کار محدود دانشجویی را از حق کار گسترده‌تر search year جدا می‌کند، اما ماندن بلندمدت همچنان به مسیر اقامتی qualifying نیاز دارد"
+        },
+        "summary": {
+          "en": "Community messages use a 20-hour student-work model and say search-year status removes that limit. A 2026 discussion also says spouse work can open during search year, while later extension requires a Single-Permit-eligible job.",
+          "fa": "پیام‌ها مدل ۲۰ ساعت کار دانشجویی را مطرح کرده و می‌گویند search year این محدودیت را برمی‌دارد. بحث ۲۰۲۶ نیز بازشدن امکان کار همسر را مطرح کرده ولی تمدید بعدی را به شغل واجد Single Permit گره می‌زند."
+        },
+        "practical_impact": {
+          "en": "Search year can improve immediate earning/employment flexibility without eliminating the future sponsorship problem.",
+          "fa": "search year می‌تواند flexibility کوتاه‌مدت کار/درآمد را بهتر کند اما مشکل اسپانسر آینده را حذف نمی‌کند."
+        },
+        "who_should_care": {
+          "en": "Students and graduates planning part-time/full-time work transitions.",
+          "fa": "دانشجویان و فارغ‌التحصیلان در حال گذار از کار پاره‌وقت به تمام‌وقت."
+        },
+        "recommended_action": {
+          "en": "Separate temporary work authorization during search year from the requirements for the next residence status.",
+          "fa": "اجازه کار موقت در search year را از requirements اقامت بعدی جدا ببینید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BEL-WORKRIGHTS-009-E1",
+          "relation": "supports",
+          "independence_group": "BEL-WORKRIGHTS-009-E1"
+        },
+        {
+          "evidence_id": "BEL-WORKRIGHTS-009-E2",
+          "relation": "supports",
+          "independence_group": "BEL-WORKRIGHTS-009-E2"
+        },
+        {
+          "evidence_id": "BEL-WORKRIGHTS-009-E3",
+          "relation": "supports",
+          "independence_group": "BEL-WORKRIGHTS-009-E3"
+        },
+        {
+          "evidence_id": "BEL-WORKRIGHTS-009-E4",
+          "relation": "supports",
+          "independence_group": "BEL-WORKRIGHTS-009-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The pattern repeats, but exact current work-right rules were not independently verified."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current student/search-year/dependant work-right rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BEL-WORKRIGHTS-009-E1",
+            "BEL-WORKRIGHTS-009-E2",
+            "BEL-WORKRIGHTS-009-E3",
+            "BEL-WORKRIGHTS-009-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Belgium migration Telegram export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Work-right rules are legal and time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student work",
+        "20 hours",
+        "search year",
+        "work rights"
+      ],
+      "first_seen": "2025-06-19",
+      "last_seen": "2026-04-01"
+    },
+    {
+      "signal_id": "BEL-ENTRY-RESIDENCE-010",
+      "issue_cluster_id": "BELGIUM-ENTRY-VISA-VS-RESIDENCE-CARD",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "BEL-DOMICILE-007"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "BEL-VFS-LEGAL-001"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "entry_visa_then_municipality_residence",
+        "class": "arrival_process"
+      },
+      "scope": {
+        "destination": {
+          "country": "Belgium",
+          "country_code": "BEL",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Belgium",
+            "other EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_visa",
+            "residence_card"
+          ]
+        },
+        "process_stages": [
+          "entry",
+          "municipality_registration",
+          "residence_card"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The Belgian entry visa and the in-country residence card are separate administrative layers; arrival triggers a second municipality-based setup process",
+          "fa": "ویزای ورود بلژیک و کارت اقامت داخل کشور دو لایه اداری جدا هستند؛ ورود، یک فرایند دوم مبتنی بر شهرداری را شروع می‌کند"
+        },
+        "summary": {
+          "en": "The source repeatedly explains that the short entry visa gets the applicant into Belgium, while address registration and municipality processing produce the longer-stay residence document used for everyday administration.",
+          "fa": "فایل بارها توضیح می‌دهد ویزای کوتاه برای ورود است و بعد ثبت آدرس و پردازش شهرداری مدرک اقامت بلندتر را می‌سازد که برای امور روزمره استفاده می‌شود."
+        },
+        "practical_impact": {
+          "en": "Getting the visa does not complete immigration setup; housing, municipality, residence card, bank and insurance remain post-arrival tasks.",
+          "fa": "گرفتن ویزا پایان setup مهاجرت نیست؛ مسکن، شهرداری، کارت اقامت، بانک و بیمه بعد از ورود باقی می‌مانند."
+        },
+        "who_should_care": {
+          "en": "First-time Belgium students/workers.",
+          "fa": "دانشجویان/کارکنان بار اول بلژیک."
+        },
+        "recommended_action": {
+          "en": "Plan the first weeks around registrable housing and municipality appointments, not only the visa and flight.",
+          "fa": "هفته‌های اول را حول مسکن قابل رجیستر و شهرداری برنامه‌ریزی کنید، نه فقط ویزا و پرواز."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "BEL-ENTRY-RESIDENCE-010-E1",
+          "relation": "supports",
+          "independence_group": "BEL-ENTRY-RESIDENCE-010-E1"
+        },
+        {
+          "evidence_id": "BEL-ENTRY-RESIDENCE-010-E2",
+          "relation": "supports",
+          "independence_group": "BEL-ENTRY-RESIDENCE-010-E2"
+        },
+        {
+          "evidence_id": "BEL-ENTRY-RESIDENCE-010-E3",
+          "relation": "supports",
+          "independence_group": "BEL-ENTRY-RESIDENCE-010-E3"
+        },
+        {
+          "evidence_id": "BEL-ENTRY-RESIDENCE-010-E4",
+          "relation": "supports",
+          "independence_group": "BEL-ENTRY-RESIDENCE-010-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple process explanations and arrival checklists show the same two-layer structure."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current visa validity and municipal residence-card procedures were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "BEL-ENTRY-RESIDENCE-010-E1",
+            "BEL-ENTRY-RESIDENCE-010-E2",
+            "BEL-ENTRY-RESIDENCE-010-E3",
+            "BEL-ENTRY-RESIDENCE-010-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Belgium migration Telegram export. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Municipal procedures and visa validity can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "entry visa",
+        "residence card",
+        "municipality",
+        "Annex"
+      ],
+      "first_seen": "2025-03-03",
+      "last_seen": "2026-07-29"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram usernames/IDs, phone numbers, addresses and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 44,230 records, including 41,855 message records."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the full reply graph was not exhaustively reconstructed."
+      },
+      "promotional_offtopic_filtered": {
+        "status": "pass",
+        "note": "Currency exchange offers, travel logistics, generic advertising and unrelated social chatter were excluded from core signals."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated VFS/legalization, Single Permit, search-year, language, residence-counting, domicile, solvency, work-right and arrival-process discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Municipality differences and time-varying document/processing practices are preserved instead of forcing a universal rule."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "Legal/administrative claims are source-reported and marked not_verified unless they are only practical first-hand observations."
+      },
+      "current_rule_verification": {
+        "status": "not_run",
+        "note": "This extraction-only run did not browse current Belgian federal/regional/municipal/VFS sources."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community migration signals only. They are not official Belgian VFS, Single Permit, search-year, work-right, long-term-residence, municipality, solvency or legalization rules. Verify current federal, regional, municipal and VFS requirements before acting."
+}

@@ -1,0 +1,386 @@
+{
+  "source": "Hamrah Community Signal Candidate Extraction",
+  "generatedAt": "2026-09-16T12:14:18Z",
+  "input": {
+    "fileName": "result(10).json",
+    "groupName": "اسپانیا با پرگار",
+    "groupType": "private_supergroup",
+    "messageCount": 27095,
+    "dateRange": {
+      "from": "2025-01-01T00:28:13",
+      "to": "2026-09-16T15:33:56"
+    }
+  },
+  "coverage": {
+    "filesScanned": 1,
+    "messagesScanned": 27095,
+    "signalsExtracted": 6,
+    "validationStatus": "candidate_only",
+    "truncated": false
+  },
+  "filters": {
+    "countryCode": "ESP",
+    "originCountry": "Iran",
+    "priorityWindow": "2026-06-01 through 2026-09-16"
+  },
+  "extractionMethod": {
+    "description": "Candidate signals were retained when supported by repeated practical reports across multiple participants or by a concrete process-change notice present in the source export. One lower-volume credential-recognition issue was retained as uncertain because it may materially affect planning.",
+    "privacy": "Participant names and user IDs are omitted. Evidence uses source message IDs, dates, claims, and short excerpts only.",
+    "validation": "These are source-derived candidate community signals and have not been promoted to Hamrah's validated Community Signal Store."
+  },
+  "resultCount": 6,
+  "signals": [
+    {
+      "datasetId": "candidate:esp-study-iran-pargar-2026",
+      "signalId": "esp-study-irn-bls-appointment-scarcity-2026",
+      "countryCode": "ESP",
+      "route": "study",
+      "topic": "BLS student-visa appointment scarcity and release uncertainty",
+      "processStage": "visa_application",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "BLS Spain Visa Application Centre in Iran",
+      "status": "active",
+      "firstObservedAt": "2026-06-03",
+      "lastObservedAt": "2026-09-13",
+      "communityEvidence": {
+        "matchedMessages": 77,
+        "distinctAuthors": 52,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages mentioning BLS together with appointment/slot language and availability, cancellation, reopening, replacement, or booking uncertainty."
+      },
+      "summary": "Applicants repeatedly reported difficulty predicting when BLS student-visa appointments would open, finding no available slots, asking for cancellation slots, and dealing with cancelled or replacement appointments. The issue persisted into September 2026 and in some cases created timing pressure against university start dates.",
+      "assessment": {
+        "signalType": "appointment_access",
+        "severity": "high",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 242614,
+          "sourceDate": "2026-07-11",
+          "claim": "Applicant asked when August BLS appointment slots would be released."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 242418,
+          "sourceDate": "2026-07-07",
+          "claim": "Applicant reported that appointments on 5-6 July had been cancelled and affected applicants were handled later, creating heavy congestion."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 254488,
+          "sourceDate": "2026-09-11",
+          "claim": "Applicant reported the BLS website showing no available student-visa appointments while their university start date was approaching.",
+          "excerpt": "توی سایت BLS میزنه الان نوبتی نداریم ... دانشگاه‌ام از ۲۰ اکتبر شروع میشه"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 254996,
+          "sourceDate": "2026-09-11",
+          "claim": "Applicant asked when BLS appointments would be released and when to keep checking."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:esp-study-iran-pargar-2026",
+      "signalId": "esp-phd-researcher-visa-route-transition-2026-08",
+      "countryCode": "ESP",
+      "route": "phd",
+      "topic": "PhD visa route changed from student visa to national researcher residence visa",
+      "processStage": "visa_application",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "BLS Spain / Embassy of Spain in Tehran",
+      "status": "active",
+      "firstObservedAt": "2026-08-17",
+      "lastObservedAt": "2026-09-15",
+      "communityEvidence": {
+        "matchedMessages": 6,
+        "distinctAuthors": 6,
+        "windowStart": "2026-08-12",
+        "countingMethod": "Messages explicitly discussing PhD/doctoral study together with researcher/RIN versus student-visa routing."
+      },
+      "summary": "A group notice stated that from 12 August 2026 BLS would no longer accept student-visa applications for Spanish doctoral programs and that PhD applicants should instead apply for the national researcher residence visa (RIN), including a residence permit among the required documents. Follow-up discussions show applicants remained uncertain about the new process and appointment-category consequences.",
+      "assessment": {
+        "signalType": "route_change",
+        "severity": "high",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 246755,
+          "sourceDate": "2026-08-17",
+          "claim": "Notice said that effective 12 August 2026 BLS would stop accepting student-visa applications for PhD programs and applicants should use the national researcher residence visa route.",
+          "excerpt": "از تاریخ ۱۲ آگوست ۲۰۲۶ ... BLS دیگر درخواست‌های ویزای دانشجویی برای دوره‌های دکتری ... را قبول نخواهد کرد"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 247079,
+          "sourceDate": "2026-08-20",
+          "claim": "Applicant asked how the new researcher-visa requirement differs from the previous student-visa process."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 249692,
+          "sourceDate": "2026-09-03",
+          "claim": "Applicant reported that a replacement BLS appointment could not be used after their visa type had changed to researcher."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 258400,
+          "sourceDate": "2026-09-15",
+          "claim": "Applicant asked for first-hand experience using the new researcher-visa route for a PhD."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:esp-study-iran-pargar-2026",
+      "signalId": "esp-document-legalization-workflow-and-appointment-friction-2026",
+      "countryCode": "ESP",
+      "route": "study_research",
+      "topic": "document legalization workflow change and non-visa legalization appointment delays",
+      "processStage": "document_preparation",
+      "originCountry": "Iran",
+      "entity": "Embassy of Spain in Tehran / BLS",
+      "status": "active",
+      "firstObservedAt": "2026-06-02",
+      "lastObservedAt": "2026-09-16",
+      "communityEvidence": {
+        "matchedMessages": 352,
+        "distinctAuthors": 144,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages discussing legalization together with BLS, embassy, appointment, email, or scheduling language."
+      },
+      "summary": "The community circulated a June 2026 embassy process update stating that documents required for a visa application would be legalized through the visa-file workflow without a separate legalization appointment, while documents needed for other purposes would require a separate embassy request. Despite that simplification for visa-linked documents, non-visa legalization remained a recurring bottleneck, with applicants reporting slow email handling and increasingly distant appointment dates.",
+      "assessment": {
+        "signalType": "document_legalization_friction",
+        "severity": "high",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 242701,
+          "sourceDate": "2026-07-12",
+          "claim": "A circulated embassy notice said visa-required documents would be legalized directly after submission of the visa file and would not need a separate legalization appointment; non-visa purposes still required an embassy request.",
+          "excerpt": "مدارکی که برای بررسی درخواست ویزا نیاز به قانونی‌سازی ... دارند ... مستقیماً در خود این سفارت قانونی‌سازی خواهند شد"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 243619,
+          "sourceDate": "2026-07-19",
+          "claim": "Applicant reported legalization appointments being offered for late August."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 245260,
+          "sourceDate": "2026-08-02",
+          "claim": "Applicant described successfully obtaining a separate legalization appointment by email for homologation-related documents."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 254291,
+          "sourceDate": "2026-09-10",
+          "claim": "Applicant reported receiving a legalization appointment for 24 January after repeated email contact, indicating a potentially long lead time for some non-visa legalization cases.",
+          "excerpt": "بعد دوبار ایمیل زدن و برای ۲۴ ژانویه وقت لگال دادن"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:esp-study-iran-pargar-2026",
+      "signalId": "esp-study-irn-proof-of-funds-history-and-source-scrutiny-2026",
+      "countryCode": "ESP",
+      "route": "study",
+      "topic": "proof-of-funds transaction history and source-of-funds scrutiny",
+      "processStage": "visa_application",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "Embassy of Spain in Tehran / BLS",
+      "status": "active",
+      "firstObservedAt": "2026-06-01",
+      "lastObservedAt": "2026-09-13",
+      "communityEvidence": {
+        "matchedMessages": 138,
+        "distinctAuthors": 78,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages mentioning proof of funds together with transaction history, six-month history, sponsor, balance, withdrawal, rejection, or account-source issues."
+      },
+      "summary": "Applicants repeatedly raised questions about the expected transaction-history period, sponsor evidence, account type, required balance, and source-of-funds documentation. A first-hand rejection report also linked concern to withdrawing funds after obtaining the bank certificate. The export supports strong documentation uncertainty and perceived scrutiny, but does not establish that the embassy can directly monitor live bank balances.",
+      "assessment": {
+        "signalType": "financial_documentation_scrutiny",
+        "severity": "high",
+        "confidence": "high_for_friction_medium_for_specific_rejection_mechanism",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 255702,
+          "sourceDate": "2026-09-12",
+          "claim": "Applicant asked whether a newly opened foreign-currency account could be used when six months of transaction history were unavailable."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 256218,
+          "sourceDate": "2026-09-13",
+          "claim": "Applicant asked whether three or six months of transaction history were expected for a student-visa proof-of-funds file."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 256353,
+          "sourceDate": "2026-09-13",
+          "claim": "Community response described sponsor documentation as including transaction history, the funds themselves, employment confirmation, and tax documentation."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 252601,
+          "sourceDate": "2026-09-07",
+          "claim": "A rejected applicant reported that their refusal letter referenced a later account-balance date after the proof-of-funds certificate and warned others that withdrawing the money may carry risk.",
+          "excerpt": "تو نامه ریجکتی من تاریخ بعد از تمکن خورده و موجودی حساب نوشته شده"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:esp-study-iran-pargar-2026",
+      "signalId": "esp-residence-tie-fingerprint-appointment-scarcity-2026",
+      "countryCode": "ESP",
+      "route": "post_arrival_residence",
+      "topic": "TIE and fingerprint appointment scarcity",
+      "processStage": "post_arrival_residence_card",
+      "entity": "Spanish police / immigration appointment system",
+      "status": "active",
+      "firstObservedAt": "2026-06-03",
+      "lastObservedAt": "2026-09-11",
+      "communityEvidence": {
+        "matchedMessages": 33,
+        "distinctAuthors": 26,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages mentioning TIE or fingerprinting together with appointment/slot availability language."
+      },
+      "summary": "After arrival in Spain, applicants repeatedly reported difficulty obtaining fingerprint/TIE appointments, especially in Madrid and Barcelona. Some users reported no available times for weeks, and one discussion connected the lack of NIE/TIE appointment access with practical difficulty opening a bank account.",
+      "assessment": {
+        "signalType": "post_arrival_appointment_access",
+        "severity": "medium",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 241297,
+          "sourceDate": "2026-06-23",
+          "claim": "Applicant in Madrid reported that no fingerprint appointment was available.",
+          "excerpt": "چطور میشه تو مادرید وقت انگشت نگاری گرفت؟ اصلا وقت نیست"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 245472,
+          "sourceDate": "2026-08-04",
+          "claim": "Applicant reported that no fingerprint appointment times had been available recently."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 253575,
+          "sourceDate": "2026-09-08",
+          "claim": "Applicant asked whether anyone had managed to independently book a fingerprint appointment for Barcelona or Madrid."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 254953,
+          "sourceDate": "2026-09-11",
+          "claim": "Applicant reported checking for a TIE appointment for three weeks without availability and noted that NIE appointment scarcity was also blocking bank-account setup.",
+          "excerpt": "سه هفتس میزنم وقت نداره"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:esp-study-iran-pargar-2026",
+      "signalId": "esp-credential-homologation-lead-time-2026",
+      "countryCode": "ESP",
+      "route": "study_professional_recognition",
+      "topic": "homologation and academic credential recognition lead time",
+      "processStage": "credential_recognition",
+      "originCountry": "Iran",
+      "entity": "Spanish credential-recognition process",
+      "status": "uncertain",
+      "firstObservedAt": "2026-06-10",
+      "lastObservedAt": "2026-09-15",
+      "communityEvidence": {
+        "matchedMessages": 14,
+        "distinctAuthors": 13,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages explicitly discussing homologation, equivalence, or academic credential-recognition procedures."
+      },
+      "summary": "Homologation and academic-equivalence questions appeared repeatedly but at lower volume than visa or legalization issues. Users described legalization of original documents as a prerequisite in some cases and one community account estimated long processing times, including around six months for school-level credentials and more than one year for university credentials. Because this timing estimate is based on limited community evidence, the signal is retained as uncertain.",
+      "assessment": {
+        "signalType": "credential_recognition_delay",
+        "severity": "medium",
+        "confidence": "low",
+        "currentApplicability": "uncertain",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 240173,
+          "sourceDate": "2026-06-10",
+          "claim": "Applicant reported a doctoral enrolment requirement to have bachelor and master degrees officially validated."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 245260,
+          "sourceDate": "2026-08-02",
+          "claim": "Applicant reported obtaining legalization appointments specifically for documents needed for homologation."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "اسپانیا با پرگار",
+          "sourceMessageId": 245265,
+          "sourceDate": "2026-08-02",
+          "claim": "Community account stated that legalized originals would later need to be presented in Madrid and estimated roughly six months for a school diploma and more than one year for university credentials.",
+          "excerpt": "برای مدرک دیپلم حدودا ۶ ماه و مدارک دانشگاهی بالای ۱ سال طول میکشه"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    }
+  ],
+  "usageNote": "Use these records as community evidence only. Time-sensitive visa, BLS, legalization, financial-document, TIE, and homologation requirements should be verified against current official sources before decisions are made."
+}

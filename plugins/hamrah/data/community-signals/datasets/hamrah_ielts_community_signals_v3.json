@@ -1,0 +1,2217 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_ielts_community_signals_candidate",
+    "generated_at": "2026-09-16T10:30:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "pargar-ielts-telegram-export",
+      "name": "result (6).json / Telegram export «Pargar IELTS»",
+      "source_type": "public_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-03-09",
+        "to": "2026-09-09",
+        "records_available": 42805,
+        "records_processed": 42805
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "contains_first_hand_test_reports": true,
+        "contains_adviser_guidance": true,
+        "contains_reposted_provider_notices": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "IELTS-IRAN-ACCESS-001-E1",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1345667"
+      },
+      "published_at": "2025-04-14",
+      "event_date": "2025-04-14",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_collective_action",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "Candidates circulated a coordinated message to IDP about sharply limited IELTS test availability in Iran and difficulty securing seats for urgent deadlines.",
+        "fa": "داوطلبان متن هماهنگ‌شده‌ای برای IDP درباره محدود شدن شدید ظرفیت آزمون IELTS در ایران و سختی رزرو برای ددلاین‌های فوری منتشر کردند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-IRAN-ACCESS-001-E2",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1373709"
+      },
+      "published_at": "2025-08-05",
+      "event_date": "2025-08-05",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_collective_action",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A later campaign described official booking sites becoming overloaded as dates opened, with seats filling within minutes and candidates waiting months for another chance.",
+        "fa": "کمپین بعدی از شلوغ شدن سایت رزرو هنگام باز شدن تاریخ‌ها، پر شدن ظرفیت ظرف چند دقیقه و انتظار ماه‌ها برای فرصت بعدی گفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-IRAN-ACCESS-001-E3",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1407612"
+      },
+      "published_at": "2026-02-06",
+      "event_date": "2026-02-06",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "provider_message_reposted",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A February 2026 reposted provider message said exams were operating with limited participant capacity because of internet bandwidth restrictions and cancelled candidates would be contacted for new times.",
+        "fa": "پیام بازنشرشده ارائه‌دهنده در فوریه ۲۰۲۶ گفته به‌دلیل محدودیت پهنای باند اینترنت ظرفیت هر آزمون محدود شده و با داوطلبان لغوشده برای زمان جدید تماس گرفته می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-IRAN-ACCESS-001-E4",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1413586"
+      },
+      "published_at": "2026-04-16",
+      "event_date": "2026-04-16",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In April 2026 a user reported that the website showed all tests cancelled until further notice.",
+        "fa": "در آوریل ۲۰۲۶ یک کاربر گزارش کرده سایت، همه آزمون‌ها را تا اطلاع ثانوی لغوشده نشان می‌داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-IRAN-ACCESS-001-E5",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1422168"
+      },
+      "published_at": "2026-07-07",
+      "event_date": "2026-07-07",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "In July 2026 a candidate whose test had been cancelled said the centre refunded the fee and told them IDP was unlikely to resume soon.",
+        "fa": "در جولای ۲۰۲۶ داوطلبی که آزمونش لغو شده بود گفته سنتر هزینه را پس داده و اعلام کرده بازگشت برگزاری از سوی IDP به این زودی بعید است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-CROSSBORDER-002-E1",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1423588"
+      },
+      "published_at": "2026-07-23",
+      "event_date": "2026-07-23",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A candidate said repeated cancellation of an Iran test forced them to move the exam to Istanbul, where several other Iranian candidates were present.",
+        "fa": "یک داوطلب گفته پس از چند بار لغو آزمون در ایران مجبور شده آزمون را در استانبول بدهد و چند داوطلب ایرانی دیگر هم آنجا بوده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-CROSSBORDER-002-E2",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1427451"
+      },
+      "published_at": "2026-09-02",
+      "event_date": "2026-09-02",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "first_hand_success_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A candidate reported taking IELTS at a British Council centre in Van, Turkey, after booking about 20 days ahead, and received an overall 8.5.",
+        "fa": "یک داوطلب تجربه آزمون در سنتر British Council شهر وان ترکیه را با رزرو حدود ۲۰ روز قبل گزارش کرده و Overall 8.5 گرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-CROSSBORDER-002-E3",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1427865"
+      },
+      "published_at": "2026-09-06",
+      "event_date": "2026-09-06",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_correction",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community response rejected claims that one country systematically gives higher IELTS scores, emphasizing approved centres and trained examiners rather than country-based score advantage.",
+        "fa": "یک پاسخ گروه ادعای «کشور خاص نمره بهتر می‌دهد» را رد کرده و به سنترهای تأییدشده و اگزمینرهای آموزش‌دیده به‌جای مزیت نمره‌ای کشورمحور تأکید کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-EOR-003-E1",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1358934"
+      },
+      "published_at": "2025-05-31",
+      "event_date": "2025-05-31",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "first_hand_success_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A candidate reported an EOR result in about two hours that increased overall band from 7.0 to 7.5.",
+        "fa": "یک داوطلب گزارش کرده EOR ظرف حدود دو ساعت نتیجه داده و Overall را از 7.0 به 7.5 افزایش داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-EOR-003-E2",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1396396"
+      },
+      "published_at": "2025-11-23",
+      "event_date": "2025-11-23",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "first_hand_success_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another candidate reported a 0.5 Writing increase from 6.5 to 7.0 and said the EOR fee was refunded after the score changed.",
+        "fa": "داوطلب دیگری افزایش نیم‌نمره رایتینگ از 6.5 به 7.0 و برگشت هزینه EOR پس از تغییر نمره را گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-EOR-003-E3",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1419289"
+      },
+      "published_at": "2026-06-12",
+      "event_date": "2026-06-12",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A 2026 Writing EOR was also returned in about two hours but with no score change, showing that fast turnaround does not imply success.",
+        "fa": "یک EOR رایتینگ در ۲۰۲۶ نیز حدود دو ساعت جواب داده اما نمره تغییر نکرده؛ بنابراین سرعت جواب به معنی موفقیت نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-EOR-003-E4",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1419387"
+      },
+      "published_at": "2026-06-12",
+      "event_date": "2026-06-12",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community member said they had rarely seen Listening or Reading scores change after EOR, unlike the more subjective productive skills.",
+        "fa": "یک عضو گروه گفته تغییر نمره Listening یا Reading پس از EOR را به‌ندرت دیده، برخلاف مهارت‌های تولیدی با قضاوت انسانی بیشتر."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-EOR-003-E5",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1419410"
+      },
+      "published_at": "2026-06-12",
+      "event_date": "2026-06-12",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community advice said EOR was more sensible when the candidate had a strong reason, often after comparing performance with prior work or teacher feedback.",
+        "fa": "راهنمایی گروه گفته EOR زمانی منطقی‌تر است که داوطلب دلیل قوی داشته باشد و معمولاً عملکرد خود را با تمرین یا نظر مدرس مقایسه کرده باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-MOCK-CALIBRATION-004-E1",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1420404"
+      },
+      "published_at": "2026-06-20",
+      "event_date": "2026-06-20",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "One candidate said repeated mocks stayed around 6-6.5 while the real exam was 7.0.",
+        "fa": "یک داوطلب گفته ماک‌های مکرر او حدود 6 تا 6.5 بوده اما آزمون اصلی 7.0 شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-MOCK-CALIBRATION-004-E2",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1420410"
+      },
+      "published_at": "2026-06-20",
+      "event_date": "2026-06-20",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community response estimated mocks are often about 0.5-1 band lower and recommended at least one mock mainly for stress and environment familiarity.",
+        "fa": "یک پاسخ گروه برآورد کرده ماک‌ها اغلب حدود 0.5 تا 1 نمره پایین‌ترند و حداقل یک ماک را بیشتر برای کنترل استرس و آشنایی با محیط توصیه کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-MOCK-CALIBRATION-004-E3",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1423210"
+      },
+      "published_at": "2026-07-18",
+      "event_date": "2026-07-18",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another response described roughly a 0.5-band average gap between mock and real scores.",
+        "fa": "پاسخ دیگری اختلاف میانگین حدود نیم‌نمره بین ماک و آزمون اصلی را مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-MOCK-CALIBRATION-004-E4",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1397484"
+      },
+      "published_at": "2025-11-30",
+      "event_date": "2025-11-30",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A former test taker said mocks were more useful for learning the test environment than for predicting the exact real-test question difficulty or score.",
+        "fa": "یک آزمون‌دهنده سابق گفته ماک بیشتر برای آشنایی با فضای آزمون مفید بوده تا پیش‌بینی دقیق سختی سوال یا نمره آزمون واقعی."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-AI-SCORING-005-E1",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1415508"
+      },
+      "published_at": "2026-05-12",
+      "event_date": "2026-05-12",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A candidate said mock and ChatGPT were suggesting Writing around 6-6.5, but the real test produced 5.5.",
+        "fa": "یک داوطلب گفته ماک و ChatGPT برای Writing حدود 6 تا 6.5 نشان می‌دادند اما آزمون واقعی 5.5 شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-AI-SCORING-005-E2",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1415763"
+      },
+      "published_at": "2026-05-15",
+      "event_date": "2026-05-15",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community response said ChatGPT scoring was not useful as a reliable band estimate and recommended using it for correction instead.",
+        "fa": "یک پاسخ گروه گفته نمره‌دهی ChatGPT برای تخمین قابل اتکای band مناسب نیست و بهتر است برای اصلاح متن استفاده شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-AI-SCORING-005-E3",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1416862"
+      },
+      "published_at": "2026-05-25",
+      "event_date": "2026-05-25",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another user described AI scoring as inconsistent and potentially 0.5-1 band away from a stronger human estimate.",
+        "fa": "کاربر دیگری نمره‌دهی AI را ناپایدار دانسته و گفته ممکن است حدود 0.5 تا 1 نمره با ارزیابی انسانی قوی‌تر اختلاف داشته باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-AI-SCORING-005-E4",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1417758"
+      },
+      "published_at": "2026-06-01",
+      "event_date": "2026-06-01",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A strong community recommendation was to use AI for grammar/spelling corrections but rely on human marking for band scoring.",
+        "fa": "توصیه پررنگ گروه این بوده که AI برای اصلاح گرامر/املا استفاده شود اما نمره band به تصحیح انسانی سپرده شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-CAMBRIDGE-BENCHMARK-006-E1",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1419692"
+      },
+      "published_at": "2026-06-14",
+      "event_date": "2026-06-14",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community message warned that non-standard tests can distort confidence and recommended Cambridge as the safer practice benchmark.",
+        "fa": "یک پیام گروه هشدار داده تست‌های غیراستاندارد می‌توانند اعتمادبه‌نفس را به‌طور غیرواقعی بالا یا پایین ببرند و کمبریج را معیار امن‌تر معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-CAMBRIDGE-BENCHMARK-006-E2",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1422064"
+      },
+      "published_at": "2026-07-06",
+      "event_date": "2026-07-06",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A July 2026 response said the real Listening/Reading result often lands near the average of recent Cambridge practice scores rather than matching one single test.",
+        "fa": "پاسخ جولای ۲۰۲۶ گفته نتیجه واقعی Listening/Reading معمولاً نزدیک میانگین نمرات اخیر کمبریج است، نه دقیقاً برابر یک تست منفرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-CAMBRIDGE-BENCHMARK-006-E3",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1422369"
+      },
+      "published_at": "2026-07-08",
+      "event_date": "2026-07-08",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another message explicitly recommended using Cambridge books as the main benchmark.",
+        "fa": "پیام دیگری صریحاً پیشنهاد کرده کتاب‌های کمبریج معیار اصلی قرار گیرند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-CAMBRIDGE-BENCHMARK-006-E4",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1425990"
+      },
+      "published_at": "2026-08-23",
+      "event_date": "2026-08-23",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance listed Cambridge, Official Guide and Trainer materials as preferred standardized sources.",
+        "fa": "راهنمایی گروه کمبریج، Official Guide و Trainer را در میان منابع استاندارد ترجیحی قرار داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-PREP-TIMELINE-007-E1",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1335664"
+      },
+      "published_at": "2025-03-09",
+      "event_date": "2025-03-09",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user stressed that preparation time depends heavily on prior language background and cannot be reduced to one formula.",
+        "fa": "یک کاربر تأکید کرده زمان آماده‌سازی به‌شدت به سابقه زبانی فرد وابسته است و یک فرمول واحد ندارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-PREP-TIMELINE-007-E2",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1335665"
+      },
+      "published_at": "2025-03-09",
+      "event_date": "2025-03-09",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user said high-score stories can hide years of prior classes and background, making a universal 6-7 month expectation misleading.",
+        "fa": "یک کاربر گفته پشت بعضی نمره‌های بالا سال‌ها کلاس و سابقه قبلی وجود دارد و انتظار عمومی ۶ تا ۷ ماهه می‌تواند گمراه‌کننده باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-PREP-TIMELINE-007-E3",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1335677"
+      },
+      "published_at": "2025-03-09",
+      "event_date": "2025-03-09",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A high-scoring participant disclosed about nine years of language classes plus periods of very intensive English study, illustrating hidden preparation history behind a seemingly rapid result.",
+        "fa": "یک شرکت‌کننده با نمره بالا از حدود ۹ سال کلاس زبان و دوره‌های مطالعه بسیار فشرده گفته که نشان می‌دهد نتیجه ظاهراً سریع می‌تواند پشتوانه طولانی داشته باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-FORMAT-TRANSITION-008-E1",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1415373"
+      },
+      "published_at": "2026-05-10",
+      "event_date": "2026-05-10",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_news_post",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A May 2026 channel post said IELTS would move away from paper testing from mid-2026, with computer delivery becoming standard and a Writing-on-Paper option in some countries.",
+        "fa": "پست مه ۲۰۲۶ گروه گفته IELTS از اواسط ۲۰۲۶ از آزمون کاملاً کاغذی فاصله می‌گیرد، آزمون کامپیوتری استاندارد می‌شود و در برخی کشورها Writing on Paper ارائه خواهد شد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-FORMAT-TRANSITION-008-E2",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1371224"
+      },
+      "published_at": "2025-07-26",
+      "event_date": "2025-07-26",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "booking_notice_reposted",
+      "firsthandness": "direct_quote",
+      "summary": {
+        "en": "A 2025 booking notice said non-residents choosing IELTS on Paper in another country may be ineligible and should choose a computer test or a paper test in their country of residence unless an exception applies.",
+        "fa": "یک اعلان رزرو در ۲۰۲۵ گفته افراد غیرمقیم برای IELTS on Paper در کشور دیگر ممکن است واجدشرایط نباشند و باید آزمون کامپیوتری یا کاغذی در کشور محل اقامت را انتخاب کنند مگر استثنا داشته باشند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-FORMAT-TRANSITION-008-E3",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1427552"
+      },
+      "published_at": "2026-09-03",
+      "event_date": "2026-09-03",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A September 2026 test taker described electronic TRFs as central for computer IELTS and said paper copies were not issued by that centre for the computer test.",
+        "fa": "یک آزمون‌دهنده در سپتامبر ۲۰۲۶ eTRF را ابزار اصلی آزمون کامپیوتری توصیف کرده و گفته سنتر موردنظر برای آزمون کامپیوتری کارنامه کاغذی صادر نکرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-PRODUCTIVE-PRACTICE-009-E1",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1419195"
+      },
+      "published_at": "2026-06-11",
+      "event_date": "2026-06-11",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance recommended using AI actively for feedback and examples, but warned not to rely on it alone for Speaking because real interaction is different.",
+        "fa": "راهنمایی گروه استفاده فعال از AI برای فیدبک و نمونه را توصیه کرده اما هشدار داده برای Speaking نباید فقط به AI تکیه کرد چون تعامل واقعی متفاوت است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-PRODUCTIVE-PRACTICE-009-E2",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1419314"
+      },
+      "published_at": "2026-06-12",
+      "event_date": "2026-06-12",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another detailed response recommended daily speaking, recording, shadowing, partner/teacher practice and AI as a supporting tool rather than the entire method.",
+        "fa": "پاسخ مفصل دیگری تمرین روزانه، ضبط صدا، shadowing، پارتنر/استاد و AI به‌عنوان ابزار مکمل را توصیه کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "IELTS-PRODUCTIVE-PRACTICE-009-E3",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1420133"
+      },
+      "published_at": "2026-06-18",
+      "event_date": "2026-06-18",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later response again prioritized a good teacher or partner for Speaking while keeping AI as an additional practice option.",
+        "fa": "پاسخ بعدی دوباره استاد خوب یا پارتنر را برای Speaking در اولویت دانسته و AI را گزینه تمرینی اضافه معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "LANGTEST-IRAN-ALTERNATIVES-010-E1",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1427059"
+      },
+      "published_at": "2026-08-30",
+      "event_date": "2026-08-30",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "first_hand_provider_correspondence_summary",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A user summarized ETS correspondence saying TOEFL testing in Iran was suspended and near-term bookings were being cancelled, while Iranian identity itself did not block testing in another country.",
+        "fa": "یک کاربر خلاصه مکاتبه با ETS را منتشر کرده که می‌گوید TOEFL در ایران تعلیق و وقت‌های نزدیک لغو شده‌اند، اما هویت ایرانی مانع آزمون در کشور دیگر نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "LANGTEST-IRAN-ALTERNATIVES-010-E2",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1427478"
+      },
+      "published_at": "2026-09-03",
+      "event_date": "2026-09-03",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "By September 2026 candidates were also worried that PTE access for Iranians might change and asked whether IELTS could be affected similarly.",
+        "fa": "تا سپتامبر ۲۰۲۶ داوطلبان درباره احتمال تغییر دسترسی ایرانیان به PTE هم نگران شده و پرسیده‌اند آیا IELTS نیز ممکن است مشابه شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "LANGTEST-IRAN-ALTERNATIVES-010-E3",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1427481"
+      },
+      "published_at": "2026-09-03",
+      "event_date": "2026-09-03",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "community_correction",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community clarification warned that the Pearson notice did not explicitly name PTE and should not automatically be generalized to that exam.",
+        "fa": "یک اصلاح در گروه هشدار داده اطلاعیه Pearson نام PTE را صریحاً نبرده و نباید خودکار به این آزمون تعمیم داده شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "LANGTEST-IRAN-ALTERNATIVES-010-E4",
+      "source_id": "pargar-ielts-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1427507"
+      },
+      "published_at": "2026-09-03",
+      "event_date": "2026-09-03",
+      "collected_at": "2026-09-16T10:30:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A candidate described being forced to switch from TOEFL to PTE and then toward IELTS under severe time pressure because of changing test-access conditions.",
+        "fa": "یک داوطلب گفته به‌خاطر تغییر شرایط دسترسی آزمون‌ها مجبور شده از TOEFL به PTE و سپس به سمت IELTS سوییچ کند، آن هم با زمان بسیار محدود."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "IELTS-IRAN-ACCESS-001",
+      "issue_cluster_id": "IELTS-IRAN-TEST-ACCESS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "IELTS-CROSSBORDER-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "LANGTEST-IRAN-ALTERNATIVES-010"
+        }
+      ],
+      "classification": {
+        "family": "E13_EXTERNAL_TEST_SERVICE",
+        "type": "test_capacity_disruption",
+        "class": "access"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "booking",
+          "test_delivery",
+          "rescheduling"
+        ],
+        "entities": [
+          {
+            "entity_type": "test_provider",
+            "name": "IDP IELTS"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "IELTS access in Iran showed sustained capacity and cancellation disruption from 2025 into 2026",
+          "fa": "دسترسی به IELTS در ایران از ۲۰۲۵ تا ۲۰۲۶ با محدودیت ظرفیت و لغوهای مکرر همراه بوده است"
+        },
+        "summary": {
+          "en": "The source moves from scarce seats and overloaded booking in 2025 to explicit cancellations, limited capacity linked to internet bandwidth, refunds and continuing uncertainty in 2026.",
+          "fa": "منبع از کمبود شدید ظرفیت و فشار سایت رزرو در ۲۰۲۵ به لغو صریح آزمون، محدودیت ظرفیت مرتبط با پهنای باند، بازپرداخت و تداوم ابهام در ۲۰۲۶ می‌رسد."
+        },
+        "practical_impact": {
+          "en": "Iran-based candidates with admissions or immigration deadlines cannot safely plan around one domestic test date.",
+          "fa": "داوطلب ایرانی با ددلاین پذیرش یا مهاجرت نمی‌تواند با اطمینان فقط روی یک تاریخ آزمون داخل ایران حساب کند."
+        },
+        "who_should_care": {
+          "en": "Iran-based IELTS candidates with hard deadlines.",
+          "fa": "داوطلبان IELTS داخل ایران با ددلاین قطعی."
+        },
+        "recommended_action": {
+          "en": "Maintain an alternate-country test plan and avoid waiting until the last available domestic slot.",
+          "fa": "پلن آزمون در کشور جایگزین داشته باشید و رزرو را به آخرین فرصت داخلی موکول نکنید."
+        },
+        "known_workaround": "Testing in neighboring countries is repeatedly reported as the practical fallback."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "IELTS-IRAN-ACCESS-001-E1",
+          "relation": "supports",
+          "independence_group": "iran-access-1"
+        },
+        {
+          "evidence_id": "IELTS-IRAN-ACCESS-001-E2",
+          "relation": "supports",
+          "independence_group": "iran-access-2"
+        },
+        {
+          "evidence_id": "IELTS-IRAN-ACCESS-001-E3",
+          "relation": "supports",
+          "independence_group": "iran-access-3"
+        },
+        {
+          "evidence_id": "IELTS-IRAN-ACCESS-001-E4",
+          "relation": "supports",
+          "independence_group": "iran-access-4"
+        },
+        {
+          "evidence_id": "IELTS-IRAN-ACCESS-001-E5",
+          "relation": "supports",
+          "independence_group": "iran-access-5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "worsening",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated evidence across more than a year shows scarcity, cancellations and rescheduling uncertainty."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official IELTS/IDP Iran test availability was not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "IELTS-IRAN-ACCESS-001-E1",
+            "IELTS-IRAN-ACCESS-001-E2",
+            "IELTS-IRAN-ACCESS-001-E3",
+            "IELTS-IRAN-ACCESS-001-E4",
+            "IELTS-IRAN-ACCESS-001-E5"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Pargar IELTS community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-23",
+        "reason": "Test availability can change at short notice.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "IELTS Iran",
+        "IDP",
+        "test cancellation",
+        "capacity",
+        "internet bandwidth"
+      ],
+      "first_seen": "2025-04-14",
+      "last_seen": "2026-07-07"
+    },
+    {
+      "signal_id": "IELTS-CROSSBORDER-002",
+      "issue_cluster_id": "IELTS-CROSSBORDER-TESTING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "IELTS-IRAN-ACCESS-001"
+        }
+      ],
+      "classification": {
+        "family": "E13_EXTERNAL_TEST_SERVICE",
+        "type": "cross_border_testing",
+        "class": "access"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "booking",
+          "travel",
+          "test_delivery"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Cross-border IELTS testing became a practical fallback for Iranian candidates; country choice is mainly logistical, not a score advantage",
+          "fa": "آزمون IELTS در کشورهای همسایه به fallback عملی ایرانیان تبدیل شده و انتخاب کشور بیشتر لجستیکی است تا نمره‌ای"
+        },
+        "summary": {
+          "en": "Direct reports show candidates moving to Istanbul and Van after Iran cancellations. The group also pushes back on claims that Turkey, Armenia or another country systematically gives better bands.",
+          "fa": "تجربه‌های مستقیم از انتقال آزمون به استانبول و وان بعد از لغوهای ایران خبر می‌دهند. گروه همچنین ادعای نمره بهتر سیستماتیک در ترکیه، ارمنستان یا کشور دیگر را رد می‌کند."
+        },
+        "practical_impact": {
+          "en": "Travel cost, booking access, centre environment and passport/payment logistics become part of the test plan.",
+          "fa": "هزینه سفر، دسترسی رزرو، محیط سنتر و مسائل پاسپورت/پرداخت وارد برنامه آزمون می‌شوند."
+        },
+        "who_should_care": {
+          "en": "Iranian candidates considering Turkey, Armenia, Iraq or other nearby centres.",
+          "fa": "داوطلبان ایرانی در حال بررسی ترکیه، ارمنستان، عراق یا سنترهای نزدیک."
+        },
+        "recommended_action": {
+          "en": "Choose an approved centre based on availability, travel and environment rather than rumours of easier scoring.",
+          "fa": "سنتر تأییدشده را بر اساس ظرفیت، سفر و شرایط محیطی انتخاب کنید نه شایعه نمره‌دهی آسان‌تر."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "IELTS-CROSSBORDER-002-E1",
+          "relation": "supports",
+          "independence_group": "crossborder-1"
+        },
+        {
+          "evidence_id": "IELTS-CROSSBORDER-002-E2",
+          "relation": "supports",
+          "independence_group": "crossborder-2"
+        },
+        {
+          "evidence_id": "IELTS-CROSSBORDER-002-E3",
+          "relation": "qualifies",
+          "independence_group": "crossborder-3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple direct travel/testing reports plus correction of country-score myths support a stable practical signal."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Centre accreditation and current availability were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "IELTS-CROSSBORDER-002-E1",
+            "IELTS-CROSSBORDER-002-E2",
+            "IELTS-CROSSBORDER-002-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Pargar IELTS community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Cross-border availability and travel rules can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "IELTS Turkey",
+        "Van",
+        "Istanbul",
+        "Armenia",
+        "cross-border"
+      ],
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "signal_id": "IELTS-EOR-003",
+      "issue_cluster_id": "IELTS-EOR-OUTCOMES",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "score_review_eor",
+        "class": "review"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "score_release",
+          "EOR"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "EOR can produce meaningful score increases, especially for judged skills, but outcomes are highly case-specific",
+          "fa": "EOR می‌تواند به افزایش واقعی نمره منجر شود، به‌خصوص در مهارت‌های قضاوتی؛ اما نتیجه کاملاً کیس‌محور است"
+        },
+        "summary": {
+          "en": "The source contains several successful 0.5-band increases and fee refund after change, as well as no-change cases. Community experience treats Writing/Speaking as more plausible EOR targets than Listening/Reading.",
+          "fa": "فایل چند افزایش نیم‌نمره‌ای موفق و برگشت هزینه پس از تغییر نمره دارد و در کنار آن کیس بدون تغییر هم دیده می‌شود. تجربه گروه Writing/Speaking را منطقی‌تر از Listening/Reading برای EOR می‌داند."
+        },
+        "practical_impact": {
+          "en": "A borderline score can sometimes be recovered without retesting, but EOR should not be treated as predictable.",
+          "fa": "گاهی می‌توان نمره مرزی را بدون آزمون مجدد اصلاح کرد، اما EOR قابل پیش‌بینی نیست."
+        },
+        "who_should_care": {
+          "en": "Candidates short by 0.5 band with strong reason to believe Writing/Speaking was under-marked.",
+          "fa": "داوطلبی که نیم‌نمره کم دارد و دلیل قوی برای کم‌نمره‌دادن Writing/Speaking دارد."
+        },
+        "recommended_action": {
+          "en": "Compare the result with stable practice/teacher feedback before paying for EOR; treat Reading/Listening changes as lower-probability community outcomes.",
+          "fa": "قبل از پرداخت EOR نتیجه را با عملکرد پایدار و نظر مدرس مقایسه کنید؛ تغییر Reading/Listening را طبق تجربه گروه کم‌احتمال‌تر بدانید."
+        },
+        "known_workaround": "If EOR is not justified, retesting may be more predictable."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "IELTS-EOR-003-E1",
+          "relation": "supports",
+          "independence_group": "eor-1"
+        },
+        {
+          "evidence_id": "IELTS-EOR-003-E2",
+          "relation": "supports",
+          "independence_group": "eor-2"
+        },
+        {
+          "evidence_id": "IELTS-EOR-003-E3",
+          "relation": "qualifies",
+          "independence_group": "eor-3"
+        },
+        {
+          "evidence_id": "IELTS-EOR-003-E4",
+          "relation": "supports",
+          "independence_group": "eor-4"
+        },
+        {
+          "evidence_id": "IELTS-EOR-003-E5",
+          "relation": "supports",
+          "independence_group": "eor-5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Several direct EOR outcomes include both successful and unchanged results, reducing survivorship bias."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official EOR fees, refund rules and timelines were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "IELTS-EOR-003-E1",
+            "IELTS-EOR-003-E2",
+            "IELTS-EOR-003-E3",
+            "IELTS-EOR-003-E4",
+            "IELTS-EOR-003-E5"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Pargar IELTS community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "EOR provider timelines and fees can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "EOR",
+        "remark",
+        "Writing",
+        "Speaking",
+        "score change"
+      ],
+      "first_seen": "2025-05-31",
+      "last_seen": "2026-06-12"
+    },
+    {
+      "signal_id": "IELTS-MOCK-CALIBRATION-004",
+      "issue_cluster_id": "IELTS-MOCK-CALIBRATION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "IELTS-CAMBRIDGE-BENCHMARK-006"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "mock_score_calibration",
+        "class": "practice"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "preparation",
+          "mock_test"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Mock IELTS is useful for environment and stress calibration, but community scores often underpredict the real exam",
+          "fa": "ماک برای آشنایی با محیط و کنترل استرس مفید است، اما در تجربه گروه اغلب نمره آزمون اصلی را کمتر برآورد می‌کند"
+        },
+        "summary": {
+          "en": "Direct reports show 6-6.5 mocks followed by 7.0 real results, while community estimates often place the gap around 0.5 band and sometimes up to one band.",
+          "fa": "گزارش‌های مستقیم از ماک 6 تا 6.5 و آزمون واقعی 7.0 خبر می‌دهند و برآورد گروه معمولاً اختلاف را حدود نیم‌نمره و گاهی تا یک نمره می‌داند."
+        },
+        "practical_impact": {
+          "en": "A low mock score can unnecessarily damage confidence if interpreted as an exact forecast.",
+          "fa": "اگر نمره پایین ماک پیش‌بینی دقیق فرض شود ممکن است بی‌دلیل اعتمادبه‌نفس را خراب کند."
+        },
+        "who_should_care": {
+          "en": "Candidates using centre mocks to decide readiness.",
+          "fa": "داوطلبانی که بر اساس ماک درباره آمادگی تصمیم می‌گیرند."
+        },
+        "recommended_action": {
+          "en": "Use mocks for timing, fatigue and environment; calibrate score readiness with multiple tests and Cambridge averages.",
+          "fa": "ماک را برای زمان، خستگی و محیط استفاده کنید و آمادگی نمره را با چند آزمون و میانگین کمبریج بسنجید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "IELTS-MOCK-CALIBRATION-004-E1",
+          "relation": "supports",
+          "independence_group": "mock-1"
+        },
+        {
+          "evidence_id": "IELTS-MOCK-CALIBRATION-004-E2",
+          "relation": "supports",
+          "independence_group": "mock-2"
+        },
+        {
+          "evidence_id": "IELTS-MOCK-CALIBRATION-004-E3",
+          "relation": "supports",
+          "independence_group": "mock-3"
+        },
+        {
+          "evidence_id": "IELTS-MOCK-CALIBRATION-004-E4",
+          "relation": "supports",
+          "independence_group": "mock-4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple direct and community reports converge on mock underprediction and environment value."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No standardized cross-centre mock calibration dataset was verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "IELTS-MOCK-CALIBRATION-004-E1",
+            "IELTS-MOCK-CALIBRATION-004-E2",
+            "IELTS-MOCK-CALIBRATION-004-E3",
+            "IELTS-MOCK-CALIBRATION-004-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Pargar IELTS community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Mock difficulty varies by provider.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "mock",
+        "real exam",
+        "0.5 band",
+        "stress",
+        "test environment"
+      ],
+      "first_seen": "2025-11-30",
+      "last_seen": "2026-07-18"
+    },
+    {
+      "signal_id": "IELTS-AI-SCORING-005",
+      "issue_cluster_id": "IELTS-AI-WRITING-SCORING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "IELTS-PRODUCTIVE-PRACTICE-009"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "ai_scoring_unreliability",
+        "class": "practice"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "Writing",
+          "Speaking",
+          "feedback"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "AI is useful for correction and practice, but its IELTS band estimates are not reliable enough to be the sole scoring benchmark",
+          "fa": "AI برای اصلاح و تمرین مفید است، اما تخمین band آن برای IELTS به‌اندازه‌ای قابل اتکا نیست که تنها معیار نمره باشد"
+        },
+        "summary": {
+          "en": "The source contains large discrepancies between ChatGPT, mock/human estimates and real Writing scores. Repeated guidance recommends AI for grammar, spelling, ideas and revision while preferring human marking for band estimation.",
+          "fa": "فایل اختلاف‌های محسوس بین ChatGPT، ماک/ارزیابی انسانی و نمره واقعی Writing دارد. راهنمایی‌های تکرارشونده AI را برای گرامر، املا، ایده و بازنویسی مفید می‌دانند اما band را به تصحیح انسانی ترجیح می‌دهند."
+        },
+        "practical_impact": {
+          "en": "Candidates can over- or under-estimate readiness by 0.5-1 band if they treat AI score output as authoritative.",
+          "fa": "اگر نمره AI قطعی فرض شود، آمادگی ممکن است حدود نیم تا یک band بیش‌ یا کم‌برآورد شود."
+        },
+        "who_should_care": {
+          "en": "Self-study candidates using ChatGPT/Gemini/other AI as Writing or Speaking evaluators.",
+          "fa": "داوطلبان خودخوانی که ChatGPT/Gemini یا AI دیگر را ممتحن Writing/Speaking می‌دانند."
+        },
+        "recommended_action": {
+          "en": "Use AI diagnostically for errors and revision, and periodically anchor progress with qualified human marking or real/mock results.",
+          "fa": "AI را برای تشخیص خطا و اصلاح استفاده کنید و پیشرفت را دوره‌ای با تصحیح انسانی معتبر یا نتیجه واقعی/ماک کالیبره کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "IELTS-AI-SCORING-005-E1",
+          "relation": "supports",
+          "independence_group": "ai-1"
+        },
+        {
+          "evidence_id": "IELTS-AI-SCORING-005-E2",
+          "relation": "supports",
+          "independence_group": "ai-2"
+        },
+        {
+          "evidence_id": "IELTS-AI-SCORING-005-E3",
+          "relation": "supports",
+          "independence_group": "ai-3"
+        },
+        {
+          "evidence_id": "IELTS-AI-SCORING-005-E4",
+          "relation": "supports",
+          "independence_group": "ai-4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct score mismatch plus repeated independent guidance consistently separates AI feedback utility from scoring reliability."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No external validation study was used; this is a community-performance signal."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "IELTS-AI-SCORING-005-E1",
+            "IELTS-AI-SCORING-005-E2",
+            "IELTS-AI-SCORING-005-E3",
+            "IELTS-AI-SCORING-005-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Pargar IELTS community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "AI model behavior changes over time.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "ChatGPT",
+        "AI scoring",
+        "Writing",
+        "band estimate",
+        "human marking"
+      ],
+      "first_seen": "2026-05-12",
+      "last_seen": "2026-06-01"
+    },
+    {
+      "signal_id": "IELTS-CAMBRIDGE-BENCHMARK-006",
+      "issue_cluster_id": "IELTS-CAMBRIDGE-BENCHMARK",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "IELTS-MOCK-CALIBRATION-004"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "standardized_practice_source",
+        "class": "practice"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "preparation",
+          "Listening",
+          "Reading"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Cambridge IELTS books are the community's most stable benchmark for Listening/Reading readiness",
+          "fa": "کتاب‌های Cambridge IELTS پایدارترین معیار کامیونیتی برای آمادگی Listening/Reading هستند"
+        },
+        "summary": {
+          "en": "Repeated guidance prefers Cambridge and other official Cambridge materials over recalled/irregular test sets; one common heuristic is to use the average of recent Cambridge scores rather than one test.",
+          "fa": "راهنمایی‌های تکرارشونده کمبریج و منابع رسمی آن را به تست‌های یادآوری‌شده/نامنظم ترجیح می‌دهند و یک heuristic رایج استفاده از میانگین چند تست اخیر کمبریج است."
+        },
+        "practical_impact": {
+          "en": "Non-standard practice can distort confidence and score forecasting.",
+          "fa": "تمرین غیراستاندارد می‌تواند اعتمادبه‌نفس و پیش‌بینی نمره را منحرف کند."
+        },
+        "who_should_care": {
+          "en": "Candidates choosing practice-test sources and deciding readiness.",
+          "fa": "داوطلبانی که منبع تست و معیار آمادگی را انتخاب می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Anchor Listening/Reading calibration to recent Cambridge sets and analyze errors instead of chasing large volumes of uncertain recalled tests.",
+          "fa": "کالیبراسیون Listening/Reading را روی سری‌های اخیر کمبریج و تحلیل خطا بنا کنید، نه حجم زیاد تست‌های نامطمئن."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "IELTS-CAMBRIDGE-BENCHMARK-006-E1",
+          "relation": "supports",
+          "independence_group": "cambridge-1"
+        },
+        {
+          "evidence_id": "IELTS-CAMBRIDGE-BENCHMARK-006-E2",
+          "relation": "supports",
+          "independence_group": "cambridge-2"
+        },
+        {
+          "evidence_id": "IELTS-CAMBRIDGE-BENCHMARK-006-E3",
+          "relation": "supports",
+          "independence_group": "cambridge-3"
+        },
+        {
+          "evidence_id": "IELTS-CAMBRIDGE-BENCHMARK-006-E4",
+          "relation": "supports",
+          "independence_group": "cambridge-4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "The recommendation is repeated across the source and ties to observed score calibration behavior."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "This is a community practice signal, not an official guarantee that any book exactly predicts a live test."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "IELTS-CAMBRIDGE-BENCHMARK-006-E1",
+            "IELTS-CAMBRIDGE-BENCHMARK-006-E2",
+            "IELTS-CAMBRIDGE-BENCHMARK-006-E3",
+            "IELTS-CAMBRIDGE-BENCHMARK-006-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Pargar IELTS community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2027-01-14",
+        "reason": "Live-test difficulty can vary by form.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Cambridge IELTS",
+        "Listening",
+        "Reading",
+        "standardized practice"
+      ],
+      "first_seen": "2026-06-14",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "signal_id": "IELTS-PREP-TIMELINE-007",
+      "issue_cluster_id": "IELTS-PREPARATION-TIMELINE",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "preparation_time_variance",
+        "class": "practice"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "preparation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "IELTS preparation time is highly background-dependent; short high-score stories often omit years of prior exposure",
+          "fa": "زمان آماده‌سازی IELTS شدیداً به بک‌گراند وابسته است و روایت‌های سریع نمره بالا اغلب سال‌های سابقه قبلی را نشان نمی‌دهند"
+        },
+        "summary": {
+          "en": "A high-engagement thread challenged the idea of a universal 6-7 month path and surfaced examples where apparently fast progress sat on top of many years of classes and intensive English exposure.",
+          "fa": "یک گفتگوی پرتعامل ایده مسیر عمومی ۶ تا ۷ماهه را به چالش کشیده و نشان داده بعضی پیشرفت‌های ظاهراً سریع روی سال‌ها کلاس و مواجهه فشرده با انگلیسی بنا شده‌اند."
+        },
+        "practical_impact": {
+          "en": "Copying another candidate's calendar can produce unrealistic deadlines and unnecessary self-comparison.",
+          "fa": "کپی‌کردن تقویم مطالعه فرد دیگر می‌تواند ددلاین غیرواقعی و مقایسه ناسالم ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Candidates estimating time from current CEFR/skill profile to target band.",
+          "fa": "داوطلبانی که زمان رسیدن از سطح فعلی به band هدف را تخمین می‌زنند."
+        },
+        "recommended_action": {
+          "en": "Estimate timeline from current four-skill performance, study hours and prior background rather than anecdotal elapsed months.",
+          "fa": "زمان را از عملکرد فعلی چهار مهارت، ساعات مطالعه و سابقه قبلی تخمین بزنید نه صرفاً تعداد ماه در روایت دیگران."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "IELTS-PREP-TIMELINE-007-E1",
+          "relation": "supports",
+          "independence_group": "timeline-1"
+        },
+        {
+          "evidence_id": "IELTS-PREP-TIMELINE-007-E2",
+          "relation": "supports",
+          "independence_group": "timeline-2"
+        },
+        {
+          "evidence_id": "IELTS-PREP-TIMELINE-007-E3",
+          "relation": "supports",
+          "independence_group": "timeline-3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "The discussion includes both the misconception and a detailed direct disclosure of hidden prior preparation."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No universal learning-duration model is inferred."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "IELTS-PREP-TIMELINE-007-E1",
+            "IELTS-PREP-TIMELINE-007-E2",
+            "IELTS-PREP-TIMELINE-007-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Pargar IELTS community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2027-03-15",
+        "reason": "Stable behavioral signal.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "preparation time",
+        "background",
+        "6 months",
+        "high score",
+        "study hours"
+      ],
+      "first_seen": "2025-03-09",
+      "last_seen": "2025-03-09"
+    },
+    {
+      "signal_id": "IELTS-FORMAT-TRANSITION-008",
+      "issue_cluster_id": "IELTS-FORMAT-TRANSITION",
+      "relationships": [],
+      "classification": {
+        "family": "E13_EXTERNAL_TEST_SERVICE",
+        "type": "computer_paper_transition",
+        "class": "test_format"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "booking",
+          "test_format",
+          "TRF"
+        ],
+        "entities": [
+          {
+            "entity_type": "test_provider",
+            "name": "IELTS"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "The source reports a transition toward computer-delivered IELTS, with paper options becoming more constrained",
+          "fa": "منبع از حرکت IELTS به سمت آزمون کامپیوتری و محدودتر شدن گزینه‌های کاغذی خبر می‌دهد"
+        },
+        "summary": {
+          "en": "A 2026 channel update says full paper delivery is being phased out, while earlier booking text already restricted cross-border paper testing for non-residents. Later experience also describes eTRF as central for computer tests.",
+          "fa": "آپدیت ۲۰۲۶ گروه از حذف تدریجی آزمون تمام‌کاغذی گفته، در حالی که متن رزرو ۲۰۲۵ نیز آزمون کاغذی برون‌مرزی برای غیرمقیم‌ها را محدود می‌کرد. تجربه بعدی نیز eTRF را محور آزمون کامپیوتری نشان می‌دهد."
+        },
+        "practical_impact": {
+          "en": "Candidates who strongly prefer handwriting or need a paper TRF may face fewer options and country-specific constraints.",
+          "fa": "داوطلبی که حتماً نوشتن دستی یا TRF کاغذی می‌خواهد ممکن است با گزینه‌های کمتر و محدودیت کشورمحور روبه‌رو شود."
+        },
+        "who_should_care": {
+          "en": "Candidates choosing paper vs computer IELTS, especially when travelling to another country.",
+          "fa": "داوطلبان انتخاب بین کاغذی و کامپیوتری، مخصوصاً هنگام سفر به کشور دیگر."
+        },
+        "recommended_action": {
+          "en": "Check the exact centre's current delivery mode, residency rule and TRF format before booking.",
+          "fa": "پیش از رزرو، فرمت برگزاری، شرط اقامت و نوع TRF همان سنتر را بررسی کنید."
+        },
+        "known_workaround": "Computer-delivered IELTS is the more portable option in the reported booking rules."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "IELTS-FORMAT-TRANSITION-008-E1",
+          "relation": "supports",
+          "independence_group": "format-news"
+        },
+        {
+          "evidence_id": "IELTS-FORMAT-TRANSITION-008-E2",
+          "relation": "supports",
+          "independence_group": "paper-booking"
+        },
+        {
+          "evidence_id": "IELTS-FORMAT-TRANSITION-008-E3",
+          "relation": "supports",
+          "independence_group": "etrf-report"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "There are multiple operational clues, but the mid-2026 global-format claim comes from a channel news post and needs primary-source verification."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official IELTS format rollout and country exceptions were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "IELTS-FORMAT-TRANSITION-008-E1",
+            "IELTS-FORMAT-TRANSITION-008-E2",
+            "IELTS-FORMAT-TRANSITION-008-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Pargar IELTS community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Format rollout is time- and country-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "computer IELTS",
+        "paper IELTS",
+        "Writing on Paper",
+        "eTRF",
+        "One Skill Retake"
+      ],
+      "first_seen": "2025-07-26",
+      "last_seen": "2026-09-03"
+    },
+    {
+      "signal_id": "IELTS-PRODUCTIVE-PRACTICE-009",
+      "issue_cluster_id": "IELTS-PRODUCTIVE-SKILLS-PRACTICE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "IELTS-AI-SCORING-005"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "interactive_feedback_practice",
+        "class": "practice"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS"
+          ]
+        },
+        "process_stages": [
+          "Speaking",
+          "Writing",
+          "practice"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For Speaking/Writing, repeated production plus feedback is treated as more important than passive study alone",
+          "fa": "برای Speaking/Writing، تولید مکرر همراه فیدبک از مطالعه صرفاً passive مهم‌تر تلقی می‌شود"
+        },
+        "summary": {
+          "en": "Community guidance repeatedly combines daily speaking, recording, shadowing, partner/teacher feedback and AI-assisted revision, while warning that AI alone does not recreate real interaction.",
+          "fa": "راهنمایی گروه بارها تمرین روزانه صحبت، ضبط صدا، shadowing، فیدبک پارتنر/استاد و اصلاح با AI را ترکیب می‌کند و هشدار می‌دهد AI به‌تنهایی تعامل واقعی را بازسازی نمی‌کند."
+        },
+        "practical_impact": {
+          "en": "Candidates with strong Reading/Listening can remain stuck if their language knowledge is not actively produced and corrected.",
+          "fa": "داوطلب با Reading/Listening قوی ممکن است اگر دانش زبانی را تولید و اصلاح نکند در مهارت‌های تولیدی گیر کند."
+        },
+        "who_should_care": {
+          "en": "Candidates whose productive skills lag behind receptive skills.",
+          "fa": "داوطلبانی که Speaking/Writing از Reading/Listening عقب‌تر است."
+        },
+        "recommended_action": {
+          "en": "Build a feedback loop: produce, record/write, review errors, repeat, and periodically use a stronger human partner/teacher.",
+          "fa": "چرخه فیدبک بسازید: تولید، ضبط/نوشتن، تحلیل خطا، تکرار و دوره‌ای استفاده از پارتنر/استاد قوی‌تر."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "IELTS-PRODUCTIVE-PRACTICE-009-E1",
+          "relation": "supports",
+          "independence_group": "practice-1"
+        },
+        {
+          "evidence_id": "IELTS-PRODUCTIVE-PRACTICE-009-E2",
+          "relation": "supports",
+          "independence_group": "practice-2"
+        },
+        {
+          "evidence_id": "IELTS-PRODUCTIVE-PRACTICE-009-E3",
+          "relation": "supports",
+          "independence_group": "practice-3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Several detailed guidance messages converge on the same active-practice loop."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "This is community learning-practice evidence, not an official IELTS preparation rule."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "IELTS-PRODUCTIVE-PRACTICE-009-E1",
+            "IELTS-PRODUCTIVE-PRACTICE-009-E2",
+            "IELTS-PRODUCTIVE-PRACTICE-009-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Pargar IELTS community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2027-03-15",
+        "reason": "Stable preparation signal.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Speaking partner",
+        "teacher feedback",
+        "shadowing",
+        "recording",
+        "AI"
+      ],
+      "first_seen": "2026-06-11",
+      "last_seen": "2026-06-18"
+    },
+    {
+      "signal_id": "LANGTEST-IRAN-ALTERNATIVES-010",
+      "issue_cluster_id": "IRAN-LANGUAGE-TEST-ACCESS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "IELTS-IRAN-ACCESS-001"
+        }
+      ],
+      "classification": {
+        "family": "E13_EXTERNAL_TEST_SERVICE",
+        "type": "alternative_test_access_disruption",
+        "class": "access"
+      },
+      "scope": {
+        "destination": {
+          "country": null,
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / IELTS"
+          ],
+          "codes": [
+            "IELTS",
+            "TOEFL",
+            "PTE"
+          ]
+        },
+        "process_stages": [
+          "test_access",
+          "route_switch"
+        ],
+        "entities": [
+          {
+            "entity_type": "test_provider",
+            "name": "ETS"
+          },
+          {
+            "entity_type": "test_provider",
+            "name": "Pearson"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "By late 2026, Iranian candidates were facing instability across multiple English-test providers, increasing forced switching between TOEFL, PTE and IELTS",
+          "fa": "تا اواخر ۲۰۲۶ بی‌ثباتی دسترسی چند آزمون زبان برای ایرانیان باعث سوییچ اجباری بین TOEFL، PTE و IELTS شده بود"
+        },
+        "summary": {
+          "en": "The source reports TOEFL suspension/cancellations in Iran, later uncertainty around Pearson/PTE, and candidates changing test strategy under deadline pressure. The PTE restriction itself remains uncertain in the source.",
+          "fa": "منبع از تعلیق/لغو TOEFL در ایران، سپس ابهام درباره Pearson/PTE و تغییر استراتژی آزمون زیر فشار ددلاین خبر می‌دهد. خود محدودیت PTE در فایل همچنان نامطمئن است."
+        },
+        "practical_impact": {
+          "en": "A migration/admission plan tied to only one English-test provider carries provider-access risk for Iran-based applicants.",
+          "fa": "پلن پذیرش/مهاجرت متکی به یک آزمون زبان برای متقاضی داخل ایران ریسک دسترسی ارائه‌دهنده دارد."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants whose institution or migration route accepts multiple English tests.",
+          "fa": "متقاضیان داخل ایران که دانشگاه یا مسیر مهاجرتشان چند آزمون زبان را می‌پذیرد."
+        },
+        "recommended_action": {
+          "en": "Before switching preparation tracks, verify current provider access and whether the target institution accepts the alternative test.",
+          "fa": "پیش از تغییر آزمون، دسترسی فعلی ارائه‌دهنده و پذیرش آزمون جایگزین توسط مقصد را بررسی کنید."
+        },
+        "known_workaround": "Where accepted, booking an approved test centre outside Iran is the repeated fallback."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "LANGTEST-IRAN-ALTERNATIVES-010-E1",
+          "relation": "supports",
+          "independence_group": "toefl-ets"
+        },
+        {
+          "evidence_id": "LANGTEST-IRAN-ALTERNATIVES-010-E2",
+          "relation": "supports",
+          "independence_group": "pte-question"
+        },
+        {
+          "evidence_id": "LANGTEST-IRAN-ALTERNATIVES-010-E3",
+          "relation": "qualifies",
+          "independence_group": "pte-correction"
+        },
+        {
+          "evidence_id": "LANGTEST-IRAN-ALTERNATIVES-010-E4",
+          "relation": "supports",
+          "independence_group": "switch-case"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "worsening",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "TOEFL disruption is strongly reported, while PTE-specific impact is explicitly uncertain; the broader multi-provider instability signal is supported."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current ETS/Pearson/IELTS Iran policies were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "LANGTEST-IRAN-ALTERNATIVES-010-E1",
+            "LANGTEST-IRAN-ALTERNATIVES-010-E2",
+            "LANGTEST-IRAN-ALTERNATIVES-010-E3",
+            "LANGTEST-IRAN-ALTERNATIVES-010-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Pargar IELTS community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-23",
+        "reason": "Provider access can change suddenly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "TOEFL Iran",
+        "PTE Iran",
+        "IELTS alternative",
+        "sanctions",
+        "test access"
+      ],
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-09-03"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names and Telegram user IDs are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded all 42,805 messages from the uploaded JSON and scanned the full export programmatically."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant local reply chains were inspected for selected evidence; the entire 42k-message reply graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Course advertisements, partner forms and teacher promotions were not treated as signals unless needed only as context."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated EOR, mock, AI, Cambridge, test-access and cross-border discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Successful and unsuccessful EOR outcomes are both preserved; AI scoring is represented as variable rather than uniformly high/low; PTE impact remains qualified."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "Provider notices or official-looking text reposted inside Telegram remain community-source evidence until independently verified."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal connector was unavailable during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals are practical test-access and preparation evidence only. They are not official IELTS/IDP/British Council/ETS/Pearson rules, guaranteed score predictions, or substitutes for current provider guidance."
+}

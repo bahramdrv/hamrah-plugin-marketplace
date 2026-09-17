@@ -1,0 +1,2279 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_scandinavia_community_signals_candidate",
+    "generated_at": "2026-09-17T05:57:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "scandinavia-pargar-telegram-export",
+      "name": "result(20260917-055610).json / Telegram export «اسکاندیناوی با پرگار»",
+      "source_type": "private_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-16",
+        "records_available": 11854,
+        "records_processed": 11854
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "contains_first_hand_applicant_reports": true,
+        "contains_reposted_university_or_mission_notices": true,
+        "contains_promotional_posts": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "SWE-STUDY-UA-DEADLINES-001-E1",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "574229"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A Sweden master's applicant described the centralized University Admissions workflow and asked whether program-specific documents beyond the standard degree/transcript/CV/SOP/references could be needed.",
+        "fa": "یک متقاضی ارشد سوئد workflow متمرکز University Admissions را مطرح کرده و درباره مدارک برنامه‌محور علاوه بر مدارک استاندارد پرسیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "SWE-STUDY-UA-DEADLINES-001-E2",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "574230"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said some programs can additionally require course syllabi and advised checking both the program page and general requirements.",
+        "fa": "پاسخ گروه گفته بعضی برنامه‌ها ممکن است سیلابس دروس را هم بخواهند و باید صفحه برنامه و general requirements جدا بررسی شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "SWE-STUDY-UA-DEADLINES-001-E3",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "576719"
+      },
+      "published_at": "2025-01-31",
+      "event_date": "2025-01-31",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "first_hand_application_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant distinguished the 15 January ranking/application deadline from a later early-February window communicated by universities for supporting documents.",
+        "fa": "یک متقاضی ددلاین ۱۵ ژانویه انتخاب/رنکینگ را از مهلت بعدی اوایل فوریه برای مدارک تکمیلی که دانشگاه‌ها ایمیل کرده بودند جدا کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "SWE-STUDY-UA-DEADLINES-001-E4",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "576720"
+      },
+      "published_at": "2025-01-31",
+      "event_date": "2025-01-31",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "first_hand_university_correspondence_summary",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The applicant said a university email explicitly allowed document submission until 3 February.",
+        "fa": "متقاضی گفته ایمیل دانشگاه صریحاً تا ۳ فوریه برای ارسال مدارک مهلت داده بود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "SWE-STUDY-UA-DEADLINES-001-E5",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "577799"
+      },
+      "published_at": "2025-02-26",
+      "event_date": "2025-02-26",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "first_hand_application_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A later applicant received a request inside University Admissions for more detailed course descriptions after initial submission.",
+        "fa": "متقاضی دیگری بعد از سابمیت اولیه در University Admissions درخواست توضیح دقیق‌تر درباره دروس پاس‌شده دریافت کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "SWE-STUDY-IRAN-BANK-FUNDS-002-E1",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "596215"
+      },
+      "published_at": "2025-12-31",
+      "event_date": "2025-12-31",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "reposted_university_notice",
+      "firsthandness": "direct_quote",
+      "summary": {
+        "en": "A Uppsala University email shared by an applicant said Swedish study-residence financial support held in Iranian bank accounts was not being accepted and warned such applicants were likely to be refused.",
+        "fa": "ایمیل دانشگاه اوپسالا که یک متقاضی منتشر کرده گفته تمکن نگهداری‌شده در بانک‌های ایرانی برای اقامت تحصیلی سوئد پذیرفته نمی‌شود و ریسک ریجکت دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "SWE-STUDY-IRAN-BANK-FUNDS-002-E2",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "599185"
+      },
+      "published_at": "2026-03-30",
+      "event_date": "2026-03-30",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 reply said applicants were using non-Iranian accounts in their own name because Iranian-bank proof had been rejected.",
+        "fa": "یک پاسخ ۲۰۲۶ گفته به‌دلیل رد تمکن بانک ایرانی، متقاضیان از حساب غیرایرانی به نام خودشان استفاده می‌کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "SWE-STUDY-IRAN-BANK-FUNDS-002-E3",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "600258"
+      },
+      "published_at": "2026-04-25",
+      "event_date": "2026-04-25",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "reposted_university_notice",
+      "firsthandness": "direct_quote",
+      "summary": {
+        "en": "The same Uppsala warning was reposted in April 2026, also stating that funds should be in the applicant's own account rather than private sponsors' accounts.",
+        "fa": "همان هشدار اوپسالا در آوریل ۲۰۲۶ دوباره منتشر شده و روی حساب به نام خود متقاضی نیز تأکید داشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "SWE-STUDY-IRAN-BANK-FUNDS-002-E4",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "602534"
+      },
+      "published_at": "2026-06-22",
+      "event_date": "2026-06-22",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A June 2026 reply said Iranian-bank statements were also not usable for later Swedish student-residence renewal in their understanding.",
+        "fa": "یک پاسخ ژوئن ۲۰۲۶ گفته طبق تجربه/اطلاع گروه، برای تمدید اقامت تحصیلی سوئد هم بانک ایرانی قابل اتکا نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "SWE-STUDY-IRAN-BANK-FUNDS-002-E5",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "605896"
+      },
+      "published_at": "2026-08-29",
+      "event_date": "2026-08-29",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_workaround",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "By August 2026, community members described opening foreign accounts in countries such as Turkey or Tajikistan as the practical workaround.",
+        "fa": "تا اوت ۲۰۲۶ اعضای گروه افتتاح حساب خارجی در کشورهایی مثل ترکیه یا تاجیکستان را workaround عملی مطرح کرده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "FIN-STUDY-VFS-003-E1",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "582296"
+      },
+      "published_at": "2025-05-07",
+      "event_date": "2025-05-07",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Finland applicant in May 2025 said VFS had offered a September appointment, creating a multi-month wait and prompting attempts to switch service point to the embassy.",
+        "fa": "یک متقاضی فنلاند در مه ۲۰۲۵ گفته VFS برای سپتامبر وقت داده؛ یعنی انتظار چندماهه و تلاش برای تغییر service point به سفارت."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "FIN-STUDY-VFS-003-E2",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "599378"
+      },
+      "published_at": "2026-04-05",
+      "event_date": "2026-04-05",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "In April 2026 an admitted master's applicant reported that Finland VFS was closed and asked whether any student-residence action was still possible.",
+        "fa": "در آوریل ۲۰۲۶ یک پذیرفته‌شده ارشد گزارش کرده VFS فنلاند بسته است و درباره امکان ادامه پرونده اقامت تحصیلی پرسیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "FIN-STUDY-VFS-003-E3",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "600070"
+      },
+      "published_at": "2026-04-21",
+      "event_date": "2026-04-21",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "first_hand_contact_with_mission",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user said the Finnish mission told them to contact the Ministry for Foreign Affairs and that an alternative third-country arrangement might be considered if enough cases were raised.",
+        "fa": "یک کاربر گفته سفارت فنلاند توصیه کرده با وزارت خارجه تماس بگیرند و احتمال معرفی کشور ثالث در صورت حجم بالای درخواست‌ها مطرح شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "FIN-STUDY-VFS-003-E4",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "601733"
+      },
+      "published_at": "2026-05-31",
+      "event_date": "2026-05-31",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A student who had already paid about EUR 8,000 tuition reported being unable to proceed while waiting for VFS reopening.",
+        "fa": "دانشجویی که حدود ۸هزار یورو شهریه داده بود گزارش کرده به‌خاطر بسته‌بودن VFS امکان ادامه مسیر نداشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "FIN-STUDY-VFS-003-E5",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "605033"
+      },
+      "published_at": "2026-08-14",
+      "event_date": "2026-08-14",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_operational_update",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "By August 2026, community guidance again described Finland VFS as handling appointments by email and the embassy as performing document legalization.",
+        "fa": "تا اوت ۲۰۲۶ راهنمایی گروه دوباره گرفتن وقت VFS فنلاند از طریق ایمیل و انجام لگالایز مدارک توسط سفارت را مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "FIN-STUDY-LABOUR-004-E1",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "591552"
+      },
+      "published_at": "2025-10-09",
+      "event_date": "2025-10-09",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For accounting and finance, a user said job prospects without Finnish were very low and English-only roles were highly competitive.",
+        "fa": "برای حسابداری و فاینانس، یک کاربر گفته بدون زبان فنلاندی شانس کاریابی بسیار کم و رقابت پوزیشن‌های انگلیسی شدید است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "FIN-STUDY-LABOUR-004-E2",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "594535"
+      },
+      "published_at": "2025-12-02",
+      "event_date": "2025-12-02",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A December 2025 reply said graduates can obtain a two-year job-seeker period, but described the labour market as weak and Finnish language as important for employment.",
+        "fa": "پاسخ دسامبر ۲۰۲۵ از دوره دوساله job seeker پس از تحصیل گفته ولی بازار کار را ضعیف و زبان فنلاندی را برای کاریابی مهم دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "FIN-STUDY-LABOUR-004-E3",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "599643"
+      },
+      "published_at": "2026-04-11",
+      "event_date": "2026-04-11",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "first_hand_applicant_research",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An Aalto master's admit reported that English-only internship and entry-level opportunities in a locally oriented real-estate/urban field appeared limited.",
+        "fa": "یک پذیرفته‌شده ارشد آلتو گزارش کرده در حوزه محلی real-estate/urban، فرصت‌های انگلیسی‌زبان اینترنشیپ و شروع کار محدود به نظر می‌رسد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "FIN-STUDY-LABOUR-004-E4",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "604415"
+      },
+      "published_at": "2026-08-10",
+      "event_date": "2026-08-10",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An August 2026 reply said general part-time work without Finnish was extremely difficult and advised relying on savings rather than assuming student work.",
+        "fa": "پاسخ اوت ۲۰۲۶ گفته کار جنرال کنار تحصیل بدون فنلاندی بسیار سخت است و بهتر است روی پس‌انداز حساب شود نه درآمد قطعی دانشجویی."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NOR-WORK-IRAN-DIRECT-005-E1",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "574246"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_labour_market_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A Norway-focused reply said employers often lose interest once they learn a candidate needs work-permit handling.",
+        "fa": "یک پاسخ درباره نروژ گفته کارفرماها وقتی متوجه نیاز متقاضی به ورک‌پرمیت می‌شوند اغلب تمایلشان کم می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NOR-WORK-IRAN-DIRECT-005-E2",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "574251"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community member said direct job offers from Iran were legally possible but practically very rare outside unusually strong or research profiles; study-to-work or PhD was described as more common.",
+        "fa": "عضو گروه گفته جاب‌آفر مستقیم از ایران از نظر قانونی ممکن است اما در عمل جز رزومه‌های بسیار قوی/ریسرچ نادر است و مسیر تحصیل→کار یا PhD رایج‌تر است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NOR-WORK-IRAN-DIRECT-005-E3",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "604086"
+      },
+      "published_at": "2026-08-01",
+      "event_date": "2026-08-01",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 reply still framed a direct Norwegian job offer as possible for a very experienced energy-sector profile, implying strong profile fit matters.",
+        "fa": "پاسخ ۲۰۲۶ همچنان جاب‌آفر مستقیم نروژ را برای رزومه بسیار باتجربه حوزه انرژی ممکن دانسته و بر فیت قوی رزومه تأکید کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NORDIC-PHD-EMPLOYMENT-006-E1",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "575045"
+      },
+      "published_at": "2025-01-09",
+      "event_date": "2025-01-09",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A Sweden-focused reply described master's study as tuition-bearing while PhD was framed as a salaried job without tuition.",
+        "fa": "یک پاسخ درباره سوئد ارشد را شهریه‌دار و دکتری را شغل حقوق‌بگیر بدون شهریه توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NORDIC-PHD-EMPLOYMENT-006-E2",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "579632"
+      },
+      "published_at": "2025-03-28",
+      "event_date": "2025-03-28",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "first_hand_student_to_worker_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Norway resident described PhD positions as employment with salary rather than student scholarships and separately described moving from student status to work status.",
+        "fa": "یک ساکن نروژ دکتری را پوزیشن شغلی با حقوق، نه بورس تحصیلی، توصیف کرده و تجربه تغییر از وضعیت دانشجویی به کاری را هم گفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NORDIC-PHD-EMPLOYMENT-006-E3",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "589030"
+      },
+      "published_at": "2025-08-31",
+      "event_date": "2025-08-31",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A Norway-specific reply said PhD vacancies are position-based, posted throughout the year, and the employment contract/salary can serve as financial support rather than separate proof of funds.",
+        "fa": "پاسخ نروژ گفته پوزیشن‌های PhD در طول سال منتشر می‌شوند و قرارداد/حقوق می‌تواند جای تمکن جداگانه را بگیرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NORDIC-PHD-EMPLOYMENT-006-E4",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "602949"
+      },
+      "published_at": "2026-07-03",
+      "event_date": "2026-07-03",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A July 2026 community summary generalized the same employment-style PhD model across Scandinavia.",
+        "fa": "یک جمع‌بندی جولای ۲۰۲۶ همین مدل دکتری شغلی و حقوق‌بگیر را به‌طور کلی برای اسکاندیناوی مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NOR-STUDY-MASTER-COST-007-E1",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "588648"
+      },
+      "published_at": "2025-08-26",
+      "event_date": "2025-08-26",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2025 reply contrasted competitive salaried PhD with master's study that generally requires the student to fund tuition/living costs.",
+        "fa": "یک پاسخ ۲۰۲۵ دکتری حقوق‌بگیر و رقابتی را در مقابل ارشد که عموماً هزینه‌اش بر عهده دانشجوست قرار داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NOR-STUDY-MASTER-COST-007-E2",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "591442"
+      },
+      "published_at": "2025-10-08",
+      "event_date": "2025-10-08",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply described Norwegian master's tuition for non-EU students as expensive and broad master's scholarships as unavailable in the speaker's experience.",
+        "fa": "پاسخ بعدی شهریه ارشد نروژ برای غیراروپایی‌ها را بالا و بورس گسترده ارشد را در تجربه گوینده تقریباً موجود ندانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NOR-STUDY-MASTER-COST-007-E3",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "606119"
+      },
+      "published_at": "2026-09-01",
+      "event_date": "2026-09-01",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_cost_estimate",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In September 2026 a user described a broad tuition range for non-EU students plus substantial living costs, warning that Norway was no longer broadly tuition-free for this group.",
+        "fa": "در سپتامبر ۲۰۲۶ کاربری بازه بالای شهریه برای غیراروپایی‌ها و هزینه زندگی قابل‌توجه را مطرح کرده و هشدار داده نروژ برای این گروه دیگر عموماً رایگان نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DNK-RESIDENCE-IRAN-CONSULAR-008-E1",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "584530"
+      },
+      "published_at": "2025-06-18",
+      "event_date": "2025-06-18",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "During a June 2025 service disruption, an applicant waiting for a Danish visa said the embassy/VFS closure required direct email contact to retrieve a passport.",
+        "fa": "در اختلال ژوئن ۲۰۲۵، متقاضی منتظر ویزای دانمارک گفته بسته‌شدن سفارت/VFS باعث شده برای پس‌گرفتن پاسپورت مستقیم ایمیل بزند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DNK-RESIDENCE-IRAN-CONSULAR-008-E2",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "599771"
+      },
+      "published_at": "2026-04-14",
+      "event_date": "2026-04-14",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_operational_update",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "In April 2026 the group reported that pending Danish cases needing biometrics could request SIRI to transfer the case to a third-country mission.",
+        "fa": "در آوریل ۲۰۲۶ گروه گزارش کرده پرونده‌های باز دانمارک که بیومتریک لازم دارند می‌توانند از SIRI درخواست انتقال پرونده به نمایندگی کشور ثالث کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DNK-RESIDENCE-IRAN-CONSULAR-008-E3",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "599772"
+      },
+      "published_at": "2026-04-14",
+      "event_date": "2026-04-14",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "reposted_official_guidance",
+      "firsthandness": "direct_quote",
+      "summary": {
+        "en": "A reposted English notice stated that visa or residence-permit applications could not at that time be submitted from Iran and that pending SIRI cases could request transfer to another Danish mission in the region.",
+        "fa": "یک متن انگلیسی بازنشرشده گفته در آن مقطع اقدام ویزا/اقامت از ایران ممکن نیست و پرونده‌های باز SIRI می‌توانند درخواست انتقال به نمایندگی دیگر در منطقه بدهند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DNK-RESIDENCE-IRAN-CONSULAR-008-E4",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "606242"
+      },
+      "published_at": "2026-09-04",
+      "event_date": "2026-09-04",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "By September 2026 applicants were still asking whether the Danish, Swedish and Norwegian missions in Iran had returned to normal service or only handled limited cases.",
+        "fa": "تا سپتامبر ۲۰۲۶ متقاضیان همچنان درباره عادی‌شدن فعالیت سفارت‌های دانمارک/سوئد/نروژ در ایران یا محدودبودن خدمات سؤال داشتند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "FIN-FAMILY-DEPENDANT-009-E1",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "585515"
+      },
+      "published_at": "2025-07-07",
+      "event_date": "2025-07-07",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2025 reply said Finland dependants were understood to have work rights and health-insurance access.",
+        "fa": "یک پاسخ ۲۰۲۵ گفته همراه در فنلاند طبق تجربه گروه اجازه کار و پوشش بیمه دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "FIN-FAMILY-DEPENDANT-009-E2",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "595478"
+      },
+      "published_at": "2025-12-19",
+      "event_date": "2025-12-19",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "first_hand_family_application_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A PhD applicant and spouse reported simultaneous Finland decisions after a shared VFS process, with the PhD handled under a work-residence category.",
+        "fa": "یک متقاضی PhD و همسرش گزارش کرده‌اند پس از فرایند مشترک VFS همزمان تصمیم گرفته شدند و پرونده PhD زیر مجموعه اقامت کاری بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "FIN-FAMILY-DEPENDANT-009-E3",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "604415"
+      },
+      "published_at": "2026-08-10",
+      "event_date": "2026-08-10",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An August 2026 reply warned that the principal student's decision can arrive on time while the dependant decision may lag.",
+        "fa": "پاسخ اوت ۲۰۲۶ هشدار داده تصمیم نفر اصلی ممکن است به‌موقع بیاید اما جواب همراه کمی دیرتر شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NORDIC-ROUTE-COUNTRY-SPECIFIC-010-E1",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "576538"
+      },
+      "published_at": "2025-01-29",
+      "event_date": "2025-01-29",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community response advised choosing a Nordic destination based on priorities such as simultaneous dependant processing, spouse work rights, tuition, unemployment and post-study opportunities rather than using one blanket ranking.",
+        "fa": "یک پاسخ گروه توصیه کرده انتخاب کشور بر اساس اولویت‌هایی مثل همراه همزمان، اجازه کار همسر، شهریه، بیکاری و فرصت پس از تحصیل انجام شود نه یک رتبه‌بندی کلی."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NORDIC-ROUTE-COUNTRY-SPECIFIC-010-E2",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "587077"
+      },
+      "published_at": "2025-08-03",
+      "event_date": "2025-08-03",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "Repeated questions about which countries allow dependants to work show that family rights were a major route-selection factor and were not understood as uniform across countries.",
+        "fa": "پرسش‌های تکراری درباره اینکه کدام کشورها به همراه اجازه کار می‌دهند نشان می‌دهد حقوق خانواده عامل مهم انتخاب مسیر بوده و یکسان فرض نمی‌شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NORDIC-ROUTE-COUNTRY-SPECIFIC-010-E3",
+      "source_id": "scandinavia-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "599621"
+      },
+      "published_at": "2026-04-11",
+      "event_date": "2026-04-11",
+      "collected_at": "2026-09-17T05:57:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 reply confirmed spouse work rights in the specific route being discussed, illustrating that answers were route-specific rather than universal.",
+        "fa": "یک پاسخ ۲۰۲۶ در مسیر مشخص موردبحث اجازه کار همراه را تأیید کرده و نشان می‌دهد پاسخ باید route-specific باشد نه عمومی."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "SWE-STUDY-UA-DEADLINES-001",
+      "issue_cluster_id": "SWE-UNIVERSITY-ADMISSIONS-WORKFLOW",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "centralized_application_deadline_split",
+        "class": "admission"
+      },
+      "scope": {
+        "destination": {
+          "country": "Sweden",
+          "country_code": "SWE",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "masters"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "masters"
+          ]
+        },
+        "process_stages": [
+          "application",
+          "ranking",
+          "document_submission"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Sweden master's applications have a centralized workflow with distinct selection and document-completion deadlines",
+          "fa": "اپلای ارشد سوئد workflow متمرکز دارد و ددلاین انتخاب/رنکینگ از تکمیل مدارک جداست"
+        },
+        "summary": {
+          "en": "Community cases show University Admissions as the main application surface, with a mid-January selection/ranking deadline and later document-completion windows in the 2025 cycle. Programs can still request extra course descriptions or syllabi.",
+          "fa": "تجربه‌های گروه University Admissions را سطح اصلی اپلای نشان می‌دهند؛ در چرخه ۲۰۲۵ ددلاین انتخاب/رنکینگ میانه ژانویه و مهلت مدارک تکمیلی دیرتر بوده است. برنامه‌ها ممکن است بعداً شرح درس/سیلابس اضافه بخواهند."
+        },
+        "practical_impact": {
+          "en": "Treating one date as the only deadline can cause either premature panic or missed supplementary-document requests.",
+          "fa": "فرض یک ددلاین واحد می‌تواند باعث نگرانی بی‌مورد یا از دست‌دادن درخواست مدارک تکمیلی شود."
+        },
+        "who_should_care": {
+          "en": "Sweden master's applicants using University Admissions.",
+          "fa": "متقاضیان ارشد سوئد از طریق University Admissions."
+        },
+        "recommended_action": {
+          "en": "Track the application/ranking deadline, document deadline and program-specific follow-up separately.",
+          "fa": "ددلاین اپلیکیشن/رنکینگ، مهلت مدارک و follow-up اختصاصی برنامه را جداگانه پیگیری کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "SWE-STUDY-UA-DEADLINES-001-E1",
+          "relation": "supports",
+          "independence_group": "SWE-STUDY-UA-DEADLINES-001-E1"
+        },
+        {
+          "evidence_id": "SWE-STUDY-UA-DEADLINES-001-E2",
+          "relation": "supports",
+          "independence_group": "SWE-STUDY-UA-DEADLINES-001-E2"
+        },
+        {
+          "evidence_id": "SWE-STUDY-UA-DEADLINES-001-E3",
+          "relation": "supports",
+          "independence_group": "SWE-STUDY-UA-DEADLINES-001-E3"
+        },
+        {
+          "evidence_id": "SWE-STUDY-UA-DEADLINES-001-E4",
+          "relation": "supports",
+          "independence_group": "SWE-STUDY-UA-DEADLINES-001-E4"
+        },
+        {
+          "evidence_id": "SWE-STUDY-UA-DEADLINES-001-E5",
+          "relation": "supports",
+          "independence_group": "SWE-STUDY-UA-DEADLINES-001-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple applicant experiences show the same centralized workflow and deadline separation."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current-cycle University Admissions deadlines were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "SWE-STUDY-UA-DEADLINES-001-E1",
+            "SWE-STUDY-UA-DEADLINES-001-E2",
+            "SWE-STUDY-UA-DEADLINES-001-E3",
+            "SWE-STUDY-UA-DEADLINES-001-E4",
+            "SWE-STUDY-UA-DEADLINES-001-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Pargar Scandinavia community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Deadlines change by intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Sweden",
+        "University Admissions",
+        "deadline",
+        "documents",
+        "syllabus"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-02-26"
+    },
+    {
+      "signal_id": "SWE-STUDY-IRAN-BANK-FUNDS-002",
+      "issue_cluster_id": "SWE-IRANIAN-BANK-PROOF-OF-FUNDS",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "iranian_bank_nonacceptance_risk",
+        "class": "residence_permit"
+      },
+      "scope": {
+        "destination": {
+          "country": "Sweden",
+          "country_code": "SWE",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Funds held in Iranian bank accounts"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_residence"
+          ]
+        },
+        "process_stages": [
+          "proof_of_funds",
+          "residence_permit",
+          "renewal"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Iranian-bank proof of funds became a major Swedish student-residence risk in late 2025-2026",
+          "fa": "تمکن از بانک‌های ایرانی از اواخر ۲۰۲۵ تا ۲۰۲۶ به ریسک جدی اقامت تحصیلی سوئد تبدیل شده است"
+        },
+        "summary": {
+          "en": "The source includes a Uppsala University warning quoting Swedish Migration Agency practice, followed by repeated community reports that successful applicants were using non-Iranian accounts in their own name.",
+          "fa": "فایل شامل هشدار دانشگاه اوپسالا درباره رویه اداره مهاجرت سوئد است و بعد از آن گزارش‌های تکراری کامیونیتی از استفاده حساب غیرایرانی به نام خود متقاضی دیده می‌شود."
+        },
+        "practical_impact": {
+          "en": "Admission can become unusable if the applicant cannot produce acceptable financial evidence outside an Iranian bank.",
+          "fa": "پذیرش ممکن است عملاً قابل استفاده نباشد اگر متقاضی نتواند تمکن قابل قبول خارج از بانک ایرانی ارائه کند."
+        },
+        "who_should_care": {
+          "en": "Iran-based Swedish student-residence applicants and renewals.",
+          "fa": "متقاضیان ایرانی اقامت تحصیلی سوئد و تمدید آن."
+        },
+        "recommended_action": {
+          "en": "Resolve the acceptable account jurisdiction and ownership before paying irreversible tuition or travel costs.",
+          "fa": "قبل از پرداخت غیرقابل‌برگشت شهریه یا سفر، کشور حساب و مالکیت حساب قابل قبول را حل کنید."
+        },
+        "known_workaround": "Community reports repeatedly use a foreign bank account in the applicant's own name."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "SWE-STUDY-IRAN-BANK-FUNDS-002-E1",
+          "relation": "supports",
+          "independence_group": "SWE-STUDY-IRAN-BANK-FUNDS-002-E1"
+        },
+        {
+          "evidence_id": "SWE-STUDY-IRAN-BANK-FUNDS-002-E2",
+          "relation": "supports",
+          "independence_group": "SWE-STUDY-IRAN-BANK-FUNDS-002-E2"
+        },
+        {
+          "evidence_id": "SWE-STUDY-IRAN-BANK-FUNDS-002-E3",
+          "relation": "supports",
+          "independence_group": "SWE-STUDY-IRAN-BANK-FUNDS-002-E3"
+        },
+        {
+          "evidence_id": "SWE-STUDY-IRAN-BANK-FUNDS-002-E4",
+          "relation": "supports",
+          "independence_group": "SWE-STUDY-IRAN-BANK-FUNDS-002-E4"
+        },
+        {
+          "evidence_id": "SWE-STUDY-IRAN-BANK-FUNDS-002-E5",
+          "relation": "supports",
+          "independence_group": "SWE-STUDY-IRAN-BANK-FUNDS-002-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "worsening",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "A university warning plus repeated 2026 operational reports support a durable high-impact signal."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The shared university warning was not independently checked against the current Swedish Migration Agency page."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "SWE-STUDY-IRAN-BANK-FUNDS-002-E1",
+            "SWE-STUDY-IRAN-BANK-FUNDS-002-E2",
+            "SWE-STUDY-IRAN-BANK-FUNDS-002-E3",
+            "SWE-STUDY-IRAN-BANK-FUNDS-002-E4",
+            "SWE-STUDY-IRAN-BANK-FUNDS-002-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Pargar Scandinavia community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Sanctions/payment policy can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Sweden",
+        "proof of funds",
+        "Iranian bank",
+        "residence permit",
+        "Uppsala"
+      ],
+      "first_seen": "2025-12-31",
+      "last_seen": "2026-08-29"
+    },
+    {
+      "signal_id": "FIN-STUDY-VFS-003",
+      "issue_cluster_id": "FIN-IRAN-VFS-ACCESS",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "vfs_appointment_service_disruption",
+        "class": "residence_permit"
+      },
+      "scope": {
+        "destination": {
+          "country": "Finland",
+          "country_code": "FIN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_residence",
+            "researcher_residence"
+          ]
+        },
+        "process_stages": [
+          "service_point",
+          "biometrics",
+          "identity_check",
+          "VFS"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Finland VFS access from Iran became a recurring bottleneck, including long waits and a 2026 closure/disruption period",
+          "fa": "دسترسی VFS فنلاند از ایران گلوگاه تکرارشونده بوده و شامل انتظار طولانی و دوره اختلال/تعطیلی در ۲۰۲۶ شده است"
+        },
+        "summary": {
+          "en": "A May 2025 applicant reported a months-long wait for VFS. In 2026, admitted students reported closure, pressure for a third-country solution, and tuition already paid while residence processing could not proceed normally; service later resumed via emailed appointments.",
+          "fa": "در مه ۲۰۲۵ یک متقاضی از انتظار چندماهه VFS گفته است. در ۲۰۲۶ پذیرفته‌شده‌ها تعطیلی، تلاش برای راهکار کشور ثالث و پرداخت شهریه بدون امکان پیشبرد عادی اقامت را گزارش کرده‌اند؛ بعدتر وقت‌دهی ایمیلی دوباره گزارش شده است."
+        },
+        "practical_impact": {
+          "en": "The immigration-service step can become the critical path after admission and tuition payment.",
+          "fa": "بعد از پذیرش و حتی پرداخت شهریه، مرحله خدمات مهاجرتی می‌تواند مسیر بحرانی پرونده شود."
+        },
+        "who_should_care": {
+          "en": "Iran-based Finland students, researchers and dependants.",
+          "fa": "دانشجو، پژوهشگر و همراه فنلاند از ایران."
+        },
+        "recommended_action": {
+          "en": "Check VFS/mission service availability before committing to non-refundable tuition and monitor alternative-service instructions.",
+          "fa": "قبل از شهریه غیرقابل‌استرداد، وضعیت VFS/سفارت را چک کنید و دستورالعمل کشور ثالث یا service point جایگزین را پیگیری کنید."
+        },
+        "known_workaround": "Email-based appointment handling and possible third-country arrangements were discussed during disruption."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "FIN-STUDY-VFS-003-E1",
+          "relation": "supports",
+          "independence_group": "FIN-STUDY-VFS-003-E1"
+        },
+        {
+          "evidence_id": "FIN-STUDY-VFS-003-E2",
+          "relation": "supports",
+          "independence_group": "FIN-STUDY-VFS-003-E2"
+        },
+        {
+          "evidence_id": "FIN-STUDY-VFS-003-E3",
+          "relation": "supports",
+          "independence_group": "FIN-STUDY-VFS-003-E3"
+        },
+        {
+          "evidence_id": "FIN-STUDY-VFS-003-E4",
+          "relation": "supports",
+          "independence_group": "FIN-STUDY-VFS-003-E4"
+        },
+        {
+          "evidence_id": "FIN-STUDY-VFS-003-E5",
+          "relation": "supports",
+          "independence_group": "FIN-STUDY-VFS-003-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct applicant reports across 2025-2026 show repeated appointment and service-point friction."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Finland VFS/mission service status was not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "FIN-STUDY-VFS-003-E1",
+            "FIN-STUDY-VFS-003-E2",
+            "FIN-STUDY-VFS-003-E3",
+            "FIN-STUDY-VFS-003-E4",
+            "FIN-STUDY-VFS-003-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Pargar Scandinavia community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "Service availability can change immediately.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Finland",
+        "VFS",
+        "EnterFinland",
+        "appointment",
+        "Iran"
+      ],
+      "first_seen": "2025-05-07",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "signal_id": "FIN-STUDY-LABOUR-004",
+      "issue_cluster_id": "FIN-POSTSTUDY-LANGUAGE-LABOUR",
+      "relationships": [],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "language_limited_poststudy_market",
+        "class": "employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "Finland",
+          "country_code": "FIN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "masters"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "masters",
+            "poststudy_job_search"
+          ]
+        },
+        "process_stages": [
+          "study",
+          "internship",
+          "job_search"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Finland offers a post-study runway, but Finnish-language and labour-market friction materially affect the value of self-funded study",
+          "fa": "فنلاند runway بعد از تحصیل دارد، اما زبان فنلاندی و اصطکاک بازار کار ارزش مسیر سلف‌فاند را شدیداً تحت‌تأثیر قرار می‌دهد"
+        },
+        "summary": {
+          "en": "The group repeatedly reports limited English-only entry-level work outside some specialist fields, strong competition, and difficulty finding general student work without Finnish. A two-year post-study job-seeker period is also repeatedly cited in the community.",
+          "fa": "گروه بارها از محدودبودن کارهای شروع‌کار انگلیسی‌زبان خارج از بعضی حوزه‌های تخصصی، رقابت بالا و سختی کار جنرال بدون فنلاندی گفته است. دوره دوساله job seeker پس از تحصیل نیز تکرار شده است."
+        },
+        "practical_impact": {
+          "en": "A nominal post-study permit does not by itself solve employability or living-cost risk.",
+          "fa": "وجود مجوز پس از تحصیل به‌تنهایی مشکل کاریابی یا هزینه زندگی را حل نمی‌کند."
+        },
+        "who_should_care": {
+          "en": "Self-funded Finland master's applicants planning to stay for work.",
+          "fa": "متقاضیان سلف‌فاند ارشد فنلاند که قصد ماندن کاری دارند."
+        },
+        "recommended_action": {
+          "en": "Evaluate the target field's English-only labour market and begin Finnish early; budget without assuming general part-time work.",
+          "fa": "بازار انگلیسی‌زبان رشته هدف را بسنجید، فنلاندی را زود شروع کنید و بودجه را بدون فرض کار جنرال ببندید."
+        },
+        "known_workaround": "Specialized English-language roles are reported as more accessible than general jobs."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "FIN-STUDY-LABOUR-004-E1",
+          "relation": "supports",
+          "independence_group": "FIN-STUDY-LABOUR-004-E1"
+        },
+        {
+          "evidence_id": "FIN-STUDY-LABOUR-004-E2",
+          "relation": "supports",
+          "independence_group": "FIN-STUDY-LABOUR-004-E2"
+        },
+        {
+          "evidence_id": "FIN-STUDY-LABOUR-004-E3",
+          "relation": "supports",
+          "independence_group": "FIN-STUDY-LABOUR-004-E3"
+        },
+        {
+          "evidence_id": "FIN-STUDY-LABOUR-004-E4",
+          "relation": "supports",
+          "independence_group": "FIN-STUDY-LABOUR-004-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Reports across several fields and dates converge on language and labour-market friction."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official post-study permit duration and labour-market statistics were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "FIN-STUDY-LABOUR-004-E1",
+            "FIN-STUDY-LABOUR-004-E2",
+            "FIN-STUDY-LABOUR-004-E3",
+            "FIN-STUDY-LABOUR-004-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Pargar Scandinavia community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Labour-market conditions change over time.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Finland",
+        "job seeker",
+        "Finnish language",
+        "labour market",
+        "part-time work"
+      ],
+      "first_seen": "2025-10-09",
+      "last_seen": "2026-08-10"
+    },
+    {
+      "signal_id": "NOR-WORK-IRAN-DIRECT-005",
+      "issue_cluster_id": "NOR-DIRECT-JOBOFFER-FROM-IRAN",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "NORDIC-PHD-EMPLOYMENT-006"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "employer_work_permit_friction",
+        "class": "employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "Norway",
+          "country_code": "NOR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "skilled_work",
+            "research",
+            "study_to_work"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "employer_selection",
+          "work_permit"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Direct Norway job offers from Iran are legally imaginable but community experience describes major employer-side work-permit friction",
+          "fa": "جاب‌آفر مستقیم نروژ از ایران از نظر تئوری ممکن است، اما تجربه گروه اصطکاک جدی کارفرما در ورک‌پرمیت را نشان می‌دهد"
+        },
+        "summary": {
+          "en": "The source says employers often prefer candidates already local or without immigration friction; direct offers from Iran are described as rare outside exceptional/research profiles. Study-to-work or PhD employment is repeatedly described as more common.",
+          "fa": "منبع می‌گوید کارفرماها اغلب متقاضی محلی یا بدون دردسر مهاجرتی را ترجیح می‌دهند و جاب‌آفر مستقیم از ایران جز رزومه‌های استثنایی/پژوهشی نادر گزارش شده است. تحصیل→کار یا PhD شغلی رایج‌تر توصیف شده است."
+        },
+        "practical_impact": {
+          "en": "A large number of remote applications may produce little traction despite formal eligibility.",
+          "fa": "با وجود eligibility قانونی، اپلای ریموت زیاد ممکن است خروجی کمی داشته باشد."
+        },
+        "who_should_care": {
+          "en": "Iran-based professionals seeking Norwegian employment without prior local study/residence.",
+          "fa": "متخصصان داخل ایران که بدون سابقه تحصیل/اقامت محلی دنبال کار نروژند."
+        },
+        "recommended_action": {
+          "en": "Prioritize employers used to international hires, research roles and highly specific profile fit; do not assume remote sponsorship is routine.",
+          "fa": "کارفرمایان باتجربه در استخدام بین‌المللی، نقش‌های ریسرچ و فیت بسیار دقیق رزومه را اولویت دهید و اسپانسر ریموت را عادی فرض نکنید."
+        },
+        "known_workaround": "PhD/research employment or study-to-work transition is repeatedly described as a more realistic entry route."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "NOR-WORK-IRAN-DIRECT-005-E1",
+          "relation": "supports",
+          "independence_group": "NOR-WORK-IRAN-DIRECT-005-E1"
+        },
+        {
+          "evidence_id": "NOR-WORK-IRAN-DIRECT-005-E2",
+          "relation": "supports",
+          "independence_group": "NOR-WORK-IRAN-DIRECT-005-E2"
+        },
+        {
+          "evidence_id": "NOR-WORK-IRAN-DIRECT-005-E3",
+          "relation": "supports",
+          "independence_group": "NOR-WORK-IRAN-DIRECT-005-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same employer-friction explanation appears repeatedly and remains consistent with later profile-specific guidance."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Norwegian work-permit rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "NOR-WORK-IRAN-DIRECT-005-E1",
+            "NOR-WORK-IRAN-DIRECT-005-E2",
+            "NOR-WORK-IRAN-DIRECT-005-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Pargar Scandinavia community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Employer demand changes by sector.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Norway",
+        "job offer",
+        "Iran",
+        "work permit",
+        "employer"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2026-08-01"
+    },
+    {
+      "signal_id": "NORDIC-PHD-EMPLOYMENT-006",
+      "issue_cluster_id": "NORDIC-PHD-EMPLOYMENT-MODEL",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "NOR-WORK-IRAN-DIRECT-005"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "salaried_phd_employment_model",
+        "class": "phd"
+      },
+      "scope": {
+        "destination": {
+          "country": "Nordic countries",
+          "country_code": null,
+          "region": "Nordic/Scandinavia",
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "phd"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "phd_employment"
+          ]
+        },
+        "process_stages": [
+          "vacancy_search",
+          "employment_contract",
+          "residence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "PhD is commonly treated as salaried employment rather than a self-funded degree across the Scandinavian discussions",
+          "fa": "در گفتگوهای اسکاندیناوی، PhD غالباً پوزیشن شغلی حقوق‌بگیر است نه تحصیل سلف‌فاند معمولی"
+        },
+        "summary": {
+          "en": "Sweden and Norway discussions repeatedly frame doctoral positions as jobs with salary and no ordinary tuition. Norway cases also describe rolling vacancy-based recruitment and the employment contract serving as financial support.",
+          "fa": "گفتگوهای سوئد و نروژ دکتری را مکرراً شغل با حقوق و بدون شهریه معمول معرفی می‌کنند. در نروژ همچنین جذب vacancy-based در طول سال و استفاده قرارداد به‌جای تمکن جداگانه گزارش شده است."
+        },
+        "practical_impact": {
+          "en": "Searching only for 'scholarships' misses many doctoral opportunities; the applicant is competing for employment vacancies.",
+          "fa": "جست‌وجوی صرف «بورسیه» بسیاری از فرصت‌های دکتری را از دست می‌دهد؛ متقاضی عملاً برای vacancy شغلی رقابت می‌کند."
+        },
+        "who_should_care": {
+          "en": "Applicants targeting PhD in Sweden, Norway, Denmark or Finland.",
+          "fa": "متقاضیان PhD سوئد، نروژ، دانمارک یا فنلاند."
+        },
+        "recommended_action": {
+          "en": "Search university job portals and vacancy boards, and assess salary/contract/residence terms like an employment application.",
+          "fa": "پرتال‌های استخدام دانشگاه و vacancyها را جست‌وجو کنید و حقوق/قرارداد/اقامت را مثل اپلای شغلی بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "NORDIC-PHD-EMPLOYMENT-006-E1",
+          "relation": "supports",
+          "independence_group": "NORDIC-PHD-EMPLOYMENT-006-E1"
+        },
+        {
+          "evidence_id": "NORDIC-PHD-EMPLOYMENT-006-E2",
+          "relation": "supports",
+          "independence_group": "NORDIC-PHD-EMPLOYMENT-006-E2"
+        },
+        {
+          "evidence_id": "NORDIC-PHD-EMPLOYMENT-006-E3",
+          "relation": "supports",
+          "independence_group": "NORDIC-PHD-EMPLOYMENT-006-E3"
+        },
+        {
+          "evidence_id": "NORDIC-PHD-EMPLOYMENT-006-E4",
+          "relation": "supports",
+          "independence_group": "NORDIC-PHD-EMPLOYMENT-006-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple countries and dates converge on the salaried-employment framing."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Employment classification and residence category can vary by country/institution and were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "NORDIC-PHD-EMPLOYMENT-006-E1",
+            "NORDIC-PHD-EMPLOYMENT-006-E2",
+            "NORDIC-PHD-EMPLOYMENT-006-E3",
+            "NORDIC-PHD-EMPLOYMENT-006-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Pargar Scandinavia community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2027-03-16",
+        "reason": "Institutional employment models are relatively stable but should be checked per vacancy.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "PhD",
+        "employment",
+        "salary",
+        "vacancy",
+        "Scandinavia"
+      ],
+      "first_seen": "2025-01-09",
+      "last_seen": "2026-07-03"
+    },
+    {
+      "signal_id": "NOR-STUDY-MASTER-COST-007",
+      "issue_cluster_id": "NOR-NON-EU-MASTER-COST",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "NORDIC-PHD-EMPLOYMENT-006"
+        }
+      ],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "non_eu_tuition_cost_gap",
+        "class": "financial"
+      },
+      "scope": {
+        "destination": {
+          "country": "Norway",
+          "country_code": "NOR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "masters"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "masters"
+          ]
+        },
+        "process_stages": [
+          "tuition",
+          "living_cost",
+          "funding"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Norway master's study for non-EU applicants is treated in the community as a high-cost route with limited broad scholarship coverage",
+          "fa": "ارشد نروژ برای غیراروپایی‌ها در تجربه گروه مسیر پرهزینه با پوشش بورسیه محدود است"
+        },
+        "summary": {
+          "en": "The source contrasts paid/competitive PhD employment with self-funded master's study and repeatedly warns that Norway is no longer broadly tuition-free for non-EU students. Exact tuition figures vary widely by institution and year.",
+          "fa": "فایل PhD حقوق‌بگیر را در مقابل ارشد سلف‌فاند قرار می‌دهد و بارها هشدار می‌دهد نروژ برای دانشجوی غیراروپایی دیگر به‌طور گسترده رایگان نیست. اعداد شهریه بین دانشگاه و سال بسیار متغیرند."
+        },
+        "practical_impact": {
+          "en": "Applicants can materially underestimate the budget if they rely on Norway's older tuition-free reputation.",
+          "fa": "اتکا به تصویر قدیمی «نروژ رایگان» می‌تواند بودجه را شدیداً کم‌برآورد کند."
+        },
+        "who_should_care": {
+          "en": "Non-EU master's applicants considering Norway.",
+          "fa": "متقاضیان غیراروپایی ارشد نروژ."
+        },
+        "recommended_action": {
+          "en": "Use the exact current program fee table and build living-cost proof separately; do not assume a general master's scholarship.",
+          "fa": "جدول شهریه روز همان برنامه را مبنا بگیرید و هزینه/تمکن زندگی را جدا حساب کنید؛ بورس عمومی ارشد را فرض نکنید."
+        },
+        "known_workaround": "Salaried PhD positions are repeatedly described as a financially different route."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "NOR-STUDY-MASTER-COST-007-E1",
+          "relation": "supports",
+          "independence_group": "NOR-STUDY-MASTER-COST-007-E1"
+        },
+        {
+          "evidence_id": "NOR-STUDY-MASTER-COST-007-E2",
+          "relation": "supports",
+          "independence_group": "NOR-STUDY-MASTER-COST-007-E2"
+        },
+        {
+          "evidence_id": "NOR-STUDY-MASTER-COST-007-E3",
+          "relation": "supports",
+          "independence_group": "NOR-STUDY-MASTER-COST-007-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The direction is consistent, while exact figures are community estimates and highly institution-specific."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official Norwegian tuition and scholarship tables were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "NOR-STUDY-MASTER-COST-007-E1",
+            "NOR-STUDY-MASTER-COST-007-E2",
+            "NOR-STUDY-MASTER-COST-007-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Pargar Scandinavia community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Tuition changes by university/year.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Norway",
+        "master",
+        "tuition",
+        "non-EU",
+        "scholarship"
+      ],
+      "first_seen": "2025-08-26",
+      "last_seen": "2026-09-01"
+    },
+    {
+      "signal_id": "DNK-RESIDENCE-IRAN-CONSULAR-008",
+      "issue_cluster_id": "DNK-IRAN-CONSULAR-DISRUPTION",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "consular_service_disruption_third_country",
+        "class": "residence_permit"
+      },
+      "scope": {
+        "destination": {
+          "country": "Denmark",
+          "country_code": "DNK",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_residence",
+            "work_residence",
+            "family_residence"
+          ]
+        },
+        "process_stages": [
+          "visa_application",
+          "biometrics",
+          "passport_handling",
+          "case_transfer"
+        ],
+        "entities": [
+          {
+            "entity_type": "authority",
+            "name": "SIRI"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "Danish residence/visa processing from Iran experienced major service disruption, with third-country case transfer becoming a workaround",
+          "fa": "پردازش ویزا/اقامت دانمارک از ایران با اختلال جدی مواجه شده و انتقال پرونده به کشور ثالث به workaround تبدیل شده است"
+        },
+        "summary": {
+          "en": "The source records a June 2025 closure-related passport problem and an April 2026 notice that applications could not then be lodged from Iran; pending SIRI cases could request transfer to another Danish mission for biometrics.",
+          "fa": "فایل یک مشکل پاسپورت مرتبط با تعطیلی در ژوئن ۲۰۲۵ و متن آوریل ۲۰۲۶ را ثبت کرده که در آن زمان اقدام از ایران ممکن نبوده و پرونده‌های باز SIRI می‌توانستند برای بیومتریک به نمایندگی دیگری منتقل شوند."
+        },
+        "practical_impact": {
+          "en": "Admission or employment start dates can become unusable if biometrics/passport handling cannot be completed in Iran.",
+          "fa": "اگر بیومتریک/پاسپورت در ایران انجام نشود، تاریخ شروع تحصیل یا کار ممکن است از دست برود."
+        },
+        "who_should_care": {
+          "en": "Iran-based Denmark students, workers and dependants.",
+          "fa": "دانشجو، نیروی کار و همراه دانمارک از ایران."
+        },
+        "recommended_action": {
+          "en": "Check current mission availability and SIRI case-transfer instructions before relying on Tehran processing.",
+          "fa": "قبل از اتکا به پردازش تهران، وضعیت فعلی سفارت و دستورالعمل انتقال پرونده SIRI را بررسی کنید."
+        },
+        "known_workaround": "Third-country mission transfer for pending cases was reported during the disruption."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DNK-RESIDENCE-IRAN-CONSULAR-008-E1",
+          "relation": "supports",
+          "independence_group": "DNK-RESIDENCE-IRAN-CONSULAR-008-E1"
+        },
+        {
+          "evidence_id": "DNK-RESIDENCE-IRAN-CONSULAR-008-E2",
+          "relation": "supports",
+          "independence_group": "DNK-RESIDENCE-IRAN-CONSULAR-008-E2"
+        },
+        {
+          "evidence_id": "DNK-RESIDENCE-IRAN-CONSULAR-008-E3",
+          "relation": "supports",
+          "independence_group": "DNK-RESIDENCE-IRAN-CONSULAR-008-E3"
+        },
+        {
+          "evidence_id": "DNK-RESIDENCE-IRAN-CONSULAR-008-E4",
+          "relation": "supports",
+          "independence_group": "DNK-RESIDENCE-IRAN-CONSULAR-008-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "A reposted operational notice and direct applicant impact show a high-severity access problem."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The reposted Danish/SIRI guidance was not independently rechecked for current September 2026 status."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DNK-RESIDENCE-IRAN-CONSULAR-008-E1",
+            "DNK-RESIDENCE-IRAN-CONSULAR-008-E2",
+            "DNK-RESIDENCE-IRAN-CONSULAR-008-E3",
+            "DNK-RESIDENCE-IRAN-CONSULAR-008-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Pargar Scandinavia community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "Mission operations can change without notice.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Denmark",
+        "Iran",
+        "SIRI",
+        "biometrics",
+        "third country",
+        "embassy"
+      ],
+      "first_seen": "2025-06-18",
+      "last_seen": "2026-09-04"
+    },
+    {
+      "signal_id": "FIN-FAMILY-DEPENDANT-009",
+      "issue_cluster_id": "FIN-STUDENT-PHD-DEPENDANT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "FIN-STUDY-VFS-003"
+        }
+      ],
+      "classification": {
+        "family": "E7_DEPENDANTS_FAMILY",
+        "type": "dependant_work_and_timing",
+        "class": "family"
+      },
+      "scope": {
+        "destination": {
+          "country": "Finland",
+          "country_code": "FIN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_residence",
+            "phd_work_residence",
+            "family_residence"
+          ]
+        },
+        "process_stages": [
+          "dependant_application",
+          "work_rights",
+          "decision_timing"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Finland is repeatedly selected for dependant work rights, but principal and spouse decisions may not always arrive together",
+          "fa": "فنلاند به‌خاطر اجازه کار همراه جذاب گزارش می‌شود، اما جواب نفر اصلی و همراه همیشه همزمان نیست"
+        },
+        "summary": {
+          "en": "Community guidance consistently treats spouse work rights as a Finland advantage. A direct PhD-family case received simultaneous decisions, while later guidance warned that dependant decisions can lag the principal applicant.",
+          "fa": "راهنمایی گروه اجازه کار همسر را مزیت فنلاند می‌داند. یک کیس مستقیم PhD و همسر همزمان جواب گرفته، اما راهنمایی بعدی از احتمال تأخیر جواب همراه نسبت به نفر اصلی گفته است."
+        },
+        "practical_impact": {
+          "en": "Families should budget travel and housing for asynchronous decisions even when the route allows dependants.",
+          "fa": "خانواده باید حتی در مسیر دارای همراه، برای احتمال جواب غیرهمزمان در سفر و مسکن برنامه داشته باشد."
+        },
+        "who_should_care": {
+          "en": "Finland students/PhD employees moving with spouse or family.",
+          "fa": "دانشجو/PhD فنلاند که با همسر یا خانواده می‌رود."
+        },
+        "recommended_action": {
+          "en": "File the family case early and avoid assuming the dependant can travel on the principal applicant's timeline.",
+          "fa": "پرونده همراه را زود ثبت کنید و فرض نکنید همراه دقیقاً با timeline نفر اصلی سفر می‌کند."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "FIN-FAMILY-DEPENDANT-009-E1",
+          "relation": "supports",
+          "independence_group": "FIN-FAMILY-DEPENDANT-009-E1"
+        },
+        {
+          "evidence_id": "FIN-FAMILY-DEPENDANT-009-E2",
+          "relation": "supports",
+          "independence_group": "FIN-FAMILY-DEPENDANT-009-E2"
+        },
+        {
+          "evidence_id": "FIN-FAMILY-DEPENDANT-009-E3",
+          "relation": "supports",
+          "independence_group": "FIN-FAMILY-DEPENDANT-009-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Work-right understanding is repeated, but decision synchrony varies across cases."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current dependant work rights and processing rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "FIN-FAMILY-DEPENDANT-009-E1",
+            "FIN-FAMILY-DEPENDANT-009-E2",
+            "FIN-FAMILY-DEPENDANT-009-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Pargar Scandinavia community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Family processing times can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Finland",
+        "dependant",
+        "spouse",
+        "work rights",
+        "family"
+      ],
+      "first_seen": "2025-07-07",
+      "last_seen": "2026-08-10"
+    },
+    {
+      "signal_id": "NORDIC-ROUTE-COUNTRY-SPECIFIC-010",
+      "issue_cluster_id": "NORDIC-COUNTRY-ROUTE-DIVERGENCE",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "country_route_tradeoff",
+        "class": "planning"
+      },
+      "scope": {
+        "destination": {
+          "country": "Nordic countries",
+          "country_code": null,
+          "region": "Nordic/Scandinavia",
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "masters",
+            "phd",
+            "work",
+            "dependant"
+          ]
+        },
+        "process_stages": [
+          "route_selection",
+          "family",
+          "poststudy",
+          "budget"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Nordic destinations are not interchangeable: dependant rights, tuition, job market and post-study options materially change the route",
+          "fa": "کشورهای اسکاندیناوی قابل‌جایگزینی ساده نیستند؛ همراه، شهریه، بازار کار و بعد از تحصیل مسیر را عوض می‌کنند"
+        },
+        "summary": {
+          "en": "The community repeatedly frames destination choice around family timing/work rights, total tuition, labour market, language and post-study conversion. Answers that are correct for Finland or Norway are frequently not safely transferable to Sweden or Denmark.",
+          "fa": "گروه بارها انتخاب مقصد را بر اساس زمان/اجازه کار همراه، کل شهریه، بازار کار، زبان و تبدیل پس از تحصیل می‌چیند. پاسخ درست برای فنلاند یا نروژ را نمی‌توان امن به سوئد یا دانمارک تعمیم داد."
+        },
+        "practical_impact": {
+          "en": "Generic 'best Nordic country' advice can create route-design errors.",
+          "fa": "توصیه کلی «بهترین کشور اسکاندیناوی» می‌تواند طراحی مسیر را اشتباه کند."
+        },
+        "who_should_care": {
+          "en": "Applicants choosing among Sweden, Finland, Norway and Denmark.",
+          "fa": "متقاضیان در حال انتخاب بین سوئد، فنلاند، نروژ و دانمارک."
+        },
+        "recommended_action": {
+          "en": "Compare the exact route country-by-country on family, funds, tuition, labour market and residence processing before choosing.",
+          "fa": "مسیر دقیق را برای هر کشور روی همراه، تمکن، شهریه، بازار کار و پردازش اقامت جدا مقایسه کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "NORDIC-ROUTE-COUNTRY-SPECIFIC-010-E1",
+          "relation": "supports",
+          "independence_group": "NORDIC-ROUTE-COUNTRY-SPECIFIC-010-E1"
+        },
+        {
+          "evidence_id": "NORDIC-ROUTE-COUNTRY-SPECIFIC-010-E2",
+          "relation": "supports",
+          "independence_group": "NORDIC-ROUTE-COUNTRY-SPECIFIC-010-E2"
+        },
+        {
+          "evidence_id": "NORDIC-ROUTE-COUNTRY-SPECIFIC-010-E3",
+          "relation": "supports",
+          "independence_group": "NORDIC-ROUTE-COUNTRY-SPECIFIC-010-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source repeatedly demonstrates materially different country/route trade-offs."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "This is a planning/meta-signal; individual country rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "NORDIC-ROUTE-COUNTRY-SPECIFIC-010-E1",
+            "NORDIC-ROUTE-COUNTRY-SPECIFIC-010-E2",
+            "NORDIC-ROUTE-COUNTRY-SPECIFIC-010-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Pargar Scandinavia community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Country policies evolve independently.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Scandinavia",
+        "dependant",
+        "tuition",
+        "labour market",
+        "post-study"
+      ],
+      "first_seen": "2025-01-29",
+      "last_seen": "2026-04-11"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram handles/user IDs, phone numbers, email addresses and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically scanned all 11,854 messages in the uploaded JSON export."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the entire 11k-message graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Paid consultations, payment-service ads and generic promotions were excluded from signals."
+      },
+      "country_separation": {
+        "status": "pass",
+        "note": "Sweden, Finland, Norway and Denmark claims are kept separate unless the source itself supports a cross-Nordic pattern."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated University Admissions, proof-of-funds, VFS, labour-market, PhD, tuition and consular discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Country/route-specific differences and asynchronous dependant outcomes are preserved rather than collapsed into universal rules."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "University/mission notices reposted in Telegram remain source-reported and are not marked officially verified."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search was unavailable during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals are practical planning evidence only. They are not official Swedish, Finnish, Norwegian or Danish immigration, university, employment or family-reunification rules. Verify current country- and route-specific requirements before acting."
+}

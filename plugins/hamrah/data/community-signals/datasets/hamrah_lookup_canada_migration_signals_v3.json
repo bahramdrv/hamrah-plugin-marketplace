@@ -1,0 +1,2468 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_lookup_canada_migration_signals_candidate",
+    "generated_at": "2026-09-17T09:16:53Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "lookup-migration-public-supergroup",
+      "name": "result(20260917-090210).json / Telegram export «گروه پرسش‌های مهاجرتی لوک‌آپ»",
+      "source_type": "public_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-17",
+        "records_available": 1887,
+        "records_processed": 1887,
+        "message_records": 1880
+      },
+      "source_characteristics": {
+        "public_supergroup": true,
+        "multi_country": true,
+        "canada_dominant": true,
+        "contains_first_hand_applicant_experience": true,
+        "contains_advisor_admin_guidance": true,
+        "contains_forwarded_promotional_content": true,
+        "contains_policy_news_posts": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "CAN-SOWP-001-E1",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10250"
+      },
+      "published_at": "2025-01-15",
+      "event_date": "2025-01-15",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "policy_update_post",
+      "firsthandness": "reported",
+      "evidence_quality": "source_reported_policy",
+      "summary": {
+        "en": "The group reported that from January 21, 2025 spouse open-work-permit eligibility for students was narrowed to PhD, longer master's and selected professional programmes.",
+        "fa": "گروه گزارش کرده از ۲۱ ژانویه ۲۰۲۵ eligibility ورک‌پرمیت باز همسر دانشجو به PhD، برخی مسترهای طولانی و چند برنامه حرفه‌ای محدودتر شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-SOWP-001-E2",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10310"
+      },
+      "published_at": "2025-01-20",
+      "event_date": "2025-01-20",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "policy_update_post",
+      "firsthandness": "reported",
+      "evidence_quality": "source_reported_policy",
+      "summary": {
+        "en": "A repeated policy post said spouses of temporary workers were limited by the worker's TEER category, shortage occupation and remaining permit validity.",
+        "fa": "پست تکراری policy گفته eligibility همسر نیروی کار موقت به TEER، شغل کمبوددار و مدت باقیمانده مجوز کار وابسته شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-SOWP-001-E3",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10083"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A full-time worker with an open work permit asked what was required to obtain accompanying work authorization for spouse and child.",
+        "fa": "فرد شاغل با Open Work Permit درباره مدارک ورک‌پرمیت همراه برای همسر و فرزند پرسیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-SOWP-001-E4",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10085"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The reply listed the principal's work permit, payroll records, both bank accounts, marriage certificate and spouse's education/employment evidence as core supporting material.",
+        "fa": "پاسخ ورک‌پرمیت نفر اصلی، فیش‌های حقوقی، حساب بانکی دو طرف، سند ازدواج و مدارک تحصیلی/شغلی همسر را جزو evidence اصلی دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-FAMILY-EVIDENCE-002-E1",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10088"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "For a spouse case after prior refusals, the group advised adding current employment confirmation and several recent pay slips from the principal in Canada.",
+        "fa": "برای پرونده همراه بعد از ریجکتی‌های قبلی، گروه توصیه کرده نامه اشتغال فعلی و چند فیش حقوقی اخیر نفر اصلی در کانادا اضافه شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-FAMILY-EVIDENCE-002-E2",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10087"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "applicant_history",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The applicant disclosed prior spouse/child refusals under both a study-permit-family route and a visitor route.",
+        "fa": "متقاضی سابقه ریجکتی همسر/فرزند را هم در مسیر همراه استادی و هم توریستی گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-FAMILY-EVIDENCE-002-E3",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10085"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The core family-work-permit evidence stack was described as status, employment, funds, relationship and spouse-profile documentation.",
+        "fa": "پک evidence همراه شامل وضعیت مهاجرتی، اشتغال، منابع مالی، رابطه خانوادگی و پروفایل همسر توصیف شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-IRAN-PUBLICPOLICY-003-E1",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10183"
+      },
+      "published_at": "2025-01-12",
+      "event_date": "2025-01-12",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_policy_guidance",
+      "firsthandness": "reported",
+      "evidence_quality": "time_sensitive_policy_claim",
+      "summary": {
+        "en": "The group described a special Iran public policy as a temporary, unusually simple in-Canada work/study-permit opportunity with a February 2025 deadline.",
+        "fa": "گروه policy ویژه ایرانیان را فرصت موقت و نسبتاً ساده برای ورک/استادی داخل کانادا با deadline فوریه ۲۰۲۵ توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-IRAN-PUBLICPOLICY-003-E2",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10184"
+      },
+      "published_at": "2025-01-12",
+      "event_date": "2025-01-12",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_policy_guidance",
+      "firsthandness": "reported",
+      "evidence_quality": "time_sensitive_policy_claim",
+      "summary": {
+        "en": "A reply said visitors had to enter Canada before the policy deadline to use the work-permit option and advised not waiting until the last days.",
+        "fa": "پاسخ گفته توریست باید پیش از deadline وارد کانادا شود تا از مسیر ورک‌پرمیت استفاده کند و اقدام به روزهای آخر موکول نشود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-IRAN-PUBLICPOLICY-003-E3",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10197"
+      },
+      "published_at": "2025-01-13",
+      "event_date": "2025-01-13",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_policy_guidance",
+      "firsthandness": "reported",
+      "evidence_quality": "time_sensitive_policy_claim",
+      "summary": {
+        "en": "The group said that under the temporary Iran policy no job offer was needed before the February 2025 deadline, while the route would change if the policy expired.",
+        "fa": "گروه گفته در policy موقت ایرانیان تا فوریه ۲۰۲۵ جاب‌آفر لازم نبود و پس از پایان policy مسیر متفاوت می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-IRAN-PUBLICPOLICY-003-E4",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10259"
+      },
+      "published_at": "2025-01-16",
+      "event_date": "2025-01-16",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "applicant_strategy_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A graduate compared the Iran-specific permit with PGWP and worried whether skipping PGWP could create future PR problems.",
+        "fa": "یک فارغ‌التحصیل ورک‌پرمیت ایرانیان را با PGWP مقایسه کرده و نگران اثر نگرفتن PGWP روی PR آینده بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-IRAN-PUBLICPOLICY-003-E5",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10260"
+      },
+      "published_at": "2025-01-16",
+      "event_date": "2025-01-16",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The response cautioned that the Iran-specific permit was not generally extendable in the way the applicant assumed and recommended PGWP when eligible.",
+        "fa": "پاسخ هشدار داده ورک‌پرمیت ایرانیان به شکل فرض‌شده قابل تمدید عمومی نیست و برای فرد واجد شرایط، PGWP را ترجیح داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-DELAY-004-E1",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10149"
+      },
+      "published_at": "2025-01-08",
+      "event_date": "2025-01-08",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "applicant_delay_report",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A study-permit applicant reported roughly six months since biometrics without a decision.",
+        "fa": "یک متقاضی استادی‌پرمیت حدود شش ماه پس از بایومتریک هنوز پاسخ نگرفته بود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-DELAY-004-E2",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10151"
+      },
+      "published_at": "2025-01-08",
+      "event_date": "2025-01-08",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group said temporary/study-permit decisions had become irregular and that webforms often produce little substantive response.",
+        "fa": "گروه گفته پاسخگویی پرونده‌های موقت/تحصیلی روند منظم ندارد و وبفرم اغلب پاسخ substantive نمی‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-DELAY-004-E3",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10810"
+      },
+      "published_at": "2025-03-28",
+      "event_date": "2025-03-28",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "applicant_delay_report",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Another study-permit case reported about eight months in processing with no decision.",
+        "fa": "کیس دیگری حدود هشت ماه در حال processing بدون جواب گزارش شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-DELAY-004-E4",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10814"
+      },
+      "published_at": "2025-03-29",
+      "event_date": "2025-03-29",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The response distinguished withdrawal from refusal and suggested deferring study to protect tuition-refund timing if the applicant still wanted to study.",
+        "fa": "پاسخ کنسل/withdraw کردن پرونده را از refusal جدا کرده و برای حفظ زمان refund شهریه، defer را مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-DELAY-004-E5",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11830"
+      },
+      "published_at": "2025-10-18",
+      "event_date": "2025-10-18",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A later reply again said webforms often go unanswered and described a prolonged study case as unusually delayed.",
+        "fa": "پاسخ بعدی دوباره گفته وبفرم‌ها معمولاً جواب نمی‌گیرند و یک پرونده تحصیلی طولانی را غیرعادی دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-VISITOR-005-E1",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10406"
+      },
+      "published_at": "2025-02-04",
+      "event_date": "2025-02-04",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "refusal_report",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A visitor applicant had a sister's invitation from Canada but was refused because the officer was not convinced the applicant would leave.",
+        "fa": "متقاضی توریستی با دعوتنامه خواهر در کانادا به دلیل قانع‌نشدن افسر نسبت به بازگشت ریجکت شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-VISITOR-005-E2",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10473"
+      },
+      "published_at": "2025-02-09",
+      "event_date": "2025-02-09",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group explicitly said an invitation is not a visa guarantee and highlighted funds, ties and employment circumstances.",
+        "fa": "گروه صریحاً گفته دعوتنامه تضمین ویزا نیست و تمکن، tie و شرایط شغلی اهمیت دارند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-VISITOR-005-E3",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11193"
+      },
+      "published_at": "2025-05-26",
+      "event_date": "2025-05-26",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_application_checklist",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A visitor-visa checklist emphasized first-degree-family invitation, purpose/travel plan, employment/financial evidence, identity documents and home-country ties.",
+        "fa": "چک‌لیست توریستی روی دعوتنامه درجه‌یک، purpose/برنامه سفر، مدارک شغلی/مالی، هویتی و tie کشور مبدا تأکید کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-VISITOR-005-E4",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11056"
+      },
+      "published_at": "2025-04-29",
+      "event_date": "2025-04-29",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_risk_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "anecdotal_high_risk_claim",
+      "summary": {
+        "en": "A later post described very high visitor refusal pressure even for some applicants with prior Canada travel and close-family invitations.",
+        "fa": "پست بعدی فشار بالای ریجکتی توریستی را حتی برای برخی افراد با سفر قبلی کانادا و دعوتنامه درجه‌یک گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-BIOMETRICS-006-E1",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10092"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant asked whether a visitor visa could be issued beyond the remaining two-year validity of existing biometrics.",
+        "fa": "متقاضی پرسیده آیا ویزای توریستی می‌تواند فراتر از دو سال اعتبار باقیمانده بایومتریک صادر شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-BIOMETRICS-006-E2",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10093"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "policy_claim_unverified",
+      "summary": {
+        "en": "A reply said visa validity would be constrained by biometric validity in that case.",
+        "fa": "پاسخ گفته در آن حالت اعتبار ویزا با اعتبار بایومتریک محدود می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-BIOMETRICS-006-E3",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10098"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group said applicants may choose to provide biometrics again before the old set expires, including in Canada, but only in connection with an application/instruction letter.",
+        "fa": "گروه گفته می‌توان پیش از انقضای بایومتریک قبلی دوباره بایومتریک داد، حتی در کانادا، اما در اتصال با application و instruction letter."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-007-E1",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10806"
+      },
+      "published_at": "2025-03-26",
+      "event_date": "2025-03-26",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "policy_news_post",
+      "firsthandness": "reported",
+      "evidence_quality": "source_reported_policy",
+      "summary": {
+        "en": "The channel reported that extra CRS points for qualifying job offers were removed from Express Entry on March 25, 2025.",
+        "fa": "کانال گزارش کرده امتیاز اضافه CRS بابت جاب‌آفر واجد شرایط از ۲۵ مارس ۲۰۲۵ از Express Entry حذف شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-007-E2",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10970"
+      },
+      "published_at": "2025-04-23",
+      "event_date": "2025-04-23",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "official_quote_relay",
+      "firsthandness": "reported",
+      "evidence_quality": "source_quotes_official_text",
+      "summary": {
+        "en": "A reply quoted the minimum NCLC 7 threshold in all four abilities for the French-language category.",
+        "fa": "پاسخ حداقل NCLC 7 در هر چهار مهارت را برای کتگوری فرانسوی نقل کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-007-E3",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11047"
+      },
+      "published_at": "2025-04-29",
+      "event_date": "2025-04-29",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group repeated NCLC 7 as the French-category minimum and noted that higher scores continue to raise CRS.",
+        "fa": "گروه NCLC 7 را حداقل کتگوری فرانسوی تکرار کرده و افزایش امتیاز CRS با نمره بالاتر را مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-007-E4",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10501"
+      },
+      "published_at": "2025-02-12",
+      "event_date": "2025-02-12",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Applicants were told to use the official CRS calculator rather than rely on generic profile judgments.",
+        "fa": "به متقاضیان توصیه شده به‌جای قضاوت کلی از CRS calculator رسمی استفاده کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-SUV-008-E1",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "12312"
+      },
+      "published_at": "2026-02-17",
+      "event_date": "2026-02-17",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "programme_status_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "programme_analysis_unverified",
+      "summary": {
+        "en": "In February 2026 the group described Canada Start-Up Visa as facing long processing, designated-organization quality problems and priority handling for stronger organizations.",
+        "fa": "در فوریه ۲۰۲۶ گروه Start-Up Visa کانادا را درگیر processing طولانی، مشکل کیفیت بعضی designated organizationها و اولویت‌دادن به نهادهای قوی‌تر توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-SUV-008-E2",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "12366"
+      },
+      "published_at": "2026-02-24",
+      "event_date": "2026-02-24",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "programme_status_update",
+      "firsthandness": "reported",
+      "evidence_quality": "source_reported_policy",
+      "summary": {
+        "en": "A later post said new Start-Up Visa intake had effectively stopped from the start of 2026, with limited grandfathering for previously issued Letters of Support.",
+        "fa": "پست بعدی گفته intake جدید Start-Up Visa از ابتدای ۲۰۲۶ عملاً متوقف شده و فقط برای Letter of Supportهای قبلی استثنای محدود وجود دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-SUV-008-E3",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "12498"
+      },
+      "published_at": "2026-05-28",
+      "event_date": "2026-05-28",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "applicant_case",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A participant reported refusal of the startup work visa and asked whether the underlying PR application could still succeed.",
+        "fa": "یک متقاضی از ریجکتی ویزای کاری استارت‌آپ گفته و پرسیده آیا PR زیرساختی هنوز ممکن است قبول شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-SUV-008-E4",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11134"
+      },
+      "published_at": "2025-05-07",
+      "event_date": "2025-05-07",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_contract_warning",
+      "firsthandness": "second_hand",
+      "evidence_quality": "consumer_risk_guidance",
+      "summary": {
+        "en": "The group advised applicants signing with startup service providers to pay close attention to the contract terms around actually obtaining the Letter of Support.",
+        "fa": "گروه توصیه کرده در قرارداد با موسسات استارت‌آپی، تکلیف دریافت واقعی Letter of Support و بازپرداخت/کسورات دقیق بررسی شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-JR-009-E1",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11999"
+      },
+      "published_at": "2025-11-11",
+      "event_date": "2025-11-11",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "legal_process_explainer",
+      "firsthandness": "reported",
+      "evidence_quality": "legal_explainer_unverified",
+      "summary": {
+        "en": "The group explained Judicial Review as Federal Court review of whether an IRCC decision was lawful, fair and reasonable.",
+        "fa": "گروه Judicial Review را بررسی دادگاه فدرال درباره قانونی، منصفانه و معقول‌بودن تصمیم IRCC توضیح داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-JR-009-E2",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11056"
+      },
+      "published_at": "2025-04-29",
+      "event_date": "2025-04-29",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_case_report",
+      "firsthandness": "reported",
+      "evidence_quality": "case_report_unverified",
+      "summary": {
+        "en": "The group said some recent visitor refusals were being considered for Federal Court litigation despite prior Canadian travel and family invitations.",
+        "fa": "گروه گفته برخی ریجکتی‌های اخیر توریستی، با وجود سفر قبلی کانادا و دعوتنامه خانوادگی، برای اقدام دادگاه فدرال بررسی شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-JR-009-E3",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11193"
+      },
+      "published_at": "2025-05-26",
+      "event_date": "2025-05-26",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "litigation_preparation_guidance",
+      "summary": {
+        "en": "Applicants were advised to submit a complete record partly because a well-documented file is easier to defend if later challenged after refusal.",
+        "fa": "به متقاضی توصیه شده پرونده کامل سابمیت شود تا در صورت ریجکتی، رکورد بهتری برای دفاع حقوقی وجود داشته باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-DIRECTWORK-010-E1",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10411"
+      },
+      "published_at": "2025-02-05",
+      "event_date": "2025-02-05",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group said ordinary work migration usually requires a job offer from an employer willing to hire the applicant.",
+        "fa": "گروه گفته مهاجرت کاری عادی معمولاً به جاب‌آفر از کارفرمای حاضر به استخدام نیاز دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-DIRECTWORK-010-E2",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "12364"
+      },
+      "published_at": "2026-02-24",
+      "event_date": "2026-02-24",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "opinion_estimate",
+      "summary": {
+        "en": "A 2026 reply strongly cautioned against relying on direct employer sponsorship as an easy route from abroad.",
+        "fa": "پاسخ ۲۰۲۶ شدیداً هشدار داده روی اسپانسر مستقیم کارفرما از خارج به‌عنوان مسیر آسان حساب نشود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-DIRECTWORK-010-E3",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "12629"
+      },
+      "published_at": "2026-06-17",
+      "event_date": "2026-06-17",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "opinion_estimate",
+      "summary": {
+        "en": "Another 2026 reply again discouraged direct job-offer migration for a young applicant and instead pointed toward study/profile building or points-based skilled routes.",
+        "fa": "پاسخ دیگری در ۲۰۲۶ برای متقاضی جوان مهاجرت با جاب‌آفر مستقیم را کم‌اتکا دانسته و تحصیل/تقویت پروفایل یا مسیرهای امتیازی را مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-DIRECTWORK-010-E4",
+      "source_id": "lookup-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10362"
+      },
+      "published_at": "2025-01-28",
+      "event_date": "2025-01-28",
+      "collected_at": "2026-09-17T09:16:53Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "For a work route, the group emphasized that relevant work experience matters but the decisive step is still securing the job offer.",
+        "fa": "در مسیر کاری، گروه سابقه مرتبط را مهم دانسته اما گام تعیین‌کننده را همچنان گرفتن جاب‌آفر معرفی کرده است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "CAN-SOWP-001",
+      "issue_cluster_id": "CANADA-SPOUSAL-OWP-ELIGIBILITY-2025",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-FAMILY-EVIDENCE-002"
+        }
+      ],
+      "classification": {
+        "family": "E7_DEPENDANTS_FAMILY",
+        "type": "spousal_open_work_permit_tightening",
+        "class": "family_work_rights"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "college",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "VISITOR",
+            "PERMANENT RESIDENCE",
+            "BUSINESS / STARTUP"
+          ],
+          "codes": [
+            "SOWP",
+            "student_spouse",
+            "worker_spouse"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Spousal open-work-permit eligibility became more selective in 2025 and now depends heavily on the principal applicant's programme/occupation and permit profile",
+          "fa": "Eligibility ورک‌پرمیت باز همسر در ۲۰۲۵ محدودتر شد و به program/occupation و وضعیت مجوز نفر اصلی وابستگی بیشتری پیدا کرد"
+        },
+        "summary": {
+          "en": "The source reports January 2025 restrictions for spouses of students and temporary workers, replacing the older assumption that spouse OWP broadly follows any study/work permit.",
+          "fa": "منبع محدودیت‌های ژانویه ۲۰۲۵ برای همسر دانشجو و نیروی کار موقت را گزارش می‌کند؛ فرض قدیمی «هر study/work permit = OWP همراه» دیگر قابل تعمیم نیست."
+        },
+        "practical_impact": {
+          "en": "Programme choice and the worker's TEER/remaining permit validity can determine whether family work rights exist.",
+          "fa": "انتخاب program و TEER/مدت اعتبار مجوز نفر اصلی می‌تواند تعیین کند همراه اصلاً حق OWP دارد یا نه."
+        },
+        "who_should_care": {
+          "en": "Couples planning Canada study/work migration together.",
+          "fa": "زوج‌هایی که برای تحصیل/کار کانادا با هم برنامه‌ریزی می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Check current spouse-OWP eligibility before committing tuition or moving the family.",
+          "fa": "قبل از پرداخت شهریه یا برنامه جابه‌جایی خانواده، eligibility روز SOWP را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-SOWP-001-E1",
+          "relation": "supports",
+          "independence_group": "CAN-SOWP-001-E1"
+        },
+        {
+          "evidence_id": "CAN-SOWP-001-E2",
+          "relation": "supports",
+          "independence_group": "CAN-SOWP-001-E2"
+        },
+        {
+          "evidence_id": "CAN-SOWP-001-E3",
+          "relation": "supports",
+          "independence_group": "CAN-SOWP-001-E3"
+        },
+        {
+          "evidence_id": "CAN-SOWP-001-E4",
+          "relation": "supports",
+          "independence_group": "CAN-SOWP-001-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The eligibility change is repeated and immediately affects family planning."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current IRCC spouse-OWP rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-SOWP-001-E1",
+            "CAN-SOWP-001-E2",
+            "CAN-SOWP-001-E3",
+            "CAN-SOWP-001-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded LookUp public Telegram supergroup. Some posts relay or quote policy text, but no independent web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Family work-permit rules are highly time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "SOWP",
+        "spouse",
+        "TEER",
+        "student spouse",
+        "worker spouse"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-01-20"
+    },
+    {
+      "signal_id": "CAN-FAMILY-EVIDENCE-002",
+      "issue_cluster_id": "CANADA-FAMILY-WORK-PERMIT-EVIDENCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-SOWP-001"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "family_work_permit_evidence_stack",
+        "class": "dependant_application"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "college",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "VISITOR",
+            "PERMANENT RESIDENCE",
+            "BUSINESS / STARTUP"
+          ],
+          "codes": [
+            "family_work_permit",
+            "dependant"
+          ]
+        },
+        "process_stages": [
+          "documents",
+          "relationship_evidence",
+          "financial_employment_evidence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Family work-permit applications are treated as evidence-heavy: the principal's status, current employment/pay, funds, relationship and spouse profile all matter",
+          "fa": "پرونده ورک‌پرمیت همراه evidence-heavy دیده می‌شود: status نفر اصلی، اشتغال/حقوق فعلی، منابع مالی، رابطه و پروفایل همسر همگی اهمیت دارند"
+        },
+        "summary": {
+          "en": "The opening thread lists work permit, payroll, banking, marriage and spouse education/employment records, then adds employer confirmation/pay slips after prior refusals.",
+          "fa": "thread ابتدایی ورک‌پرمیت، payroll، بانک، سند ازدواج و مدارک تحصیلی/شغلی همسر را فهرست می‌کند و پس از ریجکتی قبلی نامه اشتغال و فیش حقوقی را هم اضافه می‌کند."
+        },
+        "practical_impact": {
+          "en": "A technically eligible spouse case can still be weak if the principal's current employment and family evidence are thin.",
+          "fa": "پرونده همراه حتی با eligibility فنی، اگر evidence اشتغال و خانواده ضعیف باشد می‌تواند شکننده باشد."
+        },
+        "who_should_care": {
+          "en": "Families applying for accompanying work authorization.",
+          "fa": "خانواده‌های متقاضی مجوز کار همراه."
+        },
+        "recommended_action": {
+          "en": "Build the application around current status/employment and relationship evidence, and explicitly address prior refusals.",
+          "fa": "پرونده را حول status/اشتغال روز و evidence رابطه ببندید و ریجکتی‌های قبلی را صریح پوشش دهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-FAMILY-EVIDENCE-002-E1",
+          "relation": "supports",
+          "independence_group": "CAN-FAMILY-EVIDENCE-002-E1"
+        },
+        {
+          "evidence_id": "CAN-FAMILY-EVIDENCE-002-E2",
+          "relation": "supports",
+          "independence_group": "CAN-FAMILY-EVIDENCE-002-E2"
+        },
+        {
+          "evidence_id": "CAN-FAMILY-EVIDENCE-002-E3",
+          "relation": "supports",
+          "independence_group": "CAN-FAMILY-EVIDENCE-002-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The evidence stack is practical and repeated within one detailed family case, but not an official checklist."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No current IRCC checklist was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-FAMILY-EVIDENCE-002-E1",
+            "CAN-FAMILY-EVIDENCE-002-E2",
+            "CAN-FAMILY-EVIDENCE-002-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded LookUp public Telegram supergroup. Some posts relay or quote policy text, but no independent web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Document requirements vary by application answers and policy.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "pay slips",
+        "marriage certificate",
+        "employment letter",
+        "dependant"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-01-01"
+    },
+    {
+      "signal_id": "CAN-IRAN-PUBLICPOLICY-003",
+      "issue_cluster_id": "CANADA-IRAN-TEMPORARY-PUBLIC-POLICY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-SOWP-001"
+        }
+      ],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "iran_specific_temporary_work_permit_policy",
+        "class": "temporary_public_policy"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "college",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "VISITOR",
+            "PERMANENT RESIDENCE",
+            "BUSINESS / STARTUP"
+          ],
+          "codes": [
+            "Iran_public_policy",
+            "PGWP",
+            "in_Canada_work_permit"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "status_change",
+          "poststudy"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Iran-specific work-permit relief was a time-bounded special route, not a permanent substitute for PGWP or ordinary work-permit pathways",
+          "fa": "تسهیل ورک‌پرمیت ویژه ایرانیان یک مسیر زمان‌دار بود، نه جایگزین دائمی PGWP یا مسیرهای عادی ورک‌پرمیت"
+        },
+        "summary": {
+          "en": "The group repeatedly tied the route to in-Canada presence and a February 2025 deadline, while later advising PGWP-eligible graduates not to assume the special permit can simply be extended instead.",
+          "fa": "گروه مسیر را به حضور داخل کانادا و deadline فوریه ۲۰۲۵ گره زده و بعداً به فارغ‌التحصیل واجد PGWP هشدار داده که ورک‌پرمیت ویژه را جای تمدیدپذیر PGWP فرض نکند."
+        },
+        "practical_impact": {
+          "en": "Status strategy based on a temporary public policy can break when the policy expires or eligibility changes.",
+          "fa": "استراتژی status مبتنی بر public policy موقت با پایان policy یا تغییر eligibility می‌تواند از کار بیفتد."
+        },
+        "who_should_care": {
+          "en": "Iranian visitors, students and graduates in Canada.",
+          "fa": "ایرانیان توریست، دانشجو و فارغ‌التحصیل داخل کانادا."
+        },
+        "recommended_action": {
+          "en": "Treat special public-policy permits and PGWP as distinct tools; preserve eligibility for standard routes where available.",
+          "fa": "public-policy permit و PGWP را دو ابزار جدا ببینید و eligibility مسیر استاندارد را تا حد امکان حفظ کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-IRAN-PUBLICPOLICY-003-E1",
+          "relation": "supports",
+          "independence_group": "CAN-IRAN-PUBLICPOLICY-003-E1"
+        },
+        {
+          "evidence_id": "CAN-IRAN-PUBLICPOLICY-003-E2",
+          "relation": "supports",
+          "independence_group": "CAN-IRAN-PUBLICPOLICY-003-E2"
+        },
+        {
+          "evidence_id": "CAN-IRAN-PUBLICPOLICY-003-E3",
+          "relation": "supports",
+          "independence_group": "CAN-IRAN-PUBLICPOLICY-003-E3"
+        },
+        {
+          "evidence_id": "CAN-IRAN-PUBLICPOLICY-003-E4",
+          "relation": "supports",
+          "independence_group": "CAN-IRAN-PUBLICPOLICY-003-E4"
+        },
+        {
+          "evidence_id": "CAN-IRAN-PUBLICPOLICY-003-E5",
+          "relation": "supports",
+          "independence_group": "CAN-IRAN-PUBLICPOLICY-003-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "historical",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple contemporaneous messages explicitly describe the policy as deadline- and presence-sensitive."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The exact historical and current Iran-specific public-policy status was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-IRAN-PUBLICPOLICY-003-E1",
+            "CAN-IRAN-PUBLICPOLICY-003-E2",
+            "CAN-IRAN-PUBLICPOLICY-003-E3",
+            "CAN-IRAN-PUBLICPOLICY-003-E4",
+            "CAN-IRAN-PUBLICPOLICY-003-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded LookUp public Telegram supergroup. Some posts relay or quote policy text, but no independent web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Special public policies can expire or be extended with little continuity.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Iranian public policy",
+        "PGWP",
+        "in Canada",
+        "temporary"
+      ],
+      "first_seen": "2025-01-12",
+      "last_seen": "2025-01-16"
+    },
+    {
+      "signal_id": "CAN-STUDY-DELAY-004",
+      "issue_cluster_id": "CANADA-STUDY-PERMIT-PROCESSING-VARIANCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-JR-009"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "study_permit_long_delay_and_weak_webform_feedback",
+        "class": "processing_delay"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "college",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "VISITOR",
+            "PERMANENT RESIDENCE",
+            "BUSINESS / STARTUP"
+          ],
+          "codes": [
+            "study_permit"
+          ]
+        },
+        "process_stages": [
+          "biometrics",
+          "processing",
+          "webform",
+          "deferral",
+          "withdrawal"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Study-permit processing can be highly variable and webform follow-up often does not resolve long delays",
+          "fa": "Processing استادی‌پرمیت می‌تواند بسیار متغیر باشد و پیگیری وبفرم اغلب مشکل delay طولانی را حل نمی‌کند"
+        },
+        "summary": {
+          "en": "The file contains six- and eight-month unresolved study cases and later guidance that webforms often receive little response. Deferral and withdrawal appear as practical damage-control tools around tuition deadlines.",
+          "fa": "فایل کیس‌های شش‌ و هشت‌ماهه بدون جواب و راهنمایی‌های بعدی درباره کم‌اثر بودن وبفرم دارد. defer و withdrawal به‌عنوان ابزار کنترل ریسک شهریه مطرح شده‌اند."
+        },
+        "practical_impact": {
+          "en": "Applicants can miss intake/refund windows before a visa decision arrives.",
+          "fa": "ممکن است قبل از decision، intake یا مهلت refund از دست برود."
+        },
+        "who_should_care": {
+          "en": "Outside-Canada study-permit applicants with time-sensitive tuition/intakes.",
+          "fa": "متقاضیان استادی‌پرمیت خارج کانادا با intake/شهریه زمان‌حساس."
+        },
+        "recommended_action": {
+          "en": "Track deferral/refund deadlines independently from IRCC processing and do not assume a webform will accelerate the file.",
+          "fa": "deadline defer/refund را مستقل از IRCC track کنید و وبفرم را ابزار تضمینی تسریع ندانید."
+        },
+        "known_workaround": "Deferring to a later intake is repeatedly suggested when the applicant still intends to study."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-STUDY-DELAY-004-E1",
+          "relation": "supports",
+          "independence_group": "CAN-STUDY-DELAY-004-E1"
+        },
+        {
+          "evidence_id": "CAN-STUDY-DELAY-004-E2",
+          "relation": "supports",
+          "independence_group": "CAN-STUDY-DELAY-004-E2"
+        },
+        {
+          "evidence_id": "CAN-STUDY-DELAY-004-E3",
+          "relation": "supports",
+          "independence_group": "CAN-STUDY-DELAY-004-E3"
+        },
+        {
+          "evidence_id": "CAN-STUDY-DELAY-004-E4",
+          "relation": "supports",
+          "independence_group": "CAN-STUDY-DELAY-004-E4"
+        },
+        {
+          "evidence_id": "CAN-STUDY-DELAY-004-E5",
+          "relation": "supports",
+          "independence_group": "CAN-STUDY-DELAY-004-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple direct long-delay cases and repeated webform guidance support the pattern."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official processing times were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-STUDY-DELAY-004-E1",
+            "CAN-STUDY-DELAY-004-E2",
+            "CAN-STUDY-DELAY-004-E3",
+            "CAN-STUDY-DELAY-004-E4",
+            "CAN-STUDY-DELAY-004-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded LookUp public Telegram supergroup. Some posts relay or quote policy text, but no independent web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Processing backlogs change frequently.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "study permit",
+        "processing delay",
+        "webform",
+        "deferral"
+      ],
+      "first_seen": "2025-01-08",
+      "last_seen": "2025-10-18"
+    },
+    {
+      "signal_id": "CAN-VISITOR-005",
+      "issue_cluster_id": "CANADA-VISITOR-RETURN-TIES-REFUSAL",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-JR-009"
+        }
+      ],
+      "classification": {
+        "family": "E3_VISA_ADJUDICATION",
+        "type": "visitor_return_ties_and_financial_scrutiny",
+        "class": "visitor_visa"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "college",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "VISITOR",
+            "PERMANENT RESIDENCE",
+            "BUSINESS / STARTUP"
+          ],
+          "codes": [
+            "visitor_visa"
+          ]
+        },
+        "process_stages": [
+          "application",
+          "refusal",
+          "purpose_of_travel",
+          "ties"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "A Canadian invitation letter is not enough by itself; return intent, financial/employment profile and home-country ties remain core visitor-visa friction points",
+          "fa": "دعوتنامه کانادا به‌تنهایی کافی نیست؛ قصد بازگشت، پروفایل مالی/شغلی و tie کشور مبدا همچنان friction اصلی ویزای توریستی‌اند"
+        },
+        "summary": {
+          "en": "The source includes a refusal despite a sibling invitation, with return intent as the refusal reason. Later guidance repeatedly emphasizes funds, employment, travel purpose and ties and reports refusals even for some previously travelled applicants.",
+          "fa": "فایل ریجکتی با وجود دعوتنامه خواهر و علت «قانع نشدن از بازگشت» دارد. راهنمایی‌های بعدی نیز تمکن، شغل، purpose و tie را برجسته کرده و ریجکتی برخی افراد با سفر قبلی را گزارش می‌کند."
+        },
+        "practical_impact": {
+          "en": "Applicants who focus only on the inviter can under-document the applicant-side temporary-intent case.",
+          "fa": "تمرکز صرف روی دعوت‌کننده می‌تواند evidence سمت متقاضی برای temporary intent را ضعیف کند."
+        },
+        "who_should_care": {
+          "en": "Iran-based Canada visitor-visa applicants.",
+          "fa": "متقاضیان ایرانی ویزای توریستی کانادا."
+        },
+        "recommended_action": {
+          "en": "Build the application around a coherent temporary purpose plus documented employment, finances and ties; treat invitation as supporting evidence only.",
+          "fa": "پرونده را حول purpose موقت منسجم و evidence شغلی، مالی و tie بسازید؛ دعوتنامه فقط evidence کمکی است."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-VISITOR-005-E1",
+          "relation": "supports",
+          "independence_group": "CAN-VISITOR-005-E1"
+        },
+        {
+          "evidence_id": "CAN-VISITOR-005-E2",
+          "relation": "supports",
+          "independence_group": "CAN-VISITOR-005-E2"
+        },
+        {
+          "evidence_id": "CAN-VISITOR-005-E3",
+          "relation": "supports",
+          "independence_group": "CAN-VISITOR-005-E3"
+        },
+        {
+          "evidence_id": "CAN-VISITOR-005-E4",
+          "relation": "supports",
+          "independence_group": "CAN-VISITOR-005-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct refusal evidence and repeated guidance converge on the same issue."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No current visitor refusal rate or official adjudication weight was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-VISITOR-005-E1",
+            "CAN-VISITOR-005-E2",
+            "CAN-VISITOR-005-E3",
+            "CAN-VISITOR-005-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded LookUp public Telegram supergroup. Some posts relay or quote policy text, but no independent web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Visitor adjudication patterns can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "visitor visa",
+        "invitation",
+        "ties",
+        "return",
+        "refusal"
+      ],
+      "first_seen": "2025-02-04",
+      "last_seen": "2025-05-26"
+    },
+    {
+      "signal_id": "CAN-BIOMETRICS-006",
+      "issue_cluster_id": "CANADA-BIOMETRICS-VALIDITY-TRAVEL-DOCUMENT",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "biometrics_validity_application_timing",
+        "class": "biometrics"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "college",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "VISITOR",
+            "PERMANENT RESIDENCE",
+            "BUSINESS / STARTUP"
+          ],
+          "codes": [
+            "visitor_visa",
+            "temporary_residence"
+          ]
+        },
+        "process_stages": [
+          "biometrics",
+          "visa_validity"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Biometric validity can become a practical constraint on temporary-visa strategy, and re-enrolment must be tied to a new application/instruction process",
+          "fa": "اعتبار بایومتریک می‌تواند محدودیت عملی strategy ویزای موقت باشد و re-enrolment باید به application/instruction جدید متصل باشد"
+        },
+        "summary": {
+          "en": "The source discusses visa validity in relation to remaining biometrics and says applicants can choose to re-give biometrics before expiry, including in Canada, when instructed through an application.",
+          "fa": "فایل اعتبار ویزا را در نسبت با اعتبار باقی‌مانده بایومتریک مطرح کرده و امکان re-give پیش از انقضا، حتی داخل کانادا، در چارچوب application را توضیح داده است."
+        },
+        "practical_impact": {
+          "en": "Applicants may need to think about biometrics timing when seeking longer temporary-document validity.",
+          "fa": "برای document موقت بلندتر، زمان‌بندی بایومتریک می‌تواند مهم شود."
+        },
+        "who_should_care": {
+          "en": "Temporary-resident applicants with soon-expiring biometrics.",
+          "fa": "متقاضیان اقامت موقت با بایومتریک نزدیک انقضا."
+        },
+        "recommended_action": {
+          "en": "Check current biometric validity and instructions before paying or booking a new collection.",
+          "fa": "قبل از پرداخت یا گرفتن وقت جدید، اعتبار و instruction روز بایومتریک را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-BIOMETRICS-006-E1",
+          "relation": "supports",
+          "independence_group": "CAN-BIOMETRICS-006-E1"
+        },
+        {
+          "evidence_id": "CAN-BIOMETRICS-006-E2",
+          "relation": "supports",
+          "independence_group": "CAN-BIOMETRICS-006-E2"
+        },
+        {
+          "evidence_id": "CAN-BIOMETRICS-006-E3",
+          "relation": "supports",
+          "independence_group": "CAN-BIOMETRICS-006-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "medium",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The practical issue is clear but supported by one focused thread."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current IRCC biometric validity/visa-duration rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-BIOMETRICS-006-E1",
+            "CAN-BIOMETRICS-006-E2",
+            "CAN-BIOMETRICS-006-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded LookUp public Telegram supergroup. Some posts relay or quote policy text, but no independent web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Biometric policy is administrative and time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "biometrics",
+        "validity",
+        "visitor visa"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-01-01"
+    },
+    {
+      "signal_id": "CAN-EE-007",
+      "issue_cluster_id": "CANADA-EXPRESS-ENTRY-SCORING-VOLATILITY",
+      "relationships": [],
+      "classification": {
+        "family": "E9_POINTS_BASED_SELECTION",
+        "type": "crs_job_offer_and_french_category_change",
+        "class": "Express_Entry"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "college",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "VISITOR",
+            "PERMANENT RESIDENCE",
+            "BUSINESS / STARTUP"
+          ],
+          "codes": [
+            "Express_Entry",
+            "French_category"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "CRS",
+          "profile_strategy"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Express Entry strategy is policy-sensitive: 2025 removed job-offer CRS points while French-language category eligibility remained a major score/selection lever",
+          "fa": "استراتژی Express Entry policy-sensitive است: در ۲۰۲۵ امتیاز CRS جاب‌آفر حذف شد و کتگوری فرانسوی همچنان lever مهم eligibility/selection ماند"
+        },
+        "summary": {
+          "en": "The channel reported removal of job-offer points from March 25, 2025 and separately quoted NCLC 7 in all four skills as the French-category minimum.",
+          "fa": "کانال حذف امتیاز جاب‌آفر از ۲۵ مارس ۲۰۲۵ و جداگانه حداقل NCLC 7 در هر چهار مهارت برای کتگوری فرانسوی را گزارش کرده است."
+        },
+        "practical_impact": {
+          "en": "Older CRS plans built around a job offer can become obsolete; language improvement may have more durable strategic value.",
+          "fa": "پلن قدیمی CRS مبتنی بر جاب‌آفر می‌تواند منقضی شود و تقویت زبان ارزش استراتژیک پایدارتری داشته باشد."
+        },
+        "who_should_care": {
+          "en": "Express Entry candidates, especially French-capable applicants.",
+          "fa": "متقاضیان Express Entry مخصوصاً افراد دارای پتانسیل فرانسه."
+        },
+        "recommended_action": {
+          "en": "Recalculate CRS after policy changes and use the current official calculator/category criteria.",
+          "fa": "بعد از تغییر policy، CRS را دوباره محاسبه کنید و از calculator/criteria رسمی روز استفاده کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-EE-007-E1",
+          "relation": "supports",
+          "independence_group": "CAN-EE-007-E1"
+        },
+        {
+          "evidence_id": "CAN-EE-007-E2",
+          "relation": "supports",
+          "independence_group": "CAN-EE-007-E2"
+        },
+        {
+          "evidence_id": "CAN-EE-007-E3",
+          "relation": "supports",
+          "independence_group": "CAN-EE-007-E3"
+        },
+        {
+          "evidence_id": "CAN-EE-007-E4",
+          "relation": "supports",
+          "independence_group": "CAN-EE-007-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source contains dated policy change and quoted category threshold."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Express Entry CRS/category rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-EE-007-E1",
+            "CAN-EE-007-E2",
+            "CAN-EE-007-E3",
+            "CAN-EE-007-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded LookUp public Telegram supergroup. Some posts relay or quote policy text, but no independent web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Express Entry scoring/categories change frequently.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Express Entry",
+        "CRS",
+        "job offer",
+        "French",
+        "NCLC 7"
+      ],
+      "first_seen": "2025-02-12",
+      "last_seen": "2025-04-29"
+    },
+    {
+      "signal_id": "CAN-SUV-008",
+      "issue_cluster_id": "CANADA-STARTUP-VISA-PROGRAMME-INSTABILITY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-JR-009"
+        }
+      ],
+      "classification": {
+        "family": "E13_BUSINESS_STARTUP",
+        "type": "startup_visa_intake_and_designated_org_risk",
+        "class": "Start_Up_Visa"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "college",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "VISITOR",
+            "PERMANENT RESIDENCE",
+            "BUSINESS / STARTUP"
+          ],
+          "codes": [
+            "Start_Up_Visa"
+          ]
+        },
+        "process_stages": [
+          "Letter_of_Support",
+          "PR_submission",
+          "processing",
+          "work_permit"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Canada Start-Up Visa became a high-friction route by 2026: new intake was reported as effectively stopped, processing was long, and Letter-of-Support quality/issuer status became critical",
+          "fa": "Start-Up Visa کانادا تا ۲۰۲۶ به مسیر پر friction تبدیل شد: intake جدید عملاً متوقف گزارش شده، processing طولانی بوده و کیفیت/وضعیت صادرکننده Letter of Support حیاتی شده است"
+        },
+        "summary": {
+          "en": "The source moved from heavy promotion in 2025 to warnings in 2026 about suspended/low-quality organizations, priority issuers, long queues and the effective stop of new intake.",
+          "fa": "منبع از تبلیغ سنگین ۲۰۲۵ به هشدارهای ۲۰۲۶ درباره نهادهای تعلیق‌شده/کم‌کیفیت، priority issuer، صف طولانی و توقف intake جدید رسیده است."
+        },
+        "practical_impact": {
+          "en": "A Letter of Support is not equivalent to a low-risk route; issuer quality and grandfathering dates can determine whether the case remains viable.",
+          "fa": "Letter of Support معادل مسیر کم‌ریسک نیست؛ کیفیت issuer و تاریخ grandfathering می‌تواند viability پرونده را تعیین کند."
+        },
+        "who_should_care": {
+          "en": "Applicants with existing or proposed Canada startup groups.",
+          "fa": "متقاضیان دارای گروه استارت‌آپی کانادا یا پیشنهاد عضویت."
+        },
+        "recommended_action": {
+          "en": "Verify the current programme intake, Letter-of-Support date, designated-organization status and contract refund terms before paying.",
+          "fa": "قبل از پرداخت، intake روز برنامه، تاریخ LOS، وضعیت designated organization و شرایط refund قرارداد را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-SUV-008-E1",
+          "relation": "supports",
+          "independence_group": "CAN-SUV-008-E1"
+        },
+        {
+          "evidence_id": "CAN-SUV-008-E2",
+          "relation": "supports",
+          "independence_group": "CAN-SUV-008-E2"
+        },
+        {
+          "evidence_id": "CAN-SUV-008-E3",
+          "relation": "supports",
+          "independence_group": "CAN-SUV-008-E3"
+        },
+        {
+          "evidence_id": "CAN-SUV-008-E4",
+          "relation": "supports",
+          "independence_group": "CAN-SUV-008-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "deteriorating",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source documents a clear evolution from promotion to programme-risk warnings by 2026."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current IRCC Start-Up Visa intake and designated-organization status were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-SUV-008-E1",
+            "CAN-SUV-008-E2",
+            "CAN-SUV-008-E3",
+            "CAN-SUV-008-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded LookUp public Telegram supergroup. Some posts relay or quote policy text, but no independent web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Programme availability is highly time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Start-Up Visa",
+        "Letter of Support",
+        "designated organization",
+        "2026"
+      ],
+      "first_seen": "2025-05-07",
+      "last_seen": "2026-05-28"
+    },
+    {
+      "signal_id": "CAN-JR-009",
+      "issue_cluster_id": "CANADA-FEDERAL-COURT-JUDICIAL-REVIEW",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-VISITOR-005"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "CAN-STUDY-DELAY-004"
+        }
+      ],
+      "classification": {
+        "family": "E14_LEGAL_REMEDIES",
+        "type": "federal_court_judicial_review_after_refusal",
+        "class": "legal_remedy"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "college",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "VISITOR",
+            "PERMANENT RESIDENCE",
+            "BUSINESS / STARTUP"
+          ],
+          "codes": [
+            "visitor_visa",
+            "study_permit",
+            "business_immigration"
+          ]
+        },
+        "process_stages": [
+          "refusal",
+          "judicial_review"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Judicial Review is a post-decision legal remedy, not a second visa application or guaranteed approval",
+          "fa": "Judicial Review یک remedy حقوقی بعد از decision است، نه اپلیکیشن دوم یا تضمین approval"
+        },
+        "summary": {
+          "en": "The group explains that Federal Court can review whether an IRCC decision was lawful/fair/reasonable and may return a case for redetermination rather than issue the visa itself.",
+          "fa": "گروه توضیح می‌دهد دادگاه فدرال قانونی/منصفانه/معقول بودن تصمیم IRCC را بررسی می‌کند و ممکن است پرونده را برای تصمیم مجدد برگرداند، نه اینکه خودش ویزا صادر کند."
+        },
+        "practical_impact": {
+          "en": "A well-documented original application matters because the litigation record is built around the decision and file that already exist.",
+          "fa": "کامل‌بودن اپلیکیشن اولیه مهم است چون litigation روی decision و رکورد موجود بنا می‌شود."
+        },
+        "who_should_care": {
+          "en": "Applicants facing a refusal they believe was legally or procedurally flawed.",
+          "fa": "افرادی که ریجکتی را از نظر حقوقی/رویه‌ای معیوب می‌دانند."
+        },
+        "recommended_action": {
+          "en": "Get Canada-qualified legal advice quickly because deadlines and legal grounds matter; do not treat Federal Court as a routine reapplication strategy.",
+          "fa": "به‌دلیل deadline و grounds حقوقی سریعاً مشاوره حقوقی کانادایی بگیرید و دادگاه را reapply روتین ندانید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-JR-009-E1",
+          "relation": "supports",
+          "independence_group": "CAN-JR-009-E1"
+        },
+        {
+          "evidence_id": "CAN-JR-009-E2",
+          "relation": "supports",
+          "independence_group": "CAN-JR-009-E2"
+        },
+        {
+          "evidence_id": "CAN-JR-009-E3",
+          "relation": "supports",
+          "independence_group": "CAN-JR-009-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The source has one detailed explainer plus related visitor-case discussion; legal specifics remain unverified."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Federal Court deadlines, grounds and procedure were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-JR-009-E1",
+            "CAN-JR-009-E2",
+            "CAN-JR-009-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded LookUp public Telegram supergroup. Some posts relay or quote policy text, but no independent web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Legal deadlines are case-specific and strict.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Judicial Review",
+        "Federal Court",
+        "refusal",
+        "IRCC"
+      ],
+      "first_seen": "2025-04-29",
+      "last_seen": "2025-11-11"
+    },
+    {
+      "signal_id": "CAN-DIRECTWORK-010",
+      "issue_cluster_id": "CANADA-DIRECT-JOB-OFFER-FRICTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-EE-007"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "direct_job_offer_sponsorship_friction",
+        "class": "work_migration"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "college",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "VISITOR",
+            "PERMANENT RESIDENCE",
+            "BUSINESS / STARTUP"
+          ],
+          "codes": [
+            "employer_job_offer",
+            "work_permit"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "employer_sponsorship"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Direct work migration from abroad is repeatedly treated as a high-friction route because a real employer offer/sponsorship comes before the work permit",
+          "fa": "مهاجرت کاری مستقیم از خارج repeatedly مسیر پر friction دیده می‌شود چون جاب‌آفر/اسپانسر واقعی کارفرما قبل از ورک‌پرمیت قرار می‌گیرد"
+        },
+        "summary": {
+          "en": "Across 2025-2026 the group repeatedly says ordinary work visas need an employer offer and discourages young or weak profiles from planning around direct sponsorship alone.",
+          "fa": "در ۲۰۲۵–۲۰۲۶ گروه بارها گفته ویزای کاری عادی به employer offer نیاز دارد و به پروفایل‌های جوان/ضعیف توصیه کرده فقط روی اسپانسر مستقیم برنامه نریزند."
+        },
+        "practical_impact": {
+          "en": "A strong CV does not itself create a work-permit route without an employer willing and able to hire/sponsor.",
+          "fa": "رزومه قوی بدون employer حاضر و قادر به استخدام/اسپانسر، به‌تنهایی مسیر ورک‌پرمیت ایجاد نمی‌کند."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants searching for Canada jobs from abroad.",
+          "fa": "متقاضیان داخل ایران دنبال جاب‌آفر کانادا."
+        },
+        "recommended_action": {
+          "en": "Separate labour-market job search from immigration eligibility and evaluate points-based/study routes in parallel rather than assuming a direct offer will materialize.",
+          "fa": "job search بازار کار را از eligibility مهاجرتی جدا کنید و همزمان مسیر امتیازی/تحصیلی را بسنجید؛ جاب‌آفر مستقیم را فرض قطعی نگیرید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-DIRECTWORK-010-E1",
+          "relation": "supports",
+          "independence_group": "CAN-DIRECTWORK-010-E1"
+        },
+        {
+          "evidence_id": "CAN-DIRECTWORK-010-E2",
+          "relation": "supports",
+          "independence_group": "CAN-DIRECTWORK-010-E2"
+        },
+        {
+          "evidence_id": "CAN-DIRECTWORK-010-E3",
+          "relation": "supports",
+          "independence_group": "CAN-DIRECTWORK-010-E3"
+        },
+        {
+          "evidence_id": "CAN-DIRECTWORK-010-E4",
+          "relation": "supports",
+          "independence_group": "CAN-DIRECTWORK-010-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The guidance repeats over time, though the group's numerical pessimism is opinion rather than labour-market data."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current LMIA/work-permit pathways and labour-market data were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-DIRECTWORK-010-E1",
+            "CAN-DIRECTWORK-010-E2",
+            "CAN-DIRECTWORK-010-E3",
+            "CAN-DIRECTWORK-010-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded LookUp public Telegram supergroup. Some posts relay or quote policy text, but no independent web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Employer-sponsored routes and labour demand change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "job offer",
+        "employer",
+        "work permit",
+        "direct work migration"
+      ],
+      "first_seen": "2025-01-28",
+      "last_seen": "2026-06-17"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Names, Telegram usernames/IDs, phone numbers, addresses and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 1,887 records, including 1,880 message records."
+      },
+      "canada_dominant_scope": {
+        "status": "pass",
+        "note": "The source is multi-country but Canada dominates the actionable immigration discussions; core signals were restricted to repeated Canada patterns."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Generic destination rankings, service sales, startup-team promotions and unsupported 'easy/fast/high chance' claims were excluded or down-weighted."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated spouse-OWP, Iran public-policy, study-delay, visitor, biometrics, Express Entry, startup, legal-remedy and direct-work discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Time-bounded policy advice is not generalized across later dates; special Iran work permits are kept separate from PGWP."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "Policy/news claims remain source-reported and official.status=not_verified in this extraction-only run."
+      },
+      "current_rule_verification": {
+        "status": "not_run",
+        "note": "No external official web verification was performed."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community-source planning signals only. They are not official Canadian SOWP, PGWP, Iran public-policy, visitor, biometrics, Express Entry, Start-Up Visa, Federal Court or work-permit rules. Verify current IRCC and legal requirements before acting."
+}

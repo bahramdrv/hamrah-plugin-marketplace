@@ -1,0 +1,2393 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_north_america_undergrad_signals_candidate",
+    "generated_at": "2026-09-17T07:10:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "north-america-undergrad-telegram-export",
+      "name": "result(20260917-064904).json / Telegram export «کارشناسی آمریکای شمالی»",
+      "source_type": "private_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-15",
+        "records_available": 8995,
+        "records_processed": 8995,
+        "message_records": 8994
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "undergraduate_focused": true,
+        "contains_first_hand_applicant_experience": true,
+        "contains_university_correspondence": true,
+        "contains_promotional_posts": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "USA-UG-GPA-001-E1",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266219"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant had a translated high-school record that omitted grade 9 while their entered GPA included grade 9, creating a mismatch between the application and translated transcript.",
+        "fa": "یک متقاضی کارنامه ترجمه‌شده‌ای داشت که پایه نهم را نداشت، در حالی که GPA واردشده شامل نهم بود و بین اپلیکیشن و ترجمه ناهماهنگی ایجاد شده بود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-GPA-001-E2",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266221"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said the U.S. undergraduate file is commonly treated as four years of secondary-school history and advised translating grade 9 and having the counselor upload it.",
+        "fa": "پاسخ گروه پرونده کارشناسی آمریکا را معمولاً چهار سال سابقه دبیرستان دانسته و ترجمه پایه نهم و آپلود توسط counselor را پیشنهاد کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-GPA-001-C1",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266228"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "first_hand_university_contact",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant said two universities told them to report the three-year diploma average as GPA but still submit grade 9 so the universities could review it themselves.",
+        "fa": "متقاضی دیگری گفته دو دانشگاه به او گفته‌اند معدل دیپلم سه‌ساله را به‌عنوان GPA وارد کند اما کارنامه نهم را هم بفرستد تا خود دانشگاه بررسی کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-GPA-001-E3",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266261"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply explicitly deferred to the university's own instruction, showing that GPA treatment should not be generalized across institutions.",
+        "fa": "پاسخ بعدی صریحاً دستور همان دانشگاه را ملاک دانسته و نشان می‌دهد روش GPA را نباید بین همه دانشگاه‌ها تعمیم داد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-COUNSELOR-002-E1",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266247"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant reported that their school would not provide official letterhead or stamp for recommendation letters.",
+        "fa": "یک متقاضی گزارش کرده مدرسه‌اش برای توصیه‌نامه سربرگ یا مهر رسمی نمی‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-COUNSELOR-002-E2",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266269"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_workaround",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community workaround was to obtain a letter from an international-education authority in Tehran asking the school to authenticate recommendations, though the school could still refuse.",
+        "fa": "یک workaround گروه گرفتن نامه از مرجع امور بین‌الملل آموزش در تهران برای تأیید امکان مهر/امضای توصیه‌نامه بود، هرچند مدرسه ممکن است باز هم همکاری نکند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-COUNSELOR-002-E3",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266483"
+      },
+      "published_at": "2025-01-05",
+      "event_date": "2025-01-05",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant asked whether a teacher's personal email could be used in Common App when the school lacked an academic email infrastructure.",
+        "fa": "متقاضی دیگری پرسیده وقتی مدرسه ایمیل آکادمیک ندارد آیا می‌توان ایمیل شخصی معلم را در Common App وارد کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-COUNSELOR-002-E4",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266925"
+      },
+      "published_at": "2025-01-09",
+      "event_date": "2025-01-09",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance treated the counselor recommendation as required at many institutions, while teacher recommendations were often described as more variable.",
+        "fa": "راهنمایی گروه recommendation کانسلر را در بسیاری از دانشگاه‌ها ضروری و توصیه‌نامه معلم را متغیرتر توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-COUNSELOR-002-E5",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "267421"
+      },
+      "published_at": "2025-01-15",
+      "event_date": "2025-01-15",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Applicants also struggled to map U.S. concepts such as school report, mid-year report and final report onto Iranian school records.",
+        "fa": "متقاضیان برای تطبیق مفاهیمی مثل school report، mid-year report و final report با مدارک مدارس ایران نیز ابهام داشته‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-DEADLINE-003-E1",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266222"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant asked whether counselor documents could be uploaded after the application deadline or would need to be emailed separately.",
+        "fa": "یک متقاضی پرسیده مدارک counselor بعد از deadline قابل آپلود است یا باید جدا ایمیل شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-DEADLINE-003-E2",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266223"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said some supporting documents may be accepted after the main application deadline, but the statement was tentative rather than universal.",
+        "fa": "پاسخ گروه گفته بعضی مدارک تکمیلی ممکن است بعد از ددلاین اصلی پذیرفته شوند، اما این ادعا قطعی و عمومی نبوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-DEADLINE-003-E3",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266941"
+      },
+      "published_at": "2025-01-09",
+      "event_date": "2025-01-09",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A scholarship applicant asked whether submitting the main documents by the scholarship cutoff but sending the language score one or two weeks later would preserve scholarship eligibility.",
+        "fa": "یک متقاضی بورسیه پرسیده اگر مدارک اصلی را تا deadline بورسیه بدهد ولی نمره زبان را یک یا دو هفته بعد بفرستد، eligibility بورسیه حفظ می‌شود یا نه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-DEADLINE-003-E4",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "267992"
+      },
+      "published_at": "2025-01-26",
+      "event_date": "2025-01-26",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant asked whether admission could be conditional on a later English score, showing deadline and completeness are separate planning variables.",
+        "fa": "متقاضی دیگری درباره پذیرش مشروط به نمره زبانِ دیرتر پرسیده که نشان می‌دهد deadline و کامل‌بودن پرونده دو متغیر جدا هستند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-SCORE-REPORT-004-E1",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266229"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A TOEFL applicant was unsure whether a self-reported score should be transmitted by the counselor through Common App.",
+        "fa": "یک متقاضی TOEFL نمی‌دانست نمره self-report باید توسط counselor از Common App ارسال شود یا نه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-SCORE-REPORT-004-E2",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266308"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply distinguished self-reporting by the applicant from counselor-submitted school documents.",
+        "fa": "پاسخ گروه self-report توسط خود متقاضی را از مدارک مدرسه‌ای counselor جدا کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-SCORE-REPORT-004-E3",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "267543"
+      },
+      "published_at": "2025-01-17",
+      "event_date": "2025-01-17",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community advice was to inspect each university portal to see whether it asks for self-reported or official test scores.",
+        "fa": "توصیه گروه این بوده که در پرتال هر دانشگاه بررسی شود نمره self-report می‌خواهد یا official."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-SCORE-REPORT-004-E4",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "267546"
+      },
+      "published_at": "2025-01-17",
+      "event_date": "2025-01-17",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Common App user who had already self-reported was unsure whether an official score was only needed after admission, highlighting recurring process confusion.",
+        "fa": "کاربری که در Common App self-report کرده بود نمی‌دانست official score فقط بعد از پذیرش لازم می‌شود یا نه، که ابهام تکرارشونده فرایند را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-AID-NEEDAWARE-005-E1",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266403"
+      },
+      "published_at": "2025-01-03",
+      "event_date": "2025-01-03",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Applicants explicitly debated whether to answer yes to the Common App question about pursuing need-based financial aid.",
+        "fa": "متقاضیان صریحاً درباره yes/no زدن سؤال Common App برای need-based financial aid بحث کرده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-AID-NEEDAWARE-005-E2",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266411"
+      },
+      "published_at": "2025-01-03",
+      "event_date": "2025-01-03",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said requesting aid at a competitive need-aware university can reduce admission chances and warned that applicants who do not request aid initially may not be able to ask for it after admission.",
+        "fa": "پاسخ گروه گفته درخواست کمک مالی در دانشگاه need-aware رقابتی می‌تواند شانس پذیرش را کم کند و اگر ابتدا درخواست نشود ممکن است بعداً امکان درخواست وجود نداشته باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-AID-NEEDAWARE-005-E3",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "274550"
+      },
+      "published_at": "2025-03-24",
+      "event_date": "2025-03-24",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later discussion emphasized that financial-aid policy varies substantially by university.",
+        "fa": "گفتگوی بعدی تأکید کرده approach دانشگاه‌ها در financial aid تفاوت زیادی دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-AID-NEEDAWARE-005-E4",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "275755"
+      },
+      "published_at": "2025-04-20",
+      "event_date": "2025-04-20",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "first_hand_university_correspondence",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant shared a university response refusing a second aid appeal and using published official exchange rates rather than the applicant's real local exchange-rate experience.",
+        "fa": "یک متقاضی پاسخ دانشگاهی را منتشر کرده که appeal دوم کمک مالی را نپذیرفته و برای محاسبه از نرخ‌های رسمی منتشرشده استفاده کرده، نه نرخ واقعی تجربه‌شده در ایران."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-CSS-ISFAA-006-E1",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266355"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A student asked whether CSS Profile fees could be waived and whether ISFAA could be used instead.",
+        "fa": "یک دانش‌آموز پرسیده آیا هزینه CSS Profile قابل waiver است و آیا می‌توان به‌جای آن ISFAA داد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-CSS-ISFAA-006-E2",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266358"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said some universities offer a CSS waiver while others accept ISFAA, and applicants must check the university's own policy.",
+        "fa": "پاسخ گروه گفته بعضی دانشگاه‌ها CSS waiver دارند و بعضی ISFAA می‌پذیرند و باید policy همان دانشگاه چک شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-CSS-ISFAA-006-E3",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266580"
+      },
+      "published_at": "2025-01-06",
+      "event_date": "2025-01-06",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance said CSS fee-waiver handling is often university-specific and may require contacting admissions directly.",
+        "fa": "راهنمایی گروه گفته waiver هزینه CSS غالباً دانشگاه‌محور است و ممکن است نیاز به تماس مستقیم با admissions داشته باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-CSS-ISFAA-006-E4",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "275842"
+      },
+      "published_at": "2025-04-23",
+      "event_date": "2025-04-23",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply again said some universities accept alternative financial-aid forms when CSS cost is a problem, while others require CSS only.",
+        "fa": "پاسخ بعدی دوباره گفته بعضی دانشگاه‌ها در صورت مشکل هزینه CSS فرم جایگزین می‌پذیرند اما بعضی فقط CSS می‌خواهند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-SAT-007-E1",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266331"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Applicants repeatedly planned SAT preparation as a distinct part of the undergraduate timeline.",
+        "fa": "متقاضیان SAT را به‌عنوان بخش مستقل برنامه زمانی اپلای کارشناسی پیگیری می‌کردند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-SAT-007-E2",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266367"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_resource_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Bluebook and the College Board SAT question bank were recommended as preparation resources.",
+        "fa": "Bluebook و بانک سؤال College Board به‌عنوان منابع آمادگی SAT پیشنهاد شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-SAT-007-E3",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "269749"
+      },
+      "published_at": "2025-02-20",
+      "event_date": "2025-02-20",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_profile_assessment",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In one profile discussion, the absence of SAT was described as a larger weakness than the applicant's IELTS score.",
+        "fa": "در ارزیابی یک پروفایل، نداشتن SAT ضعف مهم‌تری از نمره IELTS متقاضی توصیف شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-SAT-007-C1",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "270618"
+      },
+      "published_at": "2025-02-28",
+      "event_date": "2025-02-28",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another reply noted that test-optional universities can still be an option without SAT, showing that the test is useful but not universally mandatory.",
+        "fa": "پاسخ دیگری گفته دانشگاه‌های test-optional همچنان بدون SAT گزینه هستند؛ یعنی آزمون می‌تواند مفید باشد اما همه‌جا الزامی نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-ENGLISH-008-E1",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266296"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Duolingo candidate found reading items in one mock unusually short and easy and questioned whether the real test would resemble that mock.",
+        "fa": "یک داوطلب Duolingo ریدینگ یک mock را غیرعادی کوتاه و آسان دیده و پرسیده آزمون واقعی چقدر شبیه آن است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-ENGLISH-008-E2",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266297"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same applicant found large difficulty differences between official-style and third-party listening mocks.",
+        "fa": "همان متقاضی تفاوت زیادی بین سختی listening در mockهای مختلف دیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-ENGLISH-008-E3",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266299"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "first_hand_test_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another candidate reported that one specific mock score matched their real score closely.",
+        "fa": "داوطلب دیگری گزارش کرده نمره یکی از mockها برای خودش تقریباً با نمره واقعی برابر شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-ENGLISH-008-E4",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266462"
+      },
+      "published_at": "2025-01-03",
+      "event_date": "2025-01-03",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply emphasized that universities differ on whether they require section minimums or only an overall English score.",
+        "fa": "پاسخ گروه تأکید کرده دانشگاه‌ها در اینکه حداقل هر skill را می‌خواهند یا فقط overall score تفاوت دارند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-UG-OUAC-WES-009-E1",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "266608"
+      },
+      "published_at": "2025-01-06",
+      "event_date": "2025-01-06",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The group distinguished Ontario's OUAC application system from the U.S. Common App and immediately raised uncertainty about fee waivers.",
+        "fa": "گروه OUAC انتاریو را از Common App آمریکا جدا کرده و بلافاصله درباره امکان fee waiver ابهام مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-UG-OUAC-WES-009-E2",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "267288"
+      },
+      "published_at": "2025-01-13",
+      "event_date": "2025-01-13",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Canada applicant who had already paid for WES evaluation still saw a separate OUAC 'Document Evaluation Fees' charge and was unsure whether the costs duplicated each other.",
+        "fa": "یک متقاضی کانادا با وجود پرداخت WES همچنان در OUAC هزینه جداگانه Document Evaluation Fees دیده و نمی‌دانسته این هزینه‌ها تکراری‌اند یا نه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-UG-OUAC-WES-009-E3",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "270570"
+      },
+      "published_at": "2025-02-28",
+      "event_date": "2025-02-28",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later message again identified OUAC as the application layer for Ontario universities.",
+        "fa": "پیام دیگری دوباره OUAC را لایه اپلیکیشن دانشگاه‌های انتاریو معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-UG-OUAC-WES-009-E4",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "273018"
+      },
+      "published_at": "2025-03-16",
+      "event_date": "2025-03-16",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant asked whether Canadian university/OUAC application fees could be waived at all, showing persistent cost uncertainty.",
+        "fa": "متقاضی دیگری پرسیده آیا هزینه دانشگاه/OUAC کانادا اصلاً قابل waiver است یا نه، که ابهام پایدار هزینه را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-F1-EMBASSY-010-E1",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "268619"
+      },
+      "published_at": "2025-02-05",
+      "event_date": "2025-02-05",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "In February 2025 applicants were already comparing recent Armenia embassy outcomes and asking whether the pattern had shifted from clearance/approval toward more refusals.",
+        "fa": "در فوریه ۲۰۲۵ متقاضیان نتیجه‌های اخیر سفارت ارمنستان را مقایسه می‌کردند و می‌پرسیدند آیا الگو از clearance/approval به سمت ریجکت بیشتر تغییر کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-F1-EMBASSY-010-E2",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "277541"
+      },
+      "published_at": "2025-05-23",
+      "event_date": "2025-05-23",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_operational_update",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "By May 2025 community sentiment described the Armenia post as much harder than earlier in the cycle, with even clearance treated as a positive outcome.",
+        "fa": "تا مه ۲۰۲۵ برداشت گروه این بود که سفارت ارمنستان نسبت به قبل سخت‌تر شده و حتی clearance نتیجه مثبتی تلقی می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-F1-EMBASSY-010-E3",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "277550"
+      },
+      "published_at": "2025-05-23",
+      "event_date": "2025-05-23",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_operational_update",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The same period included very negative reports about Baku outcomes, showing strong post-to-post variation.",
+        "fa": "در همان بازه گزارش‌های بسیار منفی درباره باکو وجود داشته که تفاوت زیاد بین سفارت‌ها را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "USA-UG-F1-EMBASSY-010-E4",
+      "source_id": "north-america-undergrad-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "279081"
+      },
+      "published_at": "2025-06-05",
+      "event_date": "2025-06-05",
+      "collected_at": "2026-09-17T07:10:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A June 2025 reply said bachelor's F-1 cases were perceived as more often getting same-day approval/refusal, with administrative clearance described as comparatively uncommon.",
+        "fa": "پاسخ ژوئن ۲۰۲۵ گفته کیس‌های bachelor F-1 در تجربه گروه بیشتر درجا approve/refuse می‌شوند و clearance نسبتاً کم‌تکرار است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "USA-UG-GPA-001",
+      "issue_cluster_id": "USA-UNDERGRAD-IRAN-TRANSCRIPT-GPA",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "USA-UG-COUNSELOR-002"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "iran_highschool_gpa_translation",
+        "class": "admission_documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "United States",
+          "country_code": "USA",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [
+            "secondary-school/undergraduate applicant"
+          ],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "undergraduate"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "undergraduate_admission"
+          ]
+        },
+        "process_stages": [
+          "transcript",
+          "GPA",
+          "document_translation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Iranian high-school GPA/transcript mapping is institution-specific, especially around grade 9 versus the three-year diploma",
+          "fa": "تطبیق GPA و ریزنمرات دبیرستان ایران دانشگاه‌محور است، مخصوصاً درباره پایه نهم در برابر دیپلم سه‌ساله"
+        },
+        "summary": {
+          "en": "The source contains competing practices: one community answer treats the file as four years and includes grade 9, while an applicant says two universities instructed them to report the three-year diploma average and submit grade 9 separately for review.",
+          "fa": "فایل دو رویه متفاوت دارد: یک پاسخ پرونده را چهارساله و شامل نهم می‌داند، اما یک متقاضی می‌گوید دو دانشگاه گفته‌اند معدل دیپلم سه‌ساله را وارد و کارنامه نهم را جدا ارسال کند."
+        },
+        "practical_impact": {
+          "en": "A one-size-fits-all GPA conversion can create inconsistencies between Common App and translated records.",
+          "fa": "تبدیل یکسان GPA برای همه دانشگاه‌ها می‌تواند بین Common App و ترجمه مدارک تناقض بسازد."
+        },
+        "who_should_care": {
+          "en": "Iranian U.S. undergraduate applicants.",
+          "fa": "متقاضیان ایرانی کارشناسی آمریکا."
+        },
+        "recommended_action": {
+          "en": "Follow the target university's written instruction and keep every secondary-school year available for review.",
+          "fa": "دستور کتبی همان دانشگاه را ملاک بگیرید و کارنامه همه سال‌های دبیرستان را برای بررسی آماده داشته باشید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "USA-UG-GPA-001-E1",
+          "relation": "supports",
+          "independence_group": "USA-UG-GPA-001-E1"
+        },
+        {
+          "evidence_id": "USA-UG-GPA-001-E2",
+          "relation": "supports",
+          "independence_group": "USA-UG-GPA-001-E2"
+        },
+        {
+          "evidence_id": "USA-UG-GPA-001-C1",
+          "relation": "contradicts",
+          "independence_group": "USA-UG-GPA-001-C1"
+        },
+        {
+          "evidence_id": "USA-UG-GPA-001-E3",
+          "relation": "supports",
+          "independence_group": "USA-UG-GPA-001-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct university-contact evidence contradicts a common community generalization, strongly supporting institution-specific handling."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No universal U.S. GPA-conversion rule was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "USA-UG-GPA-001-E1",
+            "USA-UG-GPA-001-E2",
+            "USA-UG-GPA-001-C1",
+            "USA-UG-GPA-001-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded North America undergraduate Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Admission-document instructions vary by institution and cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "GPA",
+        "grade 9",
+        "transcript",
+        "translation",
+        "Common App"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-01-01"
+    },
+    {
+      "signal_id": "USA-UG-COUNSELOR-002",
+      "issue_cluster_id": "USA-UNDERGRAD-IRAN-SCHOOL-OFFICIAL-FRICTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "USA-UG-GPA-001"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "USA-UG-DEADLINE-003"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "counselor_school_infrastructure_gap",
+        "class": "admission_documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "United States",
+          "country_code": "USA",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [
+            "secondary-school/undergraduate applicant"
+          ],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "undergraduate"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "undergraduate_admission"
+          ]
+        },
+        "process_stages": [
+          "counselor",
+          "recommendation",
+          "school_report",
+          "midyear_report"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Iranian schools often lack the counselor/email/letterhead workflow assumed by Common App",
+          "fa": "مدارس ایران اغلب زیرساخت counselor، ایمیل رسمی، سربرگ و reportهایی را که Common App فرض می‌کند ندارند"
+        },
+        "summary": {
+          "en": "Applicants repeatedly report schools without academic email, letterhead, stamps or familiarity with school/mid-year/final reports. Community workarounds include external authentication letters and adapting existing school staff to counselor roles.",
+          "fa": "متقاضیان مکرراً از نبود ایمیل آکادمیک، سربرگ، مهر و آشنایی مدرسه با school/mid-year/final report می‌گویند. workaroundها شامل نامه مرجع آموزشی و استفاده از کادر موجود مدرسه به‌عنوان counselor است."
+        },
+        "practical_impact": {
+          "en": "School-side document readiness can become the critical path even when the student's own application is complete.",
+          "fa": "حتی وقتی اپلیکیشن خود دانش‌آموز کامل است، آمادگی مدرسه می‌تواند گلوگاه اصلی شود."
+        },
+        "who_should_care": {
+          "en": "Applicants from schools unfamiliar with U.S. admissions.",
+          "fa": "متقاضیان مدارس ناآشنا با اپلای آمریکا."
+        },
+        "recommended_action": {
+          "en": "Start counselor/recommendation setup early and get the receiving university to confirm acceptable school-contact/authentication alternatives.",
+          "fa": "setup counselor و recommendation را زود شروع کنید و جایگزین قابل‌قبول برای ایمیل/تأیید مدرسه را از دانشگاه مقصد بپرسید."
+        },
+        "known_workaround": "Community members report using education-authority letters when schools resist stamping/signing."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "USA-UG-COUNSELOR-002-E1",
+          "relation": "supports",
+          "independence_group": "USA-UG-COUNSELOR-002-E1"
+        },
+        {
+          "evidence_id": "USA-UG-COUNSELOR-002-E2",
+          "relation": "supports",
+          "independence_group": "USA-UG-COUNSELOR-002-E2"
+        },
+        {
+          "evidence_id": "USA-UG-COUNSELOR-002-E3",
+          "relation": "supports",
+          "independence_group": "USA-UG-COUNSELOR-002-E3"
+        },
+        {
+          "evidence_id": "USA-UG-COUNSELOR-002-E4",
+          "relation": "supports",
+          "independence_group": "USA-UG-COUNSELOR-002-E4"
+        },
+        {
+          "evidence_id": "USA-UG-COUNSELOR-002-E5",
+          "relation": "supports",
+          "independence_group": "USA-UG-COUNSELOR-002-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated direct questions across recommendations, email identity and school reports show a durable school-infrastructure mismatch."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Acceptable counselor identity and authentication methods remain institution-specific."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "USA-UG-COUNSELOR-002-E1",
+            "USA-UG-COUNSELOR-002-E2",
+            "USA-UG-COUNSELOR-002-E3",
+            "USA-UG-COUNSELOR-002-E4",
+            "USA-UG-COUNSELOR-002-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded North America undergraduate Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Institutional document rules can change by cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "counselor",
+        "recommendation",
+        "school report",
+        "official email",
+        "stamp"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-01-15"
+    },
+    {
+      "signal_id": "USA-UG-DEADLINE-003",
+      "issue_cluster_id": "USA-UNDERGRAD-DEADLINE-VS-SUPPORTING-DOCS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "USA-UG-COUNSELOR-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "USA-UG-SCORE-REPORT-004"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "application_vs_material_deadline",
+        "class": "admission_timing"
+      },
+      "scope": {
+        "destination": {
+          "country": "United States",
+          "country_code": "USA",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [
+            "secondary-school/undergraduate applicant"
+          ],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "undergraduate"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "undergraduate_admission",
+            "scholarship"
+          ]
+        },
+        "process_stages": [
+          "application_deadline",
+          "supporting_documents",
+          "language_score"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The application deadline and the deadline for supporting documents/scores are not always the same",
+          "fa": "ددلاین اپلیکیشن و ددلاین مدارک تکمیلی/نمره زبان همیشه یکسان نیست"
+        },
+        "summary": {
+          "en": "Applicants repeatedly ask whether counselor files and language scores can arrive after the main application date. Community replies suggest this can happen at some schools, but scholarship and completeness deadlines may be stricter.",
+          "fa": "متقاضیان بارها می‌پرسند آیا مدارک counselor و نمره زبان می‌تواند بعد از deadline اصلی برسد. پاسخ‌های گروه می‌گویند در بعضی دانشگاه‌ها ممکن است، اما deadline بورسیه و کامل‌بودن پرونده می‌تواند سخت‌گیرانه‌تر باشد."
+        },
+        "practical_impact": {
+          "en": "Submitting Common App on time does not guarantee the file is complete for admission or scholarship review.",
+          "fa": "سابمیت به‌موقع Common App تضمین نمی‌کند پرونده برای admission یا scholarship کامل باشد."
+        },
+        "who_should_care": {
+          "en": "Applicants close to Regular Decision or scholarship deadlines.",
+          "fa": "متقاضیان نزدیک Regular Decision یا deadline بورسیه."
+        },
+        "recommended_action": {
+          "en": "Track application, school-document, test-score and scholarship cutoffs separately for each institution.",
+          "fa": "deadline اپلیکیشن، مدارک مدرسه، نمره آزمون و بورسیه را برای هر دانشگاه جدا پیگیری کنید."
+        },
+        "known_workaround": "Some applicants use portal upload or admissions email for late supporting material when the university permits it."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "USA-UG-DEADLINE-003-E1",
+          "relation": "supports",
+          "independence_group": "USA-UG-DEADLINE-003-E1"
+        },
+        {
+          "evidence_id": "USA-UG-DEADLINE-003-E2",
+          "relation": "supports",
+          "independence_group": "USA-UG-DEADLINE-003-E2"
+        },
+        {
+          "evidence_id": "USA-UG-DEADLINE-003-E3",
+          "relation": "supports",
+          "independence_group": "USA-UG-DEADLINE-003-E3"
+        },
+        {
+          "evidence_id": "USA-UG-DEADLINE-003-E4",
+          "relation": "supports",
+          "independence_group": "USA-UG-DEADLINE-003-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The pattern is recurring, but exact grace periods are institution-specific and the community evidence is not authoritative."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current material-deadline policies were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "USA-UG-DEADLINE-003-E1",
+            "USA-UG-DEADLINE-003-E2",
+            "USA-UG-DEADLINE-003-E3",
+            "USA-UG-DEADLINE-003-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded North America undergraduate Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Deadlines change every cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "deadline",
+        "supporting documents",
+        "language score",
+        "scholarship"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-01-26"
+    },
+    {
+      "signal_id": "USA-UG-SCORE-REPORT-004",
+      "issue_cluster_id": "USA-UNDERGRAD-SELFREPORT-OFFICIAL-SCORE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "USA-UG-DEADLINE-003"
+        }
+      ],
+      "classification": {
+        "family": "E13_EXTERNAL_TEST_SERVICE",
+        "type": "self_report_vs_official_score",
+        "class": "test_reporting"
+      },
+      "scope": {
+        "destination": {
+          "country": "United States",
+          "country_code": "USA",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [
+            "secondary-school/undergraduate applicant"
+          ],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "undergraduate"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "undergraduate_admission"
+          ]
+        },
+        "process_stages": [
+          "test_score_reporting",
+          "Common App",
+          "portal"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Self-reported and official test-score workflows differ by university and are frequently confused",
+          "fa": "فرایند self-report و official score بین دانشگاه‌ها فرق دارد و مکرراً با هم اشتباه می‌شود"
+        },
+        "summary": {
+          "en": "Applicants were unsure whether TOEFL self-reporting belonged to the counselor workflow and when official scores were required. The most consistent community advice was to check the exact university portal.",
+          "fa": "متقاضیان نمی‌دانستند TOEFL self-report بخشی از workflow counselor است یا چه زمانی official score لازم می‌شود. پایدارترین توصیه گروه چک‌کردن پرتال همان دانشگاه بود."
+        },
+        "practical_impact": {
+          "en": "Paying for official reports too early wastes money; sending them too late can leave a file incomplete.",
+          "fa": "ارسال official report زودهنگام هزینه اضافی دارد و دیر فرستادن آن می‌تواند پرونده را ناقص کند."
+        },
+        "who_should_care": {
+          "en": "Applicants using TOEFL/IELTS/Duolingo/SAT scores.",
+          "fa": "متقاضیان دارای TOEFL/IELTS/Duolingo/SAT."
+        },
+        "recommended_action": {
+          "en": "Classify each school as self-report accepted, official-at-application, or official-after-admission before paying score-report fees.",
+          "fa": "هر دانشگاه را قبل از پرداخت هزینه report در یکی از حالت‌های self-report، official هنگام اپلای یا official بعد از پذیرش قرار دهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "USA-UG-SCORE-REPORT-004-E1",
+          "relation": "supports",
+          "independence_group": "USA-UG-SCORE-REPORT-004-E1"
+        },
+        {
+          "evidence_id": "USA-UG-SCORE-REPORT-004-E2",
+          "relation": "supports",
+          "independence_group": "USA-UG-SCORE-REPORT-004-E2"
+        },
+        {
+          "evidence_id": "USA-UG-SCORE-REPORT-004-E3",
+          "relation": "supports",
+          "independence_group": "USA-UG-SCORE-REPORT-004-E3"
+        },
+        {
+          "evidence_id": "USA-UG-SCORE-REPORT-004-E4",
+          "relation": "supports",
+          "independence_group": "USA-UG-SCORE-REPORT-004-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple Common App threads show the same self-report/official-report confusion."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Score-reporting policies vary by institution/test and were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "USA-UG-SCORE-REPORT-004-E1",
+            "USA-UG-SCORE-REPORT-004-E2",
+            "USA-UG-SCORE-REPORT-004-E3",
+            "USA-UG-SCORE-REPORT-004-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded North America undergraduate Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Testing policies can change by cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "self-report",
+        "official score",
+        "TOEFL",
+        "Common App"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-01-17"
+    },
+    {
+      "signal_id": "USA-UG-AID-NEEDAWARE-005",
+      "issue_cluster_id": "USA-UNDERGRAD-INTERNATIONAL-FINANCIAL-AID",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "USA-UG-CSS-ISFAA-006"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "need_aware_admission_tradeoff",
+        "class": "financial_aid"
+      },
+      "scope": {
+        "destination": {
+          "country": "United States",
+          "country_code": "USA",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [
+            "secondary-school/undergraduate applicant"
+          ],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "undergraduate"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "undergraduate_admission",
+            "need_based_aid"
+          ]
+        },
+        "process_stages": [
+          "financial_aid_request",
+          "admission_review",
+          "aid_appeal"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For international undergraduates, requesting need-based aid can be part of the admission decision at need-aware schools",
+          "fa": "برای کارشناسی بین‌المللی، درخواست need-based aid در دانشگاه‌های need-aware می‌تواند بخشی از تصمیم پذیرش باشد"
+        },
+        "summary": {
+          "en": "Community discussions explicitly treat aid as an admission tradeoff at need-aware universities and warn that applicants may not be able to request institutional aid later if they initially apply without it. A direct university email also shows exchange-rate methodology can materially affect Iranian aid calculations.",
+          "fa": "گفتگوها aid را در دانشگاه need-aware یک tradeoff پذیرش می‌دانند و هشدار می‌دهند اگر ابتدا بدون aid اقدام شود شاید بعداً امکان درخواست نباشد. یک ایمیل مستقیم دانشگاه نیز نشان می‌دهد روش نرخ ارز می‌تواند محاسبه aid ایرانی‌ها را جدی تغییر دهد."
+        },
+        "practical_impact": {
+          "en": "Financial-aid strategy must be chosen before submission, not treated as a post-admission add-on.",
+          "fa": "استراتژی financial aid باید قبل از سابمیت انتخاب شود، نه به‌عنوان موضوعی بعد از پذیرش."
+        },
+        "who_should_care": {
+          "en": "International applicants who cannot fully self-fund U.S. undergraduate study.",
+          "fa": "متقاضیان بین‌المللی کارشناسی آمریکا که self-fund کامل نیستند."
+        },
+        "recommended_action": {
+          "en": "Identify each school's need-aware/need-blind and post-admission aid policy before answering the aid question.",
+          "fa": "قبل از پاسخ به سؤال aid، policy دانشگاه درباره need-aware/need-blind و امکان aid بعد از admission را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "USA-UG-AID-NEEDAWARE-005-E1",
+          "relation": "supports",
+          "independence_group": "USA-UG-AID-NEEDAWARE-005-E1"
+        },
+        {
+          "evidence_id": "USA-UG-AID-NEEDAWARE-005-E2",
+          "relation": "supports",
+          "independence_group": "USA-UG-AID-NEEDAWARE-005-E2"
+        },
+        {
+          "evidence_id": "USA-UG-AID-NEEDAWARE-005-E3",
+          "relation": "supports",
+          "independence_group": "USA-UG-AID-NEEDAWARE-005-E3"
+        },
+        {
+          "evidence_id": "USA-UG-AID-NEEDAWARE-005-E4",
+          "relation": "supports",
+          "independence_group": "USA-UG-AID-NEEDAWARE-005-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The tradeoff is repeated and supported by direct university correspondence on aid calculation/appeal."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Each university's current aid policy and exchange-rate method were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "USA-UG-AID-NEEDAWARE-005-E1",
+            "USA-UG-AID-NEEDAWARE-005-E2",
+            "USA-UG-AID-NEEDAWARE-005-E3",
+            "USA-UG-AID-NEEDAWARE-005-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded North America undergraduate Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Aid policies and budgets can change annually.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "need-aware",
+        "financial aid",
+        "international student",
+        "appeal",
+        "exchange rate"
+      ],
+      "first_seen": "2025-01-03",
+      "last_seen": "2025-04-20"
+    },
+    {
+      "signal_id": "USA-UG-CSS-ISFAA-006",
+      "issue_cluster_id": "USA-UNDERGRAD-CSS-ISFAA-WAIVER",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "USA-UG-AID-NEEDAWARE-005"
+        }
+      ],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "css_isfaa_waiver_variance",
+        "class": "financial_aid_documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "United States",
+          "country_code": "USA",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [
+            "secondary-school/undergraduate applicant"
+          ],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "undergraduate"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "undergraduate_admission",
+            "need_based_aid"
+          ]
+        },
+        "process_stages": [
+          "CSS_Profile",
+          "ISFAA",
+          "fee_waiver"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "CSS Profile fee waivers and ISFAA substitution are university-specific, not universal",
+          "fa": "waiver هزینه CSS Profile و جایگزینی ISFAA دانشگاه‌محور است و قاعده سراسری ندارد"
+        },
+        "summary": {
+          "en": "The source repeatedly says some universities waive CSS fees, some accept ISFAA or another form, and others require CSS only; applicants often need to contact the university directly.",
+          "fa": "فایل بارها می‌گوید بعضی دانشگاه‌ها هزینه CSS را waive می‌کنند، بعضی ISFAA یا فرم دیگر می‌پذیرند و بعضی فقط CSS می‌خواهند؛ تماس مستقیم با دانشگاه هم تکرار شده است."
+        },
+        "practical_impact": {
+          "en": "Assuming one aid form works everywhere can create unnecessary cost or an incomplete aid file.",
+          "fa": "فرض اینکه یک فرم aid همه‌جا جواب می‌دهد می‌تواند هزینه اضافی یا پرونده مالی ناقص ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "International applicants requesting U.S. need-based aid.",
+          "fa": "متقاضیان بین‌المللی need-based aid آمریکا."
+        },
+        "recommended_action": {
+          "en": "Build an institution-by-institution aid-form matrix before submitting CSS or paying its fee.",
+          "fa": "قبل از سابمیت CSS یا پرداخت آن، جدول دانشگاه‌به‌دانشگاه فرم‌های aid بسازید."
+        },
+        "known_workaround": "Emailing admissions/financial aid for a CSS waiver or accepted alternative is repeatedly reported."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "USA-UG-CSS-ISFAA-006-E1",
+          "relation": "supports",
+          "independence_group": "USA-UG-CSS-ISFAA-006-E1"
+        },
+        {
+          "evidence_id": "USA-UG-CSS-ISFAA-006-E2",
+          "relation": "supports",
+          "independence_group": "USA-UG-CSS-ISFAA-006-E2"
+        },
+        {
+          "evidence_id": "USA-UG-CSS-ISFAA-006-E3",
+          "relation": "supports",
+          "independence_group": "USA-UG-CSS-ISFAA-006-E3"
+        },
+        {
+          "evidence_id": "USA-UG-CSS-ISFAA-006-E4",
+          "relation": "supports",
+          "independence_group": "USA-UG-CSS-ISFAA-006-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same institution-specific pattern recurs from January through April 2025."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current CSS/ISFAA acceptance must be verified per institution."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "USA-UG-CSS-ISFAA-006-E1",
+            "USA-UG-CSS-ISFAA-006-E2",
+            "USA-UG-CSS-ISFAA-006-E3",
+            "USA-UG-CSS-ISFAA-006-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded North America undergraduate Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Aid-form requirements can change annually.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "CSS Profile",
+        "ISFAA",
+        "waiver",
+        "financial aid"
+      ],
+      "first_seen": "2025-01-02",
+      "last_seen": "2025-04-23"
+    },
+    {
+      "signal_id": "USA-UG-SAT-007",
+      "issue_cluster_id": "USA-UNDERGRAD-SAT-VALUE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "USA-UG-ENGLISH-008"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "sat_optional_but_material",
+        "class": "standardized_testing"
+      },
+      "scope": {
+        "destination": {
+          "country": "United States",
+          "country_code": "USA",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [
+            "secondary-school/undergraduate applicant"
+          ],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "undergraduate"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "undergraduate_admission"
+          ]
+        },
+        "process_stages": [
+          "SAT",
+          "test_optional",
+          "profile_strength"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "SAT is not universally mandatory, but the community still treats a strong score as materially useful for competitive international applicants",
+          "fa": "SAT همه‌جا اجباری نیست، اما کامیونیتی نمره قوی را برای متقاضی بین‌المللی رقابتی همچنان باارزش می‌داند"
+        },
+        "summary": {
+          "en": "The source combines test-optional advice with profile discussions where missing SAT is treated as a meaningful weakness. Official College Board resources are repeatedly used for preparation.",
+          "fa": "فایل هم توصیه به دانشگاه‌های test-optional دارد و هم ارزیابی‌هایی که نبود SAT را ضعف مهم می‌دانند. منابع رسمی College Board نیز برای آمادگی استفاده می‌شود."
+        },
+        "practical_impact": {
+          "en": "Treating test-optional as test-irrelevant may reduce options or profile strength at some schools.",
+          "fa": "برداشت «test-optional یعنی بی‌اهمیت بودن SAT» ممکن است گزینه‌ها یا قدرت پروفایل را در بعضی دانشگاه‌ها کم کند."
+        },
+        "who_should_care": {
+          "en": "International U.S. undergraduate applicants choosing whether to take SAT.",
+          "fa": "متقاضیان بین‌المللی کارشناسی آمریکا در تصمیم SAT."
+        },
+        "recommended_action": {
+          "en": "Compare the target school's test policy and the strength of the rest of the profile before deciding to skip SAT.",
+          "fa": "قبل از حذف SAT، policy دانشگاه هدف و قدرت بقیه پروفایل را مقایسه کنید."
+        },
+        "known_workaround": "Test-optional institutions remain a fallback when SAT is unavailable or weak."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "USA-UG-SAT-007-E1",
+          "relation": "supports",
+          "independence_group": "USA-UG-SAT-007-E1"
+        },
+        {
+          "evidence_id": "USA-UG-SAT-007-E2",
+          "relation": "supports",
+          "independence_group": "USA-UG-SAT-007-E2"
+        },
+        {
+          "evidence_id": "USA-UG-SAT-007-E3",
+          "relation": "supports",
+          "independence_group": "USA-UG-SAT-007-E3"
+        },
+        {
+          "evidence_id": "USA-UG-SAT-007-C1",
+          "relation": "contradicts",
+          "independence_group": "USA-UG-SAT-007-C1"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The source supports practical value but does not establish a universal admissions effect."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current test-optional/test-required policies were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "USA-UG-SAT-007-E1",
+            "USA-UG-SAT-007-E2",
+            "USA-UG-SAT-007-E3",
+            "USA-UG-SAT-007-C1"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded North America undergraduate Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Testing policies change rapidly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "SAT",
+        "test optional",
+        "Bluebook",
+        "College Board"
+      ],
+      "first_seen": "2025-01-02",
+      "last_seen": "2025-02-28"
+    },
+    {
+      "signal_id": "USA-UG-ENGLISH-008",
+      "issue_cluster_id": "USA-UNDERGRAD-ENGLISH-TEST-VARIANCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "USA-UG-SCORE-REPORT-004"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "english_threshold_and_mock_variance",
+        "class": "language_test"
+      },
+      "scope": {
+        "destination": {
+          "country": "United States",
+          "country_code": "USA",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [
+            "secondary-school/undergraduate applicant"
+          ],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "undergraduate"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "undergraduate_admission"
+          ]
+        },
+        "process_stages": [
+          "Duolingo",
+          "TOEFL",
+          "IELTS",
+          "language_requirement"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "English-test thresholds and mock-test reliability vary enough that applicants should plan by university, not by one generic score target",
+          "fa": "حداقل نمره زبان و دقت mockها آن‌قدر متغیر است که باید دانشگاه‌محور برنامه‌ریزی کرد، نه با یک target عمومی"
+        },
+        "summary": {
+          "en": "Applicants report large difficulty differences across Duolingo mocks, while others had a mock closely match the real result. Community guidance also notes that universities differ on overall versus section minimums.",
+          "fa": "متقاضیان از تفاوت زیاد سختی mockهای Duolingo گفته‌اند و یک نفر هم تطابق نزدیک mock با نمره واقعی را گزارش کرده است. گروه همچنین تفاوت دانشگاه‌ها در overall در برابر minimum هر skill را مطرح می‌کند."
+        },
+        "practical_impact": {
+          "en": "A single mock score can give false confidence near application deadlines.",
+          "fa": "یک نمره mock می‌تواند نزدیک deadline اعتماد کاذب ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Applicants using Duolingo/TOEFL/IELTS for U.S. undergraduate admission.",
+          "fa": "متقاضیان کارشناسی آمریکا با Duolingo/TOEFL/IELTS."
+        },
+        "recommended_action": {
+          "en": "Use several calibrated mocks and map the real target to each university's exact overall/section requirement.",
+          "fa": "از چند mock استفاده کنید و target واقعی را با شرط overall/skill همان دانشگاه تنظیم کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "USA-UG-ENGLISH-008-E1",
+          "relation": "supports",
+          "independence_group": "USA-UG-ENGLISH-008-E1"
+        },
+        {
+          "evidence_id": "USA-UG-ENGLISH-008-E2",
+          "relation": "supports",
+          "independence_group": "USA-UG-ENGLISH-008-E2"
+        },
+        {
+          "evidence_id": "USA-UG-ENGLISH-008-E3",
+          "relation": "supports",
+          "independence_group": "USA-UG-ENGLISH-008-E3"
+        },
+        {
+          "evidence_id": "USA-UG-ENGLISH-008-E4",
+          "relation": "supports",
+          "independence_group": "USA-UG-ENGLISH-008-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Direct user experience supports mock variance; institutional thresholds remain school-specific."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current language-test acceptance and cutoffs were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "USA-UG-ENGLISH-008-E1",
+            "USA-UG-ENGLISH-008-E2",
+            "USA-UG-ENGLISH-008-E3",
+            "USA-UG-ENGLISH-008-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded North America undergraduate Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Universities can change accepted tests/cutoffs by cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Duolingo",
+        "TOEFL",
+        "IELTS",
+        "mock",
+        "section minimum"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-01-03"
+    },
+    {
+      "signal_id": "CAN-UG-OUAC-WES-009",
+      "issue_cluster_id": "CAN-UNDERGRAD-OUAC-WES-COST",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "ouac_wes_fee_stack",
+        "class": "canada_application"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [
+            "secondary-school/undergraduate applicant"
+          ],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "undergraduate"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "undergraduate_admission"
+          ]
+        },
+        "process_stages": [
+          "OUAC",
+          "WES",
+          "application_fee",
+          "document_evaluation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Canadian undergraduate applications can add separate OUAC, university and credential-evaluation costs that do not map cleanly to the U.S. Common App model",
+          "fa": "اپلای کارشناسی کانادا می‌تواند هزینه‌های جداگانه OUAC، دانشگاه و ارزیابی مدرک داشته باشد و با مدل Common App آمریکا یکی نیست"
+        },
+        "summary": {
+          "en": "Ontario applicants repeatedly distinguish OUAC from Common App and ask whether fees can be waived. One applicant who had already paid WES still saw a separate OUAC document-evaluation charge.",
+          "fa": "متقاضیان انتاریو بارها OUAC را از Common App جدا می‌کنند و درباره waiver هزینه می‌پرسند. یک نفر با وجود پرداخت WES همچنان هزینه جداگانه document evaluation در OUAC دیده است."
+        },
+        "practical_impact": {
+          "en": "Applicants may underestimate total application cost or assume one credential-evaluation payment covers another platform's fee.",
+          "fa": "متقاضی ممکن است هزینه کل را کم‌برآورد کند یا تصور کند پرداخت یک ارزیابی مدرک هزینه پلتفرم دیگر را پوشش می‌دهد."
+        },
+        "who_should_care": {
+          "en": "Iranian applicants to Ontario/Canadian undergraduate programs.",
+          "fa": "متقاضیان ایرانی کارشناسی کانادا/انتاریو."
+        },
+        "recommended_action": {
+          "en": "Budget OUAC, university, WES/credential evaluation and document fees as separate line items until the institution confirms otherwise.",
+          "fa": "OUAC، هزینه دانشگاه، WES/ارزیابی مدرک و document fee را جدا بودجه‌بندی کنید مگر دانشگاه صریحاً خلافش را بگوید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-UG-OUAC-WES-009-E1",
+          "relation": "supports",
+          "independence_group": "CAN-UG-OUAC-WES-009-E1"
+        },
+        {
+          "evidence_id": "CAN-UG-OUAC-WES-009-E2",
+          "relation": "supports",
+          "independence_group": "CAN-UG-OUAC-WES-009-E2"
+        },
+        {
+          "evidence_id": "CAN-UG-OUAC-WES-009-E3",
+          "relation": "supports",
+          "independence_group": "CAN-UG-OUAC-WES-009-E3"
+        },
+        {
+          "evidence_id": "CAN-UG-OUAC-WES-009-E4",
+          "relation": "supports",
+          "independence_group": "CAN-UG-OUAC-WES-009-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated OUAC cost questions plus a direct WES/OUAC double-fee confusion support a durable process-cost signal."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current OUAC/WES fee and waiver rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-UG-OUAC-WES-009-E1",
+            "CAN-UG-OUAC-WES-009-E2",
+            "CAN-UG-OUAC-WES-009-E3",
+            "CAN-UG-OUAC-WES-009-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded North America undergraduate Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Application and evaluation fees can change annually.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Canada",
+        "OUAC",
+        "WES",
+        "document evaluation",
+        "fee waiver"
+      ],
+      "first_seen": "2025-01-06",
+      "last_seen": "2025-03-16"
+    },
+    {
+      "signal_id": "USA-UG-F1-EMBASSY-010",
+      "issue_cluster_id": "USA-F1-UNDERGRAD-POST-VARIANCE",
+      "relationships": [],
+      "classification": {
+        "family": "E3_VISA_ADJUDICATION",
+        "type": "consular_post_outcome_variance",
+        "class": "F1_visa"
+      },
+      "scope": {
+        "destination": {
+          "country": "United States",
+          "country_code": "USA",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [
+            "secondary-school/undergraduate applicant"
+          ],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "undergraduate"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Iranian applicant using third-country U.S. consular posts"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "F1_undergraduate"
+          ]
+        },
+        "process_stages": [
+          "embassy_selection",
+          "interview",
+          "administrative_processing",
+          "refusal"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Community reports show strong time- and post-specific variation in F-1 outcomes; 2025 bachelor cases were perceived as less likely to enter clearance than graduate cases",
+          "fa": "گزارش‌های گروه نوسان شدید نتیجه F-1 بر اساس سفارت و زمان را نشان می‌دهد؛ در ۲۰۲۵ کیس bachelor در تجربه گروه کمتر از graduate وارد clearance می‌شد"
+        },
+        "summary": {
+          "en": "Applicants repeatedly compared Armenia and Baku as conditions changed during spring 2025. A June 2025 community reply said undergraduate cases were commonly perceived as same-day approval/refusal, with clearance less frequent. This is community experience, not a rule or forecast.",
+          "fa": "متقاضیان در بهار ۲۰۲۵ با تغییر شرایط، ارمنستان و باکو را مرتب مقایسه کرده‌اند. یک پاسخ ژوئن ۲۰۲۵ bachelor را بیشتر درجا approve/refuse و clearance را کم‌تکرار توصیف کرده است. این تجربه کامیونیتی است، نه قانون یا پیش‌بینی."
+        },
+        "practical_impact": {
+          "en": "Embassy-selection advice becomes stale quickly and graduate-case experience should not be directly mapped onto bachelor's cases.",
+          "fa": "توصیه انتخاب سفارت سریع قدیمی می‌شود و تجربه graduate را نباید مستقیم به bachelor تعمیم داد."
+        },
+        "who_should_care": {
+          "en": "Iranian F-1 undergraduate applicants interviewing in third countries.",
+          "fa": "متقاضیان ایرانی F-1 کارشناسی که در کشور ثالث مصاحبه می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Use very recent bachelor-specific reports only as operational context and verify appointment/logistics separately; do not treat community outcome rates as predictive.",
+          "fa": "فقط گزارش‌های بسیار جدید و مخصوص bachelor را context عملی بدانید و logistics/وقت را جدا بررسی کنید؛ نرخ‌های کامیونیتی را پیش‌بینی نتیجه ندانید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "USA-UG-F1-EMBASSY-010-E1",
+          "relation": "supports",
+          "independence_group": "USA-UG-F1-EMBASSY-010-E1"
+        },
+        {
+          "evidence_id": "USA-UG-F1-EMBASSY-010-E2",
+          "relation": "supports",
+          "independence_group": "USA-UG-F1-EMBASSY-010-E2"
+        },
+        {
+          "evidence_id": "USA-UG-F1-EMBASSY-010-E3",
+          "relation": "supports",
+          "independence_group": "USA-UG-F1-EMBASSY-010-E3"
+        },
+        {
+          "evidence_id": "USA-UG-F1-EMBASSY-010-E4",
+          "relation": "supports",
+          "independence_group": "USA-UG-F1-EMBASSY-010-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Multiple contemporaneous posts show volatility, but the evidence is anecdotal and unsuitable for outcome prediction."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No official post-level approval/refusal pattern was verified; this signal must not be used to predict individual visa outcomes."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "USA-UG-F1-EMBASSY-010-E1",
+            "USA-UG-F1-EMBASSY-010-E2",
+            "USA-UG-F1-EMBASSY-010-E3",
+            "USA-UG-F1-EMBASSY-010-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded North America undergraduate Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Consular operations and case mix change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "F1",
+        "undergraduate",
+        "Armenia",
+        "Baku",
+        "clearance",
+        "refusal"
+      ],
+      "first_seen": "2025-02-05",
+      "last_seen": "2025-06-05"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram usernames/IDs, emails and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically scanned all 8,995 records from the uploaded JSON."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the complete conversation graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Payment-service promotions, generic consultancy posts and unrelated chatter were excluded."
+      },
+      "unsafe_document_practices_filtered": {
+        "status": "pass",
+        "note": "Suggestions that could amount to impersonating school officials or fabricating official communication were not converted into recommended actions."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated GPA/transcript, counselor, deadlines, test reporting, aid, CSS/ISFAA, SAT, English testing, OUAC/WES and F-1 embassy discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "The four-year-GPA community rule is preserved alongside direct university guidance using the three-year diploma GPA; SAT value is qualified by test-optional options."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "University emails/contact reports are source-reported; no current admissions, aid, testing or visa policy was independently verified."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals only. They are not official U.S./Canadian admission, financial-aid, testing, credential-evaluation or visa rules. Verify current institution- and consular-post-specific requirements before acting."
+}

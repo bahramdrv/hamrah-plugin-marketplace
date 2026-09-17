@@ -1,0 +1,1973 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_germany_work_signals_candidate",
+    "generated_at": "2026-09-16T09:55:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "germany-work-telegram-export",
+      "name": "result(5).json / Telegram export «کار در آلمان با پرگار»",
+      "source_type": "community_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-11",
+        "records_available": 5641,
+        "records_processed": 5641
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "contains_adviser_answers": true,
+        "contains_first_hand_applicant_reports": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "DEU-WORK-OFFSHORE-001-E1",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "501131"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community member said finding architecture work from Iran was much harder than being in Germany, while strong German helped the referenced case.",
+        "fa": "یک عضو گروه گفته پیدا کردن کار معماری از ایران بسیار سخت‌تر از داخل آلمان بوده و زبان آلمانی قوی به کیس مورد اشاره کمک کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-OFFSHORE-001-E2",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "508121"
+      },
+      "published_at": "2025-06-05",
+      "event_date": "2025-06-05",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An admin estimated a much longer Blue Card pathway from Iran than from inside Germany, mainly because of embassy appointments and document processing.",
+        "fa": "ادمین برای مسیر Blue Card از ایران زمان بسیار طولانی‌تری نسبت به اقدام از داخل آلمان برآورد کرده و علت را وقت سفارت و بررسی مدارک دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-OFFSHORE-001-E3",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "520377"
+      },
+      "published_at": "2026-09-07",
+      "event_date": "2026-09-07",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A September 2026 message rejected the idea of a country-wide ban on hiring Iranians, but said employers often prioritize people already in Germany because Iran-origin visa onboarding takes longer.",
+        "fa": "پیام سپتامبر ۲۰۲۶ فرض ممنوعیت سراسری استخدام ایرانیان را رد کرده، اما گفته کارفرماها به‌دلیل طولانی بودن فرایند ورود از ایران، افراد داخل آلمان را بیشتر ترجیح می‌دهند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-OFFSHORE-001-C1",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "520321"
+      },
+      "published_at": "2026-09-05",
+      "event_date": "2026-09-05",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user said people in their childcare field had recently received job offers and moved, contradicting a total hiring freeze.",
+        "fa": "یک کاربر گفته در حوزه مربی مهد افراد اخیراً جاب‌آفر گرفته و رفته‌اند؛ در نتیجه توقف کامل استخدام تأیید نمی‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-LANGUAGE-002-E1",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "518770"
+      },
+      "published_at": "2026-07-06",
+      "event_date": "2026-07-06",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A worker described an English-language interview and employer language-sufficiency letter being accepted, but said English-only job options were very limited and daily administration was hard without German.",
+        "fa": "یک فرد تجربه مصاحبه انگلیسی و پذیرش نامه کفایت زبان کارفرما را گزارش کرده، اما گفته گزینه‌های کاری فقط با انگلیسی محدود است و امور روزمره بدون آلمانی سخت می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-LANGUAGE-002-E2",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "520459"
+      },
+      "published_at": "2026-09-10",
+      "event_date": "2026-09-10",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser said an employer language-sufficiency letter may work, but having B1 German makes life and the work process in Germany much easier.",
+        "fa": "مشاور گفته نامه کفایت زبان کارفرما می‌تواند قابل استفاده باشد، اما داشتن B1 کار و زندگی در آلمان را بسیار آسان‌تر می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-LANGUAGE-002-E3",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "520233"
+      },
+      "published_at": "2026-09-01",
+      "event_date": "2026-09-01",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community response said some English-only working-student/general jobs exist, but are relatively few and German remains practically important.",
+        "fa": "یک پاسخ گروه گفته برخی کارهای دانشجویی/جنرال فقط با انگلیسی وجود دارند، اما کم‌اند و آلمانی از نظر عملی مهم می‌ماند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-APPLICATION-FIT-003-E1",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "511924"
+      },
+      "published_at": "2025-09-25",
+      "event_date": "2025-09-25",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user reported that matching CV experience and Anschreiben to each vacancy was critical; about 60% of their own applications were directly rejected before interviews.",
+        "fa": "یک کاربر گفته تطبیق رزومه و Anschreiben با هر آگهی حیاتی بوده و حدود ۶۰٪ درخواست‌های خودش پیش از مصاحبه مستقیم رد شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-APPLICATION-FIT-003-E2",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "508001"
+      },
+      "published_at": "2025-06-01",
+      "event_date": "2025-06-01",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The group discussed cases with more than 300 rejections over roughly a year before reaching interviews.",
+        "fa": "در گروه از کیس‌هایی صحبت شده که طی حدود یک سال بیش از ۳۰۰ رد درخواست داشته‌اند تا به مصاحبه برسند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-APPLICATION-FIT-003-E3",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "509692"
+      },
+      "published_at": "2025-07-17",
+      "event_date": "2025-07-17",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "One applicant reported roughly 450 applications with mostly no response and only a small number of explicit rejections.",
+        "fa": "یک متقاضی حدود ۴۵۰ درخواست با عمدتاً بدون پاسخ و تعداد کمی رد صریح گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-EXPERIENCE-EVIDENCE-004-E1",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "501147"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser said insurance records can prove work experience, and an employer employment certificate can be used if insurance is unavailable.",
+        "fa": "مشاور گفته سابقه بیمه می‌تواند سابقه کار را اثبات کند و در نبود بیمه می‌توان از گواهی اشتغال کارفرما استفاده کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-EXPERIENCE-EVIDENCE-004-E2",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "514764"
+      },
+      "published_at": "2025-12-13",
+      "event_date": "2025-12-13",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community response again described either official insurance history or an employer work certificate as usable evidence for employment/gap coverage.",
+        "fa": "یک پاسخ گروه دوباره سابقه بیمه رسمی یا گواهی کارفرما را به‌عنوان مدارک قابل استفاده برای سابقه کار/پوشش گپ معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-EXPERIENCE-EVIDENCE-004-E3",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "520460"
+      },
+      "published_at": "2026-09-10",
+      "event_date": "2026-09-10",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In September 2026 the adviser explicitly said insurance history was not mandatory, but every claim in the CV should be backed by evidence such as insurance or an employment letter.",
+        "fa": "در سپتامبر ۲۰۲۶ مشاور صریحاً گفته سابقه بیمه اجباری نیست، اما هر ادعای رزومه باید با مدرکی مثل بیمه یا نامه اشتغال پشتیبانی شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-RECOGNITION-005-E1",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "517276"
+      },
+      "published_at": "2026-05-24",
+      "event_date": "2026-05-24",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community reply recommended obtaining ZAB because employers may not understand Anabin evidence well.",
+        "fa": "یک پاسخ گروه توصیه کرده ZAB گرفته شود چون بعضی کارفرماها با مدارک Anabin آشنایی کافی ندارند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-RECOGNITION-005-E2",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "518426"
+      },
+      "published_at": "2026-06-26",
+      "event_date": "2026-06-26",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user described ZAB as the relevant route for recognition of engineering/technical bachelor's-or-higher qualifications in their context.",
+        "fa": "یک کاربر در زمینه مهندسی/فنی، ZAB را مسیر ارزیابی مدرک لیسانس و بالاتر معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-RECOGNITION-005-E3",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "518653"
+      },
+      "published_at": "2026-07-02",
+      "event_date": "2026-07-02",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A research-position applicant shared an employer message stating ZAB recognition was a prerequisite before HR would support the work-visa process.",
+        "fa": "یک متقاضی پوزیشن پژوهشی پیام کارفرما را به اشتراک گذاشته که ZAB را پیش‌شرط حمایت HR از فرایند ویزای کاری دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-SALARY-FIT-006-E1",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "506767"
+      },
+      "published_at": "2025-04-29",
+      "event_date": "2025-04-29",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Blue Card applicant said their salary met the Blue Card range, but after a long security check and expired preapproval the labour authority rejected the case because comparable positions had a higher market salary.",
+        "fa": "یک متقاضی Blue Card گفته با وجود قرار داشتن حقوق در بازه Blue Card، پس از چک امنیتی طولانی و انقضای پیش‌تأیید، اداره کار به‌دلیل بالاتر بودن میانگین حقوق پوزیشن مشابه پرونده را رد کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-SALARY-FIT-006-E2",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "519915"
+      },
+      "published_at": "2026-08-22",
+      "event_date": "2026-08-22",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later discussion emphasized that salary should plausibly match the occupation and role rather than merely clear a generic financial floor.",
+        "fa": "گفتگوی بعدی تأکید کرده حقوق باید با شغل و پوزیشن تناسب داشته باشد و صرف عبور از یک حد مالی عمومی کافی نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-AGE45-007-E1",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "507013"
+      },
+      "published_at": "2025-05-06",
+      "event_date": "2025-05-06",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser said applicants over 45 may need evidence such as property or bank assets to demonstrate retirement-age financial security.",
+        "fa": "مشاور گفته برای متقاضی بالای ۴۵ سال ممکن است مدارکی مثل ملک یا صورت‌حساب بانکی برای اثبات تأمین دوران بازنشستگی لازم شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-AGE45-007-E2",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "518188"
+      },
+      "published_at": "2026-06-18",
+      "event_date": "2026-06-18",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_legal_summary",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community legal summary cited section 18(2)(5) AufenthG and described an age-45-plus requirement involving either a salary threshold or adequate retirement provision.",
+        "fa": "یک خلاصه حقوقی در گروه با استناد به §18(2)(5) AufenthG برای افراد ۴۵سال به بالا شرط حقوق مشخص یا تأمین مناسب دوران بازنشستگی را توضیح داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-FASTTRACK-008-E1",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "518192"
+      },
+      "published_at": "2026-06-18",
+      "event_date": "2026-06-18",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser said simultaneous entry with family can be possible for ordinary job-offer cases when foreigners-authority fast-track preapproval includes the dependant names.",
+        "fa": "مشاور گفته در پرونده جاب‌آفر عادی، با پیش‌تأیید فست‌ترک اداره اتباع و درج نام همراهان، ورود همزمان خانواده می‌تواند ممکن باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-FASTTRACK-008-E2",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "513474"
+      },
+      "published_at": "2025-11-01",
+      "event_date": "2025-11-01",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A TLS applicant reported being told to provide fast-track or preapproval documentation for the Blue Card-related appointment issue.",
+        "fa": "یک متقاضی TLS گزارش کرده برای مشکل وقت مرتبط با Blue Card به او گفته‌اند فست‌ترک یا پیش‌تأیید ارائه کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-FASTTRACK-008-E3",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "508121"
+      },
+      "published_at": "2025-06-05",
+      "event_date": "2025-06-05",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The admin contrasted faster in-Germany Blue Card processing with much longer Iran-based timing, reinforcing the value of routes that reduce appointment friction.",
+        "fa": "ادمین پردازش سریع‌تر Blue Card از داخل آلمان را با زمان بسیار طولانی‌تر از ایران مقایسه کرده که اهمیت مسیرهای کاهش‌دهنده اصطکاک وقت را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-SECURITY-CHECK-009-E1",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "506767"
+      },
+      "published_at": "2025-04-29",
+      "event_date": "2025-04-29",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same Blue Card applicant said the security check took so long that their preapproval expired before the case returned to the labour authority.",
+        "fa": "همان متقاضی Blue Card گفته چک امنیتی آن‌قدر طول کشیده که پیش‌تأیید پرونده منقضی شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-SECURITY-CHECK-009-E2",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "507695"
+      },
+      "published_at": "2025-05-26",
+      "event_date": "2025-05-26",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A postdoctoral work-visa case reported a security-check step in September 2024 and visa issuance only in March 2025.",
+        "fa": "یک کیس ویزای کاری پژوهشی پست‌داک از مرحله چک امنیتی در سپتامبر ۲۰۲۴ و صدور ویزا در مارس ۲۰۲۵ گزارش داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-SECURITY-CHECK-009-E3",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "519560"
+      },
+      "published_at": "2026-08-05",
+      "event_date": "2026-08-05",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An information-security professional applying for a Blue Card in Munich reported being called to a dedicated security interview by the foreigners authority.",
+        "fa": "یک متخصص امنیت اطلاعات متقاضی Blue Card در مونیخ گزارش کرده برای مصاحبه امنیتی جداگانه از سوی اداره اتباع فراخوانده شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-OPPORTUNITY-CARD-010-E1",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "518504"
+      },
+      "published_at": "2026-06-27",
+      "event_date": "2026-06-27",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user reported obtaining the Opportunity Card in 15 working days after eight months of residence, and said their spouse also obtained one; an English interview was part of the process.",
+        "fa": "یک کاربر گزارش کرده پس از هشت ماه اقامت، کارت شانس را در ۱۵ روز کاری گرفته و همسرش هم گرفته؛ مصاحبه انگلیسی بخشی از روند بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-WORK-OPPORTUNITY-CARD-010-Q1",
+      "source_id": "germany-work-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "518813"
+      },
+      "published_at": "2026-07-08",
+      "event_date": "2026-07-08",
+      "collected_at": "2026-09-16T09:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another user claimed the older job-seeker visa was not being issued from Iran, but this was a single unverified community statement.",
+        "fa": "کاربر دیگری ادعا کرده ویزای جاب‌سیکر از ایران صادر نمی‌شود؛ این فقط یک گزارش منفرد و تأییدنشده در گروه است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "DEU-WORK-OFFSHORE-001",
+      "issue_cluster_id": "DEU-WORK-OFFSHORE-HIRING-FRICTION",
+      "relationships": [],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "offshore_hiring_friction",
+        "class": "employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Applying from Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "work_visa",
+            "EU_Blue_Card"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "job_offer",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Applying from Iran carries a practical hiring disadvantage, but the source does not support a blanket ban on Iranian hires",
+          "fa": "اقدام از ایران از نظر عملی در کاریابی ضعیف‌تر است، اما فایل ممنوعیت سراسری استخدام ایرانیان را تأیید نمی‌کند"
+        },
+        "summary": {
+          "en": "Repeated community reports describe employers preferring candidates already in Germany because onboarding and visa timing from Iran are slower. At the same time, recent job-offer examples contradict the idea of a total nationality-wide hiring freeze.",
+          "fa": "گزارش‌های تکرارشونده می‌گویند کارفرماها به‌دلیل زمان طولانی ورود و ویزا، افراد داخل آلمان را ترجیح می‌دهند. همزمان نمونه‌های جاب‌آفر جدید، فرض توقف کامل استخدام ایرانیان را رد می‌کنند."
+        },
+        "practical_impact": {
+          "en": "Location and visa lead time can affect employer willingness independently of qualifications.",
+          "fa": "محل حضور و زمان ورود می‌تواند مستقل از صلاحیت حرفه‌ای روی تمایل کارفرما اثر بگذارد."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants seeking direct German job offers.",
+          "fa": "متقاضیان داخل ایران که مستقیم دنبال جاب‌آفر آلمان هستند."
+        },
+        "recommended_action": {
+          "en": "Target employers familiar with international hiring and account for visa lead time in the application narrative.",
+          "fa": "کارفرماهای آشنا با استخدام بین‌المللی را هدف بگیرید و زمان ویزا را در مذاکره/اپلیکیشن شفاف مدیریت کنید."
+        },
+        "known_workaround": "Being already in Germany or using a faster eligible immigration workflow can reduce employer onboarding friction."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-WORK-OFFSHORE-001-E1",
+          "relation": "supports",
+          "independence_group": "offshore-r1"
+        },
+        {
+          "evidence_id": "DEU-WORK-OFFSHORE-001-E2",
+          "relation": "supports",
+          "independence_group": "offshore-admin"
+        },
+        {
+          "evidence_id": "DEU-WORK-OFFSHORE-001-E3",
+          "relation": "supports",
+          "independence_group": "offshore-r3"
+        },
+        {
+          "evidence_id": "DEU-WORK-OFFSHORE-001-C1",
+          "relation": "contradicts",
+          "independence_group": "offshore-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "worsening",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple independent reports across 2025-2026 distinguish practical offshore disadvantage from a blanket nationality ban."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No official nationality-wide hiring restriction was verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-WORK-OFFSHORE-001-E1",
+            "DEU-WORK-OFFSHORE-001-E2",
+            "DEU-WORK-OFFSHORE-001-E3",
+            "DEU-WORK-OFFSHORE-001-C1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Employer behaviour and Iran visa operations are fast-changing.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "offshore",
+        "Iran",
+        "job offer",
+        "onshore priority"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "signal_id": "DEU-WORK-LANGUAGE-002",
+      "issue_cluster_id": "DEU-WORK-LANGUAGE-MARKET",
+      "relationships": [],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "german_language_market_access",
+        "class": "employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "work_visa",
+            "EU_Blue_Card"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "interview",
+          "workplace"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "English-only hiring is possible, but German materially widens the job market and reduces day-to-day friction",
+          "fa": "استخدام فقط با انگلیسی ممکن است، اما آلمانی بازار کار را به‌طور محسوسی بازتر و زندگی روزمره را آسان‌تر می‌کند"
+        },
+        "summary": {
+          "en": "A first-hand engineering case used English interviewing and an employer language letter successfully, but the same person described English-only vacancies as very limited. Adviser guidance later said even B1 materially improves the process.",
+          "fa": "یک تجربه مستقیم مهندسی با مصاحبه انگلیسی و نامه کفایت زبان موفق بوده، اما همان فرد گزینه‌های فقط انگلیسی را بسیار محدود دانسته است. راهنمایی بعدی مشاور نیز B1 را از نظر عملی بسیار مفید دانسته است."
+        },
+        "practical_impact": {
+          "en": "No formal German certificate does not necessarily mean no work visa, but weak German can sharply reduce job-search options.",
+          "fa": "نبود مدرک رسمی آلمانی لزوماً ویزای کار را غیرممکن نمی‌کند، اما زبان ضعیف می‌تواند گزینه‌های کاری را شدیداً محدود کند."
+        },
+        "who_should_care": {
+          "en": "Applicants relying mainly on English-language roles.",
+          "fa": "متقاضیانی که عمدتاً روی پوزیشن‌های انگلیسی حساب می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Apply to genuinely English-language roles while continuing German toward at least practical workplace proficiency.",
+          "fa": "برای پوزیشن‌های واقعاً انگلیسی اپلای کنید و همزمان آلمانی را تا سطح کاربردی محیط کار ادامه دهید."
+        },
+        "known_workaround": "Employer language-sufficiency letters were reported as usable in some cases."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-WORK-LANGUAGE-002-E1",
+          "relation": "supports",
+          "independence_group": "lang-r1"
+        },
+        {
+          "evidence_id": "DEU-WORK-LANGUAGE-002-E2",
+          "relation": "supports",
+          "independence_group": "lang-adviser"
+        },
+        {
+          "evidence_id": "DEU-WORK-LANGUAGE-002-E3",
+          "relation": "supports",
+          "independence_group": "lang-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct experience plus later adviser/community guidance consistently distinguishes visa-language flexibility from labour-market reality."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Language requirements are job- and visa-route-specific."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-WORK-LANGUAGE-002-E1",
+            "DEU-WORK-LANGUAGE-002-E2",
+            "DEU-WORK-LANGUAGE-002-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Employer language requirements vary by occupation.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "German",
+        "English-only",
+        "B1",
+        "language sufficiency"
+      ],
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-09-10"
+    },
+    {
+      "signal_id": "DEU-WORK-APPLICATION-FIT-003",
+      "issue_cluster_id": "DEU-WORK-APPLICATION-FIT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-WORK-OFFSHORE-001"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "application_tailoring_high_rejection",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "employment"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "application",
+          "interview"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "High rejection volumes are normal in the source, and vacancy-specific CV/Anschreiben fit matters",
+          "fa": "حجم بالای رد درخواست در فایل رایج است و تطبیق رزومه/Anschreiben با آگهی اهمیت زیادی دارد"
+        },
+        "summary": {
+          "en": "First-hand/community reports include 60% direct rejection, 300+ rejections before interviews and about 450 applications with little response. The strongest advice is to match experience and Anschreiben to each vacancy.",
+          "fa": "گزارش‌ها شامل ۶۰٪ رد مستقیم، بیش از ۳۰۰ رد پیش از مصاحبه و حدود ۴۵۰ درخواست با بازخورد کم است. قوی‌ترین توصیه، تطبیق سابقه و Anschreiben با هر آگهی است."
+        },
+        "practical_impact": {
+          "en": "Generic mass-applying can consume months without improving interview conversion.",
+          "fa": "اپلای انبوه و عمومی می‌تواند ماه‌ها زمان بگیرد بدون اینکه نرخ رسیدن به مصاحبه بهتر شود."
+        },
+        "who_should_care": {
+          "en": "Applicants sending large numbers of German job applications without interviews.",
+          "fa": "متقاضیانی که تعداد زیادی درخواست می‌فرستند اما مصاحبه نمی‌گیرند."
+        },
+        "recommended_action": {
+          "en": "Prioritize role fit, rewrite Anschreiben per vacancy, and treat rejection rate as a diagnostic rather than proof the route is closed.",
+          "fa": "تطابق با شغل را اولویت دهید، Anschreiben را برای هر آگهی تنظیم کنید و نرخ رد را ابزار تشخیص بدانید نه اثبات بسته بودن مسیر."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-WORK-APPLICATION-FIT-003-E1",
+          "relation": "supports",
+          "independence_group": "app-r1"
+        },
+        {
+          "evidence_id": "DEU-WORK-APPLICATION-FIT-003-E2",
+          "relation": "supports",
+          "independence_group": "app-r2"
+        },
+        {
+          "evidence_id": "DEU-WORK-APPLICATION-FIT-003-E3",
+          "relation": "supports",
+          "independence_group": "app-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Several independent high-volume application experiences show the same low-conversion pattern."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No nationwide application-to-interview conversion rate was verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-WORK-APPLICATION-FIT-003-E1",
+            "DEU-WORK-APPLICATION-FIT-003-E2",
+            "DEU-WORK-APPLICATION-FIT-003-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Hiring-market conditions vary by occupation.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Bewerbung",
+        "Anschreiben",
+        "rejection",
+        "CV fit"
+      ],
+      "first_seen": "2025-06-01",
+      "last_seen": "2025-09-25"
+    },
+    {
+      "signal_id": "DEU-WORK-EXPERIENCE-EVIDENCE-004",
+      "issue_cluster_id": "DEU-WORK-EXPERIENCE-EVIDENCE",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "employment_evidence_flexibility",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "work_visa",
+            "EU_Blue_Card"
+          ]
+        },
+        "process_stages": [
+          "job_application",
+          "visa_application",
+          "employment_evidence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Insurance history is not described as universally mandatory; employment certificates can substitute, but CV claims need evidence",
+          "fa": "سابقه بیمه در فایل الزام همگانی نیست؛ گواهی اشتغال می‌تواند جایگزین شود، اما ادعاهای رزومه باید مستند باشند"
+        },
+        "summary": {
+          "en": "Adviser guidance from both the start and end of the dataset says insurance is one acceptable proof, not the only one, and an employer certificate can be used where insurance is absent.",
+          "fa": "راهنمایی مشاور در ابتدا و انتهای بازه فایل می‌گوید بیمه یکی از مدارک اثبات است نه تنها مدرک، و در نبود آن می‌توان از گواهی کارفرما استفاده کرد."
+        },
+        "practical_impact": {
+          "en": "Applicants without Iranian insurance history may still document experience, but unsupported CV claims remain risky.",
+          "fa": "متقاضی بدون سابقه بیمه ایران هنوز می‌تواند سابقه کار را اثبات کند، اما ادعای بدون مدرک در رزومه پرریسک است."
+        },
+        "who_should_care": {
+          "en": "Applicants with informal employment, missing insurance or employer-letter evidence.",
+          "fa": "متقاضیان با سابقه غیررسمی، بدون بیمه یا دارای نامه اشتغال."
+        },
+        "recommended_action": {
+          "en": "Collect redundant proof: employment letters, contracts, payslips and insurance where available.",
+          "fa": "چند نوع مدرک جمع کنید: نامه اشتغال، قرارداد، فیش حقوقی و بیمه در صورت وجود."
+        },
+        "known_workaround": "Employer employment certificates are the main alternative repeatedly mentioned in the source."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-WORK-EXPERIENCE-EVIDENCE-004-E1",
+          "relation": "supports",
+          "independence_group": "evidence-adviser-1"
+        },
+        {
+          "evidence_id": "DEU-WORK-EXPERIENCE-EVIDENCE-004-E2",
+          "relation": "supports",
+          "independence_group": "evidence-r2"
+        },
+        {
+          "evidence_id": "DEU-WORK-EXPERIENCE-EVIDENCE-004-E3",
+          "relation": "supports",
+          "independence_group": "evidence-adviser-2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated adviser guidance across the full period consistently supports multiple proof types."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Exact embassy/route document checklists were not independently checked."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-WORK-EXPERIENCE-EVIDENCE-004-E1",
+            "DEU-WORK-EXPERIENCE-EVIDENCE-004-E2",
+            "DEU-WORK-EXPERIENCE-EVIDENCE-004-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Checklist requirements can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "insurance",
+        "employment certificate",
+        "work experience evidence"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2026-09-10"
+    },
+    {
+      "signal_id": "DEU-WORK-RECOGNITION-005",
+      "issue_cluster_id": "DEU-WORK-ZAB-ANABIN",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "qualification_recognition_operational",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "work_visa",
+            "EU_Blue_Card"
+          ]
+        },
+        "process_stages": [
+          "qualification_recognition",
+          "job_offer",
+          "visa_application"
+        ],
+        "entities": [
+          {
+            "entity_type": "authority",
+            "name": "ZAB"
+          },
+          {
+            "entity_type": "database",
+            "name": "Anabin"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "Recognition evidence is operationally important even when Anabin looks favorable; employers may still request ZAB",
+          "fa": "حتی با وضعیت مناسب Anabin، مدرک ارزیابی می‌تواند از نظر عملی مهم باشد و کارفرما همچنان ZAB بخواهد"
+        },
+        "summary": {
+          "en": "Community guidance often prefers ZAB for employer clarity, and one applicant shared an employer message explicitly making ZAB a prerequisite before HR visa support.",
+          "fa": "راهنمایی‌های گروه اغلب ZAB را برای شفافیت نزد کارفرما ترجیح می‌دهند و یک متقاضی پیام کارفرما را نشان داده که ZAB را پیش‌شرط حمایت HR از ویزا کرده است."
+        },
+        "practical_impact": {
+          "en": "Relying only on an Anabin screenshot may not satisfy a specific employer/HR workflow.",
+          "fa": "اتکا فقط به اسکرین‌شات Anabin ممکن است برای فرایند HR یک کارفرمای مشخص کافی نباشد."
+        },
+        "who_should_care": {
+          "en": "Applicants with foreign academic qualifications entering German skilled employment.",
+          "fa": "متقاضیان دارای مدرک دانشگاهی خارجی برای اشتغال تخصصی آلمان."
+        },
+        "recommended_action": {
+          "en": "Check both the legal route requirement and the employer's HR recognition requirement before deciding whether ZAB is necessary.",
+          "fa": "پیش از تصمیم درباره ZAB، هم الزام قانونی مسیر و هم الزام داخلی HR کارفرما را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-WORK-RECOGNITION-005-E1",
+          "relation": "supports",
+          "independence_group": "recognition-r1"
+        },
+        {
+          "evidence_id": "DEU-WORK-RECOGNITION-005-E2",
+          "relation": "supports",
+          "independence_group": "recognition-r2"
+        },
+        {
+          "evidence_id": "DEU-WORK-RECOGNITION-005-E3",
+          "relation": "supports",
+          "independence_group": "recognition-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The employer prerequisite is strong first-hand evidence, but recognition rules remain profession- and route-specific."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "ZAB/Anabin requirements were not independently verified for every profession."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-WORK-RECOGNITION-005-E1",
+            "DEU-WORK-RECOGNITION-005-E2",
+            "DEU-WORK-RECOGNITION-005-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Recognition requirements vary by occupation and visa route.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "ZAB",
+        "Anabin",
+        "recognition",
+        "degree"
+      ],
+      "first_seen": "2026-05-24",
+      "last_seen": "2026-07-02"
+    },
+    {
+      "signal_id": "DEU-WORK-SALARY-FIT-006",
+      "issue_cluster_id": "DEU-WORK-SALARY-MARKET-FIT",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "salary_market_alignment",
+        "class": "eligibility"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "EU_Blue_Card",
+            "work_visa"
+          ]
+        },
+        "process_stages": [
+          "job_offer",
+          "salary_assessment",
+          "labour_approval"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Meeting a Blue Card floor may still be insufficient if the salary is implausibly low for the occupation",
+          "fa": "عبور از کف حقوق Blue Card ممکن است کافی نباشد اگر حقوق برای آن شغل غیرواقعی پایین باشد"
+        },
+        "summary": {
+          "en": "A first-hand Blue Card case reported labour-authority rejection even though salary was within the Blue Card range because comparable positions paid more. Later discussion again emphasized occupation-salary fit.",
+          "fa": "یک تجربه مستقیم Blue Card از رد اداره کار با وجود قرار داشتن حقوق در بازه Blue Card خبر داده، چون پوزیشن‌های مشابه حقوق بالاتری داشته‌اند. گفتگوی بعدی هم روی تناسب شغل و حقوق تأکید کرده است."
+        },
+        "practical_impact": {
+          "en": "Applicants should evaluate both statutory thresholds and market plausibility.",
+          "fa": "باید هم حد قانونی و هم منطقی‌بودن حقوق نسبت به بازار همان شغل بررسی شود."
+        },
+        "who_should_care": {
+          "en": "Blue Card and ordinary work-visa applicants negotiating salary.",
+          "fa": "متقاضیان Blue Card و ویزای کار عادی در مرحله مذاکره حقوق."
+        },
+        "recommended_action": {
+          "en": "Benchmark the offer against comparable German positions, not only the statutory visa threshold.",
+          "fa": "آفر را با حقوق پوزیشن‌های مشابه در آلمان مقایسه کنید، نه فقط کف قانونی ویزا."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-WORK-SALARY-FIT-006-E1",
+          "relation": "supports",
+          "independence_group": "salary-r1"
+        },
+        {
+          "evidence_id": "DEU-WORK-SALARY-FIT-006-E2",
+          "relation": "supports",
+          "independence_group": "salary-r2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "One detailed first-hand case plus later discussion supports salary-market alignment as a real operational issue."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current statutory Blue Card thresholds and BA salary-comparison rules were not independently checked."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-WORK-SALARY-FIT-006-E1",
+            "DEU-WORK-SALARY-FIT-006-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Salary thresholds and labour-market benchmarks change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Blue Card",
+        "salary",
+        "market salary",
+        "BA"
+      ],
+      "first_seen": "2025-04-29",
+      "last_seen": "2026-08-22"
+    },
+    {
+      "signal_id": "DEU-WORK-AGE45-007",
+      "issue_cluster_id": "DEU-WORK-AGE45-PENSION",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "age45_retirement_provision",
+        "class": "eligibility"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "First skilled-work residence at age 45+"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "skilled_work_residence"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "financial_evidence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Age 45+ can add a retirement-provision or salary hurdle to first skilled-work residence",
+          "fa": "سن ۴۵ سال به بالا می‌تواند شرط اضافه حقوق یا تأمین دوران بازنشستگی ایجاد کند"
+        },
+        "summary": {
+          "en": "Community adviser/legal-summary messages consistently describe additional financial proof for applicants aged 45 or above, either through salary or adequate retirement provision/assets.",
+          "fa": "پیام‌های مشاور/خلاصه حقوقی گروه برای متقاضی ۴۵سال به بالا از شرط مالی اضافه، از طریق حقوق یا تأمین مناسب بازنشستگی/دارایی، صحبت می‌کنند."
+        },
+        "practical_impact": {
+          "en": "Older applicants may satisfy job qualifications yet still face an additional residence-permit hurdle.",
+          "fa": "متقاضی سن بالاتر ممکن است از نظر شغلی واجد شرایط باشد اما همچنان با شرط اضافه اقامت روبه‌رو شود."
+        },
+        "who_should_care": {
+          "en": "Applicants aged 45+ entering German skilled employment for the first time.",
+          "fa": "متقاضیان ۴۵سال به بالا که برای نخستین بار وارد اشتغال تخصصی آلمان می‌شوند."
+        },
+        "recommended_action": {
+          "en": "Check the current annual threshold and acceptable retirement-provision evidence before accepting an offer.",
+          "fa": "پیش از قبول آفر، حد سالانه جاری و مدارک قابل قبول تأمین بازنشستگی را بررسی کنید."
+        },
+        "known_workaround": "Adequate retirement provision/assets were discussed as an alternative where salary is below the age-specific threshold."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-WORK-AGE45-007-E1",
+          "relation": "supports",
+          "independence_group": "age45-adviser"
+        },
+        {
+          "evidence_id": "DEU-WORK-AGE45-007-E2",
+          "relation": "supports",
+          "independence_group": "age45-legal"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The legal concept is consistently described, but current numeric thresholds were not independently verified."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official age-45 salary threshold was not independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-WORK-AGE45-007-E1",
+            "DEU-WORK-AGE45-007-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Threshold changes annually.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "45+",
+        "retirement provision",
+        "salary threshold",
+        "AufenthG"
+      ],
+      "first_seen": "2025-05-06",
+      "last_seen": "2026-06-18"
+    },
+    {
+      "signal_id": "DEU-WORK-FASTTRACK-008",
+      "issue_cluster_id": "DEU-WORK-FASTTRACK-PREAPPROVAL",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-WORK-OFFSHORE-001"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "fast_track_preapproval",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "work_visa",
+            "EU_Blue_Card",
+            "family_reunification"
+          ]
+        },
+        "process_stages": [
+          "preapproval",
+          "appointment",
+          "family_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Fast-track/preapproval can materially change appointment handling and simultaneous family processing",
+          "fa": "فست‌ترک/پیش‌تأیید می‌تواند مسیر وقت و اقدام همزمان خانواده را به‌طور جدی تغییر دهد"
+        },
+        "summary": {
+          "en": "Adviser and first-hand TLS messages describe fast-track/preapproval as a distinct operational path. Adviser guidance says dependant names included in the fast-track approval can support simultaneous family visa applications.",
+          "fa": "پیام‌های مشاور و تجربه مستقیم TLS فست‌ترک/پیش‌تأیید را مسیر عملی متفاوتی نشان می‌دهند. مشاور می‌گوید درج نام همراه در برگه فست‌ترک می‌تواند اقدام همزمان خانواده را ممکن کند."
+        },
+        "practical_impact": {
+          "en": "Using the correct preapproval route can reduce appointment friction and family separation risk.",
+          "fa": "استفاده از مسیر پیش‌تأیید درست می‌تواند اصطکاک وقت و ریسک جدایی خانواده را کم کند."
+        },
+        "who_should_care": {
+          "en": "Work-visa applicants whose employer can use accelerated skilled-worker procedures, especially with dependants.",
+          "fa": "متقاضیان ویزای کاری که کارفرما امکان فرایند تسریع‌شده دارد، به‌خصوص همراه‌دارها."
+        },
+        "recommended_action": {
+          "en": "Confirm the exact preapproval type and ensure dependants are explicitly included where simultaneous filing is intended.",
+          "fa": "نوع دقیق پیش‌تأیید را مشخص کنید و اگر اقدام همزمان مدنظر است، درج صریح همراهان را بررسی کنید."
+        },
+        "known_workaround": "Fast-track/preapproval is the main operational workaround described for appointment and dependant timing friction."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-WORK-FASTTRACK-008-E1",
+          "relation": "supports",
+          "independence_group": "fast-adviser"
+        },
+        {
+          "evidence_id": "DEU-WORK-FASTTRACK-008-E2",
+          "relation": "supports",
+          "independence_group": "fast-r2"
+        },
+        {
+          "evidence_id": "DEU-WORK-FASTTRACK-008-E3",
+          "relation": "supports",
+          "independence_group": "fast-admin"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Adviser guidance and first-hand TLS reporting both support fast-track as a distinct operational route."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current TLS/authority fast-track rules were not independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-WORK-FASTTRACK-008-E1",
+            "DEU-WORK-FASTTRACK-008-E2",
+            "DEU-WORK-FASTTRACK-008-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Appointment handling changes quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "fast track",
+        "preapproval",
+        "TLS",
+        "dependants"
+      ],
+      "first_seen": "2025-06-05",
+      "last_seen": "2026-06-18"
+    },
+    {
+      "signal_id": "DEU-WORK-SECURITY-CHECK-009",
+      "issue_cluster_id": "DEU-WORK-SECURITY-CHECK",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-WORK-SALARY-FIT-006"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "security_check_delay",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Sensitive technical or research fields"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "work_visa",
+            "EU_Blue_Card",
+            "research_work"
+          ]
+        },
+        "process_stages": [
+          "security_check",
+          "visa_processing"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Security checks can create long, case-specific delays and may interact badly with expiring preapproval",
+          "fa": "چک امنیتی می‌تواند تأخیر طولانی و کیس‌محور ایجاد کند و با انقضای پیش‌تأیید مشکل‌ساز شود"
+        },
+        "summary": {
+          "en": "The dataset includes a Blue Card case where security review outlasted preapproval, a research-work case with roughly half a year between security check and visa grant, and a 2026 information-security applicant called to a dedicated security interview.",
+          "fa": "فایل شامل یک کیس Blue Card با انقضای پیش‌تأیید در طول چک امنیتی، یک کیس کاری پژوهشی با حدود نیم‌سال فاصله از چک امنیتی تا ویزا و یک متقاضی امنیت اطلاعات در ۲۰۲۶ با مصاحبه امنیتی اختصاصی است."
+        },
+        "practical_impact": {
+          "en": "Sensitive-sector applicants may face processing risk that is not captured by ordinary appointment or visa timelines.",
+          "fa": "متقاضی حوزه حساس ممکن است با ریسکی مواجه شود که در زمان‌بندی عادی وقت/ویزای کار دیده نمی‌شود."
+        },
+        "who_should_care": {
+          "en": "Applicants in information security, advanced technology, research or other sensitive sectors.",
+          "fa": "متقاضیان امنیت اطلاعات، فناوری پیشرفته، پژوهش و حوزه‌های حساس."
+        },
+        "recommended_action": {
+          "en": "Build extra time buffer and monitor preapproval validity while security review is pending.",
+          "fa": "حاشیه زمانی اضافه بگذارید و در طول چک امنیتی اعتبار پیش‌تأیید را رصد کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-WORK-SECURITY-CHECK-009-E1",
+          "relation": "supports",
+          "independence_group": "sec-r1"
+        },
+        {
+          "evidence_id": "DEU-WORK-SECURITY-CHECK-009-E2",
+          "relation": "supports",
+          "independence_group": "sec-r2"
+        },
+        {
+          "evidence_id": "DEU-WORK-SECURITY-CHECK-009-E3",
+          "relation": "supports",
+          "independence_group": "sec-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Three first-hand cases across work/research/IT security show meaningful additional review and delay risk."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Security-review triggers and timelines were not independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-WORK-SECURITY-CHECK-009-E1",
+            "DEU-WORK-SECURITY-CHECK-009-E2",
+            "DEU-WORK-SECURITY-CHECK-009-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Security processing is highly case-specific.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "security check",
+        "Sicherheitsbefragung",
+        "Blue Card",
+        "preapproval"
+      ],
+      "first_seen": "2025-04-29",
+      "last_seen": "2026-08-05"
+    },
+    {
+      "signal_id": "DEU-WORK-OPPORTUNITY-CARD-010",
+      "issue_cluster_id": "DEU-WORK-OPPORTUNITY-CARD",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "opportunity_card_operational",
+        "class": "opportunity"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "Opportunity_Card",
+            "job_search"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "interview",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Opportunity Card can be operationally fast in some residence contexts, but Iran-origin availability should not be inferred from older job-seeker claims",
+          "fa": "کارت شانس در بعضی شرایط اقامتی می‌تواند سریع صادر شود، اما دسترسی متقاضی ایران را نباید از ادعاهای قدیمی جاب‌سیکر نتیجه گرفت"
+        },
+        "summary": {
+          "en": "One first-hand report described both spouses receiving Opportunity Cards, with a 15-working-day decision after a period of residence and an English interview. A separate single community claim said the older job-seeker visa was not issued from Iran; the two routes should not be conflated.",
+          "fa": "یک تجربه مستقیم از گرفتن کارت شانس برای هر دو همسر با تصمیم ۱۵روزه پس از مدتی اقامت و مصاحبه انگلیسی خبر می‌دهد. یک ادعای منفرد دیگر گفته جاب‌سیکر قدیمی از ایران صادر نمی‌شود؛ این دو مسیر نباید با هم یکی فرض شوند."
+        },
+        "practical_impact": {
+          "en": "Route availability can depend heavily on residence location and exact visa category.",
+          "fa": "دسترسی مسیر می‌تواند به محل اقامت و نوع دقیق ویزا وابسته باشد."
+        },
+        "who_should_care": {
+          "en": "Applicants comparing direct job-offer, Opportunity Card and older job-seeker concepts.",
+          "fa": "متقاضیانی که جاب‌آفر مستقیم، Opportunity Card و مفهوم قدیمی Job Seeker را مقایسه می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Verify current Opportunity Card availability for the exact mission/residence country rather than relying on statements about the older job-seeker visa.",
+          "fa": "دسترسی فعلی Opportunity Card را برای سفارت/کشور محل اقامت دقیق بررسی کنید و به ادعاهای مسیر قدیمی Job Seeker تعمیم ندهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-WORK-OPPORTUNITY-CARD-010-E1",
+          "relation": "supports",
+          "independence_group": "chance-r1"
+        },
+        {
+          "evidence_id": "DEU-WORK-OPPORTUNITY-CARD-010-Q1",
+          "relation": "qualifies",
+          "independence_group": "jobseeker-r2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "uncertain",
+        "evidence_maturity": "anecdotal",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "low",
+          "rationale": "Useful first-hand Opportunity Card experience exists, but source evidence is too sparse to generalize to Iran-based filing."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Iran-based Opportunity Card and job-seeker availability were not independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-WORK-OPPORTUNITY-CARD-010-E1",
+            "DEU-WORK-OPPORTUNITY-CARD-010-Q1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Mission-specific availability is time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Opportunity Card",
+        "Chancenkarte",
+        "job seeker",
+        "Iran"
+      ],
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-07-08"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names and Telegram user IDs are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded all 5,641 messages and scanned topical clusters programmatically."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals, not exhaustively reconstructed for every message."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated offshore, language, insurance, ZAB, salary and fast-track discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "The source's blanket-hiring-ban rumor is explicitly contradicted by later job-offer reports; Opportunity Card and older Job Seeker claims are kept distinct."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "All claims remain community evidence unless separately verified against German authorities."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal connector was unavailable during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals are practical evidence and planning context only. They are not official eligibility rules, guaranteed processing times, or substitutes for current German mission, TLScontact, Ausländerbehörde, Bundesagentur für Arbeit, ZAB or employer instructions."
+}

@@ -1,0 +1,2072 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_germany_college_signals_candidate",
+    "generated_at": "2026-09-16T09:45:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "germany-college-telegram-export",
+      "name": "Germany C.json / Telegram export «کالج آلمان با پرگار»",
+      "source_type": "community_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-11",
+        "records_available": 1544,
+        "records_processed": 1544
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "contains_adviser_answers": true,
+        "contains_first_hand_applicant_reports": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "DEU-COLLEGE-EMBASSY-EXAM-TIMING-001-E1",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "300124"
+      },
+      "published_at": "2025-01-05",
+      "event_date": "2025-01-05",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "first_hand_applicant_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant worried that the embassy appointment/second-email delay could push them past the Studienkolleg entrance-exam date.",
+        "fa": "یک متقاضی نگران بوده تأخیر وقت سفارت/ایمیل دوم باعث شود از تاریخ آزمون ورودی کالج عبور کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-EMBASSY-EXAM-TIMING-001-E2",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "300167"
+      },
+      "published_at": "2025-01-08",
+      "event_date": "2025-01-08",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant asked whether anyone had recently received the embassy's second email, indicating active waiting-list uncertainty.",
+        "fa": "متقاضی دیگری درباره دریافت ایمیل دوم سفارت پرسیده که نشان‌دهنده ابهام فعال در صف وقت بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-EMBASSY-EXAM-TIMING-001-E3",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "303159"
+      },
+      "published_at": "2025-06-01",
+      "event_date": "2025-06-01",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A June 2025 community response suggested planning for at least 3-4 months of interview-appointment waiting, while warning that provider changes made new timing uncertain.",
+        "fa": "یک پاسخ کامیونیتی در ژوئن ۲۰۲۵ توصیه کرده حداقل ۳ تا ۴ ماه انتظار برای وقت مصاحبه در نظر گرفته شود و همزمان گفته تغییر ارائه‌دهنده، زمان‌بندی جدید را نامطمئن کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-EMBASSY-EXAM-TIMING-001-E4",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "304584"
+      },
+      "published_at": "2025-07-31",
+      "event_date": "2025-07-31",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A July 2025 message described transition of some cases from Visametric to TLS after the security disruption, reinforcing operational uncertainty around appointment handling.",
+        "fa": "پیام جولای ۲۰۲۵ از انتقال بخشی از پرونده‌ها از Visametric به TLS پس از اختلال امنیتی گفته و ابهام عملی وقت‌دهی را تقویت می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-LANGUAGE-002-E1",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "300539"
+      },
+      "published_at": "2025-02-07",
+      "event_date": "2025-02-07",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community response described B1 as a minimum for some public-college applications but recommended B2 and preparation for mathematics/language entrance testing.",
+        "fa": "یک پاسخ گروه B1 را برای برخی درخواست‌های کالج حداقل دانسته اما B2 و آمادگی ریاضی/زبان برای آزمون ورودی را توصیه کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-LANGUAGE-002-E2",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "301076"
+      },
+      "published_at": "2025-03-02",
+      "event_date": "2025-03-02",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another user said some colleges accept B1 for application, but B2 is a safer practical level because German is tested in the entrance exam and competition exists.",
+        "fa": "کاربر دیگری گفته بعضی کالج‌ها با B1 اجازه اپلای می‌دهند، اما به‌دلیل آزمون زبان آلمانی و رقابت، B2 سطح عملی امن‌تری است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-LANGUAGE-002-E3",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "301938"
+      },
+      "published_at": "2025-04-09",
+      "event_date": "2025-04-09",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A group adviser recommended obtaining B2 after admission and before later visa/college steps.",
+        "fa": "مشاور گروه پس از پذیرش، گرفتن B2 را برای مراحل بعدی توصیه کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-LANGUAGE-002-E4",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "303956"
+      },
+      "published_at": "2025-07-02",
+      "event_date": "2025-07-02",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In an M-Kurs discussion, the adviser again recommended B2 and emphasized applying before the relevant deadline.",
+        "fa": "در گفتگوی مربوط به M-Kurs، مشاور دوباره B2 را توصیه کرده و روی اپلای پیش از ددلاین تأکید کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-UNIASSIST-VPD-003-E1",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "300081"
+      },
+      "published_at": "2025-01-04",
+      "event_date": "2025-01-04",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "first_hand_applicant_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant reported waiting eight weeks for both uni-assist/VPD and admission responses with no result yet.",
+        "fa": "یک متقاضی گزارش کرده پس از هشت هفته هنوز نه نتیجه uni-assist/VPD و نه پاسخ پذیرش را دریافت نکرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-UNIASSIST-VPD-003-E2",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "304239"
+      },
+      "published_at": "2025-07-13",
+      "event_date": "2025-07-13",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "first_hand_applicant_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A later applicant reported a uni-assist academic-evaluation issue that materially lowered the converted grade and threatened university eligibility.",
+        "fa": "متقاضی دیگری از ارزیابی uni-assist گفته که حداقل نمره قبولی را متفاوت در نظر گرفته و معدل تبدیل‌شده را به‌شدت پایین آورده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-UNIASSIST-VPD-003-E3",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "309414"
+      },
+      "published_at": "2026-04-24",
+      "event_date": "2026-04-24",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "first_hand_applicant_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A 2026 applicant asked whether a separate university-portal application was still required after uni-assist forwarded the evaluation, illustrating multi-portal process ambiguity.",
+        "fa": "یک متقاضی در ۲۰۲۶ درباره نیاز به اپلای دوباره در پورتال دانشگاه پس از ارسال ارزیابی uni-assist پرسیده که ابهام چندمرحله‌ای بودن فرایند را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-PUBLIC-PRIVATE-COST-004-E1",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "300070"
+      },
+      "published_at": "2025-01-04",
+      "event_date": "2025-01-04",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community reply characterized public Studienkollegs as generally tuition-free aside from semester/administrative charges, while private colleges charge tuition.",
+        "fa": "یک پاسخ گروه کالج‌های دولتی را عموماً بدون شهریه اصلی و با هزینه‌های ترمی/اداری، و کالج‌های خصوصی را شهریه‌دار توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-PUBLIC-PRIVATE-COST-004-E2",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "302487"
+      },
+      "published_at": "2025-05-06",
+      "event_date": "2025-05-06",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser gave a 2025 community estimate of roughly EUR 500-600 per year for public colleges versus EUR 3,000-21,000 for private colleges.",
+        "fa": "مشاور در ۲۰۲۵ برآورد کامیونیتی حدود ۵۰۰ تا ۶۰۰ یورو سالانه برای دولتی و ۳۰۰۰ تا ۲۱هزار یورو برای خصوصی ارائه کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-ENTRANCE-EXAM-005-E1",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "302529"
+      },
+      "published_at": "2025-05-06",
+      "event_date": "2025-05-06",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user said Hamburg's public college did not use a standard entrance exam and instead selected based on grades and language score.",
+        "fa": "یک کاربر گفته کالج دولتی هامبورگ آزمون ورودی معمول ندارد و بر اساس معدل و نمره زبان انتخاب می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-ENTRANCE-EXAM-005-E2",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "304069"
+      },
+      "published_at": "2025-07-07",
+      "event_date": "2025-07-07",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A group adviser said strong C1/GPA does not universally remove entrance testing, while some private colleges may not require an entrance exam.",
+        "fa": "مشاور گروه گفته C1 و معدل بالا به‌طور عمومی آزمون ورودی را حذف نمی‌کند، هرچند بعضی کالج‌های خصوصی ممکن است آزمون ورودی نداشته باشند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-ENTRANCE-EXAM-005-E3",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "308803"
+      },
+      "published_at": "2026-02-12",
+      "event_date": "2026-02-12",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "first_hand_applicant_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A former private-college student reported completing FSP and later studying medicine at Düsseldorf, showing that private-college outcomes can be viable in at least some cases.",
+        "fa": "یک دانشجوی سابق کالج خصوصی گزارش کرده FSP را گذرانده و بعداً دانشجوی پزشکی دوسلدورف شده؛ نشانه‌ای از امکان‌پذیری خروجی کالج خصوصی در دست‌کم برخی کیس‌ها."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-AGE-VISA-006-E1",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "300070"
+      },
+      "published_at": "2025-01-04",
+      "event_date": "2025-01-04",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An early community reply claimed there was no formal college age limit but said visa prospects were better for younger applicants.",
+        "fa": "یک پاسخ اولیه گروه گفته محدودیت سنی رسمی برای کالج وجود ندارد اما شانس ویزا برای سن پایین‌تر بهتر است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-AGE-VISA-006-E2",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "301916"
+      },
+      "published_at": "2025-04-08",
+      "event_date": "2025-04-08",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser gave a restrictive practical rule-of-thumb of around age 25 for public and 27 for private college applications.",
+        "fa": "مشاور یک قاعده عملی محدودکننده حدود ۲۵ سال برای دولتی و ۲۷ سال برای خصوصی مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-AGE-VISA-006-C1",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "310588"
+      },
+      "published_at": "2026-09-05",
+      "event_date": "2026-09-05",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later adviser explicitly separated admission from visa logic: admission can be possible at many ages, but the embassy needs a credible explanation for restarting study later in life.",
+        "fa": "مشاور بعدی صریحاً پذیرش را از منطق ویزا جدا کرده: پذیرش در سن‌های مختلف ممکن است، اما سفارت برای شروع دوباره تحصیل در سن بالاتر نیاز به منطق قانع‌کننده دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-FUNDS-007-E1",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "303062"
+      },
+      "published_at": "2025-05-29",
+      "event_date": "2025-05-29",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A May 2025 adviser message used roughly EUR 12,000 as the proof-of-funds benchmark for college applicants.",
+        "fa": "پیام مشاور در مه ۲۰۲۵ حدود ۱۲هزار یورو را معیار تمکن برای کالج مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-FUNDS-007-E2",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "303909"
+      },
+      "published_at": "2025-06-30",
+      "event_date": "2025-06-30",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A June 2025 adviser message described roughly EUR 960 per month as a living-cost benchmark.",
+        "fa": "پیام مشاور در ژوئن ۲۰۲۵ حدود ۹۶۰ یورو در ماه را معیار هزینه زندگی مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-FUNDS-007-E3",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "308245"
+      },
+      "published_at": "2025-12-20",
+      "event_date": "2025-12-20",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "By December 2025 a community response suggested budgeting closer to EUR 13,000 while acknowledging the visa may still show a lower figure.",
+        "fa": "تا دسامبر ۲۰۲۵ یک پاسخ گروه پیشنهاد کرده حدود ۱۳هزار یورو در نظر گرفته شود، در حالی که پذیرفته رقم درج‌شده روی ویزا ممکن است کمتر باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-DOCUMENTS-008-E1",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "303061"
+      },
+      "published_at": "2025-05-29",
+      "event_date": "2025-05-29",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A group adviser said legalization is not a universal requirement for study applications unless the university specifically asks for it.",
+        "fa": "مشاور گروه گفته لگال برای پرونده تحصیلی الزام عمومی نیست مگر اینکه دانشگاه مشخصاً آن را بخواهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-DOCUMENTS-008-E2",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "303956"
+      },
+      "published_at": "2025-07-02",
+      "event_date": "2025-07-02",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser separately emphasized that academic records still need the required domestic stamps and translation before college application.",
+        "fa": "مشاور جداگانه تأکید کرده مدارک تحصیلی همچنان باید مهرهای لازم را داشته باشند و ترجمه شوند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-DOCUMENTS-008-E3",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "310224"
+      },
+      "published_at": "2026-07-27",
+      "event_date": "2026-07-27",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 community response listed diploma/transcripts as the core translations and said civil-status translation depends on changes in the birth certificate.",
+        "fa": "یک پاسخ گروه در ۲۰۲۶ دیپلم و ریزنمرات را مدارک اصلی ترجمه معرفی کرده و ترجمه شناسنامه را وابسته به وجود تغییرات دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-WORK-RIGHTS-009-E1",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "300013"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user said part-time work of roughly 20 hours per week was allowed during college, but phrased the number with uncertainty.",
+        "fa": "یک کاربر گفته کار پاره‌وقت حدود ۲۰ ساعت در هفته در دوران کالج مجاز است، اما خود عدد را با عدم قطعیت بیان کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-WORK-RIGHTS-009-C1",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "300257"
+      },
+      "published_at": "2025-01-13",
+      "event_date": "2025-01-13",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "first_hand_applicant_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant reported being told that their section-17d college visa type could not receive work authorization and asked for recent city-specific experiences.",
+        "fa": "متقاضی دیگری گفته به او گفته‌اند با نوع ویزای 17d کالج اجازه کار نمی‌دهند و دنبال تجربه جدید شهرهای مختلف بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-WORK-RIGHTS-009-E2",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "302504"
+      },
+      "published_at": "2025-05-06",
+      "event_date": "2025-05-06",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A May 2025 response said there were reports that newer college visas might allow work, but the speaker was unsure whether the change was actually implemented.",
+        "fa": "یک پاسخ مه ۲۰۲۵ گفته شنیده شده ویزاهای جدید کالج شاید اجازه کار بدهند، اما گوینده مطمئن نبوده تغییر واقعاً اجرا شده یا نه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-WORK-RIGHTS-009-E3",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "307112"
+      },
+      "published_at": "2025-10-28",
+      "event_date": "2025-10-28",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "By October 2025 a user referred to an allowance of 140 working days per year and asked whether it applied part-time, suggesting a changed rule was circulating.",
+        "fa": "تا اکتبر ۲۰۲۵ کاربری به اجازه ۱۴۰ روز کاری در سال اشاره کرده و درباره نحوه محاسبه پاره‌وقت پرسیده؛ نشانه‌ای از تغییر یا تحول قاعده در گفتگوها."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-MKURS-MEDICINE-010-E1",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "303220"
+      },
+      "published_at": "2025-06-02",
+      "event_date": "2025-06-02",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For a dentistry goal, the adviser recommended M-Kurs and said simply studying biology for a year would not substitute for the pathway.",
+        "fa": "برای هدف دندانپزشکی، مشاور M-Kurs را توصیه کرده و گفته صرف یک سال زیست‌شناسی جای این مسیر را نمی‌گیرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-COLLEGE-MKURS-MEDICINE-010-E2",
+      "source_id": "germany-college-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "303956"
+      },
+      "published_at": "2025-07-02",
+      "event_date": "2025-07-02",
+      "collected_at": "2026-09-16T09:45:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In another M-Kurs case the adviser emphasized stamped/translated school records, direct college communication, deadlines and stronger German.",
+        "fa": "در کیس دیگری از M-Kurs، مشاور روی مدارک مهرشده/ترجمه‌شده، مکاتبه مستقیم با کالج، ددلاین و زبان قوی‌تر تأکید کرده است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "DEU-COLLEGE-EMBASSY-EXAM-TIMING-001",
+      "issue_cluster_id": "DEU-COLLEGE-EMBASSY-EXAM-TIMING",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "appointment_exam_timing_risk",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "secondary_school",
+            "Studienkolleg"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "studienkolleg",
+            "student_visa"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "appointment",
+          "entrance_exam",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Embassy appointment delays can cause applicants to miss Studienkolleg entrance exams",
+          "fa": "تأخیر وقت سفارت می‌تواند باعث از دست رفتن آزمون ورودی کالج شود"
+        },
+        "summary": {
+          "en": "Applicants in the group explicitly worried about second-email/appointment delays extending beyond entrance-exam dates. Community guidance in 2025 suggested budgeting several months for appointment uncertainty, which was compounded by the Visametric-to-TLS transition.",
+          "fa": "متقاضیان گروه صریحاً نگران بوده‌اند تأخیر ایمیل دوم/وقت سفارت از تاریخ آزمون ورودی عبور کند. راهنمایی کامیونیتی در ۲۰۲۵ توصیه می‌کرد چند ماه حاشیه برای وقت در نظر گرفته شود و انتقال Visametric به TLS این عدم قطعیت را بیشتر کرده بود."
+        },
+        "practical_impact": {
+          "en": "Admission and exam invitations can expire or need re-application even when the academic profile is acceptable.",
+          "fa": "حتی با پروفایل تحصیلی مناسب، دعوت آزمون یا پذیرش ممکن است به‌خاطر زمان سفارت از دست برود یا نیاز به اپلای مجدد پیدا کند."
+        },
+        "who_should_care": {
+          "en": "Iran-based Studienkolleg applicants with fixed in-person exam dates.",
+          "fa": "متقاضیان کالج از ایران با آزمون ورودی حضوری و تاریخ ثابت."
+        },
+        "recommended_action": {
+          "en": "Apply to multiple intakes/colleges where possible and maintain a large visa-appointment buffer before the entrance-exam date.",
+          "fa": "در صورت امکان چند intake/کالج را پوشش دهید و بین زمان مورد انتظار سفارت و آزمون ورودی حاشیه زمانی بزرگ بگذارید."
+        },
+        "known_workaround": "Re-application, deferral or a later entrance-exam intake may be needed if the appointment arrives too late."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-COLLEGE-EMBASSY-EXAM-TIMING-001-E1",
+          "relation": "supports",
+          "independence_group": "timing-r1"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-EMBASSY-EXAM-TIMING-001-E2",
+          "relation": "supports",
+          "independence_group": "timing-r2"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-EMBASSY-EXAM-TIMING-001-E3",
+          "relation": "supports",
+          "independence_group": "timing-r3"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-EMBASSY-EXAM-TIMING-001-E4",
+          "relation": "supports",
+          "independence_group": "timing-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple independent messages show the same synchronization risk between visa appointments and fixed entrance-exam dates."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Tehran appointment timing was not independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-COLLEGE-EMBASSY-EXAM-TIMING-001-E1",
+            "DEU-COLLEGE-EMBASSY-EXAM-TIMING-001-E2",
+            "DEU-COLLEGE-EMBASSY-EXAM-TIMING-001-E3",
+            "DEU-COLLEGE-EMBASSY-EXAM-TIMING-001-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Consular appointment capacity changes quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Studienkolleg",
+        "entrance exam",
+        "embassy appointment",
+        "second email",
+        "TLS"
+      ],
+      "first_seen": "2025-01-05",
+      "last_seen": "2025-07-31"
+    },
+    {
+      "signal_id": "DEU-COLLEGE-LANGUAGE-002",
+      "issue_cluster_id": "DEU-COLLEGE-LANGUAGE-COMPETITION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-COLLEGE-ENTRANCE-EXAM-005"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "language_competitiveness",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "secondary_school",
+            "Studienkolleg"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "studienkolleg"
+          ]
+        },
+        "process_stages": [
+          "application",
+          "entrance_exam"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "B1 can open some applications, but B2 is a safer practical target for competitive entrance exams",
+          "fa": "B1 برای بعضی کالج‌ها امکان اپلای می‌دهد، اما B2 هدف عملی امن‌تری برای آزمون رقابتی است"
+        },
+        "summary": {
+          "en": "The source repeatedly distinguishes application minimum from competitive readiness: some colleges accept B1, while B2 is recommended because German is tested and admission is competitive.",
+          "fa": "منبع چند بار حداقل اپلای را از آمادگی رقابتی جدا می‌کند: برخی کالج‌ها B1 را می‌پذیرند، اما چون زبان آلمانی در آزمون سنجیده می‌شود و رقابت وجود دارد، B2 توصیه می‌شود."
+        },
+        "practical_impact": {
+          "en": "An applicant can be technically eligible to apply at B1 yet still have a weak chance at the entrance exam.",
+          "fa": "متقاضی ممکن است با B1 از نظر فنی امکان اپلای داشته باشد اما در آزمون ورودی شانس ضعیف‌تری داشته باشد."
+        },
+        "who_should_care": {
+          "en": "Applicants deciding whether to apply with B1 or delay for B2.",
+          "fa": "متقاضیانی که بین اپلای با B1 یا صبر تا B2 تصمیم می‌گیرند."
+        },
+        "recommended_action": {
+          "en": "Treat each college's published minimum separately, but target B2 where the entrance exam includes German and competition is high.",
+          "fa": "حداقل رسمی هر کالج را جدا بررسی کنید، اما جایی که آزمون زبان آلمانی و رقابت وجود دارد B2 را هدف بگیرید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-COLLEGE-LANGUAGE-002-E1",
+          "relation": "supports",
+          "independence_group": "lang-r1"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-LANGUAGE-002-E2",
+          "relation": "supports",
+          "independence_group": "lang-r2"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-LANGUAGE-002-E3",
+          "relation": "supports",
+          "independence_group": "lang-adviser-1"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-LANGUAGE-002-E4",
+          "relation": "supports",
+          "independence_group": "lang-adviser-2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Independent community and adviser messages repeatedly converge on B2 as the safer practical level."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Language minimums are college-specific and were not independently checked."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-COLLEGE-LANGUAGE-002-E1",
+            "DEU-COLLEGE-LANGUAGE-002-E2",
+            "DEU-COLLEGE-LANGUAGE-002-E3",
+            "DEU-COLLEGE-LANGUAGE-002-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "College language requirements can change by intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "B1",
+        "B2",
+        "German",
+        "entrance exam",
+        "Studienkolleg"
+      ],
+      "first_seen": "2025-02-07",
+      "last_seen": "2025-07-02"
+    },
+    {
+      "signal_id": "DEU-COLLEGE-UNIASSIST-VPD-003",
+      "issue_cluster_id": "DEU-COLLEGE-UNIASSIST-VPD",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "application_evaluation_delay",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "secondary_school",
+            "Studienkolleg"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "studienkolleg",
+            "bachelor_admission"
+          ]
+        },
+        "process_stages": [
+          "uni_assist",
+          "VPD",
+          "admission"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "uni-assist/VPD can become a deadline-critical bottleneck and may also create evaluation disputes",
+          "fa": "uni-assist/VPD می‌تواند گلوگاه زمانی ددلاین شود و گاهی اختلاف ارزیابی هم ایجاد کند"
+        },
+        "summary": {
+          "en": "The export includes an eight-week no-response case, a grade-conversion complaint that threatened eligibility, and later confusion over whether university-portal action was still required after uni-assist forwarding.",
+          "fa": "فایل شامل یک کیس هشت‌هفته‌ای بدون پاسخ، یک اعتراض به تبدیل معدل که eligibility را تهدید کرده، و ابهام بعدی درباره نیاز به اقدام دوباره در پورتال دانشگاه پس از ارسال uni-assist است."
+        },
+        "practical_impact": {
+          "en": "Waiting for uni-assist until near the deadline can leave too little time to correct evaluation or complete a second portal step.",
+          "fa": "اگر uni-assist نزدیک ددلاین انجام شود، زمان کافی برای اصلاح ارزیابی یا مرحله دوم پورتال دانشگاه باقی نمی‌ماند."
+        },
+        "who_should_care": {
+          "en": "Applicants whose college/university route uses uni-assist or requires VPD.",
+          "fa": "متقاضیانی که مسیر کالج/دانشگاه‌شان از uni-assist یا VPD استفاده می‌کند."
+        },
+        "recommended_action": {
+          "en": "Submit early and check whether the target institution also requires a separate portal application after uni-assist.",
+          "fa": "زود سابمیت کنید و بررسی کنید آیا بعد از uni-assist اپلای جدا در پورتال دانشگاه هم لازم است."
+        },
+        "known_workaround": "Early submission preserves time for grade-evaluation queries or a second application step."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-COLLEGE-UNIASSIST-VPD-003-E1",
+          "relation": "supports",
+          "independence_group": "ua-r1"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-UNIASSIST-VPD-003-E2",
+          "relation": "supports",
+          "independence_group": "ua-r2"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-UNIASSIST-VPD-003-E3",
+          "relation": "supports",
+          "independence_group": "ua-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The three cases illustrate different bottlenecks but do not establish one universal turnaround time."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current uni-assist processing targets were not independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-COLLEGE-UNIASSIST-VPD-003-E1",
+            "DEU-COLLEGE-UNIASSIST-VPD-003-E2",
+            "DEU-COLLEGE-UNIASSIST-VPD-003-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Processing volume varies by intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "uni-assist",
+        "VPD",
+        "grade conversion",
+        "deadline"
+      ],
+      "first_seen": "2025-01-04",
+      "last_seen": "2026-04-24"
+    },
+    {
+      "signal_id": "DEU-COLLEGE-PUBLIC-PRIVATE-COST-004",
+      "issue_cluster_id": "DEU-COLLEGE-PUBLIC-PRIVATE-COST",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-COLLEGE-ENTRANCE-EXAM-005"
+        }
+      ],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "public_private_cost_gap",
+        "class": "financial"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "secondary_school",
+            "Studienkolleg"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "studienkolleg_public",
+            "studienkolleg_private"
+          ]
+        },
+        "process_stages": [
+          "course_selection",
+          "budget"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Public and private Studienkollegs have a large cost gap",
+          "fa": "بین کالج دولتی و خصوصی اختلاف هزینه زیادی وجود دارد"
+        },
+        "summary": {
+          "en": "Community guidance describes public colleges as near-free aside from semester/administrative costs, while the adviser gave a very broad private-college annual range reaching tens of thousands of euros.",
+          "fa": "راهنمایی گروه کالج دولتی را تقریباً رایگان جز هزینه‌های اداری/ترمی می‌داند و مشاور برای خصوصی بازه سالانه بسیار بزرگی تا ده‌ها هزار یورو گفته است."
+        },
+        "practical_impact": {
+          "en": "Choosing private college can materially change the financial feasibility of the route.",
+          "fa": "انتخاب کالج خصوصی می‌تواند امکان‌پذیری مالی کل مسیر را به‌طور جدی تغییر دهد."
+        },
+        "who_should_care": {
+          "en": "Applicants comparing public and private Studienkollegs.",
+          "fa": "متقاضیانی که بین کالج دولتی و خصوصی مقایسه می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Budget tuition separately from living-funds requirements and confirm the exact fee schedule for the target college.",
+          "fa": "شهریه را جدا از تمکن زندگی بودجه‌بندی کنید و جدول هزینه همان کالج را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-COLLEGE-PUBLIC-PRIVATE-COST-004-E1",
+          "relation": "supports",
+          "independence_group": "cost-r1"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-PUBLIC-PRIVATE-COST-004-E2",
+          "relation": "supports",
+          "independence_group": "cost-adviser"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The direction of the cost gap is consistent, but the exact figures are community estimates and college-specific."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Exact current fees were not verified against individual colleges."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-COLLEGE-PUBLIC-PRIVATE-COST-004-E1",
+            "DEU-COLLEGE-PUBLIC-PRIVATE-COST-004-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Fees vary widely by private provider.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "public Studienkolleg",
+        "private Studienkolleg",
+        "tuition",
+        "semester fee"
+      ],
+      "first_seen": "2025-01-04",
+      "last_seen": "2025-05-06"
+    },
+    {
+      "signal_id": "DEU-COLLEGE-ENTRANCE-EXAM-005",
+      "issue_cluster_id": "DEU-COLLEGE-ENTRANCE-EXAM",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-COLLEGE-LANGUAGE-002"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "entrance_exam_variability",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "secondary_school",
+            "Studienkolleg"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "studienkolleg"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "entrance_exam"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Entrance-exam rules are college-specific; an exam is common but not universal",
+          "fa": "قواعد آزمون ورودی کالج‌محور است؛ آزمون رایج است اما همگانی نیست"
+        },
+        "summary": {
+          "en": "The source reports Hamburg selecting on grades/language without the standard entrance exam, while an adviser says some private colleges may also waive it. A first-hand private-college graduate later reported successful FSP and progression to medicine.",
+          "fa": "منبع می‌گوید هامبورگ می‌تواند بر اساس معدل/زبان بدون آزمون معمول انتخاب کند و مشاور نیز گفته بعضی کالج‌های خصوصی آزمون ندارند. یک فارغ‌التحصیل کالج خصوصی هم بعداً از FSP موفق و ورود به پزشکی گزارش داده است."
+        },
+        "practical_impact": {
+          "en": "Applicants should not assume one entrance-test format across all Studienkollegs.",
+          "fa": "نباید یک الگوی آزمون ورودی را به همه کالج‌ها تعمیم داد."
+        },
+        "who_should_care": {
+          "en": "Applicants building a portfolio of Studienkolleg applications.",
+          "fa": "متقاضیانی که برای چند کالج همزمان برنامه می‌چینند."
+        },
+        "recommended_action": {
+          "en": "Check each college's exact selection mechanism, tested subjects and FSP recognition before applying.",
+          "fa": "برای هر کالج شیوه انتخاب، درس‌های آزمون و اعتبار FSP را جدا بررسی کنید."
+        },
+        "known_workaround": "Applying to colleges with different selection mechanisms can diversify admission risk."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-COLLEGE-ENTRANCE-EXAM-005-E1",
+          "relation": "supports",
+          "independence_group": "exam-r1"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-ENTRANCE-EXAM-005-E2",
+          "relation": "supports",
+          "independence_group": "exam-adviser"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-ENTRANCE-EXAM-005-E3",
+          "relation": "qualifies",
+          "independence_group": "exam-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Multiple examples support variability, but exact rules are institution-specific."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current admissions rules of the named colleges were not independently checked."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-COLLEGE-ENTRANCE-EXAM-005-E1",
+            "DEU-COLLEGE-ENTRANCE-EXAM-005-E2",
+            "DEU-COLLEGE-ENTRANCE-EXAM-005-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Entrance-test formats can change by semester.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "entrance exam",
+        "Aufnahmeprüfung",
+        "FSP",
+        "Hamburg",
+        "private college"
+      ],
+      "first_seen": "2025-05-06",
+      "last_seen": "2026-02-12"
+    },
+    {
+      "signal_id": "DEU-COLLEGE-AGE-VISA-006",
+      "issue_cluster_id": "DEU-COLLEGE-AGE-VISA",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "age_visa_rationale",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "secondary_school",
+            "Studienkolleg"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Older applicant or study restart"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "studienkolleg",
+            "bachelor",
+            "medicine"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Age is better treated as a visa-rationale risk than a universal Studienkolleg admission cutoff",
+          "fa": "سن بیشتر یک ریسک «منطق ویزا» است تا یک سقف سراسری پذیرش کالج"
+        },
+        "summary": {
+          "en": "The source is internally inconsistent: one adviser gave informal 25/27 cutoffs, while a later adviser said admission can be possible at many ages and the real issue is whether the embassy finds a late study restart credible.",
+          "fa": "منبع در این موضوع ناسازگار است: یک مشاور سقف‌های عملی ۲۵/۲۷ را گفته، اما مشاور بعدی می‌گوید پذیرش در سن‌های مختلف ممکن است و مسئله اصلی این است که سفارت شروع دوباره تحصیل را منطقی بداند."
+        },
+        "practical_impact": {
+          "en": "Older applicants should not self-reject solely on age, but should expect greater scrutiny of study progression and motivation.",
+          "fa": "متقاضی سن بالاتر نباید فقط به‌خاطر سن خود را حذف کند، اما باید انتظار بررسی بیشتر منطق تحصیلی و انگیزه را داشته باشد."
+        },
+        "who_should_care": {
+          "en": "Applicants in late 20s, 30s or above starting a new bachelor/medical pathway.",
+          "fa": "متقاضیان اواخر دهه ۲۰، دهه ۳۰ یا بالاتر که مسیر کارشناسی/پزشکی جدید شروع می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Build a coherent study-history and career rationale and verify the target college's actual admission policy rather than relying on an informal age cutoff.",
+          "fa": "منطق منسجم برای سابقه تحصیلی/شغلی بسازید و سیاست واقعی کالج را بررسی کنید، نه اینکه به یک سقف سنی غیررسمی اتکا کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-COLLEGE-AGE-VISA-006-E1",
+          "relation": "supports",
+          "independence_group": "age-r1"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-AGE-VISA-006-E2",
+          "relation": "supports",
+          "independence_group": "age-adviser-old"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-AGE-VISA-006-C1",
+          "relation": "contradicts",
+          "independence_group": "age-adviser-new"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The later adviser explanation resolves the apparent cutoff as practical/visa scrutiny rather than a universal formal bar, but official policy was not checked."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No universal official age cutoff was verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-COLLEGE-AGE-VISA-006-E1",
+            "DEU-COLLEGE-AGE-VISA-006-E2",
+            "DEU-COLLEGE-AGE-VISA-006-C1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Age treatment is case- and institution-specific.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "age",
+        "Studienkolleg",
+        "visa rationale",
+        "medicine",
+        "study gap"
+      ],
+      "first_seen": "2025-01-04",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "signal_id": "DEU-COLLEGE-FUNDS-007",
+      "issue_cluster_id": "DEU-COLLEGE-PROOF-OF-FUNDS",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "proof_of_funds_variability",
+        "class": "financial"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "secondary_school",
+            "Studienkolleg"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "studienkolleg",
+            "student_visa"
+          ]
+        },
+        "process_stages": [
+          "financial_evidence",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "College proof-of-funds benchmarks changed over time in the community and should not be frozen to one amount",
+          "fa": "عدد تمکن کالج در گفتگوها با زمان تغییر کرده و نباید روی یک مبلغ ثابت قفل شود"
+        },
+        "summary": {
+          "en": "Adviser messages in 2025 cited around EUR 12,000 or EUR 960/month, while a later community answer suggested budgeting closer to EUR 13,000. The signal is changeability, not one authoritative amount.",
+          "fa": "پیام‌های مشاور در ۲۰۲۵ حدود ۱۲هزار یورو یا ۹۶۰ یورو در ماه گفته‌اند و پاسخ بعدی گروه بودجه نزدیک ۱۳هزار یورو را پیشنهاد کرده است. سیگنال، تغییرپذیری مبلغ است نه یک عدد قطعی."
+        },
+        "practical_impact": {
+          "en": "Using an old saved screenshot or prior-year amount can leave the applicant underfunded at filing or entry.",
+          "fa": "اتکا به اسکرین‌شات قدیمی یا مبلغ سال قبل می‌تواند تمکن پرونده را در زمان سابمیت/ورود ناکافی کند."
+        },
+        "who_should_care": {
+          "en": "Studienkolleg visa applicants using bank funds or a blocked account.",
+          "fa": "متقاضیان ویزای کالج که از حساب بانکی یا Sperrkonto برای تمکن استفاده می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Check the current official amount immediately before filing and separate visa proof from any cash/customs requirement at entry.",
+          "fa": "درست پیش از سابمیت مبلغ رسمی روز را بررسی کنید و تمکن ویزا را از قواعد حمل نقدی/گمرک در ورود جدا ببینید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-COLLEGE-FUNDS-007-E1",
+          "relation": "supports",
+          "independence_group": "funds-adviser-1"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-FUNDS-007-E2",
+          "relation": "supports",
+          "independence_group": "funds-adviser-2"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-FUNDS-007-E3",
+          "relation": "supports",
+          "independence_group": "funds-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Several source values differ across 2025, supporting a time-sensitive benchmark rather than a fixed universal number."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The current official blocked-account/proof-of-funds amount was not independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-COLLEGE-FUNDS-007-E1",
+            "DEU-COLLEGE-FUNDS-007-E2",
+            "DEU-COLLEGE-FUNDS-007-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Financial thresholds are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "proof of funds",
+        "blocked account",
+        "Studienkolleg",
+        "12000 EUR",
+        "13000 EUR"
+      ],
+      "first_seen": "2025-05-29",
+      "last_seen": "2025-12-20"
+    },
+    {
+      "signal_id": "DEU-COLLEGE-DOCUMENTS-008",
+      "issue_cluster_id": "DEU-COLLEGE-DOCUMENTS",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "translation_legalization_scope",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "secondary_school",
+            "Studienkolleg"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "studienkolleg",
+            "student_visa"
+          ]
+        },
+        "process_stages": [
+          "application",
+          "documents",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Translation is core, while academic-document legalization is not described as universally required",
+          "fa": "ترجمه مدارک پایه است، اما لگال مدارک تحصیلی به‌عنوان الزام سراسری توصیف نشده است"
+        },
+        "summary": {
+          "en": "The adviser said study-document legalization is only needed when the university asks, while separately requiring the relevant domestic stamps and translations. Later community guidance also distinguishes academic documents from civil-status documents.",
+          "fa": "مشاور گفته لگال مدارک تحصیلی فقط وقتی لازم است که دانشگاه بخواهد، اما مهرهای لازم و ترجمه همچنان باید آماده باشد. راهنمایی بعدی گروه نیز مدارک تحصیلی را از مدارک هویتی تفکیک می‌کند."
+        },
+        "practical_impact": {
+          "en": "Applicants can waste time/money on unnecessary legalization or, conversely, miss a college-specific document requirement.",
+          "fa": "متقاضی ممکن است برای لگال غیرضروری وقت/هزینه صرف کند یا برعکس الزام خاص یک کالج را از دست بدهد."
+        },
+        "who_should_care": {
+          "en": "Iranian applicants preparing diploma, transcripts and civil-status documents.",
+          "fa": "متقاضیان ایرانی در حال آماده‌سازی دیپلم، ریزنمرات و مدارک هویتی."
+        },
+        "recommended_action": {
+          "en": "Prepare properly stamped translations first, then check the exact university/college and visa checklist for legalization/certification requirements.",
+          "fa": "ابتدا ترجمه دارای مهرهای لازم را آماده کنید و بعد الزام لگال/تأیید را در چک‌لیست همان کالج/دانشگاه و ویزا بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-COLLEGE-DOCUMENTS-008-E1",
+          "relation": "supports",
+          "independence_group": "docs-adviser-1"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-DOCUMENTS-008-E2",
+          "relation": "supports",
+          "independence_group": "docs-adviser-2"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-DOCUMENTS-008-E3",
+          "relation": "supports",
+          "independence_group": "docs-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source consistently separates translation from legalization and makes legalization institution/case dependent."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Institution-specific certification rules were not independently checked."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-COLLEGE-DOCUMENTS-008-E1",
+            "DEU-COLLEGE-DOCUMENTS-008-E2",
+            "DEU-COLLEGE-DOCUMENTS-008-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Document checklists can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "translation",
+        "legalization",
+        "diploma",
+        "transcript",
+        "civil status"
+      ],
+      "first_seen": "2025-05-29",
+      "last_seen": "2026-07-27"
+    },
+    {
+      "signal_id": "DEU-COLLEGE-WORK-RIGHTS-009",
+      "issue_cluster_id": "DEU-COLLEGE-WORK-RIGHTS",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "student_work_rights_uncertainty",
+        "class": "status_conditions"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "secondary_school",
+            "Studienkolleg"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "studienkolleg",
+            "student_visa"
+          ]
+        },
+        "process_stages": [
+          "status_conditions",
+          "part_time_work"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Community reports show changing and inconsistent understanding of work rights during Studienkolleg",
+          "fa": "گزارش‌های گروه درباره اجازه کار حین کالج متغیر و ناسازگار بوده‌اند"
+        },
+        "summary": {
+          "en": "Early messages cited roughly 20 hours/week, another applicant said a section-17d college status had been described as not work-authorized, and later messages referenced newer work-rights changes including 140 working days/year. The file does not establish one stable rule.",
+          "fa": "پیام‌های اولیه حدود ۲۰ ساعت در هفته گفته‌اند، یک متقاضی گفته برای وضعیت 17d به او گفته‌اند اجازه کار ندارد، و پیام‌های بعدی از تغییرات جدید و ۱۴۰ روز کاری در سال صحبت کرده‌اند. فایل یک قاعده ثابت را اثبات نمی‌کند."
+        },
+        "practical_impact": {
+          "en": "Applicants should not fund their Studienkolleg plan on assumed part-time earnings without checking the exact residence permit annotation.",
+          "fa": "نباید بودجه کالج را بر درآمد کار پاره‌وقت فرضی بنا کرد مگر اینکه شرط دقیق اجازه اقامت بررسی شود."
+        },
+        "who_should_care": {
+          "en": "Studienkolleg students relying on work to cover living costs.",
+          "fa": "دانشجویان کالج که برای هزینه زندگی به کار تکیه دارند."
+        },
+        "recommended_action": {
+          "en": "Verify the current statutory rule and the wording on the specific residence permit before starting work.",
+          "fa": "پیش از شروع کار، قانون فعلی و متن درج‌شده روی اجازه اقامت خود را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-COLLEGE-WORK-RIGHTS-009-E1",
+          "relation": "supports",
+          "independence_group": "work-r1"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-WORK-RIGHTS-009-C1",
+          "relation": "contradicts",
+          "independence_group": "work-r2"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-WORK-RIGHTS-009-E2",
+          "relation": "qualifies",
+          "independence_group": "work-r3"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-WORK-RIGHTS-009-E3",
+          "relation": "qualifies",
+          "independence_group": "work-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "uncertain",
+        "evidence_maturity": "anecdotal",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "low",
+          "rationale": "The source itself is inconsistent and reflects a changing legal/operational understanding, so this is a verification-needed signal rather than a rule."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Studienkolleg work rights were not independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-COLLEGE-WORK-RIGHTS-009-E1",
+            "DEU-COLLEGE-WORK-RIGHTS-009-C1",
+            "DEU-COLLEGE-WORK-RIGHTS-009-E2",
+            "DEU-COLLEGE-WORK-RIGHTS-009-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Legal status/work rights need current primary-source verification.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "work rights",
+        "20 hours",
+        "140 days",
+        "17d",
+        "Studienkolleg"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-10-28"
+    },
+    {
+      "signal_id": "DEU-COLLEGE-MKURS-MEDICINE-010",
+      "issue_cluster_id": "DEU-COLLEGE-MKURS-MEDICINE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-COLLEGE-LANGUAGE-002"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "course_route_alignment",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "secondary_school",
+            "Studienkolleg"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "studienkolleg_mkurs",
+            "medicine",
+            "dentistry"
+          ]
+        },
+        "process_stages": [
+          "course_selection",
+          "admission"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For medicine/dentistry goals, M-Kurs pathway alignment matters more than simply accumulating unrelated university study",
+          "fa": "برای پزشکی/دندانپزشکی، تطابق مسیر M-Kurs مهم‌تر از صرفاً گذراندن تحصیل نامرتبط است"
+        },
+        "summary": {
+          "en": "In a dentistry case, the adviser recommended M-Kurs and explicitly said a year of biology would not itself create the intended dentistry-admission pathway. Another M-Kurs response emphasized documents, deadlines and B2.",
+          "fa": "در یک کیس دندانپزشکی، مشاور M-Kurs را توصیه کرده و صریحاً گفته یک سال زیست‌شناسی به‌تنهایی مسیر پذیرش دندانپزشکی را ایجاد نمی‌کند. پاسخ دیگری برای M-Kurs نیز روی مدارک، ددلاین و B2 تأکید کرده است."
+        },
+        "practical_impact": {
+          "en": "Taking the wrong preparatory track can consume a year without improving eligibility for the intended degree.",
+          "fa": "انتخاب مسیر آمادگی اشتباه می‌تواند یک سال زمان بگیرد بدون اینکه eligibility رشته هدف را بهتر کند."
+        },
+        "who_should_care": {
+          "en": "Applicants targeting medicine, dentistry or related M-Kurs destinations.",
+          "fa": "متقاضیان پزشکی، دندانپزشکی و رشته‌های مرتبط با M-Kurs."
+        },
+        "recommended_action": {
+          "en": "Map the target degree to the correct Studienkolleg course and FSP requirements before enrolling in a preparatory program.",
+          "fa": "پیش از ثبت‌نام، رشته هدف را با کورس صحیح کالج و الزامات FSP تطبیق دهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-COLLEGE-MKURS-MEDICINE-010-E1",
+          "relation": "supports",
+          "independence_group": "mkurs-adviser-1"
+        },
+        {
+          "evidence_id": "DEU-COLLEGE-MKURS-MEDICINE-010-E2",
+          "relation": "supports",
+          "independence_group": "mkurs-adviser-2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The adviser guidance is coherent but institution-specific admission mapping was not independently verified."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Specific medicine/dentistry admissions and FSP rules were not independently checked."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-COLLEGE-MKURS-MEDICINE-010-E1",
+            "DEU-COLLEGE-MKURS-MEDICINE-010-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Admissions mappings can vary by institution.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "M-Kurs",
+        "medicine",
+        "dentistry",
+        "FSP",
+        "Studienkolleg"
+      ],
+      "first_seen": "2025-06-02",
+      "last_seen": "2025-07-02"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names and Telegram user IDs are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded all 1,544 records from the uploaded JSON export and scanned topical clusters programmatically."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals, not exhaustively reconstructed for every message."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated language, embassy timing, document and financial discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Age and work-rights contradictions are explicitly preserved rather than silently resolved."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "All selected claims remain community evidence unless separately verified against German authorities or institutions."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal connector was unavailable/disabled during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals are practical evidence and planning context only. They are not official eligibility rules, guaranteed processing times, or substitutes for current German mission, TLScontact, uni-assist, Studienkolleg or university instructions."
+}

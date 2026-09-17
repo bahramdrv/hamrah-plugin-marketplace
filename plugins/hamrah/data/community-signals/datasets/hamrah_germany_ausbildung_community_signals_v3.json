@@ -1,0 +1,2123 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_germany_ausbildung_signals_candidate",
+    "generated_at": "2026-09-16T09:30:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "germany-ausbildung-telegram-export",
+      "name": "Germany Aus.json / Telegram export «آسبیلدونگ آلمان با پرگار»",
+      "source_type": "community_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-11",
+        "records_available": 5059,
+        "records_processed": 5059
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "contains_adviser_answers": true,
+        "contains_first_hand_applicant_reports": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "DEU-AUS-TIMING-STARTDATE-001-E1",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "19847"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser said that if the visa process misses the Ausbildung start date, the employer may cancel, issue a letter accepting the delay, or replace the contract for a later intake.",
+        "fa": "مشاور گفته اگر متقاضی به تاریخ شروع دوره نرسد، کارفرما ممکن است قرارداد را لغو کند، نامه پذیرش تأخیر بدهد یا برای دوره بعد قرارداد جدید صادر کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-TIMING-STARTDATE-001-E2",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "20450"
+      },
+      "published_at": "2025-01-24",
+      "event_date": "2025-01-24",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser estimated about four months from application process to visa in early 2025 and recommended applying well before the course start.",
+        "fa": "مشاور در اوایل ۲۰۲۵ حدود چهار ماه برای روند تا ویزا برآورد کرده و توصیه کرده خیلی پیش از شروع دوره اقدام شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-TIMING-STARTDATE-001-E3",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "32204"
+      },
+      "published_at": "2026-02-09",
+      "event_date": "2026-02-09",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In February 2026 the adviser revised the practical planning benchmark upward, saying the process from applications to visa could take five months or more.",
+        "fa": "در فوریه ۲۰۲۶ مشاور معیار عملی برنامه‌ریزی را بالاتر برده و گفته روند از درخواست‌ها تا ویزا می‌تواند پنج ماه یا بیشتر طول بکشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-TIMING-STARTDATE-001-E4",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "19853"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser described August, September, April and February as common Ausbildung start months, with fewer starts in other months.",
+        "fa": "مشاور آگوست، سپتامبر، آوریل و فوریه را از ماه‌های رایج شروع Ausbildung معرفی کرده و شروع‌های سایر ماه‌ها را کمتر دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002-E1",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "31102"
+      },
+      "published_at": "2025-12-14",
+      "event_date": "2025-12-14",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant said a planned September departure was cancelled after the embassy shutdown and they were still waiting for an embassy appointment, despite later obtaining multiple contracts.",
+        "fa": "یک متقاضی گفته برنامه رفتن در سپتامبر به‌دلیل تعطیلی سفارت لغو شده و با وجود گرفتن چند قرارداد جدید همچنان منتظر نوبت سفارت بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002-E2",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "34162"
+      },
+      "published_at": "2026-06-25",
+      "event_date": "2026-06-25",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A June 2026 applicant said they had joined the waiting list in late January and were worried about reaching an August contract start.",
+        "fa": "یک متقاضی در ژوئن ۲۰۲۶ گفته از اواخر ژانویه در لیست انتظار بوده و نگران رسیدن به شروع قرارداد در آگوست بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002-E3",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "35430"
+      },
+      "published_at": "2026-08-14",
+      "event_date": "2026-08-14",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An August 2026 applicant reported uncertainty about whether an early-July TLS queue submission counted, while their course was due to start in October.",
+        "fa": "یک متقاضی در اوت ۲۰۲۶ درباره ثبت‌شدن در صف TLS از اوایل جولای ابهام داشته، در حالی که شروع دوره‌اش اکتبر بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002-E4",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "35579"
+      },
+      "published_at": "2026-08-20",
+      "event_date": "2026-08-20",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser reported one fast-track preapproval client receiving a TLS appointment for four days later in August 2026, showing that fast-track cases could move much faster than general waiting-list cases.",
+        "fa": "مشاور در اوت ۲۰۲۶ از یک کیس دارای پیش‌تأیید فست‌ترک گفته که برای چهار روز بعد وقت TLS گرفته؛ نشانه‌ای از تفاوت جدی سرعت فست‌ترک با صف عمومی."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-LANGUAGE-COMPETITION-003-E1",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "21600"
+      },
+      "published_at": "2025-02-25",
+      "event_date": "2025-02-25",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser described B1 as the minimum language certificate for visa purposes in the discussed Ausbildung context.",
+        "fa": "مشاور B1 را در زمینه مطرح‌شده حداقل مدرک زبان برای ویزا توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-LANGUAGE-COMPETITION-003-E2",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "27279"
+      },
+      "published_at": "2025-08-12",
+      "event_date": "2025-08-12",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser said higher German proficiency materially improves admission chances and that a B1 candidate may be uncompetitive when other applicants present B2/C1.",
+        "fa": "مشاور گفته سطح بالاتر آلمانی شانس پذیرش را به‌طور جدی بالا می‌برد و وقتی رقبا B2/C1 دارند، متقاضی B1 ممکن است رقابتی نباشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-LANGUAGE-COMPETITION-003-E3",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "31814"
+      },
+      "published_at": "2026-01-07",
+      "event_date": "2026-01-07",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In January 2026 the adviser said a person with an employer could still obtain the visa with B1, while emphasizing that the harder part is getting interviews and a contract.",
+        "fa": "در ژانویه ۲۰۲۶ مشاور گفته با وجود کارفرما می‌توان با B1 هم ویزا شد، اما چالش اصلی گرفتن مصاحبه و قرارداد است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-LANGUAGE-COMPETITION-003-E4",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "32195"
+      },
+      "published_at": "2026-02-09",
+      "event_date": "2026-02-09",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A February 2026 adviser response used B2 as the practical language requirement in the discussed case and said lower age improves acceptance odds even though there is no formal age condition.",
+        "fa": "پاسخ مشاور در فوریه ۲۰۲۶ در کیس مطرح‌شده B2 را نیاز عملی زبان دانسته و گفته با وجود نبود شرط سنی رسمی، سن پایین‌تر شانس پذیرش را بالا می‌برد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-FINANCIAL-GAP-004-E1",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "34273"
+      },
+      "published_at": "2026-06-29",
+      "event_date": "2026-06-29",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In June 2026 the adviser described a community benchmark of EUR 1,030 monthly income for the principal applicant; any shortfall was described as needing to be covered for the first year.",
+        "fa": "در ژوئن ۲۰۲۶ مشاور معیار کامیونیتی ۱٬۰۳۰ یورو درآمد ماهانه برای نفر اصلی را مطرح کرده و گفته کسری آن باید برای سال اول با تمکن پوشش داده شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-FINANCIAL-GAP-004-E2",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "34276"
+      },
+      "published_at": "2026-06-29",
+      "event_date": "2026-06-29",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser clarified that the benchmark can vary by city/authority and should not be treated as one fixed universal number.",
+        "fa": "مشاور تصریح کرده این عدد می‌تواند برحسب شهر/اداره تغییر کند و نباید یک مبلغ ثابت سراسری فرض شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-FINANCIAL-GAP-004-E3",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "35336"
+      },
+      "published_at": "2026-08-08",
+      "event_date": "2026-08-08",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An August 2026 response again described covering a small monthly income gap with first-year proof of funds and advised checking the employer/authority expectation.",
+        "fa": "پاسخ اوت ۲۰۲۶ دوباره پوشش کسری ماهانه حقوق با تمکن سال اول و بررسی انتظار کارفرما/اداره را مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-DOCUMENT-LEGALIZATION-005-E1",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "20720"
+      },
+      "published_at": "2025-01-31",
+      "event_date": "2025-01-31",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser said legalized academic documents were not strictly required for the Ausbildung visa itself, while certified copies/Beglaubigung could matter for recognition in many states.",
+        "fa": "مشاور گفته لگال مدارک تحصیلی برای خود ویزای Ausbildung الزام مطلق نیست، اما کپی برابر اصل/Beglaubigung برای معادل‌سازی در بسیاری ایالت‌ها اهمیت دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-DOCUMENT-LEGALIZATION-005-E2",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "33546"
+      },
+      "published_at": "2026-06-01",
+      "event_date": "2026-06-01",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser distinguished academic documents from civil-status documents, saying marriage and changed civil-status records may require translation and legalization for dependant cases.",
+        "fa": "مشاور مدارک تحصیلی را از مدارک هویتی تفکیک کرده و گفته در پرونده پیوست، سند ازدواج و برخی مدارک هویتی ممکن است به ترجمه و لگال نیاز داشته باشند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-DOCUMENT-LEGALIZATION-005-E3",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "34402"
+      },
+      "published_at": "2026-07-02",
+      "event_date": "2026-07-02",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser said ordinary translations were treated as having about one year of validity in the workflow, while legalization was described as making them durable for later use.",
+        "fa": "مشاور گفته در روند عملی، ترجمه‌ها حدود یک سال اعتبار تلقی می‌شوند و لگال برای استفاده بلندمدت‌تر مفید است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-DOCUMENT-LEGALIZATION-005-E4",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "34933"
+      },
+      "published_at": "2026-07-21",
+      "event_date": "2026-07-21",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A July 2026 response again said lack of legalization of academic documents alone was not described in the checklist as a barrier to visa or contract, while recommending legalization for durability.",
+        "fa": "پاسخ جولای ۲۰۲۶ دوباره گفته نبود لگال مدارک تحصیلی به‌تنهایی در چک‌لیست مانع ویزا یا قرارداد معرفی نشده، هرچند لگال برای دوام مدارک توصیه شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-PREAPPROVAL-FASTTRACK-006-E1",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "22055"
+      },
+      "published_at": "2025-03-04",
+      "event_date": "2025-03-04",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser distinguished standard labour-office preapproval from a foreigners-authority fast-track preapproval and described the latter as relevant to simultaneous dependant processing.",
+        "fa": "مشاور پیش‌تأیید عادی اداره کار را از پیش‌تأیید فست‌ترک اداره اتباع تفکیک کرده و فست‌ترک را برای درخواست همزمان پیوست مهم دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-PREAPPROVAL-FASTTRACK-006-E2",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "25487"
+      },
+      "published_at": "2025-06-28",
+      "event_date": "2025-06-28",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser said simultaneous dependant visa filing could be possible with fast-track preapproval plus sufficient proof of funds.",
+        "fa": "مشاور گفته با پیش‌تأیید فست‌ترک و تمکن کافی، درخواست همزمان ویزای همراه می‌تواند ممکن باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-PREAPPROVAL-FASTTRACK-006-E3",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "35161"
+      },
+      "published_at": "2026-07-30",
+      "event_date": "2026-07-30",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In July 2026 the adviser said applicants should know whether their case is fast-track or normal before booking TLS because the appointment categories were separated.",
+        "fa": "در جولای ۲۰۲۶ مشاور گفته پیش از گرفتن وقت TLS باید مشخص باشد پرونده فست‌ترک است یا عادی، چون دسته‌های وقت از هم تفکیک شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-PREAPPROVAL-FASTTRACK-006-E4",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "35579"
+      },
+      "published_at": "2026-08-20",
+      "event_date": "2026-08-20",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An August 2026 fast-track case was reported as receiving an appointment only four days later.",
+        "fa": "برای یک کیس فست‌ترک در اوت ۲۰۲۶، وقت چهار روز بعد گزارش شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-FORMAL-CONTRACT-007-E1",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "25683"
+      },
+      "published_at": "2025-07-04",
+      "event_date": "2025-07-04",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An adviser warned that without a formal Ausbildung contract registered/recognized through the relevant chamber (IHK/HWK), visa, insurance, benefits and vocational validity should not be assumed.",
+        "fa": "مشاور هشدار داده بدون قرارداد رسمی Ausbildung و ثبت/تأیید مرتبط با IHK/HWK نباید ویزا، بیمه، مزایا یا اعتبار دوره را تضمین‌شده فرض کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-FORMAL-CONTRACT-007-E2",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "27256"
+      },
+      "published_at": "2025-08-11",
+      "event_date": "2025-08-11",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser said the employer should provide the contract, connect the applicant with the school, arrange school registration/training plan, and then pursue preapproval.",
+        "fa": "مشاور گفته کارفرما باید قرارداد بدهد، مدرسه را معرفی/ثبت‌نام را پیگیری کند، قرارداد مدرسه و برنامه آموزشی را فراهم کند و سپس برای پیش‌تأیید اقدام شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-IT-COMPETITION-008-E1",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "32411"
+      },
+      "published_at": "2026-02-22",
+      "event_date": "2026-02-22",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser said IT has many Ausbildung postings but also many applicants, so a strong CV, relevant courses, English and work/internship experience can materially improve competitiveness.",
+        "fa": "مشاور گفته IT آگهی زیاد دارد اما متقاضی هم زیاد است و رزومه قوی، دوره مرتبط، انگلیسی و سابقه کار/کارآموزی می‌تواند رقابت‌پذیری را بالا ببرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-IT-COMPETITION-008-E2",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "20277"
+      },
+      "published_at": "2025-01-20",
+      "event_date": "2025-01-20",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An earlier adviser response described technical Ausbildung admissions as difficult but still feasible with a strong application.",
+        "fa": "پاسخ قدیمی‌تر مشاور، پذیرش رشته‌های فنی را سخت اما شدنی با درخواست مناسب توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-NURSING-ACCESS-009-E1",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "32440"
+      },
+      "published_at": "2026-02-23",
+      "event_date": "2026-02-23",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser described nursing as having the largest number of postings and comparatively easier acceptance than many other Ausbildung options.",
+        "fa": "مشاور پرستاری را دارای بیشترین آگهی و پذیرش نسبتاً آسان‌تر از بسیاری گزینه‌های Ausbildung توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-NURSING-ACCESS-009-E2",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "30204"
+      },
+      "published_at": "2025-11-10",
+      "event_date": "2025-11-10",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A November 2025 response described nursing as a high-acceptance option for the case being discussed.",
+        "fa": "پاسخ نوامبر ۲۰۲۵ پرستاری را برای کیس مطرح‌شده گزینه‌ای با شانس پذیرش بالا دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-NURSING-ACCESS-009-E3",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "31536"
+      },
+      "published_at": "2025-12-27",
+      "event_date": "2025-12-27",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser said relevant nursing-related documents improve acceptance chances.",
+        "fa": "مشاور گفته مدارک مرتبط با پرستاری شانس پذیرش را بالا می‌برد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-NURSING-ACCESS-009-E4",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "34349"
+      },
+      "published_at": "2026-07-01",
+      "event_date": "2026-07-01",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser recommended adding relevant nursing/paramedical courses from recognized training centres to the CV.",
+        "fa": "مشاور توصیه کرده دوره‌های مرتبط با پرستاری/پیراپزشکی از مراکز آموزشی معتبر در رزومه آورده شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-AGE-PRACTICAL-010-E1",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "20277"
+      },
+      "published_at": "2025-01-20",
+      "event_date": "2025-01-20",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser stated there was no formal age limit in the discussed Ausbildung context.",
+        "fa": "مشاور در زمینه مطرح‌شده گفته محدودیت سنی رسمی وجود ندارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-AGE-PRACTICAL-010-E2",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "32195"
+      },
+      "published_at": "2026-02-09",
+      "event_date": "2026-02-09",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In February 2026 the adviser again said there was no age condition but that younger applicants generally have better acceptance odds.",
+        "fa": "در فوریه ۲۰۲۶ مشاور دوباره گفته شرط سنی رسمی وجود ندارد، اما سن پایین‌تر معمولاً شانس پذیرش را بالا می‌برد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-AUS-AGE-PRACTICAL-010-E3",
+      "source_id": "germany-ausbildung-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "33806"
+      },
+      "published_at": "2026-06-10",
+      "event_date": "2026-06-10",
+      "collected_at": "2026-09-16T09:30:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A June 2026 response again stated that the route had no formal age limit.",
+        "fa": "پاسخ ژوئن ۲۰۲۶ نیز دوباره نبود محدودیت سنی رسمی را تکرار کرده است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "DEU-AUS-TIMING-STARTDATE-001",
+      "issue_cluster_id": "DEU-AUS-TIMING-STARTDATE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "start_date_timing_risk",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "VOCATIONAL TRAINING / AUSBILDUNG"
+          ],
+          "codes": [
+            "ausbildung_visa"
+          ]
+        },
+        "process_stages": [
+          "employer_application",
+          "visa_application",
+          "course_start"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Ausbildung timing needs a multi-month buffer before the course start",
+          "fa": "مسیر Ausbildung به حاشیه زمانی چندماهه پیش از شروع دوره نیاز دارد"
+        },
+        "summary": {
+          "en": "Community guidance evolved from roughly four months to five months or more for the end-to-end application/visa path. Missing the start date can lead to employer cancellation, a delay-acceptance letter, or a replacement contract for the next intake.",
+          "fa": "راهنمایی‌های گروه از حدود چهار ماه به پنج ماه یا بیشتر برای روند درخواست تا ویزا رسیده‌اند. نرسیدن به تاریخ شروع می‌تواند به لغو قرارداد، نامه پذیرش تأخیر یا قرارداد جدید برای intake بعدی منجر شود."
+        },
+        "practical_impact": {
+          "en": "Applicants who start employer search or visa preparation too close to August/September/April/February intakes risk losing the contract or intake.",
+          "fa": "شروع دیرهنگام جست‌وجوی کارفرما یا ویزا نزدیک intakeهای آگوست/سپتامبر/آوریل/فوریه می‌تواند باعث از دست رفتن قرارداد یا دوره شود."
+        },
+        "who_should_care": {
+          "en": "Iran-based Ausbildung applicants with fixed course-start contracts.",
+          "fa": "متقاضیان ایرانی Ausbildung با تاریخ شروع مشخص در قرارداد."
+        },
+        "recommended_action": {
+          "en": "Build at least several months of buffer and target intakes whose start date remains comfortably beyond the current application/visa timeline.",
+          "fa": "چند ماه حاشیه امن در نظر بگیرید و دوره‌ای را هدف بگیرید که شروع آن با فاصله کافی از زمان فعلی روند درخواست/ویزاست."
+        },
+        "known_workaround": "Employer delay letter or replacement contract for a later intake may preserve the case when the original start date is missed."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-AUS-TIMING-STARTDATE-001-E1",
+          "relation": "supports",
+          "independence_group": "timing-adviser-1"
+        },
+        {
+          "evidence_id": "DEU-AUS-TIMING-STARTDATE-001-E2",
+          "relation": "supports",
+          "independence_group": "timing-adviser-2"
+        },
+        {
+          "evidence_id": "DEU-AUS-TIMING-STARTDATE-001-E3",
+          "relation": "supports",
+          "independence_group": "timing-adviser-3"
+        },
+        {
+          "evidence_id": "DEU-AUS-TIMING-STARTDATE-001-E4",
+          "relation": "supports",
+          "independence_group": "timing-adviser-4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated adviser guidance across 2025-2026 consistently describes multi-month lead time and concrete consequences of missing the start date."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No official universal processing-time guarantee was verified; timing varies by employer, preapproval and consular capacity."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-AUS-TIMING-STARTDATE-001-E1",
+            "DEU-AUS-TIMING-STARTDATE-001-E2",
+            "DEU-AUS-TIMING-STARTDATE-001-E3",
+            "DEU-AUS-TIMING-STARTDATE-001-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Visa appointment and processing conditions can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Ausbildung",
+        "start date",
+        "visa timing",
+        "delay letter",
+        "intake"
+      ],
+      "first_seen": "2025-01-02",
+      "last_seen": "2026-02-09"
+    },
+    {
+      "signal_id": "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002",
+      "issue_cluster_id": "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-AUS-PREAPPROVAL-FASTTRACK-006"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "appointment_backlog_disruption",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "VOCATIONAL TRAINING / AUSBILDUNG"
+          ],
+          "codes": [
+            "ausbildung_visa"
+          ]
+        },
+        "process_stages": [
+          "appointment",
+          "visa_application"
+        ],
+        "entities": [
+          {
+            "entity_type": "service_provider",
+            "name": "TLScontact"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "Iran-based Ausbildung applicants experienced severe appointment uncertainty, while fast-track cases could move much faster",
+          "fa": "متقاضیان Ausbildung در ایران با ابهام شدید وقت‌دهی روبه‌رو بوده‌اند، در حالی که فست‌ترک می‌تواند بسیار سریع‌تر حرکت کند"
+        },
+        "summary": {
+          "en": "First-hand reports show contracts and intended starts being disrupted by embassy closure and long waiting-list uncertainty. A separate fast-track example received a TLS appointment only four days later.",
+          "fa": "تجربه‌های مستقیم از به‌هم‌خوردن شروع دوره به‌دلیل تعطیلی سفارت و ماه‌ها ابهام در صف وقت خبر می‌دهند. در مقابل، یک نمونه فست‌ترک وقت TLS را تنها چهار روز بعد گرفته است."
+        },
+        "practical_impact": {
+          "en": "Appointment category can become the critical path even after a contract is secured.",
+          "fa": "حتی بعد از گرفتن قرارداد، نوع صف و وقت سفارت/TLS می‌تواند گلوگاه اصلی پرونده باشد."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants holding or seeking Ausbildung contracts.",
+          "fa": "متقاضیان داخل ایران که قرارداد Ausbildung دارند یا دنبال قرارداد هستند."
+        },
+        "recommended_action": {
+          "en": "Track normal versus fast-track appointment rules separately and avoid assuming a contract alone guarantees arrival before the start date.",
+          "fa": "قواعد وقت عادی و فست‌ترک را جداگانه رصد کنید و صرف داشتن قرارداد را تضمین رسیدن پیش از شروع دوره ندانید."
+        },
+        "known_workaround": "Fast-track preapproval can place the case into a different appointment path when applicable."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002-E1",
+          "relation": "supports",
+          "independence_group": "appointment-r1"
+        },
+        {
+          "evidence_id": "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002-E2",
+          "relation": "supports",
+          "independence_group": "appointment-r2"
+        },
+        {
+          "evidence_id": "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002-E3",
+          "relation": "supports",
+          "independence_group": "appointment-r3"
+        },
+        {
+          "evidence_id": "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002-E4",
+          "relation": "contradicts",
+          "independence_group": "appointment-fasttrack"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple independent applicant reports show waiting-list/start-date risk, while the fast-track example demonstrates a materially different operational pathway."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current TLS/embassy appointment capacity was not independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002-E1",
+            "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002-E2",
+            "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002-E3",
+            "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-23",
+        "reason": "Fast-changing operational issue.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "TLS",
+        "appointment",
+        "Iran",
+        "embassy closure",
+        "waiting list",
+        "fast track"
+      ],
+      "first_seen": "2025-12-14",
+      "last_seen": "2026-08-20"
+    },
+    {
+      "signal_id": "DEU-AUS-LANGUAGE-COMPETITION-003",
+      "issue_cluster_id": "DEU-AUS-LANGUAGE-COMPETITION",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "language_competitiveness",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "VOCATIONAL TRAINING / AUSBILDUNG"
+          ],
+          "codes": [
+            "ausbildung_visa"
+          ]
+        },
+        "process_stages": [
+          "employer_application",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "B1 may work as a visa floor in some cases, but B2 is the stronger practical target for employer competition",
+          "fa": "B1 ممکن است در بعضی کیس‌ها کف ویزا باشد، اما B2 هدف عملی قوی‌تری برای رقابت نزد کارفرماست"
+        },
+        "summary": {
+          "en": "Repeated adviser messages distinguish formal/visa sufficiency from employer competitiveness: B1 can sometimes work if an employer is secured, but B2 or higher materially improves interview and contract prospects.",
+          "fa": "پیام‌های تکرارشونده مشاور بین کف رسمی/ویزایی و رقابت بازار کار فرق می‌گذارند: با کارفرمای قطعی B1 گاهی قابل استفاده است، اما B2 یا بالاتر شانس مصاحبه و قرارداد را به‌طور محسوسی بهتر می‌کند."
+        },
+        "practical_impact": {
+          "en": "Stopping at B1 can leave an applicant technically eligible but practically uncompetitive.",
+          "fa": "متوقف شدن در B1 می‌تواند متقاضی را از نظر فنی قابل‌اقدام اما در عمل کم‌رقابت کند."
+        },
+        "who_should_care": {
+          "en": "Applicants deciding whether to apply immediately at B1 or continue to B2/C1 first.",
+          "fa": "متقاضیانی که بین اقدام با B1 یا ادامه تا B2/C1 تصمیم می‌گیرند."
+        },
+        "recommended_action": {
+          "en": "Treat B2 as the safer market target unless the exact employer explicitly accepts B1 and the visa checklist supports it.",
+          "fa": "مگر اینکه کارفرمای مشخص B1 را صریحاً بپذیرد و چک‌لیست ویزا هم اجازه دهد، B2 را هدف امن‌تر بازار در نظر بگیرید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-AUS-LANGUAGE-COMPETITION-003-E1",
+          "relation": "supports",
+          "independence_group": "language-a1"
+        },
+        {
+          "evidence_id": "DEU-AUS-LANGUAGE-COMPETITION-003-E2",
+          "relation": "supports",
+          "independence_group": "language-a2"
+        },
+        {
+          "evidence_id": "DEU-AUS-LANGUAGE-COMPETITION-003-E3",
+          "relation": "qualifies",
+          "independence_group": "language-a3"
+        },
+        {
+          "evidence_id": "DEU-AUS-LANGUAGE-COMPETITION-003-E4",
+          "relation": "supports",
+          "independence_group": "language-a4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same practical distinction appears repeatedly across 2025-2026."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Language requirements remain occupation/employer and visa-checklist specific."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-AUS-LANGUAGE-COMPETITION-003-E1",
+            "DEU-AUS-LANGUAGE-COMPETITION-003-E2",
+            "DEU-AUS-LANGUAGE-COMPETITION-003-E3",
+            "DEU-AUS-LANGUAGE-COMPETITION-003-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Employer expectations can vary by occupation.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "B1",
+        "B2",
+        "German language",
+        "employer competition"
+      ],
+      "first_seen": "2025-02-25",
+      "last_seen": "2026-02-09"
+    },
+    {
+      "signal_id": "DEU-AUS-FINANCIAL-GAP-004",
+      "issue_cluster_id": "DEU-AUS-FINANCIAL-GAP",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "trainee_salary_funding_gap",
+        "class": "financial"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "VOCATIONAL TRAINING / AUSBILDUNG"
+          ],
+          "codes": [
+            "ausbildung_visa"
+          ]
+        },
+        "process_stages": [
+          "financial_evidence",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Low Ausbildung salary can create a first-year proof-of-funds gap rather than a simple yes/no funding rule",
+          "fa": "حقوق پایین Ausbildung می‌تواند به کسری تمکن سال اول منجر شود، نه یک قاعده ساده «تمکن لازم هست/نیست»"
+        },
+        "summary": {
+          "en": "The 2026 community guidance uses about EUR 1,030 monthly as a practical benchmark in examples and calculates first-year funds from the monthly shortfall, while explicitly warning that the amount can vary by city/authority.",
+          "fa": "راهنمایی ۲۰۲۶ گروه در مثال‌ها حدود ۱٬۰۳۰ یورو در ماه را معیار عملی می‌گیرد و تمکن سال اول را از کسری ماهانه حساب می‌کند، اما صریحاً می‌گوید مبلغ برحسب شهر/اداره می‌تواند تغییر کند."
+        },
+        "practical_impact": {
+          "en": "A paid Ausbildung is not automatically 'no proof of funds'.",
+          "fa": "حقوق‌دار بودن Ausbildung به معنی «بدون تمکن» بودن خودکار نیست."
+        },
+        "who_should_care": {
+          "en": "Applicants with trainee salary below the local financial-sufficiency benchmark or with dependants.",
+          "fa": "متقاضیان با حقوق پایین‌تر از معیار مالی محلی یا دارای همراه."
+        },
+        "recommended_action": {
+          "en": "Calculate the gap from the actual contract salary and confirm the exact amount with the competent authority before filing.",
+          "fa": "کسری را از حقوق واقعی قرارداد حساب کنید و مبلغ دقیق را پیش از سابمیت با مرجع مربوط تأیید کنید."
+        },
+        "known_workaround": "Supplementary proof of funds can cover the reported income shortfall."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-AUS-FINANCIAL-GAP-004-E1",
+          "relation": "supports",
+          "independence_group": "finance-a1"
+        },
+        {
+          "evidence_id": "DEU-AUS-FINANCIAL-GAP-004-E2",
+          "relation": "qualifies",
+          "independence_group": "finance-a2"
+        },
+        {
+          "evidence_id": "DEU-AUS-FINANCIAL-GAP-004-E3",
+          "relation": "supports",
+          "independence_group": "finance-a3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Repeated adviser guidance is internally coherent but not independently verified against a current official nationwide formula."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The source itself says the benchmark varies by city/authority; treat EUR 1,030 as a community benchmark, not a universal legal threshold."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-AUS-FINANCIAL-GAP-004-E1",
+            "DEU-AUS-FINANCIAL-GAP-004-E2",
+            "DEU-AUS-FINANCIAL-GAP-004-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Financial benchmarks change and can be authority-specific.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "proof of funds",
+        "salary",
+        "1030 EUR",
+        "Ausbildung"
+      ],
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-08-08"
+    },
+    {
+      "signal_id": "DEU-AUS-DOCUMENT-LEGALIZATION-005",
+      "issue_cluster_id": "DEU-AUS-DOCUMENT-LEGALIZATION",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "translation_legalization_beglaubigung",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "VOCATIONAL TRAINING / AUSBILDUNG"
+          ],
+          "codes": [
+            "ausbildung_visa"
+          ]
+        },
+        "process_stages": [
+          "employer_application",
+          "credential_recognition",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Translation, legalization and Beglaubigung serve different purposes in Ausbildung cases",
+          "fa": "ترجمه، لگال و Beglaubigung در پرونده Ausbildung نقش‌های متفاوتی دارند"
+        },
+        "summary": {
+          "en": "Community guidance says academic legalization is not automatically a visa requirement, while certified copies/Beglaubigung can matter for recognition and civil-status documents may require legalization in dependant cases. Legalization is also recommended to avoid translation-expiry friction.",
+          "fa": "راهنمایی گروه می‌گوید لگال مدارک تحصیلی الزام خودکار ویزا نیست، اما Beglaubigung می‌تواند برای معادل‌سازی مهم باشد و در پرونده همراه برخی مدارک هویتی نیاز به لگال دارند. لگال همچنین برای کاهش مشکل انقضای ترجمه توصیه شده است."
+        },
+        "practical_impact": {
+          "en": "Over-legalizing wastes time, but skipping the wrong certification can block recognition or dependant documentation.",
+          "fa": "لگال‌کردن اضافه زمان می‌گیرد، اما حذف تأیید درست هم می‌تواند معادل‌سازی یا مدارک پیوست را متوقف کند."
+        },
+        "who_should_care": {
+          "en": "Applicants preparing Iranian education and civil-status documents.",
+          "fa": "متقاضیانی که مدارک تحصیلی و هویتی ایران را آماده می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Separate employer-application translation needs, recognition-certified-copy needs and dependant civil-document legalization instead of treating them as one requirement.",
+          "fa": "نیاز ترجمه برای کارفرما، کپی برابر اصل برای معادل‌سازی و لگال مدارک هویتی همراه را از هم جدا بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-AUS-DOCUMENT-LEGALIZATION-005-E1",
+          "relation": "supports",
+          "independence_group": "docs-a1"
+        },
+        {
+          "evidence_id": "DEU-AUS-DOCUMENT-LEGALIZATION-005-E2",
+          "relation": "supports",
+          "independence_group": "docs-a2"
+        },
+        {
+          "evidence_id": "DEU-AUS-DOCUMENT-LEGALIZATION-005-E3",
+          "relation": "supports",
+          "independence_group": "docs-a3"
+        },
+        {
+          "evidence_id": "DEU-AUS-DOCUMENT-LEGALIZATION-005-E4",
+          "relation": "supports",
+          "independence_group": "docs-a4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "The distinction is repeated across the source and remains consistent through mid-2026."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Recognition and civil-document requirements can vary by state and case."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-AUS-DOCUMENT-LEGALIZATION-005-E1",
+            "DEU-AUS-DOCUMENT-LEGALIZATION-005-E2",
+            "DEU-AUS-DOCUMENT-LEGALIZATION-005-E3",
+            "DEU-AUS-DOCUMENT-LEGALIZATION-005-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Document checklists and state recognition practice can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "legalization",
+        "Beglaubigung",
+        "translation",
+        "recognition"
+      ],
+      "first_seen": "2025-01-31",
+      "last_seen": "2026-07-21"
+    },
+    {
+      "signal_id": "DEU-AUS-PREAPPROVAL-FASTTRACK-006",
+      "issue_cluster_id": "DEU-AUS-PREAPPROVAL-FASTTRACK",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-AUS-IRAN-APPOINTMENT-DISRUPTION-002"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "preapproval_fast_track",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "VOCATIONAL TRAINING / AUSBILDUNG"
+          ],
+          "codes": [
+            "ausbildung_visa",
+            "family_reunification"
+          ]
+        },
+        "process_stages": [
+          "preapproval",
+          "appointment",
+          "dependant_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Fast-track preapproval changes appointment handling and can matter for simultaneous dependants",
+          "fa": "پیش‌تأیید فست‌ترک می‌تواند مسیر وقت را تغییر دهد و برای پیوست همزمان مهم باشد"
+        },
+        "summary": {
+          "en": "The source distinguishes normal labour-office preapproval from a foreigners-authority fast-track path. Later messages say TLS separates fast-track and normal appointments, and one fast-track example received an appointment within four days.",
+          "fa": "منبع پیش‌تأیید عادی اداره کار را از فست‌ترک اداره اتباع جدا می‌کند. پیام‌های بعدی می‌گویند TLS وقت فست‌ترک و عادی را تفکیک می‌کند و یک نمونه فست‌ترک ظرف چهار روز وقت گرفته است."
+        },
+        "practical_impact": {
+          "en": "Using the wrong appointment category or waiting to clarify preapproval type can add avoidable delay.",
+          "fa": "انتخاب دسته وقت اشتباه یا دیر مشخص‌کردن نوع پیش‌تأیید می‌تواند تأخیر قابل اجتناب ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Applicants whose employer can pursue preapproval, especially those bringing spouse/children.",
+          "fa": "متقاضیانی که کارفرما می‌تواند برایشان پیش‌تأیید بگیرد، به‌خصوص افراد دارای همسر/فرزند."
+        },
+        "recommended_action": {
+          "en": "Clarify normal versus fast-track preapproval before booking TLS and confirm whether dependants are included in the fast-track case.",
+          "fa": "پیش از گرفتن وقت TLS مشخص کنید پیش‌تأیید عادی است یا فست‌ترک و بررسی کنید آیا همراه‌ها در پرونده فست‌ترک قید شده‌اند."
+        },
+        "known_workaround": "Fast-track preapproval is the source's main reported route for faster appointment handling and simultaneous dependant filing."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-AUS-PREAPPROVAL-FASTTRACK-006-E1",
+          "relation": "supports",
+          "independence_group": "preapproval-a1"
+        },
+        {
+          "evidence_id": "DEU-AUS-PREAPPROVAL-FASTTRACK-006-E2",
+          "relation": "supports",
+          "independence_group": "preapproval-a2"
+        },
+        {
+          "evidence_id": "DEU-AUS-PREAPPROVAL-FASTTRACK-006-E3",
+          "relation": "supports",
+          "independence_group": "preapproval-a3"
+        },
+        {
+          "evidence_id": "DEU-AUS-PREAPPROVAL-FASTTRACK-006-E4",
+          "relation": "supports",
+          "independence_group": "preapproval-a4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated process guidance plus a recent operational example support a meaningful fast-track effect."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Exact fast-track eligibility, cost and dependant rules were not independently checked against current authority guidance."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-AUS-PREAPPROVAL-FASTTRACK-006-E1",
+            "DEU-AUS-PREAPPROVAL-FASTTRACK-006-E2",
+            "DEU-AUS-PREAPPROVAL-FASTTRACK-006-E3",
+            "DEU-AUS-PREAPPROVAL-FASTTRACK-006-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "TLS and fast-track procedures can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Vorabzustimmung",
+        "fast track",
+        "TLS",
+        "dependants"
+      ],
+      "first_seen": "2025-03-04",
+      "last_seen": "2026-08-20"
+    },
+    {
+      "signal_id": "DEU-AUS-FORMAL-CONTRACT-007",
+      "issue_cluster_id": "DEU-AUS-FORMAL-CONTRACT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-AUS-PREAPPROVAL-FASTTRACK-006"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "formal_training_contract",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "VOCATIONAL TRAINING / AUSBILDUNG"
+          ],
+          "codes": [
+            "ausbildung_visa"
+          ]
+        },
+        "process_stages": [
+          "employer_contract",
+          "school_registration",
+          "preapproval"
+        ],
+        "entities": [
+          {
+            "entity_type": "chamber",
+            "name": "IHK/HWK"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "A formal Ausbildung contract and training/school documentation are core evidence, not just an informal employer promise",
+          "fa": "قرارداد رسمی Ausbildung و مدارک مدرسه/برنامه آموزشی مدرک کلیدی‌اند، نه صرفاً قول غیررسمی کارفرما"
+        },
+        "summary": {
+          "en": "The source warns against treating an internal or informal agreement as a real Ausbildung contract and advises checking chamber registration/recognition. It also describes school contract/training-plan documentation before preapproval.",
+          "fa": "منبع هشدار می‌دهد قرارداد داخلی یا قول غیررسمی را نباید معادل قرارداد واقعی Ausbildung دانست و توصیه می‌کند ثبت/تأیید اتاق مربوط بررسی شود. همچنین قرارداد مدرسه و برنامه آموزشی را پیش از پیش‌تأیید مهم می‌داند."
+        },
+        "practical_impact": {
+          "en": "An applicant can spend months on a weak or non-visa-usable offer if the contract structure is not valid.",
+          "fa": "اگر ساختار قرارداد معتبر نباشد، متقاضی ممکن است ماه‌ها روی آفر کم‌اعتبار یا غیرقابل استفاده برای ویزا وقت بگذارد."
+        },
+        "who_should_care": {
+          "en": "Applicants who receive employer offers or unusual contract documents.",
+          "fa": "متقاضیانی که آفر کارفرما یا قرارداد غیرمعمول دریافت می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Verify the formal Ausbildung contract, relevant chamber/school documentation and training plan before relying on the offer for visa steps.",
+          "fa": "قبل از اتکا به آفر برای مراحل ویزا، قرارداد رسمی Ausbildung، مدارک اتاق/مدرسه و برنامه آموزشی را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-AUS-FORMAL-CONTRACT-007-E1",
+          "relation": "supports",
+          "independence_group": "contract-a1"
+        },
+        {
+          "evidence_id": "DEU-AUS-FORMAL-CONTRACT-007-E2",
+          "relation": "supports",
+          "independence_group": "contract-a2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "High-impact operational guidance, but selected evidence comes from adviser sources rather than independently verified authority records."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Chamber-registration requirements can depend on the occupation/training type."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-AUS-FORMAL-CONTRACT-007-E1",
+            "DEU-AUS-FORMAL-CONTRACT-007-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Contract form varies by training occupation and chamber.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Ausbildung contract",
+        "IHK",
+        "HWK",
+        "school contract",
+        "training plan"
+      ],
+      "first_seen": "2025-07-04",
+      "last_seen": "2025-08-11"
+    },
+    {
+      "signal_id": "DEU-AUS-IT-COMPETITION-008",
+      "issue_cluster_id": "DEU-AUS-IT-COMPETITION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-AUS-LANGUAGE-COMPETITION-003"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "occupation_competition",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "IT / technical Ausbildung"
+          ],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "VOCATIONAL TRAINING / AUSBILDUNG"
+          ],
+          "codes": [
+            "ausbildung_it"
+          ]
+        },
+        "process_stages": [
+          "employer_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "IT Ausbildung has many postings but also high applicant competition",
+          "fa": "Ausbildung حوزه IT آگهی زیاد دارد اما رقابت متقاضی هم بالاست"
+        },
+        "summary": {
+          "en": "The adviser describes IT as a high-volume but high-competition field where CV quality, relevant courses, English and work/internship experience materially improve selection prospects.",
+          "fa": "مشاور IT را حوزه‌ای با آگهی زیاد و همزمان متقاضی زیاد توصیف کرده که کیفیت رزومه، دوره مرتبط، انگلیسی و سابقه کار/کارآموزی روی شانس انتخاب اثر جدی دارد."
+        },
+        "practical_impact": {
+          "en": "Simply finding many IT vacancies can overstate the real probability of obtaining a contract.",
+          "fa": "دیدن تعداد زیاد آگهی IT می‌تواند شانس واقعی گرفتن قرارداد را بیش‌برآورد کند."
+        },
+        "who_should_care": {
+          "en": "Applicants targeting Fachinformatiker and related IT Ausbildung roles.",
+          "fa": "متقاضیان Fachinformatiker و سایر Ausbildungهای مرتبط با IT."
+        },
+        "recommended_action": {
+          "en": "Build relevant projects/courses and practical experience before mass-applying, and do not rely on vacancy count alone.",
+          "fa": "پیش از اپلای گسترده پروژه/دوره و سابقه عملی مرتبط بسازید و فقط به تعداد آگهی‌ها اتکا نکنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-AUS-IT-COMPETITION-008-E1",
+          "relation": "supports",
+          "independence_group": "it-a1"
+        },
+        {
+          "evidence_id": "DEU-AUS-IT-COMPETITION-008-E2",
+          "relation": "supports",
+          "independence_group": "it-a2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Consistent adviser guidance, but no quantified independent acceptance-rate sample is present."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No occupation-wide acceptance-rate data was independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-AUS-IT-COMPETITION-008-E1",
+            "DEU-AUS-IT-COMPETITION-008-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Employer demand and applicant volume can change by intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "IT",
+        "Fachinformatiker",
+        "competition",
+        "CV",
+        "internship"
+      ],
+      "first_seen": "2025-01-20",
+      "last_seen": "2026-02-22"
+    },
+    {
+      "signal_id": "DEU-AUS-NURSING-ACCESS-009",
+      "issue_cluster_id": "DEU-AUS-NURSING-ACCESS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-AUS-LANGUAGE-COMPETITION-003"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "occupation_relative_access",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "Nursing / care Ausbildung"
+          ],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "VOCATIONAL TRAINING / AUSBILDUNG"
+          ],
+          "codes": [
+            "ausbildung_nursing"
+          ]
+        },
+        "process_stages": [
+          "employer_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Nursing is repeatedly described as one of the easier Ausbildung fields to source vacancies/contracts, with relevant healthcare evidence improving odds",
+          "fa": "پرستاری در گروه یکی از مسیرهای نسبتاً آسان‌تر برای پیدا کردن آگهی/قرارداد توصیف شده و مدارک مرتبط درمانی شانس را بهتر می‌کند"
+        },
+        "summary": {
+          "en": "Several adviser messages characterize nursing as having many vacancies and relatively easier acceptance, while recommending relevant nursing/paramedical courses and evidence to strengthen the CV.",
+          "fa": "چند پیام مشاور پرستاری را دارای آگهی زیاد و پذیرش نسبتاً آسان‌تر معرفی کرده‌اند و توصیه کرده‌اند دوره‌ها و مدارک مرتبط پرستاری/پیراپزشکی برای تقویت رزومه اضافه شود."
+        },
+        "practical_impact": {
+          "en": "Occupation choice can materially change the difficulty of securing an Ausbildung contract.",
+          "fa": "انتخاب رشته می‌تواند سختی گرفتن قرارداد Ausbildung را به‌طور جدی تغییر دهد."
+        },
+        "who_should_care": {
+          "en": "Applicants choosing between nursing/care and more competitive technical Ausbildung fields.",
+          "fa": "متقاضیانی که بین پرستاری/مراقبت و رشته‌های فنی رقابتی‌تر انتخاب می‌کنند."
+        },
+        "recommended_action": {
+          "en": "If nursing is genuinely suitable, support the application with related courses, experience and stronger German rather than relying only on labour demand.",
+          "fa": "اگر پرستاری واقعاً مناسب شماست، علاوه بر تقاضای بازار، دوره و سابقه مرتبط و زبان قوی‌تر را به پرونده اضافه کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-AUS-NURSING-ACCESS-009-E1",
+          "relation": "supports",
+          "independence_group": "nursing-a1"
+        },
+        {
+          "evidence_id": "DEU-AUS-NURSING-ACCESS-009-E2",
+          "relation": "supports",
+          "independence_group": "nursing-a2"
+        },
+        {
+          "evidence_id": "DEU-AUS-NURSING-ACCESS-009-E3",
+          "relation": "supports",
+          "independence_group": "nursing-a3"
+        },
+        {
+          "evidence_id": "DEU-AUS-NURSING-ACCESS-009-E4",
+          "relation": "supports",
+          "independence_group": "nursing-a4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Repeated adviser guidance supports a relative-access signal, but it is not a measured nationwide acceptance rate."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No official nationwide vacancy/acceptance rate was independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-AUS-NURSING-ACCESS-009-E1",
+            "DEU-AUS-NURSING-ACCESS-009-E2",
+            "DEU-AUS-NURSING-ACCESS-009-E3",
+            "DEU-AUS-NURSING-ACCESS-009-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Healthcare demand can vary by region and employer.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "nursing",
+        "care",
+        "Ausbildung",
+        "vacancies",
+        "healthcare"
+      ],
+      "first_seen": "2025-11-10",
+      "last_seen": "2026-07-01"
+    },
+    {
+      "signal_id": "DEU-AUS-AGE-PRACTICAL-010",
+      "issue_cluster_id": "DEU-AUS-AGE-PRACTICAL",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "age_practical_selection",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Older applicants"
+          ]
+        },
+        "routes": {
+          "families": [
+            "VOCATIONAL TRAINING / AUSBILDUNG"
+          ],
+          "codes": [
+            "ausbildung_visa"
+          ]
+        },
+        "process_stages": [
+          "employer_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The source reports no formal Ausbildung age cap, but younger applicants may have a practical employer-selection advantage",
+          "fa": "منبع محدودیت سنی رسمی برای Ausbildung گزارش نمی‌کند، اما متقاضی جوان‌تر ممکن است نزد کارفرما مزیت عملی داشته باشد"
+        },
+        "summary": {
+          "en": "Adviser messages repeatedly say there is no formal age limit, while one 2026 response explicitly says lower age generally improves contract chances.",
+          "fa": "پیام‌های مشاور چند بار می‌گویند محدودیت سنی رسمی وجود ندارد، اما یک پاسخ ۲۰۲۶ صریحاً گفته سن پایین‌تر معمولاً شانس پذیرش را بهتر می‌کند."
+        },
+        "practical_impact": {
+          "en": "Older applicants should distinguish legal eligibility from employer competitiveness.",
+          "fa": "متقاضیان سن بالاتر باید eligibility قانونی را از رقابت عملی نزد کارفرما جدا بدانند."
+        },
+        "who_should_care": {
+          "en": "Applicants in their 30s/40s considering Ausbildung.",
+          "fa": "متقاضیان دهه ۳۰ و ۴۰ زندگی که به Ausbildung فکر می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Compensate for age-related employer preference with stronger language, relevant experience and a coherent career-change rationale.",
+          "fa": "ترجیح احتمالی کارفرما به سن پایین‌تر را با زبان قوی، سابقه مرتبط و منطق روشن تغییر مسیر جبران کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-AUS-AGE-PRACTICAL-010-E1",
+          "relation": "supports",
+          "independence_group": "age-a1"
+        },
+        {
+          "evidence_id": "DEU-AUS-AGE-PRACTICAL-010-E2",
+          "relation": "supports",
+          "independence_group": "age-a2"
+        },
+        {
+          "evidence_id": "DEU-AUS-AGE-PRACTICAL-010-E3",
+          "relation": "supports",
+          "independence_group": "age-a3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Repeated no-cap guidance is consistent, but the employer-age advantage is qualitative rather than measured."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No nationwide employer acceptance-rate evidence by age was independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-AUS-AGE-PRACTICAL-010-E1",
+            "DEU-AUS-AGE-PRACTICAL-010-E2",
+            "DEU-AUS-AGE-PRACTICAL-010-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2027-01-14",
+        "reason": "Employer preferences vary by occupation.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "age",
+        "Ausbildung",
+        "employer selection"
+      ],
+      "first_seen": "2025-01-20",
+      "last_seen": "2026-06-10"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names and Telegram user IDs are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded all 5,059 records from the uploaded JSON export and scanned topic clusters programmatically."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the entire 5,059-message graph was not exhaustively reconstructed."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated adviser guidance on language, documents, timing and preapproval was clustered into shared signals."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "B1 vs B2 is represented as formal/practical tension rather than a universal single threshold; fast-track evidence is kept separate from normal appointment delays."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "All claims remain community evidence unless separately verified against German authorities."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal connector was unavailable during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals are practical evidence and planning context only. They are not official eligibility rules, guaranteed processing times, or substitutes for current German mission, TLScontact, Bundesagentur für Arbeit, Ausländerbehörde, chamber or employer instructions."
+}

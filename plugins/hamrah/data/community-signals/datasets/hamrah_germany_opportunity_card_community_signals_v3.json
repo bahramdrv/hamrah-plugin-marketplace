@@ -1,0 +1,2350 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_germany_opportunity_card_signals_candidate",
+    "generated_at": "2026-09-17T06:24:18Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "germany-opportunity-card-telegram-export",
+      "name": "result(20260917-061909).json / Telegram export «کارت شانس آلمان (گروه)»",
+      "source_type": "public_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-16",
+        "records_available": 1535,
+        "records_processed": 1535,
+        "message_records": 1316,
+        "service_records": 219
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "contains_first_hand_successful_visa_reports": true,
+        "contains_reposted_official_or_mission_text": true,
+        "contains_forwarded_news_and_unverified_guidance": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "DEU-OC-IRAN-ACCESS-001-E1",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "994"
+      },
+      "published_at": "2025-01-13",
+      "event_date": "2025-01-13",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "reposted_official_notice",
+      "firsthandness": "direct_quote",
+      "summary": {
+        "en": "A January 2025 repost quoted the German mission in Tehran saying Opportunity Card applications could not be accepted for capacity reasons and that applicants should use the self-check until appointments became available.",
+        "fa": "یک بازنشر ژانویه ۲۰۲۵ از متن سفارت آلمان در تهران می‌گوید به‌دلیل محدودیت ظرفیت، درخواست کارت شانس پذیرفته نمی‌شد و تا بازشدن وقت‌ها فقط self-check قابل استفاده بود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-IRAN-ACCESS-001-E2",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2137"
+      },
+      "published_at": "2026-07-12",
+      "event_date": "2026-07-12",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_operational_update",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "In July 2026 users noticed Opportunity Card appearing for the first time among new TLS Iran visa queues/categories.",
+        "fa": "در جولای ۲۰۲۶ کاربران متوجه شدند نام Opportunity Card برای اولین بار در صف‌ها/دسته‌های جدید TLS ایران ظاهر شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-IRAN-ACCESS-001-E3",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2221"
+      },
+      "published_at": "2026-07-18",
+      "event_date": "2026-07-18",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_operational_update",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A later July 2026 message said TLS had formally created an Opportunity Card queue.",
+        "fa": "پیام دیگری در جولای ۲۰۲۶ گفته TLS رسماً صف کارت شانس ایجاد کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-IRAN-ACCESS-001-E4",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2595"
+      },
+      "published_at": "2026-09-12",
+      "event_date": "2026-09-12",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "On 12 September 2026, a direct reply to whether applications could be made from Iran still said 'not yet'.",
+        "fa": "در ۱۲ سپتامبر ۲۰۲۶، پاسخ مستقیم به سؤال امکان اقدام از ایران همچنان «فعلاً خیر» بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-SELFCHECK-002-E1",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "974"
+      },
+      "published_at": "2025-01-04",
+      "event_date": "2025-01-04",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant completed an 18-question Opportunity Card assessment, received a score and email, and believed this might have started the application.",
+        "fa": "یک متقاضی پرسشنامه ۱۸سؤالی کارت شانس را تکمیل کرده، امتیاز و ایمیل گرفته و تصور کرده شاید فرایند درخواست شروع شده باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-SELFCHECK-002-E2",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "976"
+      },
+      "published_at": "2025-01-04",
+      "event_date": "2025-01-04",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply clarified that the tool was only a personal points/eligibility assessment, not a visa application.",
+        "fa": "پاسخ گروه روشن کرده که آن ابزار صرفاً ارزیابی شخصی امتیاز/شرایط است و درخواست ویزا محسوب نمی‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-SELFCHECK-002-E3",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "980"
+      },
+      "published_at": "2025-01-04",
+      "event_date": "2025-01-04",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same thread pointed applicants to the digital.diplo Opportunity Card route for the actual filing and said the Iran option was unavailable at that time.",
+        "fa": "در همان زنجیره، برای درخواست واقعی به مسیر Opportunity Card در digital.diplo ارجاع داده شده و گفته شده گزینه ایران در آن مقطع بسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-SELFCHECK-002-E4",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "994"
+      },
+      "published_at": "2025-01-13",
+      "event_date": "2025-01-13",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "reposted_official_notice",
+      "firsthandness": "direct_quote",
+      "summary": {
+        "en": "The reposted Tehran notice itself distinguished the Make-it-in-Germany self-check from actual appointment/application acceptance.",
+        "fa": "متن بازنشرشده سفارت تهران نیز self-check سایت Make-it-in-Germany را از پذیرش واقعی درخواست/وقت جدا کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-THIRDCOUNTRY-003-E1",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1001"
+      },
+      "published_at": "2025-01-15",
+      "event_date": "2025-01-15",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "reposted_requirement",
+      "firsthandness": "direct_quote",
+      "summary": {
+        "en": "A discussion of filing from Hungary quoted a requirement to submit a valid residence permit for the country where the applicant usually resides.",
+        "fa": "در گفتگوی اقدام از مجارستان، شرط ارائه اقامت معتبر کشور محل اقامت عادی متقاضی نقل شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-THIRDCOUNTRY-003-E2",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1002"
+      },
+      "published_at": "2025-01-15",
+      "event_date": "2025-01-15",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The applicant said they used their Hungarian address card and residence card as proof of legal local residence.",
+        "fa": "متقاضی گفته برای اثبات اقامت قانونی محلی از کارت آدرس و کارت اقامت مجارستان استفاده کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-THIRDCOUNTRY-003-E3",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2029"
+      },
+      "published_at": "2026-06-18",
+      "event_date": "2026-06-18",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "first_hand_successful_applicant",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A successful Italy-based applicant was asked to prove residence in Italy during the previous six months using utility bills or location-linked purchase transactions before the case advanced.",
+        "fa": "یک متقاضی موفق از ایتالیا قبل از پیشرفت پرونده مجبور شده سکونت شش ماه اخیر در ایتالیا را با قبض یا تراکنش‌های دارای لوکیشن ثابت کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-THIRDCOUNTRY-003-E4",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1367"
+      },
+      "published_at": "2025-08-02",
+      "event_date": "2025-08-02",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance generalized a six-month legal-residence threshold for third-country filing and warned that short tourist presence would usually not establish jurisdiction.",
+        "fa": "راهنمایی گروه قاعده عملی شش ماه اقامت قانونی برای اقدام از کشور ثالث را مطرح کرده و گفته حضور کوتاه توریستی معمولاً صلاحیت کنسولی نمی‌سازد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-PROCESSING-004-E1",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2029"
+      },
+      "published_at": "2026-06-18",
+      "event_date": "2026-06-18",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "first_hand_successful_applicant",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An Italy-based applicant created the portal account on 22 March, received a document request about ten days later, attended biometrics on 3 June and received the visa on 18 June after resolving their own document delay.",
+        "fa": "یک متقاضی از ایتالیا ۲۲ مارس اکانت ساخته، حدود ده روز بعد نقص مدرک گرفته، ۳ ژوئن بیومتریک انجام داده و ۱۸ ژوئن ویزا را دریافت کرده؛ بخشی از فاصله زمانی ناشی از تأخیر خود متقاضی در تکمیل مدارک بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-PROCESSING-004-E2",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2360"
+      },
+      "published_at": "2026-07-28",
+      "event_date": "2026-07-28",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "first_hand_successful_applicant",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Turkey-based applicant said initial review requested extra documents after two days, the next phase took about three weeks including ten public-holiday days, then a decision email arrived four days after interview and the passport two days later.",
+        "fa": "یک متقاضی از ترکیه گفته بعد از دو روز در بررسی اولیه مدارک تکمیلی خواسته شد، مرحله بعد حدود سه هفته با احتساب ده روز تعطیلی طول کشید، چهار روز بعد از مصاحبه ایمیل تصمیم و دو روز بعد پاسپورت تحویل شد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-PROCESSING-004-E3",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2437"
+      },
+      "published_at": "2026-08-10",
+      "event_date": "2026-08-10",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance described the digital flow as profile/route questionnaire, form and document upload, preliminary review, possible CV/motivation request, then appointment for interview and biometrics.",
+        "fa": "راهنمایی گروه workflow دیجیتال را شامل پروفایل/تشخیص مسیر، فرم و آپلود مدارک، بررسی اولیه، احتمال درخواست CV و انگیزه‌نامه و سپس وقت مصاحبه و بیومتریک توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-PROCESSING-004-E4",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2367"
+      },
+      "published_at": "2026-07-28",
+      "event_date": "2026-07-28",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "first_hand_successful_applicant",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The Turkey-based applicant described a short interview of roughly 5-10 minutes conducted across German and English, without submitting a language certificate in that particular case.",
+        "fa": "همان متقاضی ترکیه مصاحبه‌ای حدود ۵ تا ۱۰ دقیقه‌ای به آلمانی و انگلیسی گزارش کرده و در کیس خودش مدرک زبان ارائه نکرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-ROUTE-SPLIT-005-E1",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2597"
+      },
+      "published_at": "2026-09-16",
+      "event_date": "2026-09-16",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_detailed_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A September 2026 community summary separated Opportunity Card eligibility into a Fachkraft/skilled-worker path and a points-system path.",
+        "fa": "یک جمع‌بندی سپتامبر ۲۰۲۶ کارت شانس را به مسیر Fachkraft/نیروی متخصص و مسیر سیستم امتیازی تفکیک کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-ROUTE-SPLIT-005-E2",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2597"
+      },
+      "published_at": "2026-09-16",
+      "event_date": "2026-09-16",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_detailed_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same summary said regulated professions may require full occupational recognition to qualify as Fachkraft, while unregulated occupations may rely on academic recognition evidence.",
+        "fa": "همان جمع‌بندی گفته در مشاغل regulated ممکن است برای Fachkraft شدن recognition کامل شغلی لازم باشد، در حالی که برای مشاغل unregulated مدارک شناسایی تحصیلی می‌تواند کافی باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-ROUTE-SPLIT-005-E3",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2597"
+      },
+      "published_at": "2026-09-16",
+      "event_date": "2026-09-16",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_detailed_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For the points-system path, the source described a baseline language condition plus academic recognition before additional points are considered.",
+        "fa": "برای مسیر امتیازی، منبع وجود شرط پایه زبان و شناسایی مدرک پیش از محاسبه امتیازهای اضافه را مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-ROUTE-SPLIT-005-E4",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2036"
+      },
+      "published_at": "2026-06-19",
+      "event_date": "2026-06-19",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "Earlier successful-case discussion already showed applicants were uncertain whether Anabin alone made someone Fachkraft or whether ZAB/occupational recognition was also needed.",
+        "fa": "گفتگوی قبلی درباره یک کیس موفق نیز نشان می‌دهد متقاضیان درباره اینکه Anabin به‌تنهایی فرد را Fachkraft می‌کند یا ZAB/recognition شغلی هم لازم است ابهام داشته‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-ANABIN-ZAB-006-E1",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2265"
+      },
+      "published_at": "2026-07-19",
+      "event_date": "2026-07-19",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said ZAB may be unnecessary when the exact qualification title and university are both found in Anabin.",
+        "fa": "یک پاسخ گفته اگر عنوان دقیق مدرک و دانشگاه هر دو در Anabin وجود داشته باشند ممکن است ZAB لازم نباشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-ANABIN-ZAB-006-E2",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2285"
+      },
+      "published_at": "2026-07-20",
+      "event_date": "2026-07-20",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "applicant_document_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An applicant whose university and field appeared in Anabin but whose specialization did not asked whether ZAB was required, illustrating exact-title ambiguity.",
+        "fa": "متقاضی‌ای که دانشگاه و رشته‌اش در Anabin بود اما گرایشش نبود درباره نیاز به ZAB پرسیده؛ نمونه‌ای از ابهام در تطابق دقیق عنوان."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-ANABIN-ZAB-006-E3",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2495"
+      },
+      "published_at": "2026-08-23",
+      "event_date": "2026-08-23",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "applicant_document_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant said the university was H+ but the degree field itself was absent from Anabin and therefore expected to obtain ZAB.",
+        "fa": "متقاضی دیگری گفته دانشگاه H+ است اما رشته در Anabin نیست و بنابراین انتظار دارد ZAB بگیرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-ANABIN-ZAB-006-E4",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2505"
+      },
+      "published_at": "2026-08-24",
+      "event_date": "2026-08-24",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "first_hand_document_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Turkey-educated applicant obtained ZAB despite an EU-style degree and said other Italy-based applicants had reportedly also been asked for it by the mission.",
+        "fa": "یک متقاضی تحصیل‌کرده در ترکیه با وجود مدرک EU-style، ZAB گرفته و گفته برخی متقاضیان ایتالیا نیز بنا بر گزارش‌ها از سفارت درخواست ZAB داشته‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-FUNDS-007-E1",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2302"
+      },
+      "published_at": "2026-07-21",
+      "event_date": "2026-07-21",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 reply framed financial evidence as a blocked account or a formal sponsor/guarantor rather than a simple local-bank balance statement.",
+        "fa": "یک پاسخ ۲۰۲۶ مدرک مالی را حساب بلوکه یا اسپانسر/متعهد رسمی دانسته، نه صرفاً مانده حساب بانکی محلی."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-FUNDS-007-E2",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2440"
+      },
+      "published_at": "2026-08-10",
+      "event_date": "2026-08-10",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Applicants were told blocked-account evidence was needed already at the document-upload stage in the route being discussed.",
+        "fa": "در مسیر موردبحث گفته شده مدرک حساب بلوکه در همان مرحله تکمیل فرم و آپلود مدارک لازم است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-FUNDS-007-E3",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2084"
+      },
+      "published_at": "2026-06-27",
+      "event_date": "2026-06-27",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "first_hand_provider_friction",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An Iranian applicant said Expatrio did not allow them to proceed because of nationality.",
+        "fa": "یک متقاضی ایرانی گفته Expatrio به‌دلیل ملیت اجازه ادامه فرایند را به او نداده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-FUNDS-007-E4",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2085"
+      },
+      "published_at": "2026-06-27",
+      "event_date": "2026-06-27",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_provider_experience",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said Fintiba was commonly used by applicants as an alternative.",
+        "fa": "پاسخ گروه Fintiba را به‌عنوان گزینه‌ای که بسیاری از متقاضیان استفاده می‌کنند مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-FUNDS-007-E5",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2577"
+      },
+      "published_at": "2026-09-07",
+      "event_date": "2026-09-07",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "first_hand_provider_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A later user said they and several others had used Fintiba for blocked-account funding.",
+        "fa": "کاربر دیگری در سپتامبر ۲۰۲۶ گفته خودش و چند نفر دیگر برای حساب بلوکه از Fintiba استفاده کرده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-AGE-008-E1",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1316"
+      },
+      "published_at": "2025-05-25",
+      "event_date": "2025-05-25",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2025 reply said older applicants were not categorically barred but younger age produced more points/advantage in the points framework.",
+        "fa": "یک پاسخ ۲۰۲۵ گفته سن بالاتر ممنوعیت مطلق ایجاد نمی‌کند اما سن پایین‌تر در سیستم امتیازی مزیت بیشتری دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-AGE-008-E2",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2514"
+      },
+      "published_at": "2026-08-25",
+      "event_date": "2026-08-25",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In August 2026 a reply to a 53-year-old profile again said no explicit maximum age was known, but age points were associated with being under 40.",
+        "fa": "در اوت ۲۰۲۶ درباره پروفایل ۵۳ساله دوباره گفته شده سقف سنی صریح شناخته‌شده‌ای نیست، اما امتیاز سن برای زیر ۴۰ سال مطرح است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-AGE-008-E3",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2517"
+      },
+      "published_at": "2026-08-25",
+      "event_date": "2026-08-25",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same thread described the familiar community interpretation of two age points below 35 and one below 40, with no age points for the older profile.",
+        "fa": "همان گفتگو برداشت رایج کامیونیتی از دو امتیاز زیر ۳۵ و یک امتیاز زیر ۴۰ و نبود امتیاز سن برای پروفایل مسن‌تر را مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-WORK-ALIGNMENT-009-E1",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1327"
+      },
+      "published_at": "2025-06-03",
+      "event_date": "2025-06-03",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "applicant_profile_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A Turkey-resident applicant asked whether five years of work experience in a field different from the recognized qualification could still support an Opportunity Card application.",
+        "fa": "متقاضی مقیم ترکیه پرسیده آیا پنج سال سابقه کار در حوزه‌ای متفاوت از مدرک تحصیلی موردتأیید می‌تواند همچنان برای کارت شانس قابل استفاده باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-WORK-ALIGNMENT-009-E2",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1328"
+      },
+      "published_at": "2025-06-03",
+      "event_date": "2025-06-03",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The reply said filing could still be possible but recommended that the employment evidence used in the application align with the academic qualification where possible.",
+        "fa": "پاسخ گفته اقدام ممکن است، اما بهتر است سابقه/گواهی کاری ارائه‌شده تا حد امکان با مدرک تحصیلی مرتبط باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-WORK-ALIGNMENT-009-E3",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2515"
+      },
+      "published_at": "2026-08-25",
+      "event_date": "2026-08-25",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "forwarded_points_summary",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A later points summary circulated in the group explicitly tied some work-experience points to relevant experience within a recent time window.",
+        "fa": "در خلاصه امتیازبندی بعدی که در گروه فوروارد شده، بخشی از امتیاز سابقه کار صریحاً به تجربه مرتبط در بازه زمانی اخیر گره خورده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-WORK-ALIGNMENT-009-E4",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2597"
+      },
+      "published_at": "2026-09-16",
+      "event_date": "2026-09-16",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_detailed_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The September 2026 route summary tied Fachkraft status to the qualification/occupation relationship, especially for regulated professions.",
+        "fa": "جمع‌بندی سپتامبر ۲۰۲۶ نیز وضعیت Fachkraft را به رابطه مدرک و شغل، به‌ویژه در حرفه‌های regulated، مرتبط کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-MISSION-DOCS-010-E1",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "998"
+      },
+      "published_at": "2025-01-15",
+      "event_date": "2025-01-15",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "first_hand_mission_contact",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant said a mission advised using the booked hotel's address in a VIDEX reference field, while warning that operational handling can differ from mission to mission.",
+        "fa": "یک متقاضی گفته از یک سفارت پاسخ گرفته که در بخش reference فرم VIDEX می‌تواند آدرس هتل رزروشده را وارد کند و همزمان هشدار داده اجرای جزئیات بین سفارت‌ها فرق می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-MISSION-DOCS-010-E2",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1001"
+      },
+      "published_at": "2025-01-15",
+      "event_date": "2025-01-15",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "reposted_requirement",
+      "firsthandness": "direct_quote",
+      "summary": {
+        "en": "The same discussion quoted a mission requirement for a valid residence permit in the country of application.",
+        "fa": "در همان گفتگو شرط ارائه اقامت معتبر کشور محل اقدام از سوی سفارت نقل شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-MISSION-DOCS-010-E3",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2481"
+      },
+      "published_at": "2026-08-22",
+      "event_date": "2026-08-22",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "community_document_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 reply distinguished pre-legalized translations from full mission legalization and said the exact legalization request may depend on the mission and country that issued the document.",
+        "fa": "یک پاسخ ۲۰۲۶ pre-legal را از لگال کامل سفارت جدا کرده و گفته نیاز دقیق به لگال می‌تواند به سفارت و کشور صادرکننده مدرک وابسته باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-OC-MISSION-DOCS-010-E4",
+      "source_id": "germany-opportunity-card-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2505"
+      },
+      "published_at": "2026-08-24",
+      "event_date": "2026-08-24",
+      "collected_at": "2026-09-17T06:24:18Z",
+      "source_type": "first_hand_document_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user advised asking the exact German mission through its contact form whether ZAB would be required for the applicant's specific foreign degree, emphasizing mission-specific implementation.",
+        "fa": "یک کاربر توصیه کرده برای مدرک خارجی خاص، از همان سفارت آلمان از طریق contact form درباره نیاز به ZAB سؤال شود و اجرای mission-specific را جدی بگیرید."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "DEU-OC-IRAN-ACCESS-001",
+      "issue_cluster_id": "DEU-OPPORTUNITY-CARD-IRAN-ACCESS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-OC-SELFCHECK-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "DEU-OC-THIRDCOUNTRY-003"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "iran_consular_access_evolution",
+        "class": "visa_access"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Applying from Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "opportunity_card"
+          ]
+        },
+        "process_stages": [
+          "application_access",
+          "queue",
+          "appointment"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Iran access evolved from outright unavailability to a visible TLS queue, but practical Tehran filing still lacked community confirmation by September 2026",
+          "fa": "دسترسی از ایران از «عدم پذیرش» به ظاهرشدن صف TLS رسید، اما تا سپتامبر ۲۰۲۶ اقدام عملی تهران هنوز در کامیونیتی تأیید نشده بود"
+        },
+        "summary": {
+          "en": "January 2025 evidence says Tehran could not accept Opportunity Card applications. In July 2026 TLS surfaced an Opportunity Card queue/category, suggesting operational preparation, yet a September 2026 community reply still said applications from Iran were not available. This is an evolving operational signal, not a frozen rule.",
+          "fa": "شواهد ژانویه ۲۰۲۵ می‌گوید تهران درخواست کارت شانس را نمی‌پذیرفت. در جولای ۲۰۲۶ TLS صف/دسته کارت شانس را ظاهر کرد که نشانه آمادگی عملیاتی بود، اما در سپتامبر ۲۰۲۶ پاسخ کامیونیتی هنوز اقدام از ایران را ممکن نمی‌دانست. این یک سیگنال در حال تحول است، نه قاعده ثابت."
+        },
+        "practical_impact": {
+          "en": "Being able to join a queue or see the visa category does not necessarily mean appointments/filing are operational.",
+          "fa": "دیدن دسته ویزا یا ورود به صف الزاماً به معنی فعال‌شدن وقت‌دهی و پذیرش پرونده نیست."
+        },
+        "who_should_care": {
+          "en": "Iran-based Opportunity Card applicants.",
+          "fa": "متقاضیان کارت شانس داخل ایران."
+        },
+        "recommended_action": {
+          "en": "Treat Tehran availability as a live operational status that must be checked immediately before filing.",
+          "fa": "وضعیت تهران را عملیاتی و تاریخ‌حساس بدانید و درست قبل از اقدام بررسی کنید."
+        },
+        "known_workaround": "Applicants with valid residence abroad repeatedly used third-country German missions."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-OC-IRAN-ACCESS-001-E1",
+          "relation": "supports",
+          "independence_group": "iran-2025"
+        },
+        {
+          "evidence_id": "DEU-OC-IRAN-ACCESS-001-E2",
+          "relation": "qualifies",
+          "independence_group": "iran-jul26-a"
+        },
+        {
+          "evidence_id": "DEU-OC-IRAN-ACCESS-001-E3",
+          "relation": "qualifies",
+          "independence_group": "iran-jul26-b"
+        },
+        {
+          "evidence_id": "DEU-OC-IRAN-ACCESS-001-E4",
+          "relation": "supports",
+          "independence_group": "iran-sep26"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "evolving",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The file documents a clear operational evolution and persistent uncertainty through the latest period."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Tehran/TLS Opportunity Card operations were not independently checked outside the uploaded file."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-OC-IRAN-ACCESS-001-E1",
+            "DEU-OC-IRAN-ACCESS-001-E2",
+            "DEU-OC-IRAN-ACCESS-001-E3",
+            "DEU-OC-IRAN-ACCESS-001-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Opportunity Card Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "Mission operations can change without notice.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Chancenkarte",
+        "Iran",
+        "Tehran",
+        "TLS",
+        "queue",
+        "digital.diplo"
+      ],
+      "first_seen": "2025-01-13",
+      "last_seen": "2026-09-12"
+    },
+    {
+      "signal_id": "DEU-OC-SELFCHECK-002",
+      "issue_cluster_id": "DEU-OPPORTUNITY-CARD-SELFCHECK-VS-FILING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-OC-IRAN-ACCESS-001"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "selfcheck_application_confusion",
+        "class": "digital_process"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "opportunity_card"
+          ]
+        },
+        "process_stages": [
+          "self_check",
+          "application_submission"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Opportunity Card self-check results are repeatedly confused with an actual visa application",
+          "fa": "نتیجه self-check کارت شانس بارها با درخواست واقعی ویزا اشتباه گرفته شده است"
+        },
+        "summary": {
+          "en": "Applicants received points and emails from a self-assessment tool and expected a next visa step. The source repeatedly distinguishes this from the actual digital.diplo filing and mission appointment process.",
+          "fa": "متقاضیان از ابزار ارزیابی امتیاز و ایمیل گرفته و منتظر مرحله ویزا شده‌اند، در حالی که فایل بارها آن را از درخواست واقعی digital.diplo و وقت سفارت جدا می‌کند."
+        },
+        "practical_impact": {
+          "en": "A positive score can create false confidence that the visa file is already registered.",
+          "fa": "امتیاز مثبت ممکن است این تصور اشتباه را بسازد که پرونده ویزا ثبت شده است."
+        },
+        "who_should_care": {
+          "en": "First-time Opportunity Card applicants.",
+          "fa": "متقاضیان بار اول کارت شانس."
+        },
+        "recommended_action": {
+          "en": "Treat self-check only as planning input and confirm that the actual consular application has been submitted in the correct portal.",
+          "fa": "self-check را فقط ابزار برنامه‌ریزی بدانید و مطمئن شوید درخواست کنسولی واقعی در پرتال درست ثبت شده است."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-OC-SELFCHECK-002-E1",
+          "relation": "supports",
+          "independence_group": "DEU-OC-SELFCHECK-002-E1"
+        },
+        {
+          "evidence_id": "DEU-OC-SELFCHECK-002-E2",
+          "relation": "supports",
+          "independence_group": "DEU-OC-SELFCHECK-002-E2"
+        },
+        {
+          "evidence_id": "DEU-OC-SELFCHECK-002-E3",
+          "relation": "supports",
+          "independence_group": "DEU-OC-SELFCHECK-002-E3"
+        },
+        {
+          "evidence_id": "DEU-OC-SELFCHECK-002-E4",
+          "relation": "supports",
+          "independence_group": "DEU-OC-SELFCHECK-002-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same confusion appears explicitly in a concrete applicant thread and a reposted mission notice."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Portal behavior was not independently tested."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-OC-SELFCHECK-002-E1",
+            "DEU-OC-SELFCHECK-002-E2",
+            "DEU-OC-SELFCHECK-002-E3",
+            "DEU-OC-SELFCHECK-002-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Opportunity Card Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Digital portal flows may change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "self-check",
+        "points calculator",
+        "digital.diplo",
+        "application"
+      ],
+      "first_seen": "2025-01-04",
+      "last_seen": "2025-01-13"
+    },
+    {
+      "signal_id": "DEU-OC-THIRDCOUNTRY-003",
+      "issue_cluster_id": "DEU-OPPORTUNITY-CARD-THIRD-COUNTRY-JURISDICTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-OC-IRAN-ACCESS-001"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "DEU-OC-MISSION-DOCS-010"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "third_country_residence_jurisdiction",
+        "class": "consular_access"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Applying outside Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "opportunity_card"
+          ]
+        },
+        "process_stages": [
+          "country_of_application",
+          "residence_evidence",
+          "jurisdiction"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Third-country Opportunity Card filing depends on proving genuine legal residence, not simply travelling to another German mission",
+          "fa": "اقدام کارت شانس از کشور ثالث به اثبات اقامت قانونی واقعی وابسته است، نه صرف سفر به کشور دیگر"
+        },
+        "summary": {
+          "en": "A successful Italy case was required to show evidence of residence during the previous six months. Hungary and Turkey discussions similarly focus on valid local residence cards and a six-month residence concept. The exact jurisdiction rule is mission-specific and remains unverified officially in this extraction.",
+          "fa": "در یک کیس موفق ایتالیا اثبات سکونت شش ماه اخیر خواسته شده است. گفتگوهای مجارستان و ترکیه نیز روی کارت اقامت معتبر و مفهوم شش ماه اقامت تمرکز دارند. قاعده دقیق صلاحیت سفارت mission-specific است و در این استخراج رسمی راستی‌آزمایی نشده است."
+        },
+        "practical_impact": {
+          "en": "Short tourist presence in Turkey/Armenia/etc. may not be enough to make the German mission accept the case.",
+          "fa": "حضور کوتاه توریستی در ترکیه/ارمنستان و غیره ممکن است برای پذیرش پرونده توسط سفارت آلمان کافی نباشد."
+        },
+        "who_should_care": {
+          "en": "Iranians considering a third-country workaround.",
+          "fa": "ایرانیانی که مسیر کشور ثالث را بررسی می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Confirm the target mission's residence/jurisdiction rule before obtaining a third-country permit mainly for German filing.",
+          "fa": "قبل از گرفتن اقامت کشور ثالث صرفاً برای اقدام آلمان، قاعده صلاحیت همان سفارت را بررسی کنید."
+        },
+        "known_workaround": "Long-term legal residence in the country of application is the recurring successful pattern."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-OC-THIRDCOUNTRY-003-E1",
+          "relation": "supports",
+          "independence_group": "DEU-OC-THIRDCOUNTRY-003-E1"
+        },
+        {
+          "evidence_id": "DEU-OC-THIRDCOUNTRY-003-E2",
+          "relation": "supports",
+          "independence_group": "DEU-OC-THIRDCOUNTRY-003-E2"
+        },
+        {
+          "evidence_id": "DEU-OC-THIRDCOUNTRY-003-E3",
+          "relation": "supports",
+          "independence_group": "DEU-OC-THIRDCOUNTRY-003-E3"
+        },
+        {
+          "evidence_id": "DEU-OC-THIRDCOUNTRY-003-E4",
+          "relation": "supports",
+          "independence_group": "DEU-OC-THIRDCOUNTRY-003-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct successful evidence from Italy plus other country-residence discussions support the pattern."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The exact six-month jurisdiction rule was not independently verified for every German mission."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-OC-THIRDCOUNTRY-003-E1",
+            "DEU-OC-THIRDCOUNTRY-003-E2",
+            "DEU-OC-THIRDCOUNTRY-003-E3",
+            "DEU-OC-THIRDCOUNTRY-003-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Opportunity Card Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Consular jurisdiction can differ by mission.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "third country",
+        "residence permit",
+        "six months",
+        "Italy",
+        "Turkey",
+        "Hungary"
+      ],
+      "first_seen": "2025-01-15",
+      "last_seen": "2026-06-18"
+    },
+    {
+      "signal_id": "DEU-OC-PROCESSING-004",
+      "issue_cluster_id": "DEU-OPPORTUNITY-CARD-DIGITAL-PROCESSING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-OC-THIRDCOUNTRY-003"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "digital_precheck_interview_timing",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "opportunity_card"
+          ]
+        },
+        "process_stages": [
+          "portal_submission",
+          "precheck",
+          "additional_documents",
+          "appointment",
+          "interview",
+          "biometrics",
+          "decision"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Third-country cases show a digital pre-check → document correction → interview/biometrics → decision workflow, with timing ranging from weeks to months depending on applicant and mission",
+          "fa": "کیس‌های کشور ثالث workflow بررسی اولیه دیجیتال → تکمیل مدارک → مصاحبه/بیومتریک → تصمیم را نشان می‌دهند و زمان بسته به سفارت و نقص پرونده از چند هفته تا چند ماه متغیر است"
+        },
+        "summary": {
+          "en": "A successful Italy case and a successful Turkey case both show preliminary portal review before appointments. The Italy case was prolonged by the applicant's own document delay; the Turkey case moved from extra-document request to appointment in roughly three weeks and reached a decision days after interview.",
+          "fa": "دو کیس موفق ایتالیا و ترکیه هر دو بررسی اولیه پرتال پیش از وقت را نشان می‌دهند. کیس ایتالیا به‌دلیل تأخیر خود متقاضی طولانی شد؛ کیس ترکیه از درخواست مدرک تکمیلی تا وقت حدود سه هفته و از مصاحبه تا تصمیم چند روز طول کشید."
+        },
+        "practical_impact": {
+          "en": "The portal's initial acceptance is not the final visa decision; document completeness can materially change the timeline.",
+          "fa": "پذیرش اولیه پرتال تصمیم نهایی ویزا نیست و کامل‌بودن مدارک می‌تواند timeline را جدی تغییر دهد."
+        },
+        "who_should_care": {
+          "en": "Applicants filing through German missions outside Iran.",
+          "fa": "متقاضیان اقدام از سفارت‌های آلمان خارج از ایران."
+        },
+        "recommended_action": {
+          "en": "Prepare translation/residence/funding evidence before submission and respond quickly to portal comments.",
+          "fa": "ترجمه، اقامت و مدارک مالی را قبل از سابمیت آماده کنید و به کامنت‌های پرتال سریع پاسخ دهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-OC-PROCESSING-004-E1",
+          "relation": "supports",
+          "independence_group": "DEU-OC-PROCESSING-004-E1"
+        },
+        {
+          "evidence_id": "DEU-OC-PROCESSING-004-E2",
+          "relation": "supports",
+          "independence_group": "DEU-OC-PROCESSING-004-E2"
+        },
+        {
+          "evidence_id": "DEU-OC-PROCESSING-004-E3",
+          "relation": "supports",
+          "independence_group": "DEU-OC-PROCESSING-004-E3"
+        },
+        {
+          "evidence_id": "DEU-OC-PROCESSING-004-E4",
+          "relation": "supports",
+          "independence_group": "DEU-OC-PROCESSING-004-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Two first-hand successful cases provide concrete workflow and timing evidence."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No universal processing-time guarantee is inferred."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-OC-PROCESSING-004-E1",
+            "DEU-OC-PROCESSING-004-E2",
+            "DEU-OC-PROCESSING-004-E3",
+            "DEU-OC-PROCESSING-004-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Opportunity Card Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Processing speed varies by mission and workload.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "pre-check",
+        "portal",
+        "interview",
+        "biometrics",
+        "processing time"
+      ],
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-08-10"
+    },
+    {
+      "signal_id": "DEU-OC-ROUTE-SPLIT-005",
+      "issue_cluster_id": "DEU-OPPORTUNITY-CARD-FACHKRAFT-VS-POINTS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-OC-ANABIN-ZAB-006"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "DEU-OC-WORK-ALIGNMENT-009"
+        }
+      ],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "fachkraft_vs_points_route_split",
+        "class": "eligibility"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "opportunity_card_fachkraft",
+            "opportunity_card_points"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "recognition",
+          "language"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The community increasingly treats Opportunity Card as two distinct eligibility logics: recognized Fachkraft vs points system",
+          "fa": "کامیونیتی کارت شانس را increasingly به دو منطق eligibility جدا تقسیم می‌کند: Fachkraft شناخته‌شده و سیستم امتیازی"
+        },
+        "summary": {
+          "en": "A detailed September 2026 explanation says regulated-profession recognition can determine Fachkraft status, while applicants outside that path fall back to the points system with baseline language and qualification-recognition requirements. Earlier successful-case questions show this distinction was a major source of confusion.",
+          "fa": "توضیح مفصل سپتامبر ۲۰۲۶ می‌گوید recognition حرفه regulated می‌تواند وضعیت Fachkraft را تعیین کند و افراد خارج از آن مسیر وارد سیستم امتیازی با شروط پایه زبان و شناسایی مدرک می‌شوند. پرسش‌های قبلی درباره کیس‌های موفق نشان می‌دهد این تفکیک منبع مهم ابهام بوده است."
+        },
+        "practical_impact": {
+          "en": "Applying the points checklist to a Fachkraft case—or vice versa—can create unnecessary documents or missed requirements.",
+          "fa": "استفاده از چک‌لیست امتیازی برای Fachkraft یا بالعکس می‌تواند مدرک اضافی یا نقص پرونده ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Opportunity Card applicants deciding how their qualification is recognized.",
+          "fa": "متقاضیانی که باید مشخص کنند از کدام منطق شناسایی/امتیاز وارد کارت شانس می‌شوند."
+        },
+        "recommended_action": {
+          "en": "Identify first whether the occupation is regulated and whether the applicant qualifies as a recognized skilled worker before calculating points.",
+          "fa": "قبل از محاسبه امتیاز، ابتدا regulated بودن شغل و وضعیت Fachkraft/recognition را مشخص کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-OC-ROUTE-SPLIT-005-E1",
+          "relation": "supports",
+          "independence_group": "route-summary"
+        },
+        {
+          "evidence_id": "DEU-OC-ROUTE-SPLIT-005-E2",
+          "relation": "supports",
+          "independence_group": "route-summary"
+        },
+        {
+          "evidence_id": "DEU-OC-ROUTE-SPLIT-005-E3",
+          "relation": "supports",
+          "independence_group": "route-summary"
+        },
+        {
+          "evidence_id": "DEU-OC-ROUTE-SPLIT-005-E4",
+          "relation": "supports",
+          "independence_group": "route-earlier"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The distinction is high-value but mainly anchored in one detailed community explanation and must be officially verified before use."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current statutory Fachkraft/points-system definitions were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-OC-ROUTE-SPLIT-005-E1",
+            "DEU-OC-ROUTE-SPLIT-005-E2",
+            "DEU-OC-ROUTE-SPLIT-005-E3",
+            "DEU-OC-ROUTE-SPLIT-005-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Opportunity Card Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Eligibility rules are high-stakes and may be updated.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Fachkraft",
+        "Punktsystem",
+        "regulated profession",
+        "Anerkennung",
+        "language"
+      ],
+      "first_seen": "2026-06-19",
+      "last_seen": "2026-09-16"
+    },
+    {
+      "signal_id": "DEU-OC-ANABIN-ZAB-006",
+      "issue_cluster_id": "DEU-OPPORTUNITY-CARD-ACADEMIC-RECOGNITION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-OC-ROUTE-SPLIT-005"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "anabin_zab_exact_degree_match",
+        "class": "recognition"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "opportunity_card"
+          ]
+        },
+        "process_stages": [
+          "academic_recognition",
+          "Anabin",
+          "ZAB"
+        ],
+        "entities": [
+          {
+            "entity_type": "authority",
+            "name": "ZAB"
+          },
+          {
+            "entity_type": "database",
+            "name": "Anabin"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "H+ university status alone may not resolve recognition; exact qualification listing can determine whether ZAB becomes the fallback",
+          "fa": "H+ بودن دانشگاه به‌تنهایی همیشه recognition را حل نمی‌کند و وجود عنوان دقیق مدرک می‌تواند تعیین کند ZAB لازم می‌شود یا نه"
+        },
+        "summary": {
+          "en": "Community guidance distinguishes institution status from the exact degree/title. Applicants whose institution is H+ but whose degree or specialization is missing repeatedly consider or obtain ZAB, while exact institution+qualification matches are treated as potentially sufficient.",
+          "fa": "راهنمایی گروه وضعیت دانشگاه را از عنوان دقیق مدرک جدا می‌کند. متقاضیانی که دانشگاه H+ دارند ولی رشته/گرایششان در Anabin نیست مکرراً سراغ ZAB می‌روند؛ در مقابل تطابق دقیق دانشگاه+مدرک ممکن است کافی تلقی شود."
+        },
+        "practical_impact": {
+          "en": "Checking only the university's H+ status can leave a recognition gap late in the application.",
+          "fa": "چک‌کردن صرف H+ دانشگاه می‌تواند نقص recognition را تا مراحل بعدی پنهان کند."
+        },
+        "who_should_care": {
+          "en": "Applicants with foreign academic degrees, especially missing specialization/degree entries in Anabin.",
+          "fa": "دارندگان مدارک دانشگاهی خارجی، مخصوصاً وقتی رشته/گرایش دقیق در Anabin نیست."
+        },
+        "recommended_action": {
+          "en": "Check both institution and exact qualification entry, and start ZAB early if the match is incomplete or the mission asks for it.",
+          "fa": "هم دانشگاه و هم عنوان دقیق مدرک را بررسی کنید و اگر تطابق ناقص است یا سفارت می‌خواهد، ZAB را زود شروع کنید."
+        },
+        "known_workaround": "Some applicants obtained ZAB proactively to reduce mission-specific uncertainty."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-OC-ANABIN-ZAB-006-E1",
+          "relation": "supports",
+          "independence_group": "DEU-OC-ANABIN-ZAB-006-E1"
+        },
+        {
+          "evidence_id": "DEU-OC-ANABIN-ZAB-006-E2",
+          "relation": "supports",
+          "independence_group": "DEU-OC-ANABIN-ZAB-006-E2"
+        },
+        {
+          "evidence_id": "DEU-OC-ANABIN-ZAB-006-E3",
+          "relation": "supports",
+          "independence_group": "DEU-OC-ANABIN-ZAB-006-E3"
+        },
+        {
+          "evidence_id": "DEU-OC-ANABIN-ZAB-006-E4",
+          "relation": "supports",
+          "independence_group": "DEU-OC-ANABIN-ZAB-006-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated 2026 cases converge on exact-degree matching rather than institution status alone."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Exact current ZAB/Anabin requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-OC-ANABIN-ZAB-006-E1",
+            "DEU-OC-ANABIN-ZAB-006-E2",
+            "DEU-OC-ANABIN-ZAB-006-E3",
+            "DEU-OC-ANABIN-ZAB-006-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Opportunity Card Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Recognition requirements are high-stakes and mission-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Anabin",
+        "H+",
+        "ZAB",
+        "degree recognition",
+        "qualification"
+      ],
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-08-24"
+    },
+    {
+      "signal_id": "DEU-OC-FUNDS-007",
+      "issue_cluster_id": "DEU-OPPORTUNITY-CARD-FINANCIAL-PROOF",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "blocked_account_provider_access",
+        "class": "financial"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "opportunity_card"
+          ]
+        },
+        "process_stages": [
+          "financial_evidence",
+          "blocked_account",
+          "sponsor"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Financial-proof planning is a practical bottleneck: the community uses blocked accounts or formal sponsorship, and provider access can be nationality-sensitive",
+          "fa": "برنامه‌ریزی مدرک مالی گلوگاه عملی است: کامیونیتی از حساب بلوکه یا اسپانسر رسمی استفاده می‌کند و دسترسی provider می‌تواند به ملیت حساس باشد"
+        },
+        "summary": {
+          "en": "The source repeatedly treats blocked-account evidence or a formal guarantor as the practical proof route. One Iranian applicant reported being rejected by Expatrio because of nationality, while multiple applicants used Fintiba instead.",
+          "fa": "منبع حساب بلوکه یا متعهد رسمی را مسیر عملی اثبات مالی می‌داند. یک متقاضی ایرانی گزارش کرده Expatrio به‌دلیل ملیت اجازه ادامه نداده و چند متقاضی دیگر از Fintiba استفاده کرده‌اند."
+        },
+        "practical_impact": {
+          "en": "Applicants can be eligible on points but still unable to submit promptly if funding cannot be placed with an accepted provider.",
+          "fa": "ممکن است فرد از نظر امتیاز واجدشرایط باشد اما به‌دلیل مشکل provider نتواند مدرک مالی را به‌موقع بسازد."
+        },
+        "who_should_care": {
+          "en": "Iranian Opportunity Card applicants funding the stay themselves.",
+          "fa": "متقاضیان ایرانی کارت شانس که هزینه اقامت را خودشان تأمین می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Test provider onboarding and source-of-funds transfer early; do not leave blocked-account setup to the appointment week.",
+          "fa": "onboarding provider و انتقال منبع پول را زود تست کنید و ساخت حساب بلوکه را به هفته وقت سفارت موکول نکنید."
+        },
+        "known_workaround": "Fintiba is repeatedly reported as the working alternative in this dataset."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-OC-FUNDS-007-E1",
+          "relation": "supports",
+          "independence_group": "DEU-OC-FUNDS-007-E1"
+        },
+        {
+          "evidence_id": "DEU-OC-FUNDS-007-E2",
+          "relation": "supports",
+          "independence_group": "DEU-OC-FUNDS-007-E2"
+        },
+        {
+          "evidence_id": "DEU-OC-FUNDS-007-E3",
+          "relation": "supports",
+          "independence_group": "DEU-OC-FUNDS-007-E3"
+        },
+        {
+          "evidence_id": "DEU-OC-FUNDS-007-E4",
+          "relation": "supports",
+          "independence_group": "DEU-OC-FUNDS-007-E4"
+        },
+        {
+          "evidence_id": "DEU-OC-FUNDS-007-E5",
+          "relation": "supports",
+          "independence_group": "DEU-OC-FUNDS-007-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple first-hand and community reports show blocked-account setup and provider access as a real operational dependency."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official financial amount and provider eligibility were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-OC-FUNDS-007-E1",
+            "DEU-OC-FUNDS-007-E2",
+            "DEU-OC-FUNDS-007-E3",
+            "DEU-OC-FUNDS-007-E4",
+            "DEU-OC-FUNDS-007-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Opportunity Card Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Required amounts and provider policies can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "blocked account",
+        "Fintiba",
+        "Expatrio",
+        "financial proof",
+        "sponsor"
+      ],
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "signal_id": "DEU-OC-AGE-008",
+      "issue_cluster_id": "DEU-OPPORTUNITY-CARD-AGE-SCORING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-OC-ROUTE-SPLIT-005"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "age_points_not_absolute_bar",
+        "class": "points"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Older applicant"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "opportunity_card_points"
+          ]
+        },
+        "process_stages": [
+          "points_calculation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Age is treated by the community as a points advantage rather than an absolute maximum-age bar",
+          "fa": "سن در کامیونیتی بیشتر عامل امتیاز دیده می‌شود تا سقف سنی مطلق"
+        },
+        "summary": {
+          "en": "Across 2025 and 2026 replies, users say older applicants may still file but lose the age-point advantage. The common community interpretation is more points under 35, fewer under 40 and none thereafter.",
+          "fa": "در پاسخ‌های ۲۰۲۵ و ۲۰۲۶ گفته شده افراد مسن‌تر همچنان می‌توانند اقدام کنند اما مزیت امتیاز سن را از دست می‌دهند. برداشت رایج گروه امتیاز بیشتر زیر ۳۵، کمتر زیر ۴۰ و بدون امتیاز بعد از آن است."
+        },
+        "practical_impact": {
+          "en": "Older applicants should calculate whether other criteria still reach the required points instead of self-rejecting only because of age.",
+          "fa": "متقاضی سن بالاتر بهتر است ببیند سایر معیارها حداقل امتیاز را پوشش می‌دهند یا نه و صرفاً به‌خاطر سن خودحذفی نکند."
+        },
+        "who_should_care": {
+          "en": "Applicants above 40 considering the points route.",
+          "fa": "متقاضیان بالای ۴۰ سال در مسیر امتیازی."
+        },
+        "recommended_action": {
+          "en": "Treat age as one scoring component and verify the current official points table before filing.",
+          "fa": "سن را یک جزء امتیاز بدانید و جدول رسمی روز را قبل از اقدام بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-OC-AGE-008-E1",
+          "relation": "supports",
+          "independence_group": "DEU-OC-AGE-008-E1"
+        },
+        {
+          "evidence_id": "DEU-OC-AGE-008-E2",
+          "relation": "supports",
+          "independence_group": "DEU-OC-AGE-008-E2"
+        },
+        {
+          "evidence_id": "DEU-OC-AGE-008-E3",
+          "relation": "supports",
+          "independence_group": "DEU-OC-AGE-008-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The pattern is repeated, but exact point cutoffs remain community-reported here."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Official current age-point rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-OC-AGE-008-E1",
+            "DEU-OC-AGE-008-E2",
+            "DEU-OC-AGE-008-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Opportunity Card Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Points tables can be amended.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "age",
+        "under 35",
+        "under 40",
+        "points"
+      ],
+      "first_seen": "2025-05-25",
+      "last_seen": "2026-08-25"
+    },
+    {
+      "signal_id": "DEU-OC-WORK-ALIGNMENT-009",
+      "issue_cluster_id": "DEU-OPPORTUNITY-CARD-WORK-QUALIFICATION-ALIGNMENT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-OC-ROUTE-SPLIT-005"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "work_experience_qualification_alignment",
+        "class": "profile"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "opportunity_card_points",
+            "opportunity_card_fachkraft"
+          ]
+        },
+        "process_stages": [
+          "work_experience",
+          "qualification_alignment"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Work experience that aligns with the recognized qualification is treated as materially stronger evidence than unrelated experience",
+          "fa": "سابقه کار مرتبط با مدرک شناخته‌شده در تجربه گروه مدرک قوی‌تری نسبت به سابقه نامرتبط است"
+        },
+        "summary": {
+          "en": "A Turkey-based profile with five years of unrelated work triggered uncertainty; the response said filing may still be possible but recommended submitting work evidence related to the qualification. Later points summaries and Fachkraft discussion reinforce the importance of occupation/qualification alignment.",
+          "fa": "پروفایل مقیم ترکیه با پنج سال سابقه نامرتبط ابهام ایجاد کرده؛ پاسخ گروه اقدام را ممکن دانسته اما توصیه کرده سابقه ارائه‌شده مرتبط با مدرک باشد. خلاصه‌های بعدی امتیاز و بحث Fachkraft نیز اهمیت رابطه شغل و مدرک را تقویت می‌کنند."
+        },
+        "practical_impact": {
+          "en": "Strong total experience may not translate cleanly into points/recognition if it is poorly aligned with the qualification used for the application.",
+          "fa": "سابقه زیاد اگر با مدرکی که با آن اقدام می‌شود همسو نباشد ممکن است به‌سادگی به امتیاز/recognition تبدیل نشود."
+        },
+        "who_should_care": {
+          "en": "Career changers whose current occupation differs from their academic qualification.",
+          "fa": "افرادی که تغییر مسیر شغلی داده‌اند و کار فعلی‌شان با مدرک تحصیلی فرق دارد."
+        },
+        "recommended_action": {
+          "en": "Map each claimed work period to the qualification/occupation used in the visa route and document relevance explicitly.",
+          "fa": "هر سابقه کاری را به مدرک/شغل مورد استفاده در مسیر ویزا وصل کنید و ارتباطش را مستند نشان دهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-OC-WORK-ALIGNMENT-009-E1",
+          "relation": "supports",
+          "independence_group": "DEU-OC-WORK-ALIGNMENT-009-E1"
+        },
+        {
+          "evidence_id": "DEU-OC-WORK-ALIGNMENT-009-E2",
+          "relation": "supports",
+          "independence_group": "DEU-OC-WORK-ALIGNMENT-009-E2"
+        },
+        {
+          "evidence_id": "DEU-OC-WORK-ALIGNMENT-009-E3",
+          "relation": "supports",
+          "independence_group": "DEU-OC-WORK-ALIGNMENT-009-E3"
+        },
+        {
+          "evidence_id": "DEU-OC-WORK-ALIGNMENT-009-E4",
+          "relation": "supports",
+          "independence_group": "DEU-OC-WORK-ALIGNMENT-009-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The relevance pattern is repeated, but exact scoring consequences are not independently verified."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official scoring/recognition treatment of unrelated work experience was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-OC-WORK-ALIGNMENT-009-E1",
+            "DEU-OC-WORK-ALIGNMENT-009-E2",
+            "DEU-OC-WORK-ALIGNMENT-009-E3",
+            "DEU-OC-WORK-ALIGNMENT-009-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Opportunity Card Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Profile-scoring interpretation should be verified case by case.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "work experience",
+        "qualification",
+        "related experience",
+        "career change"
+      ],
+      "first_seen": "2025-06-03",
+      "last_seen": "2026-09-16"
+    },
+    {
+      "signal_id": "DEU-OC-MISSION-DOCS-010",
+      "issue_cluster_id": "DEU-OPPORTUNITY-CARD-MISSION-SPECIFIC-DOCUMENTS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-OC-THIRDCOUNTRY-003"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "DEU-OC-ANABIN-ZAB-006"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "mission_specific_document_implementation",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "opportunity_card"
+          ]
+        },
+        "process_stages": [
+          "VIDEX",
+          "legalization",
+          "translation",
+          "residence_evidence",
+          "ZAB"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Operational document expectations can differ by German mission even when the underlying visa route is the same",
+          "fa": "جزئیات اجرایی مدارک می‌تواند بین سفارت‌های آلمان فرق کند، حتی وقتی نوع ویزا یکی است"
+        },
+        "summary": {
+          "en": "The source includes a mission-specific answer on what to put in the VIDEX reference field, country-of-application residence evidence, and varying expectations around pre-legalization/full legalization and ZAB. Applicants repeatedly advise asking the exact mission handling the case.",
+          "fa": "فایل پاسخ mission-specific درباره reference فرم VIDEX، مدرک اقامت کشور محل اقدام و تفاوت انتظار درباره pre-legal/full legalization و ZAB دارد. توصیه تکرارشونده این است که از همان سفارت رسیدگی‌کننده سؤال شود."
+        },
+        "practical_impact": {
+          "en": "A checklist copied from another country may be incomplete or unnecessarily expensive for the applicant's mission.",
+          "fa": "چک‌لیست کپی‌شده از کشور دیگر ممکن است برای سفارت شما ناقص یا بیش‌ازحد پرهزینه باشد."
+        },
+        "who_should_care": {
+          "en": "Third-country filers and applicants with foreign-issued degrees.",
+          "fa": "اقدام‌کنندگان از کشور ثالث و دارندگان مدارک صادرشده در کشورهای مختلف."
+        },
+        "recommended_action": {
+          "en": "Use the receiving mission's written instructions/contact response as the operational checklist for ambiguous fields and legalization/recognition documents.",
+          "fa": "برای فیلدهای مبهم و مدارک لگال/recognition، دستورالعمل کتبی یا پاسخ contact همان سفارت را چک‌لیست عملی قرار دهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-OC-MISSION-DOCS-010-E1",
+          "relation": "supports",
+          "independence_group": "DEU-OC-MISSION-DOCS-010-E1"
+        },
+        {
+          "evidence_id": "DEU-OC-MISSION-DOCS-010-E2",
+          "relation": "supports",
+          "independence_group": "DEU-OC-MISSION-DOCS-010-E2"
+        },
+        {
+          "evidence_id": "DEU-OC-MISSION-DOCS-010-E3",
+          "relation": "supports",
+          "independence_group": "DEU-OC-MISSION-DOCS-010-E3"
+        },
+        {
+          "evidence_id": "DEU-OC-MISSION-DOCS-010-E4",
+          "relation": "supports",
+          "independence_group": "DEU-OC-MISSION-DOCS-010-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Several concrete mission/document examples show meaningful implementation variance."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No cross-mission universal document rule is inferred."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-OC-MISSION-DOCS-010-E1",
+            "DEU-OC-MISSION-DOCS-010-E2",
+            "DEU-OC-MISSION-DOCS-010-E3",
+            "DEU-OC-MISSION-DOCS-010-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Opportunity Card Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Mission checklists can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "VIDEX",
+        "legalization",
+        "mission",
+        "residence permit",
+        "ZAB"
+      ],
+      "first_seen": "2025-01-15",
+      "last_seen": "2026-08-24"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram usernames/IDs, contact details and other directly identifying information are removed from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 1,535 records in the uploaded JSON export."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains and first-hand success cases were inspected for selected signals; the full message graph was not exhaustively interpreted."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Unrelated ads and generic promotional posts were excluded."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated Iran-access, third-country, Anabin/ZAB, blocked-account, age, work-alignment and processing discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "The July 2026 TLS queue development is preserved alongside September 2026 community reports that Tehran filing was still not practically active."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "Reposted official-looking text and mission guidance are not marked independently verified."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal connector could not be invoked successfully during this run, so remote-store deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals are operational context only. They are not official Opportunity Card eligibility, recognition, financial-proof, consular-jurisdiction, document or processing rules. Verify current requirements with the responsible German mission and official federal sources before acting."
+}

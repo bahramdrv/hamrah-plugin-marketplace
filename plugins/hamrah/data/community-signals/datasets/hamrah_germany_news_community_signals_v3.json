@@ -1,0 +1,2266 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_germany_news_signals_candidate",
+    "generated_at": "2026-09-16T09:00:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "germany-news-telegram-export",
+      "name": "Germany News.json / Telegram export «اخبار آلمان با پرگار»",
+      "source_type": "public_channel_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full",
+        "from": "2025-01-04",
+        "to": "2026-09-10",
+        "records_available": 149,
+        "records_processed": 149
+      },
+      "source_characteristics": {
+        "editorial_channel": true,
+        "contains_promotional_content": true,
+        "contains_forwarded_content": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "DEU-NEWS-VISA-DIGITALIZATION-001-E1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3088"
+      },
+      "published_at": "2025-01-05",
+      "event_date": "2025-01-05",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported that Germany's visa process was moving into a digital/online workflow, including online application and appointment handling, and said Iran-based applicants were included.",
+        "fa": "کانال گزارش کرده روند ویزای آلمان به سمت فرایند دیجیتال/آنلاین شامل درخواست و رزرو وقت حرکت کرده و متقاضیان ساکن ایران نیز در این چارچوب قرار می‌گیرند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-VISA-DIGITALIZATION-001-E2",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3235"
+      },
+      "published_at": "2026-02-27",
+      "event_date": "2026-02-27",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A February 2026 update cited the German Foreign Office's updated visa guide and described the national-visa pathway and online application framework.",
+        "fa": "آپدیت فوریه ۲۰۲۶ با ارجاع به وزارت خارجه آلمان، راهنمای به‌روز ویزا و چارچوب درخواست آنلاین برای ویزای ملی را توضیح داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-TEHRAN-VAC-TLS-002-E1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3117"
+      },
+      "published_at": "2025-06-08",
+      "event_date": "2025-06-08",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported that from 1 July 2025 Germany's Tehran visa-service provider would change from Visametric to TLS Contact.",
+        "fa": "کانال گزارش کرده از ۱ جولای ۲۰۲۵ ارائه‌دهنده خدمات ویزای آلمان در تهران از Visametric به TLS Contact تغییر می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-TEHRAN-VAC-TLS-002-E2",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3117"
+      },
+      "published_at": "2025-06-08",
+      "event_date": "2025-06-08",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The same post said existing registrations would be transferred automatically and applicants should not re-register at that stage.",
+        "fa": "همان پست گفته ثبت‌نام‌های قبلی به‌صورت خودکار منتقل می‌شوند و در آن مرحله نیازی به ثبت‌نام مجدد نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-TEHRAN-VAC-TLS-002-E3",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3117"
+      },
+      "published_at": "2025-06-08",
+      "event_date": "2025-06-08",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The post warned applicants to answer TLS calls because missed contact could mean the appointment is not booked and registration may need to be repeated.",
+        "fa": "پست هشدار داده متقاضیان تماس TLS را پاسخ دهند، چون از دست‌دادن تماس می‌تواند باعث نشدن رزرو وقت و نیاز به ثبت‌نام دوباره شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3127"
+      },
+      "published_at": "2025-06-15",
+      "event_date": "2025-06-15",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel announced the German embassy in Tehran had closed during the security crisis in June 2025.",
+        "fa": "کانال در ژوئن ۲۰۲۵ از بسته‌شدن سفارت آلمان در تهران در جریان بحران امنیتی خبر داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E2",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3142"
+      },
+      "published_at": "2025-07-19",
+      "event_date": "2025-07-19",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "In July 2025 the channel reported limited embassy activity had resumed, but public access and in-person consular services remained suspended; some earlier visa files were being reviewed again.",
+        "fa": "در جولای ۲۰۲۵ کانال گزارش کرده فعالیت محدود سفارت از سر گرفته شده اما مراجعه عمومی و خدمات کنسولی حضوری متوقف مانده و بررسی برخی پرونده‌های قبلی دوباره شروع شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E3",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3156"
+      },
+      "published_at": "2025-08-17",
+      "event_date": "2025-08-17",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An August 2025 update said the embassy was still temporarily closed to visitors, though some core activities and passport return by appointment were resuming.",
+        "fa": "آپدیت اوت ۲۰۲۵ گفته سفارت همچنان برای مراجعه‌کنندگان موقتاً بسته است، هرچند برخی فعالیت‌های پایه و تحویل گذرنامه با وقت قبلی از سر گرفته شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E4",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3250"
+      },
+      "published_at": "2026-05-12",
+      "event_date": "2026-05-12",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A May 2026 report described months-long suspension and uncertainty for Iranian study, work and family-reunification applicants after another embassy shutdown, including cases losing jobs or admissions.",
+        "fa": "گزارش مه ۲۰۲۶ از تعلیق و بلاتکلیفی چندماهه متقاضیان ایرانی تحصیلی، کاری و پیوست پس از تعطیلی دیگر سفارت خبر داده و به از دست رفتن برخی جاب‌آفرها یا پذیرش‌ها اشاره کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E5",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3268"
+      },
+      "published_at": "2026-09-04",
+      "event_date": "2026-09-04",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel_with_official_context",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A September 2026 post said visa and consular operations in Tehran were still in emergency mode and consular assistance capacity remained very limited, while not announcing a total visa stop.",
+        "fa": "پست سپتامبر ۲۰۲۶ گفته بخش ویزا و کنسولی تهران همچنان در وضعیت عملیاتی اضطراری است و ظرفیت کمک کنسولی بسیار محدود مانده، بدون اینکه توقف کامل همه ویزاها اعلام شده باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-CITIZENSHIP-TIMELINE-004-E1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3106"
+      },
+      "published_at": "2025-04-16",
+      "event_date": "2025-04-16",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An April 2025 post reported the incoming coalition intended to abolish the accelerated three-year naturalization route while retaining the five-year standard and dual citizenship.",
+        "fa": "پست آوریل ۲۰۲۵ گزارش کرده ائتلاف جدید قصد دارد مسیر تسریع‌شده سه‌ساله تابعیت را لغو کند و مسیر استاندارد پنج‌ساله و تابعیت دوگانه را حفظ کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-CITIZENSHIP-TIMELINE-004-E2",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3179"
+      },
+      "published_at": "2025-10-12",
+      "event_date": "2025-10-12",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An October 2025 update said the three-year fast-track had been abolished by parliament and described five years as the standard naturalization route.",
+        "fa": "آپدیت اکتبر ۲۰۲۵ گفته مسیر fast-track سه‌ساله در پارلمان لغو شده و پنج سال را مسیر استاندارد تابعیت معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-CITIZENSHIP-TIMELINE-004-C1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3256"
+      },
+      "published_at": "2026-07-16",
+      "event_date": "2026-07-16",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A July 2026 channel guide nevertheless said some exceptional cases could still reach naturalization after three years, creating an internal source inconsistency that needs primary-source checking.",
+        "fa": "راهنمای جولای ۲۰۲۶ کانال با این حال نوشته در برخی شرایط استثنایی هنوز امکان سه‌سال مطرح است؛ این موضوع با گزارش‌های قبلی کانال ناسازگار است و نیاز به بررسی منبع رسمی دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-AUSBILDUNG-FUNDING-005-E1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3111"
+      },
+      "published_at": "2025-05-12",
+      "event_date": "2025-05-12",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A May 2025 post reported a monthly financial-requirement benchmark of EUR 1,030 for Ausbildung visa applicants, up from EUR 930 in 2024.",
+        "fa": "پست مه ۲۰۲۵ حداقل تمکن ماهانه ۱٬۰۳۰ یورو برای متقاضی ویزای آوسبیلدونگ را گزارش کرده که از ۹۳۰ یورو در ۲۰۲۴ افزایش یافته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-AUSBILDUNG-FUNDING-005-E2",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3229"
+      },
+      "published_at": "2026-02-16",
+      "event_date": "2026-02-16",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A February 2026 official-source summary said first-year dual-Ausbildung minimum trainee pay was EUR 724 per month in 2026.",
+        "fa": "خلاصه مبتنی بر منبع رسمی در فوریه ۲۰۲۶ حداقل حقوق کارآموز سال اول آوسبیلدونگ دوآل را ۷۲۴ یورو در ماه برای ۲۰۲۶ گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-BLUECARD-SALARY-006-E1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3224"
+      },
+      "published_at": "2026-02-08",
+      "event_date": "2026-02-08",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel cited official German guidance stating 2026 EU Blue Card salary thresholds of EUR 50,700 generally and EUR 45,934.20 for shortage occupations with BA approval.",
+        "fa": "کانال با ارجاع به راهنمای رسمی آلمان، حداقل حقوق EU Blue Card در ۲۰۲۶ را ۵۰٬۷۰۰ یورو و برای مشاغل کمبود نیرو با تأیید BA مبلغ ۴۵٬۹۳۴٫۲۰ یورو گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-OPPORTUNITY-CARD-007-E1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3206"
+      },
+      "published_at": "2025-12-04",
+      "event_date": "2025-12-04",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel described the Opportunity Card as a one-year job-search residence route with up to 20 hours per week of part-time work and a points route for some applicants.",
+        "fa": "کانال Opportunity Card را مسیر اقامت یک‌ساله برای جست‌وجوی کار معرفی کرده که امکان تا ۲۰ ساعت کار پاره‌وقت در هفته و برای برخی متقاضیان سیستم امتیازی دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-OPPORTUNITY-CARD-007-Q1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3206"
+      },
+      "published_at": "2025-12-04",
+      "event_date": "2025-12-04",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The same post added that the route was 'currently not available for Iranians', a nationality-specific claim not independently verified in this extraction.",
+        "fa": "همان پست افزوده این مسیر «در حال حاضر برای ایرانیان وجود ندارد»؛ این ادعای ملیت‌محور در این استخراج مستقلاً راستی‌آزمایی نشده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-OPPORTUNITY-CARD-007-E2",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3229"
+      },
+      "published_at": "2026-02-16",
+      "event_date": "2026-02-16",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A February 2026 official-source summary distinguished the Opportunity Card from the 18-month post-study job-search residence available to graduates of German institutions.",
+        "fa": "خلاصه فوریه ۲۰۲۶ مبتنی بر منبع رسمی، Opportunity Card را از اقامت ۱۸ماهه جست‌وجوی کار برای فارغ‌التحصیلان مؤسسات آلمان تفکیک کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-STUDY-WORK-BRIDGE-008-E1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3229"
+      },
+      "published_at": "2026-02-16",
+      "event_date": "2026-02-16",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel cited the German Foreign Office's student-work rule of 120 full days or 240 half days per year.",
+        "fa": "کانال با ارجاع به وزارت خارجه آلمان قانون کار دانشجویی ۱۲۰ روز کامل یا ۲۴۰ نیم‌روز در سال را گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-STUDY-WORK-BRIDGE-008-E2",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3235"
+      },
+      "published_at": "2026-02-27",
+      "event_date": "2026-02-27",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A February 2026 source summary noted the common Werkstudent reference of about 20 hours per week during term and a EUR 603 monthly Minijob benchmark.",
+        "fa": "خلاصه فوریه ۲۰۲۶ از قاعده رایج حدود ۲۰ ساعت در هفته برای Werkstudent در طول ترم و سقف مرجع ۶۰۳ یورو برای Minijob خبر داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-STUDY-WORK-BRIDGE-008-E3",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3229"
+      },
+      "published_at": "2026-02-16",
+      "event_date": "2026-02-16",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported that graduates of German academic/vocational institutions can use an 18-month job-search residence route after graduation.",
+        "fa": "کانال گزارش کرده فارغ‌التحصیلان مؤسسات دانشگاهی/فنی آلمان می‌توانند پس از تحصیل از اقامت ۱۸ماهه جست‌وجوی کار استفاده کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-FINANCIAL-EVIDENCE-009-E1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3210"
+      },
+      "published_at": "2025-12-27",
+      "event_date": "2025-12-27",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A December 2025 guide estimated typical 2026 student living costs at roughly EUR 950-1,200 per month and annual study-visa financial proof around EUR 11,000-12,000.",
+        "fa": "راهنمای دسامبر ۲۰۲۵ هزینه معمول زندگی دانشجو در ۲۰۲۶ را حدود ۹۵۰ تا ۱٬۲۰۰ یورو در ماه و تمکن سالانه ویزای تحصیلی را حدود ۱۱ تا ۱۲ هزار یورو برآورد کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-FINANCIAL-EVIDENCE-009-E2",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3229"
+      },
+      "published_at": "2026-02-16",
+      "event_date": "2026-02-16",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "For a language-course visa, an official-source summary reported a different benchmark: EUR 1,091 per month plus an intensive course of at least 18 hours per week.",
+        "fa": "برای ویزای دوره زبان، خلاصه مبتنی بر منبع رسمی مبلغ متفاوت ۱٬۰۹۱ یورو در ماه و شرط دوره فشرده حداقل ۱۸ ساعت در هفته را گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-FINANCIAL-EVIDENCE-009-E3",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3235"
+      },
+      "published_at": "2026-02-27",
+      "event_date": "2026-02-27",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The German Foreign Office blocked-account guide was summarized as saying the required blocked amount depends on the purpose of residence and provider documentation matters.",
+        "fa": "خلاصه راهنمای وزارت خارجه آلمان درباره Sperrkonto می‌گوید مبلغ موردنیاز به هدف اقامت وابسته است و مدارک ارائه‌دهنده حساب اهمیت دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-RESEARCH-SECURITY-010-E1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3251"
+      },
+      "published_at": "2026-06-14",
+      "event_date": "2026-06-14",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A June 2026 post said Germany was designing a national research-security structure to reduce unauthorized transfer of sensitive knowledge and technology.",
+        "fa": "پست ژوئن ۲۰۲۶ گفته آلمان در حال طراحی ساختار ملی امنیت پژوهش برای کاهش انتقال غیرمجاز دانش و فناوری حساس است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-RESEARCH-SECURITY-010-E2",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3251"
+      },
+      "published_at": "2026-06-14",
+      "event_date": "2026-06-14",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The report anticipated stronger coordination between universities, government and security bodies and possible effects on international research collaboration and recruitment.",
+        "fa": "گزارش از هماهنگی بیشتر دانشگاه‌ها، دولت و نهادهای امنیتی و اثر احتمالی بر همکاری‌های بین‌المللی و جذب پژوهشگر خارجی خبر داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-FREELANCE-SELFEMPLOYED-011-E1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3252"
+      },
+      "published_at": "2026-06-20",
+      "event_date": "2026-06-20",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel described freelance and self-employment residence routes that do not require a German employer job offer but do require evidence of viable professional or economic activity.",
+        "fa": "کانال مسیرهای اقامت فریلنسری و خوداشتغالی را معرفی کرده که به جاب‌آفر کارفرمای آلمانی نیاز ندارند، اما باید فعالیت حرفه‌ای/اقتصادی واقعی و قابل اتکا اثبات شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-FREELANCE-SELFEMPLOYED-011-E2",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3252"
+      },
+      "published_at": "2026-06-20",
+      "event_date": "2026-06-20",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The report noted possible evidence such as qualifications, business/income plans, health insurance, housing and client letters, and cautioned that fast permanent residence should not be generalized to every freelancer.",
+        "fa": "گزارش مدارکی مانند سوابق، برنامه درآمدی/کسب‌وکار، بیمه درمانی، محل اقامت و نامه مشتری را مطرح کرده و هشدار داده مسیر سریع اقامت دائم را نباید به همه فریلنسرها تعمیم داد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-RESEARCH-VISA-18D-012-E1",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3253"
+      },
+      "published_at": "2026-06-22",
+      "event_date": "2026-06-22",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported a dedicated research residence route under section 18d for international researchers with an employment contract or hosting agreement from a German university/research institution.",
+        "fa": "کانال از مسیر اقامتی اختصاصی پژوهش تحت ماده 18d برای پژوهشگران بین‌المللی دارای قرارداد کار یا hosting agreement از دانشگاه/مؤسسه پژوهشی آلمان خبر داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-NEWS-RESEARCH-VISA-18D-012-E2",
+      "source_id": "germany-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:3253"
+      },
+      "published_at": "2026-06-22",
+      "event_date": "2026-06-22",
+      "collected_at": "2026-09-16T09:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The same report said researchers may stay up to 18 months after the project to seek suitable employment if they can support themselves.",
+        "fa": "همان گزارش گفته پژوهشگر در صورت اثبات توان مالی می‌تواند پس از پایان پروژه تا ۱۸ ماه برای یافتن شغل متناسب در آلمان بماند."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "DEU-NEWS-VISA-DIGITALIZATION-001",
+      "issue_cluster_id": "DEU-VISA-DIGITALIZATION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-NEWS-TEHRAN-VAC-TLS-002"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "digital_visa_workflow",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "FAMILY / REUNIFICATION",
+            "VISIT"
+          ],
+          "codes": [
+            "national_visa",
+            "schengen_visa"
+          ]
+        },
+        "process_stages": [
+          "visa_application",
+          "appointment"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Germany shifted more of the visa application workflow online",
+          "fa": "آلمان بخش بیشتری از روند درخواست ویزا را آنلاین کرده است"
+        },
+        "summary": {
+          "en": "The channel reported digital application and appointment workflows in early 2025 and again cited the German Foreign Office's updated national-visa guide in February 2026.",
+          "fa": "کانال در اوایل ۲۰۲۵ از دیجیتالی‌شدن درخواست و رزرو وقت خبر داده و در فوریه ۲۰۲۶ نیز به راهنمای به‌روز وزارت خارجه برای ویزای ملی و مسیر آنلاین اشاره کرده است."
+        },
+        "practical_impact": {
+          "en": "Applicants increasingly need to manage online portals correctly before any in-person biometrics/document step.",
+          "fa": "متقاضیان باید قبل از مرحله حضوری مدارک/بیومتریک، پورتال آنلاین را درست مدیریت کنند."
+        },
+        "who_should_care": {
+          "en": "Germany visa applicants, including Iran-based applicants.",
+          "fa": "متقاضیان ویزای آلمان، از جمله افراد ساکن ایران."
+        },
+        "recommended_action": {
+          "en": "Use the current official portal/mission instructions rather than older paper-only workflows.",
+          "fa": "به‌جای روندهای قدیمی کاغذی، دستورالعمل فعلی پورتال و سفارت را مبنا قرار دهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-NEWS-VISA-DIGITALIZATION-001-E1",
+          "relation": "supports",
+          "independence_group": "digital-3088"
+        },
+        {
+          "evidence_id": "DEU-NEWS-VISA-DIGITALIZATION-001-E2",
+          "relation": "supports",
+          "independence_group": "digital-3235"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "improving",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Two dated posts more than a year apart describe the same digitalization direction, one with an official German Foreign Office link."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Primary portal availability by visa category/mission was not independently re-verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-NEWS-VISA-DIGITALIZATION-001-E1",
+            "DEU-NEWS-VISA-DIGITALIZATION-001-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Portal coverage and mission-specific workflows can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Consular Services Portal",
+        "online visa",
+        "national visa",
+        "appointment"
+      ],
+      "first_seen": "2025-01-05",
+      "last_seen": "2026-02-27"
+    },
+    {
+      "signal_id": "DEU-NEWS-TEHRAN-VAC-TLS-002",
+      "issue_cluster_id": "DEU-TEHRAN-VAC-PROVIDER-CHANGE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "vac_provider_change",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Applying through Tehran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "VISIT",
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "visa_appointment"
+          ]
+        },
+        "process_stages": [
+          "appointment"
+        ],
+        "entities": [
+          {
+            "entity_type": "service_provider",
+            "name": "TLS Contact"
+          },
+          {
+            "entity_type": "service_provider",
+            "name": "Visametric"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "Germany's Tehran visa-service provider changed from Visametric to TLS Contact from July 2025",
+          "fa": "ارائه‌دهنده خدمات ویزای آلمان در تهران از جولای ۲۰۲۵ از Visametric به TLS تغییر کرد"
+        },
+        "summary": {
+          "en": "The source said existing appointment registrations would transfer automatically, but applicants had to remain reachable for TLS appointment calls.",
+          "fa": "منبع گفته ثبت‌نام‌های موجود به‌صورت خودکار منتقل می‌شوند، اما متقاضی باید برای تماس TLS در دسترس باشد."
+        },
+        "practical_impact": {
+          "en": "Missing a provider contact could create avoidable appointment friction even if an earlier registration existed.",
+          "fa": "از دست دادن تماس ارائه‌دهنده می‌تواند با وجود ثبت‌نام قبلی باعث اصطکاک یا تکرار فرایند وقت شود."
+        },
+        "who_should_care": {
+          "en": "Applicants in the Tehran appointment queue around the provider transition.",
+          "fa": "متقاضیان صف وقت تهران در دوره انتقال ارائه‌دهنده."
+        },
+        "recommended_action": {
+          "en": "Keep contact details current and follow the currently assigned VAC rather than legacy Visametric instructions.",
+          "fa": "اطلاعات تماس را به‌روز نگه دارید و به‌جای دستورالعمل قدیمی Visametric، ارائه‌دهنده فعلی را دنبال کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-NEWS-TEHRAN-VAC-TLS-002-E1",
+          "relation": "supports",
+          "independence_group": "vac-3117"
+        },
+        {
+          "evidence_id": "DEU-NEWS-TEHRAN-VAC-TLS-002-E2",
+          "relation": "supports",
+          "independence_group": "vac-3117"
+        },
+        {
+          "evidence_id": "DEU-NEWS-TEHRAN-VAC-TLS-002-E3",
+          "relation": "supports",
+          "independence_group": "vac-3117"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "historical",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Operationally specific but supported by a single channel post in this extraction."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current provider/queue transfer rules were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-NEWS-TEHRAN-VAC-TLS-002-E1",
+            "DEU-NEWS-TEHRAN-VAC-TLS-002-E2",
+            "DEU-NEWS-TEHRAN-VAC-TLS-002-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Provider transition is historical, but legacy registrations can have downstream effects.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "TLS Contact",
+        "Visametric",
+        "Tehran",
+        "appointment"
+      ],
+      "first_seen": "2025-06-08",
+      "last_seen": "2025-06-08"
+    },
+    {
+      "signal_id": "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003",
+      "issue_cluster_id": "DEU-IRAN-CONSULAR-DISRUPTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-NEWS-TEHRAN-VAC-TLS-002"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "consular_service_disruption",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Applying from Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "FAMILY / REUNIFICATION",
+            "VISIT"
+          ],
+          "codes": [
+            "visa_processing",
+            "consular_service"
+          ]
+        },
+        "process_stages": [
+          "appointment",
+          "visa_processing",
+          "passport_return"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Germany visa and consular services in Iran experienced repeated severe disruption from mid-2025 through 2026",
+          "fa": "خدمات ویزا و کنسولی آلمان در ایران از میانه ۲۰۲۵ تا ۲۰۲۶ بارها دچار اختلال شدید شده است"
+        },
+        "summary": {
+          "en": "The channel records closure, partial reopening without normal public service, prolonged applicant uncertainty, and emergency-mode operations still being reported in September 2026.",
+          "fa": "کانال بسته‌شدن، بازگشایی محدود بدون خدمات عادی، بلاتکلیفی طولانی متقاضیان و ادامه وضعیت عملیاتی اضطراری تا سپتامبر ۲۰۲۶ را ثبت کرده است."
+        },
+        "practical_impact": {
+          "en": "Iran-based applicants can face appointment, passport, contract/start-date and family-separation risks unrelated to their substantive visa eligibility.",
+          "fa": "متقاضیان داخل ایران ممکن است فارغ از eligibility پرونده با ریسک وقت، پاسپورت، از دست‌رفتن شروع کار/تحصیل و جدایی خانوادگی روبه‌رو شوند."
+        },
+        "who_should_care": {
+          "en": "Iran-based German visa applicants across study, work and family routes.",
+          "fa": "متقاضیان ایرانی مسیرهای تحصیل، کار و پیوست آلمان."
+        },
+        "recommended_action": {
+          "en": "Treat Tehran consular capacity as a separate critical path and verify current mission/VAC instructions immediately before each step.",
+          "fa": "ظرفیت کنسولی تهران را یک مسیر بحرانی مستقل ببینید و قبل از هر مرحله آخرین دستورالعمل سفارت/VAC را بررسی کنید."
+        },
+        "known_workaround": "The source reports only case-by-case routing for some already-approved files; it explicitly does not establish a universal Armenia replacement route."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E1",
+          "relation": "supports",
+          "independence_group": "closure-2025"
+        },
+        {
+          "evidence_id": "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E2",
+          "relation": "supports",
+          "independence_group": "reopen-2025-07"
+        },
+        {
+          "evidence_id": "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E3",
+          "relation": "supports",
+          "independence_group": "reopen-2025-08"
+        },
+        {
+          "evidence_id": "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E4",
+          "relation": "supports",
+          "independence_group": "closure-2026"
+        },
+        {
+          "evidence_id": "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E5",
+          "relation": "supports",
+          "independence_group": "emergency-2026-09"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple dated reports across 15 months consistently show major Iran-based operational disruption, with later reports confirming emergency limitations."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Tehran operational status was not independently verified outside the uploaded source."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E1",
+            "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E2",
+            "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E3",
+            "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E4",
+            "DEU-NEWS-IRAN-CONSULAR-DISRUPTION-003-E5"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-23",
+        "reason": "Security and consular capacity can change with little notice.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Tehran embassy",
+        "consular disruption",
+        "Iran",
+        "visa suspension",
+        "emergency operations"
+      ],
+      "first_seen": "2025-06-15",
+      "last_seen": "2026-09-04"
+    },
+    {
+      "signal_id": "DEU-NEWS-CITIZENSHIP-TIMELINE-004",
+      "issue_cluster_id": "DEU-CITIZENSHIP-TIMELINE",
+      "relationships": [],
+      "classification": {
+        "family": "E12_CITIZENSHIP_LONG_TERM_STATUS",
+        "type": "naturalization_timeline_change",
+        "class": "citizenship"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "CITIZENSHIP"
+          ],
+          "codes": [
+            "naturalization"
+          ]
+        },
+        "process_stages": [
+          "long_term_status"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel reports a five-year standard naturalization route after abolition of the three-year fast track, but later messaging is internally inconsistent",
+          "fa": "کانال پس از لغو fast-track سه‌ساله، مسیر استاندارد پنج‌ساله را گزارش می‌کند؛ اما پیام‌های بعدی درباره استثنای سه‌ساله ناسازگارند"
+        },
+        "summary": {
+          "en": "April and October 2025 posts describe abolition of the three-year fast track and retention of a five-year standard plus dual citizenship. A July 2026 guide nevertheless says some three-year cases may exist, so the exact exception structure needs primary-source verification.",
+          "fa": "پست‌های آوریل و اکتبر ۲۰۲۵ لغو مسیر سه‌ساله و حفظ مسیر پنج‌ساله و تابعیت دوگانه را گزارش می‌کنند. با این حال راهنمای جولای ۲۰۲۶ هنوز از برخی موارد سه‌ساله گفته، بنابراین ساختار دقیق استثناها باید از منبع رسمی بررسی شود."
+        },
+        "practical_impact": {
+          "en": "Long-term settlement planning should not assume a three-year citizenship path without checking the current statutory exception.",
+          "fa": "برای برنامه بلندمدت نباید بدون بررسی قانون فعلی روی تابعیت سه‌ساله حساب کرد."
+        },
+        "who_should_care": {
+          "en": "Students and skilled workers planning German naturalization.",
+          "fa": "دانشجویان و نیروی متخصصی که برای تابعیت آلمان برنامه‌ریزی می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Use five years as the source's stable standard and independently confirm whether any shorter exception applies to the individual case.",
+          "fa": "پنج سال را استاندارد پایدار این منبع در نظر بگیرید و هر استثنای کوتاه‌تر را برای کیس خود جداگانه تأیید کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-NEWS-CITIZENSHIP-TIMELINE-004-E1",
+          "relation": "supports",
+          "independence_group": "citizenship-plan-2025"
+        },
+        {
+          "evidence_id": "DEU-NEWS-CITIZENSHIP-TIMELINE-004-E2",
+          "relation": "supports",
+          "independence_group": "citizenship-law-2025"
+        },
+        {
+          "evidence_id": "DEU-NEWS-CITIZENSHIP-TIMELINE-004-C1",
+          "relation": "contradicts",
+          "independence_group": "citizenship-guide-2026"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The core five-year message appears twice, but a later channel guide conflicts on exceptional three-year cases."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current statutory naturalization exceptions were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-NEWS-CITIZENSHIP-TIMELINE-004-E1",
+            "DEU-NEWS-CITIZENSHIP-TIMELINE-004-E2",
+            "DEU-NEWS-CITIZENSHIP-TIMELINE-004-C1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Source inconsistency requires primary-law recheck.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "citizenship",
+        "naturalization",
+        "five years",
+        "three years",
+        "dual citizenship"
+      ],
+      "first_seen": "2025-04-16",
+      "last_seen": "2026-07-16"
+    },
+    {
+      "signal_id": "DEU-NEWS-AUSBILDUNG-FUNDING-005",
+      "issue_cluster_id": "DEU-AUSBILDUNG-FUNDING-GAP",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "ausbildung_financial_gap",
+        "class": "financial"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "VOCATIONAL TRAINING / AUSBILDUNG"
+          ],
+          "codes": [
+            "ausbildung_visa"
+          ]
+        },
+        "process_stages": [
+          "financial_evidence",
+          "training"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Ausbildung minimum trainee pay can be below the visa living-funds benchmark, creating a funding gap",
+          "fa": "حداقل حقوق آوسبیلدونگ می‌تواند از معیار تمکن ویزا کمتر باشد و شکاف مالی ایجاد کند"
+        },
+        "summary": {
+          "en": "The channel reported a EUR 1,030 monthly financial benchmark for Ausbildung visas in 2025, while a 2026 official-source summary cited only EUR 724 as first-year minimum trainee pay.",
+          "fa": "کانال برای ویزای آوسبیلدونگ در ۲۰۲۵ معیار مالی ماهانه ۱٬۰۳۰ یورو گزارش کرده، در حالی که خلاصه رسمی ۲۰۲۶ حداقل حقوق سال اول را فقط ۷۲۴ یورو ذکر کرده است."
+        },
+        "practical_impact": {
+          "en": "Applicants should not assume the statutory trainee minimum alone will satisfy visa financial requirements.",
+          "fa": "نباید فرض کرد حداقل حقوق قانونی کارآموز به‌تنهایی شرط مالی ویزا را پوشش می‌دهد."
+        },
+        "who_should_care": {
+          "en": "Ausbildung applicants with low first-year training pay.",
+          "fa": "متقاضیان آوسبیلدونگ با حقوق پایین سال اول."
+        },
+        "recommended_action": {
+          "en": "Compare the contract's net/recognized income with the current visa funding benchmark and prepare supplementary proof if needed.",
+          "fa": "حقوق قرارداد را با معیار مالی فعلی ویزا مقایسه کنید و در صورت نیاز تمکن تکمیلی آماده کنید."
+        },
+        "known_workaround": "Supplementary blocked-account/financial evidence may be needed when training income is insufficient."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-NEWS-AUSBILDUNG-FUNDING-005-E1",
+          "relation": "supports",
+          "independence_group": "ausbildung-2025"
+        },
+        {
+          "evidence_id": "DEU-NEWS-AUSBILDUNG-FUNDING-005-E2",
+          "relation": "supports",
+          "independence_group": "ausbildung-2026"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Two different years show a clear structural gap between financial requirement and minimum trainee pay."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current exact visa funding calculation was not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-NEWS-AUSBILDUNG-FUNDING-005-E1",
+            "DEU-NEWS-AUSBILDUNG-FUNDING-005-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Both financial benchmark and trainee minimum can change annually.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Ausbildung",
+        "financial requirement",
+        "training pay",
+        "blocked account"
+      ],
+      "first_seen": "2025-05-12",
+      "last_seen": "2026-02-16"
+    },
+    {
+      "signal_id": "DEU-NEWS-BLUECARD-SALARY-006",
+      "issue_cluster_id": "DEU-BLUECARD-SALARY-THRESHOLD",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "blue_card_salary_threshold",
+        "class": "eligibility"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "EU_Blue_Card"
+          ]
+        },
+        "process_stages": [
+          "job_offer",
+          "eligibility"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "EU Blue Card salary thresholds were updated for 2026",
+          "fa": "حداقل حقوق EU Blue Card برای ۲۰۲۶ به‌روزرسانی شده است"
+        },
+        "summary": {
+          "en": "The source reports EUR 50,700 gross annually as the general threshold and EUR 45,934.20 for shortage occupations with BA approval.",
+          "fa": "منبع حداقل عمومی ۵۰٬۷۰۰ یورو ناخالص سالانه و برای مشاغل کمبود نیرو با تأیید BA مبلغ ۴۵٬۹۳۴٫۲۰ یورو را گزارش کرده است."
+        },
+        "practical_impact": {
+          "en": "A job offer that qualified in a prior year may fall below the new annual threshold.",
+          "fa": "جاب‌آفری که سال قبل کافی بوده ممکن است زیر حداقل جدید قرار بگیرد."
+        },
+        "who_should_care": {
+          "en": "Skilled workers considering the EU Blue Card in 2026.",
+          "fa": "نیروی متخصص متقاضی EU Blue Card در ۲۰۲۶."
+        },
+        "recommended_action": {
+          "en": "Match gross annual salary and occupation category against the current-year threshold before choosing the Blue Card route.",
+          "fa": "حقوق ناخالص سالانه و دسته شغلی را با حداقل همان سال تطبیق دهید."
+        },
+        "known_workaround": "The source recommends checking other skilled-work residence routes if salary is below the Blue Card threshold."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-NEWS-BLUECARD-SALARY-006-E1",
+          "relation": "supports",
+          "independence_group": "bluecard-3224"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Precise official-source figures, but one selected channel post supports this cluster."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Make-it-in-Germany threshold page was not independently reopened."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-NEWS-BLUECARD-SALARY-006-E1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Thresholds are annual.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "EU Blue Card",
+        "salary threshold",
+        "shortage occupation",
+        "BA"
+      ],
+      "first_seen": "2026-02-08",
+      "last_seen": "2026-02-08"
+    },
+    {
+      "signal_id": "DEU-NEWS-OPPORTUNITY-CARD-007",
+      "issue_cluster_id": "DEU-OPPORTUNITY-CARD",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-NEWS-STUDY-WORK-BRIDGE-008"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "job_search_residence_route",
+        "class": "opportunity"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "Opportunity_Card"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "eligibility"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Opportunity Card creates a no-job-offer job-search route, but the channel's Iran-availability claim is uncertain",
+          "fa": "Opportunity Card مسیر جست‌وجوی کار بدون جاب‌آفر ایجاد می‌کند، اما ادعای کانال درباره دسترسی ایرانیان نامطمئن است"
+        },
+        "summary": {
+          "en": "The source describes a one-year job-search route with limited part-time work and points-based eligibility for some applicants, but one post also says it was 'currently not available for Iranians'. That nationality-specific restriction is not corroborated elsewhere in the uploaded channel.",
+          "fa": "منبع از مسیر یک‌ساله جست‌وجوی کار با کار پاره‌وقت محدود و سیستم امتیازی برای برخی متقاضیان می‌گوید، اما یک پست هم ادعا می‌کند فعلاً برای ایرانیان وجود ندارد؛ این محدودیت ملیت‌محور در فایل با شواهد دیگری تأیید نشده است."
+        },
+        "practical_impact": {
+          "en": "The route can remove the need for a pre-arranged full job offer, but Iran-based applicants should not rely on the route until mission eligibility is confirmed.",
+          "fa": "مسیر می‌تواند نیاز به جاب‌آفر کامل پیش از ورود را حذف کند، اما متقاضی ایرانی باید قبل از اتکا، امکان اقدام از سفارت مربوط را تأیید کند."
+        },
+        "who_should_care": {
+          "en": "Qualified workers seeking Germany without a job offer, especially Iran-based applicants.",
+          "fa": "نیروی متخصص بدون جاب‌آفر، به‌خصوص متقاضیان داخل ایران."
+        },
+        "recommended_action": {
+          "en": "Verify mission-specific availability and recognition/points criteria before building the migration plan around this route.",
+          "fa": "پیش از ساختن پلن روی این مسیر، دسترسی سفارت و شرایط recognition/امتیاز را بررسی کنید."
+        },
+        "known_workaround": "German graduates may have a separate 18-month post-study job-search residence route."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-NEWS-OPPORTUNITY-CARD-007-E1",
+          "relation": "supports",
+          "independence_group": "opportunity-3206"
+        },
+        {
+          "evidence_id": "DEU-NEWS-OPPORTUNITY-CARD-007-Q1",
+          "relation": "qualifies",
+          "independence_group": "opportunity-3206"
+        },
+        {
+          "evidence_id": "DEU-NEWS-OPPORTUNITY-CARD-007-E2",
+          "relation": "qualifies",
+          "independence_group": "opportunity-3229"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "uncertain",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "low",
+          "rationale": "General route description is well developed, but the Iran-specific unavailability claim has only one source and needs direct mission verification."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Iran-specific eligibility/mission availability was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-NEWS-OPPORTUNITY-CARD-007-E1",
+            "DEU-NEWS-OPPORTUNITY-CARD-007-Q1",
+            "DEU-NEWS-OPPORTUNITY-CARD-007-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Nationality/mission availability is critical and time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Opportunity Card",
+        "Chancenkarte",
+        "job search",
+        "Iran"
+      ],
+      "first_seen": "2025-12-04",
+      "last_seen": "2026-02-16"
+    },
+    {
+      "signal_id": "DEU-NEWS-STUDY-WORK-BRIDGE-008",
+      "issue_cluster_id": "DEU-STUDY-TO-WORK-BRIDGE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-NEWS-OPPORTUNITY-CARD-007"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "study_to_work_bridge",
+        "class": "opportunity"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_residence",
+            "graduate_job_search"
+          ]
+        },
+        "process_stages": [
+          "study",
+          "part_time_work",
+          "post_graduation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Germany's study route includes meaningful work access during study and a separate 18-month graduate job-search bridge",
+          "fa": "مسیر تحصیل آلمان دسترسی قابل‌توجه به کار حین تحصیل و پل ۱۸ماهه جست‌وجوی کار پس از فارغ‌التحصیلی دارد"
+        },
+        "summary": {
+          "en": "The source reports the 120-full-day/240-half-day student work rule, common Werkstudent/Minijob references, and an 18-month post-study job-search residence for German graduates.",
+          "fa": "منبع قانون ۱۲۰ روز کامل/۲۴۰ نیم‌روز کار دانشجویی، قواعد رایج Werkstudent/Minijob و اقامت ۱۸ماهه جست‌وجوی کار پس از تحصیل برای فارغ‌التحصیلان آلمان را گزارش کرده است."
+        },
+        "practical_impact": {
+          "en": "Study can function as a structured transition into the German labour market, but work-hour/tax/insurance rules still matter.",
+          "fa": "تحصیل می‌تواند پل ساختاریافته ورود به بازار کار باشد، اما قواعد ساعات کار، مالیات و بیمه همچنان مهم‌اند."
+        },
+        "who_should_care": {
+          "en": "International students planning to finance study partly through work and remain after graduation.",
+          "fa": "دانشجویان بین‌المللی که بخشی از هزینه را با کار تأمین می‌کنند و قصد ماندن بعد از تحصیل دارند."
+        },
+        "recommended_action": {
+          "en": "Plan employment around legal student-work limits and prepare the post-study job-search transition before graduation.",
+          "fa": "کار را در چارچوب سقف قانونی دانشجویی برنامه‌ریزی کنید و پیش از فارغ‌التحصیلی برای گذار به اقامت جست‌وجوی کار آماده شوید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-NEWS-STUDY-WORK-BRIDGE-008-E1",
+          "relation": "supports",
+          "independence_group": "studywork-3229"
+        },
+        {
+          "evidence_id": "DEU-NEWS-STUDY-WORK-BRIDGE-008-E2",
+          "relation": "supports",
+          "independence_group": "studywork-3235"
+        },
+        {
+          "evidence_id": "DEU-NEWS-STUDY-WORK-BRIDGE-008-E3",
+          "relation": "supports",
+          "independence_group": "graduate-3229"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple official-source summaries in the channel describe consistent study-work and graduate-transition mechanisms."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current student-work and graduate-residence rules were not independently rechecked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-NEWS-STUDY-WORK-BRIDGE-008-E1",
+            "DEU-NEWS-STUDY-WORK-BRIDGE-008-E2",
+            "DEU-NEWS-STUDY-WORK-BRIDGE-008-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Work rules can vary with status and legal amendments.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student work",
+        "120 days",
+        "Werkstudent",
+        "Minijob",
+        "18 months"
+      ],
+      "first_seen": "2026-02-16",
+      "last_seen": "2026-02-27"
+    },
+    {
+      "signal_id": "DEU-NEWS-FINANCIAL-EVIDENCE-009",
+      "issue_cluster_id": "DEU-VISA-FINANCIAL-EVIDENCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-NEWS-AUSBILDUNG-FUNDING-005"
+        }
+      ],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "route_specific_financial_evidence",
+        "class": "financial"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "LANGUAGE STUDY",
+            "VOCATIONAL TRAINING / AUSBILDUNG"
+          ],
+          "codes": [
+            "study_visa",
+            "language_course_visa",
+            "blocked_account"
+          ]
+        },
+        "process_stages": [
+          "financial_evidence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "German visa financial evidence is route-specific; there is no single blocked-account amount for every purpose",
+          "fa": "تمکن و حساب مسدود آلمان مسیرمحور است و یک مبلغ واحد برای همه اهداف اقامت وجود ندارد"
+        },
+        "summary": {
+          "en": "The channel gives different financial benchmarks for general study, language-course visas and Ausbildung, while the Foreign Office blocked-account guide is summarized as explicitly tying the amount to residence purpose.",
+          "fa": "کانال برای تحصیل عمومی، ویزای زبان و آوسبیلدونگ اعداد متفاوتی گزارش کرده و راهنمای وزارت خارجه درباره Sperrkonto نیز مبلغ را وابسته به هدف اقامت توصیف می‌کند."
+        },
+        "practical_impact": {
+          "en": "Using a study amount for a language or training visa can produce an underfunded application.",
+          "fa": "استفاده از مبلغ مربوط به تحصیل برای ویزای زبان یا آوسبیلدونگ می‌تواند پرونده را از نظر مالی ناکافی کند."
+        },
+        "who_should_care": {
+          "en": "Applicants using blocked accounts or sponsorship commitments as proof of funds.",
+          "fa": "متقاضیانی که از حساب مسدود یا تعهد مالی برای تمکن استفاده می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Check the exact amount for the residence purpose and filing year, then compare blocked-account providers and accepted confirmation formats.",
+          "fa": "مبلغ دقیق همان هدف اقامت و سال سابمیت را بررسی کنید و بعد ارائه‌دهنده Sperrkonto و فرمت تأییدیه قابل قبول را مقایسه کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-NEWS-FINANCIAL-EVIDENCE-009-E1",
+          "relation": "supports",
+          "independence_group": "finance-3210"
+        },
+        {
+          "evidence_id": "DEU-NEWS-FINANCIAL-EVIDENCE-009-E2",
+          "relation": "supports",
+          "independence_group": "finance-3229"
+        },
+        {
+          "evidence_id": "DEU-NEWS-FINANCIAL-EVIDENCE-009-E3",
+          "relation": "supports",
+          "independence_group": "finance-3235"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Several route-specific examples plus an official blocked-account summary support the conclusion that funding requirements are purpose-specific."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Exact current blocked-account amounts were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-NEWS-FINANCIAL-EVIDENCE-009-E1",
+            "DEU-NEWS-FINANCIAL-EVIDENCE-009-E2",
+            "DEU-NEWS-FINANCIAL-EVIDENCE-009-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Financial thresholds can change annually.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Sperrkonto",
+        "blocked account",
+        "proof of funds",
+        "language visa",
+        "study visa"
+      ],
+      "first_seen": "2025-12-27",
+      "last_seen": "2026-02-27"
+    },
+    {
+      "signal_id": "DEU-NEWS-RESEARCH-SECURITY-010",
+      "issue_cluster_id": "DEU-RESEARCH-SECURITY",
+      "relationships": [],
+      "classification": {
+        "family": "E11_UNIVERSITY_ACADEMIC_INSTITUTION",
+        "type": "research_security_scrutiny",
+        "class": "research"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Sensitive technology or international collaboration"
+          ]
+        },
+        "routes": {
+          "families": [
+            "RESEARCH",
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "phd",
+            "research_collaboration"
+          ]
+        },
+        "process_stages": [
+          "research",
+          "institutional_compliance"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Germany is building stronger research-security oversight for sensitive international collaboration",
+          "fa": "آلمان در حال تقویت نظارت امنیت پژوهش برای همکاری‌های بین‌المللی حساس است"
+        },
+        "summary": {
+          "en": "The source describes a planned national platform linking universities, government and security bodies to reduce unauthorized transfer of sensitive knowledge and technology.",
+          "fa": "منبع از پلتفرم ملی برنامه‌ریزی‌شده برای اتصال دانشگاه‌ها، دولت و نهادهای امنیتی با هدف کاهش انتقال غیرمجاز دانش و فناوری حساس خبر می‌دهد."
+        },
+        "practical_impact": {
+          "en": "Researchers in sensitive fields may face additional institutional due diligence on partners, technology and data access.",
+          "fa": "پژوهشگران حوزه‌های حساس ممکن است با due diligence بیشتر روی شریک پژوهشی، فناوری و دسترسی داده روبه‌رو شوند."
+        },
+        "who_should_care": {
+          "en": "PhD applicants and researchers in sensitive technologies or cross-border projects.",
+          "fa": "متقاضیان دکتری و پژوهشگران فناوری‌های حساس یا پروژه‌های بین‌مرزی."
+        },
+        "recommended_action": {
+          "en": "Expect additional disclosure and compliance review for sensitive collaborations and funding relationships.",
+          "fa": "برای همکاری‌ها و منابع مالی حساس آماده disclosure و بررسی کامپلاینس بیشتر باشید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-NEWS-RESEARCH-SECURITY-010-E1",
+          "relation": "supports",
+          "independence_group": "researchsecurity-3251"
+        },
+        {
+          "evidence_id": "DEU-NEWS-RESEARCH-SECURITY-010-E2",
+          "relation": "supports",
+          "independence_group": "researchsecurity-3251"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "uncertain",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "low",
+          "rationale": "The post describes a structure under development and future effects, not a fully implemented universal rule."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The proposed national research-security framework was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-NEWS-RESEARCH-SECURITY-010-E1",
+            "DEU-NEWS-RESEARCH-SECURITY-010-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Policy is described as under design.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "research security",
+        "sensitive technology",
+        "university compliance"
+      ],
+      "first_seen": "2026-06-14",
+      "last_seen": "2026-06-14"
+    },
+    {
+      "signal_id": "DEU-NEWS-FREELANCE-SELFEMPLOYED-011",
+      "issue_cluster_id": "DEU-FREELANCE-SELFEMPLOYMENT",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "self_employment_without_job_offer",
+        "class": "opportunity"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "BUSINESS / ENTREPRENEUR"
+          ],
+          "codes": [
+            "Freiberufler",
+            "Selbständiger"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "business_plan"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Germany has freelance/self-employment residence routes that do not require an employer job offer",
+          "fa": "آلمان مسیرهای فریلنسری/خوداشتغالی دارد که به جاب‌آفر کارفرما نیاز ندارند"
+        },
+        "summary": {
+          "en": "The source describes Freiberufler and self-employment routes where the applicant instead demonstrates professional activity, clients/economic demand, financing and supporting documents.",
+          "fa": "منبع مسیرهای Freiberufler و خوداشتغالی را توضیح می‌دهد که متقاضی به‌جای جاب‌آفر باید فعالیت حرفه‌ای، مشتری/تقاضای اقتصادی، منابع مالی و مدارک پشتیبان را اثبات کند."
+        },
+        "practical_impact": {
+          "en": "No job offer does not necessarily eliminate Germany as a work destination, but the evidentiary burden shifts to viable independent activity.",
+          "fa": "نداشتن جاب‌آفر لزوماً آلمان را از گزینه‌های کاری حذف نمی‌کند، اما بار اثبات به فعالیت مستقل واقعی منتقل می‌شود."
+        },
+        "who_should_care": {
+          "en": "Freelancers, independent professionals and founders with clients or a viable German business case.",
+          "fa": "فریلنسرها، متخصصان مستقل و صاحبان کسب‌وکار دارای مشتری یا بیزنس‌کیس قابل دفاع."
+        },
+        "recommended_action": {
+          "en": "Build evidence of real clients/demand, finances, insurance and professional qualifications before treating this as a no-job-offer shortcut.",
+          "fa": "قبل از اینکه این مسیر را میانبر بدون جاب‌آفر بدانید، شواهد مشتری/تقاضا، منابع مالی، بیمه و صلاحیت حرفه‌ای را آماده کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-NEWS-FREELANCE-SELFEMPLOYED-011-E1",
+          "relation": "supports",
+          "independence_group": "freelance-3252"
+        },
+        {
+          "evidence_id": "DEU-NEWS-FREELANCE-SELFEMPLOYED-011-E2",
+          "relation": "qualifies",
+          "independence_group": "freelance-3252"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Detailed route summary but only one selected news post supports the signal."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current local-authority and residence-law requirements were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-NEWS-FREELANCE-SELFEMPLOYED-011-E1",
+            "DEU-NEWS-FREELANCE-SELFEMPLOYED-011-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Local implementation and profession classification can vary.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Freiberufler",
+        "self-employment",
+        "no job offer",
+        "clients",
+        "business"
+      ],
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20"
+    },
+    {
+      "signal_id": "DEU-NEWS-RESEARCH-VISA-18D-012",
+      "issue_cluster_id": "DEU-RESEARCH-VISA-18D",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-NEWS-RESEARCH-SECURITY-010"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "research_residence_route",
+        "class": "opportunity"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "RESEARCH",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "section_18d_research"
+          ]
+        },
+        "process_stages": [
+          "research",
+          "residence",
+          "post_project_job_search"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Section 18d provides a dedicated residence pathway for international researchers with a German hosting/employment agreement",
+          "fa": "ماده 18d مسیر اقامتی اختصاصی برای پژوهشگر بین‌المللی دارای hosting/employment agreement در آلمان فراهم می‌کند"
+        },
+        "summary": {
+          "en": "The source describes a research residence route tied to a German university/research organization and an up-to-18-month post-project job-search period with sufficient funds.",
+          "fa": "منبع مسیر اقامت پژوهشی وابسته به دانشگاه/مؤسسه تحقیقاتی آلمان و امکان تا ۱۸ ماه جست‌وجوی کار پس از پروژه با تمکن کافی را گزارش کرده است."
+        },
+        "practical_impact": {
+          "en": "Researchers can have a more direct residence basis than a generic student route, with a structured transition into employment after the project.",
+          "fa": "پژوهشگران می‌توانند مبنای اقامتی مستقیم‌تری از مسیر عمومی دانشجویی و گذار ساختاریافته‌تری به کار پس از پروژه داشته باشند."
+        },
+        "who_should_care": {
+          "en": "PhD-level researchers and international research staff with German host institutions.",
+          "fa": "پژوهشگران سطح دکتری و نیروی پژوهشی بین‌المللی با مؤسسه میزبان آلمانی."
+        },
+        "recommended_action": {
+          "en": "Confirm whether the host arrangement fits section 18d and plan post-project finances for the job-search period.",
+          "fa": "بررسی کنید قرارداد/hosting شما با ماده 18d منطبق است و برای دوره جست‌وجوی کار پس از پروژه تمکن برنامه‌ریزی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-NEWS-RESEARCH-VISA-18D-012-E1",
+          "relation": "supports",
+          "independence_group": "researchvisa-3253"
+        },
+        {
+          "evidence_id": "DEU-NEWS-RESEARCH-VISA-18D-012-E2",
+          "relation": "supports",
+          "independence_group": "researchvisa-3253"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Specific legal-section route and transition are described, but evidence is from one channel post."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Section 18d current requirements were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-NEWS-RESEARCH-VISA-18D-012-E1",
+            "DEU-NEWS-RESEARCH-VISA-18D-012-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Research residence details can change with residence-law amendments.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "18d",
+        "research visa",
+        "hosting agreement",
+        "researcher",
+        "18 months"
+      ],
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names and Telegram user IDs are omitted from evidence summaries."
+      },
+      "full_sources_processed": {
+        "status": "pass",
+        "note": "Parsed all 149 records in the uploaded JSON export."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Pure advertisements, one-off PhD vacancy posts, general lifestyle posts and unrelated geopolitical commentary were excluded from signal creation."
+      },
+      "news_vs_primary_source_separated": {
+        "status": "pass",
+        "note": "Even posts that link German official sources remain source-reported until separately verified against the primary authority."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated embassy disruption, citizenship and study/work updates were clustered into single signals."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "The channel's inconsistent three-year naturalization messaging and the unverified Iran-specific Opportunity Card claim are explicitly preserved as qualifications."
+      },
+      "speculation_filtered": {
+        "status": "pass",
+        "note": "Research-security changes under design are marked uncertain rather than treated as fully implemented rules."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal connector was disabled during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Candidate signals extracted only from the uploaded Germany news/community channel. They preserve what the source reports and are not independently verified official policy unless separately checked against a primary authority."
+}

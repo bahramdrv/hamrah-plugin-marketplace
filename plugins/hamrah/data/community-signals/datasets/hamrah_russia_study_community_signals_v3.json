@@ -1,0 +1,2321 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_russia_study_signals_candidate",
+    "generated_at": "2026-09-16T13:55:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "russia-study-telegram-export",
+      "name": "result(20260916-134821).json / Telegram export «روسیه با پرگار»",
+      "source_type": "private_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-16",
+        "records_available": 1463,
+        "records_processed": 1463
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "contains_first_hand_student_reports": true,
+        "contains_scholarship_application_discussion": true,
+        "contains_promotional_posts": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "RUS-STUDY-SCHOLARSHIP-ROUTES-001-E1",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74998"
+      },
+      "published_at": "2025-04-15",
+      "event_date": "2025-04-15",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community reply explicitly distinguished Open Doors from the Russian government scholarship as separate scholarship routes.",
+        "fa": "یک پاسخ گروه صریحاً Open Doors را از بورسیه دولتی روسیه به‌عنوان دو مسیر جدا تفکیک کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-SCHOLARSHIP-ROUTES-001-E2",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74999"
+      },
+      "published_at": "2025-04-15",
+      "event_date": "2025-04-15",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant clarified that their award came through the government Education in Russia route.",
+        "fa": "یک متقاضی روشن کرده که پذیرش/بورسیه‌اش از مسیر دولتی Education in Russia بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-SCHOLARSHIP-ROUTES-001-E3",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "73633"
+      },
+      "published_at": "2025-01-12",
+      "event_date": "2025-01-12",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Government-scholarship applicants were told that a generated application form must be downloaded, signed and re-uploaded or the application would not be reviewed.",
+        "fa": "برای متقاضی بورسیه دولتی گفته شده فرم نهایی سایت باید دانلود، امضا و دوباره آپلود شود و بدون آن پرونده بررسی نمی‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-SCHOLARSHIP-ROUTES-001-E4",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "78968"
+      },
+      "published_at": "2026-08-31",
+      "event_date": "2026-08-31",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A late-2026 Open Doors applicant asked about subject selection before the second-round exam, showing a distinct exam-based workflow.",
+        "fa": "یک متقاضی Open Doors در اواخر ۲۰۲۶ درباره انتخاب رشته پیش از آزمون مرحله دوم سؤال کرده که workflow آزمون‌محور جداگانه این مسیر را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-STAGE2-DOCS-002-E1",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74193"
+      },
+      "published_at": "2025-02-16",
+      "event_date": "2025-02-16",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The community reported that first-stage government-scholarship results had been released in mid-February 2025.",
+        "fa": "گروه گزارش کرده نتایج مرحله اول بورسیه دولتی در میانه فوریه ۲۰۲۵ اعلام شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-STAGE2-DOCS-002-E2",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74194"
+      },
+      "published_at": "2025-02-16",
+      "event_date": "2025-02-16",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Successful applicants were told to upload translated education documents and medical tests by 21 February, leaving only a few days after results.",
+        "fa": "به قبول‌شده‌ها گفته شده ترجمه مدارک تحصیلی و آزمایش‌های پزشکی را تا ۲۱ فوریه آپلود کنند؛ یعنی فقط چند روز بعد از اعلام نتیجه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-STAGE2-DOCS-002-E3",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74200"
+      },
+      "published_at": "2025-02-16",
+      "event_date": "2025-02-16",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The shared checklist discussion said translations of diploma, transcripts and passport were expected to carry embassy authentication.",
+        "fa": "در گفتگوی چک‌لیست گفته شده ترجمه مدرک تحصیلی، ریزنمرات و پاسپورت باید تأیید سفارت داشته باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-STAGE2-DOCS-002-E4",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74204"
+      },
+      "published_at": "2025-02-16",
+      "event_date": "2025-02-16",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "One applicant abandoned the next stage and reported that TB testing itself took about three days while other tests were faster, illustrating deadline pressure.",
+        "fa": "یک متقاضی از ادامه مرحله منصرف شده و گزارش کرده جواب تست سل حدود سه روز زمان برده و همین فشار ددلاین را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-SCHOLARSHIP-COVERAGE-003-E1",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74232"
+      },
+      "published_at": "2025-02-18",
+      "event_date": "2025-02-18",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_student_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A student said their scholarship mainly removed tuition and provided access to cheap dormitory, while the monthly cash amount was very small.",
+        "fa": "یک دانشجو گفته مزیت اصلی بورس حذف شهریه و دسترسی به خوابگاه ارزان است و مبلغ نقدی ماهانه بسیار ناچیز است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-SCHOLARSHIP-COVERAGE-003-E2",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74233"
+      },
+      "published_at": "2025-02-18",
+      "event_date": "2025-02-18",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_student_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same student warned that the small stipend was not enough to live on without work or family funds.",
+        "fa": "همان دانشجو هشدار داده مبلغ کمک‌هزینه بدون کار یا حمایت خانواده برای زندگی کافی نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-SCHOLARSHIP-COVERAGE-003-E3",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "78716"
+      },
+      "published_at": "2026-06-29",
+      "event_date": "2026-06-29",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In June 2026 a community reply again said both the government scholarship and Open Doors funding were insufficient to cover living costs in Moscow.",
+        "fa": "در ژوئن ۲۰۲۶ نیز یک پاسخ گروه گفته حمایت مالی بورسیه دولتی و Open Doors برای هزینه زندگی در مسکو کافی نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-SCHOLARSHIP-COVERAGE-003-E4",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "78747"
+      },
+      "published_at": "2026-06-30",
+      "event_date": "2026-06-30",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_cost_estimate",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A June 2026 estimate placed minimum monthly non-tuition living costs in Moscow around 35,000 RUB even with low-cost university dormitory, plus transit and internet.",
+        "fa": "یک برآورد ژوئن ۲۰۲۶ حداقل هزینه ماهانه زندگی در مسکو را حتی با خوابگاه ارزان دانشگاه حدود ۳۵هزار روبل، جدا از رفت‌وآمد و اینترنت، مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-PODFAK-004-E1",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74329"
+      },
+      "published_at": "2025-02-26",
+      "event_date": "2025-02-26",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For a Russian-language scholarship program, a reply said the student would study language in the first year and enter the degree afterward.",
+        "fa": "برای برنامه روسی‌زبان بورسیه، پاسخ گفته سال اول زبان خوانده می‌شود و سپس ورود به رشته اصلی انجام می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-PODFAK-004-E2",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74648"
+      },
+      "published_at": "2025-03-05",
+      "event_date": "2025-03-05",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A separate case said an English-taught master's did not require podfak, while a Russian-taught arts program did.",
+        "fa": "در کیس دیگری گفته شده ارشد انگلیسی‌زبان به پادفک نیاز نداشته ولی برنامه هنری روسی‌زبان نیاز داشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-PODFAK-004-E3",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "75163"
+      },
+      "published_at": "2025-05-01",
+      "event_date": "2025-05-01",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant waiting on a podfak invitation urged others to verify whether the target university actually requires podfak because requirements differ.",
+        "fa": "متقاضی منتظر دعوتنامه پادفک توصیه کرده قبل از اقدام بررسی شود آیا دانشگاه هدف واقعاً پادفک می‌خواهد چون الزامات متفاوت‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-PODFAK-004-E4",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "79021"
+      },
+      "published_at": "2026-09-16",
+      "event_date": "2026-09-16",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A September 2026 reply said standalone podfak admission could be obtained without a separate degree admission and gave a community-reported starting price around USD 2,000.",
+        "fa": "یک پاسخ سپتامبر ۲۰۲۶ گفته می‌توان مستقل برای پادفک پذیرش گرفت و بدون پذیرش رشته جدا وارد آن شد؛ هزینه شروع نیز حدود ۲۰۰۰ دلار به‌صورت کامیونیتی گزارش شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-INVITATION-VISA-005-E1",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74587"
+      },
+      "published_at": "2025-03-05",
+      "event_date": "2025-03-05",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A podfak applicant reported waiting 36 days for the university invitation.",
+        "fa": "یک متقاضی پادفک از ۳۶ روز انتظار برای دعوتنامه دانشگاه خبر داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-INVITATION-VISA-005-E2",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "75163"
+      },
+      "published_at": "2025-05-01",
+      "event_date": "2025-05-01",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same type of case later reached 94 days of waiting, with classes already started for about six weeks.",
+        "fa": "در یک تجربه مستقیم دیگر انتظار دعوتنامه به ۹۴ روز رسیده و کلاس‌ها حدود یک‌ونیم ماه قبل شروع شده بودند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-INVITATION-VISA-005-E3",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "76988"
+      },
+      "published_at": "2025-09-01",
+      "event_date": "2025-09-01",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said a Russian study-visa invitation could be issued for Istanbul only when the applicant held valid Turkish residence; otherwise the case was expected to use Iran.",
+        "fa": "یک پاسخ گفته دعوتنامه ویزای تحصیلی برای استانبول زمانی صادر می‌شود که متقاضی اقامت معتبر ترکیه داشته باشد و در غیر این صورت مسیر ایران مطرح است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-INVITATION-VISA-005-E4",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "76990"
+      },
+      "published_at": "2025-09-02",
+      "event_date": "2025-09-02",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance said the consular post named on the invitation matters and changing it can be difficult and slow.",
+        "fa": "راهنمایی گروه گفته محل کنسولی درج‌شده روی دعوتنامه مهم است و تغییر آن می‌تواند سخت و زمان‌بر باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-TRANSLATION-006-E1",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "75003"
+      },
+      "published_at": "2025-04-15",
+      "event_date": "2025-04-15",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A government-scholarship applicant said official translation was enough for their stage-two upload even though the portal mentioned legalization, while notarization might still be requested later in Russia.",
+        "fa": "یک متقاضی بورسیه دولتی گفته برای مرحله دوم ترجمه رسمی را آپلود کرده و با وجود اشاره به لگالایز مشکلی نداشته، اما ممکن است بعداً در روسیه ناتاریوس خواسته شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-TRANSLATION-006-E2",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "75008"
+      },
+      "published_at": "2025-04-15",
+      "event_date": "2025-04-15",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said Russian official translation was expected at stage two, although temporary upload of Persian/English might be tolerated to avoid missing the deadline before the Russian translation is supplied.",
+        "fa": "یک پاسخ گفته در مرحله دوم ترجمه رسمی روسی لازم است، هرچند برای از دست ندادن ددلاین ممکن است موقتاً نسخه فارسی/انگلیسی پذیرفته شود و بعد ترجمه روسی تکمیل شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-TRANSLATION-006-E3",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "78584"
+      },
+      "published_at": "2026-05-19",
+      "event_date": "2026-05-19",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In May 2026 a user said Russian institutions frequently require notarized translations and advised arranging them in Russia where possible.",
+        "fa": "در مه ۲۰۲۶ یک کاربر گفته در روسیه ناتاریوس زیاد خواسته می‌شود و در صورت امکان ترجمه/ناتاریوس داخل روسیه انجام شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-TRANSLATION-006-E4",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "73513"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_document_need",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The dataset opens with a medical-document case explicitly seeking Russian translation with notary certification.",
+        "fa": "در ابتدای فایل نیز یک کیس مدارک پزشکی مشخصاً دنبال ترجمه روسی با مهر ناتاریوس بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-WORK-FINANCE-007-E1",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74635"
+      },
+      "published_at": "2025-03-05",
+      "event_date": "2025-03-05",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_long_term_student_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A long-term student described easy part-time work as hard to find for foreigners and said available shifts could be long or unofficial.",
+        "fa": "یک دانشجوی باسابقه گفته کار پاره‌وقت راحت برای خارجی‌ها سخت پیدا می‌شود و بعضی کارهای موجود شیفت‌های طولانی یا غیررسمی دارند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-WORK-FINANCE-007-E2",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74568"
+      },
+      "published_at": "2025-03-05",
+      "event_date": "2025-03-05",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_long_term_student_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another long-term resident said Russian language was important for both study and work and estimated meaningful monthly living costs even in student conditions.",
+        "fa": "یک ساکن باسابقه گفته زبان روسی هم برای درس و هم کار مهم است و حتی در شرایط دانشجویی هزینه زندگی ماهانه قابل‌توجه است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-WORK-FINANCE-007-E3",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "78733"
+      },
+      "published_at": "2026-06-29",
+      "event_date": "2026-06-29",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 reply described a podfak student working as a café waiter while studying, showing that general-service work can exist.",
+        "fa": "یک پاسخ ۲۰۲۶ از دانشجوی پادفکی گفته که همزمان در کافه گارسون بوده و نشان می‌دهد کار جنرال ممکن است پیدا شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-WORK-FINANCE-007-E4",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "79024"
+      },
+      "published_at": "2026-09-16",
+      "event_date": "2026-09-16",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A September 2026 reply estimated that two or three days of general work per week could cover food and transport in one case.",
+        "fa": "یک پاسخ سپتامبر ۲۰۲۶ برآورد کرده در یک کیس، دو تا سه روز کار جنرال در هفته می‌تواند خوراک و حمل‌ونقل را پوشش دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-DORM-HEALTH-008-E1",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74840"
+      },
+      "published_at": "2025-04-07",
+      "event_date": "2025-04-07",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_student_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A student said two universities handled medical/HIV documentation differently: one requested documents in advance, while another arranged testing after arrival.",
+        "fa": "یک دانشجو گفته دو دانشگاه برای مدارک سلامت/HIV کاملاً متفاوت عمل کرده‌اند: یکی مدارک را از قبل می‌خواست و دیگری پس از ورود تست‌ها را انجام داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-DORM-HEALTH-008-E2",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74840"
+      },
+      "published_at": "2025-04-07",
+      "event_date": "2025-04-07",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_student_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same student emphasized that dormitory conditions and what students need to bring vary substantially by university.",
+        "fa": "همان دانشجو تأکید کرده شرایط خوابگاه و وسایل موردنیاز بین دانشگاه‌ها اختلاف زیادی دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-DORM-HEALTH-008-E3",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "78747"
+      },
+      "published_at": "2026-06-30",
+      "event_date": "2026-06-30",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_cost_estimate",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 message said many public-university dorms in Moscow remain inexpensive, but exact prices are university-specific.",
+        "fa": "یک پیام ۲۰۲۶ گفته خوابگاه بسیاری از دانشگاه‌های دولتی مسکو هنوز ارزان است، اما قیمت دقیق دانشگاه‌محور است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-DORM-HEALTH-008-Q1",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "74478"
+      },
+      "published_at": "2025-03-05",
+      "event_date": "2025-03-05",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Earlier community discussion also included complaints about cleanliness and mixed/shared dorm conditions, underscoring wide quality variance rather than a uniform standard.",
+        "fa": "گفتگوهای قبلی نیز از کیفیت نامتوازن، نظافت و شرایط اشتراکی خوابگاه‌ها گفته‌اند؛ نشانه‌ای از تفاوت شدید کیفیت، نه استاندارد یکنواخت."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-BANKING-009-E1",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "78341"
+      },
+      "published_at": "2026-01-18",
+      "event_date": "2026-01-18",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community reply recommended remitting through an exchange service that settles directly in rubles rather than sending crypto to the bank account.",
+        "fa": "یک پاسخ گروه توصیه کرده انتقال پول از طریق صرافی و تسویه مستقیم روبلی انجام شود و کریپتو مستقیم به حساب بانکی ارسال نشود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-BANKING-009-E2",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "78342"
+      },
+      "published_at": "2026-01-18",
+      "event_date": "2026-01-18",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user warned that transfers linked to Tether could trigger account blocking because of source-of-funds concerns.",
+        "fa": "یک کاربر هشدار داده انتقال‌های مرتبط با تتر ممکن است به‌دلیل منبع پول باعث بلاک حساب بانکی شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-BANKING-009-E3",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "73643"
+      },
+      "published_at": "2025-01-14",
+      "event_date": "2025-01-14",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_resident_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A resident described limitations using Russian bank cards for some international online services, illustrating sanctions/payment friction.",
+        "fa": "یک ساکن از محدودیت استفاده از کارت‌های بانکی روسیه برای بعضی سرویس‌های آنلاین بین‌المللی گفته که اصطکاک پرداخت را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-BANKING-009-E4",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "78879"
+      },
+      "published_at": "2026-08-10",
+      "event_date": "2026-08-10",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "By August 2026 students were still asking about opening bank accounts and receiving student bank cards through Russian banks.",
+        "fa": "تا اوت ۲۰۲۶ دانشجویان همچنان درباره افتتاح حساب و دریافت کارت بانکی دانشجویی از بانک‌های روسیه سؤال داشته‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-MEDICAL-010-E1",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "73803"
+      },
+      "published_at": "2025-01-24",
+      "event_date": "2025-01-24",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "first_hand_or_close_community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A detailed reply described Sechenov medical tuition around USD 12,000 annually at that time and emphasized that later practice/specialization abroad requires destination-country language and licensing/equivalency steps.",
+        "fa": "یک پاسخ مفصل شهریه پزشکی سچینوا را در آن مقطع حدود ۱۲هزار دلار سالانه دانسته و تأکید کرده برای کار/تخصص در کشور دیگر، زبان و مراحل معادل‌سازی/آزمون مقصد لازم است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-MEDICAL-010-E2",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "73805"
+      },
+      "published_at": "2025-01-25",
+      "event_date": "2025-01-25",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_cost_estimate",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same discussion said medical tuition outside Moscow could be materially lower, around USD 5,000 in some cities/universities at that time.",
+        "fa": "همان گفتگو گفته شهریه پزشکی در بعضی شهرها/دانشگاه‌های خارج مسکو می‌تواند در آن مقطع حدود ۵هزار دلار باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-MEDICAL-010-E3",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "78436"
+      },
+      "published_at": "2026-02-20",
+      "event_date": "2026-02-20",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A February 2026 reply said medicine admission involved an entrance exam and that an optional preparation/podfak year could be used for language and exam preparation.",
+        "fa": "یک پاسخ فوریه ۲۰۲۶ گفته ورود پزشکی با آزمون ورودی همراه است و می‌توان پیش از آن برای زبان و آمادگی آزمون یک سال پادفک/آمادگی گذراند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "RUS-STUDY-MEDICAL-010-Q1",
+      "source_id": "russia-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "73890"
+      },
+      "published_at": "2025-01-26",
+      "event_date": "2025-01-26",
+      "collected_at": "2026-09-16T13:55:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An early reply reported Russian and English medicine options but more limited language options for dentistry, while explicitly expressing uncertainty about the exact exam subjects.",
+        "fa": "یک پاسخ اولیه از گزینه روسی و انگلیسی برای پزشکی و محدودیت بیشتر زبان دندانپزشکی گفته، اما درباره جزئیات مواد آزمون صریحاً عدم قطعیت داشته است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "RUS-STUDY-SCHOLARSHIP-ROUTES-001",
+      "issue_cluster_id": "RUS-STUDY-SCHOLARSHIP-ROUTES",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "RUS-STUDY-STAGE2-DOCS-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "RUS-STUDY-SCHOLARSHIP-COVERAGE-003"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "scholarship_route_split",
+        "class": "funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "Russia",
+          "country_code": "RUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Russia",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "government_quota",
+            "Open_Doors",
+            "university_scholarship"
+          ]
+        },
+        "process_stages": [
+          "application",
+          "selection",
+          "exam"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Russian government quota, Open Doors and university scholarships should be treated as separate application pipelines",
+          "fa": "بورسیه دولتی روسیه، Open Doors و بورس مستقیم دانشگاه سه workflow جدا هستند"
+        },
+        "summary": {
+          "en": "The source repeatedly distinguishes Education in Russia government-quota applications from Open Doors and university awards. Government applications have their own signed-form workflow, while Open Doors includes a separate subject/exam process.",
+          "fa": "فایل بارها مسیر Education in Russia دولتی را از Open Doors و بورس دانشگاه جدا می‌کند. درخواست دولتی workflow فرم امضاشده دارد و Open Doors فرایند موضوع/آزمون جداگانه دارد."
+        },
+        "practical_impact": {
+          "en": "Mixing requirements across routes can cause missed forms, wrong documents or misunderstanding of selection stages.",
+          "fa": "قاطی‌کردن نیازمندی‌های این مسیرها می‌تواند باعث فرم ناقص، مدرک اشتباه یا برداشت غلط از مراحل انتخاب شود."
+        },
+        "who_should_care": {
+          "en": "Applicants comparing Russian scholarship routes.",
+          "fa": "متقاضیانی که مسیرهای بورسیه روسیه را مقایسه می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Identify the exact scholarship route first, then follow only that route's portal, exam and document instructions.",
+          "fa": "اول مسیر دقیق بورس را مشخص کنید و سپس فقط دستورالعمل پرتال، آزمون و مدارک همان مسیر را دنبال کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "RUS-STUDY-SCHOLARSHIP-ROUTES-001-E1",
+          "relation": "supports",
+          "independence_group": "route-r1"
+        },
+        {
+          "evidence_id": "RUS-STUDY-SCHOLARSHIP-ROUTES-001-E2",
+          "relation": "supports",
+          "independence_group": "route-r2"
+        },
+        {
+          "evidence_id": "RUS-STUDY-SCHOLARSHIP-ROUTES-001-E3",
+          "relation": "supports",
+          "independence_group": "route-r3"
+        },
+        {
+          "evidence_id": "RUS-STUDY-SCHOLARSHIP-ROUTES-001-E4",
+          "relation": "supports",
+          "independence_group": "route-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple route-specific discussions show clearly different workflows."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official portals, deadlines and round structure were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "RUS-STUDY-SCHOLARSHIP-ROUTES-001-E1",
+            "RUS-STUDY-SCHOLARSHIP-ROUTES-001-E2",
+            "RUS-STUDY-SCHOLARSHIP-ROUTES-001-E3",
+            "RUS-STUDY-SCHOLARSHIP-ROUTES-001-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Russia community Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Scholarship cycles and portals change annually.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Education in Russia",
+        "Open Doors",
+        "government scholarship",
+        "university scholarship"
+      ],
+      "first_seen": "2025-01-12",
+      "last_seen": "2026-08-31"
+    },
+    {
+      "signal_id": "RUS-STUDY-STAGE2-DOCS-002",
+      "issue_cluster_id": "RUS-GOVSCHOLARSHIP-STAGE2-DOCUMENT-RUSH",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "RUS-STUDY-TRANSLATION-006"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "stage2_document_deadline",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Russia",
+          "country_code": "RUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Russia",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "government_quota"
+          ]
+        },
+        "process_stages": [
+          "stage_1_result",
+          "stage_2",
+          "medical_tests",
+          "document_upload"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Government-scholarship Stage 2 can create a sudden translation and medical-document bottleneck",
+          "fa": "مرحله دوم بورسیه دولتی می‌تواند ناگهان گلوگاه ترجمه و آزمایش پزشکی ایجاد کند"
+        },
+        "summary": {
+          "en": "In the 2025 cycle, community reports show only a few days between first-stage result and a 21 February upload deadline for translated academic documents and medical tests.",
+          "fa": "در چرخه ۲۰۲۵ طبق گزارش گروه، بین اعلام نتیجه مرحله اول و ددلاین ۲۱ فوریه برای ترجمه مدارک و آزمایش‌ها فقط چند روز فاصله بوده است."
+        },
+        "practical_impact": {
+          "en": "Applicants who wait for the result before preparing translations/tests can miss the second-stage deadline.",
+          "fa": "اگر متقاضی آماده‌سازی ترجمه و تست‌ها را تا بعد از نتیجه عقب بیندازد ممکن است ددلاین مرحله دوم را از دست بدهد."
+        },
+        "who_should_care": {
+          "en": "Government-quota applicants likely to advance to Stage 2.",
+          "fa": "متقاضیان بورسیه دولتی که احتمال ورود به مرحله دوم دارند."
+        },
+        "recommended_action": {
+          "en": "Pre-plan translation providers and medical-test logistics before first-stage results.",
+          "fa": "قبل از اعلام نتیجه مرحله اول، دارالترجمه و مسیر آزمایش‌های لازم را از قبل آماده کنید."
+        },
+        "known_workaround": "Temporary upload of available documents was reported in some cases, with corrected translations supplied later."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "RUS-STUDY-STAGE2-DOCS-002-E1",
+          "relation": "supports",
+          "independence_group": "stage2-r1"
+        },
+        {
+          "evidence_id": "RUS-STUDY-STAGE2-DOCS-002-E2",
+          "relation": "supports",
+          "independence_group": "stage2-r2"
+        },
+        {
+          "evidence_id": "RUS-STUDY-STAGE2-DOCS-002-E3",
+          "relation": "supports",
+          "independence_group": "stage2-r3"
+        },
+        {
+          "evidence_id": "RUS-STUDY-STAGE2-DOCS-002-E4",
+          "relation": "supports",
+          "independence_group": "stage2-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "A concrete cycle shows compressed timing and applicant attrition from document/test burden."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current 2026-2027 Stage 2 deadlines and exact medical checklist were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "RUS-STUDY-STAGE2-DOCS-002-E1",
+            "RUS-STUDY-STAGE2-DOCS-002-E2",
+            "RUS-STUDY-STAGE2-DOCS-002-E3",
+            "RUS-STUDY-STAGE2-DOCS-002-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Russia community Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Stage deadlines are cycle-specific.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Stage 2",
+        "translation",
+        "medical tests",
+        "21 February",
+        "government scholarship"
+      ],
+      "first_seen": "2025-02-16",
+      "last_seen": "2025-02-16"
+    },
+    {
+      "signal_id": "RUS-STUDY-SCHOLARSHIP-COVERAGE-003",
+      "issue_cluster_id": "RUS-SCHOLARSHIP-LIVING-COST-GAP",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "RUS-STUDY-WORK-FINANCE-007"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "tuition_vs_living_gap",
+        "class": "funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "Russia",
+          "country_code": "RUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Russia",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "government_quota",
+            "Open_Doors",
+            "full_tuition_university"
+          ]
+        },
+        "process_stages": [
+          "funding",
+          "budget",
+          "housing"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Russian 'full tuition' or government scholarship should not be assumed to cover normal living costs",
+          "fa": "بورسیه دولتی یا full-tuition روسیه را نباید معادل پوشش کامل هزینه زندگی دانست"
+        },
+        "summary": {
+          "en": "First-hand and later community reports consistently describe tuition waiver and low-cost dormitory as the main benefit, with small stipends that do not cover ordinary Moscow living expenses.",
+          "fa": "تجربه مستقیم و گزارش‌های بعدی به‌طور ثابت حذف شهریه و خوابگاه ارزان را مزیت اصلی می‌دانند و کمک‌هزینه نقدی را برای هزینه معمول مسکو ناکافی توصیف می‌کنند."
+        },
+        "practical_impact": {
+          "en": "Applicants without family savings or reliable additional income can face a serious monthly funding gap.",
+          "fa": "متقاضی بدون پس‌انداز خانوادگی یا درآمد قابل اتکا ممکن است با کسری جدی ماهانه روبه‌رو شود."
+        },
+        "who_should_care": {
+          "en": "Scholarship applicants planning to be financially independent.",
+          "fa": "متقاضیان بورس که می‌خواهند مستقل از خانواده زندگی کنند."
+        },
+        "recommended_action": {
+          "en": "Build a living-cost budget separately from tuition coverage and treat any stipend as supplemental.",
+          "fa": "بودجه زندگی را جدا از پوشش شهریه حساب کنید و کمک‌هزینه را صرفاً مکمل بدانید."
+        },
+        "known_workaround": "Some university-specific scholarships such as stronger research-university packages were described as better funded."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "RUS-STUDY-SCHOLARSHIP-COVERAGE-003-E1",
+          "relation": "supports",
+          "independence_group": "coverage-r1"
+        },
+        {
+          "evidence_id": "RUS-STUDY-SCHOLARSHIP-COVERAGE-003-E2",
+          "relation": "supports",
+          "independence_group": "coverage-r1"
+        },
+        {
+          "evidence_id": "RUS-STUDY-SCHOLARSHIP-COVERAGE-003-E3",
+          "relation": "supports",
+          "independence_group": "coverage-r3"
+        },
+        {
+          "evidence_id": "RUS-STUDY-SCHOLARSHIP-COVERAGE-003-E4",
+          "relation": "supports",
+          "independence_group": "coverage-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "worsening",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same tuition-versus-living gap is reported in 2025 and again in 2026."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official stipend and dormitory rates were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "RUS-STUDY-SCHOLARSHIP-COVERAGE-003-E1",
+            "RUS-STUDY-SCHOLARSHIP-COVERAGE-003-E2",
+            "RUS-STUDY-SCHOLARSHIP-COVERAGE-003-E3",
+            "RUS-STUDY-SCHOLARSHIP-COVERAGE-003-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Russia community Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Living costs and stipend amounts change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "tuition waiver",
+        "stipend",
+        "dormitory",
+        "Moscow living cost",
+        "full tuition"
+      ],
+      "first_seen": "2025-02-18",
+      "last_seen": "2026-06-30"
+    },
+    {
+      "signal_id": "RUS-STUDY-PODFAK-004",
+      "issue_cluster_id": "RUS-STUDY-PODFAK-LANGUAGE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "RUS-STUDY-INVITATION-VISA-005"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "podfak_requirement_variance",
+        "class": "language"
+      },
+      "scope": {
+        "destination": {
+          "country": "Russia",
+          "country_code": "RUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Russia",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "podfak",
+            "Russian_taught",
+            "English_taught"
+          ]
+        },
+        "process_stages": [
+          "language_preparation",
+          "admission"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Podfak is not universally mandatory; its need depends on program language, university and admission route",
+          "fa": "پادفک الزام همگانی نیست و به زبان برنامه، دانشگاه و مسیر پذیرش وابسته است"
+        },
+        "summary": {
+          "en": "Russian-taught scholarship routes can include a first language year, while English-taught graduate programs may skip podfak. The source also reports standalone podfak admission in 2026.",
+          "fa": "مسیرهای روسی‌زبان ممکن است سال اول زبان داشته باشند، در حالی که بعضی ارشدهای انگلیسی‌زبان پادفک نمی‌خواهند. در ۲۰۲۶ پذیرش مستقل پادفک نیز در گروه گزارش شده است."
+        },
+        "practical_impact": {
+          "en": "Unnecessary podfak can add a year, cost and invitation risk; skipping it when required can block degree entry.",
+          "fa": "پادفک غیرضروری می‌تواند یک سال، هزینه و ریسک دعوتنامه اضافه کند و حذف آن در جایی که لازم است ورود به رشته را متوقف کند."
+        },
+        "who_should_care": {
+          "en": "Applicants choosing between Russian- and English-taught programs.",
+          "fa": "متقاضیان انتخاب بین برنامه روسی و انگلیسی."
+        },
+        "recommended_action": {
+          "en": "Get written confirmation from the university on whether podfak is mandatory for the exact program and scholarship route.",
+          "fa": "کتبی از دانشگاه تأیید بگیرید که برای برنامه و نوع بورس دقیق شما پادفک اجباری هست یا نه."
+        },
+        "known_workaround": "Accepted Russian proficiency or an English-taught program may remove the preparation year in some cases."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "RUS-STUDY-PODFAK-004-E1",
+          "relation": "supports",
+          "independence_group": "podfak-r1"
+        },
+        {
+          "evidence_id": "RUS-STUDY-PODFAK-004-E2",
+          "relation": "supports",
+          "independence_group": "podfak-r2"
+        },
+        {
+          "evidence_id": "RUS-STUDY-PODFAK-004-E3",
+          "relation": "supports",
+          "independence_group": "podfak-r3"
+        },
+        {
+          "evidence_id": "RUS-STUDY-PODFAK-004-E4",
+          "relation": "qualifies",
+          "independence_group": "podfak-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple cases explicitly show different podfak requirements based on program language and university."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current university-specific podfak rules and 2026 pricing were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "RUS-STUDY-PODFAK-004-E1",
+            "RUS-STUDY-PODFAK-004-E2",
+            "RUS-STUDY-PODFAK-004-E3",
+            "RUS-STUDY-PODFAK-004-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Russia community Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Language-preparation policies are institution-specific.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "podfak",
+        "Russian language",
+        "English taught",
+        "preparatory year"
+      ],
+      "first_seen": "2025-02-26",
+      "last_seen": "2026-09-16"
+    },
+    {
+      "signal_id": "RUS-STUDY-INVITATION-VISA-005",
+      "issue_cluster_id": "RUS-STUDY-INVITATION-VISA-DELAY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "RUS-STUDY-PODFAK-004"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "invitation_consular_delay",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Russia",
+          "country_code": "RUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Russia",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "study_visa",
+            "podfak"
+          ]
+        },
+        "process_stages": [
+          "university_invitation",
+          "consular_post",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "University invitation issuance can become a severe timing bottleneck, and the invitation's consular location can constrain where the visa is filed",
+          "fa": "صدور دعوتنامه دانشگاه می‌تواند گلوگاه شدید زمانی شود و محل کنسولی دعوتنامه روی محل اقدام ویزا اثر بگذارد"
+        },
+        "summary": {
+          "en": "The file includes podfak invitation waits from 36 to 94 days, including a case where classes began before the invitation arrived. Separate guidance says changing the named consular post can require valid third-country residence and can be slow.",
+          "fa": "فایل انتظار ۳۶ تا ۹۴روزه برای دعوتنامه پادفک دارد؛ در یک کیس کلاس‌ها قبل از دعوتنامه شروع شده بودند. راهنمایی جداگانه نیز تغییر محل کنسولی دعوتنامه را وابسته به اقامت کشور ثالث و زمان‌بر توصیف می‌کند."
+        },
+        "practical_impact": {
+          "en": "An admission/start date does not guarantee timely visa entry, especially when applying from a different country than originally planned.",
+          "fa": "تاریخ پذیرش/شروع کلاس ورود به‌موقع را تضمین نمی‌کند، مخصوصاً اگر محل اقدام ویزا نسبت به برنامه اولیه تغییر کند."
+        },
+        "who_should_care": {
+          "en": "Applicants waiting for study/podfak invitations or planning to apply from Turkey or another third country.",
+          "fa": "متقاضیان منتظر دعوتنامه یا کسانی که قصد اقدام از ترکیه/کشور ثالث دارند."
+        },
+        "recommended_action": {
+          "en": "Ask the university early about invitation processing time and exact consular post; do not book irreversible travel around the nominal course start.",
+          "fa": "زود درباره زمان صدور دعوتنامه و سفارت درج‌شده از دانشگاه بپرسید و سفر غیرقابل‌استرداد را صرفاً بر اساس تاریخ شروع دوره نچینید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "RUS-STUDY-INVITATION-VISA-005-E1",
+          "relation": "supports",
+          "independence_group": "invite-r1"
+        },
+        {
+          "evidence_id": "RUS-STUDY-INVITATION-VISA-005-E2",
+          "relation": "supports",
+          "independence_group": "invite-r2"
+        },
+        {
+          "evidence_id": "RUS-STUDY-INVITATION-VISA-005-E3",
+          "relation": "supports",
+          "independence_group": "invite-r3"
+        },
+        {
+          "evidence_id": "RUS-STUDY-INVITATION-VISA-005-E4",
+          "relation": "supports",
+          "independence_group": "invite-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct long-delay cases plus third-country consular friction show material operational risk."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Russian consular-jurisdiction and invitation-change rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "RUS-STUDY-INVITATION-VISA-005-E1",
+            "RUS-STUDY-INVITATION-VISA-005-E2",
+            "RUS-STUDY-INVITATION-VISA-005-E3",
+            "RUS-STUDY-INVITATION-VISA-005-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Russia community Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Consular operations and invitation processing can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "invitation",
+        "study visa",
+        "podfak",
+        "Turkey residence",
+        "consular post"
+      ],
+      "first_seen": "2025-03-05",
+      "last_seen": "2025-09-02"
+    },
+    {
+      "signal_id": "RUS-STUDY-TRANSLATION-006",
+      "issue_cluster_id": "RUS-STUDY-TRANSLATION-NOTARY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "RUS-STUDY-STAGE2-DOCS-002"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "translation_notary_variance",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Russia",
+          "country_code": "RUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Russia",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "government_quota",
+            "university_admission",
+            "medical_study"
+          ]
+        },
+        "process_stages": [
+          "translation",
+          "legalization",
+          "notarization"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Russian translation, legalization and notarization are separate document steps and are not applied uniformly at every stage",
+          "fa": "ترجمه روسی، لگالایز و ناتاریوس مراحل جدا هستند و در همه مراحل/دانشگاه‌ها یکسان اعمال نمی‌شوند"
+        },
+        "summary": {
+          "en": "Stage-two applicants report Russian official translation as the core requirement, while legalization could be tolerated later in some cases. By 2026 community advice still described notarized Russian translations as commonly requested after arrival.",
+          "fa": "متقاضیان مرحله دوم ترجمه رسمی روسی را هسته اصلی می‌دانند، در حالی که در بعضی کیس‌ها لگالایز دیرتر هم پذیرفته شده است. در ۲۰۲۶ نیز ناتاریوس ترجمه روسی پس از ورود همچنان پرتکرار گزارش شده است."
+        },
+        "practical_impact": {
+          "en": "Doing every certification too early may waste money, but doing too little can block Stage 2, enrollment or medical-document acceptance.",
+          "fa": "انجام همه تأییدات خیلی زود ممکن است هزینه اضافی بسازد و انجام ناکافی آن می‌تواند مرحله دوم یا ثبت‌نام را متوقف کند."
+        },
+        "who_should_care": {
+          "en": "Applicants preparing Iranian academic/medical documents for Russia.",
+          "fa": "متقاضیان آماده‌سازی مدارک تحصیلی/پزشکی ایران برای روسیه."
+        },
+        "recommended_action": {
+          "en": "Separate translation, embassy legalization and Russian notarization in the checklist and confirm which is needed at each stage.",
+          "fa": "در چک‌لیست ترجمه، تأیید سفارت و ناتاریوس روسیه را جدا کنید و نیاز هرکدام را برای هر مرحله تأیید کنید."
+        },
+        "known_workaround": "Notarization after arrival was reported as cheaper/easier in some cases."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "RUS-STUDY-TRANSLATION-006-E1",
+          "relation": "supports",
+          "independence_group": "docs-r1"
+        },
+        {
+          "evidence_id": "RUS-STUDY-TRANSLATION-006-E2",
+          "relation": "supports",
+          "independence_group": "docs-r2"
+        },
+        {
+          "evidence_id": "RUS-STUDY-TRANSLATION-006-E3",
+          "relation": "supports",
+          "independence_group": "docs-r3"
+        },
+        {
+          "evidence_id": "RUS-STUDY-TRANSLATION-006-E4",
+          "relation": "supports",
+          "independence_group": "docs-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated document cases over 2025-2026 show stage-specific differences rather than one universal certification rule."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current embassy/university notarization and legalization rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "RUS-STUDY-TRANSLATION-006-E1",
+            "RUS-STUDY-TRANSLATION-006-E2",
+            "RUS-STUDY-TRANSLATION-006-E3",
+            "RUS-STUDY-TRANSLATION-006-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Russia community Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Document rules vary by university and cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "translation",
+        "Russian",
+        "notary",
+        "legalization",
+        "documents"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2026-05-19"
+    },
+    {
+      "signal_id": "RUS-STUDY-WORK-FINANCE-007",
+      "issue_cluster_id": "RUS-STUDENT-WORK-FINANCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "RUS-STUDY-SCHOLARSHIP-COVERAGE-003"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "student_work_financial_gap",
+        "class": "employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "Russia",
+          "country_code": "RUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Russia",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "International student"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_work"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "living_cost"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Student work can supplement basic costs, but it is not a reliable substitute for a living-cost budget",
+          "fa": "کار دانشجویی می‌تواند بخشی از هزینه پایه را پوشش دهد، اما جایگزین قابل اتکای بودجه زندگی نیست"
+        },
+        "summary": {
+          "en": "Long-term students describe easy part-time work as difficult for foreigners and often dependent on Russian language, while 2026 reports show café/general work can cover some food/transport costs in individual cases.",
+          "fa": "دانشجویان باسابقه پیدا کردن کار پاره‌وقت آسان برای خارجی‌ها را دشوار و وابسته به زبان روسی می‌دانند، هرچند گزارش‌های ۲۰۲۶ نشان می‌دهد کار کافه/جنرال در بعضی کیس‌ها بخشی از خوراک و حمل‌ونقل را پوشش می‌دهد."
+        },
+        "practical_impact": {
+          "en": "Funding plans based on guaranteed part-time income can fail after arrival.",
+          "fa": "برنامه مالی متکی به درآمد قطعی کار پاره‌وقت ممکن است بعد از ورود شکست بخورد."
+        },
+        "who_should_care": {
+          "en": "Students planning to fund themselves through work.",
+          "fa": "دانشجویانی که قصد دارند هزینه زندگی را با کار تأمین کنند."
+        },
+        "recommended_action": {
+          "en": "Arrive with a living-cost buffer and treat student work as optional upside, especially before Russian proficiency improves.",
+          "fa": "با ذخیره مالی وارد شوید و تا قبل از تقویت روسی، کار دانشجویی را درآمد تضمین‌شده فرض نکنید."
+        },
+        "known_workaround": "General-service jobs are reported as more accessible than skilled professional work."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "RUS-STUDY-WORK-FINANCE-007-E1",
+          "relation": "supports",
+          "independence_group": "work-r1"
+        },
+        {
+          "evidence_id": "RUS-STUDY-WORK-FINANCE-007-E2",
+          "relation": "supports",
+          "independence_group": "work-r2"
+        },
+        {
+          "evidence_id": "RUS-STUDY-WORK-FINANCE-007-E3",
+          "relation": "qualifies",
+          "independence_group": "work-r3"
+        },
+        {
+          "evidence_id": "RUS-STUDY-WORK-FINANCE-007-E4",
+          "relation": "qualifies",
+          "independence_group": "work-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source contains both pessimistic long-term experiences and positive limited-cost coverage examples."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current legal student-work conditions, wages and work-hour rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "RUS-STUDY-WORK-FINANCE-007-E1",
+            "RUS-STUDY-WORK-FINANCE-007-E2",
+            "RUS-STUDY-WORK-FINANCE-007-E3",
+            "RUS-STUDY-WORK-FINANCE-007-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Russia community Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Wages and labor access change by city and legal status.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student work",
+        "part time",
+        "Russian language",
+        "living costs"
+      ],
+      "first_seen": "2025-03-05",
+      "last_seen": "2026-09-16"
+    },
+    {
+      "signal_id": "RUS-STUDY-DORM-HEALTH-008",
+      "issue_cluster_id": "RUS-STUDY-DORM-HEALTH-VARIANCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "RUS-STUDY-SCHOLARSHIP-COVERAGE-003"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "dorm_health_requirement_variance",
+        "class": "settlement"
+      },
+      "scope": {
+        "destination": {
+          "country": "Russia",
+          "country_code": "RUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Russia",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "university_housing",
+            "student_onboarding"
+          ]
+        },
+        "process_stages": [
+          "dormitory",
+          "health_documents",
+          "arrival"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Dormitory quality and health-document onboarding vary substantially by university",
+          "fa": "کیفیت خوابگاه و مدارک سلامتِ ورود بین دانشگاه‌ها تفاوت زیادی دارد"
+        },
+        "summary": {
+          "en": "A direct student comparison found one university demanded medical/HIV documents in advance while another arranged testing after arrival. The same source warns dorm conditions and required items are highly university-specific.",
+          "fa": "یک مقایسه مستقیم دانشجویی نشان داده یک دانشگاه مدارک سلامت/HIV را قبل از ورود می‌خواست و دیگری تست را بعد از ورود انجام می‌داد. همان منبع شرایط خوابگاه و وسایل لازم را شدیداً دانشگاه‌محور می‌داند."
+        },
+        "practical_impact": {
+          "en": "Generic packing/document checklists can be wrong for the target university.",
+          "fa": "چک‌لیست عمومی مدارک و وسایل ممکن است برای دانشگاه هدف اشتباه باشد."
+        },
+        "who_should_care": {
+          "en": "Students receiving university dormitory or preparing health documents.",
+          "fa": "دانشجویان متقاضی خوابگاه یا در حال آماده‌سازی مدارک سلامت."
+        },
+        "recommended_action": {
+          "en": "Ask current students and the university dorm/international office for the exact checklist and housing conditions.",
+          "fa": "از دانشجوی فعلی و دفتر بین‌الملل/خوابگاه دانشگاه چک‌لیست دقیق و شرایط واقعی را بگیرید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "RUS-STUDY-DORM-HEALTH-008-E1",
+          "relation": "supports",
+          "independence_group": "dorm-r1"
+        },
+        {
+          "evidence_id": "RUS-STUDY-DORM-HEALTH-008-E2",
+          "relation": "supports",
+          "independence_group": "dorm-r1"
+        },
+        {
+          "evidence_id": "RUS-STUDY-DORM-HEALTH-008-E3",
+          "relation": "supports",
+          "independence_group": "dorm-r3"
+        },
+        {
+          "evidence_id": "RUS-STUDY-DORM-HEALTH-008-Q1",
+          "relation": "qualifies",
+          "independence_group": "dorm-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct comparison across universities shows real operational variance."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current health-document and dormitory rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "RUS-STUDY-DORM-HEALTH-008-E1",
+            "RUS-STUDY-DORM-HEALTH-008-E2",
+            "RUS-STUDY-DORM-HEALTH-008-E3",
+            "RUS-STUDY-DORM-HEALTH-008-Q1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Russia community Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Housing conditions and university onboarding procedures change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "dormitory",
+        "HIV test",
+        "health certificate",
+        "arrival"
+      ],
+      "first_seen": "2025-03-04",
+      "last_seen": "2026-06-30"
+    },
+    {
+      "signal_id": "RUS-STUDY-BANKING-009",
+      "issue_cluster_id": "RUS-STUDENT-BANKING-REMITTANCE",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "banking_remittance_friction",
+        "class": "settlement_friction"
+      },
+      "scope": {
+        "destination": {
+          "country": "Russia",
+          "country_code": "RUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Russia",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_settlement"
+          ]
+        },
+        "process_stages": [
+          "bank_account",
+          "remittance",
+          "payment"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Banking and remittance carry source-of-funds and international-payment friction for students in Russia",
+          "fa": "بانک و انتقال پول در روسیه برای دانشجو با ریسک منبع وجوه و محدودیت پرداخت بین‌المللی همراه است"
+        },
+        "summary": {
+          "en": "Community experience recommends direct ruble settlement through trusted exchange services and warns that crypto-linked transfers may trigger account blocks. Russian cards also face limits on some international services.",
+          "fa": "تجربه گروه تسویه مستقیم روبلی از طریق صراف معتبر را ترجیح می‌دهد و هشدار می‌دهد انتقال مرتبط با کریپتو ممکن است حساب را بلاک کند. کارت روسی نیز برای بعضی سرویس‌های بین‌المللی محدودیت دارد."
+        },
+        "practical_impact": {
+          "en": "Students can lose access to funds or online services if they use the wrong transfer channel.",
+          "fa": "استفاده از کانال انتقال نامناسب می‌تواند دسترسی دانشجو به پول یا سرویس آنلاین را مختل کند."
+        },
+        "who_should_care": {
+          "en": "Students moving money from Iran into Russian accounts.",
+          "fa": "دانشجویانی که از ایران به حساب روسیه پول منتقل می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Use traceable, trusted ruble remittance and ask the receiving bank/exchange about source-of-funds compliance before large transfers.",
+          "fa": "از انتقال روبلی قابل‌ردگیری و صراف معتبر استفاده کنید و قبل از مبلغ بزرگ درباره منبع وجوه با بانک/صرافی هماهنگ کنید."
+        },
+        "known_workaround": "Trusted exchange services settling directly in rubles are the recurring community workaround."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "RUS-STUDY-BANKING-009-E1",
+          "relation": "supports",
+          "independence_group": "bank-r1"
+        },
+        {
+          "evidence_id": "RUS-STUDY-BANKING-009-E2",
+          "relation": "supports",
+          "independence_group": "bank-r2"
+        },
+        {
+          "evidence_id": "RUS-STUDY-BANKING-009-E3",
+          "relation": "supports",
+          "independence_group": "bank-r3"
+        },
+        {
+          "evidence_id": "RUS-STUDY-BANKING-009-E4",
+          "relation": "qualifies",
+          "independence_group": "bank-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The crypto-blocking warning is specific and consistent with broader payment friction, but evidence is limited to a few reports."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current bank compliance rules and student-account products were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "RUS-STUDY-BANKING-009-E1",
+            "RUS-STUDY-BANKING-009-E2",
+            "RUS-STUDY-BANKING-009-E3",
+            "RUS-STUDY-BANKING-009-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Russia community Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Banking controls and sanctions-related payment access change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "bank account",
+        "ruble transfer",
+        "Tether",
+        "sanctions",
+        "student card"
+      ],
+      "first_seen": "2025-01-14",
+      "last_seen": "2026-08-10"
+    },
+    {
+      "signal_id": "RUS-STUDY-MEDICAL-010",
+      "issue_cluster_id": "RUS-STUDY-MEDICAL-DENTISTRY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "RUS-STUDY-PODFAK-004"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "medical_program_cost_language_exam",
+        "class": "medical_study"
+      },
+      "scope": {
+        "destination": {
+          "country": "Russia",
+          "country_code": "RUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Russia",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "medicine",
+            "dentistry"
+          ],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "medicine",
+            "dentistry"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "tuition",
+          "language",
+          "entrance_exam",
+          "future_recognition"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Medicine/dentistry costs and language/entrance requirements vary sharply by university, and onward practice abroad still requires destination-country licensing steps",
+          "fa": "هزینه و زبان/آزمون ورودی پزشکی و دندان بین دانشگاه‌ها اختلاف زیادی دارد و کار در کشور دیگر همچنان به معادل‌سازی مقصد وابسته است"
+        },
+        "summary": {
+          "en": "The source shows a wide tuition spread between Moscow and other cities, reports entrance testing for medicine, and warns that later specialization/practice abroad requires destination-language and licensing/equivalency steps.",
+          "fa": "فایل اختلاف زیاد شهریه بین مسکو و شهرهای دیگر، وجود آزمون ورودی برای پزشکی و نیاز به زبان/معادل‌سازی کشور مقصد برای ادامه کار یا تخصص را گزارش می‌کند."
+        },
+        "practical_impact": {
+          "en": "A low-entry-barrier medical program should not be evaluated only by admission ease or tuition.",
+          "fa": "برنامه پزشکی با پذیرش آسان را نباید فقط با سهولت ورود یا شهریه سنجید."
+        },
+        "who_should_care": {
+          "en": "Iranian applicants considering medicine or dentistry in Russia.",
+          "fa": "متقاضیان ایرانی پزشکی یا دندانپزشکی روسیه."
+        },
+        "recommended_action": {
+          "en": "Verify current tuition, instruction language, entrance test and recognition path for the exact university before committing.",
+          "fa": "پیش از تصمیم، شهریه روز، زبان آموزش، آزمون ورودی و مسیر معادل‌سازی دانشگاه دقیق را بررسی کنید."
+        },
+        "known_workaround": "A preparation year can be used for language/entrance-test preparation in some cases."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "RUS-STUDY-MEDICAL-010-E1",
+          "relation": "supports",
+          "independence_group": "med-r1"
+        },
+        {
+          "evidence_id": "RUS-STUDY-MEDICAL-010-E2",
+          "relation": "supports",
+          "independence_group": "med-r2"
+        },
+        {
+          "evidence_id": "RUS-STUDY-MEDICAL-010-E3",
+          "relation": "supports",
+          "independence_group": "med-r3"
+        },
+        {
+          "evidence_id": "RUS-STUDY-MEDICAL-010-Q1",
+          "relation": "qualifies",
+          "independence_group": "med-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The core cost/entrance variance is repeated, while exact current fees and language availability are institution-specific."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current tuition, entrance exams, language options and recognition rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "RUS-STUDY-MEDICAL-010-E1",
+            "RUS-STUDY-MEDICAL-010-E2",
+            "RUS-STUDY-MEDICAL-010-E3",
+            "RUS-STUDY-MEDICAL-010-Q1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Russia community Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Medical tuition and admission rules change by university/year.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "medicine",
+        "dentistry",
+        "tuition",
+        "entrance exam",
+        "recognition"
+      ],
+      "first_seen": "2025-01-24",
+      "last_seen": "2026-02-20"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram handles/user IDs, phone numbers, addresses and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically scanned all 1,463 records in the uploaded JSON export."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the entire message graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Promotional webinars, paid services, referral links and generic migration advertising were excluded from signals."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated scholarship, podfak, invitation, translation, work, dormitory and banking discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Podfak, document certification and work feasibility are represented as conditional/variable rather than universal rules."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "All policy/process claims remain community-reported unless independently verified against Russian authorities or universities."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal connector was disabled during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals are practical planning evidence only. They are not official Russian scholarship, university, visa, banking, employment, medical-recognition or consular rules. Verify current requirements with the relevant university, Education in Russia/Open Doors portal, Russian mission, bank or competent authority before acting."
+}

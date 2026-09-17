@@ -1,0 +1,357 @@
+{
+  "source": "Hamrah Community Signal Candidate Extraction",
+  "generatedAt": "2026-09-16T13:19:14Z",
+  "input": {
+    "fileName": "result(20260916-131534).json",
+    "groupName": "Pargar française",
+    "groupType": "private_supergroup",
+    "messageCount": 2523,
+    "dateRange": {
+      "from": "2025-01-01T20:36:18",
+      "to": "2026-09-16T14:48:52"
+    }
+  },
+  "coverage": {
+    "filesScanned": 1,
+    "messagesScanned": 2523,
+    "signalsExtracted": 6,
+    "validationStatus": "candidate_only",
+    "truncated": false
+  },
+  "filters": {
+    "countryCode": "FRA",
+    "originCountry": "Iran",
+    "priorityWindow": "2026-01-01 through 2026-09-16",
+    "primaryStage": "language_preparation"
+  },
+  "extractionMethod": {
+    "description": "This source is primarily a French-language learning community, so extraction prioritizes language-preparation and testing signals rather than forcing visa topics. Signals are retained when supported by repeated messages across multiple participants. Low-volume visa discussion is explicitly marked low confidence.",
+    "privacy": "Participant names and user IDs are omitted. Evidence uses source message IDs, dates, claims, and short excerpts only.",
+    "validation": "These are source-derived candidate community signals and have not been promoted to Hamrah's validated Community Signal Store."
+  },
+  "resultCount": 6,
+  "signals": [
+    {
+      "datasetId": "candidate:fra-language-iran-pargar-francaise-2026",
+      "signalId": "fra-language-accelerated-level-progression-demand-2026",
+      "countryCode": "FRA",
+      "route": "study_language_preparation",
+      "topic": "accelerated French level progression to A2/B1/B2",
+      "processStage": "language_preparation",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "status": "active",
+      "firstObservedAt": "2026-02-04",
+      "lastObservedAt": "2026-09-10",
+      "communityEvidence": {
+        "matchedMessages": 19,
+        "distinctAuthors": 18,
+        "countingMethod": "Messages combining CEFR levels A1/A2/B1/B2 with explicit time pressure, intensive-study plans, or questions about how quickly a target level can be reached."
+      },
+      "summary": "A recurring pattern is strong time pressure to move from beginner or intermediate French to B1/B2 on an accelerated schedule. Users repeatedly ask whether B2 can be reached within months or one to two years and seek intensive courses or teachers when application timelines are limited.",
+      "assessment": {
+        "signalType": "language_timeline_pressure",
+        "severity": "medium",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": false
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 145810,
+          "sourceDate": "2026-08-28",
+          "claim": "A learner asked whether reaching B2 within one year was realistic and requested intensive-study experiences.",
+          "excerpt": "به نظرتون چقدر احتمال داره بشه در ۱ سال B2 گرفت"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 147720,
+          "sourceDate": "2026-09-05",
+          "claim": "A learner starting French from zero described a two-year deadline to reach B2 and said self-study felt too time-consuming.",
+          "excerpt": "من دو سال زمان دارم ... فرانسوی b2 بگیرم"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 151375,
+          "sourceDate": "2026-09-10",
+          "claim": "A B1 learner specifically sought an intensive teacher or institute to reach B2.",
+          "excerpt": "من الان B1 هستم و به صورت فشرده می‌خوام B2 برسم"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:fra-language-iran-pargar-francaise-2026",
+      "signalId": "fra-language-tcf-tef-exam-navigation-friction-2026",
+      "countryCode": "FRA",
+      "route": "study_language_preparation",
+      "topic": "TCF/TEF exam selection, format, registration and payment ambiguity",
+      "processStage": "language_testing",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entities": [
+        "TCF",
+        "TEF"
+      ],
+      "status": "active",
+      "firstObservedAt": "2026-01-28",
+      "lastObservedAt": "2026-09-14",
+      "communityEvidence": {
+        "matchedMessages": 31,
+        "distinctAuthors": 24,
+        "countingMethod": "Messages mentioning TCF or TEF, including exam choice, skill modules, validity, price, registration, payment, dates, mock tests and preparation."
+      },
+      "summary": "TCF/TEF navigation is one of the strongest recurring language-stage frictions in the group. Applicants ask which test to take, whether optional skills are needed, how long scores remain valid, current TEF pricing, how TCF registration/payment works for applicants outside Tehran, and where to obtain mock-test or preparation resources.",
+      "assessment": {
+        "signalType": "language_test_navigation",
+        "severity": "medium",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 147731,
+          "sourceDate": "2026-09-06",
+          "claim": "Applicant asked whether the three mandatory TCF skills are sufficient for master's applications or whether the optional skills are also needed.",
+          "excerpt": "برای ارشد مدرک tcf صرفا همون سه مهارت اجباری کافیه"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 150753,
+          "sourceDate": "2026-09-08",
+          "claim": "Applicant asked for the current TEF price."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 153838,
+          "sourceDate": "2026-09-14",
+          "claim": "Applicant asked whether TCF pre-registration had to be done in person because payment was in euros, especially for people outside Tehran.",
+          "excerpt": "پیش ثبت نام آزمون tcf باید حضوری مراجعه کنیم ... یا کسایی که شهرای دیگن میتونن غیرحضوری پرداخت کنن"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 143513,
+          "sourceDate": "2026-01-28",
+          "claim": "Applicant asked where TCF mock exams could be taken."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:fra-language-iran-pargar-francaise-2026",
+      "signalId": "fra-language-speaking-partner-practice-gap-2026",
+      "countryCode": "FRA",
+      "route": "study_language_preparation",
+      "topic": "demand for French speaking and study partners",
+      "processStage": "language_preparation",
+      "originCountry": "Iran",
+      "status": "active",
+      "firstObservedAt": "2026-01-28",
+      "lastObservedAt": "2026-07-20",
+      "communityEvidence": {
+        "matchedMessages": 18,
+        "distinctAuthors": 14,
+        "countingMethod": "Messages explicitly requesting a French study/speaking partner or proposing regular peer practice."
+      },
+      "summary": "There is repeated unmet demand for structured peer practice, especially speaking. Users at A1 through B2 repeatedly seek partners for regular online practice, often with explicit progression targets such as reaching B1 or preparing for TCF.",
+      "assessment": {
+        "signalType": "peer_practice_gap",
+        "severity": "low",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": false
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 144929,
+          "sourceDate": "2026-06-15",
+          "claim": "A2 learner requested a serious partner for online A2/B1 speaking practice."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 145403,
+          "sourceDate": "2026-07-20",
+          "claim": "Late-A1 learner sought an A1/A2 partner with the goal of reaching B1 by a specific deadline."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 145406,
+          "sourceDate": "2026-07-20",
+          "claim": "B1+ learner requested a B1-B2 partner specifically for conversation practice."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:fra-language-iran-pargar-francaise-2026",
+      "signalId": "fra-language-private-intensive-instruction-preference-2026",
+      "countryCode": "FRA",
+      "route": "study_language_preparation",
+      "topic": "preference for private or small-group intensive instruction under deadline pressure",
+      "processStage": "language_preparation",
+      "originCountry": "Iran",
+      "status": "active",
+      "firstObservedAt": "2026-02-16",
+      "lastObservedAt": "2026-09-16",
+      "communityEvidence": {
+        "matchedMessages": 9,
+        "distinctAuthors": 9,
+        "countingMethod": "Messages directly comparing private/small-group instruction with institutes or general classes in terms of speed, efficiency or deadline pressure."
+      },
+      "summary": "When users have a migration or application deadline, several community messages favor private or small-group instruction over long general-course sequences. The repeated rationale is faster progression, tighter time management and greater efficiency, although this remains community experience rather than an objective comparison of teaching quality.",
+      "assessment": {
+        "signalType": "instruction_format_preference",
+        "severity": "low",
+        "confidence": "medium",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": false
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 145390,
+          "sourceDate": "2026-07-20",
+          "claim": "Learner with limited time requested a teacher able to create a very intensive schedule."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 152343,
+          "sourceDate": "2026-09-12",
+          "claim": "A participant argued that good private instruction was more effective for rapid progress than long institute sequences."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 154484,
+          "sourceDate": "2026-09-16",
+          "claim": "A participant reported low efficiency from long institute terms and recommended private teaching when speed is the priority.",
+          "excerpt": "اگه سریع میخواین معلم خصوصی باید بگیرید"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:fra-language-iran-pargar-francaise-2026",
+      "signalId": "fra-language-self-study-structure-friction-2026",
+      "countryCode": "FRA",
+      "route": "study_language_preparation",
+      "topic": "self-study versus structured-course decision friction",
+      "processStage": "language_preparation",
+      "originCountry": "Iran",
+      "status": "active",
+      "firstObservedAt": "2026-02-16",
+      "lastObservedAt": "2026-09-06",
+      "communityEvidence": {
+        "matchedMessages": 13,
+        "distinctAuthors": 13,
+        "countingMethod": "Messages explicitly discussing self-study/self-learning for French and whether it is sufficient for migration, application or exam goals."
+      },
+      "summary": "Learners repeatedly ask whether French can be self-studied effectively and when it becomes realistic to switch away from classes. Community replies tend to distinguish casual learning from deadline-driven migration goals: self-study is seen as possible, but beginners under time pressure often seek structured classes, teacher feedback and curated resources.",
+      "assessment": {
+        "signalType": "learning_path_uncertainty",
+        "severity": "low",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": false
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 144932,
+          "sourceDate": "2026-06-15",
+          "claim": "A learner entering A2 asked from what level serious self-study becomes practical because of class costs."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 145683,
+          "sourceDate": "2026-08-18",
+          "claim": "Beginner asked whether French could be learned through self-study and what path to follow."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 145684,
+          "sourceDate": "2026-08-18",
+          "claim": "Community response distinguished hobby learning from migration/application deadlines and suggested structured classes for deadline-driven beginners."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 147720,
+          "sourceDate": "2026-09-05",
+          "claim": "A learner with a two-year B2 target said self-study from zero was taking too much time."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:fra-language-iran-pargar-francaise-2026",
+      "signalId": "fra-language-course-visa-outcome-uncertainty-2026-09",
+      "countryCode": "FRA",
+      "route": "language_course",
+      "topic": "uncertainty around visa outcomes for French-language courses",
+      "processStage": "visa_application",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "status": "uncertain",
+      "firstObservedAt": "2026-09-05",
+      "lastObservedAt": "2026-09-14",
+      "communityEvidence": {
+        "matchedMessages": 3,
+        "distinctAuthors": 3,
+        "countingMethod": "Messages directly discussing visa difficulty or success expectations for French-language-course applications."
+      },
+      "summary": "A small cluster of September 2026 messages shows concern that language-course visa outcomes may be less predictable when demand is high. Other community responses pushed back against treating this as a fixed rejection rate and emphasized the quality of the full application. The source does not support any numeric approval or refusal rate.",
+      "assessment": {
+        "signalType": "visa_outcome_uncertainty",
+        "severity": "medium",
+        "confidence": "low",
+        "currentApplicability": "uncertain",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 147692,
+          "sourceDate": "2026-09-05",
+          "claim": "A participant characterized language-course visas as less predictable because of high demand; this is community opinion, not a measured rate."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 153828,
+          "sourceDate": "2026-09-14",
+          "claim": "Applicant asked whether language-course visas had become difficult because of high demand."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "Pargar française",
+          "sourceMessageId": 153826,
+          "sourceDate": "2026-09-14",
+          "claim": "A community response said visa outcome depends on the quality of the overall application and language level rather than a single factor."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    }
+  ],
+  "usageNote": "Use language-learning signals as community evidence about recurring needs and friction. Time-sensitive exam registration, accepted test requirements, and visa rules should be verified with official/current sources before decisions are made."
+}

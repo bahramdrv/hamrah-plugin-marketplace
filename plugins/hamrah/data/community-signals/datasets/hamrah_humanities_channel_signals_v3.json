@@ -1,0 +1,1332 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_humanities_public_channel_signals_candidate",
+    "generated_at": "2026-09-17T07:41:17Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "humanities-pargar-public-channel",
+      "name": "result(20260917-073821).json / Telegram export «کانال علوم انسانی»",
+      "source_type": "public_channel_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-02-26",
+        "to": "2026-03-16",
+        "records_available": 26,
+        "records_processed": 26,
+        "message_records": 26
+      },
+      "source_characteristics": {
+        "public_channel": true,
+        "humanities_focused": true,
+        "contains_forwarded_posts": true,
+        "contains_promotional_posts": true,
+        "contains_analysis_and_predictions": true,
+        "contains_operational_service_updates": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "HUMCH-US-ACCESS-001-E1",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1683"
+      },
+      "published_at": "2025-07-08",
+      "event_date": "2025-07-08",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "channel_event_topic",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The channel repeatedly programmed U.S.-focused content around Travel Ban history, visa backlog and future study access.",
+        "fa": "کانال مکرراً محتوای آمریکا را حول تاریخچه Travel Ban، بک‌لاگ و آینده دسترسی تحصیلی برنامه‌ریزی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-US-ACCESS-001-E2",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1685"
+      },
+      "published_at": "2025-08-19",
+      "event_date": "2025-08-19",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "promotional_route_claim",
+      "firsthandness": "reported",
+      "evidence_quality": "low_promotional_claim",
+      "summary": {
+        "en": "A promotional post claimed that Iranian applicants in several immigrant-visa categories could still obtain U.S. immigrant visas despite restrictions.",
+        "fa": "یک پست تبلیغاتی مدعی شده متقاضیان ایرانی در چند کتگوری مهاجرتی آمریکا با وجود محدودیت‌ها همچنان می‌توانند ویزا بگیرند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-US-ACCESS-001-E3",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1686"
+      },
+      "published_at": "2025-09-06",
+      "event_date": "2025-09-06",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "promotional_case_claim",
+      "firsthandness": "reported",
+      "evidence_quality": "low_promotional_claim",
+      "summary": {
+        "en": "The channel presented one EB-3 visa case and attributed continued issuance to a claimed religious-minority instruction, while encouraging applicants to act quickly.",
+        "fa": "کانال یک کیس EB-3 را به‌عنوان شاهد ادامه ویزادهی ارائه کرده و آن را به دستورالعمل ادعایی اقلیت‌های دینی نسبت داده و به اقدام سریع تشویق کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-US-ACCESS-001-E4",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1693"
+      },
+      "published_at": "2025-10-31",
+      "event_date": "2025-10-31",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "channel_policy_update",
+      "firsthandness": "reported",
+      "evidence_quality": "low_unverified_policy_update",
+      "summary": {
+        "en": "A later post described Diversity Visa registration as delayed by website changes and a U.S. government shutdown, while acknowledging that the restart date was uncertain.",
+        "fa": "پست بعدی تأخیر ثبت‌نام لاتاری را به تغییر وب‌سایت و shutdown دولت آمریکا نسبت داده و زمان شروع را نامعلوم دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-EU-SPILLOVER-002-E1",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1684"
+      },
+      "published_at": "2025-08-13",
+      "event_date": "2025-08-13",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "channel_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "low_single_source_analysis",
+      "summary": {
+        "en": "The channel argued that harder U.S. conditions were shifting more applicants toward Europe and that higher demand plus anti-immigration sentiment could tighten European visa issuance.",
+        "fa": "کانال تحلیل کرده سخت‌ترشدن شرایط آمریکا تقاضا را به اروپا منتقل می‌کند و افزایش تقاضا همراه با فضای ضد مهاجرت می‌تواند ویزادهی اروپا را سخت‌تر کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-EU-SPILLOVER-002-E2",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1683"
+      },
+      "published_at": "2025-07-08",
+      "event_date": "2025-07-08",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "channel_event_topic",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Europe-wide master's, PhD and postdoc admissions were promoted as an active alternative topic alongside U.S. visa-risk discussions.",
+        "fa": "پذیرش ارشد، دکتری و پست‌داک اروپا همزمان با بحث ریسک ویزای آمریکا به‌عنوان مسیر جایگزین فعال مطرح شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-IR-DISRUPTION-003-E1",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1706"
+      },
+      "published_at": "2026-03-14",
+      "event_date": "2026-03-14",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "source_direct_operation",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "During an internet outage in Iran, the channel said it had temporarily provided support so applicants could complete migration tasks such as interviews.",
+        "fa": "در زمان قطع اینترنت ایران، کانال گفته موقتاً برای انجام امور مهاجرتی مثل مصاحبه به متقاضیان سرویس حمایتی داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-IR-DISRUPTION-003-E2",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1706"
+      },
+      "published_at": "2026-03-14",
+      "event_date": "2026-03-14",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "source_direct_operation",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The same post said the temporary outage-support service was being discontinued because staffing and operating costs were being reduced.",
+        "fa": "همان پست گفته سرویس موقت اختلال اینترنت به‌دلیل کاهش نیرو و هزینه‌های عملیاتی متوقف می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-IR-DISRUPTION-003-E3",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1707"
+      },
+      "published_at": "2026-03-16",
+      "event_date": "2026-03-16",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "channel_resource_summary",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The channel then grouped practical resources around no-internet family communication, land-border exit experiences and connectivity inside Iran.",
+        "fa": "کانال سپس منابع عملی را درباره ارتباط با خانواده بدون اینترنت، تجربه خروج زمینی از مرزها و اتصال داخل ایران دسته‌بندی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-FX-004-E1",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1700"
+      },
+      "published_at": "2025-11-06",
+      "event_date": "2025-11-06",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "service_promotion",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_but_operational",
+      "summary": {
+        "en": "The channel repeatedly marketed foreign-currency payment support specifically for university and embassy payments.",
+        "fa": "کانال مکرراً سرویس پرداخت ارزی را مشخصاً برای پرداخت‌های دانشگاه و سفارت تبلیغ کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-FX-004-E2",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1704"
+      },
+      "published_at": "2025-11-16",
+      "event_date": "2025-11-16",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "service_promotion",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_but_operational",
+      "summary": {
+        "en": "A later post again described third-party outbound foreign-currency payment infrastructure as a standing service for applicants in Iran.",
+        "fa": "پست بعدی دوباره زیرساخت شخص ثالث پرداخت ارزی به خارج را به‌عنوان سرویس دائمی برای متقاضیان داخل ایران معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-FX-004-E3",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1705"
+      },
+      "published_at": "2026-01-17",
+      "event_date": "2026-01-17",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "service_promotion",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_but_operational",
+      "summary": {
+        "en": "The same payment rail was marketed for sending foreign currency to spouses and children abroad while paying in Iranian rials domestically.",
+        "fa": "همان ریل پرداخت برای ارسال ارز به همسر/فرزند خارج کشور در برابر پرداخت ریالی داخل ایران تبلیغ شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-FX-004-E4",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1706"
+      },
+      "published_at": "2026-03-14",
+      "event_date": "2026-03-14",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "source_direct_operation",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "During a period of broader service cuts, the channel said outbound foreign-currency payments remained active.",
+        "fa": "در دوره کاهش سایر سرویس‌ها، کانال گفته پرداخت ارزی به خارج همچنان فعال مانده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-AI-SKILLS-005-E1",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1696"
+      },
+      "published_at": "2025-11-03",
+      "event_date": "2025-11-03",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "channel_career_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "opinion_forward_looking",
+      "summary": {
+        "en": "The channel recommended learning to use and integrate AI professionally even without coding, framing this as future work-readiness.",
+        "fa": "کانال توصیه کرده حتی بدون برنامه‌نویسی، استفاده و ادغام حرفه‌ای AI یاد گرفته شود و آن را آمادگی شغلی آینده دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-AI-SKILLS-005-E2",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1696"
+      },
+      "published_at": "2025-11-03",
+      "event_date": "2025-11-03",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "channel_career_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "opinion_forward_looking",
+      "summary": {
+        "en": "It specifically highlighted AI agents, data management and AI-assisted storytelling as emerging baseline skills.",
+        "fa": "به‌طور مشخص AI Agent، مدیریت دیتا و storytelling با کمک AI را مهارت‌های پایه در حال ظهور معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "HUMCH-APPLIED-RESEARCH-006-E1",
+      "source_id": "humanities-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1679"
+      },
+      "published_at": "2025-02-26",
+      "event_date": "2025-02-26",
+      "collected_at": "2026-09-17T07:41:17Z",
+      "source_type": "paid_project_posting",
+      "firsthandness": "reported",
+      "evidence_quality": "single_observed_opportunity",
+      "summary": {
+        "en": "The channel posted a paid English-language humanities research project seeking survey design, standardized assessment/evaluation and analysis skills.",
+        "fa": "کانال یک پروژه پولی علوم انسانی به زبان انگلیسی منتشر کرده که مهارت طراحی Survey، assessment/evaluation استاندارد و تحلیل می‌خواسته است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "HUMCH-US-ACCESS-001",
+      "issue_cluster_id": "IRAN-US-VISA-ACCESS-FRAGMENTATION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUMCH-EU-SPILLOVER-002"
+        }
+      ],
+      "classification": {
+        "family": "E3_VISA_ADJUDICATION",
+        "type": "travel_restriction_and_route_specific_access",
+        "class": "US_access"
+      },
+      "scope": {
+        "destination": {
+          "country": "United States",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "humanities researcher",
+            "social-science applicant"
+          ],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "IMMIGRATION OPERATIONS"
+          ],
+          "codes": [
+            "student_visa",
+            "immigrant_visa",
+            "DV",
+            "EB"
+          ]
+        },
+        "process_stages": [
+          "visa_strategy",
+          "backlog",
+          "registration",
+          "consular_processing"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel treats U.S. access for Iranians as route-specific and unstable rather than uniformly open or closed",
+          "fa": "کانال دسترسی ایرانی‌ها به آمریکا را route-specific و ناپایدار می‌بیند، نه کاملاً باز یا بسته"
+        },
+        "summary": {
+          "en": "Travel Ban history, backlog, lottery-registration delay and claimed immigrant-visa exceptions recur across the channel. The exception/case claims are promotional and remain unverified.",
+          "fa": "Travel Ban، بک‌لاگ، تأخیر لاتاری و استثناهای ادعایی ویزای مهاجرتی چند بار تکرار شده‌اند. ادعاهای استثنا/کیس ماهیت تبلیغاتی دارند و تأیید نشده‌اند."
+        },
+        "practical_impact": {
+          "en": "Applicants should not generalize one visa-category outcome to all U.S. routes.",
+          "fa": "نتیجه یک کتگوری ویزا را نباید به همه مسیرهای آمریکا تعمیم داد."
+        },
+        "who_should_care": {
+          "en": "Iranian applicants considering U.S. study or immigrant visas.",
+          "fa": "متقاضیان ایرانی تحصیل یا ویزاهای مهاجرتی آمریکا."
+        },
+        "recommended_action": {
+          "en": "Verify the live rule for the exact visa category and consular stage before relying on channel case reports.",
+          "fa": "قبل از اتکا به کیس‌های کانال، قانون روز کتگوری و مرحله کنسولی دقیق را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUMCH-US-ACCESS-001-E1",
+          "relation": "supports",
+          "independence_group": "HUMCH-US-ACCESS-001-E1"
+        },
+        {
+          "evidence_id": "HUMCH-US-ACCESS-001-E2",
+          "relation": "supports",
+          "independence_group": "HUMCH-US-ACCESS-001-E2"
+        },
+        {
+          "evidence_id": "HUMCH-US-ACCESS-001-E3",
+          "relation": "supports",
+          "independence_group": "HUMCH-US-ACCESS-001-E3"
+        },
+        {
+          "evidence_id": "HUMCH-US-ACCESS-001-E4",
+          "relation": "supports",
+          "independence_group": "HUMCH-US-ACCESS-001-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The risk theme repeats, but route-exception claims are promotional and not independently verified."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No current U.S. travel restriction, DV schedule, waiver or immigrant-visa exception was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUMCH-US-ACCESS-001-E1",
+            "HUMCH-US-ACCESS-001-E2",
+            "HUMCH-US-ACCESS-001-E3",
+            "HUMCH-US-ACCESS-001-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Channel posts can mix analysis, promotion and reported cases."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "U.S. entry and visa rules are highly time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "United States",
+        "Travel Ban",
+        "backlog",
+        "DV",
+        "EB3",
+        "Iranian applicants"
+      ],
+      "first_seen": "2025-07-08",
+      "last_seen": "2025-10-31"
+    },
+    {
+      "signal_id": "HUMCH-EU-SPILLOVER-002",
+      "issue_cluster_id": "EUROPE-DEMAND-SPILLOVER-FROM-US",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUMCH-US-ACCESS-001"
+        }
+      ],
+      "classification": {
+        "family": "E3_VISA_ADJUDICATION",
+        "type": "destination_demand_spillover",
+        "class": "Europe_visa_pressure"
+      },
+      "scope": {
+        "destination": {
+          "country": "Europe",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "humanities researcher",
+            "social-science applicant"
+          ],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "IMMIGRATION OPERATIONS"
+          ],
+          "codes": [
+            "study",
+            "postdoc"
+          ]
+        },
+        "process_stages": [
+          "destination_selection",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel argues that harder U.S. conditions are pushing more applicants toward Europe and may increase visa pressure there",
+          "fa": "کانال تحلیل می‌کند سخت‌ترشدن آمریکا متقاضیان را به اروپا می‌برد و ممکن است فشار ویزا را آنجا بالا ببرد"
+        },
+        "summary": {
+          "en": "This is channel analysis rather than verified visa statistics. Europe was simultaneously promoted as an active master's/PhD/postdoc alternative.",
+          "fa": "این تحلیل کانال است نه آمار رسمی ویزا. همزمان اروپا برای ارشد/دکتری/پست‌داک به‌عنوان آلترناتیو فعال معرفی شده است."
+        },
+        "practical_impact": {
+          "en": "Europe should not be assumed to be an automatically easier fallback when another destination becomes harder.",
+          "fa": "اروپا نباید fallback خودکار و تضمیناً آسان‌تر فرض شود."
+        },
+        "who_should_care": {
+          "en": "Applicants pivoting from U.S. plans to Europe.",
+          "fa": "متقاضیانی که از برنامه آمریکا به اروپا pivot می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Rebuild the visa/admission plan for the specific European country instead of assuming transferable ease.",
+          "fa": "برای کشور اروپایی مشخص برنامه پذیرش/ویزا را از نو بسازید و آسانی را تعمیم ندهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUMCH-EU-SPILLOVER-002-E1",
+          "relation": "supports",
+          "independence_group": "HUMCH-EU-SPILLOVER-002-E1"
+        },
+        {
+          "evidence_id": "HUMCH-EU-SPILLOVER-002-E2",
+          "relation": "supports",
+          "independence_group": "HUMCH-EU-SPILLOVER-002-E2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "low",
+          "rationale": "The core pressure claim comes from one channel-analysis post."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No European visa issuance statistics or policy changes were independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUMCH-EU-SPILLOVER-002-E1",
+            "HUMCH-EU-SPILLOVER-002-E2"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Channel posts can mix analysis, promotion and reported cases."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Visa demand and policy vary by country/intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Europe",
+        "visa pressure",
+        "U.S. restrictions",
+        "destination shift"
+      ],
+      "first_seen": "2025-07-08",
+      "last_seen": "2025-08-13"
+    },
+    {
+      "signal_id": "HUMCH-IR-DISRUPTION-003",
+      "issue_cluster_id": "IRAN-CONNECTIVITY-BORDER-MIGRATION-OPERATIONS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUMCH-FX-004"
+        }
+      ],
+      "classification": {
+        "family": "E20_LIFE_MOBILITY_OPERATIONS",
+        "type": "connectivity_and_border_disruption",
+        "class": "operational_continuity"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "humanities researcher",
+            "social-science applicant"
+          ],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "IMMIGRATION OPERATIONS"
+          ],
+          "codes": [
+            "study",
+            "work",
+            "visa"
+          ]
+        },
+        "process_stages": [
+          "interview",
+          "communication",
+          "border_exit",
+          "internet_access"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Internet disruption in Iran became a direct execution risk for migration tasks, and the support ecosystem itself could degrade during the same disruption",
+          "fa": "اختلال اینترنت ایران مستقیماً به ریسک اجرای پرونده مهاجرتی تبدیل شده و خود اکوسیستم پشتیبانی هم همزمان می‌تواند ضعیف شود"
+        },
+        "summary": {
+          "en": "The channel says it temporarily supported applicants needing interviews during an outage, later discontinued that service as staffing was cut, and then published no-internet communication, land-border and connectivity resources.",
+          "fa": "کانال گفته هنگام قطع اینترنت برای مصاحبه و امور مهاجرتی سرویس موقت داده، بعد با کاهش نیرو آن را متوقف کرده و سپس منابع ارتباط بدون اینترنت، مرز زمینی و اتصال را منتشر کرده است."
+        },
+        "practical_impact": {
+          "en": "A valid admission or appointment can still fail operationally if connectivity/support/travel continuity breaks down.",
+          "fa": "حتی پذیرش یا وقت معتبر می‌تواند با اختلال اینترنت، پشتیبانی یا سفر در عمل زمین‌گیر شود."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants with deadline-critical interviews or travel steps.",
+          "fa": "متقاضیان داخل ایران با مصاحبه یا سفر deadline-critical."
+        },
+        "recommended_action": {
+          "en": "Maintain independent backup internet, communication and travel-continuity plans rather than relying on a single support provider.",
+          "fa": "برای اینترنت، ارتباط و تداوم سفر backup مستقل داشته باشید و به یک سرویس پشتیبان وابسته نباشید."
+        },
+        "known_workaround": "The source collected no-internet communication and land-border experience resources."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUMCH-IR-DISRUPTION-003-E1",
+          "relation": "supports",
+          "independence_group": "HUMCH-IR-DISRUPTION-003-E1"
+        },
+        {
+          "evidence_id": "HUMCH-IR-DISRUPTION-003-E2",
+          "relation": "supports",
+          "independence_group": "HUMCH-IR-DISRUPTION-003-E2"
+        },
+        {
+          "evidence_id": "HUMCH-IR-DISRUPTION-003-E3",
+          "relation": "supports",
+          "independence_group": "HUMCH-IR-DISRUPTION-003-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "episodic",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source directly reports an outage-driven support need and immediate operational fallbacks."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "This is an operational source signal, not a claim about current internet or border status."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUMCH-IR-DISRUPTION-003-E1",
+            "HUMCH-IR-DISRUPTION-003-E2",
+            "HUMCH-IR-DISRUPTION-003-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Channel posts can mix analysis, promotion and reported cases."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "Connectivity and border conditions can change immediately.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Iran",
+        "internet outage",
+        "interview",
+        "land border",
+        "connectivity"
+      ],
+      "first_seen": "2026-03-14",
+      "last_seen": "2026-03-16"
+    },
+    {
+      "signal_id": "HUMCH-FX-004",
+      "issue_cluster_id": "IRAN-CROSSBORDER-APPLICATION-PAYMENTS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUMCH-IR-DISRUPTION-003"
+        }
+      ],
+      "classification": {
+        "family": "E15_FINANCIAL_INFRASTRUCTURE",
+        "type": "third_party_fx_payment_dependency",
+        "class": "payment_infrastructure"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "humanities researcher",
+            "social-science applicant"
+          ],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "IMMIGRATION OPERATIONS"
+          ],
+          "codes": [
+            "study",
+            "visa",
+            "family_support"
+          ]
+        },
+        "process_stages": [
+          "university_payment",
+          "embassy_payment",
+          "remittance"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Cross-border payment access remains an operational dependency for Iran-based applicants paying universities/embassies or supporting family abroad",
+          "fa": "دسترسی به پرداخت برون‌مرزی برای متقاضی داخل ایران—دانشگاه/سفارت یا حمایت مالی خانواده—یک وابستگی عملی است"
+        },
+        "summary": {
+          "en": "The channel repeatedly promotes third-party FX payments for university/embassy fees and family remittances, and says outbound payments remained active even during wider service cuts.",
+          "fa": "کانال بارها پرداخت ارزی شخص ثالث برای دانشگاه/سفارت و حواله خانواده را تبلیغ کرده و گفته این سرویس حتی هنگام کاهش سایر خدمات فعال مانده است."
+        },
+        "practical_impact": {
+          "en": "An otherwise complete application can stall if a compliant payment route is unavailable.",
+          "fa": "پرونده آماده هم ممکن است صرفاً به‌خاطر نبود مسیر پرداخت متوقف شود."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants with foreign application, university, test or embassy fees.",
+          "fa": "متقاضیان داخل ایران با هزینه‌های خارجی اپلیکیشن، دانشگاه، آزمون یا سفارت."
+        },
+        "recommended_action": {
+          "en": "Confirm a compliant payment route before fee deadlines and treat provider savings claims as promotional until independently checked.",
+          "fa": "قبل از deadline پرداخت مسیر compliant را قطعی کنید و ادعای صرفه‌جویی provider را تا راستی‌آزمایی تبلیغاتی بدانید."
+        },
+        "known_workaround": "Third-party payment intermediaries are the recurring workaround in this source."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUMCH-FX-004-E1",
+          "relation": "supports",
+          "independence_group": "HUMCH-FX-004-E1"
+        },
+        {
+          "evidence_id": "HUMCH-FX-004-E2",
+          "relation": "supports",
+          "independence_group": "HUMCH-FX-004-E2"
+        },
+        {
+          "evidence_id": "HUMCH-FX-004-E3",
+          "relation": "supports",
+          "independence_group": "HUMCH-FX-004-E3"
+        },
+        {
+          "evidence_id": "HUMCH-FX-004-E4",
+          "relation": "supports",
+          "independence_group": "HUMCH-FX-004-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Repeated service posts demonstrate persistent demand, but all provider-specific claims come from the provider itself."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No payment-provider compliance, fee or savings claim was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUMCH-FX-004-E1",
+            "HUMCH-FX-004-E2",
+            "HUMCH-FX-004-E3",
+            "HUMCH-FX-004-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Channel posts can mix analysis, promotion and reported cases."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Payment access can change under banking/compliance constraints.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "foreign currency payment",
+        "university fee",
+        "embassy fee",
+        "Iran",
+        "remittance"
+      ],
+      "first_seen": "2025-11-06",
+      "last_seen": "2026-03-14"
+    },
+    {
+      "signal_id": "HUMCH-AI-SKILLS-005",
+      "issue_cluster_id": "HUMANITIES-AI-WORK-READINESS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUMCH-APPLIED-RESEARCH-006"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "ai_data_human_skills_positioning",
+        "class": "career_skills"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "humanities researcher",
+            "social-science applicant"
+          ],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "IMMIGRATION OPERATIONS"
+          ],
+          "codes": [
+            "career_preparation"
+          ]
+        },
+        "process_stages": [
+          "skills",
+          "employment_positioning"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel is shifting career-preparation advice toward AI integration, data handling and human communication skills rather than coding alone",
+          "fa": "کانال توصیه شغلی را به سمت ادغام AI، مدیریت داده و مهارت‌های انسانی سوق می‌دهد، نه صرفاً کدنویسی"
+        },
+        "summary": {
+          "en": "A forward-looking post specifically named AI use/integration, AI agents, data management and AI-assisted storytelling as future baseline skills.",
+          "fa": "یک پست آینده‌نگر مشخصاً استفاده/ادغام AI، AI Agent، مدیریت دیتا و storytelling با AI را مهارت‌های پایه آینده معرفی کرده است."
+        },
+        "practical_impact": {
+          "en": "For humanities profiles, employability positioning may increasingly combine domain expertise with tool-enabled research/communication workflows.",
+          "fa": "برای پروفایل علوم انسانی، positioning شغلی می‌تواند بیش از قبل ترکیب دانش حوزه با workflow پژوهش/ارتباطات مبتنی بر ابزار باشد."
+        },
+        "who_should_care": {
+          "en": "Humanities/social-science applicants preparing for international work.",
+          "fa": "متقاضیان علوم انسانی/اجتماعی در حال آماده‌سازی برای بازار کار بین‌المللی."
+        },
+        "recommended_action": {
+          "en": "Treat this as a skills hypothesis to test against target roles; build demonstrable AI/data-assisted projects rather than relying on certificates alone.",
+          "fa": "این را فرضیه مهارتی بدانید و با شغل هدف بسنجید؛ پروژه قابل‌نمایش AI/data بسازید، نه صرفاً مدرک دوره."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUMCH-AI-SKILLS-005-E1",
+          "relation": "supports",
+          "independence_group": "HUMCH-AI-SKILLS-005-E1"
+        },
+        {
+          "evidence_id": "HUMCH-AI-SKILLS-005-E2",
+          "relation": "supports",
+          "independence_group": "HUMCH-AI-SKILLS-005-E2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "medium",
+        "confidence": {
+          "level": "low",
+          "rationale": "The signal comes from one opinion/forecast post and is not labour-market evidence."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No labour-market dataset or employer requirement was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUMCH-AI-SKILLS-005-E1",
+            "HUMCH-AI-SKILLS-005-E2"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Channel posts can mix analysis, promotion and reported cases."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Technology-skill demand changes quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "AI",
+        "AI Agent",
+        "data management",
+        "storytelling",
+        "humanities"
+      ],
+      "first_seen": "2025-11-03",
+      "last_seen": "2025-11-03"
+    },
+    {
+      "signal_id": "HUMCH-APPLIED-RESEARCH-006",
+      "issue_cluster_id": "HUMANITIES-APPLIED-RESEARCH-SKILLS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "HUMCH-AI-SKILLS-005"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "applied_research_methods_demand",
+        "class": "research_work"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [
+            "humanities researcher",
+            "social-science applicant"
+          ],
+          "fields": [
+            "humanities",
+            "social sciences"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "IMMIGRATION OPERATIONS"
+          ],
+          "codes": [
+            "research_work"
+          ]
+        },
+        "process_stages": [
+          "survey_design",
+          "assessment",
+          "evaluation",
+          "analysis",
+          "English"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel contains a concrete paid opportunity for English-language applied humanities research using survey, assessment/evaluation and analysis skills",
+          "fa": "کانال یک فرصت پولی مشخص برای پژوهش کاربردی علوم انسانی به انگلیسی با مهارت Survey، assessment/evaluation و تحلیل منتشر کرده است"
+        },
+        "summary": {
+          "en": "This is a single observed project posting, so it supports skill relevance but not a broad labour-market trend.",
+          "fa": "این فقط یک پروژه مشاهده‌شده است؛ برای relevance مهارت evidence می‌دهد اما روند گسترده بازار کار را ثابت نمی‌کند."
+        },
+        "practical_impact": {
+          "en": "Methods-oriented outputs can create paid project opportunities outside purely academic publication work.",
+          "fa": "خروجی‌های روش‌محور می‌توانند بیرون از publication صرفاً آکادمیک به پروژه پولی تبدیل شوند."
+        },
+        "who_should_care": {
+          "en": "Humanities researchers building applied-research portfolios.",
+          "fa": "پژوهشگران علوم انسانی در حال ساخت پورتفولیوی applied research."
+        },
+        "recommended_action": {
+          "en": "If targeting applied roles, build demonstrable English-language survey/evaluation/analysis samples.",
+          "fa": "اگر نقش applied هدف است، نمونه‌کار انگلیسی survey/evaluation/analysis قابل‌نمایش بسازید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "HUMCH-APPLIED-RESEARCH-006-E1",
+          "relation": "supports",
+          "independence_group": "HUMCH-APPLIED-RESEARCH-006-E1"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "medium",
+        "confidence": {
+          "level": "low",
+          "rationale": "Only one concrete paid posting is present in this small channel export."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The project itself was not independently verified and is not evidence of broad hiring demand."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "HUMCH-APPLIED-RESEARCH-006-E1"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Channel posts can mix analysis, promotion and reported cases."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2027-01-15",
+        "reason": "Single-opportunity signal needs repetition before elevation.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "survey design",
+        "assessment",
+        "evaluation",
+        "analysis",
+        "English",
+        "paid research"
+      ],
+      "first_seen": "2025-02-26",
+      "last_seen": "2025-02-26"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Names, emails, Telegram handles and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 26 records from the uploaded JSON export."
+      },
+      "source_type_classification": {
+        "status": "pass",
+        "note": "This is treated as a public branded channel, not as a first-hand community discussion group."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Most webinar sales, discount campaigns, generic consultancy advertising and provider price claims were excluded from core signals."
+      },
+      "second_passport_marketing_filtered": {
+        "status": "pass",
+        "note": "Repeated claims about 2-5 year citizenship/passports, destination superiority and guaranteed outcomes were not promoted to core migration signals."
+      },
+      "political_geopolitical_opinion_filtered": {
+        "status": "pass",
+        "note": "Geopolitical rankings/predictions and destination endorsements were not converted into factual route signals."
+      },
+      "official_vs_channel_separated": {
+        "status": "pass",
+        "note": "No channel claim is treated as independently verified immigration, visa, citizenship, labour-market or payment rule."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote-store deduplication/merge was not completed."
+      }
+    }
+  },
+  "excluded_content": {
+    "high_volume_promotional_theme": "Second-passport / rapid-citizenship webinar campaign",
+    "reason": "Repeated commercial claims about 2-5 year citizenship, passport strength, destination superiority and low costs were promotional and not independently verified.",
+    "policy": "Excluded from core actionable route signals; retained only as source-characteristic context."
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Source-derived channel signals only. They are not official U.S./European immigration rules, citizenship rules, labour-market forecasts, payment-provider guarantees or current Iran connectivity/border status. Verify live requirements with the relevant authority before acting."
+}

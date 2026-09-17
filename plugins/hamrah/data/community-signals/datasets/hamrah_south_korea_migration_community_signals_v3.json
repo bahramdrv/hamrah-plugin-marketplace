@@ -1,0 +1,2551 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_south_korea_migration_community_signals_candidate",
+    "generated_at": "2026-09-17T10:03:20Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "south-korea-migration-public-supergroup",
+      "name": "result(20260917-095534).json / Telegram export «مهاجرت به کره جنوبی»",
+      "source_type": "public_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-03",
+        "to": "2026-09-17",
+        "records_available": 11097,
+        "records_processed": 11097,
+        "message_records": 10783
+      },
+      "source_characteristics": {
+        "public_supergroup": true,
+        "south_korea_migration_focused": true,
+        "contains_first_hand_applicant_experience": true,
+        "contains_admin_and_channel_guidance": true,
+        "contains_service_sales_and_promotional_advice": true,
+        "contains_policy_and_legal_claims": true,
+        "contains_unsafe_financial_workarounds": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "KOR-GKS-TRACK-E1",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "146"
+      },
+      "published_at": "2025-01-10",
+      "event_date": "2025-01-10",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group explicitly distinguishes two GKS application routes: university track and embassy track.",
+        "fa": "گروه صریحاً دو مسیر اپلای GKS را از هم جدا می‌کند: University Track و Embassy Track."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-GKS-TRACK-E2",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1059"
+      },
+      "published_at": "2025-09-05",
+      "event_date": "2025-09-05",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_policy_summary",
+      "firsthandness": "reported",
+      "evidence_quality": "annual_policy_summary_unverified",
+      "summary": {
+        "en": "A 2025 guidance post says first-stage GKS submission was online for both tracks and describes field restrictions for university-track applicants in that year's cycle.",
+        "fa": "یک راهنمای ۲۰۲۵ می‌گوید مرحله اول GKS در هر دو track آنلاین بوده و برای University Track همان سال محدودیت رشته گزارش می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-GKS-TRACK-E3",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8364"
+      },
+      "published_at": "2026-06-15",
+      "event_date": "2026-06-15",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "applicant_guideline_quote",
+      "firsthandness": "reported",
+      "evidence_quality": "quoted_guideline_not_independently_verified",
+      "summary": {
+        "en": "An applicant quoted GKS FAQ/guidelines saying applicants may apply through the embassy of citizenship or a Korean university and challenged a conflicting claim about being in Korea.",
+        "fa": "یک متقاضی از FAQ/guidelineهای GKS نقل کرده که اپلای از سفارت کشور تابعیت یا دانشگاه کره ممکن است و claim متناقض درباره حضور داخل کره را به چالش کشیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-GKS-TRACK-E4",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8517"
+      },
+      "published_at": "2026-06-19",
+      "event_date": "2026-06-19",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A PhD applicant asked whether absence of the target field/university from the 2026 GKS graduate guideline blocks scholarship eligibility even with professor agreement.",
+        "fa": "متقاضی PhD پرسیده اگر رشته/دانشگاه در guideline سال ۲۰۲۶ GKS نباشد، حتی با توافق استاد آیا مسیر scholarship بسته می‌شود یا نه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-GKS-COMP-E1",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "103"
+      },
+      "published_at": "2025-01-03",
+      "event_date": "2025-01-03",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Early guidance says strong GPA, university background and overall CV materially affect scholarship/admission competitiveness.",
+        "fa": "راهنمای اولیه، معدل بالا، سابقه دانشگاهی و رزومه قوی را برای رقابت scholarship/admission مهم می‌داند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-GKS-COMP-E2",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "104"
+      },
+      "published_at": "2025-01-03",
+      "event_date": "2025-01-03",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "funding_scope_unverified",
+      "summary": {
+        "en": "The same discussion frames full government funding as highly selective because major study and living costs may be covered.",
+        "fa": "همان گفتگو فول‌فاند دولتی را به‌دلیل پوشش گسترده هزینه‌ها بسیار رقابتی توصیف می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-GKS-COMP-E3",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8522"
+      },
+      "published_at": "2026-06-19",
+      "event_date": "2026-06-19",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant worried that arts fields have limited GKS capacity and asked how to strengthen a weak early profile over two years.",
+        "fa": "متقاضی درباره ظرفیت محدود رشته‌های هنری در GKS نگران بوده و پرسیده طی دو سال چگونه پروفایل ضعیف اولیه را تقویت کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-GKS-COMP-E4",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11789"
+      },
+      "published_at": "2026-09-05",
+      "event_date": "2026-09-05",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_caution",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A September 2026 reply warns that scholarship competition is intense and applicants should not assume acceptance.",
+        "fa": "پاسخ سپتامبر ۲۰۲۶ هشدار می‌دهد رقابت بورسیه شدید است و نباید قبولی را فرض قطعی گرفت."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-PROF-FUND-E1",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "127"
+      },
+      "published_at": "2025-01-10",
+      "event_date": "2025-01-10",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Graduate applicants are advised to contact professors whose research closely matches their field and to make outreach specific rather than generic.",
+        "fa": "به متقاضی تحصیلات تکمیلی توصیه شده با استادانی که پژوهششان نزدیک به رشته اوست مکاتبه هدفمند کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-PROF-FUND-E2",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "129"
+      },
+      "published_at": "2025-01-10",
+      "event_date": "2025-01-10",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "programme_process_generalization",
+      "summary": {
+        "en": "A fall-cycle description says professor outreach can lead to online interviews before the professor nominates/selects students to the university.",
+        "fa": "توضیح چرخه Fall می‌گوید مکاتبه با استاد می‌تواند پیش از اعلام دانشجوی منتخب به دانشگاه به مصاحبه آنلاین برسد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-PROF-FUND-E3",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "139"
+      },
+      "published_at": "2025-01-10",
+      "event_date": "2025-01-10",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "generalized_claim",
+      "summary": {
+        "en": "The group separates direct professor-funded graduate opportunities from GKS and says many universities may have field-specific funded labs.",
+        "fa": "گروه فاند مستقیم استاد را از GKS جدا می‌کند و می‌گوید در بسیاری دانشگاه‌ها labهای فانددار رشته‌ای وجود دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-PROF-FUND-E4",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10524"
+      },
+      "published_at": "2026-08-17",
+      "event_date": "2026-08-17",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_risk_report",
+      "firsthandness": "reported",
+      "evidence_quality": "anecdotal_risk_report",
+      "summary": {
+        "en": "A 2026 warning says professor-funded stipends can be delayed and recommends arriving with financial backup rather than assuming monthly support is perfectly reliable.",
+        "fa": "هشدار ۲۰۲۶ می‌گوید پرداخت stipend استادمحور ممکن است عقب بیفتد و نباید بدون پشتوانه مالی روی پرداخت منظم حساب کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-PROF-FUND-E5",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10525"
+      },
+      "published_at": "2026-08-17",
+      "event_date": "2026-08-17",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_risk_warning",
+      "firsthandness": "reported",
+      "evidence_quality": "anecdotal_risk_warning",
+      "summary": {
+        "en": "A strongly worded message warns about power imbalance and dependency on supervisors in professor-funded arrangements.",
+        "fa": "پیام دیگری با لحن تند درباره عدم‌توازن قدرت و وابستگی دانشجو به استاد در فاند استادمحور هشدار می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-TOPIK-E1",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2410"
+      },
+      "published_at": "2025-10-08",
+      "event_date": "2025-10-08",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group says relevant CV strength, English scores where required, and TOPIK can all improve scholarship/admission chances.",
+        "fa": "گروه می‌گوید رزومه مرتبط، نمره انگلیسی در صورت نیاز و TOPIK می‌توانند شانس scholarship/admission را بهتر کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-TOPIK-E2",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6524"
+      },
+      "published_at": "2026-01-28",
+      "event_date": "2026-01-28",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "channel_guidance",
+      "firsthandness": "reported",
+      "evidence_quality": "university_specific_generalization",
+      "summary": {
+        "en": "A 2026 channel post encourages stronger Korean/TOPIK for larger tuition discounts or partial scholarships, alongside IELTS/TOEFL.",
+        "fa": "پست ۲۰۲۶ کانال، TOPIK قوی‌تر را در کنار IELTS/TOEFL عامل تخفیف شهریه یا بورسیه درصدی معرفی می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-TOPIK-E3",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "7092"
+      },
+      "published_at": "2026-02-11",
+      "event_date": "2026-02-11",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "channel_route_guidance",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_route_guidance",
+      "summary": {
+        "en": "The channel describes a common D-4 pattern: study Korean, later work part-time, obtain a Korean-language certificate and use it for partial scholarship opportunities.",
+        "fa": "کانال یک الگوی رایج D-4 را توصیف می‌کند: زبان خواندن، بعداً کار پاره‌وقت، گرفتن مدرک زبان و استفاده از آن برای بورسیه درصدی."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-TOPIK-E4",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8610"
+      },
+      "published_at": "2026-06-22",
+      "event_date": "2026-06-22",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "channel_labour_market_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "community_labour_market_analysis",
+      "summary": {
+        "en": "A long labour-market post says Korean/English level, relevant degree, work history, CV and networking all influence foreign hiring and that English-only employers are not abundant.",
+        "fa": "یک پست مفصل بازار کار می‌گوید سطح کره‌ای/انگلیسی، مدرک مرتبط، سابقه کار، رزومه و شبکه همگی روی استخدام خارجی اثر دارند و شرکت‌های صرفاً انگلیسی‌زبان فراوان نیستند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-D4-BRIDGE-E1",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "150"
+      },
+      "published_at": "2025-01-10",
+      "event_date": "2025-01-10",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "promotional_guidance",
+      "summary": {
+        "en": "The group promotes the D-4 Korean-language route as a preparatory study path before later university study.",
+        "fa": "گروه D-4 زبان کره‌ای را به‌عنوان مسیر آمادگی پیش از ادامه تحصیل دانشگاهی معرفی می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-D4-BRIDGE-E2",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "4998"
+      },
+      "published_at": "2025-11-25",
+      "event_date": "2025-11-25",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant explicitly treats D-4 as a first status and D-2 university status as a later transition, asking about repeated proof-of-funds requirements.",
+        "fa": "متقاضی D-4 را status اول و D-2 دانشگاهی را transition بعدی می‌بیند و درباره تمکن دوباره سؤال می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-D4-BRIDGE-E3",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8471"
+      },
+      "published_at": "2026-06-17",
+      "event_date": "2026-06-17",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 applicant asks how much time is available after language college to switch to either a work or study visa.",
+        "fa": "متقاضی ۲۰۲۶ پرسیده بعد از پایان کالج زبان چه مدت برای تغییر به ویزای کاری یا تحصیلی فرصت دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-D4-BRIDGE-E4",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10449"
+      },
+      "published_at": "2026-08-16",
+      "event_date": "2026-08-16",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Another applicant asks whether Korean must already be known before university admission or can be learned in Korea first.",
+        "fa": "متقاضی دیگری پرسیده آیا باید قبل از دانشگاه کره‌ای بلد بود یا می‌توان ابتدا وارد کره شد و زبان را آنجا شروع کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-STUDENT-WORK-E1",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "240"
+      },
+      "published_at": "2025-04-11",
+      "event_date": "2025-04-11",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "work_rule_unverified",
+      "summary": {
+        "en": "A 2025 reply says students should not assume immediate part-time income and reports no work in the first six months, with job availability still difficult afterward.",
+        "fa": "پاسخ ۲۰۲۵ می‌گوید دانشجو نباید روی درآمد فوری پاره‌وقت حساب کند؛ شش ماه اول بدون کار گزارش شده و بعد از آن هم پیدا کردن کار آسان نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-STUDENT-WORK-E2",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1560"
+      },
+      "published_at": "2025-09-19",
+      "event_date": "2025-09-19",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "channel_rule_summary",
+      "firsthandness": "reported",
+      "evidence_quality": "legal_rule_summary_unverified",
+      "summary": {
+        "en": "A detailed D-4 post says the visa does not include automatic work rights, reports a six-month waiting period, and says part-time work requires immigration permission and hour/occupation limits.",
+        "fa": "پست مفصل D-4 می‌گوید حق کار خودکار نیست، شش ماه waiting period گزارش می‌کند و کار پاره‌وقت را مشروط به مجوز مهاجرت و محدودیت ساعت/نوع کار می‌داند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-STUDENT-WORK-E3",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11522"
+      },
+      "published_at": "2026-08-31",
+      "event_date": "2026-08-31",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "first_hand_experience",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A participant reports personally working part-time in a restaurant while attending university, showing part-time work is possible in at least some compliant student situations.",
+        "fa": "یک عضو از تجربه مستقیم کار پاره‌وقت در رستوران همزمان با دانشگاه گفته و نشان می‌دهد در بعضی وضعیت‌های دانشجویی کار پاره‌وقت عملی است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-FUNDS-E1",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5354"
+      },
+      "published_at": "2025-12-02",
+      "event_date": "2025-12-02",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "applicant_budget_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant worried that saving enough for a later university proof-of-funds requirement from one year of part-time work may be unrealistic.",
+        "fa": "متقاضی نگران بوده جمع‌کردن تمکن دانشگاه از یک سال کار پاره‌وقت واقع‌بینانه نباشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-FUNDS-E2",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5357"
+      },
+      "published_at": "2025-12-02",
+      "event_date": "2025-12-02",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_risk_report",
+      "firsthandness": "reported",
+      "evidence_quality": "unsafe_or_noncompliant_advice",
+      "summary": {
+        "en": "A reply claims students sometimes use short-term pooled money to show proof of funds and that one-day balances may be accepted; this is retained only as a compliance-risk warning.",
+        "fa": "پاسخی ادعا می‌کند بعضی دانشجوها برای تمکن از پول کوتاه‌مدت دیگران استفاده می‌کنند و موجودی یک‌روزه ممکن است پذیرفته شود؛ این فقط به‌عنوان هشدار ریسک نگه داشته شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-FUNDS-E3",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10450"
+      },
+      "published_at": "2026-08-16",
+      "event_date": "2026-08-16",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 applicant asks whether moving from language college to university requires showing roughly USD 20k for six months, reflecting uncertainty over amount and holding period.",
+        "fa": "متقاضی ۲۰۲۶ درباره نیاز حدود ۲۰هزار دلار و مدت نگهداری آن هنگام گذار از کالج به دانشگاه سؤال کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-FUNDS-E4",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10454"
+      },
+      "published_at": "2026-08-16",
+      "event_date": "2026-08-16",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "financial_rule_unverified",
+      "summary": {
+        "en": "A reply says the roughly USD 20k proof-of-funds balance is needed for only one day, directly illustrating why holding-period rules must be officially rechecked.",
+        "fa": "پاسخ می‌گوید تمکن حدود ۲۰هزار دلار فقط یک روز لازم است؛ نمونه روشن از اینکه holding-period باید رسمی دوباره چک شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-STUDYWORK-E1",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "980"
+      },
+      "published_at": "2025-09-03",
+      "event_date": "2025-09-03",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A reply says a student can switch to work status after finding an employer, but employers willing to support the visa are not easy to find.",
+        "fa": "پاسخ می‌گوید بعد از پیدا کردن کارفرما می‌توان به status کاری تغییر کرد، اما employer حاضر به ساپورت ویزا کم است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-STUDYWORK-E2",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "4158"
+      },
+      "published_at": "2025-11-05",
+      "event_date": "2025-11-05",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group again says converting study to work depends on finding an employer and is not automatic after spending years studying in Korea.",
+        "fa": "گروه دوباره می‌گوید تبدیل تحصیل به کار به پیدا کردن کارفرما وابسته است و بعد از چند سال تحصیل خودکار نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-STUDYWORK-E3",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "4589"
+      },
+      "published_at": "2025-11-16",
+      "event_date": "2025-11-16",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "visa_category_claim_unverified",
+      "summary": {
+        "en": "A reply identifies E-7 as an employer-supported work category in the discussed case.",
+        "fa": "پاسخ در کیس مورد بحث E-7 را category کاری با ساپورت کارفرما معرفی می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-STUDYWORK-E4",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8483"
+      },
+      "published_at": "2026-06-17",
+      "event_date": "2026-06-17",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "poststudy_rule_unverified",
+      "summary": {
+        "en": "A 2026 reply describes D-10 as a post-university job-search status, says it is not for language college alone, and warns that failure to find work eventually requires departure.",
+        "fa": "پاسخ ۲۰۲۶ D-10 را status جستجوی کار بعد از دانشگاه توصیف می‌کند، نه صرفاً کالج زبان، و می‌گوید در نهایت بدون شغل باید کشور را ترک کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-DIRECTWORK-E1",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6477"
+      },
+      "published_at": "2026-01-25",
+      "event_date": "2026-01-25",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "case_specific_guidance",
+      "summary": {
+        "en": "A work-route reply says E-7 may be possible for a strong profile but lack of Korean narrows employer options.",
+        "fa": "پاسخ مسیر کاری می‌گوید E-7 برای پروفایل قوی ممکن است، اما ندانستن کره‌ای گزینه‌های employer را محدود می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-DIRECTWORK-E2",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "7189"
+      },
+      "published_at": "2026-02-11",
+      "event_date": "2026-02-11",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An Iran-based applicant asks whether an employer-sponsored E-6 sports route can be issued from Iran.",
+        "fa": "متقاضی داخل ایران پرسیده آیا مسیر E-6 ورزشی با اسپانسر employer از ایران قابل صدور است یا نه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-DIRECTWORK-E3",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "7194"
+      },
+      "published_at": "2026-02-12",
+      "event_date": "2026-02-12",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_consular_report",
+      "firsthandness": "reported",
+      "evidence_quality": "iran_specific_consular_claim_unverified",
+      "summary": {
+        "en": "A reply says some Iranian work-visa cases may be routed through a third country depending on the sponsoring company and Korean immigration approval.",
+        "fa": "پاسخ می‌گوید بعضی پرونده‌های کاری ایرانی ممکن است بسته به شرکت اسپانسر و تأیید اداره مهاجرت کره از کشور ثالث اقدام شوند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-DIRECTWORK-E4",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "7508"
+      },
+      "published_at": "2026-02-22",
+      "event_date": "2026-02-22",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "first_hand_or_detailed_process_report",
+      "firsthandness": "reported",
+      "evidence_quality": "process_report_unverified",
+      "summary": {
+        "en": "A detailed work-visa post says the sponsor first obtains Korean immigration approval, then sends the employment contract/approval for the consular visa file, alongside education/work-history and police-clearance documents.",
+        "fa": "پست مفصل ویزای کار می‌گوید اسپانسر ابتدا تأیید اداره مهاجرت کره را می‌گیرد و سپس قرارداد/تأییدیه برای پرونده کنسولی همراه مدارک تحصیلی، سابقه و سوءپیشینه ارسال می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-DOCS-E1",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5456"
+      },
+      "published_at": "2025-12-05",
+      "event_date": "2025-12-05",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A language-college applicant asks whether diploma/transcripts must arrive apostilled before the deadline and which other documents only need translation.",
+        "fa": "متقاضی کالج زبان پرسیده آیا دیپلم/ریز‌نمرات باید پیش از deadline اپوستیل‌شده برسند و کدام مدارک فقط ترجمه می‌خواهند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-DOCS-E2",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6660"
+      },
+      "published_at": "2026-02-06",
+      "event_date": "2026-02-06",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "applicant_guideline_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A GKS applicant is confused because the guideline appears to place apostilled academic documents in a later round rather than the initial application.",
+        "fa": "متقاضی GKS گیج شده چون guideline ظاهراً مدارک آکادمیک اپوستیل‌شده را برای راند بعدی می‌خواهد نه submission اولیه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-DOCS-E3",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6661"
+      },
+      "published_at": "2026-02-06",
+      "event_date": "2026-02-06",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "annual_process_claim_unverified",
+      "summary": {
+        "en": "The reply says apostille is for the later round and should be started early because it takes time.",
+        "fa": "پاسخ می‌گوید اپوستیل برای راند بعدی است و به‌دلیل زمان‌بر بودن باید زود شروع شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-DOCS-E4",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8416"
+      },
+      "published_at": "2026-06-16",
+      "event_date": "2026-06-16",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "community_warning",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A June 2026 reply warns that the original high-school diploma is mandatory in the discussed application and cautions against paying agents who claim they can bypass it.",
+        "fa": "پاسخ ژوئن ۲۰۲۶ هشدار می‌دهد در پرونده مورد بحث اصل دیپلم لازم است و نباید به واسطه‌ای که وعده دورزدن آن را می‌دهد پول داد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "KOR-DOCS-E5",
+      "source_id": "south-korea-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8727"
+      },
+      "published_at": "2026-06-26",
+      "event_date": "2026-06-26",
+      "collected_at": "2026-09-17T10:03:20Z",
+      "source_type": "applicant_planning_report",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant says delayed issuance of the original diploma can make same-year application timing risky if the original cannot be delivered by the required date.",
+        "fa": "متقاضی می‌گوید دیر صادرشدن اصل دیپلم می‌تواند اپلای همان سال را پرریسک کند اگر مدرک تا تاریخ لازم آماده نشود."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "KOR-GKS-TRACK-001",
+      "issue_cluster_id": "KOREA-GKS-TRACK-GUIDELINE-VARIANCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "KOR-GKS-COMP-002"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "gks_embassy_university_track_annual_rules",
+        "class": "GKS"
+      },
+      "scope": {
+        "destination": {
+          "country": "South Korea",
+          "country_code": "KOR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "South Korea",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "GKS",
+            "Embassy_Track",
+            "University_Track"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "application",
+          "selection"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "GKS is track- and year-specific: embassy vs university routes, eligible fields/universities and applicant-location rules must be read from that cycle's guideline",
+          "fa": "GKS به track و سال وابسته است؛ مسیر سفارت/دانشگاه، رشته/دانشگاه مجاز و قواعد محل اقامت باید از guideline همان دوره خوانده شود"
+        },
+        "summary": {
+          "en": "The group repeatedly distinguishes Embassy and University Track. It also contains a direct contradiction between a categorical community claim and an applicant's quotation of the GKS FAQ about applying while residing in Korea.",
+          "fa": "گروه مکرراً Embassy و University Track را جدا می‌کند. همچنین بین یک claim قطعی کامیونیتی و نقل FAQ GKS درباره اپلای هنگام اقامت در کره تناقض مستقیم وجود دارد."
+        },
+        "practical_impact": {
+          "en": "Old screenshots or generic GKS advice can make an otherwise eligible applicant choose the wrong track or assume a field is available when it is not.",
+          "fa": "راهنمای قدیمی یا عمومی می‌تواند باعث انتخاب track اشتباه یا فرض غلط درباره availability رشته شود."
+        },
+        "who_should_care": {
+          "en": "GKS undergraduate and graduate applicants.",
+          "fa": "متقاضیان GKS کارشناسی و تحصیلات تکمیلی."
+        },
+        "recommended_action": {
+          "en": "Use the exact current-cycle NIIED/Study in Korea guideline and university list as the controlling reference.",
+          "fa": "guideline و فهرست دانشگاه/رشته همان cycle در NIIED/Study in Korea را مرجع اصلی قرار دهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "KOR-GKS-TRACK-E1",
+          "relation": "supports",
+          "independence_group": "KOR-GKS-TRACK-E1"
+        },
+        {
+          "evidence_id": "KOR-GKS-TRACK-E2",
+          "relation": "supports",
+          "independence_group": "KOR-GKS-TRACK-E2"
+        },
+        {
+          "evidence_id": "KOR-GKS-TRACK-E3",
+          "relation": "contradicts",
+          "independence_group": "KOR-GKS-TRACK-E3"
+        },
+        {
+          "evidence_id": "KOR-GKS-TRACK-E4",
+          "relation": "supports",
+          "independence_group": "KOR-GKS-TRACK-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "evolving",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Track distinction is repeated and the source itself demonstrates why annual guideline verification is necessary."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current 2026/2027 GKS rules were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "KOR-GKS-TRACK-E1",
+            "KOR-GKS-TRACK-E2",
+            "KOR-GKS-TRACK-E3",
+            "KOR-GKS-TRACK-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded South Korea Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "GKS guidelines and university/field lists change by cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "GKS",
+        "Embassy Track",
+        "University Track",
+        "NIIED",
+        "Study in Korea"
+      ],
+      "first_seen": "2025-01-10",
+      "last_seen": "2026-06-19"
+    },
+    {
+      "signal_id": "KOR-GKS-COMP-002",
+      "issue_cluster_id": "KOREA-GKS-COMPETITION-PROFILE-FIT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "KOR-GKS-TRACK-001"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "KOR-TOPIK-004"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "gks_profile_competitiveness",
+        "class": "scholarship_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "South Korea",
+          "country_code": "KOR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "South Korea",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "GKS",
+            "scholarship"
+          ]
+        },
+        "process_stages": [
+          "profile_building",
+          "selection"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "GKS is repeatedly treated as highly competitive; GPA alone is not enough and field fit, CV, language and cycle-specific capacity matter",
+          "fa": "GKS مکرراً بسیار رقابتی دیده می‌شود؛ معدل به‌تنهایی کافی نیست و فیت رشته، رزومه، زبان و ظرفیت همان cycle مهم‌اند"
+        },
+        "summary": {
+          "en": "The source links competitiveness to GPA, overall CV and language and contains applicants worried about limited arts capacity. Later guidance explicitly warns that scholarship rejection remains common.",
+          "fa": "منبع رقابت را به معدل، رزومه کلی و زبان وصل می‌کند و نگرانی درباره ظرفیت محدود هنر دارد. راهنمایی بعدی نیز صریحاً از احتمال بالای عدم قبولی هشدار می‌دهد."
+        },
+        "practical_impact": {
+          "en": "Applicants should not choose a field solely because it is perceived as 'easier for GKS'.",
+          "fa": "متقاضی نباید رشته را صرفاً به‌خاطر تصور «شانس بالاتر GKS» انتخاب کند."
+        },
+        "who_should_care": {
+          "en": "Applicants planning profile-building one or more years before GKS.",
+          "fa": "متقاضیانی که از یک یا چند سال قبل برای GKS رزومه می‌سازند."
+        },
+        "recommended_action": {
+          "en": "Build a coherent field-specific profile and verify the actual annual capacity rather than optimizing only for GPA or a rumoured easy major.",
+          "fa": "پروفایل منسجم و مرتبط با رشته بسازید و ظرفیت واقعی سال را چک کنید، نه اینکه فقط معدل یا رشته به‌ظاهر آسان را بهینه کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "KOR-GKS-COMP-E1",
+          "relation": "supports",
+          "independence_group": "KOR-GKS-COMP-E1"
+        },
+        {
+          "evidence_id": "KOR-GKS-COMP-E2",
+          "relation": "supports",
+          "independence_group": "KOR-GKS-COMP-E2"
+        },
+        {
+          "evidence_id": "KOR-GKS-COMP-E3",
+          "relation": "supports",
+          "independence_group": "KOR-GKS-COMP-E3"
+        },
+        {
+          "evidence_id": "KOR-GKS-COMP-E4",
+          "relation": "supports",
+          "independence_group": "KOR-GKS-COMP-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The competitiveness theme recurs from the beginning of the export through September 2026."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No official acceptance-rate calculation was performed."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "KOR-GKS-COMP-E1",
+            "KOR-GKS-COMP-E2",
+            "KOR-GKS-COMP-E3",
+            "KOR-GKS-COMP-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded South Korea Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Competition and quota distribution change each cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "GKS",
+        "competition",
+        "GPA",
+        "CV",
+        "field capacity"
+      ],
+      "first_seen": "2025-01-03",
+      "last_seen": "2026-09-05"
+    },
+    {
+      "signal_id": "KOR-PROF-FUND-003",
+      "issue_cluster_id": "KOREA-PROFESSOR-LAB-FUNDING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "KOR-GKS-COMP-002"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "professor_lab_funding_and_dependency",
+        "class": "graduate_funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "South Korea",
+          "country_code": "KOR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "South Korea",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "masters",
+            "PhD",
+            "professor_funding"
+          ]
+        },
+        "process_stages": [
+          "supervisor_outreach",
+          "interview",
+          "funding"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Professor/lab funding is a distinct graduate route from GKS: research fit and direct outreach matter, but the source also reports stipend and supervisor-dependency risk",
+          "fa": "فاند استاد/lab مسیر جدا از GKS در تحصیلات تکمیلی است؛ research fit و مکاتبه مستقیم مهم‌اند، اما منبع ریسک تأخیر stipend و وابستگی به استاد را هم گزارش می‌کند"
+        },
+        "summary": {
+          "en": "Early guidance describes targeted professor outreach and interviews before university selection. Later messages warn that monthly support can be delayed and supervisor power can become a practical risk.",
+          "fa": "راهنمای اولیه مکاتبه هدفمند با استاد و مصاحبه پیش از selection دانشگاه را توضیح می‌دهد. پیام‌های بعدی از تأخیر حمایت مالی و ریسک قدرت استاد هشدار می‌دهند."
+        },
+        "practical_impact": {
+          "en": "A nominally funded offer should be evaluated for written stipend terms, lab culture and financial backup—not only the headline monthly amount.",
+          "fa": "offer فانددار باید از نظر شرایط مکتوب stipend، فرهنگ lab و پشتوانه مالی بررسی شود، نه فقط عدد ماهانه."
+        },
+        "who_should_care": {
+          "en": "Master's/PhD applicants contacting Korean professors.",
+          "fa": "متقاضیان ارشد/دکتری در حال مکاتبه با استاد کره‌ای."
+        },
+        "recommended_action": {
+          "en": "Confirm funding amount, payment source/timing, tuition, insurance, duties and exit/transfer conditions in writing where possible.",
+          "fa": "مبلغ و منبع/زمان پرداخت، شهریه، بیمه، وظایف و شرایط خروج/انتقال را تا حد ممکن مکتوب روشن کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "KOR-PROF-FUND-E1",
+          "relation": "supports",
+          "independence_group": "KOR-PROF-FUND-E1"
+        },
+        {
+          "evidence_id": "KOR-PROF-FUND-E2",
+          "relation": "supports",
+          "independence_group": "KOR-PROF-FUND-E2"
+        },
+        {
+          "evidence_id": "KOR-PROF-FUND-E3",
+          "relation": "supports",
+          "independence_group": "KOR-PROF-FUND-E3"
+        },
+        {
+          "evidence_id": "KOR-PROF-FUND-E4",
+          "relation": "risk_warning",
+          "independence_group": "KOR-PROF-FUND-E4"
+        },
+        {
+          "evidence_id": "KOR-PROF-FUND-E5",
+          "relation": "risk_warning",
+          "independence_group": "KOR-PROF-FUND-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The application pattern is repeated; the supervisor-risk evidence is anecdotal but operationally important."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No university-specific funding contract was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "KOR-PROF-FUND-E1",
+            "KOR-PROF-FUND-E2",
+            "KOR-PROF-FUND-E3",
+            "KOR-PROF-FUND-E4",
+            "KOR-PROF-FUND-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded South Korea Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Lab funding and contract practices vary by professor/university.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "professor funding",
+        "lab",
+        "stipend",
+        "supervisor",
+        "PhD"
+      ],
+      "first_seen": "2025-01-10",
+      "last_seen": "2026-08-17"
+    },
+    {
+      "signal_id": "KOR-TOPIK-004",
+      "issue_cluster_id": "KOREA-TOPIK-LANGUAGE-LEVER",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "KOR-GKS-COMP-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "KOR-STUDYWORK-008"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "topik_admission_scholarship_employability",
+        "class": "language"
+      },
+      "scope": {
+        "destination": {
+          "country": "South Korea",
+          "country_code": "KOR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "South Korea",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "TOPIK",
+            "study",
+            "employment"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "scholarship",
+          "job_search"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Korean proficiency/TOPIK is a cross-stage lever: it can strengthen admission or tuition-aid profiles and materially widen employment options",
+          "fa": "زبان کره‌ای/TOPIK یک lever چندمرحله‌ای است؛ هم پروفایل admission/تخفیف شهریه را تقویت می‌کند و هم گزینه‌های کاری را materially بیشتر می‌کند"
+        },
+        "summary": {
+          "en": "The source links TOPIK to scholarship/tuition discounts and repeatedly describes Korean level as one of the major determinants of foreign employability, especially where English-only workplaces are limited.",
+          "fa": "منبع TOPIK را به scholarship/تخفیف شهریه وصل می‌کند و سطح کره‌ای را یکی از عوامل اصلی employability خارجی‌ها می‌داند، مخصوصاً وقتی محیط‌های English-only محدودند."
+        },
+        "practical_impact": {
+          "en": "Applicants who postpone Korean until after arrival may narrow both funding and work options.",
+          "fa": "عقب‌انداختن زبان کره‌ای تا بعد از ورود می‌تواند هم گزینه فاند و هم کار را محدود کند."
+        },
+        "who_should_care": {
+          "en": "Students and workers planning multi-year residence in Korea.",
+          "fa": "دانشجویان و کارکنان با برنامه چندساله در کره."
+        },
+        "recommended_action": {
+          "en": "Treat Korean as a parallel migration asset and verify the exact TOPIK threshold for each scholarship, university and job.",
+          "fa": "زبان کره‌ای را asset موازی مهاجرت بدانید و threshold دقیق TOPIK هر بورسیه، دانشگاه و شغل را جدا چک کنید."
+        },
+        "known_workaround": "Some English-taught programmes and international employers exist, but the source does not support treating them as the default labour market."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "KOR-TOPIK-E1",
+          "relation": "supports",
+          "independence_group": "KOR-TOPIK-E1"
+        },
+        {
+          "evidence_id": "KOR-TOPIK-E2",
+          "relation": "supports",
+          "independence_group": "KOR-TOPIK-E2"
+        },
+        {
+          "evidence_id": "KOR-TOPIK-E3",
+          "relation": "supports",
+          "independence_group": "KOR-TOPIK-E3"
+        },
+        {
+          "evidence_id": "KOR-TOPIK-E4",
+          "relation": "supports",
+          "independence_group": "KOR-TOPIK-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Language appears repeatedly across scholarship, D-4 and labour-market discussions."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Programme- and occupation-specific TOPIK requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "KOR-TOPIK-E1",
+            "KOR-TOPIK-E2",
+            "KOR-TOPIK-E3",
+            "KOR-TOPIK-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded South Korea Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "TOPIK thresholds vary by route/institution.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "TOPIK",
+        "Korean",
+        "scholarship",
+        "employment",
+        "language"
+      ],
+      "first_seen": "2025-10-08",
+      "last_seen": "2026-06-22"
+    },
+    {
+      "signal_id": "KOR-D4-BRIDGE-005",
+      "issue_cluster_id": "KOREA-D4-LANGUAGE-TO-D2-BRIDGE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "KOR-TOPIK-004"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "KOR-FUNDS-007"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "d4_language_bridge_to_degree",
+        "class": "study_route"
+      },
+      "scope": {
+        "destination": {
+          "country": "South Korea",
+          "country_code": "KOR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "South Korea",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "D-4",
+            "D-2",
+            "language_school"
+          ]
+        },
+        "process_stages": [
+          "language_study",
+          "status_change",
+          "university_entry"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "D-4 language study is widely used as a bridge toward Korean proficiency and later D-2 university study, but it is a self-funded bridge rather than a guaranteed migration outcome",
+          "fa": "D-4 زبان به‌طور گسترده به‌عنوان پل ساخت زبان و ورود بعدی به D-2 دانشگاه دیده می‌شود، اما یک پل self-funded است نه outcome تضمینی مهاجرت"
+        },
+        "summary": {
+          "en": "The export repeatedly discusses language college first, then university/status change. Questions about transition timing and repeated proof of funds show that the second step is not automatic.",
+          "fa": "فایل بارها الگوی «اول کالج زبان، بعد دانشگاه/change of status» را مطرح می‌کند. سؤال‌های زمان تغییر status و تمکن دوباره نشان می‌دهد مرحله دوم خودکار نیست."
+        },
+        "practical_impact": {
+          "en": "Applicants can incur substantial tuition/living costs before degree admission or a work route is secured.",
+          "fa": "ممکن است پیش از قطعی‌شدن دانشگاه یا مسیر کار، شهریه و هزینه زندگی قابل‌توجهی پرداخت شود."
+        },
+        "who_should_care": {
+          "en": "Applicants using language college as their entry route.",
+          "fa": "متقاضیانی که کالج زبان را مسیر ورود می‌گیرند."
+        },
+        "recommended_action": {
+          "en": "Before paying, define the target TOPIK level, intended D-2 programme, transition deadline and full funding runway.",
+          "fa": "قبل از پرداخت، سطح TOPIK هدف، برنامه D-2 بعدی، deadline تغییر status و runway مالی کامل را مشخص کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "KOR-D4-BRIDGE-E1",
+          "relation": "supports",
+          "independence_group": "KOR-D4-BRIDGE-E1"
+        },
+        {
+          "evidence_id": "KOR-D4-BRIDGE-E2",
+          "relation": "supports",
+          "independence_group": "KOR-D4-BRIDGE-E2"
+        },
+        {
+          "evidence_id": "KOR-D4-BRIDGE-E3",
+          "relation": "supports",
+          "independence_group": "KOR-D4-BRIDGE-E3"
+        },
+        {
+          "evidence_id": "KOR-D4-BRIDGE-E4",
+          "relation": "supports",
+          "independence_group": "KOR-D4-BRIDGE-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The route is very frequently discussed, but some 'easiest/best route' claims come from service-selling participants and are down-weighted."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current D-4/D-2 eligibility and status-change rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "KOR-D4-BRIDGE-E1",
+            "KOR-D4-BRIDGE-E2",
+            "KOR-D4-BRIDGE-E3",
+            "KOR-D4-BRIDGE-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded South Korea Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Visa and university transition rules can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "D-4",
+        "D-2",
+        "language college",
+        "status change"
+      ],
+      "first_seen": "2025-01-10",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "signal_id": "KOR-STUDENT-WORK-006",
+      "issue_cluster_id": "KOREA-STUDENT-PARTTIME-WORK-RULES",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "KOR-D4-BRIDGE-005"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "KOR-FUNDS-007"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "student_work_delayed_and_permission_based",
+        "class": "student_work"
+      },
+      "scope": {
+        "destination": {
+          "country": "South Korea",
+          "country_code": "KOR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "South Korea",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "D-4",
+            "D-2",
+            "student_work"
+          ]
+        },
+        "process_stages": [
+          "part_time_work",
+          "budgeting"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Student part-time work should not be treated as immediate or guaranteed funding; the source describes a waiting period, permission requirements and uncertain job availability",
+          "fa": "کار پاره‌وقت دانشجویی نباید منبع فوری یا تضمینی بودجه فرض شود؛ منبع waiting period، نیاز به مجوز و عدم‌قطعیت پیدا کردن کار را گزارش می‌کند"
+        },
+        "summary": {
+          "en": "A detailed D-4 post reports no automatic work right, a six-month waiting period and immigration permission. A first-hand student later confirms that compliant part-time work can be possible in practice.",
+          "fa": "پست مفصل D-4 حق کار خودکار را رد می‌کند و شش ماه waiting period و مجوز مهاجرت را مطرح می‌کند. تجربه مستقیم بعدی نشان می‌دهد کار پاره‌وقت در عمل برای بعضی دانشجویان ممکن است."
+        },
+        "practical_impact": {
+          "en": "Budget plans that require income from the first months are fragile.",
+          "fa": "بودجه‌ای که از ماه‌های اول به درآمد کاری وابسته باشد شکننده است."
+        },
+        "who_should_care": {
+          "en": "Self-funded language and university students.",
+          "fa": "دانشجویان زبان و دانشگاه self-funded."
+        },
+        "recommended_action": {
+          "en": "Fund the initial months without employment income and verify the current permission/hour rules before working.",
+          "fa": "ماه‌های اول را بدون درآمد کاری تأمین کنید و قبل از شروع کار، قواعد مجوز/ساعت روز را رسمی چک کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "KOR-STUDENT-WORK-E1",
+          "relation": "supports",
+          "independence_group": "KOR-STUDENT-WORK-E1"
+        },
+        {
+          "evidence_id": "KOR-STUDENT-WORK-E2",
+          "relation": "supports",
+          "independence_group": "KOR-STUDENT-WORK-E2"
+        },
+        {
+          "evidence_id": "KOR-TOPIK-E3",
+          "relation": "supports",
+          "independence_group": "KOR-TOPIK-E3"
+        },
+        {
+          "evidence_id": "KOR-STUDENT-WORK-E3",
+          "relation": "supports",
+          "independence_group": "KOR-STUDENT-WORK-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The no-immediate-income pattern is consistent across 2025-2026 despite positive later work examples."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Korean student-work waiting period, hours and permission rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "KOR-STUDENT-WORK-E1",
+            "KOR-STUDENT-WORK-E2",
+            "KOR-TOPIK-E3",
+            "KOR-STUDENT-WORK-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded South Korea Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Student work rules are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "part-time",
+        "D-4",
+        "six months",
+        "work permission"
+      ],
+      "first_seen": "2025-04-11",
+      "last_seen": "2026-08-31"
+    },
+    {
+      "signal_id": "KOR-FUNDS-007",
+      "issue_cluster_id": "KOREA-PROOF-OF-FUNDS-REPEATED-TRANSITIONS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "KOR-D4-BRIDGE-005"
+        }
+      ],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "proof_of_funds_amount_holding_variance",
+        "class": "proof_of_funds"
+      },
+      "scope": {
+        "destination": {
+          "country": "South Korea",
+          "country_code": "KOR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "South Korea",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "D-4",
+            "D-2",
+            "student_visa"
+          ]
+        },
+        "process_stages": [
+          "proof_of_funds",
+          "status_change"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Proof of funds is a repeated friction at entry and status transitions, while community claims about required amount and holding period are inconsistent and sometimes unsafe",
+          "fa": "تمکن در ورود و transitionهای status یک friction تکرارشونده است، اما claimهای گروه درباره مبلغ و مدت نگهداری متناقض و گاهی پرریسک‌اند"
+        },
+        "summary": {
+          "en": "Applicants repeatedly ask whether funds must be shown again when moving D-4 to D-2 and cite roughly USD 20k. Replies claim one-day balances may suffice and even describe pooled temporary money, which should not be treated as compliant advice.",
+          "fa": "متقاضیان بارها درباره تمکن دوباره در گذار D-4 به D-2 و ارقام حدود ۲۰هزار دلار سؤال می‌کنند. پاسخ‌ها حتی موجودی یک‌روزه و پول موقت دیگران را مطرح می‌کنند که نباید راهکار compliant فرض شود."
+        },
+        "practical_impact": {
+          "en": "Applicants can face financial, visa or misrepresentation risk if they rely on unofficial temporary-balance tactics.",
+          "fa": "اتکا به تاکتیک‌های غیررسمی موجودی موقت می‌تواند ریسک مالی، ویزا یا misrepresentation ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Self-funded D-4/D-2 applicants.",
+          "fa": "متقاضیان self-funded مسیر D-4/D-2."
+        },
+        "recommended_action": {
+          "en": "Use only genuinely available funds and verify the exact amount, account holder, bank format and holding-period rule from the competent university/consular source.",
+          "fa": "فقط از منابع مالی واقعاً در دسترس استفاده کنید و مبلغ، صاحب حساب، فرمت بانک و holding period را از منبع دانشگاهی/کنسولی مربوطه رسمی چک کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "KOR-D4-BRIDGE-E2",
+          "relation": "supports",
+          "independence_group": "KOR-D4-BRIDGE-E2"
+        },
+        {
+          "evidence_id": "KOR-FUNDS-E1",
+          "relation": "supports",
+          "independence_group": "KOR-FUNDS-E1"
+        },
+        {
+          "evidence_id": "KOR-FUNDS-E2",
+          "relation": "risk_warning",
+          "independence_group": "KOR-FUNDS-E2"
+        },
+        {
+          "evidence_id": "KOR-FUNDS-E3",
+          "relation": "supports",
+          "independence_group": "KOR-FUNDS-E3"
+        },
+        {
+          "evidence_id": "KOR-FUNDS-E4",
+          "relation": "supports",
+          "independence_group": "KOR-FUNDS-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "uncertain",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Proof-of-funds questions recur heavily and the source contains materially conflicting/unsafe advice."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official proof-of-funds amount and holding-period rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "KOR-D4-BRIDGE-E2",
+            "KOR-FUNDS-E1",
+            "KOR-FUNDS-E2",
+            "KOR-FUNDS-E3",
+            "KOR-FUNDS-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded South Korea Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Financial thresholds and bank rules can change by university/visa stage.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "proof of funds",
+        "D-4",
+        "D-2",
+        "bank balance",
+        "20k"
+      ],
+      "first_seen": "2025-11-25",
+      "last_seen": "2026-08-16"
+    },
+    {
+      "signal_id": "KOR-STUDYWORK-008",
+      "issue_cluster_id": "KOREA-STUDY-TO-WORK-EMPLOYER-DEPENDENCY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "KOR-TOPIK-004"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "KOR-DIRECTWORK-009"
+        }
+      ],
+      "classification": {
+        "family": "E8_POSTSTUDY_TRANSITION",
+        "type": "study_to_work_employer_dependency",
+        "class": "poststudy_work"
+      },
+      "scope": {
+        "destination": {
+          "country": "South Korea",
+          "country_code": "KOR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "South Korea",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "D-10",
+            "E-7",
+            "poststudy_work"
+          ]
+        },
+        "process_stages": [
+          "graduation",
+          "job_search",
+          "employer_sponsorship",
+          "status_change"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Study-to-work transition is not automatic: foreign graduates still need employability, an appropriate job and an employer/status route that can support continued stay",
+          "fa": "تبدیل تحصیل به کار خودکار نیست؛ فارغ‌التحصیل خارجی همچنان به employability، شغل مناسب و employer/status قابل‌استفاده برای ماندن نیاز دارد"
+        },
+        "summary": {
+          "en": "The source repeatedly says employer sponsorship is hard to secure, identifies E-7 in work-status discussions and describes D-10 as a temporary job-search bridge after qualifying university study rather than a permanent solution.",
+          "fa": "منبع بارها از سختی پیدا کردن employer اسپانسر می‌گوید، E-7 را در بحث status کاری مطرح می‌کند و D-10 را پل موقت job search بعد از دانشگاه می‌داند نه راه‌حل دائمی."
+        },
+        "practical_impact": {
+          "en": "A Korean degree or language-college stay does not by itself guarantee long-term residence.",
+          "fa": "مدرک کره یا اقامت کالج زبان به‌تنهایی اقامت بلندمدت را تضمین نمی‌کند."
+        },
+        "who_should_care": {
+          "en": "Students choosing Korea mainly for post-study employment.",
+          "fa": "دانشجویانی که هدف اصلی‌شان کار بعد از تحصیل در کره است."
+        },
+        "recommended_action": {
+          "en": "Choose the degree with target occupations and work-status eligibility in mind, build Korean and employer networks early, and verify D-10/E-7 rules before graduation.",
+          "fa": "رشته را با شغل هدف و eligibility status کاری انتخاب کنید، زبان/شبکه employer را زود بسازید و قواعد D-10/E-7 را قبل از فارغ‌التحصیلی رسمی چک کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "KOR-STUDYWORK-E1",
+          "relation": "supports",
+          "independence_group": "KOR-STUDYWORK-E1"
+        },
+        {
+          "evidence_id": "KOR-STUDYWORK-E2",
+          "relation": "supports",
+          "independence_group": "KOR-STUDYWORK-E2"
+        },
+        {
+          "evidence_id": "KOR-STUDYWORK-E3",
+          "relation": "supports",
+          "independence_group": "KOR-STUDYWORK-E3"
+        },
+        {
+          "evidence_id": "KOR-STUDYWORK-E4",
+          "relation": "supports",
+          "independence_group": "KOR-STUDYWORK-E4"
+        },
+        {
+          "evidence_id": "KOR-TOPIK-E4",
+          "relation": "supports",
+          "independence_group": "KOR-TOPIK-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Employer dependence and language/profile constraints recur throughout the source."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current D-10/E-7 eligibility, duration and employer requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "KOR-STUDYWORK-E1",
+            "KOR-STUDYWORK-E2",
+            "KOR-STUDYWORK-E3",
+            "KOR-STUDYWORK-E4",
+            "KOR-TOPIK-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded South Korea Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Post-study work rules are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "D-10",
+        "E-7",
+        "employer",
+        "post-study",
+        "job search"
+      ],
+      "first_seen": "2025-09-03",
+      "last_seen": "2026-06-22"
+    },
+    {
+      "signal_id": "KOR-DIRECTWORK-009",
+      "issue_cluster_id": "KOREA-IRAN-DIRECT-WORK-SPONSOR-CONSULAR",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "KOR-STUDYWORK-008"
+        }
+      ],
+      "classification": {
+        "family": "E3_VISA_ADJUDICATION",
+        "type": "iran_direct_work_sponsor_and_third_country_friction",
+        "class": "work_visa"
+      },
+      "scope": {
+        "destination": {
+          "country": "South Korea",
+          "country_code": "KOR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "South Korea",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Applying from Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "E-6",
+            "E-7",
+            "employer_sponsored_work"
+          ]
+        },
+        "process_stages": [
+          "employer_sponsorship",
+          "immigration_approval",
+          "consular_visa"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Direct work migration from Iran is strongly sponsor-dependent, and the source reports that some cases may require third-country consular processing",
+          "fa": "مهاجرت کاری مستقیم از ایران شدیداً sponsor-dependent است و منبع گزارش می‌کند بعضی پرونده‌ها ممکن است به پردازش کنسولی کشور ثالث نیاز داشته باشند"
+        },
+        "summary": {
+          "en": "The source describes Korean employer/immigration approval before the visa file and says the strength/type of sponsoring company can affect whether the applicant can use Tehran or must use another post. Korean language also narrows or expands job options.",
+          "fa": "منبع گرفتن تأییدیه از سمت employer/مهاجرت کره پیش از پرونده ویزا را توضیح می‌دهد و می‌گوید نوع/قدرت شرکت اسپانسر می‌تواند روی تهران یا کشور ثالث اثر بگذارد. زبان کره‌ای نیز گزینه‌های شغلی را محدود یا گسترده می‌کند."
+        },
+        "practical_impact": {
+          "en": "Having occupational skills is not enough without a willing sponsor and a workable consular route.",
+          "fa": "مهارت شغلی بدون sponsor حاضر و مسیر کنسولی عملی کافی نیست."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants pursuing Korean employer-sponsored work visas.",
+          "fa": "متقاضیان داخل ایران برای ویزای کاری اسپانسرشده کره."
+        },
+        "recommended_action": {
+          "en": "Validate the sponsor's immigration process, required approval, occupation category and competent consular post before making relocation commitments.",
+          "fa": "قبل از تعهد مالی/جابجایی، پروسه مهاجرتی sponsor، approval لازم، category شغل و سفارت صالح را روشن کنید."
+        },
+        "known_workaround": "Third-country consular processing is reported in some Iran-linked cases, but should not be assumed available."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "KOR-DIRECTWORK-E1",
+          "relation": "supports",
+          "independence_group": "KOR-DIRECTWORK-E1"
+        },
+        {
+          "evidence_id": "KOR-DIRECTWORK-E2",
+          "relation": "supports",
+          "independence_group": "KOR-DIRECTWORK-E2"
+        },
+        {
+          "evidence_id": "KOR-DIRECTWORK-E3",
+          "relation": "supports",
+          "independence_group": "KOR-DIRECTWORK-E3"
+        },
+        {
+          "evidence_id": "KOR-DIRECTWORK-E4",
+          "relation": "supports",
+          "independence_group": "KOR-DIRECTWORK-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The evidence includes a detailed process report but is concentrated in a small number of work-visa cases."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Iran-specific Korean work-visa and consular-post rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "KOR-DIRECTWORK-E1",
+            "KOR-DIRECTWORK-E2",
+            "KOR-DIRECTWORK-E3",
+            "KOR-DIRECTWORK-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded South Korea Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Consular routing and sponsor eligibility can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "E-6",
+        "E-7",
+        "sponsor",
+        "Iran",
+        "third country"
+      ],
+      "first_seen": "2026-01-25",
+      "last_seen": "2026-02-22"
+    },
+    {
+      "signal_id": "KOR-DOCS-010",
+      "issue_cluster_id": "KOREA-ACADEMIC-DOCUMENT-APOSTILLE-ORIGINALS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "KOR-GKS-TRACK-001"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "apostille_original_diploma_timing",
+        "class": "academic_documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "South Korea",
+          "country_code": "KOR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "South Korea",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "GKS",
+            "language_college",
+            "university_admission"
+          ]
+        },
+        "process_stages": [
+          "translation",
+          "apostille",
+          "original_documents",
+          "deadline"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Academic-document preparation is a real timing bottleneck: translation, apostille and original diploma requirements can fall in different rounds and originals may not be issued fast enough",
+          "fa": "آماده‌سازی مدارک تحصیلی گلوگاه زمانی واقعی است؛ ترجمه، اپوستیل و اصل دیپلم ممکن است در راندهای متفاوت لازم شوند و اصل مدرک به‌موقع آماده نشود"
+        },
+        "summary": {
+          "en": "Applicants repeatedly ask which round needs apostille and whether originals must physically arrive before deadlines. June 2026 discussions warn that an unavailable original diploma can invalidate the plan regardless of agent promises.",
+          "fa": "متقاضیان بارها می‌پرسند اپوستیل در کدام راند لازم است و اصل مدرک باید تا چه زمانی برسد. بحث ژوئن ۲۰۲۶ هشدار می‌دهد نبود اصل دیپلم می‌تواند کل پلن را خراب کند، مستقل از وعده واسطه."
+        },
+        "practical_impact": {
+          "en": "Starting document authentication late can cause a missed GKS or university cycle even with a strong profile.",
+          "fa": "شروع دیرهنگام تأیید مدارک می‌تواند حتی با رزومه قوی باعث از دست‌رفتن cycle GKS/دانشگاه شود."
+        },
+        "who_should_care": {
+          "en": "Applicants graduating close to GKS/university deadlines.",
+          "fa": "متقاضیانی که نزدیک deadlineهای GKS/دانشگاه فارغ‌التحصیل می‌شوند."
+        },
+        "recommended_action": {
+          "en": "Map each round's exact document status early and begin translation/apostille/original retrieval with enough buffer; do not pay for promised document bypasses.",
+          "fa": "وضعیت دقیق مدارک هر راند را زود مشخص کنید و ترجمه/اپوستیل/گرفتن اصل مدرک را با buffer شروع کنید؛ برای وعده دورزدن مدرک پول ندهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "KOR-DOCS-E1",
+          "relation": "supports",
+          "independence_group": "KOR-DOCS-E1"
+        },
+        {
+          "evidence_id": "KOR-DOCS-E2",
+          "relation": "supports",
+          "independence_group": "KOR-DOCS-E2"
+        },
+        {
+          "evidence_id": "KOR-DOCS-E3",
+          "relation": "supports",
+          "independence_group": "KOR-DOCS-E3"
+        },
+        {
+          "evidence_id": "KOR-DOCS-E4",
+          "relation": "supports",
+          "independence_group": "KOR-DOCS-E4"
+        },
+        {
+          "evidence_id": "KOR-DOCS-E5",
+          "relation": "supports",
+          "independence_group": "KOR-DOCS-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same document-timing friction appears across language-college and GKS discussions."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current apostille/original-document requirements for each institution and GKS round were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "KOR-DOCS-E1",
+            "KOR-DOCS-E2",
+            "KOR-DOCS-E3",
+            "KOR-DOCS-E4",
+            "KOR-DOCS-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded South Korea Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Document rules vary by cycle and institution.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "apostille",
+        "original diploma",
+        "translation",
+        "GKS documents"
+      ],
+      "first_seen": "2025-12-05",
+      "last_seen": "2026-06-26"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Names, Telegram usernames/IDs, phone numbers, addresses and direct contact information are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 11,097 records, including 10,783 message records."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the complete graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Claims tied to application-service sales, guaranteed/easy admissions, guaranteed jobs, or part-time income covering all costs were excluded or down-weighted."
+      },
+      "unsafe_financial_practices_filtered": {
+        "status": "pass",
+        "note": "Temporary/borrowed proof-of-funds tactics were not turned into recommendations; they are retained only as a risk/compliance warning."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated GKS, professor funding, TOPIK, D-4, student work, proof-of-funds, post-study work, direct-work and document discussions were clustered."
+      },
+      "contradictions_preserved": {
+        "status": "pass",
+        "note": "GKS in-country eligibility and financial holding-period uncertainty are preserved instead of being silently reconciled."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "All current policy/legal/visa claims remain official.status=not_verified unless independently verified elsewhere."
+      },
+      "current_rule_verification": {
+        "status": "not_run",
+        "note": "This run extracted community evidence only and did not browse current Korean official sources."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community planning evidence only. This is not an official source for GKS, TOPIK, D-4/D-2, student work, proof of funds, D-10/E-7, Korean work visas, apostille or consular rules. Verify current NIIED/Study in Korea, university, immigration and embassy requirements before acting."
+}

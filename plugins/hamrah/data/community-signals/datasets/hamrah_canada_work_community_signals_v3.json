@@ -1,0 +1,2436 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_canada_work_signals_candidate",
+    "generated_at": "2026-09-17T07:20:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "canada-work-pargar-telegram-export",
+      "name": "result(20260917-070521).json / Telegram export «کار در کانادا با پرگار»",
+      "source_type": "private_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-06",
+        "to": "2026-08-29",
+        "records_available": 623,
+        "records_processed": 623,
+        "message_records": 622
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "contains_first_hand_applicant_reports": true,
+        "contains_admin_guidance": true,
+        "contains_reposted_official_news": true,
+        "contains_promotional_posts": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "CAN-WORK-PROCESSING-001-E1",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3727"
+      },
+      "published_at": "2025-01-07",
+      "event_date": "2025-01-07",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "first_hand_processing_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An LMIA-based work-permit applicant reported waiting 17 months, while saying some other cases had received decisions in roughly 2-3 months.",
+        "fa": "یک متقاضی ورک‌پرمیت مبتنی بر LMIA گزارش کرده ۱۷ ماه منتظر بوده، در حالی که بعضی کیس‌های دیگر حدود ۲ تا ۳ ماهه جواب گرفته‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-WORK-PROCESSING-001-E2",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3992"
+      },
+      "published_at": "2025-02-16",
+      "event_date": "2025-02-16",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "first_hand_lmia_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user reported their LMIA step took about five months while other cases had reportedly taken around one month.",
+        "fa": "یک کاربر گفته مرحله LMIA خودش حدود پنج ماه طول کشیده، در حالی که برای بعضی‌ها حدود یک ماه گزارش شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-WORK-PROCESSING-001-E3",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6234"
+      },
+      "published_at": "2025-07-09",
+      "event_date": "2025-07-09",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "first_hand_processing_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant reported six months with no update after biometrics while the work-permit file remained under review.",
+        "fa": "متقاضی دیگری گزارش کرده شش ماه بعد از بیومتریک بدون آپدیت و با وضعیت under review منتظر ورک‌پرمیت بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-WORK-PROCESSING-001-E4",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5680"
+      },
+      "published_at": "2025-05-29",
+      "event_date": "2025-05-29",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "first_hand_processing_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A separate visa case had a posted processing time around 35 weeks but received a decision in under two weeks, illustrating the gap between posted and actual case timing.",
+        "fa": "یک کیس دیگر با processing time اعلامی حدود ۳۵ هفته، در کمتر از دو هفته جواب گرفته؛ نمونه‌ای از فاصله زیاد بین زمان اعلامی و زمان واقعی."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-IRAN-OWP-002-E1",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "7659"
+      },
+      "published_at": "2025-09-20",
+      "event_date": "2025-09-20",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "first_hand_policy_user",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A couple who originally entered Canada as visitors said they had already obtained the special Iranian work permit and were considering a second extension.",
+        "fa": "زوجی که با ویزای توریستی وارد کانادا شده بودند گفته‌اند از پالیسی ورک‌پرمیت ایرانی‌ها استفاده کرده‌اند و درباره تمدید دوباره آن فکر می‌کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-IRAN-OWP-002-E2",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9732"
+      },
+      "published_at": "2026-02-15",
+      "event_date": "2026-02-15",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "policy_user_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "In February 2026 an Iranian open-work-permit holder asked what would happen if the special policy was not extended beyond the remaining window.",
+        "fa": "در فوریه ۲۰۲۶ دارنده open work permit ایرانی پرسیده اگر پالیسی ویژه تمدید نشود چه راهی برای ادامه خواهد داشت."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-IRAN-OWP-002-E3",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9733"
+      },
+      "published_at": "2026-02-15",
+      "event_date": "2026-02-15",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The reply said the fallback would be a closed work permit tied to a job offer.",
+        "fa": "پاسخ گروه fallback را کلوز ورک‌پرمیت مبتنی بر جاب‌آفر دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-IRAN-OWP-002-E4",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9735"
+      },
+      "published_at": "2026-02-15",
+      "event_date": "2026-02-15",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same thread explicitly said an open permit would no longer be available if the special policy ended.",
+        "fa": "در همان زنجیره صریحاً گفته شده اگر پالیسی تمام شود، open permit دیگر در آن قالب در دسترس نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-IRAN-OWP-002-E5",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10008"
+      },
+      "published_at": "2026-04-16",
+      "event_date": "2026-04-16",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "By April 2026, a reply to whether a visitor in Canada could simply apply from inside Canada for a work permit was 'no'.",
+        "fa": "تا آوریل ۲۰۲۶ پاسخ به این سؤال که آیا visitor داخل کانادا می‌تواند به‌سادگی از داخل برای ورک‌پرمیت اقدام کند «خیر» بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-FAMILY-WORK-003-E1",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3750"
+      },
+      "published_at": "2025-01-16",
+      "event_date": "2025-01-16",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "family_route_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A family asked whether a visitor-to-work transition by a parent could then create work/visitor options for an adult daughter.",
+        "fa": "یک خانواده پرسیده اگر پدر از visitor به work permit برسد آیا برای دختر بزرگسال هم مسیر همراه/ویزیتور ایجاد می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-FAMILY-WORK-003-E2",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3753"
+      },
+      "published_at": "2025-01-16",
+      "event_date": "2025-01-16",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_policy_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The group's administrator said new rules had restricted family-member work-permit access and described employment/pay-stub evidence as relevant before supporting relatives.",
+        "fa": "ادمین گروه گفته قواعد جدید دسترسی اعضای خانواده به ورک‌پرمیت را محدود کرده و داشتن شغل/فیش حقوقی را برای حمایت از اعضای خانواده مهم دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-FAMILY-WORK-003-E3",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "7124"
+      },
+      "published_at": "2025-08-28",
+      "event_date": "2025-08-28",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "spouse_open_work_permit_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "Applicants continued to seek route-specific cover-letter guidance for a student spouse open work permit later in 2025.",
+        "fa": "در ادامه ۲۰۲۵ متقاضیان برای open work permit همسر دانشجو همچنان راهنمایی route-specific می‌خواستند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-FAMILY-WORK-003-E4",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9550"
+      },
+      "published_at": "2026-02-01",
+      "event_date": "2026-02-01",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 reply said spouse accompaniment remained possible in some study cases but timing/strategy could depend on funding and case profile.",
+        "fa": "یک پاسخ ۲۰۲۶ گفته همراهی همسر در بعضی پرونده‌های تحصیلی ممکن است اما timing/strategy به فاند و پروفایل پرونده بستگی دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-WORK-FUNDS-004-E1",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3922"
+      },
+      "published_at": "2025-02-09",
+      "event_date": "2025-02-09",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A job-offer holder asked whether a property valuation could replace bank transaction evidence for proof of funds.",
+        "fa": "دارنده جاب‌آفر پرسیده آیا ارزیابی ارزش ملک می‌تواند جای گردش حساب بانکی را برای تمکن بگیرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-WORK-FUNDS-004-E2",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3937"
+      },
+      "published_at": "2025-02-10",
+      "event_date": "2025-02-10",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The administrator replied that proof of funds generally means money that is immediately usable and that property does not replace bank liquidity.",
+        "fa": "ادمین پاسخ داده تمکن معمولاً باید پولی با قابلیت استفاده فوری باشد و ملک جای نقدینگی بانکی را نمی‌گیرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-WORK-FUNDS-004-E3",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6417"
+      },
+      "published_at": "2025-07-25",
+      "event_date": "2025-07-25",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "express_entry_funds_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An Express Entry applicant separately asked about the required amount, exchange rate and how long money must remain in the account.",
+        "fa": "یک متقاضی Express Entry جداگانه درباره مبلغ تمکن، نرخ ارز و مدت ماندن پول در حساب پرسیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-CATEGORY-005-E1",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9178"
+      },
+      "published_at": "2025-12-20",
+      "event_date": "2025-12-20",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A late-2025 reply said French-language ability materially improved PR prospects, reflecting the community's growing focus on French-targeted draws.",
+        "fa": "یک پاسخ اواخر ۲۰۲۵ گفته توانایی فرانسه شانس PR را به‌طور معنادار بهتر می‌کند و تمرکز رو‌به‌رشد گروه بر دراوهای فرانسوی را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-CATEGORY-005-E2",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9588"
+      },
+      "published_at": "2026-02-04",
+      "event_date": "2026-02-04",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A February 2026 reply clarified that French was not mandatory for Express Entry overall.",
+        "fa": "پاسخ فوریه ۲۰۲۶ روشن کرده فرانسه برای کل Express Entry اجباری نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-CATEGORY-005-E3",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9770"
+      },
+      "published_at": "2026-02-18",
+      "event_date": "2026-02-18",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "reposted_official_news",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A post linking to IRCC summarized 2026 targeted categories including physicians/researchers with Canadian experience plus continued French, health/social care, trades, education, STEM, transport and agriculture/food categories.",
+        "fa": "یک پست با لینک IRCC کتگوری‌های هدفمند ۲۰۲۶ را شامل پزشکان/پژوهشگران دارای تجربه کانادایی و ادامه دسته‌های فرانسه، سلامت، فنی، آموزش، STEM، حمل‌ونقل و کشاورزی/غذا جمع‌بندی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-CATEGORY-005-E4",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9702"
+      },
+      "published_at": "2026-02-14",
+      "event_date": "2026-02-14",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_explanation",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance explained category-based Express Entry as distinct from province-specific streams, using French and healthcare as examples.",
+        "fa": "راهنمایی گروه category-based Express Entry را از استریم‌های استانی جدا کرده و فرانسه و کادر درمان را مثال زده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PROVINCIAL-006-E1",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3718"
+      },
+      "published_at": "2025-01-07",
+      "event_date": "2025-01-07",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The group repeatedly treated Quebec as structurally different from the rest of Canada for immigration planning.",
+        "fa": "گروه بارها کبک را از نظر برنامه‌ریزی مهاجرتی ساختاری متفاوت از بقیه کانادا دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PROVINCIAL-006-E2",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3820"
+      },
+      "published_at": "2025-01-29",
+      "event_date": "2025-01-29",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "first_hand_pr_planning",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A PhD student working full-time in Quebec asked whether Canadian work performed during study would count for Ontario or Quebec permanent-residence pathways.",
+        "fa": "یک دانشجوی PhD که در کبک فول‌تایم کار می‌کرد پرسیده سابقه کار حین تحصیل برای مسیرهای PR انتاریو یا کبک حساب می‌شود یا نه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PROVINCIAL-006-E3",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3842"
+      },
+      "published_at": "2025-02-01",
+      "event_date": "2025-02-01",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The reply said work during study did not count for Ontario and, to the speaker's knowledge, did not count for Quebec in the route being discussed.",
+        "fa": "پاسخ گفته در مسیر موردبحث سابقه کار حین تحصیل برای انتاریو حساب نمی‌شود و طبق اطلاع گوینده برای کبک هم نه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PROVINCIAL-006-E4",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9615"
+      },
+      "published_at": "2026-02-06",
+      "event_date": "2026-02-06",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_route_explanation",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 explanation said each province has its own program and that federal and provincial job-offer/LMIA logic differs.",
+        "fa": "توضیح ۲۰۲۶ گفته هر استان برنامه خودش را دارد و منطق جاب‌آفر/LMIA بین مسیر فدرال و استانی فرق می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PROVINCIAL-006-E5",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9619"
+      },
+      "published_at": "2026-02-06",
+      "event_date": "2026-02-06",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_route_explanation",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same discussion said a provincial nomination can be layered onto a federal skilled-worker pathway after satisfying provincial conditions.",
+        "fa": "همان گفتگو گفته پس از برآورده‌کردن شرایط استان، nomination استانی می‌تواند به مسیر فدرال اضافه شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-JOBOFFER-LMIA-007-E1",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5784"
+      },
+      "published_at": "2025-06-04",
+      "event_date": "2025-06-04",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "remote_job_search_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An experienced applicant in Iran asked whether they could independently secure an LMIA-linked job offer remotely from Iran.",
+        "fa": "یک متقاضی باتجربه داخل ایران پرسیده آیا می‌تواند شخصاً از ایران جاب‌آفر مرتبط با LMIA بگیرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-JOBOFFER-LMIA-007-E2",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5825"
+      },
+      "published_at": "2025-06-06",
+      "event_date": "2025-06-06",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_job_search_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance suggested targeting Job Bank postings open to foreign workers and employers that already had or were pursuing LMIA.",
+        "fa": "راهنمایی گروه پیشنهاد کرده آگهی‌های Job Bank مخصوص نیروی خارجی و کارفرمای دارای LMIA یا در حال اقدام هدف گرفته شوند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-JOBOFFER-LMIA-007-E3",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8095"
+      },
+      "published_at": "2025-10-15",
+      "event_date": "2025-10-15",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply framed domestic labour availability as a barrier to employers recruiting abroad.",
+        "fa": "پاسخ بعدی وجود نیروی آماده داخل کانادا را مانعی برای استخدام نیروی خارج کشور توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-JOBOFFER-LMIA-007-E4",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9247"
+      },
+      "published_at": "2025-12-22",
+      "event_date": "2025-12-22",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A detailed late-2025 reply described substantial employer compliance, advertising, insurance and tax obligations for closed-work-permit sponsorship.",
+        "fa": "پاسخ مفصل اواخر ۲۰۲۵ از تعهدات قابل‌توجه کارفرما در تبلیغ موقعیت، بیمه، مالیات و حمایت از کلوز ورک‌پرمیت گفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-JOBOFFER-LMIA-007-E5",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9718"
+      },
+      "published_at": "2026-02-14",
+      "event_date": "2026-02-14",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_labour_market_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In February 2026 the group described closed-work-permit sponsorship as one of the hardest temporary routes because employers prefer workers already in Canada with valid permits.",
+        "fa": "در فوریه ۲۰۲۶ گروه کلوز ورک‌پرمیت را از سخت‌ترین مسیرهای موقت دانسته چون کارفرما نیروی حاضر در کانادا با پرمیت آماده را ترجیح می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-LICENSING-008-E1",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5681"
+      },
+      "published_at": "2025-05-29",
+      "event_date": "2025-05-29",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_professional_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For a psychology-related work question, the group said local examinations/licensing analogous to a professional regulatory licence would be required.",
+        "fa": "در پاسخ به یک سؤال کاری حوزه روانشناسی، گروه از نیاز به آزمون‌ها/مجوز حرفه‌ای محلی مشابه مجوز نظام حرفه‌ای گفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-LICENSING-008-E2",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9697"
+      },
+      "published_at": "2026-02-14",
+      "event_date": "2026-02-14",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For heavy-truck work, a reply said the applicant would need to enter Canada and obtain the relevant provincial licence before using provincial/category-based routes.",
+        "fa": "برای رانندگی سنگین، پاسخ گفته فرد باید وارد کانادا شود و گواهینامه استان مربوطه را بگیرد تا بتواند مسیرهای استانی/category-based را دنبال کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-LICENSING-008-E3",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9699"
+      },
+      "published_at": "2026-02-14",
+      "event_date": "2026-02-14",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same thread said the Iranian licence would not substitute for the required provincial testing.",
+        "fa": "همان زنجیره گفته گواهینامه ایرانی جای آزمون/گواهینامه استانی لازم را نمی‌گیرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-LICENSING-008-E4",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9717"
+      },
+      "published_at": "2026-02-14",
+      "event_date": "2026-02-14",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For beauty work, the group said provincial certification/examination was needed before local employment or a realistic job offer.",
+        "fa": "برای حوزه بیوتی، گروه گفته قبل از کار محلی یا جاب‌آفر واقعی، آزمون/سرتیفیکیت استانی لازم است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-LICENSING-008-E5",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10070"
+      },
+      "published_at": "2026-05-10",
+      "event_date": "2026-05-10",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A May 2026 reply again said some beauty occupations require in-province certification before working.",
+        "fa": "پاسخ مه ۲۰۲۶ دوباره گفته بعضی مشاغل بیوتی قبل از کار نیازمند سرتیفیکیت داخل استان هستند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PGWP-LANGUAGE-009-E1",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "4328"
+      },
+      "published_at": "2025-03-09",
+      "event_date": "2025-03-09",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Applicants were actively comparing IELTS, CELPIP and PTE for the newer PGWP language requirement.",
+        "fa": "متقاضیان برای شرط زبان PGWP بین IELTS، CELPIP و PTE مقایسه می‌کردند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PGWP-LANGUAGE-009-E2",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5662"
+      },
+      "published_at": "2025-05-29",
+      "event_date": "2025-05-29",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "first_hand_test_case",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A PhD graduate had two TCF Canada results where different skills missed the target level on different sittings and asked whether the two score reports could be combined.",
+        "fa": "یک فارغ‌التحصیل PhD دو کارنامه TCF Canada داشت که در هر آزمون skill متفاوتی زیر سطح هدف بود و پرسیده آیا می‌تواند دو کارنامه را ترکیب کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PGWP-LANGUAGE-009-E3",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5663"
+      },
+      "published_at": "2025-05-29",
+      "event_date": "2025-05-29",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The reply said the required passing scores had to be achieved in a single test sitting.",
+        "fa": "پاسخ گروه گفته نمره‌های لازم باید در یک آزمون واحد به‌دست آمده باشند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-EVIDENCE-010-E1",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "4353"
+      },
+      "published_at": "2025-03-11",
+      "event_date": "2025-03-11",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A work-migration inquiry was redirected first to the Express Entry points calculator, reinforcing that the route begins with measurable profile factors rather than a generic work-visa application.",
+        "fa": "یک سؤال مهاجرت کاری ابتدا به ماشین‌حساب امتیاز Express Entry ارجاع داده شده؛ یعنی مسیر با فاکتورهای قابل‌امتیاز پروفایل شروع می‌شود نه «ویزای کار» عمومی."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-EVIDENCE-010-E2",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6793"
+      },
+      "published_at": "2025-08-15",
+      "event_date": "2025-08-15",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_route_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply described Express Entry as a ranked pool and encouraged building a profile to see the actual score before selecting a pathway.",
+        "fa": "پاسخ گروه Express Entry را pool رتبه‌بندی‌شده توصیف کرده و پیشنهاد داده ابتدا پروفایل ساخته و امتیاز واقعی دیده شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-EVIDENCE-010-E3",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6878"
+      },
+      "published_at": "2025-08-18",
+      "event_date": "2025-08-18",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "applicant_evidence_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Applicants repeatedly asked how to prove foreign work experience beyond a reference letter, including contracts and other supporting documents.",
+        "fa": "متقاضیان مکرراً درباره اثبات سابقه کار خارج کانادا فراتر از reference letter، از جمله قرارداد و مدارک مکمل، پرسیده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-EVIDENCE-010-E4",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "7027"
+      },
+      "published_at": "2025-08-25",
+      "event_date": "2025-08-25",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community reply said language results and credential assessment were foundational inputs for starting an Express Entry profile.",
+        "fa": "پاسخ گروه نمره زبان و ارزیابی مدرک را از ورودی‌های پایه برای شروع پروفایل Express Entry دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-EVIDENCE-010-E5",
+      "source_id": "canada-work-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10090"
+      },
+      "published_at": "2026-05-13",
+      "event_date": "2026-05-13",
+      "collected_at": "2026-09-17T07:20:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 reply summarized Federal Skilled Worker entry as requiring at least one year of work experience, language around CLB 7 and enough points to be drawn.",
+        "fa": "یک پاسخ ۲۰۲۶ مسیر Federal Skilled Worker را وابسته به حداقل یک سال سابقه کار، زبان حدود CLB 7 و امتیاز کافی برای draw توصیف کرده است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "CAN-WORK-PROCESSING-001",
+      "issue_cluster_id": "CAN-LMIA-WORK-PERMIT-PROCESSING",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "lmia_work_permit_timing_variance",
+        "class": "work_permit"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "PERMANENT RESIDENCE"
+          ],
+          "codes": [
+            "LMIA",
+            "employer_specific_work_permit"
+          ]
+        },
+        "process_stages": [
+          "LMIA",
+          "biometrics",
+          "processing",
+          "decision"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "LMIA and work-permit timing is highly variable and individual cases can diverge dramatically from posted or peer timelines",
+          "fa": "زمان LMIA و ورک‌پرمیت بسیار متغیر است و کیس واقعی می‌تواند شدیداً با زمان اعلامی یا تجربه دیگران فرق کند"
+        },
+        "summary": {
+          "en": "The source includes a 17-month wait versus peer cases around 2-3 months, LMIA examples around one to five months, and a six-month post-biometrics work-permit wait.",
+          "fa": "فایل انتظار ۱۷ماهه در کنار کیس‌های ۲–۳ماهه، LMIA حدود یک تا پنج ماه و انتظار شش‌ماهه بعد از بیومتریک را ثبت کرده است."
+        },
+        "practical_impact": {
+          "en": "Employer start dates, LMIA validity and family planning can become fragile when processing stretches unpredictably.",
+          "fa": "تاریخ شروع کار، اعتبار LMIA و برنامه خانواده با کش‌آمدن نامطمئن processing آسیب‌پذیر می‌شود."
+        },
+        "who_should_care": {
+          "en": "LMIA-based Canadian work-permit applicants.",
+          "fa": "متقاضیان ورک‌پرمیت کانادا مبتنی بر LMIA."
+        },
+        "recommended_action": {
+          "en": "Do not budget the route around a single peer timeline; plan for a wide processing range and employer follow-up.",
+          "fa": "مسیر را بر اساس یک تجربه زمانی نبندید؛ بازه وسیع processing و follow-up کارفرما را در نظر بگیرید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-WORK-PROCESSING-001-E1",
+          "relation": "supports",
+          "independence_group": "CAN-WORK-PROCESSING-001-E1"
+        },
+        {
+          "evidence_id": "CAN-WORK-PROCESSING-001-E2",
+          "relation": "supports",
+          "independence_group": "CAN-WORK-PROCESSING-001-E2"
+        },
+        {
+          "evidence_id": "CAN-WORK-PROCESSING-001-E3",
+          "relation": "supports",
+          "independence_group": "CAN-WORK-PROCESSING-001-E3"
+        },
+        {
+          "evidence_id": "CAN-WORK-PROCESSING-001-E4",
+          "relation": "supports",
+          "independence_group": "CAN-WORK-PROCESSING-001-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple direct applicant reports show extreme variance."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official IRCC/ESDC processing times were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-WORK-PROCESSING-001-E1",
+            "CAN-WORK-PROCESSING-001-E2",
+            "CAN-WORK-PROCESSING-001-E3",
+            "CAN-WORK-PROCESSING-001-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Canada-work Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Processing times change frequently.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "LMIA",
+        "work permit",
+        "processing time",
+        "biometrics"
+      ],
+      "first_seen": "2025-01-07",
+      "last_seen": "2025-07-09"
+    },
+    {
+      "signal_id": "CAN-IRAN-OWP-002",
+      "issue_cluster_id": "CAN-IRAN-SPECIAL-WORK-PERMIT-POLICY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-FAMILY-WORK-003"
+        }
+      ],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "iranian_open_work_permit_policy_sunset",
+        "class": "work_permit"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Iranian nationals / special temporary policy users"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "PERMANENT RESIDENCE"
+          ],
+          "codes": [
+            "iranian_special_open_work_permit",
+            "visitor_to_work",
+            "closed_work_permit"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "extension",
+          "status_change"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The special Iranian open-work-permit route was treated as temporary and should not be confused with a general visitor-to-worker conversion",
+          "fa": "مسیر open work permit ویژه ایرانی‌ها موقت تلقی شده و نباید با «تبدیل عمومی visitor به worker» یکی گرفته شود"
+        },
+        "summary": {
+          "en": "Earlier users had obtained the Iranian OWP after visitor entry. By February 2026 community discussion focused on the policy's end and described a job-offer-tied closed permit as the fallback; by April a generic inside-Canada visitor-to-work question was answered negatively.",
+          "fa": "در تجربه‌های قبلی افراد بعد از ورود توریستی از OWP ایرانی‌ها استفاده کرده‌اند. تا فوریه ۲۰۲۶ بحث روی پایان پالیسی و fallback کلوز ورک‌پرمیت با جاب‌آفر رفته و در آوریل سؤال عمومی visitor→work از داخل کانادا پاسخ منفی گرفته است."
+        },
+        "practical_impact": {
+          "en": "Plans built on a temporary public policy can stop working abruptly when the policy expires.",
+          "fa": "برنامه‌ای که روی temporary public policy بنا شده با پایان آن ممکن است ناگهان از کار بیفتد."
+        },
+        "who_should_care": {
+          "en": "Iranian visitors/open-work-permit holders in Canada.",
+          "fa": "ایرانیان visitor یا دارنده open work permit در کانادا."
+        },
+        "recommended_action": {
+          "en": "Separate the temporary Iranian policy from ordinary work-permit rules and verify the live policy end date before relying on an extension.",
+          "fa": "پالیسی موقت ایرانی‌ها را از قواعد عادی ورک‌پرمیت جدا کنید و قبل از اتکا به تمدید، تاریخ و وضعیت روز را بررسی کنید."
+        },
+        "known_workaround": "The recurring fallback in the source is an employer-specific/closed work permit supported by a job offer."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-IRAN-OWP-002-E1",
+          "relation": "supports",
+          "independence_group": "CAN-IRAN-OWP-002-E1"
+        },
+        {
+          "evidence_id": "CAN-IRAN-OWP-002-E2",
+          "relation": "supports",
+          "independence_group": "CAN-IRAN-OWP-002-E2"
+        },
+        {
+          "evidence_id": "CAN-IRAN-OWP-002-E3",
+          "relation": "supports",
+          "independence_group": "CAN-IRAN-OWP-002-E3"
+        },
+        {
+          "evidence_id": "CAN-IRAN-OWP-002-E4",
+          "relation": "supports",
+          "independence_group": "CAN-IRAN-OWP-002-E4"
+        },
+        {
+          "evidence_id": "CAN-IRAN-OWP-002-E5",
+          "relation": "supports",
+          "independence_group": "CAN-IRAN-OWP-002-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "sunsetting",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source preserves both earlier use and later sunset/fallback discussion."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current special-measures eligibility/end dates and ordinary in-Canada work-permit rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-IRAN-OWP-002-E1",
+            "CAN-IRAN-OWP-002-E2",
+            "CAN-IRAN-OWP-002-E3",
+            "CAN-IRAN-OWP-002-E4",
+            "CAN-IRAN-OWP-002-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Canada-work Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "Temporary policies are highly time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Iranian work permit",
+        "open work permit",
+        "visitor",
+        "closed work permit"
+      ],
+      "first_seen": "2025-09-20",
+      "last_seen": "2026-04-16"
+    },
+    {
+      "signal_id": "CAN-FAMILY-WORK-003",
+      "issue_cluster_id": "CAN-FAMILY-WORK-PERMIT-RESTRICTIONS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-IRAN-OWP-002"
+        }
+      ],
+      "classification": {
+        "family": "E7_DEPENDANTS_FAMILY",
+        "type": "family_work_permit_restriction",
+        "class": "family"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "PERMANENT RESIDENCE"
+          ],
+          "codes": [
+            "family_work_permit",
+            "spouse_open_work_permit",
+            "visitor_family"
+          ]
+        },
+        "process_stages": [
+          "dependant_eligibility",
+          "spouse",
+          "family_timing"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Family work/visitor rights became more route-specific and constrained rather than automatically following the principal worker/student",
+          "fa": "حقوق کار/ویزیتور خانواده route-specific و محدودتر شده و به‌صورت خودکار از پرونده نفر اصلی تبعیت نمی‌کند"
+        },
+        "summary": {
+          "en": "A January 2025 administrator reply described new limits on family work-permit access and the need for employment/pay evidence in the case discussed. Later spouse/student cases continued to require route- and funding-specific handling.",
+          "fa": "پاسخ ادمین در ژانویه ۲۰۲۵ از محدودیت جدید برای ورک‌پرمیت خانواده و اهمیت شغل/فیش حقوقی در کیس موردبحث گفته است. پرونده‌های بعدی همسر دانشجو نیز همچنان route/funding-specific بوده‌اند."
+        },
+        "practical_impact": {
+          "en": "A principal applicant's permit does not automatically solve the spouse/adult-child immigration plan.",
+          "fa": "گرفتن permit نفر اصلی لزوماً برنامه همسر یا فرزند بزرگسال را حل نمی‌کند."
+        },
+        "who_should_care": {
+          "en": "Workers/students moving with spouse or adult dependants.",
+          "fa": "نیروی کار/دانشجویی که با همسر یا همراه بزرگسال برنامه‌ریزی می‌کند."
+        },
+        "recommended_action": {
+          "en": "Check dependant eligibility independently for the exact principal route and occupation/program.",
+          "fa": "eligibility همراه را جداگانه برای route و شغل/برنامه دقیق نفر اصلی بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-FAMILY-WORK-003-E1",
+          "relation": "supports",
+          "independence_group": "CAN-FAMILY-WORK-003-E1"
+        },
+        {
+          "evidence_id": "CAN-FAMILY-WORK-003-E2",
+          "relation": "supports",
+          "independence_group": "CAN-FAMILY-WORK-003-E2"
+        },
+        {
+          "evidence_id": "CAN-FAMILY-WORK-003-E3",
+          "relation": "supports",
+          "independence_group": "CAN-FAMILY-WORK-003-E3"
+        },
+        {
+          "evidence_id": "CAN-FAMILY-WORK-003-E4",
+          "relation": "supports",
+          "independence_group": "CAN-FAMILY-WORK-003-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The restriction is repeated but exact family rules vary by route and are not officially verified here."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current spouse/dependant work-permit rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-FAMILY-WORK-003-E1",
+            "CAN-FAMILY-WORK-003-E2",
+            "CAN-FAMILY-WORK-003-E3",
+            "CAN-FAMILY-WORK-003-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Canada-work Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Family work-permit policy can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "family",
+        "spouse",
+        "open work permit",
+        "dependant"
+      ],
+      "first_seen": "2025-01-16",
+      "last_seen": "2026-02-01"
+    },
+    {
+      "signal_id": "CAN-WORK-FUNDS-004",
+      "issue_cluster_id": "CAN-WORK-PR-PROOF-OF-FUNDS",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "liquid_funds_evidence",
+        "class": "financial"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "PERMANENT RESIDENCE"
+          ],
+          "codes": [
+            "work_permit",
+            "Express_Entry"
+          ]
+        },
+        "process_stages": [
+          "proof_of_funds",
+          "bank_evidence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The community treats liquid, readily available money as materially stronger proof of funds than property value",
+          "fa": "کامیونیتی نقدینگی قابل‌استفاده فوری را برای تمکن به‌مراتب قوی‌تر از ارزش ملک می‌داند"
+        },
+        "summary": {
+          "en": "A job-offer holder asked whether a property appraisal could replace bank history; the administrator said property does not replace immediately usable funds. Express Entry users separately raise account amount/exchange-rate/holding-period questions.",
+          "fa": "دارنده جاب‌آفر درباره جایگزینی ارزیابی ملک با گردش حساب پرسیده و ادمین گفته ملک جای پول قابل‌استفاده فوری را نمی‌گیرد. متقاضیان Express Entry هم درباره مبلغ، نرخ ارز و مدت نگهداری پول سؤال دارند."
+        },
+        "practical_impact": {
+          "en": "High net worth on paper may not satisfy a route that expects accessible settlement funds.",
+          "fa": "دارایی بالا روی کاغذ ممکن است برای مسیری که پول قابل‌دسترسی می‌خواهد کافی نباشد."
+        },
+        "who_should_care": {
+          "en": "Work/PR applicants relying on Iranian property as financial evidence.",
+          "fa": "متقاضیان کاری/PR که روی ملک ایران برای تمکن حساب کرده‌اند."
+        },
+        "recommended_action": {
+          "en": "Build route-compliant liquid-fund evidence rather than assuming property valuation substitutes for cash/bank evidence.",
+          "fa": "مدرک نقدینگی مطابق route بسازید و فرض نکنید ارزش‌گذاری ملک جای پول/حساب بانکی را می‌گیرد."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-WORK-FUNDS-004-E1",
+          "relation": "supports",
+          "independence_group": "CAN-WORK-FUNDS-004-E1"
+        },
+        {
+          "evidence_id": "CAN-WORK-FUNDS-004-E2",
+          "relation": "supports",
+          "independence_group": "CAN-WORK-FUNDS-004-E2"
+        },
+        {
+          "evidence_id": "CAN-WORK-FUNDS-004-E3",
+          "relation": "supports",
+          "independence_group": "CAN-WORK-FUNDS-004-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The liquidity principle is consistent, while exact amount/holding rules remain route-specific."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official settlement-fund amounts and exemptions were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-WORK-FUNDS-004-E1",
+            "CAN-WORK-FUNDS-004-E2",
+            "CAN-WORK-FUNDS-004-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Canada-work Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Fund thresholds and exemptions can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "proof of funds",
+        "bank",
+        "property",
+        "Express Entry"
+      ],
+      "first_seen": "2025-02-09",
+      "last_seen": "2025-07-25"
+    },
+    {
+      "signal_id": "CAN-EE-CATEGORY-005",
+      "issue_cluster_id": "CAN-EXPRESS-ENTRY-CATEGORY-TARGETING-2026",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-EE-EVIDENCE-010"
+        }
+      ],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "category_based_selection_priority",
+        "class": "permanent_residence"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "PERMANENT RESIDENCE"
+          ],
+          "codes": [
+            "Express_Entry",
+            "category_based_selection"
+          ]
+        },
+        "process_stages": [
+          "profile_strategy",
+          "draw",
+          "occupation",
+          "language"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Express Entry strategy increasingly depends on category fit, with French and selected occupations materially affecting invitation pathways",
+          "fa": "استراتژی Express Entry increasingly به فیت کتگوری وابسته است و فرانسه و مشاغل منتخب مسیر دعوت را جدی تغییر می‌دهند"
+        },
+        "summary": {
+          "en": "The file distinguishes French as an advantage rather than a universal requirement and includes a February 2026 IRCC-linked post listing targeted physician/researcher categories plus continuing French, healthcare, trades, education, STEM, transport and agriculture/food categories.",
+          "fa": "فایل فرانسه را مزیت می‌داند نه الزام عمومی و یک پست فوریه ۲۰۲۶ با لینک IRCC کتگوری‌های پزشک/پژوهشگر و ادامه فرانسه، سلامت، فنی، آموزش، STEM، حمل‌ونقل و کشاورزی/غذا را فهرست کرده است."
+        },
+        "practical_impact": {
+          "en": "A generic CRS-only plan can miss category-specific opportunities or overestimate a profile that does not fit an active category.",
+          "fa": "برنامه صرفاً مبتنی بر CRS ممکن است فرصت کتگوری خاص را از دست بدهد یا پروفایل خارج از کتگوری فعال را بیش‌برآورد کند."
+        },
+        "who_should_care": {
+          "en": "Express Entry candidates planning 2026+ PR strategy.",
+          "fa": "متقاضیان Express Entry برای استراتژی PR در ۲۰۲۶ به بعد."
+        },
+        "recommended_action": {
+          "en": "Track both CRS and category eligibility, especially French/occupation/Canadian-experience conditions.",
+          "fa": "هم CRS و هم eligibility کتگوری را پیگیری کنید، مخصوصاً شروط فرانسه، شغل و سابقه کانادایی."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-EE-CATEGORY-005-E1",
+          "relation": "supports",
+          "independence_group": "CAN-EE-CATEGORY-005-E1"
+        },
+        {
+          "evidence_id": "CAN-EE-CATEGORY-005-E2",
+          "relation": "supports",
+          "independence_group": "CAN-EE-CATEGORY-005-E2"
+        },
+        {
+          "evidence_id": "CAN-EE-CATEGORY-005-E3",
+          "relation": "supports",
+          "independence_group": "CAN-EE-CATEGORY-005-E3"
+        },
+        {
+          "evidence_id": "CAN-EE-CATEGORY-005-E4",
+          "relation": "supports",
+          "independence_group": "CAN-EE-CATEGORY-005-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "targeted",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source includes an IRCC-linked policy post plus recurring community route explanations."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The 2026 IRCC-linked post was not independently verified in this extraction run."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-EE-CATEGORY-005-E1",
+            "CAN-EE-CATEGORY-005-E2",
+            "CAN-EE-CATEGORY-005-E3",
+            "CAN-EE-CATEGORY-005-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Canada-work Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Express Entry categories can be revised by year.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Express Entry",
+        "French",
+        "healthcare",
+        "STEM",
+        "category based"
+      ],
+      "first_seen": "2025-12-20",
+      "last_seen": "2026-02-18"
+    },
+    {
+      "signal_id": "CAN-PROVINCIAL-006",
+      "issue_cluster_id": "CAN-PROVINCIAL-FEDERAL-DIVERGENCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-EE-CATEGORY-005"
+        }
+      ],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "provincial_federal_route_divergence",
+        "class": "permanent_residence"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "PERMANENT RESIDENCE"
+          ],
+          "codes": [
+            "PNP",
+            "Quebec",
+            "Federal_Skilled_Worker",
+            "CEC"
+          ]
+        },
+        "process_stages": [
+          "provincial_nomination",
+          "work_experience",
+          "eligibility"
+        ],
+        "entities": [
+          {
+            "entity_type": "province",
+            "name": "Quebec"
+          },
+          {
+            "entity_type": "province",
+            "name": "Ontario"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "Provincial, Quebec and federal PR routes cannot be treated as interchangeable; even Canadian work experience can be counted differently",
+          "fa": "مسیرهای استانی، کبک و فدرال قابل‌جایگزینی ساده نیستند؛ حتی سابقه کار کانادایی ممکن است متفاوت حساب شود"
+        },
+        "summary": {
+          "en": "The source repeatedly separates Quebec and provincial programs from federal routes. A direct PhD/work case triggered discussion that work performed during study would not count in the Ontario route being discussed and likely not in the Quebec route either.",
+          "fa": "فایل بارها کبک و برنامه‌های استانی را از مسیر فدرال جدا می‌کند. یک کیس مستقیم PhD/کار باعث بحثی شده که سابقه کار حین تحصیل در مسیر انتاریوی موردبحث حساب نمی‌شود و احتمالاً در مسیر کبک هم نه."
+        },
+        "practical_impact": {
+          "en": "The same job offer or Canadian work period can have different value depending on province and PR stream.",
+          "fa": "یک جاب‌آفر یا سابقه کار کانادایی می‌تواند بسته به استان و stream ارزش متفاوتی داشته باشد."
+        },
+        "who_should_care": {
+          "en": "Candidates choosing between PNP, Quebec, FSW and CEC.",
+          "fa": "افرادی که بین PNP، کبک، FSW و CEC انتخاب می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Evaluate the exact province/stream before assuming work history, LMIA or nomination effects transfer across routes.",
+          "fa": "قبل از تعمیم اثر سابقه کار، LMIA یا nomination، همان استان/stream را جدا بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-PROVINCIAL-006-E1",
+          "relation": "supports",
+          "independence_group": "CAN-PROVINCIAL-006-E1"
+        },
+        {
+          "evidence_id": "CAN-PROVINCIAL-006-E2",
+          "relation": "supports",
+          "independence_group": "CAN-PROVINCIAL-006-E2"
+        },
+        {
+          "evidence_id": "CAN-PROVINCIAL-006-E3",
+          "relation": "supports",
+          "independence_group": "CAN-PROVINCIAL-006-E3"
+        },
+        {
+          "evidence_id": "CAN-PROVINCIAL-006-E4",
+          "relation": "supports",
+          "independence_group": "CAN-PROVINCIAL-006-E4"
+        },
+        {
+          "evidence_id": "CAN-PROVINCIAL-006-E5",
+          "relation": "supports",
+          "independence_group": "CAN-PROVINCIAL-006-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple route discussions consistently show province/stream divergence."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current PNP/Quebec/FSW/CEC rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-PROVINCIAL-006-E1",
+            "CAN-PROVINCIAL-006-E2",
+            "CAN-PROVINCIAL-006-E3",
+            "CAN-PROVINCIAL-006-E4",
+            "CAN-PROVINCIAL-006-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Canada-work Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Provincial criteria change frequently.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "PNP",
+        "Quebec",
+        "Ontario",
+        "FSW",
+        "CEC",
+        "nomination"
+      ],
+      "first_seen": "2025-01-07",
+      "last_seen": "2026-02-06"
+    },
+    {
+      "signal_id": "CAN-JOBOFFER-LMIA-007",
+      "issue_cluster_id": "CAN-FOREIGN-JOBOFFER-EMPLOYER-FRICTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-WORK-PROCESSING-001"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "CAN-LICENSING-008"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "employer_sponsorship_friction",
+        "class": "job_offer"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "PERMANENT RESIDENCE"
+          ],
+          "codes": [
+            "LMIA",
+            "closed_work_permit",
+            "foreign_worker"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "employer_sponsorship",
+          "LMIA"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The hardest part of the direct-from-abroad work route is often employer willingness to sponsor, not finding a job board",
+          "fa": "گلوگاه اصلی مسیر کاری مستقیم از خارج اغلب willingness کارفرما برای اسپانسر است، نه پیدا کردن سایت آگهی"
+        },
+        "summary": {
+          "en": "The community recommends Job Bank/Indeed/LinkedIn but repeatedly describes employer advertising, compliance, tax/insurance obligations and preference for workers already in Canada. Late-2025/2026 messages frame closed-work-permit sponsorship as unusually difficult.",
+          "fa": "گروه Job Bank/Indeed/LinkedIn را پیشنهاد می‌کند اما مکرراً از تعهد تبلیغ، compliance، مالیات/بیمه و ترجیح نیروی حاضر در کانادا می‌گوید. پیام‌های اواخر ۲۰۲۵/۲۰۲۶ کلوز ورک‌پرمیت را مسیر بسیار سختی توصیف می‌کنند."
+        },
+        "practical_impact": {
+          "en": "Strong credentials alone may not convert into an LMIA-backed offer if the employer does not want immigration/compliance burden.",
+          "fa": "رزومه قوی به‌تنهایی به جاب‌آفر LMIA تبدیل نمی‌شود اگر کارفرما بار مهاجرتی/compliance را نپذیرد."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants seeking a Canadian employer-specific work permit.",
+          "fa": "متقاضیان داخل ایران برای employer-specific work permit کانادا."
+        },
+        "recommended_action": {
+          "en": "Prioritize employers already recruiting foreign workers or experienced with LMIA and treat sponsorship willingness as an explicit screening criterion.",
+          "fa": "کارفرمایان دارای سابقه جذب نیروی خارجی/LMIA را اولویت دهید و willingness اسپانسرشیپ را معیار مستقیم غربال قرار دهید."
+        },
+        "known_workaround": "Foreign-worker-targeted Job Bank postings are repeatedly suggested as a more relevant search pool."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-JOBOFFER-LMIA-007-E1",
+          "relation": "supports",
+          "independence_group": "CAN-JOBOFFER-LMIA-007-E1"
+        },
+        {
+          "evidence_id": "CAN-JOBOFFER-LMIA-007-E2",
+          "relation": "supports",
+          "independence_group": "CAN-JOBOFFER-LMIA-007-E2"
+        },
+        {
+          "evidence_id": "CAN-JOBOFFER-LMIA-007-E3",
+          "relation": "supports",
+          "independence_group": "CAN-JOBOFFER-LMIA-007-E3"
+        },
+        {
+          "evidence_id": "CAN-JOBOFFER-LMIA-007-E4",
+          "relation": "supports",
+          "independence_group": "CAN-JOBOFFER-LMIA-007-E4"
+        },
+        {
+          "evidence_id": "CAN-JOBOFFER-LMIA-007-E5",
+          "relation": "supports",
+          "independence_group": "CAN-JOBOFFER-LMIA-007-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated guidance across 2025-2026 converges on employer-side friction."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Specific LMIA employer obligations and exemptions were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-JOBOFFER-LMIA-007-E1",
+            "CAN-JOBOFFER-LMIA-007-E2",
+            "CAN-JOBOFFER-LMIA-007-E3",
+            "CAN-JOBOFFER-LMIA-007-E4",
+            "CAN-JOBOFFER-LMIA-007-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Canada-work Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Labour market and LMIA policy are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "job offer",
+        "LMIA",
+        "Job Bank",
+        "employer",
+        "closed work permit"
+      ],
+      "first_seen": "2025-06-04",
+      "last_seen": "2026-02-14"
+    },
+    {
+      "signal_id": "CAN-LICENSING-008",
+      "issue_cluster_id": "CAN-PROVINCIAL-OCCUPATIONAL-LICENSING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-JOBOFFER-LMIA-007"
+        }
+      ],
+      "classification": {
+        "family": "E12_PROFESSIONAL_REGULATION",
+        "type": "provincial_certification_barrier",
+        "class": "regulated_occupation"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "PERMANENT RESIDENCE"
+          ],
+          "codes": [
+            "regulated_occupation",
+            "provincial_certificate"
+          ]
+        },
+        "process_stages": [
+          "licensing",
+          "exam",
+          "job_offer"
+        ],
+        "entities": [
+          {
+            "entity_type": "province",
+            "name": "various"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "For some occupations, provincial certification is a precondition to realistic local employment and can block direct job-offer strategies from abroad",
+          "fa": "در بعضی مشاغل، سرتیفیکیت/لایسنس استانی پیش‌شرط کار واقعی است و می‌تواند مسیر جاب‌آفر مستقیم از خارج را مسدود کند"
+        },
+        "summary": {
+          "en": "The source gives examples in beauty, heavy-truck driving and professional fields where local/provincial examinations or licences are described as necessary before working. Iranian credentials/licences are not assumed to substitute automatically.",
+          "fa": "فایل در حوزه بیوتی، رانندگی سنگین و حرفه‌های تخصصی نمونه‌هایی دارد که آزمون یا لایسنس استانی را پیش از کار لازم می‌دانند و مدارک/گواهینامه ایران را جایگزین خودکار فرض نمی‌کنند."
+        },
+        "practical_impact": {
+          "en": "A seemingly strong occupation for immigration may still require in-province licensing before the candidate becomes employable.",
+          "fa": "حتی شغل مناسب مهاجرت ممکن است تا قبل از لایسنس داخل استان عملاً قابل استخدام نباشد."
+        },
+        "who_should_care": {
+          "en": "Applicants in regulated or provincially certified occupations.",
+          "fa": "متقاضیان مشاغل regulated یا نیازمند گواهی استانی."
+        },
+        "recommended_action": {
+          "en": "Map licensing/certification before pursuing job offers and determine whether exams can be completed from abroad or require physical presence.",
+          "fa": "قبل از جاب‌آفر مسیر لایسنس را مشخص کنید و ببینید آزمون از خارج ممکن است یا حضور داخل استان لازم است."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-LICENSING-008-E1",
+          "relation": "supports",
+          "independence_group": "CAN-LICENSING-008-E1"
+        },
+        {
+          "evidence_id": "CAN-LICENSING-008-E2",
+          "relation": "supports",
+          "independence_group": "CAN-LICENSING-008-E2"
+        },
+        {
+          "evidence_id": "CAN-LICENSING-008-E3",
+          "relation": "supports",
+          "independence_group": "CAN-LICENSING-008-E3"
+        },
+        {
+          "evidence_id": "CAN-LICENSING-008-E4",
+          "relation": "supports",
+          "independence_group": "CAN-LICENSING-008-E4"
+        },
+        {
+          "evidence_id": "CAN-LICENSING-008-E5",
+          "relation": "supports",
+          "independence_group": "CAN-LICENSING-008-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The pattern recurs across occupations, but exact licensing authorities and rules are occupation/province-specific."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current licensing rules for each profession/province were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-LICENSING-008-E1",
+            "CAN-LICENSING-008-E2",
+            "CAN-LICENSING-008-E3",
+            "CAN-LICENSING-008-E4",
+            "CAN-LICENSING-008-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Canada-work Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Licensing rules vary by province and profession.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "licence",
+        "certificate",
+        "province",
+        "beauty",
+        "truck",
+        "regulated"
+      ],
+      "first_seen": "2025-05-29",
+      "last_seen": "2026-05-10"
+    },
+    {
+      "signal_id": "CAN-PGWP-LANGUAGE-009",
+      "issue_cluster_id": "CAN-PGWP-LANGUAGE-TEST",
+      "relationships": [],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "pgwp_language_single_test_threshold",
+        "class": "poststudy_work"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "PERMANENT RESIDENCE"
+          ],
+          "codes": [
+            "PGWP"
+          ]
+        },
+        "process_stages": [
+          "language_test",
+          "application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "PGWP planning now includes a language-test threshold, and community guidance treats all required skills as needing to clear the target in one sitting",
+          "fa": "برنامه PGWP حالا شامل threshold زبان است و راهنمایی گروه می‌گوید همه skillهای لازم باید در یک آزمون واحد حدنصاب را بگیرند"
+        },
+        "summary": {
+          "en": "Applicants compare accepted English tests and a direct TCF case asked whether two sittings with complementary weak skills could be combined; the reply said no, the passing result must be in one exam.",
+          "fa": "متقاضیان آزمون‌های زبان PGWP را مقایسه می‌کنند و یک کیس مستقیم TCF پرسیده آیا دو آزمون با skillهای ضعیف متفاوت قابل ترکیب است؛ پاسخ گروه گفته خیر و حدنصاب باید در یک آزمون باشد."
+        },
+        "practical_impact": {
+          "en": "Near-threshold candidates may need another full sitting even if their best individual skills across two exams would meet the target.",
+          "fa": "داوطلب نزدیک حدنصاب ممکن است با وجود ترکیب نمره خوب از دو آزمون، مجبور به یک آزمون کامل دیگر شود."
+        },
+        "who_should_care": {
+          "en": "Graduates preparing a PGWP language test.",
+          "fa": "فارغ‌التحصیلانی که برای شرط زبان PGWP آماده می‌شوند."
+        },
+        "recommended_action": {
+          "en": "Plan for one complete qualifying score report and verify the currently accepted tests/CLB requirement for the credential level.",
+          "fa": "برای یک کارنامه کامل واجدحدنصاب برنامه‌ریزی کنید و آزمون‌های پذیرفته‌شده/CLB روز را بر اساس مقطع بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-PGWP-LANGUAGE-009-E1",
+          "relation": "supports",
+          "independence_group": "CAN-PGWP-LANGUAGE-009-E1"
+        },
+        {
+          "evidence_id": "CAN-PGWP-LANGUAGE-009-E2",
+          "relation": "supports",
+          "independence_group": "CAN-PGWP-LANGUAGE-009-E2"
+        },
+        {
+          "evidence_id": "CAN-PGWP-LANGUAGE-009-E3",
+          "relation": "supports",
+          "independence_group": "CAN-PGWP-LANGUAGE-009-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "A concrete case exists, but the rule is represented through community guidance rather than independent official verification."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current PGWP accepted tests, CLB levels and score-combination rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-PGWP-LANGUAGE-009-E1",
+            "CAN-PGWP-LANGUAGE-009-E2",
+            "CAN-PGWP-LANGUAGE-009-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Canada-work Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "PGWP language rules are recent and may change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "PGWP",
+        "TCF Canada",
+        "IELTS",
+        "CELPIP",
+        "PTE",
+        "CLB"
+      ],
+      "first_seen": "2025-03-09",
+      "last_seen": "2025-05-29"
+    },
+    {
+      "signal_id": "CAN-EE-EVIDENCE-010",
+      "issue_cluster_id": "CAN-EXPRESS-ENTRY-PROFILE-EVIDENCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CAN-EE-CATEGORY-005"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "CAN-PROVINCIAL-006"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "points_profile_evidence_stack",
+        "class": "permanent_residence"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Canada",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "PERMANENT RESIDENCE"
+          ],
+          "codes": [
+            "Express_Entry",
+            "Federal_Skilled_Worker"
+          ]
+        },
+        "process_stages": [
+          "profile_creation",
+          "language",
+          "ECA",
+          "work_experience_evidence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Express Entry is an evidence-and-points route, not a generic work visa: language, credential assessment and provable work history are foundational",
+          "fa": "Express Entry مسیر امتیاز و evidence است، نه یک «ویزای کاری» عمومی؛ زبان، ارزیابی مدرک و سابقه کار قابل‌اثبات پایه‌های اصلی‌اند"
+        },
+        "summary": {
+          "en": "The source repeatedly redirects work-migration questions to the CRS/points calculator and profile creation. It also highlights language results, credential assessment and documentary proof of foreign work experience as core inputs.",
+          "fa": "فایل بارها سؤال‌های مهاجرت کاری را به ماشین‌حساب امتیاز و ساخت پروفایل برمی‌گرداند و نمره زبان، ارزیابی مدرک و اثبات سابقه کار خارجی را ورودی‌های اصلی می‌داند."
+        },
+        "practical_impact": {
+          "en": "A candidate may be employable but still have a weak PR profile if their language/ECA/work evidence is incomplete.",
+          "fa": "ممکن است فرد از نظر شغلی قوی باشد اما به‌دلیل نقص زبان/ECA/مدارک سابقه کار پروفایل PR ضعیفی داشته باشد."
+        },
+        "who_should_care": {
+          "en": "Applicants using Express Entry/FSW from outside Canada.",
+          "fa": "متقاضیان Express Entry/FSW از خارج کانادا."
+        },
+        "recommended_action": {
+          "en": "Build the evidence stack first—language, ECA, detailed work proof—then calculate and monitor score/category fit.",
+          "fa": "اول evidence stack شامل زبان، ECA و سابقه کار مستند را بسازید و بعد امتیاز و فیت کتگوری را پایش کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-EE-EVIDENCE-010-E1",
+          "relation": "supports",
+          "independence_group": "CAN-EE-EVIDENCE-010-E1"
+        },
+        {
+          "evidence_id": "CAN-EE-EVIDENCE-010-E2",
+          "relation": "supports",
+          "independence_group": "CAN-EE-EVIDENCE-010-E2"
+        },
+        {
+          "evidence_id": "CAN-EE-EVIDENCE-010-E3",
+          "relation": "supports",
+          "independence_group": "CAN-EE-EVIDENCE-010-E3"
+        },
+        {
+          "evidence_id": "CAN-EE-EVIDENCE-010-E4",
+          "relation": "supports",
+          "independence_group": "CAN-EE-EVIDENCE-010-E4"
+        },
+        {
+          "evidence_id": "CAN-EE-EVIDENCE-010-E5",
+          "relation": "supports",
+          "independence_group": "CAN-EE-EVIDENCE-010-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated guidance across the file consistently frames Express Entry as points/evidence driven."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current FSW/Express Entry minimums and evidence standards were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-EE-EVIDENCE-010-E1",
+            "CAN-EE-EVIDENCE-010-E2",
+            "CAN-EE-EVIDENCE-010-E3",
+            "CAN-EE-EVIDENCE-010-E4",
+            "CAN-EE-EVIDENCE-010-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Canada-work Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Express Entry thresholds and documentary rules can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Express Entry",
+        "CRS",
+        "ECA",
+        "language",
+        "work experience"
+      ],
+      "first_seen": "2025-03-11",
+      "last_seen": "2026-05-13"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram usernames/IDs and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 623 records in the uploaded JSON."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the full graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Consultancy ads, unrelated study promotions and generic promotional content were excluded from signals."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated LMIA/work-permit, Iranian OWP, family, proof-of-funds, Express Entry, PNP, job-offer, licensing and PGWP discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Time-sensitive evolution of the special Iranian OWP policy and route-specific provincial/federal differences are preserved."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "Even posts linking official IRCC material remain source-reported because no independent official verification was performed in this extraction run."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community planning signals only. They are not official IRCC, ESDC, provincial-program, licensing-body or employer rules. Verify current policy, eligibility, processing and licensing requirements before acting."
+}

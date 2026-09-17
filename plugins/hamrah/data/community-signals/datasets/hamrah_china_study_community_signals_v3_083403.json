@@ -1,0 +1,2594 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_china_study_community_signals_candidate",
+    "generated_at": "2026-09-17T08:36:07Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "china-study-pargar-telegram-export",
+      "name": "result(20260917-083403).json / Telegram export «تحصیل در چین با پرگار»",
+      "source_type": "private_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-02-07",
+        "to": "2026-09-17",
+        "records_available": 19776,
+        "records_processed": 19776,
+        "message_records": 19756
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "china_study_focused": true,
+        "contains_first_hand_applicant_experience": true,
+        "contains_advisor_admin_replies": true,
+        "contains_forwarded_promotional_posts": true,
+        "contains_quoted_official_or_university_text": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "CHN-FUNDING-001-E1",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "29495"
+      },
+      "published_at": "2025-12-30",
+      "event_date": "2025-12-30",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A late-2025 reply separated China funding into CSC/government, university and provincial scholarships and said competitiveness depends on profile, language track and field.",
+        "fa": "یک پاسخ اواخر ۲۰۲۵ فاند چین را به CSC/دولتی، دانشگاهی و استانی تفکیک کرده و رقابت را وابسته به رزومه، زبان برنامه و رشته دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-FUNDING-001-E2",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "34720"
+      },
+      "published_at": "2026-05-07",
+      "event_date": "2026-05-07",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "admin_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 admin reply said there is no single site covering every scholarship; applicants must check each university's International Admissions portal, with some internal funding requested during admission and some assessed later.",
+        "fa": "پاسخ ادمین در ۲۰۲۶ گفته سایت واحدی برای همه بورسیه‌ها وجود ندارد؛ باید International Admissions هر دانشگاه بررسی شود و بعضی فاندهای داخلی همزمان با اپلای و بعضی بعد از پذیرش بررسی می‌شوند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-FUNDING-001-E3",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "21031"
+      },
+      "published_at": "2025-08-26",
+      "event_date": "2025-08-26",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "advisor_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An advisor said each university has scholarship quotas and applicants who miss government funding may still apply for university funding.",
+        "fa": "مشاور گفته هر دانشگاه سهمیه فاند دارد و اگر فاند دولتی گرفته نشود، امکان اقدام برای فاند دانشگاهی وجود دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-FUNDING-001-E4",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2665"
+      },
+      "published_at": "2025-03-04",
+      "event_date": "2025-03-04",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "forwarded_promotional_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_amounts_unverified",
+      "summary": {
+        "en": "A forwarded study guide described CSC as covering tuition, accommodation, insurance and a monthly stipend, while also listing city/provincial scholarships with partial or full tuition support.",
+        "fa": "یک راهنمای فورواردشده CSC را شامل شهریه، اقامت، بیمه و stipend ماهانه معرفی کرده و بورسیه‌های شهری/استانی با پوشش partial/full شهریه را هم فهرست کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-FUNDING-001-E5",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "49781"
+      },
+      "published_at": "2026-09-08",
+      "event_date": "2026-09-08",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "route_details_unverified",
+      "summary": {
+        "en": "A September 2026 reply distinguished CSC Type A and Type B and framed pre-admission plus the university's own deadline as part of the scholarship workflow.",
+        "fa": "یک پاسخ سپتامبر ۲۰۲۶ CSC Type A و Type B را تفکیک کرده و pre-admission و deadline خود دانشگاه را بخشی از workflow بورسیه دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-SUPERVISOR-002-E1",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "132"
+      },
+      "published_at": "2025-02-16",
+      "event_date": "2025-02-16",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "channel_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group said professor-led outreach can raise funding chances for engineering applicants.",
+        "fa": "گروه گفته برای متقاضیان مهندسی، مسیر استادمحور می‌تواند شانس فاند را بالا ببرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-SUPERVISOR-002-E2",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "188"
+      },
+      "published_at": "2025-02-16",
+      "event_date": "2025-02-16",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "channel_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A reply advised contacting a professor around an attractive research project and separately noted government, university and research funding layers.",
+        "fa": "پاسخ توصیه کرده روی پروژه‌ای جذاب برای استاد مکاتبه شود و همزمان فاند دولتی، دانشگاهی و تحقیقاتی را جدا دیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-SUPERVISOR-002-E3",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "4604"
+      },
+      "published_at": "2025-03-10",
+      "event_date": "2025-03-10",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "first_hand_university_email",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant shared a university email saying the college had pre-admitted them and would prepare a pre-admission letter for completion of the CSC portal process.",
+        "fa": "یک متقاضی ایمیل دانشگاهی به‌اشتراک گذاشته که می‌گوید توسط کالج pre-admit شده و دانشگاه برای تکمیل روند CSC، pre-admission letter آماده می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-SUPERVISOR-002-E4",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "41123"
+      },
+      "published_at": "2026-08-20",
+      "event_date": "2026-08-20",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "first_hand_outreach",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 applicant reported a professor had reviewed the CV, invited the applicant toward the research team and asked them to prepare CSC documents.",
+        "fa": "یک متقاضی در ۲۰۲۶ گزارش کرده استاد رزومه را بررسی کرده، برای پیوستن به تیم پژوهشی ابراز تمایل کرده و خواسته مدارک CSC آماده شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-SUPERVISOR-002-E5",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "41124"
+      },
+      "published_at": "2026-08-20",
+      "event_date": "2026-08-20",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_reply",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The reply treated professor approval as a meaningful boost to scholarship odds but did not present it as final admission.",
+        "fa": "پاسخ، اوکی استاد را افزایش‌دهنده جدی شانس فاند دانسته اما آن را پذیرش نهایی تلقی نکرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-DEADLINE-003-E1",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "182"
+      },
+      "published_at": "2025-02-16",
+      "event_date": "2025-02-16",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "channel_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The channel said application timing differs by university and applicants should check each university site.",
+        "fa": "کانال گفته زمان اپلای بین دانشگاه‌ها متفاوت است و باید سایت هر دانشگاه جدا بررسی شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-DEADLINE-003-E2",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "207"
+      },
+      "published_at": "2025-02-16",
+      "event_date": "2025-02-16",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "channel_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A follow-up again said deadlines are on each university's own site rather than one common calendar.",
+        "fa": "پاسخ دیگری دوباره گفته deadlineها روی سایت خود دانشگاه‌ها هستند و تقویم واحدی وجود ندارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-DEADLINE-003-E3",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "34720"
+      },
+      "published_at": "2026-05-07",
+      "event_date": "2026-05-07",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "admin_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 admin reply said master’s applicants commonly apply through each university’s own International Admissions portal, with scholarship timing differing by institution.",
+        "fa": "پاسخ ادمین ۲۰۲۶ گفته اپلای ارشد معمولاً از پورتال International Admissions همان دانشگاه انجام می‌شود و زمان فاند بین دانشگاه‌ها فرق دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-DEADLINE-003-E4",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "49781"
+      },
+      "published_at": "2026-09-08",
+      "event_date": "2026-09-08",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "route_details_unverified",
+      "summary": {
+        "en": "A September 2026 reply linked CSC timing to the university-specific deadline rather than treating a generic CSC date as sufficient.",
+        "fa": "پاسخ سپتامبر ۲۰۲۶ زمان CSC را به deadline خود دانشگاه گره زده و تاریخ عمومی را به‌تنهایی کافی ندانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-LANGUAGE-004-C1",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "217"
+      },
+      "published_at": "2025-02-16",
+      "event_date": "2025-02-16",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "overgeneralized_claim",
+      "summary": {
+        "en": "An early thread claimed China does not waive language proof and discouraged trying to waive it.",
+        "fa": "یک گفتگو در ابتدای فایل ادعا کرده چین روی مدرک زبان کوتاه نمی‌آید و تلاش برای waiver را بی‌فایده دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-LANGUAGE-004-E1",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "704"
+      },
+      "published_at": "2025-02-18",
+      "event_date": "2025-02-18",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Another reply said Duolingo acceptance depends on the university and recommended IELTS when time permits.",
+        "fa": "پاسخ دیگری گفته پذیرش Duolingo به دانشگاه بستگی دارد و در صورت داشتن زمان IELTS را مطمئن‌تر دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-LANGUAGE-004-E2",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "16098"
+      },
+      "published_at": "2025-07-01",
+      "event_date": "2025-07-01",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A July 2025 reply said accepted language evidence varies and should be researched alongside CSC, provincial and university funding.",
+        "fa": "پاسخ ژوئیه ۲۰۲۵ گفته مدرک زبان پذیرفته‌شده متغیر است و باید همزمان با CSC، فاند استانی و دانشگاهی تحقیق شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-LANGUAGE-004-E3",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "37391"
+      },
+      "published_at": "2026-06-24",
+      "event_date": "2026-06-24",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "applicant_requirement_quote",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 applicant quoted a university requirement: Chinese-taught study required HSK, while an English-taught programme accepted TOEFL/IELTS and in some cases proof that prior study was in English.",
+        "fa": "یک متقاضی در ۲۰۲۶ requirements دانشگاه را نقل کرده: برنامه چینی HSK می‌خواست و برنامه انگلیسی TOEFL/IELTS یا در بعضی موارد گواهی انگلیسی‌بودن تحصیل قبلی را می‌پذیرفت."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-LANGUAGE-004-E4",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "36893"
+      },
+      "published_at": "2026-06-12",
+      "event_date": "2026-06-12",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_compilation",
+      "firsthandness": "reported",
+      "evidence_quality": "programme_examples_unverified",
+      "summary": {
+        "en": "A 2026 compilation listed several universities said to accept MOI letters or interviews for some English-taught programmes, reinforcing programme-level variation.",
+        "fa": "یک جمع‌بندی ۲۰۲۶ چند دانشگاه را با امکان MOI یا مصاحبه در بعضی برنامه‌های انگلیسی معرفی کرده و variability در سطح program را تقویت می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-STUDENT-WORK-005-E1",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "96"
+      },
+      "published_at": "2025-02-15",
+      "event_date": "2025-02-15",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "channel_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The channel said student work can be possible with specific permissions and that restrictions had previously been tighter.",
+        "fa": "کانال گفته کار دانشجویی با بعضی مجوزها ممکن است و قبلاً محدودتر بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-STUDENT-WORK-005-C1",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "117"
+      },
+      "published_at": "2025-02-15",
+      "event_date": "2025-02-15",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "legal_claim_unverified",
+      "summary": {
+        "en": "A member warned that general/specialized work could be prohibited without proper status and raised deportation risk for unauthorized work.",
+        "fa": "یکی از اعضا هشدار داده کار عمومی/تخصصی بدون وضعیت مجاز می‌تواند ممنوع باشد و کار غیرمجاز ریسک دیپورت دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-STUDENT-WORK-005-E2",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "191"
+      },
+      "published_at": "2025-02-16",
+      "event_date": "2025-02-16",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "forwarded_promotional_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_income_unverified",
+      "summary": {
+        "en": "A forwarded post promoted on-campus and off-campus student jobs subject to a student work permit and advertised high monthly earnings.",
+        "fa": "یک پست فورواردشده کار داخل و خارج دانشگاه را مشروط به مجوز دانشجویی معرفی کرده و درآمد ماهانه بالایی تبلیغ کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-STUDENT-WORK-005-C2",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "24861"
+      },
+      "published_at": "2025-10-13",
+      "event_date": "2025-10-13",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "advisor_experience",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An advisor said that although work with permission is discussed, they had not personally seen people around them successfully obtain university permission.",
+        "fa": "یک مشاور گفته اگرچه درباره امکان کار با مجوز صحبت می‌شود، در اطراف خودش موردی ندیده که عملاً مجوز دانشگاه گرفته باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-STUDENT-WORK-005-C3",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "24897"
+      },
+      "published_at": "2025-10-13",
+      "event_date": "2025-10-13",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_analysis",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A later discussion argued that even with permission, demanding PhD research workloads can make outside work impractical.",
+        "fa": "گفتگوی بعدی استدلال کرده حتی با مجوز، فشار پژوهشی PhD می‌تواند کار بیرون از تحصیل را عملاً دشوار کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-COST-006-E1",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1471"
+      },
+      "published_at": "2025-02-25",
+      "event_date": "2025-02-25",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "channel_cost_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "channel_estimates_unverified",
+      "summary": {
+        "en": "A cost guide showed large city-to-city differences in dormitory, rent, food and total monthly living costs.",
+        "fa": "راهنمای هزینه زندگی تفاوت زیاد شهر به شهر در خوابگاه، اجاره، غذا و مجموع هزینه ماهانه را نشان داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-COST-006-E2",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2665"
+      },
+      "published_at": "2025-03-04",
+      "event_date": "2025-03-04",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "forwarded_promotional_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_amounts_unverified",
+      "summary": {
+        "en": "A forwarded CSC guide paired tuition/accommodation/insurance coverage with a monthly stipend, implying that the scholarship package and living budget should be evaluated together.",
+        "fa": "راهنمای فورواردشده CSC پوشش شهریه/اقامت/بیمه را با stipend ماهانه کنار هم گذاشته و نشان می‌دهد package و بودجه زندگی باید با هم سنجیده شوند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-COST-006-E3",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "213"
+      },
+      "published_at": "2025-02-16",
+      "event_date": "2025-02-16",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "applicant_budget_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant explicitly questioned how advertised student-job income could exceed the commonly discussed CSC stipend, exposing uncertainty around realistic student budgeting.",
+        "fa": "یک متقاضی صریحاً پرسیده چطور درآمد تبلیغ‌شده کار دانشجویی می‌تواند از stipend رایج CSC بیشتر باشد و تناقض بودجه‌ریزی را برجسته کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-COST-006-E4",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "21031"
+      },
+      "published_at": "2025-08-26",
+      "event_date": "2025-08-26",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "advisor_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "anecdotal_observation",
+      "summary": {
+        "en": "An advisor observed that many Iranian graduate students they had seen in China were scholarship-funded rather than self-funded, underscoring the centrality of funding to affordability.",
+        "fa": "مشاور گفته در تجربه‌اش بسیاری از دانشجویان ایرانی ارشد/دکتری چین بورسیه دارند و self-funded کمتر دیده می‌شود؛ نشانه اهمیت فاند در affordability."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-VISA-X1-007-E1",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "38276"
+      },
+      "published_at": "2026-07-08",
+      "event_date": "2026-07-08",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "embassy_requirement_quote",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 message quoted embassy X1 requirements including JW201/JW202, admission letter and either a bank deposit certificate tied to remaining study years or a scholarship certificate.",
+        "fa": "پیام ۲۰۲۶ requirements ویزای X1 از سایت سفارت را نقل کرده: JW201/JW202، admission letter و یا گواهی سپرده بانکی متناسب با سال‌های باقیمانده یا scholarship certificate."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-VISA-X1-007-E2",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "20952"
+      },
+      "published_at": "2025-08-26",
+      "event_date": "2025-08-26",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "first_hand_embassy_experience",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A first-hand embassy visit listed passport, identity copy, JW, admission, photo, signed visa form and financial proof, while saying full-funding cases did not need separate proof of funds in that experience.",
+        "fa": "یک تجربه مستقیم سفارت، پاسپورت، کپی هویتی، JW، admission، عکس، فرم امضاشده و تمکن را فهرست کرده و گفته در تجربه او فول‌فاند نیاز به تمکن جدا نداشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-VISA-X1-007-E3",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1296"
+      },
+      "published_at": "2025-02-23",
+      "event_date": "2025-02-23",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "historical_community_claim",
+      "summary": {
+        "en": "An early reply similarly said full-funded admission usually reduces or removes the need for separate financial proof, while self-funded cases need case-specific budgeting.",
+        "fa": "پاسخ اولیه نیز گفته فول‌فاند معمولاً نیاز به تمکن جدا را کم/حذف می‌کند ولی self-funded باید موردی بررسی شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-VISA-X1-007-E4",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "24487"
+      },
+      "published_at": "2025-10-08",
+      "event_date": "2025-10-08",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "first_hand_embassy_experience",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A later embassy experience again observed a distinct handling path for student applicants carrying JW documentation.",
+        "fa": "یک تجربه بعدی سفارت نیز مسیر اجرایی جدا برای متقاضیان دانشجویی دارای JW را گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-DOCS-008-E1",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "18807"
+      },
+      "published_at": "2025-08-02",
+      "event_date": "2025-08-02",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "first_hand_application_experience",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A CSC applicant described using the programme's medical and self-declaration/non-criminal forms during initial university and CSC submission.",
+        "fa": "یک متقاضی CSC تجربه استفاده از فرم پزشکی و self-declaration/عدم سوءپیشینه را در اپلای اولیه دانشگاه و CSC توضیح داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-DOCS-008-E2",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "33904"
+      },
+      "published_at": "2026-04-12",
+      "event_date": "2026-04-12",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "first_hand_application_problem",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A doctoral applicant reported that a translated Iranian police-clearance document was rejected as invalid by a university, demonstrating institution-specific criminal-record requirements.",
+        "fa": "یک متقاضی دکتری گزارش کرده ترجمه گواهی عدم سوءپیشینه ایران توسط دانشگاه نامعتبر اعلام شده؛ نشان‌دهنده requirements دانشگاه‌محور است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-DOCS-008-E3",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "34311"
+      },
+      "published_at": "2026-04-29",
+      "event_date": "2026-04-29",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "institution_specific",
+      "summary": {
+        "en": "A later reply warned that at a specific university, missing embassy authentication of the police-clearance document could hold the application even after professor support.",
+        "fa": "پاسخ بعدی هشدار داده در یک دانشگاه مشخص، نبود تأیید سفارت روی سوءپیشینه می‌تواند اپلیکیشن را حتی با اوکی استاد hold کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-DOCS-008-E4",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "37801"
+      },
+      "published_at": "2026-06-30",
+      "event_date": "2026-06-30",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "first_hand_legalization_experience",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A first-hand embassy legalization report listed translated academic documents bearing justice/foreign-ministry stamps, copies, a legalization form and passport copy.",
+        "fa": "یک تجربه مستقیم لگالایز سفارت، ترجمه رسمی مدارک تحصیلی با مهر دادگستری/خارجه، کپی‌ها، فرم لگال و کپی پاسپورت را فهرست کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-DOCS-008-E5",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "34338"
+      },
+      "published_at": "2026-04-29",
+      "event_date": "2026-04-29",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A reply separated early academic/research application documents from identity, medical, police-clearance and translation/legalization materials more commonly needed later for final admission/visa.",
+        "fa": "یک پاسخ مدارک اولیه آکادمیک/پژوهشی را از مدارک هویتی، پزشکی، سوءپیشینه و ترجمه/لگال که بیشتر در مراحل نهایی پذیرش/ویزا لازم می‌شوند تفکیک کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-POSTSTUDY-009-E1",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1381"
+      },
+      "published_at": "2025-02-25",
+      "event_date": "2025-02-25",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "first_hand_poststudy_experience",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A graduate reported only a short interval between receiving the degree and expiry of student status, making job search difficult, and described work-visa renewal rather than automatic permanent residence.",
+        "fa": "یک فارغ‌التحصیل گزارش کرده فاصله کمی بین دریافت مدرک و پایان وضعیت دانشجویی داشته و job search سخت شده؛ همچنین از تمدید ویزای کار به‌جای اقامت دائم خودکار گفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-POSTSTUDY-009-E2",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "806"
+      },
+      "published_at": "2025-02-18",
+      "event_date": "2025-02-18",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "community_success_cases",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Another member reported several acquaintances finding field-related work after graduation and said Chinese-language ability improves the chance.",
+        "fa": "عضو دیگری از چند آشنا با کار مرتبط پس از فارغ‌التحصیلی گفته و زبان چینی را افزایش‌دهنده شانس دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-POSTSTUDY-009-E3",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11148"
+      },
+      "published_at": "2025-05-21",
+      "event_date": "2025-05-21",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "advisor_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "advisor_generalization",
+      "summary": {
+        "en": "An advisor characterized specialized employment after a master's as difficult and saw stronger prospects after a China-based PhD.",
+        "fa": "یک مشاور کار تخصصی پس از مستر را دشوار و چشم‌انداز پس از PhD چین را بهتر توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-POSTSTUDY-009-E4",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11264"
+      },
+      "published_at": "2025-05-22",
+      "event_date": "2025-05-22",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "advisor_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A later reply said post-graduation employment depends on Chinese language, networks, specialization and degree level, with different patterns by field.",
+        "fa": "پاسخ بعدی گفته اشتغال پس از تحصیل به زبان چینی، شبکه ارتباطی، تخصص و مقطع بستگی دارد و بین رشته‌ها متفاوت است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-FAMILY-S1-010-E1",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11545"
+      },
+      "published_at": "2025-05-27",
+      "event_date": "2025-05-27",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "embassy_requirement_quote",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A member quoted S1 embassy requirements for family members, including proof of relationship, invitation and the inviter's passport/residence documentation.",
+        "fa": "یکی از اعضا requirements سفارت برای S1 را نقل کرده که شامل اثبات رابطه، دعوت‌نامه و مدارک پاسپورت/اقامت دعوت‌کننده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-FAMILY-S1-010-E2",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "20006"
+      },
+      "published_at": "2025-08-16",
+      "event_date": "2025-08-16",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "first_hand_or_peer_guidance",
+      "firsthandness": "reported",
+      "evidence_quality": "experience_not_official",
+      "summary": {
+        "en": "A detailed peer message described X1/S1 document handling and said full-funding cases may not need separate family financial proof in that experience.",
+        "fa": "یک پیام تفصیلی درباره مدارک X1/S1 گفته در تجربه مطرح‌شده، فول‌فاند ممکن است نیاز تمکن جدا برای دانشجو/همراه را حذف کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-FAMILY-S1-010-E3",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "26431"
+      },
+      "published_at": "2025-11-09",
+      "event_date": "2025-11-09",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "first_hand_family_problem",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A worker who obtained S1 for a spouse later faced a residence-permit block because the local institution would not issue a letter naming the spouse.",
+        "fa": "فردی که برای همسر S1 گرفته بود بعداً برای residence permit با مشکل مواجه شد چون مؤسسه محلی نامه‌ای با نام همسر صادر نمی‌کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHN-FAMILY-S1-010-E4",
+      "source_id": "china-study-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "40035"
+      },
+      "published_at": "2026-08-06",
+      "event_date": "2026-08-06",
+      "collected_at": "2026-09-17T08:22:00Z",
+      "source_type": "first_hand_family_application",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 applicant described taking copies of the principal's X1/JW documents plus translated/legalized marriage documents and an invitation form for the spouse's S1 application.",
+        "fa": "یک متقاضی در ۲۰۲۶ برای S1 همسر، کپی مدارک X1/JW نفر اصلی، سند ازدواج ترجمه/مهرشده و فرم دعوت‌نامه را گزارش کرده است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "CHN-FUNDING-001",
+      "issue_cluster_id": "CHINA-SCHOLARSHIP-MULTI-LAYER",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-SUPERVISOR-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "CHN-DEADLINE-003"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "csc_university_provincial_stack",
+        "class": "funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "DEPENDANT"
+          ],
+          "codes": [
+            "CSC",
+            "university_scholarship",
+            "provincial_scholarship",
+            "research_funding"
+          ]
+        },
+        "process_stages": [
+          "scholarship_search",
+          "admission",
+          "funding"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "China funding is a multi-layer system—CSC/government, university, provincial and research/supervisor funding—with different portals, quotas and coverage",
+          "fa": "فاند چین یک سیستم چندلایه است—CSC/دولتی، دانشگاهی، استانی و پژوهشی/استادمحور—با پورتال، سهمیه و پوشش متفاوت"
+        },
+        "summary": {
+          "en": "Across 2025-2026 the group repeatedly separates funding types and warns there is no single scholarship portal covering every route. CSC is treated as highly competitive, while university funding can remain a fallback when government funding is not obtained.",
+          "fa": "در ۲۰۲۵–۲۰۲۶ گروه بارها انواع فاند را جدا کرده و تأکید دارد پورتال واحدی برای همه مسیرها نیست. CSC رقابتی توصیف می‌شود و فاند دانشگاهی می‌تواند fallback بعد از نگرفتن فاند دولتی باشد."
+        },
+        "practical_impact": {
+          "en": "Applicants who search only CSC can miss university/provincial funding or different application timing.",
+          "fa": "متقاضی‌ای که فقط CSC را دنبال کند ممکن است فاند دانشگاهی/استانی یا زمان‌بندی متفاوت آن‌ها را از دست بدهد."
+        },
+        "who_should_care": {
+          "en": "Applicants who require substantial funding for China study.",
+          "fa": "متقاضیانی که برای تحصیل چین به فاند جدی نیاز دارند."
+        },
+        "recommended_action": {
+          "en": "Build a funding matrix per university covering CSC route, internal scholarship, provincial funding, coverage and separate deadlines.",
+          "fa": "برای هر دانشگاه ماتریس فاند شامل مسیر CSC، بورسیه داخلی، استانی، پوشش و deadline جدا بسازید."
+        },
+        "known_workaround": "University funding is repeatedly described as a fallback when CSC is not secured."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-FUNDING-001-E1",
+          "relation": "supports",
+          "independence_group": "CHN-FUNDING-001-E1"
+        },
+        {
+          "evidence_id": "CHN-FUNDING-001-E2",
+          "relation": "supports",
+          "independence_group": "CHN-FUNDING-001-E2"
+        },
+        {
+          "evidence_id": "CHN-FUNDING-001-E3",
+          "relation": "supports",
+          "independence_group": "CHN-FUNDING-001-E3"
+        },
+        {
+          "evidence_id": "CHN-FUNDING-001-E4",
+          "relation": "supports",
+          "independence_group": "CHN-FUNDING-001-E4"
+        },
+        {
+          "evidence_id": "CHN-FUNDING-001-E5",
+          "relation": "supports",
+          "independence_group": "CHN-FUNDING-001-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The funding-layer pattern recurs over the full export and includes advisor/admin guidance."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current CSC Type A/B rules, stipend amounts, quotas and scholarship coverage were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-FUNDING-001-E1",
+            "CHN-FUNDING-001-E2",
+            "CHN-FUNDING-001-E3",
+            "CHN-FUNDING-001-E4",
+            "CHN-FUNDING-001-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-study Telegram community export. Some messages quote official/university text, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Scholarship rules and calls change by intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "CSC",
+        "university scholarship",
+        "provincial scholarship",
+        "funding"
+      ],
+      "first_seen": "2025-03-04",
+      "last_seen": "2026-09-08"
+    },
+    {
+      "signal_id": "CHN-SUPERVISOR-002",
+      "issue_cluster_id": "CHINA-SUPERVISOR-PREADMISSION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-FUNDING-001"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "supervisor_support_preadmission",
+        "class": "academic_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "research fields"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "DEPENDANT"
+          ],
+          "codes": [
+            "research_masters",
+            "PhD",
+            "CSC"
+          ]
+        },
+        "process_stages": [
+          "supervisor_outreach",
+          "pre_admission",
+          "scholarship_nomination"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Supervisor support and pre-admission can materially strengthen research-master's/PhD scholarship applications, but they are not the same as final CSC award/admission",
+          "fa": "اوکی استاد و pre-admission می‌تواند اپلای فاند ارشد پژوهشی/PhD را جدی تقویت کند، اما معادل نتیجه نهایی CSC/پذیرش نیست"
+        },
+        "summary": {
+          "en": "The file includes direct university pre-admission correspondence for CSC and a 2026 applicant whose professor encouraged CSC preparation. Community replies consistently treat supervisor support as a strong signal, especially in engineering.",
+          "fa": "فایل ایمیل مستقیم دانشگاه درباره pre-admission برای CSC و کیس ۲۰۲۶ با تشویق استاد به آماده‌سازی CSC دارد. پاسخ‌ها اوکی استاد را مخصوصاً در مهندسی سیگنال قوی می‌دانند."
+        },
+        "practical_impact": {
+          "en": "Applicants should not stop after professor approval; programme/university and scholarship committee steps remain.",
+          "fa": "بعد از اوکی استاد نباید روند را تمام‌شده دانست؛ مراحل دانشگاه و کمیته بورسیه همچنان باقی است."
+        },
+        "who_should_care": {
+          "en": "Research master's/PhD applicants seeking CSC or university funding.",
+          "fa": "متقاضیان ارشد پژوهشی/دکتری دنبال CSC یا فاند دانشگاهی."
+        },
+        "recommended_action": {
+          "en": "Use targeted research-fit outreach, obtain pre-admission/support where available, then complete the formal university/CSC process.",
+          "fa": "مکاتبه research-fit انجام دهید، در صورت امکان pre-admission/support بگیرید و سپس فرایند رسمی دانشگاه/CSC را کامل کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-SUPERVISOR-002-E1",
+          "relation": "supports",
+          "independence_group": "CHN-SUPERVISOR-002-E1"
+        },
+        {
+          "evidence_id": "CHN-SUPERVISOR-002-E2",
+          "relation": "supports",
+          "independence_group": "CHN-SUPERVISOR-002-E2"
+        },
+        {
+          "evidence_id": "CHN-SUPERVISOR-002-E3",
+          "relation": "supports",
+          "independence_group": "CHN-SUPERVISOR-002-E3"
+        },
+        {
+          "evidence_id": "CHN-SUPERVISOR-002-E4",
+          "relation": "supports",
+          "independence_group": "CHN-SUPERVISOR-002-E4"
+        },
+        {
+          "evidence_id": "CHN-SUPERVISOR-002-E5",
+          "relation": "supports",
+          "independence_group": "CHN-SUPERVISOR-002-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct university email plus later first-hand outreach support the distinction between supervisor support and final award."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current university/CSC pre-admission requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-SUPERVISOR-002-E1",
+            "CHN-SUPERVISOR-002-E2",
+            "CHN-SUPERVISOR-002-E3",
+            "CHN-SUPERVISOR-002-E4",
+            "CHN-SUPERVISOR-002-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-study Telegram community export. Some messages quote official/university text, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Supervisor availability and scholarship workflow vary by university.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "supervisor",
+        "pre-admission",
+        "acceptance letter",
+        "CSC"
+      ],
+      "first_seen": "2025-02-16",
+      "last_seen": "2026-08-20"
+    },
+    {
+      "signal_id": "CHN-DEADLINE-003",
+      "issue_cluster_id": "CHINA-DECENTRALIZED-APPLICATION-CALENDAR",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-FUNDING-001"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "university_specific_deadlines_portals",
+        "class": "application"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "DEPENDANT"
+          ],
+          "codes": [
+            "university_admission",
+            "CSC",
+            "internal_scholarship"
+          ]
+        },
+        "process_stages": [
+          "programme_search",
+          "application",
+          "deadline"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "China admissions and scholarship timing are decentralized enough that applicants must track each university portal and deadline separately",
+          "fa": "زمان‌بندی پذیرش و بورسیه چین آن‌قدر دانشگاه‌محور است که باید پورتال و deadline هر دانشگاه جدا track شود"
+        },
+        "summary": {
+          "en": "The group repeatedly rejects a single universal application date. University admissions, internal scholarships and CSC-linked steps can have different timing.",
+          "fa": "گروه بارها تاریخ واحد عمومی را رد می‌کند؛ پذیرش دانشگاه، فاند داخلی و مراحل مرتبط با CSC می‌توانند زمان‌بندی متفاوت داشته باشند."
+        },
+        "practical_impact": {
+          "en": "Relying on a generic 'China deadline' can cause missed university or scholarship windows.",
+          "fa": "اتکا به یک «ددلاین چین» عمومی می‌تواند باعث از دست‌دادن مهلت دانشگاه یا بورسیه شود."
+        },
+        "who_should_care": {
+          "en": "All China study applicants, especially scholarship applicants.",
+          "fa": "همه متقاضیان چین، مخصوصاً متقاضیان بورسیه."
+        },
+        "recommended_action": {
+          "en": "Maintain a university-by-university calendar for admission, internal funding and CSC-related submission.",
+          "fa": "تقویم جدا برای هر دانشگاه شامل admission، فاند داخلی و submission مرتبط با CSC بسازید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-DEADLINE-003-E1",
+          "relation": "supports",
+          "independence_group": "CHN-DEADLINE-003-E1"
+        },
+        {
+          "evidence_id": "CHN-DEADLINE-003-E2",
+          "relation": "supports",
+          "independence_group": "CHN-DEADLINE-003-E2"
+        },
+        {
+          "evidence_id": "CHN-DEADLINE-003-E3",
+          "relation": "supports",
+          "independence_group": "CHN-DEADLINE-003-E3"
+        },
+        {
+          "evidence_id": "CHN-DEADLINE-003-E4",
+          "relation": "supports",
+          "independence_group": "CHN-DEADLINE-003-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same guidance appears from the start through 2026."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No current university deadline was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-DEADLINE-003-E1",
+            "CHN-DEADLINE-003-E2",
+            "CHN-DEADLINE-003-E3",
+            "CHN-DEADLINE-003-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-study Telegram community export. Some messages quote official/university text, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Deadlines change each intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "deadline",
+        "International Admissions",
+        "CSC",
+        "portal"
+      ],
+      "first_seen": "2025-02-16",
+      "last_seen": "2026-09-08"
+    },
+    {
+      "signal_id": "CHN-LANGUAGE-004",
+      "issue_cluster_id": "CHINA-LANGUAGE-PROOF-VARIANCE",
+      "relationships": [],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "programme_specific_language_evidence",
+        "class": "language"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "DEPENDANT"
+          ],
+          "codes": [
+            "English_taught",
+            "Chinese_taught"
+          ]
+        },
+        "process_stages": [
+          "language_proof",
+          "admission",
+          "scholarship"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Language proof is programme-specific: IELTS/TOEFL, HSK, MOI and sometimes interviews appear across the file, while Duolingo/waiver claims conflict",
+          "fa": "مدرک زبان program-specific است: IELTS/TOEFL، HSK، MOI و گاهی مصاحبه در فایل دیده می‌شود و درباره Duolingo/waiver روایت‌ها متناقض‌اند"
+        },
+        "summary": {
+          "en": "The export contains both rigid 'no waiver' claims and university examples accepting different evidence. A 2026 quoted requirement directly separates HSK for Chinese-medium study from TOEFL/IELTS or prior-English-study evidence for English-medium study.",
+          "fa": "فایل هم ادعای سخت‌گیرانه «waiver نداریم» دارد و هم نمونه دانشگاه با evidenceهای متفاوت. requirement نقل‌شده در ۲۰۲۶، HSK را برای Chinese-medium و TOEFL/IELTS یا سابقه تحصیل انگلیسی را برای English-medium جدا کرده است."
+        },
+        "practical_impact": {
+          "en": "Assuming one test works everywhere can make both admission and scholarship applications ineligible.",
+          "fa": "فرض اینکه یک آزمون همه‌جا پذیرفته می‌شود می‌تواند هم پذیرش و هم scholarship application را نامعتبر کند."
+        },
+        "who_should_care": {
+          "en": "Applicants using IELTS, TOEFL, Duolingo, MOI or HSK.",
+          "fa": "متقاضیان با IELTS، TOEFL، Duolingo، MOI یا HSK."
+        },
+        "recommended_action": {
+          "en": "Verify the exact programme and scholarship language rule; do not infer visa or CSC acceptance from university admission alone.",
+          "fa": "قاعده زبان همان program و همان scholarship را چک کنید و پذیرش دانشگاه را به پذیرش ویزا/CSC تعمیم ندهید."
+        },
+        "known_workaround": "Some programmes in the source are reported to accept MOI or interviews, but only when that exact programme permits it."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-LANGUAGE-004-C1",
+          "relation": "contradicts",
+          "independence_group": "CHN-LANGUAGE-004-C1"
+        },
+        {
+          "evidence_id": "CHN-LANGUAGE-004-E1",
+          "relation": "supports",
+          "independence_group": "CHN-LANGUAGE-004-E1"
+        },
+        {
+          "evidence_id": "CHN-LANGUAGE-004-E2",
+          "relation": "supports",
+          "independence_group": "CHN-LANGUAGE-004-E2"
+        },
+        {
+          "evidence_id": "CHN-LANGUAGE-004-E3",
+          "relation": "supports",
+          "independence_group": "CHN-LANGUAGE-004-E3"
+        },
+        {
+          "evidence_id": "CHN-LANGUAGE-004-E4",
+          "relation": "supports",
+          "independence_group": "CHN-LANGUAGE-004-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct quoted university requirements plus contradictory community claims show genuine programme-level variance."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current test acceptance, Duolingo status, MOI and waiver rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-LANGUAGE-004-C1",
+            "CHN-LANGUAGE-004-E1",
+            "CHN-LANGUAGE-004-E2",
+            "CHN-LANGUAGE-004-E3",
+            "CHN-LANGUAGE-004-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-study Telegram community export. Some messages quote official/university text, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Language/test availability and programme policies change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "IELTS",
+        "TOEFL",
+        "Duolingo",
+        "MOI",
+        "HSK"
+      ],
+      "first_seen": "2025-02-16",
+      "last_seen": "2026-06-24"
+    },
+    {
+      "signal_id": "CHN-STUDENT-WORK-005",
+      "issue_cluster_id": "CHINA-INTERNATIONAL-STUDENT-WORK",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-COST-006"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "student_work_permit_friction",
+        "class": "student_employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "DEPENDANT"
+          ],
+          "codes": [
+            "student_work"
+          ]
+        },
+        "process_stages": [
+          "work_permission",
+          "part_time_work",
+          "budgeting"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Student work should be treated as permission-dependent and operationally uncertain, not as a reliable way to finance study in China",
+          "fa": "کار دانشجویی چین باید permit-dependent و از نظر عملی نامطمئن دیده شود، نه منبع قابل‌اتکای تأمین هزینه تحصیل"
+        },
+        "summary": {
+          "en": "The file contains claims that work is possible with permission, warnings about unauthorized work, promotional income estimates, and an advisor's experience that actual university permission was rarely seen around them.",
+          "fa": "فایل هم ادعای امکان کار با مجوز دارد، هم هشدار کار غیرمجاز، هم درآمد تبلیغاتی، و هم تجربه مشاور که در اطرافش عملاً گرفتن مجوز دانشگاه را ندیده است."
+        },
+        "practical_impact": {
+          "en": "Applicants who need part-time earnings to make the budget work face a material risk.",
+          "fa": "متقاضی‌ای که برای عملی‌شدن بودجه به درآمد پاره‌وقت نیاز دارد با ریسک جدی روبه‌روست."
+        },
+        "who_should_care": {
+          "en": "Self-funded or partially funded international students.",
+          "fa": "دانشجویان self-funded یا partial-funded."
+        },
+        "recommended_action": {
+          "en": "Budget as if no part-time income is available until the university/local authority confirms permission in writing.",
+          "fa": "تا زمانی که دانشگاه/مرجع محلی مجوز را مکتوب تأیید نکرده، بودجه را بدون درآمد پاره‌وقت ببندید."
+        },
+        "known_workaround": "On-campus/research-linked work appears more plausible in community discussion than unrestricted general employment."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-STUDENT-WORK-005-E1",
+          "relation": "supports",
+          "independence_group": "CHN-STUDENT-WORK-005-E1"
+        },
+        {
+          "evidence_id": "CHN-STUDENT-WORK-005-C1",
+          "relation": "supports",
+          "independence_group": "CHN-STUDENT-WORK-005-C1"
+        },
+        {
+          "evidence_id": "CHN-STUDENT-WORK-005-E2",
+          "relation": "supports",
+          "independence_group": "CHN-STUDENT-WORK-005-E2"
+        },
+        {
+          "evidence_id": "CHN-STUDENT-WORK-005-C2",
+          "relation": "contradicts",
+          "independence_group": "CHN-STUDENT-WORK-005-C2"
+        },
+        {
+          "evidence_id": "CHN-STUDENT-WORK-005-C3",
+          "relation": "contradicts",
+          "independence_group": "CHN-STUDENT-WORK-005-C3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The repeated contradiction itself is durable; direct advisor experience argues against budgeting on advertised work income."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Chinese student-work permission, hour limits and enforcement were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-STUDENT-WORK-005-E1",
+            "CHN-STUDENT-WORK-005-C1",
+            "CHN-STUDENT-WORK-005-E2",
+            "CHN-STUDENT-WORK-005-C2",
+            "CHN-STUDENT-WORK-005-C3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-study Telegram community export. Some messages quote official/university text, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Student-work rules are time-sensitive and local.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student work",
+        "permission",
+        "part time",
+        "deportation risk",
+        "income"
+      ],
+      "first_seen": "2025-02-15",
+      "last_seen": "2025-10-13"
+    },
+    {
+      "signal_id": "CHN-COST-006",
+      "issue_cluster_id": "CHINA-COST-STIPEND-CITY-GAP",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-FUNDING-001"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "CHN-STUDENT-WORK-005"
+        }
+      ],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "city_dependent_cost_and_stipend_sufficiency",
+        "class": "living_cost"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "DEPENDANT"
+          ],
+          "codes": [
+            "living_cost",
+            "CSC_stipend",
+            "dormitory"
+          ]
+        },
+        "process_stages": [
+          "budgeting",
+          "housing",
+          "funding"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Scholarship sufficiency depends heavily on city, dormitory/housing and lifestyle; stipend numbers cannot be interpreted without the local cost structure",
+          "fa": "کفایت فاند به شهر، خوابگاه/مسکن و سبک زندگی شدیداً وابسته است؛ عدد stipend بدون ساختار هزینه محلی معنی کافی ندارد"
+        },
+        "summary": {
+          "en": "Cost guides show large differences between cheaper and major cities. The group also questions promotional student-job income and repeatedly treats scholarships as central to affordability.",
+          "fa": "راهنماهای هزینه تفاوت زیاد شهرهای ارزان و کلان‌شهرها را نشان می‌دهند. گروه همچنین درآمدهای تبلیغاتی کار دانشجویی را زیر سؤال برده و فاند را محور affordability می‌بیند."
+        },
+        "practical_impact": {
+          "en": "The same scholarship can be comfortable in one city and tight in another.",
+          "fa": "همان scholarship ممکن است در یک شهر کافی و در شهر دیگر محدود باشد."
+        },
+        "who_should_care": {
+          "en": "Applicants comparing offers across Chinese cities.",
+          "fa": "متقاضیانی که offerهای شهرهای مختلف چین را مقایسه می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Calculate a city-specific budget using actual dorm/rent, food, insurance and uncovered university fees before choosing an offer.",
+          "fa": "قبل از انتخاب offer، بودجه شهرمحور با خوابگاه/اجاره واقعی، غذا، بیمه و fees خارج از پوشش بسازید."
+        },
+        "known_workaround": "University dormitory and full scholarship coverage reduce the largest cost exposures."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-COST-006-E1",
+          "relation": "supports",
+          "independence_group": "CHN-COST-006-E1"
+        },
+        {
+          "evidence_id": "CHN-COST-006-E2",
+          "relation": "supports",
+          "independence_group": "CHN-COST-006-E2"
+        },
+        {
+          "evidence_id": "CHN-COST-006-E3",
+          "relation": "supports",
+          "independence_group": "CHN-COST-006-E3"
+        },
+        {
+          "evidence_id": "CHN-COST-006-E4",
+          "relation": "supports",
+          "independence_group": "CHN-COST-006-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The city-cost pattern is clear, but specific price/stipend figures are source estimates and time-sensitive."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current living costs and CSC stipend amounts were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-COST-006-E1",
+            "CHN-COST-006-E2",
+            "CHN-COST-006-E3",
+            "CHN-COST-006-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-study Telegram community export. Some messages quote official/university text, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Prices and scholarship amounts change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "living cost",
+        "dormitory",
+        "CSC stipend",
+        "Beijing",
+        "Shanghai"
+      ],
+      "first_seen": "2025-02-16",
+      "last_seen": "2025-08-26"
+    },
+    {
+      "signal_id": "CHN-VISA-X1-007",
+      "issue_cluster_id": "CHINA-X1-FINANCIAL-PROOF",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-DOCS-008"
+        }
+      ],
+      "classification": {
+        "family": "E3_VISA_ADJUDICATION",
+        "type": "x1_jw_financial_proof_stack",
+        "class": "student_visa"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "DEPENDANT"
+          ],
+          "codes": [
+            "X1",
+            "JW201",
+            "JW202"
+          ]
+        },
+        "process_stages": [
+          "visa_application",
+          "financial_proof",
+          "embassy"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The X1 visa workflow repeatedly centers on JW documentation, admission proof and financial evidence, with scholarship proof potentially substituting for separate bank funds",
+          "fa": "workflow ویزای X1 مکرراً حول JW، admission و evidence مالی می‌چرخد و scholarship proof می‌تواند در بعضی guidanceها جای تمکن بانکی جدا را بگیرد"
+        },
+        "summary": {
+          "en": "A 2026 message directly quotes embassy requirements listing JW201/JW202, admission and either bank deposit or scholarship certificate. First-hand embassy reports also say fully funded students were not asked for separate financial proof in their cases.",
+          "fa": "پیام ۲۰۲۶ requirements سفارت را با JW201/JW202، admission و bank deposit یا scholarship certificate نقل کرده است. تجربه‌های سفارت هم می‌گویند در کیس‌های فول‌فاند تمکن جدا خواسته نشده است."
+        },
+        "practical_impact": {
+          "en": "Admission alone is not enough for X1; the visa-document and funding-evidence stack must be ready.",
+          "fa": "پذیرش به‌تنهایی برای X1 کافی نیست؛ پکیج مدارک و evidence مالی باید آماده باشد."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants preparing an X1 student visa.",
+          "fa": "متقاضیان داخل ایران برای ویزای دانشجویی X1."
+        },
+        "recommended_action": {
+          "en": "Confirm the current embassy checklist and whether your exact scholarship certificate satisfies the financial-proof requirement.",
+          "fa": "چک‌لیست روز سفارت و اینکه scholarship certificate شما دقیقاً شرط تمکن را پوشش می‌دهد بررسی کنید."
+        },
+        "known_workaround": "In source-reported full-funding cases, scholarship documentation replaced separate financial proof."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-VISA-X1-007-E1",
+          "relation": "supports",
+          "independence_group": "CHN-VISA-X1-007-E1"
+        },
+        {
+          "evidence_id": "CHN-VISA-X1-007-E2",
+          "relation": "supports",
+          "independence_group": "CHN-VISA-X1-007-E2"
+        },
+        {
+          "evidence_id": "CHN-VISA-X1-007-E3",
+          "relation": "supports",
+          "independence_group": "CHN-VISA-X1-007-E3"
+        },
+        {
+          "evidence_id": "CHN-VISA-X1-007-E4",
+          "relation": "supports",
+          "independence_group": "CHN-VISA-X1-007-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "A quoted embassy checklist aligns with multiple first-hand embassy experiences."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current X1/JW/financial-proof rules were not independently verified against the live embassy website."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-VISA-X1-007-E1",
+            "CHN-VISA-X1-007-E2",
+            "CHN-VISA-X1-007-E3",
+            "CHN-VISA-X1-007-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-study Telegram community export. Some messages quote official/university text, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Visa document rules can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "X1",
+        "JW201",
+        "JW202",
+        "bank statement",
+        "scholarship certificate"
+      ],
+      "first_seen": "2025-02-23",
+      "last_seen": "2026-07-08"
+    },
+    {
+      "signal_id": "CHN-DOCS-008",
+      "issue_cluster_id": "CHINA-DOCUMENT-LEGALIZATION-FRICTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-VISA-X1-007"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "police_medical_notarization_legalization",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "DEPENDANT"
+          ],
+          "codes": [
+            "university_admission",
+            "CSC",
+            "visa"
+          ]
+        },
+        "process_stages": [
+          "police_clearance",
+          "medical",
+          "notarization",
+          "legalization"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Police-clearance, medical, notarization and legalization requirements are a recurring China application bottleneck and can vary by university/stage",
+          "fa": "سوءپیشینه، پزشکی، notarization و legalization گلوگاه تکرارشونده اپلای چین‌اند و با دانشگاه/مرحله فرق می‌کنند"
+        },
+        "summary": {
+          "en": "The export includes a case where police clearance was rejected by a university, another where missing embassy authentication reportedly held the file, and a detailed first-hand embassy legalization workflow.",
+          "fa": "فایل کیس رد شدن سوءپیشینه توسط دانشگاه، hold شدن پرونده به‌خاطر نبود تأیید سفارت و یک تجربه تفصیلی لگالایز مدارک در سفارت دارد."
+        },
+        "practical_impact": {
+          "en": "A strong academic file can stop for documentary compliance even after professor support.",
+          "fa": "پرونده آکادمیک قوی حتی بعد از اوکی استاد هم می‌تواند به‌خاطر compliance مدارک متوقف شود."
+        },
+        "who_should_care": {
+          "en": "Applicants approaching final university review, CSC or visa stages.",
+          "fa": "متقاضیان نزدیک بررسی نهایی دانشگاه، CSC یا ویزا."
+        },
+        "recommended_action": {
+          "en": "Maintain a stage-specific document checklist and ask the exact university which items need embassy authentication before spending on legalization.",
+          "fa": "چک‌لیست stage-specific بسازید و قبل از هزینه legalization از همان دانشگاه بپرسید کدام مدارک تأیید سفارت می‌خواهند."
+        },
+        "known_workaround": "Some early CSC/university stages may accept programme forms or declarations, with full legalization completed later when required."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-DOCS-008-E1",
+          "relation": "supports",
+          "independence_group": "CHN-DOCS-008-E1"
+        },
+        {
+          "evidence_id": "CHN-DOCS-008-E2",
+          "relation": "supports",
+          "independence_group": "CHN-DOCS-008-E2"
+        },
+        {
+          "evidence_id": "CHN-DOCS-008-E3",
+          "relation": "supports",
+          "independence_group": "CHN-DOCS-008-E3"
+        },
+        {
+          "evidence_id": "CHN-DOCS-008-E4",
+          "relation": "supports",
+          "independence_group": "CHN-DOCS-008-E4"
+        },
+        {
+          "evidence_id": "CHN-DOCS-008-E5",
+          "relation": "supports",
+          "independence_group": "CHN-DOCS-008-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple direct cases show real file holds/rejections and a separate embassy legalization workflow."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current university and embassy legalization requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-DOCS-008-E1",
+            "CHN-DOCS-008-E2",
+            "CHN-DOCS-008-E3",
+            "CHN-DOCS-008-E4",
+            "CHN-DOCS-008-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-study Telegram community export. Some messages quote official/university text, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Document validity/authentication rules can change by institution.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "police clearance",
+        "medical form",
+        "notarized",
+        "legalization",
+        "embassy authentication"
+      ],
+      "first_seen": "2025-08-02",
+      "last_seen": "2026-06-30"
+    },
+    {
+      "signal_id": "CHN-POSTSTUDY-009",
+      "issue_cluster_id": "CHINA-POSTSTUDY-WORK-RESIDENCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-STUDENT-WORK-005"
+        }
+      ],
+      "classification": {
+        "family": "E8_POSTSTUDY_TRANSITION",
+        "type": "job_dependent_poststudy_transition",
+        "class": "poststudy"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "DEPENDANT"
+          ],
+          "codes": [
+            "poststudy_work",
+            "work_visa",
+            "long_term_stay"
+          ]
+        },
+        "process_stages": [
+          "graduation",
+          "job_search",
+          "employment",
+          "residence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Post-study stay in China is job- and profile-dependent rather than an automatic residence pathway; Chinese language, networks, field and degree level materially affect outcomes",
+          "fa": "ماندن بعد از تحصیل در چین job/profile-dependent است نه مسیر خودکار اقامت؛ زبان چینی، شبکه، رشته و مقطع روی outcome اثر جدی دارند"
+        },
+        "summary": {
+          "en": "A first-hand graduate described a very short period before student status expired and ongoing work-visa renewal rather than automatic permanent residence. Other members report successful field-related jobs, especially with Chinese language and stronger research/degree profiles.",
+          "fa": "یک فارغ‌التحصیل از فاصله خیلی کوتاه تا پایان وضعیت دانشجویی و تمدید ویزای کار به‌جای اقامت دائم خودکار گفته است. در مقابل، نمونه‌های کار مرتبط نیز با زبان چینی و پروفایل قوی‌تر گزارش شده‌اند."
+        },
+        "practical_impact": {
+          "en": "Applicants choosing China for migration should evaluate post-study employability separately from scholarship attractiveness.",
+          "fa": "کسی که چین را با هدف مهاجرت انتخاب می‌کند باید employability بعد از تحصیل را جدا از جذابیت فاند بسنجد."
+        },
+        "who_should_care": {
+          "en": "Applicants whose goal includes staying and working in China after graduation.",
+          "fa": "متقاضیانی که هدفشان ماندن و کار در چین بعد از فارغ‌التحصیلی است."
+        },
+        "recommended_action": {
+          "en": "Treat Chinese-language acquisition, networking and employer eligibility as part of the study plan from year one.",
+          "fa": "یادگیری زبان چینی، networking و eligibility کارفرما را از سال اول بخشی از برنامه تحصیل کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-POSTSTUDY-009-E1",
+          "relation": "supports",
+          "independence_group": "CHN-POSTSTUDY-009-E1"
+        },
+        {
+          "evidence_id": "CHN-POSTSTUDY-009-E2",
+          "relation": "supports",
+          "independence_group": "CHN-POSTSTUDY-009-E2"
+        },
+        {
+          "evidence_id": "CHN-POSTSTUDY-009-E3",
+          "relation": "supports",
+          "independence_group": "CHN-POSTSTUDY-009-E3"
+        },
+        {
+          "evidence_id": "CHN-POSTSTUDY-009-E4",
+          "relation": "supports",
+          "independence_group": "CHN-POSTSTUDY-009-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The file preserves both first-hand friction and successful cases, supporting a conditional rather than categorical signal."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Chinese work-visa, post-study and permanent-residence rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-POSTSTUDY-009-E1",
+            "CHN-POSTSTUDY-009-E2",
+            "CHN-POSTSTUDY-009-E3",
+            "CHN-POSTSTUDY-009-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-study Telegram community export. Some messages quote official/university text, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Employment and residence policies are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "post-study",
+        "work visa",
+        "Chinese language",
+        "job search",
+        "permanent residence"
+      ],
+      "first_seen": "2025-02-18",
+      "last_seen": "2025-05-22"
+    },
+    {
+      "signal_id": "CHN-FAMILY-S1-010",
+      "issue_cluster_id": "CHINA-STUDENT-FAMILY-S1",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHN-VISA-X1-007"
+        }
+      ],
+      "classification": {
+        "family": "E7_DEPENDANTS_FAMILY",
+        "type": "s1_family_residence_document_chain",
+        "class": "family"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Spouse/family accompaniment"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "DEPENDANT"
+          ],
+          "codes": [
+            "S1",
+            "dependant"
+          ]
+        },
+        "process_stages": [
+          "family_application",
+          "relationship_documents",
+          "residence_permit"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Bringing family through S1 adds a separate document and residence-permit workflow; obtaining the entry visa does not guarantee smooth in-country residence conversion",
+          "fa": "همراه‌بردن خانواده با S1 یک workflow جدا برای مدارک و residence permit دارد؛ گرفتن ویزای ورود تضمین نمی‌کند تبدیل اقامت داخل چین بدون مشکل باشد"
+        },
+        "summary": {
+          "en": "The source quotes relationship/invitation/residence-document requirements and contains a first-hand case where an S1 spouse later could not obtain a residence permit because the local institution would not issue the needed letter.",
+          "fa": "فایل requirements رابطه/دعوت‌نامه/مدارک اقامت را نقل کرده و یک کیس مستقیم دارد که همسر با S1 داخل چین به‌دلیل صادرنشدن نامه لازم از مؤسسه، برای residence permit گیر کرده است."
+        },
+        "practical_impact": {
+          "en": "Family plans can fail after arrival even when the initial S1 visa was issued.",
+          "fa": "برنامه خانواده می‌تواند بعد از ورود گیر کند حتی اگر ویزای S1 اولیه صادر شده باشد."
+        },
+        "who_should_care": {
+          "en": "Students or workers planning to bring spouse/children to China.",
+          "fa": "دانشجویان/کارکنانی که قصد بردن همسر یا فرزند به چین دارند."
+        },
+        "recommended_action": {
+          "en": "Before travel, confirm both the embassy S1 checklist and the local institution/immigration documents needed for the spouse's residence permit after arrival.",
+          "fa": "قبل از سفر، هم چک‌لیست سفارت برای S1 و هم مدارک موردنیاز مؤسسه/مهاجرت محلی برای residence permit همراه را تأیید کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHN-FAMILY-S1-010-E1",
+          "relation": "supports",
+          "independence_group": "CHN-FAMILY-S1-010-E1"
+        },
+        {
+          "evidence_id": "CHN-FAMILY-S1-010-E2",
+          "relation": "supports",
+          "independence_group": "CHN-FAMILY-S1-010-E2"
+        },
+        {
+          "evidence_id": "CHN-FAMILY-S1-010-E3",
+          "relation": "supports",
+          "independence_group": "CHN-FAMILY-S1-010-E3"
+        },
+        {
+          "evidence_id": "CHN-FAMILY-S1-010-E4",
+          "relation": "supports",
+          "independence_group": "CHN-FAMILY-S1-010-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "A first-hand residence-permit failure plus multiple document-chain reports support the signal."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current S1 eligibility, document and residence-permit conversion rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHN-FAMILY-S1-010-E1",
+            "CHN-FAMILY-S1-010-E2",
+            "CHN-FAMILY-S1-010-E3",
+            "CHN-FAMILY-S1-010-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded China-study Telegram community export. Some messages quote official/university text, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Family/immigration rules vary locally and can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "S1",
+        "spouse",
+        "family",
+        "residence permit",
+        "invitation letter"
+      ],
+      "first_seen": "2025-05-27",
+      "last_seen": "2026-08-06"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram usernames/IDs, phone numbers and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 19,776 records, including 19,756 message records."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the complete reply graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Generic destination promotion, service sales and unsupported income/funding claims were excluded or down-weighted."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated funding, supervisor, deadline, language, student-work, cost, visa, legalization, post-study and S1 discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Contradictions on language-test acceptance, student-work feasibility and post-study outcomes are preserved."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "Quoted embassy/university text remains source-reported; no current official rule was independently web-verified in this extraction-only run."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote deduplication/merge was not completed."
+      },
+      "duplicate_source_detection": {
+        "status": "pass",
+        "note": "This upload is byte-for-byte identical to the previously processed China-study export; the verified signal set was reproduced without inventing deltas.",
+        "sha256": "9e0aa516b4829c962e13c640d4ba5704bbc80bbbd51d7af30a5f539b6698eb9f"
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community planning evidence only. This is not an official source for CSC, university scholarships, Chinese student-work permissions, language-test acceptance, X1/S1 visa rules, document legalization, work visas or permanent residence. Verify current requirements with the relevant university, CSC and Chinese authorities before acting."
+}

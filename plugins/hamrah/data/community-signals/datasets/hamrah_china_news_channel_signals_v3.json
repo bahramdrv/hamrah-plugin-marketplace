@@ -1,0 +1,2038 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_china_news_public_channel_signals_candidate",
+    "generated_at": "2026-09-17T08:28:11Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "china-news-pargar-public-channel",
+      "name": "result(20260917-082421).json / Telegram export «اخبار چین با پرگار»",
+      "source_type": "public_channel_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-02-08",
+        "to": "2026-09-16",
+        "records_available": 714,
+        "records_processed": 714,
+        "message_records": 703
+      },
+      "source_characteristics": {
+        "public_channel": true,
+        "china_migration_study_focused": true,
+        "contains_promotional_posts": true,
+        "contains_official_source_links": true,
+        "contains_policy_news_and_analysis": true,
+        "contains_service_promotions": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "CHNNEWS-FUND-001-E1",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5"
+      },
+      "published_at": "2025-02-13",
+      "event_date": "2025-02-13",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "channel_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The channel separated China funding into CSC, university, provincial, Confucius/language-related and supervisor/research funding.",
+        "fa": "کانال فاند چین را به CSC، دانشگاهی، استانی، بورسیه‌های مرتبط با زبان/کنفوسیوس و فاند استاد/پژوهش تفکیک کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-FUND-001-E2",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "180"
+      },
+      "published_at": "2025-07-04",
+      "event_date": "2025-07-04",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "promotional_application_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_amounts_unverified",
+      "summary": {
+        "en": "A later application guide again separated CSC from university and other funding and described full-funding components for graduate applicants.",
+        "fa": "راهنمای بعدی اپلای دوباره CSC را از فاند دانشگاهی و سایر مسیرها جدا کرده و اجزای فول‌فاند را برای تحصیلات تکمیلی توضیح داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-FUND-001-E3",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "725"
+      },
+      "published_at": "2026-07-30",
+      "event_date": "2026-07-30",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "promotional_success_case",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_case_unverified",
+      "summary": {
+        "en": "The channel advertised a USTC master's admission with ANSO full funding, showing that non-CSC specialist funding also appears in the source.",
+        "fa": "کانال یک کیس تبلیغاتی پذیرش ارشد USTC با فول‌فاند ANSO منتشر کرده که نشان می‌دهد مسیرهای تخصصی غیر-CSC هم در فایل دیده می‌شوند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-FUND-001-E4",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "738"
+      },
+      "published_at": "2026-08-14",
+      "event_date": "2026-08-14",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "channel_update",
+      "firsthandness": "reported",
+      "evidence_quality": "programme_specific_unverified",
+      "summary": {
+        "en": "An August 2026 post explicitly rejected the idea that CSC is the only route and pointed to central-government, provincial and university scholarships at Xiamen University.",
+        "fa": "پست اوت ۲۰۲۶ صریحاً ایده «فقط CSC» را رد کرده و در Xiamen University از بورسیه دولت مرکزی، استانی و خود دانشگاه گفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-DEADLINE-002-E1",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "604"
+      },
+      "published_at": "2025-12-25",
+      "event_date": "2025-12-25",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "channel_application_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A December 2025 guide described autumn admission, spring admission and different deadline windows for self-funded, CSC and university/provincial scholarship routes.",
+        "fa": "راهنمای دسامبر ۲۰۲۵ برای پذیرش پاییز/بهار و self-funded، CSC و بورسیه دانشگاهی/استانی windowهای زمانی متفاوت تعریف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-DEADLINE-002-E2",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "655"
+      },
+      "published_at": "2026-02-18",
+      "event_date": "2026-02-18",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "official_linked_news_roundup",
+      "firsthandness": "reported",
+      "evidence_quality": "source_embeds_official_link",
+      "summary": {
+        "en": "A February 2026 roundup linked official ECUST information with separate deadlines for Chinese Government Scholarship, Shanghai Government Scholarship and self-funded admission.",
+        "fa": "خبرنامه فوریه ۲۰۲۶ با لینک رسمی ECUST deadlineهای جدا برای CGS، Shanghai Government Scholarship و self-funded را آورده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-DEADLINE-002-E3",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "655"
+      },
+      "published_at": "2026-02-18",
+      "event_date": "2026-02-18",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "official_linked_news_roundup",
+      "firsthandness": "reported",
+      "evidence_quality": "source_embeds_official_link",
+      "summary": {
+        "en": "The same roundup linked Donghua University's 2026 guide and described a separate timeline for entrance scholarships, self-funded admission and later JW document issuance.",
+        "fa": "همان خبرنامه با لینک راهنمای Donghua در ۲۰۲۶، timeline جدا برای entrance scholarship، self-funded و صدور بعدی JW را شرح داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-LANG-003-E1",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "559"
+      },
+      "published_at": "2025-12-06",
+      "event_date": "2025-12-06",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "university_profile",
+      "firsthandness": "reported",
+      "evidence_quality": "programme_profile_unverified",
+      "summary": {
+        "en": "A Tsinghua profile listed IELTS/TOEFL for English-taught programmes and HSK for Chinese-taught programmes, with programme-level variation.",
+        "fa": "پروفایل Tsinghua برای برنامه انگلیسی IELTS/TOEFL و برای برنامه چینی HSK را مطرح کرده و به تفاوت program-level اشاره دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-LANG-003-E2",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "655"
+      },
+      "published_at": "2026-02-18",
+      "event_date": "2026-02-18",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "official_linked_news_roundup",
+      "firsthandness": "reported",
+      "evidence_quality": "source_embeds_official_link",
+      "summary": {
+        "en": "The ECUST 2026 item linked an official admissions page and said language evidence differs between Chinese-taught and English-taught programmes.",
+        "fa": "آیتم ECUST در ۲۰۲۶ با لینک رسمی گفته evidence زبان بین برنامه‌های چینی و انگلیسی متفاوت است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-LANG-003-E3",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "724"
+      },
+      "published_at": "2026-07-30",
+      "event_date": "2026-07-30",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "university_profile",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A Tongji 2026 profile highlighted that some civil-engineering programmes were available in English, reinforcing programme-level language variation.",
+        "fa": "پروفایل Tongji برای ۲۰۲۶ گفته بعضی برنامه‌های عمران به انگلیسی ارائه می‌شوند و variability زبان در سطح program را تقویت می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-WORK-004-E1",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6"
+      },
+      "published_at": "2025-02-13",
+      "event_date": "2025-02-13",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "channel_living_cost_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_income_unverified",
+      "summary": {
+        "en": "The channel said off-campus part-time work requires a student work permit and also advertised student-job income estimates.",
+        "fa": "کانال گفته کار پاره‌وقت خارج دانشگاه نیاز به student work permit دارد و همزمان ارقام درآمد کار دانشجویی را تبلیغ کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-WORK-004-E2",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "603"
+      },
+      "published_at": "2025-12-25",
+      "event_date": "2025-12-25",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "cross_channel_destination_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "cross_destination_context",
+      "summary": {
+        "en": "A later Asia-study post again framed student work as permit-based rather than automatic, suggesting the channel consistently distinguishes work permission from student status.",
+        "fa": "پست بعدی درباره تحصیل در آسیا نیز کار دانشجویی را مبتنی بر work permit دانسته و نشان می‌دهد کانال حق کار را خودکار فرض نمی‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-WORK-004-E3",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "188"
+      },
+      "published_at": "2025-07-06",
+      "event_date": "2025-07-06",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "channel_cost_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "cost_estimate_unverified",
+      "summary": {
+        "en": "A later cost guide argued that scholarship stipends can cover basic living costs, making student employment less central to the budget.",
+        "fa": "راهنمای هزینه بعدی ادعا کرده stipend بورسیه می‌تواند هزینه پایه را پوشش دهد و در نتیجه کار دانشجویی نباید ستون اصلی بودجه باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-X1-005-E1",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "655"
+      },
+      "published_at": "2026-02-18",
+      "event_date": "2026-02-18",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "official_linked_news_roundup",
+      "firsthandness": "reported",
+      "evidence_quality": "source_embeds_official_link",
+      "summary": {
+        "en": "A February 2026 item explicitly warned that China's visa-free entry policy for certain passports does not replace X1/X2 student-visa requirements.",
+        "fa": "آیتم فوریه ۲۰۲۶ صریحاً گفته ورود بدون ویزا برای بعضی پاسپورت‌ها جایگزین ویزای دانشجویی X1/X2 نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-X1-005-E2",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "655"
+      },
+      "published_at": "2026-02-18",
+      "event_date": "2026-02-18",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "official_linked_news_roundup",
+      "firsthandness": "reported",
+      "evidence_quality": "source_embeds_official_link",
+      "summary": {
+        "en": "The Donghua 2026 guide referenced later issuance of JW documentation after admission processing.",
+        "fa": "راهنمای Donghua در ۲۰۲۶ به صدور JW در مرحله بعد از روند پذیرش اشاره کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-X1-005-E3",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "15"
+      },
+      "published_at": "2025-02-17",
+      "event_date": "2025-02-17",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "programme_visa_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "general_channel_guide",
+      "summary": {
+        "en": "An early pharmacy-study guide described X1 student-visa requirements as a separate step after admission.",
+        "fa": "راهنمای اولیه تحصیل داروسازی، ویزای X1 را مرحله‌ای جدا بعد از پذیرش توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-CONSULAR-006-E1",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "313"
+      },
+      "published_at": "2025-08-24",
+      "event_date": "2025-08-24",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "channel_consular_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "single_source_observation",
+      "summary": {
+        "en": "In August 2025 the channel reported long queues outside the Chinese embassy in Tehran and framed appointment access as a bottleneck under rising demand.",
+        "fa": "در اوت ۲۰۲۵ کانال از صف‌های طولانی سفارت چین در تهران گزارش داده و دسترسی به وقت را گلوگاه ناشی از افزایش تقاضا توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-CONSULAR-006-E2",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "319"
+      },
+      "published_at": "2025-08-25",
+      "event_date": "2025-08-25",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "channel_consular_update",
+      "firsthandness": "reported",
+      "evidence_quality": "reported_embassy_statement",
+      "summary": {
+        "en": "A follow-up said the embassy stated visa issuance continued and applicants were advised to apply well before travel.",
+        "fa": "پست بعدی گفته سفارت ادامه روند صدور ویزا را اعلام کرده و توصیه شده متقاضیان زودتر از سفر اقدام کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-CONSULAR-006-E3",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "698"
+      },
+      "published_at": "2026-07-11",
+      "event_date": "2026-07-11",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "channel_consular_update",
+      "firsthandness": "reported",
+      "evidence_quality": "reported_embassy_statement",
+      "summary": {
+        "en": "In July 2026 the channel said the Chinese embassy in Iran would resume consular services from July 8, 2026.",
+        "fa": "در ژوئیه ۲۰۲۶ کانال گفته سفارت چین در ایران خدمات کنسولی را از ۸ ژوئیه ۲۰۲۶ از سر می‌گیرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-TECH-007-E1",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "229"
+      },
+      "published_at": "2025-07-22",
+      "event_date": "2025-07-22",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "promotional_programme_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_programme_claims",
+      "summary": {
+        "en": "A smart-city study post connected Chinese university programmes to IoT, green infrastructure, intelligent transport and industry-linked research.",
+        "fa": "پست تحصیل شهر هوشمند، برنامه‌های دانشگاهی چین را به IoT، زیرساخت سبز، حمل‌ونقل هوشمند و پژوهش متصل به صنعت پیوند داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-TECH-007-E2",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "709"
+      },
+      "published_at": "2026-07-22",
+      "event_date": "2026-07-22",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "lab_opportunity_post",
+      "firsthandness": "reported",
+      "evidence_quality": "opportunity_post_unverified",
+      "summary": {
+        "en": "A 2026 laboratory post described recruitment for microfluidics, nanomedicine, AI in medicine and theranostics, with Iranian universities explicitly mentioned among preferred talent pools.",
+        "fa": "پست آزمایشگاهی ۲۰۲۶ جذب در میکروفلوئیدیک، نانودارو، AI پزشکی و theranostics را مطرح کرده و دانشگاه‌های ایران را در talent pool موردنظر نام برده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-TECH-007-E3",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "724"
+      },
+      "published_at": "2026-07-30",
+      "event_date": "2026-07-30",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "university_profile",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Tongji was profiled around civil engineering, architecture, transport, intelligent construction, AI and industry-linked urban fields.",
+        "fa": "Tongji حول عمران، معماری، حمل‌ونقل، intelligent construction، AI و حوزه‌های شهری متصل به صنعت معرفی شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-TECH-007-E4",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "769"
+      },
+      "published_at": "2026-09-10",
+      "event_date": "2026-09-10",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "channel_analysis_with_sources",
+      "firsthandness": "reported",
+      "evidence_quality": "channel_analysis_with_external_sources",
+      "summary": {
+        "en": "A September 2026 analysis connected China's R&D investment, AI/EV/battery/robotics sectors and university-industry links to study-migration attractiveness.",
+        "fa": "تحلیل سپتامبر ۲۰۲۶ سرمایه‌گذاری R&D چین، AI/EV/باتری/رباتیک و ارتباط دانشگاه-صنعت را به جذابیت تحصیل/مهاجرت وصل کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-POSTSTUDY-008-E1",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "684"
+      },
+      "published_at": "2026-06-10",
+      "event_date": "2026-06-10",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "channel_positioning",
+      "firsthandness": "reported",
+      "evidence_quality": "channel_positioning",
+      "summary": {
+        "en": "The channel explicitly reframed China as a 'launchpad' for later academic, professional and commercial opportunities rather than primarily a permanent-residence destination.",
+        "fa": "کانال صریحاً چین را بیشتر «سکوی پرتاب» برای فرصت‌های بعدی علمی/شغلی/تجاری معرفی کرده تا مقصد اصلی اقامت دائم."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-POSTSTUDY-008-E2",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "111"
+      },
+      "published_at": "2025-06-07",
+      "event_date": "2025-06-07",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "promotional_career_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_poststudy_claim",
+      "summary": {
+        "en": "A career guide claimed that graduates can work in China and that Chinese-language skill creates an advantage in trade and business roles.",
+        "fa": "راهنمای شغلی ادعا کرده فارغ‌التحصیلان می‌توانند در چین کار کنند و زبان چینی در تجارت/بیزنس مزیت ایجاد می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-POSTSTUDY-008-E3",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "485"
+      },
+      "published_at": "2025-11-10",
+      "event_date": "2025-11-10",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "work_visa_news",
+      "firsthandness": "reported",
+      "evidence_quality": "policy_news_unverified",
+      "summary": {
+        "en": "A November 2025 post introduced China's new K visa as a technology-talent route without an initial job offer, while acknowledging uncertainty around long-term residence, family support and citizenship.",
+        "fa": "پست نوامبر ۲۰۲۵ ویزای K چین را مسیر استعداد فناوری بدون جاب‌آفر اولیه معرفی کرده و همزمان ابهام اقامت بلندمدت، خانواده و شهروندی را پذیرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-PAYMENT-009-E1",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "53"
+      },
+      "published_at": "2025-03-18",
+      "event_date": "2025-03-18",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "service_promotion",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_but_operational",
+      "summary": {
+        "en": "The channel promoted third-party foreign-currency payment support for applicants dealing with embassy and university payments during exchange-rate stress.",
+        "fa": "کانال سرویس پرداخت ارزی شخص ثالث را برای پرداخت‌های دانشگاه/سفارت در دوره فشار نرخ ارز تبلیغ کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-PAYMENT-009-E2",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "478"
+      },
+      "published_at": "2025-11-06",
+      "event_date": "2025-11-06",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "service_promotion",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_but_operational",
+      "summary": {
+        "en": "A later post again promoted outbound foreign-currency payments for university and embassy applications, indicating persistent payment friction for Iran-based applicants.",
+        "fa": "پست بعدی دوباره پرداخت ارزی برای دانشگاه/سفارت را تبلیغ کرده و نشان‌دهنده استمرار اصطکاک پرداخت برای متقاضی داخل ایران است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHNNEWS-PAYMENT-009-E3",
+      "source_id": "china-news-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "743"
+      },
+      "published_at": "2026-08-15",
+      "event_date": "2026-08-15",
+      "collected_at": "2026-09-17T08:28:11Z",
+      "source_type": "service_cross_promotion",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_but_operational",
+      "summary": {
+        "en": "A 2026 cross-promotion bundled application, visa and foreign-currency payment support together, again treating payment access as part of the migration execution stack.",
+        "fa": "کراس‌پروموشن ۲۰۲۶ اپلای، ویزا و پرداخت ارزی را در یک پکیج عملیاتی کنار هم گذاشته و دسترسی پرداخت را بخشی از execution stack مهاجرت می‌بیند."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "CHNNEWS-FUND-001",
+      "issue_cluster_id": "CHINA-MULTI-LAYER-SCHOLARSHIP",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHNNEWS-DEADLINE-002"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "csc_university_provincial_specialist_stack",
+        "class": "funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "CSC",
+            "university_scholarship",
+            "provincial_scholarship",
+            "specialist_scholarship"
+          ]
+        },
+        "process_stages": [
+          "scholarship_search",
+          "admission",
+          "funding"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "China funding is repeatedly presented as a multi-layer stack rather than a CSC-only route",
+          "fa": "فاند چین بارها به‌صورت stack چندلایه مطرح شده، نه فقط مسیر CSC"
+        },
+        "summary": {
+          "en": "The channel repeatedly separates CSC, university, provincial and specialist/research funding. By 2026 it explicitly warns that a suitable scholarship may be outside CSC.",
+          "fa": "کانال بارها CSC، فاند دانشگاهی، استانی و تخصصی/پژوهشی را جدا کرده و در ۲۰۲۶ صریحاً گفته گزینه مناسب ممکن است اصلاً CSC نباشد."
+        },
+        "practical_impact": {
+          "en": "Applicants who only track CSC can miss alternative awards with different coverage and deadlines.",
+          "fa": "کسی که فقط CSC را دنبال کند ممکن است فاندهای جایگزین با پوشش و deadline متفاوت را از دست بدهد."
+        },
+        "who_should_care": {
+          "en": "Applicants who require substantial funding.",
+          "fa": "متقاضیان نیازمند فاند جدی."
+        },
+        "recommended_action": {
+          "en": "For each university, check central-government, provincial/city, university and specialist scholarship layers separately.",
+          "fa": "برای هر دانشگاه، فاند دولت مرکزی، استان/شهر، خود دانشگاه و بورسیه تخصصی را جدا بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHNNEWS-FUND-001-E1",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-FUND-001-E1"
+        },
+        {
+          "evidence_id": "CHNNEWS-FUND-001-E2",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-FUND-001-E2"
+        },
+        {
+          "evidence_id": "CHNNEWS-FUND-001-E3",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-FUND-001-E3"
+        },
+        {
+          "evidence_id": "CHNNEWS-FUND-001-E4",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-FUND-001-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same multi-layer structure recurs from 2025 through 2026."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current scholarship coverage and eligibility were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHNNEWS-FUND-001-E1",
+            "CHNNEWS-FUND-001-E2",
+            "CHNNEWS-FUND-001-E3",
+            "CHNNEWS-FUND-001-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Official links embedded in some posts were not independently opened/verified in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Scholarship calls change by intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "CSC",
+        "university scholarship",
+        "provincial scholarship",
+        "ANSO"
+      ],
+      "first_seen": "2025-02-13",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "signal_id": "CHNNEWS-DEADLINE-002",
+      "issue_cluster_id": "CHINA-SCHOLARSHIP-DEADLINE-SEGMENTATION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHNNEWS-FUND-001"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "route_specific_deadlines",
+        "class": "application"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "self_funded",
+            "CSC",
+            "university_scholarship",
+            "provincial_scholarship"
+          ]
+        },
+        "process_stages": [
+          "deadline",
+          "application",
+          "JW_issuance"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Admission and scholarship deadlines are route- and university-specific; self-funded, CSC and local/university awards follow different calendars",
+          "fa": "ددلاین پذیرش و بورسیه route-specific و university-specific است؛ self-funded، CSC و فاند محلی/دانشگاهی تقویم یکسان ندارند"
+        },
+        "summary": {
+          "en": "The channel repeatedly distinguishes autumn/spring intake and separate funding windows. Official-linked 2026 university posts show materially different deadlines for government, municipal and self-funded routes.",
+          "fa": "کانال intake پاییز/بهار و windowهای فاند را جدا می‌کند. پست‌های ۲۰۲۶ دارای لینک رسمی دانشگاه deadlineهای واقعاً متفاوت برای دولتی، شهری و self-funded نشان می‌دهند."
+        },
+        "practical_impact": {
+          "en": "A single generic 'China deadline' is unsafe for planning.",
+          "fa": "یک «ددلاین چین» عمومی برای برنامه‌ریزی امن نیست."
+        },
+        "who_should_care": {
+          "en": "All China study applicants.",
+          "fa": "همه متقاضیان تحصیل چین."
+        },
+        "recommended_action": {
+          "en": "Maintain a university-level calendar for admission, scholarship and visa-document issuance.",
+          "fa": "برای هر دانشگاه تقویم جدا برای admission، scholarship و صدور مدارک ویزا بسازید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHNNEWS-DEADLINE-002-E1",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-DEADLINE-002-E1"
+        },
+        {
+          "evidence_id": "CHNNEWS-DEADLINE-002-E2",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-DEADLINE-002-E2"
+        },
+        {
+          "evidence_id": "CHNNEWS-DEADLINE-002-E3",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-DEADLINE-002-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The segmentation recurs and is supported by official-linked university notices."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Exact current deadlines were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHNNEWS-DEADLINE-002-E1",
+            "CHNNEWS-DEADLINE-002-E2",
+            "CHNNEWS-DEADLINE-002-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Official links embedded in some posts were not independently opened/verified in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Deadlines change every intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "deadline",
+        "CSC",
+        "CGS",
+        "SGS",
+        "self-funded",
+        "JW"
+      ],
+      "first_seen": "2025-12-25",
+      "last_seen": "2026-02-18"
+    },
+    {
+      "signal_id": "CHNNEWS-LANG-003",
+      "issue_cluster_id": "CHINA-PROGRAMME-LANGUAGE-REQUIREMENTS",
+      "relationships": [],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "programme_language_specificity",
+        "class": "language"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "English_taught",
+            "Chinese_taught"
+          ]
+        },
+        "process_stages": [
+          "programme_selection",
+          "language_proof"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Language requirements are programme-specific: English-taught and Chinese-taught routes use different proof standards",
+          "fa": "requirements زبان program-specific است؛ مسیر انگلیسی و چینی evidence متفاوت می‌خواهند"
+        },
+        "summary": {
+          "en": "The channel's university profiles repeatedly distinguish IELTS/TOEFL for English-taught study and HSK for Chinese-taught study, with minimums varying by programme.",
+          "fa": "پروفایل‌های دانشگاهی کانال بارها IELTS/TOEFL را برای English-taught و HSK را برای Chinese-taught جدا کرده و minimum را program-dependent نشان می‌دهند."
+        },
+        "practical_impact": {
+          "en": "Applicants cannot safely reuse one language assumption across universities or programmes.",
+          "fa": "نمی‌توان یک فرض زبان را برای همه دانشگاه‌ها/programها تعمیم داد."
+        },
+        "who_should_care": {
+          "en": "Applicants choosing between English- and Chinese-taught programmes.",
+          "fa": "متقاضیان بین برنامه‌های انگلیسی و چینی."
+        },
+        "recommended_action": {
+          "en": "Verify the exact programme's accepted test and minimum score before scholarship submission.",
+          "fa": "قبل از scholarship submission، آزمون و حداقل نمره همان program را چک کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHNNEWS-LANG-003-E1",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-LANG-003-E1"
+        },
+        {
+          "evidence_id": "CHNNEWS-LANG-003-E2",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-LANG-003-E2"
+        },
+        {
+          "evidence_id": "CHNNEWS-LANG-003-E3",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-LANG-003-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The pattern is repeated, but programme-specific requirements remain unverified here."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current programme language thresholds were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHNNEWS-LANG-003-E1",
+            "CHNNEWS-LANG-003-E2",
+            "CHNNEWS-LANG-003-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Official links embedded in some posts were not independently opened/verified in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Programme requirements change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "IELTS",
+        "TOEFL",
+        "HSK",
+        "English-taught"
+      ],
+      "first_seen": "2025-12-06",
+      "last_seen": "2026-07-30"
+    },
+    {
+      "signal_id": "CHNNEWS-WORK-004",
+      "issue_cluster_id": "CHINA-STUDENT-WORK-PERMIT",
+      "relationships": [],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "student_work_permission_dependency",
+        "class": "student_employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_work"
+          ]
+        },
+        "process_stages": [
+          "work_permit",
+          "part_time_work",
+          "budgeting"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel consistently treats student work as permit-dependent; advertised income should not be treated as guaranteed budget support",
+          "fa": "کانال کار دانشجویی را permit-dependent می‌داند؛ درآمدهای تبلیغ‌شده نباید پشتوانه قطعی بودجه فرض شوند"
+        },
+        "summary": {
+          "en": "The channel says off-campus work requires a permit, while its income figures are promotional and not independently verified. Scholarship/living-cost posts imply funding should remain the primary budget base.",
+          "fa": "کانال کار بیرون دانشگاه را نیازمند مجوز می‌داند، اما ارقام درآمدش تبلیغاتی و تأییدنشده‌اند. پست‌های فاند/هزینه هم نشان می‌دهند پایه بودجه بهتر است خود فاند باشد."
+        },
+        "practical_impact": {
+          "en": "Students who require part-time income to make the budget viable face risk.",
+          "fa": "دانشجویی که برای عملی‌شدن بودجه به کار پاره‌وقت وابسته است ریسک دارد."
+        },
+        "who_should_care": {
+          "en": "Self-funded or partial-funded students.",
+          "fa": "دانشجویان self-funded یا partial-funded."
+        },
+        "recommended_action": {
+          "en": "Budget without student-job income until work permission and a realistic local opportunity are confirmed.",
+          "fa": "تا تأیید مجوز و فرصت واقعی محلی، بودجه را بدون درآمد کار دانشجویی ببندید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHNNEWS-WORK-004-E1",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-WORK-004-E1"
+        },
+        {
+          "evidence_id": "CHNNEWS-WORK-004-E2",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-WORK-004-E2"
+        },
+        {
+          "evidence_id": "CHNNEWS-WORK-004-E3",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-WORK-004-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Permit dependency is repeated, while earnings claims are promotional."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current work-permit rules and hour/income limits were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHNNEWS-WORK-004-E1",
+            "CHNNEWS-WORK-004-E2",
+            "CHNNEWS-WORK-004-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Official links embedded in some posts were not independently opened/verified in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Student work rules can change and may be locally administered.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student work",
+        "work permit",
+        "part-time"
+      ],
+      "first_seen": "2025-02-13",
+      "last_seen": "2025-12-25"
+    },
+    {
+      "signal_id": "CHNNEWS-X1-005",
+      "issue_cluster_id": "CHINA-X1-VISA-DOCUMENT-CHAIN",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHNNEWS-CONSULAR-006"
+        }
+      ],
+      "classification": {
+        "family": "E3_VISA_ADJUDICATION",
+        "type": "x1_x2_distinct_from_short_stay",
+        "class": "student_visa"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "X1",
+            "X2",
+            "JW"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "visa_document",
+          "student_visa"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Student entry remains a distinct X1/X2 workflow even when China expands visa-free short-stay access for other passport categories",
+          "fa": "ورود دانشجویی workflow جداگانه X1/X2 دارد حتی وقتی چین ورود کوتاه‌مدت بدون ویزا را برای بعضی پاسپورت‌ها گسترش می‌دهد"
+        },
+        "summary": {
+          "en": "A 2026 official-linked news item explicitly states that visa-free entry does not replace X1/X2, and a university guide separately schedules JW document issuance after admission processing.",
+          "fa": "خبر ۲۰۲۶ دارای لینک رسمی صریحاً می‌گوید visa-free جای X1/X2 را نمی‌گیرد و راهنمای دانشگاه نیز صدور JW را مرحله‌ای جدا بعد از admission می‌داند."
+        },
+        "practical_impact": {
+          "en": "Applicants must complete the student-visa document chain rather than relying on tourist/visa-free entry logic.",
+          "fa": "متقاضی باید زنجیره مدارک ویزای دانشجویی را کامل کند و به منطق tourist/visa-free اتکا نکند."
+        },
+        "who_should_care": {
+          "en": "Applicants preparing to enter China for degree study.",
+          "fa": "متقاضیان ورود به چین برای تحصیل دانشگاهی."
+        },
+        "recommended_action": {
+          "en": "Track admission letter, JW documentation and the current X1/X2 checklist as separate steps.",
+          "fa": "admission letter، JW و چک‌لیست روز X1/X2 را مراحل جدا track کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHNNEWS-X1-005-E1",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-X1-005-E1"
+        },
+        {
+          "evidence_id": "CHNNEWS-X1-005-E2",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-X1-005-E2"
+        },
+        {
+          "evidence_id": "CHNNEWS-X1-005-E3",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-X1-005-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The distinction is explicit in an official-linked 2026 post."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current X1/X2/JW requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHNNEWS-X1-005-E1",
+            "CHNNEWS-X1-005-E2",
+            "CHNNEWS-X1-005-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Official links embedded in some posts were not independently opened/verified in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Visa requirements are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "X1",
+        "X2",
+        "JW",
+        "visa-free"
+      ],
+      "first_seen": "2025-02-17",
+      "last_seen": "2026-02-18"
+    },
+    {
+      "signal_id": "CHNNEWS-CONSULAR-006",
+      "issue_cluster_id": "CHINA-IRAN-CONSULAR-CAPACITY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHNNEWS-X1-005"
+        }
+      ],
+      "classification": {
+        "family": "E3_VISA_ADJUDICATION",
+        "type": "tehran_consular_capacity_disruption",
+        "class": "consular_access"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Applying from Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_visa",
+            "consular_services"
+          ]
+        },
+        "process_stages": [
+          "appointment",
+          "consular_processing"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Iran-based applicants faced consular-capacity volatility: queue pressure in 2025 and a documented channel report of service resumption in July 2026",
+          "fa": "متقاضیان داخل ایران با نوسان ظرفیت کنسولی روبه‌رو بوده‌اند: فشار صف در ۲۰۲۵ و گزارش بازگشایی خدمات در ژوئیه ۲۰۲۶"
+        },
+        "summary": {
+          "en": "The channel reported heavy Tehran queues in August 2025, then later said the embassy would resume consular services from July 8, 2026. This supports treating consular continuity as an operational risk.",
+          "fa": "کانال در اوت ۲۰۲۵ از صف سنگین تهران و بعد در ژوئیه ۲۰۲۶ از ازسرگیری خدمات کنسولی از ۸ ژوئیه خبر داده است؛ پس continuity سفارت یک ریسک عملیاتی است."
+        },
+        "practical_impact": {
+          "en": "Even a complete admission file can be delayed by local consular capacity or service interruption.",
+          "fa": "حتی پرونده پذیرش کامل ممکن است به‌خاطر ظرفیت یا وقفه خدمات کنسولی عقب بیفتد."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants with China visa deadlines.",
+          "fa": "متقاضیان داخل ایران با deadline ویزای چین."
+        },
+        "recommended_action": {
+          "en": "Leave consular buffer time and verify current embassy service status before committing to travel dates.",
+          "fa": "برای سفارت buffer زمانی بگذارید و قبل از قطعی‌کردن سفر، وضعیت روز خدمات را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHNNEWS-CONSULAR-006-E1",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-CONSULAR-006-E1"
+        },
+        {
+          "evidence_id": "CHNNEWS-CONSULAR-006-E2",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-CONSULAR-006-E2"
+        },
+        {
+          "evidence_id": "CHNNEWS-CONSULAR-006-E3",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-CONSULAR-006-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The channel documents both capacity pressure and later service resumption."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current embassy service status as of 2026-09-17 was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHNNEWS-CONSULAR-006-E1",
+            "CHNNEWS-CONSULAR-006-E2",
+            "CHNNEWS-CONSULAR-006-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Official links embedded in some posts were not independently opened/verified in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "Consular operations can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "China embassy Iran",
+        "Tehran",
+        "consular services",
+        "visa queue"
+      ],
+      "first_seen": "2025-08-24",
+      "last_seen": "2026-07-11"
+    },
+    {
+      "signal_id": "CHNNEWS-TECH-007",
+      "issue_cluster_id": "CHINA-RESEARCH-INDUSTRY-STUDY-ALIGNMENT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHNNEWS-POSTSTUDY-008"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "tech_research_industry_alignment",
+        "class": "study_to_industry"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "engineering",
+            "AI",
+            "biotech",
+            "smart_city",
+            "advanced_materials"
+          ]
+        },
+        "process_stages": [
+          "programme_selection",
+          "research",
+          "lab_opportunity",
+          "industry_link"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel's strongest study-to-industry positioning is concentrated in engineering, AI, biotech, smart infrastructure and other applied research fields",
+          "fa": "قوی‌ترین positioning تحصیل→صنعت کانال در مهندسی، AI، بیوتک، زیرساخت هوشمند و پژوهش‌های کاربردی متمرکز است"
+        },
+        "summary": {
+          "en": "Repeated university/lab profiles emphasize applied labs, industry collaboration and technology sectors rather than generic degree value. A 2026 lab post even named Iranian universities among desired talent sources.",
+          "fa": "پروفایل‌های تکراری دانشگاه/lab روی آزمایشگاه کاربردی، همکاری صنعت و سکتورهای فناوری تأکید دارند نه صرفاً ارزش عمومی مدرک. یک پست lab در ۲۰۲۶ حتی دانشگاه‌های ایران را در talent source نام برده است."
+        },
+        "practical_impact": {
+          "en": "Applicants can improve fit by selecting programmes with visible lab/industry pathways instead of ranking alone.",
+          "fa": "متقاضی می‌تواند به‌جای ranking صرف، program دارای مسیر روشن lab/industry را انتخاب کند."
+        },
+        "who_should_care": {
+          "en": "STEM and applied-research applicants.",
+          "fa": "متقاضیان STEM و پژوهش کاربردی."
+        },
+        "recommended_action": {
+          "en": "Prioritize programme/lab fit and verify current projects, supervisors and industry links before applying.",
+          "fa": "فیت program/lab را اولویت دهید و پروژه، استاد و ارتباط صنعت روز را قبل از اپلای بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHNNEWS-TECH-007-E1",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-TECH-007-E1"
+        },
+        {
+          "evidence_id": "CHNNEWS-TECH-007-E2",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-TECH-007-E2"
+        },
+        {
+          "evidence_id": "CHNNEWS-TECH-007-E3",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-TECH-007-E3"
+        },
+        {
+          "evidence_id": "CHNNEWS-TECH-007-E4",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-TECH-007-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The theme is pervasive, but individual opportunity and employment claims are not independently verified."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current lab vacancies, industry partnerships and labour outcomes were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHNNEWS-TECH-007-E1",
+            "CHNNEWS-TECH-007-E2",
+            "CHNNEWS-TECH-007-E3",
+            "CHNNEWS-TECH-007-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Official links embedded in some posts were not independently opened/verified in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Projects and hiring demand evolve.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "AI",
+        "biotech",
+        "smart city",
+        "lab",
+        "industry"
+      ],
+      "first_seen": "2025-07-22",
+      "last_seen": "2026-09-10"
+    },
+    {
+      "signal_id": "CHNNEWS-POSTSTUDY-008",
+      "issue_cluster_id": "CHINA-POSTSTUDY-NOT-AUTOMATIC-PR",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHNNEWS-TECH-007"
+        }
+      ],
+      "classification": {
+        "family": "E8_POSTSTUDY_TRANSITION",
+        "type": "career_launchpad_vs_permanent_residence",
+        "class": "poststudy"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "poststudy_work",
+            "work_visa",
+            "K_visa"
+          ]
+        },
+        "process_stages": [
+          "graduation",
+          "employment",
+          "long_term_stay"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel increasingly frames China as a career/research launchpad rather than an automatic permanent-residence destination",
+          "fa": "کانال بیشتر چین را سکوی پرتاب شغلی/پژوهشی می‌بیند تا مسیر خودکار اقامت دائم"
+        },
+        "summary": {
+          "en": "A 2026 post explicitly says many students use China to build academic/industry experience rather than seek permanent residence. A K-visa post also acknowledged unresolved questions around long-term residence, family and citizenship.",
+          "fa": "پست ۲۰۲۶ صریحاً می‌گوید بسیاری چین را برای ساخت تجربه علمی/صنعتی می‌خواهند نه PR. پست K-visa نیز ابهام اقامت بلندمدت، خانواده و شهروندی را پذیرفته است."
+        },
+        "practical_impact": {
+          "en": "Scholarship attractiveness should not be confused with a guaranteed settlement pathway.",
+          "fa": "جذابیت scholarship نباید با تضمین settlement اشتباه گرفته شود."
+        },
+        "who_should_care": {
+          "en": "Applicants whose long-term goal is permanent migration.",
+          "fa": "متقاضیانی که هدف بلندمدتشان مهاجرت دائمی است."
+        },
+        "recommended_action": {
+          "en": "Evaluate the degree as an academic/career asset first and separately verify any work-visa or long-term-residence pathway.",
+          "fa": "اول مدرک را asset علمی/شغلی ببینید و مسیر work visa/long-term residence را جدا verify کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHNNEWS-POSTSTUDY-008-E1",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-POSTSTUDY-008-E1"
+        },
+        {
+          "evidence_id": "CHNNEWS-POSTSTUDY-008-E2",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-POSTSTUDY-008-E2"
+        },
+        {
+          "evidence_id": "CHNNEWS-POSTSTUDY-008-E3",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-POSTSTUDY-008-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The channel itself contains both optimistic career claims and explicit acknowledgement that permanent residence is not automatic."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current work-visa, K-visa and permanent-residence rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHNNEWS-POSTSTUDY-008-E1",
+            "CHNNEWS-POSTSTUDY-008-E2",
+            "CHNNEWS-POSTSTUDY-008-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Official links embedded in some posts were not independently opened/verified in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Work/residence categories are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "post-study",
+        "K visa",
+        "work visa",
+        "permanent residence"
+      ],
+      "first_seen": "2025-07-02",
+      "last_seen": "2026-06-10"
+    },
+    {
+      "signal_id": "CHNNEWS-PAYMENT-009",
+      "issue_cluster_id": "IRAN-CHINA-CROSSBORDER-PAYMENT",
+      "relationships": [],
+      "classification": {
+        "family": "E15_FINANCIAL_INFRASTRUCTURE",
+        "type": "third_party_fx_payment_dependency",
+        "class": "payment"
+      },
+      "scope": {
+        "destination": {
+          "country": "China",
+          "country_code": "CHN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Applying from Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "application_payment",
+            "university_payment",
+            "embassy_payment"
+          ]
+        },
+        "process_stages": [
+          "payment",
+          "application_execution"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Foreign-currency payment access is treated as an operational dependency for Iran-based China applicants",
+          "fa": "دسترسی به پرداخت ارزی برای متقاضی داخل ایران یک وابستگی عملیاتی پرونده چین است"
+        },
+        "summary": {
+          "en": "The channel repeatedly markets third-party payment services specifically for university and embassy transactions, indicating persistent payment friction even though provider claims are promotional.",
+          "fa": "کانال بارها سرویس پرداخت شخص ثالث را مشخصاً برای دانشگاه و سفارت تبلیغ می‌کند؛ نشانه استمرار اصطکاک پرداخت، هرچند ادعاهای provider تبلیغاتی‌اند."
+        },
+        "practical_impact": {
+          "en": "Applications can stall at fee/payment steps even when documents are ready.",
+          "fa": "پرونده با مدارک آماده هم ممکن است در مرحله fee/payment متوقف شود."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants with foreign-currency fees.",
+          "fa": "متقاضیان داخل ایران با fees ارزی."
+        },
+        "recommended_action": {
+          "en": "Confirm a compliant payment route before fee deadlines and independently compare provider fees/terms.",
+          "fa": "قبل از deadline پرداخت، مسیر compliant را قطعی و fee/terms provider را مستقل مقایسه کنید."
+        },
+        "known_workaround": "Third-party FX/payment intermediaries are the recurring workaround in this source."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHNNEWS-PAYMENT-009-E1",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-PAYMENT-009-E1"
+        },
+        {
+          "evidence_id": "CHNNEWS-PAYMENT-009-E2",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-PAYMENT-009-E2"
+        },
+        {
+          "evidence_id": "CHNNEWS-PAYMENT-009-E3",
+          "relation": "supports",
+          "independence_group": "CHNNEWS-PAYMENT-009-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Repeated payment-service promotion implies persistent demand; provider savings claims are not trusted."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No provider compliance, fee or savings claim was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHNNEWS-PAYMENT-009-E1",
+            "CHNNEWS-PAYMENT-009-E2",
+            "CHNNEWS-PAYMENT-009-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded public Telegram channel. Official links embedded in some posts were not independently opened/verified in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Payment access can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "foreign currency payment",
+        "university fee",
+        "embassy payment",
+        "Iran"
+      ],
+      "first_seen": "2025-03-18",
+      "last_seen": "2026-08-15"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, usernames, phone numbers and direct contacts are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 714 records, including 703 message records."
+      },
+      "source_type_classification": {
+        "status": "pass",
+        "note": "Treated as a public branded channel rather than peer-to-peer community discussion."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Generic destination hype, rankings, consultancy sales and unsupported superlatives were excluded or down-weighted."
+      },
+      "official_link_posts_separated": {
+        "status": "pass",
+        "note": "Posts embedding official university/government links are marked but remain not independently verified."
+      },
+      "contradictions_preserved": {
+        "status": "pass",
+        "note": "Optimistic student-work/post-study claims are not elevated into official rules; long-term residence is kept separate from study/career value."
+      },
+      "current_rule_verification": {
+        "status": "not_run",
+        "note": "This extraction run did not browse current official China/embassy/university sources."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Source-derived public-channel signals only. They are not official China scholarship, university admission, language, student-work, X1/X2/JW, embassy, work-visa, K-visa, permanent-residence or payment-provider rules. Verify current requirements with the relevant university and Chinese authority before acting."
+}

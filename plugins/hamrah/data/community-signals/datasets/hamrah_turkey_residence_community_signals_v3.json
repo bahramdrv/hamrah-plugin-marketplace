@@ -1,0 +1,2223 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_turkey_residence_signals_candidate",
+    "generated_at": "2026-09-16T13:26:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "turkey-residence-telegram-export",
+      "name": "result(20260916-132558).json / Telegram export «اقامت در ترکیه»",
+      "source_type": "private_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-13",
+        "records_available": 661,
+        "records_processed": 661
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "contains_first_hand_applicant_reports": true,
+        "contains_second_hand_guidance": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "TUR-RES-TOURIST-RENEWAL-001-E1",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42238"
+      },
+      "published_at": "2025-08-24",
+      "event_date": "2025-08-24",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community reply said first-time tourist residence could still be possible but had become difficult and usually required financial evidence; renewal was described as nearly impossible.",
+        "fa": "یک پاسخ گروه گفته اقامت توریستی بار اول هنوز ممکن است اما سخت‌تر شده و معمولاً تمکن می‌خواهد؛ تمدید تقریباً بسیار دشوار توصیف شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-TOURIST-RENEWAL-001-E2",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42244"
+      },
+      "published_at": "2025-08-24",
+      "event_date": "2025-08-24",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "family_case_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user described relatives who obtained two six-month tourist permits with financial evidence but were rejected on a later attempt.",
+        "fa": "یک کاربر از بستگانی گفته که دو بار اقامت شش‌ماهه توریستی با تمکن گرفته‌اند اما در اقدام بعدی رد شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-TOURIST-RENEWAL-001-C1",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42235"
+      },
+      "published_at": "2025-08-23",
+      "event_date": "2025-08-23",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another reply claimed new tourist residence was effectively unavailable to Iranians, contradicting the more nuanced first-time-possible reports.",
+        "fa": "پاسخ دیگری ادعا کرده اقامت توریستی جدید عملاً به ایرانی‌ها داده نمی‌شود؛ این با گزارش‌های «بار اول هنوز ممکن است» تناقض دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-RENTAL-ROUTE-002-E1",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "41926"
+      },
+      "published_at": "2025-06-30",
+      "event_date": "2025-06-30",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An applicant asked whether rental housing alone still supported residence and whether language-college registration could be used instead.",
+        "fa": "متقاضی پرسیده آیا اجاره خانه به‌تنهایی هنوز برای اقامت کافی است و آیا ثبت‌نام کالج زبان می‌تواند جایگزین باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-RENTAL-ROUTE-002-E2",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "41957"
+      },
+      "published_at": "2025-07-03",
+      "event_date": "2025-07-03",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community response said a rental contract alone was no longer treated as sufficient and pointed to study, property ownership or work as the common residence bases.",
+        "fa": "یک پاسخ گروه گفته اجاره‌نامه به‌تنهایی دیگر برای اقامت کافی تلقی نمی‌شود و مسیرهای رایج را تحصیلی، ملکی یا کاری معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-RENTAL-ROUTE-002-E3",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "41806"
+      },
+      "published_at": "2025-05-12",
+      "event_date": "2025-05-12",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A separate user asked whether short-term residence could still be obtained through renting plus language study, showing continued uncertainty around the old rental-based route.",
+        "fa": "کاربر دیگری درباره امکان اقامت کوتاه‌مدت از طریق اجاره و دوره زبان پرسیده که نشان‌دهنده ابهام ادامه‌دار درباره مسیر قدیمی اجاره است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-STUDENT-DURATION-003-E1",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "41185"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A student asked whether buying two years of insurance could lead to a two-year student residence permit instead of annual renewal.",
+        "fa": "یک دانشجو پرسیده آیا بیمه دوساله می‌تواند به اقامت دانشجویی دوساله به‌جای تمدید سالانه منجر شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-STUDENT-DURATION-003-E2",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "41207"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_experience_summary",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said acquaintances had received durations ranging from six months to two years, implying permit length was not determined by insurance term alone.",
+        "fa": "پاسخ گفته در میان آشنایان مدت کارت از شش ماه تا دو سال متفاوت بوده و مدت اقامت صرفاً با مدت بیمه تعیین نمی‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-STUDENT-DURATION-003-E3",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "43382"
+      },
+      "published_at": "2026-07-06",
+      "event_date": "2026-07-06",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later 2026 reply described student/family residence as something commonly renewed each year.",
+        "fa": "یک پاسخ در ۲۰۲۶ اقامت دانشجویی/خانوادگی را در عمل نیازمند تمدید سالانه توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-STUDENT-FUNDS-004-E1",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42105"
+      },
+      "published_at": "2025-07-18",
+      "event_date": "2025-07-18",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A student asked whether Iranian applicants were required to show financial proof for the student residence card.",
+        "fa": "یک دانشجو پرسیده آیا برای کارت اقامت دانشجویی از ایرانی‌ها تمکن مالی خواسته می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-STUDENT-FUNDS-004-E2",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42106"
+      },
+      "published_at": "2025-07-18",
+      "event_date": "2025-07-18",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "first_hand_student_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "One student said neither they nor a friend were asked for financial proof, while explicitly noting they could not generalize the rule.",
+        "fa": "یک دانشجو گفته نه از خودش و نه از دوستش تمکن نخواسته‌اند، اما صریحاً گفته نمی‌تواند این را قاعده قطعی بداند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-STUDENT-FUNDS-004-E3",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "43380"
+      },
+      "published_at": "2026-07-06",
+      "event_date": "2026-07-06",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later response on family/student residence suggested showing bank funds or scholarship evidence to demonstrate financial sufficiency.",
+        "fa": "پاسخ دیگری درباره اقامت دانشجو/خانواده توصیه کرده برای اثبات توان مالی، موجودی بانکی یا بورسیه ارائه شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-STUDENT-FUNDS-004-E4",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "43468"
+      },
+      "published_at": "2026-07-29",
+      "event_date": "2026-07-29",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 response recommended putting as much financial evidence as possible in the file, including bank funds and local assets, because the reviewer may assess ability to cover a year of living costs.",
+        "fa": "پاسخ ۲۰۲۶ توصیه کرده مدارک مالی بیشتری مثل موجودی بانک و دارایی‌های داخل ترکیه ضمیمه شود چون بررسی‌کننده ممکن است توان پوشش هزینه یک‌سال زندگی را بسنجد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-STUDENT-FAMILY-005-E1",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42358"
+      },
+      "published_at": "2025-09-10",
+      "event_date": "2025-09-10",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community answer said student family residence could cover spouse and children under 18, not wider relatives.",
+        "fa": "یک پاسخ گروه گفته پیوست دانشجو می‌تواند همسر و فرزندان زیر ۱۸ سال را پوشش دهد، نه بستگان گسترده‌تر."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-STUDENT-FAMILY-005-E2",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42272"
+      },
+      "published_at": "2025-08-28",
+      "event_date": "2025-08-28",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A student applying for residence said their spouse was being added as a dependant and they had been told an authenticated marriage certificate was required.",
+        "fa": "یک دانشجو در حال اقدام گفته همسرش به‌عنوان پیوست اضافه می‌شود و برای پرونده سند ازدواج با تأییدیه خواسته‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-STUDENT-FAMILY-005-E3",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "43046"
+      },
+      "published_at": "2026-02-09",
+      "event_date": "2026-02-09",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "first_hand_family_case",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A master's student arriving with spouse and child reported uncertainty around address restrictions, apartment suitability and how those rules affect dependant residence.",
+        "fa": "یک دانشجوی ارشد با همسر و فرزند درباره محدودیت محله، مناسب‌بودن خانه و اثر این موارد بر اقامت پیوست گزارش ابهام کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-STUDENT-FAMILY-005-Q1",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "43566"
+      },
+      "published_at": "2026-08-26",
+      "event_date": "2026-08-26",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply said there did not appear to be a legal bar on undergraduate students sponsoring a spouse, but the speaker was unsure and asked others to confirm.",
+        "fa": "پاسخ بعدی گفته ظاهراً منع قانونی برای پیوست همسر دانشجوی کارشناسی وجود ندارد، اما گوینده مطمئن نبوده و درخواست تأیید کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-ADDRESS-006-E1",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42122"
+      },
+      "published_at": "2025-07-19",
+      "event_date": "2025-07-19",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user said students were believed to be able to rent in otherwise restricted neighborhoods, while noting this was based on their understanding rather than personal experience.",
+        "fa": "یک کاربر گفته بر اساس اطلاعش دانشجوها می‌توانند در بعضی مناطق ممنوعه هم اجاره کنند، اما تجربه مستقیم نداشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-ADDRESS-006-E2",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42159"
+      },
+      "published_at": "2025-07-27",
+      "event_date": "2025-07-27",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another reply similarly said student applicants were not subject to restricted-neighborhood rules to the best of the speaker's knowledge.",
+        "fa": "پاسخ دیگری نیز گفته تا جایی که اطلاع دارد دانشجوها مشمول محدودیت محله ممنوعه نیستند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-ADDRESS-006-E3",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42133"
+      },
+      "published_at": "2025-07-23",
+      "event_date": "2025-07-23",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "first_hand_housing_search",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A student searching for housing specifically wanted a property that could be notarized and allow a utility bill in their name, showing address-document practicality matters.",
+        "fa": "یک دانشجو در جست‌وجوی خانه مشخصاً ملکی می‌خواسته که امکان نوتر و قبض به نام خودش داشته باشد؛ یعنی مدارک آدرس در عمل اهمیت دارند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-ADDRESS-006-E4",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "43046"
+      },
+      "published_at": "2026-02-09",
+      "event_date": "2026-02-09",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "first_hand_family_case",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A 2026 dependant case reported conflicting advice on whether restricted neighborhoods, distance from university and apartment characteristics would affect the family residence application.",
+        "fa": "یک پرونده پیوست در ۲۰۲۶ از توصیه‌های متناقض درباره محله ممنوعه، فاصله از دانشگاه و مشخصات خانه خبر داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-PROPERTY-007-E1",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "41983"
+      },
+      "published_at": "2025-07-07",
+      "event_date": "2025-07-07",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A user asked whether property-based residence was still available.",
+        "fa": "یک کاربر پرسیده آیا اقامت از طریق خرید ملک هنوز برقرار است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-PROPERTY-007-E2",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "41990"
+      },
+      "published_at": "2025-07-08",
+      "event_date": "2025-07-08",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In reply to a threshold question, a user affirmed a community benchmark of about USD 200,000 for the property route at that time.",
+        "fa": "در پاسخ به سؤال درباره حد ارزش ملک، کاربر معیار کامیونیتی حدود ۲۰۰ هزار دلار را در آن مقطع تأیید کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-PROPERTY-007-E3",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42421"
+      },
+      "published_at": "2025-09-16",
+      "event_date": "2025-09-16",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply still listed property residence alongside study and work as one of the main practical residence bases.",
+        "fa": "پاسخ بعدی اقامت ملکی را در کنار تحصیل و کار یکی از مبناهای اصلی اقامت معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-RES-PROPERTY-007-E4",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42971"
+      },
+      "published_at": "2026-01-27",
+      "event_date": "2026-01-27",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A January 2026 reply estimated that obtaining residence after property purchase could take up to roughly three months.",
+        "fa": "یک پاسخ ژانویه ۲۰۲۶ زمان اخذ اقامت بعد از خرید ملک را تا حدود سه ماه برآورد کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-WORK-PERMIT-FRICTION-008-E1",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "43498"
+      },
+      "published_at": "2026-08-04",
+      "event_date": "2026-08-04",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "first_hand_jobseeker_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A graduate student said the core problem was not only finding work but whether employers would handle the work-permit process for a foreign hire.",
+        "fa": "یک دانشجوی ارشد گفته مسئله اصلی فقط پیدا کردن کار نیست، بلکه این است که آیا کارفرما حاضر است فرایند مجوز کار خارجی را انجام دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-WORK-PERMIT-FRICTION-008-E2",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "43499"
+      },
+      "published_at": "2026-08-04",
+      "event_date": "2026-08-04",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A reply said finding an employer willing to obtain a permit was harder than finding work itself.",
+        "fa": "یک پاسخ گفته پیدا کردن کارفرمایی که حاضر باشد مجوز کار بگیرد از خود پیدا کردن کار سخت‌تر است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-WORK-PERMIT-FRICTION-008-E3",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "43507"
+      },
+      "published_at": "2026-08-04",
+      "event_date": "2026-08-04",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user explained that the employer obtains the work permit and that the burden varies by sector and qualification-document complexity.",
+        "fa": "یک کاربر توضیح داده مجوز کار را کارفرما می‌گیرد و سختی آن بر اساس سکتور و پیچیدگی مدارک تخصصی فرق می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-WORK-PERMIT-FRICTION-008-E4",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "43528"
+      },
+      "published_at": "2026-08-19",
+      "event_date": "2026-08-19",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_experience_summary",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user described a case where someone worked informally for years before the employer later obtained a formal work permit, attributing delay to the extra employer cost/burden for foreign workers.",
+        "fa": "یک کاربر از فردی گفته که چند سال غیررسمی کار کرده و بعد کارفرما برایش چالیشما ایزنی گرفته؛ هزینه و دردسر بیشتر استخدام خارجی به‌عنوان عامل تأخیر مطرح شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-WORK-PERMIT-FRICTION-008-Q1",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "43605"
+      },
+      "published_at": "2026-09-04",
+      "event_date": "2026-09-04",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_report_of_official_guidance",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A 2026 discussion said overseas applicants can in principle be processed after contract registration by the employer, challenging employers who insist the worker must already hold Turkish residence.",
+        "fa": "گفتگوی ۲۰۲۶ گفته متقاضی خارج از ترکیه می‌تواند اصولاً پس از ثبت قرارداد توسط کارفرما وارد فرایند شود؛ این ادعای بعضی کارفرماها که حتماً باید از قبل اقامت داشته باشید را به چالش می‌کشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-WORK-LANGUAGE-009-E1",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "41894"
+      },
+      "published_at": "2025-06-23",
+      "event_date": "2025-06-23",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "first_hand_jobseeker_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A job seeker in Alanya said they had English around B1 but no Turkish and saw language as the main obstacle to finding local work.",
+        "fa": "یک جوینده کار در آلانیا گفته انگلیسی حدود B1 دارد اما ترکی بلد نیست و زبان را مانع اصلی ورود به کار محلی می‌بیند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-WORK-LANGUAGE-009-E2",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "41900"
+      },
+      "published_at": "2025-06-25",
+      "event_date": "2025-06-25",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said Turkish was effectively essential both for skilled work and for many informal/general jobs, alongside experience or practical skills.",
+        "fa": "یک پاسخ گفته زبان ترکی عملاً هم برای کار تخصصی و هم بسیاری از کارهای جنرال/غیررسمی لازم است و سابقه یا مهارت عملی هم اهمیت دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-WORK-LANGUAGE-009-E3",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "43513"
+      },
+      "published_at": "2026-08-07",
+      "event_date": "2026-08-07",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 response said general jobs and some English-teaching work may be found, but networking and local presence materially help for skilled roles.",
+        "fa": "پاسخ ۲۰۲۶ گفته کار جنرال و بعضی تدریس‌های زبان ممکن است پیدا شود، اما برای کار تخصصی حضور محلی و نتورکینگ اهمیت زیادی دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-LIFE-BANKING-010-E1",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42055"
+      },
+      "published_at": "2025-07-15",
+      "event_date": "2025-07-15",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A user asked whether foreigners could open a Turkish bank account and obtain bank evidence for proof of funds.",
+        "fa": "یک کاربر پرسیده آیا خارجی‌ها می‌توانند در ترکیه حساب باز کنند و از آن برای تمکن بانکی استفاده کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-LIFE-BANKING-010-E2",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42057"
+      },
+      "published_at": "2025-07-15",
+      "event_date": "2025-07-15",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said Ziraat was believed to be the main option without residence, while having a residence card broadened choices.",
+        "fa": "یک پاسخ گفته بدون اقامت، زراعت گزینه اصلی تصور می‌شود و داشتن کیملیک انتخاب‌ها را بیشتر می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-LIFE-BANKING-010-E3",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42060"
+      },
+      "published_at": "2025-07-15",
+      "event_date": "2025-07-15",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "first_hand_banking_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another resident corrected that even with a residence card many branches/banks refuse foreigners; only a limited set of banks had opened accounts in their experience.",
+        "fa": "فرد دیگری از تجربه مستقیم گفته حتی با کیملیک خیلی از بانک‌ها یا شعبه‌ها حساب خارجی باز نمی‌کنند و فقط چند بانک محدود پذیرفته‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-LIFE-BANKING-010-E4",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42142"
+      },
+      "published_at": "2025-07-23",
+      "event_date": "2025-07-23",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "first_hand_banking_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user reported opening both Ziraat and İş Bank accounts through a lawyer without a residence card.",
+        "fa": "یک کاربر گزارش کرده از طریق وکیل و بدون کارت اقامت هم در زراعت و هم ایش‌بانک حساب باز کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-LIFE-BANKING-010-E5",
+      "source_id": "turkey-residence-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "42323"
+      },
+      "published_at": "2025-09-04",
+      "event_date": "2025-09-04",
+      "collected_at": "2026-09-16T13:26:00Z",
+      "source_type": "first_hand_banking_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user reported being charged about 5,000 TRY at VakıfBank to open/activate an account, while replies showed branch-to-branch disagreement over whether such charges were normal.",
+        "fa": "یک کاربر گفته واکیف‌بانک برای افتتاح/فعال‌سازی حساب حدود ۵۰۰۰ لیر گرفته و پاسخ‌ها نشان داده‌اند درباره عادی بودن این هزینه بین شعب/افراد اختلاف وجود دارد."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "TUR-RES-TOURIST-RENEWAL-001",
+      "issue_cluster_id": "TUR-TOURIST-RESIDENCE-RENEWAL",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-RES-RENTAL-ROUTE-002"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "tourist_residence_renewal_friction",
+        "class": "residence"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "SHORT-TERM RESIDENCE"
+          ],
+          "codes": [
+            "tourist_residence"
+          ]
+        },
+        "process_stages": [
+          "initial_application",
+          "renewal",
+          "financial_evidence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Tourist residence appears materially harder to renew than to obtain initially",
+          "fa": "طبق تجربه گروه، تمدید اقامت توریستی به‌مراتب سخت‌تر از اقدام اولیه شده است"
+        },
+        "summary": {
+          "en": "Community reports conflict on whether new permits are broadly available, but converge on high friction: first-time applications may still succeed with financial evidence, while repeated renewals are reported as much harder and sometimes rejected.",
+          "fa": "گزارش‌ها درباره امکان بار اول کاملاً هم‌نظر نیستند، اما روی سخت‌شدن مسیر اتفاق نظر دارند: بار اول ممکن است با تمکن انجام شود، ولی تمدیدهای مکرر بسیار سخت‌تر و گاهی رد گزارش شده‌اند."
+        },
+        "practical_impact": {
+          "en": "Applicants should not build a long-term plan around serial tourist-residence renewals.",
+          "fa": "نباید برنامه بلندمدت را بر تمدیدهای پیاپی اقامت توریستی بنا کرد."
+        },
+        "who_should_care": {
+          "en": "Iranians staying beyond the 90-day visa-free period without a study/work/property basis.",
+          "fa": "ایرانیانی که بعد از ۹۰ روز قصد ماندن دارند اما مبنای تحصیل/کار/ملک ندارند."
+        },
+        "recommended_action": {
+          "en": "Treat tourist residence as uncertain and verify a more durable residence basis before relying on renewal.",
+          "fa": "اقامت توریستی را نامطمئن فرض کنید و پیش از اتکا به تمدید، مبنای پایدارتر اقامت را بررسی کنید."
+        },
+        "known_workaround": "Study, work or property residence is repeatedly discussed as a more durable basis."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-RES-TOURIST-RENEWAL-001-E1",
+          "relation": "supports",
+          "independence_group": "tourist-r1"
+        },
+        {
+          "evidence_id": "TUR-RES-TOURIST-RENEWAL-001-E2",
+          "relation": "supports",
+          "independence_group": "tourist-r2"
+        },
+        {
+          "evidence_id": "TUR-RES-TOURIST-RENEWAL-001-C1",
+          "relation": "contradicts",
+          "independence_group": "tourist-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "worsening",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The exact first-time availability is disputed, but renewal friction is repeated and supported by a concrete family example."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Göç İdaresi rules and nationality-specific practice were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-RES-TOURIST-RENEWAL-001-E1",
+            "TUR-RES-TOURIST-RENEWAL-001-E2",
+            "TUR-RES-TOURIST-RENEWAL-001-C1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Short-term residence practice can change rapidly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "tourist residence",
+        "renewal",
+        "financial proof",
+        "Iran"
+      ],
+      "first_seen": "2025-08-23",
+      "last_seen": "2025-08-24"
+    },
+    {
+      "signal_id": "TUR-RES-RENTAL-ROUTE-002",
+      "issue_cluster_id": "TUR-RENTAL-RESIDENCE-BASIS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-RES-TOURIST-RENEWAL-001"
+        }
+      ],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "rental_not_standalone_basis",
+        "class": "residence"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "SHORT-TERM RESIDENCE",
+            "STUDY",
+            "WORK",
+            "PROPERTY"
+          ],
+          "codes": [
+            "residence_basis"
+          ]
+        },
+        "process_stages": [
+          "eligibility"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "A rental contract alone is not treated by the community as a reliable standalone residence basis",
+          "fa": "اجاره‌نامه به‌تنهایی در تجربه گروه مبنای قابل اتکایی برای اقامت تلقی نمی‌شود"
+        },
+        "summary": {
+          "en": "Users repeatedly ask whether the old rental-based route still works; the clearest guidance in the file says applicants now generally need a study, property or work basis rather than only a lease.",
+          "fa": "کاربران چند بار درباره ادامه مسیر قدیمی اجاره پرسیده‌اند؛ روشن‌ترین پاسخ فایل می‌گوید معمولاً باید مبنای تحصیلی، ملکی یا کاری داشت و صرف اجاره کافی نیست."
+        },
+        "practical_impact": {
+          "en": "Signing a lease before confirming residence eligibility can create unnecessary cost and false expectations.",
+          "fa": "امضای اجاره قبل از روشن شدن eligibility اقامت می‌تواند هزینه و انتظار اشتباه ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Applicants considering renting solely to obtain Turkish residence.",
+          "fa": "افرادی که فقط برای گرفتن اقامت قصد اجاره خانه دارند."
+        },
+        "recommended_action": {
+          "en": "Confirm the actual legal residence basis before committing to a lease for immigration purposes.",
+          "fa": "قبل از تعهد اجاره برای هدف مهاجرتی، مبنای قانونی واقعی اقامت را مشخص کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-RES-RENTAL-ROUTE-002-E1",
+          "relation": "supports",
+          "independence_group": "rental-q1"
+        },
+        {
+          "evidence_id": "TUR-RES-RENTAL-ROUTE-002-E2",
+          "relation": "supports",
+          "independence_group": "rental-a1"
+        },
+        {
+          "evidence_id": "TUR-RES-RENTAL-ROUTE-002-E3",
+          "relation": "supports",
+          "independence_group": "rental-q2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The pattern is clear in community guidance but not independently verified against current official short-term-residence rules."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Official residence-basis rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-RES-RENTAL-ROUTE-002-E1",
+            "TUR-RES-RENTAL-ROUTE-002-E2",
+            "TUR-RES-RENTAL-ROUTE-002-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Residence bases are policy-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "rental contract",
+        "short-term residence",
+        "lease",
+        "Turkey"
+      ],
+      "first_seen": "2025-05-12",
+      "last_seen": "2025-07-03"
+    },
+    {
+      "signal_id": "TUR-RES-STUDENT-DURATION-003",
+      "issue_cluster_id": "TUR-STUDENT-RESIDENCE-DURATION",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "student_permit_duration_variance",
+        "class": "study_residence"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_residence"
+          ]
+        },
+        "process_stages": [
+          "issuance",
+          "renewal",
+          "insurance"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Student residence duration is variable and not reliably determined by insurance term alone",
+          "fa": "مدت اقامت دانشجویی متغیر است و از روی مدت بیمه به‌تنهایی قابل پیش‌بینی نیست"
+        },
+        "summary": {
+          "en": "The source contains reports of student residence cards ranging from six months to two years, while later guidance still frames annual renewal as common.",
+          "fa": "فایل از کارت‌های دانشجویی شش‌ماهه تا دوساله گزارش دارد، در حالی که راهنمایی‌های بعدی تمدید سالانه را همچنان رایج می‌دانند."
+        },
+        "practical_impact": {
+          "en": "Buying longer insurance does not guarantee a residence card of the same duration.",
+          "fa": "خرید بیمه بلندمدت، کارت اقامت با همان مدت را تضمین نمی‌کند."
+        },
+        "who_should_care": {
+          "en": "Students budgeting insurance and renewal timing.",
+          "fa": "دانشجویانی که هزینه بیمه و زمان تمدید را برنامه‌ریزی می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Budget for annual renewal even if longer insurance is purchased.",
+          "fa": "حتی با بیمه بلندمدت، برای تمدید سالانه بودجه و زمان در نظر بگیرید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-RES-STUDENT-DURATION-003-E1",
+          "relation": "supports",
+          "independence_group": "duration-q"
+        },
+        {
+          "evidence_id": "TUR-RES-STUDENT-DURATION-003-E2",
+          "relation": "supports",
+          "independence_group": "duration-r1"
+        },
+        {
+          "evidence_id": "TUR-RES-STUDENT-DURATION-003-E3",
+          "relation": "qualifies",
+          "independence_group": "duration-r2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The file shows meaningful variance but not a large enough sample to estimate probabilities."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official student-residence validity rules were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-RES-STUDENT-DURATION-003-E1",
+            "TUR-RES-STUDENT-DURATION-003-E2",
+            "TUR-RES-STUDENT-DURATION-003-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Permit duration can depend on study and insurance dates.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student residence",
+        "duration",
+        "insurance",
+        "renewal"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2026-07-06"
+    },
+    {
+      "signal_id": "TUR-RES-STUDENT-FUNDS-004",
+      "issue_cluster_id": "TUR-STUDENT-RESIDENCE-FINANCIAL-PROOF",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "student_financial_proof_variance",
+        "class": "study_residence"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_residence"
+          ]
+        },
+        "process_stages": [
+          "financial_evidence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Financial-proof requests for student residence appear inconsistent in community experience",
+          "fa": "در تجربه گروه، درخواست تمکن برای اقامت دانشجویی یکنواخت نیست"
+        },
+        "summary": {
+          "en": "Some students report no financial proof request, while later applicants are advised to submit bank/scholarship/assets evidence to demonstrate one-year self-sufficiency.",
+          "fa": "بعضی دانشجوها گزارش کرده‌اند تمکن از آن‌ها خواسته نشده، در حالی که در کیس‌های بعدی توصیه شده موجودی بانک، بورسیه و دارایی برای اثبات توان مالی یک‌سال ارائه شود."
+        },
+        "practical_impact": {
+          "en": "Assuming financial proof will never be requested can leave an otherwise complete file vulnerable.",
+          "fa": "فرض اینکه تمکن هیچ‌وقت خواسته نمی‌شود می‌تواند پرونده را ناقص کند."
+        },
+        "who_should_care": {
+          "en": "Student and dependant residence applicants.",
+          "fa": "متقاضیان اقامت دانشجویی و پیوست."
+        },
+        "recommended_action": {
+          "en": "Carry credible financial evidence even when peers were not asked for it.",
+          "fa": "حتی اگر از دیگران تمکن نخواسته‌اند، مدارک مالی معتبر همراه داشته باشید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-RES-STUDENT-FUNDS-004-E1",
+          "relation": "supports",
+          "independence_group": "fund-q"
+        },
+        {
+          "evidence_id": "TUR-RES-STUDENT-FUNDS-004-E2",
+          "relation": "qualifies",
+          "independence_group": "fund-r1"
+        },
+        {
+          "evidence_id": "TUR-RES-STUDENT-FUNDS-004-E3",
+          "relation": "supports",
+          "independence_group": "fund-r2"
+        },
+        {
+          "evidence_id": "TUR-RES-STUDENT-FUNDS-004-E4",
+          "relation": "supports",
+          "independence_group": "fund-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The evidence is internally mixed, supporting variability rather than one fixed requirement."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Official financial-proof requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-RES-STUDENT-FUNDS-004-E1",
+            "TUR-RES-STUDENT-FUNDS-004-E2",
+            "TUR-RES-STUDENT-FUNDS-004-E3",
+            "TUR-RES-STUDENT-FUNDS-004-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Document requests can vary by case and office.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student residence",
+        "proof of funds",
+        "bank statement",
+        "scholarship"
+      ],
+      "first_seen": "2025-07-18",
+      "last_seen": "2026-07-29"
+    },
+    {
+      "signal_id": "TUR-RES-STUDENT-FAMILY-005",
+      "issue_cluster_id": "TUR-STUDENT-FAMILY-RESIDENCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-RES-ADDRESS-006"
+        }
+      ],
+      "classification": {
+        "family": "E7_DEPENDANTS_FAMILY",
+        "type": "student_family_residence",
+        "class": "family"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "FAMILY RESIDENCE"
+          ],
+          "codes": [
+            "student_dependants"
+          ]
+        },
+        "process_stages": [
+          "dependant_application",
+          "civil_documents",
+          "address"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Student dependant residence is reported for spouse and minor children, but document/address details remain a source of friction",
+          "fa": "پیوست دانشجو برای همسر و فرزند زیر ۱۸ سال گزارش شده، اما مدارک و آدرس همچنان اصطکاک اصلی‌اند"
+        },
+        "summary": {
+          "en": "Community guidance repeatedly points to spouse/minor-child eligibility, while first-hand cases show authenticated marriage documents and address suitability/restricted-neighborhood questions as practical hurdles.",
+          "fa": "راهنمایی گروه بارها همسر و فرزند زیر ۱۸ سال را واجد پیوست دانسته، اما تجربه‌های مستقیم تأیید سند ازدواج و مناسب‌بودن آدرس/محله را گلوگاه عملی نشان می‌دهند."
+        },
+        "practical_impact": {
+          "en": "Family arrival does not automatically translate into a simple residence filing; civil and address evidence can be decisive.",
+          "fa": "حضور خانواده به‌معنی پرونده ساده نیست و مدارک هویتی و آدرس می‌تواند تعیین‌کننده باشد."
+        },
+        "who_should_care": {
+          "en": "Students moving to Turkey with spouse or children.",
+          "fa": "دانشجویانی که با همسر یا فرزند به ترکیه می‌روند."
+        },
+        "recommended_action": {
+          "en": "Prepare authenticated marriage/birth documents and verify address eligibility before filing dependants.",
+          "fa": "مدارک ازدواج/تولد تأییدشده را آماده کنید و eligibility آدرس را قبل از اقدام پیوست بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-RES-STUDENT-FAMILY-005-E1",
+          "relation": "supports",
+          "independence_group": "family-r1"
+        },
+        {
+          "evidence_id": "TUR-RES-STUDENT-FAMILY-005-E2",
+          "relation": "supports",
+          "independence_group": "family-r2"
+        },
+        {
+          "evidence_id": "TUR-RES-STUDENT-FAMILY-005-E3",
+          "relation": "supports",
+          "independence_group": "family-r3"
+        },
+        {
+          "evidence_id": "TUR-RES-STUDENT-FAMILY-005-Q1",
+          "relation": "qualifies",
+          "independence_group": "family-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Core spouse/minor-child pattern is repeated, but level-of-study and filing-location details remain uncertain in the source."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official family-residence eligibility and study-level conditions were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-RES-STUDENT-FAMILY-005-E1",
+            "TUR-RES-STUDENT-FAMILY-005-E2",
+            "TUR-RES-STUDENT-FAMILY-005-E3",
+            "TUR-RES-STUDENT-FAMILY-005-Q1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Family residence rules and local document practice can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student dependant",
+        "spouse",
+        "minor child",
+        "marriage certificate"
+      ],
+      "first_seen": "2025-08-28",
+      "last_seen": "2026-08-26"
+    },
+    {
+      "signal_id": "TUR-RES-ADDRESS-006",
+      "issue_cluster_id": "TUR-RESIDENCE-ADDRESS-RESTRICTIONS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-RES-STUDENT-FAMILY-005"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "address_notary_restricted_area",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "FAMILY RESIDENCE",
+            "SHORT-TERM RESIDENCE"
+          ],
+          "codes": [
+            "address_registration"
+          ]
+        },
+        "process_stages": [
+          "lease",
+          "notary",
+          "restricted_neighborhood"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Residence applications are highly sensitive to usable address documents, while student exceptions to restricted-neighborhood rules remain uncertain",
+          "fa": "پرونده اقامت به آدرس قابل‌استفاده و مدارک نوتر حساس است و استثنای دانشجو برای مناطق ممنوعه در فایل قطعی نیست"
+        },
+        "summary": {
+          "en": "Students explicitly search for leases that can be notarized and support utilities/address proof. Multiple users believe students may be exempt from closed-neighborhood restrictions, but a 2026 family case shows conflicting advice.",
+          "fa": "دانشجوها صریحاً دنبال خانه‌ای هستند که نوتر و قبض آدرس بدهد. چند کاربر تصور می‌کنند دانشجو از محدودیت محله ممنوعه مستثناست، اما پرونده خانوادگی ۲۰۲۶ توصیه‌های متناقض نشان می‌دهد."
+        },
+        "practical_impact": {
+          "en": "A cheap or convenient apartment can still be unusable for residence paperwork.",
+          "fa": "خانه ارزان یا مناسب ممکن است برای مدارک اقامت قابل استفاده نباشد."
+        },
+        "who_should_care": {
+          "en": "Students and families renting in Istanbul or other restricted areas.",
+          "fa": "دانشجویان و خانواده‌هایی که در استانبول یا مناطق محدودشده اجاره می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Check notary/address-registration usability and neighborhood status before paying deposit.",
+          "fa": "قبل از پرداخت ودیعه، امکان نوتر/ثبت آدرس و وضعیت محله را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-RES-ADDRESS-006-E1",
+          "relation": "supports",
+          "independence_group": "addr-r1"
+        },
+        {
+          "evidence_id": "TUR-RES-ADDRESS-006-E2",
+          "relation": "supports",
+          "independence_group": "addr-r2"
+        },
+        {
+          "evidence_id": "TUR-RES-ADDRESS-006-E3",
+          "relation": "supports",
+          "independence_group": "addr-r3"
+        },
+        {
+          "evidence_id": "TUR-RES-ADDRESS-006-E4",
+          "relation": "contradicts",
+          "independence_group": "addr-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "uncertain",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Address-document importance is clear, but the claimed student exemption from restricted neighborhoods is not consistently resolved."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current restricted-neighborhood lists and student/family exemptions were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-RES-ADDRESS-006-E1",
+            "TUR-RES-ADDRESS-006-E2",
+            "TUR-RES-ADDRESS-006-E3",
+            "TUR-RES-ADDRESS-006-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Restricted-neighborhood rules are location- and date-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "address",
+        "notary",
+        "restricted neighborhood",
+        "student residence",
+        "utility bill"
+      ],
+      "first_seen": "2025-07-19",
+      "last_seen": "2026-02-09"
+    },
+    {
+      "signal_id": "TUR-RES-PROPERTY-007",
+      "issue_cluster_id": "TUR-PROPERTY-RESIDENCE",
+      "relationships": [],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "property_residence",
+        "class": "property"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "PROPERTY RESIDENCE"
+          ],
+          "codes": [
+            "property_based_residence"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "purchase",
+          "residence_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Property residence remained a live community route, but threshold and timing claims are time-sensitive",
+          "fa": "اقامت ملکی در فایل همچنان مسیر فعال گزارش شده، اما عدد حداقل و زمان‌بندی آن تاریخ‌حساس است"
+        },
+        "summary": {
+          "en": "The community continued to describe property ownership as a residence basis. A 2025 thread cited about USD 200,000 and a 2026 reply estimated up to three months to residence, but neither figure was independently verified.",
+          "fa": "گروه همچنان خرید ملک را مبنای اقامت می‌دانسته است. در یک گفتگوی ۲۰۲۵ حدود ۲۰۰ هزار دلار و در پاسخ ۲۰۲۶ تا حدود سه ماه زمان مطرح شده، اما هیچ‌کدام مستقلاً راستی‌آزمایی نشده‌اند."
+        },
+        "practical_impact": {
+          "en": "Using an old price threshold or timing assumption can materially misprice a property-residence plan.",
+          "fa": "اتکا به حد ارزش یا زمان‌بندی قدیمی می‌تواند برنامه اقامت ملکی را به‌طور جدی اشتباه کند."
+        },
+        "who_should_care": {
+          "en": "Applicants considering buying property mainly to secure Turkish residence.",
+          "fa": "افرادی که عمدتاً برای اقامت قصد خرید ملک در ترکیه دارند."
+        },
+        "recommended_action": {
+          "en": "Verify the current minimum property value and qualifying title-deed conditions immediately before purchase.",
+          "fa": "درست پیش از خرید، حداقل ارزش فعلی و شرایط سند واجدشرایط را رسمی بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-RES-PROPERTY-007-E1",
+          "relation": "supports",
+          "independence_group": "prop-q"
+        },
+        {
+          "evidence_id": "TUR-RES-PROPERTY-007-E2",
+          "relation": "supports",
+          "independence_group": "prop-r1"
+        },
+        {
+          "evidence_id": "TUR-RES-PROPERTY-007-E3",
+          "relation": "supports",
+          "independence_group": "prop-r2"
+        },
+        {
+          "evidence_id": "TUR-RES-PROPERTY-007-E4",
+          "relation": "supports",
+          "independence_group": "prop-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The route itself is repeatedly reported, but the numeric threshold and processing estimate are weak/time-sensitive community figures."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official property-value threshold and processing times were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-RES-PROPERTY-007-E1",
+            "TUR-RES-PROPERTY-007-E2",
+            "TUR-RES-PROPERTY-007-E3",
+            "TUR-RES-PROPERTY-007-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Property residence thresholds can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "property residence",
+        "house purchase",
+        "title deed",
+        "200000 USD"
+      ],
+      "first_seen": "2025-07-07",
+      "last_seen": "2026-01-27"
+    },
+    {
+      "signal_id": "TUR-WORK-PERMIT-FRICTION-008",
+      "issue_cluster_id": "TUR-WORK-PERMIT-EMPLOYER-FRICTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-WORK-LANGUAGE-009"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "employer_work_permit_friction",
+        "class": "employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "calisma_izni"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "employer_sponsorship",
+          "work_permit"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The employer's willingness to obtain çalışma izni is a major bottleneck, sometimes harder than finding the job itself",
+          "fa": "تمایل کارفرما به گرفتن çalışma izni گلوگاه بزرگی است و گاهی از خود پیدا کردن کار سخت‌تر گزارش می‌شود"
+        },
+        "summary": {
+          "en": "Repeated 2026 discussion says the employer must handle the permit, with burden varying by sector. Some workers first work informally before later sponsorship; employers also sometimes incorrectly insist applicants must already hold residence.",
+          "fa": "گفتگوهای ۲۰۲۶ می‌گویند مجوز را کارفرما پیگیری می‌کند و سختی آن با سکتور فرق دارد. بعضی افراد ابتدا غیررسمی کار کرده‌اند و بعد اسپانسر شده‌اند؛ بعضی کارفرماها هم از قبل داشتن اقامت را شرط می‌کنند."
+        },
+        "practical_impact": {
+          "en": "A job offer is not equivalent to a legal work path until the employer is actually willing and able to complete the permit process.",
+          "fa": "جاب‌آفر تا وقتی کارفرما واقعاً حاضر و قادر به تکمیل مجوز نباشد، معادل مسیر قانونی کار نیست."
+        },
+        "who_should_care": {
+          "en": "Foreign students and Iran-based applicants seeking Turkish employment.",
+          "fa": "دانشجویان خارجی و متقاضیان ایرانی کار در ترکیه."
+        },
+        "recommended_action": {
+          "en": "Ask explicitly at interview stage whether the employer has sponsored foreigners before and will file çalışma izni.",
+          "fa": "در مرحله مصاحبه صریحاً بپرسید آیا کارفرما سابقه اسپانسر خارجی دارد و برای çalışma izni اقدام می‌کند."
+        },
+        "known_workaround": "Local networking and employers experienced with foreign hires reduce friction."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-WORK-PERMIT-FRICTION-008-E1",
+          "relation": "supports",
+          "independence_group": "work-r1"
+        },
+        {
+          "evidence_id": "TUR-WORK-PERMIT-FRICTION-008-E2",
+          "relation": "supports",
+          "independence_group": "work-r2"
+        },
+        {
+          "evidence_id": "TUR-WORK-PERMIT-FRICTION-008-E3",
+          "relation": "supports",
+          "independence_group": "work-r3"
+        },
+        {
+          "evidence_id": "TUR-WORK-PERMIT-FRICTION-008-E4",
+          "relation": "supports",
+          "independence_group": "work-r4"
+        },
+        {
+          "evidence_id": "TUR-WORK-PERMIT-FRICTION-008-Q1",
+          "relation": "qualifies",
+          "independence_group": "work-r5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple independent discussions converge on employer-side work-permit burden as a practical bottleneck."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Ministry of Labour rules for domestic vs overseas applications were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-WORK-PERMIT-FRICTION-008-E1",
+            "TUR-WORK-PERMIT-FRICTION-008-E2",
+            "TUR-WORK-PERMIT-FRICTION-008-E3",
+            "TUR-WORK-PERMIT-FRICTION-008-E4",
+            "TUR-WORK-PERMIT-FRICTION-008-Q1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Work-permit rules and sector ratios can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "çalışma izni",
+        "work permit",
+        "employer sponsorship",
+        "foreign worker"
+      ],
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-09-04"
+    },
+    {
+      "signal_id": "TUR-WORK-LANGUAGE-009",
+      "issue_cluster_id": "TUR-LABOUR-MARKET-LANGUAGE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-WORK-PERMIT-FRICTION-008"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "turkish_language_labor_market",
+        "class": "employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "job_search"
+          ]
+        },
+        "process_stages": [
+          "language",
+          "networking"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Turkish language and local networking materially shape access to both general and skilled jobs",
+          "fa": "زبان ترکی و نتورک محلی روی دسترسی به کار جنرال و تخصصی اثر جدی دارند"
+        },
+        "summary": {
+          "en": "Job seekers repeatedly describe Turkish as necessary for local work. Community advice also emphasizes experience, practical trade skills and networking/local presence for skilled positions.",
+          "fa": "جویندگان کار بارها ترکی را برای بازار محلی ضروری دانسته‌اند. راهنمایی گروه نیز برای کار تخصصی روی سابقه، مهارت عملی و نتورک/حضور محلی تأکید دارد."
+        },
+        "practical_impact": {
+          "en": "English alone may be insufficient for a broad Turkish labor-market search outside narrow international roles.",
+          "fa": "فقط انگلیسی برای جست‌وجوی گسترده در بازار کار ترکیه، خارج از پوزیشن‌های محدود بین‌المللی، معمولاً کافی نیست."
+        },
+        "who_should_care": {
+          "en": "New arrivals looking for work in tourism, services or technical fields.",
+          "fa": "تازه‌واردانی که در گردشگری، خدمات یا حوزه‌های تخصصی دنبال کارند."
+        },
+        "recommended_action": {
+          "en": "Improve Turkish while building local references/network; do not rely only on online applications.",
+          "fa": "همزمان با تقویت ترکی، معرف و نتورک محلی بسازید و فقط به اپلای آنلاین تکیه نکنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-WORK-LANGUAGE-009-E1",
+          "relation": "supports",
+          "independence_group": "lang-r1"
+        },
+        {
+          "evidence_id": "TUR-WORK-LANGUAGE-009-E2",
+          "relation": "supports",
+          "independence_group": "lang-r2"
+        },
+        {
+          "evidence_id": "TUR-WORK-LANGUAGE-009-E3",
+          "relation": "supports",
+          "independence_group": "lang-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same language/networking constraint appears across locations and time."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "This is a labor-market signal, not a formal language requirement."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-WORK-LANGUAGE-009-E1",
+            "TUR-WORK-LANGUAGE-009-E2",
+            "TUR-WORK-LANGUAGE-009-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Labor demand varies by sector/city.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Turkish language",
+        "job search",
+        "networking",
+        "general work"
+      ],
+      "first_seen": "2025-06-23",
+      "last_seen": "2026-08-07"
+    },
+    {
+      "signal_id": "TUR-LIFE-BANKING-010",
+      "issue_cluster_id": "TUR-FOREIGNER-BANKING-ACCESS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-RES-STUDENT-FUNDS-004"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "foreigner_banking_access",
+        "class": "settlement_friction"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "RESIDENCE / SETTLEMENT"
+          ],
+          "codes": [
+            "banking"
+          ]
+        },
+        "process_stages": [
+          "account_opening",
+          "proof_of_funds"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Bank-account access for foreigners is branch- and status-dependent even when a residence card exists",
+          "fa": "افتتاح حساب برای خارجی‌ها حتی با کیملیک هم به بانک/شعبه و وضعیت اقامتی وابسته است"
+        },
+        "summary": {
+          "en": "The source shows contradictory but compatible experiences: Ziraat is often treated as the default without residence, some residents are still refused by many banks, lawyer-assisted openings can work, and branch-level charges vary.",
+          "fa": "فایل تجربه‌های متفاوتی دارد: زراعت اغلب گزینه بدون اقامت دانسته می‌شود، بعضی افراد حتی با کیملیک از بانک‌ها رد شده‌اند، افتتاح با وکیل در بعضی کیس‌ها جواب داده و هزینه شعب هم متفاوت بوده است."
+        },
+        "practical_impact": {
+          "en": "Applicants needing Turkish bank evidence or salary/payment access should expect branch shopping and inconsistent requirements.",
+          "fa": "کسی که برای تمکن، حقوق یا پرداخت به حساب ترکیه نیاز دارد باید انتظار مراجعه به چند شعبه و مدارک متفاوت را داشته باشد."
+        },
+        "who_should_care": {
+          "en": "New residents, students and applicants needing local proof of funds.",
+          "fa": "تازه‌واردان، دانشجویان و متقاضیانی که تمکن بانکی محلی می‌خواهند."
+        },
+        "recommended_action": {
+          "en": "Do not assume one bank's refusal applies nationwide; compare branches and ask for the exact fee/document basis in writing.",
+          "fa": "رد یک بانک/شعبه را سراسری فرض نکنید؛ چند شعبه را امتحان کنید و مبنای هزینه/مدارک را دقیق بپرسید."
+        },
+        "known_workaround": "Lawyer-assisted opening and trying Ziraat/İş/Vakıf branches are recurring community workarounds."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-LIFE-BANKING-010-E1",
+          "relation": "supports",
+          "independence_group": "bank-q"
+        },
+        {
+          "evidence_id": "TUR-LIFE-BANKING-010-E2",
+          "relation": "supports",
+          "independence_group": "bank-r1"
+        },
+        {
+          "evidence_id": "TUR-LIFE-BANKING-010-E3",
+          "relation": "qualifies",
+          "independence_group": "bank-r2"
+        },
+        {
+          "evidence_id": "TUR-LIFE-BANKING-010-E4",
+          "relation": "supports",
+          "independence_group": "bank-r3"
+        },
+        {
+          "evidence_id": "TUR-LIFE-BANKING-010-E5",
+          "relation": "supports",
+          "independence_group": "bank-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple first-hand reports show strong branch/status variance rather than a single universal rule."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current bank policies and fees were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-LIFE-BANKING-010-E1",
+            "TUR-LIFE-BANKING-010-E2",
+            "TUR-LIFE-BANKING-010-E3",
+            "TUR-LIFE-BANKING-010-E4",
+            "TUR-LIFE-BANKING-010-E5"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Bank compliance practice can change by branch.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "bank account",
+        "Ziraat",
+        "İş Bankası",
+        "VakıfBank",
+        "proof of funds"
+      ],
+      "first_seen": "2025-07-15",
+      "last_seen": "2025-09-04"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram handles/user IDs, phone numbers and other directly identifying details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically scanned all 661 messages in the uploaded JSON export."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were reconstructed for selected signals; the entire conversation graph was not exhaustively interpreted."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated tourist-residence, student, work-permit, address and banking discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Tourist-residence availability, student financial proof and restricted-neighborhood claims preserve conflicting evidence rather than forcing one rule."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "All claims remain community-reported unless independently verified against Turkish authorities."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal connector was unavailable/disabled during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals are operational context only. They are not official Turkish immigration, residence, work-permit, banking or property rules. Verify current requirements with Göç İdaresi, Ministry of Labour, the relevant university/municipality/bank or another competent authority before acting."
+}
