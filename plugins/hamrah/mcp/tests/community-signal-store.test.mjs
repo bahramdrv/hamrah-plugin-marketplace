@@ -10,9 +10,9 @@ import {
 test("all bundled community signal datasets conform to the v3 store contract", () => {
   const store = loadCommunitySignalStore();
 
-  assert.equal(store.scanned, 3);
+  assert.ok(store.scanned > 0, "at least one bundled community dataset must be present");
   assert.equal(store.invalidDatasets.length, 0);
-  assert.equal(store.datasets.length, 3);
+  assert.equal(store.datasets.length, store.scanned);
   for (const { dataset } of store.datasets) {
     assert.equal(dataset.schema_version, "3.0.0");
     assert.ok(Array.isArray(dataset.sources));

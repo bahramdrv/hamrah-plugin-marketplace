@@ -1,6 +1,9 @@
 {
   "source": "Hamrah Community Signal Candidate Extraction",
   "generatedAt": "2026-09-16T11:03:31Z",
+  "extractionMethod": {
+    "privacy": "Participant names and user IDs are omitted from this candidate export. Evidence retains only source/channel metadata, message IDs, dates, and claim summaries."
+  },
   "coverage": {
     "filesScanned": 1,
     "validDatasets": 0,
