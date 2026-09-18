@@ -12,9 +12,9 @@ Read `references/workflow.md` first. It is the source of truth for routing and s
 Use the named Skill as the implementation contract for each output:
 
 - Raw community evidence → `../hamrah-signal-builder/SKILL.md`; validate and optionally persist it in the signal store.
-- Applicant facts → `../hamrah-profile-normalizer/SKILL.md`; its JSON is canonical.
-- Current route evidence → `references/api_access.md` and `references/case_to_scorecard.md`; prefer the bundled Visa Atlas MCP tools.
-- Immigration scorecard → `../hamrah-scorecard-engine/SKILL.md`, then `references/scorecard_presentation.md`.
+- Applicant facts → `../hamrah-profile-normalizer/SKILL.md`; its JSON is canonical. When structured facts are ready, prefer the `normalizeApplicantProfile` MCP tool so schema defaults and missing-information gates are enforced consistently.
+- Current route evidence → `references/api_access.md` and `references/case_to_scorecard.md`; prefer `getRouteFactPack` for route-level evidence aggregation, then verify decisive claims with linked primary authorities and aggregate the official gate with `evaluateRouteEligibility`.
+- Immigration scorecard → `../hamrah-scorecard-engine/SKILL.md`, then `references/scorecard_presentation.md`. Use `evaluateCommunityAdjustment` for every candidate route and `finalizeAssessment` before treating the scorecard as final.
 - Academic program shortlist → `../hamrah-program-finder/SKILL.md`, after a relevant study/research route assessment.
 - Shareable scorecard image → `../hamrah-scorecard-visualizer/SKILL.md`, after scorecard validation. In ChatGPT web skill imports, where only five top-level skills are accepted, use the bundled equivalent at `references/web_scorecard_visualizer.md` and ChatGPT's image-generation capability.
 
