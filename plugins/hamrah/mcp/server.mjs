@@ -8,6 +8,13 @@ import {
   getCommunitySignalDataset,
   searchCommunitySignals
 } from "./community-signals.mjs";
+import {
+  ASSESSMENT_TOOLS,
+  evaluateCommunityAdjustment,
+  evaluateRouteEligibility,
+  finalizeAssessment,
+  normalizeApplicantProfile
+} from "./assessment-tools.mjs";
 
 export const OPENAPI = JSON.parse(
   readFileSync(new URL("./visa_atlas_core_openapi.json", import.meta.url), "utf8")
@@ -123,6 +130,7 @@ const COMMUNITY_SIGNAL_TOOLS = [
 export const TOOLS = [
   ...STANDARD_DISCOVERY_TOOLS,
   ...COMMUNITY_SIGNAL_TOOLS,
+  ...ASSESSMENT_TOOLS,
   ...GET_OPERATIONS.map(([name, path, description]) => ({
     title: description,
     name,
@@ -238,6 +246,69 @@ function toolResult(payload, isError = false) {
   };
 }
 
+const ROUTE_FACT_PACK_OPERATIONS = [
+  "getVisaRoutes",
+  "getPolicyClaims",
+  "getPolicyUpdates",
+  "getVisaFees",
+  "getSalaryThresholds",
+  "getProcessingTimes",
+  "getCostToComplete",
+  "getSourceFreshness",
+  "getProcessingReliability"
+];
+
+async function getRouteFactPack(args, fetchImpl) {
+  if (typeof args.slug !== "string" || !args.slug.trim()) {
+    throw new Error("getRouteFactPack requires a non-empty route slug.");
+  }
+  const filters = {
+    slug: args.slug.trim(),
+    countryCode: args.countryCode,
+    destination: args.destination,
+    category: args.category,
+    limit: Math.max(1, Math.min(25, Number.isInteger(args.limit) ? args.limit : 10))
+  };
+  const datasets = {};
+  const failures = [];
+
+  for (const operationName of ROUTE_FACT_PACK_OPERATIONS) {
+    const path = operationByName.get(operationName);
+    if (!path) {
+      failures.push({ operation: operationName, error: "operation_not_available" });
+      continue;
+    }
+    try {
+      const raw = await fetchJson(path, {}, fetchImpl);
+      const filtered = filterResponse(raw, filters);
+      datasets[operationName] = {
+        endpoint: path,
+        total: filtered.total,
+        returned: filtered.returned,
+        data: filtered.data
+      };
+    } catch (error) {
+      failures.push({
+        operation: operationName,
+        endpoint: path,
+        status: error?.status ?? null,
+        message: error instanceof Error ? error.message : String(error)
+      });
+    }
+  }
+
+  return {
+    source: "Hamrah Route Fact Pack",
+    baseUrl: BASE_URL,
+    retrievedAt: new Date().toISOString(),
+    filters,
+    datasets,
+    failures,
+    coverage: failures.length === 0 ? "complete" : Object.keys(datasets).length ? "partial" : "unavailable",
+    legalNote: "Visa Atlas is a source-linked compilation, not an issuing authority. Verify decisive, time-sensitive claims with linked primary authorities."
+  };
+}
+
 export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch, options = {}) {
   try {
     if (name === "search") {
@@ -285,6 +356,26 @@ export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch,
       return toolResult(getCommunitySignalDataset(args, options.signalStoreRoot));
     }
 
+    if (name === "normalizeApplicantProfile") {
+      return toolResult(normalizeApplicantProfile(args));
+    }
+
+    if (name === "evaluateRouteEligibility") {
+      return toolResult(evaluateRouteEligibility(args));
+    }
+
+    if (name === "getRouteFactPack") {
+      return toolResult(await getRouteFactPack(args, fetchImpl));
+    }
+
+    if (name === "evaluateCommunityAdjustment") {
+      return toolResult(evaluateCommunityAdjustment(args, options.signalStoreRoot));
+    }
+
+    if (name === "finalizeAssessment") {
+      return toolResult(finalizeAssessment(args));
+    }
+
     if (operationByName.has(name)) {
       const path = operationByName.get(name);
       const raw = await fetchJson(path, {}, fetchImpl);
@@ -306,15 +397,18 @@ export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch,
 
     return toolResult({ error: "unknown_tool", message: `Unknown tool: ${name}` }, true);
   } catch (error) {
-    const isCommunityTool = name === "searchCommunitySignals" || name === "getCommunitySignalDataset";
+    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "evaluateCommunityAdjustment"].includes(name);
+    const isAssessmentTool = ["normalizeApplicantProfile", "evaluateRouteEligibility", "finalizeAssessment"].includes(name);
     return toolResult({
-      error: isCommunityTool ? "community_signal_store_failed" : "visa_atlas_request_failed",
+      error: isCommunityTool ? "community_signal_store_failed" : isAssessmentTool ? "assessment_validation_failed" : "visa_atlas_request_failed",
       message: error instanceof Error ? error.message : String(error),
       status: error?.status ?? null,
       details: error?.body ?? null,
       guidance: isCommunityTool
         ? "Do not infer community coverage. Report the dataset error and use Community Adjustment 0 with coverage unavailable until the store is corrected."
-        : "Do not infer missing data. Mark affected claims UNKNOWN and use a current primary source or another documented endpoint."
+        : isAssessmentTool
+          ? "Do not bypass failed assessment gates. Correct the input, preserve UNKNOWN values, or collect the missing evidence."
+          : "Do not infer missing data. Mark affected claims UNKNOWN and use a current primary source or another documented endpoint."
     }, true);
   }
 }
@@ -328,8 +422,8 @@ export async function handleRequest(message, fetchImpl = globalThis.fetch) {
       result: {
         protocolVersion: params.protocolVersion || "2025-06-18",
         capabilities: { tools: { listChanged: false } },
-        serverInfo: { name: "hamrah-visa-atlas", version: "1.1.0" },
-        instructions: "Use the smallest relevant Visa Atlas tool. Before applying a community adjustment, use searchCommunitySignals and getCommunitySignalDataset. Treat route scores as discovery aids, community signals as practical context, and verify decisive requirements with primary sources."
+        serverInfo: { name: "hamrah-visa-atlas", version: "1.2.0" },
+        instructions: "Use normalizeApplicantProfile for structured intake normalization, findMatchingVisaRoutes for discovery, getRouteFactPack plus primary authorities for decisive route facts, evaluateRouteEligibility for the official gate, evaluateCommunityAdjustment for the required practical-friction check, and finalizeAssessment before treating a scorecard as final. Route scores are discovery aids, community signals are practical context, and decisive requirements must remain source-backed."
       }
     };
   }
