@@ -73,7 +73,7 @@ Weights:
 Do not hide component reasoning.
 
 ### 4. Apply Community Adjustment
-Call `searchCommunitySignals` for every candidate route with the narrowest known country, route, process stage, entity, and applicant scope. Use `getCommunitySignalDataset` to inspect the full evidence and quality controls for any candidate signals before scoring. Record the dataset ID and applicable signal IDs. If the tools report no valid coverage or a dataset error, use adjustment `0` and explicitly label community coverage unavailable; never treat missing coverage as evidence of no friction.
+Call `evaluateCommunityAdjustment` for every candidate route with the narrowest known country, route, process stage, entity, and applicant scope. That MCP tool is the preferred orchestration layer because it performs the required `searchCommunitySignals` + `getCommunitySignalDataset` evidence checks, deduplicates correlated root causes, and returns an allowed downside-only adjustment. Record the returned dataset/signal evidence references. If coverage is `none` or `unavailable`, use adjustment `0` and explicitly preserve the coverage warning; never treat missing coverage as evidence of no friction.
 
 Match only signals that actually apply to the applicant, route, process stage, institution/provider, location, and timing.
 
@@ -117,7 +117,7 @@ Run:
 
 `python scripts/validate_scorecard.py hamrah_scorecard.json`
 
-Fix all errors before returning the scorecard.
+Fix all errors before returning the scorecard. Then call `finalizeAssessment` with the canonical applicant profile, scorecard, and per-route community evaluations. Do not present the scorecard as final if any finalization gate fails.
 
 ## Non-Negotiable Rules
 
