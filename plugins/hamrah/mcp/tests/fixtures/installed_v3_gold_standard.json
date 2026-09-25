@@ -1,0 +1,352 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "gold-standard-uk",
+    "generated_at": "2026-09-11T00:00:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "example-community",
+      "name": "Example UK immigration community",
+      "source_type": "community_export",
+      "source_url": null,
+      "coverage": {
+        "status": "complete",
+        "from": "2026-01-01",
+        "to": "2026-09-11",
+        "records_available": 1000,
+        "records_processed": 1000
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "EX-1",
+      "source_id": "example-community",
+      "locator": {
+        "type": "message_id",
+        "value": "101"
+      },
+      "published_at": "2026-08-01",
+      "event_date": "2026-08-01",
+      "collected_at": "2026-09-11T00:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Applicant reported an endorsement wait beyond the usual window.",
+        "fa": "متقاضی از طولانی شدن زمان اندورسمنت گزارش داد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "EX-2",
+      "source_id": "example-community",
+      "locator": {
+        "type": "message_id",
+        "value": "202"
+      },
+      "published_at": "2026-08-20",
+      "event_date": "2026-08-20",
+      "collected_at": "2026-09-11T00:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Independent applicant reported a similar delay.",
+        "fa": "متقاضی مستقلی تأخیر مشابهی گزارش داد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "EX-3",
+      "source_id": "example-community",
+      "locator": {
+        "type": "message_id",
+        "value": "303"
+      },
+      "published_at": "2026-08-10",
+      "event_date": "2026-08-10",
+      "collected_at": "2026-09-11T00:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Priority processing exceeded its target window.",
+        "fa": "پردازش Priority از بازه هدف عبور کرد."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "GBR-GT-R4-ENDORSEMENT-DELAY-EXAMPLE",
+      "issue_cluster_id": "endorsement-delay",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "processing_delay",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "science",
+            "engineering",
+            "technology"
+          ],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "global_talent"
+          ]
+        },
+        "process_stages": [
+          "endorsement_stage_1",
+          "peer_review"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Repeated peer-review endorsement delays",
+          "fa": "تأخیرهای تکرارشونده در اندورسمنت"
+        },
+        "summary": {
+          "en": "Independent applicants report longer endorsement waits.",
+          "fa": "متقاضیان مستقل زمان انتظار طولانی‌تر را گزارش کرده‌اند."
+        },
+        "practical_impact": {
+          "en": "Fixed deadlines may become difficult.",
+          "fa": "ددلاین‌های ثابت ممکن است با مشکل روبه‌رو شوند."
+        },
+        "who_should_care": {
+          "en": "Global Talent applicants with fixed deadlines.",
+          "fa": "متقاضیان Global Talent با ددلاین ثابت."
+        },
+        "recommended_action": {
+          "en": "Allow contingency time and verify official guidance.",
+          "fa": "حاشیه زمانی در نظر بگیرید و راهنمای رسمی را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "EX-1",
+          "relation": "supports",
+          "independence_group": "r1"
+        },
+        {
+          "evidence_id": "EX-2",
+          "relation": "supports",
+          "independence_group": "r2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "corroborated",
+        "trend": "worsening",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Two recent independent first-hand reports."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-11",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": "2026-09-11",
+          "note": null
+        },
+        "community": {
+          "status": "corroborated",
+          "evidence_ids": [
+            "EX-1",
+            "EX-2"
+          ],
+          "checked_at": "2026-09-11",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-11",
+        "next_check_at": "2026-09-25",
+        "reason": "Current operational signal.",
+        "confirmation_criteria": [
+          "new independent reports",
+          "current official timing"
+        ]
+      },
+      "keywords": [
+        "Global Talent",
+        "peer review",
+        "endorsement",
+        "delay"
+      ]
+    },
+    {
+      "signal_id": "GBR-WORK-PRIORITY-OVERRUN-EXAMPLE",
+      "issue_cluster_id": "priority-overrun",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "processing_delay",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "global_talent",
+            "skilled_worker"
+          ]
+        },
+        "process_stages": [
+          "visa_application",
+          "priority_processing"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Priority processing can exceed target windows",
+          "fa": "پردازش Priority می‌تواند از بازه هدف عبور کند"
+        },
+        "summary": {
+          "en": "A direct report shows a priority overrun.",
+          "fa": "یک گزارش مستقیم عبور از بازه Priority را نشان می‌دهد."
+        },
+        "practical_impact": {
+          "en": "Immovable start dates need contingency.",
+          "fa": "تاریخ شروع غیرقابل تغییر به حاشیه امن نیاز دارد."
+        },
+        "who_should_care": {
+          "en": "Applicants relying on priority timing.",
+          "fa": "متقاضیانی که به زمان Priority متکی‌اند."
+        },
+        "recommended_action": {
+          "en": "Treat the target as non-guaranteed.",
+          "fa": "بازه هدف را تضمین‌شده فرض نکنید."
+        },
+        "known_workaround": "Apply earlier where possible."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "EX-3",
+          "relation": "supports",
+          "independence_group": "p1"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "anecdotal",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "low",
+          "rationale": "One first-hand report."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-11",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": "2026-09-11",
+          "note": null
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "EX-3"
+          ],
+          "checked_at": "2026-09-11",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-11",
+        "next_check_at": "2026-10-11",
+        "reason": "Single-report operational signal.",
+        "confirmation_criteria": [
+          "additional independent reports"
+        ]
+      },
+      "keywords": [
+        "priority",
+        "processing",
+        "work visa"
+      ]
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal identifiers removed."
+      },
+      "full_sources_processed": {
+        "status": "pass",
+        "note": null
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": null
+      }
+    }
+  }
+}

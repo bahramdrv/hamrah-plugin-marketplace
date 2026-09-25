@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 
 const NARRATIVE_FIELDS = new Set([
-  "summary_en", "summary_fa", "evidence_summary", "resolution_summary", "current_evidence",
+  "summary", "summary_en", "summary_fa", "evidence_summary", "resolution_summary", "current_evidence",
   "practical_impact", "who_should_care", "recommended_action", "known_workaround",
   "reason", "what_would_confirm_it"
 ]);
@@ -45,10 +45,11 @@ function inspectString(value, path, field, parent, findings, exceptions) {
     exceptions.push({ path, rule: "institution_name", reason: `Reviewed ${parent.entity_type} institution label; contact details remain scanned.` });
     return;
   }
-  if (NARRATIVE_FIELDS.has(field) || field === "name" || field === "title" || field === "source_name") {
+  const baseField = field.replace(/_(?:en|fa)$/, "");
+  if (NARRATIVE_FIELDS.has(field) || NARRATIVE_FIELDS.has(baseField) || baseField === "name" || baseField === "title" || field === "source_name") {
     const explicitName = /\b(?:Mr\.?|Mrs\.?|Ms\.?|Dr\.?|named|applicant named|person named)\s+[A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}\b/i.test(decoded);
-    const titleName = field === "title" && /\b[A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}\s+(?:applied|filed|reported|said|shared)\b/.test(decoded);
-    const englishNames = NARRATIVE_FIELDS.has(field) || field === "name" || field === "source_name"
+    const titleName = baseField === "title" && /\b[A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}\s+(?:applied|filed|reported|said|shared)\b/.test(decoded);
+    const englishNames = NARRATIVE_FIELDS.has(field) || NARRATIVE_FIELDS.has(baseField) || baseField === "name" || field === "source_name"
       ? (decoded.match(/\b[A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}\b/g) || [])
       : [];
     for (const phrase of englishNames.filter((candidate) => DOMAIN_PHRASES.has(candidate))) {
@@ -62,7 +63,8 @@ function inspectString(value, path, field, parent, findings, exceptions) {
       add("needs_review", "possible_full_name");
     }
   }
-  if (field.endsWith("_url") && /^https?:/i.test(decoded)) {
+  // Any URL is inspected, whatever its field name (for example a version 3 locator.value).
+  if (/^https?:/i.test(decoded)) {
     try {
       const url = new URL(decoded);
       if (url.username || url.password) add("fail", "embedded_contact_locator");
@@ -85,7 +87,11 @@ export function inspectDatasetPrivacy(dataset) {
     if (typeof value === "string") inspectString(value, path, field, parent, findings, exceptions);
     else if (Array.isArray(value)) value.forEach((item, index) => visit(item, `${path}[${index}]`, field, parent));
     else if (value && typeof value === "object") {
-      for (const [key, item] of Object.entries(value)) visit(item, path ? `${path}.${key}` : key, key, value);
+      for (const [key, item] of Object.entries(value)) {
+        // Localized {en, fa} values inherit their parent field's rules, e.g. claim.summary.fa is inspected as summary_fa.
+        const inspectedField = (key === "en" || key === "fa") && field ? `${field}_${key}` : key;
+        visit(item, path ? `${path}.${key}` : key, inspectedField, value);
+      }
     }
   }
   visit(dataset, "");

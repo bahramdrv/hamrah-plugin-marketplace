@@ -25,15 +25,18 @@ if result.returncode:
     sys.stderr.write(result.stdout + result.stderr)
     raise SystemExit(result.returncode)
 data = json.loads(source.read_text())
-is_v4 = data.get("schema_version") == "4.0.0"
-if not is_v4 and not data.get("quality_control", {}).get("personal_identifiers_removed"):
+version = data.get("schema_version")
+is_v4 = version == "4.0.0"
+is_v3 = version == "3.0.0"
+if version == "2.0" and not data.get("quality_control", {}).get("personal_identifiers_removed"):
     print("Refusing to store: personal_identifiers_removed is not true.", file=sys.stderr)
     raise SystemExit(1)
 
 canonical = json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
 digest = hashlib.sha256(canonical).hexdigest()
 label = re.sub(r"[^a-z0-9]+", "-", args.label.lower()).strip("-") or "signals"
-stamp = re.sub(r"[^0-9]", "", data.get("generated_at", ""))[:14] or datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+generated_at = data.get("dataset", {}).get("generated_at") if is_v3 else data.get("generated_at")
+stamp = re.sub(r"[^0-9]", "", generated_at or "")[:14] or datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
 relative = Path("datasets") / stamp[:4] / stamp[4:6] / f"{stamp}-{label}-{digest[:10]}.json"
 destination = root / relative
 catalog_path = root / "catalog.json"
@@ -58,19 +61,26 @@ finally:
     temporary.unlink(missing_ok=True)
 
 signals = data.get("signals", [])
+if is_v3:
+    destinations = [signal.get("scope", {}).get("destination", {}) for signal in signals]
+    route_codes = [signal.get("scope", {}).get("routes", {}).get("codes", []) for signal in signals]
+    statuses = [signal.get("assessment", {}).get("lifecycle") for signal in signals]
+    source_ids = [source.get("source_id") for source in data.get("sources", [])]
+else:
+    destinations = [signal.get("destination", {}) for signal in signals]
+    route_codes = [signal.get("migration_routes", []) for signal in signals]
+    statuses = [signal.get("lifecycle", {}).get("status") if is_v4 else signal.get("status") for signal in signals]
+    source_ids = [item.get("source_id") for item in data.get("source_coverage", [])]
 entry = {
     "path": relative.as_posix(),
     "sha256": digest,
-    "schema_version": data.get("schema_version"),
-    "generated_at": data.get("generated_at"),
-    "countries": sorted({signal.get("destination", {}).get("country_code") for signal in signals if signal.get("destination", {}).get("country_code")}),
-    "routes": sorted({route for signal in signals for route in signal.get("migration_routes", [])}),
-    "statuses": sorted({
-        (signal.get("lifecycle", {}).get("status") if is_v4 else signal.get("status"))
-        for signal in signals
-    } - {None}),
+    "schema_version": version,
+    "generated_at": generated_at,
+    "countries": sorted({item.get("country_code") for item in destinations if item.get("country_code")}),
+    "routes": sorted({route for routes in route_codes for route in routes}),
+    "statuses": sorted({status for status in statuses if status}),
     "signal_count": len(signals),
-    "source_ids": sorted({item.get("source_id") for item in data.get("source_coverage", []) if item.get("source_id")})
+    "source_ids": sorted({item for item in source_ids if item})
 }
 catalog["datasets"].append(entry)
 catalog["updated_at"] = datetime.now(timezone.utc).isoformat()

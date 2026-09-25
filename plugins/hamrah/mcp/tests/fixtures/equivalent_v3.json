@@ -1,0 +1,267 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "equivalent-v3",
+    "generated_at": "2026-09-11T00:00:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "src_example-uk-community",
+      "name": "Example UK immigration community",
+      "source_type": "community_export",
+      "source_url": null,
+      "coverage": {
+        "status": "unknown",
+        "from": null,
+        "to": null,
+        "records_available": null,
+        "records_processed": null
+      }
+    },
+    {
+      "source_id": "src_gov-uk-global-talent",
+      "name": "GOV.UK Global Talent visa guidance",
+      "source_type": "url",
+      "source_url": "https://www.gov.uk/global-talent",
+      "coverage": {
+        "status": "unknown",
+        "from": null,
+        "to": null,
+        "records_available": null,
+        "records_processed": null
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evd_gt-endorsement-delay-1",
+      "source_id": "src_example-uk-community",
+      "locator": {
+        "type": "none",
+        "value": null
+      },
+      "published_at": null,
+      "event_date": "2026-08-01",
+      "collected_at": "2026-09-11T00:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Applicant reported waiting well beyond the usual endorsement window.",
+        "fa": ""
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "evd_gt-endorsement-delay-2",
+      "source_id": "src_example-uk-community",
+      "locator": {
+        "type": "none",
+        "value": null
+      },
+      "published_at": null,
+      "event_date": "2026-08-20",
+      "collected_at": "2026-09-11T00:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Independent applicant reported a similar extended wait.",
+        "fa": ""
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "evd_gt-endorsement-delay-3",
+      "source_id": "src_example-uk-community",
+      "locator": {
+        "type": "none",
+        "value": null
+      },
+      "published_at": null,
+      "event_date": "2026-09-05",
+      "collected_at": "2026-09-11T00:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Third independent applicant reported the same timing pattern.",
+        "fa": ""
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "evd_gt-official-baseline-timing",
+      "source_id": "src_gov-uk-global-talent",
+      "locator": {
+        "type": "url",
+        "value": "https://www.gov.uk/global-talent"
+      },
+      "published_at": null,
+      "event_date": null,
+      "collected_at": "2026-09-11T00:00:00Z",
+      "source_type": "official_government",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Official guidance publishes the baseline endorsement timing but not the community-observed backlog.",
+        "fa": ""
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "sig_gbr-gt-endorsement-delay",
+      "issue_cluster_id": "gbr-gt-endorsement-delay",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "processing_delay",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "science",
+            "engineering",
+            "technology"
+          ],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Global Talent peer-review endorsement applicant"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "global_talent"
+          ]
+        },
+        "process_stages": [
+          "endorsement_stage_1",
+          "peer_review"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Repeated peer-review endorsement delays beyond the usual window",
+          "fa": ""
+        },
+        "summary": {
+          "en": "Several independent recent applicants report materially longer peer-review endorsement waits than the usual published timing.",
+          "fa": "چند متقاضی مستقل در گزارش‌های جدید از طولانی‌تر شدن محسوس زمان اندورسمنت Peer Review نسبت به زمان معمول منتشرشده خبر داده‌اند."
+        },
+        "practical_impact": {
+          "en": "Fixed employment or immigration deadlines may become difficult.",
+          "fa": ""
+        },
+        "who_should_care": {
+          "en": "Applicants using the affected peer-review endorsement path with fixed deadlines.",
+          "fa": ""
+        },
+        "recommended_action": {
+          "en": "Allow a larger timing buffer and verify the latest official processing guidance.",
+          "fa": ""
+        },
+        "known_workaround": "Avoid non-refundable commitments based only on the nominal timing."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "evd_gt-endorsement-delay-1",
+          "relation": "supports",
+          "independence_group": "r1"
+        },
+        {
+          "evidence_id": "evd_gt-endorsement-delay-2",
+          "relation": "supports",
+          "independence_group": "r2"
+        },
+        {
+          "evidence_id": "evd_gt-endorsement-delay-3",
+          "relation": "supports",
+          "independence_group": "r3"
+        },
+        {
+          "evidence_id": "evd_gt-official-baseline-timing",
+          "relation": "supports",
+          "independence_group": "gov-uk"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "corroborated",
+        "trend": "worsening",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Three independent first-hand reports and a primary baseline."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-11",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "partly_confirmed",
+          "evidence_ids": [
+            "evd_gt-official-baseline-timing"
+          ],
+          "checked_at": "2026-09-11",
+          "note": "Official source confirms the baseline timing but not the full community-observed backlog."
+        },
+        "community": {
+          "status": "corroborated",
+          "evidence_ids": [
+            "evd_gt-endorsement-delay-1",
+            "evd_gt-endorsement-delay-2",
+            "evd_gt-endorsement-delay-3"
+          ],
+          "checked_at": "2026-09-11",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "no_recheck",
+        "last_checked_at": "2026-09-11",
+        "next_check_at": "2026-09-25",
+        "reason": "Current independent reports.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Global Talent",
+        "peer review",
+        "endorsement",
+        "delay"
+      ]
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Inspected before storage."
+      }
+    }
+  }
+}

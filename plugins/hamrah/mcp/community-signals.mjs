@@ -2,27 +2,12 @@ import { readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import Ajv2020 from "ajv/dist/2020.js";
 import { BudgetExceededError, REQUEST_BUDGETS } from "./budgets.mjs";
-import { inspectDatasetPrivacy } from "./privacy-check.mjs";
-import {
-  searchableV4Signals,
-  V4_SCHEMA_VERSION,
-  v4DatasetView,
-  validateCommunityDatasetV4
-} from "./community-dataset-v4.mjs";
+import { readCommunityDataset } from "./community-datasets.mjs";
 
 const DATASET_ROOT = fileURLToPath(
   new URL("../data/community-signals/datasets/", import.meta.url)
 );
-const SCHEMA = JSON.parse(
-  readFileSync(
-    new URL("../skills/hamrah-signal-builder/references/output_schema.json", import.meta.url),
-    "utf8"
-  )
-);
-const ajv = new Ajv2020({ allErrors: true, strict: false });
-const validateSchema = ajv.compile(SCHEMA);
 const ALLOWED_CURRENT_STATUSES = new Set(["active", "monitoring", "uncertain"]);
 const MAX_DATASET_BYTES = 2_000_000;
 
@@ -41,36 +26,6 @@ function walkJsonFiles(directory, maxFiles, output = []) {
     else if (entry.isFile() && entry.name.endsWith(".json")) output.push(absolutePath);
   }
   return output;
-}
-
-function compactSchemaErrors(errors = []) {
-  return errors.slice(0, 8).map((error) => {
-    const location = error.instancePath || "<root>";
-    return `${location}: ${error.message}`;
-  });
-}
-
-function semanticErrors(dataset) {
-  const errors = [];
-  if (dataset.quality_control?.personal_identifiers_removed !== true) {
-    errors.push("quality_control.personal_identifiers_removed must be true");
-  }
-  const signals = Array.isArray(dataset.signals) ? dataset.signals : [];
-  const ids = signals.map((signal) => signal.signal_id);
-  const duplicates = [...new Set(ids.filter((id, index) => id && ids.indexOf(id) !== index))];
-  if (duplicates.length) errors.push(`duplicate signal_id values: ${duplicates.join(", ")}`);
-  if (dataset.summary?.total_signals !== signals.length) {
-    errors.push("summary.total_signals does not match signals.length");
-  }
-  for (const signal of signals) {
-    if (["resolved", "historical"].includes(signal.status) && signal.suggested_fit_adjustment !== 0) {
-      errors.push(`${signal.signal_id}: resolved/historical adjustment must be 0`);
-    }
-    if (signal.impact_direction === "positive_resolution" && signal.suggested_fit_adjustment !== 0) {
-      errors.push(`${signal.signal_id}: positive resolution adjustment must be 0`);
-    }
-  }
-  return errors.slice(0, 8);
 }
 
 function datasetIdFor(filePath, root) {
@@ -95,27 +50,12 @@ export function loadCommunitySignalStore(root = DATASET_ROOT, maxDatasets = REQU
         throw new Error(`file exceeds ${MAX_DATASET_BYTES} bytes`);
       }
       const dataset = JSON.parse(readFileSync(filePath, "utf8"));
-      if (dataset?.schema_version === V4_SCHEMA_VERSION) {
-        const { errors, privacy } = validateCommunityDatasetV4(dataset);
-        if (errors.length) {
-          invalidDatasets.push({ datasetId, error: errors.join("; "), ...(privacy ? { privacy } : {}) });
-          continue;
-        }
-        datasets.push({ datasetId, dataset, privacy, signals: searchableV4Signals(dataset) });
-        continue;
-      }
-      const privacy = inspectDatasetPrivacy(dataset);
-      const schemaValid = validateSchema(dataset);
-      const errors = [
-        ...(schemaValid ? [] : compactSchemaErrors(validateSchema.errors)),
-        ...semanticErrors(dataset),
-        ...(privacy.status === "pass" ? [] : [`privacy ${privacy.status}: ${privacy.findings.map((item) => `${item.path} (${item.rule})`).join(", ")}`])
-      ];
+      const { schemaVersion, errors, privacy, canonical } = readCommunityDataset(dataset);
       if (errors.length) {
-        invalidDatasets.push({ datasetId, error: errors.join("; "), privacy });
+        invalidDatasets.push({ datasetId, schemaVersion, error: errors.join("; "), ...(privacy ? { privacy } : {}) });
         continue;
       }
-      datasets.push({ datasetId, dataset, privacy, signals: dataset.signals });
+      datasets.push({ datasetId, dataset, privacy, canonical });
     } catch (error) {
       invalidDatasets.push({
         datasetId,
@@ -180,7 +120,7 @@ function matchesSignal(signal, args) {
   ].some((value) => normalized(value) === originCountry)) return false;
   if (nationality && !arrayIncludes(signal.applicant_scope?.nationalities, nationality)) return false;
   if (entity && !(signal.entities || []).some((item) => normalized(item.name).includes(entity))) return false;
-  if (!statuses.has(signal.status)) return false;
+  if (!statuses.has(signal.lifecycle.status)) return false;
   if (topic && !searchableText(signal).includes(topic)) return false;
   return true;
 }
@@ -190,19 +130,16 @@ function dateValue(value) {
   return Number.isNaN(timestamp) ? 0 : timestamp;
 }
 
-function publicSignal(datasetId, dataset, signal) {
-  const v4 = dataset.schema_version === V4_SCHEMA_VERSION
-    ? { lifecycle: signal.lifecycle, validationStatus: signal.validation.status, evidenceIds: signal.evidence_ids }
-    : {};
+function publicSignal(datasetId, canonical, signal) {
   return {
     datasetId,
-    datasetGeneratedAt: dataset.generated_at,
-    schemaVersion: dataset.schema_version,
+    datasetGeneratedAt: canonical.generatedAt,
+    schemaVersion: signal.source_schema_version,
     privacyStatus: "pass",
-    signalId: signal.signal_id,
+    signalId: signal.id,
     rootCauseId: signal.root_cause_id,
     title: signal.title,
-    status: signal.status,
+    status: signal.lifecycle.status,
     trend: signal.trend,
     severity: signal.severity,
     confidence: signal.confidence,
@@ -218,8 +155,8 @@ function publicSignal(datasetId, dataset, signal) {
     whoShouldCare: signal.who_should_care,
     recommendedAction: signal.recommended_action,
     knownWorkaround: signal.known_workaround,
-    lastSeen: signal.last_seen,
-    lastVerified: signal.last_verified,
+    lastSeen: signal.lifecycle.last_seen,
+    lastVerified: signal.lifecycle.last_verified,
     officiallyConfirmed: signal.officially_confirmed,
     communityConfirmed: signal.community_confirmed,
     suggestedFitAdjustment: signal.suggested_fit_adjustment,
@@ -228,27 +165,29 @@ function publicSignal(datasetId, dataset, signal) {
     correlatedSignalIds: signal.correlated_signal_ids,
     needsRecheck: signal.needs_recheck,
     suggestedRecheckDate: signal.suggested_recheck_date,
-    ...v4
+    lifecycle: signal.lifecycle,
+    validationStatus: signal.validation.status,
+    evidenceIds: signal.evidence_ids
   };
 }
 
 export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatasets) {
   const store = loadCommunitySignalStore(root, maxDatasets);
   const newestBySignalId = new Map();
-  for (const { datasetId, dataset, signals } of store.datasets) {
-    for (const signal of signals) {
+  for (const { datasetId, canonical } of store.datasets) {
+    for (const signal of canonical.signals) {
       if (!matchesSignal(signal, args)) continue;
-      const existing = newestBySignalId.get(signal.signal_id);
-      if (!existing || dateValue(dataset.generated_at) > dateValue(existing.dataset.generated_at)) {
-        newestBySignalId.set(signal.signal_id, { datasetId, dataset, signal });
+      const existing = newestBySignalId.get(signal.id);
+      if (!existing || dateValue(canonical.generatedAt) > dateValue(existing.canonical.generatedAt)) {
+        newestBySignalId.set(signal.id, { datasetId, canonical, signal });
       }
     }
   }
   const limit = Math.max(1, Math.min(50, Number.isInteger(args.limit) ? args.limit : 20));
   const matches = [...newestBySignalId.values()]
-    .sort((a, b) => dateValue(b.signal.last_verified) - dateValue(a.signal.last_verified))
+    .sort((a, b) => dateValue(b.signal.lifecycle.last_verified) - dateValue(a.signal.lifecycle.last_verified))
     .slice(0, limit)
-    .map(({ datasetId, dataset, signal }) => publicSignal(datasetId, dataset, signal));
+    .map(({ datasetId, canonical, signal }) => publicSignal(datasetId, canonical, signal));
   return {
     source: "Hamrah Community Signal Store",
     generatedAt: new Date().toISOString(),
@@ -275,27 +214,33 @@ export function getCommunitySignalDataset(args = {}, root = DATASET_ROOT, maxDat
   const requested = Array.isArray(args.signalIds) && args.signalIds.length
     ? new Set(args.signalIds.map(String))
     : null;
-  const isV4 = found.dataset.schema_version === V4_SCHEMA_VERSION;
-  const idOf = (signal) => (isV4 ? signal.id : signal.signal_id);
-  const signals = requested
-    ? found.dataset.signals.filter((signal) => requested.has(idOf(signal)))
-    : found.dataset.signals;
+  const { canonical, dataset } = found;
+  const selected = canonical.signals
+    .map((signal, index) => ({ signal, original: dataset.signals[index] }))
+    .filter(({ signal }) => !requested || requested.has(signal.id));
+  const canonicalSignals = selected.map(({ signal }) => signal);
+  const evidenceIds = new Set(canonicalSignals.flatMap((signal) => signal.evidence_ids));
+  const evidence = canonical.evidence.filter((item) => requested ? evidenceIds.has(item.id) : true);
+  const sourceIds = new Set(evidence.map((item) => item.source_id));
   return {
     source: "Hamrah Community Signal Store",
     datasetId: found.datasetId,
-    schemaVersion: found.dataset.schema_version,
-    generatedAt: found.dataset.generated_at,
-    sourceCoverage: found.dataset.source_coverage,
-    summary: found.dataset.summary ?? null,
-    qualityControl: found.dataset.quality_control,
+    schemaVersion: canonical.sourceSchemaVersion,
+    generatedAt: canonical.generatedAt,
+    sourceCoverage: canonical.sourceCoverage,
+    summary: canonical.summary,
+    qualityControl: canonical.qualityControl,
     privacy: found.privacy,
-    signals,
-    ...(isV4 ? v4DatasetView(found.dataset, signals) : {}),
-    watchlist: found.dataset.watchlist,
+    provenance: canonical.provenance,
+    signals: selected.map(({ original }) => original),
+    canonicalSignals,
+    evidence,
+    sources: canonical.sources.filter((source) => requested ? sourceIds.has(source.id) : true),
+    watchlist: canonical.watchlist,
     missingSignalIds: requested
-      ? [...requested].filter((signalId) => !signals.some((signal) => idOf(signal) === signalId))
+      ? [...requested].filter((signalId) => !canonicalSignals.some((signal) => signal.id === signalId))
       : [],
-    usageNote: "Official eligibility remains separate. Resolved and historical signals have zero current fit adjustment."
+    usageNote: "Official eligibility remains separate. Resolved and historical signals have zero current fit adjustment. signals keep the dataset's original schema; canonicalSignals, evidence, and sources use the version 4 field names, with null or \"unknown\" where the original schema cannot express a value."
   };
 }
 

@@ -51,7 +51,7 @@ test("a published version 4 Signal is searchable and retrievable with evidence, 
   assert.equal(found.privacyStatus, "pass");
   assert.equal(found.validationStatus, "validated");
   assert.equal(found.lastVerified, "2026-09-11");
-  assert.deepEqual(found.lifecycle, V4_EXAMPLE.signals[0].lifecycle);
+  assert.deepEqual(found.lifecycle, { ...V4_EXAMPLE.signals[0].lifecycle, source_status: "active" });
   assert.equal(found.evidenceIds.length, 4);
 
   const fetched = await executeTool("getCommunitySignalDataset", {

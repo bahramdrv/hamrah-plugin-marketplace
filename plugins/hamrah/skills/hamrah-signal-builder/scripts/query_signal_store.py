@@ -25,15 +25,22 @@ for entry in catalog.get("datasets", []):
     path = root / entry["path"]
     data = json.loads(path.read_text())
     signal_ids = []
+    version = data.get("schema_version")
     for signal in data.get("signals", []):
-        if args.country_code and signal.get("destination", {}).get("country_code") != args.country_code:
+        if version == "3.0.0":
+            scope = signal.get("scope", {})
+            destination, routes = scope.get("destination", {}), scope.get("routes", {}).get("codes", [])
+            status = {"unknown": "uncertain"}.get(signal.get("assessment", {}).get("lifecycle"), signal.get("assessment", {}).get("lifecycle"))
+        else:
+            destination, routes = signal.get("destination", {}), signal.get("migration_routes", [])
+            status = signal.get("lifecycle", {}).get("status") if version == "4.0.0" else signal.get("status")
+        if args.country_code and destination.get("country_code") != args.country_code:
             continue
-        if args.route and args.route not in signal.get("migration_routes", []):
+        if args.route and args.route not in routes:
             continue
-        status = signal.get("lifecycle", {}).get("status") if data.get("schema_version") == "4.0.0" else signal.get("status")
         if args.status and status not in args.status:
             continue
-        signal_ids.append(signal.get("id") if data.get("schema_version") == "4.0.0" else signal.get("signal_id"))
+        signal_ids.append(signal.get("id") if version == "4.0.0" else signal.get("signal_id"))
     if signal_ids:
         matches.append({"dataset": str(path), "generated_at": entry.get("generated_at"), "signal_ids": signal_ids})
 print(json.dumps({"store_root": str(root), "matches": matches}, ensure_ascii=False, indent=2))

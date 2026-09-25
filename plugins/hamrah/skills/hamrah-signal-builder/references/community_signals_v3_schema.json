@@ -1,0 +1,862 @@
+{
+  "$comment": "Installed Hamrah Community Signal contract 3.0.0, copied unchanged from the hamrah 0.1.0+codex.20260915053638 plugin package. Read-only: new datasets use community_dataset_v4_schema.json.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://visaatlas.org/schemas/community-signals-v3.schema.json",
+  "title": "Hamrah Community Signals v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "taxonomy_version",
+    "dataset",
+    "sources",
+    "evidence",
+    "signals",
+    "quality"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.0.0"
+    },
+    "taxonomy_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dataset": {
+      "$ref": "#/$defs/dataset"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "signals": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/signal"
+      }
+    },
+    "quality": {
+      "$ref": "#/$defs/quality"
+    },
+    "extensions": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "dataset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dataset_id",
+        "generated_at",
+        "generator"
+      ],
+      "properties": {
+        "dataset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "generated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "generator": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "version"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "from",
+        "to",
+        "records_available",
+        "records_processed"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "complete",
+            "partial",
+            "unknown"
+          ]
+        },
+        "from": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "to": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "records_available": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "records_processed": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "name",
+        "source_type",
+        "source_url",
+        "coverage"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_type": {
+          "enum": [
+            "json",
+            "forum",
+            "url",
+            "text",
+            "social",
+            "mixed",
+            "community_export",
+            "other"
+          ]
+        },
+        "source_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "coverage": {
+          "$ref": "#/$defs/coverage"
+        }
+      }
+    },
+    "localized": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "en",
+        "fa"
+      ],
+      "properties": {
+        "en": {
+          "type": "string"
+        },
+        "fa": {
+          "type": "string"
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_id",
+        "source_id",
+        "locator",
+        "published_at",
+        "event_date",
+        "collected_at",
+        "source_type",
+        "firsthandness",
+        "summary",
+        "privacy_redacted"
+      ],
+      "properties": {
+        "evidence_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "value"
+          ],
+          "properties": {
+            "type": {
+              "enum": [
+                "message_id",
+                "url",
+                "citation",
+                "record_id",
+                "none"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "published_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "event_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "collected_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "firsthandness": {
+          "enum": [
+            "direct",
+            "second_hand",
+            "unknown"
+          ]
+        },
+        "summary": {
+          "$ref": "#/$defs/localized"
+        },
+        "privacy_redacted": {
+          "type": "boolean"
+        }
+      }
+    },
+    "entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entity_type",
+        "name"
+      ],
+      "properties": {
+        "entity_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "destination",
+        "applicants",
+        "routes",
+        "process_stages",
+        "entities"
+      ],
+      "properties": {
+        "destination": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "country",
+            "country_code",
+            "region",
+            "city"
+          ],
+          "properties": {
+            "country": {
+              "type": "string"
+            },
+            "country_code": {
+              "type": "string"
+            },
+            "region": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "applicants": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "origin_countries",
+            "nationalities",
+            "residence_countries",
+            "applying_from",
+            "age_groups",
+            "occupations",
+            "fields",
+            "education_levels",
+            "regulated_professions",
+            "other_conditions"
+          ],
+          "properties": {
+            "origin_countries": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "nationalities": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "residence_countries": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "applying_from": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "age_groups": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "occupations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "education_levels": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "regulated_professions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "other_conditions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "routes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "families",
+            "codes"
+          ],
+          "properties": {
+            "families": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "codes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "process_stages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "entities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entity"
+          }
+        }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family",
+        "type",
+        "class"
+      ],
+      "properties": {
+        "family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "class": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "summary",
+        "practical_impact",
+        "who_should_care",
+        "recommended_action",
+        "known_workaround"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "#/$defs/localized"
+        },
+        "summary": {
+          "$ref": "#/$defs/localized"
+        },
+        "practical_impact": {
+          "$ref": "#/$defs/localized"
+        },
+        "who_should_care": {
+          "$ref": "#/$defs/localized"
+        },
+        "recommended_action": {
+          "$ref": "#/$defs/localized"
+        },
+        "known_workaround": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "evidenceLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_id",
+        "relation",
+        "independence_group"
+      ],
+      "properties": {
+        "evidence_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relation": {
+          "enum": [
+            "supports",
+            "contradicts",
+            "resolves",
+            "context"
+          ]
+        },
+        "independence_group": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "signal_id"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "correlates_with",
+            "same_issue_cluster",
+            "caused_by",
+            "supersedes",
+            "contradicts",
+            "related_to"
+          ]
+        },
+        "signal_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lifecycle",
+        "evidence_maturity",
+        "trend",
+        "severity",
+        "confidence",
+        "impact_direction",
+        "assessed_at",
+        "method"
+      ],
+      "properties": {
+        "lifecycle": {
+          "enum": [
+            "active",
+            "resolved",
+            "historical",
+            "unknown"
+          ]
+        },
+        "evidence_maturity": {
+          "enum": [
+            "anecdotal",
+            "emerging",
+            "corroborated",
+            "officially_verified",
+            "contradicted"
+          ]
+        },
+        "trend": {
+          "enum": [
+            "worsening",
+            "stable",
+            "improving",
+            "resolved",
+            "unknown"
+          ]
+        },
+        "severity": {
+          "enum": [
+            "low",
+            "moderate",
+            "high",
+            "critical"
+          ]
+        },
+        "confidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "level",
+            "rationale"
+          ],
+          "properties": {
+            "level": {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "rationale": {
+              "type": "string"
+            }
+          }
+        },
+        "impact_direction": {
+          "enum": [
+            "negative",
+            "positive_resolution",
+            "mixed",
+            "neutral"
+          ]
+        },
+        "assessed_at": {
+          "type": "string"
+        },
+        "method": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "version"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "verificationState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "evidence_ids",
+        "checked_at",
+        "note"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "checked_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "official",
+        "community"
+      ],
+      "properties": {
+        "official": {
+          "$ref": "#/$defs/verificationState"
+        },
+        "community": {
+          "$ref": "#/$defs/verificationState"
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "last_checked_at",
+        "next_check_at",
+        "reason",
+        "confirmation_criteria"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "recheck_required",
+            "monitor",
+            "no_recheck",
+            "resolved"
+          ]
+        },
+        "last_checked_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "next_check_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        },
+        "confirmation_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "signal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signal_id",
+        "issue_cluster_id",
+        "relationships",
+        "classification",
+        "scope",
+        "claim",
+        "evidence_links",
+        "assessment",
+        "verification",
+        "review",
+        "keywords"
+      ],
+      "properties": {
+        "signal_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "issue_cluster_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "relationships": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relationship"
+          }
+        },
+        "classification": {
+          "$ref": "#/$defs/classification"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "claim": {
+          "$ref": "#/$defs/claim"
+        },
+        "evidence_links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceLink"
+          }
+        },
+        "assessment": {
+          "$ref": "#/$defs/assessment"
+        },
+        "verification": {
+          "$ref": "#/$defs/verification"
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "qualityCheck": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "note"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "pass",
+            "fail",
+            "partial",
+            "not_run",
+            "not_available",
+            "not_applicable"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "checks"
+      ],
+      "properties": {
+        "checks": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/qualityCheck"
+          },
+          "required": [
+            "privacy"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 
 import Ajv2020 from "ajv/dist/2020.js";
+import { localized } from "./community-canonical.mjs";
 import { inspectDatasetPrivacy } from "./privacy-check.mjs";
 
 export const V4_SCHEMA_VERSION = "4.0.0";
@@ -14,7 +15,7 @@ const MAX_ERRORS = 12;
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const DATE_TIME = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?(?:Z|[+-]\d{2}:\d{2})$/;
 
-function parseDay(value, allowDate, allowDateTime) {
+export function parseIsoDay(value, allowDate, allowDateTime) {
   if (typeof value !== "string") return null;
   const isDate = allowDate && DATE.test(value);
   if (!isDate && !(allowDateTime && DATE_TIME.test(value))) return null;
@@ -28,7 +29,7 @@ function parseDay(value, allowDate, allowDateTime) {
 
 function checkDate(errors, reference, path, value, { allowDate = true, allowDateTime = false, nullable = false } = {}) {
   if (value === null && nullable) return null;
-  const day = parseDay(value, allowDate, allowDateTime);
+  const day = parseIsoDay(value, allowDate, allowDateTime);
   if (!day) {
     errors.push(`${path} is not a valid ISO ${[allowDate && "date", allowDateTime && "date-time"].filter(Boolean).join(" or ")}`);
     return null;
@@ -151,35 +152,46 @@ export function validateCommunityDatasetV4(dataset) {
   return { errors: errors.slice(0, MAX_ERRORS), privacy };
 }
 
-export function searchableV4Signals(dataset) {
-  return dataset.signals.map((signal) => ({
-    ...signal,
-    signal_id: signal.id,
-    status: signal.lifecycle.status,
-    first_seen: signal.lifecycle.first_seen,
-    last_seen: signal.lifecycle.last_seen,
-    last_verified: signal.lifecycle.last_verified ?? null
-  }));
-}
-
-export function v4DatasetView(dataset, signals) {
-  const evidenceIds = new Set(signals.flatMap((signal) => signal.evidence_ids));
-  const evidence = dataset.evidence.filter((item) => evidenceIds.has(item.id));
-  const sourceIds = new Set(evidence.map((item) => item.source_id));
+export function adaptCommunityDatasetV4(dataset) {
+  const evidenceById = new Map(dataset.evidence.map((item) => [item.id, item]));
+  const sourcesById = new Map(dataset.sources.map((source) => [source.id, source]));
   return {
+    sourceSchemaVersion: V4_SCHEMA_VERSION,
+    generatedAt: dataset.generated_at,
+    sourceCoverage: dataset.source_coverage,
+    summary: null,
+    qualityControl: dataset.quality_control,
+    watchlist: dataset.watchlist,
     provenance: dataset.provenance,
-    evidence,
-    sources: dataset.sources.filter((source) => sourceIds.has(source.id))
+    sources: dataset.sources.map((source) => ({ ...source, source_schema_version: V4_SCHEMA_VERSION, source_type: null })),
+    evidence: dataset.evidence.map((item) => ({
+      ...item,
+      source_schema_version: V4_SCHEMA_VERSION,
+      source_name: sourcesById.get(item.source_id).source_name,
+      locator: item.source_url ? { type: "url", value: item.source_url } : null,
+      evidence_summary_fa: null,
+      privacy_redacted: null
+    })),
+    signals: dataset.signals.map((signal) => ({
+      ...signal,
+      source_schema_version: V4_SCHEMA_VERSION,
+      relationships: signal.correlated_signal_ids.map((id) => ({ type: "correlates_with", signal_id: id })),
+      confidence_rationale: null,
+      evidence_maturity: null,
+      localized: {
+        title: localized(signal.title),
+        summary: localized(signal.summary_en, signal.summary_fa),
+        practical_impact: localized(signal.practical_impact),
+        who_should_care: localized(signal.who_should_care),
+        recommended_action: localized(signal.recommended_action)
+      },
+      community_verification: null,
+      evidence_links: signal.evidence_ids.map((id) => ({
+        evidence_id: id,
+        relation: evidenceById.get(id).supports_or_contradicts,
+        independence_group: evidenceById.get(id).independence_group
+      })),
+      lifecycle: { ...signal.lifecycle, source_status: signal.lifecycle.status, last_verified: signal.lifecycle.last_verified ?? null }
+    }))
   };
-}
-
-if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).href) {
-  try {
-    const { errors, privacy } = validateCommunityDatasetV4(JSON.parse(readFileSync(process.argv[2], "utf8")));
-    process.stdout.write(`${JSON.stringify({ valid: errors.length === 0, errors, privacy })}\n`);
-    if (errors.length) process.exitCode = 1;
-  } catch (error) {
-    process.stderr.write(`Version 4 validation failed: ${error.message}\n`);
-    process.exitCode = 1;
-  }
 }

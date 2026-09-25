@@ -34,7 +34,7 @@ Read only the references needed for the task:
 - `references/migration_routes.md` — normalized route codes and process stages
 - `references/evidence_rules.md` — confidence, recency, contradiction, privacy, scoring
 - `references/output_schema.json` — required output contract
-- `references/community_dataset_v4_schema.json` — version 4.0.0 Community Dataset with separate Sources, Evidence, Signals, and other artifact collections; see `examples/v4_signal_dataset.json`. `scripts/validate_output.py` and `scripts/store_signals.py` accept either version.
+- `references/community_dataset_v4_schema.json` — version 4.0.0 Community Dataset with separate Sources, Evidence, Signals, and other artifact collections; see `examples/v4_signal_dataset.json`. `scripts/validate_output.py` and `scripts/store_signals.py` accept version 2, the installed version 3 contract (`references/community_signals_v3_schema.json`, read-only), and version 4.
 
 Use `examples/gold_standard.json` when uncertain about how active, monitoring, and resolved signals should look.
 
