@@ -265,7 +265,7 @@ test("a route without a current official basis has no IRVI", async () => {
   assert.ok(result.ranking.reasons.some((reason) => reason.code === "no_route_evidence_threshold"));
 });
 
-test("a configured German route passes only with current official and independent public Iran evidence", async () => {
+function passingCandidate() {
   const candidate = structuredClone(CANDIDATE);
   const FINANCE = "https://www.auswaertiges-amt.example.de/visa/study-finance";
   const REGIONAL = "https://regional.example.org/iran-study-observation";
@@ -288,6 +288,11 @@ test("a configured German route passes only with current official and independen
     summary_en: "A doctoral researcher from Iran enrolled in a German PhD programme in April 2026.",
     evidence_ids: ["profile"], lifecycle: structuredClone(LIFECYCLE)
   }];
+  return candidate;
+}
+
+test("a configured German route passes only with current official and independent public Iran evidence", async () => {
+  const candidate = passingCandidate();
   const result = await viability({ officialEligibility: "PASS" }, publish(candidate).storeRoot);
   assert.equal(result.ranking.rankable, true);
   assert.equal(result.ranking.threshold.status, "pass");
@@ -351,4 +356,114 @@ test("the reviewed thresholds describe the first published German routes", async
     assert.equal(result.ranking.rankable, false);
     assert.deepEqual(result.ranking.reasons.map((reason) => reason.code), ["insufficient_iran_source_families", "no_recent_qualified_examples"]);
   }
+});
+
+test("route discovery is read-only and separates uncovered countries from unranked candidates", async () => {
+  assert.equal(TOOLS.find((item) => item.name === "findViableRoutesForIranians").annotations.readOnlyHint, true);
+  const result = (await executeTool("findViableRoutesForIranians", {
+    countryCodes: ["DEU", "JPN"], residenceCountry: "IRN", asOf: AS_OF, maxCandidates: 10
+  })).structuredContent;
+  assert.equal(result.status, "partial_coverage");
+  assert.equal(result.ranked.length, 0);
+  assert.equal(result.unranked.length, 5);
+  assert.ok(result.coverage.countries.some((item) => item.countryCode === "JPN" && item.status === "no_coverage"));
+  assert.ok(result.unranked.every((item) => item.reasons.some((reason) => reason.code === "official_eligibility_unresolved")));
+  assert.ok(result.unranked.every((item) => item.summaryFa.includes("رتبه")));
+  assert.ok(result.unranked.every((item) => item.summaryFa.includes("آلمان")));
+
+  const uncovered = (await executeTool("findViableRoutesForIranians", {
+    countryCodes: ["JPN"], residenceCountry: "IRN", asOf: AS_OF
+  })).structuredContent;
+  assert.equal(uncovered.status, "research_required");
+  assert.equal(uncovered.coverage.countries[0].status, "no_coverage");
+  assert.deepEqual(uncovered.ranked, []);
+});
+
+test("route discovery reports provider failure and enforces candidate fan-out limits", async () => {
+  const failed = (await executeTool("findViableRoutesForIranians", {
+    countryCodes: ["DEU"], residenceCountry: "IRN", asOf: AS_OF
+  }, globalThis.fetch, { evidenceProvider: { discoverCandidates: async () => { throw new Error("provider offline"); } } })).structuredContent;
+  assert.equal(failed.status, "research_required");
+  assert.deepEqual(failed.ranked, []);
+  assert.deepEqual(failed.unranked, []);
+  assert.equal(failed.provider.status, "unavailable");
+
+  const limited = (await executeTool("findViableRoutesForIranians", {
+    countryCodes: ["DEU"], residenceCountry: "IRN", asOf: AS_OF, maxCandidates: 2
+  })).structuredContent;
+  assert.equal(limited.ranked.length + limited.unranked.length, 2);
+  assert.equal(limited.coverage.truncatedCandidates, true);
+
+  const invalid = (await executeTool("findViableRoutesForIranians", {
+    countryCodes: ["DEU"], residenceCountry: "IRN", asOf: AS_OF,
+    routeAssessments: [
+      { countryCode: "DEU", route: "student_phd", officialEligibility: "PASS" },
+      { countryCode: "DEU", route: "student_phd", officialEligibility: "FAIL" }
+    ]
+  })).structuredContent;
+  assert.equal(invalid.error, "invalid_route_discovery_input");
+
+  const timedOut = (await executeTool("findViableRoutesForIranians", {
+    countryCodes: ["DEU"], residenceCountry: "IRN", asOf: AS_OF
+  }, globalThis.fetch, { deadlineMs: 20, evidenceProvider: { discoverCandidates: () => new Promise(() => {}) } })).structuredContent;
+  assert.equal(timedOut.error, "operation_deadline_exceeded");
+});
+
+test("route discovery ranks a qualified route and explains official FAIL, stale facts, and missing evidence", async () => {
+  const candidate = passingCandidate();
+  const { storeRoot } = publish(candidate);
+  const args = {
+    countryCodes: ["DEU"], residenceCountry: "IRN", asOf: AS_OF,
+    routeAssessments: [{ countryCode: "DEU", route: "student_phd", officialEligibility: "PASS", applicantFit: 78, practicalFit: 68 }]
+  };
+  const unverified = await callIn(storeRoot, "findViableRoutesForIranians", args);
+  assert.equal(unverified.ranked.length, 0, "a caller-supplied PASS is not verified eligibility");
+  assert.equal(unverified.unranked[0].officialEligibility.claimedStatus, "PASS");
+  assert.equal(unverified.unranked[0].officialEligibility.verificationStatus, "unverified");
+  const verifiedOptions = {
+    signalStoreRoot: path.join(storeRoot, "datasets"),
+    eligibilityProvider: { assess: async () => ({ status: "PASS", verificationStatus: "verified", freshness: "current", assessmentId: "scorecard-1", sourceIds: ["law-site"] }) }
+  };
+  const ranked = (await executeTool("findViableRoutesForIranians", args, globalThis.fetch, verifiedOptions)).structuredContent;
+  assert.equal(ranked.status, "complete");
+  assert.equal(ranked.ranked.length, 1);
+  assert.equal(ranked.unranked.length, 0);
+  const route = ranked.ranked[0];
+  assert.equal(route.qualifiedExampleCount, 1);
+  assert.equal(route.officialEligibility.status, "PASS");
+  assert.equal(route.officialEligibility.assessmentId, "scorecard-1");
+  assert.equal(route.evidence.freshness.decisiveFactCurrent, true);
+  assert.equal(route.evidence.verification.status, "validated_public_dataset");
+  assert.equal(route.evidence.verification.routeThresholdStatus, "pass");
+  assert.equal(route.evidence.privacy.status, "public_only");
+  assert.ok(route.evidence.trace.some((item) => item.authority === "primary" && item.freshness === "current"));
+  assert.equal(route.applicantFit.value, 78);
+  assert.equal(route.practicalFit.value, 68);
+  assert.equal(route.confidence.label, "low");
+  assert.ok(route.sourceIds.length >= 3);
+  assert.ok(route.evidenceIds.length >= 3);
+  assert.ok(route.sourceIds.every((id) => !route.evidenceIds.includes(id)));
+  assert.ok(route.risks.some((risk) => risk.kind === "community_friction"));
+  assert.equal(route.frictionPoints, -10);
+  assert.ok(route.idealNextActions.length > 0);
+  assert.match(route.summaryFa, /رتبه‌بندی پذیرفته شده/);
+  assert.ok(route.reasons.some((reason) => reason.code === "route_evidence_threshold_pass"));
+
+  const failed = await callIn(storeRoot, "findViableRoutesForIranians", {
+    ...args, routeAssessments: [{ countryCode: "DEU", route: "student_phd", officialEligibility: "FAIL" }]
+  });
+  assert.equal(failed.ranked.length, 0);
+  assert.ok(failed.unranked[0].reasons.some((reason) => reason.code === "official_fail"));
+
+  const staleCandidate = passingCandidate();
+  staleCandidate.evidence.find((item) => item.id === "law").retrieved_at = "2023-06-01T00:00:00Z";
+  const stale = (await executeTool("findViableRoutesForIranians", args, globalThis.fetch, {
+    ...verifiedOptions, signalStoreRoot: path.join(publish(staleCandidate).storeRoot, "datasets")
+  })).structuredContent;
+  assert.equal(stale.ranked.length, 0);
+  assert.ok(stale.unranked[0].reasons.some((reason) => reason.code === "stale_decisive_fact"));
+
+  const insufficient = await callIn(store().storeRoot, "findViableRoutesForIranians", args);
+  assert.equal(insufficient.ranked.length, 0);
+  assert.ok(insufficient.unranked[0].reasons.some((reason) => reason.code === "insufficient_iran_source_families"));
 });

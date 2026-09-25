@@ -60,7 +60,7 @@ function evidenceTrace(entries, freshness) {
   return entries.flatMap(({ canonical, artifact, datasetId }) => evidenceOf(canonical, artifact.evidence_ids)
     .filter(isPublic)
     .map(({ item, source }) => ({
-      datasetId, artifactId: artifact.id, evidenceId: item.id,
+      datasetId, artifactId: artifact.id, evidenceId: item.id, sourceId: item.source_id,
       sourceName: item.public_person_locator === true ? null : source.source_name,
       sourceUrl: item.public_person_locator === true ? null : item.source_url,
       sourceUrlWithheld: item.public_person_locator === true ? "public_person_locator" : null,
@@ -87,7 +87,7 @@ function officialAccessibility(claims, asOf) {
     .filter((entry) => entry.support.length);
   if (!official.length) return { ...component("official_accessibility", "not_assessed", null, "No current public official Route Claim covers this route."), basis: "missing", evidence: [] };
   const trace = official.flatMap((entry) => entry.support.map(({ item, source }) => ({
-    datasetId: entry.datasetId, artifactId: entry.artifact.id, evidenceId: item.id,
+    datasetId: entry.datasetId, artifactId: entry.artifact.id, evidenceId: item.id, sourceId: item.source_id,
     sourceName: source.source_name, sourceUrl: item.source_url,
     authority: item.authority, retrievedAt: item.retrieved_at, role: "supports",
     freshness: claimFreshness(entry.artifact, entry.support.map(({ item: support }) => support), asOf).status
@@ -95,7 +95,7 @@ function officialAccessibility(claims, asOf) {
   if (official.some(({ canonical, artifact }) => evidenceOf(canonical, artifact.opposing_evidence_ids).some(isOfficial))) {
     const opposing = official.flatMap((entry) => evidenceOf(entry.canonical, entry.artifact.opposing_evidence_ids)
       .filter(isOfficial).map(({ item, source }) => ({
-        datasetId: entry.datasetId, artifactId: entry.artifact.id, evidenceId: item.id,
+        datasetId: entry.datasetId, artifactId: entry.artifact.id, evidenceId: item.id, sourceId: item.source_id,
         sourceName: source.source_name, sourceUrl: item.source_url,
         authority: item.authority, retrievedAt: item.retrieved_at, role: "opposes",
         freshness: claimFreshness(entry.artifact, [item], asOf).status
@@ -275,7 +275,7 @@ function routeThreshold(countryCode, route, claims, signals, examples, args, asO
   };
 }
 
-export function getIranianRouteViability(args = {}, root = DATASET_ROOT, maxDatasets) {
+export function getIranianRouteViability(args = {}, root = DATASET_ROOT, maxDatasets, loadedStore) {
   if (typeof args.countryCode !== "string" || typeof args.route !== "string") throw new Error("getIranianRouteViability requires a countryCode and a route.");
   if (![args.nationality, args.residenceCountry, args.originCountry].some((value) => IRAN_CODES.has(normalizeQuestionText(value)))) {
     throw new InvalidIranianApplicantError("getIranianRouteViability requires nationality, residenceCountry, or originCountry to identify an Iran-connected applicant.");
@@ -286,7 +286,7 @@ export function getIranianRouteViability(args = {}, root = DATASET_ROOT, maxData
   const profileLevel = callerLevel(args, "profileCompatibility");
   const executionLevel = callerLevel(args, "executionPracticality");
 
-  const store = loadCommunitySignalStore(root, maxDatasets);
+  const store = loadedStore ?? loadCommunitySignalStore(root, maxDatasets);
   const countryCode = normalizeQuestionText(args.countryCode);
   const route = normalizeQuestionText(args.route);
   const onRoute = (routes) => routes.some((item) => normalizeQuestionText(item) === route);
@@ -328,7 +328,7 @@ export function getIranianRouteViability(args = {}, root = DATASET_ROOT, maxData
     ...(accessibility.basis === "stale" ? [{ code: "stale_decisive_fact", message: "A decisive official rule is past its freshness limit." }] : []),
     ...thresholdDecision.reasons
   ];
-  const statisticsResult = searchOfficialApprovalStatistics({ countryCode: args.countryCode, route: args.route, nationality: args.nationality, residenceCountry: args.residenceCountry, originCountry: args.originCountry }, root, maxDatasets);
+  const statisticsResult = searchOfficialApprovalStatistics({ countryCode: args.countryCode, route: args.route, nationality: args.nationality, residenceCountry: args.residenceCountry, originCountry: args.originCountry }, root, maxDatasets, store);
   return {
     source: "Hamrah Route Viability Assessment",
     generatedAt: new Date().toISOString(),

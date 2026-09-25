@@ -14,6 +14,7 @@ import { getLivedExperience, LivedExperienceNotFoundError, searchIranianLivedExp
 import { MILESTONES, OUTCOMES } from "./community-experiences.mjs";
 import { getAcademicOpportunity, OpportunityNotFoundError, searchAcademicOpportunities } from "./community-opportunity-tools.mjs";
 import { CLAIM_TYPES, searchRouteClaims } from "./community-route-claim-tools.mjs";
+import { findViableRoutesForIranians, InvalidRouteDiscoveryInput } from "./community-route-discovery.mjs";
 import { getIranianRouteViability, InvalidIranianApplicantError } from "./community-route-viability.mjs";
 import { searchOfficialApprovalStatistics } from "./community-statistics-tools.mjs";
 import { getCommunityQuestion, QuestionNotFoundError, searchCommunityQuestions } from "./community-question-tools.mjs";
@@ -392,6 +393,36 @@ const ROUTE_VIABILITY_TOOL = {
   annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
 };
 
+const VIABLE_ROUTE_DISCOVERY_TOOL = {
+  name: "findViableRoutesForIranians",
+  title: "Find viable routes for Iranian applicants",
+  description: "Discover source-backed route candidates in validated Hamrah evidence for up to four destination countries. Returns ranked and unranked candidates with evidence trace, freshness, verification, privacy status, risks, and Persian summaries. Caller-supplied eligibility is unverified and cannot unlock ranking; a trusted eligibility provider must verify a current PASS. An unavailable evidence provider yields research_required.",
+  inputSchema: {
+    type: "object", additionalProperties: false, required: ["countryCodes"],
+    properties: {
+      countryCodes: { type: "array", minItems: 1, maxItems: 4, uniqueItems: true, items: { type: "string", pattern: "^[A-Z]{3}$" } },
+      nationality: { type: "string", minLength: 2, maxLength: 80 },
+      residenceCountry: { type: "string", minLength: 2, maxLength: 80 },
+      originCountry: { type: "string", minLength: 2, maxLength: 80 },
+      asOf: { type: "string", pattern: "^\\d{4}-\\d{2}-\\d{2}$" },
+      maxCandidates: { type: "integer", minimum: 1, maximum: 10, default: 10 },
+      routeAssessments: {
+        type: "array", maxItems: 10,
+        description: "Prior scorecard values for exact destination and route pairs. A caller-supplied PASS is displayed as unverified and cannot unlock ranking.",
+        items: { type: "object", additionalProperties: false, required: ["countryCode", "route"], properties: {
+          countryCode: { type: "string", pattern: "^[A-Z]{3}$" }, route: { type: "string", minLength: 1, maxLength: 100 },
+          officialEligibility: { type: "string", enum: ["PASS", "POSSIBLE", "FAIL", "UNKNOWN"] },
+          profileCompatibility: { type: "string", enum: ["high", "medium", "low"] },
+          executionPracticality: { type: "string", enum: ["high", "medium", "low"] },
+          applicantFit: { type: "number", minimum: 0, maximum: 100 },
+          practicalFit: { type: "number", minimum: 0, maximum: 100 }
+        } }
+      }
+    }
+  },
+  annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+};
+
 export const TOOLS = [
   ...STANDARD_DISCOVERY_TOOLS,
   ...COMMUNITY_SIGNAL_TOOLS,
@@ -401,6 +432,7 @@ export const TOOLS = [
   ...LIVED_EXPERIENCE_TOOLS,
   OFFICIAL_STATISTICS_TOOL,
   ROUTE_VIABILITY_TOOL,
+  VIABLE_ROUTE_DISCOVERY_TOOL,
   ROUTE_FACT_PACK_TOOL,
   ...GET_OPERATIONS.map(([name, path, description]) => ({
     title: description,
@@ -660,6 +692,10 @@ async function runTool(name, args, fetchImpl, options, signal) {
       return toolResult(getIranianRouteViability(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
 
+    if (name === "findViableRoutesForIranians") {
+      return toolResult(await findViableRoutesForIranians(args, { ...options, signal }));
+    }
+
     if (name === "searchOfficialApprovalStatistics") {
       return toolResult(searchOfficialApprovalStatistics(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
@@ -735,7 +771,10 @@ async function runTool(name, args, fetchImpl, options, signal) {
     if (error instanceof InvalidIranianApplicantError) {
       return toolResult({ error: "invalid_irvi_applicant", message: error.message }, true);
     }
-    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim", "searchAcademicOpportunities", "getAcademicOpportunity", "searchIranianLivedExperiences", "getLivedExperience", "searchOfficialApprovalStatistics", "getIranianRouteViability"].includes(name);
+    if (error instanceof InvalidRouteDiscoveryInput) {
+      return toolResult({ error: "invalid_route_discovery_input", message: error.message }, true);
+    }
+    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim", "searchAcademicOpportunities", "getAcademicOpportunity", "searchIranianLivedExperiences", "getLivedExperience", "searchOfficialApprovalStatistics", "getIranianRouteViability", "findViableRoutesForIranians"].includes(name);
     if (name === "findMatchingVisaRoutes" && error?.validationDetails) {
       return toolResult({
         error: "invalid_route_finder_input",

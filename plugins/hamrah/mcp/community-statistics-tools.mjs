@@ -51,8 +51,8 @@ function present({ datasetId, canonical, statistic }) {
   };
 }
 
-export function searchOfficialApprovalStatistics(args = {}, root = DATASET_ROOT, maxDatasets) {
-  const store = loadCommunitySignalStore(root, maxDatasets);
+export function searchOfficialApprovalStatistics(args = {}, root = DATASET_ROOT, maxDatasets, loadedStore) {
+  const store = loadedStore ?? loadCommunitySignalStore(root, maxDatasets);
   const countryCode = normalizeQuestionText(args.countryCode);
   const route = normalizeQuestionText(args.route);
   const statuses = Array.isArray(args.statuses) && args.statuses.length ? new Set(args.statuses) : CURRENT_STATUSES;
