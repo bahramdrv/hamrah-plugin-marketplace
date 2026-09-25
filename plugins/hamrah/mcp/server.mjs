@@ -8,6 +8,7 @@ import Ajv from "ajv";
 import { BudgetExceededError, REQUEST_BUDGETS, withDeadline } from "./budgets.mjs";
 import { pickRecordArray } from "./record-array.mjs";
 import { buildRouteFactPack, InvalidFactPackInput, ROUTE_FACT_PACK_TOOL } from "./route-fact-pack.mjs";
+import { getCommunityQuestion, QuestionNotFoundError, searchCommunityQuestions } from "./community-question-tools.mjs";
 import {
   getCommunitySignalDataset,
   searchCommunitySignals
@@ -137,9 +138,56 @@ const COMMUNITY_SIGNAL_TOOLS = [
   }
 ];
 
+const QUESTION_SCOPE = {
+  countryCode: { type: "string", minLength: 2, maxLength: 3, description: "Destination ISO country code, such as DEU." },
+  route: { type: "string", minLength: 1, maxLength: 100, description: "Normalized route code, such as opportunity_card." },
+  topic: { type: "string", minLength: 1, maxLength: 120, description: "Normalized topic, such as work_rights." },
+  processStage: { type: "string", minLength: 1, maxLength: 100, description: "Normalized process stage, such as visa_application." }
+};
+
+const COMMUNITY_QUESTION_TOOLS = [
+  {
+    name: "searchCommunityQuestions",
+    title: "Search Hamrah Community Questions",
+    description: "Use this to find recurring applicant questions in Persian or English from Hamrah's validated datasets, with independent asker counts, first and last seen dates, trend, and answer status. Wording variants of one question are merged. A question shows demand, not an answer or an official rule; missing coverage means unknown.",
+    inputSchema: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+        query: { type: "string", minLength: 1, maxLength: 200, description: "Question text or keywords in Persian or English." },
+        ...QUESTION_SCOPE,
+        answerStatus: { type: "string", enum: ["official", "evidence_based", "community_observation", "unresolved"] },
+        statuses: {
+          type: "array", minItems: 1, maxItems: 6, uniqueItems: true,
+          items: { type: "string", enum: ["active", "monitoring", "resolved", "historical", "stale", "superseded"] },
+          description: "Defaults to active and monitoring questions."
+        },
+        limit: { type: "integer", minimum: 1, maximum: 50, default: 20 }
+      }
+    },
+    annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+  },
+  {
+    name: "getCommunityQuestion",
+    title: "Get Hamrah Community Question",
+    description: "Use this after searchCommunityQuestions to inspect one question by its stable questionId, including its variants, the posts where it was asked, source families, private-evidence count, time window, and dataset snapshots.",
+    inputSchema: {
+      type: "object",
+      additionalProperties: false,
+      required: ["questionId"],
+      properties: {
+        questionId: { type: "string", minLength: 1, maxLength: 200 },
+        datasetId: { type: "string", minLength: 1, maxLength: 240, description: "Optional dataset to read instead of the newest snapshot." }
+      }
+    },
+    annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+  }
+];
+
 export const TOOLS = [
   ...STANDARD_DISCOVERY_TOOLS,
   ...COMMUNITY_SIGNAL_TOOLS,
+  ...COMMUNITY_QUESTION_TOOLS,
   ROUTE_FACT_PACK_TOOL,
   ...GET_OPERATIONS.map(([name, path, description]) => ({
     title: description,
@@ -375,6 +423,14 @@ async function runTool(name, args, fetchImpl, options, signal) {
       return toolResult(getCommunitySignalDataset(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
 
+    if (name === "searchCommunityQuestions") {
+      return toolResult(searchCommunityQuestions(args, options.signalStoreRoot, options.maxDatasetsScanned));
+    }
+
+    if (name === "getCommunityQuestion") {
+      return toolResult(getCommunityQuestion(args, options.signalStoreRoot, options.maxDatasetsScanned));
+    }
+
     if (operationByName.has(name)) {
       const path = operationByName.get(name);
       const raw = await fetchJson(path, {}, fetchImpl, signal);
@@ -399,7 +455,14 @@ async function runTool(name, args, fetchImpl, options, signal) {
   } catch (error) {
     if (signal.reason instanceof BudgetExceededError) throw signal.reason;
     if (error instanceof BudgetExceededError) throw error;
-    const isCommunityTool = name === "searchCommunitySignals" || name === "getCommunitySignalDataset";
+    if (error instanceof QuestionNotFoundError) {
+      return toolResult({
+        error: "community_question_not_found",
+        message: error.message,
+        guidance: "Use a questionId returned by searchCommunityQuestions. An unknown ID is not evidence that the question is never asked."
+      }, true);
+    }
+    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion"].includes(name);
     if (name === "findMatchingVisaRoutes" && error?.validationDetails) {
       return toolResult({
         error: "invalid_route_finder_input",

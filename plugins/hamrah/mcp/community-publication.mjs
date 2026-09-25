@@ -13,6 +13,7 @@ import path from "node:path";
 
 import Ajv2020 from "ajv/dist/2020.js";
 import { parseIsoDay, V4_SCHEMA_VERSION, validateCommunityDatasetV4 } from "./community-dataset-v4.mjs";
+import { askerCountIssues, countIndependentAskers, mergeQuestions, normalizeQuestionText } from "./community-questions.mjs";
 import { DATASET_ROOT, loadCommunitySignalStore } from "./community-signals.mjs";
 import { emptyLedger, ledgerPathFor, readWithdrawalLedger, WITHDRAWAL_REASONS } from "./withdrawals.mjs";
 
@@ -64,9 +65,9 @@ function stableJson(value) {
 function identityText(value) {
   return String(value ?? "")
     .normalize("NFKC")
-    .replace(/[يى]/gu, "ی")
-    .replace(/ك/gu, "ک")
-    .replace(/‌/gu, " ")
+    .replace(/[\u064a\u0649]/gu, "\u06cc")
+    .replace(/\u0643/gu, "\u06a9")
+    .replace(/\u200c/gu, " ")
     .toLowerCase()
     .replace(/\s+/gu, " ")
     .trim();
@@ -122,7 +123,7 @@ function identityKey(collection, artifact, ids) {
       return [artifact.destination.country_code, sortedText(artifact.migration_routes), identityText(artifact.signal_type),
         identityText(artifact.root_cause_id), sortedText(artifact.entities.map((entity) => entity.name))];
     case "questions":
-      return [sortedText(artifact.country_codes), sortedText(artifact.routes), identityText(artifact.canonical_en)];
+      return [sortedText(artifact.country_codes), sortedText(artifact.routes), normalizeQuestionText(artifact.canonical_en)];
     case "academic_opportunities":
       return [artifact.country_code, identityText(artifact.institution), identityText(artifact.program),
         identityText(artifact.degree_level), artifact.deadline];
@@ -236,6 +237,14 @@ function deduplicate(collection, artifacts, candidateKeys) {
       byId.set(artifact.id, { artifact, key: candidateKeys[index] });
     } else if (stableJson(existing.artifact) === stableJson(artifact)) {
       merged++;
+    } else if (collection === "questions") {
+      // Differently worded records of one Question are merged; conflicting facts about it are not.
+      const result = mergeQuestions(existing.artifact, artifact);
+      if (result.issue) issues.push({ gate: "deduplication", message: `questions: ${result.issue} from candidate keys ${existing.key} and ${candidateKeys[index]}` });
+      else {
+        existing.artifact = result.merged;
+        merged++;
+      }
     } else {
       issues.push({
         gate: "deduplication",
@@ -282,6 +291,8 @@ export function prepareCandidate(candidate, { now }) {
   }
   const normalized = normalizeCandidate(candidate);
   assertNoIssues(candidateChecks(normalized));
+  // Each proposed record must count its own askers correctly before records are merged and recounted.
+  assertNoIssues(askerCountIssues(normalized.questions, normalized.evidence));
   const { ids, issues: idIssues } = assignIds(normalized);
   assertNoIssues(idIssues);
 
@@ -295,7 +306,12 @@ export function prepareCandidate(candidate, { now }) {
       normalized[collection].map((artifact) => remap(collection, artifact, ids)),
       normalized[collection].map((artifact) => artifact.id)
     );
-    collections[collection] = result.artifacts.map((artifact) => ({ ...artifact, validation }));
+    const evidenceById = new Map((collections.evidence ?? []).map((item) => [item.id, item]));
+    collections[collection] = result.artifacts.map((artifact) => ({
+      ...artifact,
+      ...(collection === "questions" ? { independent_asker_count: countIndependentAskers(artifact.evidence_ids, evidenceById) } : {}),
+      validation
+    }));
     merged[collection] = result.merged;
     dedupIssues.push(...result.issues);
   }
@@ -402,7 +418,7 @@ export function withdraw({ storeRoot, artifactId, datasetId, reason, note = null
   }
   const store = loadCommunitySignalStore(datasetsRoot);
   const exists = artifactId
-    ? store.datasets.some(({ canonical }) => [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims]
+    ? store.datasets.some(({ canonical }) => [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims, ...canonical.questions]
       .some((artifact) => artifact.id === artifactId))
     : store.datasets.some((entry) => entry.datasetId === datasetId);
   if (!exists) throw new Error(`${artifactId ?? datasetId} was not found in the store's current datasets.`);

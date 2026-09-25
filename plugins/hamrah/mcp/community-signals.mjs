@@ -52,7 +52,11 @@ function withoutWithdrawn(canonical, withdrawn) {
       opposing_evidence_ids: claim.opposing_evidence_ids.filter((id) => !withdrawn.has(id))
     }))
     .filter((claim) => claim.evidence_ids.length > 0);
-  return { ...canonical, evidence, signals, routeClaims, sources: canonical.sources.filter((source) => !withdrawn.has(source.id)) };
+  const questions = canonical.questions
+    .filter((question) => !withdrawn.has(question.id))
+    .map((question) => ({ ...question, evidence_ids: question.evidence_ids.filter((id) => !withdrawn.has(id)) }))
+    .filter((question) => question.evidence_ids.length > 0);
+  return { ...canonical, evidence, signals, routeClaims, questions, sources: canonical.sources.filter((source) => !withdrawn.has(source.id)) };
 }
 
 // Version 2 signals embed their evidence, so withdrawn evidence must also leave the original-form signal.
@@ -90,7 +94,7 @@ export function loadCommunitySignalStore(root = DATASET_ROOT, maxDatasets = REQU
         invalidDatasets.push({ datasetId, schemaVersion, error: errors.join("; "), ...(privacy ? { privacy } : {}) });
         continue;
       }
-      const withdrawnArtifactIds = [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims]
+      const withdrawnArtifactIds = [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims, ...canonical.questions]
         .map((artifact) => artifact.id)
         .filter((id) => withdrawn.artifacts.has(id));
       datasets.push({

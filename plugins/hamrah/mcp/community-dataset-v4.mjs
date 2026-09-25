@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 
 import Ajv2020 from "ajv/dist/2020.js";
 import { localized } from "./community-canonical.mjs";
+import { ambiguityIssues, askerCountIssues } from "./community-questions.mjs";
 import { inspectDatasetPrivacy } from "./privacy-check.mjs";
 
 export const V4_SCHEMA_VERSION = "4.0.0";
@@ -149,6 +150,9 @@ export function validateCommunityDatasetV4(dataset) {
   const privacy = inspectDatasetPrivacy(dataset);
   referenceIssues(dataset, issue);
   lifecycleAndStateIssues(dataset, issue);
+  for (const found of [...askerCountIssues(dataset.questions, dataset.evidence), ...ambiguityIssues(dataset.questions)]) {
+    issue(found.gate, found.message);
+  }
   if (privacy.status !== "pass") {
     issue("privacy", `privacy ${privacy.status}: ${privacy.findings.map((item) => `${item.path} (${item.rule})`).join(", ")}`);
   }
@@ -169,6 +173,7 @@ export function adaptCommunityDatasetV4(dataset) {
     provenance: dataset.provenance,
     sources: dataset.sources.map((source) => ({ ...source, source_schema_version: V4_SCHEMA_VERSION, source_type: null })),
     routeClaims: dataset.route_claims.map((claim) => ({ ...claim, source_schema_version: V4_SCHEMA_VERSION })),
+    questions: dataset.questions.map((question) => ({ ...question, source_schema_version: V4_SCHEMA_VERSION })),
     evidence: dataset.evidence.map((item) => ({
       ...item,
       source_schema_version: V4_SCHEMA_VERSION,
