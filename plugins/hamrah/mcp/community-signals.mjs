@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import Ajv2020 from "ajv/dist/2020.js";
+import { BudgetExceededError, REQUEST_BUDGETS } from "./budgets.mjs";
 import { inspectDatasetPrivacy } from "./privacy-check.mjs";
 
 const DATASET_ROOT = fileURLToPath(
@@ -17,10 +18,9 @@ const SCHEMA = JSON.parse(
 const ajv = new Ajv2020({ allErrors: true, strict: false });
 const validateSchema = ajv.compile(SCHEMA);
 const ALLOWED_CURRENT_STATUSES = new Set(["active", "monitoring", "uncertain"]);
-const MAX_DATASETS = 500;
 const MAX_DATASET_BYTES = 2_000_000;
 
-function walkJsonFiles(directory, output = []) {
+function walkJsonFiles(directory, maxFiles, output = []) {
   let entries;
   try {
     entries = readdirSync(directory, { withFileTypes: true });
@@ -29,9 +29,9 @@ function walkJsonFiles(directory, output = []) {
     throw error;
   }
   for (const entry of entries.sort((a, b) => a.name.localeCompare(b.name))) {
-    if (output.length >= MAX_DATASETS) break;
+    if (output.length > maxFiles) break;
     const absolutePath = path.join(directory, entry.name);
-    if (entry.isDirectory()) walkJsonFiles(absolutePath, output);
+    if (entry.isDirectory()) walkJsonFiles(absolutePath, maxFiles, output);
     else if (entry.isFile() && entry.name.endsWith(".json")) output.push(absolutePath);
   }
   return output;
@@ -71,10 +71,17 @@ function datasetIdFor(filePath, root) {
   return path.relative(root, filePath).split(path.sep).join("/").replace(/\.json$/i, "");
 }
 
-export function loadCommunitySignalStore(root = DATASET_ROOT) {
+export function loadCommunitySignalStore(root = DATASET_ROOT, maxDatasets = REQUEST_BUDGETS.maxDatasetsScanned) {
   const datasets = [];
   const invalidDatasets = [];
-  const files = walkJsonFiles(root);
+  const files = walkJsonFiles(root, maxDatasets);
+  if (files.length > maxDatasets) {
+    throw new BudgetExceededError(
+      "dataset_scan_limit_exceeded",
+      `The community signal store holds more than ${maxDatasets} dataset files, the per-call scan limit.`,
+      { limit: maxDatasets }
+    );
+  }
   for (const filePath of files) {
     const datasetId = datasetIdFor(filePath, root);
     try {
@@ -106,7 +113,7 @@ export function loadCommunitySignalStore(root = DATASET_ROOT) {
     scanned: files.length,
     datasets,
     invalidDatasets,
-    truncated: files.length >= MAX_DATASETS
+    truncated: false
   };
 }
 
@@ -205,8 +212,8 @@ function publicSignal(datasetId, dataset, signal) {
   };
 }
 
-export function searchCommunitySignals(args = {}, root = DATASET_ROOT) {
-  const store = loadCommunitySignalStore(root);
+export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatasets) {
+  const store = loadCommunitySignalStore(root, maxDatasets);
   const newestBySignalId = new Map();
   for (const { datasetId, dataset } of store.datasets) {
     for (const signal of dataset.signals) {
@@ -238,11 +245,11 @@ export function searchCommunitySignals(args = {}, root = DATASET_ROOT) {
   };
 }
 
-export function getCommunitySignalDataset(args = {}, root = DATASET_ROOT) {
+export function getCommunitySignalDataset(args = {}, root = DATASET_ROOT, maxDatasets) {
   if (typeof args.datasetId !== "string" || !args.datasetId.trim()) {
     throw new Error("getCommunitySignalDataset requires a non-empty datasetId from searchCommunitySignals.");
   }
-  const store = loadCommunitySignalStore(root);
+  const store = loadCommunitySignalStore(root, maxDatasets);
   const found = store.datasets.find(({ datasetId }) => datasetId === args.datasetId.trim());
   if (!found) throw new Error(`Community signal dataset not found: ${args.datasetId}`);
   const requested = Array.isArray(args.signalIds) && args.signalIds.length

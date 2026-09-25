@@ -5,6 +5,7 @@ import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 import Ajv from "ajv";
 
+import { BudgetExceededError, REQUEST_BUDGETS, withDeadline } from "./budgets.mjs";
 import {
   getCommunitySignalDataset,
   searchCommunitySignals
@@ -233,14 +234,21 @@ export function filterResponse(data, args = {}) {
   return { data: output, total: filtered.length, returned: limited.length };
 }
 
-async function fetchJson(path, init = {}, fetchImpl = globalThis.fetch) {
+const APPROVED_PATHS = new Set([...operationByName.values(), "/api/public/search-index", "/api/public/route-finder"]);
+
+async function fetchJson(path, init = {}, fetchImpl = globalThis.fetch, signal = undefined) {
+  const url = new URL(path, BASE_URL);
+  if (url.origin !== BASE_URL || !APPROVED_PATHS.has(url.pathname) || url.search) {
+    throw new Error(`Refusing unapproved Visa Atlas request path: ${path}`);
+  }
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
-    const response = await fetchImpl(`${BASE_URL}${path}`, {
+    const response = await fetchImpl(url.href, {
       ...init,
       headers: { Accept: "application/json", "User-Agent": "Hamrah-Plugin/1.0", ...(init.headers || {}) },
-      signal: controller.signal
+      redirect: "error",
+      signal: signal ? AbortSignal.any([signal, controller.signal]) : controller.signal
     });
     const raw = await response.text();
     let body;
@@ -283,9 +291,28 @@ function toolResult(payload, isError = false) {
 
 export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch, options = {}) {
   try {
+    return await withDeadline(
+      options.deadlineMs ?? REQUEST_BUDGETS.deadlineMs,
+      (signal) => runTool(name, args, fetchImpl, options, signal)
+    );
+  } catch (error) {
+    if (error instanceof BudgetExceededError) {
+      return toolResult({
+        error: error.code,
+        message: error.message,
+        ...error.limit,
+        guidance: "No partial result was returned. Retry with a narrower request or report the affected coverage as unavailable."
+      }, true);
+    }
+    throw error;
+  }
+}
+
+async function runTool(name, args, fetchImpl, options, signal) {
+  try {
     if (name === "search") {
       if (typeof args.query !== "string" || !args.query.trim()) throw new Error("search requires a non-empty query.");
-      const raw = await fetchJson("/api/public/search-index", {}, fetchImpl);
+      const raw = await fetchJson("/api/public/search-index", {}, fetchImpl, signal);
       const filtered = filterResponse(raw, { query: args.query.trim(), limit: 25 });
       const { records } = pickRecordArray(filtered.data);
       const payload = {
@@ -301,7 +328,7 @@ export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch,
     if (name === "fetch") {
       if (typeof args.id !== "string" || !args.id.trim()) throw new Error("fetch requires a non-empty id.");
       const id = args.id.trim();
-      const raw = await fetchJson("/api/public/search-index", {}, fetchImpl);
+      const raw = await fetchJson("/api/public/search-index", {}, fetchImpl, signal);
       const { records } = pickRecordArray(raw);
       const record = (records || []).find((item) => item?.id === id);
       if (!record) throw new Error(`Visa Atlas search result not found: ${id}`);
@@ -321,16 +348,16 @@ export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch,
     }
 
     if (name === "searchCommunitySignals") {
-      return toolResult(searchCommunitySignals(args, options.signalStoreRoot));
+      return toolResult(searchCommunitySignals(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
 
     if (name === "getCommunitySignalDataset") {
-      return toolResult(getCommunitySignalDataset(args, options.signalStoreRoot));
+      return toolResult(getCommunitySignalDataset(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
 
     if (operationByName.has(name)) {
       const path = operationByName.get(name);
-      const raw = await fetchJson(path, {}, fetchImpl);
+      const raw = await fetchJson(path, {}, fetchImpl, signal);
       const filtered = filterResponse(raw, args);
       return toolResult(resultPayload(path, filtered.data, { total: filtered.total, returned: filtered.returned }));
     }
@@ -340,7 +367,8 @@ export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch,
       const raw = await fetchJson(
         "/api/public/route-finder",
         { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(safeArgs) },
-        fetchImpl
+        fetchImpl,
+        signal
       );
       return toolResult(resultPayload("/api/public/route-finder", raw, {
         warning: "The route-finder score is a deterministic ordering aid, not official eligibility or approval probability."
@@ -349,6 +377,8 @@ export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch,
 
     return toolResult({ error: "unknown_tool", message: `Unknown tool: ${name}` }, true);
   } catch (error) {
+    if (signal.reason instanceof BudgetExceededError) throw signal.reason;
+    if (error instanceof BudgetExceededError) throw error;
     const isCommunityTool = name === "searchCommunitySignals" || name === "getCommunitySignalDataset";
     if (name === "findMatchingVisaRoutes" && error?.validationDetails) {
       return toolResult({

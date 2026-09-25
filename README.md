@@ -14,6 +14,8 @@ https://hamrah-plugin-marketplace.vercel.app/mcp
 
 In ChatGPT Web, enable Developer mode, add a new plugin/app with the URL above, and run **Scan Tools**. The server exposes 27 read-only tools and five importable Hamrah skills. The main imported skill also contains the scorecard-image workflow so ChatGPT can use its image-generation capability after validating a scorecard.
 
+Each MCP request is bounded (defaults in `plugins/hamrah/mcp/budgets.mjs`): request bodies over 64 KiB receive a JSON-RPC `413`, more than 16 concurrent requests per instance receive a `503` with `Retry-After`, a tool call that exceeds 25 seconds returns `operation_deadline_exceeded`, and a community search that would scan more than 500 dataset files returns `dataset_scan_limit_exceeded` instead of a truncated result. Server-side fetches go only to fixed `https://visaatlas.org` paths and refuse redirects.
+
 ## Shared Community Signals
 
 Validated Signal Builder outputs committed below `plugins/hamrah/data/community-signals/datasets/` are indexed automatically by the deployed MCP server. The `searchCommunitySignals` tool finds current candidate signals and `getCommunitySignalDataset` retrieves their full evidence and quality controls. Raw Telegram/forum exports and applicant data must never be committed; only schema-version 2.0 datasets with `quality_control.personal_identifiers_removed: true` are accepted. Invalid files are excluded and reported in search coverage diagnostics.
