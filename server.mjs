@@ -11,6 +11,7 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 
 import { REQUEST_BUDGETS } from "./plugins/hamrah/mcp/budgets.mjs";
+import { createRateLimiter, rateLimitStoreFromEnv } from "./plugins/hamrah/mcp/rate-limit.mjs";
 import { executeTool, TOOLS } from "./plugins/hamrah/mcp/server.mjs";
 import { getSkill, readSkillResource, SKILL_CATALOG, SKILL_RESOURCES } from "./web/skill-catalog.mjs";
 
@@ -77,6 +78,7 @@ export function createApp(options = {}) {
     maxDatasetsScanned: budgets.maxDatasetsScanned,
     signalStoreRoot: options.signalStoreRoot
   };
+  const rateLimitStore = options.rateLimitStore ?? rateLimitStoreFromEnv();
   let activeRequests = 0;
 
   const app = express();
@@ -89,6 +91,13 @@ export function createApp(options = {}) {
     if (req.method === "OPTIONS") return res.status(204).end();
     next();
   });
+  app.use("/mcp", createRateLimiter({
+    store: rateLimitStore,
+    windowMs: budgets.rateLimitWindowMs,
+    ipRequestsPerWindow: budgets.ipRequestsPerWindow,
+    sessionRequestsPerWindow: budgets.sessionRequestsPerWindow,
+    trustProxyHeaders: options.trustProxyHeaders ?? Boolean(process.env.VERCEL)
+  }));
   app.use("/mcp", (_req, res, next) => {
     if (activeRequests >= budgets.maxConcurrentRequests) {
       res.setHeader("Retry-After", "1");
@@ -115,7 +124,7 @@ export function createApp(options = {}) {
     res.json({ name: "Hamrah", status: "ok", mcp: "/mcp", version: APP_VERSION });
   });
   app.get("/health", (_req, res) => {
-    res.json({ status: "ok", tools: TOOLS.length, skills: SKILL_CATALOG.length });
+    res.json({ status: "ok", tools: TOOLS.length, skills: SKILL_CATALOG.length, rateLimitStore: rateLimitStore.kind });
   });
   app.all("/mcp", async (req, res) => {
     const server = createServer(fetchImpl, toolOptions);

@@ -2,7 +2,10 @@ export const REQUEST_BUDGETS = Object.freeze({
   bodyLimitBytes: 64 * 1024,
   deadlineMs: 25_000,
   maxConcurrentRequests: 16,
-  maxDatasetsScanned: 500
+  maxDatasetsScanned: 500,
+  rateLimitWindowMs: 60_000,
+  ipRequestsPerWindow: 120,
+  sessionRequestsPerWindow: 60
 });
 
 export class BudgetExceededError extends Error {
