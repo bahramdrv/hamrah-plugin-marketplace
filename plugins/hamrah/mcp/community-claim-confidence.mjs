@@ -119,7 +119,11 @@ export function validateRouteClaim(args = {}, root = DATASET_ROOT, maxDatasets) 
     .flatMap(({ datasetId, canonical }) => canonical.routeClaims.filter((claim) => claim.id === args.claimId.trim()).map((claim) => ({ datasetId, canonical, claim })))
     .sort((a, b) => (Date.parse(b.canonical.generatedAt) || 0) - (Date.parse(a.canonical.generatedAt) || 0))[0];
   if (!found) throw new RouteClaimNotFoundError(`Route claim not found: ${args.claimId}`);
-  const { datasetId, canonical, claim } = found;
+  return assessRouteClaim(found, args, asOf);
+}
+
+// Evidence Confidence for one Route Claim already read from the store, as { datasetId, canonical, claim }.
+export function assessRouteClaim({ datasetId, canonical, claim }, args, asOf) {
   const evidenceById = new Map(canonical.evidence.map((item) => [item.id, item]));
   const sourcesById = new Map(canonical.sources.map((source) => [source.id, source]));
   const items = (ids) => ids.map((id) => evidenceById.get(id)).filter(Boolean)
@@ -174,6 +178,7 @@ export function validateRouteClaim(args = {}, root = DATASET_ROOT, maxDatasets) 
     datasetId,
     asOf,
     policyVersion: CONFIDENCE_POLICY.policy_version,
+    freshness,
     claim: { claimType: claim.claim_type, statementEn: claim.statement_en, countryCode: claim.country_code, routes: claim.routes, processStage: claim.process_stage, applicantScope: claim.applicant_scope ?? null, lifecycle: claim.lifecycle },
     evidenceConfidence: {
       score,

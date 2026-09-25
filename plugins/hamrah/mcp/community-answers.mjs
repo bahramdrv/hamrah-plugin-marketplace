@@ -30,7 +30,7 @@ function dayNumber(day) {
   return Math.round(Date.parse(`${day}T00:00:00Z`) / 86_400_000);
 }
 
-function claimFreshness(claim, evidence, asOf) {
+export function claimFreshness(claim, evidence, asOf) {
   const factType = CLAIM_FACT_TYPES[claim.claim_type] ?? claim.claim_type;
   const rule = FRESHNESS_POLICY.fact_types[factType];
   const retrieved = evidence.map((item) => parseIsoDay(item.retrieved_at, false, true)).filter(Boolean).sort().at(-1);
@@ -40,7 +40,7 @@ function claimFreshness(claim, evidence, asOf) {
   return { status, ageDays, maxAgeDays: rule.max_age_days, factType };
 }
 
-function signalFreshness(signal, asOf) {
+export function signalFreshness(signal, asOf) {
   const recheck = signal.suggested_recheck_date;
   if (!parseIsoDay(recheck, true, false)) return { status: "unknown", recheckBy: recheck ?? null };
   return { status: asOf > recheck ? "stale" : "current", recheckBy: recheck };

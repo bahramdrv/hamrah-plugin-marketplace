@@ -1,0 +1,26 @@
+{
+  "policy_version": "0.1.0",
+  "status": "provisional",
+  "reviewed_at": "2026-09-25",
+  "review_basis": {
+    "dataset": "plugins/hamrah/data/community-signals/datasets/2026/09/20260925174655-de-study-opportunity-card-78f7f8bd21.json",
+    "coverage": "Initial German study and Opportunity Card evidence: 10 Route Claims, 3 Signals, 6 Evidence records, 0 Lived Experiences, and 0 Academic Opportunities.",
+    "decision": "Give official accessibility and evidence quality a combined 35 points; give applicant compatibility and execution 30; reserve 35 for Iran-specific evidence, attained examples, and funding. Missing applicant or funding inputs remain not_assessed; missing attained examples score zero and block ranking. The seed has no examples or opportunities, so calibration remains provisional and confidence stays capped at low."
+  },
+  "scope": "Deterministic Iranian Route Viability Index for one route. It measures practical, evidence-based usability for an Iranian applicant profile, not official eligibility, applicant fit, Practical Fit, Community Confidence, or approval probability. The initial evidence review supports a conservative provisional rubric; sparse outcome and opportunity coverage keeps confidence capped at low.",
+  "components": {
+    "official_accessibility": { "max": 20, "levels": { "current": 1, "aging": 0.6, "stale": 0, "contradicted": 0 }, "basis": "Current public official Route Claims (official_rule or financial_requirement) with primary or trusted support, aged by the scorecard fact-type freshness policy; an official contradiction counts as none." },
+    "profile_compatibility": { "max": 15, "levels": { "high": 1, "medium": 0.6, "low": 0.2 }, "basis": "Caller-supplied level from the applicant's scorecard facts; not assessed when absent." },
+    "execution_practicality": { "max": 15, "levels": { "high": 1, "medium": 0.6, "low": 0.2 }, "basis": "Caller-supplied level from the applicant's scorecard facts; not assessed when absent." },
+    "iran_specific_evidence": { "max": 15, "levels": { "iran_scoped_public": 1, "general_public_only": 0.5, "iran_restriction": 0 }, "basis": "Current public Route Claims and Signals scoped to Iranian nationals, residents, or applicants from Iran; an officially supported Iran-scoped risk claim is a restriction." },
+    "qualified_examples": { "max": 10, "fraction_by_count": [0, 0.5, 0.8, 1], "window_days": 730, "basis": "Qualified successes among public Iranian Lived Experiences for the route within the window." },
+    "funding_or_sponsorship": { "max": 10, "levels": { "verified": 1, "unverified": 0.4, "none": 0 }, "basis": "Current Academic Opportunities for the route by verified funding state; not assessed when the route has none." },
+    "evidence_quality": { "max": 15, "basis": "Mean Evidence Confidence of the route's current Route Claims, scaled to the component maximum." }
+  },
+  "friction": { "min": -20, "basis": "Community Adjustment from applicable, current Signals with public evidence, using the scorecard's allowed steps; private-only Signals are warnings and never score." },
+  "confidence": {
+    "high_min_assessed_share": 0.8,
+    "medium_min_assessed_share": 0.5,
+    "cap_while_provisional": "low"
+  }
+}

@@ -14,6 +14,7 @@ import { getLivedExperience, LivedExperienceNotFoundError, searchIranianLivedExp
 import { MILESTONES, OUTCOMES } from "./community-experiences.mjs";
 import { getAcademicOpportunity, OpportunityNotFoundError, searchAcademicOpportunities } from "./community-opportunity-tools.mjs";
 import { CLAIM_TYPES, searchRouteClaims } from "./community-route-claim-tools.mjs";
+import { getIranianRouteViability, InvalidIranianApplicantError } from "./community-route-viability.mjs";
 import { searchOfficialApprovalStatistics } from "./community-statistics-tools.mjs";
 import { getCommunityQuestion, QuestionNotFoundError, searchCommunityQuestions } from "./community-question-tools.mjs";
 import {
@@ -366,6 +367,31 @@ const OFFICIAL_STATISTICS_TOOL = {
   annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
 };
 
+const ROUTE_VIABILITY_TOOL = {
+  name: "getIranianRouteViability",
+  title: "Get Hamrah Iranian Route Viability",
+  description: "Use this to assess one route for an applicant explicitly connected to Iran by nationality, residence, or origin. It returns a versioned, deterministic 0-100 Iranian Route Viability Index (IRVI) with component points (official accessibility, profile compatibility, execution practicality, Iran-specific evidence, qualified examples, funding or sponsorship, evidence quality) minus community friction, its confidence and reasons, and whether the route can be ranked. Official eligibility, applicant fit, Practical Fit, Community Confidence, and official approval statistics are reported in separate fields and never merged into IRVI. IRVI is route viability, not an approval probability.",
+  inputSchema: {
+    type: "object",
+    additionalProperties: false,
+    required: ["countryCode", "route"],
+    properties: {
+      countryCode: { type: "string", minLength: 2, maxLength: 3, description: "Destination ISO country code, such as DEU." },
+      route: { type: "string", minLength: 1, maxLength: 100, description: "Route code, such as student_phd." },
+      asOf: { type: "string", pattern: "^\\d{4}-\\d{2}-\\d{2}$", description: "Optional ISO date for freshness and example windows; defaults to today." },
+      nationality: { type: "string", minLength: 2, maxLength: 80 },
+      residenceCountry: { type: "string", minLength: 2, maxLength: 80, description: "Country the applicant lives in or applies from." },
+      originCountry: { type: "string", minLength: 2, maxLength: 80 },
+      profileCompatibility: { type: "string", enum: ["high", "medium", "low"], description: "From the applicant's scorecard facts; omit when not assessed." },
+      executionPracticality: { type: "string", enum: ["high", "medium", "low"], description: "From the applicant's scorecard facts; omit when not assessed." },
+      officialEligibility: { type: "string", enum: ["PASS", "POSSIBLE", "FAIL", "UNKNOWN"], description: "The scorecard's official eligibility status, echoed separately." },
+      applicantFit: { type: "number", minimum: 0, maximum: 100, description: "The scorecard's applicant fit, echoed separately." },
+      practicalFit: { type: "number", minimum: 0, maximum: 100, description: "The scorecard's Practical Fit, echoed separately." }
+    }
+  },
+  annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+};
+
 export const TOOLS = [
   ...STANDARD_DISCOVERY_TOOLS,
   ...COMMUNITY_SIGNAL_TOOLS,
@@ -374,6 +400,7 @@ export const TOOLS = [
   ...OPPORTUNITY_TOOLS,
   ...LIVED_EXPERIENCE_TOOLS,
   OFFICIAL_STATISTICS_TOOL,
+  ROUTE_VIABILITY_TOOL,
   ROUTE_FACT_PACK_TOOL,
   ...GET_OPERATIONS.map(([name, path, description]) => ({
     title: description,
@@ -629,6 +656,10 @@ async function runTool(name, args, fetchImpl, options, signal) {
       return toolResult(getLivedExperience(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
 
+    if (name === "getIranianRouteViability") {
+      return toolResult(getIranianRouteViability(args, options.signalStoreRoot, options.maxDatasetsScanned));
+    }
+
     if (name === "searchOfficialApprovalStatistics") {
       return toolResult(searchOfficialApprovalStatistics(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
@@ -701,7 +732,10 @@ async function runTool(name, args, fetchImpl, options, signal) {
         guidance: "Use a questionId returned by searchCommunityQuestions. An unknown ID is not evidence that the question is never asked."
       }, true);
     }
-    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim", "searchAcademicOpportunities", "getAcademicOpportunity", "searchIranianLivedExperiences", "getLivedExperience", "searchOfficialApprovalStatistics"].includes(name);
+    if (error instanceof InvalidIranianApplicantError) {
+      return toolResult({ error: "invalid_irvi_applicant", message: error.message }, true);
+    }
+    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim", "searchAcademicOpportunities", "getAcademicOpportunity", "searchIranianLivedExperiences", "getLivedExperience", "searchOfficialApprovalStatistics", "getIranianRouteViability"].includes(name);
     if (name === "findMatchingVisaRoutes" && error?.validationDetails) {
       return toolResult({
         error: "invalid_route_finder_input",

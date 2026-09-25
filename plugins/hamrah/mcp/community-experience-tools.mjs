@@ -40,7 +40,7 @@ function presentExperienceEvidence(item, source) {
 }
 
 // Private community evidence alone neither establishes the Iran connection nor supports the milestone publicly.
-function assess({ canonical, experience }) {
+export function assessLivedExperience({ canonical, experience }) {
   const evidenceById = new Map(canonical.evidence.map((item) => [item.id, item]));
   const sourcesById = new Map(canonical.sources.map((source) => [source.id, source]));
   const presented = new Map(experienceEvidenceIds(experience).map((id) => evidenceById.get(id)).filter(Boolean)
@@ -122,7 +122,7 @@ export function searchIranianLivedExperiences(args = {}, root = DATASET_ROOT, ma
       const text = normalizeQuestionText(`${experience.summary_en} ${experience.milestone} ${experience.routes.join(" ")} ${experience.entity?.name ?? ""}`);
       return tokens.every((token) => text.includes(token));
     })
-    .map((entry) => ({ ...entry, ...assess(entry) }));
+    .map((entry) => ({ ...entry, ...assessLivedExperience(entry) }));
   const limit = Math.max(1, Math.min(50, Number.isInteger(args.limit) ? args.limit : 20));
   const experiences = [...matches]
     .sort((a, b) => dateValue(b.experience.event_date) - dateValue(a.experience.event_date) || a.experience.id.localeCompare(b.experience.id))
@@ -159,7 +159,7 @@ export function getLivedExperience(args = {}, root = DATASET_ROOT, maxDatasets) 
   const found = newestExperiences(store).find(({ experience }) => experience.id === args.experienceId.trim());
   if (!found) throw new LivedExperienceNotFoundError(`Lived experience not found: ${args.experienceId}`);
   const { datasetId, canonical, experience } = found;
-  const { caseClass, evidence, verification, freshness } = assess(found);
+  const { caseClass, evidence, verification, freshness } = assessLivedExperience(found);
   return {
     source: "Hamrah Lived Experience Store",
     datasetId,
