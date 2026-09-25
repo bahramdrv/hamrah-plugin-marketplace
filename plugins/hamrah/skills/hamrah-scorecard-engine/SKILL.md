@@ -31,6 +31,7 @@ If official route context is unavailable, do not invent it. Mark official eligib
 - `references/scoring_rubric.md`
 - `references/eligibility_rules.md`
 - `references/source_authority_policy.json`
+- `references/freshness_policy.json`
 - `references/community_adjustment_rules.md`
 - `references/confidence_rules.md`
 
@@ -100,6 +101,8 @@ Clamp only at 0 if a negative adjustment would otherwise produce a negative numb
 For `FAIL`, the diagnostic score may still be shown, but `usable_for_ranking` must be `false`.
 
 For `UNKNOWN`, route ranking should normally be disabled until official data is available.
+
+A stale or undated decisive requirement (see `references/freshness_policy.json`) must set `usable_for_ranking` to `false` and add a `practical_fit.ranking_blockers` entry explaining why.
 
 ### 6. Set confidence
 Use `references/confidence_rules.md`.

@@ -4,6 +4,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
+from freshness import assess_freshness, load_policy as load_freshness_policy, parse_iso
 from source_authority import classify_source, load_policy
 
 ALLOWED_COMMUNITY = {0, -5, -10, -15, -20}
@@ -86,9 +87,88 @@ def official_source_errors(route, country_code, route_code, status, usable, labe
 
     return errors
 
+REQUIREMENT_DATE_FIELDS = {
+    "checked_at": (True, True),
+    "retrieved_at": (False, True),
+    "published_at": (True, True),
+    "effective_from": (True, False),
+    "effective_until": (True, False),
+}
+OBSERVATION_DATE_FIELDS = ("checked_at", "retrieved_at", "published_at")
+
+
+def iso_kind(allow_date, allow_date_time):
+    return " or ".join(kind for kind, allowed in (("date", allow_date), ("date-time", allow_date_time)) if allowed)
+
+
+def date_error(label, field, value, allow_date=True, allow_date_time=True):
+    if value is None or parse_iso(value, allow_date, allow_date_time):
+        return None
+    return f"{label}: {field} is not a valid ISO {iso_kind(allow_date, allow_date_time)}."
+
+
+def requirement_freshness(route, reference_date, usable, label, freshness_policy):
+    errors, warnings = [], []
+    eligibility = route.get("official_eligibility", {})
+    blocking = []
+    for req in eligibility.get("reasons", []):
+        req_label = f"{label}: requirement {req.get('requirement_id')!r}"
+        dates = {}
+        for field, kinds in REQUIREMENT_DATE_FIELDS.items():
+            error = date_error(req_label, field, req.get(field), *kinds)
+            if error:
+                errors.append(error)
+            else:
+                dates[field] = parse_iso(req.get(field), *kinds)
+        if dates.get("effective_from") and dates.get("effective_until") and dates["effective_until"] < dates["effective_from"]:
+            errors.append(f"{req_label}: effective_until is before effective_from.")
+        for field in OBSERVATION_DATE_FIELDS:
+            if reference_date and dates.get(field) and dates[field] > reference_date:
+                errors.append(f"{req_label}: {field} is after generated_at.")
+
+        expected = assess_freshness(req, reference_date, freshness_policy)
+        if req.get("freshness") != expected:
+            errors.append(f"{req_label}: freshness must match versioned freshness policy {expected}.")
+        if req.get("result") not in {"met", "not_met"}:
+            continue
+        if reference_date and dates.get("effective_from") and dates["effective_from"] > reference_date:
+            errors.append(f"{req_label}: effective_from is after generated_at; a decisive requirement cannot cite a rule not yet in effect.")
+        if expected["status"] == "stale":
+            blocking.append((req.get("requirement_id"), "stale_decisive_requirement"))
+            if usable:
+                errors.append(f"{req_label}: stale decisive requirement cannot be ranked.")
+        elif expected["status"] == "unknown":
+            blocking.append((req.get("requirement_id"), "unknown_freshness"))
+            if usable:
+                errors.append(f"{req_label}: decisive requirement with unknown freshness cannot be ranked.")
+        elif expected["status"] == "aging":
+            warnings.append(f"{req_label}: decisive requirement is aging ({expected['age_days']} of {expected['max_age_days']} days); re-verify before relying on it.")
+
+    blockers = [b for b in route.get("practical_fit", {}).get("ranking_blockers", []) if isinstance(b, dict)]
+    if usable and blockers:
+        errors.append(f"{label}: rankable route cannot list ranking_blockers.")
+    for requirement_id, code in blocking:
+        if not any(b.get("requirement_id") == requirement_id and b.get("code") == code and b.get("reason") for b in blockers):
+            errors.append(f"{label}: requirement {requirement_id!r} needs a ranking_blockers entry with code {code!r} and a reason.")
+    if blocking and eligibility.get("official_data_quality", {}).get("status") == "current":
+        errors.append(f"{label}: official_data_quality.status cannot be 'current' with a stale or undated decisive requirement.")
+    return errors, warnings
+
+
 def semantic_validate(data):
     errors, warnings = [], []
     authority_policy = load_policy()
+    freshness_policy = load_freshness_policy()
+
+    reference_date = parse_iso(data.get("generated_at"), allow_date=False)
+    if not reference_date:
+        errors.append("generated_at is not a valid ISO date-time.")
+    profile_date_error = date_error(
+        "applicant_profile_reference", "profile_generated_at",
+        data.get("applicant_profile_reference", {}).get("profile_generated_at"), allow_date=False,
+    )
+    if profile_date_error:
+        errors.append(profile_date_error)
 
     if data.get("schema_version") != "1.0":
         errors.append("schema_version must be '1.0'.")
@@ -216,10 +296,16 @@ def semantic_validate(data):
                 rankable.append((country_code, route_code, practical_score))
 
         dq = route.get("official_eligibility", {}).get("official_data_quality", {})
+        as_of_error = date_error(f"{label}: official_data_quality", "as_of", dq.get("as_of"))
+        if as_of_error:
+            errors.append(as_of_error)
         if dq.get("status") == "missing" and route.get("confidence", {}).get("level") == "high":
             errors.append(f"{label}: missing official data cannot have high confidence.")
 
         errors.extend(official_source_errors(route, country_code, route_code, status, usable, label, authority_policy))
+        freshness_errors, freshness_warnings = requirement_freshness(route, reference_date, usable, label, freshness_policy)
+        errors.extend(freshness_errors)
+        warnings.extend(freshness_warnings)
 
     summary = data.get("portfolio_summary", {})
     expected_viable = len(rankable)

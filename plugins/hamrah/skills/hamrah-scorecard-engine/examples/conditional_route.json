@@ -42,7 +42,9 @@
             "source_authority": {"policy_version": "1.0.0", "classification": "unknown", "rule_id": null},
             "retrieved_at": "2026-09-11T00:00:00Z",
             "effective_from": null,
-            "effective_until": null
+            "effective_until": null,
+            "fact_type": "statutory_condition",
+            "freshness": {"policy_version": "1.0.0", "fact_type": "statutory_condition", "status": "current", "age_days": 0, "max_age_days": 730}
           }
         ],
         "missing_requirements": [

@@ -189,7 +189,9 @@
         "claim_type",
         "source_authority",
         "retrieved_at",
-        "effective_from"
+        "effective_from",
+        "fact_type",
+        "freshness"
       ],
       "properties": {
         "requirement_id": {
@@ -249,6 +251,24 @@
         },
         "effective_until": {
           "type": ["string", "null"]
+        },
+        "published_at": {
+          "type": ["string", "null"]
+        },
+        "fact_type": {
+          "type": "string"
+        },
+        "freshness": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["policy_version", "fact_type", "status", "age_days", "max_age_days"],
+          "properties": {
+            "policy_version": { "type": "string" },
+            "fact_type": { "type": ["string", "null"] },
+            "status": { "type": "string", "enum": ["current", "aging", "stale", "unknown"] },
+            "age_days": { "type": ["integer", "null"] },
+            "max_age_days": { "type": ["integer", "null"], "minimum": 1 }
+          }
         }
       }
     },
@@ -550,6 +570,19 @@
             },
             "usable_for_ranking": {
               "type": "boolean"
+            },
+            "ranking_blockers": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["requirement_id", "code", "reason"],
+                "properties": {
+                  "requirement_id": { "type": "string" },
+                  "code": { "type": "string", "enum": ["stale_decisive_requirement", "unknown_freshness"] },
+                  "reason": { "type": "string", "minLength": 1 }
+                }
+              }
             },
             "interpretation": {
               "type": "string"

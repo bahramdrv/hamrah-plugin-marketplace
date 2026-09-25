@@ -68,6 +68,7 @@ Each checked requirement should include:
 - `checked_at`
 - `claim_type` and versioned `source_authority` (`policy_version`, `classification`, `rule_id`)
 - `retrieved_at`, `effective_from`, and `effective_until` (null when no end date is known)
+- `fact_type` and versioned `freshness` (`policy_version`, `fact_type`, `status`, `age_days`, `max_age_days`)
 
 The validator classifies the source URL using `source_authority_policy.json`. A rule must match the claim type, requirement ID, exact title and result explanation, country, route, HTTPS host, and exact path. The supplied `source_authority` must match that computed classification; a title or claimed authority cannot substitute for a rule. Policy version 1.0.0 contains one reviewed primary rule for the secured-livelihood condition in Germany's Opportunity Card. Add other source and claim pairs to the versioned policy after review. The policy controls which legal claim a source can support; validation of the applicant's evidence remains a separate step.
 
@@ -100,21 +101,18 @@ Use when:
 
 ## Freshness
 
-Official facts that can change should carry an assessment date.
+Dates must be real ISO values. `generated_at`, `profile_generated_at`, and `retrieved_at` are date-times with a timezone (`2026-09-11T00:00:00Z`); `effective_from` and `effective_until` are dates (`2026-09-11`); `checked_at`, `published_at`, and `official_data_quality.as_of` accept either. Impossible calendar values, an `effective_until` before `effective_from`, and a `checked_at`, `retrieved_at`, or `published_at` after `generated_at` are validation errors. A `met` or `not_met` requirement cannot cite a rule whose `effective_from` is after `generated_at`.
 
-Examples:
-- salary thresholds
-- funds requirements
-- fees
-- processing targets
-- route openings/closures
-- occupation lists
-- draw/category rules
-- nomination rules
+The validator computes each requirement's `freshness` from `references/freshness_policy.json` and the supplied `freshness` must match it. Age is the number of UTC calendar days from `retrieved_at` to `generated_at`. Policy version 1.0.0 covers `salary_threshold`, `fee`, `occupation_list`, `deadline`, `quota`, `processing_time`, `financial_requirement`, and `statutory_condition`:
 
-If freshness cannot be established and the fact is material:
-- lower confidence;
-- consider `UNKNOWN`.
+- `current`: age is at most the fact type's `aging_after_days`;
+- `aging`: age is at most `max_age_days` (the validator warns for decisive requirements);
+- `stale`: age exceeds `max_age_days`, or `effective_until` is before `generated_at`;
+- `unknown`: `retrieved_at` is missing or the fact type is not in the policy. An unknown date is never treated as current.
+
+A `met` or `not_met` requirement that is `stale` or `unknown` blocks ranking. Set `usable_for_ranking: false`, do not report `official_data_quality.status: "current"`, and add a `practical_fit.ranking_blockers` entry with the `requirement_id`, code `stale_decisive_requirement` or `unknown_freshness`, and a reason. A rankable route cannot list ranking blockers.
+
+If freshness cannot be established and the fact is material, lower confidence and consider `UNKNOWN`.
 
 ---
 

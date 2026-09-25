@@ -1,0 +1,47 @@
+{
+  "policy_version": "1.0.0",
+  "reviewed_at": "2026-09-25",
+  "age_basis": "retrieved_at relative to the scorecard generated_at date (UTC calendar days)",
+  "fact_types": {
+    "salary_threshold": {
+      "aging_after_days": 180,
+      "max_age_days": 365,
+      "basis": "Salary thresholds such as the German EU Blue Card minimums are revised annually."
+    },
+    "fee": {
+      "aging_after_days": 180,
+      "max_age_days": 365,
+      "basis": "Visa and administrative fees are typically revised at most annually."
+    },
+    "occupation_list": {
+      "aging_after_days": 90,
+      "max_age_days": 180,
+      "basis": "Shortage and occupation lists can be updated several times a year."
+    },
+    "deadline": {
+      "aging_after_days": 30,
+      "max_age_days": 120,
+      "basis": "Application and funding deadlines change per intake cycle."
+    },
+    "quota": {
+      "aging_after_days": 60,
+      "max_age_days": 180,
+      "basis": "Quotas and caps are allocated per program period and can be exhausted mid-period."
+    },
+    "processing_time": {
+      "aging_after_days": 30,
+      "max_age_days": 90,
+      "basis": "Published processing times are refreshed monthly or quarterly."
+    },
+    "financial_requirement": {
+      "aging_after_days": 180,
+      "max_age_days": 365,
+      "basis": "Livelihood and blocked-account amounts are revised annually."
+    },
+    "statutory_condition": {
+      "aging_after_days": 365,
+      "max_age_days": 730,
+      "basis": "Non-numeric statutory conditions change through legislation rather than periodic revision."
+    }
+  }
+}

@@ -42,7 +42,9 @@
             "source_authority": {"policy_version": "1.0.0", "classification": "primary", "rule_id": "de-opportunity-card-core"},
             "retrieved_at": "2026-09-11T00:00:00Z",
             "effective_from": "2024-06-01",
-            "effective_until": null
+            "effective_until": null,
+            "fact_type": "financial_requirement",
+            "freshness": {"policy_version": "1.0.0", "fact_type": "financial_requirement", "status": "current", "age_days": 0, "max_age_days": 365}
           }
         ],
         "missing_requirements": [],
