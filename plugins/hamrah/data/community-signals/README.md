@@ -10,6 +10,10 @@ A version 4.0.0 dataset (`skills/hamrah-signal-builder/references/community_data
 
 The privacy decision includes audited exceptions for institution names and exact domain phrases. Review the reported field and source before correcting a finding; automatic detection can miss names or context. Remove private material from the candidate before rerunning the publication command.
 
+## Cross-dataset evidence
+
+`searchCommunitySignals` returns `evidenceAggregation` for the requested scope across every valid dataset (`plugins/hamrah/mcp/community-aggregation.mjs`). Records that share a version 4 ID, content hash, normalized summary text, or message locator form one evidence cluster, so cross-posted copies are listed together with their source families, copy risk, and time window. Clusters are one independent report when a dataset declares a shared independence group or they cite the same URL. Only records linked from active, monitoring, or uncertain signals, and not superseded by newer evidence, count toward `currentSupport`; historical, stale, resolved, and superseded records stay in `clusters` with a `historicalReason`. Contradicting records are kept and counted separately, each signal reports its own `evidenceSupport`, and `datasetCoverage` names the matching datasets with their sources and coverage. Text matching is exact after normalization; paraphrased copies are not yet detected.
+
 ## Publishing version 4 evidence
 
 Version 4 data is published only through the explicit command below, from the repository root. The candidate uses the version 4 layout with local keys as IDs (validation blocks are optional; a declared `needs_review` or non-`pass` state is refused):

@@ -88,7 +88,7 @@ const COMMUNITY_SIGNAL_TOOLS = [
   {
     name: "searchCommunitySignals",
     title: "Search Hamrah Community Signals",
-    description: "Use this when evaluating an immigration route or preparing a scorecard to find current, validated community-friction signals from Hamrah's versioned GitHub dataset store. Search with the narrowest known country, route, stage, topic, or applicant scope. Results are practical context, not official eligibility.",
+    description: "Use this when evaluating an immigration route or preparing a scorecard to find current, validated community-friction signals from Hamrah's versioned GitHub dataset store. Search with the narrowest known country, route, stage, topic, or applicant scope. evidenceAggregation clusters copied evidence across datasets, counts independent supporting and opposing reports from current signals only, and lists historical or superseded records for audit with dataset coverage. Results are practical context, not official eligibility or a probability.",
     inputSchema: {
       type: "object",
       additionalProperties: false,

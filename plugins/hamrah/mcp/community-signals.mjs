@@ -3,13 +3,13 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { BudgetExceededError, REQUEST_BUDGETS } from "./budgets.mjs";
+import { aggregateEvidence, CURRENT_STATUSES } from "./community-aggregation.mjs";
 import { readCommunityDataset } from "./community-datasets.mjs";
 import { ledgerPathFor, readWithdrawalLedger, withdrawnSets } from "./withdrawals.mjs";
 
 const DATASET_ROOT = fileURLToPath(
   new URL("../data/community-signals/datasets/", import.meta.url)
 );
-const ALLOWED_CURRENT_STATUSES = new Set(["active", "monitoring", "uncertain"]);
 const MAX_DATASET_BYTES = 2_000_000;
 
 function walkJsonFiles(directory, maxFiles, output = []) {
@@ -133,7 +133,12 @@ function searchableText(signal) {
   ].join(" ").toLowerCase();
 }
 
-function matchesSignal(signal, args) {
+function matchesStatus(signal, args) {
+  const statuses = Array.isArray(args.statuses) && args.statuses.length ? new Set(args.statuses) : CURRENT_STATUSES;
+  return statuses.has(signal.lifecycle.status);
+}
+
+function matchesScope(signal, args) {
   const countryCode = normalized(args.countryCode);
   const country = normalized(args.country);
   const route = normalized(args.route);
@@ -142,10 +147,6 @@ function matchesSignal(signal, args) {
   const originCountry = normalized(args.originCountry);
   const nationality = normalized(args.nationality);
   const entity = normalized(args.entity);
-  const statuses = Array.isArray(args.statuses) && args.statuses.length
-    ? new Set(args.statuses)
-    : ALLOWED_CURRENT_STATUSES;
-
   if (countryCode && normalized(signal.destination?.country_code) !== countryCode) return false;
   if (country && !normalized(signal.destination?.country).includes(country)) return false;
   if (route && !arrayIncludes(signal.migration_routes, route) && !arrayIncludes(signal.migration_route_family, route)) return false;
@@ -157,7 +158,6 @@ function matchesSignal(signal, args) {
   ].some((value) => normalized(value) === originCountry)) return false;
   if (nationality && !arrayIncludes(signal.applicant_scope?.nationalities, nationality)) return false;
   if (entity && !(signal.entities || []).some((item) => normalized(item.name).includes(entity))) return false;
-  if (!statuses.has(signal.lifecycle.status)) return false;
   if (topic && !searchableText(signal).includes(topic)) return false;
   return true;
 }
@@ -221,11 +221,16 @@ export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatase
     }
   }
   const limit = Math.max(1, Math.min(50, Number.isInteger(args.limit) ? args.limit : 20));
-  const matches = [...newestBySignalId.values()]
-    .filter(({ signal }) => matchesSignal(signal, args))
+  const inScope = [...newestBySignalId.values()].filter(({ signal }) => matchesScope(signal, args));
+  const { aggregation, signalSupport } = aggregateEvidence(store, inScope);
+  const matches = inScope
+    .filter(({ signal }) => matchesStatus(signal, args))
     .sort((a, b) => dateValue(b.signal.lifecycle.last_verified) - dateValue(a.signal.lifecycle.last_verified))
     .slice(0, limit)
-    .map(({ datasetId, canonical, signal }) => publicSignal(datasetId, canonical, signal));
+    .map(({ datasetId, canonical, signal }) => ({
+      ...publicSignal(datasetId, canonical, signal),
+      evidenceSupport: signalSupport.get(signal.id)
+    }));
   return {
     source: "Hamrah Community Signal Store",
     generatedAt: new Date().toISOString(),
@@ -239,6 +244,7 @@ export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatase
     filters: args,
     resultCount: matches.length,
     signals: matches,
+    evidenceAggregation: aggregation,
     usageNote: "Community evidence is practical context only. Recheck applicant, route, stage, entity, location, timing, and conditions before applying an adjustment."
   };
 }
