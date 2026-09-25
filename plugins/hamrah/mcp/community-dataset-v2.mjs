@@ -145,9 +145,10 @@ export function adaptCommunityDatasetV2(dataset) {
     qualityControl: dataset.quality_control,
     watchlist: dataset.watchlist,
     provenance: null,
-    // Legacy schemas have no Route Claims or Questions.
+    // Legacy schemas have no Route Claims, Questions, or Academic Opportunities.
     routeClaims: [],
     questions: [],
+    academicOpportunities: [],
     sources: dataset.source_coverage.map((item) => ({
       id: item.source_id,
       source_schema_version: V2_SCHEMA_VERSION,

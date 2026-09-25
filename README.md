@@ -12,7 +12,7 @@ Production MCP URL:
 https://hamrah-plugin-marketplace.vercel.app/mcp
 ```
 
-In ChatGPT Web, enable Developer mode, add a new plugin/app with the URL above, and run **Scan Tools**. The server exposes 33 read-only tools and five importable Hamrah skills. The main imported skill also contains the scorecard-image workflow so ChatGPT can use its image-generation capability after validating a scorecard.
+In ChatGPT Web, enable Developer mode, add a new plugin/app with the URL above, and run **Scan Tools**. The server exposes 35 read-only tools and five importable Hamrah skills. The main imported skill also contains the scorecard-image workflow so ChatGPT can use its image-generation capability after validating a scorecard.
 
 Each MCP request is bounded (defaults in `plugins/hamrah/mcp/budgets.mjs`): request bodies over 64 KiB receive a JSON-RPC `413`, more than 16 concurrent requests per instance receive a `503` with `Retry-After`, a tool call that exceeds 25 seconds returns `operation_deadline_exceeded`, and a community search that would scan more than 500 dataset files returns `dataset_scan_limit_exceeded` instead of a truncated result. Server-side fetches go only to fixed `https://visaatlas.org` paths and refuse redirects.
 

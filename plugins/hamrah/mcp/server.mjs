@@ -10,6 +10,7 @@ import { pickRecordArray } from "./record-array.mjs";
 import { buildRouteFactPack, InvalidFactPackInput, ROUTE_FACT_PACK_TOOL } from "./route-fact-pack.mjs";
 import { answerCommunityQuestion } from "./community-answers.mjs";
 import { RouteClaimNotFoundError, validateRouteClaim } from "./community-claim-confidence.mjs";
+import { getAcademicOpportunity, OpportunityNotFoundError, searchAcademicOpportunities } from "./community-opportunity-tools.mjs";
 import { CLAIM_TYPES, searchRouteClaims } from "./community-route-claim-tools.mjs";
 import { getCommunityQuestion, QuestionNotFoundError, searchCommunityQuestions } from "./community-question-tools.mjs";
 import {
@@ -249,11 +250,54 @@ const ROUTE_CLAIM_TOOLS = [
   }
 ];
 
+const OPPORTUNITY_TOOLS = [
+  {
+    name: "searchAcademicOpportunities",
+    title: "Search Hamrah Academic Opportunities",
+    description: "Use this to find validated academic openings by country, route, institution, degree, field, funding, deadline, or text. Each result shows funding components, nationality restrictions, and Iranian evidence status exactly as sources state them; unknown means no source states it, and an unknown deadline is counted rather than guessed.",
+    inputSchema: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+        query: { type: "string", minLength: 1, maxLength: 200, description: "Program, department, research area, or supervisor text." },
+        countryCode: { type: "string", minLength: 2, maxLength: 3 },
+        route: { type: "string", minLength: 1, maxLength: 100, description: "Route code, such as student_phd." },
+        institution: { type: "string", minLength: 1, maxLength: 200 },
+        degreeLevel: { type: "string", enum: ["bachelor", "master", "phd", "postdoc", "other"] },
+        field: { type: "string", minLength: 1, maxLength: 120 },
+        fundingStatus: { type: "string", enum: ["verified", "unverified", "unknown", "none"] },
+        fundingComponent: { type: "string", enum: ["stipend", "tuition_waiver", "assistantship", "scholarship", "salary_position", "other"] },
+        deadlineAfter: { type: "string", pattern: "^\\d{4}-\\d{2}-\\d{2}$" },
+        deadlineBefore: { type: "string", pattern: "^\\d{4}-\\d{2}-\\d{2}$" },
+        statuses: {
+          type: "array", minItems: 1, maxItems: 6, uniqueItems: true,
+          items: { type: "string", enum: ["active", "monitoring", "resolved", "historical", "stale", "superseded"] }
+        },
+        limit: { type: "integer", minimum: 1, maximum: 50, default: 20 }
+      }
+    },
+    annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+  },
+  {
+    name: "getAcademicOpportunity",
+    title: "Get Hamrah Academic Opportunity",
+    description: "Use this after searchAcademicOpportunities to inspect one opening by its stable opportunityId: institution, department, program, degree, field, research area or supervisor, deadline and intake, funding components, admission conditions, nationality restrictions, Iranian evidence status, classed evidence with provenance, and freshness.",
+    inputSchema: {
+      type: "object",
+      additionalProperties: false,
+      required: ["opportunityId"],
+      properties: { opportunityId: { type: "string", minLength: 1, maxLength: 200 } }
+    },
+    annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+  }
+];
+
 export const TOOLS = [
   ...STANDARD_DISCOVERY_TOOLS,
   ...COMMUNITY_SIGNAL_TOOLS,
   ...COMMUNITY_QUESTION_TOOLS,
   ...ROUTE_CLAIM_TOOLS,
+  ...OPPORTUNITY_TOOLS,
   ROUTE_FACT_PACK_TOOL,
   ...GET_OPERATIONS.map(([name, path, description]) => ({
     title: description,
@@ -493,6 +537,14 @@ async function runTool(name, args, fetchImpl, options, signal) {
       return toolResult(searchCommunityQuestions(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
 
+    if (name === "searchAcademicOpportunities") {
+      return toolResult(searchAcademicOpportunities(args, options.signalStoreRoot, options.maxDatasetsScanned));
+    }
+
+    if (name === "getAcademicOpportunity") {
+      return toolResult(getAcademicOpportunity(args, options.signalStoreRoot, options.maxDatasetsScanned));
+    }
+
     if (name === "validateRouteClaim") {
       return toolResult(validateRouteClaim(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
@@ -533,6 +585,13 @@ async function runTool(name, args, fetchImpl, options, signal) {
   } catch (error) {
     if (signal.reason instanceof BudgetExceededError) throw signal.reason;
     if (error instanceof BudgetExceededError) throw error;
+    if (error instanceof OpportunityNotFoundError) {
+      return toolResult({
+        error: "academic_opportunity_not_found",
+        message: error.message,
+        guidance: "Use an opportunityId returned by searchAcademicOpportunities. An unknown ID is not evidence that no opening exists."
+      }, true);
+    }
     if (error instanceof RouteClaimNotFoundError) {
       return toolResult({
         error: "route_claim_not_found",
@@ -547,7 +606,7 @@ async function runTool(name, args, fetchImpl, options, signal) {
         guidance: "Use a questionId returned by searchCommunityQuestions. An unknown ID is not evidence that the question is never asked."
       }, true);
     }
-    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim"].includes(name);
+    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim", "searchAcademicOpportunities", "getAcademicOpportunity"].includes(name);
     if (name === "findMatchingVisaRoutes" && error?.validationDetails) {
       return toolResult({
         error: "invalid_route_finder_input",

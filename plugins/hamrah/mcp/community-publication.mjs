@@ -13,6 +13,7 @@ import path from "node:path";
 
 import Ajv2020 from "ajv/dist/2020.js";
 import { parseIsoDay, V4_SCHEMA_VERSION, validateCommunityDatasetV4 } from "./community-dataset-v4.mjs";
+import { mapOpportunityEvidence, opportunityEvidenceRefs } from "./community-opportunities.mjs";
 import { askerCountIssues, countIndependentAskers, mergeQuestions, normalizeQuestionText } from "./community-questions.mjs";
 import { DATASET_ROOT, loadCommunitySignalStore } from "./community-signals.mjs";
 import { emptyLedger, ledgerPathFor, readWithdrawalLedger, WITHDRAWAL_REASONS } from "./withdrawals.mjs";
@@ -156,6 +157,9 @@ function referenceFields(collection, artifact) {
     for (const id of artifact.correlated_signal_ids || []) references.push(["correlated_signal_ids", id, "signals"]);
     if (artifact.iran_connection_evidence_id) references.push(["iran_connection_evidence_id", artifact.iran_connection_evidence_id, "evidence"]);
     references.push(["lifecycle.superseded_by", artifact.lifecycle.superseded_by, collection]);
+    if (collection === "academic_opportunities") {
+      for (const [field, id] of opportunityEvidenceRefs(artifact)) references.push([field, id, "evidence"]);
+    }
   }
   return references.filter(([, id]) => id !== null && id !== undefined);
 }
@@ -228,6 +232,10 @@ function remap(collection, artifact, ids) {
     if (artifact.opposing_evidence_ids) mapped.opposing_evidence_ids = unique(artifact.opposing_evidence_ids, "evidence");
     if (artifact.correlated_signal_ids) mapped.correlated_signal_ids = unique(artifact.correlated_signal_ids, "signals");
     if (artifact.iran_connection_evidence_id) mapped.iran_connection_evidence_id = ids.evidence.get(artifact.iran_connection_evidence_id);
+    if (collection === "academic_opportunities") {
+      const nested = mapOpportunityEvidence(artifact, (list) => [...new Set(list.map((id) => ids.evidence.get(id)))].sort());
+      for (const field of ["funding", "admission_conditions", "nationality_restrictions", "iranian_evidence"]) mapped[field] = nested[field];
+    }
     if (artifact.answer_links) {
       // Links to candidate keys become stable IDs; other links name artifacts already published in the store.
       mapped.answer_links = artifact.answer_links.map((link) => ({
@@ -449,7 +457,7 @@ export function withdraw({ storeRoot, artifactId, datasetId, reason, note = null
   }
   const store = loadCommunitySignalStore(datasetsRoot);
   const exists = artifactId
-    ? store.datasets.some(({ canonical }) => [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims, ...canonical.questions]
+    ? store.datasets.some(({ canonical }) => [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims, ...canonical.questions, ...canonical.academicOpportunities]
       .some((artifact) => artifact.id === artifactId))
     : store.datasets.some((entry) => entry.datasetId === datasetId);
   if (!exists) throw new Error(`${artifactId ?? datasetId} was not found in the store's current datasets.`);

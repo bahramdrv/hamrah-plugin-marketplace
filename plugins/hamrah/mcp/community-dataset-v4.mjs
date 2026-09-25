@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 
 import Ajv2020 from "ajv/dist/2020.js";
 import { localized } from "./community-canonical.mjs";
+import { opportunityConsistencyIssues, opportunityEvidenceRefs } from "./community-opportunities.mjs";
 import { ambiguityIssues, askerCountIssues } from "./community-questions.mjs";
 import { inspectDatasetPrivacy } from "./privacy-check.mjs";
 
@@ -85,6 +86,9 @@ function referenceIssues(dataset, issue) {
         expect(`${path}.iran_connection_evidence_id`, artifact.iran_connection_evidence_id, "evidence", "evidence");
       }
       for (const id of artifact.correlated_signal_ids || []) expect(`${path}.correlated_signal_ids`, id, "signals", "signal");
+      if (collection === "academic_opportunities") {
+        for (const [field, id] of opportunityEvidenceRefs(artifact)) expect(`${path}.${field}`, id, "evidence", "evidence");
+      }
       expect(`${path}.lifecycle.superseded_by`, artifact.lifecycle.superseded_by, collection, "artifact");
     });
   }
@@ -150,7 +154,11 @@ export function validateCommunityDatasetV4(dataset) {
   const privacy = inspectDatasetPrivacy(dataset);
   referenceIssues(dataset, issue);
   lifecycleAndStateIssues(dataset, issue);
-  for (const found of [...askerCountIssues(dataset.questions, dataset.evidence), ...ambiguityIssues(dataset.questions)]) {
+  for (const found of [
+    ...askerCountIssues(dataset.questions, dataset.evidence),
+    ...ambiguityIssues(dataset.questions),
+    ...opportunityConsistencyIssues(dataset.academic_opportunities, dataset.evidence, dataset.sources)
+  ]) {
     issue(found.gate, found.message);
   }
   if (privacy.status !== "pass") {
@@ -174,6 +182,7 @@ export function adaptCommunityDatasetV4(dataset) {
     sources: dataset.sources.map((source) => ({ ...source, source_schema_version: V4_SCHEMA_VERSION, source_type: null })),
     routeClaims: dataset.route_claims.map((claim) => ({ ...claim, source_schema_version: V4_SCHEMA_VERSION })),
     questions: dataset.questions.map((question) => ({ ...question, source_schema_version: V4_SCHEMA_VERSION })),
+    academicOpportunities: dataset.academic_opportunities.map((item) => ({ ...item, source_schema_version: V4_SCHEMA_VERSION })),
     evidence: dataset.evidence.map((item) => ({
       ...item,
       source_schema_version: V4_SCHEMA_VERSION,

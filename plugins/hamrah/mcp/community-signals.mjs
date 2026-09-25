@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { BudgetExceededError, REQUEST_BUDGETS } from "./budgets.mjs";
 import { aggregateEvidence, CURRENT_STATUSES } from "./community-aggregation.mjs";
 import { readCommunityDataset } from "./community-datasets.mjs";
+import { downgradeUnsupported, mapOpportunityEvidence } from "./community-opportunities.mjs";
 import { ledgerPathFor, readWithdrawalLedger, withdrawnSets } from "./withdrawals.mjs";
 
 const DATASET_ROOT = fileURLToPath(
@@ -56,7 +57,11 @@ function withoutWithdrawn(canonical, withdrawn) {
     .filter((question) => !withdrawn.has(question.id))
     .map((question) => ({ ...question, evidence_ids: question.evidence_ids.filter((id) => !withdrawn.has(id)) }))
     .filter((question) => question.evidence_ids.length > 0);
-  return { ...canonical, evidence, signals, routeClaims, questions, sources: canonical.sources.filter((source) => !withdrawn.has(source.id)) };
+  const academicOpportunities = canonical.academicOpportunities
+    .filter((item) => !withdrawn.has(item.id))
+    .map((item) => downgradeUnsupported(mapOpportunityEvidence(item, (list) => list.filter((id) => !withdrawn.has(id)))))
+    .filter((item) => item.evidence_ids.length > 0);
+  return { ...canonical, evidence, signals, routeClaims, questions, academicOpportunities, sources: canonical.sources.filter((source) => !withdrawn.has(source.id)) };
 }
 
 // Version 2 signals embed their evidence, so withdrawn evidence must also leave the original-form signal.
@@ -94,7 +99,7 @@ export function loadCommunitySignalStore(root = DATASET_ROOT, maxDatasets = REQU
         invalidDatasets.push({ datasetId, schemaVersion, error: errors.join("; "), ...(privacy ? { privacy } : {}) });
         continue;
       }
-      const withdrawnArtifactIds = [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims, ...canonical.questions]
+      const withdrawnArtifactIds = [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims, ...canonical.questions, ...canonical.academicOpportunities]
         .map((artifact) => artifact.id)
         .filter((id) => withdrawn.artifacts.has(id));
       datasets.push({
