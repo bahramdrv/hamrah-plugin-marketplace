@@ -14,7 +14,7 @@ const V4_EXAMPLE = JSON.parse(readFileSync(
 const V2_EXAMPLE = JSON.parse(readFileSync(
   new URL("../../skills/hamrah-signal-builder/examples/gold_standard.json", import.meta.url), "utf8"
 ));
-const STORE_SIGNALS = fileURLToPath(new URL("../../skills/hamrah-signal-builder/scripts/store_signals.py", import.meta.url));
+const PUBLISHER = fileURLToPath(new URL("../community-publication.mjs", import.meta.url));
 const SIGNAL_ID = "sig_gbr-gt-endorsement-delay";
 
 function tempDir(t, prefix) {
@@ -26,7 +26,7 @@ function tempDir(t, prefix) {
 function publish(directory, dataset, storeRoot) {
   const candidate = path.join(directory, `candidate-${Math.random().toString(36).slice(2)}.json`);
   writeFileSync(candidate, JSON.stringify(dataset));
-  return spawnSync("python3", [STORE_SIGNALS, candidate, "--store-root", storeRoot, "--label", "v4"], { encoding: "utf8" });
+  return spawnSync(process.execPath, [PUBLISHER, "publish", candidate, "--store-root", storeRoot, "--label", "v4", "--now", "2026-09-25T00:00:00Z"], { encoding: "utf8" });
 }
 
 function search(signalStoreRoot, args = {}) {
@@ -39,6 +39,7 @@ test("a published version 4 Signal is searchable and retrievable with evidence, 
   const published = publish(directory, V4_EXAMPLE, storeRoot);
   assert.equal(published.status, 0, published.stderr);
   const signalStoreRoot = path.join(storeRoot, "datasets");
+  const SIGNAL_ID = JSON.parse(published.stdout).ids.signals["sig_gbr-gt-endorsement-delay"];
 
   const searched = await search(signalStoreRoot, { countryCode: "GBR", route: "global_talent" });
   assert.equal(searched.isError, false);
@@ -52,6 +53,7 @@ test("a published version 4 Signal is searchable and retrievable with evidence, 
   assert.equal(found.validationStatus, "validated");
   assert.equal(found.lastVerified, "2026-09-11");
   assert.deepEqual(found.lifecycle, { ...V4_EXAMPLE.signals[0].lifecycle, source_status: "active" });
+  assert.match(SIGNAL_ID, /^sig_[0-9a-f]{32}$/);
   assert.equal(found.evidenceIds.length, 4);
 
   const fetched = await executeTool("getCommunitySignalDataset", {
@@ -98,29 +100,29 @@ test("invalid references, missing provenance, and unsafe privacy states never en
       process_stage: null, statement_en: "Endorsement takes longer than published.", opposing_evidence_ids: [],
       evidence_ids: ["evd_missing"], lifecycle: { ...d.signals[0].lifecycle }, validation: { ...d.signals[0].validation }
     }), /unknown evidence evd_missing/],
-    ["duplicate_id", (d) => { d.evidence[1].id = d.evidence[0].id; }, /duplicate artifact id/],
+    ["duplicate_id", (d) => { d.evidence[1].id = d.evidence[0].id; }, /duplicate artifact id/, /duplicate candidate key/],
     ["missing_hash", (d) => { delete d.evidence[0].content_hash; }, /content_hash/],
     ["missing_retrieval", (d) => { delete d.evidence[0].retrieved_at; }, /retrieved_at/],
     ["invalid_retrieval", (d) => { d.evidence[0].retrieved_at = "2026-02-30T00:00:00Z"; }, /retrieved_at is not a valid ISO date-time/],
-    ["no_evidence", (d) => { d.signals[0].evidence_ids = []; }, /evidence_ids/],
+    ["no_evidence", (d) => { d.signals[0].evidence_ids = []; }, /evidence_ids/, /has no evidence/],
     ["public_without_locator", (d) => { d.sources[1].source_url = null; }, /public source needs an https source_url/],
     ["private_with_locator", (d) => { d.evidence[0].source_url = "https://example.org/thread/1"; }, /private source must not carry a source_url/],
-    ["artifact_needs_review", (d) => { d.evidence[0].validation.privacy_status = "needs_review"; }, /validation.privacy_status must be pass/],
-    ["artifact_not_validated", (d) => { d.signals[0].validation.status = "needs_review"; }, /validation.status must be validated/],
+    ["artifact_needs_review", (d) => { d.evidence[0].validation.privacy_status = "needs_review"; }, /validation.privacy_status must be pass/, /privacy needs_review/],
+    ["artifact_not_validated", (d) => { d.signals[0].validation.status = "needs_review"; }, /validation.status must be validated/, /declares validation needs_review/],
     ["inspected_privacy_fail", (d) => { d.evidence[0].evidence_summary = "Contact the applicant at jane@example.com"; }, /privacy fail/],
     ["impossible_lifecycle_date", (d) => { d.signals[0].lifecycle.first_seen = "2026-02-30"; }, /first_seen is not a valid ISO date/],
-    ["future_lifecycle_date", (d) => { d.signals[0].lifecycle.last_seen = "2026-09-12"; }, /last_seen is after generated_at/],
+    ["future_lifecycle_date", (d) => { d.signals[0].lifecycle.last_seen = "2026-09-26"; }, /last_seen is after generated_at/],
     ["superseded_without_successor", (d) => { d.signals[0].lifecycle.status = "superseded"; }, /superseded status requires superseded_by/],
     ["resolved_penalty", (d) => { d.signals[0].lifecycle.status = "resolved"; }, /adjustment must be 0/]
   ];
   const signalStoreRoot = path.join(directory, "direct");
   mkdirSync(signalStoreRoot);
-  for (const [name, mutate, reason] of cases) {
+  for (const [name, mutate, reason, publishReason = reason] of cases) {
     const dataset = structuredClone(V4_EXAMPLE);
     mutate(dataset);
     const published = publish(directory, dataset, path.join(directory, `store-${name}`));
     assert.notEqual(published.status, 0, name);
-    assert.match(published.stderr, reason, name);
+    assert.match(published.stderr, publishReason, name);
     writeFileSync(path.join(signalStoreRoot, `${name}.json`), JSON.stringify(dataset));
   }
 

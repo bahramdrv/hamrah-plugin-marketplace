@@ -18,6 +18,14 @@ parser.add_argument("--label", default="signals")
 args = parser.parse_args()
 
 source = Path(args.dataset).resolve()
+if json.loads(source.read_text()).get("schema_version") == "4.0.0":
+    print(
+        "Refusing to store a version 4 dataset directly: publish it with "
+        "`node plugins/hamrah/mcp/community-publication.mjs publish <candidate.json> --store-root <root>` "
+        "so normalization, deduplication, stable IDs, and every publication gate run.",
+        file=sys.stderr,
+    )
+    raise SystemExit(1)
 root = Path(args.store_root).resolve()
 validator = Path(__file__).with_name("validate_output.py")
 result = subprocess.run([sys.executable, str(validator), str(source)], text=True, capture_output=True)

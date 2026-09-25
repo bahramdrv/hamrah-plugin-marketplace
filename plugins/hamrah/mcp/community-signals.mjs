@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 
 import { BudgetExceededError, REQUEST_BUDGETS } from "./budgets.mjs";
 import { readCommunityDataset } from "./community-datasets.mjs";
+import { ledgerPathFor, readWithdrawalLedger, withdrawnSets } from "./withdrawals.mjs";
 
 const DATASET_ROOT = fileURLToPath(
   new URL("../data/community-signals/datasets/", import.meta.url)
@@ -32,9 +33,31 @@ function datasetIdFor(filePath, root) {
   return path.relative(root, filePath).split(path.sep).join("/").replace(/\.json$/i, "");
 }
 
+function withoutWithdrawn(canonical, withdrawn) {
+  const evidence = canonical.evidence.filter((item) => !withdrawn.has(item.id));
+  const signals = canonical.signals
+    .filter((signal) => !withdrawn.has(signal.id))
+    .map((signal) => ({
+      ...signal,
+      evidence_ids: signal.evidence_ids.filter((id) => !withdrawn.has(id)),
+      evidence_links: signal.evidence_links.filter((link) => !withdrawn.has(link.evidence_id))
+    }))
+    // A signal left without any evidence after a withdrawal is no longer supported.
+    .filter((signal) => signal.evidence_ids.length > 0);
+  return { ...canonical, evidence, signals, sources: canonical.sources.filter((source) => !withdrawn.has(source.id)) };
+}
+
+// Version 2 signals embed their evidence, so withdrawn evidence must also leave the original-form signal.
+function withoutEmbeddedWithdrawn(signal, withdrawnIds) {
+  if (!withdrawnIds.length || !Array.isArray(signal.evidence)) return signal;
+  return { ...signal, evidence: signal.evidence.filter((item) => !withdrawnIds.includes(item.evidence_id)) };
+}
+
 export function loadCommunitySignalStore(root = DATASET_ROOT, maxDatasets = REQUEST_BUDGETS.maxDatasetsScanned) {
   const datasets = [];
   const invalidDatasets = [];
+  const withdrawnDatasets = [];
+  const withdrawn = withdrawnSets(readWithdrawalLedger(ledgerPathFor(root)));
   const files = walkJsonFiles(root, maxDatasets);
   if (files.length > maxDatasets) {
     throw new BudgetExceededError(
@@ -45,6 +68,10 @@ export function loadCommunitySignalStore(root = DATASET_ROOT, maxDatasets = REQU
   }
   for (const filePath of files) {
     const datasetId = datasetIdFor(filePath, root);
+    if (withdrawn.datasets.has(datasetId)) {
+      withdrawnDatasets.push(datasetId);
+      continue;
+    }
     try {
       if (statSync(filePath).size > MAX_DATASET_BYTES) {
         throw new Error(`file exceeds ${MAX_DATASET_BYTES} bytes`);
@@ -55,7 +82,16 @@ export function loadCommunitySignalStore(root = DATASET_ROOT, maxDatasets = REQU
         invalidDatasets.push({ datasetId, schemaVersion, error: errors.join("; "), ...(privacy ? { privacy } : {}) });
         continue;
       }
-      datasets.push({ datasetId, dataset, privacy, canonical });
+      const withdrawnArtifactIds = [...canonical.signals, ...canonical.evidence, ...canonical.sources]
+        .map((artifact) => artifact.id)
+        .filter((id) => withdrawn.artifacts.has(id));
+      datasets.push({
+        datasetId,
+        dataset,
+        privacy,
+        canonical: withdrawnArtifactIds.length ? withoutWithdrawn(canonical, withdrawn.artifacts) : canonical,
+        withdrawnArtifactIds
+      });
     } catch (error) {
       invalidDatasets.push({
         datasetId,
@@ -68,6 +104,7 @@ export function loadCommunitySignalStore(root = DATASET_ROOT, maxDatasets = REQU
     scanned: files.length,
     datasets,
     invalidDatasets,
+    withdrawnDatasets,
     truncated: false
   };
 }
@@ -174,9 +211,9 @@ function publicSignal(datasetId, canonical, signal) {
 export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatasets) {
   const store = loadCommunitySignalStore(root, maxDatasets);
   const newestBySignalId = new Map();
+  // The newest copy of each signal decides, so a later superseded or resolved snapshot hides an older current one.
   for (const { datasetId, canonical } of store.datasets) {
     for (const signal of canonical.signals) {
-      if (!matchesSignal(signal, args)) continue;
       const existing = newestBySignalId.get(signal.id);
       if (!existing || dateValue(canonical.generatedAt) > dateValue(existing.canonical.generatedAt)) {
         newestBySignalId.set(signal.id, { datasetId, canonical, signal });
@@ -185,6 +222,7 @@ export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatase
   }
   const limit = Math.max(1, Math.min(50, Number.isInteger(args.limit) ? args.limit : 20));
   const matches = [...newestBySignalId.values()]
+    .filter(({ signal }) => matchesSignal(signal, args))
     .sort((a, b) => dateValue(b.signal.lifecycle.last_verified) - dateValue(a.signal.lifecycle.last_verified))
     .slice(0, limit)
     .map(({ datasetId, canonical, signal }) => publicSignal(datasetId, canonical, signal));
@@ -195,6 +233,7 @@ export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatase
       filesScanned: store.scanned,
       validDatasets: store.datasets.length,
       invalidDatasets: store.invalidDatasets,
+      withdrawnDatasets: store.withdrawnDatasets,
       truncated: store.truncated
     },
     filters: args,
@@ -215,8 +254,10 @@ export function getCommunitySignalDataset(args = {}, root = DATASET_ROOT, maxDat
     ? new Set(args.signalIds.map(String))
     : null;
   const { canonical, dataset } = found;
+  const originalIdOf = (signal) => signal.id ?? signal.signal_id;
+  const originals = new Map(dataset.signals.map((signal) => [originalIdOf(signal), signal]));
   const selected = canonical.signals
-    .map((signal, index) => ({ signal, original: dataset.signals[index] }))
+    .map((signal) => ({ signal, original: originals.get(signal.id) }))
     .filter(({ signal }) => !requested || requested.has(signal.id));
   const canonicalSignals = selected.map(({ signal }) => signal);
   const evidenceIds = new Set(canonicalSignals.flatMap((signal) => signal.evidence_ids));
@@ -232,11 +273,12 @@ export function getCommunitySignalDataset(args = {}, root = DATASET_ROOT, maxDat
     qualityControl: canonical.qualityControl,
     privacy: found.privacy,
     provenance: canonical.provenance,
-    signals: selected.map(({ original }) => original),
+    signals: selected.map(({ original }) => withoutEmbeddedWithdrawn(original, found.withdrawnArtifactIds)),
     canonicalSignals,
     evidence,
     sources: canonical.sources.filter((source) => requested ? sourceIds.has(source.id) : true),
     watchlist: canonical.watchlist,
+    withdrawnArtifactIds: found.withdrawnArtifactIds,
     missingSignalIds: requested
       ? [...requested].filter((signalId) => !canonicalSignals.some((signal) => signal.id === signalId))
       : [],

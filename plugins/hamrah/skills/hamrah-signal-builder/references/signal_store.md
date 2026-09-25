@@ -6,6 +6,8 @@ Default local location is `.hamrah/community-signals` under the active workspace
 
 For the Hamrah plugin repository, the shared production store is `plugins/hamrah/data/community-signals`. Its MCP server scans every `.json` file below `datasets/`, validates schema version 2.0 and privacy controls, and exposes valid records through `searchCommunitySignals` and `getCommunitySignalDataset`. A push to the connected main branch must deploy successfully before ChatGPT Web can read the new revision; refresh the Hamrah app after tool metadata changes.
 
+Version 4 evidence is published with `node plugins/hamrah/mcp/community-publication.mjs publish <candidate.json> --store-root <root>` (and withdrawn with its `withdraw` command); see `plugins/hamrah/data/community-signals/README.md`. The commands below store version 2 and 3 datasets.
+
 Store a dataset:
 
 ```sh
