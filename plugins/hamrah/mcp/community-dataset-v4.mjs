@@ -168,6 +168,7 @@ export function adaptCommunityDatasetV4(dataset) {
     watchlist: dataset.watchlist,
     provenance: dataset.provenance,
     sources: dataset.sources.map((source) => ({ ...source, source_schema_version: V4_SCHEMA_VERSION, source_type: null })),
+    routeClaims: dataset.route_claims.map((claim) => ({ ...claim, source_schema_version: V4_SCHEMA_VERSION })),
     evidence: dataset.evidence.map((item) => ({
       ...item,
       source_schema_version: V4_SCHEMA_VERSION,

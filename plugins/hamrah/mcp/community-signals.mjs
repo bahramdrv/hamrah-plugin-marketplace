@@ -44,7 +44,15 @@ function withoutWithdrawn(canonical, withdrawn) {
     }))
     // A signal left without any evidence after a withdrawal is no longer supported.
     .filter((signal) => signal.evidence_ids.length > 0);
-  return { ...canonical, evidence, signals, sources: canonical.sources.filter((source) => !withdrawn.has(source.id)) };
+  const routeClaims = canonical.routeClaims
+    .filter((claim) => !withdrawn.has(claim.id))
+    .map((claim) => ({
+      ...claim,
+      evidence_ids: claim.evidence_ids.filter((id) => !withdrawn.has(id)),
+      opposing_evidence_ids: claim.opposing_evidence_ids.filter((id) => !withdrawn.has(id))
+    }))
+    .filter((claim) => claim.evidence_ids.length > 0);
+  return { ...canonical, evidence, signals, routeClaims, sources: canonical.sources.filter((source) => !withdrawn.has(source.id)) };
 }
 
 // Version 2 signals embed their evidence, so withdrawn evidence must also leave the original-form signal.
@@ -82,7 +90,7 @@ export function loadCommunitySignalStore(root = DATASET_ROOT, maxDatasets = REQU
         invalidDatasets.push({ datasetId, schemaVersion, error: errors.join("; "), ...(privacy ? { privacy } : {}) });
         continue;
       }
-      const withdrawnArtifactIds = [...canonical.signals, ...canonical.evidence, ...canonical.sources]
+      const withdrawnArtifactIds = [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims]
         .map((artifact) => artifact.id)
         .filter((id) => withdrawn.artifacts.has(id));
       datasets.push({
@@ -208,6 +216,52 @@ function publicSignal(datasetId, canonical, signal) {
   };
 }
 
+function coverageStatus(found) {
+  return found
+    ? { status: "evidence_found", note: "Coverage lists only the validated datasets and claims that match this scope; other facts may still be unknown." }
+    : { status: "no_coverage", note: "No validated Hamrah dataset covers this scope yet. This is missing coverage, not evidence that the route is closed or unavailable." };
+}
+
+// Route Claims carry only a country code, routes, a stage, and text, so other filters cannot be checked against them.
+const CLAIM_UNEVALUATED_FILTERS = ["country", "originCountry", "nationality", "entity"];
+
+function claimMatchesScope(claim, args) {
+  const countryCode = normalized(args.countryCode);
+  const route = normalized(args.route);
+  const processStage = normalized(args.processStage);
+  const topic = normalized(args.topic);
+  if (countryCode && normalized(claim.country_code) !== countryCode) return false;
+  if (route && !claim.routes.some((item) => normalized(item) === route)) return false;
+  if (processStage && normalized(claim.process_stage) !== processStage) return false;
+  if (topic && !`${claim.claim_type} ${claim.statement_en}`.toLowerCase().includes(topic)) return false;
+  return true;
+}
+
+// Route Claims are counted here; searching their contents is a separate tool.
+function routeClaimsInScope(store, args) {
+  const notEvaluated = CLAIM_UNEVALUATED_FILTERS.filter((filter) => normalized(args[filter]));
+  if (notEvaluated.length) return { matchingClaims: 0, currentClaims: 0, byClaimType: {}, datasets: [], notEvaluated };
+  const byDataset = [];
+  const byClaimType = {};
+  let current = 0;
+  for (const { datasetId, canonical } of store.datasets) {
+    const claims = canonical.routeClaims.filter((claim) => claimMatchesScope(claim, args));
+    if (!claims.length) continue;
+    for (const claim of claims) {
+      byClaimType[claim.claim_type] = (byClaimType[claim.claim_type] ?? 0) + 1;
+      if (CURRENT_STATUSES.has(claim.lifecycle.status)) current++;
+    }
+    byDataset.push({ datasetId, claimIds: claims.map((claim) => claim.id).sort() });
+  }
+  return {
+    matchingClaims: byDataset.reduce((total, item) => total + item.claimIds.length, 0),
+    currentClaims: current,
+    byClaimType,
+    datasets: byDataset,
+    notEvaluated
+  };
+}
+
 export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatasets) {
   const store = loadCommunitySignalStore(root, maxDatasets);
   const newestBySignalId = new Map();
@@ -223,6 +277,7 @@ export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatase
   const limit = Math.max(1, Math.min(50, Number.isInteger(args.limit) ? args.limit : 20));
   const inScope = [...newestBySignalId.values()].filter(({ signal }) => matchesScope(signal, args));
   const { aggregation, signalSupport } = aggregateEvidence(store, inScope);
+  const routeClaimCoverage = routeClaimsInScope(store, args);
   const matches = inScope
     .filter(({ signal }) => matchesStatus(signal, args))
     .sort((a, b) => dateValue(b.signal.lifecycle.last_verified) - dateValue(a.signal.lifecycle.last_verified))
@@ -235,6 +290,7 @@ export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatase
     source: "Hamrah Community Signal Store",
     generatedAt: new Date().toISOString(),
     coverage: {
+      ...coverageStatus(aggregation.datasetCoverage.matchingDatasets > 0 || routeClaimCoverage.matchingClaims > 0),
       filesScanned: store.scanned,
       validDatasets: store.datasets.length,
       invalidDatasets: store.invalidDatasets,
@@ -244,6 +300,7 @@ export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatase
     filters: args,
     resultCount: matches.length,
     signals: matches,
+    routeClaimCoverage,
     evidenceAggregation: aggregation,
     usageNote: "Community evidence is practical context only. Recheck applicant, route, stage, entity, location, timing, and conditions before applying an adjustment."
   };
@@ -266,7 +323,11 @@ export function getCommunitySignalDataset(args = {}, root = DATASET_ROOT, maxDat
     .map((signal) => ({ signal, original: originals.get(signal.id) }))
     .filter(({ signal }) => !requested || requested.has(signal.id));
   const canonicalSignals = selected.map(({ signal }) => signal);
-  const evidenceIds = new Set(canonicalSignals.flatMap((signal) => signal.evidence_ids));
+  const routeClaims = canonical.routeClaims;
+  const evidenceIds = new Set([
+    ...canonicalSignals.flatMap((signal) => signal.evidence_ids),
+    ...routeClaims.flatMap((claim) => [...claim.evidence_ids, ...claim.opposing_evidence_ids])
+  ]);
   const evidence = canonical.evidence.filter((item) => requested ? evidenceIds.has(item.id) : true);
   const sourceIds = new Set(evidence.map((item) => item.source_id));
   return {
@@ -281,6 +342,7 @@ export function getCommunitySignalDataset(args = {}, root = DATASET_ROOT, maxDat
     provenance: canonical.provenance,
     signals: selected.map(({ original }) => withoutEmbeddedWithdrawn(original, found.withdrawnArtifactIds)),
     canonicalSignals,
+    routeClaims,
     evidence,
     sources: canonical.sources.filter((source) => requested ? sourceIds.has(source.id) : true),
     watchlist: canonical.watchlist,

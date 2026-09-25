@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-09-25T17:46:55Z",
+  "datasets": [
+    {
+      "path": "datasets/2026/09/20260925174655-de-study-opportunity-card-78f7f8bd21.json",
+      "sha256": "78f7f8bd216db2a82e937eeea3a3058e639765443fc83b755ebed29666684a52",
+      "content_digest": "582a7bdce43a136bb240c1c5a926650e77c297066e826fbaf595549ea461ffe1",
+      "schema_version": "4.0.0",
+      "generated_at": "2026-09-25T17:46:55Z",
+      "countries": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card",
+        "student_bachelor",
+        "student_masters_research",
+        "student_masters_taught",
+        "student_phd"
+      ],
+      "statuses": [
+        "active"
+      ],
+      "signal_count": 3,
+      "source_ids": [
+        "src_198d2c125548bf5800d76399aa0710e2",
+        "src_4e28d9fbc35ff7e801b2e7fe96d1abf0",
+        "src_5cf3b6cb54edfdb935ad1d1ed0751476",
+        "src_80fd9259910fe999cbe89cda0844c0d2",
+        "src_922a0144ec3ef0e9aa52400daa24ff66",
+        "src_ac5a75d2120cf9c585a500123709499a"
+      ]
+    }
+  ]
+}

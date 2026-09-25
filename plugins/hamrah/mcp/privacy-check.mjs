@@ -3,14 +3,30 @@ import { readFileSync } from "node:fs";
 const NARRATIVE_FIELDS = new Set([
   "summary", "summary_en", "summary_fa", "evidence_summary", "resolution_summary", "current_evidence",
   "practical_impact", "who_should_care", "recommended_action", "known_workaround",
-  "reason", "what_would_confirm_it"
+  "reason", "what_would_confirm_it",
+  "statement_en", "canonical_en", "canonical_fa", "variants", "milestone"
 ]);
-const DOMAIN_PHRASES = new Set(["Global Talent", "United Kingdom", "Peer Review", "Example Community"]);
+const ID_FIELDS = new Set([
+  "id", "source_id", "supersedes", "superseded_by", "iran_connection_evidence_id",
+  "evidence_ids", "opposing_evidence_ids", "correlated_signal_ids"
+]);
+const STABLE_ID = /^(?:sig|qst|opp|exp|clm|src|evd)_[0-9a-f]{32}$/;
+// Reviewed route, law, and institution labels that look like "First Last" names. Each use is reported as an exception.
+const DOMAIN_PHRASES = new Set([
+  "Global Talent", "United Kingdom", "Peer Review", "Example Community",
+  "Opportunity Card", "Residence Act", "Consular Services",
+  "Federal Ministry", "Federal Foreign", "Federal Employment"
+]);
 const KNOWN_INSTITUTIONS = new Map([
-  ["vac", new Set(["Tehran UK Visa Application Centre"])]
+  ["vac", new Set(["Tehran UK Visa Application Centre"])],
+  ["embassy", new Set(["German Embassy Tehran"])]
 ]);
 
 function inspectString(value, path, field, parent, findings, exceptions) {
+  if (ID_FIELDS.has(field) && STABLE_ID.test(value)) {
+    exceptions.push({ path, rule: "stable_id", reason: "A SHA-256-derived publication ID, not a contact detail." });
+    return;
+  }
   if (field === "content_hash" && /^sha256:[0-9a-f]{64}$/.test(value)) {
     exceptions.push({ path, rule: "content_hash", reason: "A SHA-256 digest of source content, not a contact detail." });
     return;

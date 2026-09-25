@@ -130,7 +130,7 @@ function identityKey(collection, artifact, ids) {
       return [artifact.country_code, identityText(artifact.route), identityText(artifact.milestone), artifact.outcome,
         artifact.event_date, ids.evidence.get(artifact.iran_connection_evidence_id)];
     case "route_claims":
-      return [artifact.country_code, identityText(artifact.route), identityText(artifact.claim_type),
+      return [artifact.country_code, sortedText(artifact.routes), identityText(artifact.claim_type),
         identityText(artifact.process_stage), identityText(artifact.statement_en)];
     default:
       throw new Error(`Unknown collection ${collection}`);
@@ -402,7 +402,7 @@ export function withdraw({ storeRoot, artifactId, datasetId, reason, note = null
   }
   const store = loadCommunitySignalStore(datasetsRoot);
   const exists = artifactId
-    ? store.datasets.some(({ canonical }) => [...canonical.signals, ...canonical.evidence, ...canonical.sources]
+    ? store.datasets.some(({ canonical }) => [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims]
       .some((artifact) => artifact.id === artifactId))
     : store.datasets.some((entry) => entry.datasetId === datasetId);
   if (!exists) throw new Error(`${artifactId ?? datasetId} was not found in the store's current datasets.`);

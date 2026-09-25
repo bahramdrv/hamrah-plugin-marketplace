@@ -96,7 +96,7 @@ test("invalid references, missing provenance, and unsafe privacy states never en
     ["unknown_evidence", (d) => d.signals[0].evidence_ids.push("evd_missing"), /unknown evidence evd_missing/],
     ["unknown_source", (d) => { d.evidence[0].source_id = "src_missing"; }, /unknown source src_missing/],
     ["claim_reference", (d) => d.route_claims.push({
-      id: "clm_unsupported", country_code: "GBR", route: "global_talent", claim_type: "processing_time",
+      id: "clm_unsupported", country_code: "GBR", routes: ["global_talent"], claim_type: "processing_time",
       process_stage: null, statement_en: "Endorsement takes longer than published.", opposing_evidence_ids: [],
       evidence_ids: ["evd_missing"], lifecycle: { ...d.signals[0].lifecycle }, validation: { ...d.signals[0].validation }
     }), /unknown evidence evd_missing/],
@@ -145,4 +145,22 @@ test("a content hash with long digit runs is not mistaken for a phone number", a
   writeFileSync(path.join(signalStoreRoot, "hash.json"), JSON.stringify(dataset));
   const searched = await search(signalStoreRoot);
   assert.equal(searched.structuredContent.coverage.validDatasets, 1, JSON.stringify(searched.structuredContent.coverage));
+});
+
+test("stable publication IDs with long digit runs are not mistaken for phone numbers", async (t) => {
+  const signalStoreRoot = tempDir(t, "hamrah-v4-ids-");
+  const dataset = structuredClone(V4_EXAMPLE);
+  const evidenceId = "evd_1234567890abcdefabcdefabcdefabcd";
+  const oldId = dataset.evidence[0].id;
+  dataset.evidence[0].id = evidenceId;
+  dataset.signals[0].evidence_ids = dataset.signals[0].evidence_ids.map((id) => (id === oldId ? evidenceId : id));
+  dataset.signals[0].id = "sig_aaaa9876543210bbbbccccddddeeeeff";
+  writeFileSync(path.join(signalStoreRoot, "ids.json"), JSON.stringify(dataset));
+  const searched = await search(signalStoreRoot);
+  assert.equal(searched.structuredContent.coverage.validDatasets, 1, JSON.stringify(searched.structuredContent.coverage));
+
+  dataset.evidence[0].evidence_summary = "Call 1234567890123 for the result.";
+  writeFileSync(path.join(signalStoreRoot, "ids.json"), JSON.stringify(dataset));
+  const phone = await search(signalStoreRoot);
+  assert.equal(phone.structuredContent.coverage.validDatasets, 0, "the exemption is limited to ID fields");
 });

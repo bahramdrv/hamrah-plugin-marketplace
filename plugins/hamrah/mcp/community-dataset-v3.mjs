@@ -166,6 +166,8 @@ export function adaptCommunityDatasetV3(dataset) {
     summary: null,
     qualityControl: dataset.quality,
     watchlist: null,
+    // Legacy schemas have no Route Claims.
+    routeClaims: [],
     provenance: {
       dataset_id: dataset.dataset.dataset_id,
       producer: dataset.dataset.generator.name,

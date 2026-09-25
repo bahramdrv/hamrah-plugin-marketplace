@@ -1,0 +1,909 @@
+{
+  "schema_version": "4.0.0",
+  "generated_at": "2026-09-25T17:46:55Z",
+  "provenance": {
+    "producer": "hamrah-seed-review",
+    "method": "Retrieved official German federal law texts, a Federal Foreign Office page, and German embassy in Tehran pages; facts are paraphrased from the retrieved text and each evidence record hashes the exact bytes retrieved. make-it-in-germany.com was not used because it blocked automated retrieval.",
+    "collected_at": "2026-09-25T17:43:15Z"
+  },
+  "source_coverage": [
+    {
+      "source_id": "src_law-20a",
+      "source_name": "Residence Act section 20a (Federal Ministry of Justice legal database)",
+      "source_type": "url",
+      "source_url": "https://www.gesetze-im-internet.de/aufenthg_2004/__20a.html",
+      "coverage_start": "2026-09-25",
+      "coverage_end": "2026-09-25",
+      "records_processed": 1,
+      "coverage_complete": true
+    },
+    {
+      "source_id": "src_law-16b",
+      "source_name": "Residence Act section 16b (Federal Ministry of Justice legal database)",
+      "source_type": "url",
+      "source_url": "https://www.gesetze-im-internet.de/aufenthg_2004/__16b.html",
+      "coverage_start": "2026-09-25",
+      "coverage_end": "2026-09-25",
+      "records_processed": 1,
+      "coverage_complete": true
+    },
+    {
+      "source_id": "src_law-2",
+      "source_name": "Residence Act section 2 (Federal Ministry of Justice legal database)",
+      "source_type": "url",
+      "source_url": "https://www.gesetze-im-internet.de/aufenthg_2004/__2.html",
+      "coverage_start": "2026-09-25",
+      "coverage_end": "2026-09-25",
+      "records_processed": 1,
+      "coverage_complete": true
+    },
+    {
+      "source_id": "src_ffo-blocked-account",
+      "source_name": "Federal Foreign Office page on blocked accounts",
+      "source_type": "url",
+      "source_url": "https://www.auswaertiges-amt.de/en/sperrkonto-388600",
+      "coverage_start": "2026-09-25",
+      "coverage_end": "2026-09-25",
+      "records_processed": 1,
+      "coverage_complete": true
+    },
+    {
+      "source_id": "src_tehran-visa",
+      "source_name": "German embassy in Tehran: visa section operations",
+      "source_type": "url",
+      "source_url": "https://teheran.diplo.de/ir-de/2752046-2752046",
+      "coverage_start": "2026-09-25",
+      "coverage_end": "2026-09-25",
+      "records_processed": 1,
+      "coverage_complete": true
+    },
+    {
+      "source_id": "src_tehran-home",
+      "source_name": "German embassy in Tehran: current notices",
+      "source_type": "url",
+      "source_url": "https://teheran.diplo.de/ir-de",
+      "coverage_start": "2026-09-25",
+      "coverage_end": "2026-09-25",
+      "records_processed": 1,
+      "coverage_complete": true
+    }
+  ],
+  "quality_control": {
+    "full_sources_processed": true,
+    "reply_chains_considered": false,
+    "duplicates_merged": true,
+    "contradictions_checked": true,
+    "resolutions_checked": true,
+    "country_scope_checked": true,
+    "route_scope_checked": true,
+    "institution_scope_checked": true,
+    "correlated_penalties_checked": true
+  },
+  "watchlist": [
+    {
+      "watch_id": "watch_deu-blocked-account-amount",
+      "country": "Germany",
+      "topic": "Study blocked account amount",
+      "reason": "The blocked-account page of the Federal Foreign Office does not state the amount; it defers to the competent mission.",
+      "current_evidence": "No amount has been retrieved from the competent mission yet, so the amount remains unknown.",
+      "what_would_confirm_it": "The current amount on the competent mission's study visa page or the Consular Services Portal.",
+      "last_checked": "2026-09-25"
+    },
+    {
+      "watch_id": "watch_deu-opportunity-card-waiting-list",
+      "country": "Germany",
+      "topic": "Opportunity Card waiting list in Tehran",
+      "reason": "The embassy page does not name the waiting list category for the Opportunity Card.",
+      "current_evidence": "Both candidate categories report no foreseeable appointments for new registrants.",
+      "what_would_confirm_it": "An embassy or waiting-list page that names the Opportunity Card category.",
+      "last_checked": "2026-09-25"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src_198d2c125548bf5800d76399aa0710e2",
+      "source_name": "Federal Foreign Office page on blocked accounts",
+      "source_family": "auswaertiges-amt.de",
+      "public": true,
+      "source_url": "https://www.auswaertiges-amt.de/en/sperrkonto-388600",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "src_4e28d9fbc35ff7e801b2e7fe96d1abf0",
+      "source_name": "Residence Act section 16b (Federal Ministry of Justice legal database)",
+      "source_family": "gesetze-im-internet.de",
+      "public": true,
+      "source_url": "https://www.gesetze-im-internet.de/aufenthg_2004/__16b.html",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "src_5cf3b6cb54edfdb935ad1d1ed0751476",
+      "source_name": "German embassy in Tehran: visa section operations",
+      "source_family": "teheran.diplo.de",
+      "public": true,
+      "source_url": "https://teheran.diplo.de/ir-de/2752046-2752046",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "src_80fd9259910fe999cbe89cda0844c0d2",
+      "source_name": "Residence Act section 20a (Federal Ministry of Justice legal database)",
+      "source_family": "gesetze-im-internet.de",
+      "public": true,
+      "source_url": "https://www.gesetze-im-internet.de/aufenthg_2004/__20a.html",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "src_922a0144ec3ef0e9aa52400daa24ff66",
+      "source_name": "German embassy in Tehran: current notices",
+      "source_family": "teheran.diplo.de",
+      "public": true,
+      "source_url": "https://teheran.diplo.de/ir-de",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "src_ac5a75d2120cf9c585a500123709499a",
+      "source_name": "Residence Act section 2 (Federal Ministry of Justice legal database)",
+      "source_family": "gesetze-im-internet.de",
+      "public": true,
+      "source_url": "https://www.gesetze-im-internet.de/aufenthg_2004/__2.html",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evd_25377e5542fa730d7887be1d42a0159a",
+      "source_id": "src_922a0144ec3ef0e9aa52400daa24ff66",
+      "source_url": "https://teheran.diplo.de/ir-de",
+      "retrieved_at": "2026-09-25T17:43:19Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:94ec6ad8e28ef3897226c1496b629029b8ddad2b30ab2b2901e15d2063a10b59",
+      "source_type": "official_embassy_or_consulate",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "teheran.diplo.de:tehran_home",
+      "copy_risk": "low",
+      "evidence_summary": "The embassy states that its visa section and consulate work in restricted operation, that Iranian airspace remains closed, that land border crossings involve long waits and can change at short notice, and that there are reports of Iranian authorities refusing exit to Iranian nationals at border crossings.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "evd_4e2ca606c0336c515546eda4036e1bea",
+      "source_id": "src_198d2c125548bf5800d76399aa0710e2",
+      "source_url": "https://www.auswaertiges-amt.de/en/sperrkonto-388600",
+      "retrieved_at": "2026-09-25T17:43:17Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:d2d1c77561aa38f0c50e5c7efe9fc7974a28969271c27da238e65e936d9e3aaa",
+      "source_type": "official_government",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "auswaertiges-amt.de:ffo_blocked_account",
+      "copy_risk": "low",
+      "evidence_summary": "According to the Federal Foreign Office, a blocked account must cover living costs in Germany unless other proof of support is presented; the amount depends on the purpose of stay and follows the maximum student support rates, and is published by the competent mission or the Consular Services Portal.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "evd_6f4ad53a7737f13b55e17ee06afdddc6",
+      "source_id": "src_5cf3b6cb54edfdb935ad1d1ed0751476",
+      "source_url": "https://teheran.diplo.de/ir-de/2752046-2752046",
+      "retrieved_at": "2026-09-25T17:43:19Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:26929a32e738b50c2441e9f00ef7e0b3055c583ad1477ea929fd89778a28bf3f",
+      "source_type": "official_embassy_or_consulate",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "teheran.diplo.de:tehran_visa",
+      "copy_risk": "low",
+      "evidence_summary": "The embassy's visa section in Tehran works in restricted operation with limited appointments and no reliable date for returning to normal service. For residents of Iran, study appointments go to people already on the waiting list on 18 January 2026 and to Master and PhD applicants registered on the new waiting lists since 15 July 2026. For employment outside the accelerated skilled-worker procedure and for other national visa purposes, new registrants since 15 July 2026 have no foreseeable appointment date. Applications at other missions are rejected for lack of jurisdiction, and longer processing times are expected.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "evd_b9a50307f7b2a2dfc0631ac841669dc3",
+      "source_id": "src_4e28d9fbc35ff7e801b2e7fe96d1abf0",
+      "source_url": "https://www.gesetze-im-internet.de/aufenthg_2004/__16b.html",
+      "retrieved_at": "2026-09-25T17:43:16Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:d2cb2d5e807a370a118d4fa604422e9a26e12b3a7a9278fca51c92517c6686cf",
+      "source_type": "official_government",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "gesetze-im-internet.de:law_16b",
+      "copy_risk": "low",
+      "evidence_summary": "Section 16b of the Residence Act grants a residence permit for full-time study to applicants admitted by a state or state-recognised institution, sets validity at usually two years and at least one year, and allows employment of up to 140 working days a year, with student jobs not counted.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "evd_d89a1111114d7106ddf6145b72c3ff35",
+      "source_id": "src_80fd9259910fe999cbe89cda0844c0d2",
+      "source_url": "https://www.gesetze-im-internet.de/aufenthg_2004/__20a.html",
+      "retrieved_at": "2026-09-25T17:43:15Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:eb92fe13bc22d367c47af60552258727f93af5b6e7aea9007d269e1ef16f87c9",
+      "source_type": "official_government",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "gesetze-im-internet.de:law_20a",
+      "copy_risk": "low",
+      "evidence_summary": "Section 20a of the Residence Act defines the Opportunity Card as a residence permit to look for work, sets eligibility as either skilled-worker status or enough points, requires secured livelihood, lists the qualification and language conditions for the points path, limits permitted work, and sets validity of up to one year with a possible follow-on card.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "evd_fc335a07e811aa2e93e671fc3dd53703",
+      "source_id": "src_ac5a75d2120cf9c585a500123709499a",
+      "source_url": "https://www.gesetze-im-internet.de/aufenthg_2004/__2.html",
+      "retrieved_at": "2026-09-25T17:43:16Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:a9168f7f8f1442e530c126425595e13683b1884a03164c99f7361500b8f49103",
+      "source_type": "official_government",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "gesetze-im-internet.de:law_2",
+      "copy_risk": "low",
+      "evidence_summary": "Section 2(9) of the Residence Act defines basic German language skills as CEFR level A1.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    }
+  ],
+  "signals": [
+    {
+      "id": "sig_208a78f3f1feaffed1e20d34be7973e7",
+      "root_cause_id": "deu-tehran-study-appointments",
+      "correlated_signal_ids": [
+        "sig_9b36af82daaee029046f46329e343588"
+      ],
+      "title": "Study visa appointments in Tehran limited to specific waiting lists",
+      "signal_family": "E4_EMBASSY_CONSULATE_VAC_BIOMETRICS",
+      "signal_type": "appointment_availability",
+      "signal_class": "operational",
+      "impact_direction": "negative",
+      "trend": "unknown",
+      "severity": "high",
+      "confidence": "high",
+      "destination": {
+        "country": "Germany",
+        "country_code": "DEU",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [
+          "IRN",
+          "AFG"
+        ],
+        "residence_countries": [
+          "IRN"
+        ],
+        "applying_from": [
+          "IRN"
+        ],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": []
+      },
+      "migration_routes": [
+        "student_bachelor",
+        "student_masters_taught",
+        "student_masters_research",
+        "student_phd"
+      ],
+      "migration_route_family": [
+        "STUDY / ACADEMIC"
+      ],
+      "process_stages": [
+        "visa_application"
+      ],
+      "entities": [
+        {
+          "entity_type": "embassy",
+          "name": "German Embassy Tehran"
+        }
+      ],
+      "summary_en": "The visa section in Tehran is in restricted operation. For residents of Iran, study visa appointments currently go only to people on the waiting list of 18 January 2026 and to Master and PhD applicants on the new waiting lists opened on 15 July 2026; other new study applicants have no stated appointment date.",
+      "summary_fa": "بخش ویزای سفارت آلمان در تهران با ظرفیت محدود کار می‌کند. برای ساکنان ایران، نوبت ویزای تحصیلی فعلاً فقط به افرادی که در ۱۸ ژانویه ۲۰۲۶ در فهرست انتظار بودند و به متقاضیان کارشناسی ارشد و دکتری ثبت‌شده در فهرست‌های انتظار جدید از ۱۵ ژوئیه ۲۰۲۶ داده می‌شود؛ برای سایر متقاضیان جدید تحصیلی زمان نوبت اعلام نشده است.",
+      "practical_impact": "Admission and semester start dates may pass before an appointment is available, especially for bachelor applicants.",
+      "who_should_care": "Applicants for German study visas who live in Iran.",
+      "recommended_action": "Register on the relevant waiting list, do not apply at other German missions because those applications are rejected, and plan enrolment deadlines around uncertain appointment timing.",
+      "known_workaround": null,
+      "officially_confirmed": true,
+      "community_confirmed": false,
+      "official_verification": {
+        "status": "confirmed",
+        "source_url": "https://teheran.diplo.de/ir-de/2752046-2752046",
+        "source_title": "German embassy in Tehran: visa section operations",
+        "verified_at": "2026-09-25",
+        "note": "Stated directly by the competent German mission."
+      },
+      "suggested_fit_adjustment": -15,
+      "conditional_adjustment": {
+        "adjustment": -20,
+        "apply_when": "The applicant lives in Iran, is not a Master or PhD applicant on the new waiting list, and was not on the waiting list of 18 January 2026."
+      },
+      "reason_for_adjustment": "An official notice of restricted capacity is an execution barrier for applicants resident in Iran; it is not an approval probability.",
+      "keywords": [
+        "study visa",
+        "Tehran",
+        "waiting list",
+        "appointment",
+        "TLScontact"
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-10-09",
+      "evidence_ids": [
+        "evd_6f4ad53a7737f13b55e17ee06afdddc6"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25",
+        "last_verified": "2026-09-25",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "sig_9b36af82daaee029046f46329e343588",
+      "root_cause_id": "deu-tehran-national-visa-registrations",
+      "correlated_signal_ids": [
+        "sig_208a78f3f1feaffed1e20d34be7973e7"
+      ],
+      "title": "New national visa registrations in Tehran have no foreseeable appointment date",
+      "signal_family": "E4_EMBASSY_CONSULATE_VAC_BIOMETRICS",
+      "signal_type": "appointment_availability",
+      "signal_class": "operational",
+      "impact_direction": "negative",
+      "trend": "unknown",
+      "severity": "high",
+      "confidence": "high",
+      "destination": {
+        "country": "Germany",
+        "country_code": "DEU",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [
+          "IRN",
+          "AFG"
+        ],
+        "residence_countries": [
+          "IRN"
+        ],
+        "applying_from": [
+          "IRN"
+        ],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": []
+      },
+      "migration_routes": [
+        "opportunity_card"
+      ],
+      "migration_route_family": [
+        "EMPLOYMENT / WORK"
+      ],
+      "process_stages": [
+        "visa_application"
+      ],
+      "entities": [
+        {
+          "entity_type": "embassy",
+          "name": "German Embassy Tehran"
+        }
+      ],
+      "summary_en": "For residents of Iran, the embassy says new registrants since 15 July 2026 for employment outside the accelerated skilled-worker procedure and for other national visa purposes have no foreseeable appointment date. The page does not name the Opportunity Card, but both categories it could fall under are in this position.",
+      "summary_fa": "به گفته سفارت، برای ساکنان ایران که از ۱۵ ژوئیه ۲۰۲۶ برای اشتغال خارج از روند سریع نیروی متخصص یا سایر اهداف ویزای ملی ثبت‌نام کرده‌اند، زمان نوبت قابل پیش‌بینی نیست. در این صفحه نام کارت فرصت ذکر نشده است، اما هر دو دسته‌ای که ممکن است این کارت در آن قرار گیرد همین وضعیت را دارند.",
+      "practical_impact": "An Opportunity Card application from Iran may not reach an appointment within a predictable period.",
+      "who_should_care": "Opportunity Card applicants who live in Iran.",
+      "recommended_action": "Confirm with the embassy which waiting list applies to the Opportunity Card, register there, and avoid commitments that depend on a fixed entry date.",
+      "known_workaround": null,
+      "officially_confirmed": true,
+      "community_confirmed": false,
+      "official_verification": {
+        "status": "confirmed",
+        "source_url": "https://teheran.diplo.de/ir-de/2752046-2752046",
+        "source_title": "German embassy in Tehran: visa section operations",
+        "verified_at": "2026-09-25",
+        "note": "Stated directly by the competent German mission."
+      },
+      "suggested_fit_adjustment": -15,
+      "conditional_adjustment": {
+        "adjustment": -20,
+        "apply_when": "The applicant lives in Iran and was not on the embassy waiting list of 18 January 2026."
+      },
+      "reason_for_adjustment": "An official notice of restricted capacity is an execution barrier for applicants resident in Iran; it is not an approval probability.",
+      "keywords": [
+        "Opportunity Card",
+        "Chancenkarte",
+        "Tehran",
+        "waiting list",
+        "national visa"
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-10-09",
+      "evidence_ids": [
+        "evd_6f4ad53a7737f13b55e17ee06afdddc6"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25",
+        "last_verified": "2026-09-25",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "sig_9e52c66ae59c3bf1e151b27605227b6a",
+      "root_cause_id": "deu-iran-airspace-closure",
+      "correlated_signal_ids": [],
+      "title": "Iranian airspace closed and land exits disrupted",
+      "signal_family": "E14_TRAVEL_BORDER_TRANSPORT",
+      "signal_type": "airspace_disruption",
+      "signal_class": "travel",
+      "impact_direction": "negative",
+      "trend": "unknown",
+      "severity": "high",
+      "confidence": "high",
+      "destination": {
+        "country": "Germany",
+        "country_code": "DEU",
+        "region": null,
+        "city": null
+      },
+      "applicant_scope": {
+        "origin_countries": [],
+        "nationalities": [
+          "IRN",
+          "AFG"
+        ],
+        "residence_countries": [
+          "IRN"
+        ],
+        "applying_from": [
+          "IRN"
+        ],
+        "age_groups": [],
+        "occupations": [],
+        "fields": [],
+        "education_levels": [],
+        "regulated_professions": [],
+        "other_conditions": []
+      },
+      "migration_routes": [
+        "student_bachelor",
+        "student_masters_taught",
+        "student_masters_research",
+        "student_phd",
+        "opportunity_card"
+      ],
+      "migration_route_family": [
+        "STUDY / ACADEMIC",
+        "EMPLOYMENT / WORK"
+      ],
+      "process_stages": [
+        "travel"
+      ],
+      "entities": [],
+      "summary_en": "Germany's embassy in Tehran states that Iranian airspace remains closed, that land border crossings involve long waits and changing opening hours, and that there are reports of Iranian authorities refusing exit to Iranian nationals at border crossings.",
+      "summary_fa": "سفارت آلمان در تهران اعلام کرده است که حریم هوایی ایران همچنان بسته است، عبور از مرزهای زمینی با انتظار طولانی و تغییر ساعات همراه است و گزارش‌هایی از ممانعت مقامات ایرانی از خروج برخی اتباع ایرانی در مرزها وجود دارد.",
+      "practical_impact": "Even with a visa, travel from Iran to Germany may be delayed or uncertain.",
+      "who_should_care": "Applicants who must travel from Iran to start study or an Opportunity Card stay.",
+      "recommended_action": "Check the embassy's current notices before booking travel and allow time for overland exit.",
+      "known_workaround": null,
+      "officially_confirmed": true,
+      "community_confirmed": false,
+      "official_verification": {
+        "status": "confirmed",
+        "source_url": "https://teheran.diplo.de/ir-de",
+        "source_title": "German embassy in Tehran: current notices",
+        "verified_at": "2026-09-25",
+        "note": "Stated directly by the competent German mission."
+      },
+      "suggested_fit_adjustment": -10,
+      "conditional_adjustment": {
+        "adjustment": -10,
+        "apply_when": "The applicant must start travel to Germany from inside Iran."
+      },
+      "reason_for_adjustment": "An official notice of restricted capacity is an execution barrier for applicants resident in Iran; it is not an approval probability.",
+      "keywords": [
+        "airspace",
+        "border",
+        "exit",
+        "travel",
+        "Iran"
+      ],
+      "resolution": {
+        "resolved": false,
+        "resolved_date": null,
+        "resolution_summary": null,
+        "resolution_source": null
+      },
+      "needs_recheck": true,
+      "suggested_recheck_date": "2026-10-09",
+      "evidence_ids": [
+        "evd_25377e5542fa730d7887be1d42a0159a"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25",
+        "last_verified": "2026-09-25",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    }
+  ],
+  "questions": [],
+  "academic_opportunities": [],
+  "lived_experiences": [],
+  "route_claims": [
+    {
+      "id": "clm_37e2f9e4b6c866d2aafed97b02f701ee",
+      "country_code": "DEU",
+      "routes": [
+        "student_bachelor",
+        "student_masters_taught",
+        "student_masters_research",
+        "student_phd"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": null,
+      "statement_en": "A study residence permit allows employment of up to 140 working days a year; student jobs are not counted.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_b9a50307f7b2a2dfc0631ac841669dc3"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25",
+        "last_verified": "2026-09-25",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "clm_57832b240116f6849719769409f488b8",
+      "country_code": "DEU",
+      "routes": [
+        "opportunity_card"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": "points_assessment",
+      "statement_en": "The points path needs a foreign vocational qualification of at least two years or a foreign university degree recognised by the issuing state (or a qualifying German chamber of commerce abroad certificate), confirmed by a competent German body, plus German at CEFR A1 or English at CEFR B2.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_d89a1111114d7106ddf6145b72c3ff35",
+        "evd_fc335a07e811aa2e93e671fc3dd53703"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25",
+        "last_verified": "2026-09-25",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "clm_76050189318ac88eb6826ff77a74cf29",
+      "country_code": "DEU",
+      "routes": [
+        "opportunity_card"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": null,
+      "statement_en": "An Opportunity Card is first issued for up to one year and can be extended by up to two years as a follow-on card with a qualified job offer and Federal Employment Agency approval.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_d89a1111114d7106ddf6145b72c3ff35"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25",
+        "last_verified": "2026-09-25",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "clm_7f4ba60dd99fcdc2bedc2d584fb630c0",
+      "country_code": "DEU",
+      "routes": [
+        "student_bachelor",
+        "student_masters_taught",
+        "student_masters_research",
+        "student_phd"
+      ],
+      "claim_type": "financial_requirement",
+      "process_stage": "financial_evidence",
+      "statement_en": "A blocked account can prove funds for a study stay; the amount depends on the purpose of stay, follows the maximum student support rates, and is published by the competent mission or the Consular Services Portal.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_4e2ca606c0336c515546eda4036e1bea"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25",
+        "last_verified": "2026-09-25",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "clm_7ffb6d470ccf1c8c382ab5a0faff0c02",
+      "country_code": "DEU",
+      "routes": [
+        "opportunity_card"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": "points_assessment",
+      "statement_en": "An Opportunity Card can be issued to a skilled worker or to an applicant who reaches enough points under the statutory points table.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_d89a1111114d7106ddf6145b72c3ff35"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25",
+        "last_verified": "2026-09-25",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "clm_a98d8a8447c9353c69f4c85092779af9",
+      "country_code": "DEU",
+      "routes": [
+        "opportunity_card"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": null,
+      "statement_en": "An Opportunity Card is a residence permit to look for work or for measures to recognise a foreign qualification.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_d89a1111114d7106ddf6145b72c3ff35"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25",
+        "last_verified": "2026-09-25",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "clm_b3f6732a0a7ddb5673bcfb44b8c63aed",
+      "country_code": "DEU",
+      "routes": [
+        "opportunity_card"
+      ],
+      "claim_type": "financial_requirement",
+      "process_stage": "financial_evidence",
+      "statement_en": "An Opportunity Card may only be issued when the applicant's livelihood is secured.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_d89a1111114d7106ddf6145b72c3ff35"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25",
+        "last_verified": "2026-09-25",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "clm_cf79d214a5a899c08dbba9f253089c68",
+      "country_code": "DEU",
+      "routes": [
+        "student_bachelor",
+        "student_masters_taught",
+        "student_masters_research",
+        "student_phd"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": null,
+      "statement_en": "A study residence permit is usually issued for two years and should be for at least one year.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_b9a50307f7b2a2dfc0631ac841669dc3"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25",
+        "last_verified": "2026-09-25",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "clm_ecc12df87e8d3658e2e38209f9d229d3",
+      "country_code": "DEU",
+      "routes": [
+        "student_bachelor",
+        "student_masters_taught",
+        "student_masters_research",
+        "student_phd"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": "admission",
+      "statement_en": "A residence permit for full-time study is issued when a state or state-recognised higher education institution has admitted the applicant.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_b9a50307f7b2a2dfc0631ac841669dc3"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25",
+        "last_verified": "2026-09-25",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    },
+    {
+      "id": "clm_f6394b899f9461a692ab4b1846a2d134",
+      "country_code": "DEU",
+      "routes": [
+        "opportunity_card"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": null,
+      "statement_en": "An Opportunity Card allows work of up to 20 hours a week on average and trial employment of up to two weeks each.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_d89a1111114d7106ddf6145b72c3ff35"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-25",
+        "last_seen": "2026-09-25",
+        "last_verified": "2026-09-25",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-25T17:46:55Z"
+      }
+    }
+  ]
+}
