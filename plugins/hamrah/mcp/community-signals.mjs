@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import Ajv2020 from "ajv/dist/2020.js";
+import { inspectDatasetPrivacy } from "./privacy-check.mjs";
 
 const DATASET_ROOT = fileURLToPath(
   new URL("../data/community-signals/datasets/", import.meta.url)
@@ -81,13 +82,18 @@ export function loadCommunitySignalStore(root = DATASET_ROOT) {
         throw new Error(`file exceeds ${MAX_DATASET_BYTES} bytes`);
       }
       const dataset = JSON.parse(readFileSync(filePath, "utf8"));
+      const privacy = inspectDatasetPrivacy(dataset);
       const schemaValid = validateSchema(dataset);
       const errors = [
         ...(schemaValid ? [] : compactSchemaErrors(validateSchema.errors)),
-        ...semanticErrors(dataset)
+        ...semanticErrors(dataset),
+        ...(privacy.status === "pass" ? [] : [`privacy ${privacy.status}: ${privacy.findings.map((item) => `${item.path} (${item.rule})`).join(", ")}`])
       ];
-      if (errors.length) throw new Error(errors.join("; "));
-      datasets.push({ datasetId, dataset });
+      if (errors.length) {
+        invalidDatasets.push({ datasetId, error: errors.join("; "), privacy });
+        continue;
+      }
+      datasets.push({ datasetId, dataset, privacy });
     } catch (error) {
       invalidDatasets.push({
         datasetId,
@@ -166,6 +172,7 @@ function publicSignal(datasetId, dataset, signal) {
   return {
     datasetId,
     datasetGeneratedAt: dataset.generated_at,
+    privacyStatus: "pass",
     signalId: signal.signal_id,
     rootCauseId: signal.root_cause_id,
     title: signal.title,
@@ -252,6 +259,7 @@ export function getCommunitySignalDataset(args = {}, root = DATASET_ROOT) {
     sourceCoverage: found.dataset.source_coverage,
     summary: found.dataset.summary,
     qualityControl: found.dataset.quality_control,
+    privacy: found.privacy,
     signals,
     watchlist: found.dataset.watchlist,
     missingSignalIds: requested

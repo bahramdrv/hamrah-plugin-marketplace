@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -194,6 +195,27 @@ def semantic_validate(data):
     return errors, warnings
 
 
+def privacy_validate(dataset_path: Path):
+    checker = Path(__file__).resolve().parents[3] / "mcp" / "privacy-check.mjs"
+    try:
+        result = subprocess.run(
+            ["node", str(checker), str(dataset_path)],
+            text=True, capture_output=True, check=False,
+        )
+        decision = json.loads(result.stdout)
+    except (OSError, ValueError) as exc:
+        return [f"privacy inspection unavailable: {exc}"]
+    if result.returncode == 0 and decision.get("status") == "pass":
+        return []
+    findings = decision.get("findings", [])
+    if not findings:
+        return ["privacy inspection did not pass"]
+    return [
+        f"privacy {decision.get('status')}: {item['path']} ({item['rule']})"
+        for item in findings
+    ]
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("file", type=Path)
@@ -213,6 +235,7 @@ def main():
     sem_errors, sem_warnings = semantic_validate(data)
     errors.extend(sem_errors)
     warnings.extend(sem_warnings)
+    errors.extend(privacy_validate(args.file))
 
     for warning in warnings:
         print(f"WARNING: {warning}", file=sys.stderr)

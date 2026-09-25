@@ -2,7 +2,9 @@
 
 Only validated, privacy-clean Signal Builder outputs belong here. Raw Telegram, forum, email, or applicant exports must not be committed.
 
-Add datasets anywhere below `datasets/` with a `.json` extension. The deployed MCP server discovers files recursively, validates them against the Signal Builder schema, and indexes only datasets with `schema_version: "2.0"` and `quality_control.personal_identifiers_removed: true`.
+Add datasets anywhere below `datasets/` with a `.json` extension. The publisher and deployed MCP server both inspect dataset text and locators for personal details. They index only schema-valid version 2 datasets with `quality_control.personal_identifiers_removed: true` **and** a privacy `pass` decision. A claimed redaction flag cannot override a `fail` or `needs_review` finding. Search coverage lists excluded files with field paths and finding rules, without repeating the private value.
+
+The privacy decision includes audited exceptions for institution names and exact domain phrases. Review the reported field and source before correcting a finding; automatic detection can miss names or context. Remove private material from the candidate before rerunning the publication command.
 
 Recommended publication command from the repository root:
 

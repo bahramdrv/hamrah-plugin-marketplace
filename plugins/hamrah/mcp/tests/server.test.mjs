@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
 import test from "node:test";
 
 import { executeTool, filterResponse, handleRequest, OPENAPI, TOOLS } from "../server.mjs";
@@ -202,6 +203,8 @@ test("indexes valid Git-backed community datasets and reports invalid files", as
   assert.equal(fetched.isError, false);
   assert.equal(fetched.structuredContent.signals.length, 1);
   assert.equal(fetched.structuredContent.qualityControl.personal_identifiers_removed, true);
+  assert.equal(fetched.structuredContent.privacy.status, "pass");
+  assert.ok(fetched.structuredContent.privacy.exceptions.some((item) => item.rule === "institution_name"));
 });
 
 test("refuses invalid or unknown community datasets", async (t) => {
@@ -216,4 +219,75 @@ test("refuses invalid or unknown community datasets", async (t) => {
   assert.equal(result.isError, true);
   assert.equal(result.structuredContent.error, "community_signal_store_failed");
   assert.match(result.structuredContent.guidance, /coverage unavailable/);
+});
+
+test("fake redaction metadata cannot publish or expose private evidence through MCP", async (t) => {
+  const signalStoreRoot = mkdtempSync(path.join(tmpdir(), "hamrah-private-signals-"));
+  t.after(() => rmSync(signalStoreRoot, { recursive: true, force: true }));
+  const dataset = JSON.parse(readFileSync(
+    new URL("../../skills/hamrah-signal-builder/examples/gold_standard.json", import.meta.url), "utf8"
+  ));
+  dataset.quality_control.personal_identifiers_removed = true;
+  dataset.signals[0].evidence[0].evidence_summary = "Contact applicant at jane@example.com";
+  const candidate = path.join(signalStoreRoot, "candidate.json");
+  writeFileSync(candidate, JSON.stringify(dataset));
+
+  const published = spawnSync("python3", [
+    new URL("../../skills/hamrah-signal-builder/scripts/store_signals.py", import.meta.url).pathname,
+    candidate, "--store-root", path.join(signalStoreRoot, "published")
+  ], { encoding: "utf8" });
+  assert.notEqual(published.status, 0);
+  assert.match(published.stderr, /privacy.*fail|email/i);
+
+  const searched = await executeTool("searchCommunitySignals", {}, globalThis.fetch, { signalStoreRoot });
+  assert.equal(searched.structuredContent.resultCount, 0);
+  assert.equal(searched.structuredContent.coverage.validDatasets, 0);
+  assert.equal(searched.structuredContent.coverage.invalidDatasets[0].privacy.status, "fail");
+  assert.equal(searched.structuredContent.coverage.invalidDatasets[0].privacy.findings[0].rule, "email");
+  const fetched = await executeTool("getCommunitySignalDataset", { datasetId: "candidate" }, globalThis.fetch, { signalStoreRoot });
+  assert.equal(fetched.isError, true);
+});
+
+test("MCP excludes datasets with direct identifiers and names needing review", async (t) => {
+  const signalStoreRoot = mkdtempSync(path.join(tmpdir(), "hamrah-privacy-cases-"));
+  t.after(() => rmSync(signalStoreRoot, { recursive: true, force: true }));
+  const fixture = JSON.parse(readFileSync(
+    new URL("../../skills/hamrah-signal-builder/examples/gold_standard.json", import.meta.url), "utf8"
+  ));
+  const cases = [
+    ["phone", (data) => { data.signals[0].evidence[0].evidence_summary = "Call +989121234567"; }, "fail"],
+    ["handle", (data) => { data.signals[0].evidence[0].evidence_summary = "Ask @private_user"; }, "fail"],
+    ["telegram_locator", (data) => { data.signals[0].evidence[0].source_url = "https://t.me/private_user"; }, "fail"],
+    ["personal_identifier", (data) => { data.signals[0].evidence[0].evidence_summary = "application number: A12345678"; }, "fail"],
+    ["passport_identifier", (data) => { data.signals[0].evidence[0].evidence_summary = "passport ID: A12345678"; }, "fail", "personal_identifier"],
+    ["national_identifier", (data) => { data.signals[0].evidence[0].evidence_summary = "national ID: 12345678"; }, "fail", "personal_identifier"],
+    ["persian_identifier", (data) => { data.signals[0].evidence[0].evidence_summary = "کد ملی ۱۲۳۴۵۶۷۸۹۰"; }, "fail", "personal_identifier"],
+    ["address", (data) => { data.signals[0].evidence[0].evidence_summary = "At 123 Main Street"; }, "fail"],
+    ["persian_address", (data) => { data.signals[0].evidence[0].evidence_summary = "نشانی: خیابان آزادی، پلاک ۱۲"; }, "fail", "address"],
+    ["embedded_contact_locator", (data) => { data.signals[0].evidence[0].source_url = "https://example.org/?user=private"; }, "fail"],
+    ["possible_full_name", (data) => { data.signals[0].evidence[0].evidence_summary = "John Smith filed a case"; }, "needs_review"],
+    ["source_name", (data) => { data.signals[0].evidence[0].source_name = "John Smith"; }, "needs_review", "possible_full_name"],
+    ["action_name", (data) => { data.signals[0].recommended_action = "Ask John Smith directly"; }, "needs_review", "possible_full_name"],
+    ["persian_name", (data) => { data.signals[0].summary_fa = "علی رضایی پرونده را ثبت کرد"; }, "needs_review", "possible_full_name"],
+    ["persian_evidence_name", (data) => { data.signals[0].evidence[0].evidence_summary = "علی رضایی پرونده را ثبت کرد"; }, "needs_review", "possible_full_name"],
+    ["entity_name", (data) => { data.signals[2].entities[0].name = "John Smith"; }, "needs_review", "possible_full_name"],
+    ["possible_full_name_locator", (data) => { data.signals[0].evidence[0].source_url = "https://example.org/users/john-smith"; }, "needs_review"],
+    ["short_profile_locator", (data) => { data.signals[0].evidence[0].source_url = "https://example.org/u/john-smith"; }, "needs_review", "possible_full_name_locator"],
+    ["possible_account_id", (data) => { data.signals[0].evidence[0].source_message_id = "1234567890"; }, "needs_review"],
+    ["message_phone", (data) => { data.signals[0].evidence[0].source_message_id = "+989121234567"; }, "fail", "phone"],
+    ["telegram_account_id", (data) => { data.signals[0].evidence[0].source_message_id = "telegram_user_A1234567"; }, "fail"]
+  ];
+  for (const [rule, mutate] of cases) {
+    const dataset = structuredClone(fixture);
+    mutate(dataset);
+    writeFileSync(path.join(signalStoreRoot, `${rule}.json`), JSON.stringify(dataset));
+  }
+  const searched = await executeTool("searchCommunitySignals", {}, globalThis.fetch, { signalStoreRoot });
+  assert.equal(searched.structuredContent.resultCount, 0);
+  assert.equal(searched.structuredContent.coverage.validDatasets, 0);
+  for (const [rule, , status, expectedRule = rule] of cases) {
+    const invalid = searched.structuredContent.coverage.invalidDatasets.find((item) => item.datasetId === rule);
+    assert.equal(invalid.privacy.status, status, rule);
+    assert.ok(invalid.privacy.findings.some((item) => item.rule === expectedRule), rule);
+  }
 });
