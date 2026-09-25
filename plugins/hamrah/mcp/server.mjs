@@ -9,6 +9,7 @@ import { BudgetExceededError, REQUEST_BUDGETS, withDeadline } from "./budgets.mj
 import { pickRecordArray } from "./record-array.mjs";
 import { buildRouteFactPack, InvalidFactPackInput, ROUTE_FACT_PACK_TOOL } from "./route-fact-pack.mjs";
 import { answerCommunityQuestion } from "./community-answers.mjs";
+import { CLAIM_TYPES, searchRouteClaims } from "./community-route-claim-tools.mjs";
 import { getCommunityQuestion, QuestionNotFoundError, searchCommunityQuestions } from "./community-question-tools.mjs";
 import {
   getCommunitySignalDataset,
@@ -200,10 +201,40 @@ const COMMUNITY_QUESTION_TOOLS = [
   }
 ];
 
+const ROUTE_CLAIM_TOOLS = [
+  {
+    name: "searchRouteClaims",
+    title: "Search Hamrah Route Claims",
+    description: "Use this to find Route Claims (official rules, operational or anecdotal patterns, opportunities, risks, and workarounds) by country, route, stage, claim type, applicant scope, or text. Each claim lists supporting and opposing evidence classed as official, public community, or private community, with verification status and dates. A claim is a sourced statement to inspect, not a verified fact; missing coverage means unknown.",
+    inputSchema: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+        query: { type: "string", minLength: 1, maxLength: 200 },
+        countryCode: { type: "string", minLength: 2, maxLength: 3, description: "Destination ISO country code, such as DEU." },
+        route: { type: "string", minLength: 1, maxLength: 100 },
+        processStage: { type: "string", minLength: 1, maxLength: 100 },
+        claimType: { type: "string", enum: CLAIM_TYPES },
+        nationality: { type: "string", minLength: 2, maxLength: 80, description: "Applicant nationality; claims limited to other nationalities are excluded." },
+        residenceCountry: { type: "string", minLength: 2, maxLength: 80, description: "Country the applicant lives in or applies from." },
+        originCountry: { type: "string", minLength: 2, maxLength: 80 },
+        statuses: {
+          type: "array", minItems: 1, maxItems: 6, uniqueItems: true,
+          items: { type: "string", enum: ["active", "monitoring", "resolved", "historical", "stale", "superseded"] },
+          description: "Defaults to active and monitoring claims."
+        },
+        limit: { type: "integer", minimum: 1, maximum: 50, default: 20 }
+      }
+    },
+    annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+  }
+];
+
 export const TOOLS = [
   ...STANDARD_DISCOVERY_TOOLS,
   ...COMMUNITY_SIGNAL_TOOLS,
   ...COMMUNITY_QUESTION_TOOLS,
+  ...ROUTE_CLAIM_TOOLS,
   ROUTE_FACT_PACK_TOOL,
   ...GET_OPERATIONS.map(([name, path, description]) => ({
     title: description,
@@ -443,6 +474,10 @@ async function runTool(name, args, fetchImpl, options, signal) {
       return toolResult(searchCommunityQuestions(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
 
+    if (name === "searchRouteClaims") {
+      return toolResult(searchRouteClaims(args, options.signalStoreRoot, options.maxDatasetsScanned));
+    }
+
     if (name === "answerCommunityQuestion") {
       return toolResult(answerCommunityQuestion(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
@@ -482,7 +517,7 @@ async function runTool(name, args, fetchImpl, options, signal) {
         guidance: "Use a questionId returned by searchCommunityQuestions. An unknown ID is not evidence that the question is never asked."
       }, true);
     }
-    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion"].includes(name);
+    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims"].includes(name);
     if (name === "findMatchingVisaRoutes" && error?.validationDetails) {
       return toolResult({
         error: "invalid_route_finder_input",

@@ -695,82 +695,7 @@
           }
         },
         "applicant_scope": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "origin_countries",
-            "nationalities",
-            "residence_countries",
-            "applying_from",
-            "age_groups",
-            "occupations",
-            "fields",
-            "education_levels",
-            "regulated_professions",
-            "other_conditions"
-          ],
-          "properties": {
-            "origin_countries": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "nationalities": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "residence_countries": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "applying_from": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "age_groups": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "occupations": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "fields": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "education_levels": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "regulated_professions": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "other_conditions": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
+          "$ref": "#/$defs/applicantScope"
         },
         "migration_routes": {
           "type": "array",
@@ -1438,13 +1363,26 @@
         },
         "claim_type": {
           "type": "string",
-          "minLength": 1
+          "enum": [
+            "official_rule",
+            "financial_requirement",
+            "operational_pattern",
+            "anecdotal_pattern",
+            "opportunity",
+            "risk",
+            "workaround"
+          ],
+          "description": "official_rule and financial_requirement state official rules; the other types are observed patterns, opportunities, risks, or workarounds and are never official."
         },
         "process_stage": {
           "type": [
             "string",
             "null"
           ]
+        },
+        "applicant_scope": {
+          "$ref": "#/$defs/applicantScope",
+          "description": "Applicants the claim is limited to; omit when it applies to all applicants."
         },
         "statement_en": {
           "type": "string",
@@ -1495,6 +1433,84 @@
             "partially_answers",
             "contradicts"
           ]
+        }
+      }
+    },
+    "applicantScope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "origin_countries",
+        "nationalities",
+        "residence_countries",
+        "applying_from",
+        "age_groups",
+        "occupations",
+        "fields",
+        "education_levels",
+        "regulated_professions",
+        "other_conditions"
+      ],
+      "properties": {
+        "origin_countries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "nationalities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "residence_countries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "applying_from": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "age_groups": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "occupations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "education_levels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regulated_professions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "other_conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     }

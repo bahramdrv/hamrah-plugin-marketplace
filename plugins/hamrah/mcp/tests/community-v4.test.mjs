@@ -96,7 +96,7 @@ test("invalid references, missing provenance, and unsafe privacy states never en
     ["unknown_evidence", (d) => d.signals[0].evidence_ids.push("evd_missing"), /unknown evidence evd_missing/],
     ["unknown_source", (d) => { d.evidence[0].source_id = "src_missing"; }, /unknown source src_missing/],
     ["claim_reference", (d) => d.route_claims.push({
-      id: "clm_unsupported", country_code: "GBR", routes: ["global_talent"], claim_type: "processing_time",
+      id: "clm_unsupported", country_code: "GBR", routes: ["global_talent"], claim_type: "operational_pattern",
       process_stage: null, statement_en: "Endorsement takes longer than published.", opposing_evidence_ids: [],
       evidence_ids: ["evd_missing"], lifecycle: { ...d.signals[0].lifecycle }, validation: { ...d.signals[0].validation }
     }), /unknown evidence evd_missing/],

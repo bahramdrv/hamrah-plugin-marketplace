@@ -130,9 +130,16 @@ function identityKey(collection, artifact, ids) {
     case "lived_experiences":
       return [artifact.country_code, identityText(artifact.route), identityText(artifact.milestone), artifact.outcome,
         artifact.event_date, ids.evidence.get(artifact.iran_connection_evidence_id)];
-    case "route_claims":
-      return [artifact.country_code, sortedText(artifact.routes), identityText(artifact.claim_type),
+    case "route_claims": {
+      const key = [artifact.country_code, sortedText(artifact.routes), identityText(artifact.claim_type),
         identityText(artifact.process_stage), identityText(artifact.statement_en)];
+      // Applicant scope joins the identity only when present, so unscoped claims keep their published IDs.
+      const scope = Object.entries(artifact.applicant_scope ?? {})
+        .filter(([, values]) => values.length)
+        .map(([field, values]) => [field, sortedText(values)])
+        .sort(([a], [b]) => a.localeCompare(b));
+      return scope.length ? [...key, scope] : key;
+    }
     default:
       throw new Error(`Unknown collection ${collection}`);
   }

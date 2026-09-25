@@ -71,7 +71,8 @@ const rules = {
     claim("work-limit", "An Opportunity Card allows work of up to 20 hours a week on average.", ["law-text"]),
     claim("old-funds", "An archived funds amount applied to the Opportunity Card.", ["old-amount"], { claimType: "financial_requirement" }),
     claim("canada-rule", "A Canadian rule that does not apply to Germany.", ["law-text"], { countryCode: "CAN" }),
-    claim("mixed-funds", "A funds amount applies to the Opportunity Card.", ["old-amount", "post-a"], { claimType: "financial_requirement" })
+    claim("mixed-funds", "A funds amount applies to the Opportunity Card.", ["old-amount", "post-a"], { claimType: "financial_requirement" }),
+    claim("pattern", "Card holders usually find part-time work within two months.", ["law-text"], { claimType: "operational_pattern" })
   ],
   questions: []
 };
@@ -109,7 +110,8 @@ function buildStore(t) {
     partial: question("q-partial", "What are all the work and funds rules for the card?", [{ artifact_id: id("route_claims", "work-limit"), relation: "partially_answers" }]),
     outOfScope: question("q-scope", "Does a Canadian rule answer this?", [{ artifact_id: id("route_claims", "canada-rule"), relation: "answers" }]),
     research: question("q-research", "Can I bring my family on the card?", []),
-    mixed: question("q-mixed", "What funds amount applies to the card?", [{ artifact_id: id("route_claims", "mixed-funds"), relation: "answers" }])
+    mixed: question("q-mixed", "What funds amount applies to the card?", [{ artifact_id: id("route_claims", "mixed-funds"), relation: "answers" }]),
+    pattern: question("q-pattern", "How long until card holders find part-time work?", [{ artifact_id: id("route_claims", "pattern"), relation: "answers" }])
   };
   const questionData = {
     ...structuredClone(V4), sources: [rules.sources[2]], evidence: [ask], signals: [], route_claims: [], questions: Object.values(questions)
@@ -222,4 +224,11 @@ test("a stale authoritative source cannot make a claim official through fresher 
   assert.deepEqual(content.official, []);
   assert.equal(content.answerType, "community_observation");
   assert.equal(content.communityObservations[0].kind, "route_claim");
+});
+
+test("pattern claims are never official answers, even with an authoritative source", async (t) => {
+  const { storeRoot, questionIds } = buildStore(t);
+  const content = (await answer(storeRoot, questionIds.pattern)).structuredContent;
+  assert.notEqual(content.answerType, "official");
+  assert.deepEqual(content.official, []);
 });

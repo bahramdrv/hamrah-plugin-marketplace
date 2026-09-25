@@ -14,6 +14,8 @@ const FRESHNESS_POLICY = JSON.parse(readFileSync(
 ));
 const CLAIM_FACT_TYPES = { official_rule: "statutory_condition" };
 const AUTHORITATIVE = new Set(["primary", "trusted"]);
+// Observed patterns, opportunities, risks, and workarounds are never official, whatever their sources.
+const OFFICIAL_CLAIM_TYPES = new Set(["official_rule", "financial_requirement"]);
 const EXPLANATIONS_FA = {
   official: "پاسخ بر پایه قاعده رسمی جاری با منبع معتبر است. شرایط فردی را جداگانه بررسی کنید.",
   evidence_based: "پاسخ بر پایه چند شاهد عمومی و مستقل است، اما منبع رسمی جاری آن را تأیید نکرده است.",
@@ -103,7 +105,7 @@ function evaluateLink(link, question, index, asOf) {
   const freshness = kind === "route_claim" ? claimFreshness(artifact, evidence, asOf) : signalFreshness(artifact, asOf);
   if (freshness.status === "stale") return { ...base, freshness, excluded: "stale" };
   if (freshness.status === "unknown") return { ...base, freshness, excluded: "unknown_freshness" };
-  if (kind !== "route_claim") return { ...base, freshness, official: false };
+  if (kind !== "route_claim" || !OFFICIAL_CLAIM_TYPES.has(artifact.claim_type)) return { ...base, freshness, official: false };
   // An official rule needs a Route Claim whose authoritative, publicly inspectable HTTPS source is itself fresh;
   // fresher community evidence on the same claim cannot stand in for it.
   const authoritative = evidence.filter((item) => AUTHORITATIVE.has(item.authority)

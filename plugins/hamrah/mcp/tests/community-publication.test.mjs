@@ -179,7 +179,7 @@ test("every publication gate refuses unsafe candidates and writes nothing", (t) 
     }, /no supporting evidence/],
     ["contradiction", (d) => { d.evidence[1].supports_or_contradicts = "contradicts"; }, /high confidence with contradicting evidence/],
     ["contradiction", (d) => d.route_claims.push({
-      id: "clm_overlap", country_code: "GBR", routes: ["global_talent"], claim_type: "processing_time", process_stage: null,
+      id: "clm_overlap", country_code: "GBR", routes: ["global_talent"], claim_type: "operational_pattern", process_stage: null,
       statement_en: "Endorsement takes longer than published.", evidence_ids: [d.evidence[0].id],
       opposing_evidence_ids: [d.evidence[0].id], lifecycle: structuredClone(d.signals[0].lifecycle)
     }), /both supports and opposes/],
