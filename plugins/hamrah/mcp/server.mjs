@@ -10,6 +10,8 @@ import { pickRecordArray } from "./record-array.mjs";
 import { buildRouteFactPack, InvalidFactPackInput, ROUTE_FACT_PACK_TOOL } from "./route-fact-pack.mjs";
 import { answerCommunityQuestion } from "./community-answers.mjs";
 import { RouteClaimNotFoundError, validateRouteClaim } from "./community-claim-confidence.mjs";
+import { getLivedExperience, LivedExperienceNotFoundError, searchIranianLivedExperiences } from "./community-experience-tools.mjs";
+import { MILESTONES, OUTCOMES } from "./community-experiences.mjs";
 import { getAcademicOpportunity, OpportunityNotFoundError, searchAcademicOpportunities } from "./community-opportunity-tools.mjs";
 import { CLAIM_TYPES, searchRouteClaims } from "./community-route-claim-tools.mjs";
 import { getCommunityQuestion, QuestionNotFoundError, searchCommunityQuestions } from "./community-question-tools.mjs";
@@ -296,12 +298,56 @@ const OPPORTUNITY_TOOLS = [
   }
 ];
 
+const LIVED_EXPERIENCE_TOOLS = [
+  {
+    name: "searchIranianLivedExperiences",
+    title: "Search Hamrah Iranian Lived Experiences",
+    description: "Use this to find public Iranian Lived Experiences by country, route, milestone, outcome, applicant scope, or text. Each case has explicit public Iran evidence, evidence IDs, verification, and freshness, and never names the person. observedCases separates qualified successes, failures, and unresolved cases with a sample-bias statement; the counts are biased observations, never an approval probability, and private community reports are context only.",
+    inputSchema: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+        query: { type: "string", minLength: 1, maxLength: 200 },
+        countryCode: { type: "string", minLength: 2, maxLength: 3, description: "Destination ISO country code, such as DEU." },
+        route: { type: "string", minLength: 1, maxLength: 100, description: "Route code, such as student_phd." },
+        milestone: { type: "string", enum: Object.values(MILESTONES).flatMap((groups) => [...groups.progress, ...groups.success]) },
+        outcome: { type: "string", enum: OUTCOMES },
+        nationality: { type: "string", minLength: 2, maxLength: 80, description: "Applicant nationality; experiences limited to other nationalities are excluded." },
+        residenceCountry: { type: "string", minLength: 2, maxLength: 80, description: "Country the applicant lives in or applies from." },
+        originCountry: { type: "string", minLength: 2, maxLength: 80 },
+        statuses: {
+          type: "array", minItems: 1, maxItems: 6, uniqueItems: true,
+          items: { type: "string", enum: ["active", "monitoring", "resolved", "historical", "stale", "superseded"] },
+          description: "Defaults to active and monitoring experiences."
+        },
+        limit: { type: "integer", minimum: 1, maximum: 50, default: 20 }
+      }
+    },
+    annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+  },
+  {
+    name: "getLivedExperience",
+    title: "Get Hamrah Lived Experience",
+    description: "Use this after searchIranianLivedExperiences to inspect one case by its stable experienceId: milestone, outcome, event date, entity, applicant scope, the Iran connection basis, classed evidence with provenance, verification, and freshness. Public profile locators are withheld and names are never shown.",
+    inputSchema: {
+      type: "object",
+      additionalProperties: false,
+      required: ["experienceId"],
+      properties: {
+        experienceId: { type: "string", minLength: 1, maxLength: 200 }
+      }
+    },
+    annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+  }
+];
+
 export const TOOLS = [
   ...STANDARD_DISCOVERY_TOOLS,
   ...COMMUNITY_SIGNAL_TOOLS,
   ...COMMUNITY_QUESTION_TOOLS,
   ...ROUTE_CLAIM_TOOLS,
   ...OPPORTUNITY_TOOLS,
+  ...LIVED_EXPERIENCE_TOOLS,
   ROUTE_FACT_PACK_TOOL,
   ...GET_OPERATIONS.map(([name, path, description]) => ({
     title: description,
@@ -549,6 +595,14 @@ async function runTool(name, args, fetchImpl, options, signal) {
       return toolResult(getAcademicOpportunity(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
 
+    if (name === "searchIranianLivedExperiences") {
+      return toolResult(searchIranianLivedExperiences(args, options.signalStoreRoot, options.maxDatasetsScanned));
+    }
+
+    if (name === "getLivedExperience") {
+      return toolResult(getLivedExperience(args, options.signalStoreRoot, options.maxDatasetsScanned));
+    }
+
     if (name === "validateRouteClaim") {
       return toolResult(validateRouteClaim(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
@@ -596,6 +650,13 @@ async function runTool(name, args, fetchImpl, options, signal) {
         guidance: "Use an opportunityId returned by searchAcademicOpportunities. An unknown ID is not evidence that no opening exists."
       }, true);
     }
+    if (error instanceof LivedExperienceNotFoundError) {
+      return toolResult({
+        error: "lived_experience_not_found",
+        message: error.message,
+        guidance: "Use an experienceId returned by searchIranianLivedExperiences. An unknown ID is not evidence about the route."
+      }, true);
+    }
     if (error instanceof RouteClaimNotFoundError) {
       return toolResult({
         error: "route_claim_not_found",
@@ -610,7 +671,7 @@ async function runTool(name, args, fetchImpl, options, signal) {
         guidance: "Use a questionId returned by searchCommunityQuestions. An unknown ID is not evidence that the question is never asked."
       }, true);
     }
-    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim", "searchAcademicOpportunities", "getAcademicOpportunity"].includes(name);
+    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim", "searchAcademicOpportunities", "getAcademicOpportunity", "searchIranianLivedExperiences", "getLivedExperience"].includes(name);
     if (name === "findMatchingVisaRoutes" && error?.validationDetails) {
       return toolResult({
         error: "invalid_route_finder_input",

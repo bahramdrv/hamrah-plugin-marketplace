@@ -21,7 +21,7 @@ function evidenceClass(item, source) {
   return AUTHORITATIVE.has(item.authority) && /^https:\/\//.test(item.source_url ?? "") ? "official" : "public_community";
 }
 
-function presentEvidence(item, source) {
+export function presentEvidence(item, source) {
   const evidenceClassName = evidenceClass(item, source);
   return {
     evidenceId: item.id,
@@ -40,9 +40,9 @@ function presentEvidence(item, source) {
   };
 }
 
-// A claim with no applicant scope applies to everyone; a scoped claim matches only applicants inside a listed value.
-function applicantMatches(claim, args) {
-  const scope = claim.applicant_scope;
+// An artifact with no applicant scope applies to everyone; a scoped one matches only applicants inside a listed value.
+export function applicantMatches(artifact, args) {
+  const scope = artifact.applicant_scope;
   return Object.entries(APPLICANT_FILTERS).every(([filter, fields]) => {
     const wanted = normalizeQuestionText(args[filter]);
     if (!wanted || !scope) return true;

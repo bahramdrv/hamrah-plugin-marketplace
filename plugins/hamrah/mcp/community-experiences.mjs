@@ -8,6 +8,7 @@ export const MILESTONES = {
   process: { progress: ["application_submitted", "appointment_obtained", "interview_attended"], success: [] }
 };
 export const NEGATIVE_OUTCOMES = new Set(["refusal", "delay", "operational_failure"]);
+export const OUTCOMES = ["milestone_attained", ...NEGATIVE_OUTCOMES, "withdrawn", "claim_only"];
 const EXPLICIT_BASES = new Set(["self_declared", "documented"]);
 // Evidence must state the connection in words; a name or a Persian-looking text is not enough.
 const IRAN_TERMS = /\b(?:iran|iranian)\b|ایران/iu;
