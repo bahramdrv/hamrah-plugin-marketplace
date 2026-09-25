@@ -3,6 +3,7 @@
 import readline from "node:readline";
 import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
+import Ajv from "ajv";
 
 import {
   getCommunitySignalDataset,
@@ -39,6 +40,19 @@ const FILTER_SCHEMA = {
 };
 
 const ROUTE_FINDER_SCHEMA = OPENAPI.components.schemas.RouteFinderRequest;
+const validateRouteFinderSchema = new Ajv({ allErrors: true }).compile(ROUTE_FINDER_SCHEMA);
+const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+const coarseDestinations = new Set(["UK", "USA", "UAE"]);
+for (let first = 65; first <= 90; first++) {
+  for (let second = 65; second <= 90; second++) {
+    const code = String.fromCharCode(first, second);
+    const name = regionNames.of(code);
+    if (name !== code) {
+      coarseDestinations.add(code);
+      coarseDestinations.add(name.toUpperCase());
+    }
+  }
+}
 
 const STANDARD_DISCOVERY_TOOLS = [
   {
@@ -139,15 +153,44 @@ export const TOOLS = [
 ];
 
 const operationByName = new Map(GET_OPERATIONS.map(([name, path]) => [name, path]));
-const routeFinderKeys = new Set(Object.keys(ROUTE_FINDER_SCHEMA.properties));
-
 function sanitizeRouteFinderArgs(args) {
   if (!args || typeof args !== "object" || Array.isArray(args)) {
-    throw new Error("Route-finder arguments must be an object.");
+    throw Object.assign(new Error("Route-finder arguments must be an object."), {
+      validationDetails: [{ field: "$", message: "must be an object" }]
+    });
   }
-  const unknownKeys = Object.keys(args).filter((key) => !routeFinderKeys.has(key));
-  if (unknownKeys.length) {
-    throw new Error(`Unsupported or overly detailed route-finder fields: ${unknownKeys.join(", ")}.`);
+  const details = [];
+  if (!validateRouteFinderSchema(args)) {
+    for (const issue of validateRouteFinderSchema.errors) {
+      const field = issue.keyword === "additionalProperties"
+        ? issue.params.additionalProperty
+        : issue.instancePath.slice(1).replaceAll("/", ".") || "$";
+      details.push({ field, message: issue.message });
+    }
+  }
+  const sensitive = /@|https?:|www\.|\b(?:passport|address|email|phone|tel)\b|شماره|آدرس|ایمیل|\+?\d[\d\s().-]{6,}\d|[\r\n\t]/iu;
+  const strings = [
+    ["professionSlug", args.professionSlug, /^[a-z0-9]+(?:-[a-z0-9]+)*$/i],
+    ["nationalityIso", args.nationalityIso, /^[A-Z]{2,3}$/],
+  ];
+  for (const [field, value, coarsePattern] of strings) {
+    const addressSlug = field === "professionSlug" && typeof value === "string" &&
+      (/^\d{1,6}-/.test(value) || /(?:^|-)(?:street|road|avenue|lane|drive|boulevard|address|postal|postcode)(?:-|$)/i.test(value));
+    if (typeof value === "string" && (sensitive.test(value) || !coarsePattern.test(value) || addressSlug)) {
+      details.push({ field, message: "must contain only a coarse route-finder value, without personal details" });
+    }
+  }
+  if (Array.isArray(args.targetDestinations)) {
+    args.targetDestinations.forEach((value, index) => {
+      if (typeof value === "string" && !coarseDestinations.has(value.trim().toUpperCase())) {
+        details.push({ field: `targetDestinations.${index}`, message: "must be a country code or country name" });
+      }
+    });
+  }
+  if (details.length) {
+    throw Object.assign(new Error(`Invalid route-finder input: ${details.map((item) => item.field).join(", ")}.`), {
+      validationDetails: details
+    });
   }
   return Object.fromEntries(Object.entries(args).filter(([, value]) => value !== undefined));
 }
@@ -307,6 +350,13 @@ export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch,
     return toolResult({ error: "unknown_tool", message: `Unknown tool: ${name}` }, true);
   } catch (error) {
     const isCommunityTool = name === "searchCommunitySignals" || name === "getCommunitySignalDataset";
+    if (name === "findMatchingVisaRoutes" && error?.validationDetails) {
+      return toolResult({
+        error: "invalid_route_finder_input",
+        message: error.message,
+        details: error.validationDetails
+      }, true);
+    }
     return toolResult({
       error: isCommunityTool ? "community_signal_store_failed" : "visa_atlas_request_failed",
       message: error instanceof Error ? error.message : String(error),

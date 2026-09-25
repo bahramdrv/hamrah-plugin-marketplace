@@ -83,6 +83,54 @@ test("POSTs only the coarse route-finder payload", async () => {
   assert.deepEqual(JSON.parse(calls[0].init.body), profile);
 });
 
+test("MCP rejects malformed and detailed route-finder input without contacting Visa Atlas", async () => {
+  const calls = [];
+  const fakeFetch = async (...args) => {
+    calls.push(args);
+    return new Response("{}", { status: 200 });
+  };
+  const rejected = [
+    { nationalityIso: "IR", fullName: "Example Person" },
+    { nationalityIso: 42 },
+    { targetDestinations: ["DE", 123] },
+    { dependants: -1 },
+    { limit: 1.5 },
+    { routeIntent: "job" },
+    { professionSlug: "engineer jane@example.com" },
+    { professionSlug: "123-main-street" },
+    { targetDestinations: ["DE +989121234567"] },
+    { targetDestinations: ["John Smith"] },
+    { targetDestinations: ["آدرس منزل تهران"] }
+  ];
+
+  for (const input of rejected) {
+    const response = await handleRequest({
+      jsonrpc: "2.0", id: 1, method: "tools/call",
+      params: { name: "findMatchingVisaRoutes", arguments: input }
+    }, fakeFetch);
+    assert.equal(response.result.isError, true, JSON.stringify(input));
+    assert.equal(response.result.structuredContent.error, "invalid_route_finder_input");
+    assert.ok(response.result.structuredContent.details.length > 0);
+  }
+  assert.equal(calls.length, 0);
+});
+
+test("MCP accepts a coarse route-finder request and preserves its response", async () => {
+  const calls = [];
+  const fakeFetch = async (url, init) => {
+    calls.push({ url, body: JSON.parse(init.body) });
+    return new Response(JSON.stringify({ results: [{ slug: "study-route" }] }), { status: 200 });
+  };
+  const input = { nationalityIso: "IR", targetDestinations: ["DE"], routeIntent: "study", limit: 4 };
+  const response = await handleRequest({
+    jsonrpc: "2.0", id: 2, method: "tools/call",
+    params: { name: "findMatchingVisaRoutes", arguments: input }
+  }, fakeFetch);
+  assert.equal(response.result.isError, false);
+  assert.deepEqual(response.result.structuredContent.data, { results: [{ slug: "study-route" }] });
+  assert.deepEqual(calls, [{ url: "https://visaatlas.org/api/public/route-finder", body: input }]);
+});
+
 test("returns explicit errors instead of inventing unavailable data", async () => {
   const fakeFetch = async () => new Response(JSON.stringify({ error: "not_found" }), { status: 404 });
   const result = await executeTool("getSourceFreshness", {}, fakeFetch);
