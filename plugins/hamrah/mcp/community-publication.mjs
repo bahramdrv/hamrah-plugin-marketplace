@@ -12,7 +12,7 @@ import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "
 import path from "node:path";
 
 import Ajv2020 from "ajv/dist/2020.js";
-import { parseIsoDay, V4_SCHEMA_VERSION, validateCommunityDatasetV4 } from "./community-dataset-v4.mjs";
+import { parseIsoDay, V4_SCHEMA_VERSION, validateCommunityDatasetV4, withOptionalCollections } from "./community-dataset-v4.mjs";
 import { mapOpportunityEvidence, opportunityEvidenceRefs } from "./community-opportunities.mjs";
 import { askerCountIssues, countIndependentAskers, mergeQuestions, normalizeQuestionText } from "./community-questions.mjs";
 import { DATASET_ROOT, loadCommunitySignalStore } from "./community-signals.mjs";
@@ -27,9 +27,10 @@ const COLLECTIONS = {
   questions: "qst",
   academic_opportunities: "opp",
   lived_experiences: "exp",
-  route_claims: "clm"
+  route_claims: "clm",
+  official_statistics: "sta"
 };
-const ARTIFACT_COLLECTIONS = ["signals", "questions", "academic_opportunities", "lived_experiences", "route_claims"];
+const ARTIFACT_COLLECTIONS = ["signals", "questions", "academic_opportunities", "lived_experiences", "route_claims", "official_statistics"];
 
 export class PublicationError extends Error {
   constructor(issues) {
@@ -97,13 +98,13 @@ function normalizeStrings(value) {
 }
 
 function normalizeCandidate(candidate) {
-  const normalized = normalizeStrings(candidate);
+  const normalized = withOptionalCollections(normalizeStrings(candidate));
   for (const collection of ["sources", "evidence"]) {
     for (const item of normalized[collection]) item.source_url = canonicalUrl(item.source_url);
   }
   for (const item of normalized.evidence) item.content_hash = item.content_hash.toLowerCase();
   for (const signal of normalized.signals) signal.destination.country_code = signal.destination.country_code.toUpperCase();
-  for (const collection of ["academic_opportunities", "lived_experiences", "route_claims"]) {
+  for (const collection of ["academic_opportunities", "lived_experiences", "route_claims", "official_statistics"]) {
     for (const item of normalized[collection]) item.country_code = item.country_code.toUpperCase();
   }
   for (const question of normalized.questions) question.country_codes = question.country_codes.map((code) => code.toUpperCase());
@@ -131,6 +132,9 @@ function identityKey(collection, artifact, ids) {
     case "lived_experiences":
       return [artifact.country_code, sortedText(artifact.routes), artifact.milestone, artifact.outcome,
         artifact.event_date, [...new Set(artifact.iran_connection.evidence_ids.map((id) => ids.evidence.get(id)))].sort()];
+    case "official_statistics":
+      return [artifact.country_code, sortedText(artifact.routes), identityText(artifact.authority.name),
+        identityText(artifact.population.description_en), artifact.period.start, artifact.period.end];
     case "route_claims": {
       const key = [artifact.country_code, sortedText(artifact.routes), identityText(artifact.claim_type),
         identityText(artifact.process_stage), identityText(artifact.statement_en)];
@@ -363,6 +367,8 @@ export function prepareCandidate(candidate, { now, publishedArtifactIds = new Se
     watchlist: normalized.watchlist,
     ...collections
   };
+  // An empty optional collection is left out so unchanged older content keeps its digest.
+  if (!dataset.official_statistics.length) delete dataset.official_statistics;
   const { issues } = validateCommunityDatasetV4(dataset);
   assertNoIssues([...issues, ...contradictionIssues(dataset)]);
   return {
@@ -459,7 +465,7 @@ export function withdraw({ storeRoot, artifactId, datasetId, reason, note = null
   }
   const store = loadCommunitySignalStore(datasetsRoot);
   const exists = artifactId
-    ? store.datasets.some(({ canonical }) => [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims, ...canonical.questions, ...canonical.academicOpportunities, ...canonical.livedExperiences]
+    ? store.datasets.some(({ canonical }) => [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims, ...canonical.questions, ...canonical.academicOpportunities, ...canonical.livedExperiences, ...canonical.officialStatistics]
       .some((artifact) => artifact.id === artifactId))
     : store.datasets.some((entry) => entry.datasetId === datasetId);
   if (!exists) throw new Error(`${artifactId ?? datasetId} was not found in the store's current datasets.`);

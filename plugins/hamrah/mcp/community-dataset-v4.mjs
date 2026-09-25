@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import Ajv2020 from "ajv/dist/2020.js";
 import { localized } from "./community-canonical.mjs";
 import { applyPublicPersonException, experienceIssues } from "./community-experiences.mjs";
+import { statisticIssues } from "./community-official-statistics.mjs";
 import { opportunityConsistencyIssues, opportunityEvidenceRefs } from "./community-opportunities.mjs";
 import { ambiguityIssues, askerCountIssues } from "./community-questions.mjs";
 import { inspectDatasetPrivacy } from "./privacy-check.mjs";
@@ -12,7 +13,7 @@ const SCHEMA = JSON.parse(readFileSync(
   new URL("../skills/hamrah-signal-builder/references/community_dataset_v4_schema.json", import.meta.url), "utf8"
 ));
 const validateSchema = new Ajv2020({ allErrors: true, strict: false }).compile(SCHEMA);
-const COLLECTIONS = ["sources", "evidence", "signals", "questions", "academic_opportunities", "lived_experiences", "route_claims"];
+const COLLECTIONS = ["sources", "evidence", "signals", "questions", "academic_opportunities", "lived_experiences", "route_claims", "official_statistics"];
 const ARTIFACT_COLLECTIONS = COLLECTIONS.filter((name) => name !== "sources" && name !== "evidence");
 const MAX_ERRORS = 12;
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -140,14 +141,20 @@ function lifecycleAndStateIssues(dataset, issue) {
 }
 
 // Returns plain error messages plus the same findings tagged with the publication gate they belong to.
-export function validateCommunityDatasetV4(dataset) {
-  if (!validateSchema(dataset)) {
+// Official statistics are an optional collection; datasets published before it existed have none.
+export function withOptionalCollections(dataset) {
+  return dataset.official_statistics ? dataset : { ...dataset, official_statistics: [] };
+}
+
+export function validateCommunityDatasetV4(input) {
+  if (!validateSchema(input)) {
     const issues = validateSchema.errors.slice(0, MAX_ERRORS).map((error) => ({
       gate: "schema",
       message: `schema ${error.instancePath || "<root>"}: ${error.message}`
     }));
     return { errors: issues.map((item) => item.message), issues, privacy: null };
   }
+  const dataset = withOptionalCollections(input);
   const issues = [];
   const issue = (gate, message) => issues.push({ gate, message });
   const privacy = applyPublicPersonException(inspectDatasetPrivacy(dataset), dataset);
@@ -157,7 +164,8 @@ export function validateCommunityDatasetV4(dataset) {
     ...askerCountIssues(dataset.questions, dataset.evidence),
     ...ambiguityIssues(dataset.questions),
     ...opportunityConsistencyIssues(dataset.academic_opportunities, dataset.evidence, dataset.sources),
-    ...experienceIssues(dataset.lived_experiences, dataset.evidence, dataset.sources)
+    ...experienceIssues(dataset.lived_experiences, dataset.evidence, dataset.sources),
+    ...statisticIssues(dataset.official_statistics, dataset.evidence, dataset.sources, dataset.generated_at)
   ]) {
     issue(found.gate, found.message);
   }
@@ -184,6 +192,7 @@ export function adaptCommunityDatasetV4(dataset) {
     questions: dataset.questions.map((question) => ({ ...question, source_schema_version: V4_SCHEMA_VERSION })),
     academicOpportunities: dataset.academic_opportunities.map((item) => ({ ...item, source_schema_version: V4_SCHEMA_VERSION })),
     livedExperiences: dataset.lived_experiences.map((item) => ({ ...item, source_schema_version: V4_SCHEMA_VERSION })),
+    officialStatistics: withOptionalCollections(dataset).official_statistics.map((item) => ({ ...item, source_schema_version: V4_SCHEMA_VERSION })),
     evidence: dataset.evidence.map((item) => ({
       ...item,
       source_schema_version: V4_SCHEMA_VERSION,

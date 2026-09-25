@@ -14,6 +14,7 @@ import { getLivedExperience, LivedExperienceNotFoundError, searchIranianLivedExp
 import { MILESTONES, OUTCOMES } from "./community-experiences.mjs";
 import { getAcademicOpportunity, OpportunityNotFoundError, searchAcademicOpportunities } from "./community-opportunity-tools.mjs";
 import { CLAIM_TYPES, searchRouteClaims } from "./community-route-claim-tools.mjs";
+import { searchOfficialApprovalStatistics } from "./community-statistics-tools.mjs";
 import { getCommunityQuestion, QuestionNotFoundError, searchCommunityQuestions } from "./community-question-tools.mjs";
 import {
   getCommunitySignalDataset,
@@ -341,6 +342,30 @@ const LIVED_EXPERIENCE_TOOLS = [
   }
 ];
 
+const OFFICIAL_STATISTICS_TOOL = {
+  name: "searchOfficialApprovalStatistics",
+  title: "Search Hamrah Official Approval Statistics",
+  description: "Use this to find approval statistics an authority publishes for a defined population and period, by country, route, or applicant scope. official_success_rate is computed only from the authority's matching applications and approvals, with its source and period; a missing denominator or mismatched population leaves it unresolved. It is separate from IRVI, applicant fit, Practical Fit, and Community Confidence, and community samples never supply it.",
+  inputSchema: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      countryCode: { type: "string", minLength: 2, maxLength: 3, description: "Destination ISO country code, such as DEU." },
+      route: { type: "string", minLength: 1, maxLength: 100, description: "Route code, such as student_phd." },
+      nationality: { type: "string", minLength: 2, maxLength: 80, description: "Applicant nationality; statistics limited to other nationalities are excluded." },
+      residenceCountry: { type: "string", minLength: 2, maxLength: 80, description: "Country the applicant lives in or applies from." },
+      originCountry: { type: "string", minLength: 2, maxLength: 80 },
+      statuses: {
+        type: "array", minItems: 1, maxItems: 6, uniqueItems: true,
+        items: { type: "string", enum: ["active", "monitoring", "resolved", "historical", "stale", "superseded"] },
+        description: "Defaults to active and monitoring statistics."
+      },
+      limit: { type: "integer", minimum: 1, maximum: 50, default: 20 }
+    }
+  },
+  annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+};
+
 export const TOOLS = [
   ...STANDARD_DISCOVERY_TOOLS,
   ...COMMUNITY_SIGNAL_TOOLS,
@@ -348,6 +373,7 @@ export const TOOLS = [
   ...ROUTE_CLAIM_TOOLS,
   ...OPPORTUNITY_TOOLS,
   ...LIVED_EXPERIENCE_TOOLS,
+  OFFICIAL_STATISTICS_TOOL,
   ROUTE_FACT_PACK_TOOL,
   ...GET_OPERATIONS.map(([name, path, description]) => ({
     title: description,
@@ -603,6 +629,10 @@ async function runTool(name, args, fetchImpl, options, signal) {
       return toolResult(getLivedExperience(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
 
+    if (name === "searchOfficialApprovalStatistics") {
+      return toolResult(searchOfficialApprovalStatistics(args, options.signalStoreRoot, options.maxDatasetsScanned));
+    }
+
     if (name === "validateRouteClaim") {
       return toolResult(validateRouteClaim(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
@@ -671,7 +701,7 @@ async function runTool(name, args, fetchImpl, options, signal) {
         guidance: "Use a questionId returned by searchCommunityQuestions. An unknown ID is not evidence that the question is never asked."
       }, true);
     }
-    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim", "searchAcademicOpportunities", "getAcademicOpportunity", "searchIranianLivedExperiences", "getLivedExperience"].includes(name);
+    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim", "searchAcademicOpportunities", "getAcademicOpportunity", "searchIranianLivedExperiences", "getLivedExperience", "searchOfficialApprovalStatistics"].includes(name);
     if (name === "findMatchingVisaRoutes" && error?.validationDetails) {
       return toolResult({
         error: "invalid_route_finder_input",

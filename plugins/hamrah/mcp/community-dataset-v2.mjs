@@ -150,6 +150,7 @@ export function adaptCommunityDatasetV2(dataset) {
     questions: [],
     academicOpportunities: [],
     livedExperiences: [],
+    officialStatistics: [],
     sources: dataset.source_coverage.map((item) => ({
       id: item.source_id,
       source_schema_version: V2_SCHEMA_VERSION,

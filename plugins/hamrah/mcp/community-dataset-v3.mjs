@@ -171,6 +171,7 @@ export function adaptCommunityDatasetV3(dataset) {
     questions: [],
     academicOpportunities: [],
     livedExperiences: [],
+    officialStatistics: [],
     provenance: {
       dataset_id: dataset.dataset.dataset_id,
       producer: dataset.dataset.generator.name,
