@@ -30,6 +30,7 @@ If official route context is unavailable, do not invent it. Mark official eligib
 - `references/scorecard_schema.json`
 - `references/scoring_rubric.md`
 - `references/eligibility_rules.md`
+- `references/source_authority_policy.json`
 - `references/community_adjustment_rules.md`
 - `references/confidence_rules.md`
 

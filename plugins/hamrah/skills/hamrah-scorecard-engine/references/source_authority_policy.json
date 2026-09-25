@@ -1,0 +1,22 @@
+{
+  "policy_version": "1.0.0",
+  "reviewed_at": "2026-09-25",
+  "rules": [
+    {
+      "rule_id": "de-opportunity-card-core",
+      "classification": "primary",
+      "claim_type": "immigration_requirement",
+      "country_code": "DEU",
+      "route_code": "opportunity_card",
+      "requirement_id": "opportunity_card_secured_livelihood",
+      "claim_title": "Secured livelihood for the Opportunity Card under Section 20a(4)",
+      "result_explanations": {
+        "met": "The applicant has evidence of secured livelihood for the Opportunity Card.",
+        "not_met": "The applicant lacks evidence of secured livelihood for the Opportunity Card."
+      },
+      "source_host": "www.gesetze-im-internet.de",
+      "source_path": "/aufenthg_2004/__20a.html",
+      "authority_basis": "Federal Ministry of Justice publication of Residence Act section 20a"
+    }
+  ]
+}

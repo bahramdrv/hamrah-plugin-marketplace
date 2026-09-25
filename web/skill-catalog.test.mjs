@@ -21,6 +21,7 @@ test("every skill resource is readable and matches its advertised digest", () =>
     assert.ok(skill.resources.some((resource) => resource.uri === skill.uri));
     assert.ok(skill.resources.length <= 100);
     for (const advertised of skill.resources) {
+      assert.doesNotMatch(advertised.uri, /(?:__pycache__|\.pyc$)/);
       const resource = readSkillResource(advertised.uri);
       assert.ok(resource);
       const digest = `sha256:${createHash("sha256").update(resource.text).digest("hex")}`;

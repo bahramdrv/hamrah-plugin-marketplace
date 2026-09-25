@@ -4,6 +4,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
+from source_authority import classify_source, load_policy
 
 ALLOWED_COMMUNITY = {0, -5, -10, -15, -20}
 WEIGHTS = {
@@ -40,8 +41,54 @@ def schema_validate(data, schema_path: Path):
         errors.append(f"schema: {loc}: {err.message}")
     return errors, warnings
 
+def official_source_errors(route, country_code, route_code, status, usable, label, authority_policy):
+    errors = []
+    eligibility = route.get("official_eligibility", {})
+    checked = []
+    has_unknown_authority = False
+    for req in eligibility.get("reasons", []):
+        req_label = f"{label}: requirement {req.get('requirement_id')!r}"
+        authority = classify_source(req, country_code, route_code, authority_policy)
+        if req.get("source_authority") != authority:
+            errors.append(f"{req_label}: source_authority must match versioned source classification {authority}.")
+        decisive = req.get("result") in {"met", "not_met"}
+        if decisive:
+            checked.append(req)
+            if not req.get("source_url"):
+                errors.append(f"{req_label}: checked requirement has no source_url.")
+            if authority["classification"] not in {"primary", "trusted"}:
+                errors.append(f"{req_label}: source authority is unknown or out of scope; result must remain unverified.")
+            for field in ("claim_type", "checked_at", "retrieved_at", "effective_from"):
+                if not req.get(field):
+                    errors.append(f"{req_label}: checked requirement needs {field}.")
+        if authority["classification"] == "unknown" and req.get("result") != "not_applicable":
+            has_unknown_authority = True
+    if status in {"PASS", "FAIL"}:
+        if eligibility.get("assessment_kind") != "official":
+            errors.append(f"{label}: decisive eligibility needs assessment_kind='official'.")
+        if not checked:
+            errors.append(f"{label}: decisive eligibility needs a checked authoritative requirement.")
+        if has_unknown_authority:
+            errors.append(f"{label}: unknown source authority cannot establish official {status}.")
+        if status == "PASS" and any(req.get("result") == "not_met" for req in checked):
+            errors.append(f"{label}: PASS conflicts with a not_met requirement.")
+        if status == "PASS" and (
+            eligibility.get("missing_requirements")
+            or any(req.get("result") == "unknown" for req in eligibility.get("reasons", []))
+        ):
+            errors.append(f"{label}: PASS cannot leave mandatory requirements unverified.")
+        if status == "FAIL" and not any(req.get("result") == "not_met" for req in checked):
+            errors.append(f"{label}: FAIL needs an authoritative not_met requirement.")
+    elif has_unknown_authority and eligibility.get("assessment_kind") != "provisional":
+        errors.append(f"{label}: unknown source authority requires a provisional assessment.")
+    if has_unknown_authority and usable:
+        errors.append(f"{label}: provisional assessment with unknown source authority cannot be ranked.")
+
+    return errors
+
 def semantic_validate(data):
     errors, warnings = [], []
+    authority_policy = load_policy()
 
     if data.get("schema_version") != "1.0":
         errors.append("schema_version must be '1.0'.")
@@ -172,12 +219,7 @@ def semantic_validate(data):
         if dq.get("status") == "missing" and route.get("confidence", {}).get("level") == "high":
             errors.append(f"{label}: missing official data cannot have high confidence.")
 
-        # Requirement source guard
-        for req in route.get("official_eligibility", {}).get("reasons", []):
-            if req.get("result") in {"met", "not_met"} and not req.get("source_url"):
-                warnings.append(
-                    f"{label}: checked requirement {req.get('requirement_id')!r} has no source_url."
-                )
+        errors.extend(official_source_errors(route, country_code, route_code, status, usable, label, authority_policy))
 
     summary = data.get("portfolio_summary", {})
     expected_viable = len(rankable)

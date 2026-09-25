@@ -28,15 +28,21 @@
       },
       "official_eligibility": {
         "status": "POSSIBLE",
+        "assessment_kind": "provisional",
         "reasons": [
           {
             "requirement_id": "official-1",
             "title": "Core route requirements",
-            "result": "met",
-            "explanation": "Current supplied profile satisfies the checked core route requirements.",
-            "source_url": "https://example.gov/route",
-            "source_title": "Official route requirements",
-            "checked_at": "2026-09-11"
+            "result": "unknown",
+            "explanation": "The applicant may meet the route requirements, but endorsement and a claim-scoped authority review remain unresolved.",
+            "source_url": "https://www.gov.uk/global-talent",
+            "source_title": "Global Talent visa overview",
+            "checked_at": "2026-09-11",
+            "claim_type": "immigration_requirement",
+            "source_authority": {"policy_version": "1.0.0", "classification": "unknown", "rule_id": null},
+            "retrieved_at": "2026-09-11T00:00:00Z",
+            "effective_from": null,
+            "effective_until": null
           }
         ],
         "missing_requirements": [
@@ -44,9 +50,9 @@
         ],
         "blockers": [],
         "official_data_quality": {
-          "status": "current",
+          "status": "partial",
           "as_of": "2026-09-11",
-          "freshness_note": "Current primary source checked."
+          "freshness_note": "A route overview is available, but claim-scoped authority is unverified."
         }
       },
       "base_fit": {
@@ -106,8 +112,8 @@
       "practical_fit": {
         "score": 67,
         "formula": "base_fit + community_adjustment",
-        "usable_for_ranking": true,
-        "interpretation": "Moderate practical fit while endorsement remains unresolved."
+        "usable_for_ranking": false,
+        "interpretation": "Diagnostic fit only while endorsement and authority remain unresolved."
       },
       "confidence": {
         "level": "medium",
@@ -125,14 +131,8 @@
     }
   ],
   "portfolio_summary": {
-    "viable_route_count": 1,
-    "strongest_routes": [
-      {
-        "country_code": "GBR",
-        "route_code": "global_talent",
-        "practical_fit_score": 67
-      }
-    ],
+    "viable_route_count": 0,
+    "strongest_routes": [],
     "blocked_routes": [],
     "notes": [
       "Route is conditional and not a confirmed PASS."

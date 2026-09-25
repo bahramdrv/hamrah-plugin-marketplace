@@ -66,6 +66,12 @@ Each checked requirement should include:
 - `source_url`
 - `source_title`
 - `checked_at`
+- `claim_type` and versioned `source_authority` (`policy_version`, `classification`, `rule_id`)
+- `retrieved_at`, `effective_from`, and `effective_until` (null when no end date is known)
+
+The validator classifies the source URL using `source_authority_policy.json`. A rule must match the claim type, requirement ID, exact title and result explanation, country, route, HTTPS host, and exact path. The supplied `source_authority` must match that computed classification; a title or claimed authority cannot substitute for a rule. Policy version 1.0.0 contains one reviewed primary rule for the secured-livelihood condition in Germany's Opportunity Card. Add other source and claim pairs to the versioned policy after review. The policy controls which legal claim a source can support; validation of the applicant's evidence remains a separate step.
+
+For `met` or `not_met`, a real scoped source URL and all authority and date fields are mandatory. An unrecognized or mismatched source remains `unknown`, with `assessment_kind: "provisional"` and nondecisive official eligibility. `PASS` and `FAIL` require `assessment_kind: "official"` and checked authoritative requirements.
 
 Allowed results:
 

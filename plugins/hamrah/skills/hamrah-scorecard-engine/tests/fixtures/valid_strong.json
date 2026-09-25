@@ -28,15 +28,21 @@
       },
       "official_eligibility": {
         "status": "PASS",
+        "assessment_kind": "official",
         "reasons": [
           {
-            "requirement_id": "official-1",
-            "title": "Core route requirements",
+            "requirement_id": "opportunity_card_secured_livelihood",
+            "title": "Secured livelihood for the Opportunity Card under Section 20a(4)",
             "result": "met",
-            "explanation": "Current supplied profile satisfies the checked core route requirements.",
-            "source_url": "https://example.gov/route",
-            "source_title": "Official route requirements",
-            "checked_at": "2026-09-11"
+            "explanation": "The applicant has evidence of secured livelihood for the Opportunity Card.",
+            "source_url": "https://www.gesetze-im-internet.de/aufenthg_2004/__20a.html",
+            "source_title": "Residence Act section 20a",
+            "checked_at": "2026-09-11",
+            "claim_type": "immigration_requirement",
+            "source_authority": {"policy_version": "1.0.0", "classification": "primary", "rule_id": "de-opportunity-card-core"},
+            "retrieved_at": "2026-09-11T00:00:00Z",
+            "effective_from": "2024-06-01",
+            "effective_until": null
           }
         ],
         "missing_requirements": [],

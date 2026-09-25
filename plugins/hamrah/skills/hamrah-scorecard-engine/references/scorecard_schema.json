@@ -185,7 +185,11 @@
         "explanation",
         "source_url",
         "source_title",
-        "checked_at"
+        "checked_at",
+        "claim_type",
+        "source_authority",
+        "retrieved_at",
+        "effective_from"
       ],
       "properties": {
         "requirement_id": {
@@ -223,6 +227,28 @@
             "string",
             "null"
           ]
+        },
+        "claim_type": {
+          "type": "string"
+        },
+        "source_authority": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["policy_version", "classification", "rule_id"],
+          "properties": {
+            "policy_version": { "type": "string" },
+            "classification": { "type": "string", "enum": ["primary", "trusted", "unknown"] },
+            "rule_id": { "type": ["string", "null"] }
+          }
+        },
+        "retrieved_at": {
+          "type": ["string", "null"]
+        },
+        "effective_from": {
+          "type": ["string", "null"]
+        },
+        "effective_until": {
+          "type": ["string", "null"]
         }
       }
     },
@@ -339,6 +365,7 @@
           "additionalProperties": false,
           "required": [
             "status",
+            "assessment_kind",
             "reasons",
             "missing_requirements",
             "blockers",
@@ -353,6 +380,10 @@
                 "POSSIBLE",
                 "UNKNOWN"
               ]
+            },
+            "assessment_kind": {
+              "type": "string",
+              "enum": ["official", "provisional"]
             },
             "reasons": {
               "type": "array",

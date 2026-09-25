@@ -9,34 +9,40 @@
   "assessment_scope": {
     "goal": "Work migration",
     "countries": [
-      "Example Country"
+      "Germany"
     ],
     "route_codes": [
-      "example_route"
+      "opportunity_card"
     ]
   },
   "route_scorecards": [
     {
       "country": {
-        "name": "Example Country",
-        "code": "XXX"
+        "name": "Germany",
+        "code": "DEU"
       },
       "route": {
-        "code": "example_route",
-        "name": "Example Route",
+        "code": "opportunity_card",
+        "name": "Opportunity Card",
         "family": "EMPLOYMENT / WORK"
       },
       "official_eligibility": {
         "status": "FAIL",
+        "assessment_kind": "official",
         "reasons": [
           {
-            "requirement_id": "mandatory-1",
-            "title": "Mandatory threshold",
+            "requirement_id": "opportunity_card_secured_livelihood",
+            "title": "Secured livelihood for the Opportunity Card under Section 20a(4)",
             "result": "not_met",
-            "explanation": "The applicant does not meet a current mandatory requirement.",
-            "source_url": "https://example.gov/route",
-            "source_title": "Official route requirements",
-            "checked_at": "2026-09-11"
+            "explanation": "The applicant lacks evidence of secured livelihood for the Opportunity Card.",
+            "source_url": "https://www.gesetze-im-internet.de/aufenthg_2004/__20a.html",
+            "source_title": "Residence Act section 20a",
+            "checked_at": "2026-09-11",
+            "claim_type": "immigration_requirement",
+            "source_authority": {"policy_version": "1.0.0", "classification": "primary", "rule_id": "de-opportunity-card-core"},
+            "retrieved_at": "2026-09-11T00:00:00Z",
+            "effective_from": "2024-06-01",
+            "effective_until": null
           }
         ],
         "missing_requirements": [],
@@ -120,8 +126,8 @@
     "strongest_routes": [],
     "blocked_routes": [
       {
-        "country_code": "XXX",
-        "route_code": "example_route",
+        "country_code": "DEU",
+        "route_code": "opportunity_card",
         "reason": "Mandatory route threshold is not met."
       }
     ],
