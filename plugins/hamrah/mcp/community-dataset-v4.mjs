@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 
 import Ajv2020 from "ajv/dist/2020.js";
 import { localized } from "./community-canonical.mjs";
+import { applyPublicPersonException, experienceIssues } from "./community-experiences.mjs";
 import { opportunityConsistencyIssues, opportunityEvidenceRefs } from "./community-opportunities.mjs";
 import { ambiguityIssues, askerCountIssues } from "./community-questions.mjs";
 import { inspectDatasetPrivacy } from "./privacy-check.mjs";
@@ -82,9 +83,7 @@ function referenceIssues(dataset, issue) {
       for (const field of ["evidence_ids", "opposing_evidence_ids"]) {
         for (const id of artifact[field] || []) expect(`${path}.${field}`, id, "evidence", "evidence");
       }
-      if (artifact.iran_connection_evidence_id) {
-        expect(`${path}.iran_connection_evidence_id`, artifact.iran_connection_evidence_id, "evidence", "evidence");
-      }
+      for (const id of artifact.iran_connection?.evidence_ids ?? []) expect(`${path}.iran_connection.evidence_ids`, id, "evidence", "evidence");
       for (const id of artifact.correlated_signal_ids || []) expect(`${path}.correlated_signal_ids`, id, "signals", "signal");
       if (collection === "academic_opportunities") {
         for (const [field, id] of opportunityEvidenceRefs(artifact)) expect(`${path}.${field}`, id, "evidence", "evidence");
@@ -151,13 +150,14 @@ export function validateCommunityDatasetV4(dataset) {
   }
   const issues = [];
   const issue = (gate, message) => issues.push({ gate, message });
-  const privacy = inspectDatasetPrivacy(dataset);
+  const privacy = applyPublicPersonException(inspectDatasetPrivacy(dataset), dataset);
   referenceIssues(dataset, issue);
   lifecycleAndStateIssues(dataset, issue);
   for (const found of [
     ...askerCountIssues(dataset.questions, dataset.evidence),
     ...ambiguityIssues(dataset.questions),
-    ...opportunityConsistencyIssues(dataset.academic_opportunities, dataset.evidence, dataset.sources)
+    ...opportunityConsistencyIssues(dataset.academic_opportunities, dataset.evidence, dataset.sources),
+    ...experienceIssues(dataset.lived_experiences, dataset.evidence, dataset.sources)
   ]) {
     issue(found.gate, found.message);
   }
@@ -183,6 +183,7 @@ export function adaptCommunityDatasetV4(dataset) {
     routeClaims: dataset.route_claims.map((claim) => ({ ...claim, source_schema_version: V4_SCHEMA_VERSION })),
     questions: dataset.questions.map((question) => ({ ...question, source_schema_version: V4_SCHEMA_VERSION })),
     academicOpportunities: dataset.academic_opportunities.map((item) => ({ ...item, source_schema_version: V4_SCHEMA_VERSION })),
+    livedExperiences: dataset.lived_experiences.map((item) => ({ ...item, source_schema_version: V4_SCHEMA_VERSION })),
     evidence: dataset.evidence.map((item) => ({
       ...item,
       source_schema_version: V4_SCHEMA_VERSION,

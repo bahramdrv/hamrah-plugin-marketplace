@@ -129,8 +129,8 @@ function identityKey(collection, artifact, ids) {
       return [artifact.country_code, identityText(artifact.institution), identityText(artifact.program),
         identityText(artifact.degree_level), artifact.deadline];
     case "lived_experiences":
-      return [artifact.country_code, identityText(artifact.route), identityText(artifact.milestone), artifact.outcome,
-        artifact.event_date, ids.evidence.get(artifact.iran_connection_evidence_id)];
+      return [artifact.country_code, sortedText(artifact.routes), artifact.milestone, artifact.outcome,
+        artifact.event_date, [...new Set(artifact.iran_connection.evidence_ids.map((id) => ids.evidence.get(id)))].sort()];
     case "route_claims": {
       const key = [artifact.country_code, sortedText(artifact.routes), identityText(artifact.claim_type),
         identityText(artifact.process_stage), identityText(artifact.statement_en)];
@@ -155,7 +155,7 @@ function referenceFields(collection, artifact) {
     for (const id of artifact.evidence_ids) references.push(["evidence_ids", id, "evidence"]);
     for (const id of artifact.opposing_evidence_ids || []) references.push(["opposing_evidence_ids", id, "evidence"]);
     for (const id of artifact.correlated_signal_ids || []) references.push(["correlated_signal_ids", id, "signals"]);
-    if (artifact.iran_connection_evidence_id) references.push(["iran_connection_evidence_id", artifact.iran_connection_evidence_id, "evidence"]);
+    for (const id of artifact.iran_connection?.evidence_ids ?? []) references.push(["iran_connection.evidence_ids", id, "evidence"]);
     references.push(["lifecycle.superseded_by", artifact.lifecycle.superseded_by, collection]);
     if (collection === "academic_opportunities") {
       for (const [field, id] of opportunityEvidenceRefs(artifact)) references.push([field, id, "evidence"]);
@@ -231,7 +231,9 @@ function remap(collection, artifact, ids) {
     mapped.evidence_ids = unique(artifact.evidence_ids, "evidence");
     if (artifact.opposing_evidence_ids) mapped.opposing_evidence_ids = unique(artifact.opposing_evidence_ids, "evidence");
     if (artifact.correlated_signal_ids) mapped.correlated_signal_ids = unique(artifact.correlated_signal_ids, "signals");
-    if (artifact.iran_connection_evidence_id) mapped.iran_connection_evidence_id = ids.evidence.get(artifact.iran_connection_evidence_id);
+    if (artifact.iran_connection) {
+      mapped.iran_connection = { ...artifact.iran_connection, evidence_ids: unique(artifact.iran_connection.evidence_ids, "evidence") };
+    }
     if (collection === "academic_opportunities") {
       const nested = mapOpportunityEvidence(artifact, (list) => [...new Set(list.map((id) => ids.evidence.get(id)))].sort());
       for (const field of ["deadline_evidence_ids", "funding", "admission_conditions", "nationality_restrictions", "iranian_evidence"]) mapped[field] = nested[field];
@@ -457,7 +459,7 @@ export function withdraw({ storeRoot, artifactId, datasetId, reason, note = null
   }
   const store = loadCommunitySignalStore(datasetsRoot);
   const exists = artifactId
-    ? store.datasets.some(({ canonical }) => [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims, ...canonical.questions, ...canonical.academicOpportunities]
+    ? store.datasets.some(({ canonical }) => [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims, ...canonical.questions, ...canonical.academicOpportunities, ...canonical.livedExperiences]
       .some((artifact) => artifact.id === artifactId))
     : store.datasets.some((entry) => entry.datasetId === datasetId);
   if (!exists) throw new Error(`${artifactId ?? datasetId} was not found in the store's current datasets.`);

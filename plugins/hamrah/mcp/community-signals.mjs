@@ -61,7 +61,23 @@ function withoutWithdrawn(canonical, withdrawn) {
     .filter((item) => !withdrawn.has(item.id))
     .map((item) => downgradeUnsupported(mapOpportunityEvidence(item, (list) => list.filter((id) => !withdrawn.has(id)))))
     .filter((item) => item.evidence_ids.length > 0);
-  return { ...canonical, evidence, signals, routeClaims, questions, academicOpportunities, sources: canonical.sources.filter((source) => !withdrawn.has(source.id)) };
+  // An experience whose Iran connection or milestone evidence is withdrawn is no longer established.
+  const livedExperiences = canonical.livedExperiences
+    .filter((item) => !withdrawn.has(item.id))
+    .map((item) => ({
+      ...item,
+      evidence_ids: item.evidence_ids.filter((id) => !withdrawn.has(id)),
+      iran_connection: { ...item.iran_connection, evidence_ids: item.iran_connection.evidence_ids.filter((id) => !withdrawn.has(id)) }
+    }))
+    .filter((item) => item.evidence_ids.length > 0 && item.iran_connection.evidence_ids.length > 0);
+  // A public profile locator is kept only as provenance for a cited Lived Experience; once no remaining
+  // experience cites it, the evidence and its source are no longer served.
+  const citedByExperiences = new Set(livedExperiences.flatMap((item) => [...item.evidence_ids, ...item.iran_connection.evidence_ids]));
+  const orphanedProfiles = evidence.filter((item) => item.public_person_locator === true && !citedByExperiences.has(item.id));
+  const servedEvidence = evidence.filter((item) => !orphanedProfiles.includes(item));
+  const servedSources = canonical.sources.filter((source) => !withdrawn.has(source.id)
+    && !(orphanedProfiles.some((item) => item.source_id === source.id) && !servedEvidence.some((item) => item.source_id === source.id)));
+  return { ...canonical, evidence: servedEvidence, signals, routeClaims, questions, academicOpportunities, livedExperiences, sources: servedSources };
 }
 
 // Version 2 signals embed their evidence, so withdrawn evidence must also leave the original-form signal.
@@ -99,7 +115,7 @@ export function loadCommunitySignalStore(root = DATASET_ROOT, maxDatasets = REQU
         invalidDatasets.push({ datasetId, schemaVersion, error: errors.join("; "), ...(privacy ? { privacy } : {}) });
         continue;
       }
-      const withdrawnArtifactIds = [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims, ...canonical.questions, ...canonical.academicOpportunities]
+      const withdrawnArtifactIds = [...canonical.signals, ...canonical.evidence, ...canonical.sources, ...canonical.routeClaims, ...canonical.questions, ...canonical.academicOpportunities, ...canonical.livedExperiences]
         .map((artifact) => artifact.id)
         .filter((id) => withdrawn.artifacts.has(id));
       datasets.push({

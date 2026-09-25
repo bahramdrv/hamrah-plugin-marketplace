@@ -1070,6 +1070,10 @@
         },
         "validation": {
           "$ref": "#/$defs/validation"
+        },
+        "public_person_locator": {
+          "type": "boolean",
+          "description": "Marks a public profile locator kept only as provenance for a Lived Experience that cites this evidence."
         }
       }
     },
@@ -1485,11 +1489,14 @@
       "required": [
         "id",
         "country_code",
-        "route",
+        "routes",
         "milestone",
         "outcome",
         "event_date",
-        "iran_connection_evidence_id",
+        "entity",
+        "applicant_scope",
+        "iran_connection",
+        "summary_en",
         "evidence_ids",
         "lifecycle",
         "validation"
@@ -1503,13 +1510,31 @@
           "minLength": 2,
           "maxLength": 3
         },
-        "route": {
-          "type": "string",
-          "minLength": 1
+        "routes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
         },
         "milestone": {
           "type": "string",
-          "minLength": 1
+          "enum": [
+            "admission_received",
+            "study_visa_granted",
+            "enrolled",
+            "job_offer_received",
+            "work_visa_granted",
+            "employment_started",
+            "permanent_residence_granted",
+            "citizenship_granted",
+            "application_submitted",
+            "appointment_obtained",
+            "interview_attended"
+          ],
+          "description": "Study, work, and settlement milestones, or a process step; a process step is never an attained success."
         },
         "outcome": {
           "type": "string",
@@ -1518,6 +1543,7 @@
             "refusal",
             "delay",
             "operational_failure",
+            "withdrawn",
             "claim_only"
           ]
         },
@@ -1527,8 +1553,60 @@
             "null"
           ]
         },
-        "iran_connection_evidence_id": {
-          "$ref": "#/$defs/evidenceId"
+        "entity": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/entity"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "applicant_scope": {
+          "$ref": "#/$defs/applicantScope"
+        },
+        "iran_connection": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "basis",
+            "evidence_ids"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "explicit",
+                "unknown"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "enum": [
+                "self_declared",
+                "documented",
+                "name",
+                "appearance",
+                "language",
+                "education_history"
+              ],
+              "description": "Only self_declared or documented evidence can establish an Iran connection."
+            },
+            "evidence_ids": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/evidenceId"
+              }
+            }
+          }
+        },
+        "summary_en": {
+          "type": "string",
+          "minLength": 1,
+          "description": "A short anonymized description without names."
         },
         "evidence_ids": {
           "type": "array",

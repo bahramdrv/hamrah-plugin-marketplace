@@ -7,7 +7,7 @@ const NARRATIVE_FIELDS = new Set([
   "statement_en", "canonical_en", "canonical_fa", "variants", "milestone"
 ]);
 const ID_FIELDS = new Set([
-  "id", "source_id", "supersedes", "superseded_by", "iran_connection_evidence_id",
+  "id", "source_id", "supersedes", "superseded_by",
   "evidence_ids", "opposing_evidence_ids", "correlated_signal_ids"
 ]);
 const STABLE_ID = /^(?:sig|qst|opp|exp|clm|src|evd)_[0-9a-f]{32}$/;
