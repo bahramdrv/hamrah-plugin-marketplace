@@ -152,7 +152,10 @@ test("a current route without recent Iranian examples shows a numeric, low-confi
   assert.equal(irvi.confidence.label, "low");
   assert.ok(irvi.confidence.reasons.some((reason) => reason.code === "no_recent_qualified_examples"));
   assert.equal(result.ranking.rankable, false);
-  assert.deepEqual(result.ranking.reasons.map((reason) => reason.code).sort(), ["no_recent_qualified_examples", "no_route_evidence_threshold"]);
+  assert.equal(result.ranking.threshold.policyVersion, "1.0.0");
+  assert.equal(result.ranking.threshold.route, "student_phd");
+  assert.ok(result.ranking.reasons.some((reason) => reason.code === "insufficient_iran_source_families"));
+  assert.ok(result.ranking.reasons.some((reason) => reason.code === "no_recent_qualified_examples"));
 });
 
 test("a Signal with unknown freshness cannot change friction or Community Confidence", async () => {
@@ -208,7 +211,8 @@ test("qualified examples raise the component, while a provisional policy keeps c
   assert.equal(irvi.confidence.label, "low");
   assert.notEqual(irvi.confidence.uncappedLabel, "low");
   assert.deepEqual(irvi.confidence.reasons.map((reason) => reason.code), ["provisional_policy"]);
-  assert.deepEqual(result.ranking.reasons.map((reason) => reason.code), ["no_route_evidence_threshold"]);
+  assert.ok(result.ranking.reasons.some((reason) => reason.code === "insufficient_official_source_families"));
+  assert.ok(result.ranking.reasons.some((reason) => reason.code === "insufficient_iran_source_families"));
 
   const beforeMilestone = await viability({ asOf: "2026-03-01" }, storeRoot);
   assert.equal(beforeMilestone.measures.irvi.components.qualified_examples.count, 0, "a later milestone is not a past success as of the assessment date");
@@ -258,4 +262,93 @@ test("a route without a current official basis has no IRVI", async () => {
   assert.equal(result.measures.irvi.status, "research_required");
   assert.equal(result.ranking.rankable, false);
   assert.ok(result.ranking.reasons.some((reason) => reason.code === "no_official_basis"));
+  assert.ok(result.ranking.reasons.some((reason) => reason.code === "no_route_evidence_threshold"));
+});
+
+test("a configured German route passes only with current official and independent public Iran evidence", async () => {
+  const candidate = structuredClone(CANDIDATE);
+  const FINANCE = "https://www.auswaertiges-amt.example.de/visa/study-finance";
+  const REGIONAL = "https://regional.example.org/iran-study-observation";
+  candidate.sources.push(
+    { id: "finance-site", source_name: "Federal Foreign Office finance guidance", source_family: "auswaertiges-amt.example.de", public: true, source_url: FINANCE },
+    { id: "regional", source_name: "Independent regional report", source_family: "regional.example.org", public: true, source_url: REGIONAL },
+    { id: "profile-site", source_name: "Public professional profile", source_family: "example.org", public: true, source_url: PROFILE }
+  );
+  candidate.evidence.push(
+    evidence("finance-rule", "finance-site", "Official guidance requires proof of study financing.", { url: FINANCE, authority: "primary", sourceType: "official_government" }),
+    evidence("regional-report", "regional", "Applicants resident in Iran describe a separate German study visa processing delay.", { url: REGIONAL }),
+    { ...evidence("profile", "profile-site", "The public profile states the researcher is from Iran and enrolled in a German PhD in April 2026.", { url: PROFILE, sourceType: "first_hand_applicant_experience" }), public_person_locator: true }
+  );
+  candidate.route_claims.push(claim("finance-requirement", { claim_type: "financial_requirement", statement_en: "Study applicants must prove adequate financing.", evidence_ids: ["finance-rule"] }));
+  candidate.signals.push(signal("regional-delay", { title: "Separate processing delay", summary_en: "Applicants resident in Iran describe another German study visa processing delay.", evidence_ids: ["regional-report"], suggested_fit_adjustment: 0, conditional_adjustment: { adjustment: 0, apply_when: "The applicant applies from Iran." } }));
+  candidate.lived_experiences = [{
+    id: "enrolled", country_code: "DEU", routes: ["student_phd"], milestone: "enrolled", outcome: "milestone_attained", event_date: "2026-04-01",
+    entity: null, applicant_scope: { ...EMPTY_SCOPE, nationalities: ["IRN"] },
+    iran_connection: { status: "explicit", basis: "self_declared", evidence_ids: ["profile"] },
+    summary_en: "A doctoral researcher from Iran enrolled in a German PhD programme in April 2026.",
+    evidence_ids: ["profile"], lifecycle: structuredClone(LIFECYCLE)
+  }];
+  const result = await viability({ officialEligibility: "PASS" }, publish(candidate).storeRoot);
+  assert.equal(result.ranking.rankable, true);
+  assert.equal(result.ranking.threshold.status, "pass");
+  assert.deepEqual(result.ranking.reasons, []);
+  assert.equal(result.ranking.threshold.observed.officialSourceFamilies, 2);
+  assert.equal(result.ranking.threshold.observed.iranSourceFamilies, 2);
+
+  const copiedReport = structuredClone(candidate);
+  copiedReport.evidence.find((item) => item.id === "regional-report").independence_group = "appointments";
+  const copied = await viability({ officialEligibility: "PASS" }, publish(copiedReport).storeRoot);
+  assert.equal(copied.ranking.rankable, false, "a copied report in another source family is still one independent report");
+  assert.equal(copied.ranking.threshold.observed.iranSourceFamilies, 1);
+
+  const withPrivate = structuredClone(candidate);
+  withPrivate.signals.push(signal("private-warning", { title: "Private applicant warning", summary_en: "Applicants resident in Iran privately reported another delay.", evidence_ids: ["chat-post"], suggested_fit_adjustment: -15, conditional_adjustment: { adjustment: -15, apply_when: "The applicant applies from Iran." } }));
+  withPrivate.route_claims.push(claim("private-rule", { statement_en: "A private group claims another rule applies.", evidence_ids: ["chat-post"] }));
+  const privateResult = await viability({ officialEligibility: "PASS" }, publish(withPrivate).storeRoot);
+  assert.equal(privateResult.ranking.rankable, true, "private reports cannot change a passing public rank");
+  assert.equal(privateResult.measures.irvi.score, result.measures.irvi.score);
+  assert.deepEqual(privateResult.ranking.threshold.observed.iranFamilies, result.ranking.threshold.observed.iranFamilies);
+
+  const failed = await viability({ officialEligibility: "FAIL" }, publish(candidate).storeRoot);
+  assert.equal(failed.ranking.rankable, false);
+  assert.ok(failed.ranking.reasons.some((reason) => reason.code === "official_fail"));
+
+  const unresolved = structuredClone(candidate);
+  unresolved.route_claims.push(claim("unverified-rule", { statement_en: "Another purported study requirement needs official verification.", evidence_ids: ["iran-pattern"] }));
+  const unresolvedResult = await viability({ officialEligibility: "PASS" }, publish(unresolved).storeRoot);
+  assert.equal(unresolvedResult.ranking.rankable, false);
+  assert.ok(unresolvedResult.ranking.reasons.some((reason) => reason.code === "unresolved_official_requirements"));
+
+  const eligibilityUnknown = await viability({ officialEligibility: "UNKNOWN" }, publish(candidate).storeRoot);
+  assert.equal(eligibilityUnknown.ranking.rankable, false);
+  assert.ok(eligibilityUnknown.ranking.reasons.some((reason) => reason.code === "official_eligibility_unresolved"));
+});
+
+test("private reports cannot satisfy public route thresholds", async () => {
+  const candidate = structuredClone(CANDIDATE);
+  candidate.route_claims[1].evidence_ids = ["chat-post"];
+  candidate.signals[0].evidence_ids = ["chat-post"];
+  candidate.academic_opportunities[0].evidence_ids = ["chat-post"];
+  candidate.academic_opportunities[0].deadline_evidence_ids = ["chat-post"];
+  candidate.academic_opportunities[0].funding.status = "unverified";
+  candidate.academic_opportunities[0].funding.components[0].status = "unverified";
+  candidate.academic_opportunities[0].funding.components[0].evidence_ids = ["chat-post"];
+  const result = await viability({ officialEligibility: "PASS" }, publish(candidate).storeRoot);
+  assert.equal(result.ranking.rankable, false);
+  assert.equal(result.ranking.threshold.observed.iranSourceFamilies, 0);
+  assert.equal(result.measures.irvi.components.funding_or_sponsorship.status, "not_assessed");
+  assert.ok(result.ranking.reasons.some((reason) => reason.code === "insufficient_iran_source_families"));
+});
+
+test("the reviewed thresholds describe the first published German routes", async () => {
+  for (const route of ["student_bachelor", "student_masters_taught", "student_masters_research", "student_phd", "opportunity_card"]) {
+    const result = (await executeTool("getIranianRouteViability", { countryCode: "DEU", route, residenceCountry: "IRN", officialEligibility: "PASS", asOf: AS_OF })).structuredContent;
+    const expectedOfficial = route === "opportunity_card" ? 1 : 2;
+    assert.equal(result.ranking.threshold.requirements.current_official_source_families, expectedOfficial);
+    assert.equal(result.ranking.threshold.observed.officialSourceFamilies, expectedOfficial);
+    assert.equal(result.ranking.threshold.observed.iranSourceFamilies, 1);
+    assert.equal(result.ranking.threshold.observed.qualifiedRecentExamples, 0);
+    assert.equal(result.ranking.rankable, false);
+    assert.deepEqual(result.ranking.reasons.map((reason) => reason.code), ["insufficient_iran_source_families", "no_recent_qualified_examples"]);
+  }
 });

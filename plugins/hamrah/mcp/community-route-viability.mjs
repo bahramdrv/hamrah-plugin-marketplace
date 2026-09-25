@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 
-import { CURRENT_STATUSES } from "./community-aggregation.mjs";
+import { CURRENT_STATUSES, groupIndependentReports } from "./community-aggregation.mjs";
 import { claimFreshness, signalFreshness } from "./community-answers.mjs";
 import { assessRouteClaim } from "./community-claim-confidence.mjs";
 import { parseIsoDay } from "./community-dataset-v4.mjs";
@@ -15,6 +15,9 @@ import { searchOfficialApprovalStatistics } from "./community-statistics-tools.m
 // policy is provisional, confidence is capped.
 export const IRVI_POLICY = JSON.parse(readFileSync(
   new URL("../skills/hamrah-signal-builder/references/irvi_policy.json", import.meta.url), "utf8"
+));
+export const ROUTE_EVIDENCE_THRESHOLDS = JSON.parse(readFileSync(
+  new URL("../skills/hamrah-signal-builder/references/route_evidence_thresholds.json", import.meta.url), "utf8"
 ));
 const AUTHORITATIVE = new Set(["primary", "trusted"]);
 const OFFICIAL_CLAIM_TYPES = new Set(["official_rule", "financial_requirement"]);
@@ -135,10 +138,11 @@ function qualifiedExamples(experiences, asOf) {
 function fundingOrSponsorship(opportunities, asOf) {
   const current = opportunities
     .map((entry) => ({ ...entry, verification: verifyOpportunity(entry.artifact, entry.canonical, asOf) }))
-    .filter(({ verification }) => CURRENT_STATUSES.has(verification.lifecycleStatus));
+    .filter(({ verification, canonical, artifact }) => CURRENT_STATUSES.has(verification.lifecycleStatus)
+      && evidenceOf(canonical, [...artifact.evidence_ids, ...artifact.funding.components.flatMap((item) => item.evidence_ids)]).some(isPublic));
   if (!current.length) return { ...component("funding_or_sponsorship", "not_assessed", null, "No current Academic Opportunity is recorded for this route."), evidence: [] };
   const level = current.some(({ verification }) => verification.funding.effectiveStatus === "verified") ? "verified"
-    : current.some(({ artifact }) => artifact.funding.components.length) ? "unverified"
+    : current.some(({ canonical, artifact }) => artifact.funding.components.some((item) => evidenceOf(canonical, item.evidence_ids).some(isPublic))) ? "unverified"
     : "none";
   return { ...component("funding_or_sponsorship", "assessed", level, `${current.length} current opportunities; the best funding state is ${level}.`), evidence: evidenceTrace(current, ({ artifact }) => artifact.lifecycle.status) };
 }
@@ -203,6 +207,74 @@ function callerScore(args, name) {
   return { value, source: "caller_scorecard" };
 }
 
+function publicEvidenceRecords(entries) {
+  return entries.flatMap(({ datasetId, canonical, artifact }) => evidenceOf(canonical, artifact.evidence_ids)
+    .filter(isPublic).map(({ item, source }) => ({ datasetId, evidence: item, source })));
+}
+
+function independentPublicFamilies(records) {
+  const qualifying = records.filter(({ evidence, source }) => source?.public === true && evidence.copy_risk !== "high" && source.source_family);
+  const reports = groupIndependentReports(qualifying);
+  const representatives = reports.map((group) => [...group].sort((a, b) =>
+    a.source.source_family.localeCompare(b.source.source_family) || a.evidence.id.localeCompare(b.evidence.id))[0]);
+  return {
+    families: [...new Set(representatives.map(({ source }) => source.source_family))].sort(),
+    evidenceIds: representatives.map(({ evidence }) => evidence.id).sort(),
+    independentReports: reports.length
+  };
+}
+
+function currentOfficialSupport(entry, asOf) {
+  return evidenceOf(entry.canonical, entry.artifact.evidence_ids)
+    .filter(({ item, source }) => isOfficial({ item, source })
+      && ["current", "aging"].includes(claimFreshness(entry.artifact, [item], asOf).status));
+}
+
+function routeThreshold(countryCode, route, claims, signals, examples, args, asOf) {
+  const routePolicies = ROUTE_EVIDENCE_THRESHOLDS.routes[countryCode.toUpperCase()] ?? {};
+  const routeCode = Object.keys(routePolicies).find((code) => normalizeQuestionText(code) === route) ?? route;
+  const requirement = routePolicies[routeCode] ?? null;
+  if (!requirement) return {
+    threshold: { status: "unconfigured", policyVersion: ROUTE_EVIDENCE_THRESHOLDS.policy_version, reviewedAt: ROUTE_EVIDENCE_THRESHOLDS.reviewed_at, countryCode, route: routeCode, requirements: null, observed: null, missing: [] },
+    reasons: [{ code: "no_route_evidence_threshold", message: `No reviewed Route Evidence Threshold is configured for ${countryCode.toUpperCase()} ${routeCode}.` }]
+  };
+
+  const officialClaims = claims.filter(({ canonical, artifact }) => OFFICIAL_CLAIM_TYPES.has(artifact.claim_type)
+    && evidenceOf(canonical, [...artifact.evidence_ids, ...artifact.opposing_evidence_ids]).some(isPublic));
+  const official = independentPublicFamilies(officialClaims.flatMap((entry) => currentOfficialSupport(entry, asOf)
+    .map(({ item, source }) => ({ datasetId: entry.datasetId, evidence: item, source }))));
+  const unresolvedClaims = officialClaims.filter((entry) => {
+    const opposition = evidenceOf(entry.canonical, entry.artifact.opposing_evidence_ids).some(isPublic);
+    return !currentOfficialSupport(entry, asOf).length || opposition;
+  }).map(({ artifact }) => artifact.id).sort();
+
+  const iranClaims = claims.filter((entry) => isIranScoped(entry.artifact.applicant_scope)
+    && ["current", "aging"].includes(assessRouteClaim({ datasetId: entry.datasetId, canonical: entry.canonical, claim: entry.artifact }, args, asOf).freshness.status));
+  const iranSignals = signals.filter(({ artifact }) => isIranScoped(artifact.applicant_scope) && signalFreshness(artifact, asOf).status === "current");
+  const iran = independentPublicFamilies(publicEvidenceRecords([...iranClaims, ...iranSignals]));
+  const observed = {
+    officialSourceFamilies: official.families.length,
+    officialFamilies: official.families,
+    officialEvidenceIds: official.evidenceIds,
+    iranSourceFamilies: iran.families.length,
+    iranFamilies: iran.families,
+    iranEvidenceIds: iran.evidenceIds,
+    independentIranReports: iran.independentReports,
+    qualifiedRecentExamples: examples.count,
+    unresolvedOfficialClaimIds: unresolvedClaims
+  };
+  const missing = [
+    ...(unresolvedClaims.length ? [{ code: "unresolved_official_requirements", message: `${unresolvedClaims.length} official Route Claims lack current official support or have unresolved public opposition.` }] : []),
+    ...(observed.officialSourceFamilies < requirement.current_official_source_families ? [{ code: "insufficient_official_source_families", message: `Current official source families: ${observed.officialSourceFamilies}; required: ${requirement.current_official_source_families}.` }] : []),
+    ...(observed.iranSourceFamilies < requirement.independent_iran_public_source_families ? [{ code: "insufficient_iran_source_families", message: `Independent public Iran-specific source families: ${observed.iranSourceFamilies}; required: ${requirement.independent_iran_public_source_families}.` }] : []),
+    ...(examples.count < requirement.qualified_recent_examples ? [{ code: examples.count ? "insufficient_recent_qualified_examples" : "no_recent_qualified_examples", message: `Qualified recent Iranian milestones: ${examples.count}; required: ${requirement.qualified_recent_examples}.` }] : [])
+  ];
+  return {
+    threshold: { status: missing.length ? "missing_evidence" : "pass", policyVersion: ROUTE_EVIDENCE_THRESHOLDS.policy_version, reviewedAt: ROUTE_EVIDENCE_THRESHOLDS.reviewed_at, countryCode, route: routeCode, requirements: requirement, observed, missing },
+    reasons: missing
+  };
+}
+
 export function getIranianRouteViability(args = {}, root = DATASET_ROOT, maxDatasets) {
   if (typeof args.countryCode !== "string" || typeof args.route !== "string") throw new Error("getIranianRouteViability requires a countryCode and a route.");
   if (![args.nationality, args.residenceCountry, args.originCountry].some((value) => IRAN_CODES.has(normalizeQuestionText(value)))) {
@@ -237,7 +309,7 @@ export function getIranianRouteViability(args = {}, root = DATASET_ROOT, maxData
     iran_specific_evidence: iranSpecificEvidence(claims, signals, args, asOf),
     qualified_examples: examples,
     funding_or_sponsorship: fundingOrSponsorship(opportunities, asOf),
-    evidence_quality: evidenceQuality(claims, args, asOf)
+    evidence_quality: evidenceQuality(claims.filter(({ canonical, artifact }) => evidenceOf(canonical, artifact.evidence_ids).some(isPublic)), args, asOf)
   };
   const { friction, communityConfidence } = communityMeasures(signals, asOf);
   const assessed = Object.values(components).filter((item) => item.status !== "not_assessed");
@@ -247,13 +319,14 @@ export function getIranianRouteViability(args = {}, root = DATASET_ROOT, maxData
   const score = accessibility.basis === "missing" ? null
     : Math.max(0, Math.min(100, Math.round((100 * earned) / assessedMax) + friction.points));
 
+  const thresholdDecision = routeThreshold(countryCode, route, claims, signals, examples, args, asOf);
   const ranking = [
     ...(accessibility.basis === "missing" ? [{ code: "no_official_basis", message: "No current official source establishes the route." }] : []),
     ...(args.officialEligibility === "FAIL" ? [{ code: "official_fail", message: "The applicant's official eligibility is FAIL." }] : []),
+    ...(args.officialEligibility !== "PASS" && args.officialEligibility !== "FAIL" ? [{ code: "official_eligibility_unresolved", message: "A PASS result from the applicant's official eligibility assessment is required for ranking." }] : []),
     ...(accessibility.basis === "contradicted" ? [{ code: "unresolved_official_conflict", message: "Official sources conflict about a route rule." }] : []),
     ...(accessibility.basis === "stale" ? [{ code: "stale_decisive_fact", message: "A decisive official rule is past its freshness limit." }] : []),
-    ...(!examples.count ? [{ code: "no_recent_qualified_examples", message: "No verified recent Iranian example has attained a route milestone." }] : []),
-    { code: "no_route_evidence_threshold", message: "No versioned Route Evidence Threshold is configured for this route, so it cannot be ranked." }
+    ...thresholdDecision.reasons
   ];
   const statisticsResult = searchOfficialApprovalStatistics({ countryCode: args.countryCode, route: args.route, nationality: args.nationality, residenceCountry: args.residenceCountry, originCountry: args.originCountry }, root, maxDatasets);
   return {
@@ -282,7 +355,7 @@ export function getIranianRouteViability(args = {}, root = DATASET_ROOT, maxData
       },
       officialApprovalStatistics: { statistics: statisticsResult.statistics, separation: statisticsResult.separation }
     },
-    ranking: { rankable: false, reasons: ranking },
+    ranking: { rankable: score !== null && ranking.length === 0, threshold: thresholdDecision.threshold, reasons: ranking },
     usageNote: "Report each measure in its own field. Show IRVI with its confidence, components, and policy version; never call it a visa chance or approval probability, and never merge it with applicant fit, Practical Fit, or official statistics."
   };
 }

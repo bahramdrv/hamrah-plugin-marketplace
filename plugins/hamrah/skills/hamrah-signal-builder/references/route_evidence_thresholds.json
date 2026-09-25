@@ -1,0 +1,17 @@
+{
+  "policy_version": "1.0.0",
+  "reviewed_at": "2026-09-25",
+  "review_basis": {
+    "dataset": "plugins/hamrah/data/community-signals/datasets/2026/09/20260925174655-de-study-opportunity-card-78f7f8bd21.json",
+    "decision": "The initial German dataset has current official rules from two public source families for each study route and one for the Opportunity Card. Iran-scoped operational evidence currently comes from one public source family, and there are no qualified attained examples. Keep all five routes unranked until a second independent public Iran-specific family and one qualified recent milestone are verified; do not infer an approval rate from the examples."
+  },
+  "routes": {
+    "DEU": {
+      "student_bachelor": { "current_official_source_families": 2, "independent_iran_public_source_families": 2, "qualified_recent_examples": 1 },
+      "student_masters_taught": { "current_official_source_families": 2, "independent_iran_public_source_families": 2, "qualified_recent_examples": 1 },
+      "student_masters_research": { "current_official_source_families": 2, "independent_iran_public_source_families": 2, "qualified_recent_examples": 1 },
+      "student_phd": { "current_official_source_families": 2, "independent_iran_public_source_families": 2, "qualified_recent_examples": 1 },
+      "opportunity_card": { "current_official_source_families": 1, "independent_iran_public_source_families": 2, "qualified_recent_examples": 1 }
+    }
+  }
+}
