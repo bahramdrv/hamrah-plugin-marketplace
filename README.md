@@ -2,6 +2,8 @@
 
 Hamrah guides facilitators and applicants through immigration intake, profile normalization, live Visa Atlas route assessment, reusable community signals, academic program matching, explainable scorecards, and scorecard visuals. The plugin now bundles a local MCP adapter for the curated Visa Atlas Core OpenAPI 1.3.0 contract.
 
+This repository is self-contained in the `Hamrah Plugin` folder. Its development intake contract is in `packages/hamrah-intake-contract`; no files from the Immi folder are needed. From this folder, run `npm ci` and `npm test` to install dependencies and run the test suite.
+
 ## ChatGPT Web
 
 Production MCP URL:

@@ -4,6 +4,7 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
+import { fileURLToPath } from "node:url";
 
 import { executeTool, filterResponse, handleRequest, OPENAPI, TOOLS } from "../server.mjs";
 
@@ -233,7 +234,7 @@ test("fake redaction metadata cannot publish or expose private evidence through 
   writeFileSync(candidate, JSON.stringify(dataset));
 
   const published = spawnSync("python3", [
-    new URL("../../skills/hamrah-signal-builder/scripts/store_signals.py", import.meta.url).pathname,
+    fileURLToPath(new URL("../../skills/hamrah-signal-builder/scripts/store_signals.py", import.meta.url)),
     candidate, "--store-root", path.join(signalStoreRoot, "published")
   ], { encoding: "utf8" });
   assert.notEqual(published.status, 0);

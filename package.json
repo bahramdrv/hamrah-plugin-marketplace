@@ -18,6 +18,6 @@
     "zod": "4.6.5"
   },
   "devDependencies": {
-    "@immi/hamrah-intake-contract": "file:../packages/hamrah-intake-contract"
+    "@immi/hamrah-intake-contract": "file:./packages/hamrah-intake-contract"
   }
 }
