@@ -9,6 +9,7 @@ import { BudgetExceededError, REQUEST_BUDGETS, withDeadline } from "./budgets.mj
 import { pickRecordArray } from "./record-array.mjs";
 import { buildRouteFactPack, InvalidFactPackInput, ROUTE_FACT_PACK_TOOL } from "./route-fact-pack.mjs";
 import { answerCommunityQuestion } from "./community-answers.mjs";
+import { RouteClaimNotFoundError, validateRouteClaim } from "./community-claim-confidence.mjs";
 import { CLAIM_TYPES, searchRouteClaims } from "./community-route-claim-tools.mjs";
 import { getCommunityQuestion, QuestionNotFoundError, searchCommunityQuestions } from "./community-question-tools.mjs";
 import {
@@ -224,6 +225,24 @@ const ROUTE_CLAIM_TOOLS = [
           description: "Defaults to active and monitoring claims."
         },
         limit: { type: "integer", minimum: 1, maximum: 50, default: 20 }
+      }
+    },
+    annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+  },
+  {
+    name: "validateRouteClaim",
+    title: "Validate a Hamrah Route Claim",
+    description: "Use this after searchRouteClaims to compute a claim's versioned 0-100 Evidence Confidence from source diversity, independent reports, primary support, recency, applicant scope, and data quality, minus a contradiction penalty. Copies count once, private evidence is context only, opposing evidence stays visible, and contradiction explanations are labelled hypotheses. The score measures support for the claim, not the probability of any outcome.",
+    inputSchema: {
+      type: "object",
+      additionalProperties: false,
+      required: ["claimId"],
+      properties: {
+        claimId: { type: "string", minLength: 1, maxLength: 200 },
+        asOf: { type: "string", pattern: "^\\d{4}-\\d{2}-\\d{2}$", description: "Optional ISO date for recency; defaults to today." },
+        nationality: { type: "string", minLength: 2, maxLength: 80 },
+        residenceCountry: { type: "string", minLength: 2, maxLength: 80 },
+        originCountry: { type: "string", minLength: 2, maxLength: 80 }
       }
     },
     annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
@@ -474,6 +493,10 @@ async function runTool(name, args, fetchImpl, options, signal) {
       return toolResult(searchCommunityQuestions(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
 
+    if (name === "validateRouteClaim") {
+      return toolResult(validateRouteClaim(args, options.signalStoreRoot, options.maxDatasetsScanned));
+    }
+
     if (name === "searchRouteClaims") {
       return toolResult(searchRouteClaims(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
@@ -510,6 +533,13 @@ async function runTool(name, args, fetchImpl, options, signal) {
   } catch (error) {
     if (signal.reason instanceof BudgetExceededError) throw signal.reason;
     if (error instanceof BudgetExceededError) throw error;
+    if (error instanceof RouteClaimNotFoundError) {
+      return toolResult({
+        error: "route_claim_not_found",
+        message: error.message,
+        guidance: "Use a claimId returned by searchRouteClaims. An unknown ID is not evidence about the route."
+      }, true);
+    }
     if (error instanceof QuestionNotFoundError) {
       return toolResult({
         error: "community_question_not_found",
@@ -517,7 +547,7 @@ async function runTool(name, args, fetchImpl, options, signal) {
         guidance: "Use a questionId returned by searchCommunityQuestions. An unknown ID is not evidence that the question is never asked."
       }, true);
     }
-    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims"].includes(name);
+    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim"].includes(name);
     if (name === "findMatchingVisaRoutes" && error?.validationDetails) {
       return toolResult({
         error: "invalid_route_finder_input",

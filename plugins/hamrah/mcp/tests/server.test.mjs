@@ -9,7 +9,7 @@ import { fileURLToPath } from "node:url";
 import { executeTool, filterResponse, handleRequest, OPENAPI, TOOLS } from "../server.mjs";
 
 test("publishes every curated OpenAPI operation", async () => {
-  assert.equal(TOOLS.length, 32);
+  assert.equal(TOOLS.length, 33);
   assert.equal(OPENAPI.info.version, "1.3.0");
   const contractOperationIds = Object.values(OPENAPI.paths).flatMap((methods) =>
     Object.values(methods).map((operation) => operation.operationId)
@@ -24,6 +24,7 @@ test("publishes every curated OpenAPI operation", async () => {
       "getCommunityQuestion",
       "answerCommunityQuestion",
       "searchRouteClaims",
+      "validateRouteClaim",
       "getRouteFactPack"
     ].includes(name)).sort(),
     contractOperationIds.sort()
@@ -150,7 +151,7 @@ test("supports MCP initialize and tools/list", async () => {
   const initialized = await handleRequest({ jsonrpc: "2.0", id: 1, method: "initialize", params: { protocolVersion: "2025-06-18" } });
   assert.equal(initialized.result.serverInfo.name, "hamrah-visa-atlas");
   const listed = await handleRequest({ jsonrpc: "2.0", id: 2, method: "tools/list" });
-  assert.equal(listed.result.tools.length, 32);
+  assert.equal(listed.result.tools.length, 33);
 });
 
 test("implements citation-ready standard search and fetch tools", async () => {

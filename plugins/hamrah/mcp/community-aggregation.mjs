@@ -302,15 +302,24 @@ export function aggregateEvidence(store, entries) {
   };
 }
 
-// Independent reports among evidence records drawn from one or more datasets, using the same copy and
-// independence rules as the aggregation above.
-export function countIndependentReports(items) {
+// Groups evidence records from one or more datasets into independent reports, using the same copy and
+// independence rules as the aggregation above. Each group lists the original items it contains.
+export function groupIndependentReports(items) {
   const records = new Map();
-  for (const { datasetId, evidence } of items) {
-    const key = `${datasetId}::${evidence.id}`;
+  for (const item of items) {
+    const key = `${item.datasetId}::${item.evidence.id}`;
     if (!records.has(key)) {
-      records.set(key, { key, datasetId, evidence, source: null, current: true, links: [{ independenceGroup: evidence.independence_group }] });
+      records.set(key, { key, datasetId: item.datasetId, evidence: item.evidence, item, source: null, current: true, links: [{ independenceGroup: item.evidence.independence_group }] });
     }
   }
-  return new Set(buildClusters([...records.values()]).map((cluster) => cluster.independenceGroupId)).size;
+  const groups = new Map();
+  for (const cluster of buildClusters([...records.values()])) {
+    if (!groups.has(cluster.independenceGroupId)) groups.set(cluster.independenceGroupId, []);
+    groups.get(cluster.independenceGroupId).push(...cluster.records.map((record) => record.item));
+  }
+  return [...groups.values()];
+}
+
+export function countIndependentReports(items) {
+  return groupIndependentReports(items).length;
 }

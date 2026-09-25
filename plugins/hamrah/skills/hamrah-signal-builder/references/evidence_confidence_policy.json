@@ -1,0 +1,32 @@
+{
+  "policy_version": "1.0.0",
+  "reviewed_at": "2026-09-25",
+  "scope": "Deterministic Evidence Confidence for one Route Claim. It measures support for the claim from public evidence, not the probability of any outcome. Private evidence is reported as context and never scores.",
+  "components": {
+    "diversity": { "max": 15, "points_by_count": [0, 5, 10, 15], "basis": "Distinct public source families, counted at most once per independent report." },
+    "independentReports": { "max": 25, "points_by_count": [0, 5, 12, 18, 22, 25], "basis": "Independent public supporting reports; copies, cross-posts, shared independence groups, and shared URLs count once. One report stays weak." },
+    "primarySupport": { "max": 25, "points": { "primary": 25, "trusted": 18, "none": 0 }, "basis": "Supporting evidence with primary or trusted authority from a public HTTPS source." },
+    "recency": { "max": 15, "points": { "current": 15, "aging": 8, "stale": 0, "unknown": 0 }, "basis": "Age of the newest public supporting evidence against the claim type's window." },
+    "scope": { "max": 10, "points": { "not_evaluated": 10, "matched": 10, "general_claim": 7, "outside": 0 }, "basis": "Fit between the claim's applicant scope and the applicant supplied to the check." },
+    "dataQuality": { "max": 10, "basis": "Share of public supporting evidence that is direct, low or medium copy risk, and dated." }
+  },
+  "contradiction_penalty": { "per_independent_opposing_report": 10, "max": 30, "basis": "Independent public opposing reports; opposing evidence is kept and shown." },
+  "recency_windows": {
+    "official_rule": { "aging_after_days": 365, "max_age_days": 730 },
+    "financial_requirement": { "aging_after_days": 180, "max_age_days": 365 },
+    "operational_pattern": { "aging_after_days": 120, "max_age_days": 365 },
+    "anecdotal_pattern": { "aging_after_days": 120, "max_age_days": 365 },
+    "opportunity": { "aging_after_days": 30, "max_age_days": 120 },
+    "risk": { "aging_after_days": 180, "max_age_days": 365 },
+    "workaround": { "aging_after_days": 180, "max_age_days": 365 }
+  },
+  "labels": [
+    { "label": "very_low", "min": 0 },
+    { "label": "low", "min": 25 },
+    { "label": "moderate", "min": 50 },
+    { "label": "high", "min": 75 }
+  ],
+  "hypothesis_rules": {
+    "timing_gap_days": 90
+  }
+}
