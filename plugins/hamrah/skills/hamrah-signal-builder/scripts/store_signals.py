@@ -25,7 +25,8 @@ if result.returncode:
     sys.stderr.write(result.stdout + result.stderr)
     raise SystemExit(result.returncode)
 data = json.loads(source.read_text())
-if not data.get("quality_control", {}).get("personal_identifiers_removed"):
+is_v4 = data.get("schema_version") == "4.0.0"
+if not is_v4 and not data.get("quality_control", {}).get("personal_identifiers_removed"):
     print("Refusing to store: personal_identifiers_removed is not true.", file=sys.stderr)
     raise SystemExit(1)
 
@@ -64,7 +65,10 @@ entry = {
     "generated_at": data.get("generated_at"),
     "countries": sorted({signal.get("destination", {}).get("country_code") for signal in signals if signal.get("destination", {}).get("country_code")}),
     "routes": sorted({route for signal in signals for route in signal.get("migration_routes", [])}),
-    "statuses": sorted({signal.get("status") for signal in signals if signal.get("status")}),
+    "statuses": sorted({
+        (signal.get("lifecycle", {}).get("status") if is_v4 else signal.get("status"))
+        for signal in signals
+    } - {None}),
     "signal_count": len(signals),
     "source_ids": sorted({item.get("source_id") for item in data.get("source_coverage", []) if item.get("source_id")})
 }

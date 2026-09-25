@@ -11,6 +11,10 @@ const KNOWN_INSTITUTIONS = new Map([
 ]);
 
 function inspectString(value, path, field, parent, findings, exceptions) {
+  if (field === "content_hash" && /^sha256:[0-9a-f]{64}$/.test(value)) {
+    exceptions.push({ path, rule: "content_hash", reason: "A SHA-256 digest of source content, not a contact detail." });
+    return;
+  }
   let decoded = value;
   try { decoded = decodeURIComponent(value); } catch { /* Invalid escapes remain inspectable as raw text. */ }
   const digitsNormalized = decoded.replace(/[۰-۹٠-٩]/gu, (digit) => {

@@ -5,6 +5,12 @@ import { fileURLToPath } from "node:url";
 import Ajv2020 from "ajv/dist/2020.js";
 import { BudgetExceededError, REQUEST_BUDGETS } from "./budgets.mjs";
 import { inspectDatasetPrivacy } from "./privacy-check.mjs";
+import {
+  searchableV4Signals,
+  V4_SCHEMA_VERSION,
+  v4DatasetView,
+  validateCommunityDatasetV4
+} from "./community-dataset-v4.mjs";
 
 const DATASET_ROOT = fileURLToPath(
   new URL("../data/community-signals/datasets/", import.meta.url)
@@ -89,6 +95,15 @@ export function loadCommunitySignalStore(root = DATASET_ROOT, maxDatasets = REQU
         throw new Error(`file exceeds ${MAX_DATASET_BYTES} bytes`);
       }
       const dataset = JSON.parse(readFileSync(filePath, "utf8"));
+      if (dataset?.schema_version === V4_SCHEMA_VERSION) {
+        const { errors, privacy } = validateCommunityDatasetV4(dataset);
+        if (errors.length) {
+          invalidDatasets.push({ datasetId, error: errors.join("; "), ...(privacy ? { privacy } : {}) });
+          continue;
+        }
+        datasets.push({ datasetId, dataset, privacy, signals: searchableV4Signals(dataset) });
+        continue;
+      }
       const privacy = inspectDatasetPrivacy(dataset);
       const schemaValid = validateSchema(dataset);
       const errors = [
@@ -100,7 +115,7 @@ export function loadCommunitySignalStore(root = DATASET_ROOT, maxDatasets = REQU
         invalidDatasets.push({ datasetId, error: errors.join("; "), privacy });
         continue;
       }
-      datasets.push({ datasetId, dataset, privacy });
+      datasets.push({ datasetId, dataset, privacy, signals: dataset.signals });
     } catch (error) {
       invalidDatasets.push({
         datasetId,
@@ -176,9 +191,13 @@ function dateValue(value) {
 }
 
 function publicSignal(datasetId, dataset, signal) {
+  const v4 = dataset.schema_version === V4_SCHEMA_VERSION
+    ? { lifecycle: signal.lifecycle, validationStatus: signal.validation.status, evidenceIds: signal.evidence_ids }
+    : {};
   return {
     datasetId,
     datasetGeneratedAt: dataset.generated_at,
+    schemaVersion: dataset.schema_version,
     privacyStatus: "pass",
     signalId: signal.signal_id,
     rootCauseId: signal.root_cause_id,
@@ -208,15 +227,16 @@ function publicSignal(datasetId, dataset, signal) {
     reasonForAdjustment: signal.reason_for_adjustment,
     correlatedSignalIds: signal.correlated_signal_ids,
     needsRecheck: signal.needs_recheck,
-    suggestedRecheckDate: signal.suggested_recheck_date
+    suggestedRecheckDate: signal.suggested_recheck_date,
+    ...v4
   };
 }
 
 export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatasets) {
   const store = loadCommunitySignalStore(root, maxDatasets);
   const newestBySignalId = new Map();
-  for (const { datasetId, dataset } of store.datasets) {
-    for (const signal of dataset.signals) {
+  for (const { datasetId, dataset, signals } of store.datasets) {
+    for (const signal of signals) {
       if (!matchesSignal(signal, args)) continue;
       const existing = newestBySignalId.get(signal.signal_id);
       if (!existing || dateValue(dataset.generated_at) > dateValue(existing.dataset.generated_at)) {
@@ -255,8 +275,10 @@ export function getCommunitySignalDataset(args = {}, root = DATASET_ROOT, maxDat
   const requested = Array.isArray(args.signalIds) && args.signalIds.length
     ? new Set(args.signalIds.map(String))
     : null;
+  const isV4 = found.dataset.schema_version === V4_SCHEMA_VERSION;
+  const idOf = (signal) => (isV4 ? signal.id : signal.signal_id);
   const signals = requested
-    ? found.dataset.signals.filter((signal) => requested.has(signal.signal_id))
+    ? found.dataset.signals.filter((signal) => requested.has(idOf(signal)))
     : found.dataset.signals;
   return {
     source: "Hamrah Community Signal Store",
@@ -264,13 +286,14 @@ export function getCommunitySignalDataset(args = {}, root = DATASET_ROOT, maxDat
     schemaVersion: found.dataset.schema_version,
     generatedAt: found.dataset.generated_at,
     sourceCoverage: found.dataset.source_coverage,
-    summary: found.dataset.summary,
+    summary: found.dataset.summary ?? null,
     qualityControl: found.dataset.quality_control,
     privacy: found.privacy,
     signals,
+    ...(isV4 ? v4DatasetView(found.dataset, signals) : {}),
     watchlist: found.dataset.watchlist,
     missingSignalIds: requested
-      ? [...requested].filter((signalId) => !signals.some((signal) => signal.signal_id === signalId))
+      ? [...requested].filter((signalId) => !signals.some((signal) => idOf(signal) === signalId))
       : [],
     usageNote: "Official eligibility remains separate. Resolved and historical signals have zero current fit adjustment."
   };

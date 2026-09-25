@@ -216,6 +216,21 @@ def privacy_validate(dataset_path: Path):
     ]
 
 
+def v4_validate(dataset_path: Path):
+    validator = Path(__file__).resolve().parents[3] / "mcp" / "community-dataset-v4.mjs"
+    try:
+        result = subprocess.run(
+            ["node", str(validator), str(dataset_path)],
+            text=True, capture_output=True, check=False,
+        )
+        decision = json.loads(result.stdout)
+    except (OSError, ValueError) as exc:
+        return [f"version 4 validation unavailable: {exc}"]
+    if result.returncode == 0 and decision.get("valid") is True:
+        return []
+    return decision.get("errors") or ["version 4 validation did not pass"]
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("file", type=Path)
@@ -231,11 +246,14 @@ def main():
     default_schema = Path(__file__).resolve().parents[1] / "references" / "output_schema.json"
     schema_path = args.schema or default_schema
 
-    errors, warnings = schema_validate(data, schema_path)
-    sem_errors, sem_warnings = semantic_validate(data)
-    errors.extend(sem_errors)
-    warnings.extend(sem_warnings)
-    errors.extend(privacy_validate(args.file))
+    if isinstance(data, dict) and data.get("schema_version") == "4.0.0":
+        errors, warnings = v4_validate(args.file), []
+    else:
+        errors, warnings = schema_validate(data, schema_path)
+        sem_errors, sem_warnings = semantic_validate(data)
+        errors.extend(sem_errors)
+        warnings.extend(sem_warnings)
+        errors.extend(privacy_validate(args.file))
 
     for warning in warnings:
         print(f"WARNING: {warning}", file=sys.stderr)

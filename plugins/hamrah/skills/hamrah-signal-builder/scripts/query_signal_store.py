@@ -30,9 +30,10 @@ for entry in catalog.get("datasets", []):
             continue
         if args.route and args.route not in signal.get("migration_routes", []):
             continue
-        if args.status and signal.get("status") not in args.status:
+        status = signal.get("lifecycle", {}).get("status") if data.get("schema_version") == "4.0.0" else signal.get("status")
+        if args.status and status not in args.status:
             continue
-        signal_ids.append(signal.get("signal_id"))
+        signal_ids.append(signal.get("id") if data.get("schema_version") == "4.0.0" else signal.get("signal_id"))
     if signal_ids:
         matches.append({"dataset": str(path), "generated_at": entry.get("generated_at"), "signal_ids": signal_ids})
 print(json.dumps({"store_root": str(root), "matches": matches}, ensure_ascii=False, indent=2))

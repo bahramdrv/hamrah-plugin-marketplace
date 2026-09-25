@@ -1,0 +1,1465 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hamrah.local/schemas/community-dataset-4.0.0.schema.json",
+  "title": "Hamrah Community Dataset 4.0.0",
+  "description": "Independent artifact collections linked by explicit IDs. Each artifact carries a lifecycle and a validation state; references, provenance, dates, and privacy are enforced by plugins/hamrah/mcp/community-dataset-v4.mjs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "provenance",
+    "source_coverage",
+    "quality_control",
+    "watchlist",
+    "sources",
+    "evidence",
+    "signals",
+    "questions",
+    "academic_opportunities",
+    "lived_experiences",
+    "route_claims"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "4.0.0"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producer",
+        "method",
+        "collected_at"
+      ],
+      "properties": {
+        "producer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "collected_at": {
+          "type": "string"
+        }
+      }
+    },
+    "source_coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_id",
+          "source_name",
+          "source_type",
+          "source_url",
+          "coverage_start",
+          "coverage_end",
+          "records_processed",
+          "coverage_complete"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "json",
+              "forum",
+              "url",
+              "text",
+              "social",
+              "mixed"
+            ]
+          },
+          "source_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "coverage_start": {
+            "type": "string"
+          },
+          "coverage_end": {
+            "type": "string"
+          },
+          "records_processed": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "coverage_complete": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "quality_control": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "full_sources_processed",
+        "reply_chains_considered",
+        "duplicates_merged",
+        "contradictions_checked",
+        "resolutions_checked",
+        "country_scope_checked",
+        "route_scope_checked",
+        "institution_scope_checked",
+        "correlated_penalties_checked"
+      ],
+      "properties": {
+        "full_sources_processed": {
+          "type": "boolean"
+        },
+        "reply_chains_considered": {
+          "type": "boolean"
+        },
+        "duplicates_merged": {
+          "type": "boolean"
+        },
+        "contradictions_checked": {
+          "type": "boolean"
+        },
+        "resolutions_checked": {
+          "type": "boolean"
+        },
+        "country_scope_checked": {
+          "type": "boolean"
+        },
+        "route_scope_checked": {
+          "type": "boolean"
+        },
+        "institution_scope_checked": {
+          "type": "boolean"
+        },
+        "correlated_penalties_checked": {
+          "type": "boolean"
+        }
+      }
+    },
+    "watchlist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "watch_id",
+          "country",
+          "topic",
+          "reason",
+          "current_evidence",
+          "what_would_confirm_it",
+          "last_checked"
+        ],
+        "properties": {
+          "watch_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "country": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "current_evidence": {
+            "type": "string"
+          },
+          "what_would_confirm_it": {
+            "type": "string"
+          },
+          "last_checked": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "signals": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/signal"
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/question"
+      }
+    },
+    "academic_opportunities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/academic_opportunity"
+      }
+    },
+    "lived_experiences": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/lived_experience"
+      }
+    },
+    "route_claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/route_claim"
+      }
+    }
+  },
+  "$defs": {
+    "signalId": {
+      "type": "string",
+      "pattern": "^sig_[A-Za-z0-9][A-Za-z0-9_-]{2,127}$"
+    },
+    "questionId": {
+      "type": "string",
+      "pattern": "^qst_[A-Za-z0-9][A-Za-z0-9_-]{2,127}$"
+    },
+    "opportunityId": {
+      "type": "string",
+      "pattern": "^opp_[A-Za-z0-9][A-Za-z0-9_-]{2,127}$"
+    },
+    "experienceId": {
+      "type": "string",
+      "pattern": "^exp_[A-Za-z0-9][A-Za-z0-9_-]{2,127}$"
+    },
+    "claimId": {
+      "type": "string",
+      "pattern": "^clm_[A-Za-z0-9][A-Za-z0-9_-]{2,127}$"
+    },
+    "sourceId": {
+      "type": "string",
+      "pattern": "^src_[A-Za-z0-9][A-Za-z0-9_-]{2,127}$"
+    },
+    "evidenceId": {
+      "type": "string",
+      "pattern": "^evd_[A-Za-z0-9][A-Za-z0-9_-]{2,127}$"
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "privacy_status",
+        "validated_at"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "validated",
+            "needs_review",
+            "rejected"
+          ]
+        },
+        "privacy_status": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "needs_review",
+            "fail"
+          ]
+        },
+        "validated_at": {
+          "type": "string"
+        }
+      }
+    },
+    "signalLifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "first_seen",
+        "last_seen",
+        "superseded_by"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "monitoring",
+            "resolved",
+            "historical",
+            "stale",
+            "superseded"
+          ]
+        },
+        "first_seen": {
+          "type": "string"
+        },
+        "last_seen": {
+          "type": "string"
+        },
+        "last_verified": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "superseded_by": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/signalId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "questionLifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "first_seen",
+        "last_seen",
+        "superseded_by"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "monitoring",
+            "resolved",
+            "historical",
+            "stale",
+            "superseded"
+          ]
+        },
+        "first_seen": {
+          "type": "string"
+        },
+        "last_seen": {
+          "type": "string"
+        },
+        "last_verified": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "superseded_by": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/questionId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "opportunityLifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "first_seen",
+        "last_seen",
+        "superseded_by"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "monitoring",
+            "resolved",
+            "historical",
+            "stale",
+            "superseded"
+          ]
+        },
+        "first_seen": {
+          "type": "string"
+        },
+        "last_seen": {
+          "type": "string"
+        },
+        "last_verified": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "superseded_by": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/opportunityId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "experienceLifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "first_seen",
+        "last_seen",
+        "superseded_by"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "monitoring",
+            "resolved",
+            "historical",
+            "stale",
+            "superseded"
+          ]
+        },
+        "first_seen": {
+          "type": "string"
+        },
+        "last_seen": {
+          "type": "string"
+        },
+        "last_verified": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "superseded_by": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/experienceId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "claimLifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "first_seen",
+        "last_seen",
+        "superseded_by"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "monitoring",
+            "resolved",
+            "historical",
+            "stale",
+            "superseded"
+          ]
+        },
+        "first_seen": {
+          "type": "string"
+        },
+        "last_seen": {
+          "type": "string"
+        },
+        "last_verified": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "superseded_by": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/claimId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entity_type",
+        "name"
+      ],
+      "properties": {
+        "entity_type": {
+          "type": "string",
+          "enum": [
+            "university",
+            "employer",
+            "vac",
+            "embassy",
+            "consulate",
+            "immigration_authority",
+            "regulator",
+            "test_provider",
+            "payment_provider",
+            "region",
+            "other"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "signal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "root_cause_id",
+        "title",
+        "signal_family",
+        "signal_type",
+        "signal_class",
+        "impact_direction",
+        "trend",
+        "severity",
+        "confidence",
+        "destination",
+        "applicant_scope",
+        "migration_routes",
+        "migration_route_family",
+        "process_stages",
+        "entities",
+        "summary_en",
+        "summary_fa",
+        "practical_impact",
+        "who_should_care",
+        "recommended_action",
+        "known_workaround",
+        "officially_confirmed",
+        "community_confirmed",
+        "official_verification",
+        "suggested_fit_adjustment",
+        "conditional_adjustment",
+        "reason_for_adjustment",
+        "keywords",
+        "resolution",
+        "needs_recheck",
+        "suggested_recheck_date",
+        "correlated_signal_ids",
+        "evidence_ids",
+        "lifecycle",
+        "validation"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/signalId"
+        },
+        "root_cause_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "signal_family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "signal_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "signal_class": {
+          "type": "string",
+          "enum": [
+            "official_implementation",
+            "operational",
+            "processing",
+            "adjudication",
+            "market_behavior",
+            "institution",
+            "practical_selection",
+            "financial",
+            "testing",
+            "travel",
+            "geopolitical",
+            "settlement",
+            "fraud",
+            "other"
+          ]
+        },
+        "impact_direction": {
+          "type": "string",
+          "enum": [
+            "negative",
+            "positive_resolution",
+            "mixed",
+            "neutral"
+          ]
+        },
+        "trend": {
+          "type": "string",
+          "enum": [
+            "worsening",
+            "stable",
+            "improving",
+            "resolved",
+            "unknown"
+          ]
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "low",
+            "moderate",
+            "high",
+            "critical"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "destination": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "country",
+            "country_code",
+            "region",
+            "city"
+          ],
+          "properties": {
+            "country": {
+              "type": "string"
+            },
+            "country_code": {
+              "type": "string"
+            },
+            "region": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "applicant_scope": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "origin_countries",
+            "nationalities",
+            "residence_countries",
+            "applying_from",
+            "age_groups",
+            "occupations",
+            "fields",
+            "education_levels",
+            "regulated_professions",
+            "other_conditions"
+          ],
+          "properties": {
+            "origin_countries": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "nationalities": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "residence_countries": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "applying_from": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "age_groups": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "occupations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "education_levels": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "regulated_professions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "other_conditions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "migration_routes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "migration_route_family": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "process_stages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "entities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entity"
+          }
+        },
+        "summary_en": {
+          "type": "string"
+        },
+        "summary_fa": {
+          "type": "string"
+        },
+        "practical_impact": {
+          "type": "string"
+        },
+        "who_should_care": {
+          "type": "string"
+        },
+        "recommended_action": {
+          "type": "string"
+        },
+        "known_workaround": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "officially_confirmed": {
+          "type": "boolean"
+        },
+        "community_confirmed": {
+          "type": "boolean"
+        },
+        "official_verification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "source_url",
+            "source_title",
+            "verified_at",
+            "note"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "confirmed",
+                "partly_confirmed",
+                "contradicted",
+                "not_verified",
+                "not_applicable"
+              ]
+            },
+            "source_url": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source_title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "verified_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "suggested_fit_adjustment": {
+          "type": "integer",
+          "enum": [
+            0,
+            -5,
+            -10,
+            -15,
+            -20
+          ]
+        },
+        "conditional_adjustment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "adjustment",
+            "apply_when"
+          ],
+          "properties": {
+            "adjustment": {
+              "type": "integer",
+              "enum": [
+                0,
+                -5,
+                -10,
+                -15,
+                -20
+              ]
+            },
+            "apply_when": {
+              "type": "string"
+            }
+          }
+        },
+        "reason_for_adjustment": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "resolution": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "resolved",
+            "resolved_date",
+            "resolution_summary",
+            "resolution_source"
+          ],
+          "properties": {
+            "resolved": {
+              "type": "boolean"
+            },
+            "resolved_date": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "resolution_summary": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "resolution_source": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "needs_recheck": {
+          "type": "boolean"
+        },
+        "suggested_recheck_date": {
+          "type": "string"
+        },
+        "correlated_signal_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/signalId"
+          }
+        },
+        "evidence_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/evidenceId"
+          },
+          "minItems": 1
+        },
+        "lifecycle": {
+          "$ref": "#/$defs/signalLifecycle"
+        },
+        "validation": {
+          "$ref": "#/$defs/validation"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "source_name",
+        "source_family",
+        "public",
+        "source_url",
+        "validation"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/sourceId"
+        },
+        "source_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_family": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Shared origin used to group copies, such as one community or publisher."
+        },
+        "public": {
+          "type": "boolean",
+          "description": "False marks Private Community Evidence that cannot be publicly inspected."
+        },
+        "source_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "validation": {
+          "$ref": "#/$defs/validation"
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "source_id",
+        "source_url",
+        "retrieved_at",
+        "published_at",
+        "event_date",
+        "content_hash",
+        "source_type",
+        "authority",
+        "direct_or_second_hand",
+        "supports_or_contradicts",
+        "independence_group",
+        "copy_risk",
+        "evidence_summary",
+        "supersedes",
+        "validation"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/evidenceId"
+        },
+        "source_id": {
+          "$ref": "#/$defs/sourceId"
+        },
+        "source_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Canonical public locator; null for private sources."
+        },
+        "retrieved_at": {
+          "type": "string"
+        },
+        "published_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "event_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "source_type": {
+          "type": "string",
+          "enum": [
+            "official_government",
+            "official_immigration_authority",
+            "official_embassy_or_consulate",
+            "official_vac_or_service_provider",
+            "official_university",
+            "official_employer",
+            "official_professional_regulator",
+            "official_test_provider",
+            "official_payment_provider",
+            "official_airline_or_border_authority",
+            "recognized_news",
+            "community_admin",
+            "licensed_or_identified_professional",
+            "shared_direct_institution_email",
+            "shared_direct_employer_email",
+            "first_hand_applicant_experience",
+            "second_hand_report",
+            "community_opinion",
+            "unknown"
+          ]
+        },
+        "authority": {
+          "type": "string",
+          "enum": [
+            "primary",
+            "trusted",
+            "unknown"
+          ]
+        },
+        "direct_or_second_hand": {
+          "type": "string",
+          "enum": [
+            "direct",
+            "second_hand"
+          ]
+        },
+        "supports_or_contradicts": {
+          "type": "string",
+          "enum": [
+            "supports",
+            "contradicts",
+            "resolves"
+          ]
+        },
+        "independence_group": {
+          "type": "string",
+          "minLength": 1
+        },
+        "copy_risk": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "evidence_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "supersedes": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/evidenceId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "validation": {
+          "$ref": "#/$defs/validation"
+        }
+      }
+    },
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "canonical_en",
+        "canonical_fa",
+        "variants",
+        "country_codes",
+        "routes",
+        "topics",
+        "process_stages",
+        "independent_asker_count",
+        "trend",
+        "answer_status",
+        "evidence_ids",
+        "lifecycle",
+        "validation"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/questionId"
+        },
+        "canonical_en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_fa": {
+          "type": "string",
+          "minLength": 1
+        },
+        "variants": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "country_codes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "routes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "process_stages": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "independent_asker_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "trend": {
+          "type": "string",
+          "enum": [
+            "rising",
+            "stable",
+            "falling",
+            "unknown"
+          ]
+        },
+        "answer_status": {
+          "type": "string",
+          "enum": [
+            "official",
+            "evidence_based",
+            "community_observation",
+            "unresolved"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/evidenceId"
+          },
+          "minItems": 1
+        },
+        "lifecycle": {
+          "$ref": "#/$defs/questionLifecycle"
+        },
+        "validation": {
+          "$ref": "#/$defs/validation"
+        }
+      }
+    },
+    "academic_opportunity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "institution",
+        "program",
+        "field",
+        "degree_level",
+        "country_code",
+        "deadline",
+        "funding_status",
+        "evidence_ids",
+        "lifecycle",
+        "validation"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/opportunityId"
+        },
+        "institution": {
+          "type": "string",
+          "minLength": 1
+        },
+        "program": {
+          "type": "string",
+          "minLength": 1
+        },
+        "field": {
+          "type": "string",
+          "minLength": 1
+        },
+        "degree_level": {
+          "type": "string",
+          "minLength": 1
+        },
+        "country_code": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 3
+        },
+        "deadline": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "funding_status": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "unverified",
+            "unknown",
+            "none"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/evidenceId"
+          },
+          "minItems": 1
+        },
+        "lifecycle": {
+          "$ref": "#/$defs/opportunityLifecycle"
+        },
+        "validation": {
+          "$ref": "#/$defs/validation"
+        }
+      }
+    },
+    "lived_experience": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "country_code",
+        "route",
+        "milestone",
+        "outcome",
+        "event_date",
+        "iran_connection_evidence_id",
+        "evidence_ids",
+        "lifecycle",
+        "validation"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/experienceId"
+        },
+        "country_code": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 3
+        },
+        "route": {
+          "type": "string",
+          "minLength": 1
+        },
+        "milestone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "outcome": {
+          "type": "string",
+          "enum": [
+            "milestone_attained",
+            "refusal",
+            "delay",
+            "operational_failure",
+            "claim_only"
+          ]
+        },
+        "event_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "iran_connection_evidence_id": {
+          "$ref": "#/$defs/evidenceId"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/evidenceId"
+          },
+          "minItems": 1
+        },
+        "lifecycle": {
+          "$ref": "#/$defs/experienceLifecycle"
+        },
+        "validation": {
+          "$ref": "#/$defs/validation"
+        }
+      }
+    },
+    "route_claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "country_code",
+        "route",
+        "claim_type",
+        "process_stage",
+        "statement_en",
+        "opposing_evidence_ids",
+        "evidence_ids",
+        "lifecycle",
+        "validation"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/claimId"
+        },
+        "country_code": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 3
+        },
+        "route": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "process_stage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "statement_en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "opposing_evidence_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/evidenceId"
+          }
+        },
+        "evidence_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/evidenceId"
+          },
+          "minItems": 1
+        },
+        "lifecycle": {
+          "$ref": "#/$defs/claimLifecycle"
+        },
+        "validation": {
+          "$ref": "#/$defs/validation"
+        }
+      }
+    }
+  }
+}
