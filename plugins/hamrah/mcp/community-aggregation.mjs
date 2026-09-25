@@ -301,3 +301,16 @@ export function aggregateEvidence(store, entries) {
     }
   };
 }
+
+// Independent reports among evidence records drawn from one or more datasets, using the same copy and
+// independence rules as the aggregation above.
+export function countIndependentReports(items) {
+  const records = new Map();
+  for (const { datasetId, evidence } of items) {
+    const key = `${datasetId}::${evidence.id}`;
+    if (!records.has(key)) {
+      records.set(key, { key, datasetId, evidence, source: null, current: true, links: [{ independenceGroup: evidence.independence_group }] });
+    }
+  }
+  return new Set(buildClusters([...records.values()]).map((cluster) => cluster.independenceGroupId)).size;
+}

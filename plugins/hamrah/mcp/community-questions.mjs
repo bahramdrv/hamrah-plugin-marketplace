@@ -111,6 +111,10 @@ export function mergeQuestions(first, second) {
       topics: union(first.topics, second.topics),
       process_stages: union(first.process_stages, second.process_stages),
       evidence_ids: union(first.evidence_ids, second.evidence_ids).sort(),
+      ...(first.answer_links || second.answer_links ? {
+        answer_links: [...new Map([...(first.answer_links ?? []), ...(second.answer_links ?? [])]
+          .map((link) => [`${link.artifact_id}|${link.relation}`, link])).values()]
+      } : {}),
       lifecycle: {
         ...first.lifecycle,
         first_seen: earliest(first.lifecycle.first_seen, second.lifecycle.first_seen),

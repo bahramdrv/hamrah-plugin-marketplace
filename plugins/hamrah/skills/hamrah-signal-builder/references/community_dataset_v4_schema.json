@@ -1249,6 +1249,13 @@
           },
           "minItems": 1
         },
+        "answer_links": {
+          "type": "array",
+          "description": "Route Claims or Signals, in this or another published dataset, that answer, partly answer, or contradict the answer to this question.",
+          "items": {
+            "$ref": "#/$defs/answerLink"
+          }
+        },
         "lifecycle": {
           "$ref": "#/$defs/questionLifecycle"
         },
@@ -1463,6 +1470,31 @@
         },
         "validation": {
           "$ref": "#/$defs/validation"
+        }
+      }
+    },
+    "answerTargetId": {
+      "type": "string",
+      "pattern": "^(sig|clm)_[A-Za-z0-9][A-Za-z0-9_-]{2,127}$"
+    },
+    "answerLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact_id",
+        "relation"
+      ],
+      "properties": {
+        "artifact_id": {
+          "$ref": "#/$defs/answerTargetId"
+        },
+        "relation": {
+          "type": "string",
+          "enum": [
+            "answers",
+            "partially_answers",
+            "contradicts"
+          ]
         }
       }
     }

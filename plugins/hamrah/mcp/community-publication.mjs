@@ -221,6 +221,13 @@ function remap(collection, artifact, ids) {
     if (artifact.opposing_evidence_ids) mapped.opposing_evidence_ids = unique(artifact.opposing_evidence_ids, "evidence");
     if (artifact.correlated_signal_ids) mapped.correlated_signal_ids = unique(artifact.correlated_signal_ids, "signals");
     if (artifact.iran_connection_evidence_id) mapped.iran_connection_evidence_id = ids.evidence.get(artifact.iran_connection_evidence_id);
+    if (artifact.answer_links) {
+      // Links to candidate keys become stable IDs; other links name artifacts already published in the store.
+      mapped.answer_links = artifact.answer_links.map((link) => ({
+        ...link,
+        artifact_id: ids.signals.get(link.artifact_id) ?? ids.route_claims.get(link.artifact_id) ?? link.artifact_id
+      }));
+    }
     const successor = artifact.lifecycle.superseded_by;
     mapped.lifecycle = { ...mapped.lifecycle, superseded_by: successor === null ? null : ids[collection].get(successor) };
   }
@@ -281,7 +288,20 @@ function contradictionIssues(dataset) {
 }
 
 // Runs every gate and returns the dataset to persist; throws PublicationError listing each failing gate.
-export function prepareCandidate(candidate, { now }) {
+function answerLinkIssues(questions, ids, publishedArtifactIds) {
+  const issues = [];
+  questions.forEach((question, index) => {
+    for (const link of question.answer_links ?? []) {
+      const inCandidate = ids.signals.has(link.artifact_id) || ids.route_claims.has(link.artifact_id);
+      if (!inCandidate && !publishedArtifactIds.has(link.artifact_id)) {
+        issues.push({ gate: "evidence", message: `questions[${index}].answer_links references ${link.artifact_id}, which was not found in the candidate or the store's current datasets` });
+      }
+    }
+  });
+  return issues;
+}
+
+export function prepareCandidate(candidate, { now, publishedArtifactIds = new Set() }) {
   if (!parseIsoDay(now, false, true)) throw new PublicationError([{ gate: "normalization", message: `--now ${now} is not an ISO date-time` }]);
   if (!validateCandidate(candidate)) {
     throw new PublicationError(validateCandidate.errors.slice(0, 12).map((error) => ({
@@ -294,7 +314,7 @@ export function prepareCandidate(candidate, { now }) {
   // Each proposed record must count its own askers correctly before records are merged and recounted.
   assertNoIssues(askerCountIssues(normalized.questions, normalized.evidence));
   const { ids, issues: idIssues } = assignIds(normalized);
-  assertNoIssues(idIssues);
+  assertNoIssues([...idIssues, ...answerLinkIssues(normalized.questions, ids, publishedArtifactIds)]);
 
   const validation = { status: "validated", privacy_status: "pass", validated_at: now };
   const collections = {};
@@ -366,7 +386,11 @@ function contentDigest(dataset) {
 export function publishCandidate(candidate, { storeRoot, label = "community", now }) {
   if (!storeRoot) throw new PublicationError([{ gate: "normalization", message: "--store-root is required; use plugins/hamrah/data/community-signals for the deployed store" }]);
   const root = path.resolve(storeRoot);
-  const { dataset, ids, merged } = prepareCandidate(candidate, { now });
+  const datasetsRoot = path.join(root, "datasets");
+  const publishedArtifactIds = new Set(existsSync(datasetsRoot)
+    ? loadCommunitySignalStore(datasetsRoot).datasets.flatMap(({ canonical }) => [...canonical.signals, ...canonical.routeClaims].map((artifact) => artifact.id))
+    : []);
+  const { dataset, ids, merged } = prepareCandidate(candidate, { now, publishedArtifactIds });
   const digestOfContent = contentDigest(dataset);
   const catalog = readCatalog(root);
   const base = { datasetsDirectory: path.join(root, "datasets"), readerScans: isDeployedStore(root), contentDigest: digestOfContent, ids, merged };

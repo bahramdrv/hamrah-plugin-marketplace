@@ -8,6 +8,7 @@ import Ajv from "ajv";
 import { BudgetExceededError, REQUEST_BUDGETS, withDeadline } from "./budgets.mjs";
 import { pickRecordArray } from "./record-array.mjs";
 import { buildRouteFactPack, InvalidFactPackInput, ROUTE_FACT_PACK_TOOL } from "./route-fact-pack.mjs";
+import { answerCommunityQuestion } from "./community-answers.mjs";
 import { getCommunityQuestion, QuestionNotFoundError, searchCommunityQuestions } from "./community-question-tools.mjs";
 import {
   getCommunitySignalDataset,
@@ -178,6 +179,21 @@ const COMMUNITY_QUESTION_TOOLS = [
       properties: {
         questionId: { type: "string", minLength: 1, maxLength: 200 },
         datasetId: { type: "string", minLength: 1, maxLength: 240, description: "Optional dataset to read instead of the newest snapshot." }
+      }
+    },
+    annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+  },
+  {
+    name: "answerCommunityQuestion",
+    title: "Answer a Hamrah Community Question",
+    description: "Use this after searchCommunityQuestions to get a cited answer to one question. It checks the linked Route Claims and Signals for scope, source authority, freshness, contradictions, and independence, and returns official, evidence_based, community_observation, partially_answered, outdated, unresolved, or research_required with confidence, citations, and last verification date. Official answers come only from current authoritative rules; community observations are never rules or probabilities.",
+    inputSchema: {
+      type: "object",
+      additionalProperties: false,
+      required: ["questionId"],
+      properties: {
+        questionId: { type: "string", minLength: 1, maxLength: 200 },
+        asOf: { type: "string", pattern: "^\\d{4}-\\d{2}-\\d{2}$", description: "Optional ISO date for freshness checks; defaults to today." }
       }
     },
     annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
@@ -427,6 +443,10 @@ async function runTool(name, args, fetchImpl, options, signal) {
       return toolResult(searchCommunityQuestions(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
 
+    if (name === "answerCommunityQuestion") {
+      return toolResult(answerCommunityQuestion(args, options.signalStoreRoot, options.maxDatasetsScanned));
+    }
+
     if (name === "getCommunityQuestion") {
       return toolResult(getCommunityQuestion(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
@@ -462,7 +482,7 @@ async function runTool(name, args, fetchImpl, options, signal) {
         guidance: "Use a questionId returned by searchCommunityQuestions. An unknown ID is not evidence that the question is never asked."
       }, true);
     }
-    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion"].includes(name);
+    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion"].includes(name);
     if (name === "findMatchingVisaRoutes" && error?.validationDetails) {
       return toolResult({
         error: "invalid_route_finder_input",
