@@ -1,5 +1,7 @@
 import { CURRENT_STATUSES } from "./community-aggregation.mjs";
+import { parseIsoDay } from "./community-dataset-v4.mjs";
 import { opportunityEvidenceRefs } from "./community-opportunities.mjs";
+import { verifyOpportunity } from "./community-opportunity-verification.mjs";
 import { normalizeQuestionText } from "./community-questions.mjs";
 import { DATASET_ROOT, loadCommunitySignalStore } from "./community-signals.mjs";
 
@@ -14,6 +16,20 @@ function dateValue(value) {
 
 function contains(value, wanted) {
   return !wanted || normalizeQuestionText(value).includes(wanted);
+}
+
+// The fundingStatus filter over the verified state: funding reported by a source but not verified is "unverified",
+// and "unknown" means no funding is reported at all.
+function fundingFilterValue(opportunity, verification) {
+  const effective = verification.funding.effectiveStatus;
+  if (effective !== "unknown") return effective;
+  return opportunity.funding.components.length ? "unverified" : "unknown";
+}
+
+function asOfDate(args) {
+  const asOf = args.asOf ?? new Date().toISOString().slice(0, 10);
+  if (!parseIsoDay(asOf, true, false)) throw new Error(`asOf ${asOf} is not an ISO date.`);
+  return asOf;
 }
 
 function newestOpportunities(store) {
@@ -40,7 +56,7 @@ function freshness(opportunity, evidence) {
   };
 }
 
-function summary({ datasetId, opportunity }) {
+function summary({ datasetId, opportunity, verification }) {
   return {
     opportunityId: opportunity.id,
     datasetId,
@@ -58,7 +74,14 @@ function summary({ datasetId, opportunity }) {
     fundingComponents: opportunity.funding.components.map((component) => ({ type: component.type, status: component.status })),
     nationalityRestrictions: opportunity.nationality_restrictions.status,
     iranianEvidence: opportunity.iranian_evidence.status,
-    lifecycle: opportunity.lifecycle
+    lifecycle: opportunity.lifecycle,
+    verification: {
+      asOf: verification.asOf,
+      lifecycleStatus: verification.lifecycleStatus,
+      deadline: verification.deadline.status,
+      funding: verification.funding.effectiveStatus,
+      nationalityRestrictions: verification.nationalityRestrictions.effectiveStatus
+    }
   };
 }
 
@@ -69,16 +92,20 @@ export function searchAcademicOpportunities(args = {}, root = DATASET_ROOT, maxD
   const tokens = normalizeQuestionText(args.query).split(" ").filter((token) => token.length >= 2);
   const statuses = Array.isArray(args.statuses) && args.statuses.length ? new Set(args.statuses) : CURRENT_STATUSES;
 
-  const scoped = newestOpportunities(store).filter(({ opportunity }) =>
-    (!countryCode || normalizeQuestionText(opportunity.country_code) === countryCode)
-    && (!route || opportunity.routes.some((item) => normalizeQuestionText(item) === route))
-    && statuses.has(opportunity.lifecycle.status));
+  const asOf = asOfDate(args);
+  // Filters use the verified, as-of state: an expired deadline makes an opening historical.
+  const scoped = newestOpportunities(store)
+    .map((entry) => ({ ...entry, verification: verifyOpportunity(entry.opportunity, entry.canonical, asOf) }))
+    .filter(({ opportunity, verification }) =>
+      (!countryCode || normalizeQuestionText(opportunity.country_code) === countryCode)
+      && (!route || opportunity.routes.some((item) => normalizeQuestionText(item) === route))
+      && statuses.has(verification.lifecycleStatus));
   let unknownDeadlineExcluded = 0;
-  const matches = scoped.filter(({ opportunity }) => {
+  const matches = scoped.filter(({ opportunity, verification }) => {
     if (!contains(opportunity.institution, normalizeQuestionText(args.institution))) return false;
     if (!contains(opportunity.field, normalizeQuestionText(args.field))) return false;
     if (args.degreeLevel && opportunity.degree_level !== args.degreeLevel) return false;
-    if (args.fundingStatus && opportunity.funding.status !== args.fundingStatus) return false;
+    if (args.fundingStatus && fundingFilterValue(opportunity, verification) !== args.fundingStatus) return false;
     if (args.fundingComponent && !opportunity.funding.components.some((component) => component.type === args.fundingComponent)) return false;
     if (tokens.length) {
       const text = normalizeQuestionText([opportunity.institution, opportunity.department, opportunity.program, opportunity.field, opportunity.research_area, opportunity.supervisor].filter(Boolean).join(" "));
@@ -104,6 +131,7 @@ export function searchAcademicOpportunities(args = {}, root = DATASET_ROOT, maxD
   return {
     source: "Hamrah Academic Opportunity Store",
     generatedAt: new Date().toISOString(),
+    asOf,
     coverage: {
       status: matchingDatasets > 0 ? "evidence_found" : "no_coverage",
       note: matchingDatasets > 0
@@ -119,7 +147,7 @@ export function searchAcademicOpportunities(args = {}, root = DATASET_ROOT, maxD
     resultCount: opportunities.length,
     unknownDeadlineExcluded,
     opportunities,
-    usageNote: "Funding, admission conditions, nationality restrictions, and Iranian participation are shown only as their sources state them; unknown means no source states it."
+    usageNote: "Funding, admission conditions, nationality restrictions, and Iranian participation are shown only as their sources state them; unknown means no source states it. fundingStatus filters use verified status: only a current official institution source makes funding verified, and openings whose deadline has passed are historical."
   };
 }
 
@@ -127,6 +155,7 @@ export function getAcademicOpportunity(args = {}, root = DATASET_ROOT, maxDatase
   if (typeof args.opportunityId !== "string" || !args.opportunityId.trim()) {
     throw new Error("getAcademicOpportunity requires an opportunityId from searchAcademicOpportunities.");
   }
+  const asOf = asOfDate(args);
   const store = loadCommunitySignalStore(root, maxDatasets);
   const found = newestOpportunities(store).find(({ opportunity }) => opportunity.id === args.opportunityId.trim());
   if (!found) throw new OpportunityNotFoundError(`Academic opportunity not found: ${args.opportunityId}`);
@@ -159,6 +188,7 @@ export function getAcademicOpportunity(args = {}, root = DATASET_ROOT, maxDatase
     opportunity,
     evidence,
     freshness: freshness(opportunity, cited),
+    verification: verifyOpportunity(opportunity, canonical, asOf),
     usageNote: "Check the official institution source before applying; funding marked unverified or unknown is not an offer."
   };
 }

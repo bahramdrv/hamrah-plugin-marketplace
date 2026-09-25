@@ -234,7 +234,7 @@ function remap(collection, artifact, ids) {
     if (artifact.iran_connection_evidence_id) mapped.iran_connection_evidence_id = ids.evidence.get(artifact.iran_connection_evidence_id);
     if (collection === "academic_opportunities") {
       const nested = mapOpportunityEvidence(artifact, (list) => [...new Set(list.map((id) => ids.evidence.get(id)))].sort());
-      for (const field of ["funding", "admission_conditions", "nationality_restrictions", "iranian_evidence"]) mapped[field] = nested[field];
+      for (const field of ["deadline_evidence_ids", "funding", "admission_conditions", "nationality_restrictions", "iranian_evidence"]) mapped[field] = nested[field];
     }
     if (artifact.answer_links) {
       // Links to candidate keys become stable IDs; other links name artifacts already published in the store.

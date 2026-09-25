@@ -1204,6 +1204,7 @@
         "research_area",
         "supervisor",
         "deadline",
+        "deadline_evidence_ids",
         "intake",
         "funding",
         "admission_conditions",
@@ -1279,6 +1280,14 @@
           ],
           "description": "Application deadline as an ISO date; null when no source states it."
         },
+        "deadline_evidence_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/evidenceId"
+          },
+          "description": "Evidence stating the deadline; only an official institution source can verify it."
+        },
         "intake": {
           "type": [
             "string",
@@ -1311,7 +1320,8 @@
                   "type",
                   "status",
                   "amount",
-                  "evidence_ids"
+                  "evidence_ids",
+                  "opposing_evidence_ids"
                 ],
                 "properties": {
                   "type": {
@@ -1345,6 +1355,14 @@
                     "items": {
                       "$ref": "#/$defs/evidenceId"
                     }
+                  },
+                  "opposing_evidence_ids": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "$ref": "#/$defs/evidenceId"
+                    },
+                    "description": "Evidence that disputes this funding component; it is preserved and lowers confidence."
                   }
                 }
               }

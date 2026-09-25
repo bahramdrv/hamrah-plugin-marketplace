@@ -28,7 +28,7 @@ function opportunity(id, fields) {
   return {
     id, country_code: "DEU", routes: ["student_phd"], institution: "Example Technical University", department: null,
     program: "Doctoral programme", degree_level: "phd", field: "Computer Science", research_area: null, supervisor: null,
-    deadline: null, intake: null,
+    deadline: null, deadline_evidence_ids: [], intake: null,
     funding: { status: "unknown", components: [] },
     admission_conditions: null,
     nationality_restrictions: { status: "unknown", details: null, evidence_ids: [] },
@@ -54,12 +54,12 @@ const CANDIDATE = {
     opportunity("phd-ml", {
       department: "Department of Informatics", research_area: "Machine learning", supervisor: "Chair of Machine Learning",
       deadline: "2026-12-15", intake: "2027 summer semester",
-      funding: { status: "verified", components: [{ type: "stipend", status: "verified", amount: "Full-time position at salary grade E13", evidence_ids: ["phd-page"] }] },
+      funding: { status: "verified", components: [{ type: "stipend", status: "verified", amount: "Full-time position at salary grade E13", evidence_ids: ["phd-page"], opposing_evidence_ids: [] }] },
       admission_conditions: [{ condition: "A master's degree in computer science or a related field", status: "verified", evidence_ids: ["phd-page"] }]
     }),
     opportunity("msc-ds", {
       routes: ["student_masters_taught"], program: "Master of Data Science", degree_level: "master", field: "Data Science",
-      funding: { status: "unverified", components: [{ type: "tuition_waiver", status: "unverified", amount: null, evidence_ids: ["chat"] }] },
+      funding: { status: "unverified", components: [{ type: "tuition_waiver", status: "unverified", amount: null, evidence_ids: ["chat"], opposing_evidence_ids: [] }] },
       evidence_ids: ["phd-page", "chat"]
     }),
     opportunity("ca-phd", { country_code: "CAN", institution: "Example Canadian University", program: "PhD in Physics", field: "Physics", deadline: "2027-01-10" })
@@ -80,7 +80,8 @@ function publishStore(candidate = CANDIDATE) {
   return published;
 }
 
-const call = (name, args) => executeTool(name, args, globalThis.fetch, { signalStoreRoot: path.join(publishStore().storeRoot, "datasets") });
+const AS_OF = "2026-09-25";
+const call = (name, args) => executeTool(name, { asOf: AS_OF, ...args }, globalThis.fetch, { signalStoreRoot: path.join(publishStore().storeRoot, "datasets") });
 const idsOf = async (args) => (await call("searchAcademicOpportunities", args)).structuredContent.opportunities.map((item) => item.opportunityId).sort();
 
 test("the opportunity tools are read-only", () => {
@@ -160,12 +161,12 @@ test("nested evidence is inspectable and withdrawn support downgrades verified f
   const candidate = structuredClone(CANDIDATE);
   candidate.evidence.push(evidence("letter", "uni", "The stipend letter confirms a monthly doctoral stipend.", { url: `${PHD_PAGE}/stipend`, authority: "primary" }));
   candidate.academic_opportunities = [opportunity("funded", {
-    funding: { status: "verified", components: [{ type: "stipend", status: "verified", amount: null, evidence_ids: ["letter"] }] }
+    funding: { status: "verified", components: [{ type: "stipend", status: "verified", amount: null, evidence_ids: ["letter"], opposing_evidence_ids: [] }] }
   })];
   const { storeRoot, result, ids } = publishStore(candidate);
   assert.equal(result.status, 0, result.stderr);
   const signalStoreRoot = path.join(storeRoot, "datasets");
-  const get = async () => (await executeTool("getAcademicOpportunity", { opportunityId: ids.funded }, globalThis.fetch, { signalStoreRoot })).structuredContent;
+  const get = async () => (await executeTool("getAcademicOpportunity", { opportunityId: ids.funded, asOf: AS_OF }, globalThis.fetch, { signalStoreRoot })).structuredContent;
 
   const before = await get();
   assert.ok(before.evidence.some((item) => item.sourceUrl === `${PHD_PAGE}/stipend`), "evidence cited only by a funding component is shown");

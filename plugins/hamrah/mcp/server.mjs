@@ -269,6 +269,7 @@ const OPPORTUNITY_TOOLS = [
         fundingComponent: { type: "string", enum: ["stipend", "tuition_waiver", "assistantship", "scholarship", "salary_position", "other"] },
         deadlineAfter: { type: "string", pattern: "^\\d{4}-\\d{2}-\\d{2}$" },
         deadlineBefore: { type: "string", pattern: "^\\d{4}-\\d{2}-\\d{2}$" },
+        asOf: { type: "string", pattern: "^\\d{4}-\\d{2}-\\d{2}$", description: "Optional ISO date for deadline and freshness checks; defaults to today." },
         statuses: {
           type: "array", minItems: 1, maxItems: 6, uniqueItems: true,
           items: { type: "string", enum: ["active", "monitoring", "resolved", "historical", "stale", "superseded"] }
@@ -286,7 +287,10 @@ const OPPORTUNITY_TOOLS = [
       type: "object",
       additionalProperties: false,
       required: ["opportunityId"],
-      properties: { opportunityId: { type: "string", minLength: 1, maxLength: 200 } }
+      properties: {
+        opportunityId: { type: "string", minLength: 1, maxLength: 200 },
+        asOf: { type: "string", pattern: "^\\d{4}-\\d{2}-\\d{2}$", description: "Optional ISO date for deadline and freshness checks; defaults to today." }
+      }
     },
     annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
   }

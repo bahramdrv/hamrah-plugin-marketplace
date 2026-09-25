@@ -1,9 +1,23 @@
 import { parseIsoDay } from "./community-dataset-v4.mjs";
 
+const AUTHORITATIVE = new Set(["primary", "trusted"]);
+const INSTITUTION_SOURCE_TYPES = new Set(["official_university", "official_government", "official_employer"]);
+
+// An official institution source: primary or trusted authority, a public source, an HTTPS locator, and an
+// institution, government, or employer source type.
+export function isOfficialInstitutionEvidence(item, source) {
+  return Boolean(item && AUTHORITATIVE.has(item.authority) && source?.public === true
+    && /^https:\/\//.test(item.source_url ?? "") && INSTITUTION_SOURCE_TYPES.has(item.source_type));
+}
+
 // Evidence references nested inside an Academic Opportunity, as [field path, evidence id] pairs.
 export function opportunityEvidenceRefs(opportunity) {
   return [
-    ...opportunity.funding.components.flatMap((component, index) => component.evidence_ids.map((id) => [`funding.components[${index}].evidence_ids`, id])),
+    ...opportunity.deadline_evidence_ids.map((id) => ["deadline_evidence_ids", id]),
+    ...opportunity.funding.components.flatMap((component, index) => [
+      ...component.evidence_ids.map((id) => [`funding.components[${index}].evidence_ids`, id]),
+      ...component.opposing_evidence_ids.map((id) => [`funding.components[${index}].opposing_evidence_ids`, id])
+    ]),
     ...(opportunity.admission_conditions ?? []).flatMap((condition, index) => condition.evidence_ids.map((id) => [`admission_conditions[${index}].evidence_ids`, id])),
     ...opportunity.nationality_restrictions.evidence_ids.map((id) => ["nationality_restrictions.evidence_ids", id]),
     ...opportunity.iranian_evidence.evidence_ids.map((id) => ["iranian_evidence.evidence_ids", id])
@@ -15,7 +29,15 @@ export function mapOpportunityEvidence(opportunity, transform) {
   return {
     ...opportunity,
     evidence_ids: transform(opportunity.evidence_ids),
-    funding: { ...opportunity.funding, components: opportunity.funding.components.map((component) => ({ ...component, evidence_ids: transform(component.evidence_ids) })) },
+    deadline_evidence_ids: transform(opportunity.deadline_evidence_ids),
+    funding: {
+      ...opportunity.funding,
+      components: opportunity.funding.components.map((component) => ({
+        ...component,
+        evidence_ids: transform(component.evidence_ids),
+        opposing_evidence_ids: transform(component.opposing_evidence_ids)
+      }))
+    },
     admission_conditions: opportunity.admission_conditions?.map((condition) => ({ ...condition, evidence_ids: transform(condition.evidence_ids) })) ?? null,
     nationality_restrictions: { ...opportunity.nationality_restrictions, evidence_ids: transform(opportunity.nationality_restrictions.evidence_ids) },
     iranian_evidence: { ...opportunity.iranian_evidence, evidence_ids: transform(opportunity.iranian_evidence.evidence_ids) }
@@ -26,6 +48,7 @@ export function mapOpportunityEvidence(opportunity, transform) {
 export function opportunityConsistencyIssues(opportunities, evidence, sources, collection = "academic_opportunities") {
   const evidenceById = new Map(evidence.map((item) => [item.id, item]));
   const publicSources = new Set(sources.filter((source) => source.public).map((source) => source.id));
+  const sourcesById = new Map(sources.map((source) => [source.id, source]));
   const issues = [];
   opportunities.forEach((opportunity, index) => {
     const at = `${collection}[${index}]`;
@@ -39,7 +62,11 @@ export function opportunityConsistencyIssues(opportunities, evidence, sources, c
     }
     if (funding.status === "none" && funding.components.length) add("funding.status none cannot list funding components");
     funding.components.forEach((component, componentIndex) => {
-      if (component.status === "verified" && !component.evidence_ids.length) add(`verified funding component ${componentIndex} needs evidence`);
+      if (component.status !== "verified") return;
+      if (!component.evidence_ids.length) add(`verified funding component ${componentIndex} needs evidence`);
+      else if (!component.evidence_ids.some((id) => isOfficialInstitutionEvidence(evidenceById.get(id), sourcesById.get(evidenceById.get(id)?.source_id)))) {
+        add(`verified funding component ${componentIndex} needs an official institution source`);
+      }
     });
     (opportunity.admission_conditions ?? []).forEach((condition, conditionIndex) => {
       if (condition.status === "verified" && !condition.evidence_ids.length) add(`verified admission condition ${conditionIndex} needs evidence`);
