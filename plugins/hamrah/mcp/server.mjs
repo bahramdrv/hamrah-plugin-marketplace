@@ -6,6 +6,8 @@ import { pathToFileURL } from "node:url";
 import Ajv from "ajv";
 
 import { BudgetExceededError, REQUEST_BUDGETS, withDeadline } from "./budgets.mjs";
+import { pickRecordArray } from "./record-array.mjs";
+import { buildRouteFactPack, InvalidFactPackInput, ROUTE_FACT_PACK_TOOL } from "./route-fact-pack.mjs";
 import {
   getCommunitySignalDataset,
   searchCommunitySignals
@@ -138,6 +140,7 @@ const COMMUNITY_SIGNAL_TOOLS = [
 export const TOOLS = [
   ...STANDARD_DISCOVERY_TOOLS,
   ...COMMUNITY_SIGNAL_TOOLS,
+  ROUTE_FACT_PACK_TOOL,
   ...GET_OPERATIONS.map(([name, path, description]) => ({
     title: description,
     name,
@@ -201,15 +204,6 @@ function clampLimit(value, fallback = DEFAULT_LIMIT) {
   return Math.max(1, Math.min(MAX_LIMIT, value));
 }
 
-function pickRecordArray(data) {
-  if (Array.isArray(data)) return { records: data, key: null };
-  if (!data || typeof data !== "object") return { records: null, key: null };
-  for (const key of ["items", "results", "records", "data", "datasets", "packs", "capsules"]) {
-    if (Array.isArray(data[key])) return { records: data[key], key };
-  }
-  return { records: null, key: null };
-}
-
 function contains(value, needle) {
   return typeof value === "string" && value.toLowerCase().includes(needle.toLowerCase());
 }
@@ -243,28 +237,38 @@ async function fetchJson(path, init = {}, fetchImpl = globalThis.fetch, signal =
   }
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  const requestSignal = signal ? AbortSignal.any([signal, controller.signal]) : controller.signal;
+  let onAbort;
   try {
-    const response = await fetchImpl(url.href, {
-      ...init,
-      headers: { Accept: "application/json", "User-Agent": "Hamrah-Plugin/1.0", ...(init.headers || {}) },
-      redirect: "error",
-      signal: signal ? AbortSignal.any([signal, controller.signal]) : controller.signal
+    if (requestSignal.aborted) throw requestSignal.reason;
+    const aborted = new Promise((_resolve, reject) => {
+      onAbort = () => reject(requestSignal.reason);
+      requestSignal.addEventListener("abort", onAbort, { once: true });
     });
-    const raw = await response.text();
-    let body;
-    try {
-      body = raw ? JSON.parse(raw) : null;
-    } catch {
-      throw new Error(`Visa Atlas returned non-JSON content (HTTP ${response.status}).`);
-    }
-    if (!response.ok) {
-      const error = new Error(`Visa Atlas endpoint ${path} returned HTTP ${response.status}.`);
-      error.status = response.status;
-      error.body = body;
-      throw error;
-    }
-    return body;
+    return await Promise.race([(async () => {
+      const response = await fetchImpl(url.href, {
+        ...init,
+        headers: { Accept: "application/json", "User-Agent": "Hamrah-Plugin/1.0", ...(init.headers || {}) },
+        redirect: "error",
+        signal: requestSignal
+      });
+      const raw = await response.text();
+      let body;
+      try {
+        body = raw ? JSON.parse(raw) : null;
+      } catch {
+        throw new Error(`Visa Atlas returned non-JSON content (HTTP ${response.status}).`);
+      }
+      if (!response.ok) {
+        const error = new Error(`Visa Atlas endpoint ${path} returned HTTP ${response.status}.`);
+        error.status = response.status;
+        error.body = body;
+        throw error;
+      }
+      return body;
+    })(), aborted]);
   } finally {
+    if (onAbort) requestSignal.removeEventListener("abort", onAbort);
     clearTimeout(timer);
   }
 }
@@ -290,6 +294,22 @@ function toolResult(payload, isError = false) {
 }
 
 export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch, options = {}) {
+  if (name === "getRouteFactPack") {
+    try {
+      const payload = await buildRouteFactPack(
+        args,
+        (operation) => operationByName.get(operation),
+        (path, signal) => fetchJson(path, {}, fetchImpl, signal),
+        options.deadlineMs ?? REQUEST_BUDGETS.deadlineMs
+      );
+      return toolResult(payload);
+    } catch (error) {
+      if (error instanceof InvalidFactPackInput) {
+        return toolResult({ error: "invalid_route_fact_pack_input", message: error.message }, true);
+      }
+      throw error;
+    }
+  }
   try {
     return await withDeadline(
       options.deadlineMs ?? REQUEST_BUDGETS.deadlineMs,
@@ -409,7 +429,7 @@ export async function handleRequest(message, fetchImpl = globalThis.fetch) {
         protocolVersion: params.protocolVersion || "2025-06-18",
         capabilities: { tools: { listChanged: false } },
         serverInfo: { name: "hamrah-visa-atlas", version: "1.1.0" },
-        instructions: "Use the smallest relevant Visa Atlas tool. Before applying a community adjustment, use searchCommunitySignals and getCommunitySignalDataset. Treat route scores as discovery aids, community signals as practical context, and verify decisive requirements with primary sources."
+        instructions: "Use the smallest relevant Visa Atlas tool; getRouteFactPack gathers selected route datasets with explicit partial coverage. Before applying a community adjustment, use searchCommunitySignals and getCommunitySignalDataset. Treat route scores as discovery aids, community signals as practical context, and verify decisive requirements with primary sources."
       }
     };
   }
