@@ -104,3 +104,24 @@ test("published German questions expose partial answers in search and answer ret
   assert.equal(answered.structuredContent.answerType, "partially_answered");
   assert.equal(answered.structuredContent.storedAnswerStatus, "partially_answered");
 });
+
+test("published German skilled-worker questions expose embassy-backed official answers", async () => {
+  for (const query of ["language", "Anabin"]) {
+    const searched = await executeTool("searchCommunityQuestions", {
+      countryCode: "DEU", answerStatus: "official", query
+    }, offline);
+    assert.equal(searched.isError, false);
+    assert.equal(searched.structuredContent.resultCount, 1, query);
+    const question = searched.structuredContent.questions[0];
+    assert.equal(question.answerStatus, "official");
+    const answered = await executeTool("answerCommunityQuestion", {
+      questionId: question.questionId, asOf: "2026-09-26"
+    }, offline);
+    assert.equal(answered.isError, false);
+    assert.equal(answered.structuredContent.answerType, "official");
+    assert.equal(answered.structuredContent.storedAnswerStatus, "official");
+    assert.ok(answered.structuredContent.citations.some((citation) =>
+      citation.sourceUrl === "https://teheran.diplo.de/ir-de/02-service/2712070-2712070"
+    ));
+  }
+});

@@ -1,0 +1,1433 @@
+{
+  "schema_version": "4.0.0",
+  "generated_at": "2026-09-26T12:03:00Z",
+  "provenance": {
+    "producer": "hamrah-skilled-worker-official-review",
+    "method": "Reviewed current German Embassy Tehran qualified-worker visa checklist. Added source-scoped answers for prior work evidence, language evidence, and qualification recognition. Existing sources and excerpts remain in this immutable successor snapshot.",
+    "collected_at": "2026-09-26T12:02:00Z"
+  },
+  "source_coverage": [
+    {
+      "source_id": "src_de_telegram_original",
+      "source_name": "Germany migration Telegram export",
+      "source_type": "json",
+      "source_url": null,
+      "coverage_start": "2025-01-01",
+      "coverage_end": "2026-09-16",
+      "records_processed": 1535,
+      "coverage_complete": false
+    },
+    {
+      "source_id": "src_embassy",
+      "source_name": "German Embassy Tehran national visas",
+      "source_type": "url",
+      "source_url": "https://teheran.diplo.de/ir-de/02-service/2403868-2403868",
+      "coverage_start": "2026-09-26",
+      "coverage_end": "2026-09-26",
+      "records_processed": 1,
+      "coverage_complete": false
+    },
+    {
+      "source_id": "src_selfcheck",
+      "source_name": "Make it in Germany opportunity card",
+      "source_type": "url",
+      "source_url": "https://www.make-it-in-germany.com/en/visa-residence/opportunity-card/job-search",
+      "coverage_start": "2026-09-26",
+      "coverage_end": "2026-09-26",
+      "records_processed": 1,
+      "coverage_complete": false
+    },
+    {
+      "source_id": "src_anabin",
+      "source_name": "Make it in Germany opportunity card FAQ",
+      "source_type": "url",
+      "source_url": "https://www.make-it-in-germany.com/en/visa-residence/opportunity-card/questions-answers",
+      "coverage_start": "2026-09-26",
+      "coverage_end": "2026-09-26",
+      "records_processed": 1,
+      "coverage_complete": false
+    },
+    {
+      "source_id": "src_qualified",
+      "source_name": "Federal work visa for qualified professionals",
+      "source_type": "url",
+      "source_url": "https://www.make-it-in-germany.com/en/visa-residence/types/work-qualified-professionals",
+      "coverage_start": "2026-09-26",
+      "coverage_end": "2026-09-26",
+      "records_processed": 1,
+      "coverage_complete": false
+    },
+    {
+      "source_id": "src_language",
+      "source_name": "Federal guide to visa language requirements",
+      "source_type": "url",
+      "source_url": "https://www.make-it-in-germany.com/en/living-in-germany/learn-german/knowledge",
+      "coverage_start": "2026-09-26",
+      "coverage_end": "2026-09-26",
+      "records_processed": 1,
+      "coverage_complete": false
+    },
+    {
+      "source_id": "src_recognition",
+      "source_name": "Federal immigration FAQ",
+      "source_type": "url",
+      "source_url": "https://www.make-it-in-germany.com/en/service/faq",
+      "coverage_start": "2026-09-26",
+      "coverage_end": "2026-09-26",
+      "records_processed": 1,
+      "coverage_complete": false
+    },
+    {
+      "source_id": "src_skilled_embassy",
+      "source_name": "German Embassy Tehran qualified worker visa checklist",
+      "source_type": "url",
+      "source_url": "https://teheran.diplo.de/ir-de/02-service/2712070-2712070",
+      "coverage_start": "2026-09-26",
+      "coverage_end": "2026-09-26",
+      "records_processed": 1,
+      "coverage_complete": false
+    }
+  ],
+  "quality_control": {
+    "full_sources_processed": false,
+    "reply_chains_considered": true,
+    "duplicates_merged": true,
+    "contradictions_checked": true,
+    "resolutions_checked": true,
+    "country_scope_checked": true,
+    "route_scope_checked": true,
+    "institution_scope_checked": true,
+    "correlated_penalties_checked": true
+  },
+  "watchlist": [
+    {
+      "watch_id": "watch_de_question_iran_access",
+      "country": "Germany",
+      "topic": "Current opportunity card application access from Iran",
+      "reason": "The 2026 community reply says not yet, and a 2025 thread also reports access restrictions. No current official authority source was checked in this source audit.",
+      "current_evidence": "Messages 2594, 2595, and dated earlier replies 980 and 983 are present in the original export.",
+      "what_would_confirm_it": "Current German mission or official application portal guidance naming the opportunity card application channel from Iran.",
+      "last_checked": "2026-09-26"
+    },
+    {
+      "watch_id": "watch_de_skilled_case_scope",
+      "country": "Germany",
+      "topic": "Skilled-worker case scope and official requirements",
+      "reason": "The thread root confirms the skilled-worker route, and message 2041 describes one applicant case. That experience does not establish general requirements.",
+      "current_evidence": "Messages 2020, 2031, 2036, and 2041 are present in the original export.",
+      "what_would_confirm_it": "Current official skilled-worker route guidance on qualification recognition, work history, and language requirements for the relevant applicant scope.",
+      "last_checked": "2026-09-26"
+    },
+    {
+      "watch_id": "watch_de_document_answers",
+      "country": "Germany",
+      "topic": "Opportunity card document requirements",
+      "reason": "Message 2290 answers four questions as community advice, but gives no official source.",
+      "current_evidence": "Messages 2285 and 2290 are present in the original export.",
+      "what_would_confirm_it": "Current official checklist for the relevant German mission and applicant circumstances.",
+      "last_checked": "2026-09-26"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src_04111d0c166dc7286dbac3e9b70d7fa9",
+      "source_name": "Federal immigration FAQ",
+      "source_family": "German Federal Government Make it in Germany",
+      "public": true,
+      "source_url": "https://www.make-it-in-germany.com/en/service/faq",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "src_04fd13d22aa3c567a01dd1393ed1099a",
+      "source_name": "German Embassy Tehran national visas",
+      "source_family": "German Federal Foreign Office",
+      "public": true,
+      "source_url": "https://teheran.diplo.de/ir-de/02-service/2403868-2403868",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "src_4d1dc2283cf3bff9e901cabbcb02c20d",
+      "source_name": "Federal guide to visa language requirements",
+      "source_family": "German Federal Government Make it in Germany",
+      "public": true,
+      "source_url": "https://www.make-it-in-germany.com/en/living-in-germany/learn-german/knowledge",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "src_58b90ff40a974614ffdb33a9f3142586",
+      "source_name": "Make it in Germany opportunity card FAQ",
+      "source_family": "German Federal Government Make it in Germany",
+      "public": true,
+      "source_url": "https://www.make-it-in-germany.com/en/visa-residence/opportunity-card/questions-answers",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "src_66e4d2e5bf8ab8740099e0f8b7a2aa38",
+      "source_name": "German Embassy Tehran qualified worker visa checklist",
+      "source_family": "German Federal Foreign Office",
+      "public": true,
+      "source_url": "https://teheran.diplo.de/ir-de/02-service/2712070-2712070",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "src_72a57cabbc4918123ce42770807b775e",
+      "source_name": "Federal work visa for qualified professionals",
+      "source_family": "German Federal Government Make it in Germany",
+      "public": true,
+      "source_url": "https://www.make-it-in-germany.com/en/visa-residence/types/work-qualified-professionals",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "src_b75a241833fc844f08a1d30563408290",
+      "source_name": "Germany migration Telegram export",
+      "source_family": "germany-migration-telegram-export",
+      "public": false,
+      "source_url": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "src_d9f2008a688550afee99f8cc9cf8afd6",
+      "source_name": "Make it in Germany opportunity card",
+      "source_family": "German Federal Government Make it in Germany",
+      "public": true,
+      "source_url": "https://www.make-it-in-germany.com/en/visa-residence/opportunity-card/job-search",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evd_04248a177d29e4b2da02b5323eb7f0d6",
+      "source_id": "src_4d1dc2283cf3bff9e901cabbcb02c20d",
+      "source_url": "https://www.make-it-in-germany.com/en/living-in-germany/learn-german/knowledge",
+      "retrieved_at": "2026-09-26T07:18:00Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:e3f342e190c45e10c26ccde896ee20fb26fdd900010b438cdacb3cb8d3af9bb6",
+      "source_type": "official_government",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "German Federal Government Make it in Germany",
+      "copy_risk": "low",
+      "evidence_summary": "The federal guide lists no general legal German-language threshold for the qualified-professional work visa, while noting additional profession, recognition, and mission requirements.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_04985de079696aa5d10b0781b22ec577",
+      "source_id": "src_b75a241833fc844f08a1d30563408290",
+      "source_url": null,
+      "retrieved_at": "2026-09-26T06:51:07Z",
+      "published_at": null,
+      "event_date": "2026-09-12",
+      "content_hash": "sha256:dd46580b96671111e9179093d081b8f90cd2eb1cf6dc3d47093159e3bc6a4003",
+      "source_type": "unknown",
+      "authority": "unknown",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "asker_a",
+      "copy_risk": "low",
+      "evidence_summary": "Message 2594 asks whether the German opportunity card can be applied for from Iran.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_14f123a3003ee60f4fa8d9c74c6f7d66",
+      "source_id": "src_58b90ff40a974614ffdb33a9f3142586",
+      "source_url": "https://www.make-it-in-germany.com/en/visa-residence/opportunity-card/questions-answers",
+      "retrieved_at": "2026-09-26T07:04:00Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:93056af5ddbb5e8a3fff054f397e312dcf6dfff9dea20994270a2130ca463ccc",
+      "source_type": "official_government",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "German Federal Government Make it in Germany",
+      "copy_risk": "low",
+      "evidence_summary": "The federal FAQ requires positive ratings for both the degree and institution in Anabin, or a ZAB comparability statement.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_1f809613a5541689b92f4e3eb263b64b",
+      "source_id": "src_b75a241833fc844f08a1d30563408290",
+      "source_url": null,
+      "retrieved_at": "2026-09-26T06:51:07Z",
+      "published_at": null,
+      "event_date": "2026-06-19",
+      "content_hash": "sha256:9337d71fffd424cf9f04a3c74501a80541319a28d8e83ebbbdc6ab5cf151d560",
+      "source_type": "unknown",
+      "authority": "unknown",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "asker_c",
+      "copy_risk": "low",
+      "evidence_summary": "Message 2036 asks three skilled-worker questions about qualification recognition, work or insurance history, and language evidence. Message 2020 confirms the route of the surrounding thread.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_39dfa1b38c941c1339d5198048d21240",
+      "source_id": "src_66e4d2e5bf8ab8740099e0f8b7a2aa38",
+      "source_url": "https://teheran.diplo.de/ir-de/02-service/2712070-2712070",
+      "retrieved_at": "2026-09-26T12:02:00Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:d373551a4f6b4aae080bfa29585d40fa39e2c50891253e1598d91b26cc159d63",
+      "source_type": "official_embassy_or_consulate",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "German Federal Foreign Office",
+      "copy_risk": "low",
+      "evidence_summary": "The Tehran embassy checklist asks for evidence of prior professional activities and career, giving salary and social insurance records as examples. It does not state a universal minimum work-experience duration for this visa.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_4880c5d73bc6e27e5a940f2bc99ec4b7",
+      "source_id": "src_b75a241833fc844f08a1d30563408290",
+      "source_url": null,
+      "retrieved_at": "2026-09-26T06:51:07Z",
+      "published_at": null,
+      "event_date": "2025-01-04",
+      "content_hash": "sha256:8b94885b0c97c076eb4112e601676f08277c09258f0f54016e49f42478a82a93",
+      "source_type": "unknown",
+      "authority": "unknown",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "asker_b",
+      "copy_risk": "low",
+      "evidence_summary": "Message 974 asks what to do after an opportunity card self-check produced a score and notification email.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_48f25f3b3f38ef6b7cc681632bc9bec0",
+      "source_id": "src_04111d0c166dc7286dbac3e9b70d7fa9",
+      "source_url": "https://www.make-it-in-germany.com/en/service/faq",
+      "retrieved_at": "2026-09-26T07:18:00Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:0876fbf52c7f9d4731066e7f7c04df3c018d25aeebeb443b215cdda116ee7bb7",
+      "source_type": "official_government",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "German Federal Government Make it in Germany",
+      "copy_risk": "low",
+      "evidence_summary": "The federal FAQ distinguishes Anabin assessment for non-regulated academic degrees, ZAB when the degree is unlisted or not clearly comparable, and profession-specific recognition for regulated or vocational work.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_5223f2bd305cb381337f245540bd9292",
+      "source_url": null,
+      "published_at": null,
+      "authority": "unknown",
+      "supports_or_contradicts": "supports",
+      "copy_risk": "low",
+      "supersedes": null,
+      "source_id": "src_b75a241833fc844f08a1d30563408290",
+      "retrieved_at": "2026-09-26T06:51:07Z",
+      "event_date": "2025-06-03",
+      "content_hash": "sha256:735d57f815b61f97d608e1d403d5fc1ed9f648212add3426c071345bcadfcc41",
+      "source_type": "community_opinion",
+      "direct_or_second_hand": "direct",
+      "independence_group": "respondent_work",
+      "evidence_summary": "Message 1328 offers community advice on Turkey residence and qualification alignment; no official source is given.",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_545d18b564ca602ed9c26850a8259bcd",
+      "source_id": "src_66e4d2e5bf8ab8740099e0f8b7a2aa38",
+      "source_url": "https://teheran.diplo.de/ir-de/02-service/2712070-2712070",
+      "retrieved_at": "2026-09-26T12:02:00Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:50612158847d40475ecd4e6a8188d7f8deae07daaa55b2c7ff4570f4ee7e14d6",
+      "source_type": "official_embassy_or_consulate",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "German Federal Foreign Office",
+      "copy_risk": "low",
+      "evidence_summary": "The embassy requires matching Anabin degree and institution entries for non-regulated academic work, ZAB when either is absent, and a competent recognition decision or licence for regulated or vocational work.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_706536a7904004cef1cbb08f27b03b9f",
+      "source_url": null,
+      "published_at": null,
+      "authority": "unknown",
+      "supports_or_contradicts": "supports",
+      "copy_risk": "low",
+      "supersedes": null,
+      "source_id": "src_b75a241833fc844f08a1d30563408290",
+      "retrieved_at": "2026-09-26T06:51:07Z",
+      "event_date": "2025-01-04",
+      "content_hash": "sha256:9c062469e0e6e208a1ad67ff3468dd92d6bdc8180d992e45a82be7c252452014",
+      "source_type": "community_opinion",
+      "direct_or_second_hand": "direct",
+      "independence_group": "respondent_selfcheck",
+      "evidence_summary": "Message 976 describes the self-check as a personal points assessment, without official verification.",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_7d682e91f0f762503088b5dfaadb4f8e",
+      "source_id": "src_d9f2008a688550afee99f8cc9cf8afd6",
+      "source_url": "https://www.make-it-in-germany.com/en/visa-residence/opportunity-card/job-search",
+      "retrieved_at": "2026-09-26T07:04:00Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:c8cf80f47b1df012ef271357c033297a133ca16d44a0eae3075ee0d2ab549bed",
+      "source_type": "official_government",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "German Federal Government Make it in Germany",
+      "copy_risk": "low",
+      "evidence_summary": "The federal portal awards points for post-graduation professional experience related to formal qualification.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_7ef08b0890be67c9fb13b237efc50e4b",
+      "source_id": "src_b75a241833fc844f08a1d30563408290",
+      "source_url": null,
+      "retrieved_at": "2026-09-26T06:51:07Z",
+      "published_at": null,
+      "event_date": "2026-07-20",
+      "content_hash": "sha256:88856dd7c6b4270fb0dbe23b8f49102193f0fb4d0bba827bbad5953e184fc8ee",
+      "source_type": "unknown",
+      "authority": "unknown",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "asker_d",
+      "copy_risk": "low",
+      "evidence_summary": "Message 2285 asks four opportunity card questions about Anabin specialization, degree choice, legalization scope, and academic transcripts.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_7fcc75dad8c4ba6831eec60a9e556929",
+      "source_url": null,
+      "published_at": null,
+      "authority": "unknown",
+      "supports_or_contradicts": "supports",
+      "copy_risk": "low",
+      "supersedes": null,
+      "source_id": "src_b75a241833fc844f08a1d30563408290",
+      "retrieved_at": "2026-09-26T06:51:07Z",
+      "event_date": "2026-09-12",
+      "content_hash": "sha256:b0cb22195095cd63d45f9bb669c6e4cae3a1b33229f86c82b16c716ba2737b59",
+      "source_type": "community_opinion",
+      "direct_or_second_hand": "direct",
+      "independence_group": "respondent_iran",
+      "evidence_summary": "Message 2595 gives a brief community reply saying application from Iran was not possible then; it cites no current official authority.",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_7feea07b2e210db08d2aaa38260dcf7a",
+      "source_id": "src_72a57cabbc4918123ce42770807b775e",
+      "source_url": "https://www.make-it-in-germany.com/en/visa-residence/types/work-qualified-professionals",
+      "retrieved_at": "2026-09-26T07:18:00Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:91fc2e74a75c71fa455a0a557e7da96826677f6d9f46476b30c09236e1de1b3b",
+      "source_type": "official_government",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "German Federal Government Make it in Germany",
+      "copy_risk": "low",
+      "evidence_summary": "The federal guide lists recognised or comparable qualifications among requirements for the qualified-professional work visa; it does not present insurance history as a general prerequisite.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_8b01035b8c9018d06d4867b754a70b96",
+      "source_id": "src_66e4d2e5bf8ab8740099e0f8b7a2aa38",
+      "source_url": "https://teheran.diplo.de/ir-de/02-service/2712070-2712070",
+      "retrieved_at": "2026-09-26T12:02:00Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:ba1673338758d34ffadd3af818c0cad25cb5481ef7e9bc64ef0df20bf5286090",
+      "source_type": "official_embassy_or_consulate",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "German Federal Foreign Office",
+      "copy_risk": "low",
+      "evidence_summary": "The Tehran embassy asks for evidence of existing German or English ability: employer confirmation, certificates where needed, or an employer explanation of how work can begin without foreign-language skills.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_9637b6aedfcce3d60260d433304980c1",
+      "source_id": "src_04fd13d22aa3c567a01dd1393ed1099a",
+      "source_url": "https://teheran.diplo.de/ir-de/02-service/2403868-2403868",
+      "retrieved_at": "2026-09-26T07:04:00Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:f953d0892adad34c88d47f9ac088f83662492831a925abdb7b3923346c47e607",
+      "source_type": "official_embassy_or_consulate",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "German Federal Foreign Office",
+      "copy_risk": "low",
+      "evidence_summary": "The Tehran embassy lists the Opportunity Card under its national-visa Other waitlist; this documents an application channel, not appointment availability or visa approval.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_9dcd4551014cc25ea3718544735ec1a7",
+      "source_url": null,
+      "published_at": null,
+      "authority": "unknown",
+      "supports_or_contradicts": "supports",
+      "copy_risk": "low",
+      "supersedes": null,
+      "source_id": "src_b75a241833fc844f08a1d30563408290",
+      "retrieved_at": "2026-09-26T06:51:07Z",
+      "event_date": "2026-06-18",
+      "content_hash": "sha256:095742e9fc45af100c8f27e30238221d7b2030ea69e2e74e734dabcc722fc70c",
+      "source_type": "first_hand_applicant_experience",
+      "direct_or_second_hand": "direct",
+      "independence_group": "respondent_skilled_case",
+      "evidence_summary": "Message 2020 reports receipt of a skilled-worker visa from the German mission in Italy. This identifies the route for the later thread.",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_a0077c69f0a174b7ae025a09b5b6bcfd",
+      "source_url": null,
+      "published_at": null,
+      "authority": "unknown",
+      "supports_or_contradicts": "supports",
+      "copy_risk": "low",
+      "supersedes": null,
+      "source_id": "src_b75a241833fc844f08a1d30563408290",
+      "retrieved_at": "2026-09-26T06:51:07Z",
+      "event_date": "2025-01-04",
+      "content_hash": "sha256:f872ead7adb17ce550e36e4e572af7a93881bd03cd998c66e4f8cd17b9ce66ba",
+      "source_type": "community_opinion",
+      "direct_or_second_hand": "direct",
+      "independence_group": "respondent_portal",
+      "evidence_summary": "Message 980 points to an official application portal but reports that applying from Iran was unavailable at that time; this is a dated community report.",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_a30d33ec1de35fad81a6cee7c09ddc00",
+      "source_url": null,
+      "published_at": null,
+      "authority": "unknown",
+      "supports_or_contradicts": "supports",
+      "copy_risk": "low",
+      "supersedes": null,
+      "source_id": "src_b75a241833fc844f08a1d30563408290",
+      "retrieved_at": "2026-09-26T06:51:07Z",
+      "event_date": "2026-07-20",
+      "content_hash": "sha256:4f5c856b5ea93730db46328266a6e3ab3b336e1f13fce00c93ffea1de6babffa",
+      "source_type": "community_opinion",
+      "direct_or_second_hand": "direct",
+      "independence_group": "respondent_documents",
+      "evidence_summary": "Message 2290 offers community answers to the four document questions in message 2285, without a current official source.",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_a8ba10f2f1e26f72f2a606c4e888c22e",
+      "source_id": "src_b75a241833fc844f08a1d30563408290",
+      "source_url": null,
+      "retrieved_at": "2026-09-26T06:51:07Z",
+      "published_at": null,
+      "event_date": "2025-06-03",
+      "content_hash": "sha256:509bf142e8969c61b94eacf149dfc6b4d9ed18d6124c89601a015bd9960bca65",
+      "source_type": "second_hand_report",
+      "authority": "unknown",
+      "direct_or_second_hand": "second_hand",
+      "supports_or_contradicts": "supports",
+      "independence_group": "asker_e",
+      "copy_risk": "low",
+      "evidence_summary": "Message 1327 asks on behalf of a person living in Turkey whether unrelated work experience can support an opportunity card application.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_bd4cdce463cca7f4a07100771d9f25c4",
+      "source_id": "src_d9f2008a688550afee99f8cc9cf8afd6",
+      "source_url": "https://www.make-it-in-germany.com/en/visa-residence/opportunity-card/job-search",
+      "retrieved_at": "2026-09-26T07:04:00Z",
+      "published_at": null,
+      "event_date": null,
+      "content_hash": "sha256:24ba26a630440ca6ed1241e1d051004096e1d3442498053e7eb4fc072d609ef0",
+      "source_type": "official_government",
+      "authority": "primary",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "German Federal Government Make it in Germany",
+      "copy_risk": "low",
+      "evidence_summary": "The federal portal describes self-check as a way to assess eligibility to apply, rather than the application itself.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_eacf33bf78e2d2f27122a35dd76b769f",
+      "source_url": null,
+      "published_at": null,
+      "authority": "unknown",
+      "supports_or_contradicts": "supports",
+      "copy_risk": "low",
+      "supersedes": null,
+      "source_id": "src_b75a241833fc844f08a1d30563408290",
+      "retrieved_at": "2026-09-26T06:51:07Z",
+      "event_date": "2026-06-18",
+      "content_hash": "sha256:e9798ac0d21cb3e0feb2a173b82db62f351060262a7f992de9156d78e072c1ba",
+      "source_type": "first_hand_applicant_experience",
+      "direct_or_second_hand": "direct",
+      "independence_group": "respondent_skilled_case",
+      "evidence_summary": "Message 2031 describes an Italian master degree and Anabin listing in the skilled-worker thread; it is the parent of message 2036.",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "evd_f5de7664430ed5eb52431f1dfcfe9fe7",
+      "source_url": null,
+      "published_at": null,
+      "authority": "unknown",
+      "supports_or_contradicts": "supports",
+      "copy_risk": "low",
+      "supersedes": null,
+      "source_id": "src_b75a241833fc844f08a1d30563408290",
+      "retrieved_at": "2026-09-26T06:51:07Z",
+      "event_date": "2026-06-19",
+      "content_hash": "sha256:b62a2819fad75470f5101f1edd6ddf1baecfa6bd50466c023ce5bf2c2460a44f",
+      "source_type": "first_hand_applicant_experience",
+      "direct_or_second_hand": "direct",
+      "independence_group": "respondent_skilled_case",
+      "evidence_summary": "Message 2041 reports that one skilled-worker applicant supplied Anabin records and was not asked for work, insurance, or language evidence; this is one case, not a general rule.",
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    }
+  ],
+  "signals": [],
+  "questions": [
+    {
+      "id": "qst_05261716e14dfff30d92a341cdf2fbde",
+      "canonical_en": "Is employment or insurance history required for the German skilled worker route?",
+      "canonical_fa": "آیا برای مسیر نیروی متخصص آلمان، سابقهٔ کار یا سوابق بیمه لازم است؟",
+      "variants": [
+        "به سابقه کاری یا سوابق بیمه هم داشتن برای اسکیلد ورکر یا مهم نیست؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "skilled_worker"
+      ],
+      "topics": [
+        "work_experience",
+        "insurance_history"
+      ],
+      "process_stages": [
+        "skills_assessment",
+        "visa_application"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "partially_answered",
+      "evidence_ids": [
+        "evd_1f809613a5541689b92f4e3eb263b64b"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-06-19",
+        "last_seen": "2026-06-19",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "answer_links": [
+        {
+          "artifact_id": "clm_768b76b601415668d27345cb012ef918",
+          "relation": "partially_answers"
+        }
+      ],
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "qst_16aa91029d2beba6551cb7a7f36ebcdf",
+      "canonical_en": "Is language evidence required for the German skilled worker route, and which certificate should be presented?",
+      "canonical_fa": "آیا برای مسیر نیروی متخصص آلمان مدرک زبان لازم است و چه مدرکی باید ارائه شود؟",
+      "variants": [
+        "مدرک زبان چطور براشون اداعه دادن مدرک زبان مهم بود و شما چی اراعه دادید؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "skilled_worker"
+      ],
+      "topics": [
+        "language_evidence"
+      ],
+      "process_stages": [
+        "visa_application"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "official",
+      "evidence_ids": [
+        "evd_1f809613a5541689b92f4e3eb263b64b"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-06-19",
+        "last_seen": "2026-06-19",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "answer_links": [
+        {
+          "artifact_id": "clm_8245eb5f8d950dce8de95ff67f2e5927",
+          "relation": "answers"
+        }
+      ],
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "qst_17b48540d670fd552ec96ef472539596",
+      "canonical_en": "Must academic transcripts be translated and legalized for an opportunity card application?",
+      "canonical_fa": "آیا برای کارت فرصت ترجمه و لگالایز ریزنمرات هم لازم است؟",
+      "variants": [
+        "باید ریز نمرات هم ترجمه و لگال کرد؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "transcript_legalization"
+      ],
+      "process_stages": [
+        "visa_application"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "unresolved",
+      "evidence_ids": [
+        "evd_7ef08b0890be67c9fb13b237efc50e4b"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-07-20",
+        "last_seen": "2026-07-20",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "qst_211e8054cafb980a45bfaddc5e708715",
+      "canonical_en": "Can someone apply for the German opportunity card from Iran?",
+      "canonical_fa": "آیا می‌توان برای کارت فرصت آلمان از داخل ایران درخواست داد؟",
+      "variants": [
+        "کارت شانس را میشه از ایران هم اقدام کرد یا خیر."
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "application_from_iran"
+      ],
+      "process_stages": [
+        "visa_application"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "official",
+      "evidence_ids": [
+        "evd_04985de079696aa5d10b0781b22ec577"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-09-12",
+        "last_seen": "2026-09-12",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "answer_links": [
+        {
+          "artifact_id": "clm_39b87511b54c8b8dbc006231a4369f01",
+          "relation": "answers"
+        }
+      ],
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "qst_304ed73a925386a38511ee044b16af44",
+      "canonical_en": "For the German skilled worker route, is Anabin alone sufficient or is ZAB or occupational recognition also needed?",
+      "canonical_fa": "برای مسیر نیروی متخصص آلمان، آیا آنابین به‌تنهایی کافی است یا تأیید ZAB یا معادل‌سازی شغلی هم لازم است؟",
+      "variants": [
+        "فقط آنابین اراعه دادید که اسکیل ورکر حساب شدید یا نیاز به زاب یا مثلا آنرکنونگ شغلی داشتید در آلمان؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "skilled_worker"
+      ],
+      "topics": [
+        "qualification_recognition"
+      ],
+      "process_stages": [
+        "skills_assessment"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "official",
+      "evidence_ids": [
+        "evd_1f809613a5541689b92f4e3eb263b64b"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-06-19",
+        "last_seen": "2026-06-19",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "answer_links": [
+        {
+          "artifact_id": "clm_e32bb1751f60478d62b2f8ebcaf2550d",
+          "relation": "answers"
+        }
+      ],
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "qst_6a26f27043be8d8866517574cfaab11a",
+      "canonical_en": "Can work experience in a field unrelated to the qualification support a German opportunity card application?",
+      "canonical_fa": "آیا سابقهٔ کار در حوزه‌ای نامرتبط با مدرک تحصیلی برای کارت فرصت آلمان قابل استفاده است؟",
+      "variants": [
+        "اگر مدرک تحصیلی و سابقه کار مرتبط نباشه  امکان گرفتن این ویزا هست ؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "work_experience",
+        "qualification_alignment"
+      ],
+      "process_stages": [
+        "points_assessment"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "partially_answered",
+      "evidence_ids": [
+        "evd_a8ba10f2f1e26f72f2a606c4e888c22e"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2025-06-03",
+        "last_seen": "2025-06-03",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "answer_links": [
+        {
+          "artifact_id": "clm_e09a5bd8664872d9d1adf66d6397f203",
+          "relation": "partially_answers"
+        }
+      ],
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "qst_8b89acac79869b700b7b4f1cd8f218a6",
+      "canonical_en": "Does choosing a bachelor or master degree make a difference for an opportunity card application?",
+      "canonical_fa": "آیا اقدام برای کارت فرصت با مدرک کارشناسی یا کارشناسی ارشد تفاوتی دارد؟",
+      "variants": [
+        "با مدرک تحصیلی لیسانس اقدام کنم بهتر هست یا ارشد؟ آیا تفاوتی دارد؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "degree_choice"
+      ],
+      "process_stages": [
+        "points_assessment"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "unresolved",
+      "evidence_ids": [
+        "evd_7ef08b0890be67c9fb13b237efc50e4b"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-07-20",
+        "last_seen": "2026-07-20",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "qst_9ea8de6b7504f903fa5b3dcb4a57310c",
+      "canonical_en": "Does completing the opportunity card self-check and receiving a score and email start an application, and what is the next step?",
+      "canonical_fa": "آیا تکمیل خودارزیابی کارت فرصت و دریافت امتیاز و ایمیل به معنی ثبت درخواست است و گام بعدی چیست؟",
+      "variants": [
+        "الان باید کاری انجام بدم یا منتظر ایمله دیگه ای باشم؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "self_check",
+        "application_step"
+      ],
+      "process_stages": [
+        "points_assessment",
+        "visa_application"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "official",
+      "evidence_ids": [
+        "evd_4880c5d73bc6e27e5a940f2bc99ec4b7"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2025-01-04",
+        "last_seen": "2025-01-04",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "answer_links": [
+        {
+          "artifact_id": "clm_13ef4fdaab0ef72811277891ad7954a2",
+          "relation": "answers"
+        }
+      ],
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "qst_b530e6ed80ee3b3da4c16d8b4aa20917",
+      "canonical_en": "If the university and field appear in Anabin but the specialization does not, is ZAB required for the opportunity card?",
+      "canonical_fa": "اگر دانشگاه و رشته در آنابین ثبت شده اما گرایش ثبت نشده باشد، آیا برای کارت فرصت تأیید ZAB لازم است؟",
+      "variants": [
+        "در این صورت باید zab بگیرم؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "qualification_recognition",
+        "anabin_zab"
+      ],
+      "process_stages": [
+        "skills_assessment"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "partially_answered",
+      "evidence_ids": [
+        "evd_7ef08b0890be67c9fb13b237efc50e4b"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-07-20",
+        "last_seen": "2026-07-20",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "answer_links": [
+        {
+          "artifact_id": "clm_748d8083d932be0235342a4e284f69cb",
+          "relation": "partially_answers"
+        }
+      ],
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "qst_cad2045f8511716b781f8a9d4d0eb0d1",
+      "canonical_en": "For an opportunity card application, must all education levels be legalized or only the degree used to apply?",
+      "canonical_fa": "برای کارت فرصت باید همهٔ مقاطع تحصیلی لگالایز شوند یا فقط مدرکی که با آن اقدام می‌شود؟",
+      "variants": [
+        "برای لگالایز کردن مدارک تحصیلی باید همه مقاطع لگال کرد یا فقط مقطعی که میخوایم باهاش اقدام کنیم؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "document_legalization"
+      ],
+      "process_stages": [
+        "visa_application"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "unresolved",
+      "evidence_ids": [
+        "evd_7ef08b0890be67c9fb13b237efc50e4b"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-07-20",
+        "last_seen": "2026-07-20",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    }
+  ],
+  "academic_opportunities": [],
+  "lived_experiences": [],
+  "route_claims": [
+    {
+      "id": "clm_13ef4fdaab0ef72811277891ad7954a2",
+      "country_code": "DEU",
+      "routes": [
+        "opportunity_card"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": "visa_application",
+      "statement_en": "A positive Opportunity Card self-check indicates that the person may apply; the self-check itself is not a visa application. The German Embassy in Tehran lists an Opportunity Card national-visa waitlist.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_9637b6aedfcce3d60260d433304980c1",
+        "evd_bd4cdce463cca7f4a07100771d9f25c4"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-26",
+        "last_seen": "2026-09-26",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "clm_39b87511b54c8b8dbc006231a4369f01",
+      "country_code": "DEU",
+      "routes": [
+        "opportunity_card"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": "visa_application",
+      "statement_en": "The German Embassy in Tehran lists the Opportunity Card in its national visa Other waitlist for applicants resident in Iran; this is a registration route, not a guarantee of an appointment or visa.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_9637b6aedfcce3d60260d433304980c1"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-26",
+        "last_seen": "2026-09-26",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "clm_748d8083d932be0235342a4e284f69cb",
+      "country_code": "DEU",
+      "routes": [
+        "opportunity_card"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": "qualification_recognition",
+      "statement_en": "For an Opportunity Card based on a foreign university degree, the degree and institution should both have positive Anabin ratings; otherwise a ZAB Statement of Comparability is an alternative.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_14f123a3003ee60f4fa8d9c74c6f7d66"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-26",
+        "last_seen": "2026-09-26",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "clm_768b76b601415668d27345cb012ef918",
+      "country_code": "DEU",
+      "routes": [
+        "skilled_worker"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": "visa_application",
+      "statement_en": "The qualified-worker checklist of the embassy in Tehran requests prior professional activity and career evidence, including salary and social insurance records as examples; it does not set a universal minimum number of years of prior work.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_39dfa1b38c941c1339d5198048d21240"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-26",
+        "last_seen": "2026-09-26",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "clm_8245eb5f8d950dce8de95ff67f2e5927",
+      "country_code": "DEU",
+      "routes": [
+        "skilled_worker"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": "visa_application",
+      "statement_en": "For the qualified-worker work visa, the Tehran embassy asks for proof of German or English ability through employer confirmation, certificates where applicable, or an employer explanation when foreign-language skills are absent; no single certificate is universally specified.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_8b01035b8c9018d06d4867b754a70b96"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-26",
+        "last_seen": "2026-09-26",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "clm_bb92fde5ae572257f200a8ae9ebe9885",
+      "country_code": "DEU",
+      "routes": [
+        "skilled_worker"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": "visa_application",
+      "statement_en": "For the work visa for qualified professionals, federal guidance states no general statutory German-language requirement; regulated professions, recognition and mission document rules may impose additional language evidence.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_04248a177d29e4b2da02b5323eb7f0d6"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-26",
+        "last_seen": "2026-09-26",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "clm_c9b940a42f38a32a517d3f1a6a5468af",
+      "country_code": "DEU",
+      "routes": [
+        "skilled_worker"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": "visa_application",
+      "statement_en": "The qualified-professional work visa requires a recognised or comparable qualification and a qualified job offer. This federal overview does not establish a universal prior-work or insurance-history requirement.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_7feea07b2e210db08d2aaa38260dcf7a"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-26",
+        "last_seen": "2026-09-26",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "clm_dcfde01be9d96ec02e2c864785a95dab",
+      "country_code": "DEU",
+      "routes": [
+        "skilled_worker"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": "qualification_recognition",
+      "statement_en": "For a non-regulated academic occupation, comparability can be shown through positive Anabin assessment of the degree and institution; an unlisted or unclear degree needs a ZAB Statement of Comparability. Regulated and vocational occupations have separate recognition procedures.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_48f25f3b3f38ef6b7cc681632bc9bec0"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-26",
+        "last_seen": "2026-09-26",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "clm_e09a5bd8664872d9d1adf66d6397f203",
+      "country_code": "DEU",
+      "routes": [
+        "opportunity_card"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": "points_assessment",
+      "statement_en": "For the Opportunity Card points path, professional experience earns points only when it was gained after graduation and relates to the formal qualification.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_7d682e91f0f762503088b5dfaadb4f8e"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-26",
+        "last_seen": "2026-09-26",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    },
+    {
+      "id": "clm_e32bb1751f60478d62b2f8ebcaf2550d",
+      "country_code": "DEU",
+      "routes": [
+        "skilled_worker"
+      ],
+      "claim_type": "official_rule",
+      "process_stage": "qualification_recognition",
+      "statement_en": "For the Tehran qualified-worker visa, matching positive Anabin records for both degree and institution support non-regulated academic qualifications; if either is missing, a ZAB comparability statement is requested. Regulated or vocational work uses the competent recognition authority or professional licence.",
+      "opposing_evidence_ids": [],
+      "evidence_ids": [
+        "evd_545d18b564ca602ed9c26850a8259bcd"
+      ],
+      "lifecycle": {
+        "status": "active",
+        "first_seen": "2026-09-26",
+        "last_seen": "2026-09-26",
+        "last_verified": "2026-09-26",
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T12:03:00Z"
+      }
+    }
+  ]
+}
