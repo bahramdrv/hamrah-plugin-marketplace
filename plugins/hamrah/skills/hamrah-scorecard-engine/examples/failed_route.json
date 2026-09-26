@@ -39,7 +39,7 @@
             "source_title": "Residence Act section 20a",
             "checked_at": "2026-09-11",
             "claim_type": "immigration_requirement",
-            "source_authority": {"policy_version": "1.0.0", "classification": "primary", "rule_id": "de-opportunity-card-core"},
+            "source_authority": {"policy_version": "2.0.0", "classification": "primary", "rule_id": "de-opportunity-card-core"},
             "retrieved_at": "2026-09-11T00:00:00Z",
             "effective_from": "2024-06-01",
             "effective_until": null,

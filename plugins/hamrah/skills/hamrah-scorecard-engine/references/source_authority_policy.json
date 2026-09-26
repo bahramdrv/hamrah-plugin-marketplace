@@ -1,9 +1,15 @@
 {
-  "policy_version": "1.0.0",
-  "reviewed_at": "2026-09-25",
+  "policy_version": "2.0.0",
+  "reviewed_at": "2026-09-26",
+  "rule_formats": {
+    "exact": "Matches one claim: claim_type, requirement_id, claim_title, the result explanation, country_code, route_code, source_host and the exact decoded source_path.",
+    "host_path_prefix": "Matches any claim of one of claim_types in country_code ('*' for every country) when the source host equals source_host and the decoded path starts with source_path_prefix. Rules are tried in order; the first match wins.",
+    "requires": "A rule may require government_source_url (an HTTPS government link carried by the claim, on another host) and verified_at_within_freshness (a verification date whose age, measured with the versioned freshness policy for the claim's fact_type, is not stale and not in the future). A claim that fails a requirement stays unknown."
+  },
   "rules": [
     {
       "rule_id": "de-opportunity-card-core",
+      "match": "exact",
       "classification": "primary",
       "claim_type": "immigration_requirement",
       "country_code": "DEU",
@@ -16,7 +22,64 @@
       },
       "source_host": "www.gesetze-im-internet.de",
       "source_path": "/aufenthg_2004/__20a.html",
-      "authority_basis": "Federal Ministry of Justice publication of Residence Act section 20a"
+      "authority_basis": "Federal Ministry of Justice publication of Residence Act section 20a",
+      "reviewed_at": "2026-09-25"
+    },
+    {
+      "rule_id": "de-residence-act",
+      "match": "host_path_prefix",
+      "classification": "primary",
+      "claim_types": ["immigration_requirement", "financial_requirement"],
+      "country_code": "DEU",
+      "source_host": "www.gesetze-im-internet.de",
+      "source_path_prefix": "/aufenthg_2004/",
+      "authority_basis": "Official publication of the Residence Act (Aufenthaltsgesetz) by the Federal Ministry of Justice and the Federal Office of Justice; the statute itself sets German residence-title requirements.",
+      "reviewed_at": "2026-09-26"
+    },
+    {
+      "rule_id": "de-make-it-in-germany",
+      "match": "host_path_prefix",
+      "classification": "primary",
+      "claim_types": ["immigration_requirement", "financial_requirement"],
+      "country_code": "DEU",
+      "source_host": "www.make-it-in-germany.com",
+      "source_path_prefix": "/",
+      "authority_basis": "Make it in Germany is the Federal Government's official portal for skilled immigration, run for the Federal Ministries of Economic Affairs, Labour, and the Interior with the Federal Employment Agency.",
+      "reviewed_at": "2026-09-26"
+    },
+    {
+      "rule_id": "de-mission-tehran",
+      "match": "host_path_prefix",
+      "classification": "primary",
+      "claim_types": ["immigration_requirement", "financial_requirement"],
+      "country_code": "DEU",
+      "source_host": "teheran.diplo.de",
+      "source_path_prefix": "/",
+      "authority_basis": "Website of the German Embassy in Tehran (Federal Foreign Office), the mission that decides national visa applications filed in Iran.",
+      "reviewed_at": "2026-09-26"
+    },
+    {
+      "rule_id": "de-consular-services-portal",
+      "match": "host_path_prefix",
+      "classification": "primary",
+      "claim_types": ["immigration_requirement", "financial_requirement"],
+      "country_code": "DEU",
+      "source_host": "digital.diplo.de",
+      "source_path_prefix": "/",
+      "authority_basis": "The Federal Foreign Office's Consular Services Portal, through which German missions accept online national visa applications such as the Opportunity Card.",
+      "reviewed_at": "2026-09-26"
+    },
+    {
+      "rule_id": "visa-atlas-record",
+      "match": "host_path_prefix",
+      "classification": "trusted",
+      "claim_types": ["immigration_requirement", "financial_requirement"],
+      "country_code": "*",
+      "source_host": "visaatlas.org",
+      "source_path_prefix": "/",
+      "requires": ["government_source_url", "verified_at_within_freshness"],
+      "authority_basis": "Visa Atlas is a source-linked compilation, not an issuing authority (ADR 0005). Its records are trusted only when they link the government source and carry a current verification date; decisive requirements still need primary confirmation.",
+      "reviewed_at": "2026-09-26"
     }
   ]
 }

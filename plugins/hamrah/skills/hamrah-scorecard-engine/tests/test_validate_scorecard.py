@@ -64,7 +64,7 @@ def test_unknown_source_is_provisional_not_official_pass():
         requirement = route["official_eligibility"]["reasons"][0]
         requirement["result"] = "unknown"
         requirement["source_url"] = "https://unknown.example.org/admissions"
-        requirement["source_authority"] = {"policy_version": "1.0.0", "classification": "unknown", "rule_id": None}
+        requirement["source_authority"] = {"policy_version": "2.0.0", "classification": "unknown", "rule_id": None}
         route["practical_fit"]["usable_for_ranking"] = False
         data["portfolio_summary"]["viable_route_count"] = 0
         data["portfolio_summary"]["strongest_routes"] = []
@@ -85,15 +85,146 @@ def test_source_authority_metadata_and_dates_are_required():
     assert "needs effective_from" in result.stderr
 
 
-def test_authority_is_tied_to_exact_route_claim_and_url():
+def test_official_host_and_path_rule_confirms_any_requirement_it_states():
+    def other_section(data):
+        requirement_of(data).update(
+            requirement_id="opportunity_card_points",
+            title="Points for the Opportunity Card under Section 20b",
+            source_url="https://www.gesetze-im-internet.de/aufenthg_2004/__20b.html",
+            source_authority={"policy_version": "2.0.0", "classification": "primary", "rule_id": "de-residence-act"},
+        )
+    result = validate_variant(other_section)
+    assert result.returncode == 0, result.stderr
+
+
+VISA_ATLAS_RECORD = "https://visaatlas.org/visas/germany/opportunity-card"
+TRUSTED = {"policy_version": "2.0.0", "classification": "trusted", "rule_id": "visa-atlas-record"}
+
+
+def visa_atlas_requirement(data, **overrides):
+    requirement = dict(requirement_of(data))
+    requirement.update(
+        source_url=VISA_ATLAS_RECORD,
+        source_title="Visa Atlas: Germany Opportunity Card",
+        government_source_url="https://www.gesetze-im-internet.de/aufenthg_2004/__20a.html",
+        verified_at="2026-09-01",
+        source_authority=TRUSTED,
+    )
+    requirement.update(overrides)
+    return requirement
+
+
+def awaiting_confirmation(data):
+    route = data["route_scorecards"][0]
+    route["official_eligibility"]["reasons"] = [visa_atlas_requirement(data)]
+    route["official_eligibility"]["status"] = "POSSIBLE"
+    route["official_eligibility"]["assessment_kind"] = "awaiting_official_confirmation"
+    route["official_eligibility"]["awaiting_official_confirmation"] = [requirement_of(data)["title"]]
+
+
+def test_trusted_visa_atlas_record_alone_cannot_establish_official_pass():
+    def trusted_pass(data):
+        data["route_scorecards"][0]["official_eligibility"]["reasons"] = [visa_atlas_requirement(data)]
+    result = validate_variant(trusted_pass)
+    assert result.returncode != 0
+    assert "awaiting official confirmation" in result.stderr
+
+
+def test_trusted_visa_atlas_record_alone_is_possible_awaiting_official_confirmation():
+    result = validate_variant(awaiting_confirmation)
+    assert result.returncode == 0, result.stderr
+
+
+def test_trusted_visa_atlas_record_confirmed_at_primary_source_can_pass():
+    def confirmed(data):
+        reasons = data["route_scorecards"][0]["official_eligibility"]["reasons"]
+        reasons.insert(0, visa_atlas_requirement(data))
+    result = validate_variant(confirmed)
+    assert result.returncode == 0, result.stderr
+
+
+LACKS = "The applicant lacks evidence of secured livelihood for the Opportunity Card."
+
+
+def test_primary_source_that_contradicts_visa_atlas_decides_the_result():
+    def primary_met(data):
+        reasons = data["route_scorecards"][0]["official_eligibility"]["reasons"]
+        reasons.insert(0, visa_atlas_requirement(data, result="not_met", explanation=LACKS))
+    result = validate_variant(primary_met)
+    assert result.returncode == 0, result.stderr
+
+    def primary_not_met_reported_as_pass(data):
+        reasons = data["route_scorecards"][0]["official_eligibility"]["reasons"]
+        reasons[0].update(result="not_met", explanation=LACKS)
+        reasons.insert(0, visa_atlas_requirement(data, result="met"))
+    result = validate_variant(primary_not_met_reported_as_pass)
+    assert result.returncode != 0
+    assert "PASS conflicts with a not_met requirement" in result.stderr
+
+
+def test_trusted_not_met_alone_cannot_establish_official_fail():
+    def trusted_fail(data):
+        route = data["route_scorecards"][0]
+        route["official_eligibility"].update(
+            status="FAIL",
+            reasons=[visa_atlas_requirement(data, result="not_met", explanation=LACKS)],
+            blockers=[requirement_of(data)["title"]],
+        )
+        route["base_fit"]["components"]["eligibility_fit"]["score"] = 0
+        route["base_fit"]["score"] -= 28
+        route["practical_fit"]["score"] -= 28
+        route["practical_fit"]["usable_for_ranking"] = False
+        data["portfolio_summary"]["viable_route_count"] = 0
+        data["portfolio_summary"]["strongest_routes"] = []
+    result = validate_variant(trusted_fail)
+    assert result.returncode != 0
+    assert "FAIL needs a not_met requirement confirmed at a primary official source" in result.stderr
+
+
+def test_stale_or_unlinked_visa_atlas_record_is_unknown_and_keeps_the_route_provisional():
+    for overrides in (
+        {"government_source_url": None},
+        {"government_source_url": "https://visaatlas.org/sources/aufenthg"},
+        {"verified_at": None},
+        {"verified_at": "2025-01-01"},
+    ):
+        def claimed_trusted(data):
+            awaiting_confirmation(data)
+            requirement_of(data).update(overrides)
+        result = validate_variant(claimed_trusted)
+        assert result.returncode != 0, overrides
+        assert "source authority is unknown" in result.stderr
+
+        def provisional(data):
+            claimed_trusted(data)
+            route = data["route_scorecards"][0]
+            requirement_of(data).update(result="unknown", source_authority={"policy_version": "2.0.0", "classification": "unknown", "rule_id": None})
+            route["official_eligibility"].update(assessment_kind="provisional", awaiting_official_confirmation=[])
+            route["official_eligibility"]["missing_requirements"] = [requirement_of(data)["title"]]
+            route["practical_fit"]["usable_for_ranking"] = False
+            data["portfolio_summary"]["viable_route_count"] = 0
+            data["portfolio_summary"]["strongest_routes"] = []
+        result = validate_variant(provisional)
+        assert result.returncode == 0, (overrides, result.stderr)
+
+        def provisional_ranked(data):
+            provisional(data)
+            data["route_scorecards"][0]["practical_fit"]["usable_for_ranking"] = True
+        result = validate_variant(provisional_ranked)
+        assert result.returncode != 0
+        assert "unknown source authority cannot be ranked" in result.stderr
+
+
+def test_authority_is_scoped_to_country_claim_type_and_official_path():
     for change in (
-        lambda data: data["route_scorecards"][0]["official_eligibility"]["reasons"][0].update(requirement_id="unrelated-requirement"),
-        lambda data: data["route_scorecards"][0]["official_eligibility"]["reasons"][0].update(title="University tuition is guaranteed"),
-        lambda data: data["route_scorecards"][0]["official_eligibility"]["reasons"][0].update(explanation="University tuition is guaranteed"),
-        lambda data: data["route_scorecards"][0]["route"].update(code="unrelated-route"),
-        lambda data: data["route_scorecards"][0]["official_eligibility"]["reasons"][0].update(source_url="https://www.gesetze-im-internet.de/aufenthg_2004/__20b.html"),
-        lambda data: data["route_scorecards"][0]["official_eligibility"]["reasons"][0].update(source_url="https://www.gesetze-im-internet.de/aufenthg_2004/__20a.html////////"),
-        lambda data: data["route_scorecards"][0]["official_eligibility"]["reasons"][0].update(source_url="https://www.gesetze-im-internet.de/aufenthg_2004/__20a.html?override=1"),
+        lambda data: requirement_of(data).update(claim_type="university_admission"),
+        lambda data: data["route_scorecards"][0]["country"].update(code="CAN"),
+        lambda data: requirement_of(data).update(source_url="https://www.gesetze-im-internet.de/bgb/__1.html"),
+        lambda data: requirement_of(data).update(source_url="https://www.gesetze-im-internet.de/aufenthg_2004/../bgb/__1.html"),
+        lambda data: requirement_of(data).update(source_url="https://www.gesetze-im-internet.de/aufenthg_2004/%2e%2e/bgb/__1.html"),
+        lambda data: requirement_of(data).update(source_url="https://www.gesetze-im-internet.de/aufenthg_2004/__20a.html////////"),
+        lambda data: requirement_of(data).update(source_url="https://www.gesetze-im-internet.de/aufenthg_2004/__20a.html?override=1"),
+        lambda data: requirement_of(data).update(source_url="https://kairo.diplo.de/ir-de/02-service"),
     ):
         result = validate_variant(change)
         assert result.returncode != 0, result.stderr
@@ -130,6 +261,7 @@ def test_impossible_or_malformed_dates_are_rejected():
         lambda data: requirement_of(data).update(retrieved_at="2026-09-11T00:00:00"),
         lambda data: requirement_of(data).update(effective_from="2025-02-29"),
         lambda data: requirement_of(data).update(effective_until="2026-9-30"),
+        lambda data: requirement_of(data).update(verified_at="2026-02-30"),
         lambda data: data.update(generated_at="2026-09-31T00:00:00Z"),
         lambda data: data["route_scorecards"][0]["official_eligibility"]["official_data_quality"].update(as_of="2026-04-31"),
     ]
@@ -203,9 +335,8 @@ def test_missing_date_or_unknown_fact_type_is_not_silently_current():
     def missing_date_claimed_current(data):
         route = data["route_scorecards"][0]
         route["official_eligibility"]["status"] = "POSSIBLE"
-        route["official_eligibility"]["assessment_kind"] = "provisional"
         requirement_of(data).update(result="unknown", retrieved_at=None, checked_at=None, freshness=freshness("current", 0),
-                                    source_authority={"policy_version": "1.0.0", "classification": "unknown", "rule_id": None})
+                                    source_authority={"policy_version": "2.0.0", "classification": "primary", "rule_id": "de-residence-act"})
         route["official_eligibility"]["missing_requirements"] = ["Secured livelihood evidence was not reviewed."]
         route["practical_fit"]["usable_for_ranking"] = False
         route["confidence"]["level"] = "medium"

@@ -42,14 +42,15 @@ def schema_validate(data, schema_path: Path):
         errors.append(f"schema: {loc}: {err.message}")
     return errors, warnings
 
-def official_source_errors(route, country_code, route_code, status, usable, label, authority_policy):
+def official_source_errors(route, country_code, route_code, status, usable, label, authority_policy, reference_date, freshness_policy):
     errors = []
     eligibility = route.get("official_eligibility", {})
     checked = []
+    classified = []
     has_unknown_authority = False
     for req in eligibility.get("reasons", []):
         req_label = f"{label}: requirement {req.get('requirement_id')!r}"
-        authority = classify_source(req, country_code, route_code, authority_policy)
+        authority = classify_source(req, country_code, route_code, authority_policy, reference_date, freshness_policy)
         if req.get("source_authority") != authority:
             errors.append(f"{req_label}: source_authority must match versioned source classification {authority}.")
         decisive = req.get("result") in {"met", "not_met"}
@@ -64,6 +65,18 @@ def official_source_errors(route, country_code, route_code, status, usable, labe
                     errors.append(f"{req_label}: checked requirement needs {field}.")
         if authority["classification"] == "unknown" and req.get("result") != "not_applicable":
             has_unknown_authority = True
+        classified.append((req, authority["classification"]))
+
+    # A primary check decides its requirement, overriding other checks of it (such as a contradicting
+    # Visa Atlas record). A decisive requirement with only trusted checks awaits official confirmation.
+    decisive = [(req, kind) for req, kind in classified if req.get("result") in {"met", "not_met"}]
+    confirmed = {req.get("requirement_id") for req, kind in decisive if kind == "primary"}
+    awaiting = [req for req, kind in decisive if kind == "trusted" and req.get("requirement_id") not in confirmed]
+    effective = [
+        req for req, kind in classified
+        if req.get("result") != "not_applicable" and (req.get("requirement_id") not in confirmed or kind == "primary")
+    ]
+    awaiting_ids = {req.get("requirement_id") for req in awaiting}
     if status in {"PASS", "FAIL"}:
         if eligibility.get("assessment_kind") != "official":
             errors.append(f"{label}: decisive eligibility needs assessment_kind='official'.")
@@ -71,17 +84,35 @@ def official_source_errors(route, country_code, route_code, status, usable, labe
             errors.append(f"{label}: decisive eligibility needs a checked authoritative requirement.")
         if has_unknown_authority:
             errors.append(f"{label}: unknown source authority cannot establish official {status}.")
-        if status == "PASS" and any(req.get("result") == "not_met" for req in checked):
+        if status == "PASS":
+            for requirement_id in sorted(awaiting_ids, key=str):
+                errors.append(
+                    f"{label}: requirement {requirement_id!r} rests only on trusted Visa Atlas evidence and is awaiting "
+                    "official confirmation at a primary source; it cannot establish official PASS."
+                )
+        if status == "PASS" and any(req.get("result") == "not_met" for req in effective):
             errors.append(f"{label}: PASS conflicts with a not_met requirement.")
         if status == "PASS" and (
             eligibility.get("missing_requirements")
-            or any(req.get("result") == "unknown" for req in eligibility.get("reasons", []))
+            or any(req.get("result") == "unknown" for req in effective)
         ):
             errors.append(f"{label}: PASS cannot leave mandatory requirements unverified.")
-        if status == "FAIL" and not any(req.get("result") == "not_met" for req in checked):
-            errors.append(f"{label}: FAIL needs an authoritative not_met requirement.")
+        if status == "FAIL" and not any(
+            req.get("result") == "not_met" and req.get("requirement_id") in confirmed for req in effective
+        ):
+            errors.append(f"{label}: FAIL needs a not_met requirement confirmed at a primary official source.")
     elif has_unknown_authority and eligibility.get("assessment_kind") != "provisional":
         errors.append(f"{label}: unknown source authority requires a provisional assessment.")
+    elif awaiting_ids and not has_unknown_authority:
+        if eligibility.get("assessment_kind") != "awaiting_official_confirmation":
+            errors.append(f"{label}: a decisive requirement with only trusted authority needs assessment_kind='awaiting_official_confirmation'.")
+        listed = eligibility.get("awaiting_official_confirmation")
+        listed = listed if isinstance(listed, list) else []
+        for req in awaiting:
+            if req.get("title") not in listed:
+                errors.append(f"{label}: requirement {req.get('requirement_id')!r} must be listed in awaiting_official_confirmation.")
+    if eligibility.get("assessment_kind") == "awaiting_official_confirmation" and not awaiting_ids:
+        errors.append(f"{label}: assessment_kind 'awaiting_official_confirmation' needs a decisive requirement with only trusted authority.")
     if has_unknown_authority and usable:
         errors.append(f"{label}: provisional assessment with unknown source authority cannot be ranked.")
 
@@ -93,8 +124,9 @@ REQUIREMENT_DATE_FIELDS = {
     "published_at": (True, True),
     "effective_from": (True, False),
     "effective_until": (True, False),
+    "verified_at": (True, True),
 }
-OBSERVATION_DATE_FIELDS = ("checked_at", "retrieved_at", "published_at")
+OBSERVATION_DATE_FIELDS = ("checked_at", "retrieved_at", "published_at", "verified_at")
 
 
 def iso_kind(allow_date, allow_date_time):
@@ -302,7 +334,9 @@ def semantic_validate(data):
         if dq.get("status") == "missing" and route.get("confidence", {}).get("level") == "high":
             errors.append(f"{label}: missing official data cannot have high confidence.")
 
-        errors.extend(official_source_errors(route, country_code, route_code, status, usable, label, authority_policy))
+        errors.extend(official_source_errors(
+            route, country_code, route_code, status, usable, label, authority_policy, reference_date, freshness_policy
+        ))
         freshness_errors, freshness_warnings = requirement_freshness(route, reference_date, usable, label, freshness_policy)
         errors.extend(freshness_errors)
         warnings.extend(freshness_warnings)

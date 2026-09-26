@@ -65,10 +65,11 @@ export const ASSESSMENT_TOOLS = [
     "Evaluate Source-Backed Route Eligibility",
     [
       "Deterministically aggregate explicit, source-backed official requirement checks for one route into PASS, FAIL, POSSIBLE, or UNKNOWN. This tool does not invent requirements and should be used after route facts or primary-authority checks are collected.",
-      `Every check is classified with the versioned Source Authority policy (version ${SOURCE_AUTHORITY_POLICY_VERSION}) that the scorecard validator uses. A rule matches only when all of these equal it exactly: claimType (policy claim_type), requirementId (requirement_id), title (claim_title), explanation (the rule's result explanation for this result), countryCode (country_code), routeCode (route_code), and the sourceUrl host and decoded path. sourceUrl must be HTTPS with no port, credentials, query, or fragment; sourceTitle is descriptive only and never establishes authority.`,
-      "A met or not_met check whose source is missing, title-only, non-HTTPS, unrecognised, or outside the rule's claim scope keeps the route UNKNOWN; any non-not_applicable check with unknown authority makes the result a Provisional Assessment (assessment_kind 'provisional') with usableForRanking false. Official PASS or FAIL needs every decisive check to have primary or trusted authority.",
+      "Two-step flow: first submit each requirement as read from a Visa Atlas record (sourceUrl = the record's https://visaatlas.org URL, governmentSourceUrl = the record's primarySource.url, verifiedAt = its primarySource.lastVerified or lastReviewed date, plus factType); then, for every met or not_met requirement, submit a second check with the same requirementId whose sourceUrl is the primary official page that confirms it.",
+      `Every check is classified with the versioned Source Authority policy (version ${SOURCE_AUTHORITY_POLICY_VERSION}) that the scorecard validator uses; the first matching rule decides. An exact rule needs claimType, requirementId, title, explanation, countryCode, routeCode, and the sourceUrl host and decoded path to equal it. A host and path-prefix rule needs claimType in its claim types, countryCode in its country, the sourceUrl host, and a decoded path under its prefix: official German pages on the Residence Act (gesetze-im-internet.de/aufenthg_2004/), Make it in Germany, the Tehran embassy and the Consular Services Portal (diplo.de) are primary. A Visa Atlas record is trusted only with an HTTPS governmentSourceUrl on another host and a verifiedAt whose age under the freshness policy for its factType is current or aging; otherwise it is unknown. sourceUrl must be HTTPS with no port, credentials, query, fragment, empty or dot path segments; sourceTitle is descriptive only and never establishes authority.`,
+      "A met or not_met check whose source is missing, title-only, non-HTTPS, unrecognised, a stale or unlinked Visa Atlas record, or outside the rule's scope keeps the route UNKNOWN; any non-not_applicable check with unknown authority makes the result a Provisional Assessment (assessment_kind 'provisional') with usableForRanking false. A primary check decides its requirement and overrides a contradicting Visa Atlas check. A decisive requirement with only trusted evidence is listed in awaiting_official_confirmation and caps the route at POSSIBLE (assessment_kind 'awaiting_official_confirmation'); it can be ranked but never counts as PASS. Official PASS needs every decisive requirement confirmed by a primary check; a primary not_met gives an official FAIL.",
       `Freshness uses the versioned fact-type policy (version ${FRESHNESS_POLICY_VERSION}) from the scorecard validator: age is measured from retrievedAt (zoned ISO date-time) to evaluation time for the given factType, and effectiveUntil in the past makes a check stale. A stale met or not_met check cannot produce PASS or FAIL, and a timeSensitive check with unknown freshness (no valid factType or retrievedAt) keeps the route UNKNOWN.`,
-      "Each reason returns source_url, checked_at, claim_type, source_authority {policy_version, classification, rule_id}, fact_type, retrieved_at, effective dates, and freshness {policy_version, fact_type, status, age_days, max_age_days}."
+      "Each reason returns source_url, government_source_url, verified_at, checked_at, claim_type, source_authority {policy_version, classification, rule_id}, fact_type, retrieved_at, effective dates, and freshness {policy_version, fact_type, status, age_days, max_age_days}."
     ].join(" "),
     {
       type: "object",
@@ -108,7 +109,16 @@ export const ASSESSMENT_TOOLS = [
               sourceUrl: {
                 type: ["string", "null"],
                 maxLength: 1000,
-                description: "HTTPS URL of the official source; its host and path are matched against the Source Authority policy."
+                description: "HTTPS URL of the source: a primary official page, or a Visa Atlas record URL (https://visaatlas.org/...); its host and path are matched against the Source Authority policy."
+              },
+              governmentSourceUrl: {
+                type: ["string", "null"],
+                maxLength: 1000,
+                description: "For a Visa Atlas record: the government source it links (the record's primarySource.url). Required, as HTTPS on another host, for the record to be trusted."
+              },
+              verifiedAt: {
+                type: ["string", "null"],
+                description: "For a Visa Atlas record: when it was last verified against that government source (primarySource.lastVerified, else lastReviewed), as an ISO date or zoned date-time. It must be within the freshness policy for factType for the record to be trusted."
               },
               sourceTitle: { type: ["string", "null"], maxLength: 500, description: "Descriptive only; never establishes authority." },
               checkedAt: { type: ["string", "null"], description: "When the facilitator checked the requirement (ISO date or date-time)." },
@@ -513,7 +523,9 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
     source_title: requirement.sourceTitle ?? null,
     checked_at: requirement.checkedAt ?? null,
     claim_type: requirement.claimType ?? null,
-    source_authority: classifySource({ ...requirement, countryCode: args.countryCode, routeCode: args.routeCode }),
+    government_source_url: requirement.governmentSourceUrl ?? null,
+    verified_at: requirement.verifiedAt ?? null,
+    source_authority: classifySource({ ...requirement, countryCode: args.countryCode, routeCode: args.routeCode }, now),
     fact_type: requirement.factType ?? null,
     retrieved_at: requirement.retrievedAt ?? null,
     effective_from: requirement.effectiveFrom ?? null,
@@ -530,15 +542,29 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
   const undatedSensitive = requirements.filter((item, index) =>
     item.result !== "not_applicable" && item.timeSensitive === true && reasons[index].freshness.status === "unknown"
   );
-  const blockers = decisive.filter((item) => item.result === "not_met").map((item) => item.title);
-  const missingRequirements = decisive.filter((item) => item.result === "unknown").map((item) => item.title);
+  const decisiveReasons = reasons.filter((reason) => ["met", "not_met"].includes(reason.result));
+  const confirmedIds = new Set(decisiveReasons
+    .filter((reason) => reason.source_authority.classification === "primary")
+    .map((reason) => reason.requirement_id));
+  const awaitingReasons = decisiveReasons
+    .filter((reason) => reason.source_authority.classification === "trusted" && !confirmedIds.has(reason.requirement_id));
+  const awaitingConfirmation = [...new Set(awaitingReasons.map((reason) => reason.title))];
+  // A primary check decides its requirement: other checks of that requirement, including a contradicting
+  // Visa Atlas record, no longer count. A trusted-only decisive check is awaiting confirmation, not a blocker.
+  const effective = reasons.filter((reason) => reason.result !== "not_applicable"
+    && (!confirmedIds.has(reason.requirement_id) || reason.source_authority.classification === "primary"));
+  const titlesWith = (result) => [...new Set(effective
+    .filter((reason) => reason.result === result && !awaitingReasons.includes(reason))
+    .map((reason) => reason.title))];
+  const blockers = titlesWith("not_met");
+  const missingRequirements = titlesWith("unknown");
 
   let status = "UNKNOWN";
   if (args.officialDataQuality === "missing" || args.officialDataQuality === "stale" || unauthorisedChecks.length || staleChecks.length || undatedSensitive.length) {
     status = "UNKNOWN";
   } else if (blockers.length) {
     status = "FAIL";
-  } else if (missingRequirements.length || args.officialDataQuality === "partial") {
+  } else if (awaitingConfirmation.length || missingRequirements.length || args.officialDataQuality === "partial") {
     status = "POSSIBLE";
   } else if (decisive.length) {
     status = "PASS";
@@ -554,6 +580,9 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
   if (undatedSensitive.length) {
     notes.push("One or more time-sensitive checks have unknown freshness; supply a freshness-policy factType and a zoned retrievedAt date-time.");
   }
+  if (awaitingConfirmation.length && !hasUnknownAuthority) {
+    notes.push("One or more decisive requirements rest only on trusted Visa Atlas evidence and are awaiting official confirmation at a primary official source; the route is at most POSSIBLE until each is confirmed.");
+  }
 
   return {
     source: "Hamrah Eligibility Gate",
@@ -563,8 +592,11 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
     routeName: args.routeName ?? null,
     officialEligibility: {
       status,
-      assessment_kind: hasUnknownAuthority ? "provisional" : "official",
+      assessment_kind: hasUnknownAuthority
+        ? "provisional"
+        : awaitingConfirmation.length && status !== "FAIL" ? "awaiting_official_confirmation" : "official",
       reasons,
+      awaiting_official_confirmation: awaitingConfirmation,
       missing_requirements: missingRequirements,
       blockers,
       official_data_quality: {
