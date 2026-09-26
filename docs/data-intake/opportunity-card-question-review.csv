@@ -1,6 +1,6 @@
-evidence_id,message_id,message_date,candidate_topic,original_question_redacted,reply_message_ids,reply_summary_redacted,independent_asker_key,source_export_reference,review_status
-DEU-OC-IRAN-ACCESS-001-E4,2595,2026-09-12,Applying from Iran,,,,,,needs_original_thread
-DEU-OC-SELFCHECK-002-E1,974,2025-01-04,Self-check versus application,,,,,,needs_original_thread
-DEU-OC-ROUTE-SPLIT-005-E4,2036,2026-06-19,Fachkraft versus points route,,,,,,needs_original_thread
-DEU-OC-ANABIN-ZAB-006-E2,2285,2026-07-20,Anabin specialization and ZAB,,,,,,needs_original_thread
-DEU-OC-WORK-ALIGNMENT-009-E1,1327,2025-06-03,Work experience in different field,,,,,,needs_original_thread
+evidence_id,message_id,message_date,message_role_from_summary,question_paraphrase_from_summary_fa,original_question_redacted,reply_message_ids,reply_summary_redacted,independent_asker_key,source_export_reference,review_status
+DEU-OC-IRAN-ACCESS-001-E4,2595,2026-09-12,reply,آیا در حال حاضر می‌توان برای کارت فرصت آلمان از ایران درخواست داد؟,,,,,,needs_original_thread
+DEU-OC-SELFCHECK-002-E1,974,2025-01-04,applicant_experience,آیا تکمیل خودارزیابی کارت فرصت و دریافت امتیاز و ایمیل به معنی آغاز درخواست است؟,,,,,,needs_original_thread
+DEU-OC-ROUTE-SPLIT-005-E4,2036,2026-06-19,community_question,آیا ثبت مدرک در آنابین برای مسیر نیروی متخصص کافی است یا تأیید ZAB یا معادل‌سازی شغلی هم لازم است؟,,,,,,needs_original_thread
+DEU-OC-ANABIN-ZAB-006-E2,2285,2026-07-20,applicant_question,اگر دانشگاه و رشته در آنابین ثبت شده اما گرایش ثبت نشده باشد آیا ZAB لازم است؟,,,,,,needs_original_thread
+DEU-OC-WORK-ALIGNMENT-009-E1,1327,2025-06-03,applicant_question,آیا سابقهٔ کار در حوزه‌ای متفاوت از مدرک تحصیلی برای کارت فرصت قابل استفاده است؟,,,,,,needs_original_thread
