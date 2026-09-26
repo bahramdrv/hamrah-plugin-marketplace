@@ -4,6 +4,8 @@ Hamrah guides facilitators and applicants through immigration intake, profile no
 
 This repository is self-contained in the `Hamrah Plugin` folder. Its development intake contract is in `packages/hamrah-intake-contract`; no files from the Immi folder are needed. From this folder, run `npm ci` and `npm test` to install dependencies and run the test suite.
 
+Before deployment, run `npm run verify:release` and follow the [release verification guide](docs/release-verification.md) for the complete CI checks, scoring definitions, privacy gate, and Persian example output.
+
 ## ChatGPT Web
 
 Production MCP URL:
@@ -33,7 +35,7 @@ python plugins/hamrah/skills/hamrah-signal-builder/scripts/store_signals.py \
 
 Commit and push the generated dataset. The connected Vercel project deploys the new repository revision; Hamrah reads the new data after that deployment completes.
 
-The remote service stores no applicant profiles. The optional route-finder sends only documented coarse fields to Visa Atlas after explicit consent.
+The remote service stores no applicant profiles. The optional route-finder sends only documented coarse fields to Visa Atlas. Hamrah assumes consent was established before tool use; the MCP server does not verify it.
 
 ## Install
 

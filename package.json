@@ -6,7 +6,9 @@
   "description": "Remote MCP endpoint for the Hamrah ChatGPT app.",
   "scripts": {
     "start": "node server.mjs",
-    "test": "node --test plugins/hamrah/mcp/tests/*.test.mjs web/*.test.mjs"
+    "test": "node --test plugins/hamrah/mcp/tests/*.test.mjs web/*.test.mjs",
+    "verify:release": "node scripts/verify-release.mjs",
+    "check:static": "find plugins web packages scripts -name '*.mjs' -type f -exec node --check {} \\;"
   },
   "engines": {
     "node": "22.x"
