@@ -1,0 +1,3 @@
+# Keep external profile disclosure limited without an MCP consent gate
+
+The product owner treats consent as established before Hamrah tool use and explicitly chose to remove the proposed approval page and code-level consent gate. The stateless MCP server has no signal with which to verify that assumption. The Visa Atlas route-finder may therefore receive only its documented coarse applicant fields, while the server makes no claim that it independently verified consent. This trades a verifiable in-tool gate for a shorter workflow and should be revisited if a trustworthy host consent signal becomes available.

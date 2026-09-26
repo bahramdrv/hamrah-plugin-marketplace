@@ -1,0 +1,3 @@
+# Publish evidence through automated validation
+
+Hamrah currently has no human review workflow for Git-backed evidence. Publishing therefore depends on automated schema, provenance, freshness, and privacy checks. Only artifacts that pass every required check can enter the published store or scoring; findings marked `fail` or `needs_review` stay outside both. This permits publication without a reviewer while making uncertain privacy findings a hard stop. Automated detection can miss identifiers, so the publication workflow must retain a way to withdraw or supersede an artifact if a later review finds a problem.
