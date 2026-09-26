@@ -31,6 +31,9 @@ import {
   normalizeApplicantProfile
 } from "./assessment-tools.mjs";
 
+// The one Hamrah version, reported by this MCP server and by the remote app (root server.mjs) that imports it.
+export const HAMRAH_VERSION = "1.3.0";
+
 export const OPENAPI = JSON.parse(
   readFileSync(new URL("./visa_atlas_core_openapi.json", import.meta.url), "utf8")
 );
@@ -449,33 +452,12 @@ const IDEAL_CANDIDATE_PROFILE_TOOL = {
   annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
 };
 
-export const TOOLS = [
-  ...STANDARD_DISCOVERY_TOOLS,
-  ...COMMUNITY_SIGNAL_TOOLS,
-  ...COMMUNITY_QUESTION_TOOLS,
-  ...ROUTE_CLAIM_TOOLS,
-  ...OPPORTUNITY_TOOLS,
-  ...LIVED_EXPERIENCE_TOOLS,
-  OFFICIAL_STATISTICS_TOOL,
-  ROUTE_VIABILITY_TOOL,
-  VIABLE_ROUTE_DISCOVERY_TOOL,
-  IDEAL_CANDIDATE_PROFILE_TOOL,
-  ROUTE_FACT_PACK_TOOL,
-  ...ASSESSMENT_TOOLS,
-  ...GET_OPERATIONS.map(([name, path, description]) => ({
-    title: description,
-    name,
-    description: `${description} Reads only ${BASE_URL}${path}. Optional filters are applied locally after retrieval. Visa Atlas is a source-linked compilation, not an issuing authority.`,
-    inputSchema: FILTER_SCHEMA,
-    annotations: { readOnlyHint: true, openWorldHint: true, destructiveHint: false }
-  })),
-  {
-    name: "findMatchingVisaRoutes",
-    description: "Send only a consented, coarse applicant profile to the Visa Atlas deterministic route finder. Its ordering score is not official eligibility or approval probability.",
-    inputSchema: ROUTE_FINDER_SCHEMA,
-    annotations: { readOnlyHint: true, openWorldHint: true, destructiveHint: false }
-  }
-];
+const FIND_MATCHING_VISA_ROUTES_TOOL = {
+  name: "findMatchingVisaRoutes",
+  description: "Send only a consented, coarse applicant profile to the Visa Atlas deterministic route finder. Its ordering score is not official eligibility or approval probability.",
+  inputSchema: ROUTE_FINDER_SCHEMA,
+  annotations: { readOnlyHint: true, openWorldHint: true, destructiveHint: false }
+};
 
 const operationByName = new Map(GET_OPERATIONS.map(([name, path]) => [name, path]));
 function sanitizeRouteFinderArgs(args) {
@@ -614,27 +596,229 @@ function toolResult(payload, isError = false) {
   };
 }
 
-export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch, options = {}) {
-  if (name === "getRouteFactPack") {
-    try {
-      const payload = await buildRouteFactPack(
-        args,
-        (operation) => operationByName.get(operation),
-        (path, signal) => fetchJson(path, {}, fetchImpl, signal),
-        options.deadlineMs ?? REQUEST_BUDGETS.deadlineMs
-      );
-      return toolResult(payload);
-    } catch (error) {
-      if (error instanceof InvalidFactPackInput) {
-        return toolResult({ error: "invalid_route_fact_pack_input", message: error.message }, true);
-      }
-      throw error;
-    }
+// A tool's kind selects the failure code and guidance reported when its handler throws an unclassified error.
+const TOOL_FAILURES = {
+  community: {
+    error: "community_signal_store_failed",
+    guidance: "Do not infer community coverage. Report the dataset error and use Community Adjustment 0 with coverage unavailable until the store is corrected."
+  },
+  assessment: {
+    error: "assessment_validation_failed",
+    guidance: "Do not bypass failed assessment gates. Correct the input, preserve UNKNOWN values, or collect the missing evidence."
+  },
+  visaAtlas: {
+    error: "visa_atlas_request_failed",
+    guidance: "Do not infer missing data. Mark affected claims UNKNOWN and use a current primary source or another documented endpoint."
   }
+};
+
+// Domain errors any tool may raise, reported with their own code instead of the kind's failure.
+const KNOWN_TOOL_ERRORS = [
+  {
+    type: OpportunityNotFoundError,
+    error: "academic_opportunity_not_found",
+    guidance: "Use an opportunityId returned by searchAcademicOpportunities. An unknown ID is not evidence that no opening exists."
+  },
+  {
+    type: LivedExperienceNotFoundError,
+    error: "lived_experience_not_found",
+    guidance: "Use an experienceId returned by searchIranianLivedExperiences. An unknown ID is not evidence about the route."
+  },
+  {
+    type: RouteClaimNotFoundError,
+    error: "route_claim_not_found",
+    guidance: "Use a claimId returned by searchRouteClaims. An unknown ID is not evidence about the route."
+  },
+  {
+    type: QuestionNotFoundError,
+    error: "community_question_not_found",
+    guidance: "Use a questionId returned by searchCommunityQuestions. An unknown ID is not evidence that the question is never asked."
+  },
+  { type: InvalidIranianApplicantError, error: "invalid_irvi_applicant" },
+  { type: InvalidRouteDiscoveryInput, error: "invalid_route_discovery_input" },
+  { type: InvalidIdealCandidateProfileInput, error: "invalid_ideal_candidate_profile_input" }
+];
+
+// Handlers receive (args, { fetchImpl, options, signal }) and return a complete MCP tool result.
+const communityStoreTool = (read) => ({
+  kind: "community",
+  handler: (args, { options }) => toolResult(read(args, options.signalStoreRoot, options.maxDatasetsScanned))
+});
+const assessmentTool = (evaluate) => ({ kind: "assessment", handler: (args) => toolResult(evaluate(args)) });
+const visaAtlasTool = (handler) => ({ kind: "visaAtlas", handler });
+
+async function searchVisaAtlas(args, { fetchImpl, signal }) {
+  if (typeof args.query !== "string" || !args.query.trim()) throw new Error("search requires a non-empty query.");
+  const raw = await fetchJson("/api/public/search-index", {}, fetchImpl, signal);
+  const filtered = filterResponse(raw, { query: args.query.trim(), limit: 25 });
+  const { records } = pickRecordArray(filtered.data);
+  const payload = {
+    results: (records || []).map((record) => ({
+      id: String(record.id),
+      title: String(record.title || record.id),
+      url: String(record.url)
+    }))
+  };
+  return { content: [{ type: "text", text: JSON.stringify(payload) }], structuredContent: payload };
+}
+
+async function fetchVisaAtlasResult(args, { fetchImpl, signal }) {
+  if (typeof args.id !== "string" || !args.id.trim()) throw new Error("fetch requires a non-empty id.");
+  const id = args.id.trim();
+  const raw = await fetchJson("/api/public/search-index", {}, fetchImpl, signal);
+  const { records } = pickRecordArray(raw);
+  const record = (records || []).find((item) => item?.id === id);
+  if (!record) throw new Error(`Visa Atlas search result not found: ${id}`);
+  const payload = {
+    id: String(record.id),
+    title: String(record.title || record.id),
+    text: [record.description, Array.isArray(record.keywords) ? `Keywords: ${record.keywords.join(", ")}` : null]
+      .filter(Boolean)
+      .join("\n"),
+    url: String(record.url),
+    metadata: {
+      kind: record.kind ?? null,
+      sourceDatasets: record.sourceDatasets ?? []
+    }
+  };
+  return { content: [{ type: "text", text: JSON.stringify(payload) }], structuredContent: payload };
+}
+
+async function readVisaAtlasOperation(path, args, { fetchImpl, signal }) {
+  const raw = await fetchJson(path, {}, fetchImpl, signal);
+  const filtered = filterResponse(raw, args);
+  return toolResult(resultPayload(path, filtered.data, { total: filtered.total, returned: filtered.returned }));
+}
+
+async function findMatchingVisaRoutesHandler(args, { fetchImpl, signal }) {
+  const safeArgs = sanitizeRouteFinderArgs(args);
+  const raw = await fetchJson(
+    "/api/public/route-finder",
+    { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(safeArgs) },
+    fetchImpl,
+    signal
+  );
+  return toolResult(resultPayload("/api/public/route-finder", raw, {
+    warning: "The route-finder score is a deterministic ordering aid, not official eligibility or approval probability."
+  }));
+}
+
+// The fact pack applies its own per-source deadlines and returns partial coverage, so it runs outside the
+// request deadline and reports only its own input errors.
+async function getRouteFactPackHandler(args, { fetchImpl, options }) {
+  try {
+    const payload = await buildRouteFactPack(
+      args,
+      (operation) => operationByName.get(operation),
+      (path, signal) => fetchJson(path, {}, fetchImpl, signal),
+      options.deadlineMs ?? REQUEST_BUDGETS.deadlineMs
+    );
+    return toolResult(payload);
+  } catch (error) {
+    if (error instanceof InvalidFactPackInput) {
+      return toolResult({ error: "invalid_route_fact_pack_input", message: error.message }, true);
+    }
+    throw error;
+  }
+}
+
+// Pairs each definition with its { kind, handler } by tool name; a definition without a handler, or a handler
+// without a definition, is a registration mistake caught when the module loads.
+function registerTools(definitions, handlersByName) {
+  const unused = new Set(Object.keys(handlersByName));
+  const entries = definitions.map((definition) => {
+    if (!Object.hasOwn(handlersByName, definition.name)) throw new Error(`No handler registered for tool ${definition.name}.`);
+    unused.delete(definition.name);
+    return { definition, ...handlersByName[definition.name] };
+  });
+  if (unused.size) throw new Error(`Handlers registered without a tool definition: ${[...unused].join(", ")}.`);
+  return entries;
+}
+
+// The single source for tools: TOOLS (tools/list) and the dispatcher both read it, in this order.
+const TOOL_REGISTRY = [
+  ...registerTools(STANDARD_DISCOVERY_TOOLS, {
+    search: visaAtlasTool(searchVisaAtlas),
+    fetch: visaAtlasTool(fetchVisaAtlasResult)
+  }),
+  ...registerTools(COMMUNITY_SIGNAL_TOOLS, {
+    searchCommunitySignals: communityStoreTool(searchCommunitySignals),
+    getCommunitySignalDataset: communityStoreTool(getCommunitySignalDataset)
+  }),
+  ...registerTools(COMMUNITY_QUESTION_TOOLS, {
+    searchCommunityQuestions: communityStoreTool(searchCommunityQuestions),
+    getCommunityQuestion: communityStoreTool(getCommunityQuestion),
+    answerCommunityQuestion: communityStoreTool(answerCommunityQuestion)
+  }),
+  ...registerTools(ROUTE_CLAIM_TOOLS, {
+    searchRouteClaims: communityStoreTool(searchRouteClaims),
+    validateRouteClaim: communityStoreTool(validateRouteClaim)
+  }),
+  ...registerTools(OPPORTUNITY_TOOLS, {
+    searchAcademicOpportunities: communityStoreTool(searchAcademicOpportunities),
+    getAcademicOpportunity: communityStoreTool(getAcademicOpportunity)
+  }),
+  ...registerTools(LIVED_EXPERIENCE_TOOLS, {
+    searchIranianLivedExperiences: communityStoreTool(searchIranianLivedExperiences),
+    getLivedExperience: communityStoreTool(getLivedExperience)
+  }),
+  ...registerTools([OFFICIAL_STATISTICS_TOOL], {
+    searchOfficialApprovalStatistics: communityStoreTool(searchOfficialApprovalStatistics)
+  }),
+  ...registerTools([ROUTE_VIABILITY_TOOL], {
+    getIranianRouteViability: communityStoreTool(getIranianRouteViability)
+  }),
+  ...registerTools([VIABLE_ROUTE_DISCOVERY_TOOL], {
+    findViableRoutesForIranians: {
+      kind: "community",
+      handler: async (args, { options, signal }) => toolResult(await findViableRoutesForIranians(args, { ...options, signal }))
+    }
+  }),
+  ...registerTools([IDEAL_CANDIDATE_PROFILE_TOOL], {
+    getIdealCandidateProfile: communityStoreTool(getIdealCandidateProfile)
+  }),
+  ...registerTools([ROUTE_FACT_PACK_TOOL], {
+    getRouteFactPack: { kind: "visaAtlas", handler: getRouteFactPackHandler, ownsDeadline: true }
+  }),
+  ...registerTools(ASSESSMENT_TOOLS, {
+    normalizeApplicantProfile: assessmentTool(normalizeApplicantProfile),
+    evaluateRouteEligibility: assessmentTool(evaluateRouteEligibility),
+    evaluateCommunityAdjustment: communityStoreTool(evaluateCommunityAdjustment),
+    finalizeAssessment: assessmentTool(finalizeAssessment)
+  }),
+  ...registerTools(
+    GET_OPERATIONS.map(([name, path, description]) => ({
+      title: description,
+      name,
+      description: `${description} Reads only ${BASE_URL}${path}. Optional filters are applied locally after retrieval. Visa Atlas is a source-linked compilation, not an issuing authority.`,
+      inputSchema: FILTER_SCHEMA,
+      annotations: { readOnlyHint: true, openWorldHint: true, destructiveHint: false }
+    })),
+    Object.fromEntries(GET_OPERATIONS.map(([name, path]) => [
+      name,
+      visaAtlasTool((args, context) => readVisaAtlasOperation(path, args, context))
+    ]))
+  ),
+  ...registerTools([FIND_MATCHING_VISA_ROUTES_TOOL], {
+    findMatchingVisaRoutes: visaAtlasTool(findMatchingVisaRoutesHandler)
+  })
+];
+
+const toolsByName = new Map();
+for (const entry of TOOL_REGISTRY) {
+  if (toolsByName.has(entry.definition.name)) throw new Error(`Tool ${entry.definition.name} is registered twice.`);
+  toolsByName.set(entry.definition.name, entry);
+}
+
+export const TOOLS = TOOL_REGISTRY.map((entry) => entry.definition);
+
+export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch, options = {}) {
+  const entry = toolsByName.get(name);
+  if (entry?.ownsDeadline) return entry.handler(args, { fetchImpl, options });
   try {
     return await withDeadline(
       options.deadlineMs ?? REQUEST_BUDGETS.deadlineMs,
-      (signal) => runTool(name, args, fetchImpl, options, signal)
+      (signal) => runTool(entry, name, args, fetchImpl, options, signal)
     );
   } catch (error) {
     if (error instanceof BudgetExceededError) {
@@ -649,183 +833,21 @@ export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch,
   }
 }
 
-async function runTool(name, args, fetchImpl, options, signal) {
+async function runTool(entry, name, args, fetchImpl, options, signal) {
+  if (!entry) return toolResult({ error: "unknown_tool", message: `Unknown tool: ${name}` }, true);
   try {
-    if (name === "search") {
-      if (typeof args.query !== "string" || !args.query.trim()) throw new Error("search requires a non-empty query.");
-      const raw = await fetchJson("/api/public/search-index", {}, fetchImpl, signal);
-      const filtered = filterResponse(raw, { query: args.query.trim(), limit: 25 });
-      const { records } = pickRecordArray(filtered.data);
-      const payload = {
-        results: (records || []).map((record) => ({
-          id: String(record.id),
-          title: String(record.title || record.id),
-          url: String(record.url)
-        }))
-      };
-      return { content: [{ type: "text", text: JSON.stringify(payload) }], structuredContent: payload };
-    }
-
-    if (name === "fetch") {
-      if (typeof args.id !== "string" || !args.id.trim()) throw new Error("fetch requires a non-empty id.");
-      const id = args.id.trim();
-      const raw = await fetchJson("/api/public/search-index", {}, fetchImpl, signal);
-      const { records } = pickRecordArray(raw);
-      const record = (records || []).find((item) => item?.id === id);
-      if (!record) throw new Error(`Visa Atlas search result not found: ${id}`);
-      const payload = {
-        id: String(record.id),
-        title: String(record.title || record.id),
-        text: [record.description, Array.isArray(record.keywords) ? `Keywords: ${record.keywords.join(", ")}` : null]
-          .filter(Boolean)
-          .join("\n"),
-        url: String(record.url),
-        metadata: {
-          kind: record.kind ?? null,
-          sourceDatasets: record.sourceDatasets ?? []
-        }
-      };
-      return { content: [{ type: "text", text: JSON.stringify(payload) }], structuredContent: payload };
-    }
-
-    if (name === "searchCommunitySignals") {
-      return toolResult(searchCommunitySignals(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "getCommunitySignalDataset") {
-      return toolResult(getCommunitySignalDataset(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "searchCommunityQuestions") {
-      return toolResult(searchCommunityQuestions(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "searchAcademicOpportunities") {
-      return toolResult(searchAcademicOpportunities(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "getAcademicOpportunity") {
-      return toolResult(getAcademicOpportunity(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "searchIranianLivedExperiences") {
-      return toolResult(searchIranianLivedExperiences(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "getLivedExperience") {
-      return toolResult(getLivedExperience(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "getIranianRouteViability") {
-      return toolResult(getIranianRouteViability(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "findViableRoutesForIranians") {
-      return toolResult(await findViableRoutesForIranians(args, { ...options, signal }));
-    }
-
-    if (name === "getIdealCandidateProfile") {
-      return toolResult(getIdealCandidateProfile(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "searchOfficialApprovalStatistics") {
-      return toolResult(searchOfficialApprovalStatistics(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "validateRouteClaim") {
-      return toolResult(validateRouteClaim(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "searchRouteClaims") {
-      return toolResult(searchRouteClaims(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "answerCommunityQuestion") {
-      return toolResult(answerCommunityQuestion(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "getCommunityQuestion") {
-      return toolResult(getCommunityQuestion(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "normalizeApplicantProfile") {
-      return toolResult(normalizeApplicantProfile(args));
-    }
-
-    if (name === "evaluateRouteEligibility") {
-      return toolResult(evaluateRouteEligibility(args));
-    }
-
-    if (name === "evaluateCommunityAdjustment") {
-      return toolResult(evaluateCommunityAdjustment(args, options.signalStoreRoot, options.maxDatasetsScanned));
-    }
-
-    if (name === "finalizeAssessment") {
-      return toolResult(finalizeAssessment(args));
-    }
-
-    if (operationByName.has(name)) {
-      const path = operationByName.get(name);
-      const raw = await fetchJson(path, {}, fetchImpl, signal);
-      const filtered = filterResponse(raw, args);
-      return toolResult(resultPayload(path, filtered.data, { total: filtered.total, returned: filtered.returned }));
-    }
-
-    if (name === "findMatchingVisaRoutes") {
-      const safeArgs = sanitizeRouteFinderArgs(args);
-      const raw = await fetchJson(
-        "/api/public/route-finder",
-        { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(safeArgs) },
-        fetchImpl,
-        signal
-      );
-      return toolResult(resultPayload("/api/public/route-finder", raw, {
-        warning: "The route-finder score is a deterministic ordering aid, not official eligibility or approval probability."
-      }));
-    }
-
-    return toolResult({ error: "unknown_tool", message: `Unknown tool: ${name}` }, true);
+    return await entry.handler(args, { fetchImpl, options, signal });
   } catch (error) {
     if (signal.reason instanceof BudgetExceededError) throw signal.reason;
     if (error instanceof BudgetExceededError) throw error;
-    if (error instanceof OpportunityNotFoundError) {
+    const known = KNOWN_TOOL_ERRORS.find(({ type }) => error instanceof type);
+    if (known) {
       return toolResult({
-        error: "academic_opportunity_not_found",
+        error: known.error,
         message: error.message,
-        guidance: "Use an opportunityId returned by searchAcademicOpportunities. An unknown ID is not evidence that no opening exists."
+        ...(known.guidance ? { guidance: known.guidance } : {})
       }, true);
     }
-    if (error instanceof LivedExperienceNotFoundError) {
-      return toolResult({
-        error: "lived_experience_not_found",
-        message: error.message,
-        guidance: "Use an experienceId returned by searchIranianLivedExperiences. An unknown ID is not evidence about the route."
-      }, true);
-    }
-    if (error instanceof RouteClaimNotFoundError) {
-      return toolResult({
-        error: "route_claim_not_found",
-        message: error.message,
-        guidance: "Use a claimId returned by searchRouteClaims. An unknown ID is not evidence about the route."
-      }, true);
-    }
-    if (error instanceof QuestionNotFoundError) {
-      return toolResult({
-        error: "community_question_not_found",
-        message: error.message,
-        guidance: "Use a questionId returned by searchCommunityQuestions. An unknown ID is not evidence that the question is never asked."
-      }, true);
-    }
-    if (error instanceof InvalidIranianApplicantError) {
-      return toolResult({ error: "invalid_irvi_applicant", message: error.message }, true);
-    }
-    if (error instanceof InvalidRouteDiscoveryInput) {
-      return toolResult({ error: "invalid_route_discovery_input", message: error.message }, true);
-    }
-    if (error instanceof InvalidIdealCandidateProfileInput) {
-      return toolResult({ error: "invalid_ideal_candidate_profile_input", message: error.message }, true);
-    }
-    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim", "searchAcademicOpportunities", "getAcademicOpportunity", "searchIranianLivedExperiences", "getLivedExperience", "searchOfficialApprovalStatistics", "getIranianRouteViability", "findViableRoutesForIranians", "getIdealCandidateProfile", "evaluateCommunityAdjustment"].includes(name);
     if (name === "findMatchingVisaRoutes" && error?.validationDetails) {
       return toolResult({
         error: "invalid_route_finder_input",
@@ -833,18 +855,13 @@ async function runTool(name, args, fetchImpl, options, signal) {
         details: error.validationDetails
       }, true);
     }
-    const isAssessmentTool = ["normalizeApplicantProfile", "evaluateRouteEligibility", "finalizeAssessment"].includes(name);
-
+    const failure = TOOL_FAILURES[entry.kind];
     return toolResult({
-      error: isCommunityTool ? "community_signal_store_failed" : isAssessmentTool ? "assessment_validation_failed" : "visa_atlas_request_failed",
+      error: failure.error,
       message: error instanceof Error ? error.message : String(error),
       status: error?.status ?? null,
       details: error?.body ?? null,
-      guidance: isCommunityTool
-        ? "Do not infer community coverage. Report the dataset error and use Community Adjustment 0 with coverage unavailable until the store is corrected."
-        : isAssessmentTool
-          ? "Do not bypass failed assessment gates. Correct the input, preserve UNKNOWN values, or collect the missing evidence."
-          : "Do not infer missing data. Mark affected claims UNKNOWN and use a current primary source or another documented endpoint."
+      guidance: failure.guidance
     }, true);
   }
 }
@@ -858,7 +875,7 @@ export async function handleRequest(message, fetchImpl = globalThis.fetch) {
       result: {
         protocolVersion: params.protocolVersion || "2025-06-18",
         capabilities: { tools: { listChanged: false } },
-        serverInfo: { name: "hamrah-visa-atlas", version: "1.3.0" },
+        serverInfo: { name: "hamrah-visa-atlas", version: HAMRAH_VERSION },
         instructions: "Use normalizeApplicantProfile for structured intake, findMatchingVisaRoutes for discovery, getRouteFactPack plus primary authorities for route facts, evaluateRouteEligibility for the official gate, evaluateCommunityAdjustment for practical friction, and finalizeAssessment before treating a scorecard as final. Use community questions, claims, opportunities, experiences, statistics, viability, and profile tools when relevant. Route scores are discovery aids and decisive requirements must remain source-backed."
       }
     };

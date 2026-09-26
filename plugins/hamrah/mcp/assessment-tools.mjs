@@ -592,12 +592,26 @@ function policyInputs(canonical, searched) {
   };
 }
 
-function basePenalty(inputs) {
-  if (inputs.status !== "active") return 0;
-  if (!["negative", "mixed"].includes(inputs.impactDirection)) return 0;
-  if (!["corroborated", "officially_verified"].includes(inputs.evidenceMaturity)) return 0;
-  if (inputs.independentReports < 2) return 0;
-  if (inputs.confidence === "low") return 0;
+// The ordered conditions a signal must meet before its severity can become a penalty. The first failed rule
+// names why a signal was ignored, so penalty eligibility and the ignore reason cannot drift apart.
+const PENALTY_ELIGIBILITY_RULES = [
+  { reasonCode: "not_active", fails: (inputs) => inputs.status !== "active" },
+  { reasonCode: "not_downside", fails: (inputs) => !["negative", "mixed"].includes(inputs.impactDirection) },
+  { reasonCode: "evidence_maturity_unrecorded", fails: (inputs) => inputs.evidenceMaturity === null },
+  {
+    reasonCode: "evidence_maturity_insufficient",
+    fails: (inputs) => !["corroborated", "officially_verified"].includes(inputs.evidenceMaturity)
+  },
+  { reasonCode: "fewer_than_two_independent_reports", fails: (inputs) => inputs.independentReports < 2 },
+  { reasonCode: "low_confidence", fails: (inputs) => inputs.confidence === "low" }
+];
+
+function failedEligibilityRule(inputs) {
+  return PENALTY_ELIGIBILITY_RULES.find((rule) => rule.fails(inputs)) ?? null;
+}
+
+// Severity penalty for a signal that passed every eligibility rule, capped by confidence and impact direction.
+function severityPenalty(inputs) {
   let penalty = {
     low: 0,
     moderate: -5,
@@ -628,16 +642,6 @@ const IGNORE_REASONS = {
   no_material_penalty: { excluded: false, reason: "No material penalty under the current community-adjustment policy." },
   correlated_root_cause: { excluded: false, reason: "A correlated signal with the same root cause already carries the penalty." }
 };
-
-function ignoreReasonCode(inputs) {
-  if (inputs.status !== "active") return "not_active";
-  if (!["negative", "mixed"].includes(inputs.impactDirection)) return "not_downside";
-  if (inputs.evidenceMaturity === null) return "evidence_maturity_unrecorded";
-  if (!["corroborated", "officially_verified"].includes(inputs.evidenceMaturity)) return "evidence_maturity_insufficient";
-  if (inputs.independentReports < 2) return "fewer_than_two_independent_reports";
-  if (inputs.confidence === "low") return "low_confidence";
-  return "no_material_penalty";
-}
 
 // ADR 0004: community friction may lower only the applicant's Practical Fit.
 const SCORE_COMPONENT = Object.freeze({
@@ -706,9 +710,10 @@ export function evaluateCommunityAdjustment(args = {}, root, maxDatasets) {
       evidenceIds: fullSignal.evidence_links.map((link) => link.evidence_id)
     });
     const inputs = policyInputs(fullSignal, signal);
-    const penalty = basePenalty(inputs);
+    const failedRule = failedEligibilityRule(inputs);
+    const penalty = failedRule ? 0 : severityPenalty(inputs);
     if (!penalty) {
-      ignoredSignals.push(ignoredSignal(signal, ignoreReasonCode(inputs)));
+      ignoredSignals.push(ignoredSignal(signal, failedRule?.reasonCode ?? "no_material_penalty"));
       continue;
     }
     candidates.push({
