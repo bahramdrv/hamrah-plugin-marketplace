@@ -1,7 +1,9 @@
 import { readFileSync } from "node:fs";
 
 import { adaptCommunityDatasetV2, V2_SCHEMA_VERSION, validateCommunityDatasetV2 } from "./community-dataset-v2.mjs";
-import { adaptCommunityDatasetV3, V3_SCHEMA_VERSION, validateCommunityDatasetV3 } from "./community-dataset-v3.mjs";
+import {
+  adaptCommunityDatasetV3, V3_SCHEMA_VERSION, validateCommunityDatasetV3, validateNormalizedLegacyDatasetV3
+} from "./community-dataset-v3.mjs";
 import { adaptCommunityDatasetV4, V4_SCHEMA_VERSION, validateCommunityDatasetV4 } from "./community-dataset-v4.mjs";
 import { normalizeCommunityDataset } from "./community-legacy-normalizer.mjs";
 import { inspectDatasetPrivacy } from "./privacy-check.mjs";
@@ -17,6 +19,7 @@ export const SUPPORTED_SCHEMA_VERSIONS = [...ADAPTERS.keys()];
 // Validates a raw dataset against its own contract and, when valid, adapts it to canonical internal artifacts.
 export function readCommunityDataset(raw, datasetId = "dataset") {
   const schemaVersion = raw && typeof raw === "object" && !Array.isArray(raw) ? raw.schema_version ?? null : null;
+  let normalizedLegacy = false;
   if ((schemaVersion === V3_SCHEMA_VERSION && Object.hasOwn(raw, "qualityControl"))
     || (schemaVersion === null && Array.isArray(raw?.signals))) {
     const direct = schemaVersion === V3_SCHEMA_VERSION ? validateCommunityDatasetV3(raw) : null;
@@ -27,6 +30,7 @@ export function readCommunityDataset(raw, datasetId = "dataset") {
       }
       try {
         raw = normalizeCommunityDataset(raw, datasetId);
+        normalizedLegacy = true;
       } catch (error) {
         return { schemaVersion, errors: [error.message], privacy: rawPrivacy, canonical: null };
       }
@@ -42,7 +46,7 @@ export function readCommunityDataset(raw, datasetId = "dataset") {
       canonical: null
     };
   }
-  const { errors, privacy } = adapter.validate(raw);
+  const { errors, privacy } = (normalizedLegacy ? validateNormalizedLegacyDatasetV3 : adapter.validate)(raw);
   return { schemaVersion: effectiveVersion, errors, privacy, canonical: errors.length ? null : adapter.adapt(raw), dataset: raw };
 }
 

@@ -11,6 +11,14 @@ const SCHEMA = JSON.parse(readFileSync(
   new URL("../skills/hamrah-signal-builder/references/community_signals_v3_schema.json", import.meta.url), "utf8"
 ));
 const validateSchema = new Ajv2020({ allErrors: true, strict: false, validateFormats: false }).compile(SCHEMA);
+// Legacy exports normalized at ingest record what their source never stated as unknown instead of inventing
+// a value. Only those fields widen; every other 3.0.0 rule, and privacy inspection, still applies.
+const NORMALIZED_LEGACY_SCHEMA = structuredClone(SCHEMA);
+NORMALIZED_LEGACY_SCHEMA.$defs.qualityCheck.properties.status.enum.push("unknown");
+NORMALIZED_LEGACY_SCHEMA.$defs.evidence.properties.privacy_redacted.type = ["boolean", "null"];
+NORMALIZED_LEGACY_SCHEMA.$defs.assessment.properties.evidence_maturity.enum.push(null);
+const validateNormalizedLegacySchema = new Ajv2020({ allErrors: true, strict: false, validateFormats: false })
+  .compile(NORMALIZED_LEGACY_SCHEMA);
 // Version 3 "unknown" lifecycle means the status was not determined, which version 2 and search call "uncertain".
 const LIFECYCLE_STATUS = { active: "active", resolved: "resolved", historical: "historical", unknown: "uncertain" };
 const COVERAGE_COMPLETE = { complete: true, partial: false, unknown: null };
@@ -41,15 +49,26 @@ function referenceErrors(dataset) {
   return errors;
 }
 
-export function validateCommunityDatasetV3(dataset) {
-  if (!validateSchema(dataset)) return { errors: schemaErrorMessages(validateSchema.errors, 12), privacy: null };
+function validate(dataset, schemaValidator, acceptedDeclarations, requirement) {
+  if (!schemaValidator(dataset)) return { errors: schemaErrorMessages(schemaValidator.errors, 12), privacy: null };
   const privacy = inspectDatasetPrivacy(dataset);
   const errors = [...referenceErrors(dataset)];
   if (!parseIsoDay(dataset.dataset.generated_at, false, true)) errors.push("dataset.generated_at is not a valid ISO date-time");
   const declared = dataset.quality.checks.privacy.status;
-  if (declared !== "pass") errors.push(`quality.checks.privacy is ${declared}; version 3 datasets need a declared and inspected privacy pass`);
+  if (!acceptedDeclarations.includes(declared)) errors.push(`quality.checks.privacy is ${declared}; ${requirement}`);
   errors.push(...privacyErrors(privacy));
   return { errors: errors.slice(0, 12), privacy };
+}
+
+export function validateCommunityDatasetV3(dataset) {
+  return validate(dataset, validateSchema, ["pass"], "version 3 datasets need a declared and inspected privacy pass");
+}
+
+// A normalized legacy export may lack a privacy declaration; the inspected result alone then decides.
+// A declared result other than pass still rejects the dataset.
+export function validateNormalizedLegacyDatasetV3(dataset) {
+  return validate(dataset, validateNormalizedLegacySchema, ["pass", "unknown"],
+    "legacy datasets need a declared pass or no declaration, and an inspected privacy pass");
 }
 
 function canonicalEvidence(item, sourcesById) {

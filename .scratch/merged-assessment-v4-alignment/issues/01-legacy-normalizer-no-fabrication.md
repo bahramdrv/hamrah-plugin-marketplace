@@ -4,12 +4,12 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Privacy for a legacy dataset is decided only by the inspected privacy result; a declared `fail` stays `fail`, and a missing declaration is recorded as unknown rather than `pass`.
-- [ ] Evidence records are not blanket-marked as redacted.
-- [ ] Evidence maturity such as `corroborated` is carried over only when the source stated it; it is never derived from confidence or lifecycle labels.
-- [ ] A signal without a source ID gets a deterministic ID that matches the ID its linked evidence refers to; the same input always produces the same output.
-- [ ] Schema version strings come from the shared version constants.
-- [ ] `npm run verify:release` result is reported: every legacy dataset either still loads or is rejected with an explicit, per-dataset reason recorded in `docs/dataset-privacy-review.md`; no dataset is silently dropped.
-- [ ] Tests cover free-text redaction notes, an explicit privacy fail, a missing maturity, and a missing signal ID.
+- [x] Privacy for a legacy dataset is decided only by the inspected privacy result; a declared `fail` stays `fail`, and a missing declaration is recorded as unknown rather than `pass`.
+- [x] Evidence records are not blanket-marked as redacted.
+- [x] Evidence maturity such as `corroborated` is carried over only when the source stated it; it is never derived from confidence or lifecycle labels.
+- [x] A signal without a source ID gets a deterministic ID that matches the ID its linked evidence refers to; the same input always produces the same output.
+- [x] Schema version strings come from the shared version constants.
+- [x] `npm run verify:release` result is reported: every legacy dataset either still loads or is rejected with an explicit, per-dataset reason recorded in `docs/dataset-privacy-review.md`; no dataset is silently dropped.
+- [x] Tests cover free-text redaction notes, an explicit privacy fail, a missing maturity, and a missing signal ID.

@@ -1,0 +1,90 @@
+{
+  "source": "community_supergroup_export",
+  "generatedAt": "2026-09-16T00:00:00Z",
+  "input": {
+    "groupName": "example france study group",
+    "groupType": "supergroup",
+    "messageCount": 1200,
+    "dateRange": { "from": "2026-01-01", "to": "2026-09-01" }
+  },
+  "filters": { "countryCode": "FRA", "originCountry": "IRN" },
+  "coverage": {
+    "filesScanned": 1,
+    "messagesScanned": 1200,
+    "signalsExtracted": 2,
+    "validationStatus": "candidate_only",
+    "truncated": false
+  },
+  "extractionMethod": {
+    "description": "Candidate signals were kept when several participants reported the same practical pattern.",
+    "privacy": "Participant names and user IDs are omitted. Evidence uses source message IDs, dates, claims, and short excerpts only.",
+    "validation": "These are source-derived candidate community signals, not official rules."
+  },
+  "resultCount": 2,
+  "signals": [
+    {
+      "signalId": "fra-visa-appointment-variability",
+      "topic": "visa appointment variability",
+      "summary": "Applicants reported that visa appointment waits varied from a few days to about two weeks.",
+      "countryCode": "FRA",
+      "originCountry": "IRN",
+      "route": "study",
+      "processStage": "visa_appointment",
+      "status": "monitoring",
+      "validationStatus": "unvalidated_candidate",
+      "firstObservedAt": "2026-03-01",
+      "lastObservedAt": "2026-08-20",
+      "assessment": {
+        "signalType": "appointment_variability",
+        "severity": "medium",
+        "confidence": "high",
+        "currentApplicability": "monitoring",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "example france study group",
+          "sourceMessageId": 513323,
+          "sourceDate": "2026-06-23",
+          "claim": "An applicant reported waiting about two weeks for a visa appointment."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "example france study group",
+          "sourceMessageId": 513400,
+          "sourceDate": "2026-07-02",
+          "claim": "Another applicant reported an appointment reply within three days."
+        }
+      ]
+    },
+    {
+      "topic": "housing deposit before arrival",
+      "summary": "Students reported that landlords often asked for a deposit before arrival.",
+      "countryCode": "FRA",
+      "originCountry": "IRN",
+      "route": "study",
+      "processStage": "arrival",
+      "status": "active",
+      "validationStatus": "unvalidated_candidate",
+      "firstObservedAt": "2026-04-01",
+      "lastObservedAt": "2026-08-01",
+      "assessment": {
+        "signalType": "housing_deposit",
+        "severity": "low",
+        "confidence": "high",
+        "currentApplicability": "current",
+        "needsFreshnessCheck": false
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "example france study group",
+          "sourceMessageId": 514002,
+          "sourceDate": "2026-07-15",
+          "claim": "A student reported paying a deposit before the housing contract was signed."
+        }
+      ]
+    }
+  ]
+}
