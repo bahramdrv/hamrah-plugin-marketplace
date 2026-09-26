@@ -91,9 +91,8 @@ function impactDirection(value) {
 
 function severity(value) {
   const v = normalized(value);
-  if (["low", "moderate", "high", "critical"].includes(v)) return v;
-  if (v === "medium") return "moderate";
-  return "moderate";
+  // Recognized levels pass through; "medium" and anything unrecognized become "moderate".
+  return ["low", "moderate", "high", "critical"].includes(v) ? v : "moderate";
 }
 
 function confidenceLevel(value) {

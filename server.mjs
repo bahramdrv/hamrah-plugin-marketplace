@@ -12,11 +12,10 @@ import {
 
 import { REQUEST_BUDGETS } from "./plugins/hamrah/mcp/budgets.mjs";
 import { createRateLimiter, rateLimitStoreFromEnv } from "./plugins/hamrah/mcp/rate-limit.mjs";
-import { executeTool, TOOLS } from "./plugins/hamrah/mcp/server.mjs";
+import { executeTool, HAMRAH_VERSION, TOOLS } from "./plugins/hamrah/mcp/server.mjs";
 import { getSkill, readSkillResource, SKILL_CATALOG, SKILL_RESOURCES } from "./web/skill-catalog.mjs";
 
 const PORT = Number(process.env.PORT || 3000);
-const APP_VERSION = "1.2.0";
 const INSTRUCTIONS = [
   "Hamrah is available: never claim its profile format or workflow is missing.",
   "Guide the facilitator through consented intake, normalize the profile, screen current routes, and then create an evidence-aware scorecard.",
@@ -29,7 +28,7 @@ const INSTRUCTIONS = [
 
 function createServer(fetchImpl, toolOptions) {
   const server = new Server(
-    { name: "hamrah", version: APP_VERSION },
+    { name: "hamrah", version: HAMRAH_VERSION },
     {
       capabilities: {
         tools: { listChanged: false },
@@ -122,7 +121,7 @@ export function createApp(options = {}) {
   app.use(express.json({ limit: budgets.bodyLimitBytes }));
 
   app.get("/", (_req, res) => {
-    res.json({ name: "Hamrah", status: "ok", mcp: "/mcp", version: APP_VERSION });
+    res.json({ name: "Hamrah", status: "ok", mcp: "/mcp", version: HAMRAH_VERSION });
   });
   app.get("/health", (_req, res) => {
     res.json({

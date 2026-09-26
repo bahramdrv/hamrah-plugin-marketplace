@@ -4,10 +4,10 @@
 
 **Blocked by:** 02, 03, 04 (they change the same dispatcher and tools)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Tool definitions and handlers live in one registry that the dispatcher reads; community and assessment name lists derive from it.
-- [ ] The duplicated penalty and ignore-reason conditions in the community adjustment share one rule definition.
-- [ ] The app and MCP server report one version from a single source.
-- [ ] The dataset validation script's message reflects all accepted versions.
-- [ ] Behaviour is unchanged: the full test suite and live MCP acceptance check pass without changing expectations.
+- [x] Tool definitions and handlers live in one registry that the dispatcher reads; community and assessment name lists derive from it.
+- [x] The duplicated penalty and ignore-reason conditions in the community adjustment share one rule definition.
+- [x] The app and MCP server report one version from a single source.
+- [x] The dataset validation script's message reflects all accepted versions.
+- [x] Behaviour is unchanged: the full test suite and live MCP acceptance check pass without changing expectations.
