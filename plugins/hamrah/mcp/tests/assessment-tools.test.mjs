@@ -7,7 +7,6 @@ import {
   finalizeAssessment,
   normalizeApplicantProfile
 } from "../assessment-tools.mjs";
-import { executeTool } from "../server.mjs";
 
 test("normalizes a partial structured profile without inventing omitted facts", () => {
   const result = normalizeApplicantProfile({
@@ -41,27 +40,6 @@ test("missing community coverage always keeps adjustment at zero", () => {
   assert.equal(result.coverage, "none");
   assert.equal(result.totalAdjustment, 0);
   assert.match(result.warnings.join(" "), /not proof of no friction/i);
-});
-
-test("route fact pack tolerates individual Visa Atlas endpoint failures", async () => {
-  const calls = [];
-  const fakeFetch = async (url) => {
-    calls.push(url);
-    if (url.endsWith("/api/public/freshness")) {
-      return new Response(JSON.stringify({ error: "not_found" }), { status: 404 });
-    }
-    return new Response(JSON.stringify([]), { status: 200 });
-  };
-
-  const result = await executeTool("getRouteFactPack", {
-    countryCode: "DEU",
-    slug: "opportunity-card"
-  }, fakeFetch);
-
-  assert.equal(result.isError, false);
-  assert.equal(result.structuredContent.coverage, "partial");
-  assert.ok(result.structuredContent.failures.some((item) => item.operation === "getSourceFreshness"));
-  assert.ok(calls.length >= 8);
 });
 
 test("finalization rejects a scorecard when community evaluation is missing", () => {

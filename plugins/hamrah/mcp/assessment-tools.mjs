@@ -135,24 +135,6 @@ export const ASSESSMENT_TOOLS = [
     }
   ),
   toolDefinition(
-    "getRouteFactPack",
-    "Get Route Fact Pack",
-    "Fetch a compact route-level evidence pack from the relevant Visa Atlas datasets, including route records, policy claims and updates, fees, salary thresholds, processing information, cost-to-complete, freshness, and processing reliability. Individual unavailable datasets are reported without fabricating replacements.",
-    {
-      type: "object",
-      additionalProperties: false,
-      required: ["slug"],
-      properties: {
-        slug: { type: "string", minLength: 1, maxLength: 160 },
-        countryCode: { type: "string", minLength: 2, maxLength: 3 },
-        destination: { type: "string", minLength: 2, maxLength: 100 },
-        category: { type: "string", maxLength: 100 },
-        limit: { type: "integer", minimum: 1, maximum: 25, default: 10 }
-      }
-    },
-    true
-  ),
-  toolDefinition(
     "evaluateCommunityAdjustment",
     "Evaluate Community Adjustment",
     "Run the required community-signal search and full dataset evidence check for one applicant-route scope, deduplicate correlated issues, and derive a conservative downside-only adjustment under Hamrah policy. Missing coverage returns adjustment 0 plus an explicit warning.",
