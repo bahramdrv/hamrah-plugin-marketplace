@@ -7,7 +7,7 @@ test("all bundled community datasets pass their versioned contract and privacy g
   const store = loadCommunitySignalStore();
   assert.ok(store.scanned > 0);
   assert.deepEqual(store.invalidDatasets, []);
-  assert.equal(store.datasets.length, store.scanned);
+  assert.equal(store.datasets.length + store.withdrawnDatasets.length, store.scanned);
   for (const { dataset, privacy } of store.datasets) {
     assert.ok(["2.0", "3.0.0", "4.0.0"].includes(dataset.schema_version));
     assert.equal(privacy.status, "pass");
@@ -24,7 +24,7 @@ test("Australian and German signals remain queryable from the mixed store", () =
   for (const countryCode of ["AUS", "DEU"]) {
     const result = searchCommunitySignals({ countryCode });
     assert.ok(result.resultCount > 0, countryCode);
-    assert.equal(result.coverage.validDatasets, result.coverage.filesScanned);
+    assert.equal(result.coverage.validDatasets + result.coverage.withdrawnDatasets.length, result.coverage.filesScanned);
     assert.ok(result.signals.every((signal) => signal.datasetId && signal.schemaVersion));
   }
 });

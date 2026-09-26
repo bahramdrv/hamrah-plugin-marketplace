@@ -8,7 +8,7 @@ const NARRATIVE_FIELDS = new Set([
 ]);
 const ID_FIELDS = new Set([
   "id", "source_id", "supersedes", "superseded_by",
-  "evidence_ids", "opposing_evidence_ids", "correlated_signal_ids"
+  "evidence_ids", "opposing_evidence_ids", "correlated_signal_ids", "artifact_id"
 ]);
 const STABLE_ID = /^(?:sig|qst|opp|exp|clm|src|evd)_[0-9a-f]{32}$/;
 // Exact title-case phrases reviewed in the publication corpus. New phrases remain blocked.

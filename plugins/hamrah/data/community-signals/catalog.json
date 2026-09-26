@@ -1,7 +1,64 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-26T06:51:07Z",
+  "updated_at": "2026-09-26T12:00:00Z",
   "datasets": [
+    {
+      "path": "datasets/2026/09/20260926120000-de-answers-9f77824bcc.json",
+      "sha256": "9f77824bccfcca2d9a54a6364f2efc5b4f81896dbf148771eff55a338240ae3e",
+      "content_digest": "116d9456877bd24bf8d03754a3cab5b53416b787bad55d1261c91e2c0ee3f29b",
+      "schema_version": "4.0.0",
+      "generated_at": "2026-09-26T12:00:00Z",
+      "countries": [],
+      "routes": [],
+      "statuses": [],
+      "signal_count": 0,
+      "source_ids": [
+        "src_04111d0c166dc7286dbac3e9b70d7fa9",
+        "src_04fd13d22aa3c567a01dd1393ed1099a",
+        "src_4d1dc2283cf3bff9e901cabbcb02c20d",
+        "src_58b90ff40a974614ffdb33a9f3142586",
+        "src_72a57cabbc4918123ce42770807b775e",
+        "src_b75a241833fc844f08a1d30563408290",
+        "src_d9f2008a688550afee99f8cc9cf8afd6"
+      ]
+    },
+    {
+      "path": "datasets/2026/09/20260926092700-de-answers-2dabe07859.json",
+      "sha256": "2dabe078590f6dcb8348883f0278f5d158bc12d8945b3f27bec47c498db27b6d",
+      "content_digest": "688cea8993276672fa76de3a66a03bf6dfdd491cce3a8bd29198a51ee7e51724",
+      "schema_version": "4.0.0",
+      "generated_at": "2026-09-26T09:27:00Z",
+      "countries": [],
+      "routes": [],
+      "statuses": [],
+      "signal_count": 0,
+      "source_ids": [
+        "src_04111d0c166dc7286dbac3e9b70d7fa9",
+        "src_04fd13d22aa3c567a01dd1393ed1099a",
+        "src_4d1dc2283cf3bff9e901cabbcb02c20d",
+        "src_58b90ff40a974614ffdb33a9f3142586",
+        "src_72a57cabbc4918123ce42770807b775e",
+        "src_b75a241833fc844f08a1d30563408290",
+        "src_d9f2008a688550afee99f8cc9cf8afd6"
+      ]
+    },
+    {
+      "path": "datasets/2026/09/20260926070700-de-answers-10fbfbd150.json",
+      "sha256": "10fbfbd150b0f4a0e08b14f32bc9e50bccb2ebd0a5294978d6c4979dc26e0316",
+      "content_digest": "664d90d998ea63d37367d90739bb06099e629e3a51bbc2dae5bfcebf98e43ee8",
+      "schema_version": "4.0.0",
+      "generated_at": "2026-09-26T07:07:00Z",
+      "countries": [],
+      "routes": [],
+      "statuses": [],
+      "signal_count": 0,
+      "source_ids": [
+        "src_04fd13d22aa3c567a01dd1393ed1099a",
+        "src_58b90ff40a974614ffdb33a9f3142586",
+        "src_b75a241833fc844f08a1d30563408290",
+        "src_d9f2008a688550afee99f8cc9cf8afd6"
+      ]
+    },
     {
       "path": "datasets/2026/09/20260926065107-de-questions-c88f30d127.json",
       "sha256": "c88f30d12736910a12a9150a2e43f419507f79ae3f24addee9e98eda867480af",

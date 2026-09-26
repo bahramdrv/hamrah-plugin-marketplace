@@ -1223,6 +1223,7 @@
             "official",
             "evidence_based",
             "community_observation",
+            "partially_answered",
             "unresolved"
           ]
         },

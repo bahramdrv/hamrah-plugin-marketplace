@@ -90,3 +90,17 @@ test("routes and countries without seeded evidence report missing coverage, not 
     assert.match(searched.structuredContent.coverage.note, /missing coverage, not evidence that the route is closed/);
   }
 });
+
+test("published German questions expose partial answers in search and answer retrieval", async () => {
+  const searched = await executeTool("searchCommunityQuestions", {
+    countryCode: "DEU", answerStatus: "partially_answered", query: "insurance"
+  }, offline);
+  assert.equal(searched.isError, false);
+  assert.equal(searched.structuredContent.resultCount, 1);
+  const question = searched.structuredContent.questions[0];
+  assert.equal(question.answerStatus, "partially_answered");
+  const answered = await executeTool("answerCommunityQuestion", { questionId: question.questionId, asOf: "2026-09-26" }, offline);
+  assert.equal(answered.isError, false);
+  assert.equal(answered.structuredContent.answerType, "partially_answered");
+  assert.equal(answered.structuredContent.storedAnswerStatus, "partially_answered");
+});

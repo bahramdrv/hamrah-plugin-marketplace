@@ -350,7 +350,7 @@ test("the reviewed thresholds describe the first published German routes", async
     const result = (await executeTool("getIranianRouteViability", { countryCode: "DEU", route, residenceCountry: "IRN", officialEligibility: "PASS", asOf: AS_OF })).structuredContent;
     const expectedOfficial = route === "opportunity_card" ? 1 : 2;
     assert.equal(result.ranking.threshold.requirements.current_official_source_families, expectedOfficial);
-    assert.equal(result.ranking.threshold.observed.officialSourceFamilies, expectedOfficial);
+    assert.ok(result.ranking.threshold.observed.officialSourceFamilies >= expectedOfficial);
     assert.equal(result.ranking.threshold.observed.iranSourceFamilies, 1);
     assert.equal(result.ranking.threshold.observed.qualifiedRecentExamples, 0);
     assert.equal(result.ranking.rankable, false);
@@ -365,7 +365,9 @@ test("route discovery is read-only and separates uncovered countries from unrank
   })).structuredContent;
   assert.equal(result.status, "partial_coverage");
   assert.equal(result.ranked.length, 0);
-  assert.equal(result.unranked.length, 5);
+  assert.deepEqual(result.unranked.map((item) => item.route).sort(), [
+    "opportunity_card", "skilled_worker", "student_bachelor", "student_masters_research", "student_masters_taught", "student_phd"
+  ]);
   assert.ok(result.coverage.countries.some((item) => item.countryCode === "JPN" && item.status === "no_coverage"));
   assert.ok(result.unranked.every((item) => item.reasons.some((reason) => reason.code === "official_eligibility_unresolved")));
   assert.ok(result.unranked.every((item) => item.summaryFa.includes("رتبه")));

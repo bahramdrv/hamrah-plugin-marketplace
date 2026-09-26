@@ -7,6 +7,7 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 
 import { DEPLOYED_STORE_ROOT, isDeployedStore } from "../community-publication.mjs";
+import { inspectDatasetPrivacy } from "../privacy-check.mjs";
 import { executeTool } from "../server.mjs";
 
 const PUBLISHER = fileURLToPath(new URL("../community-publication.mjs", import.meta.url));
@@ -16,6 +17,13 @@ const V4 = JSON.parse(readFileSync(
 ));
 const NOW = "2026-09-25T00:00:00Z";
 const STABLE = (prefix) => new RegExp(`^${prefix}_[0-9a-f]{32}$`);
+
+test("answer links accept published artifact IDs while still scanning arbitrary identifiers", () => {
+  const linked = { questions: [{ answer_links: [{ artifact_id: "clm_1234567890abcdef1234567890abcdef" }] }] };
+  assert.equal(inspectDatasetPrivacy(linked).status, "pass");
+  linked.questions[0].answer_links[0].artifact_id = "+989121234567";
+  assert.equal(inspectDatasetPrivacy(linked).status, "fail");
+});
 
 function workspace(t) {
   const directory = mkdtempSync(path.join(tmpdir(), "hamrah-publish-"));

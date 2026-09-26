@@ -173,7 +173,7 @@ const COMMUNITY_QUESTION_TOOLS = [
       properties: {
         query: { type: "string", minLength: 1, maxLength: 200, description: "Question text or keywords in Persian or English." },
         ...QUESTION_SCOPE,
-        answerStatus: { type: "string", enum: ["official", "evidence_based", "community_observation", "unresolved"] },
+        answerStatus: { type: "string", enum: ["official", "evidence_based", "community_observation", "partially_answered", "unresolved"] },
         statuses: {
           type: "array", minItems: 1, maxItems: 6, uniqueItems: true,
           items: { type: "string", enum: ["active", "monitoring", "resolved", "historical", "stale", "superseded"] },
