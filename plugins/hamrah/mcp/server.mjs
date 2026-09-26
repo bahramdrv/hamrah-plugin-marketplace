@@ -15,6 +15,7 @@ import { MILESTONES, OUTCOMES } from "./community-experiences.mjs";
 import { getAcademicOpportunity, OpportunityNotFoundError, searchAcademicOpportunities } from "./community-opportunity-tools.mjs";
 import { CLAIM_TYPES, searchRouteClaims } from "./community-route-claim-tools.mjs";
 import { findViableRoutesForIranians, InvalidRouteDiscoveryInput } from "./community-route-discovery.mjs";
+import { getIdealCandidateProfile, InvalidIdealCandidateProfileInput } from "./ideal-candidate-profile.mjs";
 import { getIranianRouteViability, InvalidIranianApplicantError } from "./community-route-viability.mjs";
 import { searchOfficialApprovalStatistics } from "./community-statistics-tools.mjs";
 import { getCommunityQuestion, QuestionNotFoundError, searchCommunityQuestions } from "./community-question-tools.mjs";
@@ -423,6 +424,24 @@ const VIABLE_ROUTE_DISCOVERY_TOOL = {
   annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
 };
 
+const IDEAL_CANDIDATE_PROFILE_TOOL = {
+  name: "getIdealCandidateProfile",
+  title: "Get a sourced ideal candidate profile",
+  description: "Inspect documented route requirements, community patterns, and traits explicitly recorded in successful cases. Each characteristic has evidence and freshness. Observed patterns are not mandatory rules or approval probabilities; contradicted claims remain unresolved.",
+  inputSchema: {
+    type: "object", additionalProperties: false, required: ["countryCode", "route"],
+    properties: {
+      countryCode: { type: "string", pattern: "^[A-Z]{3}$" },
+      route: { type: "string", minLength: 1, maxLength: 100 },
+      asOf: { type: "string", pattern: "^\\d{4}-\\d{2}-\\d{2}$" },
+      nationality: { type: "string", minLength: 2, maxLength: 80 },
+      residenceCountry: { type: "string", minLength: 2, maxLength: 80 },
+      originCountry: { type: "string", minLength: 2, maxLength: 80 }
+    }
+  },
+  annotations: { readOnlyHint: true, openWorldHint: false, destructiveHint: false, idempotentHint: true }
+};
+
 export const TOOLS = [
   ...STANDARD_DISCOVERY_TOOLS,
   ...COMMUNITY_SIGNAL_TOOLS,
@@ -433,6 +452,7 @@ export const TOOLS = [
   OFFICIAL_STATISTICS_TOOL,
   ROUTE_VIABILITY_TOOL,
   VIABLE_ROUTE_DISCOVERY_TOOL,
+  IDEAL_CANDIDATE_PROFILE_TOOL,
   ROUTE_FACT_PACK_TOOL,
   ...GET_OPERATIONS.map(([name, path, description]) => ({
     title: description,
@@ -696,6 +716,10 @@ async function runTool(name, args, fetchImpl, options, signal) {
       return toolResult(await findViableRoutesForIranians(args, { ...options, signal }));
     }
 
+    if (name === "getIdealCandidateProfile") {
+      return toolResult(getIdealCandidateProfile(args, options.signalStoreRoot, options.maxDatasetsScanned));
+    }
+
     if (name === "searchOfficialApprovalStatistics") {
       return toolResult(searchOfficialApprovalStatistics(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
@@ -774,7 +798,10 @@ async function runTool(name, args, fetchImpl, options, signal) {
     if (error instanceof InvalidRouteDiscoveryInput) {
       return toolResult({ error: "invalid_route_discovery_input", message: error.message }, true);
     }
-    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim", "searchAcademicOpportunities", "getAcademicOpportunity", "searchIranianLivedExperiences", "getLivedExperience", "searchOfficialApprovalStatistics", "getIranianRouteViability", "findViableRoutesForIranians"].includes(name);
+    if (error instanceof InvalidIdealCandidateProfileInput) {
+      return toolResult({ error: "invalid_ideal_candidate_profile_input", message: error.message }, true);
+    }
+    const isCommunityTool = ["searchCommunitySignals", "getCommunitySignalDataset", "searchCommunityQuestions", "getCommunityQuestion", "answerCommunityQuestion", "searchRouteClaims", "validateRouteClaim", "searchAcademicOpportunities", "getAcademicOpportunity", "searchIranianLivedExperiences", "getLivedExperience", "searchOfficialApprovalStatistics", "getIranianRouteViability", "findViableRoutesForIranians", "getIdealCandidateProfile"].includes(name);
     if (name === "findMatchingVisaRoutes" && error?.validationDetails) {
       return toolResult({
         error: "invalid_route_finder_input",
