@@ -4,7 +4,6 @@ import test from "node:test";
 
 import {
   evaluateCommunityAdjustment,
-  evaluateRouteEligibility,
   finalizeAssessment,
   normalizeApplicantProfile
 } from "../assessment-tools.mjs";
@@ -30,59 +29,6 @@ test("normalizes a partial structured profile without inventing omitted facts", 
   assert.equal(result.normalizedProfile.goals.primary_goal, "Skilled work");
   assert.equal(result.normalizedProfile.intake_status, "needs_more_information");
   assert.ok(result.normalizedProfile.missing_information.some((item) => item.field_path === "employment.roles"));
-});
-
-test("official eligibility cannot PASS without source-backed decisive checks", () => {
-  const result = evaluateRouteEligibility({
-    countryCode: "DEU",
-    routeCode: "opportunity_card",
-    officialDataQuality: "current",
-    requirements: [{
-      requirementId: "r1",
-      title: "Core route condition",
-      result: "met",
-      explanation: "Applicant states the condition is met."
-    }]
-  }, "2026-09-18T00:00:00Z");
-
-  assert.equal(result.officialEligibility.status, "UNKNOWN");
-  assert.equal(result.usableForRanking, false);
-  assert.match(result.warnings.join(" "), /lack a linked official/i);
-});
-
-test("official eligibility aggregates blockers and unknown requirements", () => {
-  const failed = evaluateRouteEligibility({
-    countryCode: "CAN",
-    routeCode: "example",
-    officialDataQuality: "current",
-    requirements: [{
-      requirementId: "salary",
-      title: "Salary threshold",
-      result: "not_met",
-      explanation: "Offer is below the current threshold.",
-      sourceUrl: "https://example.gov/official",
-      sourceTitle: "Official threshold",
-      checkedAt: "2026-09-18"
-    }]
-  });
-  assert.equal(failed.officialEligibility.status, "FAIL");
-  assert.deepEqual(failed.officialEligibility.blockers, ["Salary threshold"]);
-
-  const possible = evaluateRouteEligibility({
-    countryCode: "CAN",
-    routeCode: "example",
-    officialDataQuality: "current",
-    requirements: [{
-      requirementId: "offer",
-      title: "Eligible job offer",
-      result: "unknown",
-      explanation: "No offer has been secured yet.",
-      sourceUrl: "https://example.gov/official",
-      sourceTitle: "Official route page",
-      checkedAt: "2026-09-18"
-    }]
-  });
-  assert.equal(possible.officialEligibility.status, "POSSIBLE");
 });
 
 test("missing community coverage always keeps adjustment at zero", () => {

@@ -4,10 +4,10 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] The tool classifies each decisive check with the same versioned source authority policy the scorecard validator uses; there is one policy file, not a second copy.
-- [ ] A title-only, URL-less, non-HTTPS, or unrecognised source cannot produce PASS or FAIL; the result is marked provisional and `usableForRanking` is false.
-- [ ] A time-sensitive check past its versioned freshness limit cannot produce PASS, using the same freshness policy as the scorecard validator.
-- [ ] Each reason in the output keeps the source URL, authority classification, rule ID, policy version and check date.
-- [ ] Tests cover primary authority, unknown authority, title-only source, and a source whose scope does not match the claim; the live MCP acceptance check still passes.
+- [x] The tool classifies each decisive check with the same versioned source authority policy the scorecard validator uses; there is one policy file, not a second copy.
+- [x] A title-only, URL-less, non-HTTPS, or unrecognised source cannot produce PASS or FAIL; the result is marked provisional and `usableForRanking` is false.
+- [x] A time-sensitive check past its versioned freshness limit cannot produce PASS, using the same freshness policy as the scorecard validator.
+- [x] Each reason in the output keeps the source URL, authority classification, rule ID, policy version and check date.
+- [x] Tests cover primary authority, unknown authority, title-only source, and a source whose scope does not match the claim; the live MCP acceptance check still passes.

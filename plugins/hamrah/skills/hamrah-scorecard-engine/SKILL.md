@@ -60,6 +60,8 @@ Set one:
 
 Official eligibility is a gate. Community evidence cannot change it.
 
+The MCP tool `evaluateRouteEligibility` applies this skill's `references/source_authority_policy.json` and `references/freshness_policy.json` (the same files `scripts/validate_scorecard.py` uses). Its reasons carry `claim_type`, `source_authority`, `fact_type`, `retrieved_at`, effective dates, and `freshness` in the scorecard requirement shape; copy them unchanged. An unknown or out-of-scope authority yields `assessment_kind: "provisional"` and cannot be ranked.
+
 ### 3. Score Base Fit
 Use the 100-point rubric in `references/scoring_rubric.md`.
 

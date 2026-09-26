@@ -6,6 +6,8 @@ import {
   getCommunitySignalDataset,
   searchCommunitySignals
 } from "./community-signals.mjs";
+import { assessFreshness, FRESHNESS_FACT_TYPES, FRESHNESS_POLICY_VERSION } from "./requirement-freshness.mjs";
+import { classifySource, SOURCE_AUTHORITY_POLICY_VERSION } from "./source-authority.mjs";
 
 const PROFILE_SCHEMA = JSON.parse(
   readFileSync(
@@ -25,6 +27,7 @@ const validateProfileSchema = ajv.compile(PROFILE_SCHEMA);
 const validateScorecardSchema = ajv.compile(SCORECARD_SCHEMA);
 
 const ALLOWED_ADJUSTMENTS = new Set([0, -5, -10, -15, -20]);
+const AUTHORITATIVE_CLASSIFICATIONS = new Set(["primary", "trusted"]);
 
 function toolDefinition(name, title, description, inputSchema, openWorldHint = false) {
   return {
@@ -60,7 +63,13 @@ export const ASSESSMENT_TOOLS = [
   toolDefinition(
     "evaluateRouteEligibility",
     "Evaluate Source-Backed Route Eligibility",
-    "Deterministically aggregate explicit, source-backed official requirement checks for one route into PASS, FAIL, POSSIBLE, or UNKNOWN. This tool does not invent requirements and should be used after route facts or primary-authority checks are collected.",
+    [
+      "Deterministically aggregate explicit, source-backed official requirement checks for one route into PASS, FAIL, POSSIBLE, or UNKNOWN. This tool does not invent requirements and should be used after route facts or primary-authority checks are collected.",
+      `Every check is classified with the versioned Source Authority policy (version ${SOURCE_AUTHORITY_POLICY_VERSION}) that the scorecard validator uses. A rule matches only when all of these equal it exactly: claimType (policy claim_type), requirementId (requirement_id), title (claim_title), explanation (the rule's result explanation for this result), countryCode (country_code), routeCode (route_code), and the sourceUrl host and decoded path. sourceUrl must be HTTPS with no port, credentials, query, or fragment; sourceTitle is descriptive only and never establishes authority.`,
+      "A met or not_met check whose source is missing, title-only, non-HTTPS, unrecognised, or outside the rule's claim scope keeps the route UNKNOWN; any non-not_applicable check with unknown authority makes the result a Provisional Assessment (assessment_kind 'provisional') with usableForRanking false. Official PASS or FAIL needs every decisive check to have primary or trusted authority.",
+      `Freshness uses the versioned fact-type policy (version ${FRESHNESS_POLICY_VERSION}) from the scorecard validator: age is measured from retrievedAt (zoned ISO date-time) to evaluation time for the given factType, and effectiveUntil in the past makes a check stale. A stale met or not_met check cannot produce PASS or FAIL, and a timeSensitive check with unknown freshness (no valid factType or retrievedAt) keeps the route UNKNOWN.`,
+      "Each reason returns source_url, checked_at, claim_type, source_authority {policy_version, classification, rule_id}, fact_type, retrieved_at, effective dates, and freshness {policy_version, fact_type, status, age_days, max_age_days}."
+    ].join(" "),
     {
       type: "object",
       additionalProperties: false,
@@ -91,10 +100,34 @@ export const ASSESSMENT_TOOLS = [
                 enum: ["met", "not_met", "unknown", "not_applicable"]
               },
               explanation: { type: "string", minLength: 1, maxLength: 2000 },
-              sourceUrl: { type: ["string", "null"], maxLength: 1000 },
-              sourceTitle: { type: ["string", "null"], maxLength: 500 },
-              checkedAt: { type: ["string", "null"] },
-              timeSensitive: { type: "boolean", default: false }
+              claimType: {
+                type: "string",
+                maxLength: 120,
+                description: "Claim type matched against the Source Authority policy's claim_type, for example immigration_requirement."
+              },
+              sourceUrl: {
+                type: ["string", "null"],
+                maxLength: 1000,
+                description: "HTTPS URL of the official source; its host and path are matched against the Source Authority policy."
+              },
+              sourceTitle: { type: ["string", "null"], maxLength: 500, description: "Descriptive only; never establishes authority." },
+              checkedAt: { type: ["string", "null"], description: "When the facilitator checked the requirement (ISO date or date-time)." },
+              factType: {
+                type: ["string", "null"],
+                enum: [...FRESHNESS_FACT_TYPES, null],
+                description: "Freshness-policy fact type that sets the aging and maximum age for this check."
+              },
+              retrievedAt: {
+                type: ["string", "null"],
+                description: "Zoned ISO date-time when the source was retrieved; the freshness age basis."
+              },
+              effectiveFrom: { type: ["string", "null"], description: "ISO date the cited rule took effect." },
+              effectiveUntil: { type: ["string", "null"], description: "ISO date the cited rule stops applying; a past date makes the check stale." },
+              timeSensitive: {
+                type: "boolean",
+                default: false,
+                description: "When true, the check needs a known, non-stale freshness (factType plus retrievedAt) before the route can PASS."
+              }
             }
           }
         }
@@ -496,18 +529,30 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
     explanation: String(requirement.explanation),
     source_url: requirement.sourceUrl ?? null,
     source_title: requirement.sourceTitle ?? null,
-    checked_at: requirement.checkedAt ?? null
+    checked_at: requirement.checkedAt ?? null,
+    claim_type: requirement.claimType ?? null,
+    source_authority: classifySource({ ...requirement, countryCode: args.countryCode, routeCode: args.routeCode }),
+    fact_type: requirement.factType ?? null,
+    retrieved_at: requirement.retrievedAt ?? null,
+    effective_from: requirement.effectiveFrom ?? null,
+    effective_until: requirement.effectiveUntil ?? null,
+    freshness: assessFreshness(requirement, now)
   }));
   const decisive = requirements.filter((item) => item.result !== "not_applicable");
-  const missingSource = decisive.filter((item) =>
-    ["met", "not_met"].includes(item.result) && !item.sourceUrl && !item.sourceTitle
+  const authorised = (reason) => AUTHORITATIVE_CLASSIFICATIONS.has(reason.source_authority.classification);
+  const unauthorisedChecks = reasons.filter((reason) => ["met", "not_met"].includes(reason.result) && !authorised(reason));
+  const staleChecks = reasons.filter((reason) => ["met", "not_met"].includes(reason.result) && reason.freshness.status === "stale");
+  const hasUnknownAuthority = reasons.some((reason) =>
+    reason.result !== "not_applicable" && reason.source_authority.classification === "unknown"
   );
-  const staleSensitive = decisive.filter((item) => item.timeSensitive === true && !item.checkedAt);
+  const undatedSensitive = requirements.filter((item, index) =>
+    item.result !== "not_applicable" && item.timeSensitive === true && reasons[index].freshness.status === "unknown"
+  );
   const blockers = decisive.filter((item) => item.result === "not_met").map((item) => item.title);
   const missingRequirements = decisive.filter((item) => item.result === "unknown").map((item) => item.title);
 
   let status = "UNKNOWN";
-  if (args.officialDataQuality === "missing" || args.officialDataQuality === "stale" || missingSource.length || staleSensitive.length) {
+  if (args.officialDataQuality === "missing" || args.officialDataQuality === "stale" || unauthorisedChecks.length || staleChecks.length || undatedSensitive.length) {
     status = "UNKNOWN";
   } else if (blockers.length) {
     status = "FAIL";
@@ -518,8 +563,15 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
   }
 
   const notes = [];
-  if (missingSource.length) notes.push("One or more decisive checks lack a linked official/trusted source.");
-  if (staleSensitive.length) notes.push("One or more time-sensitive checks lack a checked-at date.");
+  if (unauthorisedChecks.length) {
+    notes.push("One or more decisive checks lack a linked official source whose versioned Source Authority covers that exact claim; the result is a Provisional Assessment and cannot be ranked.");
+  }
+  if (staleChecks.length) {
+    notes.push("One or more decisive checks are past their versioned freshness limit; re-verify them against a current official source before relying on the result.");
+  }
+  if (undatedSensitive.length) {
+    notes.push("One or more time-sensitive checks have unknown freshness; supply a freshness-policy factType and a zoned retrievedAt date-time.");
+  }
 
   return {
     source: "Hamrah Eligibility Gate",
@@ -529,6 +581,7 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
     routeName: args.routeName ?? null,
     officialEligibility: {
       status,
+      assessment_kind: hasUnknownAuthority ? "provisional" : "official",
       reasons,
       missing_requirements: missingRequirements,
       blockers,
@@ -538,7 +591,7 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
         freshness_note: args.freshnessNote || notes.join(" ") || "No additional freshness note supplied."
       }
     },
-    usableForRanking: status === "PASS" || status === "POSSIBLE",
+    usableForRanking: (status === "PASS" || status === "POSSIBLE") && !hasUnknownAuthority,
     warnings: notes,
     usageNote: "Community evidence and preferences cannot change official eligibility."
   };

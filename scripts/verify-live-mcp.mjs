@@ -64,6 +64,7 @@ async function main() {
     requirements: [{ requirementId: "synthetic", title: "Unverified requirement", result: "met", explanation: "Synthetic applicant statement only." }]
   });
   requireResult(eligibility.officialEligibility.status === "UNKNOWN", "unverified eligibility was not kept UNKNOWN");
+  requireResult(eligibility.usableForRanking === false, "unverified eligibility was rankable");
   const community = await tool(7, "evaluateCommunityAdjustment", { countryCode: "DEU", route: "opportunity_card" });
   requireResult(community.checked === true, "community evaluation did not complete");
 
