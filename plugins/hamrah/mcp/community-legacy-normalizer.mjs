@@ -1,20 +1,26 @@
-// Compatibility normalization for legacy community exports from origin/main.
+// Compatibility normalization for legacy community exports from origin/main. The output follows the
+// 3.0.0 contract, except that values the source never stated stay unknown (see
+// validateNormalizedLegacyDatasetV3).
+import { createHash } from "node:crypto";
+
+import { V3_SCHEMA_VERSION } from "./community-dataset-v3.mjs";
+
 function q(status, note = null) { return { status, note }; }
 function arr(value) { return Array.isArray(value) ? value : []; }
 function normalized(value) { return String(value ?? "").trim().toLowerCase(); }
-function dateValue(value) { const ts = Date.parse(value || ""); return Number.isNaN(ts) ? 0 : ts; }
-function local(en = "", fa = "") { return { en: String(en || ""), fa: String(fa || "") }; }
 function oneOf(value, allowed, fallback) { return allowed.includes(value) ? value : fallback; }
 function integerOrNull(value) { return Number.isInteger(value) && value >= 0 ? value : null; }
 function stringOrNull(value) { return value === null || value === undefined || value === "" ? null : String(value); }
+function booleanOrNull(value) { return typeof value === "boolean" ? value : null; }
 
-function localized(value, fallback = "") {
+// The 3.0.0 contract needs both languages as strings, unlike the canonical `localized` helper, which
+// returns null for a missing language.
+function bilingualText(value) {
+  const text = (part) => String(part || "");
   if (value && typeof value === "object" && !Array.isArray(value)) {
-    const en = value.en ?? value.fa ?? fallback;
-    const fa = value.fa ?? value.en ?? fallback;
-    return local(en, fa);
+    return { en: text(value.en ?? value.fa), fa: text(value.fa ?? value.en) };
   }
-  return local(value ?? fallback, value ?? fallback);
+  return { en: text(value), fa: text(value) };
 }
 
 function sourceType(value) {
@@ -60,14 +66,18 @@ function lifecycleFrom(value) {
   return "active";
 }
 
-function maturityFrom(value, confidence, officialStatus, communityStatus) {
+// Only a maturity the source stated in the shared vocabulary is carried over. Other labels (such as
+// "established"), confidence, and verification states never set it; it is otherwise unknown (null).
+function maturityFrom(value) {
   const v = normalized(value);
-  if (["anecdotal", "emerging", "corroborated", "officially_verified", "contradicted"].includes(v)) return v;
-  if (v.includes("contradict")) return "contradicted";
-  if (v.includes("official") || normalized(officialStatus).includes("confirm")) return "officially_verified";
-  if (v.includes("corrobor") || v.includes("confirm") || normalized(communityStatus).includes("corrobor") || normalized(confidence) === "high") return "corroborated";
-  if (v.includes("emerg") || normalized(confidence) === "medium") return "emerging";
-  return "anecdotal";
+  return ["anecdotal", "emerging", "corroborated", "officially_verified", "contradicted"].includes(v) ? v : null;
+}
+
+// A verification state the source did not give is unknown, not inferred from confidence.
+function statedStatus(flag, whenTrue, whenFalse) {
+  if (flag === true) return whenTrue;
+  if (flag === false) return whenFalse;
+  return "unknown";
 }
 
 function impactDirection(value) {
@@ -104,18 +114,14 @@ function qualityStatus(value) {
   return oneOf(v, ["pass", "fail", "partial", "not_run", "not_available", "not_applicable"], "not_run");
 }
 
-function canonicalQuality(raw, evidence) {
+function canonicalQuality(raw) {
   const checks = {};
   for (const [name, check] of Object.entries(raw.quality?.checks || {})) {
     checks[name] = q(qualityStatus(check?.status), stringOrNull(check?.note));
   }
-  const existingPrivacy = checks.privacy?.status === "pass";
-  const evidencePrivacy = evidence.length > 0 && evidence.every((item) => item.privacy_redacted === true);
-  const legacyPrivacy = raw.quality_control?.personal_identifiers_removed === true;
-  const privacyStatement = normalized(raw.extractionMethod?.privacy ?? raw.extraction_method?.privacy ?? "");
-  const declaredPrivacy = /omitt|redact|remov|anonym|حذف|ناشناس/.test(privacyStatement);
-  checks.privacy = q(existingPrivacy || evidencePrivacy || legacyPrivacy || declaredPrivacy ? "pass" : "fail",
-    existingPrivacy ? checks.privacy.note : declaredPrivacy ? "Source extraction declares participant identifiers omitted or redacted." : evidencePrivacy ? "All evidence records declare privacy_redacted=true." : legacyPrivacy ? "Legacy quality control declares personal identifiers removed." : null);
+  // Only a declared check result is carried over. Redaction notes and flags are claims, not a check, so
+  // without a declaration the privacy result is unknown and publication rests on inspection alone.
+  checks.privacy ??= q("unknown", "The source declared no privacy check result; the inspected privacy result decides.");
   return { checks };
 }
 
@@ -151,8 +157,8 @@ function canonicalEvidence(item, index, defaultSourceId, generatedAt, fallbackId
     collected_at: stringOrNull(item?.collected_at ?? item?.collectedAt ?? generatedAt),
     source_type: String(item?.source_type || item?.sourceType || "unknown"),
     firsthandness: firsthandness(item?.firsthandness ?? item?.direct_or_second_hand ?? item?.sourceType),
-    summary: localized(summaryValue),
-    privacy_redacted: item?.privacy_redacted === true || item?.privacyRedacted === true
+    summary: bilingualText(summaryValue),
+    privacy_redacted: booleanOrNull(item?.privacy_redacted ?? item?.privacyRedacted)
   };
 }
 
@@ -187,8 +193,15 @@ function canonicalVerificationState(value, fallbackStatus, evidenceIds) {
   };
 }
 
-function canonicalSignal(signal, raw, generatedAt, nestedEvidenceLinks = []) {
-  const signalId = String(signal?.signal_id || signal?.signalId || `signal-${Math.random().toString(36).slice(2)}`);
+// A signal the source left unnamed is identified by a SHA-256 digest of its own content, so the same input
+// always yields the same ID. The digest is spelled in letters only (0-9 become g-p) so that privacy
+// inspection never mistakes a run of digits in it for a phone number or account ID.
+function derivedSignalId(signal) {
+  const digest = createHash("sha256").update(JSON.stringify(signal ?? null)).digest("hex").slice(0, 16);
+  return `signal-${digest.replace(/\d/gu, (digit) => String.fromCharCode(103 + Number(digit)))}`;
+}
+
+function canonicalSignal(signal, signalId, raw, generatedAt, nestedEvidenceLinks = []) {
   const scope = signal?.scope || {};
   const destination = scope.destination || signal?.destination || {};
   const applicants = scope.applicants || signal?.applicant_scope || signal?.applicantScope || {};
@@ -244,17 +257,17 @@ function canonicalSignal(signal, raw, generatedAt, nestedEvidenceLinks = []) {
       entities: entitiesRaw.map(canonicalEntity)
     },
     claim: {
-      title: localized(title),
-      summary: localized(summary),
-      practical_impact: localized(claim.practical_impact ?? claim.practicalImpact ?? signal?.practical_impact ?? signal?.practicalImpact ?? ""),
-      who_should_care: localized(claim.who_should_care ?? claim.whoShouldCare ?? signal?.who_should_care ?? signal?.whoShouldCare ?? ""),
-      recommended_action: localized(claim.recommended_action ?? claim.recommendedAction ?? signal?.recommended_action ?? signal?.recommendedAction ?? ""),
+      title: bilingualText(title),
+      summary: bilingualText(summary),
+      practical_impact: bilingualText(claim.practical_impact ?? claim.practicalImpact ?? signal?.practical_impact ?? signal?.practicalImpact ?? ""),
+      who_should_care: bilingualText(claim.who_should_care ?? claim.whoShouldCare ?? signal?.who_should_care ?? signal?.whoShouldCare ?? ""),
+      recommended_action: bilingualText(claim.recommended_action ?? claim.recommendedAction ?? signal?.recommended_action ?? signal?.recommendedAction ?? ""),
       known_workaround: typeof (claim.known_workaround ?? claim.knownWorkaround ?? signal?.known_workaround ?? signal?.knownWorkaround) === "string" ? (claim.known_workaround ?? claim.knownWorkaround ?? signal?.known_workaround ?? signal?.knownWorkaround) : null
     },
     evidence_links: evidenceLinks,
     assessment: {
       lifecycle,
-      evidence_maturity: maturityFrom(assessment.evidence_maturity ?? assessment.evidenceMaturity, confidence, official.status, community.status),
+      evidence_maturity: maturityFrom(assessment.evidence_maturity ?? assessment.evidenceMaturity),
       trend: oneOf(normalized(assessment.trend ?? signal?.trend), ["worsening", "stable", "improving", "resolved", "unknown"], "unknown"),
       severity: severity(assessment.severity ?? signal?.severity),
       confidence: { level: confidence, rationale: String((typeof assessment.confidence === "object" ? assessment.confidence.rationale : null) || assessment.reason || signal?.reason_for_adjustment || "Imported community evidence; confidence preserved where available and otherwise kept conservative.") },
@@ -263,8 +276,8 @@ function canonicalSignal(signal, raw, generatedAt, nestedEvidenceLinks = []) {
       method: { name: String(assessment.method?.name || "hamrah-community-import"), version: String(assessment.method?.version || "3.0") }
     },
     verification: {
-      official: canonicalVerificationState(official, signal?.officially_confirmed ? "confirmed" : "not_verified", []),
-      community: canonicalVerificationState(community, confidence === "high" ? "corroborated" : "unverified", evidenceIds)
+      official: canonicalVerificationState(official, statedStatus(signal?.officially_confirmed, "confirmed", "not_verified"), []),
+      community: canonicalVerificationState(community, statedStatus(signal?.community_confirmed, "corroborated", "unverified"), evidenceIds)
     },
     review: {
       status: reviewStatus(reviewValue, lifecycle, needsRecheck),
@@ -303,8 +316,13 @@ function canonicalizeLooseDataset(raw, datasetId) {
   });
   const evidenceIds = new Set(evidence.map((item) => item.evidence_id));
   const signals = [];
+  const derivedIds = new Set();
   for (const [signalIndex, signal] of arr(raw.signals).entries()) {
-    const signalId = String(signal?.signal_id || signal?.signalId || `signal-${signalIndex + 1}`);
+    const statedId = signal?.signal_id || signal?.signalId;
+    let signalId = statedId ? String(statedId) : derivedSignalId(signal);
+    // Identical unnamed signals get a positional suffix so their IDs stay unique and reproducible.
+    if (!statedId && derivedIds.has(signalId)) signalId = `${signalId}-${signalIndex + 1}`;
+    if (!statedId) derivedIds.add(signalId);
     const nestedLinks = [];
     for (const [evidenceIndex, item] of arr(signal?.evidence).entries()) {
       const canonical = canonicalEvidence(item, evidenceIndex, defaultSourceId, generatedAt, signalId);
@@ -316,13 +334,10 @@ function canonicalizeLooseDataset(raw, datasetId) {
       evidence.push(canonical);
       nestedLinks.push({ evidence_id: evidenceId, relation: "supports", independence_group: evidenceId });
     }
-    signals.push(canonicalSignal(signal, raw, generatedAt, nestedLinks));
+    signals.push(canonicalSignal(signal, signalId, raw, generatedAt, nestedLinks));
   }
-  const privacyStatement = normalized(raw.extractionMethod?.privacy ?? raw.extraction_method?.privacy ?? "");
-  const declaredPrivacy = /omitt|redact|remov|anonym|حذف|ناشناس/.test(privacyStatement);
-  if (declaredPrivacy) for (const item of evidence) item.privacy_redacted = true;
   return {
-    schema_version: "3.0.0",
+    schema_version: V3_SCHEMA_VERSION,
     taxonomy_version: String(raw.taxonomy_version || raw.taxonomyVersion || "2026.09"),
     dataset: {
       dataset_id: String(raw.dataset?.dataset_id || raw.dataset?.datasetId || datasetId),
@@ -332,7 +347,7 @@ function canonicalizeLooseDataset(raw, datasetId) {
     sources,
     evidence,
     signals,
-    quality: canonicalQuality(raw, evidence),
+    quality: canonicalQuality(raw),
     extensions: {
       ...(raw.extensions && typeof raw.extensions === "object" && !Array.isArray(raw.extensions) ? raw.extensions : {}),
       normalized_at_ingest: true,
@@ -341,105 +356,10 @@ function canonicalizeLooseDataset(raw, datasetId) {
   };
 }
 
-function maturity(signal) {
-  if (signal.officially_confirmed) return "officially_verified";
-  if (signal.community_confirmed || signal.confidence === "high") return "corroborated";
-  if (signal.confidence === "medium") return "emerging";
-  return "anecdotal";
-}
-
-function lifecycle(signal) {
-  if (signal.status === "resolved") return "resolved";
-  if (signal.status === "historical") return "historical";
-  if (signal.status === "uncertain") return "unknown";
-  return "active";
-}
-
-function legacyQuality(raw) {
-  const qc = raw.quality_control || {};
-  const check = (name) => q(qc[name] === true ? "pass" : "not_run");
-  return { checks: {
-    privacy: q(qc.personal_identifiers_removed === true ? "pass" : "fail"),
-    full_sources_processed: check("full_sources_processed"),
-    reply_chains_considered: check("reply_chains_considered"),
-    duplicates_merged: check("duplicates_merged"),
-    contradictions_checked: check("contradictions_checked"),
-    resolutions_checked: check("resolutions_checked"),
-    country_scope_checked: check("country_scope_checked"),
-    route_scope_checked: check("route_scope_checked"),
-    institution_scope_checked: check("institution_scope_checked"),
-    correlated_penalties_checked: check("correlated_penalties_checked")
-  }};
-}
-
-function migrateV2(raw, datasetId) {
-  const sources = arr(raw.source_coverage).map((source, index) => ({
-    source_id: source.source_id || `source-${index + 1}`,
-    name: source.source_name || source.source_id || `Source ${index + 1}`,
-    source_type: sourceType(source.source_type),
-    source_url: source.source_url ?? null,
-    coverage: {
-      status: source.coverage_complete === true ? "complete" : source.coverage_complete === false ? "partial" : "unknown",
-      from: source.coverage_start || null,
-      to: source.coverage_end || null,
-      records_available: source.coverage_complete === true ? (source.records_processed ?? null) : null,
-      records_processed: Number.isInteger(source.records_processed) ? source.records_processed : null
-    }
-  }));
-  if (!sources.length) sources.push({ source_id: "legacy-source", name: "Legacy v2 source", source_type: "other", source_url: null, coverage: { status: "unknown", from: null, to: null, records_available: null, records_processed: null } });
-  const defaultSourceId = sources[0].source_id;
-  const evidenceById = new Map();
-  const signals = arr(raw.signals).map((signal) => {
-    const links = [];
-    for (const item of arr(signal.evidence)) {
-      const evidenceId = item.evidence_id || `${signal.signal_id}-E${links.length + 1}`;
-      if (!evidenceById.has(evidenceId)) evidenceById.set(evidenceId, {
-        evidence_id: evidenceId,
-        source_id: defaultSourceId,
-        locator: { type: item.source_message_id ? (String(item.source_message_id).includes("filecite") ? "citation" : "message_id") : item.source_url ? "url" : "none", value: item.source_message_id ?? item.source_url ?? null },
-        published_at: item.date || null,
-        event_date: item.date || null,
-        collected_at: raw.generated_at || null,
-        source_type: item.source_type || "unknown",
-        firsthandness: item.direct_or_second_hand === "direct" ? "direct" : item.direct_or_second_hand === "second_hand" ? "second_hand" : "unknown",
-        summary: local(item.evidence_summary || "", item.evidence_summary || ""),
-        privacy_redacted: raw.quality_control?.personal_identifiers_removed === true
-      });
-      links.push({ evidence_id: evidenceId, relation: ["supports", "contradicts", "resolves"].includes(item.supports_or_contradicts) ? item.supports_or_contradicts : "context", independence_group: item.independence_group || evidenceId });
-    }
-    const officialStatus = signal.official_verification?.status || (signal.officially_confirmed ? "confirmed" : "not_verified");
-    return {
-      signal_id: signal.signal_id,
-      issue_cluster_id: signal.root_cause_id || null,
-      relationships: arr(signal.correlated_signal_ids).map((signalId) => ({ type: "correlates_with", signal_id: signalId })),
-      classification: { family: signal.signal_family || "OTHER", type: signal.signal_type || "other", class: signal.signal_class || "other" },
-      scope: {
-        destination: { country: signal.destination?.country || "", country_code: signal.destination?.country_code || "", region: signal.destination?.region ?? null, city: signal.destination?.city ?? null },
-        applicants: {
-          origin_countries: arr(signal.applicant_scope?.origin_countries), nationalities: arr(signal.applicant_scope?.nationalities), residence_countries: arr(signal.applicant_scope?.residence_countries), applying_from: arr(signal.applicant_scope?.applying_from), age_groups: arr(signal.applicant_scope?.age_groups), occupations: arr(signal.applicant_scope?.occupations), fields: arr(signal.applicant_scope?.fields), education_levels: arr(signal.applicant_scope?.education_levels), regulated_professions: arr(signal.applicant_scope?.regulated_professions), other_conditions: arr(signal.applicant_scope?.other_conditions)
-        },
-        routes: { families: arr(signal.migration_route_family), codes: arr(signal.migration_routes).filter((route) => route !== "other").map((route) => normalized(route).replace(/\s+/gu, "_")) },
-        process_stages: arr(signal.process_stages), entities: arr(signal.entities).map(canonicalEntity)
-      },
-      claim: {
-        title: local(signal.title || signal.summary_en || signal.signal_id, signal.title || signal.summary_fa || ""), summary: local(signal.summary_en || "", signal.summary_fa || ""), practical_impact: local(signal.practical_impact || "", signal.practical_impact || ""), who_should_care: local(signal.who_should_care || "", signal.who_should_care || ""), recommended_action: local(signal.recommended_action || "", signal.recommended_action || ""), known_workaround: typeof signal.known_workaround === "string" ? signal.known_workaround : null
-      },
-      evidence_links: links,
-      assessment: {
-        lifecycle: lifecycle(signal), evidence_maturity: maturity(signal), trend: oneOf(signal.trend, ["worsening", "stable", "improving", "resolved", "unknown"], "unknown"), severity: severity(signal.severity), confidence: { level: confidenceLevel(signal.confidence), rationale: signal.reason_for_adjustment || "Migrated from the validated v2 assessment without adding new claims." }, impact_direction: impactDirection(signal.impact_direction), assessed_at: signal.last_verified || raw.generated_at, method: { name: "hamrah-signal-builder", version: "3.0" }
-      },
-      verification: {
-        official: { status: officialStatus, evidence_ids: [], checked_at: signal.official_verification?.verified_at ?? null, note: signal.official_verification?.note ?? null }, community: { status: signal.community_confirmed ? "corroborated" : "unverified", evidence_ids: links.map((link) => link.evidence_id), checked_at: signal.last_verified || null, note: null }
-      },
-      review: { status: signal.status === "resolved" ? "resolved" : signal.needs_recheck || ["monitoring", "uncertain"].includes(signal.status) ? "recheck_required" : "no_recheck", last_checked_at: signal.last_verified || null, next_check_at: signal.suggested_recheck_date || null, reason: signal.reason_for_adjustment || "Migrated from v2 review state.", confirmation_criteria: [] },
-      keywords: arr(signal.keywords)
-    };
-  });
-  return { schema_version: "3.0.0", taxonomy_version: "2026.09", dataset: { dataset_id: datasetId, generated_at: raw.generated_at, generator: { name: "hamrah-v2-compat-migrator", version: "1.0" } }, sources, evidence: [...evidenceById.values()], signals, quality: legacyQuality(raw), extensions: { migrated_from_schema: "2.0" } };
-}
-
+// Version 2 datasets have their own adapter; only version 3 exports carrying legacy blocks and schema-less
+// signal candidate exports are normalized here.
 export function normalizeCommunityDataset(raw, datasetId = "dataset") {
-  if (raw?.schema_version === "2.0") return migrateV2(raw, datasetId);
-  if (raw?.schema_version === "3.0.0" || Array.isArray(raw?.signals)) return canonicalizeLooseDataset(raw, datasetId);
-  throw new Error(`unsupported community-signal schema ${raw?.schema_version ?? "<missing>"}; expected v3, explicit v2, or a signal candidate export`);
+  const version = raw?.schema_version ?? null;
+  if (version === V3_SCHEMA_VERSION || (version === null && Array.isArray(raw?.signals))) return canonicalizeLooseDataset(raw, datasetId);
+  throw new Error(`unsupported legacy community-signal export ${version ?? "<missing>"}; expected a ${V3_SCHEMA_VERSION} export or a signal candidate export`);
 }

@@ -53,4 +53,11 @@ Initial scan: 49 files; 5 accepted; 44 held for review. Current strict scan: 49 
 | hamrah_turkey_study_community_signals_v3 | needs_review | possible_full_name (1) | signals[9].claim.practical_impact.fa | 4 | pass; reviewed |
 | hamrah_uk_global_talent_skilled_worker_community_signals_v3 | needs_review | possible_full_name (49) | sources[0].name, evidence[0].summary.en, evidence[0].summary.fa | 115 | pass; reviewed |
 
+## Legacy normalization without a fabricated privacy pass
+
+Rechecked on 26 September 2026 after the legacy normalizer stopped turning redaction notes and flags into a declared privacy `pass`. Legacy exports now keep only the privacy result their source declared. When there is no declaration, the result is recorded as `unknown` and the inspected privacy result decides; a declared `fail` still rejects the file. `npm run verify:release` still loads every published dataset: 57 files, of which 1 is withdrawn, and none are rejected.
+
+- 40 version 3 exports with a legacy `qualityControl` block still load on their own declared and inspected `pass`.
+- 6 schema-less candidate exports now load with a declared privacy result of `unknown` and an inspected `pass`: `hamrah_europe_phd_signals_result9`, `hamrah_france_signals_result16`, `hamrah_italy_candidate_signals`, `hamrah_italy_signals_result8`, `hamrah_pargar_francaise_signals_20260916`, and `hamrah_spain_signals_result10`. Before this change they relied only on the free-text `extractionMethod.privacy` note. Their 109 evidence records are no longer marked as redacted.
+
 The original reported counts in the table are capped at 50 per dataset. The audit JSON records every current title-case match, including matches outside the original narrative-only scan, so its counts differ. Each of the 44 held files has an explicit passing disposition above; the other five also appear in the audit JSON. `npm run verify:release` verifies all 49 against the current fail-closed detector.
