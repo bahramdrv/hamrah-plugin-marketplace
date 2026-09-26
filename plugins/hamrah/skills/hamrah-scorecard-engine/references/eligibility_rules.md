@@ -84,7 +84,7 @@ Add other countries' official hosts to the versioned policy after review. The po
 
 Read route requirements from Visa Atlas first; a current, government-linked record is `trusted`. Every decisive requirement (`met` or `not_met`) must then be confirmed by a second requirement record with the same `requirement_id` whose source is `primary`:
 
-- **Trusted only:** the route is at most `POSSIBLE`, with `assessment_kind: "awaiting_official_confirmation"` and each such requirement's title in `official_eligibility.awaiting_official_confirmation`. It may be ranked by Practical Fit but is not `PASS` and cannot satisfy gates that require PASS, such as IRVI ranking.
+- **Trusted only:** the route is at most `POSSIBLE`, with `assessment_kind: "awaiting_official_confirmation"` and each such requirement's title in `official_eligibility.awaiting_official_confirmation`. It may be ranked by Practical Fit but is not `PASS` and cannot satisfy gates that require PASS, such as IRVI ranking. Exception: a trusted-only `not_met` is a likely failure. List its title in `official_eligibility.likely_blockers`, set `usable_for_ranking: false`, and keep it unranked until a primary source confirms or overturns it.
 - **Trusted plus primary:** the primary record decides the requirement; `PASS` needs every decisive requirement confirmed and `FAIL` needs a primary `not_met`.
 - **Contradiction:** when the primary record and Visa Atlas disagree, the primary record decides and the Visa Atlas record no longer counts for that requirement.
 

@@ -372,3 +372,24 @@ def test_malformed_freshness_inputs_are_reported_not_crashed():
     result = validate_variant(change)
     assert result.returncode == 1
     assert "Traceback" not in result.stderr
+
+
+def trusted_not_met_awaiting(data, usable):
+    awaiting_confirmation(data)
+    route = data["route_scorecards"][0]
+    route["official_eligibility"]["reasons"] = [visa_atlas_requirement(data, result="not_met", explanation=LACKS)]
+    route["practical_fit"]["usable_for_ranking"] = usable
+    if not usable:
+        data["portfolio_summary"]["viable_route_count"] = 0
+        data["portfolio_summary"]["strongest_routes"] = []
+
+
+def test_trusted_not_met_awaiting_confirmation_cannot_be_ranked():
+    result = validate_variant(lambda data: trusted_not_met_awaiting(data, usable=True))
+    assert result.returncode != 0
+    assert "likely failure awaiting official confirmation cannot be ranked" in result.stderr
+
+
+def test_trusted_not_met_awaiting_confirmation_is_possible_but_unranked():
+    result = validate_variant(lambda data: trusted_not_met_awaiting(data, usable=False))
+    assert result.returncode == 0, result.stderr

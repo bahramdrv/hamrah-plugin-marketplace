@@ -67,7 +67,7 @@ export const ASSESSMENT_TOOLS = [
       "Deterministically aggregate explicit, source-backed official requirement checks for one route into PASS, FAIL, POSSIBLE, or UNKNOWN. This tool does not invent requirements and should be used after route facts or primary-authority checks are collected.",
       "Two-step flow: first submit each requirement as read from a Visa Atlas record (sourceUrl = the record's https://visaatlas.org URL, governmentSourceUrl = the record's primarySource.url, verifiedAt = its primarySource.lastVerified or lastReviewed date, plus factType); then, for every met or not_met requirement, submit a second check with the same requirementId whose sourceUrl is the primary official page that confirms it.",
       `Every check is classified with the versioned Source Authority policy (version ${SOURCE_AUTHORITY_POLICY_VERSION}) that the scorecard validator uses; the first matching rule decides. An exact rule needs claimType, requirementId, title, explanation, countryCode, routeCode, and the sourceUrl host and decoded path to equal it. A host and path-prefix rule needs claimType in its claim types, countryCode in its country, the sourceUrl host, and a decoded path under its prefix: official German pages on the Residence Act (gesetze-im-internet.de/aufenthg_2004/), Make it in Germany, the Tehran embassy and the Consular Services Portal (diplo.de) are primary. A Visa Atlas record is trusted only with an HTTPS governmentSourceUrl on another host and a verifiedAt whose age under the freshness policy for its factType is current or aging; otherwise it is unknown. sourceUrl must be HTTPS with no port, credentials, query, fragment, empty or dot path segments; sourceTitle is descriptive only and never establishes authority.`,
-      "A met or not_met check whose source is missing, title-only, non-HTTPS, unrecognised, a stale or unlinked Visa Atlas record, or outside the rule's scope keeps the route UNKNOWN; any non-not_applicable check with unknown authority makes the result a Provisional Assessment (assessment_kind 'provisional') with usableForRanking false. A primary check decides its requirement and overrides a contradicting Visa Atlas check. A decisive requirement with only trusted evidence is listed in awaiting_official_confirmation and caps the route at POSSIBLE (assessment_kind 'awaiting_official_confirmation'); it can be ranked but never counts as PASS. Official PASS needs every decisive requirement confirmed by a primary check; a primary not_met gives an official FAIL.",
+      "A met or not_met check whose source is missing, title-only, non-HTTPS, unrecognised, a stale or unlinked Visa Atlas record, or outside the rule's scope keeps the route UNKNOWN; any non-not_applicable check with unknown authority makes the result a Provisional Assessment (assessment_kind 'provisional') with usableForRanking false. A primary check decides its requirement and overrides a contradicting Visa Atlas check. A decisive requirement with only trusted evidence is listed in awaiting_official_confirmation and caps the route at POSSIBLE (assessment_kind 'awaiting_official_confirmation'); it can be ranked but never counts as PASS, except that a trusted-only not_met is listed in likely_blockers and makes the route unrankable until a primary check confirms or overturns it. Official PASS needs every decisive requirement confirmed by a primary check; a primary not_met gives an official FAIL.",
       `Freshness uses the versioned fact-type policy (version ${FRESHNESS_POLICY_VERSION}) from the scorecard validator: age is measured from retrievedAt (zoned ISO date-time) to evaluation time for the given factType, and effectiveUntil in the past makes a check stale. A stale met or not_met check cannot produce PASS or FAIL, and a timeSensitive check with unknown freshness (no valid factType or retrievedAt) keeps the route UNKNOWN.`,
       "Each reason returns source_url, government_source_url, verified_at, checked_at, claim_type, source_authority {policy_version, classification, rule_id}, fact_type, retrieved_at, effective dates, and freshness {policy_version, fact_type, status, age_days, max_age_days}."
     ].join(" "),
@@ -549,6 +549,8 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
   const awaitingReasons = decisiveReasons
     .filter((reason) => reason.source_authority.classification === "trusted" && !confirmedIds.has(reason.requirement_id));
   const awaitingConfirmation = [...new Set(awaitingReasons.map((reason) => reason.title))];
+  // A trusted-only not_met is a likely failure: it cannot establish FAIL, but it must not be ranked either.
+  const likelyBlockers = [...new Set(awaitingReasons.filter((reason) => reason.result === "not_met").map((reason) => reason.title))];
   // A primary check decides its requirement: other checks of that requirement, including a contradicting
   // Visa Atlas record, no longer count. A trusted-only decisive check is awaiting confirmation, not a blocker.
   const effective = reasons.filter((reason) => reason.result !== "not_applicable"
@@ -580,6 +582,9 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
   if (undatedSensitive.length) {
     notes.push("One or more time-sensitive checks have unknown freshness; supply a freshness-policy factType and a zoned retrievedAt date-time.");
   }
+  if (likelyBlockers.length && !hasUnknownAuthority) {
+    notes.push("Visa Atlas reports one or more decisive requirements as not met; treat the route as a likely failure awaiting official confirmation at a primary official source, and do not rank it until then.");
+  }
   if (awaitingConfirmation.length && !hasUnknownAuthority) {
     notes.push("One or more decisive requirements rest only on trusted Visa Atlas evidence and are awaiting official confirmation at a primary official source; the route is at most POSSIBLE until each is confirmed.");
   }
@@ -597,6 +602,7 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
         : awaitingConfirmation.length && status !== "FAIL" ? "awaiting_official_confirmation" : "official",
       reasons,
       awaiting_official_confirmation: awaitingConfirmation,
+      likely_blockers: likelyBlockers,
       missing_requirements: missingRequirements,
       blockers,
       official_data_quality: {
@@ -605,7 +611,7 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
         freshness_note: args.freshnessNote || notes.join(" ") || "No additional freshness note supplied."
       }
     },
-    usableForRanking: (status === "PASS" || status === "POSSIBLE") && !hasUnknownAuthority,
+    usableForRanking: (status === "PASS" || status === "POSSIBLE") && !hasUnknownAuthority && !likelyBlockers.length,
     warnings: notes,
     usageNote: "Community evidence and preferences cannot change official eligibility."
   };

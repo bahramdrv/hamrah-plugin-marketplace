@@ -208,6 +208,19 @@ function visaAtlasCheck(overrides = {}) {
   });
 }
 
+test("a trusted-only not_met is a likely failure: POSSIBLE awaiting confirmation, but not rankable", async () => {
+  const lacks = "The applicant lacks evidence of secured livelihood for the Opportunity Card.";
+  const result = await evaluate([visaAtlasCheck({ result: "not_met", explanation: lacks })]);
+
+  assert.equal(result.officialEligibility.status, "POSSIBLE");
+  assert.equal(result.officialEligibility.assessment_kind, "awaiting_official_confirmation");
+  assert.deepEqual(result.officialEligibility.likely_blockers, [
+    "Secured livelihood for the Opportunity Card under Section 20a(4)"
+  ]);
+  assert.equal(result.usableForRanking, false);
+  assert.match(result.warnings.join(" "), /likely failure/i);
+});
+
 test("a current, government-linked Visa Atlas record alone is trusted and reaches at most POSSIBLE awaiting official confirmation", async () => {
   const result = await evaluate([visaAtlasCheck()]);
 

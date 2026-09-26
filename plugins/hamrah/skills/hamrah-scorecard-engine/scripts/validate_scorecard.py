@@ -115,6 +115,8 @@ def official_source_errors(route, country_code, route_code, status, usable, labe
         errors.append(f"{label}: assessment_kind 'awaiting_official_confirmation' needs a decisive requirement with only trusted authority.")
     if has_unknown_authority and usable:
         errors.append(f"{label}: provisional assessment with unknown source authority cannot be ranked.")
+    if usable and any(req.get("result") == "not_met" for req in awaiting):
+        errors.append(f"{label}: a trusted-only not_met is a likely failure; a likely failure awaiting official confirmation cannot be ranked.")
 
     return errors
 
