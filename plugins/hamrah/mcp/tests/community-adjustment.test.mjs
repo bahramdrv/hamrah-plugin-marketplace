@@ -37,35 +37,63 @@ test("a corroborated active downside signal lowers Practical Fit by its policy p
   assert.deepEqual(adjustment.ignoredSignals.map((item) => item.signalId), ["GBR-WORK-PRIORITY-OVERRUN-EXAMPLE"]);
 });
 
-test("when every matching signal is excluded, coverage is not strong and the exclusion reasons are counted", async (t) => {
+test("validated version 4 independent community reports can lower Practical Fit", async (t) => {
   const signalStoreRoot = store(t, { "v4.json": V4_DATASET });
   const result = await evaluate({ countryCode: "GBR", route: "global_talent" }, { signalStoreRoot });
   assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
   const adjustment = result.structuredContent;
-  assert.equal(adjustment.coverage, "none");
-  assert.equal(adjustment.totalAdjustment, 0);
-  assert.deepEqual(adjustment.signalCoverage, {
-    matching: 1, used: 0, applied: 0, excluded: 1,
-    excludedByReason: { evidence_maturity_unrecorded: 1 }, truncated: false
-  });
-  assert.match(adjustment.warnings.join(" "), /not proof of no friction/i);
+  assert.equal(adjustment.totalAdjustment, -10);
+  assert.equal(adjustment.appliedSignals[0].evidenceMaturity, "corroborated");
+  assert.equal(adjustment.scoreComponent.component, "practical_fit");
 });
 
-test("a version 2 dataset reports used and excluded signals separately and coverage as partial", async (t) => {
+test("validated version 2 independent community reports can lower Practical Fit", async (t) => {
   const signalStoreRoot = store(t, { "v2.json": V2_DATASET });
   const result = await evaluate({ countryCode: "GBR", route: "global_talent" }, { signalStoreRoot });
   assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
   const adjustment = result.structuredContent;
-  assert.equal(adjustment.coverage, "partial");
-  assert.deepEqual(adjustment.signalCoverage, {
-    matching: 2, used: 1, applied: 0, excluded: 1,
-    excludedByReason: { evidence_maturity_unrecorded: 1 }, truncated: false
-  });
+  assert.equal(adjustment.coverage, "strong");
+  assert.equal(adjustment.totalAdjustment, -10);
+  assert.equal(adjustment.signalCoverage.applied, 1);
   const byId = Object.fromEntries(adjustment.ignoredSignals.map((item) => [item.signalId, item]));
-  assert.equal(byId["GBR-GT-R4-ENDORSEMENT-DELAY-EXAMPLE"].excluded, true);
-  assert.equal(byId["GBR-GT-R4-ENDORSEMENT-DELAY-EXAMPLE"].reasonCode, "evidence_maturity_unrecorded");
   assert.equal(byId["GBR-WORK-PRIORITY-OVERRUN-EXAMPLE"].excluded, false);
   assert.equal(byId["GBR-WORK-PRIORITY-OVERRUN-EXAMPLE"].reasonCode, "not_active");
+});
+
+test("version 4 reports with one independent group cannot create a penalty", async (t) => {
+  const data = JSON.parse(V4_DATASET);
+  for (const evidence of data.evidence) if (evidence.source_id === "src_example-uk-community") evidence.independence_group = "r1";
+  const signalStoreRoot = store(t, { "v4.json": JSON.stringify(data) });
+  const result = await evaluate({ countryCode: "GBR", route: "global_talent" }, { signalStoreRoot });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.equal(result.structuredContent.totalAdjustment, 0);
+  assert.equal(result.structuredContent.ignoredSignals[0].reasonCode, "evidence_maturity_insufficient");
+});
+
+test("opposing public reports reduce version 4 Evidence Confidence before maturity is granted", async (t) => {
+  const data = JSON.parse(V4_DATASET);
+  data.sources[0].public = true;
+  data.sources[0].source_url = "https://example.org/community";
+  const signal = data.signals[0];
+  signal.evidence_ids = signal.evidence_ids.filter((id) => id !== "evd_gt-official-baseline-timing");
+  for (const evidence of data.evidence.filter((item) => item.source_id === "src_example-uk-community")) {
+    evidence.source_url = `https://example.org/reports/${evidence.independence_group}`;
+  }
+  for (let index = 1; index <= 3; index++) {
+    const opposing = structuredClone(data.evidence[0]);
+    opposing.id = `evd_opposing-${index}`;
+    opposing.independence_group = `opposing-${index}`;
+    opposing.source_url = `https://example.org/opposing/${index}`;
+    opposing.content_hash = `sha256:${String(index).repeat(64)}`;
+    opposing.supports_or_contradicts = "contradicts";
+    data.evidence.push(opposing);
+    signal.evidence_ids.push(opposing.id);
+  }
+  const signalStoreRoot = store(t, { "v4.json": JSON.stringify(data) });
+  const result = await evaluate({ countryCode: "GBR", route: "global_talent" }, { signalStoreRoot });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.equal(result.structuredContent.totalAdjustment, 0);
+  assert.equal(result.structuredContent.ignoredSignals[0].reasonCode, "evidence_maturity_insufficient");
 });
 
 test("German Opportunity Card signals in the deployed store are evaluated for policy reasons, not a privacy flag", async () => {

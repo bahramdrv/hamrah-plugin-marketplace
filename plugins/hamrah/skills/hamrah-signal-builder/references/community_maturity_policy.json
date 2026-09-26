@@ -1,0 +1,11 @@
+{
+  "policy_version": "1.0.0",
+  "reviewed_at": "2026-09-26",
+  "scope": "Evidence maturity for community friction in Practical Fit only. It does not establish official eligibility or affect IRVI or route ranking.",
+  "minimum_independent_supporting_reports": 2,
+  "minimum_public_evidence_confidence_label": "moderate",
+  "required_community_verification": true,
+  "version_2_rule": "Requires community_confirmed=true and at least two independent supporting evidence groups. Unknown verification or absent linked evidence keeps maturity unknown; explicit unverified or one group is emerging.",
+  "version_4_rule": "Requires community_confirmed=true and at least two independent supporting evidence groups. Public support must reach the Evidence Confidence label in this policy, with public opposition counted. Independently verified private support can qualify only for the applicant's Practical Fit warning when recorded signal confidence is medium or high; public opposition blocks that private fallback. Private reports never raise public Evidence Confidence.",
+  "unknown_when": "Missing independent evidence or community verification never becomes corroboration. Private reports can support a personal Practical Fit warning after privacy inspection, but never public Evidence Confidence or route ranking."
+}

@@ -7,6 +7,7 @@ import {
   searchCommunitySignals
 } from "./community-signals.mjs";
 import { assessFreshness, FRESHNESS_FACT_TYPES, FRESHNESS_POLICY_VERSION } from "./requirement-freshness.mjs";
+import { evidenceMaturityForSignal, MATURITY_POLICY } from "./community-maturity.mjs";
 import { classifySource, SOURCE_AUTHORITY_POLICY_VERSION } from "./source-authority.mjs";
 
 const PROFILE_SCHEMA = JSON.parse(
@@ -619,11 +620,11 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
 
 // Policy inputs come from the canonical signal, whose field names version 2, 3 and 4 datasets share, and from
 // the store's count of independent supporting reports.
-function policyInputs(canonical, searched) {
+function policyInputs(canonical, searched, dataset) {
   return {
     status: canonical.lifecycle?.status,
     impactDirection: canonical.impact_direction,
-    evidenceMaturity: canonical.evidence_maturity ?? null,
+    evidenceMaturity: evidenceMaturityForSignal(canonical, dataset, searched.datasetId, new Date().toISOString().slice(0, 10)),
     severity: canonical.severity,
     confidence: canonical.confidence || "low",
     independentReports: searched.evidenceSupport?.supportingGroups ?? 0
@@ -709,6 +710,7 @@ export function evaluateCommunityAdjustment(args = {}, root, maxDatasets) {
       checkedAt: new Date().toISOString(),
       filters: args,
       scoreComponent: SCORE_COMPONENT,
+      maturityPolicyVersion: MATURITY_POLICY.policy_version,
       coverage: "none",
       signalCoverage: { matching: 0, used: 0, applied: 0, excluded: 0, excludedByReason: {}, truncated: Boolean(searched.coverage?.truncated) },
       totalAdjustment: 0,
@@ -747,7 +749,7 @@ export function evaluateCommunityAdjustment(args = {}, root, maxDatasets) {
       signalId: signal.signalId,
       evidenceIds: fullSignal.evidence_links.map((link) => link.evidence_id)
     });
-    const inputs = policyInputs(fullSignal, signal);
+    const inputs = policyInputs(fullSignal, signal, dataset);
     const failedRule = failedEligibilityRule(inputs);
     const penalty = failedRule ? 0 : severityPenalty(inputs);
     if (!penalty) {
@@ -765,7 +767,8 @@ export function evaluateCommunityAdjustment(args = {}, root, maxDatasets) {
       independentReportCount: inputs.independentReports,
       severity: inputs.severity,
       confidence: inputs.confidence,
-      evidenceMaturity: inputs.evidenceMaturity
+      evidenceMaturity: inputs.evidenceMaturity,
+      maturityPolicyVersion: MATURITY_POLICY.policy_version
     });
   }
 
@@ -817,6 +820,7 @@ export function evaluateCommunityAdjustment(args = {}, root, maxDatasets) {
     checkedAt: new Date().toISOString(),
     filters: args,
     scoreComponent: SCORE_COMPONENT,
+    maturityPolicyVersion: MATURITY_POLICY.policy_version,
     coverage,
     signalCoverage,
     totalAdjustment,

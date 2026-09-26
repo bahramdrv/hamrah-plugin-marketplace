@@ -4,10 +4,10 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] A documented, versioned rule maps version 2 and version 4 evidence fields to evidence maturity; fields that are absent keep maturity unknown, never corroborated.
-- [ ] The rule reuses the existing Evidence Confidence and independence counts rather than a new heuristic.
-- [ ] Community adjustment applies penalties from qualifying version 2 and version 4 signals and still excludes those whose maturity is unknown, with reasons.
-- [ ] Per ADR 0004 the result remains a Practical Fit component only.
-- [ ] Tests cover a qualifying version 4 signal, a version 4 signal with too little independent evidence, and a version 2 signal, through the community adjustment tool.
+- [x] A documented, versioned rule maps version 2 and version 4 evidence fields to evidence maturity; fields that are absent keep maturity unknown, never corroborated.
+- [x] The rule reuses the existing Evidence Confidence and independence counts rather than a new heuristic.
+- [x] Community adjustment applies penalties from qualifying version 2 and version 4 signals and still excludes those whose maturity is unknown, with reasons.
+- [x] Per ADR 0004 the result remains a Practical Fit component only.
+- [x] Tests cover a qualifying version 4 signal, a version 4 signal with too little independent evidence, and a version 2 signal, through the community adjustment tool.
