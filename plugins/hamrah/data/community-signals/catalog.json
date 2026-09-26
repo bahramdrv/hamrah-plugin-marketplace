@@ -1,7 +1,21 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-25T17:46:55Z",
+  "updated_at": "2026-09-26T06:40:43Z",
   "datasets": [
+    {
+      "path": "datasets/2026/09/20260926064043-de-questions-74e0f04344.json",
+      "sha256": "74e0f0434489c0f3863ce990c34dff2ecb399aeec92ab48bf2ebeec69b018975",
+      "content_digest": "b0db0b6b0fc09708f7bf7f57ff30980986368d52a4a076b821f54787b12423c2",
+      "schema_version": "4.0.0",
+      "generated_at": "2026-09-26T06:40:43Z",
+      "countries": [],
+      "routes": [],
+      "statuses": [],
+      "signal_count": 0,
+      "source_ids": [
+        "src_0843ac14b7686bfd171c93cb01e5dfb1"
+      ]
+    },
     {
       "path": "datasets/2026/09/20260925174655-de-study-opportunity-card-78f7f8bd21.json",
       "sha256": "78f7f8bd216db2a82e937eeea3a3058e639765443fc83b755ebed29666684a52",

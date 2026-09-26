@@ -1,0 +1,570 @@
+{
+  "schema_version": "4.0.0",
+  "generated_at": "2026-09-26T06:40:43Z",
+  "provenance": {
+    "producer": "hamrah-signal-builder",
+    "method": "Reviewed eight user-supplied Telegram message excerpts. Five question posts were de-identified; two replies and one follow-up were considered. Parent message 2031 and later replies to some questions were not supplied. No official answer was inferred.",
+    "collected_at": "2026-09-26T06:40:43Z"
+  },
+  "source_coverage": [
+    {
+      "source_id": "src_de_opportunity_card_excerpt",
+      "source_name": "Excerpt about the opportunity card in Germany",
+      "source_type": "json",
+      "source_url": null,
+      "coverage_start": "2025-01-04",
+      "coverage_end": "2026-09-12",
+      "records_processed": 8,
+      "coverage_complete": false
+    }
+  ],
+  "quality_control": {
+    "full_sources_processed": false,
+    "reply_chains_considered": false,
+    "duplicates_merged": true,
+    "contradictions_checked": false,
+    "resolutions_checked": false,
+    "country_scope_checked": true,
+    "route_scope_checked": true,
+    "institution_scope_checked": true,
+    "correlated_penalties_checked": true
+  },
+  "watchlist": [
+    {
+      "watch_id": "watch_de_question_iran_access",
+      "country": "Germany",
+      "topic": "Current opportunity card application access from Iran",
+      "reason": "A community reply says not yet, but no current official authority source was supplied.",
+      "current_evidence": "Question message 2594 and reply message 2595 were supplied.",
+      "what_would_confirm_it": "Current German mission or official application portal guidance naming the opportunity card application channel from Iran.",
+      "last_checked": "2026-09-26"
+    },
+    {
+      "watch_id": "watch_de_skilled_thread_context",
+      "country": "Germany",
+      "topic": "Skilled worker question thread context",
+      "reason": "Message 2036 replies to message 2031, which was not supplied.",
+      "current_evidence": "The three questions in message 2036 are directly readable, but the case being addressed and any answer are unavailable.",
+      "what_would_confirm_it": "De-identified parent message 2031 and relevant subsequent replies.",
+      "last_checked": "2026-09-26"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src_0843ac14b7686bfd171c93cb01e5dfb1",
+      "source_name": "Excerpt about the opportunity card in Germany",
+      "source_family": "germany-opportunity-card-telegram-export",
+      "public": false,
+      "source_url": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evd_0f194d126a02f5886adf85b7bc67835b",
+      "source_id": "src_0843ac14b7686bfd171c93cb01e5dfb1",
+      "source_url": null,
+      "retrieved_at": "2026-09-26T06:40:43Z",
+      "published_at": null,
+      "event_date": "2025-06-03",
+      "content_hash": "sha256:cc96cf83f9c4df52dde6a807c7387fe6d2de46810da2fd46d588cde810b4456d",
+      "source_type": "second_hand_report",
+      "authority": "unknown",
+      "direct_or_second_hand": "second_hand",
+      "supports_or_contradicts": "supports",
+      "independence_group": "asker_e",
+      "copy_risk": "low",
+      "evidence_summary": "Message 1327 asks on behalf of a person living in Turkey whether work experience unrelated to an Iranian qualification can support an opportunity card application.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    },
+    {
+      "id": "evd_99b93ecd4db2fab32b3ba0a2a0637061",
+      "source_id": "src_0843ac14b7686bfd171c93cb01e5dfb1",
+      "source_url": null,
+      "retrieved_at": "2026-09-26T06:40:43Z",
+      "published_at": null,
+      "event_date": "2025-01-04",
+      "content_hash": "sha256:245e174050e4c8dfad8d956dae3c733cf2cc5eb2df971933c965b8752cb4a512",
+      "source_type": "unknown",
+      "authority": "unknown",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "asker_b",
+      "copy_risk": "low",
+      "evidence_summary": "Message 974 asks what to do after an 18-question opportunity card self-check produced a score and notification email.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    },
+    {
+      "id": "evd_9a8cbf39acfecb98b406a3b0ee14a6b3",
+      "source_id": "src_0843ac14b7686bfd171c93cb01e5dfb1",
+      "source_url": null,
+      "retrieved_at": "2026-09-26T06:40:43Z",
+      "published_at": null,
+      "event_date": "2026-09-12",
+      "content_hash": "sha256:a6e5e3e082f849f7f9a2dfbf62cd5207c3abee0c7e7204b491d07cbd2cfa90be",
+      "source_type": "unknown",
+      "authority": "unknown",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "asker_a",
+      "copy_risk": "low",
+      "evidence_summary": "Message 2594 asks whether a person can apply for the German opportunity card from Iran.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    },
+    {
+      "id": "evd_b400296dcbc2d1218056769af627b0e7",
+      "source_id": "src_0843ac14b7686bfd171c93cb01e5dfb1",
+      "source_url": null,
+      "retrieved_at": "2026-09-26T06:40:43Z",
+      "published_at": null,
+      "event_date": "2026-06-19",
+      "content_hash": "sha256:44b74dd98a043a3c4499176e2efc1987306c3847dded5d94ff66b5c902db703b",
+      "source_type": "unknown",
+      "authority": "unknown",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "asker_c",
+      "copy_risk": "low",
+      "evidence_summary": "Message 2036 asks a skilled-worker visa recipient about Anabin versus ZAB or occupational recognition, work or insurance history, and language evidence. The parent message was not supplied.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    },
+    {
+      "id": "evd_c35ee3151f25dd17c7e5b17419c8c99d",
+      "source_id": "src_0843ac14b7686bfd171c93cb01e5dfb1",
+      "source_url": null,
+      "retrieved_at": "2026-09-26T06:40:43Z",
+      "published_at": null,
+      "event_date": "2026-07-20",
+      "content_hash": "sha256:b228dc4702ad381fff50131191f7bbefe543270b8fc653be12e3c4b0faa450f4",
+      "source_type": "unknown",
+      "authority": "unknown",
+      "direct_or_second_hand": "direct",
+      "supports_or_contradicts": "supports",
+      "independence_group": "asker_d",
+      "copy_risk": "low",
+      "evidence_summary": "Message 2285 asks four opportunity card document questions: missing Anabin specialization and ZAB, bachelor versus master degree, legalization of degree levels, and translation or legalization of transcripts.",
+      "supersedes": null,
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    }
+  ],
+  "signals": [],
+  "questions": [
+    {
+      "id": "qst_05261716e14dfff30d92a341cdf2fbde",
+      "canonical_en": "Is employment or insurance history required for the German skilled worker route?",
+      "canonical_fa": "آیا برای مسیر نیروی متخصص آلمان، سابقهٔ کار یا سوابق بیمه لازم است؟",
+      "variants": [
+        "به سابقه کاری یا سوابق بیمه هم داشتن برای اسکیلد ورکر مهم است؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "skilled_worker"
+      ],
+      "topics": [
+        "work_experience",
+        "insurance_history"
+      ],
+      "process_stages": [
+        "skills_assessment",
+        "visa_application"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "unresolved",
+      "evidence_ids": [
+        "evd_b400296dcbc2d1218056769af627b0e7"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-06-19",
+        "last_seen": "2026-06-19",
+        "last_verified": null,
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    },
+    {
+      "id": "qst_16aa91029d2beba6551cb7a7f36ebcdf",
+      "canonical_en": "Is language evidence required for the German skilled worker route, and which certificate should be presented?",
+      "canonical_fa": "آیا برای مسیر نیروی متخصص آلمان مدرک زبان لازم است و چه مدرکی باید ارائه شود؟",
+      "variants": [
+        "مدرک زبان مهم بود و شما چی ارائه دادید؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "skilled_worker"
+      ],
+      "topics": [
+        "language_evidence"
+      ],
+      "process_stages": [
+        "visa_application"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "unresolved",
+      "evidence_ids": [
+        "evd_b400296dcbc2d1218056769af627b0e7"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-06-19",
+        "last_seen": "2026-06-19",
+        "last_verified": null,
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    },
+    {
+      "id": "qst_17b48540d670fd552ec96ef472539596",
+      "canonical_en": "Must academic transcripts be translated and legalized for an opportunity card application?",
+      "canonical_fa": "آیا برای کارت فرصت ترجمه و لگالایز ریزنمرات هم لازم است؟",
+      "variants": [
+        "باید ریز نمرات هم ترجمه و لگال کرد؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "transcript_legalization"
+      ],
+      "process_stages": [
+        "visa_application"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "unresolved",
+      "evidence_ids": [
+        "evd_c35ee3151f25dd17c7e5b17419c8c99d"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-07-20",
+        "last_seen": "2026-07-20",
+        "last_verified": null,
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    },
+    {
+      "id": "qst_211e8054cafb980a45bfaddc5e708715",
+      "canonical_en": "Can someone apply for the German opportunity card from Iran?",
+      "canonical_fa": "آیا می‌توان برای کارت فرصت آلمان از داخل ایران درخواست داد؟",
+      "variants": [
+        "کارت شانس را میشه از ایران هم اقدام کرد یا خیر؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "application_from_iran"
+      ],
+      "process_stages": [
+        "visa_application"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "unresolved",
+      "evidence_ids": [
+        "evd_9a8cbf39acfecb98b406a3b0ee14a6b3"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-09-12",
+        "last_seen": "2026-09-12",
+        "last_verified": null,
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    },
+    {
+      "id": "qst_304ed73a925386a38511ee044b16af44",
+      "canonical_en": "For the German skilled worker route, is Anabin alone sufficient or is ZAB or occupational recognition also needed?",
+      "canonical_fa": "برای مسیر نیروی متخصص آلمان، آیا آنابین به‌تنهایی کافی است یا تأیید ZAB یا معادل‌سازی شغلی هم لازم است؟",
+      "variants": [
+        "فقط آنابین ارائه دادید یا نیاز به زاب یا آنرکنونگ شغلی داشتید؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "skilled_worker"
+      ],
+      "topics": [
+        "qualification_recognition"
+      ],
+      "process_stages": [
+        "skills_assessment"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "unresolved",
+      "evidence_ids": [
+        "evd_b400296dcbc2d1218056769af627b0e7"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-06-19",
+        "last_seen": "2026-06-19",
+        "last_verified": null,
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    },
+    {
+      "id": "qst_6a26f27043be8d8866517574cfaab11a",
+      "canonical_en": "Can work experience in a field unrelated to the qualification support a German opportunity card application?",
+      "canonical_fa": "آیا سابقهٔ کار در حوزه‌ای نامرتبط با مدرک تحصیلی برای کارت فرصت آلمان قابل استفاده است؟",
+      "variants": [
+        "اگر مدرک تحصیلی و سابقه کار مرتبط نباشه امکان گرفتن این ویزا هست؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "work_experience",
+        "qualification_alignment"
+      ],
+      "process_stages": [
+        "points_assessment"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "unresolved",
+      "evidence_ids": [
+        "evd_0f194d126a02f5886adf85b7bc67835b"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2025-06-03",
+        "last_seen": "2025-06-03",
+        "last_verified": null,
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    },
+    {
+      "id": "qst_8b89acac79869b700b7b4f1cd8f218a6",
+      "canonical_en": "Does choosing a bachelor or master degree make a difference for an opportunity card application?",
+      "canonical_fa": "آیا اقدام برای کارت فرصت با مدرک کارشناسی یا کارشناسی ارشد تفاوتی دارد؟",
+      "variants": [
+        "با مدرک تحصیلی لیسانس اقدام کنم بهتر هست یا ارشد؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "degree_choice"
+      ],
+      "process_stages": [
+        "points_assessment"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "unresolved",
+      "evidence_ids": [
+        "evd_c35ee3151f25dd17c7e5b17419c8c99d"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-07-20",
+        "last_seen": "2026-07-20",
+        "last_verified": null,
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    },
+    {
+      "id": "qst_9ea8de6b7504f903fa5b3dcb4a57310c",
+      "canonical_en": "Does completing the opportunity card self-check and receiving a score and email start an application, and what is the next step?",
+      "canonical_fa": "آیا تکمیل خودارزیابی کارت فرصت و دریافت امتیاز و ایمیل به معنی ثبت درخواست است و گام بعدی چیست؟",
+      "variants": [
+        "الان باید کاری انجام بدم یا منتظر ایمیل دیگه ای باشم؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "self_check",
+        "application_step"
+      ],
+      "process_stages": [
+        "points_assessment",
+        "visa_application"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "unresolved",
+      "evidence_ids": [
+        "evd_99b93ecd4db2fab32b3ba0a2a0637061"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2025-01-04",
+        "last_seen": "2025-01-04",
+        "last_verified": null,
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    },
+    {
+      "id": "qst_b530e6ed80ee3b3da4c16d8b4aa20917",
+      "canonical_en": "If the university and field appear in Anabin but the specialization does not, is ZAB required for the opportunity card?",
+      "canonical_fa": "اگر دانشگاه و رشته در آنابین ثبت شده اما گرایش ثبت نشده باشد، آیا برای کارت فرصت تأیید ZAB لازم است؟",
+      "variants": [
+        "در این صورت باید zab بگیرم؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "qualification_recognition",
+        "anabin_zab"
+      ],
+      "process_stages": [
+        "skills_assessment"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "unresolved",
+      "evidence_ids": [
+        "evd_c35ee3151f25dd17c7e5b17419c8c99d"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-07-20",
+        "last_seen": "2026-07-20",
+        "last_verified": null,
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    },
+    {
+      "id": "qst_cad2045f8511716b781f8a9d4d0eb0d1",
+      "canonical_en": "For an opportunity card application, must all education levels be legalized or only the degree used to apply?",
+      "canonical_fa": "برای کارت فرصت باید همهٔ مقاطع تحصیلی لگالایز شوند یا فقط مدرکی که با آن اقدام می‌شود؟",
+      "variants": [
+        "برای لگالایز کردن مدارک تحصیلی باید همه مقاطع لگال کرد یا فقط مقطعی که میخوایم باهاش اقدام کنیم؟"
+      ],
+      "country_codes": [
+        "DEU"
+      ],
+      "routes": [
+        "opportunity_card"
+      ],
+      "topics": [
+        "document_legalization"
+      ],
+      "process_stages": [
+        "visa_application"
+      ],
+      "independent_asker_count": 1,
+      "trend": "unknown",
+      "answer_status": "unresolved",
+      "evidence_ids": [
+        "evd_c35ee3151f25dd17c7e5b17419c8c99d"
+      ],
+      "lifecycle": {
+        "status": "monitoring",
+        "first_seen": "2026-07-20",
+        "last_seen": "2026-07-20",
+        "last_verified": null,
+        "superseded_by": null
+      },
+      "validation": {
+        "status": "validated",
+        "privacy_status": "pass",
+        "validated_at": "2026-09-26T06:40:43Z"
+      }
+    }
+  ],
+  "academic_opportunities": [],
+  "lived_experiences": [],
+  "route_claims": []
+}
