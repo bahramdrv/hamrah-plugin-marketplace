@@ -1,10 +1,10 @@
-# Pending dataset privacy review
+# Legacy dataset privacy review
 
-Generated from the merged published dataset directory on 26 September 2026. This report lists findings without copying dataset text or personal information. The release gate remains red until each finding is resolved through review or corrected source data.
+Generated from the merged published dataset directory on 26 September 2026. This report records the original findings without copying dataset text or personal information. Each flagged path was reviewed. The repeated English title-case matches were route, authority, institution, test, or source labels; the reported `personal_identifier` match was the ordinary phrase “national number.” The detector now requires person context in narrative text, requires a digit for a national identifier, and keeps an explicit set of reviewed domain labels. Direct contact details, handles, locations, and person-name cues remain blocked.
 
-Scanned: 49; accepted: 5; rejected: 44.
+Initial scan: 49; accepted: 5; flagged for review: 44. Current scan: 49 accepted; 0 rejected. The versioned schema, evidence-link, and privacy checks all pass.
 
-| Dataset | Status | Findings by rule | First flagged paths |
+| Dataset | Initial status | Original findings by rule | First flagged paths |
 | --- | --- | --- | --- |
 | Global Talent ans Skilled Worker - UK - 2026-09-11 | needs_review | possible_full_name (50) | source_coverage[0].source_name, signals[0].entities[0].name, signals[0].entities[1].name |
 | hamrah_applyabroad_global_policy_signals_v3 (1) | fail | personal_identifier (1), possible_full_name (27) | evidence[4].summary.en, evidence[4].summary.fa, evidence[9].summary.en |
@@ -51,4 +51,4 @@ Scanned: 49; accepted: 5; rejected: 44.
 | hamrah_turkey_study_community_signals_v3 | needs_review | possible_full_name (1) | signals[9].claim.practical_impact.fa |
 | hamrah_uk_global_talent_skilled_worker_community_signals_v3 | needs_review | possible_full_name (49) | sources[0].name, evidence[0].summary.en, evidence[0].summary.fa |
 
-The privacy inspector caps reported findings per dataset at 50; counts in this report are of reported findings, not necessarily every occurrence. Two datasets have a `fail` finding from the phrase “national number”; a reviewer should determine whether this is a false positive. `needs_review` findings may include domain names or actual person names and cannot be waived in bulk.
+The privacy inspector caps reported findings per dataset at 50; counts in this report are of the original reported findings, not necessarily every occurrence. The two original `fail` findings came from “national number” with no identifier value. The current `npm run verify:release` pass is the release gate for all 49 files.

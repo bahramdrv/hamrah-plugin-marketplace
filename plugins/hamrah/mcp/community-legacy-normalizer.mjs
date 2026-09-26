@@ -239,7 +239,7 @@ function canonicalSignal(signal, raw, generatedAt, nestedEvidenceLinks = []) {
         regulated_professions: arr(applicants.regulated_professions ?? applicants.regulatedProfessions).map(String),
         other_conditions: arr(applicants.other_conditions ?? applicants.otherConditions).map(String)
       },
-      routes: { families: routeFamilies.filter((route) => route !== "other").map(String), codes: routeCodes.filter((route) => route !== "other").map(String) },
+      routes: { families: routeFamilies.filter((route) => route !== "other").map(String), codes: routeCodes.filter((route) => route !== "other").map((route) => normalized(route).replace(/\s+/gu, "_")) },
       process_stages: arr(scope.process_stages ?? scope.processStages).map(String).length ? arr(scope.process_stages ?? scope.processStages).map(String) : signal?.processStage ? [String(signal.processStage)] : [],
       entities: entitiesRaw.map(canonicalEntity)
     },
@@ -418,7 +418,7 @@ function migrateV2(raw, datasetId) {
         applicants: {
           origin_countries: arr(signal.applicant_scope?.origin_countries), nationalities: arr(signal.applicant_scope?.nationalities), residence_countries: arr(signal.applicant_scope?.residence_countries), applying_from: arr(signal.applicant_scope?.applying_from), age_groups: arr(signal.applicant_scope?.age_groups), occupations: arr(signal.applicant_scope?.occupations), fields: arr(signal.applicant_scope?.fields), education_levels: arr(signal.applicant_scope?.education_levels), regulated_professions: arr(signal.applicant_scope?.regulated_professions), other_conditions: arr(signal.applicant_scope?.other_conditions)
         },
-        routes: { families: arr(signal.migration_route_family), codes: arr(signal.migration_routes).filter((route) => route !== "other") },
+        routes: { families: arr(signal.migration_route_family), codes: arr(signal.migration_routes).filter((route) => route !== "other").map((route) => normalized(route).replace(/\s+/gu, "_")) },
         process_stages: arr(signal.process_stages), entities: arr(signal.entities).map(canonicalEntity)
       },
       claim: {

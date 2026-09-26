@@ -4,7 +4,7 @@ Run from the repository root before deployment:
 
 ```sh
 npm ci
-python3 -m pip install -r requirements-test.txt
+python3 -m pip install --no-deps -r requirements-test.txt
 npm run check:static
 python3 -m compileall -q plugins/hamrah/skills
 npm run verify:release
@@ -30,7 +30,20 @@ The Node suite covers request controls, publication and privacy, evidence retrie
 
 The local environment could not download the pinned Python test dependencies, so the Python tests ran without `jsonschema`; the schema compiler above provided independent schema validation. A green CI run is required before deployment.
 
-The subsequent merge with `origin/main` introduced 48 additional dataset files. The combined store currently scans 49 files and rejects 44 on privacy inspection (42 `needs_review`, 2 `fail`). The release check and the bundled-dataset test remain red until those records are reviewed and corrected; the pre-merge results above do not describe the combined release.
+The subsequent merge with `origin/main` introduced 48 additional dataset files. The combined store now scans and validates all 49 files after review of the original 44 privacy findings. See the [legacy dataset privacy review](dataset-privacy-review.md) for the original flagged paths and resolution. The pre-merge results above remain a historical record; the combined release needs its own complete CI run before deployment.
+
+### Combined local verification on 26 September 2026
+
+| Check | Result |
+| --- | --- |
+| Locked installs | `npm ci` passed; the fully pinned Python test packages installed with `--no-deps` in an isolated directory |
+| Node suite | 172 passed, 0 failed |
+| Python suite | 21 passed with `pytest` and `jsonschema` |
+| Schemas and published data | 19 schemas compiled; all 49 published datasets valid with privacy `pass` |
+| Static checks | JavaScript syntax, Python compilation, and Git whitespace checks passed |
+| Production dependency audit | Online npm audit found 0 vulnerabilities |
+
+GitHub Actions has not yet run on this merge. Its result is required before deployment.
 
 ## How to read Hamrah's measures
 

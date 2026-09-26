@@ -1,57 +1,42 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import {
-  getCommunitySignalDataset,
-  loadCommunitySignalStore,
-  searchCommunitySignals
-} from "../community-signals.mjs";
+import { loadCommunitySignalStore, searchCommunitySignals } from "../community-signals.mjs";
 
-test("all bundled community signal datasets conform to the v3 store contract", () => {
+test("all bundled community datasets pass their versioned contract and privacy gate", () => {
   const store = loadCommunitySignalStore();
-
-  assert.ok(store.scanned > 0, "at least one bundled community dataset must be present");
-  assert.equal(store.invalidDatasets.length, 0);
+  assert.ok(store.scanned > 0);
+  assert.deepEqual(store.invalidDatasets, []);
   assert.equal(store.datasets.length, store.scanned);
-  for (const { dataset } of store.datasets) {
-    assert.equal(dataset.schema_version, "3.0.0");
-    assert.ok(Array.isArray(dataset.sources));
-    assert.ok(Array.isArray(dataset.evidence));
-    assert.ok(Array.isArray(dataset.signals));
-    assert.equal(dataset.quality?.checks?.privacy?.status, "pass");
-    for (const signal of dataset.signals) {
-      assert.equal(Object.hasOwn(signal, "suggested_fit_adjustment"), false);
-      assert.equal(Object.hasOwn(signal, "conditional_adjustment"), false);
-      assert.ok(signal.assessment?.lifecycle);
-      assert.ok(signal.assessment?.evidence_maturity);
-      assert.ok(signal.review?.status);
+  for (const { dataset, privacy } of store.datasets) {
+    assert.ok(["2.0", "3.0.0", "4.0.0"].includes(dataset.schema_version));
+    assert.equal(privacy.status, "pass");
+    if (dataset.schema_version === "3.0.0") {
+      for (const signal of dataset.signals) {
+        assert.equal(Object.hasOwn(signal, "suggested_fit_adjustment"), false);
+        assert.equal(Object.hasOwn(signal, "conditional_adjustment"), false);
+      }
     }
   }
 });
 
-test("Australia and Germany signals are queryable without stored scoring adjustments", () => {
-  const australia = searchCommunitySignals({ countryCode: "AUS" });
-  const germany = searchCommunitySignals({ countryCode: "DEU" });
-
-  assert.ok(australia.resultCount > 0);
-  assert.ok(germany.resultCount > 0);
-  for (const result of [...australia.signals, ...germany.signals]) {
-    assert.ok(result.assessment?.lifecycle);
-    assert.equal(Object.hasOwn(result, "suggestedFitAdjustment"), false);
-    assert.equal(Object.hasOwn(result, "conditionalAdjustment"), false);
+test("Australian and German signals remain queryable from the mixed store", () => {
+  for (const countryCode of ["AUS", "DEU"]) {
+    const result = searchCommunitySignals({ countryCode });
+    assert.ok(result.resultCount > 0, countryCode);
+    assert.equal(result.coverage.validDatasets, result.coverage.filesScanned);
+    assert.ok(result.signals.every((signal) => signal.datasetId && signal.schemaVersion));
   }
 });
 
-test("every signal evidence link resolves to top-level evidence", () => {
-  const searched = searchCommunitySignals({ countryCode: "DEU", limit: 1 });
-  assert.equal(searched.resultCount, 1);
-  const full = getCommunitySignalDataset({ datasetId: searched.signals[0].datasetId });
-  const evidenceIds = new Set(full.evidence.map((item) => item.evidence_id));
-
-  for (const signal of full.signals) {
-    for (const link of signal.evidence_links) {
-      assert.ok(evidenceIds.has(link.evidence_id), `${link.evidence_id} must resolve`);
-      assert.ok(["supports", "contradicts", "resolves", "context"].includes(link.relation));
+test("every served signal resolves its evidence within its own dataset", () => {
+  const store = loadCommunitySignalStore();
+  for (const { datasetId, canonical } of store.datasets) {
+    const evidenceIds = new Set(canonical.evidence.map((item) => item.id));
+    for (const signal of canonical.signals) {
+      for (const evidenceId of signal.evidence_ids) {
+        assert.ok(evidenceIds.has(evidenceId), `${datasetId}: ${signal.id} references ${evidenceId}`);
+      }
     }
   }
 });

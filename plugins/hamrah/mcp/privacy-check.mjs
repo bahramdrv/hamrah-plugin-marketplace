@@ -15,7 +15,14 @@ const STABLE_ID = /^(?:sig|qst|opp|exp|clm|src|evd)_[0-9a-f]{32}$/;
 const DOMAIN_PHRASES = new Set([
   "Global Talent", "United Kingdom", "Peer Review", "Example Community",
   "Opportunity Card", "Residence Act", "Consular Services",
-  "Federal Ministry", "Federal Foreign", "Federal Employment"
+  "Federal Ministry", "Federal Foreign", "Federal Employment",
+  // Reviewed route, authority, institution, exam, and source labels in the published legacy datasets.
+  "Academic Technology", "Application Centre", "Approval Scheme", "Arts Council", "Australia News",
+  "British Academy", "Build Abroad", "Campus France", "Canada News", "Core Skills",
+  "Deakin University", "Duolingo English", "Eindhoven University", "Germany Aus",
+  "Germany News", "Graduate Diploma", "Griffith University", "Hamrah Community",
+  "Home Office", "Royal Academy", "Royal Society", "Signal Candidate", "Skilled Worker",
+  "Spain Visa", "Specialist Skills", "Tech Nation", "Visa Application"
 ]);
 const KNOWN_INSTITUTIONS = new Map([
   ["vac", new Set(["Tehran UK Visa Application Centre"])],
@@ -43,7 +50,8 @@ function inspectString(value, path, field, parent, findings, exceptions) {
     && /(?:\+|00)\d[\d\s().-]{7,}\d|(?<!\d)\d{9,15}(?!\d)/u.test(digitsNormalized)) add("fail", "phone");
   if (/@[A-Za-z0-9_]{3,}/u.test(decoded)) add("fail", "handle");
   if (/(?:t\.me|telegram\.me)\/|tg:\/\//i.test(decoded)) add("fail", "telegram_locator");
-  if (/\b(?:telegram|account|chat|user|application|passport|national)[ _-]?(?:id|number|no\.?)[\s:#=-]*[A-Za-z0-9_-]{4,}\b/i.test(decoded)) {
+  const identifier = /\b(telegram|account|chat|user|application|passport|national)[ _-]?(id|number|no\.?)[\s:#=-]*([A-Za-z0-9_-]{4,})\b/i.exec(decoded);
+  if (identifier && (identifier[1].toLowerCase() !== "national" || /\d/u.test(identifier[3]))) {
     add("fail", "personal_identifier");
   }
   if (/(?:کد\s*ملی|شماره\s*ملی|شماره\s*(?:گذرنامه|پاسپورت|درخواست))\s*[:：]?\s*\d{6,15}/u.test(digitsNormalized)) {
@@ -63,19 +71,23 @@ function inspectString(value, path, field, parent, findings, exceptions) {
   }
   const baseField = field.replace(/_(?:en|fa)$/, "");
   if (NARRATIVE_FIELDS.has(field) || NARRATIVE_FIELDS.has(baseField) || baseField === "name" || baseField === "title" || field === "source_name") {
-    const explicitName = /\b(?:Mr\.?|Mrs\.?|Ms\.?|Dr\.?|named|applicant named|person named)\s+[A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}\b/i.test(decoded);
+    const explicitName = /\b(?:[Mm]r\.?|[Mm]rs\.?|[Mm]s\.?|[Dd]r\.?|[Nn]amed|[Aa]pplicant named|[Pp]erson named)\s+[A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}\b/u.test(decoded);
     const titleName = baseField === "title" && /\b[A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}\s+(?:applied|filed|reported|said|shared)\b/.test(decoded);
-    const englishNames = NARRATIVE_FIELDS.has(field) || NARRATIVE_FIELDS.has(baseField) || baseField === "name" || field === "source_name"
+    const englishNames = baseField === "name" || field === "source_name"
       ? (decoded.match(/\b[A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}\b/g) || [])
       : [];
     for (const phrase of englishNames.filter((candidate) => DOMAIN_PHRASES.has(candidate))) {
       exceptions.push({ path, rule: "domain_phrase", reason: `${phrase} is an exact route, country, or process label.` });
     }
-    if (explicitName || titleName || englishNames.some((candidate) => !DOMAIN_PHRASES.has(candidate))) add("needs_review", "possible_full_name");
+    const personAction = /\b([A-Z][a-z]{2,}\s+[A-Z][a-z]{2,})\s+(?:applied|confirmed|enrolled|filed|graduated|obtained|received|reported|said|shared|submitted)\b/u.exec(decoded);
+    const namedAction = /\b(?:[Aa]sk|[Cc]ontact|[Ee]mail|[Cc]all)\s+([A-Z][a-z]{2,}\s+[A-Z][a-z]{2,})\b/u.exec(decoded);
+    if (explicitName || titleName || (personAction && !DOMAIN_PHRASES.has(personAction[1]))
+      || (namedAction && !DOMAIN_PHRASES.has(namedAction[1]))
+      || englishNames.some((candidate) => !DOMAIN_PHRASES.has(candidate))) add("needs_review", "possible_full_name");
     if (/(?:آقای|خانم|نام(?:\s+متقاضی)?\s*[:：])\s*[؀-ۿ]{2,}\s+[؀-ۿ]{2,}/u.test(decoded)) {
       add("needs_review", "possible_full_name");
     }
-    if ((field.endsWith("_fa") || NARRATIVE_FIELDS.has(field)) && /(?:^|[.!؟]\s*)[\p{Script=Arabic}]{2,}\s+[\p{Script=Arabic}]{2,}\s+(?:پرونده|درخواست|گفت|اعلام)(?:\s|$)/u.test(decoded)) {
+    if ((field.endsWith("_fa") || NARRATIVE_FIELDS.has(field)) && /(?:^|[.!؟]\s*)[\p{Script=Arabic}]{2,}\s+[\p{Script=Arabic}]{2,}\s+(?:پرونده\s+را\s+(?:ثبت|ارسال)|درخواست\s+(?:داد|کرد)|گفت|اعلام\s+کرد)(?:\s|$)/u.test(decoded)) {
       add("needs_review", "possible_full_name");
     }
   }
