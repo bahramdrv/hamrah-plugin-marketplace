@@ -4,7 +4,7 @@
 export const LEGACY_VALIDATION = Object.freeze({ status: "legacy_import", privacy_status: "pass", validated_at: null });
 
 export function localized(en, fa = null) {
-  return { en: en ?? null, fa: fa || null };
+  return { en: en || null, fa: fa || null };
 }
 
 export function schemaErrorMessages(errors = [], limit = 8) {

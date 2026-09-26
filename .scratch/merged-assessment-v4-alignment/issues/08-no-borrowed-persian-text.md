@@ -4,9 +4,9 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Normalizing a legacy dataset leaves a missing Persian or English field empty (or explicitly marked missing) instead of copying the other language.
-- [ ] Search and retrieval results show which language each text is in; a Persian summary is never English text.
-- [ ] Every published legacy dataset still loads; `npm run verify:release` passes.
-- [ ] Tests cover an English-only and a Persian-only legacy signal through the store reader and a search tool.
+- [x] Normalizing a legacy dataset leaves a missing Persian or English field empty (or explicitly marked missing) instead of copying the other language.
+- [x] Search and retrieval results show which language each text is in; a Persian summary is never English text.
+- [x] Every published legacy dataset still loads; `npm run verify:release` passes.
+- [x] Tests cover an English-only and a Persian-only legacy signal through the store reader and a search tool.

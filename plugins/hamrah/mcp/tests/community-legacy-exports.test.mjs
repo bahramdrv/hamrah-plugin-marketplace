@@ -87,3 +87,42 @@ test("an explicit privacy fail in a legacy export stays a fail despite redaction
   assert.equal(result.canonical, null);
   assert.match(result.errors.join("; "), /quality\.checks\.privacy is fail/);
 });
+
+test("legacy English-only and Persian-only summaries keep their language through retrieval and search", async (t) => {
+  const exportData = structuredClone(CANDIDATE_EXPORT);
+  exportData.signals[1].summary = "متقاضیان از تأخیر در نوبت خبر دادند.";
+  const root = mkdtempSync(path.join(tmpdir(), "hamrah-languages-"));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  writeFileSync(path.join(root, "candidate.json"), JSON.stringify(exportData));
+  const offline = async () => { throw new Error("network access is not expected"); };
+  const retrieved = await executeTool("getCommunitySignalDataset", { datasetId: "candidate" }, offline, { signalStoreRoot: root });
+  assert.equal(retrieved.isError, false, JSON.stringify(retrieved.structuredContent));
+  const [english, persian] = retrieved.structuredContent.canonicalSignals;
+  assert.equal(english.localized.summary.fa, null);
+  assert.equal(persian.localized.summary.en, null);
+  assert.equal(persian.localized.summary.fa, exportData.signals[1].summary);
+
+  const searched = await executeTool("searchCommunitySignals", { countryCode: "FRA", statuses: ["active", "uncertain"] }, offline, { signalStoreRoot: root });
+  assert.equal(searched.isError, false, JSON.stringify(searched.structuredContent));
+  const byId = Object.fromEntries(searched.structuredContent.signals.map((signal) => [signal.signalId, signal]));
+  assert.equal(byId[english.id].summaryFa, null);
+  assert.deepEqual(byId[english.id].availableSummaryLanguages, ["en"]);
+  assert.deepEqual(byId[english.id].localized.summary, { en: exportData.signals[0].summary, fa: null });
+  assert.equal(byId[english.id].localized.practical_impact.fa, null);
+  assert.equal(byId[persian.id].summaryEn, null);
+  assert.deepEqual(byId[persian.id].availableSummaryLanguages, ["fa"]);
+  assert.equal(byId[persian.id].localized.summary.fa, exportData.signals[1].summary);
+});
+
+test("separate legacy summary language fields survive normalization", () => {
+  const exportData = structuredClone(CANDIDATE_EXPORT);
+  delete exportData.signals[0].summary;
+  exportData.signals[0].summary_en = "Applicants reported an appointment delay.";
+  exportData.signals[0].summary_fa = "متقاضیان از تأخیر نوبت خبر دادند.";
+  const result = readCommunityDataset(exportData, "candidate");
+  assert.deepEqual(result.errors, []);
+  assert.deepEqual(result.canonical.signals[0].localized.summary, {
+    en: exportData.signals[0].summary_en,
+    fa: exportData.signals[0].summary_fa
+  });
+});

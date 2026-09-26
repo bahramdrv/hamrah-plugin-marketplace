@@ -13,14 +13,15 @@ function integerOrNull(value) { return Number.isInteger(value) && value >= 0 ? v
 function stringOrNull(value) { return value === null || value === undefined || value === "" ? null : String(value); }
 function booleanOrNull(value) { return typeof value === "boolean" ? value : null; }
 
-// The 3.0.0 contract needs both languages as strings, unlike the canonical `localized` helper, which
-// returns null for a missing language.
+// The 3.0.0 contract needs both language keys as strings. Empty means the source did not provide
+// that translation; the canonical reader converts it to null.
 function bilingualText(value) {
   const text = (part) => String(part || "");
   if (value && typeof value === "object" && !Array.isArray(value)) {
-    return { en: text(value.en ?? value.fa), fa: text(value.fa ?? value.en) };
+    return { en: text(value.en), fa: text(value.fa) };
   }
-  return { en: text(value), fa: text(value) };
+  const source = text(value);
+  return /[\u0600-\u06ff]/u.test(source) ? { en: "", fa: source } : { en: source, fa: "" };
 }
 
 function sourceType(value) {
@@ -217,7 +218,9 @@ function canonicalSignal(signal, signalId, raw, generatedAt, nestedEvidenceLinks
   const routeCodes = arr(routes.codes).length ? arr(routes.codes) : arr(signal?.migration_routes).length ? arr(signal.migration_routes) : signal?.route ? [signal.route] : [];
   const routeFamilies = arr(routes.families).length ? arr(routes.families) : arr(signal?.migration_route_family).length ? arr(signal.migration_route_family) : signal?.route ? [signal.route] : [];
   const claim = signal?.claim || {};
-  const summary = claim.summary ?? signal?.summary ?? signal?.summary_en ?? "";
+  const summary = claim.summary ?? (signal?.summary_en !== undefined || signal?.summary_fa !== undefined
+    ? { en: signal?.summary_en ?? signal?.summary, fa: signal?.summary_fa }
+    : signal?.summary ?? "");
   const title = claim.title ?? signal?.title ?? signal?.topic ?? signalId;
   const review = signal?.review || {};
   const reviewValue = review.status ?? signal?.validationStatus ?? signal?.status;
