@@ -1,248 +1,2456 @@
-[
-  "Academic Technology",
-  "Accepted English",
-  "Accepted Russian",
-  "All China",
-  "All Ministry",
-  "All Swiss",
-  "Amir Kabir",
-  "Anchor Listening",
-  "Application Centre",
-  "Approval Scheme",
-  "Architecture Telegram",
-  "Arts Council",
-  "Australia News",
-  "Australian Government",
-  "Blue Card",
-  "British Academy",
-  "British Council",
-  "British Embassy",
-  "Build Abroad",
-  "Build Japanese",
-  "Campus France",
-  "Canada News",
-  "Canada Start",
-  "Chinese Government",
-  "Civil Engineering",
-  "College Board",
-  "Common App",
-  "Community Signal",
-  "Community Student",
-  "Consular Services",
-  "Core Skills",
-  "Current Appendix",
-  "Current Armenian",
-  "Current Australian",
-  "Current Belgian",
-  "Current Chile",
-  "Current China",
-  "Current Chinese",
-  "Current Endorsed",
-  "Current English",
-  "Current Express",
-  "Current Finland",
-  "Current German",
-  "Current Home",
-  "Current Immigration",
-  "Current Iran",
-  "Current Iranian",
-  "Current Italian",
-  "Current Japanese",
-  "Current Korean",
-  "Current Make",
-  "Current Ministry",
-  "Current Norwegian",
-  "Current Peer",
-  "Current Route",
-  "Current Russian",
-  "Current Skilled",
-  "Current Studienkolleg",
-  "Current Swiss",
-  "Current Taiwan",
-  "Current Tehran",
-  "Current Turkish",
-  "Deakin University",
-  "Digital Technology",
-  "Direct China",
-  "Direct Norway",
-  "Diversity Visa",
-  "Document Australia",
-  "Document Evaluation",
-  "Donghua University",
-  "Duolingo English",
-  "Earned Settlement",
-  "Eindhoven University",
-  "Eligible Global",
-  "Embassy Track",
-  "Employment System",
-  "Endorsed Funder",
-  "Engineering Route",
-  "Engineering Stage",
-  "Engineers Australia",
-  "Equivalent Transnational",
-  "Example Community",
-  "Exceptional Talent",
-  "Express Entry",
-  "Federal Court",
-  "Federal Employment",
-  "Federal Foreign",
-  "Federal Ministry",
-  "Federal Skilled",
-  "For Germany",
-  "For Iran",
-  "For Iranian",
-  "For Listening",
-  "For Speaking",
-  "Foreign Affairs",
-  "Foreign Office",
-  "Francophone Minority",
-  "From June",
-  "General License",
-  "Genuine Student",
-  "German Approbation",
-  "German Embassy",
-  "German Foreign",
-  "Germany Aus",
-  "Germany Blue",
-  "Germany News",
-  "Get Canada",
-  "Global Talent",
-  "Gold Card",
-  "Google Slides",
-  "Graduate Diploma",
-  "Graduate Diplomas",
-  "Graduate Route",
-  "Grandparents Program",
-  "Griffith University",
-  "Hamrah Community",
-  "Historical Arts",
-  "Historical Iran",
-  "Historical Route",
-  "Home Affairs",
-  "Home Office",
-  "Horizon Europe",
-  "Humanities Telegram",
-  "Ikusei Shuro",
-  "Immigration Rule",
-  "Immigration Rules",
-  "Improve Turkish",
-  "Improving English",
-  "Industrial Engineering",
-  "International Admissions",
-  "Iran General",
-  "Iranian Ministry",
-  "Iranian Opportunity",
-  "Japan Foundation",
-  "Japan Telegram",
-  "Job Bank",
-  "Job Seeker",
-  "Judicial Review",
-  "Language Test",
-  "Limited German",
-  "Low Ausbildung",
-  "Middle East",
-  "Middle Eastern",
-  "Ministerial Directions",
-  "Multiple Common",
-  "National Register",
-  "New Zealand",
-  "Nomination Conditions",
-  "North America",
-  "Not Italy",
-  "Official College",
-  "Official Guide",
-  "One August",
-  "One Iranian",
-  "One September",
-  "One Skill",
-  "Online German",
-  "Open Doors",
-  "Open Work",
-  "Opportunity Card",
-  "Opportunity Cards",
-  "Overseas Skilled",
-  "Pargar Scandinavia",
-  "Past Tehran",
-  "Pathway Student",
-  "Peer Review",
-  "Pending Global",
-  "Procedural Fairness",
-  "Provide Route",
-  "Public Policy",
-  "Recent Cambridge",
-  "Recommendation Letter",
-  "Regular Decision",
-  "Repeated Armenia",
-  "Repeated Iran",
-  "Repeated Route",
-  "Repeated University",
-  "Representative Office",
-  "Research Assistant",
-  "Research Associate",
-  "Residence Act",
-  "Royal Academy",
-  "Royal Society",
-  "Search Year",
-  "Secure English",
-  "Separate September",
-  "Shanghai Government",
-  "Sharif University",
-  "Signal Candidate",
-  "Single Permit",
-  "Skilled Worker",
-  "Skilled Workers",
-  "Some English",
-  "South Korea",
-  "Spain Visa",
-  "Specialist Skills",
-  "Specialized English",
-  "Specified Skilled",
-  "Speculative August",
-  "Start Ecctis",
-  "Start Japanese",
-  "Study Permit",
-  "Study Work",
-  "Submitting Common",
-  "Super Visa",
-  "Swedish Migration",
-  "Taipei Medical",
-  "Taipei Office",
-  "Taipei Representative",
-  "Taiwan Employment",
-  "Taiwan Scholarship",
-  "Tech Nation",
-  "Tehran University",
-  "Temporary Annex",
-  "Temporary Graduate",
-  "The Belgian",
-  "The British",
-  "The Donghua",
-  "The Earned",
-  "The Express",
-  "The German",
-  "The Italy",
-  "The July",
-  "The September",
-  "The Tehran",
-  "The Temporary",
-  "The Turkey",
-  "Top Taiwan",
-  "Track Australian",
-  "Transnational Education",
-  "Travel Ban",
-  "Treat Chile",
-  "Treat Chinese",
-  "Treat German",
-  "Treat Korean",
-  "Treat Tehran",
-  "United Kingdom",
-  "United States",
-  "University Admissions",
-  "University Track",
-  "Uppsala University",
-  "Using Turkish",
-  "Visa Application",
-  "Web Administrator",
-  "Work Permit",
-  "Xiamen University"
-]
+{
+  "description": "Title-case phrases reviewed as not identifying a private person. A phrase is accepted by the full-name rule only inside one of its scopes: the store dataset id (relative path without .json; \"*\" means any dataset) and a field path pattern in which [*] stands for any array index. Everywhere else the phrase still yields needs_review. The review and per-file audit are in docs/dataset-privacy-review.md and docs/dataset-privacy-review-findings.json.",
+  "phrases": [
+    {
+      "phrase": "Academic Technology",
+      "reason": "Part of the UK Academic Technology Approval Scheme (ATAS), a government clearance scheme.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].entities[*].name",
+            "signals[*].evidence[*].source_name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Application Centre",
+      "reason": "Part of an institutional label such as \"Tehran UK Visa Application Centre\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_spain_signals_result10"
+          ],
+          "fields": [
+            "signals[*].scope.entities[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Approval Scheme",
+      "reason": "Part of the UK Academic Technology Approval Scheme (ATAS).",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].entities[*].name",
+            "signals[*].evidence[*].source_name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Arts Council",
+      "reason": "Arts Council England, a Global Talent endorsing body.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].entities[*].name",
+            "signals[*].evidence[*].evidence_summary",
+            "signals[*].title",
+            "signals[*].who_should_care"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_uk_global_talent_skilled_worker_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Australia News",
+      "reason": "Name of the exported Telegram news channel file (\"Australia News.json\"), not a person.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_australia_news_community_signals_v3"
+          ],
+          "fields": [
+            "sources[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Australian Government",
+      "reason": "The Australian Government as a sanctions authority.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_europe_phd_signals_result9"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Blue Card",
+      "reason": "EU Blue Card, a German residence permit route.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_germany_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.known_workaround",
+            "signals[*].claim.recommended_action.en",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa",
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_germany_work_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa",
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "British Academy",
+      "reason": "The British Academy, a Global Talent endorsing body.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].entities[*].name"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_uk_global_talent_skilled_worker_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "British Council",
+      "reason": "British Council, the IELTS test provider and cultural body.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_ielts_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_testinno_ielts_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "British Embassy",
+      "reason": "The British Embassy as a diplomatic mission.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].evidence[*].evidence_summary",
+            "signals[*].summary_en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Build Abroad",
+      "reason": "Name of the public Telegram channel the dataset was exported from.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_build_abroad_community_signals_v3"
+          ],
+          "fields": [
+            "sources[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Campus France",
+      "reason": "Campus France, the French government's study-abroad agency.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_france_signals_result16"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa",
+            "signals[*].scope.entities[*].name",
+            "signals[*].summary"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Canada News",
+      "reason": "Name of the exported Telegram news channel file (\"Canada News(1).json\"), not a person.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_canada_news_community_signals_v3"
+          ],
+          "fields": [
+            "sources[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Canada Start",
+      "reason": "Part of \"Canada Start-Up Visa\", an immigration programme.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_lookup_canada_migration_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "signals[*].claim.title.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Chinese Government",
+      "reason": "Part of \"Chinese Government Scholarship\", a public funding programme.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_china_news_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Civil Engineering",
+      "reason": "An academic discipline and occupation named in points reports.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_australia_work_community_signals_v3 (1)",
+            "hamrah_australia_work_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "College Board",
+      "reason": "College Board, the US organisation that runs the SAT.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_north_america_undergrad_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Common App",
+      "reason": "Common App, the US undergraduate application platform.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_north_america_undergrad_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.practical_impact.en",
+            "signals[*].claim.practical_impact.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Community Student",
+      "reason": "Part of the IRCC \"Francophone Minority Community Student Pilot\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_canada_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Consular Services",
+      "reason": "Part of the German \"Consular Services Portal\", an official application portal.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "2026/09/20260925174655-de-study-opportunity-card-78f7f8bd21"
+          ],
+          "fields": [
+            "evidence[*].evidence_summary",
+            "route_claims[*].statement_en",
+            "watchlist[*].what_would_confirm_it"
+          ]
+        },
+        {
+          "datasets": [
+            "2026/09/20260926123500-de-answers-36d8bf27bb"
+          ],
+          "fields": [
+            "sources[*].source_name",
+            "watchlist[*].current_evidence"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Core Skills",
+      "reason": "Australian Core Skills Income Threshold, a visa salary threshold.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_australia_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].scope.entities[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Deakin University",
+      "reason": "Deakin University, an Australian university; the institution, not the person it is named after.",
+      "resembles_personal_name": true,
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_europe_phd_signals_result9"
+          ],
+          "fields": [
+            "signals[*].scope.entities[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Digital Technology",
+      "reason": "Tech Nation's Digital Technology endorsement field for UK Global Talent.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].title"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Diversity Visa",
+      "reason": "US Diversity Visa lottery programme.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_humanities_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Document Evaluation",
+      "reason": "Part of the OUAC \"Document Evaluation Fees\" charge.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_north_america_undergrad_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Donghua University",
+      "reason": "Donghua University, a Chinese university in Shanghai; the institution name, not a person.",
+      "resembles_personal_name": true,
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_china_news_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Duolingo English",
+      "reason": "Part of \"Duolingo English Test\", a language test.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_europe_phd_signals_result9",
+            "hamrah_france_signals_result16",
+            "hamrah_italy_signals_result8"
+          ],
+          "fields": [
+            "signals[*].scope.entities[*].name"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_italy_candidate_signals"
+          ],
+          "fields": [
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].scope.entities[*].name",
+            "signals[*].summary"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Earned Settlement",
+      "reason": "UK Earned Settlement reform consultation.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].evidence[*].evidence_summary",
+            "signals[*].recommended_action",
+            "signals[*].summary_en",
+            "signals[*].summary_fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Eindhoven University",
+      "reason": "Part of \"Eindhoven University of Technology (TU/e)\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_europe_phd_signals_result9"
+          ],
+          "fields": [
+            "signals[*].scope.entities[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Embassy Track",
+      "reason": "Korean GKS scholarship application stream (Embassy Track).",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_south_korea_migration_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Employment System",
+      "reason": "Part of Japan's \"Training and Employment System\" (Ikusei Shuro).",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_japan_migration_community_signals_v3 (1)",
+            "hamrah_japan_migration_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Endorsed Funder",
+      "reason": "UK Global Talent Endorsed Funder route.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_uk_global_talent_skilled_worker_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.known_workaround",
+            "signals[*].claim.practical_impact.en",
+            "signals[*].claim.practical_impact.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa",
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Engineering Route",
+      "reason": "Part of \"Royal Academy of Engineering Route 4\" endorsement.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].evidence[*].evidence_summary"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Engineering Stage",
+      "reason": "Part of \"Royal Academy of Engineering Stage 1\" endorsement.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].evidence[*].evidence_summary"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Exceptional Talent",
+      "reason": "UK Global Talent Exceptional Talent criterion.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_uk_global_talent_skilled_worker_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Express Entry",
+      "reason": "Canada's Express Entry immigration system.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_canada_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_canada_work_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa",
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa",
+            "signals[*].review.reason"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_lookup_canada_migration_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa",
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa",
+            "signals[*].review.reason"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Federal Court",
+      "reason": "The Federal Court of Canada in judicial-review explanations.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_lookup_canada_migration_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "signals[*].claim.recommended_action.en",
+            "signals[*].claim.summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Federal Employment",
+      "reason": "Part of the German \"Federal Employment Agency\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "2026/09/20260925174655-de-study-opportunity-card-78f7f8bd21"
+          ],
+          "fields": [
+            "route_claims[*].statement_en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Federal Foreign",
+      "reason": "Part of the German \"Federal Foreign Office\". Accepted in any dataset because official German sources and the publication pipeline's fixtures cite it; field-limited.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "*"
+          ],
+          "fields": [
+            "evidence[*].evidence_summary",
+            "official_statistics[*].authority.name",
+            "route_claims[*].statement_en",
+            "source_coverage[*].source_name",
+            "sources[*].source_name",
+            "watchlist[*].reason"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Federal Ministry",
+      "reason": "Part of the German \"Federal Ministry of Justice\" legal database source name.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "2026/09/20260925174655-de-study-opportunity-card-78f7f8bd21"
+          ],
+          "fields": [
+            "source_coverage[*].source_name",
+            "sources[*].source_name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Federal Skilled",
+      "reason": "Part of Canada's \"Federal Skilled Worker\" programme.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_canada_work_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Foreign Affairs",
+      "reason": "Part of \"Ministry for Foreign Affairs\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_scandinavia_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Foreign Office",
+      "reason": "Part of \"German Foreign Office\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_germany_news_community_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Francophone Minority",
+      "reason": "Part of the IRCC \"Francophone Minority Community Student Pilot\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_canada_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "General License",
+      "reason": "US OFAC Iran General License G.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_applyabroad_global_policy_signals_v3 (1)",
+            "hamrah_applyabroad_global_policy_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Genuine Student",
+      "reason": "Australian Genuine Student visa requirement.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_australia_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "German Approbation",
+      "reason": "German Approbation, the medical/pharmacy licence.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_medical_sciences_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "signals[*].claim.summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "German Embassy",
+      "reason": "German Embassy (Tehran) as a diplomatic mission and source.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "2026/09/20260926070700-de-answers-10fbfbd150",
+            "2026/09/20260926092700-de-answers-2dabe07859",
+            "2026/09/20260926120000-de-answers-9f77824bcc",
+            "2026/09/20260926120300-de-answers-6f6aed2e5e",
+            "2026/09/20260926121500-de-answers-fe350b6888",
+            "2026/09/20260926123500-de-answers-36d8bf27bb"
+          ],
+          "fields": [
+            "route_claims[*].statement_en",
+            "source_coverage[*].source_name",
+            "sources[*].source_name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "German Foreign",
+      "reason": "Part of \"German Foreign Office\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_germany_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "signals[*].claim.summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Germany Aus",
+      "reason": "Name of the exported Telegram channel file (\"Germany Aus.json\", Ausbildung channel), not a person.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_germany_ausbildung_community_signals_v3"
+          ],
+          "fields": [
+            "sources[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Germany Blue",
+      "reason": "Part of \"in-Germany Blue Card processing\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_germany_work_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Germany News",
+      "reason": "Name of the exported Telegram news channel file (\"Germany News.json\"), not a person.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_germany_news_community_signals_v3"
+          ],
+          "fields": [
+            "sources[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Global Talent",
+      "reason": "UK Global Talent visa route. Accepted in any dataset because the route name appears across UK datasets, the skill's gold-standard examples and publication fixtures; field-limited.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "*"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.known_workaround",
+            "signals[*].claim.recommended_action.en",
+            "signals[*].claim.recommended_action.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa",
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa",
+            "signals[*].evidence[*].evidence_summary",
+            "signals[*].evidence[*].source_name",
+            "signals[*].known_workaround",
+            "signals[*].practical_impact",
+            "signals[*].recommended_action",
+            "signals[*].summary_en",
+            "signals[*].summary_fa",
+            "signals[*].title",
+            "signals[*].who_should_care",
+            "source_coverage[*].source_name",
+            "sources[*].name",
+            "sources[*].source_name",
+            "watchlist[*].current_evidence"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Gold Card",
+      "reason": "Taiwan Employment Gold Card, a residence permit.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_taiwan_study_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.recommended_action.en",
+            "signals[*].claim.recommended_action.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Google Slides",
+      "reason": "Google Slides, a product used to host portfolios.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_art_architecture_community_signals_v3 (1)",
+            "hamrah_art_architecture_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Graduate Diploma",
+      "reason": "Graduate Diploma, a New Zealand/Australian qualification level.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_applyabroad_global_policy_signals_v3 (1)",
+            "hamrah_applyabroad_global_policy_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_australia_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.practical_impact.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].scope.entities[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Graduate Diplomas",
+      "reason": "Plural of the Graduate Diploma qualification.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_australia_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "signals[*].claim.known_workaround",
+            "signals[*].claim.practical_impact.en",
+            "signals[*].claim.summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Graduate Route",
+      "reason": "UK Graduate Route visa.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_applyabroad_global_policy_signals_v3 (1)",
+            "hamrah_applyabroad_global_policy_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Grandparents Program",
+      "reason": "Part of Canada's \"Parents and Grandparents Program\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_canada_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "signals[*].claim.title.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Griffith University",
+      "reason": "Griffith University, an Australian university; the institution, not the person it is named after.",
+      "resembles_personal_name": true,
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_europe_phd_signals_result9"
+          ],
+          "fields": [
+            "signals[*].scope.entities[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Hamrah Community",
+      "reason": "Hamrah's own \"Community Signal\" tool and extraction name in legacy provenance notes.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_italy_candidate_signals"
+          ],
+          "fields": [
+            "sources[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Home Affairs",
+      "reason": "Australian Department of Home Affairs.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_australia_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.recommended_action.en",
+            "signals[*].claim.recommended_action.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Home Office",
+      "reason": "UK Home Office.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].entities[*].name",
+            "signals[*].evidence[*].evidence_summary",
+            "signals[*].recommended_action"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_uk_global_talent_skilled_worker_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.known_workaround",
+            "signals[*].claim.recommended_action.en",
+            "signals[*].claim.recommended_action.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Horizon Europe",
+      "reason": "Horizon Europe, the EU research funding programme.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_australia_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Ikusei Shuro",
+      "reason": "Ikusei Shuro (育成就労), Japan's new training-employment visa system; a programme name, not a Japanese personal name.",
+      "resembles_personal_name": true,
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_japan_migration_community_signals_v3 (1)",
+            "hamrah_japan_migration_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Immigration Rule",
+      "reason": "UK Immigration Rules (singular use).",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].evidence[*].evidence_summary",
+            "watchlist[*].reason"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Immigration Rules",
+      "reason": "UK Immigration Rules.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].recommended_action",
+            "watchlist[*].what_would_confirm_it"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Industrial Engineering",
+      "reason": "An academic discipline.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_australia_work_community_signals_v3 (1)",
+            "hamrah_australia_work_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "International Admissions",
+      "reason": "A university's International Admissions portal or office.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_china_study_community_signals_v3",
+            "hamrah_china_study_community_signals_v3_083403"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Iran General",
+      "reason": "Part of US OFAC \"Iran General License G\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_applyabroad_global_policy_signals_v3 (1)",
+            "hamrah_applyabroad_global_policy_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Iranian Opportunity",
+      "reason": "Sentence opening \"Iranian Opportunity Card applicants\": a nationality adjective before the Opportunity Card route; kept because nationality adjectives are not treated as generic openers.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_germany_opportunity_card_community_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.who_should_care.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Japan Foundation",
+      "reason": "The Japan Foundation, which runs the JLPT abroad.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_japan_migration_community_signals_v3 (1)",
+            "hamrah_japan_migration_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Job Bank",
+      "reason": "Canada's Job Bank, the government job portal.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_canada_work_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.known_workaround",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Job Seeker",
+      "reason": "Former German Job Seeker visa.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_germany_work_community_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.recommended_action.fa",
+            "signals[*].claim.who_should_care.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Judicial Review",
+      "reason": "Judicial Review, a Canadian court procedure.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_lookup_canada_migration_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Language Test",
+      "reason": "Part of UK \"Secure English Language Test\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].evidence[*].evidence_summary"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Low Ausbildung",
+      "reason": "Sentence opening \"Low Ausbildung salary\": kept as a phrase because \"Low\" is also a surname, so it is not a generic sentence opener.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_germany_ausbildung_community_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.title.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Middle East",
+      "reason": "A geographic region.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_humanities_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Middle Eastern",
+      "reason": "A regional adjective.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_humanities_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "signals[*].claim.summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Ministerial Directions",
+      "reason": "Australian Ministerial Directions 111/115 on visa processing priority.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_australia_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "signals[*].review.reason"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "National Register",
+      "reason": "The Belgian National Register (population register) as an institution.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_belgium_migration_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "New Zealand",
+      "reason": "A country.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_applyabroad_global_policy_signals_v3 (1)",
+            "hamrah_applyabroad_global_policy_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "signals[*].claim.title.en",
+            "signals[*].claim.who_should_care.en"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_medical_sciences_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Nomination Conditions",
+      "reason": "Victorian state nomination conditions forms for visa subclasses.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_australia_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "North America",
+      "reason": "A continent.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_humanities_community_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Official Guide",
+      "reason": "Cambridge IELTS \"Official Guide\", a preparation book named mid-sentence.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_ielts_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Open Doors",
+      "reason": "Open Doors, a Russian government-backed scholarship olympiad.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_russia_study_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Open Work",
+      "reason": "Part of Canada's \"Open Work Permit\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_canada_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.fa",
+            "signals[*].claim.title.fa"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_lookup_canada_migration_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Opportunity Card",
+      "reason": "German Opportunity Card (Chancenkarte) residence route. Accepted in any dataset because it is the seeded route and appears in publication fixtures; field-limited.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "*"
+          ],
+          "fields": [
+            "evidence[*].evidence_summary",
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "questions[*].canonical_en",
+            "route_claims[*].statement_en",
+            "signals[*].claim.recommended_action.en",
+            "signals[*].claim.recommended_action.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa",
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa",
+            "signals[*].practical_impact",
+            "signals[*].recommended_action",
+            "signals[*].summary_en",
+            "signals[*].title",
+            "signals[*].who_should_care",
+            "sources[*].source_name",
+            "watchlist[*].reason",
+            "watchlist[*].what_would_confirm_it"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Opportunity Cards",
+      "reason": "Plural of the German Opportunity Card.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_germany_work_community_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Pathway Student",
+      "reason": "Part of Canada's \"Pathway Student Visa\" measure.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_applyabroad_global_policy_signals_v3 (1)",
+            "hamrah_applyabroad_global_policy_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Peer Review",
+      "reason": "The UK Global Talent Route 4 peer-review endorsement stage. Accepted in any dataset because the skill's gold-standard examples use it; field-limited.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "*"
+          ],
+          "fields": [
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa",
+            "signals[*].summary_fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Procedural Fairness",
+      "reason": "Part of IRCC \"Procedural Fairness Letter\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_canada_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Public Policy",
+      "reason": "An IRCC temporary public policy.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_canada_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.fa",
+            "signals[*].claim.title.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Recommendation Letter",
+      "reason": "A Global Talent application document.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_uk_global_talent_skilled_worker_community_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Regular Decision",
+      "reason": "US undergraduate Regular Decision admissions round.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_north_america_undergrad_community_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Representative Office",
+      "reason": "Part of \"Taipei Representative Office\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_taiwan_study_channel_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Research Assistant",
+      "reason": "An academic job title in Endorsed Funder eligibility.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_uk_global_talent_skilled_worker_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Residence Act",
+      "reason": "German Residence Act (Aufenthaltsgesetz). Accepted in any dataset because official German sources and publication fixtures cite it; field-limited.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "*"
+          ],
+          "fields": [
+            "evidence[*].evidence_summary",
+            "source_coverage[*].source_name",
+            "sources[*].source_name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Royal Academy",
+      "reason": "Royal Academy of Engineering, a Global Talent endorsing body.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].entities[*].name",
+            "signals[*].evidence[*].evidence_summary",
+            "signals[*].summary_en",
+            "signals[*].summary_fa",
+            "signals[*].who_should_care"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_uk_global_talent_skilled_worker_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Royal Society",
+      "reason": "The Royal Society, a Global Talent endorsing body.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].entities[*].name",
+            "signals[*].evidence[*].evidence_summary",
+            "signals[*].evidence[*].source_name",
+            "signals[*].summary_en",
+            "signals[*].summary_fa",
+            "signals[*].who_should_care"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_uk_global_talent_skilled_worker_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Search Year",
+      "reason": "Belgium's post-study search year (zoekjaar) permit, quoted in Persian text.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_belgium_migration_community_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.title.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Secure English",
+      "reason": "Part of UK \"Secure English Language Test\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].evidence[*].evidence_summary"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Shanghai Government",
+      "reason": "Part of \"Shanghai Government Scholarship\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_china_news_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Signal Candidate",
+      "reason": "Part of the legacy extraction name \"Hamrah Community Signal Candidate Extraction\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_italy_candidate_signals"
+          ],
+          "fields": [
+            "sources[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Single Permit",
+      "reason": "EU/Belgian Single Permit (combined work and residence permit).",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_belgium_migration_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.fa",
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Skilled Worker",
+      "reason": "UK Skilled Worker visa route.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].evidence[*].evidence_summary",
+            "signals[*].evidence[*].source_name",
+            "signals[*].summary_en",
+            "signals[*].summary_fa",
+            "signals[*].title",
+            "signals[*].who_should_care",
+            "source_coverage[*].source_name"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_applyabroad_global_policy_signals_v3 (1)",
+            "hamrah_applyabroad_global_policy_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_uk_global_talent_skilled_worker_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.practical_impact.en",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa",
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa",
+            "sources[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Skilled Workers",
+      "reason": "Holders of the UK Skilled Worker visa.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].summary_en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Spain Visa",
+      "reason": "Part of \"BLS Spain Visa Application Centre in Iran\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_spain_signals_result10"
+          ],
+          "fields": [
+            "signals[*].scope.entities[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Specialist Skills",
+      "reason": "Australian Specialist Skills Income Threshold.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_australia_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].scope.entities[*].name"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Specified Skilled",
+      "reason": "Part of Japan's \"Specified Skilled Worker\" visa.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_japan_migration_community_signals_v3 (1)",
+            "hamrah_japan_migration_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Study Permit",
+      "reason": "Canadian Study Permit.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_applyabroad_global_policy_signals_v3 (1)",
+            "hamrah_applyabroad_global_policy_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.title.fa",
+            "signals[*].claim.who_should_care.fa"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_canada_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.fa",
+            "signals[*].claim.practical_impact.fa",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.fa",
+            "signals[*].claim.who_should_care.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Super Visa",
+      "reason": "Canadian Parent and Grandparent Super Visa.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_canada_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.known_workaround",
+            "signals[*].claim.recommended_action.en",
+            "signals[*].claim.recommended_action.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.en",
+            "signals[*].claim.title.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Swedish Migration",
+      "reason": "Part of \"Swedish Migration Agency\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_scandinavia_community_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Taipei Medical",
+      "reason": "Part of \"Taipei Medical University\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_taiwan_study_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Taipei Office",
+      "reason": "Taipei Office, Taiwan's representative office.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_taiwan_study_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Taipei Representative",
+      "reason": "Part of \"Taipei Representative Office in Iran\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_taiwan_study_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Taiwan Employment",
+      "reason": "Part of \"Taiwan Employment Gold Card\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_taiwan_study_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Taiwan Scholarship",
+      "reason": "Taiwan Scholarship (MOE) programme.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_taiwan_study_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Tech Nation",
+      "reason": "Tech Nation, a former Global Talent endorsing body.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].entities[*].name",
+            "signals[*].evidence[*].evidence_summary",
+            "signals[*].summary_en",
+            "signals[*].summary_fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Tehran University",
+      "reason": "University of Tehran.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_japan_migration_community_signals_v3 (1)",
+            "hamrah_japan_migration_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Temporary Annex",
+      "reason": "Italian temporary annex documents in a residence-permit process.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_belgium_migration_community_signals_v3"
+          ],
+          "fields": [
+            "signals[*].claim.known_workaround"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Temporary Graduate",
+      "reason": "Australian Temporary Graduate visa (subclass 485).",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_applyabroad_global_policy_signals_v3 (1)",
+            "hamrah_applyabroad_global_policy_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Travel Ban",
+      "reason": "The US travel ban (presidential proclamations).",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_humanities_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        },
+        {
+          "datasets": [
+            "hamrah_medical_sciences_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "University Admissions",
+      "reason": "Swedish centralised University Admissions service.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_scandinavia_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.who_should_care.en",
+            "signals[*].claim.who_should_care.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "University Track",
+      "reason": "Korean GKS scholarship application stream (University Track).",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_south_korea_migration_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.fa",
+            "signals[*].claim.summary.en",
+            "signals[*].claim.summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Uppsala University",
+      "reason": "Uppsala University, Sweden.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_scandinavia_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "signals[*].claim.summary.en"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Visa Application",
+      "reason": "Part of \"Visa Application Centre\".",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "Global Talent ans Skilled Worker - UK - 2026-09-11"
+          ],
+          "fields": [
+            "signals[*].entities[*].name",
+            "signals[*].evidence[*].evidence_summary",
+            "signals[*].resolution.resolution_summary",
+            "signals[*].summary_en",
+            "signals[*].title",
+            "signals[*].who_should_care"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Web Administrator",
+      "reason": "An occupation title in Australian points reports.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_australia_work_community_signals_v3 (1)",
+            "hamrah_australia_work_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Work Permit",
+      "reason": "Canadian Work Permit.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_canada_news_community_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.fa",
+            "signals[*].claim.practical_impact.fa",
+            "signals[*].claim.recommended_action.fa",
+            "signals[*].claim.summary.fa",
+            "signals[*].claim.title.fa",
+            "signals[*].claim.who_should_care.fa"
+          ]
+        }
+      ]
+    },
+    {
+      "phrase": "Xiamen University",
+      "reason": "Xiamen University, China.",
+      "reviewed_on": "2026-09-26",
+      "scopes": [
+        {
+          "datasets": [
+            "hamrah_china_news_channel_signals_v3"
+          ],
+          "fields": [
+            "evidence[*].summary.en",
+            "evidence[*].summary.fa"
+          ]
+        }
+      ]
+    }
+  ]
+}

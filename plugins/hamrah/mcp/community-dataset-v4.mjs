@@ -146,7 +146,7 @@ export function withOptionalCollections(dataset) {
   return dataset.official_statistics ? dataset : { ...dataset, official_statistics: [] };
 }
 
-export function validateCommunityDatasetV4(input) {
+export function validateCommunityDatasetV4(input, options = {}) {
   if (!validateSchema(input)) {
     const issues = validateSchema.errors.slice(0, MAX_ERRORS).map((error) => ({
       gate: "schema",
@@ -157,7 +157,7 @@ export function validateCommunityDatasetV4(input) {
   const dataset = withOptionalCollections(input);
   const issues = [];
   const issue = (gate, message) => issues.push({ gate, message });
-  const privacy = applyPublicPersonException(inspectDatasetPrivacy(dataset), dataset);
+  const privacy = applyPublicPersonException(inspectDatasetPrivacy(dataset, options), dataset);
   referenceIssues(dataset, issue);
   lifecycleAndStateIssues(dataset, issue);
   for (const found of [

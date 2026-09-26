@@ -47,7 +47,9 @@ function verifyPublishedStore() {
     });
   })(storeRoot);
   for (const file of files) {
-    const { errors } = readCommunityDataset(JSON.parse(readFileSync(file, "utf8")));
+    // The store id (relative path without .json) selects the phrases reviewed for this dataset.
+    const datasetId = path.relative(storeRoot, file).split(path.sep).join("/").replace(/\.json$/i, "");
+    const { errors } = readCommunityDataset(JSON.parse(readFileSync(file, "utf8")), datasetId);
     if (errors.length) throw new Error(`${path.relative(storeRoot, file)}: ${errors.join("; ")}`);
   }
   const result = loadCommunitySignalStore(storeRoot);
