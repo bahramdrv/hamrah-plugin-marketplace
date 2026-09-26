@@ -32,8 +32,8 @@ function semanticErrors(dataset) {
   return errors;
 }
 
-export function validateCommunityDatasetV2(dataset) {
-  const privacy = inspectDatasetPrivacy(dataset);
+export function validateCommunityDatasetV2(dataset, options = {}) {
+  const privacy = inspectDatasetPrivacy(dataset, options);
   const errors = [
     ...(validateSchema(dataset) ? [] : schemaErrorMessages(validateSchema.errors)),
     ...semanticErrors(dataset),

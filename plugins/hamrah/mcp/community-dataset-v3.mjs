@@ -49,9 +49,9 @@ function referenceErrors(dataset) {
   return errors;
 }
 
-function validate(dataset, schemaValidator, acceptedDeclarations, requirement) {
+function validate(dataset, options, schemaValidator, acceptedDeclarations, requirement) {
   if (!schemaValidator(dataset)) return { errors: schemaErrorMessages(schemaValidator.errors, 12), privacy: null };
-  const privacy = inspectDatasetPrivacy(dataset);
+  const privacy = inspectDatasetPrivacy(dataset, options);
   const errors = [...referenceErrors(dataset)];
   if (!parseIsoDay(dataset.dataset.generated_at, false, true)) errors.push("dataset.generated_at is not a valid ISO date-time");
   const declared = dataset.quality.checks.privacy.status;
@@ -60,14 +60,14 @@ function validate(dataset, schemaValidator, acceptedDeclarations, requirement) {
   return { errors: errors.slice(0, 12), privacy };
 }
 
-export function validateCommunityDatasetV3(dataset) {
-  return validate(dataset, validateSchema, ["pass"], "version 3 datasets need a declared and inspected privacy pass");
+export function validateCommunityDatasetV3(dataset, options = {}) {
+  return validate(dataset, options, validateSchema, ["pass"], "version 3 datasets need a declared and inspected privacy pass");
 }
 
 // A normalized legacy export may lack a privacy declaration; the inspected result alone then decides.
 // A declared result other than pass still rejects the dataset.
-export function validateNormalizedLegacyDatasetV3(dataset) {
-  return validate(dataset, validateNormalizedLegacySchema, ["pass", "unknown"],
+export function validateNormalizedLegacyDatasetV3(dataset, options = {}) {
+  return validate(dataset, options, validateNormalizedLegacySchema, ["pass", "unknown"],
     "legacy datasets need a declared pass or no declaration, and an inspected privacy pass");
 }
 

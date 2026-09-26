@@ -22,9 +22,9 @@ export function readCommunityDataset(raw, datasetId = "dataset") {
   let normalizedLegacy = false;
   if ((schemaVersion === V3_SCHEMA_VERSION && Object.hasOwn(raw, "qualityControl"))
     || (schemaVersion === null && Array.isArray(raw?.signals))) {
-    const direct = schemaVersion === V3_SCHEMA_VERSION ? validateCommunityDatasetV3(raw) : null;
+    const direct = schemaVersion === V3_SCHEMA_VERSION ? validateCommunityDatasetV3(raw, { datasetId }) : null;
     if (!direct || (direct.errors.length && direct.privacy === null)) {
-      const rawPrivacy = inspectDatasetPrivacy(raw);
+      const rawPrivacy = inspectDatasetPrivacy(raw, { datasetId });
       if (rawPrivacy.status !== "pass") {
         return { schemaVersion, errors: [`raw dataset privacy ${rawPrivacy.status}: ${rawPrivacy.findings.map((item) => `${item.path} (${item.rule})`).join(", ")}`], privacy: rawPrivacy, canonical: null };
       }
@@ -46,13 +46,13 @@ export function readCommunityDataset(raw, datasetId = "dataset") {
       canonical: null
     };
   }
-  const { errors, privacy } = (normalizedLegacy ? validateNormalizedLegacyDatasetV3 : adapter.validate)(raw);
+  const { errors, privacy } = (normalizedLegacy ? validateNormalizedLegacyDatasetV3 : adapter.validate)(raw, { datasetId });
   return { schemaVersion: effectiveVersion, errors, privacy, canonical: errors.length ? null : adapter.adapt(raw), dataset: raw };
 }
 
 if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).href) {
   try {
-    const { schemaVersion, errors, privacy } = readCommunityDataset(JSON.parse(readFileSync(process.argv[2], "utf8")));
+    const { schemaVersion, errors, privacy } = readCommunityDataset(JSON.parse(readFileSync(process.argv[2], "utf8")), process.argv[3]);
     process.stdout.write(`${JSON.stringify({ valid: errors.length === 0, schemaVersion, errors, privacy })}\n`);
     if (errors.length) process.exitCode = 1;
   } catch (error) {

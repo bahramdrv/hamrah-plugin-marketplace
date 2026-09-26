@@ -19,9 +19,16 @@ function publishedFiles(directory = DATASET_ROOT) {
   });
 }
 
+// Each seed carries its store id (relative path without .json), which scopes its reviewed privacy phrases.
 function seedDatasets() {
   return publishedFiles()
-    .map((file) => JSON.parse(readFileSync(file, "utf8")))
+    .map((file) => {
+      const dataset = JSON.parse(readFileSync(file, "utf8"));
+      Object.defineProperty(dataset, "storeId", {
+        value: path.relative(DATASET_ROOT, file).split(path.sep).join("/").replace(/\.json$/i, "")
+      });
+      return dataset;
+    })
     .filter((dataset) => dataset.schema_version === "4.0.0" && dataset.signals.some((signal) => signal.destination.country_code === "DEU"));
 }
 
@@ -31,7 +38,7 @@ test("the committed German seed is valid, sourced, dated, and privacy-checked", 
   const datasets = seedDatasets();
   assert.ok(datasets.length >= 1, "a German seed dataset is published");
   for (const dataset of datasets) {
-    const { errors, privacy } = readCommunityDataset(dataset);
+    const { errors, privacy } = readCommunityDataset(dataset, dataset.storeId);
     assert.deepEqual(errors, []);
     assert.equal(privacy.status, "pass");
     const evidenceById = new Map(dataset.evidence.map((item) => [item.id, item]));

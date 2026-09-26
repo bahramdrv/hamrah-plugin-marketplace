@@ -8,7 +8,7 @@ Each supported version is adapted to canonical internal artifacts with the versi
 
 A version 4.0.0 dataset (`skills/hamrah-signal-builder/references/community_dataset_v4_schema.json`, example `skills/hamrah-signal-builder/examples/v4_signal_dataset.json`) keeps Sources, Evidence, Signals, Questions, Academic Opportunities, Lived Experiences, and Route Claims in separate collections linked by IDs. `plugins/hamrah/mcp/community-dataset-v4.mjs` rejects the whole file when an ID is duplicated or a reference does not resolve; when evidence lacks `retrieved_at` or a `content_hash`; when a public source lacks an HTTPS locator or private-source evidence carries one; when a date is impossible or after `generated_at`; when any artifact's `validation` is not `validated` with privacy `pass`; or when privacy inspection does not pass. Stale and superseded artifacts remain in the file for history and are excluded from default search.
 
-The privacy decision includes audited exceptions for institution names and exact domain phrases. Review the reported field and source before correcting a finding; automatic detection can miss names or context. Remove private material from the candidate before rerunning the publication command.
+The privacy decision includes audited exceptions for institution names and reviewed phrases. Each reviewed phrase in `plugins/hamrah/mcp/reviewed-domain-phrases.json` applies only to the dataset ids and field paths it was reviewed in, so a new dataset starts with only the few phrases scoped to every dataset. Review the reported field and source before correcting a finding; automatic detection can miss names or context. Remove private material from the candidate before rerunning the publication command.
 
 ## Seeded German evidence
 
