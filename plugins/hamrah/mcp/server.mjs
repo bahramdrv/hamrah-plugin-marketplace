@@ -460,15 +460,8 @@ export const TOOLS = [
   ROUTE_VIABILITY_TOOL,
   VIABLE_ROUTE_DISCOVERY_TOOL,
   IDEAL_CANDIDATE_PROFILE_TOOL,
-  {
-    ...ROUTE_FACT_PACK_TOOL,
-    description: `${ROUTE_FACT_PACK_TOOL.description} Also accepts a slug for the broader assessment evidence pack.`,
-    inputSchema: {
-      type: "object",
-      anyOf: [ROUTE_FACT_PACK_TOOL.inputSchema, ASSESSMENT_TOOLS.find((tool) => tool.name === "getRouteFactPack").inputSchema]
-    }
-  },
-  ...ASSESSMENT_TOOLS.filter((tool) => tool.name !== "getRouteFactPack"),
+  ROUTE_FACT_PACK_TOOL,
+  ...ASSESSMENT_TOOLS,
   ...GET_OPERATIONS.map(([name, path, description]) => ({
     title: description,
     name,
@@ -621,71 +614,8 @@ function toolResult(payload, isError = false) {
   };
 }
 
-const ROUTE_FACT_PACK_OPERATIONS = [
-  "getVisaRoutes",
-  "getPolicyClaims",
-  "getPolicyUpdates",
-  "getVisaFees",
-  "getSalaryThresholds",
-  "getProcessingTimes",
-  "getCostToComplete",
-  "getSourceFreshness",
-  "getProcessingReliability"
-];
-
-async function getRouteFactPack(args, fetchImpl) {
-  if (typeof args.slug !== "string" || !args.slug.trim()) {
-    throw new Error("getRouteFactPack requires a non-empty route slug.");
-  }
-  const filters = {
-    slug: args.slug.trim(),
-    countryCode: args.countryCode,
-    destination: args.destination,
-    category: args.category,
-    limit: Math.max(1, Math.min(25, Number.isInteger(args.limit) ? args.limit : 10))
-  };
-  const datasets = {};
-  const failures = [];
-
-  for (const operationName of ROUTE_FACT_PACK_OPERATIONS) {
-    const path = operationByName.get(operationName);
-    if (!path) {
-      failures.push({ operation: operationName, error: "operation_not_available" });
-      continue;
-    }
-    try {
-      const raw = await fetchJson(path, {}, fetchImpl);
-      const filtered = filterResponse(raw, filters);
-      datasets[operationName] = {
-        endpoint: path,
-        total: filtered.total,
-        returned: filtered.returned,
-        data: filtered.data
-      };
-    } catch (error) {
-      failures.push({
-        operation: operationName,
-        endpoint: path,
-        status: error?.status ?? null,
-        message: error instanceof Error ? error.message : String(error)
-      });
-    }
-  }
-
-  return {
-    source: "Hamrah Route Fact Pack",
-    baseUrl: BASE_URL,
-    retrievedAt: new Date().toISOString(),
-    filters,
-    datasets,
-    failures,
-    coverage: failures.length === 0 ? "complete" : Object.keys(datasets).length ? "partial" : "unavailable",
-    legalNote: "Visa Atlas is a source-linked compilation, not an issuing authority. Verify decisive, time-sensitive claims with linked primary authorities."
-  };
-}
-
 export async function executeTool(name, args = {}, fetchImpl = globalThis.fetch, options = {}) {
-  if (name === "getRouteFactPack" && !Object.hasOwn(args, "slug")) {
+  if (name === "getRouteFactPack") {
     try {
       const payload = await buildRouteFactPack(
         args,
@@ -824,10 +754,6 @@ async function runTool(name, args, fetchImpl, options, signal) {
 
     if (name === "evaluateRouteEligibility") {
       return toolResult(evaluateRouteEligibility(args));
-    }
-
-    if (name === "getRouteFactPack") {
-      return toolResult(await getRouteFactPack(args, fetchImpl));
     }
 
     if (name === "evaluateCommunityAdjustment") {

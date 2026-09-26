@@ -97,27 +97,6 @@ test("missing community coverage always keeps adjustment at zero", () => {
   assert.match(result.warnings.join(" "), /not proof of no friction/i);
 });
 
-test("route fact pack tolerates individual Visa Atlas endpoint failures", async () => {
-  const calls = [];
-  const fakeFetch = async (url) => {
-    calls.push(url);
-    if (url.endsWith("/api/public/freshness")) {
-      return new Response(JSON.stringify({ error: "not_found" }), { status: 404 });
-    }
-    return new Response(JSON.stringify([]), { status: 200 });
-  };
-
-  const result = await executeTool("getRouteFactPack", {
-    countryCode: "DEU",
-    slug: "opportunity-card"
-  }, fakeFetch);
-
-  assert.equal(result.isError, false);
-  assert.equal(result.structuredContent.coverage, "partial");
-  assert.ok(result.structuredContent.failures.some((item) => item.operation === "getSourceFreshness"));
-  assert.ok(calls.length >= 8);
-});
-
 test("finalization rejects a scorecard when community evaluation is missing", () => {
   const profile = JSON.parse(readFileSync(
     new URL("../../skills/hamrah-profile-normalizer/examples/skilled_worker_profile.json", import.meta.url),

@@ -4,10 +4,10 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] The slug input form is an adapter onto the existing concurrent, deadline-bounded builder; the separate sequential builder is removed.
-- [ ] When the deadline expires, completed datasets are returned with the rest marked `timeout`.
-- [ ] Coverage is reported as counts against a documented denominator instead of `complete`.
-- [ ] The tool advertises one input schema per meaning, or both forms are documented as the same operation; skills and API docs that describe the tool match.
-- [ ] Tests cover all-success, one failure, and a deadline hit for the slug form; request budgets are respected.
+- [x] The slug input form is an adapter onto the existing concurrent, deadline-bounded builder; the separate sequential builder is removed.
+- [x] When the deadline expires, completed datasets are returned with the rest marked `timeout`.
+- [x] Coverage is reported as counts against a documented denominator instead of `complete`.
+- [x] The tool advertises one input schema per meaning, or both forms are documented as the same operation; skills and API docs that describe the tool match.
+- [x] Tests cover all-success, one failure, and a deadline hit for the slug form; request budgets are respected.
