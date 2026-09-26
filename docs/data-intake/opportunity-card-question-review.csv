@@ -1,0 +1,6 @@
+evidence_id,message_id,message_date,candidate_topic,original_question_redacted,reply_message_ids,reply_summary_redacted,independent_asker_key,source_export_reference,review_status
+DEU-OC-IRAN-ACCESS-001-E4,2595,2026-09-12,Applying from Iran,,,,,,needs_original_thread
+DEU-OC-SELFCHECK-002-E1,974,2025-01-04,Self-check versus application,,,,,,needs_original_thread
+DEU-OC-ROUTE-SPLIT-005-E4,2036,2026-06-19,Fachkraft versus points route,,,,,,needs_original_thread
+DEU-OC-ANABIN-ZAB-006-E2,2285,2026-07-20,Anabin specialization and ZAB,,,,,,needs_original_thread
+DEU-OC-WORK-ALIGNMENT-009-E1,1327,2025-06-03,Work experience in different field,,,,,,needs_original_thread

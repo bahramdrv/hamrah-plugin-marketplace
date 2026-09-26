@@ -8,6 +8,7 @@
     "start": "node server.mjs",
     "test": "node --test plugins/hamrah/mcp/tests/*.test.mjs web/*.test.mjs",
     "verify:release": "node scripts/verify-release.mjs",
+    "verify:live": "node scripts/verify-live-mcp.mjs",
     "check:static": "find plugins web packages scripts -name '*.mjs' -type f -exec node --check {} \\;"
   },
   "engines": {

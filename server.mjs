@@ -125,7 +125,13 @@ export function createApp(options = {}) {
     res.json({ name: "Hamrah", status: "ok", mcp: "/mcp", version: APP_VERSION });
   });
   app.get("/health", (_req, res) => {
-    res.json({ status: "ok", tools: TOOLS.length, skills: SKILL_CATALOG.length, rateLimitStore: rateLimitStore.kind });
+    res.json({
+      status: "ok",
+      tools: TOOLS.length,
+      skills: SKILL_CATALOG.length,
+      rateLimitStore: rateLimitStore.kind,
+      deploymentCommit: process.env.VERCEL_GIT_COMMIT_SHA || null
+    });
   });
   app.all("/mcp", async (req, res) => {
     const server = createServer(fetchImpl, toolOptions);

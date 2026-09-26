@@ -43,7 +43,7 @@ The subsequent merge with `origin/main` introduced 48 additional dataset files. 
 | Static checks | JavaScript syntax, Python compilation, and Git whitespace checks passed |
 | Production dependency audit | Online npm audit found 0 vulnerabilities |
 
-GitHub Actions has not yet run on this merge. Its result is required before deployment.
+The combined release passed both GitHub Actions workflows on commit `1fd29d2`: [Verify release](https://github.com/bahramdrv/hamrah-plugin-marketplace/actions/runs/36221292571) and [Community signals](https://github.com/bahramdrv/hamrah-plugin-marketplace/actions/runs/36221292596). The production MCP endpoint was then exercised with `npm run verify:live`; its synthetic checks passed. Run that command after each production deployment and compare `deploymentCommit` with the commit intended for release.
 
 ## How to read Hamrah's measures
 
