@@ -1,6 +1,6 @@
 ---
 name: hamrah-signal-builder
-description: Use when immigration-related community sources need to be converted into canonical Hamrah Community Signals v3.
+description: Use when the user asks to analyze a specified immigration community source for signals; extract its questions in the same source pass.
 ---
 
 # Hamrah Signal Builder
@@ -26,7 +26,7 @@ Read the references needed for the task:
 
 1. Inventory the complete available source and mark coverage `complete`, `partial`, or `unknown` without guessing.
 2. Normalize provenance into top-level `sources` and privacy-clean top-level `evidence`.
-3. Extract narrowly scoped claims as `signals`; questions alone are not signals.
+3. Extract narrowly scoped claims as `signals`; questions alone are not signals. In the same user-requested source pass, extract distinct applicant Questions into the version 4 `questions` collection, merge wording variants, preserve their source evidence and independent asker counts, and mark unsupported answers unresolved. Do not research unrelated sources or countries as a follow-on task.
 4. Deduplicate evidence and link it through `evidence_links`; preserve contradictions explicitly.
 5. Keep lifecycle separate from evidence maturity and review state.
 6. Verify high-impact current claims when possible; otherwise record them as unverified.
