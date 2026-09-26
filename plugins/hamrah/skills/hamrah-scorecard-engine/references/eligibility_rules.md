@@ -67,12 +67,28 @@ Each checked requirement should include:
 - `source_title`
 - `checked_at`
 - `claim_type` and versioned `source_authority` (`policy_version`, `classification`, `rule_id`)
+- for a Visa Atlas record, `government_source_url` (the record's `primarySource.url`) and `verified_at` (its last verification date, ISO date or zoned date-time)
 - `retrieved_at`, `effective_from`, and `effective_until` (null when no end date is known)
 - `fact_type` and versioned `freshness` (`policy_version`, `fact_type`, `status`, `age_days`, `max_age_days`)
 
-The validator classifies the source URL using `source_authority_policy.json`. A rule must match the claim type, requirement ID, exact title and result explanation, country, route, HTTPS host, and exact path. The supplied `source_authority` must match that computed classification; a title or claimed authority cannot substitute for a rule. Policy version 1.0.0 contains one reviewed primary rule for the secured-livelihood condition in Germany's Opportunity Card. Add other source and claim pairs to the versioned policy after review. The policy controls which legal claim a source can support; validation of the applicant's evidence remains a separate step.
+The validator classifies the source URL using `source_authority_policy.json`, the same file the `evaluateRouteEligibility` MCP tool uses. Rules are tried in order and the first match decides. An `exact` rule must match the claim type, requirement ID, exact title and result explanation, country, route, HTTPS host, and exact path. A `host_path_prefix` rule matches any claim of one of its `claim_types` in its country (`*` for all) when the HTTPS host equals its host and the decoded path starts with its prefix; URLs with a port, credentials, query, fragment, or empty or dot path segments are never recognised. A rule's `requires` list adds conditions: `government_source_url` (an HTTPS government link on another host) and `verified_at_within_freshness` (`verified_at`, aged to `generated_at` under the freshness policy for the requirement's `fact_type`, is current or aging and not in the future). The supplied `source_authority` must match the computed classification; a title or claimed authority cannot substitute for a rule. Each rule records its `authority_basis` and `reviewed_at` date.
 
-For `met` or `not_met`, a real scoped source URL and all authority and date fields are mandatory. An unrecognized or mismatched source remains `unknown`, with `assessment_kind: "provisional"` and nondecisive official eligibility. `PASS` and `FAIL` require `assessment_kind: "official"` and checked authoritative requirements.
+Policy version 2.0.0 contains:
+
+- `primary` host and path rules for the official German sources used in the published evidence: the Residence Act on `www.gesetze-im-internet.de/aufenthg_2004/`, the federal Make it in Germany portal, the German Embassy in Tehran (`teheran.diplo.de`), and the Federal Foreign Office Consular Services Portal (`digital.diplo.de`), plus the original exact rule for the Opportunity Card secured-livelihood condition;
+- a `trusted` rule for Visa Atlas records (`visaatlas.org`) that requires a government link and a current verification date.
+
+Add other countries' official hosts to the versioned policy after review. The policy controls which kind of claim a source can support; validation of the applicant's evidence remains a separate step.
+
+### Visa Atlas first, primary confirmation for decisive requirements
+
+Read route requirements from Visa Atlas first; a current, government-linked record is `trusted`. Every decisive requirement (`met` or `not_met`) must then be confirmed by a second requirement record with the same `requirement_id` whose source is `primary`:
+
+- **Trusted only:** the route is at most `POSSIBLE`, with `assessment_kind: "awaiting_official_confirmation"` and each such requirement's title in `official_eligibility.awaiting_official_confirmation`. It may be ranked by Practical Fit but is not `PASS` and cannot satisfy gates that require PASS, such as IRVI ranking.
+- **Trusted plus primary:** the primary record decides the requirement; `PASS` needs every decisive requirement confirmed and `FAIL` needs a primary `not_met`.
+- **Contradiction:** when the primary record and Visa Atlas disagree, the primary record decides and the Visa Atlas record no longer counts for that requirement.
+
+For `met` or `not_met`, a real scoped source URL and all authority and date fields are mandatory. An unrecognized or mismatched source, or a Visa Atlas record without a government link or past its freshness limit, remains `unknown`, with `assessment_kind: "provisional"`, nondecisive official eligibility, and `usable_for_ranking: false`. `PASS` and `FAIL` require `assessment_kind: "official"` and primary-confirmed decisive requirements.
 
 Allowed results:
 
@@ -81,7 +97,7 @@ Allowed results:
 - `unknown`
 - `not_applicable`
 
-Do not claim a requirement was checked without a supporting official source or configured trusted route dataset.
+Do not claim a requirement was checked without a supporting official source or configured trusted route dataset (Visa Atlas under the rules above), and do not present a trusted-only requirement as officially confirmed.
 
 ---
 

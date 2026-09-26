@@ -224,6 +224,12 @@
             "null"
           ]
         },
+        "government_source_url": {
+          "type": ["string", "null"]
+        },
+        "verified_at": {
+          "type": ["string", "null"]
+        },
         "checked_at": {
           "type": [
             "string",
@@ -403,12 +409,18 @@
             },
             "assessment_kind": {
               "type": "string",
-              "enum": ["official", "provisional"]
+              "enum": ["official", "provisional", "awaiting_official_confirmation"]
             },
             "reasons": {
               "type": "array",
               "items": {
                 "$ref": "#/$defs/requirement"
+              }
+            },
+            "awaiting_official_confirmation": {
+              "type": "array",
+              "items": {
+                "type": "string"
               }
             },
             "missing_requirements": {

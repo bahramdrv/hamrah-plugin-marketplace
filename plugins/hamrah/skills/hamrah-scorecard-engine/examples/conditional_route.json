@@ -39,7 +39,7 @@
             "source_title": "Global Talent visa overview",
             "checked_at": "2026-09-11",
             "claim_type": "immigration_requirement",
-            "source_authority": {"policy_version": "1.0.0", "classification": "unknown", "rule_id": null},
+            "source_authority": {"policy_version": "2.0.0", "classification": "unknown", "rule_id": null},
             "retrieved_at": "2026-09-11T00:00:00Z",
             "effective_from": null,
             "effective_until": null,

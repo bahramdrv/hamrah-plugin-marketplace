@@ -60,7 +60,7 @@ Set one:
 
 Official eligibility is a gate. Community evidence cannot change it.
 
-The MCP tool `evaluateRouteEligibility` applies this skill's `references/source_authority_policy.json` and `references/freshness_policy.json` (the same files `scripts/validate_scorecard.py` uses). Its reasons carry `claim_type`, `source_authority`, `fact_type`, `retrieved_at`, effective dates, and `freshness` in the scorecard requirement shape; copy them unchanged. An unknown or out-of-scope authority yields `assessment_kind: "provisional"` and cannot be ranked.
+The MCP tool `evaluateRouteEligibility` applies this skill's `references/source_authority_policy.json` and `references/freshness_policy.json` (the same files `scripts/validate_scorecard.py` uses). Its reasons carry `claim_type`, `government_source_url`, `verified_at`, `source_authority`, `fact_type`, `retrieved_at`, effective dates, and `freshness` in the scorecard requirement shape; copy them, and `awaiting_official_confirmation`, unchanged. An unknown or out-of-scope authority, or a stale or unlinked Visa Atlas record, yields `assessment_kind: "provisional"` and cannot be ranked. A decisive requirement backed only by a trusted Visa Atlas record caps the route at `POSSIBLE` with `assessment_kind: "awaiting_official_confirmation"` until a primary official source confirms it (see `references/eligibility_rules.md`).
 
 ### 3. Score Base Fit
 Use the 100-point rubric in `references/scoring_rubric.md`.
