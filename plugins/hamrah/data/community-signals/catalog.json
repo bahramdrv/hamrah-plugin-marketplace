@@ -1,7 +1,30 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-26T12:15:00Z",
+  "updated_at": "2026-09-26T12:35:00Z",
   "datasets": [
+    {
+      "path": "datasets/2026/09/20260926123500-de-answers-36d8bf27bb.json",
+      "sha256": "36d8bf27bb4399d9dc9c5c02b85df7862de9ea613362654e939fec37d8f26579",
+      "content_digest": "d041e6fc27aae5e74c63b52fbd323ba963d7092fcc52616064497b27e00fcf8d",
+      "schema_version": "4.0.0",
+      "generated_at": "2026-09-26T12:35:00Z",
+      "countries": [],
+      "routes": [],
+      "statuses": [],
+      "signal_count": 0,
+      "source_ids": [
+        "src_04111d0c166dc7286dbac3e9b70d7fa9",
+        "src_04fd13d22aa3c567a01dd1393ed1099a",
+        "src_4d1dc2283cf3bff9e901cabbcb02c20d",
+        "src_58b90ff40a974614ffdb33a9f3142586",
+        "src_5cf3b6cb54edfdb935ad1d1ed0751476",
+        "src_66e4d2e5bf8ab8740099e0f8b7a2aa38",
+        "src_72a57cabbc4918123ce42770807b775e",
+        "src_85e7592213ab9a288001769eb2b7d9ce",
+        "src_b75a241833fc844f08a1d30563408290",
+        "src_d9f2008a688550afee99f8cc9cf8afd6"
+      ]
+    },
     {
       "path": "datasets/2026/09/20260926121500-de-answers-fe350b6888.json",
       "sha256": "fe350b68884814a11dd1472c32471c98aa3ccccc0a410128e695c619cc06ff38",

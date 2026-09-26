@@ -142,3 +142,15 @@ test("Opportunity Card degree choice stays partial and legalization questions st
     assert.equal(answer.structuredContent.storedAnswerStatus, "unresolved");
   }
 });
+
+test("Opportunity Card from Iran cites on-site application and unforeseeable appointment timing", async () => {
+  const answer = await executeTool("answerCommunityQuestion", { questionId: "qst_211e8054cafb980a45bfaddc5e708715", asOf: "2026-09-26" }, offline);
+  assert.equal(answer.isError, false);
+  assert.equal(answer.structuredContent.answerType, "official");
+  const urls = answer.structuredContent.citations.map((citation) => citation.sourceUrl);
+  for (const url of [
+    "https://teheran.diplo.de/ir-de/02-service/2403868-2403868",
+    "https://digital.diplo.de/chancenkarte",
+    "https://teheran.diplo.de/ir-de/2752046-2752046"
+  ]) assert.ok(urls.includes(url), `missing citation ${url}`);
+});
