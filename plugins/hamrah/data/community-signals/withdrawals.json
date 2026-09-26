@@ -1,0 +1,11 @@
+{
+  "ledger_version": "1.0",
+  "withdrawals": [
+    {
+      "dataset_id": "2026/09/20260926064043-de-questions-74e0f04344",
+      "reason": "superseded",
+      "note": "Replaced after comparison with original Telegram export and complete relevant reply chains.",
+      "withdrawn_at": "2026-09-26T06:51:07Z"
+    }
+  ]
+}

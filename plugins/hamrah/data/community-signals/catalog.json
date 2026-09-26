@@ -1,7 +1,21 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-26T06:40:43Z",
+  "updated_at": "2026-09-26T06:51:07Z",
   "datasets": [
+    {
+      "path": "datasets/2026/09/20260926065107-de-questions-c88f30d127.json",
+      "sha256": "c88f30d12736910a12a9150a2e43f419507f79ae3f24addee9e98eda867480af",
+      "content_digest": "625d46773cc3b51e8a1670002cbd3df18324983de15bb15d36a2a1e23739edce",
+      "schema_version": "4.0.0",
+      "generated_at": "2026-09-26T06:51:07Z",
+      "countries": [],
+      "routes": [],
+      "statuses": [],
+      "signal_count": 0,
+      "source_ids": [
+        "src_b75a241833fc844f08a1d30563408290"
+      ]
+    },
     {
       "path": "datasets/2026/09/20260926064043-de-questions-74e0f04344.json",
       "sha256": "74e0f0434489c0f3863ce990c34dff2ecb399aeec92ab48bf2ebeec69b018975",
