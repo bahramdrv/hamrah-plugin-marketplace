@@ -757,7 +757,7 @@ async function runTool(name, args, fetchImpl, options, signal) {
     }
 
     if (name === "evaluateCommunityAdjustment") {
-      return toolResult(evaluateCommunityAdjustment(args, options.signalStoreRoot));
+      return toolResult(evaluateCommunityAdjustment(args, options.signalStoreRoot, options.maxDatasetsScanned));
     }
 
     if (name === "finalizeAssessment") {

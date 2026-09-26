@@ -307,8 +307,8 @@ export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatase
   const inScope = [...newestBySignalId.values()].filter(({ signal }) => matchesScope(signal, args));
   const { aggregation, signalSupport } = aggregateEvidence(store, inScope);
   const routeClaimCoverage = routeClaimsInScope(store, args);
-  const matches = inScope
-    .filter(({ signal }) => matchesStatus(signal, args))
+  const statusMatches = inScope.filter(({ signal }) => matchesStatus(signal, args));
+  const matches = statusMatches
     .sort((a, b) => dateValue(b.signal.lifecycle.last_verified) - dateValue(a.signal.lifecycle.last_verified))
     .slice(0, limit)
     .map(({ datasetId, canonical, signal }) => ({
@@ -328,6 +328,7 @@ export function searchCommunitySignals(args = {}, root = DATASET_ROOT, maxDatase
     },
     filters: args,
     resultCount: matches.length,
+    totalMatches: statusMatches.length,
     signals: matches,
     routeClaimCoverage,
     evidenceAggregation: aggregation,

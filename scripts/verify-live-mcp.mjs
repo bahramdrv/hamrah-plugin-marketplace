@@ -67,6 +67,10 @@ async function main() {
   requireResult(eligibility.usableForRanking === false, "unverified eligibility was rankable");
   const community = await tool(7, "evaluateCommunityAdjustment", { countryCode: "DEU", route: "opportunity_card" });
   requireResult(community.checked === true, "community evaluation did not complete");
+  requireResult(community.scoreComponent?.component === "practical_fit", "community adjustment is not labelled as a Practical Fit component");
+  requireResult(community.signalCoverage?.matching > 0, "German Opportunity Card signals were not evaluated");
+  requireResult(!community.ignoredSignals.some((item) => item.reasonCode === "privacy_inspection_not_passed"), "community signals were ignored by the privacy gate");
+  requireResult(community.coverage !== "strong" || community.signalCoverage.excluded === 0, "community coverage is strong despite excluded signals");
 
   const profile = JSON.parse(readFileSync(new URL("../plugins/hamrah/skills/hamrah-profile-normalizer/examples/skilled_worker_profile.json", import.meta.url)));
   const scorecard = JSON.parse(readFileSync(new URL("../plugins/hamrah/skills/hamrah-scorecard-engine/examples/strong_route.json", import.meta.url)));
@@ -89,7 +93,7 @@ async function main() {
     baseUrl, deploymentCommit: health.deploymentCommit, tools: listed.tools.length, skills: skills.skills.length,
     datasets: signals.coverage.validDatasets, germanSignals: signals.resultCount, germanClaims: claims.resultCount,
     normalization: normalized.normalizedProfile.intake_status, eligibility: eligibility.officialEligibility.status,
-    communityCoverage: community.coverage, syntheticScorecardFinalized: finalized.finalized,
+    communityCoverage: community.coverage, communitySignalCoverage: community.signalCoverage, syntheticScorecardFinalized: finalized.finalized,
     visaAtlasRoutes: routes.data.results.length, coverage
   }, null, 2)}\n`);
 }

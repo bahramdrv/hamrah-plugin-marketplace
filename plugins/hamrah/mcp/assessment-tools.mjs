@@ -137,7 +137,7 @@ export const ASSESSMENT_TOOLS = [
   toolDefinition(
     "evaluateCommunityAdjustment",
     "Evaluate Community Adjustment",
-    "Run the required community-signal search and full dataset evidence check for one applicant-route scope, deduplicate correlated issues, and derive a conservative downside-only adjustment under Hamrah policy. Missing coverage returns adjustment 0 plus an explicit warning.",
+    "Run the required community-signal search and full dataset evidence check for one applicant-route scope, deduplicate correlated issues, and derive a conservative downside-only adjustment under Hamrah policy. The result is a Practical Fit component only. Coverage counts the matching signals used and excluded (with reasons); missing or wholly excluded coverage returns adjustment 0 plus an explicit warning.",
     {
       type: "object",
       additionalProperties: false,
@@ -579,24 +579,34 @@ export function evaluateRouteEligibility(args = {}, now = new Date().toISOString
   };
 }
 
-function basePenalty(signal) {
-  if (signal.status !== "active") return 0;
-  const assessment = signal.assessment || {};
-  if (!["negative", "mixed"].includes(assessment.impact_direction)) return 0;
-  if (!["corroborated", "officially_verified"].includes(assessment.evidence_maturity)) return 0;
-  if ((signal.independentReportCount || 0) < 2) return 0;
+// Policy inputs come from the canonical signal, whose field names version 2, 3 and 4 datasets share, and from
+// the store's count of independent supporting reports.
+function policyInputs(canonical, searched) {
+  return {
+    status: canonical.lifecycle?.status,
+    impactDirection: canonical.impact_direction,
+    evidenceMaturity: canonical.evidence_maturity ?? null,
+    severity: canonical.severity,
+    confidence: canonical.confidence || "low",
+    independentReports: searched.evidenceSupport?.supportingGroups ?? 0
+  };
+}
 
-  const confidence = assessment.confidence?.level || "low";
-  if (confidence === "low") return 0;
+function basePenalty(inputs) {
+  if (inputs.status !== "active") return 0;
+  if (!["negative", "mixed"].includes(inputs.impactDirection)) return 0;
+  if (!["corroborated", "officially_verified"].includes(inputs.evidenceMaturity)) return 0;
+  if (inputs.independentReports < 2) return 0;
+  if (inputs.confidence === "low") return 0;
   let penalty = {
     low: 0,
     moderate: -5,
     high: -10,
     critical: -15
-  }[assessment.severity] ?? 0;
+  }[inputs.severity] ?? 0;
 
-  if (confidence === "medium" && penalty < -5) penalty = -5;
-  if (assessment.impact_direction === "mixed") {
+  if (inputs.confidence === "medium" && penalty < -5) penalty = -5;
+  if (inputs.impactDirection === "mixed") {
     if (penalty === -15) penalty = -10;
     else if (penalty === -10) penalty = -5;
     else if (penalty === -5) penalty = 0;
@@ -604,17 +614,43 @@ function basePenalty(signal) {
   return penalty;
 }
 
-function ignoreReason(signal) {
-  if (signal.status !== "active") return "Only active signals can create a current penalty under default Hamrah policy.";
-  if (!["negative", "mixed"].includes(signal.assessment?.impact_direction)) return "Signal is not a current downside/friction signal.";
-  if (!["corroborated", "officially_verified"].includes(signal.assessment?.evidence_maturity)) return "Evidence maturity is not strong enough for a scored penalty.";
-  if ((signal.independentReportCount || 0) < 2) return "Fewer than two independent reports; one anecdote does not create a penalty.";
-  if ((signal.assessment?.confidence?.level || "low") === "low") return "Confidence is too low for a scored penalty.";
-  return "No material penalty under the current community-adjustment policy.";
+// An excluded signal could not be judged by the policy, so it does not count as used coverage; the other
+// reasons are policy conclusions about a signal that was used.
+const IGNORE_REASONS = {
+  privacy_inspection_not_passed: { excluded: true, reason: "Dataset privacy inspection did not pass." },
+  signal_not_in_dataset: { excluded: true, reason: "Signal was not found in the validated full dataset." },
+  evidence_maturity_unrecorded: { excluded: true, reason: "The source dataset does not record evidence maturity, so the signal cannot support a scored penalty." },
+  not_active: { excluded: false, reason: "Only active signals can create a current penalty under default Hamrah policy." },
+  not_downside: { excluded: false, reason: "Signal is not a current downside/friction signal." },
+  evidence_maturity_insufficient: { excluded: false, reason: "Evidence maturity is not strong enough for a scored penalty." },
+  fewer_than_two_independent_reports: { excluded: false, reason: "Fewer than two independent reports; one anecdote does not create a penalty." },
+  low_confidence: { excluded: false, reason: "Confidence is too low for a scored penalty." },
+  no_material_penalty: { excluded: false, reason: "No material penalty under the current community-adjustment policy." },
+  correlated_root_cause: { excluded: false, reason: "A correlated signal with the same root cause already carries the penalty." }
+};
+
+function ignoreReasonCode(inputs) {
+  if (inputs.status !== "active") return "not_active";
+  if (!["negative", "mixed"].includes(inputs.impactDirection)) return "not_downside";
+  if (inputs.evidenceMaturity === null) return "evidence_maturity_unrecorded";
+  if (!["corroborated", "officially_verified"].includes(inputs.evidenceMaturity)) return "evidence_maturity_insufficient";
+  if (inputs.independentReports < 2) return "fewer_than_two_independent_reports";
+  if (inputs.confidence === "low") return "low_confidence";
+  return "no_material_penalty";
 }
 
-export function evaluateCommunityAdjustment(args = {}, root) {
-  const searched = searchCommunitySignals(args, root);
+// ADR 0004: community friction may lower only the applicant's Practical Fit.
+const SCORE_COMPONENT = Object.freeze({
+  component: "practical_fit",
+  notUsedFor: ["iranian_route_viability_index", "route_evidence_threshold", "rankable_route", "route_discovery_ordering"]
+});
+
+function ignoredSignal(signal, reasonCode) {
+  return { signalId: signal.signalId, datasetId: signal.datasetId, reasonCode, ...IGNORE_REASONS[reasonCode] };
+}
+
+export function evaluateCommunityAdjustment(args = {}, root, maxDatasets) {
+  const searched = searchCommunitySignals(args, root, maxDatasets);
   const warnings = [];
   if (searched.coverage?.invalidDatasets?.length) {
     warnings.push("Some community datasets were invalid and excluded; coverage is partial.");
@@ -630,20 +666,22 @@ export function evaluateCommunityAdjustment(args = {}, root) {
       checked: true,
       checkedAt: new Date().toISOString(),
       filters: args,
+      scoreComponent: SCORE_COMPONENT,
       coverage: "none",
+      signalCoverage: { matching: 0, used: 0, applied: 0, excluded: 0, excludedByReason: {}, truncated: Boolean(searched.coverage?.truncated) },
       totalAdjustment: 0,
       appliedSignals: [],
       ignoredSignals: [],
       evidenceRefs: [],
       warnings,
-      usageNote: "Community adjustment is practical context only and never changes official eligibility."
+      usageNote: "Community adjustment is a Practical Fit component only; it never changes official eligibility, the Iranian Route Viability Index, Route Evidence Thresholds, Rankable Route status, or route discovery ordering."
     };
   }
 
   const datasets = new Map();
   for (const signal of searched.signals) {
     if (!datasets.has(signal.datasetId)) {
-      datasets.set(signal.datasetId, getCommunitySignalDataset({ datasetId: signal.datasetId }, root));
+      datasets.set(signal.datasetId, getCommunitySignalDataset({ datasetId: signal.datasetId }, root, maxDatasets));
     }
   }
 
@@ -652,13 +690,14 @@ export function evaluateCommunityAdjustment(args = {}, root) {
   const evidenceRefs = [];
   for (const signal of searched.signals) {
     const dataset = datasets.get(signal.datasetId);
-    if (!dataset?.qualityControl?.personal_identifiers_removed) {
-      ignoredSignals.push({ signalId: signal.signalId, datasetId: signal.datasetId, reason: "Dataset privacy quality gate did not pass." });
+    // The store admits only datasets whose privacy inspection passed; its recorded result is the gate.
+    if (dataset?.privacy?.status !== "pass") {
+      ignoredSignals.push(ignoredSignal(signal, "privacy_inspection_not_passed"));
       continue;
     }
-    const fullSignal = dataset.signals.find((item) => item.signal_id === signal.signalId);
+    const fullSignal = dataset.canonicalSignals.find((item) => item.id === signal.signalId);
     if (!fullSignal) {
-      ignoredSignals.push({ signalId: signal.signalId, datasetId: signal.datasetId, reason: "Signal was not found in the validated full dataset." });
+      ignoredSignals.push(ignoredSignal(signal, "signal_not_in_dataset"));
       continue;
     }
     evidenceRefs.push({
@@ -666,23 +705,24 @@ export function evaluateCommunityAdjustment(args = {}, root) {
       signalId: signal.signalId,
       evidenceIds: fullSignal.evidence_links.map((link) => link.evidence_id)
     });
-    const penalty = basePenalty(signal);
+    const inputs = policyInputs(fullSignal, signal);
+    const penalty = basePenalty(inputs);
     if (!penalty) {
-      ignoredSignals.push({ signalId: signal.signalId, datasetId: signal.datasetId, reason: ignoreReason(signal) });
+      ignoredSignals.push(ignoredSignal(signal, ignoreReasonCode(inputs)));
       continue;
     }
     candidates.push({
       signalId: signal.signalId,
       datasetId: signal.datasetId,
-      rootCauseId: signal.issueClusterId || signal.signalId,
+      rootCauseId: fullSignal.root_cause_id || signal.signalId,
       adjustment: penalty,
-      reason: signal.practicalImpact?.en || signal.summaryEn || "Applicable corroborated community friction.",
+      reason: fullSignal.practical_impact || fullSignal.summary_en || "Applicable corroborated community friction.",
       applicability: "matched",
-      evidenceCount: signal.evidenceCount,
-      independentReportCount: signal.independentReportCount,
-      severity: signal.assessment?.severity,
-      confidence: signal.assessment?.confidence?.level,
-      evidenceMaturity: signal.assessment?.evidence_maturity
+      evidenceCount: fullSignal.evidence_ids.length,
+      independentReportCount: inputs.independentReports,
+      severity: inputs.severity,
+      confidence: inputs.confidence,
+      evidenceMaturity: inputs.evidenceMaturity
     });
   }
 
@@ -692,22 +732,56 @@ export function evaluateCommunityAdjustment(args = {}, root) {
     if (!existing || candidate.adjustment < existing.adjustment) bestByRootCause.set(candidate.rootCauseId, candidate);
   }
   const appliedSignals = [...bestByRootCause.values()].sort((a, b) => a.adjustment - b.adjustment);
+  for (const candidate of candidates) {
+    if (!appliedSignals.includes(candidate)) {
+      ignoredSignals.push(ignoredSignal(candidate, "correlated_root_cause"));
+    }
+  }
   const rawTotal = appliedSignals.reduce((sum, item) => sum + item.adjustment, 0);
   const totalAdjustment = Math.max(-20, rawTotal);
-  const coverage = searched.coverage?.invalidDatasets?.length || searched.coverage?.truncated ? "partial" : "strong";
+
+  const excludedByReason = {};
+  for (const item of ignoredSignals.filter((entry) => entry.excluded)) {
+    excludedByReason[item.reasonCode] = (excludedByReason[item.reasonCode] ?? 0) + 1;
+  }
+  // Matches past the result limit were never evaluated, so they count as excluded.
+  const beyondLimit = Math.max(0, (searched.totalMatches ?? searched.signals.length) - searched.signals.length);
+  if (beyondLimit) {
+    excludedByReason.result_limit = beyondLimit;
+    warnings.push(`${beyondLimit} matching community signals were beyond the result limit and were not evaluated; raise limit or narrow the scope.`);
+  }
+  const excluded = ignoredSignals.filter((entry) => entry.excluded).length + beyondLimit;
+  const signalCoverage = {
+    matching: searched.signals.length + beyondLimit,
+    used: searched.signals.length + beyondLimit - excluded,
+    applied: appliedSignals.length,
+    excluded,
+    excludedByReason,
+    truncated: Boolean(beyondLimit || searched.coverage?.truncated)
+  };
+  let coverage = "strong";
+  if (signalCoverage.used === 0) {
+    coverage = "none";
+    warnings.push(`All ${excluded} matching community signals were excluded before the policy could judge them. Adjustment remains 0; this is missing usable coverage, not proof of no friction.`);
+  } else if (excluded || searched.coverage?.invalidDatasets?.length || signalCoverage.truncated) {
+    coverage = "partial";
+    if (excluded) warnings.push(`${excluded} of ${signalCoverage.matching} matching community signals were excluded; coverage is partial.`);
+  }
 
   return {
     source: "Hamrah Community Adjustment Evaluator",
     checked: true,
     checkedAt: new Date().toISOString(),
     filters: args,
+    scoreComponent: SCORE_COMPONENT,
     coverage,
+    signalCoverage,
     totalAdjustment,
     appliedSignals,
     ignoredSignals,
     evidenceRefs,
     warnings,
-    usageNote: "Penalties are downside-only, correlated root causes are deduplicated, and the total adjustment is capped at -20."
+    usageNote: "A Practical Fit component only: penalties are downside-only, correlated root causes are deduplicated, and the total adjustment is capped at -20. It never changes official eligibility, the Iranian Route Viability Index, Route Evidence Thresholds, Rankable Route status, or route discovery ordering."
   };
 }
 
