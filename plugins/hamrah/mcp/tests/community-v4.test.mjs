@@ -12,7 +12,7 @@ const V4_EXAMPLE = JSON.parse(readFileSync(
   new URL("../../skills/hamrah-signal-builder/examples/v4_signal_dataset.json", import.meta.url), "utf8"
 ));
 const V2_EXAMPLE = JSON.parse(readFileSync(
-  new URL("../../skills/hamrah-signal-builder/examples/gold_standard.json", import.meta.url), "utf8"
+  new URL("../../skills/hamrah-signal-builder/examples/gold_standard_v2.json", import.meta.url), "utf8"
 ));
 const PUBLISHER = fileURLToPath(new URL("../community-publication.mjs", import.meta.url));
 const SIGNAL_ID = "sig_gbr-gt-endorsement-delay";

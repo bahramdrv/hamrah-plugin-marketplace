@@ -1,0 +1,838 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://visaatlas.org/schemas/immigration-community-signals.schema.json",
+  "title": "Visa Atlas Immigration Community Signals",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "source_coverage",
+    "summary",
+    "signals",
+    "watchlist",
+    "quality_control"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2.0"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "source_coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_id",
+          "source_name",
+          "source_type",
+          "source_url",
+          "coverage_start",
+          "coverage_end",
+          "records_processed",
+          "coverage_complete"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "json",
+              "forum",
+              "url",
+              "text",
+              "social",
+              "mixed"
+            ]
+          },
+          "source_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "coverage_start": {
+            "type": "string"
+          },
+          "coverage_end": {
+            "type": "string"
+          },
+          "records_processed": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "coverage_complete": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "countries_detected",
+        "total_signals",
+        "active",
+        "monitoring",
+        "uncertain",
+        "resolved",
+        "historical",
+        "highest_active_severity"
+      ],
+      "properties": {
+        "countries_detected": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "total_signals": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "active": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "monitoring": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "uncertain": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "resolved": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "historical": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "highest_active_severity": {
+          "type": "string",
+          "enum": [
+            "none",
+            "low",
+            "moderate",
+            "high",
+            "critical"
+          ]
+        }
+      }
+    },
+    "signals": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/signal"
+      }
+    },
+    "watchlist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "watch_id",
+          "country",
+          "topic",
+          "reason",
+          "current_evidence",
+          "what_would_confirm_it",
+          "last_checked"
+        ],
+        "properties": {
+          "watch_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "country": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "current_evidence": {
+            "type": "string"
+          },
+          "what_would_confirm_it": {
+            "type": "string"
+          },
+          "last_checked": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "quality_control": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "full_sources_processed",
+        "reply_chains_considered",
+        "duplicates_merged",
+        "contradictions_checked",
+        "resolutions_checked",
+        "country_scope_checked",
+        "route_scope_checked",
+        "institution_scope_checked",
+        "correlated_penalties_checked",
+        "personal_identifiers_removed"
+      ],
+      "properties": {
+        "full_sources_processed": {
+          "type": "boolean"
+        },
+        "reply_chains_considered": {
+          "type": "boolean"
+        },
+        "duplicates_merged": {
+          "type": "boolean"
+        },
+        "contradictions_checked": {
+          "type": "boolean"
+        },
+        "resolutions_checked": {
+          "type": "boolean"
+        },
+        "country_scope_checked": {
+          "type": "boolean"
+        },
+        "route_scope_checked": {
+          "type": "boolean"
+        },
+        "institution_scope_checked": {
+          "type": "boolean"
+        },
+        "correlated_penalties_checked": {
+          "type": "boolean"
+        },
+        "personal_identifiers_removed": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entity_type",
+        "name"
+      ],
+      "properties": {
+        "entity_type": {
+          "type": "string",
+          "enum": [
+            "university",
+            "employer",
+            "vac",
+            "embassy",
+            "consulate",
+            "immigration_authority",
+            "regulator",
+            "test_provider",
+            "payment_provider",
+            "region",
+            "other"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_id",
+        "date",
+        "source_type",
+        "source_name",
+        "source_url",
+        "source_message_id",
+        "evidence_summary",
+        "direct_or_second_hand",
+        "supports_or_contradicts",
+        "independence_group"
+      ],
+      "properties": {
+        "evidence_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "type": "string"
+        },
+        "source_type": {
+          "type": "string",
+          "enum": [
+            "official_government",
+            "official_immigration_authority",
+            "official_embassy_or_consulate",
+            "official_vac_or_service_provider",
+            "official_university",
+            "official_employer",
+            "official_professional_regulator",
+            "official_test_provider",
+            "official_payment_provider",
+            "official_airline_or_border_authority",
+            "recognized_news",
+            "community_admin",
+            "licensed_or_identified_professional",
+            "shared_direct_institution_email",
+            "shared_direct_employer_email",
+            "first_hand_applicant_experience",
+            "second_hand_report",
+            "community_opinion",
+            "unknown"
+          ]
+        },
+        "source_name": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_message_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_summary": {
+          "type": "string"
+        },
+        "direct_or_second_hand": {
+          "type": "string",
+          "enum": [
+            "direct",
+            "second_hand"
+          ]
+        },
+        "supports_or_contradicts": {
+          "type": "string",
+          "enum": [
+            "supports",
+            "contradicts",
+            "resolves"
+          ]
+        },
+        "independence_group": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "signal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signal_id",
+        "root_cause_id",
+        "correlated_signal_ids",
+        "title",
+        "signal_family",
+        "signal_type",
+        "signal_class",
+        "impact_direction",
+        "status",
+        "trend",
+        "severity",
+        "confidence",
+        "destination",
+        "applicant_scope",
+        "migration_routes",
+        "migration_route_family",
+        "process_stages",
+        "entities",
+        "summary_en",
+        "summary_fa",
+        "practical_impact",
+        "who_should_care",
+        "recommended_action",
+        "known_workaround",
+        "first_seen",
+        "last_seen",
+        "last_verified",
+        "recency_class",
+        "evidence_count",
+        "independent_report_count",
+        "officially_confirmed",
+        "community_confirmed",
+        "official_verification",
+        "suggested_fit_adjustment",
+        "conditional_adjustment",
+        "reason_for_adjustment",
+        "keywords",
+        "evidence",
+        "resolution",
+        "needs_recheck",
+        "suggested_recheck_date"
+      ],
+      "properties": {
+        "signal_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "root_cause_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "correlated_signal_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "signal_family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "signal_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "signal_class": {
+          "type": "string",
+          "enum": [
+            "official_implementation",
+            "operational",
+            "processing",
+            "adjudication",
+            "market_behavior",
+            "institution",
+            "practical_selection",
+            "financial",
+            "testing",
+            "travel",
+            "geopolitical",
+            "settlement",
+            "fraud",
+            "other"
+          ]
+        },
+        "impact_direction": {
+          "type": "string",
+          "enum": [
+            "negative",
+            "positive_resolution",
+            "mixed",
+            "neutral"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "monitoring",
+            "uncertain",
+            "resolved",
+            "historical"
+          ]
+        },
+        "trend": {
+          "type": "string",
+          "enum": [
+            "worsening",
+            "stable",
+            "improving",
+            "resolved",
+            "unknown"
+          ]
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "low",
+            "moderate",
+            "high",
+            "critical"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "destination": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "country",
+            "country_code",
+            "region",
+            "city"
+          ],
+          "properties": {
+            "country": {
+              "type": "string"
+            },
+            "country_code": {
+              "type": "string"
+            },
+            "region": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "applicant_scope": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "origin_countries",
+            "nationalities",
+            "residence_countries",
+            "applying_from",
+            "age_groups",
+            "occupations",
+            "fields",
+            "education_levels",
+            "regulated_professions",
+            "other_conditions"
+          ],
+          "properties": {
+            "origin_countries": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "nationalities": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "residence_countries": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "applying_from": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "age_groups": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "occupations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "education_levels": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "regulated_professions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "other_conditions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "migration_routes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "migration_route_family": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "process_stages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "entities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entity"
+          }
+        },
+        "summary_en": {
+          "type": "string"
+        },
+        "summary_fa": {
+          "type": "string"
+        },
+        "practical_impact": {
+          "type": "string"
+        },
+        "who_should_care": {
+          "type": "string"
+        },
+        "recommended_action": {
+          "type": "string"
+        },
+        "known_workaround": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "first_seen": {
+          "type": "string"
+        },
+        "last_seen": {
+          "type": "string"
+        },
+        "last_verified": {
+          "type": "string"
+        },
+        "recency_class": {
+          "type": "string",
+          "enum": [
+            "very_current",
+            "current",
+            "supporting",
+            "historical"
+          ]
+        },
+        "evidence_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "independent_report_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "officially_confirmed": {
+          "type": "boolean"
+        },
+        "community_confirmed": {
+          "type": "boolean"
+        },
+        "official_verification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "source_url",
+            "source_title",
+            "verified_at",
+            "note"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "confirmed",
+                "partly_confirmed",
+                "contradicted",
+                "not_verified",
+                "not_applicable"
+              ]
+            },
+            "source_url": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source_title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "verified_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "suggested_fit_adjustment": {
+          "type": "integer",
+          "enum": [
+            0,
+            -5,
+            -10,
+            -15,
+            -20
+          ]
+        },
+        "conditional_adjustment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "adjustment",
+            "apply_when"
+          ],
+          "properties": {
+            "adjustment": {
+              "type": "integer",
+              "enum": [
+                0,
+                -5,
+                -10,
+                -15,
+                -20
+              ]
+            },
+            "apply_when": {
+              "type": "string"
+            }
+          }
+        },
+        "reason_for_adjustment": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "resolution": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "resolved",
+            "resolved_date",
+            "resolution_summary",
+            "resolution_source"
+          ],
+          "properties": {
+            "resolved": {
+              "type": "boolean"
+            },
+            "resolved_date": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "resolution_summary": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "resolution_source": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "needs_recheck": {
+          "type": "boolean"
+        },
+        "suggested_recheck_date": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "resolved",
+                  "historical"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "suggested_fit_adjustment": {
+                "const": 0
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

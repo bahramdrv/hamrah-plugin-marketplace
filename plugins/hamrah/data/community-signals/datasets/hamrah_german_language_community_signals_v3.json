@@ -1,0 +1,2176 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_german_language_signals_candidate",
+    "generated_at": "2026-09-17T06:15:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "german-language-pargar-telegram-export",
+      "name": "result(20260917-060335).json / Telegram export «گروه زبان آلمانی پرگار»",
+      "source_type": "private_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-17",
+        "records_available": 6148,
+        "records_processed": 6148
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "contains_first_hand_exam_reports": true,
+        "contains_teacher_or_admin_guidance": true,
+        "contains_promotional_posts": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "DEU-LANG-TEST-ACCESS-001-E1",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "16813"
+      },
+      "published_at": "2025-08-20",
+      "event_date": "2025-08-20",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2025 reply said Goethe was no longer operating locally while ÖSD remained available in Iran, with nearby-country travel as the fallback for other exams.",
+        "fa": "یک پاسخ ۲۰۲۵ گفته گوته داخل ایران فعال نیست و ÖSD داخل ایران در دسترس است و برای آزمون‌های دیگر سفر به کشورهای اطراف مطرح می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-TEST-ACCESS-001-E2",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "18724"
+      },
+      "published_at": "2025-10-22",
+      "event_date": "2025-10-22",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later message said Goethe and telc were not being held in Iran and therefore added travel cost, while ÖSD had limited capacity.",
+        "fa": "پیام بعدی گفته Goethe و telc در ایران برگزار نمی‌شوند و هزینه سفر اضافه می‌کنند، در حالی که ظرفیت ÖSD محدود است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-TEST-ACCESS-001-E3",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "26537"
+      },
+      "published_at": "2026-07-07",
+      "event_date": "2026-07-07",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In July 2026 a reply again said Goethe had no activity in Iran and pointed to ÖSD as the domestic option.",
+        "fa": "در جولای ۲۰۲۶ نیز پاسخ دیگری گوته را غیرفعال در ایران و ÖSD را گزینه داخلی معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-TEST-ACCESS-001-E4",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "32324"
+      },
+      "published_at": "2026-09-11",
+      "event_date": "2026-09-11",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A September 2026 reply said digital TestDaF and ÖSD were being held in Iran at that time.",
+        "fa": "پاسخ سپتامبر ۲۰۲۶ گفته در آن مقطع TestDaF دیجیتال و ÖSD در ایران برگزار می‌شوند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-RETRY-002-E1",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "18724"
+      },
+      "published_at": "2025-10-22",
+      "event_date": "2025-10-22",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user estimated that failing ÖSD could cost at least about two months before a practical retake because of result waiting and limited registration capacity.",
+        "fa": "یک کاربر برآورد کرده ردشدن ÖSD با توجه به انتظار نتیجه و ظرفیت محدود، می‌تواند حداقل حدود دو ماه تا آزمون مجدد زمان بسوزاند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-RETRY-002-E2",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "24411"
+      },
+      "published_at": "2026-04-28",
+      "event_date": "2026-04-28",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 reply said ÖSD results in Turkey commonly arrived in roughly two to four weeks depending on the centre.",
+        "fa": "پاسخ ۲۰۲۶ گفته نتیجه ÖSD در ترکیه معمولاً بسته به سنتر حدود دو تا چهار هفته زمان می‌برد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-RETRY-002-E3",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "24413"
+      },
+      "published_at": "2026-04-28",
+      "event_date": "2026-04-28",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same discussion said expedited results were not consistently available across centres.",
+        "fa": "همان گفتگو گفته گزینه نتیجه اکسپرس در همه سنترها پایدار و قابل اتکا نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-ACCEPTANCE-003-E1",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "18723"
+      },
+      "published_at": "2025-10-22",
+      "event_date": "2025-10-22",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_claim",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user claimed some strong universities ask for higher Goethe/ÖSD levels while telc C1 Hochschule may suffice, illustrating certificate-specific acceptance differences.",
+        "fa": "یک کاربر ادعا کرده بعضی دانشگاه‌های قوی برای Goethe/ÖSD سطح بالاتری می‌خواهند در حالی که telc C1 Hochschule ممکن است کافی باشد؛ نمونه‌ای از تفاوت پذیرش مدرک."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-ACCEPTANCE-003-E2",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "19814"
+      },
+      "published_at": "2025-12-04",
+      "event_date": "2025-12-04",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply said many university programs use telc C1 Hochschule or TestDaF 4x4, while college/Ausbildung routes may accept B2 from Goethe, telc or ÖSD.",
+        "fa": "پاسخ بعدی گفته بسیاری از دانشگاه‌ها telc C1 Hochschule یا TestDaF 4x4 می‌خواهند و در بعضی مسیرهای کالج/آوسبیلدونگ B2 از Goethe/telc/ÖSD پذیرفته می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-ACCEPTANCE-003-C1",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "21047"
+      },
+      "published_at": "2026-01-04",
+      "event_date": "2026-01-04",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_uncertainty",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another user said some universities may not accept telc, reinforcing that acceptance should not be generalized.",
+        "fa": "کاربر دیگری گفته بعضی دانشگاه‌ها ممکن است telc را قبول نکنند؛ تأکیدی بر اینکه پذیرش را نباید سراسری فرض کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-ACCEPTANCE-003-E3",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "27128"
+      },
+      "published_at": "2026-07-18",
+      "event_date": "2026-07-18",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 reply advised checking the exact university requirement and noted TestDaF 4x4 as a commonly accepted direct-admission benchmark.",
+        "fa": "پاسخ ۲۰۲۶ توصیه کرده الزام همان دانشگاه بررسی شود و TestDaF 4x4 را benchmark رایج پذیرش مستقیم دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-COURSE-CERT-004-E1",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8832"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant said prior course certificates and a paid placement test did not prevent an institution from later asking for an official ÖSD B1 exam certificate.",
+        "fa": "یک متقاضی گفته گواهی دوره‌های قبلی و حتی تعیین‌سطح پولی باعث نشد مؤسسه از درخواست مدرک رسمی ÖSD B1 صرف‌نظر کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-COURSE-CERT-004-E2",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8885"
+      },
+      "published_at": "2025-01-05",
+      "event_date": "2025-01-05",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A user asked whether a B1 certificate had to be an overall/complete certificate for embassy purposes, showing recurring uncertainty between course/exam formats.",
+        "fa": "یک کاربر درباره این‌که برای سفارت B1 حتماً باید مدرک کامل/overall باشد سؤال کرده که ابهام درباره نوع مدرک را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-COURSE-CERT-004-E3",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "32324"
+      },
+      "published_at": "2026-09-11",
+      "event_date": "2026-09-11",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply again tied required language level to the exact university/program rather than to generic study history.",
+        "fa": "پاسخ بعدی نیز سطح مدرک لازم را به دانشگاه/رشته دقیق گره زده نه صرف سابقه دوره زبان."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-TELC-REPEAT-005-E1",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9614"
+      },
+      "published_at": "2025-01-29",
+      "event_date": "2025-01-29",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "first_hand_test_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A telc test taker said nearly all of their test material had appeared in repeated-question files they studied.",
+        "fa": "یک آزمون‌دهنده telc گفته تقریباً همه مواد آزمونش در فایل‌های سؤال پرتکراری که خوانده بود وجود داشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-TELC-REPEAT-005-E2",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9616"
+      },
+      "published_at": "2025-01-29",
+      "event_date": "2025-01-29",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "first_hand_course_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A learner attending telc preparation in Turkey said even the exam-prep centre strongly emphasized repeated-question material.",
+        "fa": "یک زبان‌آموز در کلاس آمادگی telc ترکیه گفته خود سنتر آمادگی نیز شدیداً روی سؤال‌های پرتکرار تأکید می‌کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-TELC-REPEAT-005-E3",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10385"
+      },
+      "published_at": "2025-02-28",
+      "event_date": "2025-02-28",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user said repeated-question files were the practical core of telc preparation but added an important caveat: the learner should already have a real B1+ level.",
+        "fa": "یک کاربر فایل‌های پرتکرار را هسته عملی آمادگی telc دانسته اما شرط مهم گذاشته که سطح واقعی فرد حداقل B1+ باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-TELC-REPEAT-005-E4",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "18135"
+      },
+      "published_at": "2025-10-01",
+      "event_date": "2025-10-01",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_resource_sharing",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "By October 2025 users were still circulating telc repeated-question sets with and without answers.",
+        "fa": "تا اکتبر ۲۰۲۵ کاربران همچنان بسته‌های سؤال پرتکرار telc با جواب و بدون جواب را به اشتراک می‌گذاشتند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-CERT-COMPETENCE-006-E1",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9015"
+      },
+      "published_at": "2025-01-09",
+      "event_date": "2025-01-09",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "first_hand_exam_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user said they obtained B2 while starting from around A2 by focusing on repeated exam material, but explicitly said they only 'got the B2' and later had to work on listening and speaking.",
+        "fa": "یک کاربر گفته با سطح حدود A2 و تمرکز روی پرتکرارها B2 گرفته، اما صریحاً گفته فقط «مدرک B2» گرفته و بعداً مجبور شده روی Hören و Sprechen کار کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-CERT-COMPETENCE-006-E2",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9018"
+      },
+      "published_at": "2025-01-09",
+      "event_date": "2025-01-09",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "first_hand_exam_prep",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same user described independently filling grammar gaps and working through around forty telc samples rather than following a full B2 textbook course.",
+        "fa": "همان فرد گفته خلأهای گرامر را خودخوان پر کرده و حدود چهل نمونه telc کار کرده، نه این‌که یک دوره کامل کتاب B2 را طی کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-CERT-COMPETENCE-006-E3",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9019"
+      },
+      "published_at": "2025-01-09",
+      "event_date": "2025-01-09",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "first_hand_exam_prep",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "They estimated about five months of sustained work and said limited vocabulary was a major reason the process took time.",
+        "fa": "همان تجربه حدود پنج ماه تمرین مستمر را ذکر کرده و کمبود واژگان را عامل مهم طولانی‌شدن مسیر دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-SPEAKING-FEEDBACK-007-E1",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11200"
+      },
+      "published_at": "2025-04-06",
+      "event_date": "2025-04-06",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "first_hand_test_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A telc B1 test taker described losing time because they did not know the speaking-task interaction format in advance, showing task rehearsal matters.",
+        "fa": "یک آزمون‌دهنده telc B1 گفته چون قالب تعامل بخش شفاهی را از قبل نمی‌دانسته زمان و امتیاز عملی از دست داده؛ یعنی rehearsal فرمت مهم است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-SPEAKING-FEEDBACK-007-E2",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "16593"
+      },
+      "published_at": "2025-08-15",
+      "event_date": "2025-08-15",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "practice_partner_request",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A telc B2 candidate specifically sought a speaking partner for exam preparation.",
+        "fa": "یک داوطلب telc B2 مشخصاً برای آمادگی آزمون دنبال پارتنر Sprechen بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-SPEAKING-FEEDBACK-007-E3",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "17087"
+      },
+      "published_at": "2025-08-27",
+      "event_date": "2025-08-27",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "first_hand_test_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A digital telc B1 candidate who practiced German speaking continuously in class scored 71/75 in speaking and attributed success to sustained active use and feedback.",
+        "fa": "یک داوطلب Digital telc B1 که در کلاس به‌صورت مستمر آلمانی صحبت می‌کرد نمره 71/75 در Sprechen گرفته و موفقیت را به استفاده فعال و فیدبک مستمر نسبت داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-SPEAKING-FEEDBACK-007-E4",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "28126"
+      },
+      "published_at": "2026-08-23",
+      "event_date": "2026-08-23",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "practice_partner_request",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An ÖSD B1 learner sought daily speaking practice with a consistent partner focused on the exam speaking section.",
+        "fa": "یک زبان‌آموز ÖSD B1 دنبال تمرین روزانه مکالمه با پارتنر منظم و تمرکز روی بخش Sprechen آزمون بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-SELFSTUDY-008-E1",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "16435"
+      },
+      "published_at": "2025-08-12",
+      "event_date": "2025-08-12",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "first_hand_learning_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A learner said A1 self-study was workable, but they found teacher support more structured for B1/B2, while still acknowledging self-study can work.",
+        "fa": "یک زبان‌آموز گفته A1 را خودخوان پیش برده، اما برای B1/B2 همراهی استاد را اصولی‌تر دانسته و در عین حال خودخوان را ناممکن ندانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-SELFSTUDY-008-E2",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "17918"
+      },
+      "published_at": "2025-09-22",
+      "event_date": "2025-09-22",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another user expressed the opposite sequencing preference: teacher support early, then more self-study independence at B2+.",
+        "fa": "کاربر دیگری ترتیب برعکس را پیشنهاد کرده: استاد از ابتدا و خودخوان بیشتر در B2 به بالا."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-SELFSTUDY-008-E3",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "17087"
+      },
+      "published_at": "2025-08-27",
+      "event_date": "2025-08-27",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "first_hand_test_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A successful telc candidate concluded that private class, AI, YouTube or self-study can all work if the learner maintains consistency and discipline.",
+        "fa": "یک داوطلب موفق telc جمع‌بندی کرده کلاس خصوصی، AI، یوتیوب یا خودخوان همگی می‌توانند جواب بدهند اگر استمرار و نظم حفظ شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-ONLINE-QUALITY-009-E1",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8894"
+      },
+      "published_at": "2025-01-05",
+      "event_date": "2025-01-05",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "teacher_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A teacher said online classes can be close to in-person quality when the teacher and platform are good and the learner is comfortable online.",
+        "fa": "یک مدرس گفته کلاس آنلاین با استاد و پلتفرم خوب می‌تواند تفاوت زیادی با حضوری نداشته باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-ONLINE-QUALITY-009-E2",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8901"
+      },
+      "published_at": "2025-01-05",
+      "event_date": "2025-01-05",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "first_hand_student_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A learner reported good online B1/B2 classes overall but one poor teacher, with supervisor intervention allowing a teacher change.",
+        "fa": "یک زبان‌آموز از تجربه کلی خوب کلاس آنلاین B1/B2 گفته اما یک مدرس ضعیف داشته و با دخالت سوپروایزر استادش را عوض کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-ONLINE-QUALITY-009-E3",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8982"
+      },
+      "published_at": "2025-01-08",
+      "event_date": "2025-01-08",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "first_hand_student_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another learner described leaving a large low-quality class after two sessions and not receiving the remaining fee back.",
+        "fa": "زبان‌آموز دیگری گفته کلاس بزرگ و بی‌کیفیتی را بعد از دو جلسه رها کرده و باقی هزینه‌اش هم پس داده نشده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-DIRECT-CENTER-010-E1",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "17087"
+      },
+      "published_at": "2025-08-27",
+      "event_date": "2025-08-27",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "first_hand_test_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A telc candidate said they completed all exam registration themselves and communicated directly with the Ankara test centre, recommending others avoid unnecessary intermediaries.",
+        "fa": "یک داوطلب telc گفته تمام ثبت‌نام آزمون را خودش انجام داده و مستقیم با سنتر آنکارا در ارتباط بوده و استفاده از واسطه را غیرضروری دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-DIRECT-CENTER-010-E2",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "24413"
+      },
+      "published_at": "2026-04-28",
+      "event_date": "2026-04-28",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For ÖSD in Turkey, guidance pointed applicants to the official exam-centre directory and direct centre registration.",
+        "fa": "برای ÖSD ترکیه، راهنمایی گروه متقاضی را به فهرست رسمی exam centre و ثبت‌نام مستقیم با سنتر ارجاع داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-LANG-DIRECT-CENTER-010-E3",
+      "source_id": "german-language-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10459"
+      },
+      "published_at": "2025-03-03",
+      "event_date": "2025-03-03",
+      "collected_at": "2026-09-17T06:15:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A Goethe candidate asked how to locate centres in nearby countries such as Dubai or Armenia, reflecting recurring cross-border centre-selection friction.",
+        "fa": "یک داوطلب Goethe درباره پیدا کردن سنتر در کشورهای نزدیک مثل دبی یا ارمنستان پرسیده که اصطکاک تکرارشونده انتخاب سنتر برون‌مرزی را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "DEU-LANG-TEST-ACCESS-001",
+      "issue_cluster_id": "DEU-GERMAN-TEST-ACCESS-IRAN",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-LANG-RETRY-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "DEU-LANG-DIRECT-CENTER-010"
+        }
+      ],
+      "classification": {
+        "family": "E13_EXTERNAL_TEST_SERVICE",
+        "type": "test_access_geographic_constraint",
+        "class": "language_test"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / GERMAN",
+            "STUDY / ACADEMIC",
+            "AUSBILDUNG / VOCATIONAL",
+            "FAMILY"
+          ],
+          "codes": [
+            "Goethe",
+            "telc",
+            "ÖSD",
+            "TestDaF"
+          ]
+        },
+        "process_stages": [
+          "exam_selection",
+          "booking",
+          "travel"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "German-test availability in Iran is uneven, making exam choice partly a logistics decision",
+          "fa": "دسترسی آزمون‌های آلمانی در ایران نامتوازن است و انتخاب آزمون فقط آموزشی نیست، بلکه لجستیکی هم هست"
+        },
+        "summary": {
+          "en": "Across 2025-2026 the source repeatedly describes Goethe/telc as unavailable in Iran, ÖSD as the main domestic option, and digital TestDaF as available by September 2026. Cross-border testing adds travel cost.",
+          "fa": "در ۲۰۲۵ تا ۲۰۲۶ فایل بارها Goethe/telc را خارج از دسترس داخل ایران، ÖSD را گزینه داخلی اصلی و تا سپتامبر ۲۰۲۶ TestDaF دیجیتال را نیز داخل ایران گزارش کرده است. آزمون خارج کشور هزینه سفر اضافه می‌کند."
+        },
+        "practical_impact": {
+          "en": "The academically preferred certificate may be slower or more expensive to obtain than a locally available alternative.",
+          "fa": "مدرک ترجیحی دانشگاه ممکن است از گزینه داخلی زمان‌برتر و گران‌تر باشد."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants needing German certification for study, Ausbildung, work or family routes.",
+          "fa": "متقاضیان داخل ایران که برای تحصیل، آوسبیلدونگ، کار یا پیوست مدرک آلمانی می‌خواهند."
+        },
+        "recommended_action": {
+          "en": "Choose the certificate only after checking both institutional acceptance and current test-centre access.",
+          "fa": "مدرک را فقط بعد از بررسی همزمان پذیرش مؤسسه و دسترسی فعلی سنتر انتخاب کنید."
+        },
+        "known_workaround": "ÖSD/TestDaF domestically or Goethe/telc in nearby countries, subject to current availability."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-LANG-TEST-ACCESS-001-E1",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-TEST-ACCESS-001-E1"
+        },
+        {
+          "evidence_id": "DEU-LANG-TEST-ACCESS-001-E2",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-TEST-ACCESS-001-E2"
+        },
+        {
+          "evidence_id": "DEU-LANG-TEST-ACCESS-001-E3",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-TEST-ACCESS-001-E3"
+        },
+        {
+          "evidence_id": "DEU-LANG-TEST-ACCESS-001-E4",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-TEST-ACCESS-001-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated reports over more than a year show durable geographic access differences."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official test-centre availability was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-LANG-TEST-ACCESS-001-E1",
+            "DEU-LANG-TEST-ACCESS-001-E2",
+            "DEU-LANG-TEST-ACCESS-001-E3",
+            "DEU-LANG-TEST-ACCESS-001-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded German-language Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Test-centre availability can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Goethe",
+        "telc",
+        "ÖSD",
+        "TestDaF",
+        "Iran"
+      ],
+      "first_seen": "2025-08-20",
+      "last_seen": "2026-09-11"
+    },
+    {
+      "signal_id": "DEU-LANG-RETRY-002",
+      "issue_cluster_id": "DEU-GERMAN-TEST-RETRY-DELAY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-LANG-TEST-ACCESS-001"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "result_and_retake_delay",
+        "class": "language_test"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / GERMAN",
+            "STUDY / ACADEMIC",
+            "AUSBILDUNG / VOCATIONAL",
+            "FAMILY"
+          ],
+          "codes": [
+            "ÖSD"
+          ]
+        },
+        "process_stages": [
+          "result_wait",
+          "retake",
+          "booking"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "ÖSD failure can create a multi-week or multi-month timing penalty because result and rebooking windows compound",
+          "fa": "ردشدن ÖSD می‌تواند به‌خاطر جمع‌شدن زمان نتیجه و ثبت‌نام مجدد، چند هفته تا چند ماه زمان بسوزاند"
+        },
+        "summary": {
+          "en": "Community guidance cites two-to-four-week result windows in some centres and warns that limited capacity can extend a practical retake cycle to around two months or more.",
+          "fa": "راهنمایی گروه از نتیجه دو تا چهار هفته‌ای در بعضی سنترها و ظرفیت محدود گفته و چرخه عملی retry را حدود دو ماه یا بیشتر برآورد کرده است."
+        },
+        "practical_impact": {
+          "en": "A single failed attempt close to an admission or visa deadline can derail the timeline.",
+          "fa": "یک بار ردشدن نزدیک ددلاین پذیرش یا ویزا می‌تواند کل timeline را به‌هم بزند."
+        },
+        "who_should_care": {
+          "en": "Applicants with hard deadlines relying on ÖSD.",
+          "fa": "متقاضیان دارای ددلاین سخت که روی ÖSD حساب کرده‌اند."
+        },
+        "recommended_action": {
+          "en": "Leave a retake buffer and do not assume expedited results are available.",
+          "fa": "برای retry حاشیه زمانی بگذارید و نتیجه اکسپرس را قطعی فرض نکنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-LANG-RETRY-002-E1",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-RETRY-002-E1"
+        },
+        {
+          "evidence_id": "DEU-LANG-RETRY-002-E2",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-RETRY-002-E2"
+        },
+        {
+          "evidence_id": "DEU-LANG-RETRY-002-E3",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-RETRY-002-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The pattern is operationally plausible and repeated, but exact timing is centre-specific."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Official result/retake timelines were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-LANG-RETRY-002-E1",
+            "DEU-LANG-RETRY-002-E2",
+            "DEU-LANG-RETRY-002-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded German-language Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Centre capacity and result timing can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "ÖSD",
+        "results",
+        "retake",
+        "capacity"
+      ],
+      "first_seen": "2025-10-22",
+      "last_seen": "2026-04-28"
+    },
+    {
+      "signal_id": "DEU-LANG-ACCEPTANCE-003",
+      "issue_cluster_id": "DEU-GERMAN-CERTIFICATE-ACCEPTANCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-LANG-TEST-ACCESS-001"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "certificate_acceptance_variance",
+        "class": "eligibility"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / GERMAN",
+            "STUDY / ACADEMIC",
+            "AUSBILDUNG / VOCATIONAL",
+            "FAMILY"
+          ],
+          "codes": [
+            "Goethe",
+            "telc",
+            "ÖSD",
+            "TestDaF"
+          ]
+        },
+        "process_stages": [
+          "program_requirement",
+          "certificate_selection"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "German certificate acceptance is institution- and route-specific; telc/ÖSD/Goethe/TestDaF are not safely interchangeable",
+          "fa": "پذیرش مدرک زبان دانشگاه‌ و مسیرمحور است و telc/ÖSD/Goethe/TestDaF را نباید قابل‌جایگزینی قطعی فرض کرد"
+        },
+        "summary": {
+          "en": "The source contains conflicting community claims about accepted certificates and levels, but consistently advises checking the exact university/program requirement.",
+          "fa": "فایل ادعاهای متناقض درباره نوع و سطح مدرک دارد، اما به‌طور پایدار توصیه می‌کند الزام دانشگاه/برنامه دقیق بررسی شود."
+        },
+        "practical_impact": {
+          "en": "Taking an accessible exam that the target institution does not accept can waste months and substantial cost.",
+          "fa": "دادن آزمون در دسترس ولی غیرقابل‌قبول برای دانشگاه هدف می‌تواند ماه‌ها زمان و هزینه را هدر دهد."
+        },
+        "who_should_care": {
+          "en": "Applicants selecting a German certificate for university, college or Ausbildung.",
+          "fa": "متقاضیان انتخاب مدرک زبان برای دانشگاه، کالج یا آوسبیلدونگ."
+        },
+        "recommended_action": {
+          "en": "Use the target institution's current accepted-certificate table, not community generalizations.",
+          "fa": "جدول مدرک‌های پذیرفته‌شده همان مؤسسه را مبنا بگیرید، نه تعمیم‌های گروه."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-LANG-ACCEPTANCE-003-E1",
+          "relation": "supports",
+          "independence_group": "acc-r1"
+        },
+        {
+          "evidence_id": "DEU-LANG-ACCEPTANCE-003-E2",
+          "relation": "supports",
+          "independence_group": "acc-r2"
+        },
+        {
+          "evidence_id": "DEU-LANG-ACCEPTANCE-003-C1",
+          "relation": "contradicts",
+          "independence_group": "acc-r3"
+        },
+        {
+          "evidence_id": "DEU-LANG-ACCEPTANCE-003-E3",
+          "relation": "supports",
+          "independence_group": "acc-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Contradictory certificate claims strongly support institution-specific variance rather than a universal rule."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current university and uni-assist acceptance rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-LANG-ACCEPTANCE-003-E1",
+            "DEU-LANG-ACCEPTANCE-003-E2",
+            "DEU-LANG-ACCEPTANCE-003-C1",
+            "DEU-LANG-ACCEPTANCE-003-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded German-language Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Accepted certificates vary by institution and intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "telc C1 Hochschule",
+        "Goethe",
+        "ÖSD",
+        "TestDaF",
+        "university"
+      ],
+      "first_seen": "2025-10-22",
+      "last_seen": "2026-07-18"
+    },
+    {
+      "signal_id": "DEU-LANG-COURSE-CERT-004",
+      "issue_cluster_id": "DEU-LANGUAGE-COURSE-VS-OFFICIAL-CERT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-LANG-ACCEPTANCE-003"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "course_certificate_not_exam_equivalent",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / GERMAN",
+            "STUDY / ACADEMIC",
+            "AUSBILDUNG / VOCATIONAL",
+            "FAMILY"
+          ],
+          "codes": [
+            "German_language_proof"
+          ]
+        },
+        "process_stages": [
+          "course_enrollment",
+          "visa",
+          "institution_requirement"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Course attendance/placement evidence should not be assumed equivalent to an official external language certificate",
+          "fa": "گواهی دوره یا تعیین‌سطح را نباید معادل مدرک رسمی آزمون زبان فرض کرد"
+        },
+        "summary": {
+          "en": "A direct case shows an institution initially accepting course history for placement but later requiring an official ÖSD B1 certificate. Community questions also show continuing uncertainty over certificate format for embassy/institution use.",
+          "fa": "یک کیس مستقیم نشان می‌دهد مؤسسه ابتدا سوابق دوره را برای تعیین سطح پذیرفته اما بعد مدرک رسمی ÖSD B1 خواسته است. پرسش‌های گروه نیز ابهام درباره فرمت مدرک برای سفارت/مؤسسه را نشان می‌دهد."
+        },
+        "practical_impact": {
+          "en": "Applicants can pay course or placement fees and still need a separate official exam.",
+          "fa": "ممکن است متقاضی هزینه دوره/تعیین‌سطح بدهد و در نهایت باز هم آزمون رسمی جدا لازم شود."
+        },
+        "who_should_care": {
+          "en": "Applicants relying on institute course certificates for immigration or admission evidence.",
+          "fa": "افرادی که روی گواهی دوره مؤسسه برای پذیرش یا مهاجرت حساب کرده‌اند."
+        },
+        "recommended_action": {
+          "en": "Confirm whether the receiving authority needs course proof, a recognized exam certificate, or a specific module/overall format.",
+          "fa": "قبل از هزینه، روشن کنید مرجع مقصد گواهی دوره، مدرک رسمی آزمون یا فرمت ماژولی/کامل خاص می‌خواهد."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-LANG-COURSE-CERT-004-E1",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-COURSE-CERT-004-E1"
+        },
+        {
+          "evidence_id": "DEU-LANG-COURSE-CERT-004-E2",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-COURSE-CERT-004-E2"
+        },
+        {
+          "evidence_id": "DEU-LANG-COURSE-CERT-004-E3",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-COURSE-CERT-004-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Direct evidence exists, but receiving-authority requirements vary."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Exact embassy/institution certificate-format requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-LANG-COURSE-CERT-004-E1",
+            "DEU-LANG-COURSE-CERT-004-E2",
+            "DEU-LANG-COURSE-CERT-004-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded German-language Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Document rules are route-specific.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "course certificate",
+        "ÖSD B1",
+        "embassy",
+        "language proof"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2026-09-11"
+    },
+    {
+      "signal_id": "DEU-LANG-TELC-REPEAT-005",
+      "issue_cluster_id": "DEU-TELC-REPEATED-QUESTION-PREP",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-LANG-CERT-COMPETENCE-006"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "repeat_question_exam_strategy",
+        "class": "preparation"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / GERMAN",
+            "STUDY / ACADEMIC",
+            "AUSBILDUNG / VOCATIONAL",
+            "FAMILY"
+          ],
+          "codes": [
+            "telc B1",
+            "telc B2",
+            "telc C1"
+          ]
+        },
+        "process_stages": [
+          "exam_preparation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Repeated-question sets are a dominant community strategy for telc preparation, but work best on top of real baseline competence",
+          "fa": "فایل‌های سؤال پرتکرار استراتژی غالب آمادگی telc هستند، اما وقتی سطح پایه واقعی وجود دارد بهتر جواب می‌دهند"
+        },
+        "summary": {
+          "en": "Multiple direct/community reports say telc tests overlapped heavily with circulated repeat sets. One of the strongest advocates still cautioned that the learner should have at least real B1+ competence.",
+          "fa": "چند تجربه مستقیم/کامیونیتی از همپوشانی زیاد آزمون telc با فایل‌های پرتکرار می‌گویند. حتی یکی از حامیان اصلی این روش تأکید کرده سطح واقعی حداقل B1+ لازم است."
+        },
+        "practical_impact": {
+          "en": "Repeat sets can improve test efficiency but may create false readiness if used instead of underlying language development.",
+          "fa": "پرتکرارها می‌توانند آمادگی آزمون را بهینه کنند اما اگر جای زبان واقعی را بگیرند آمادگی کاذب می‌سازند."
+        },
+        "who_should_care": {
+          "en": "telc candidates under time pressure.",
+          "fa": "داوطلبان telc با محدودیت زمان."
+        },
+        "recommended_action": {
+          "en": "Use repeated-question sets as exam-format drilling after reaching a credible language baseline.",
+          "fa": "پرتکرار را بعد از رسیدن به سطح پایه معتبر، برای drill فرمت آزمون استفاده کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-LANG-TELC-REPEAT-005-E1",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-TELC-REPEAT-005-E1"
+        },
+        {
+          "evidence_id": "DEU-LANG-TELC-REPEAT-005-E2",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-TELC-REPEAT-005-E2"
+        },
+        {
+          "evidence_id": "DEU-LANG-TELC-REPEAT-005-E3",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-TELC-REPEAT-005-E3"
+        },
+        {
+          "evidence_id": "DEU-LANG-TELC-REPEAT-005-E4",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-TELC-REPEAT-005-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The pattern recurs across many messages and includes direct test experience plus a useful baseline caveat."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No official claim is made that future telc forms will repeat community files."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-LANG-TELC-REPEAT-005-E1",
+            "DEU-LANG-TELC-REPEAT-005-E2",
+            "DEU-LANG-TELC-REPEAT-005-E3",
+            "DEU-LANG-TELC-REPEAT-005-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded German-language Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Exam forms and item pools can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "telc",
+        "repeated questions",
+        "B1",
+        "B2",
+        "exam prep"
+      ],
+      "first_seen": "2025-01-29",
+      "last_seen": "2025-10-01"
+    },
+    {
+      "signal_id": "DEU-LANG-CERT-COMPETENCE-006",
+      "issue_cluster_id": "DEU-EXAM-CERTIFICATE-VS-COMPETENCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-LANG-TELC-REPEAT-005"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "certificate_competence_gap",
+        "class": "preparation"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / GERMAN",
+            "STUDY / ACADEMIC",
+            "AUSBILDUNG / VOCATIONAL",
+            "FAMILY"
+          ],
+          "codes": [
+            "telc B2"
+          ]
+        },
+        "process_stages": [
+          "exam_preparation",
+          "post_exam_learning"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Passing B2 through exam-focused preparation does not necessarily mean balanced B2 competence",
+          "fa": "قبولی B2 با آمادگی امتحان‌محور الزاماً به معنی مهارت متوازن واقعی در سطح B2 نیست"
+        },
+        "summary": {
+          "en": "A direct source case says the learner obtained B2 from an A2-ish starting point using repeat-heavy preparation but later needed to work specifically on listening, speaking and vocabulary.",
+          "fa": "یک تجربه مستقیم می‌گوید فرد با نقطه شروع حدود A2 و آمادگی پرتکرارمحور B2 گرفته اما بعد از قبولی مجبور شده مشخصاً روی Listening، Speaking و واژگان کار کند."
+        },
+        "practical_impact": {
+          "en": "A certificate may satisfy a formal requirement while leaving the learner underprepared for study, work or daily German.",
+          "fa": "مدرک ممکن است شرط رسمی را حل کند اما فرد را برای دانشگاه، کار یا زندگی روزمره آماده نکند."
+        },
+        "who_should_care": {
+          "en": "Applicants optimizing only for a language-certificate deadline.",
+          "fa": "متقاضیانی که فقط برای ددلاین مدرک زبان بهینه‌سازی می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Separate the 'pass the exam' plan from the 'build usable German' plan and continue active skill work after the exam if needed.",
+          "fa": "برنامه «قبولی آزمون» را از «ساخت زبان قابل‌استفاده» جدا کنید و در صورت نیاز بعد از آزمون مهارت‌های فعال را ادامه دهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-LANG-CERT-COMPETENCE-006-E1",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-CERT-COMPETENCE-006-E1"
+        },
+        {
+          "evidence_id": "DEU-LANG-CERT-COMPETENCE-006-E2",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-CERT-COMPETENCE-006-E2"
+        },
+        {
+          "evidence_id": "DEU-LANG-CERT-COMPETENCE-006-E3",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-CERT-COMPETENCE-006-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The signal is anchored by a strong direct case but should not be generalized to every learner."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "This is a learning-outcome signal, not an official exam statement."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-LANG-CERT-COMPETENCE-006-E1",
+            "DEU-LANG-CERT-COMPETENCE-006-E2",
+            "DEU-LANG-CERT-COMPETENCE-006-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded German-language Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2027-03-16",
+        "reason": "Stable learning/practice signal.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "B2",
+        "certificate",
+        "competence",
+        "repeat questions",
+        "skills"
+      ],
+      "first_seen": "2025-01-09",
+      "last_seen": "2025-01-09"
+    },
+    {
+      "signal_id": "DEU-LANG-SPEAKING-FEEDBACK-007",
+      "issue_cluster_id": "DEU-GERMAN-ACTIVE-SKILL-FEEDBACK",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "speaking_feedback_practice",
+        "class": "preparation"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / GERMAN",
+            "STUDY / ACADEMIC",
+            "AUSBILDUNG / VOCATIONAL",
+            "FAMILY"
+          ],
+          "codes": [
+            "telc",
+            "ÖSD",
+            "Goethe"
+          ]
+        },
+        "process_stages": [
+          "Sprechen",
+          "Schreiben",
+          "active_practice"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Active speaking rehearsal and feedback are recurring high-value preparation signals, especially because task format matters",
+          "fa": "تمرین فعال Sprechen و فیدبک سیگنال پرتکرار و پربازده است، مخصوصاً چون فرمت تسک اهمیت عملی دارد"
+        },
+        "summary": {
+          "en": "The source includes repeated partner searches, a B1 candidate who lost time by not knowing the speaking interaction format, and a high-scoring digital telc candidate who practiced German speaking continuously with feedback.",
+          "fa": "فایل شامل جست‌وجوی مکرر پارتنر، تجربه B1 از دست‌دادن زمان به‌خاطر ندانستن فرمت تعامل شفاهی، و یک داوطلب Digital telc با نمره بالای Sprechen و تمرین/فیدبک مستمر است."
+        },
+        "practical_impact": {
+          "en": "General grammar knowledge alone may not transfer cleanly to interactive exam tasks.",
+          "fa": "دانش عمومی گرامر به‌تنهایی الزاماً به اجرای خوب تسک تعاملی آزمون منتقل نمی‌شود."
+        },
+        "who_should_care": {
+          "en": "Candidates whose productive skills lag behind reading/grammar.",
+          "fa": "داوطلبانی که مهارت تولیدی‌شان از گرامر/خواندن عقب‌تر است."
+        },
+        "recommended_action": {
+          "en": "Rehearse the exact task structure with a partner or teacher and obtain corrective feedback.",
+          "fa": "ساختار دقیق تسک را با پارتنر/مدرس تمرین کنید و فیدبک اصلاحی بگیرید."
+        },
+        "known_workaround": "Regular online speaking partners are a recurring community workaround."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-LANG-SPEAKING-FEEDBACK-007-E1",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-SPEAKING-FEEDBACK-007-E1"
+        },
+        {
+          "evidence_id": "DEU-LANG-SPEAKING-FEEDBACK-007-E2",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-SPEAKING-FEEDBACK-007-E2"
+        },
+        {
+          "evidence_id": "DEU-LANG-SPEAKING-FEEDBACK-007-E3",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-SPEAKING-FEEDBACK-007-E3"
+        },
+        {
+          "evidence_id": "DEU-LANG-SPEAKING-FEEDBACK-007-E4",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-SPEAKING-FEEDBACK-007-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct test experience and repeated practice behavior converge strongly."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Preparation signal only; no official scoring interpretation is inferred."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-LANG-SPEAKING-FEEDBACK-007-E1",
+            "DEU-LANG-SPEAKING-FEEDBACK-007-E2",
+            "DEU-LANG-SPEAKING-FEEDBACK-007-E3",
+            "DEU-LANG-SPEAKING-FEEDBACK-007-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded German-language Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2027-03-16",
+        "reason": "Stable preparation signal.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Sprechen",
+        "partner",
+        "feedback",
+        "telc",
+        "ÖSD"
+      ],
+      "first_seen": "2025-04-06",
+      "last_seen": "2026-08-23"
+    },
+    {
+      "signal_id": "DEU-LANG-SELFSTUDY-008",
+      "issue_cluster_id": "DEU-GERMAN-SELFSTUDY-STAGE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-LANG-SPEAKING-FEEDBACK-007"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "selfstudy_stage_dependence",
+        "class": "learning"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / GERMAN",
+            "STUDY / ACADEMIC",
+            "AUSBILDUNG / VOCATIONAL",
+            "FAMILY"
+          ],
+          "codes": [
+            "German_learning"
+          ]
+        },
+        "process_stages": [
+          "A1",
+          "A2",
+          "B1",
+          "B2",
+          "C1"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Self-study is viable, but the value of a teacher changes by learner and stage rather than following one universal sequence",
+          "fa": "خودخوان ممکن است، اما ارزش استاد به فرد و سطح وابسته است و یک ترتیب واحد برای همه وجود ندارد"
+        },
+        "summary": {
+          "en": "The source contains opposite successful preferences: one learner self-studied A1 then preferred teachers for B1/B2; another advised teachers earlier and more independence at B2+. A successful telc candidate emphasized consistency over method.",
+          "fa": "فایل دو الگوی موفق متضاد دارد: یک نفر A1 را خودخوان و B1/B2 را با استاد بهتر دانسته؛ دیگری استاد را اول مسیر و استقلال را در B2+ ترجیح داده است. یک داوطلب موفق telc نیز استمرار را مهم‌تر از روش دانسته است."
+        },
+        "practical_impact": {
+          "en": "Choosing class vs self-study based only on level labels can be less useful than matching structure and feedback needs.",
+          "fa": "انتخاب کلاس یا خودخوان صرفاً بر اساس برچسب سطح، از تطبیق با نیاز به ساختار و فیدبک کم‌فایده‌تر است."
+        },
+        "who_should_care": {
+          "en": "Learners planning A1-C1 with limited time or budget.",
+          "fa": "زبان‌آموزان A1 تا C1 با محدودیت زمان یا بودجه."
+        },
+        "recommended_action": {
+          "en": "Use teacher support where accountability, pronunciation or feedback are the bottleneck; self-study where structure and discipline are already strong.",
+          "fa": "جایی که accountability، تلفظ یا فیدبک گلوگاه است از استاد کمک بگیرید و جایی که ساختار و نظم قوی دارید خودخوان جلو بروید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-LANG-SELFSTUDY-008-E1",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-SELFSTUDY-008-E1"
+        },
+        {
+          "evidence_id": "DEU-LANG-SELFSTUDY-008-E2",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-SELFSTUDY-008-E2"
+        },
+        {
+          "evidence_id": "DEU-LANG-SELFSTUDY-008-E3",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-SELFSTUDY-008-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Contrasting first-hand preferences support individual/stage dependence rather than one prescription."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Learning-strategy signal only."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-LANG-SELFSTUDY-008-E1",
+            "DEU-LANG-SELFSTUDY-008-E2",
+            "DEU-LANG-SELFSTUDY-008-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded German-language Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2027-03-16",
+        "reason": "Stable learning signal.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "self-study",
+        "teacher",
+        "A1",
+        "B2",
+        "consistency"
+      ],
+      "first_seen": "2025-08-12",
+      "last_seen": "2025-09-22"
+    },
+    {
+      "signal_id": "DEU-LANG-ONLINE-QUALITY-009",
+      "issue_cluster_id": "DEU-GERMAN-ONLINE-CLASS-QUALITY",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "online_class_quality_variance",
+        "class": "learning"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / GERMAN",
+            "STUDY / ACADEMIC",
+            "AUSBILDUNG / VOCATIONAL",
+            "FAMILY"
+          ],
+          "codes": [
+            "German_learning"
+          ]
+        },
+        "process_stages": [
+          "course_selection",
+          "online_class",
+          "teacher_quality"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Online German classes can work well, but instructor quality and refund/change policy matter more than the online format itself",
+          "fa": "کلاس آنلاین می‌تواند خوب جواب بدهد، اما کیفیت مدرس و سیاست تعویض/بازپرداخت از خود آنلاین‌بودن مهم‌تر است"
+        },
+        "summary": {
+          "en": "The source contains positive online-class experiences, a case where changing a weak teacher solved the problem, and a case of leaving a poor large class without receiving the remaining fee back.",
+          "fa": "فایل تجربه مثبت کلاس آنلاین، یک کیس حل مشکل با تعویض مدرس، و یک کیس ترک کلاس بزرگ و بی‌کیفیت بدون بازگشت باقی هزینه را ثبت کرده است."
+        },
+        "practical_impact": {
+          "en": "Paying for a long package without teacher-change/refund protection can create avoidable loss.",
+          "fa": "خرید پکیج طولانی بدون امکان تعویض مدرس/بازپرداخت می‌تواند ضرر قابل‌اجتناب ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Learners choosing online institutes or private teachers.",
+          "fa": "افرادی که مؤسسه آنلاین یا مدرس خصوصی انتخاب می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Prefer trial classes and confirm teacher-change/refund policy before committing to a long package.",
+          "fa": "جلسه آزمایشی بگیرید و قبل از پکیج طولانی، سیاست تعویض مدرس و بازپرداخت را روشن کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-LANG-ONLINE-QUALITY-009-E1",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-ONLINE-QUALITY-009-E1"
+        },
+        {
+          "evidence_id": "DEU-LANG-ONLINE-QUALITY-009-E2",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-ONLINE-QUALITY-009-E2"
+        },
+        {
+          "evidence_id": "DEU-LANG-ONLINE-QUALITY-009-E3",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-ONLINE-QUALITY-009-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple first-hand reports show teacher/policy variance dominates format alone."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No institute ranking is inferred from individual experiences."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-LANG-ONLINE-QUALITY-009-E1",
+            "DEU-LANG-ONLINE-QUALITY-009-E2",
+            "DEU-LANG-ONLINE-QUALITY-009-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded German-language Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2027-03-16",
+        "reason": "Course quality is provider/teacher specific.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "online class",
+        "teacher quality",
+        "refund",
+        "teacher change"
+      ],
+      "first_seen": "2025-01-05",
+      "last_seen": "2025-01-08"
+    },
+    {
+      "signal_id": "DEU-LANG-DIRECT-CENTER-010",
+      "issue_cluster_id": "DEU-GERMAN-TEST-DIRECT-REGISTRATION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-LANG-TEST-ACCESS-001"
+        }
+      ],
+      "classification": {
+        "family": "E13_EXTERNAL_TEST_SERVICE",
+        "type": "direct_test_center_booking",
+        "class": "operations"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "LANGUAGE TEST / GERMAN",
+            "STUDY / ACADEMIC",
+            "AUSBILDUNG / VOCATIONAL",
+            "FAMILY"
+          ],
+          "codes": [
+            "telc",
+            "ÖSD",
+            "Goethe"
+          ]
+        },
+        "process_stages": [
+          "center_search",
+          "registration",
+          "cross_border_testing"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Direct test-centre registration is a recurring low-friction strategy for cross-border German exams",
+          "fa": "ثبت‌نام مستقیم با سنتر آزمون، استراتژی پرتکرار برای کم‌کردن اصطکاک آزمون برون‌مرزی است"
+        },
+        "summary": {
+          "en": "A direct telc test taker handled the entire Ankara registration without an intermediary and recommended the same. ÖSD guidance similarly points to official centre directories and direct contact.",
+          "fa": "یک آزمون‌دهنده telc کل ثبت‌نام آنکارا را بدون واسطه انجام داده و همین روش را توصیه کرده است. راهنمایی ÖSD نیز به دایرکتوری رسمی سنترها و تماس مستقیم ارجاع می‌دهد."
+        },
+        "practical_impact": {
+          "en": "Intermediaries may add cost without eliminating the need to understand centre rules, dates and result timing.",
+          "fa": "واسطه ممکن است هزینه اضافه کند بدون اینکه نیاز به فهم قوانین سنتر، تاریخ‌ها و زمان نتیجه را حذف کند."
+        },
+        "who_should_care": {
+          "en": "Iran-based candidates travelling for telc/Goethe/ÖSD.",
+          "fa": "داوطلبان ایرانی که برای telc/Goethe/ÖSD سفر می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Start with the exam body's official centre list and communicate directly with the selected centre before using an agent.",
+          "fa": "از فهرست رسمی سنترهای آزمون شروع کنید و قبل از واسطه، مستقیم با سنتر منتخب ارتباط بگیرید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-LANG-DIRECT-CENTER-010-E1",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-DIRECT-CENTER-010-E1"
+        },
+        {
+          "evidence_id": "DEU-LANG-DIRECT-CENTER-010-E2",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-DIRECT-CENTER-010-E2"
+        },
+        {
+          "evidence_id": "DEU-LANG-DIRECT-CENTER-010-E3",
+          "relation": "supports",
+          "independence_group": "DEU-LANG-DIRECT-CENTER-010-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct registration is supported by first-hand experience and repeated centre-search behavior."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current country-specific registration restrictions were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-LANG-DIRECT-CENTER-010-E1",
+            "DEU-LANG-DIRECT-CENTER-010-E2",
+            "DEU-LANG-DIRECT-CENTER-010-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded German-language Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Centre policies change by country and date.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "test centre",
+        "direct booking",
+        "telc",
+        "ÖSD",
+        "travel"
+      ],
+      "first_seen": "2025-03-03",
+      "last_seen": "2026-04-28"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram handles/user IDs, phone numbers and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically scanned all 6,148 messages from the uploaded JSON."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected evidence; the full message graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Teacher/course promotions were excluded unless used only as context; no provider ranking was produced."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated telc/ÖSD/Goethe/TestDaF access, acceptance, preparation, class-quality and speaking-practice discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Conflicting certificate-acceptance and self-study sequencing claims are preserved as variance rather than forced into a single rule."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "All exam availability, certificate acceptance and institutional-use claims remain community-reported until independently verified."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah search was unavailable during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals are practical language-test and preparation evidence only. They are not official telc, Goethe, ÖSD, TestDaF, university, uni-assist or German mission rules. Verify current test availability and certificate acceptance before acting."
+}

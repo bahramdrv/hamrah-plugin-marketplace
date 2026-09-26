@@ -1,0 +1,2082 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_uk_global_talent_skilled_worker_signals_candidate",
+    "generated_at": "2026-09-16T10:05:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "name": "result(6).json / Telegram export «UK 🇬🇧 Global Talent and Skilled Worker»",
+      "source_type": "community_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-02",
+        "to": "2026-09-11",
+        "records_available": 4994,
+        "records_processed": 4994
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "contains_first_hand_applicant_reports": true,
+        "contains_shared_employer_or_endorsing_body_responses": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "GBR-GT-ROUTE3-SG-001-E1",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5009"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Route 3 applicant reported that the university took about 1.5 months to issue the Statement of Guarantee, then Home Office said the document was not in the correct format and the process had to be repeated.",
+        "fa": "یک متقاضی Route 3 گزارش کرده دانشگاه حدود یک‌ونیم ماه برای Statement of Guarantee زمان برده و بعد Home Office فرمت را نادرست دانسته و بخشی از روند مجبور به تکرار شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-ROUTE3-SG-001-E2",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6274"
+      },
+      "published_at": "2025-03-01",
+      "event_date": "2025-03-01",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_success_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same applicant later reported a successful Route 3 visa and said the incorrect SG format had cost about one month; they advised checking the university letter against the standard route template.",
+        "fa": "همان متقاضی بعداً از موفقیت Route 3 خبر داده و گفته فرمت اشتباه SG حدود یک ماه تأخیر ایجاد کرده؛ توصیه کرده نامه دانشگاه با تمپلیت استاندارد همان Route تطبیق داده شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-ROUTE3-SG-001-E3",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5006"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant reported waiting several weeks for the university to prepare documents and send a draft SG and grant award to UKRI for sense-checking before endorsement submission.",
+        "fa": "متقاضی دیگری چند هفته منتظر آماده‌شدن مدارک دانشگاه بوده و گفته draft SG و grant award برای بررسی اولیه به UKRI ارسال شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-ENDORSED-FUNDER-002-E1",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9899"
+      },
+      "published_at": "2025-08-08",
+      "event_date": "2025-08-08",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "shared_university_hr_response",
+      "firsthandness": "direct_quote",
+      "summary": {
+        "en": "A user shared a university HR response stating that a PhD student was not eligible for the Endorsed Funder route unless they held a Research Assistant/Associate employment contract with at least one year remaining at endorsement application.",
+        "fa": "کاربری پاسخ HR دانشگاه را به اشتراک گذاشته که طبق آن صرف دانشجوی دکتری بودن کافی نیست و برای Endorsed Funder باید قرارداد استخدام Research Assistant/Associate با حداقل یک سال اعتبار باقی‌مانده وجود داشته باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-ENDORSED-FUNDER-002-E2",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9898"
+      },
+      "published_at": "2025-08-08",
+      "event_date": "2025-08-08",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The applicant said their PhD funder was UKRI-approved, yet the funder directed them to university HR to determine eligibility.",
+        "fa": "متقاضی گفته فاند دکتری‌اش مورد تأیید UKRI بوده، اما خود فاندر تشخیص eligibility را به HR دانشگاه ارجاع داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-ENDORSED-FUNDER-002-E3",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9905"
+      },
+      "published_at": "2025-08-08",
+      "event_date": "2025-08-08",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "community_correction",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply explicitly corrected the assumption that every funded PhD position automatically receives an Endorsed Funder letter.",
+        "fa": "پاسخ بعدی صریحاً این فرض را اصلاح کرده که هر PhD فاندشده الزاماً نامه Endorsed Funder می‌گیرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-PEER-REVIEW-EVIDENCE-003-E1",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5021"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance said an applicant without a PhD should make equivalent academic/research experience explicit and connect the years of experience to concrete outputs.",
+        "fa": "راهنمایی گروه گفته متقاضی بدون PhD باید سابقه معادل تحقیقاتی/آکادمیک را صریح نشان دهد و آن سابقه را به خروجی‌های واقعی وصل کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-PEER-REVIEW-EVIDENCE-003-E2",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5022"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The adviser warned that research-experience duration and publications should be stated very clearly in CV/recommendation materials because assessors may otherwise miss the qualifying experience.",
+        "fa": "مشاور هشدار داده مدت سابقه تحقیقاتی و خروجی‌ها باید در رزومه/ریکام بسیار واضح نوشته شوند چون ممکن است داور سابقه واجدشرایط را به‌درستی تشخیص ندهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-PEER-REVIEW-EVIDENCE-003-E3",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5079"
+      },
+      "published_at": "2025-01-07",
+      "event_date": "2025-01-07",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "community_adviser",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A separate discussion again linked no-PhD eligibility to at least three years of research/academic experience evidenced through publications, books or projects.",
+        "fa": "گفتگوی دیگری دوباره eligibility بدون PhD را به حداقل سه سال سابقه تحقیقاتی/آکادمیک با خروجی‌هایی مثل مقاله، کتاب یا پروژه مرتبط کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-PEER-REVIEW-EVIDENCE-003-E4",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "15608"
+      },
+      "published_at": "2026-04-12",
+      "event_date": "2026-04-12",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "community_post_with_gov_excerpt",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A 2026 post quoted the recommendation-letter requirements: the letter must be specifically for the Global Talent application, signed, and supported by the recommender's credentials; Exceptional Talent was described as needing an additional independent UK senior-person letter.",
+        "fa": "یک پست ۲۰۲۶ الزامات نامه توصیه را نقل کرده: نامه باید مخصوص Global Talent باشد، امضا شود و اعتبار نویسنده ضمیمه شود؛ برای Exceptional Talent نیز نامه مستقل دیگری از فرد ارشد در یک سازمان بریتانیایی ذکر شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-ROUTE-SWITCH-004-E1",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "17687"
+      },
+      "published_at": "2026-08-11",
+      "event_date": "2026-08-11",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "shared_endorsing_body_response",
+      "firsthandness": "direct_quote",
+      "summary": {
+        "en": "A user shared a Royal Academy of Engineering response stating that two live endorsement applications cannot run simultaneously; if circumstances change from Route 4 to Route 1, the applicant can notify Home Office and provide the new supporting documents rather than submit a second live application.",
+        "fa": "کاربری پاسخ Royal Academy of Engineering را منتشر کرده که دو endorsement فعال همزمان مجاز نیست؛ اگر شرایط از Route 4 به Route 1 تغییر کند، به‌جای درخواست زنده دوم می‌توان Home Office را مطلع و مدارک مسیر جدید را ارائه کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-STAGE2-TIMING-005-E1",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6274"
+      },
+      "published_at": "2025-03-01",
+      "event_date": "2025-03-01",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_success_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Route 3 applicant reported receiving the Stage 2 visa decision after nine days.",
+        "fa": "یک متقاضی Route 3 گزارش کرده تصمیم ویزای Stage 2 را پس از ۹ روز دریافت کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-STAGE2-TIMING-005-E2",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10031"
+      },
+      "published_at": "2025-08-11",
+      "event_date": "2025-08-11",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_success_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A priority Global Talent applicant reported biometrics on 16 July 2025 and visa email on 11 August 2025, materially longer than a simple five-day expectation.",
+        "fa": "یک متقاضی Global Talent با priority از بایومتریک ۱۶ جولای تا ایمیل ویزا در ۱۱ اوت ۲۰۲۵ منتظر مانده؛ بیشتر از انتظار ساده پنج‌روزه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-STAGE2-TIMING-005-E3",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "17664"
+      },
+      "published_at": "2026-08-10",
+      "event_date": "2026-08-10",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_success_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A 2026 priority Stage 2 applicant reported applying on 3 August and receiving a decision on 10 August.",
+        "fa": "یک متقاضی priority در Stage 2 طی ۲۰۲۶ گزارش کرده ۳ اوت اپلای و ۱۰ اوت جواب گرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-ILR-ROUTE-006-E1",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8545"
+      },
+      "published_at": "2025-07-03",
+      "event_date": "2025-07-03",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "community_post_with_gov_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A community correction warned that ILR timing is not determined only by the Talent/Promise label and linked the official eligibility page showing shorter settlement for some academic endorsing bodies.",
+        "fa": "یک اصلاح در گروه هشدار داده زمان ILR فقط با برچسب Talent/Promise تعیین نمی‌شود و به صفحه رسمی eligibility برای تفاوت endorsing bodyها لینک داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-GT-ILR-ROUTE-006-E2",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8546"
+      },
+      "published_at": "2025-07-03",
+      "event_date": "2025-07-03",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "community_post_with_gov_excerpt",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The quoted eligibility text said endorsement by British Academy, Royal Academy of Engineering, Royal Society or UKRI can lead to a three-year ILR qualifying period, while some Arts Council/technology Promise routes were described as five-year.",
+        "fa": "متن نقل‌شده eligibility می‌گوید endorsement از British Academy، RAEng، Royal Society یا UKRI می‌تواند دوره سه‌ساله ILR داشته باشد، در حالی که برخی مسیرهای Promise هنری/فناوری پنج‌ساله توصیف شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-EVISA-BRP-007-E1",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5075"
+      },
+      "published_at": "2025-01-07",
+      "event_date": "2025-01-07",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A newly arrived migrant reported successfully obtaining share codes through the eVisa account but receiving no new BRP card/code.",
+        "fa": "فردی که تازه وارد بریتانیا شده بود گزارش کرده از حساب eVisa share code گرفته اما BRP جدید یا «BRP code» دریافت نکرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-EVISA-BRP-007-E2",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5092"
+      },
+      "published_at": "2025-01-07",
+      "event_date": "2025-01-07",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_resident_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A resident said their BRP had expired after moving to eVisa and that no replacement physical card was being issued.",
+        "fa": "یک ساکن گفته پس از انتقال به eVisa، BRP قبلی منقضی شده و کارت فیزیکی جایگزین صادر نشده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-EVISA-BRP-007-E3",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5100"
+      },
+      "published_at": "2025-01-07",
+      "event_date": "2025-01-07",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "community_explanation",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community explanation said physical BRP issuance for new migrants had effectively ended and the digital eVisa system was replacing the card.",
+        "fa": "توضیح گروه گفته صدور BRP فیزیکی برای مهاجران جدید عملاً متوقف شده و eVisa جایگزین کارت می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-SW-SPONSOR-COS-008-E1",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5042"
+      },
+      "published_at": "2025-01-05",
+      "event_date": "2025-01-05",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_employer_case",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user described an employer willing to hire but unfamiliar with obtaining a sponsor licence, creating HR/process friction before Skilled Worker sponsorship could proceed.",
+        "fa": "کاربری گفته کارفرما حاضر به استخدام بوده اما با گرفتن sponsor licence آشنا نبوده و همین موضوع پیش از Skilled Worker اصطکاک HR/فرایندی ایجاد کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-SW-SPONSOR-COS-008-E2",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "7089"
+      },
+      "published_at": "2025-04-17",
+      "event_date": "2025-04-17",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community response said the CoS indicates whether the sponsor certifies maintenance; if not, the applicant may need to provide financial evidence.",
+        "fa": "پاسخ گروه گفته در CoS مشخص می‌شود آیا اسپانسر maintenance را تأیید می‌کند و در غیر این صورت ممکن است متقاضی نیاز به ارائه تمکن داشته باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-SW-SPONSOR-COS-008-E3",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11999"
+      },
+      "published_at": "2025-09-28",
+      "event_date": "2025-09-28",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant with a university job offer reported HR would not issue the CoS until English evidence was resolved through a new test or ECCTIS.",
+        "fa": "یک متقاضی با جاب‌آفر دانشگاه گزارش کرده HR تا حل مدرک زبان از طریق آزمون جدید یا ECCTIS، CoS را صادر نمی‌کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-SW-ENGLISH-ECCTIS-009-E1",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "11999"
+      },
+      "published_at": "2025-09-28",
+      "event_date": "2025-09-28",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A university job-offer holder said CoS issuance was blocked because they had not yet finished the PhD and HR required either fresh English evidence or ECCTIS for earlier qualifications.",
+        "fa": "دارنده جاب‌آفر دانشگاه گفته چون دکتری هنوز تمام نشده بود، HR برای صدور CoS مدرک زبان جدید یا ECCTIS مدارک قبلی می‌خواست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-SW-ENGLISH-ECCTIS-009-E2",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "17104"
+      },
+      "published_at": "2026-07-03",
+      "event_date": "2026-07-03",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_success_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A 2026 Skilled Worker applicant described ECCTIS as the main bottleneck: transcript-format issues reset the review clock, so they switched to a UKVI-approved language test and obtained the result much faster.",
+        "fa": "یک متقاضی موفق Skilled Worker در ۲۰۲۶ ECCTIS را گلوگاه اصلی دانسته؛ مشکل فرمت ریزنمرات زمان بررسی را از نو شروع کرده و در نهایت با آزمون زبان مورد تأیید UKVI سریع‌تر جلو رفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-SW-PRIORITY-TIMING-010-E1",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9054"
+      },
+      "published_at": "2025-07-15",
+      "event_date": "2025-07-15",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Skilled Worker priority applicant received an automated notice immediately after biometrics saying UKVI could not decide within published processing times.",
+        "fa": "یک متقاضی Skilled Worker با priority بلافاصله بعد از بایومتریک ایمیلی گرفته که UKVI نمی‌تواند در زمان اعلام‌شده تصمیم بگیرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-SW-PRIORITY-TIMING-010-E2",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9831"
+      },
+      "published_at": "2025-08-07",
+      "event_date": "2025-08-07",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_success_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A priority work-visa applicant applying from Malaysia reported biometrics on 14 July and visa email on 7 August 2025.",
+        "fa": "یک متقاضی ویزای کاری با priority از مالزی گزارش کرده ۱۴ جولای بایومتریک و ۷ اوت ایمیل ویزا را دریافت کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-SW-PRIORITY-TIMING-010-E3",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "17104"
+      },
+      "published_at": "2026-07-03",
+      "event_date": "2026-07-03",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "first_hand_success_report",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A 2026 applicant using a premium service expected a mid-June decision after 9 June biometrics but ultimately received the Skilled Worker visa on 3 July.",
+        "fa": "یک متقاضی ۲۰۲۶ با سرویس premium پس از بایومتریک ۹ ژوئن انتظار جواب میانه ژوئن داشته اما نهایتاً ۳ جولای ویزا گرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-SW-SALARY-OCCUPATION-011-E1",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8415"
+      },
+      "published_at": "2025-06-28",
+      "event_date": "2025-06-28",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Community guidance emphasized that Skilled Worker eligibility depends on an eligible occupation code and the minimum salary/going-rate requirement for that occupation.",
+        "fa": "راهنمایی گروه تأکید کرده Skilled Worker به occupation code واجدشرایط و حداقل حقوق/going rate همان شغل وابسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-SW-SALARY-OCCUPATION-011-E2",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8418"
+      },
+      "published_at": "2025-06-28",
+      "event_date": "2025-06-28",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "community_post_with_gov_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The group shared the GOV.UK going-rates table as the reference for occupation-specific Skilled Worker salary requirements.",
+        "fa": "گروه جدول رسمی GOV.UK مربوط به going rateهای شغلی Skilled Worker را به‌عنوان مرجع به اشتراک گذاشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-SW-SALARY-OCCUPATION-011-E3",
+      "source_id": "uk-global-talent-skilled-worker-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "17404"
+      },
+      "published_at": "2026-07-24",
+      "event_date": "2026-07-24",
+      "collected_at": "2026-09-16T10:05:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later discussion noted that reducing sponsored working hours can create a salary-compliance problem if the adjusted pay no longer meets the sponsor/visa minimum.",
+        "fa": "گفتگوی بعدی اشاره کرده کاهش ساعات کار در شغل اسپانسری می‌تواند مشکل حقوق ایجاد کند اگر پرداخت تعدیل‌شده دیگر حداقل لازم مسیر را پوشش ندهد."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "GBR-GT-ROUTE3-SG-001",
+      "issue_cluster_id": "GBR-GT-ROUTE3-STATEMENT-OF-GUARANTEE",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "route3_statement_of_guarantee_format",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "GLOBAL TALENT"
+          ],
+          "codes": [
+            "global_talent_route_3"
+          ]
+        },
+        "process_stages": [
+          "endorsement",
+          "university_hr"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Route 3 Statement of Guarantee formatting can create a material endorsement delay",
+          "fa": "فرمت اشتباه Statement of Guarantee در Route 3 می‌تواند endorsement را به‌طور جدی عقب بیندازد"
+        },
+        "summary": {
+          "en": "First-hand cases show that university preparation can already take weeks, and a non-standard SG can be rejected for correction, adding roughly another month in one successful case.",
+          "fa": "تجربه‌های مستقیم نشان می‌دهند آماده‌سازی دانشگاه می‌تواند چند هفته طول بکشد و SG با فرمت غیر استاندارد ممکن است برای اصلاح برگردد؛ در یک کیس موفق حدود یک ماه تأخیر اضافه ایجاد شده است."
+        },
+        "practical_impact": {
+          "en": "Applicants can lose significant time before Stage 1 is complete even when the underlying grant/route is otherwise suitable.",
+          "fa": "حتی با فاند و Route مناسب، قبل از تکمیل Stage 1 ممکن است زمان زیادی صرف اصلاح مدارک دانشگاه شود."
+        },
+        "who_should_care": {
+          "en": "Global Talent Route 3 applicants relying on university HR for SG/grant documents.",
+          "fa": "متقاضیان Route 3 که برای SG و مدارک فاند به HR دانشگاه وابسته‌اند."
+        },
+        "recommended_action": {
+          "en": "Check the SG against the route-specific required content/template before submitting endorsement.",
+          "fa": "پیش از سابمیت endorsement، SG را با محتوای الزامی/تمپلیت همان Route تطبیق دهید."
+        },
+        "known_workaround": "Ask university HR to correct the SG before or immediately after Home Office feedback."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "GBR-GT-ROUTE3-SG-001-E1",
+          "relation": "supports",
+          "independence_group": "sg-case-1"
+        },
+        {
+          "evidence_id": "GBR-GT-ROUTE3-SG-001-E2",
+          "relation": "supports",
+          "independence_group": "sg-case-1"
+        },
+        {
+          "evidence_id": "GBR-GT-ROUTE3-SG-001-E3",
+          "relation": "supports",
+          "independence_group": "sg-case-2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple direct applicant reports show both university-side delay and a concrete format rejection/correction cycle."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Route 3 SG template/content was not independently checked against GOV.UK/UKRI."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "GBR-GT-ROUTE3-SG-001-E1",
+            "GBR-GT-ROUTE3-SG-001-E2",
+            "GBR-GT-ROUTE3-SG-001-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Endorsement templates and process guidance can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Global Talent",
+        "Route 3",
+        "Statement of Guarantee",
+        "UKRI",
+        "endorsement"
+      ],
+      "first_seen": "2025-01-02",
+      "last_seen": "2025-03-01"
+    },
+    {
+      "signal_id": "GBR-GT-ENDORSED-FUNDER-002",
+      "issue_cluster_id": "GBR-GT-ENDORSED-FUNDER-CONTRACT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "GBR-GT-ROUTE3-SG-001"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "endorsed_funder_contract_eligibility",
+        "class": "eligibility"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "PhD/funded research applicants"
+          ]
+        },
+        "routes": {
+          "families": [
+            "GLOBAL TALENT"
+          ],
+          "codes": [
+            "endorsed_funder_route"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "endorsement"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "UKRI-approved funding alone does not necessarily make a PhD student eligible for the Endorsed Funder route",
+          "fa": "صرف UKRI-approved بودن فاند، دانشجوی PhD را الزاماً واجدشرایط Endorsed Funder نمی‌کند"
+        },
+        "summary": {
+          "en": "A shared university HR response required a Research Assistant/Associate employment contract with at least one year remaining. The funder itself had referred eligibility back to university HR.",
+          "fa": "در پاسخ HR دانشگاه، قرارداد استخدام Research Assistant/Associate با حداقل یک سال اعتبار باقی‌مانده شرط دانسته شده و خود فاندر هم تعیین eligibility را به HR دانشگاه ارجاع داده است."
+        },
+        "practical_impact": {
+          "en": "Applicants can misclassify a funded PhD as Route 3/Endorsed Funder eligibility and lose time.",
+          "fa": "ممکن است متقاضی PhD فاندشده مسیر را اشتباه Route 3/Endorsed Funder فرض کند و زمان از دست بدهد."
+        },
+        "who_should_care": {
+          "en": "Funded PhD candidates considering the Endorsed Funder route.",
+          "fa": "دانشجویان دکتری فاندشده که Endorsed Funder را بررسی می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Confirm employment-contract status and remaining term with university HR before choosing the route.",
+          "fa": "قبل از انتخاب مسیر، وضعیت قرارداد استخدام و مدت باقی‌مانده را با HR دانشگاه تأیید کنید."
+        },
+        "known_workaround": "If not eligible under Endorsed Funder, assess another Global Talent endorsement route rather than assuming the grant is sufficient."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "GBR-GT-ENDORSED-FUNDER-002-E1",
+          "relation": "supports",
+          "independence_group": "hr-response"
+        },
+        {
+          "evidence_id": "GBR-GT-ENDORSED-FUNDER-002-E2",
+          "relation": "supports",
+          "independence_group": "applicant-case"
+        },
+        {
+          "evidence_id": "GBR-GT-ENDORSED-FUNDER-002-E3",
+          "relation": "qualifies",
+          "independence_group": "community-correction"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The HR quote is strong operational evidence, but it is one institution's shared response and primary route rules were not independently verified."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Endorsed Funder eligibility criteria were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "GBR-GT-ENDORSED-FUNDER-002-E1",
+            "GBR-GT-ENDORSED-FUNDER-002-E2",
+            "GBR-GT-ENDORSED-FUNDER-002-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Route eligibility is high-impact and should be checked against current official criteria.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Endorsed Funder",
+        "UKRI",
+        "PhD",
+        "Research Associate",
+        "employment contract"
+      ],
+      "first_seen": "2025-08-08",
+      "last_seen": "2025-08-08"
+    },
+    {
+      "signal_id": "GBR-GT-PEER-REVIEW-EVIDENCE-003",
+      "issue_cluster_id": "GBR-GT-PEER-REVIEW-EVIDENCE",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "peer_review_evidence_clarity",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "GLOBAL TALENT"
+          ],
+          "codes": [
+            "global_talent_route_4_peer_review"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "endorsement",
+          "recommendation_letters"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Route 4 cases depend heavily on explicit evidence of research track record and correctly targeted recommendation letters",
+          "fa": "پرونده Route 4 به ارائه صریح سابقه پژوهشی و Recommendation Letter درست و مخصوص Global Talent حساس است"
+        },
+        "summary": {
+          "en": "Community guidance repeatedly says no-PhD applicants should make equivalent research experience and outputs unmistakable. A later post also stressed that recommendation letters must be written specifically for Global Talent and signed with recommender credentials.",
+          "fa": "راهنمایی گروه چند بار تأکید کرده متقاضی بدون PhD باید سابقه معادل و خروجی‌ها را بسیار واضح ارائه کند. پست بعدی نیز می‌گوید Recommendation Letter باید مشخصاً برای Global Talent نوشته، امضا و همراه اعتبار نویسنده باشد."
+        },
+        "practical_impact": {
+          "en": "A substantively strong profile can still be weakened by ambiguous presentation or non-compliant letters.",
+          "fa": "پروفایل قوی ممکن است به‌خاطر ارائه مبهم یا نامه غیرمنطبق ضعیف شود."
+        },
+        "who_should_care": {
+          "en": "Peer Review applicants, especially those relying on equivalent research experience rather than a PhD.",
+          "fa": "متقاضیان Peer Review، مخصوصاً افراد بدون PhD که روی سابقه معادل پژوهشی تکیه دارند."
+        },
+        "recommended_action": {
+          "en": "Make years of research, outputs and impact explicit across CV/SOP/recommendations and use route-specific letters.",
+          "fa": "سال‌های سابقه، خروجی و اثرگذاری را در CV/SOP/ریکام صریح کنید و نامه مخصوص همان درخواست تهیه کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "GBR-GT-PEER-REVIEW-EVIDENCE-003-E1",
+          "relation": "supports",
+          "independence_group": "peer-advice-1"
+        },
+        {
+          "evidence_id": "GBR-GT-PEER-REVIEW-EVIDENCE-003-E2",
+          "relation": "supports",
+          "independence_group": "peer-advice-1"
+        },
+        {
+          "evidence_id": "GBR-GT-PEER-REVIEW-EVIDENCE-003-E3",
+          "relation": "supports",
+          "independence_group": "peer-advice-2"
+        },
+        {
+          "evidence_id": "GBR-GT-PEER-REVIEW-EVIDENCE-003-E4",
+          "relation": "supports",
+          "independence_group": "recommendation-2026"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Repeated guidance is consistent, but some eligibility statements are community interpretations rather than independently checked primary rules."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Peer Review eligibility and recommendation-letter requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "GBR-GT-PEER-REVIEW-EVIDENCE-003-E1",
+            "GBR-GT-PEER-REVIEW-EVIDENCE-003-E2",
+            "GBR-GT-PEER-REVIEW-EVIDENCE-003-E3",
+            "GBR-GT-PEER-REVIEW-EVIDENCE-003-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Endorsing-body evidence rules may change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Peer Review",
+        "Route 4",
+        "recommendation letter",
+        "research experience",
+        "PhD"
+      ],
+      "first_seen": "2025-01-02",
+      "last_seen": "2026-04-12"
+    },
+    {
+      "signal_id": "GBR-GT-ROUTE-SWITCH-004",
+      "issue_cluster_id": "GBR-GT-ENDORSEMENT-ROUTE-SWITCH",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "endorsement_route_switch",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "GLOBAL TALENT"
+          ],
+          "codes": [
+            "route_1",
+            "route_4"
+          ]
+        },
+        "process_stages": [
+          "endorsement"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Two live endorsement applications should not be run in parallel; route changes may be handled within the existing case",
+          "fa": "دو endorsement فعال همزمان نباید اجرا شود؛ تغییر Route ممکن است داخل همان پرونده مدیریت شود"
+        },
+        "summary": {
+          "en": "A shared RAEng response said an applicant moving from Route 4 to Route 1 should notify Home Office and provide new evidence rather than open a second live endorsement application.",
+          "fa": "پاسخ به‌اشتراک‌گذاشته‌شده RAEng گفته متقاضی در تغییر Route 4 به Route 1 باید Home Office را مطلع و مدارک جدید ارائه کند، نه اینکه endorsement دوم فعال باز کند."
+        },
+        "practical_impact": {
+          "en": "Opening duplicate live endorsements can create avoidable procedural risk.",
+          "fa": "باز کردن دو endorsement همزمان می‌تواند ریسک فرایندی غیرضروری ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Applicants whose job/academic circumstances change while a Peer Review endorsement is pending.",
+          "fa": "متقاضیانی که در زمان بررسی Peer Review، شرایط شغلی/آکادمیک‌شان تغییر می‌کند."
+        },
+        "recommended_action": {
+          "en": "Ask the endorsing body/Home Office how to re-route the live case before filing another endorsement.",
+          "fa": "قبل از درخواست endorsement جدید، روش تغییر Route همان پرونده را از endorsing body/Home Office بپرسید."
+        },
+        "known_workaround": "Provide Route 1 supporting documents to the existing live application if instructed by the endorsing body/Home Office."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "GBR-GT-ROUTE-SWITCH-004-E1",
+          "relation": "supports",
+          "independence_group": "raeng-response"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The evidence is a direct shared response from an endorsing body, but only one correspondence is present."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The current route-switch process was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "GBR-GT-ROUTE-SWITCH-004-E1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Application mechanics can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Route 1",
+        "Route 4",
+        "RAEng",
+        "live endorsement",
+        "switch"
+      ],
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11"
+    },
+    {
+      "signal_id": "GBR-GT-STAGE2-TIMING-005",
+      "issue_cluster_id": "GBR-GT-STAGE2-PROCESSING",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "stage2_processing_variance",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "GLOBAL TALENT"
+          ],
+          "codes": [
+            "stage_2_visa"
+          ]
+        },
+        "process_stages": [
+          "visa_application",
+          "biometrics",
+          "decision"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Global Talent Stage 2 decisions vary materially even with priority service",
+          "fa": "زمان تصمیم Stage 2 گلوبال تلنت حتی با priority نوسان قابل‌توجه دارد"
+        },
+        "summary": {
+          "en": "The source includes a nine-day decision, a priority case taking from 16 July to 11 August 2025, and a 2026 priority case decided in seven days.",
+          "fa": "فایل شامل تصمیم ۹روزه، یک کیس priority از ۱۶ جولای تا ۱۱ اوت ۲۰۲۵، و یک کیس priority هفت‌روزه در ۲۰۲۶ است."
+        },
+        "practical_impact": {
+          "en": "Priority should be treated as acceleration, not a guaranteed exact decision date.",
+          "fa": "priority را باید سرویس تسریع دانست، نه تضمین تاریخ دقیق جواب."
+        },
+        "who_should_care": {
+          "en": "Applicants planning travel or job start around Stage 2 processing.",
+          "fa": "متقاضیانی که سفر یا شروع کار را حول Stage 2 برنامه‌ریزی می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Keep buffer beyond the advertised priority target and avoid non-refundable commitments until the decision is issued.",
+          "fa": "فراتر از زمان هدف priority حاشیه امن بگذارید و تا صدور تصمیم تعهد غیرقابل‌استرداد ندهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "GBR-GT-STAGE2-TIMING-005-E1",
+          "relation": "supports",
+          "independence_group": "gt-timing-r1"
+        },
+        {
+          "evidence_id": "GBR-GT-STAGE2-TIMING-005-E2",
+          "relation": "supports",
+          "independence_group": "gt-timing-r2"
+        },
+        {
+          "evidence_id": "GBR-GT-STAGE2-TIMING-005-E3",
+          "relation": "supports",
+          "independence_group": "gt-timing-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Several direct decisions show meaningful timing dispersion across standard/priority experiences."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current published UKVI service standards were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "GBR-GT-STAGE2-TIMING-005-E1",
+            "GBR-GT-STAGE2-TIMING-005-E2",
+            "GBR-GT-STAGE2-TIMING-005-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Visa processing times are fast-changing.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Global Talent",
+        "Stage 2",
+        "priority",
+        "processing time"
+      ],
+      "first_seen": "2025-03-01",
+      "last_seen": "2026-08-10"
+    },
+    {
+      "signal_id": "GBR-GT-ILR-ROUTE-006",
+      "issue_cluster_id": "GBR-GT-ILR-ENDORSER",
+      "relationships": [],
+      "classification": {
+        "family": "E12_CITIZENSHIP_LONG_TERM_STATUS",
+        "type": "global_talent_ilr_route_variance",
+        "class": "settlement"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "GLOBAL TALENT"
+          ],
+          "codes": [
+            "ILR"
+          ]
+        },
+        "process_stages": [
+          "settlement"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Global Talent ILR timing depends on how and by whom the applicant was endorsed, not only Talent versus Promise",
+          "fa": "زمان ILR گلوبال تلنت به نوع و مرجع endorsement وابسته است، نه فقط Talent یا Promise"
+        },
+        "summary": {
+          "en": "The group corrected a blanket 'Promise = 5 years' claim by sharing eligibility text showing three-year settlement for several academic endorsing bodies, while other Promise routes can remain five-year.",
+          "fa": "گروه ادعای کلی «Promise = پنج سال» را با متن eligibility اصلاح کرده که برای چند endorsing body آکادمیک مسیر سه‌ساله نشان می‌دهد، در حالی که برخی Promiseهای دیگر پنج‌ساله‌اند."
+        },
+        "practical_impact": {
+          "en": "Misclassifying the settlement clock can cause unnecessary visa length/IHS cost or poor long-term planning.",
+          "fa": "اشتباه در محاسبه ILR می‌تواند باعث هزینه اضافه ویزا/IHS یا برنامه‌ریزی بلندمدت نادرست شود."
+        },
+        "who_should_care": {
+          "en": "Global Talent applicants choosing visa duration or planning ILR.",
+          "fa": "متقاضیان Global Talent در انتخاب مدت ویزا یا برنامه ILR."
+        },
+        "recommended_action": {
+          "en": "Determine the ILR qualifying period from the exact endorsing body/route before paying for visa duration.",
+          "fa": "پیش از پرداخت مدت ویزا، دوره واجدشرایط ILR را از endorsing body/Route دقیق مشخص کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "GBR-GT-ILR-ROUTE-006-E1",
+          "relation": "supports",
+          "independence_group": "ilr-correction"
+        },
+        {
+          "evidence_id": "GBR-GT-ILR-ROUTE-006-E2",
+          "relation": "supports",
+          "independence_group": "ilr-gov-excerpt"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The community explicitly identified and corrected an overgeneralization using quoted eligibility text and a government link."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current ILR eligibility was not independently reopened on GOV.UK."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "GBR-GT-ILR-ROUTE-006-E1",
+            "GBR-GT-ILR-ROUTE-006-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Settlement rules are high-impact and policy-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Global Talent",
+        "ILR",
+        "3 years",
+        "5 years",
+        "endorsing body"
+      ],
+      "first_seen": "2025-07-03",
+      "last_seen": "2025-07-03"
+    },
+    {
+      "signal_id": "GBR-EVISA-BRP-007",
+      "issue_cluster_id": "GBR-EVISA-BRP-TRANSITION",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "digital_status_transition",
+        "class": "status_document"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "GLOBAL TALENT",
+            "SKILLED WORKER",
+            "OTHER UK VISAS"
+          ],
+          "codes": [
+            "eVisa",
+            "BRP"
+          ]
+        },
+        "process_stages": [
+          "post_grant",
+          "status_proof"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "eVisa/share codes replaced the expectation of receiving a new physical BRP",
+          "fa": "eVisa و share code جای انتظار برای BRP فیزیکی جدید را گرفته‌اند"
+        },
+        "summary": {
+          "en": "Early-2025 first-hand reports show migrants using eVisa share codes while no replacement physical BRP or separate 'BRP code' was issued.",
+          "fa": "تجربه‌های مستقیم اوایل ۲۰۲۵ نشان می‌دهند افراد از share code در eVisa استفاده می‌کنند و BRP فیزیکی جایگزین یا «BRP code» جدا دریافت نمی‌کنند."
+        },
+        "practical_impact": {
+          "en": "New arrivals can incorrectly treat the absence of a BRP card as a missing status document.",
+          "fa": "تازه‌وارد ممکن است نبود کارت BRP را به اشتباه نقص مدرک اقامت بداند."
+        },
+        "who_should_care": {
+          "en": "New UK visa holders transitioning to digital immigration status.",
+          "fa": "دارندگان ویزای جدید بریتانیا در انتقال به وضعیت دیجیتال."
+        },
+        "recommended_action": {
+          "en": "Confirm the eVisa account and share-code functionality rather than waiting for a new physical card.",
+          "fa": "به‌جای انتظار برای کارت جدید، فعال بودن حساب eVisa و share code را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "GBR-EVISA-BRP-007-E1",
+          "relation": "supports",
+          "independence_group": "evisa-r1"
+        },
+        {
+          "evidence_id": "GBR-EVISA-BRP-007-E2",
+          "relation": "supports",
+          "independence_group": "evisa-r2"
+        },
+        {
+          "evidence_id": "GBR-EVISA-BRP-007-E3",
+          "relation": "supports",
+          "independence_group": "evisa-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple direct resident reports consistently describe the same digital-status transition."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Home Office eVisa/BRP transition guidance was not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "GBR-EVISA-BRP-007-E1",
+            "GBR-EVISA-BRP-007-E2",
+            "GBR-EVISA-BRP-007-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Digital-status rollout can change operational details.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "eVisa",
+        "BRP",
+        "share code",
+        "digital status"
+      ],
+      "first_seen": "2025-01-07",
+      "last_seen": "2025-01-07"
+    },
+    {
+      "signal_id": "GBR-SW-SPONSOR-COS-008",
+      "issue_cluster_id": "GBR-SW-SPONSOR-COS-READINESS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "GBR-SW-ENGLISH-ECCTIS-009"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "sponsor_cos_operational_dependency",
+        "class": "employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "Skilled_Worker"
+          ]
+        },
+        "process_stages": [
+          "sponsor_licence",
+          "CoS",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Skilled Worker cases depend heavily on employer sponsor/CoS readiness, not just having a job offer",
+          "fa": "پرونده Skilled Worker به آمادگی sponsor/CoS کارفرما وابسته است، نه صرف داشتن جاب‌آفر"
+        },
+        "summary": {
+          "en": "The file includes an employer willing to hire but unfamiliar with sponsor-licence setup, a CoS maintenance decision affecting financial evidence, and a university HR team delaying CoS until English evidence was resolved.",
+          "fa": "فایل شامل کارفرمای مایل به استخدام اما ناآشنا با sponsor licence، اثر تیک maintenance در CoS بر تمکن، و HR دانشگاهی است که صدور CoS را تا حل مدرک زبان متوقف کرده است."
+        },
+        "practical_impact": {
+          "en": "A job offer can still stall before visa filing if the employer lacks sponsorship infrastructure or required applicant evidence.",
+          "fa": "جاب‌آفر ممکن است قبل از سابمیت ویزا متوقف شود اگر کارفرما زیرساخت sponsorship یا مدرک لازم متقاضی را نداشته باشد."
+        },
+        "who_should_care": {
+          "en": "Applicants considering offers from employers that are new to Skilled Worker sponsorship.",
+          "fa": "متقاضیانی که آفر از کارفرمای کم‌تجربه در Skilled Worker دارند."
+        },
+        "recommended_action": {
+          "en": "Confirm sponsor-licence status, CoS issuance workflow, maintenance certification and pre-CoS evidence early.",
+          "fa": "وضعیت sponsor licence، روند صدور CoS، maintenance و مدارک پیش‌نیاز CoS را زود بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "GBR-SW-SPONSOR-COS-008-E1",
+          "relation": "supports",
+          "independence_group": "sponsor-r1"
+        },
+        {
+          "evidence_id": "GBR-SW-SPONSOR-COS-008-E2",
+          "relation": "supports",
+          "independence_group": "cos-r2"
+        },
+        {
+          "evidence_id": "GBR-SW-SPONSOR-COS-008-E3",
+          "relation": "supports",
+          "independence_group": "cos-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Several independent operational examples point to employer/CoS readiness as a recurring bottleneck."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current sponsor-licence, CoS and maintenance rules were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "GBR-SW-SPONSOR-COS-008-E1",
+            "GBR-SW-SPONSOR-COS-008-E2",
+            "GBR-SW-SPONSOR-COS-008-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Sponsor and CoS rules are operationally important and can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Skilled Worker",
+        "sponsor licence",
+        "CoS",
+        "maintenance",
+        "HR"
+      ],
+      "first_seen": "2025-01-05",
+      "last_seen": "2025-09-28"
+    },
+    {
+      "signal_id": "GBR-SW-ENGLISH-ECCTIS-009",
+      "issue_cluster_id": "GBR-SW-ENGLISH-ECCTIS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "GBR-SW-SPONSOR-COS-008"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "english_ecctis_bottleneck",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "Skilled_Worker"
+          ]
+        },
+        "process_stages": [
+          "English_requirement",
+          "ECCTIS",
+          "CoS"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "English evidence can become a pre-CoS bottleneck; ECCTIS document defects may reset the timeline",
+          "fa": "مدرک زبان می‌تواند قبل از CoS گلوگاه شود و نقص مدارک ECCTIS زمان بررسی را از نو شروع کند"
+        },
+        "summary": {
+          "en": "A university applicant could not get CoS until English/ECCTIS was resolved. A 2026 successful case described transcript-format problems delaying ECCTIS and used a UKVI-approved test as the faster fallback.",
+          "fa": "یک متقاضی دانشگاه تا حل زبان/ECCTIS نتوانست CoS بگیرد. تجربه موفق ۲۰۲۶ نیز از تأخیر ECCTIS به‌خاطر فرمت ریزنمرات و استفاده از آزمون مورد تأیید UKVI به‌عنوان مسیر سریع‌تر خبر می‌دهد."
+        },
+        "practical_impact": {
+          "en": "Waiting to resolve English after the offer can threaten CoS/start dates.",
+          "fa": "موکول‌کردن مدرک زبان به بعد از آفر می‌تواند صدور CoS و تاریخ شروع را تهدید کند."
+        },
+        "who_should_care": {
+          "en": "Skilled Worker applicants relying on an overseas English-taught degree instead of a UKVI language test.",
+          "fa": "متقاضیان Skilled Worker که به مدرک انگلیسی‌زبان خارجی به‌جای آزمون UKVI تکیه می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Start ECCTIS early and verify transcript formalities; keep a UKVI-approved language test as a timing fallback where eligible.",
+          "fa": "ECCTIS را زود شروع و فرمت ریزنمرات را کنترل کنید؛ در صورت امکان آزمون مورد تأیید UKVI را به‌عنوان مسیر جایگزین زمانی در نظر بگیرید."
+        },
+        "known_workaround": "A UKVI-approved English test was used successfully when ECCTIS was taking too long."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "GBR-SW-ENGLISH-ECCTIS-009-E1",
+          "relation": "supports",
+          "independence_group": "english-r1"
+        },
+        {
+          "evidence_id": "GBR-SW-ENGLISH-ECCTIS-009-E2",
+          "relation": "supports",
+          "independence_group": "english-r2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Two direct applicant experiences show the same English-evidence issue at different stages, including a successful fallback."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current English-evidence options and ECCTIS requirements were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "GBR-SW-ENGLISH-ECCTIS-009-E1",
+            "GBR-SW-ENGLISH-ECCTIS-009-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Accepted English evidence and provider processes can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Skilled Worker",
+        "ECCTIS",
+        "English",
+        "UKVI",
+        "CoS"
+      ],
+      "first_seen": "2025-09-28",
+      "last_seen": "2026-07-03"
+    },
+    {
+      "signal_id": "GBR-SW-PRIORITY-TIMING-010",
+      "issue_cluster_id": "GBR-SW-PRIORITY-PROCESSING",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "priority_processing_variance",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Priority or premium service"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "Skilled_Worker"
+          ]
+        },
+        "process_stages": [
+          "visa_application",
+          "biometrics",
+          "decision"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Skilled Worker priority/premium service does not guarantee the advertised target date",
+          "fa": "سرویس priority/premium در Skilled Worker تاریخ هدف را تضمین نمی‌کند"
+        },
+        "summary": {
+          "en": "Direct cases include an immediate UKVI delay notice despite priority, a Malaysia application taking roughly 24 days from biometrics to decision, and a 2026 premium case deciding on 3 July after 9 June biometrics.",
+          "fa": "تجربه‌های مستقیم شامل ایمیل تأخیر UKVI با وجود priority، کیس مالزی با حدود ۲۴ روز از بایومتریک تا جواب، و کیس premium در ۲۰۲۶ از بایومتریک ۹ ژوئن تا صدور ۳ جولای است."
+        },
+        "practical_impact": {
+          "en": "Applicants can miss employment or relocation timing if they interpret priority as an SLA.",
+          "fa": "اگر priority به‌عنوان SLA قطعی فرض شود، تاریخ شروع کار یا جابه‌جایی ممکن است به خطر بیفتد."
+        },
+        "who_should_care": {
+          "en": "Overseas Skilled Worker applicants using paid expedited service.",
+          "fa": "متقاضیان Skilled Worker خارج بریتانیا با سرویس سریع پولی."
+        },
+        "recommended_action": {
+          "en": "Keep contingency time even after paying for priority and do not plan around the nominal target alone.",
+          "fa": "حتی با پرداخت priority حاشیه زمانی نگه دارید و فقط بر زمان اسمی سرویس برنامه‌ریزی نکنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "GBR-SW-PRIORITY-TIMING-010-E1",
+          "relation": "supports",
+          "independence_group": "sw-priority-r1"
+        },
+        {
+          "evidence_id": "GBR-SW-PRIORITY-TIMING-010-E2",
+          "relation": "supports",
+          "independence_group": "sw-priority-r2"
+        },
+        {
+          "evidence_id": "GBR-SW-PRIORITY-TIMING-010-E3",
+          "relation": "supports",
+          "independence_group": "sw-priority-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple first-hand priority cases show delay beyond simple advertised targets."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current UKVI priority service standard was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "GBR-SW-PRIORITY-TIMING-010-E1",
+            "GBR-SW-PRIORITY-TIMING-010-E2",
+            "GBR-SW-PRIORITY-TIMING-010-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Processing conditions change rapidly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Skilled Worker",
+        "priority",
+        "premium",
+        "processing time"
+      ],
+      "first_seen": "2025-07-15",
+      "last_seen": "2026-07-03"
+    },
+    {
+      "signal_id": "GBR-SW-SALARY-OCCUPATION-011",
+      "issue_cluster_id": "GBR-SW-SALARY-OCCUPATION",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "occupation_salary_alignment",
+        "class": "eligibility"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "Skilled_Worker"
+          ]
+        },
+        "process_stages": [
+          "occupation_code",
+          "salary",
+          "job_offer"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Skilled Worker salary eligibility is occupation-specific, not one universal salary floor",
+          "fa": "شرط حقوق Skilled Worker شغل‌محور است و یک کف حقوق واحد برای همه مشاغل نیست"
+        },
+        "summary": {
+          "en": "The group repeatedly pointed applicants to the eligible-occupation and going-rate tables. Later discussion noted that reducing sponsored hours can also create a salary-compliance problem.",
+          "fa": "گروه چند بار متقاضیان را به جدول مشاغل واجدشرایط و going rate ارجاع داده است. گفتگوی بعدی نیز می‌گوید کاهش ساعات کار اسپانسری می‌تواند باعث عدم رعایت حد حقوق شود."
+        },
+        "practical_impact": {
+          "en": "A job offer may fail Skilled Worker eligibility because of the occupation code/going rate even if the headline salary seems reasonable.",
+          "fa": "ممکن است آفر با حقوق ظاهراً مناسب به‌دلیل occupation code یا going rate همان شغل واجدشرایط نباشد."
+        },
+        "who_should_care": {
+          "en": "Applicants evaluating whether a UK job offer can support Skilled Worker sponsorship.",
+          "fa": "متقاضیانی که می‌سنجند آیا جاب‌آفر بریتانیا برای Skilled Worker مناسب است."
+        },
+        "recommended_action": {
+          "en": "Map the job to the exact eligible occupation code and current going rate before relying on the offer.",
+          "fa": "قبل از اتکا به آفر، شغل را با occupation code دقیق و going rate جاری تطبیق دهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "GBR-SW-SALARY-OCCUPATION-011-E1",
+          "relation": "supports",
+          "independence_group": "salary-guidance"
+        },
+        {
+          "evidence_id": "GBR-SW-SALARY-OCCUPATION-011-E2",
+          "relation": "supports",
+          "independence_group": "salary-gov-link"
+        },
+        {
+          "evidence_id": "GBR-SW-SALARY-OCCUPATION-011-E3",
+          "relation": "qualifies",
+          "independence_group": "salary-hours"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The direction is repeatedly supported and a government table was linked, but current numeric thresholds were not independently checked."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Skilled Worker occupation codes and going rates were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "GBR-SW-SALARY-OCCUPATION-011-E1",
+            "GBR-SW-SALARY-OCCUPATION-011-E2",
+            "GBR-SW-SALARY-OCCUPATION-011-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Salary thresholds and occupation tables are policy-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Skilled Worker",
+        "going rate",
+        "occupation code",
+        "salary"
+      ],
+      "first_seen": "2025-06-28",
+      "last_seen": "2026-07-24"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names and Telegram user IDs are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and scanned all 4,994 messages in the uploaded JSON export."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the entire graph was not exhaustively reconstructed."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated Route 3, Peer Review, Stage 2, eVisa, CoS, English and priority-processing discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "ILR overgeneralization, timing variance and Endorsed Funder assumptions are represented as qualified signals rather than universal rules."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "Shared GOV.UK/HR/endorsing-body text remains source-reported until independently verified."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal connector was disabled during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals are practical evidence and planning context only. They are not official eligibility rules, guaranteed processing times, or substitutes for current GOV.UK, UKVI, endorsing-body, sponsor or employer guidance."
+}

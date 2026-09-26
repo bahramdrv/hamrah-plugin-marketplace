@@ -1,111 +1,51 @@
 ---
 name: hamrah-signal-builder
-description: Use when immigration-related community sources such as JSON exports, forum threads, Reddit posts, URLs, pasted conversations, shared emails, or mixed evidence need to be converted into normalized Visa Atlas Community Signals.
+description: Use when immigration-related community sources need to be converted into canonical Hamrah Community Signals v3.
 ---
 
 # Hamrah Signal Builder
 
-## Overview
+## Contract
 
-Convert raw immigration community evidence into a small, structured, evidence-aware JSON dataset for downstream Visa Atlas analysis.
+Create evidence-aware Community Signals. Community evidence is practical context, never an official rule merely because it is repeated.
 
-The skill extracts **practical signals**, not general chat summaries. Community evidence never becomes an official legal rule merely because it is repeated.
+New public evidence uses the version 4 Community Dataset contract in `references/community_dataset_v4_schema.json` and the publication gate described below. The version 3 contract in `references/output_schema.json` remains supported for existing signal-only exports. Candidate notes and legacy version 2 shapes are not final public evidence.
 
-## When to Use
+## Required references
 
-Use for:
-- Telegram/WhatsApp/Discord/community JSON exports
-- Reddit or immigration forum threads
-- pasted conversations or shared emails
-- URLs containing immigration experiences or operational updates
-- mixed community + official-source material
-
-Do **not** use this skill to:
-- produce a user immigration scorecard
-- recommend a country or university
-- decide official eligibility
-- estimate visa approval probability
-
-## Required References
-
-Read only the references needed for the task:
-
-- `references/signal_taxonomy.md` — signal families/types
-- `references/migration_routes.md` — normalized route codes and process stages
-- `references/evidence_rules.md` — confidence, recency, contradiction, privacy, scoring
-- `references/output_schema.json` — required output contract
-- `references/community_dataset_v4_schema.json` — version 4.0.0 Community Dataset with separate Sources, Evidence, Signals, and other artifact collections; see `examples/v4_signal_dataset.json`. `scripts/validate_output.py` accepts version 2, the installed version 3 contract (`references/community_signals_v3_schema.json`, read-only), and version 4. Publish version 4 evidence only with `node plugins/hamrah/mcp/community-publication.mjs publish <candidate.json> --store-root <root>`, which assigns stable IDs and runs every publication gate; `scripts/store_signals.py` stores version 2 and 3 files and refuses version 4.
-
-Use `examples/gold_standard.json` when uncertain about how active, monitoring, and resolved signals should look.
+Read the references needed for the task:
+- `references/signal_taxonomy.md`
+- `references/migration_routes.md`
+- `references/evidence_rules.md`
+- `references/output_schema.json`
+- `references/community_dataset_v4_schema.json` and `examples/v4_signal_dataset.json` for new public evidence
+- `references/community_signals_v3_schema.json` for the installed version 3 compatibility contract
+- `examples/gold_standard.json` when uncertain
 
 ## Workflow
 
-1. **Inventory the source**
-   - Identify source type, destination countries, date coverage, and record count.
-   - Process the entire available source. If coverage is partial, mark it explicitly.
+1. Inventory the complete available source and mark coverage `complete`, `partial`, or `unknown` without guessing.
+2. Normalize provenance into top-level `sources` and privacy-clean top-level `evidence`.
+3. Extract narrowly scoped claims as `signals`; questions alone are not signals.
+4. Deduplicate evidence and link it through `evidence_links`; preserve contradictions explicitly.
+5. Keep lifecycle separate from evidence maturity and review state.
+6. Verify high-impact current claims when possible; otherwise record them as unverified.
+7. Never store applicant-specific fit adjustments in Community Signals. Scoring belongs to Advisor policy.
+8. Remove personal identifiers and set `quality.checks.privacy.status` to `pass` only after the check is actually complete.
+9. Write `immigration_community_signals.json` using schema v4 for new public evidence, or v3 when maintaining a legacy signal-only export.
+10. Run `python scripts/validate_output.py immigration_community_signals.json`.
+11. If validation returns non-zero, fix the dataset and rerun. NEVER return, persist, publish, or describe the dataset as complete until validation exits 0.
+12. Publish version 4 with `node plugins/hamrah/mcp/community-publication.mjs publish <candidate.json> --store-root <root>` so normalization, privacy, provenance, stable IDs, and schema gates run. `scripts/store_signals.py` accepts validated version 2/3 compatibility files and refuses version 4.
 
-2. **Normalize evidence**
-   - Follow reply/thread context where available.
-   - Separate first-hand experience, shared direct email, admin guidance, rumor, question, and official notice.
-   - Questions alone are not signals.
-
-3. **Extract candidate signals**
-   - Use the signal taxonomy.
-   - Assign the narrowest supported country, applicant, route, process-stage, institution, and provider scope.
-
-4. **Merge and deduplicate**
-   - One underlying issue becomes one signal.
-   - Count independent reporters, not raw message count.
-   - Use `root_cause_id` and `correlated_signal_ids` for related issues.
-
-5. **Check contradictions**
-   - Search for successful counterexamples and later corrections.
-   - Prefer newer authoritative evidence over older community claims.
-   - Preserve meaningful contradictory evidence.
-
-6. **Check resolution**
-   - Search later evidence for reopening, normalization, restored access, or removal of a restriction.
-   - Resolved and historical signals must have current fit adjustment `0`.
-
-7. **Verify high-impact current claims**
-   - When browsing is available, verify high/critical active signals using current primary sources.
-   - If verification is unavailable, use `not_verified`; do not invent confirmation.
-
-8. **Assign status and impact**
-   - Follow `references/evidence_rules.md`.
-   - Single anecdote normally stays `monitoring` with adjustment `0`.
-   - Community adjustments are downside-only: `0, -5, -10, -15, -20`.
-   - Do not double-count correlated penalties.
-
-9. **Protect privacy**
-   - Remove community member names, usernames, IDs, phone numbers, private emails, addresses, passport numbers, and application numbers.
-   - Preserve anonymous message IDs only for traceability.
-
-10. **Create output**
-    - Write the result as `immigration_community_signals.json`.
-    - For more than 5 destination countries or more than 200 final signals, also create country-specific files and a global index.
-
-11. **Validate**
-    - Run:
-      `python scripts/validate_output.py immigration_community_signals.json`
-    - Fix all errors before returning the dataset.
-    - Warnings should be reviewed, not silently ignored.
-
-12. **Persist when requested or when the workflow needs reusable signals**
-    - Read `references/signal_store.md`.
-    - Store only the validated, privacy-clean dataset with `scripts/store_signals.py`.
-    - Default to the active workspace's `.hamrah/community-signals`; use a user-specified local or Git checkout path when supplied.
-    - Return the stored dataset path and catalog path. Publishing a Git commit/push requires an explicit target and request.
-
-## Non-Negotiable Rules
+## Non-negotiable rules
 
 - Official eligibility and Community Signal are separate layers.
-- Do not generalize one applicant, institution, employer, or city to a whole country.
 - Do not infer approval rates from community samples.
-- Positive evidence may resolve a negative signal but never creates a positive fit bonus.
-- Never keep a resolved disruption active merely because older messages were severe.
-- If the full source was not processed, never claim that no signal exists.
+- Do not generalize one applicant, institution, employer, or city to a whole country.
+- Do not infer source completeness, official confirmation, or quality checks that were not actually established.
+- Evidence belongs at top level; support/contradiction belongs on the signal-to-evidence link.
+- The final dataset MUST validate successfully before return/store.
 
-## Final Output
+## Final output
 
-Return the generated JSON file. Keep any chat summary brief unless the user asks for analysis.
+Return the validated JSON file and a brief validation result. Publishing a Git commit/push requires an explicit target and request.

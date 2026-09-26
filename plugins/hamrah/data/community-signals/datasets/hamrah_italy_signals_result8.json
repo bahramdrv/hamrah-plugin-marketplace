@@ -1,0 +1,362 @@
+{
+  "source": "Hamrah Community Signal Candidate Extraction",
+  "generatedAt": "2026-09-16T11:52:51Z",
+  "input": {
+    "fileName": "result(8).json",
+    "groupName": "ایتالیا با پرگار",
+    "groupType": "private_supergroup",
+    "messageCount": 55922,
+    "dateRange": {
+      "from": "2025-01-01T00:08:42",
+      "to": "2026-09-16T14:43:10"
+    }
+  },
+  "coverage": {
+    "filesScanned": 1,
+    "messagesScanned": 55922,
+    "signalsExtracted": 6,
+    "validationStatus": "candidate_only",
+    "truncated": false
+  },
+  "filters": {
+    "countryCode": "ITA",
+    "route": "study",
+    "originCountry": "Iran",
+    "nationality": "Iranian",
+    "priorityWindow": "2026-06-01 through 2026-09-16"
+  },
+  "extractionMethod": {
+    "description": "Candidate signals were retained when they reflected repeated practical friction across multiple messages/users or a concrete high-impact event. Single-user claims were excluded unless explicitly retained as low-confidence uncertain signals.",
+    "privacy": "Participant names and user IDs are omitted. Evidence references use source message IDs and short excerpts only.",
+    "validation": "These are community-derived candidates, not official rules and not promoted to Hamrah's validated Community Signal Store."
+  },
+  "resultCount": 6,
+  "signals": [
+    {
+      "datasetId": "candidate:ita-study-iran-pargar-supergroup-2026",
+      "signalId": "ita-study-irn-visa-appointment-queue-after-universitaly-2026",
+      "countryCode": "ITA",
+      "route": "study",
+      "topic": "student visa appointment queue after Universitaly validation",
+      "processStage": "visa_application",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "Embassy of Italy in Tehran / VisaMetric / Universitaly",
+      "status": "active",
+      "firstObservedAt": "2026-06-18",
+      "lastObservedAt": "2026-09-12",
+      "communityEvidence": {
+        "matchedMessages": 30,
+        "distinctAuthors": 23,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages mentioning Universitaly together with embassy/visa appointment or queue language."
+      },
+      "summary": "Multiple applicants reported that even after their Universitaly pre-enrolment was validated and forwarded to the embassy, they remained uncertain about when a student-visa appointment would be assigned. Repeated questions in August and September 2026, including an applicant who reported being green since 10 July, indicate an ongoing appointment-queue bottleneck or lack of schedule visibility.",
+      "assessment": {
+        "signalType": "process_friction",
+        "severity": "high",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1178348,
+          "sourceDate": "2026-08-20",
+          "claim": "Applicant reported Universitaly validation on 4 August and asked how long appointment assignment would take.",
+          "excerpt": "ثبتنام یونیورسیتالیم سبز شده، زده برای سفارت ارسال شده. تقریبا چقدر طول میکشه نوبت بدن؟"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1180606,
+          "sourceDate": "2026-09-10",
+          "claim": "Applicant reported being green since 10 July and still asked when an embassy appointment might be assigned.",
+          "excerpt": "۱۰ جولای سبز شدم بنظرتون کی وقت سفارت بهم میدن!؟"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1180873,
+          "sourceDate": "2026-09-12",
+          "claim": "Applicant asked for the current state of appointments and the latest appointment date being assigned to people with Universitaly.",
+          "excerpt": "وقت سفارتا در چه وضعیتیه؟ کسایی که یونیورسیتالی دارن وقت بهشون رسیده؟"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1180709,
+          "sourceDate": "2026-09-11",
+          "claim": "A community message asked applicants no longer proceeding to cancel active Universitaly cases so scarce embassy appointment capacity would not be consumed.",
+          "excerpt": "لغو کردنش باعث می‌شه این ظرفیت بی‌دلیل اشغال نشه و شانس این باشه که اون وقت به یکی دیگه ... برسه"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:ita-study-iran-pargar-supergroup-2026",
+      "signalId": "ita-study-regional-scholarship-does-not-remove-upfront-funds-friction-2026",
+      "countryCode": "ITA",
+      "route": "study",
+      "topic": "regional scholarship timing versus visa financial proof",
+      "processStage": "visa_application",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "Italian regional scholarship systems",
+      "status": "active",
+      "firstObservedAt": "2026-06-22",
+      "lastObservedAt": "2026-09-13",
+      "communityEvidence": {
+        "matchedMessages": 10,
+        "distinctAuthors": 8,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages discussing regional scholarships together with embassy/visa proof-of-funds requirements."
+      },
+      "summary": "Applicants repeatedly discussed the practical mismatch between regional-scholarship timing and the visa stage. Community responses stated that regional scholarship outcomes commonly arrive too late to replace proof of funds at the embassy, so applicants should expect a separate upfront financial-proof requirement unless they already hold a funding letter covering costs.",
+      "assessment": {
+        "signalType": "funding_timing_friction",
+        "severity": "high",
+        "confidence": "medium",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1181041,
+          "sourceDate": "2026-09-13",
+          "claim": "Applicant asked whether regional scholarship recipients still need proof of funds.",
+          "excerpt": "اگه بورسیه استانی بگیریم بازم باید نامه تمکن ارائه بدیم؟"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1181054,
+          "sourceDate": "2026-09-13",
+          "claim": "Community reply stated that proof of funds is still needed because regional scholarship results generally arrive later.",
+          "excerpt": "چون جواب بورسیه تون معمولا بعد از رفتنتون میاد ... برای سفارت باید تمکن ارائه بدین"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1181055,
+          "sourceDate": "2026-09-13",
+          "claim": "Community reply distinguished scholarships already documented before the embassy visit from regional scholarships whose result timing does not normally provide that exemption.",
+          "excerpt": "بورسیه هایی شمارو از تمکن معاف میکنن که قبل از مراجعه به سفارت جوابش اومده باشه"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:ita-study-iran-pargar-supergroup-2026",
+      "signalId": "ita-study-irn-bank-history-proof-of-funds-ambiguity-2026",
+      "countryCode": "ITA",
+      "route": "study",
+      "topic": "bank transaction history and proof-of-funds preparation ambiguity",
+      "processStage": "visa_application",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "Embassy of Italy in Tehran",
+      "status": "active",
+      "firstObservedAt": "2026-06-04",
+      "lastObservedAt": "2026-09-16",
+      "communityEvidence": {
+        "matchedMessages": 26,
+        "distinctAuthors": 18,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages mentioning bank transaction history together with three-month/six-month or proof-of-funds preparation language."
+      },
+      "summary": "There is persistent community uncertainty about how many months of bank transaction history are expected, how a normal account history should be built, and how rial versus foreign-currency balances are treated. The friction is amplified by concern about holding large rial balances during inflation while preparing the visa file.",
+      "assessment": {
+        "signalType": "documentation_ambiguity",
+        "severity": "medium",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1178976,
+          "sourceDate": "2026-08-26",
+          "claim": "Applicant asked how to build a normal six-month transaction history.",
+          "excerpt": "گردش حساب رو باید به چه شکلی ایجاد کنیم طی ۶ ماه؟ چه حالتی نرمال و سیفه؟"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1180777,
+          "sourceDate": "2026-09-11",
+          "claim": "Applicant described the inflation cost of keeping funds in rials for three to six months while preparing the account history.",
+          "excerpt": "گردش حساب هستش که باعث میشه برای 3 تا 6 ماه پول رو به ریال نگه دارم تو حساب"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1181325,
+          "sourceDate": "2026-09-16",
+          "claim": "Applicant asked whether three or six months of transaction history are required.",
+          "excerpt": "برای تمکن مالی گردش حساب ۳ ماهه نیازه یا ۶ ماهه؟"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:ita-study-iran-pargar-supergroup-2026",
+      "signalId": "ita-study-irn-provisional-degree-document-bottleneck-2026",
+      "countryCode": "ITA",
+      "route": "study",
+      "topic": "provisional degree and transcript translation bottleneck",
+      "processStage": "university_application",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "Iranian universities / translation offices / Universitaly",
+      "status": "active",
+      "firstObservedAt": "2026-06-09",
+      "lastObservedAt": "2026-09-15",
+      "communityEvidence": {
+        "matchedMessages": 21,
+        "distinctAuthors": 14,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages mentioning provisional/temporary degree documents together with translation, Universitaly, embassy, or original-degree requirements."
+      },
+      "summary": "Final-year and newly graduated applicants repeatedly reported friction when temporary degree certificates state that they are not valid for translation, while release of the final diploma may take months. Community experience suggests some universities may accept interim documents for admission, but later Universitaly or embassy stages may require official/final documentation.",
+      "assessment": {
+        "signalType": "document_availability_friction",
+        "severity": "medium",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1178203,
+          "sourceDate": "2026-08-19",
+          "claim": "Applicant reported a temporary certificate marked as not valid for translation and concern that final diploma release would take time.",
+          "excerpt": "مدرک موقتم را گرفتم داخلش نوشته ارزش ترجمه نداره ... دانشنامه هم که یه خورده طول میکشه"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1178226,
+          "sourceDate": "2026-08-19",
+          "claim": "Applicant reported that the original diploma could take three to four months while the temporary document was said not to be translatable.",
+          "excerpt": "تا اصلش بیاد سه چهارماهی زمان میبره ... مدرک موقت ارزش ترجمه نداره"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1181176,
+          "sourceDate": "2026-09-14",
+          "claim": "Community experience described admission using an interim transcript while distinguishing later Universitaly document needs.",
+          "excerpt": "پذیرشم رو با همون کارنامه آموزشیار گرفتم ... برای یونیورسیتالی ولی فکر کنم باید اصل مدرکتون و ریزنمرات رو داشته باشید"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:ita-study-iran-pargar-supergroup-2026",
+      "signalId": "irn-study-english-test-access-disruption-2026-08",
+      "countryCode": "ITA",
+      "route": "study",
+      "topic": "English-language test access disruption for Iranian applicants",
+      "processStage": "language_requirement",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "Duolingo English Test / ETS TOEFL",
+      "status": "active",
+      "firstObservedAt": "2026-08-28",
+      "lastObservedAt": "2026-09-06",
+      "communityEvidence": {
+        "matchedMessages": 25,
+        "distinctAuthors": 21,
+        "windowStart": "2026-08-24",
+        "countingMethod": "Messages mentioning TOEFL or Duolingo together with Iran/Iranian, suspension, sanctions, closure, ban, or taking the exam abroad."
+      },
+      "summary": "Late-August and early-September 2026 discussions show a sudden language-testing access shock for Iranian applicants. The group circulated a report that TOEFL/GRE testing in Iran had been suspended while testing abroad remained possible, and that Duolingo access was restricted for Iranian users. The disruption created uncertainty about test location, score reporting, and acceptable alternatives for Italian university and visa applications.",
+      "assessment": {
+        "signalType": "test_access",
+        "severity": "high",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true,
+        "scopeNote": "Not Italy-specific; included because it directly affects Iranian study applicants to Italy."
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1179169,
+          "sourceDate": "2026-08-28",
+          "claim": "Community member reported Duolingo access closure for Iranian users.",
+          "excerpt": "دولینگو رسمن بست"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1179564,
+          "sourceDate": "2026-08-31",
+          "claim": "A forwarded report said ETS Europe had suspended TOEFL and GRE testing in Iran while testing abroad remained possible, and described Duolingo restrictions affecting Iranian users.",
+          "excerpt": "برگزاری آزمون‌های تافل و جی‌آر‌ای در ایران را ... به حالت تعلیق درآورده است"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1180048,
+          "sourceDate": "2026-09-05",
+          "claim": "Applicant raised concern that TOEFL suspension and score-reporting limitations could affect Italian university applications.",
+          "excerpt": "با توجه به اینه تافل در ایران کنسل شده ... دانشگاه های ایتالیا لازم دارن ... نتایج از طریق ETS به دانشگاه ارسال بشه"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:ita-study-iran-pargar-supergroup-2026",
+      "signalId": "ita-study-cimea-capacity-access-friction-2026-08",
+      "countryCode": "ITA",
+      "route": "study",
+      "topic": "CIMEA service capacity access friction",
+      "processStage": "credential_recognition",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entity": "CIMEA",
+      "status": "uncertain",
+      "firstObservedAt": "2026-08-31",
+      "lastObservedAt": "2026-08-31",
+      "communityEvidence": {
+        "matchedMessages": 1,
+        "distinctAuthors": 1,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Direct report of CIMEA checkout showing capacity exhausted.",
+        "adjacentTopicMessages": 46,
+        "adjacentTopicDistinctAuthors": 33
+      },
+      "summary": "One direct late-August 2026 report described completing the CIMEA request flow but being unable to proceed at payment because the service displayed that capacity was exhausted. Broader CIMEA/DOV discussion is frequent, but there is not enough direct evidence in this export to treat a capacity outage as confirmed or widespread.",
+      "assessment": {
+        "signalType": "service_access",
+        "severity": "medium",
+        "confidence": "low",
+        "currentApplicability": "uncertain",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "ایتالیا با پرگار",
+          "sourceMessageId": 1179560,
+          "sourceDate": "2026-08-31",
+          "claim": "Applicant reported that the CIMEA payment step displayed capacity exhausted.",
+          "excerpt": "تا به درگاه پرداخت میرسم میگه ظرفیت تموم شده"
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    }
+  ],
+  "usageNote": "Use these records as community evidence only. Verify time-sensitive requirements with official sources before making eligibility, visa, financial, credential-recognition, or test-planning decisions."
+}

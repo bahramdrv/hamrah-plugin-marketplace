@@ -113,8 +113,8 @@ export function loadCommunitySignalStore(root = DATASET_ROOT, maxDatasets = REQU
       if (statSync(filePath).size > MAX_DATASET_BYTES) {
         throw new Error(`file exceeds ${MAX_DATASET_BYTES} bytes`);
       }
-      const dataset = JSON.parse(readFileSync(filePath, "utf8"));
-      const { schemaVersion, errors, privacy, canonical } = readCommunityDataset(dataset);
+      const raw = JSON.parse(readFileSync(filePath, "utf8"));
+      const { schemaVersion, errors, privacy, canonical, dataset } = readCommunityDataset(raw, datasetId);
       if (errors.length) {
         invalidDatasets.push({ datasetId, schemaVersion, error: errors.join("; "), ...(privacy ? { privacy } : {}) });
         continue;

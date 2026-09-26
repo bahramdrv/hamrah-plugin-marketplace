@@ -244,7 +244,9 @@ def main():
     args = parser.parse_args()
 
     data = load_json(args.file)
-    default_schema = Path(__file__).resolve().parents[1] / "references" / "output_schema.json"
+    default_schema = Path(__file__).resolve().parents[1] / "references" / (
+        "community_dataset_v2_schema.json" if data.get("schema_version") == "2.0" else "output_schema.json"
+    )
     schema_path = args.schema or default_schema
 
     if isinstance(data, dict) and data.get("schema_version") in {"3.0.0", "4.0.0"}:

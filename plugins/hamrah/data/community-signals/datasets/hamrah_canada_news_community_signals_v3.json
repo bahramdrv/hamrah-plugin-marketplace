@@ -1,0 +1,2206 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_canada_news_signals_candidate",
+    "generated_at": "2026-09-16T08:00:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "canada-news-telegram-export",
+      "name": "Canada News(1).json / Telegram export «اخبار کانادا با پرگار»",
+      "source_type": "public_channel_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full",
+        "from": "2025-01-02",
+        "to": "2026-09-10",
+        "records_available": 433,
+        "records_processed": 433
+      },
+      "source_characteristics": {
+        "editorial_channel": true,
+        "contains_promotional_content": true,
+        "contains_forwarded_content": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "CAN-FAMILY-OWP-RESTRICTION-001-E1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1571"
+      },
+      "published_at": "2025-01-15",
+      "event_date": "2025-01-15",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel, citing IRCC, reported that from 21 January 2025 family open-work-permit eligibility narrowed to selected spouses of international students and foreign workers.",
+        "fa": "کانال با ارجاع به IRCC گزارش کرده از ۲۱ ژانویه ۲۰۲۵ واجدشرایط‌بودن Open Work Permit خانوادگی به برخی همسران دانشجویان بین‌المللی و نیروی کار خارجی محدود شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-FAMILY-OWP-RESTRICTION-001-E2",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1571"
+      },
+      "published_at": "2025-01-15",
+      "event_date": "2025-01-15",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "For student spouses, the report limited eligibility mainly to Master's programs of at least 16 months, PhD programs and selected professional programs.",
+        "fa": "برای همسر دانشجو، گزارش واجدشرایط‌بودن را عمدتاً به مستر حداقل ۱۶ماهه، دکتری و برخی برنامه‌های حرفه‌ای منتخب محدود کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-FAMILY-OWP-RESTRICTION-001-E3",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1571"
+      },
+      "published_at": "2025-01-15",
+      "event_date": "2025-01-15",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "For worker spouses, the report described eligibility around TEER 0/1 and selected TEER 2/3 shortage occupations, with at least 16 months remaining on the principal worker's permit.",
+        "fa": "برای همسر نیروی کار، گزارش از TEER 0/1 و برخی TEER 2/3 در حوزه‌های کمبود نیرو و حداقل ۱۶ ماه اعتبار باقی‌مانده مجوز کار فرد اصلی صحبت می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-PAL-CAP-EVOLUTION-002-E1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1576"
+      },
+      "published_at": "2025-01-22",
+      "event_date": "2025-01-22",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A January 2025 post reported a national processing cap of 505,162 study-permit applications for the rest of 2025.",
+        "fa": "پست ژانویه ۲۰۲۵ سقف ۵۰۵٬۱۶۲ درخواست Study Permit برای باقی‌مانده سال ۲۰۲۵ را گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-PAL-CAP-EVOLUTION-002-E2",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1577"
+      },
+      "published_at": "2025-01-22",
+      "event_date": "2025-01-22",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The same period's channel update said Master's and PhD applicants were no longer exempt from PAL and needed a provincial attestation letter.",
+        "fa": "آپدیت همان دوره گفته متقاضیان ارشد و دکتری دیگر از PAL معاف نیستند و باید نامه استانی بگیرند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-PAL-CAP-EVOLUTION-002-C1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1909"
+      },
+      "published_at": "2025-11-28",
+      "event_date": "2025-11-28",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "By late November 2025, the channel reported that Master's and PhD students had again been exempted from PAL requirements.",
+        "fa": "تا اواخر نوامبر ۲۰۲۵ کانال گزارش کرده دانشجویان ارشد و دکتری دوباره از الزام PAL معاف شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-PAL-CAP-EVOLUTION-002-C2",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1969"
+      },
+      "published_at": "2026-02-12",
+      "event_date": "2026-02-12",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel_with_official_context",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A February 2026 update said Master's and PhD students at public institutions remained exempt in specified circumstances, while transfers/restoration could still trigger PAL/TAL requirements.",
+        "fa": "آپدیت فوریه ۲۰۲۶ گفته دانشجویان ارشد و دکتری در مؤسسات دولتی در شرایط مشخص همچنان معاف‌اند، اما انتقال رشته/مؤسسه یا restoration می‌تواند دوباره PAL/TAL را لازم کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-EE-JOBOFFER-CRS-REMOVAL-003-E1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1625"
+      },
+      "published_at": "2025-03-25",
+      "event_date": "2025-03-25",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel, linking IRCC, reported that LMIA-backed job-offer CRS points were removed from Express Entry effective 25 March 2025.",
+        "fa": "کانال با لینک IRCC گزارش کرده امتیاز CRS جاب‌آفر دارای LMIA از ۲۵ مارس ۲۰۲۵ از Express Entry حذف شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PGWP-PROGRAM-ELIGIBILITY-004-E1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1691"
+      },
+      "published_at": "2025-06-25",
+      "event_date": "2025-06-25",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A June 2025 update said IRCC added 119 fields and removed 178 from the PGWP-eligible field-of-study list for affected non-degree programs, with transition protection for earlier study-permit applicants.",
+        "fa": "آپدیت ژوئن ۲۰۲۵ گفته IRCC برای برنامه‌های غیر degree مشمول، ۱۱۹ رشته را به فهرست PGWP اضافه و ۱۷۸ رشته را حذف کرده و برای برخی متقاضیان قدیمی‌تر حمایت انتقالی در نظر گرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PGWP-PROGRAM-ELIGIBILITY-004-E2",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2019"
+      },
+      "published_at": "2026-07-27",
+      "event_date": "2026-07-27",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "In July 2026 the channel reported widespread PGWP refusals involving non-credit programs, with IRCC maintaining that such programs were not eligible.",
+        "fa": "در جولای ۲۰۲۶ کانال از رد گسترده PGWP برای برنامه‌های non-credit خبر داده و گزارش کرده IRCC این برنامه‌ها را واجد شرایط نمی‌داند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PGWP-PROGRAM-ELIGIBILITY-004-E3",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2019"
+      },
+      "published_at": "2026-07-27",
+      "event_date": "2026-07-27",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The report estimated around 1,500 international students could be affected and described legal challenges over program-eligibility clarity.",
+        "fa": "گزارش برآورد کرده حدود ۱۵۰۰ دانشجوی بین‌المللی ممکن است تحت تأثیر باشند و از چالش‌های حقوقی درباره شفافیت شرایط برنامه خبر داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-TFWP-LOWWAGE-LMIA-GEO-005-E1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1704"
+      },
+      "published_at": "2025-07-13",
+      "event_date": "2025-07-13",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A July 2025 report said low-wage LMIA applications would not be processed in 26 CMAs with unemployment at 6% or above, up from 24 previously.",
+        "fa": "گزارش جولای ۲۰۲۵ گفته در ۲۶ CMA با نرخ بیکاری ۶٪ یا بیشتر، LMIA کم‌دستمزد پردازش نمی‌شود؛ این تعداد قبلاً ۲۴ منطقه بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-TFWP-LOWWAGE-LMIA-GEO-005-E2",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1704"
+      },
+      "published_at": "2025-07-13",
+      "event_date": "2025-07-13",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The same report noted sector exemptions such as agriculture, food processing, construction and health care and suggested the restriction was geographically dynamic.",
+        "fa": "همان گزارش به استثناهای بخشی مثل کشاورزی، صنایع غذایی، ساخت‌وساز و سلامت اشاره کرده و نشان داده این محدودیت جغرافیایی پویاست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PGP-INTAKE-PAUSE-006-E1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1561"
+      },
+      "published_at": "2025-01-05",
+      "event_date": "2025-01-05",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A January 2025 post reported that the Parents and Grandparents Program would not accept new applications in 2025.",
+        "fa": "پست ژانویه ۲۰۲۵ گزارش کرده برنامه اسپانسرشیپ والدین و پدربزرگ/مادربزرگ در سال ۲۰۲۵ درخواست جدید نمی‌پذیرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PGP-INTAKE-PAUSE-006-E2",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2013"
+      },
+      "published_at": "2026-07-16",
+      "event_date": "2026-07-16",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "In July 2026 the channel reported another pause: no new PGP applications, interest forms or invitations until further notice, while existing files continued.",
+        "fa": "در جولای ۲۰۲۶ کانال توقف دیگری گزارش کرده: تا اطلاع ثانوی درخواست جدید، فرم علاقه‌مندی و دعوتنامه جدید PGP صادر نمی‌شود، در حالی که پرونده‌های قبلی ادامه دارند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-PGP-INTAKE-PAUSE-006-W1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1746"
+      },
+      "published_at": "2025-08-15",
+      "event_date": "2025-08-15",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A separate channel post presented the Super Visa as the main temporary family-reunification alternative when PGP intake is constrained.",
+        "fa": "پست دیگری از کانال، Super Visa را هنگام محدود بودن PGP به‌عنوان مسیر موقت جایگزین برای الحاق والدین معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-FRANCOPHONE-STUDENT-PR-007-E1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2042"
+      },
+      "published_at": "2026-08-27",
+      "event_date": "2026-08-27",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An August 2026 post said the Francophone Minority Community Student Pilot opened a new intake of up to 2,970 applications through 25 August 2027 or until capacity is reached.",
+        "fa": "پست اوت ۲۰۲۶ گفته FMCSP پذیرش جدید تا سقف ۲٬۹۷۰ درخواست را تا ۲۵ اوت ۲۰۲۷ یا تکمیل ظرفیت باز کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-FRANCOPHONE-STUDENT-PR-007-E2",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2042"
+      },
+      "published_at": "2026-08-27",
+      "event_date": "2026-08-27",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The report said the pilot operates through 17 institutions outside Quebec and gives eligible graduates a direct PR pathway without competing in Express Entry or PNP, with French at NCLC 5.",
+        "fa": "گزارش گفته این پایلوت در ۱۷ مؤسسه خارج کبک اجرا می‌شود و برای فارغ‌التحصیلان واجد شرایط مسیر مستقیم PR بدون رقابت Express Entry یا PNP با حداقل فرانسه NCLC 5 فراهم می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-FINANCIAL-REQUIREMENT-008-E1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2043"
+      },
+      "published_at": "2026-08-28",
+      "event_date": "2026-08-28",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported that from 1 September 2026 the minimum annual living-cost amount for one study-permit applicant outside Quebec would rise from CAD 22,895 to 23,448.",
+        "fa": "کانال گزارش کرده از ۱ سپتامبر ۲۰۲۶ حداقل هزینه زندگی سالانه یک متقاضی Study Permit خارج کبک از ۲۲٬۸۹۵ به ۲۳٬۴۴۸ دلار کانادا افزایش می‌یابد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-FINANCIAL-REQUIREMENT-008-E2",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2044"
+      },
+      "published_at": "2026-08-29",
+      "event_date": "2026-08-29",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A follow-up specified CAD 29,192 for two people and CAD 35,888 for three, and said the new amount depends on the application submission date.",
+        "fa": "آپدیت بعدی برای دو نفر ۲۹٬۱۹۲ و برای سه نفر ۳۵٬۸۸۸ دلار را ذکر کرده و گفته ملاک، تاریخ ثبت درخواست است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-FINANCIAL-REQUIREMENT-008-Q1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2044"
+      },
+      "published_at": "2026-08-29",
+      "event_date": "2026-08-29",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The same post noted a temporary mismatch between a crawled IRCC page still showing the older amount and the annual-adjustment rule, so implementation should be checked at filing.",
+        "fa": "همان پست به ناهماهنگی موقت بین صفحه crawlشده IRCC با مبلغ قبلی و قاعده تعدیل سالانه اشاره کرده، بنابراین مبلغ باید هنگام سابمیت دوباره بررسی شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-LOA-SDS-SCRUTINY-009-E1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2048"
+      },
+      "published_at": "2026-09-02",
+      "event_date": "2026-09-02",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A September 2026 report said IRCC was strengthening monitoring for some study-permit extensions, especially higher-risk cases linked to the former SDS system.",
+        "fa": "گزارش سپتامبر ۲۰۲۶ گفته IRCC نظارت روی برخی Study Permit Extensionها، به‌خصوص پرونده‌های پرریسک مرتبط با SDS سابق، را تشدید می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-LOA-SDS-SCRUTINY-009-E2",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2048"
+      },
+      "published_at": "2026-09-02",
+      "event_date": "2026-09-02",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The report described centralized Letter of Acceptance verification, with a No Match potentially leading to a procedural-fairness process and possible misrepresentation findings.",
+        "fa": "گزارش از تأیید متمرکزتر Letter of Acceptance گفته و اینکه نتیجه No Match می‌تواند به Procedural Fairness Letter و در صورت اثبات، misrepresentation منجر شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-LOA-SDS-SCRUTINY-009-E3",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2055"
+      },
+      "published_at": "2026-09-10",
+      "event_date": "2026-09-10",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A later post said IRCC was applying a renewed risk lens to extensions for people whose original permit came through SDS and cited audit findings of document fraud/misrepresentation in historical files.",
+        "fa": "پست بعدی گفته IRCC برای تمدید افرادی که مجوز اولیه‌شان از SDS بوده risk lens جدید اعمال می‌کند و به یافته‌های Audit درباره اسناد جعلی/اظهارات نادرست در پرونده‌های قدیمی اشاره کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-WORKPERMIT-SHORT-STUDY-EXEMPTION-010-E1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2054"
+      },
+      "published_at": "2026-09-10",
+      "event_date": "2026-09-10",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A 10 September 2026 post reported a temporary public policy allowing holders of a valid work permit to study in programs of six months or less without a study permit.",
+        "fa": "پست ۱۰ سپتامبر ۲۰۲۶ گزارش کرده Public Policy موقتی به دارندگان Work Permit معتبر اجازه می‌دهد دوره‌های ۶ماهه یا کوتاه‌تر را بدون Study Permit بگذرانند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-WORKPERMIT-SHORT-STUDY-EXEMPTION-010-E2",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2054"
+      },
+      "published_at": "2026-09-10",
+      "event_date": "2026-09-10",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The policy was reported as effective from 4 September 2026 through 31 December 2027, or until the work permit expires if earlier.",
+        "fa": "طبق گزارش، سیاست از ۴ سپتامبر ۲۰۲۶ تا ۳۱ دسامبر ۲۰۲۷ معتبر است یا اگر Work Permit زودتر منقضی شود تا همان تاریخ."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-DOCUMENT-CANCELLATION-AUTHORITY-011-E1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1729"
+      },
+      "published_at": "2025-08-07",
+      "event_date": "2025-08-07",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported that regulatory amendments effective 31 January 2025 gave officers formal authority to cancel or suspend eTAs, TRVs, work permits and study permits in specified circumstances.",
+        "fa": "کانال گزارش کرده اصلاحات مقرراتی از ۳۱ ژانویه ۲۰۲۵ به افسران اختیار رسمی لغو یا تعلیق eTA، TRV، Work Permit و Study Permit را در شرایط مشخص داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-DOCUMENT-CANCELLATION-AUTHORITY-011-E2",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1729"
+      },
+      "published_at": "2025-08-07",
+      "event_date": "2025-08-07",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The post listed triggers including inadmissibility/criminality or false information, concern the person may not leave at status expiry, administrative error and certain automatic events.",
+        "fa": "پست از عواملی مانند inadmissibility/سابقه کیفری یا اطلاعات نادرست، نگرانی از ترک‌نکردن کانادا، خطای اداری و برخی رویدادهای خودکار نام برده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STARTUP-VISA-BACKLOG-012-E1",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1936"
+      },
+      "published_at": "2025-12-22",
+      "event_date": "2025-12-22",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A December 2025 post described Start-Up Visa PR processing as effectively stalled, with some waits approaching 10 years.",
+        "fa": "پست دسامبر ۲۰۲۵ روند PR استارتاپ را عملاً متوقف/بسیار کند توصیف کرده و از انتظار نزدیک به ۱۰ سال در برخی پرونده‌ها گفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STARTUP-VISA-BACKLOG-012-E2",
+      "source_id": "canada-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2052"
+      },
+      "published_at": "2026-09-05",
+      "event_date": "2026-09-05",
+      "collected_at": "2026-09-16T08:00:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A September 2026 processing-time update again reported Start-Up Visa estimates above 10 years.",
+        "fa": "آپدیت زمان پردازش در سپتامبر ۲۰۲۶ دوباره زمان تخمینی Start-Up Visa را بیش از ۱۰ سال گزارش کرده است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "CAN-FAMILY-OWP-RESTRICTION-001",
+      "issue_cluster_id": "CAN-FAMILY-OPEN-WORK-PERMIT-ELIGIBILITY",
+      "relationships": [],
+      "classification": {
+        "family": "E3_FAMILY_DEPENDANTS",
+        "type": "family_open_work_permit_restriction",
+        "class": "eligibility"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Spouse/dependant of international student or foreign worker"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "FAMILY / REUNIFICATION"
+          ],
+          "codes": [
+            "family_open_work_permit"
+          ]
+        },
+        "process_stages": [
+          "eligibility"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Family open-work-permit eligibility narrowed from 21 January 2025",
+          "fa": "واجدشرایط‌بودن Open Work Permit خانوادگی از ۲۱ ژانویه ۲۰۲۵ محدودتر شد"
+        },
+        "summary": {
+          "en": "The source says family OWP access was narrowed to selected spouses of students and workers, with program length/level and TEER/permit-duration conditions becoming central.",
+          "fa": "منبع می‌گوید دسترسی به OWP خانوادگی به برخی همسران دانشجو و نیروی کار محدود شد و طول/مقطع برنامه، TEER شغل و اعتبار باقی‌مانده مجوز کار اهمیت محوری پیدا کرد."
+        },
+        "practical_impact": {
+          "en": "A spouse should no longer be assumed automatically eligible because the principal applicant has a study or work permit.",
+          "fa": "دیگر نباید صرف داشتن Study Permit یا Work Permit فرد اصلی را به معنی واجدشرایط‌بودن خودکار همسر دانست."
+        },
+        "who_should_care": {
+          "en": "Couples planning Canadian study/work routes with a spouse who expects to work.",
+          "fa": "زوج‌هایی که مسیر تحصیل/کار کانادا را با انتظار اشتغال همسر برنامه‌ریزی می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Check the principal applicant's exact program/TEER and remaining permit validity before relying on spouse OWP.",
+          "fa": "پیش از اتکا به OWP همراه، مقطع/برنامه یا TEER و اعتبار باقی‌مانده مجوز فرد اصلی را بررسی کنید."
+        },
+        "known_workaround": "Where family OWP is unavailable, the source notes other work-permit pathways may still be considered."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-FAMILY-OWP-RESTRICTION-001-E1",
+          "relation": "supports",
+          "independence_group": "owp-1571"
+        },
+        {
+          "evidence_id": "CAN-FAMILY-OWP-RESTRICTION-001-E2",
+          "relation": "supports",
+          "independence_group": "owp-1571"
+        },
+        {
+          "evidence_id": "CAN-FAMILY-OWP-RESTRICTION-001-E3",
+          "relation": "supports",
+          "independence_group": "owp-1571"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Detailed source report with IRCC attribution, but all selected evidence comes from one channel post."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The IRCC page was not independently opened in this extraction."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-FAMILY-OWP-RESTRICTION-001-E1",
+            "CAN-FAMILY-OWP-RESTRICTION-001-E2",
+            "CAN-FAMILY-OWP-RESTRICTION-001-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Family OWP rules can be amended by program and date.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "open work permit",
+        "spouse",
+        "international student",
+        "TEER",
+        "family"
+      ],
+      "first_seen": "2025-01-15",
+      "last_seen": "2025-01-15"
+    },
+    {
+      "signal_id": "CAN-STUDY-PAL-CAP-EVOLUTION-002",
+      "issue_cluster_id": "CAN-STUDY-PERMIT-CAP-PAL-TAL",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "study_cap_attestation_evolution",
+        "class": "policy"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "study_permit",
+            "PAL",
+            "TAL"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Canada's study-permit cap and PAL/TAL rules changed materially between 2025 and 2026",
+          "fa": "قواعد سقف Study Permit و PAL/TAL بین ۲۰۲۵ و ۲۰۲۶ تغییر جدی داشته‌اند"
+        },
+        "summary": {
+          "en": "The source first reported a 2025 study-permit application cap and PAL requirements for Master's/PhD applicants, then later reported renewed graduate-level exemptions with important exceptions for transfers/restoration and institution type.",
+          "fa": "منبع ابتدا در ۲۰۲۵ سقف درخواست و الزام PAL برای ارشد/دکتری را گزارش کرده، اما بعداً معافیت دوباره برخی تحصیلات تکمیلی را با استثناهای مهم برای انتقال، restoration و نوع مؤسسه گزارش کرده است."
+        },
+        "practical_impact": {
+          "en": "PAL/TAL eligibility cannot safely be inferred from a prior intake year or an older checklist.",
+          "fa": "نمی‌توان واجدشرایط‌بودن PAL/TAL را از intake قبلی یا چک‌لیست قدیمی نتیجه گرفت."
+        },
+        "who_should_care": {
+          "en": "International students, especially Master's/PhD applicants and students changing institutions/programs.",
+          "fa": "دانشجویان بین‌المللی، به‌ویژه ارشد/دکتری و افرادی که مؤسسه یا رشته را تغییر می‌دهند."
+        },
+        "recommended_action": {
+          "en": "Check the rule for the exact filing year, DLI/program type and whether the application is new, transfer or restoration.",
+          "fa": "قاعده دقیق سال سابمیت، نوع DLI/برنامه و نوع درخواست جدید/انتقال/restoration را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-STUDY-PAL-CAP-EVOLUTION-002-E1",
+          "relation": "supports",
+          "independence_group": "cap-2025"
+        },
+        {
+          "evidence_id": "CAN-STUDY-PAL-CAP-EVOLUTION-002-E2",
+          "relation": "supports",
+          "independence_group": "pal-2025"
+        },
+        {
+          "evidence_id": "CAN-STUDY-PAL-CAP-EVOLUTION-002-C1",
+          "relation": "contradicts",
+          "independence_group": "pal-late-2025"
+        },
+        {
+          "evidence_id": "CAN-STUDY-PAL-CAP-EVOLUTION-002-C2",
+          "relation": "qualifies",
+          "independence_group": "pal-2026"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple dated posts show the rule changed over time; representing it as evolution avoids incorrectly freezing one version as universal."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current IRCC cap/PAL rules were not independently re-verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-STUDY-PAL-CAP-EVOLUTION-002-E1",
+            "CAN-STUDY-PAL-CAP-EVOLUTION-002-E2",
+            "CAN-STUDY-PAL-CAP-EVOLUTION-002-C1",
+            "CAN-STUDY-PAL-CAP-EVOLUTION-002-C2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Attestation and cap rules are annual/intake-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "study permit cap",
+        "PAL",
+        "TAL",
+        "Master",
+        "PhD",
+        "DLI"
+      ],
+      "first_seen": "2025-01-22",
+      "last_seen": "2026-02-12"
+    },
+    {
+      "signal_id": "CAN-EE-JOBOFFER-CRS-REMOVAL-003",
+      "issue_cluster_id": "CAN-EXPRESS-ENTRY-CRS-JOBOFFER",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "crs_job_offer_points_removed",
+        "class": "selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "express_entry"
+          ]
+        },
+        "process_stages": [
+          "profile",
+          "CRS",
+          "invitation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "LMIA-backed job offers stopped adding CRS points from 25 March 2025",
+          "fa": "از ۲۵ مارس ۲۰۲۵ جاب‌آفر دارای LMIA دیگر امتیاز CRS اضافه نمی‌کند"
+        },
+        "summary": {
+          "en": "The source, linking IRCC, says the additional job-offer CRS points were removed from Express Entry as an anti-fraud measure.",
+          "fa": "منبع با لینک IRCC می‌گوید امتیاز اضافی CRS جاب‌آفر از Express Entry حذف شده و هدف آن مقابله با تقلب بوده است."
+        },
+        "practical_impact": {
+          "en": "A job offer may still matter for eligibility or real employment, but should not be assumed to boost CRS the way it did before the change.",
+          "fa": "جاب‌آفر ممکن است برای eligibility یا اشتغال واقعی مهم باشد، اما نباید مثل قبل به‌عنوان افزایش‌دهنده CRS فرض شود."
+        },
+        "who_should_care": {
+          "en": "Express Entry candidates relying on arranged employment to raise CRS.",
+          "fa": "متقاضیان Express Entry که برای افزایش CRS روی جاب‌آفر حساب می‌کردند."
+        },
+        "recommended_action": {
+          "en": "Recalculate CRS under the current scoring rules and separate CRS value from job-offer value for other program requirements.",
+          "fa": "CRS را با قواعد فعلی دوباره محاسبه کنید و ارزش جاب‌آفر برای سایر شروط را از امتیاز CRS جدا ببینید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-EE-JOBOFFER-CRS-REMOVAL-003-E1",
+          "relation": "supports",
+          "independence_group": "crs-1625"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Single but specific channel report with an IRCC link and effective date."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The Express Entry CRS calculator page was not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-EE-JOBOFFER-CRS-REMOVAL-003-E1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "CRS scoring rules can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Express Entry",
+        "CRS",
+        "job offer",
+        "LMIA"
+      ],
+      "first_seen": "2025-03-25",
+      "last_seen": "2025-03-25"
+    },
+    {
+      "signal_id": "CAN-PGWP-PROGRAM-ELIGIBILITY-004",
+      "issue_cluster_id": "CAN-PGWP-FIELD-PROGRAM-ELIGIBILITY",
+      "relationships": [],
+      "classification": {
+        "family": "E11_UNIVERSITY_ACADEMIC_INSTITUTION",
+        "type": "pgwp_program_eligibility",
+        "class": "post_study_work"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "PGWP"
+          ]
+        },
+        "process_stages": [
+          "course_selection",
+          "post_graduation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "PGWP eligibility increasingly depends on exact program type, CIP/field and credit status",
+          "fa": "واجدشرایط‌بودن PGWP بیش از پیش به نوع دقیق برنامه، CIP/رشته و credit status وابسته است"
+        },
+        "summary": {
+          "en": "The source reported large 2025 changes to eligible fields for affected non-degree programs and later 2026 refusals involving non-credit programs. The signal is to validate the exact program, not assume a DLI or Canadian credential automatically yields PGWP.",
+          "fa": "منبع از تغییر بزرگ فهرست رشته‌های واجد شرایط در ۲۰۲۵ و سپس ردهای ۲۰۲۶ برای برنامه‌های non-credit خبر داده است. سیگنال عملی این است که خود برنامه دقیق باید بررسی شود و صرف DLI یا مدرک کانادایی کافی فرض نشود."
+        },
+        "practical_impact": {
+          "en": "Choosing an ineligible program can eliminate the expected post-study work pathway after tuition has already been paid.",
+          "fa": "انتخاب برنامه نامعتبر می‌تواند بعد از پرداخت شهریه، مسیر مورد انتظار کار پس از تحصیل را از بین ببرد."
+        },
+        "who_should_care": {
+          "en": "International students choosing diploma/certificate/non-degree or non-credit programs with PGWP as a goal.",
+          "fa": "دانشجویانی که دیپلم/گواهی/برنامه non-degree یا non-credit را با هدف PGWP انتخاب می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Verify the current DLI program, CIP/field-of-study rule and credit status before enrolment and again before filing PGWP.",
+          "fa": "پیش از ثبت‌نام و دوباره پیش از PGWP، برنامه DLI، کد CIP/قاعده رشته و credit status را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-PGWP-PROGRAM-ELIGIBILITY-004-E1",
+          "relation": "supports",
+          "independence_group": "pgwp-2025"
+        },
+        {
+          "evidence_id": "CAN-PGWP-PROGRAM-ELIGIBILITY-004-E2",
+          "relation": "supports",
+          "independence_group": "pgwp-2026"
+        },
+        {
+          "evidence_id": "CAN-PGWP-PROGRAM-ELIGIBILITY-004-E3",
+          "relation": "supports",
+          "independence_group": "pgwp-2026"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Two dated reports show both rule-list volatility and a concrete refusal consequence for program type."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current IRCC PGWP eligibility tables were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-PGWP-PROGRAM-ELIGIBILITY-004-E1",
+            "CAN-PGWP-PROGRAM-ELIGIBILITY-004-E2",
+            "CAN-PGWP-PROGRAM-ELIGIBILITY-004-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "PGWP field/program rules are changeable and intake-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "PGWP",
+        "CIP",
+        "field of study",
+        "non-credit",
+        "DLI"
+      ],
+      "first_seen": "2025-06-25",
+      "last_seen": "2026-07-27"
+    },
+    {
+      "signal_id": "CAN-TFWP-LOWWAGE-LMIA-GEO-005",
+      "issue_cluster_id": "CAN-TFWP-LOW-WAGE-LMIA-CMA",
+      "relationships": [],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "low_wage_lmia_geographic_restriction",
+        "class": "employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Low-wage stream"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "TFWP",
+            "LMIA"
+          ]
+        },
+        "process_stages": [
+          "job_offer",
+          "LMIA"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Low-wage LMIA access is geographically restricted in higher-unemployment CMAs",
+          "fa": "دسترسی LMIA کم‌دستمزد در CMAهای با بیکاری بالاتر محدود شده است"
+        },
+        "summary": {
+          "en": "The source says low-wage LMIA applications were not processed in 26 CMAs at 6%+ unemployment in July 2025, with periodic list updates and sector exemptions.",
+          "fa": "منبع می‌گوید در جولای ۲۰۲۵ LMIA کم‌دستمزد در ۲۶ CMA با بیکاری ۶٪ یا بیشتر پردازش نمی‌شد و فهرست به‌صورت دوره‌ای تغییر می‌کرد، با استثناهای بخشی."
+        },
+        "practical_impact": {
+          "en": "A viable employer/job can still fail at the LMIA stage because of work-location unemployment and wage stream.",
+          "fa": "حتی جاب و کارفرمای مناسب ممکن است به‌خاطر محل کار و low-wage stream در مرحله LMIA گیر کند."
+        },
+        "who_should_care": {
+          "en": "Employers and foreign workers using low-wage TFWP routes.",
+          "fa": "کارفرماها و نیروهای خارجی در مسیر low-wage TFWP."
+        },
+        "recommended_action": {
+          "en": "Check the current CMA unemployment list and wage-stream classification for the exact work location before relying on LMIA.",
+          "fa": "پیش از اتکا به LMIA، فهرست فعلی CMA و دسته دستمزد محل دقیق کار را بررسی کنید."
+        },
+        "known_workaround": "The source notes high-wage restructuring or eligible exempt sectors/locations may avoid the specific low-wage CMA restriction."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-TFWP-LOWWAGE-LMIA-GEO-005-E1",
+          "relation": "supports",
+          "independence_group": "lmia-1704"
+        },
+        {
+          "evidence_id": "CAN-TFWP-LOWWAGE-LMIA-GEO-005-E2",
+          "relation": "qualifies",
+          "independence_group": "lmia-1704"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Specific operational restriction with dynamic geography and exemptions, supported by one detailed news report."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current ESDC CMA list was not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-TFWP-LOWWAGE-LMIA-GEO-005-E1",
+            "CAN-TFWP-LOWWAGE-LMIA-GEO-005-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "CMA unemployment lists are updated periodically.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "LMIA",
+        "TFWP",
+        "low wage",
+        "CMA",
+        "unemployment"
+      ],
+      "first_seen": "2025-07-13",
+      "last_seen": "2025-07-13"
+    },
+    {
+      "signal_id": "CAN-PGP-INTAKE-PAUSE-006",
+      "issue_cluster_id": "CAN-PARENTS-GRANDPARENTS-PGP-PAUSE",
+      "relationships": [],
+      "classification": {
+        "family": "E3_FAMILY_DEPENDANTS",
+        "type": "pgp_intake_pause",
+        "class": "family"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "FAMILY / REUNIFICATION"
+          ],
+          "codes": [
+            "PGP",
+            "Super Visa"
+          ]
+        },
+        "process_stages": [
+          "intake",
+          "family_sponsorship"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Parents and Grandparents Program intake has repeatedly paused, making Super Visa the practical temporary fallback",
+          "fa": "پذیرش PGP چند بار متوقف شده و Super Visa به گزینه موقت عملی تبدیل شده است"
+        },
+        "summary": {
+          "en": "The channel reported no new PGP intake in 2025 and another pause from July 2026, while existing cases continued; Super Visa was presented as the main temporary alternative.",
+          "fa": "کانال در ۲۰۲۵ عدم پذیرش پرونده جدید PGP و در جولای ۲۰۲۶ توقف دیگری را گزارش کرده، در حالی که پرونده‌های قبلی ادامه داشته‌اند؛ Super Visa به‌عنوان جایگزین موقت اصلی معرفی شده است."
+        },
+        "practical_impact": {
+          "en": "Families without an existing PGP file may not have an immediate PR sponsorship intake window.",
+          "fa": "خانواده‌ای که پرونده PGP قبلی ندارد ممکن است پنجره فوری برای اسپانسرشیپ PR نداشته باشد."
+        },
+        "who_should_care": {
+          "en": "Canadian citizens/PRs planning to bring parents or grandparents permanently.",
+          "fa": "شهروندان/PRهای کانادا که قصد آوردن دائم والدین یا پدربزرگ/مادربزرگ را دارند."
+        },
+        "recommended_action": {
+          "en": "Track PGP reopening separately and treat Super Visa as temporary status, not PR.",
+          "fa": "بازگشایی PGP را جداگانه رصد کنید و Super Visa را اقامت موقت بدانید، نه PR."
+        },
+        "known_workaround": "Super Visa is the temporary family-reunification alternative described by the source."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-PGP-INTAKE-PAUSE-006-E1",
+          "relation": "supports",
+          "independence_group": "pgp-2025"
+        },
+        {
+          "evidence_id": "CAN-PGP-INTAKE-PAUSE-006-E2",
+          "relation": "supports",
+          "independence_group": "pgp-2026"
+        },
+        {
+          "evidence_id": "CAN-PGP-INTAKE-PAUSE-006-W1",
+          "relation": "supports",
+          "independence_group": "supervisa-2025"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same intake constraint is reported across two calendar years, with a consistent temporary alternative."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current PGP intake status and Super Visa conditions were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-PGP-INTAKE-PAUSE-006-E1",
+            "CAN-PGP-INTAKE-PAUSE-006-E2",
+            "CAN-PGP-INTAKE-PAUSE-006-W1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "PGP may reopen by invitation/intake cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "PGP",
+        "parents",
+        "grandparents",
+        "Super Visa",
+        "family sponsorship"
+      ],
+      "first_seen": "2025-01-05",
+      "last_seen": "2026-07-16"
+    },
+    {
+      "signal_id": "CAN-FRANCOPHONE-STUDENT-PR-007",
+      "issue_cluster_id": "CAN-FMCSP-DIRECT-PR",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "francophone_student_direct_pr",
+        "class": "opportunity"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "French NCLC 5",
+            "Participating institution outside Quebec"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "PERMANENT RESIDENCE"
+          ],
+          "codes": [
+            "FMCSP"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "study_permit",
+          "permanent_residence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "FMCSP offers a capped direct-PR route for eligible Francophone students outside Quebec",
+          "fa": "FMCSP برای دانشجویان فرانسوی‌زبان واجد شرایط خارج کبک مسیر محدود اما مستقیم PR ایجاد می‌کند"
+        },
+        "summary": {
+          "en": "The source reports a new intake of up to 2,970 applications through August 2027, 17 participating institutions and direct PR eligibility for qualified graduates without Express Entry/PNP competition.",
+          "fa": "منبع از intake تا سقف ۲٬۹۷۰ درخواست تا اوت ۲۰۲۷، ۱۷ مؤسسه مشارکت‌کننده و امکان PR مستقیم برای فارغ‌التحصیل واجد شرایط بدون رقابت Express Entry/PNP خبر می‌دهد."
+        },
+        "practical_impact": {
+          "en": "French ability can materially change route structure, not just add points.",
+          "fa": "توانایی فرانسه می‌تواند ساختار مسیر را عوض کند، نه اینکه فقط امتیاز اضافه کند."
+        },
+        "who_should_care": {
+          "en": "French-speaking international students considering study outside Quebec with PR as a goal.",
+          "fa": "دانشجویان فرانسوی‌زبان متقاضی تحصیل خارج کبک با هدف PR."
+        },
+        "recommended_action": {
+          "en": "Check institution participation, annual intake capacity and NCLC requirements before selecting the program.",
+          "fa": "قبل از انتخاب برنامه، مشارکت مؤسسه، ظرفیت intake و شرط NCLC را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-FRANCOPHONE-STUDENT-PR-007-E1",
+          "relation": "supports",
+          "independence_group": "fmcsp-2042"
+        },
+        {
+          "evidence_id": "CAN-FRANCOPHONE-STUDENT-PR-007-E2",
+          "relation": "supports",
+          "independence_group": "fmcsp-2042"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Specific program, cap and language threshold are reported, but only one selected source post supports the cluster."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current FMCSP intake page was not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-FRANCOPHONE-STUDENT-PR-007-E1",
+            "CAN-FRANCOPHONE-STUDENT-PR-007-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Intake is capped and can fill before the stated closing date.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "FMCSP",
+        "Francophone",
+        "NCLC 5",
+        "direct PR",
+        "study permit"
+      ],
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27"
+    },
+    {
+      "signal_id": "CAN-STUDY-FINANCIAL-REQUIREMENT-008",
+      "issue_cluster_id": "CAN-STUDY-PERMIT-COST-OF-LIVING",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "study_permit_living_funds_increase",
+        "class": "financial"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "study_permit"
+          ]
+        },
+        "process_stages": [
+          "financial_evidence",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Study-permit living-fund requirement increased from 1 September 2026",
+          "fa": "حداقل تمکن هزینه زندگی Study Permit از ۱ سپتامبر ۲۰۲۶ افزایش یافت"
+        },
+        "summary": {
+          "en": "The channel reports the outside-Quebec one-person living-cost amount rising from CAD 22,895 to 23,448, with higher family amounts and filing date controlling which threshold applies.",
+          "fa": "کانال افزایش مبلغ هزینه زندگی یک نفر خارج کبک از ۲۲٬۸۹۵ به ۲۳٬۴۴۸ دلار را گزارش کرده و برای خانواده مبالغ بالاتر و ملاک تاریخ سابمیت را ذکر کرده است."
+        },
+        "practical_impact": {
+          "en": "A financial plan that was sufficient in August 2026 can become insufficient for a September filing.",
+          "fa": "تمکنی که برای سابمیت اوت ۲۰۲۶ کافی بوده ممکن است برای سپتامبر کافی نباشد."
+        },
+        "who_should_care": {
+          "en": "Study-permit applicants and extension applicants filing around annual threshold changes.",
+          "fa": "متقاضیان Study Permit و تمدیدهایی که نزدیک زمان تغییر سالانه مبلغ اقدام می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Recheck the official amount on the day of filing and add tuition/travel separately.",
+          "fa": "روز سابمیت مبلغ رسمی را دوباره بررسی کنید و شهریه/رفت‌وآمد را جداگانه لحاظ کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-STUDY-FINANCIAL-REQUIREMENT-008-E1",
+          "relation": "supports",
+          "independence_group": "funds-2043"
+        },
+        {
+          "evidence_id": "CAN-STUDY-FINANCIAL-REQUIREMENT-008-E2",
+          "relation": "supports",
+          "independence_group": "funds-2044"
+        },
+        {
+          "evidence_id": "CAN-STUDY-FINANCIAL-REQUIREMENT-008-Q1",
+          "relation": "qualifies",
+          "independence_group": "funds-2044"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Two consecutive source posts agree on the new amount, but one also flags a temporary mismatch in the crawled official page."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current IRCC table was not independently verified; source itself flags timing mismatch."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-STUDY-FINANCIAL-REQUIREMENT-008-E1",
+            "CAN-STUDY-FINANCIAL-REQUIREMENT-008-E2",
+            "CAN-STUDY-FINANCIAL-REQUIREMENT-008-Q1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Financial thresholds are adjusted periodically/annually.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "study permit",
+        "proof of funds",
+        "cost of living",
+        "September 2026"
+      ],
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-29"
+    },
+    {
+      "signal_id": "CAN-STUDY-LOA-SDS-SCRUTINY-009",
+      "issue_cluster_id": "CAN-STUDY-PERMIT-LOA-SDS-COMPLIANCE",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "loa_sds_compliance_scrutiny",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Former SDS cases",
+            "LOA verification"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "study_permit",
+            "study_permit_extension"
+          ]
+        },
+        "process_stages": [
+          "document_verification",
+          "extension"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "IRCC scrutiny of LOA verification and some former-SDS study-permit extensions tightened in September 2026",
+          "fa": "نظارت IRCC روی تأیید LOA و برخی تمدیدهای مربوط به SDS سابق در سپتامبر ۲۰۲۶ سخت‌تر گزارش شده است"
+        },
+        "summary": {
+          "en": "The source describes centralized LOA matching and renewed risk review for some extensions tied to the former SDS channel, with No Match potentially escalating to procedural fairness and misrepresentation review.",
+          "fa": "منبع از تطبیق متمرکز LOA و risk review جدید برای برخی تمدیدهای مرتبط با SDS سابق خبر می‌دهد؛ No Match می‌تواند به procedural fairness و بررسی misrepresentation برسد."
+        },
+        "practical_impact": {
+          "en": "Document authenticity and consistency with DLI records have become a material operational risk point.",
+          "fa": "اصالت مدارک و تطابق با رکورد DLI به یک نقطه ریسک عملی مهم تبدیل شده است."
+        },
+        "who_should_care": {
+          "en": "Study-permit extension applicants, especially people whose original permit came through SDS.",
+          "fa": "متقاضیان تمدید Study Permit، مخصوصاً کسانی که مجوز اولیه‌شان از SDS بوده است."
+        },
+        "recommended_action": {
+          "en": "Confirm the DLI can verify the LOA/enrolment record and resolve discrepancies before filing or responding to IRCC.",
+          "fa": "پیش از سابمیت یا پاسخ به IRCC مطمئن شوید DLI می‌تواند LOA/ثبت‌نام را تأیید کند و مغایرت‌ها را رفع کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-STUDY-LOA-SDS-SCRUTINY-009-E1",
+          "relation": "supports",
+          "independence_group": "scrutiny-2048"
+        },
+        {
+          "evidence_id": "CAN-STUDY-LOA-SDS-SCRUTINY-009-E2",
+          "relation": "supports",
+          "independence_group": "scrutiny-2048"
+        },
+        {
+          "evidence_id": "CAN-STUDY-LOA-SDS-SCRUTINY-009-E3",
+          "relation": "supports",
+          "independence_group": "scrutiny-2055"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "worsening",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Two separate September 2026 posts describe the same compliance direction with complementary operational detail."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "IRCC audit/compliance documents were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-STUDY-LOA-SDS-SCRUTINY-009-E1",
+            "CAN-STUDY-LOA-SDS-SCRUTINY-009-E2",
+            "CAN-STUDY-LOA-SDS-SCRUTINY-009-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Fast-changing compliance implementation.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "LOA",
+        "SDS",
+        "study permit extension",
+        "misrepresentation",
+        "No Match"
+      ],
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-10"
+    },
+    {
+      "signal_id": "CAN-WORKPERMIT-SHORT-STUDY-EXEMPTION-010",
+      "issue_cluster_id": "CAN-WORKPERMIT-SHORT-STUDY-POLICY",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "short_course_study_permit_exemption",
+        "class": "eligibility"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Valid work permit",
+            "Course 6 months or less"
+          ]
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK",
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "work_permit",
+            "short_course"
+          ]
+        },
+        "process_stages": [
+          "eligibility"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Valid work-permit holders can reportedly take short courses without a study permit under a temporary policy",
+          "fa": "طبق گزارش، دارندگان Work Permit معتبر می‌توانند تحت Public Policy موقت دوره کوتاه را بدون Study Permit بگذرانند"
+        },
+        "summary": {
+          "en": "The source says a policy effective 4 September 2026 allows study in courses of six months or less without a study permit, through 31 December 2027 or work-permit expiry if earlier.",
+          "fa": "منبع می‌گوید سیاستی از ۴ سپتامبر ۲۰۲۶ اجازه دوره‌های ۶ماهه یا کوتاه‌تر بدون Study Permit را تا ۳۱ دسامبر ۲۰۲۷ یا انقضای زودتر Work Permit می‌دهد."
+        },
+        "practical_impact": {
+          "en": "Some workers can add short training without a separate study-permit application.",
+          "fa": "برخی نیروی کار می‌توانند آموزش کوتاه را بدون پرونده جداگانه Study Permit اضافه کنند."
+        },
+        "who_should_care": {
+          "en": "Temporary workers considering upskilling or short credential programs in Canada.",
+          "fa": "دارندگان Work Permit که قصد upskill یا دوره کوتاه در کانادا دارند."
+        },
+        "recommended_action": {
+          "en": "Confirm the course length, work-permit validity and policy end date before enrolling.",
+          "fa": "پیش از ثبت‌نام، طول دوره، اعتبار Work Permit و تاریخ پایان سیاست را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-WORKPERMIT-SHORT-STUDY-EXEMPTION-010-E1",
+          "relation": "supports",
+          "independence_group": "shortstudy-2054"
+        },
+        {
+          "evidence_id": "CAN-WORKPERMIT-SHORT-STUDY-EXEMPTION-010-E2",
+          "relation": "supports",
+          "independence_group": "shortstudy-2054"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Single detailed source post with clear policy dates and scope."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The Temporary Public Policy text was not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-WORKPERMIT-SHORT-STUDY-EXEMPTION-010-E1",
+            "CAN-WORKPERMIT-SHORT-STUDY-EXEMPTION-010-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Temporary policy currently reported through end-2027.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "work permit",
+        "short course",
+        "study permit exemption",
+        "public policy"
+      ],
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10"
+    },
+    {
+      "signal_id": "CAN-DOCUMENT-CANCELLATION-AUTHORITY-011",
+      "issue_cluster_id": "CAN-IMMIGRATION-DOCUMENT-CANCELLATION",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "document_cancellation_authority",
+        "class": "compliance"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "VISIT",
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "eTA",
+            "TRV",
+            "work_permit",
+            "study_permit"
+          ]
+        },
+        "process_stages": [
+          "status_maintenance",
+          "compliance"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Officers gained broader formal authority to cancel or suspend temporary immigration documents from 31 January 2025",
+          "fa": "از ۳۱ ژانویه ۲۰۲۵ اختیار رسمی افسران برای لغو/تعلیق اسناد موقت مهاجرتی گسترده‌تر گزارش شده است"
+        },
+        "summary": {
+          "en": "The source describes regulation SOR/2025-11 covering eTA, TRV, work permits and study permits in defined circumstances such as false information, inadmissibility, non-departure concern or administrative error.",
+          "fa": "منبع مقرره SOR/2025-11 را برای eTA، TRV، Work Permit و Study Permit در شرایطی مثل اطلاعات نادرست، inadmissibility، نگرانی از ترک‌نکردن یا خطای اداری توصیف کرده است."
+        },
+        "practical_impact": {
+          "en": "Holding an issued temporary document does not eliminate later compliance/cancellation risk.",
+          "fa": "داشتن سند موقت صادرشده، ریسک بعدی لغو به‌دلیل compliance را از بین نمی‌برد."
+        },
+        "who_should_care": {
+          "en": "Temporary residents and travellers holding Canadian immigration documents.",
+          "fa": "دارندگان اسناد موقت مهاجرتی کانادا."
+        },
+        "recommended_action": {
+          "en": "Keep IRCC information accurate and current and promptly report material status/document changes.",
+          "fa": "اطلاعات IRCC را دقیق و به‌روز نگه دارید و تغییرات مهم وضعیت/مدارک را سریع گزارش کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-DOCUMENT-CANCELLATION-AUTHORITY-011-E1",
+          "relation": "supports",
+          "independence_group": "cancel-1729"
+        },
+        {
+          "evidence_id": "CAN-DOCUMENT-CANCELLATION-AUTHORITY-011-E2",
+          "relation": "supports",
+          "independence_group": "cancel-1729"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The source names the regulation and effective date, but primary regulatory text was not independently checked."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "SOR/2025-11 was not independently opened."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-DOCUMENT-CANCELLATION-AUTHORITY-011-E1",
+            "CAN-DOCUMENT-CANCELLATION-AUTHORITY-011-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Further related amendments were described as forthcoming.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "eTA",
+        "TRV",
+        "work permit",
+        "study permit",
+        "cancellation",
+        "SOR/2025-11"
+      ],
+      "first_seen": "2025-08-07",
+      "last_seen": "2025-08-07"
+    },
+    {
+      "signal_id": "CAN-STARTUP-VISA-BACKLOG-012",
+      "issue_cluster_id": "CAN-STARTUP-VISA-PROCESSING-BACKLOG",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "extreme_processing_backlog",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "BUSINESS / ENTREPRENEUR"
+          ],
+          "codes": [
+            "Start-Up Visa"
+          ]
+        },
+        "process_stages": [
+          "permanent_residence",
+          "processing"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Start-Up Visa PR processing is reported at extreme backlog levels above 10 years",
+          "fa": "زمان پردازش PR مسیر Start-Up Visa در سطح بسیار شدید و بیش از ۱۰ سال گزارش شده است"
+        },
+        "summary": {
+          "en": "A December 2025 post described near-10-year waits and a September 2026 processing update again put the Start-Up Visa estimate above 10 years.",
+          "fa": "پست دسامبر ۲۰۲۵ از انتظار نزدیک ۱۰ سال گفته و آپدیت سپتامبر ۲۰۲۶ دوباره زمان تخمینی Start-Up Visa را بیش از ۱۰ سال گزارش کرده است."
+        },
+        "practical_impact": {
+          "en": "The route may be technically open while being impractical for applicants who need predictable PR timing.",
+          "fa": "مسیر ممکن است از نظر فنی وجود داشته باشد اما برای متقاضی نیازمند زمان‌بندی قابل پیش‌بینی PR عملاً بسیار پرریسک باشد."
+        },
+        "who_should_care": {
+          "en": "Entrepreneurs evaluating Canada's Start-Up Visa against other business/PR routes.",
+          "fa": "کارآفرینانی که Start-Up Visa را با مسیرهای دیگر کسب‌وکار/PR مقایسه می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Treat processing time as a core route-selection factor and verify current intake/processing status before committing capital or years of planning.",
+          "fa": "زمان پردازش را معیار اصلی انتخاب مسیر قرار دهید و پیش از تعهد سرمایه/سال‌ها برنامه‌ریزی، وضعیت فعلی intake و processing را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-STARTUP-VISA-BACKLOG-012-E1",
+          "relation": "supports",
+          "independence_group": "startup-1936"
+        },
+        {
+          "evidence_id": "CAN-STARTUP-VISA-BACKLOG-012-E2",
+          "relation": "supports",
+          "independence_group": "startup-2052"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Two reports nine months apart independently repeat the extreme processing-time pattern."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official processing-time page was not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-STARTUP-VISA-BACKLOG-012-E1",
+            "CAN-STARTUP-VISA-BACKLOG-012-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public news/community channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Backlog can change with intake policy and processing resources.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Start-Up Visa",
+        "SUV",
+        "processing time",
+        "backlog",
+        "PR"
+      ],
+      "first_seen": "2025-12-22",
+      "last_seen": "2026-09-05"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "No personal client names or Telegram user IDs are reproduced in evidence summaries."
+      },
+      "full_sources_processed": {
+        "status": "pass",
+        "note": "Parsed all 433 messages in the uploaded JSON export."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Service advertisements, generic destination promotion and unrelated items were excluded from signal creation."
+      },
+      "news_vs_primary_source_separated": {
+        "status": "pass",
+        "note": "Even posts that cite IRCC/ESDC remain source-reported until separately verified against the primary authority."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated or evolving policy updates were clustered, especially PAL/TAL, PGP, PGWP and study-permit compliance."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "2025 vs 2026 PAL/TAL changes are preserved as policy evolution instead of selecting one version as universal."
+      },
+      "speculation_filtered": {
+        "status": "pass",
+        "note": "Speculative proposals without final rules were not promoted into active signals."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal connector was unavailable during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Candidate signals extracted only from the uploaded Canada news/community channel. They preserve what the source reports and are not independently verified official policy unless separately checked against a primary authority."
+}

@@ -23,13 +23,18 @@ function verifySchemas() {
   const files = [...schemaFiles(skills), ...schemaFiles(source)];
   const grouped = Map.groupBy(files, (file) => path.dirname(file));
   for (const siblings of grouped.values()) {
-    const ajv = new Ajv2020({ strict: false, validateFormats: false });
-    for (const file of siblings) {
-      const schema = JSON.parse(readFileSync(file, "utf8"));
-      if (!ajv.validateSchema(schema)) throw new Error(`${file}: invalid schema: ${ajv.errorsText(ajv.errors)}`);
-      ajv.addSchema(schema, path.basename(file));
+    const parsed = siblings.map((file) => ({ file, schema: JSON.parse(readFileSync(file, "utf8")) }));
+    for (const target of parsed) {
+      const ajv = new Ajv2020({ strict: false, validateFormats: false });
+      const seenIds = new Set();
+      for (const item of [target, ...parsed.filter((item) => item !== target)]) {
+        if (item.schema.$id && seenIds.has(item.schema.$id)) continue;
+        if (!ajv.validateSchema(item.schema)) throw new Error(`${item.file}: invalid schema: ${ajv.errorsText(ajv.errors)}`);
+        ajv.addSchema(item.schema, path.basename(item.file));
+        if (item.schema.$id) seenIds.add(item.schema.$id);
+      }
+      ajv.getSchema(path.basename(target.file));
     }
-    for (const file of siblings) ajv.getSchema(path.basename(file));
   }
   return files.length;
 }

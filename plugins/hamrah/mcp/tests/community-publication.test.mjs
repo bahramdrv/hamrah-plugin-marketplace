@@ -302,7 +302,7 @@ test("a newer snapshot that supersedes a Signal hides the older current copy", a
 test("withdrawn version 2 evidence is removed from original-form signals too", async (t) => {
   const directory = workspace(t);
   const storeRoot = path.join(directory, "store");
-  const v2 = JSON.parse(readFileSync(new URL("../../skills/hamrah-signal-builder/examples/gold_standard.json", import.meta.url), "utf8"));
+  const v2 = JSON.parse(readFileSync(new URL("../../skills/hamrah-signal-builder/examples/gold_standard_v2.json", import.meta.url), "utf8"));
   const datasetsRoot = path.join(storeRoot, "datasets");
   mkdirSync(datasetsRoot, { recursive: true });
   writeFileSync(path.join(datasetsRoot, "legacy.json"), JSON.stringify(v2));

@@ -9,7 +9,7 @@ import { fileURLToPath } from "node:url";
 import { executeTool, filterResponse, handleRequest, OPENAPI, TOOLS } from "../server.mjs";
 
 test("publishes every curated OpenAPI operation", async () => {
-  assert.equal(TOOLS.length, 41);
+  assert.equal(TOOLS.length, 45);
   assert.equal(OPENAPI.info.version, "1.3.0");
   const contractOperationIds = Object.values(OPENAPI.paths).flatMap((methods) =>
     Object.values(methods).map((operation) => operation.operationId)
@@ -33,7 +33,11 @@ test("publishes every curated OpenAPI operation", async () => {
       "getIranianRouteViability",
       "findViableRoutesForIranians",
       "getIdealCandidateProfile",
-      "getRouteFactPack"
+      "getRouteFactPack",
+      "normalizeApplicantProfile",
+      "evaluateRouteEligibility",
+      "evaluateCommunityAdjustment",
+      "finalizeAssessment"
     ].includes(name)).sort(),
     contractOperationIds.sort()
   );
@@ -159,7 +163,7 @@ test("supports MCP initialize and tools/list", async () => {
   const initialized = await handleRequest({ jsonrpc: "2.0", id: 1, method: "initialize", params: { protocolVersion: "2025-06-18" } });
   assert.equal(initialized.result.serverInfo.name, "hamrah-visa-atlas");
   const listed = await handleRequest({ jsonrpc: "2.0", id: 2, method: "tools/list" });
-  assert.equal(listed.result.tools.length, 41);
+  assert.equal(listed.result.tools.length, 45);
 });
 
 test("implements citation-ready standard search and fetch tools", async () => {
@@ -189,7 +193,7 @@ test("indexes valid Git-backed community datasets and reports invalid files", as
   const signalStoreRoot = mkdtempSync(path.join(tmpdir(), "hamrah-signals-"));
   t.after(() => rmSync(signalStoreRoot, { recursive: true, force: true }));
   const fixture = JSON.parse(readFileSync(
-    new URL("../../skills/hamrah-signal-builder/examples/gold_standard.json", import.meta.url),
+    new URL("../../skills/hamrah-signal-builder/examples/gold_standard_v2.json", import.meta.url),
     "utf8"
   ));
   mkdirSync(path.join(signalStoreRoot, "2026", "09"), { recursive: true });
@@ -240,7 +244,7 @@ test("fake redaction metadata cannot publish or expose private evidence through 
   const signalStoreRoot = mkdtempSync(path.join(tmpdir(), "hamrah-private-signals-"));
   t.after(() => rmSync(signalStoreRoot, { recursive: true, force: true }));
   const dataset = JSON.parse(readFileSync(
-    new URL("../../skills/hamrah-signal-builder/examples/gold_standard.json", import.meta.url), "utf8"
+    new URL("../../skills/hamrah-signal-builder/examples/gold_standard_v2.json", import.meta.url), "utf8"
   ));
   dataset.quality_control.personal_identifiers_removed = true;
   dataset.signals[0].evidence[0].evidence_summary = "Contact applicant at jane@example.com";
@@ -267,7 +271,7 @@ test("MCP excludes datasets with direct identifiers and names needing review", a
   const signalStoreRoot = mkdtempSync(path.join(tmpdir(), "hamrah-privacy-cases-"));
   t.after(() => rmSync(signalStoreRoot, { recursive: true, force: true }));
   const fixture = JSON.parse(readFileSync(
-    new URL("../../skills/hamrah-signal-builder/examples/gold_standard.json", import.meta.url), "utf8"
+    new URL("../../skills/hamrah-signal-builder/examples/gold_standard_v2.json", import.meta.url), "utf8"
   ));
   const cases = [
     ["phone", (data) => { data.signals[0].evidence[0].evidence_summary = "Call +989121234567"; }, "fail"],

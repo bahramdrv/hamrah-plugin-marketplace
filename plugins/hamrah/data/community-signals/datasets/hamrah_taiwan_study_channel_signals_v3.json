@@ -1,0 +1,2576 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_taiwan_study_public_channel_signals_candidate",
+    "generated_at": "2026-09-17T08:14:33Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "taiwan-pargar-public-channel",
+      "name": "result(20260917-075852).json / Telegram export «اخبار تایوان با پرگار»",
+      "source_type": "public_channel_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-12-07",
+        "to": "2026-08-21",
+        "records_available": 47,
+        "records_processed": 47,
+        "message_records": 44
+      },
+      "source_characteristics": {
+        "public_channel": true,
+        "taiwan_study_focused": true,
+        "contains_promotional_posts": true,
+        "contains_official_source_links": true,
+        "contains_operational_service_updates": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "TAI-STUDY-FUNDING-001-E1",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6"
+      },
+      "published_at": "2025-12-08",
+      "event_date": "2025-12-08",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "channel_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The channel described Taiwan funding as a mix of government scholarships and university tuition/stipend schemes for international graduate students.",
+        "fa": "کانال فاند تایوان را ترکیبی از بورسیه‌های دولتی و حمایت‌های دانشگاهی شهریه/استایپند برای دانشجویان بین‌المللی تحصیلات تکمیلی توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-STUDY-FUNDING-001-E2",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8"
+      },
+      "published_at": "2025-12-09",
+      "event_date": "2025-12-09",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "promotional_study_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_generalization",
+      "summary": {
+        "en": "A study guide listed Taiwan Scholarship/MOE, university funding and professor-linked funding as parallel funding layers.",
+        "fa": "یک راهنمای تحصیل، Taiwan Scholarship/MOE، فاند دانشگاهی و فاند استادمحور را سه لایه موازی معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-STUDY-FUNDING-001-E3",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "19"
+      },
+      "published_at": "2025-12-25",
+      "event_date": "2025-12-25",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "promotional_scholarship_post",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_amounts_unverified",
+      "summary": {
+        "en": "A dedicated post promoted the MOE Scholarship and gave specific tuition/stipend claims for undergraduate and graduate students.",
+        "fa": "یک پست اختصاصی MOE Scholarship را تبلیغ کرده و اعداد مشخصی برای پوشش شهریه و استایپند کارشناسی/تحصیلات تکمیلی آورده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-STUDY-FUNDING-001-E4",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "20"
+      },
+      "published_at": "2025-12-27",
+      "event_date": "2025-12-27",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "promotional_scholarship_post",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_amounts_unverified",
+      "summary": {
+        "en": "A separate post promoted TIGP as a high-support research route and claimed tuition plus a monthly stipend.",
+        "fa": "پست دیگری TIGP را به‌عنوان مسیر پژوهشی با حمایت مالی بالا معرفی کرده و پوشش شهریه و استایپند ماهانه را ادعا کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-STUDY-FUNDING-001-E5",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "21"
+      },
+      "published_at": "2025-12-29",
+      "event_date": "2025-12-29",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "programme_funding_summary",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Taipei Medical University was presented with several scholarship tiers combining tuition waiver and monthly stipend, plus possible MOE funding.",
+        "fa": "برای Taipei Medical University چند tier فاند شامل tuition waiver و stipend ماهانه، به‌علاوه امکان MOE، معرفی شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-STUDY-FUNDING-001-E6",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "50"
+      },
+      "published_at": "2026-08-21",
+      "event_date": "2026-08-21",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "official_linked_scholarship_post",
+      "firsthandness": "reported",
+      "evidence_quality": "source_embeds_official_link",
+      "summary": {
+        "en": "An August 2026 post linked the official NCHU scholarship page and described full or partial tuition waiver plus a competitive monthly stipend for Spring 2027 international master's/PhD applicants.",
+        "fa": "یک پست اوت ۲۰۲۶ با لینک رسمی NCHU برای متقاضیان بین‌المللی Spring 2027 ارشد/دکتری، full/partial tuition waiver و stipend رقابتی را شرح داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-STUDY-LANGUAGE-002-E1",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6"
+      },
+      "published_at": "2025-12-08",
+      "event_date": "2025-12-08",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "channel_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The channel said many graduate programmes, especially in engineering/sciences/management, are offered in English.",
+        "fa": "کانال گفته بسیاری از برنامه‌های تحصیلات تکمیلی، به‌ویژه مهندسی/علوم/مدیریت، به زبان انگلیسی ارائه می‌شوند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-STUDY-LANGUAGE-002-E2",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8"
+      },
+      "published_at": "2025-12-09",
+      "event_date": "2025-12-09",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "promotional_study_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_generalization",
+      "summary": {
+        "en": "A general post claimed many programmes accept moderate IELTS scores and that some departments may use interviews instead.",
+        "fa": "یک پست عمومی ادعا کرده بسیاری از برنامه‌ها نمره متوسط IELTS می‌پذیرند و بعضی دپارتمان‌ها ممکن است از مصاحبه به‌جای مدرک استاندارد استفاده کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-STUDY-LANGUAGE-002-E3",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "13"
+      },
+      "published_at": "2025-12-15",
+      "event_date": "2025-12-15",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "promotional_language_flexibility_post",
+      "firsthandness": "reported",
+      "evidence_quality": "programme_specific_claims_unverified",
+      "summary": {
+        "en": "A dedicated post described conditional language admission, internal interviews/tests and possible use of expired English scores after contacting the university.",
+        "fa": "پست اختصاصی زبان از conditional admission، مصاحبه/آزمون داخلی و امکان بررسی مدرک زبان منقضی پس از مکاتبه با دانشگاه گفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-STUDY-LANGUAGE-002-E4",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "21"
+      },
+      "published_at": "2025-12-29",
+      "event_date": "2025-12-29",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "programme_summary",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Taipei Medical University graduate programmes were presented as including numerous English-taught health-science options.",
+        "fa": "برای Taipei Medical University تعداد زیادی برنامه تحصیلات تکمیلی علوم سلامت به زبان انگلیسی معرفی شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-SUPERVISOR-FIT-003-E1",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8"
+      },
+      "published_at": "2025-12-09",
+      "event_date": "2025-12-09",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "promotional_study_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_generalization",
+      "summary": {
+        "en": "The channel said having a professor during the application process can improve admission odds and is relevant to research master's/PhD funding.",
+        "fa": "کانال گفته داشتن استاد در پروسه اپلای می‌تواند شانس پذیرش را بالا ببرد و برای فاند ارشد پژوهشی/دکتری اهمیت دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-SUPERVISOR-FIT-003-E2",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "17"
+      },
+      "published_at": "2025-12-23",
+      "event_date": "2025-12-23",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "channel_research_profile",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Top Taiwan faculty were presented as working closely with industry and applied research projects, creating research-to-industry opportunities for students.",
+        "fa": "اساتید دانشگاه‌های برتر تایوان به‌عنوان افراد درگیر پروژه‌های صنعتی/کاربردی معرفی شده‌اند که فرصت research-to-industry برای دانشجو می‌سازند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-SUPERVISOR-FIT-003-E3",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "18"
+      },
+      "published_at": "2025-12-24",
+      "event_date": "2025-12-24",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "channel_research_profile",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The channel emphasized new ideas, motivation and active laboratory collaboration rather than grades alone.",
+        "fa": "کانال روی ایده جدید، انگیزه و همکاری فعال آزمایشگاهی بیش از صرف نمره تأکید کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-SUPERVISOR-FIT-003-E4",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "22"
+      },
+      "published_at": "2025-12-31",
+      "event_date": "2025-12-31",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "outreach_guidance",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A professor-contact guide advised referencing the professor's exact research topic, keeping the email concise and showing specific motivation for the lab.",
+        "fa": "راهنمای مکاتبه استاد توصیه کرده به موضوع پژوهشی دقیق استاد اشاره شود، ایمیل کوتاه باشد و انگیزه مشخص برای همان lab نشان داده شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-SUPERVISOR-FIT-003-E5",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "25"
+      },
+      "published_at": "2026-01-04",
+      "event_date": "2026-01-04",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "promotional_comparison",
+      "firsthandness": "reported",
+      "evidence_quality": "response_rate_unverified",
+      "summary": {
+        "en": "A later comparison again framed Taiwan professor outreach as research-fit driven, while giving unverified response-rate percentages.",
+        "fa": "مقایسه بعدی دوباره مکاتبه با استاد در تایوان را مبتنی بر research fit توصیف کرده، هرچند درصدهای پاسخ‌دهی آن تأیید نشده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-STUDENT-WORK-004-E1",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8"
+      },
+      "published_at": "2025-12-09",
+      "event_date": "2025-12-09",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "promotional_study_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "policy_claim_unverified",
+      "summary": {
+        "en": "The channel stated that international students with a work permit can work up to 20 hours per week and gain relevant experience.",
+        "fa": "کانال گفته دانشجوی بین‌المللی با work permit می‌تواند تا ۲۰ ساعت در هفته کار کند و سابقه مرتبط بسازد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-STUDENT-WORK-004-E2",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10"
+      },
+      "published_at": "2025-12-12",
+      "event_date": "2025-12-12",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "visa_work_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "policy_claim_unverified",
+      "summary": {
+        "en": "A visa FAQ separately repeated the up-to-20-hours-per-week student work claim and tied it to a separate Ministry of Labor permit.",
+        "fa": "FAQ ویزا جداگانه ادعای کار دانشجویی تا ۲۰ ساعت در هفته را تکرار کرده و آن را مشروط به مجوز جداگانه وزارت کار دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-STUDENT-WORK-004-E3",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "37"
+      },
+      "published_at": "2026-02-27",
+      "event_date": "2026-02-27",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "official_linked_employment_news",
+      "firsthandness": "reported",
+      "evidence_quality": "source_embeds_official_link",
+      "summary": {
+        "en": "A February 2026 post linked an MOE announcement saying the government English-teaching recruitment programme would continue in 2026.",
+        "fa": "پست فوریه ۲۰۲۶ با لینک MOE گفته برنامه دولتی جذب نیروی آموزش زبان انگلیسی در ۲۰۲۶ ادامه دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-POSTSTUDY-RESIDENCE-005-E1",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6"
+      },
+      "published_at": "2025-12-08",
+      "event_date": "2025-12-08",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "channel_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The channel said Taiwan provides ways for international graduates to remain and seek work after study, especially in technology fields.",
+        "fa": "کانال گفته برای فارغ‌التحصیل بین‌المللی امکان ماندن و جست‌وجوی کار پس از تحصیل، به‌ویژه در حوزه فناوری، وجود دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-POSTSTUDY-RESIDENCE-005-E2",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "7"
+      },
+      "published_at": "2025-12-08",
+      "event_date": "2025-12-08",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "residence_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "policy_claim_unverified",
+      "summary": {
+        "en": "A residence post described a study-to-employment ARC pathway and later long-term/permanent residence after work and tax history.",
+        "fa": "پست اقامت مسیر تحصیل→استخدام→ARC و سپس اقامت بلندمدت/دائم پس از سابقه کار و مالیات را توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-POSTSTUDY-RESIDENCE-005-E3",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "7"
+      },
+      "published_at": "2025-12-08",
+      "event_date": "2025-12-08",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "residence_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "possible_overgeneralization",
+      "summary": {
+        "en": "The same post also suggested graduates may apply for a Taiwan Employment Gold Card, a claim that should not be treated as automatic graduate eligibility.",
+        "fa": "همان پست Gold Card را نیز برای فارغ‌التحصیلان مطرح کرده؛ این ادعا نباید به‌عنوان eligibility خودکار فارغ‌التحصیل تلقی شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-POSTSTUDY-RESIDENCE-005-E4",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8"
+      },
+      "published_at": "2025-12-09",
+      "event_date": "2025-12-09",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "promotional_study_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_generalization",
+      "summary": {
+        "en": "Student work experience was explicitly framed as useful for later residence/employment applications.",
+        "fa": "سابقه کار دانشجویی صریحاً به‌عنوان عامل مفید برای مسیر بعدی اقامت/استخدام معرفی شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-FAMILY-DEPENDANT-006-E1",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14"
+      },
+      "published_at": "2025-12-17",
+      "event_date": "2025-12-17",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "dependant_visa_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "policy_claim_unverified",
+      "summary": {
+        "en": "The channel said spouse and under-18 children can apply as dependants, potentially at the same time as the principal student.",
+        "fa": "کانال گفته همسر و فرزند زیر ۱۸ سال می‌توانند به‌عنوان همراه، حتی همزمان با دانشجوی اصلی، اقدام کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-FAMILY-DEPENDANT-006-E2",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14"
+      },
+      "published_at": "2025-12-17",
+      "event_date": "2025-12-17",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "dependant_visa_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "policy_claim_unverified",
+      "summary": {
+        "en": "The same checklist said dependant civil documents require translation/legalization and that long-term stay requires ARC after arrival.",
+        "fa": "همان چک‌لیست ترجمه/تأیید مدارک مدنی همراه و نیاز ARC برای اقامت طولانی پس از ورود را مطرح کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-FAMILY-DEPENDANT-006-E3",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14"
+      },
+      "published_at": "2025-12-17",
+      "event_date": "2025-12-17",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "dependant_visa_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "policy_claim_unverified",
+      "summary": {
+        "en": "It explicitly said dependant status does not itself grant work rights and that a separate work permit is required.",
+        "fa": "صریحاً گفته شده ویزای همراه خودبه‌خود حق کار نمی‌دهد و work permit جداگانه لازم است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-FAMILY-DEPENDANT-006-E4",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14"
+      },
+      "published_at": "2025-12-17",
+      "event_date": "2025-12-17",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "dependant_visa_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "policy_claim_unverified",
+      "summary": {
+        "en": "The student was described as responsible for showing financial capacity for accompanying family members.",
+        "fa": "دانشجو مسئول اثبات تمکن مالی برای همراهان توصیف شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-VISA-IRAN-007-E1",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10"
+      },
+      "published_at": "2025-12-12",
+      "event_date": "2025-12-12",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "visa_faq",
+      "firsthandness": "reported",
+      "evidence_quality": "policy_claim_unverified",
+      "summary": {
+        "en": "The channel listed a student-visa document stack including admission, passport, academic records, health check, police clearance and financial proof.",
+        "fa": "کانال برای ویزای دانشجویی مجموعه مدارکی شامل پذیرش، پاسپورت، مدارک تحصیلی، health check، سوءپیشینه و تمکن را فهرست کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-VISA-IRAN-007-E2",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "10"
+      },
+      "published_at": "2025-12-12",
+      "event_date": "2025-12-12",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "visa_faq",
+      "firsthandness": "reported",
+      "evidence_quality": "time_sensitive_unverified",
+      "summary": {
+        "en": "The same FAQ claimed a 2-4 working-day processing time and said Iranian applicants had to use Dubai for the visa process, with some later applying from Turkey.",
+        "fa": "همان FAQ زمان ۲ تا ۴ روز کاری را ادعا کرده و گفته متقاضی ایرانی باید فرایند ویزا را در دبی انجام دهد و برخی پس از تأیید مدارک از ترکیه اقدام کرده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-VISA-IRAN-007-E3",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14"
+      },
+      "published_at": "2025-12-17",
+      "event_date": "2025-12-17",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "dependant_visa_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "internal_contradiction",
+      "summary": {
+        "en": "Five days later, the dependant checklist referred applicants to a 'Taipei Office' and advised checking the 'Taipei Representative Office in Iran', creating internal inconsistency with the Dubai-only claim.",
+        "fa": "پنج روز بعد، چک‌لیست همراه به Taipei Office و «Taipei Representative Office in Iran» ارجاع داده و با ادعای قبلی دبی‌محور ناسازگاری داخلی ایجاد کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-VISA-IRAN-007-E4",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "23"
+      },
+      "published_at": "2026-01-01",
+      "event_date": "2026-01-01",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "promotional_visa_claim",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_high_risk_claim",
+      "summary": {
+        "en": "A later post claimed Taiwan student visas are usually issued in 2-4 days and that rejection after formal admission is almost zero.",
+        "fa": "پست بعدی ادعا کرده ویزای تحصیلی تایوان معمولاً ۲ تا ۴ روزه صادر می‌شود و ریجکتی پس از پذیرش رسمی تقریباً صفر است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-TECH-INDUSTRY-008-E1",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "5"
+      },
+      "published_at": "2025-12-08",
+      "event_date": "2025-12-08",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "country_profile",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The channel repeatedly positioned Taiwan around semiconductors, advanced electronics, AI, biotechnology and green technology.",
+        "fa": "کانال تایوان را مکرراً حول نیمه‌هادی، الکترونیک پیشرفته، AI، بیوتکنولوژی و فناوری سبز معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-TECH-INDUSTRY-008-E2",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "6"
+      },
+      "published_at": "2025-12-08",
+      "event_date": "2025-12-08",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "channel_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Universities were described as closely connected to major technology companies, with research and internship opportunities.",
+        "fa": "دانشگاه‌ها دارای ارتباط نزدیک با شرکت‌های بزرگ فناوری و فرصت‌های پژوهشی/کارآموزی توصیف شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-TECH-INDUSTRY-008-E3",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "8"
+      },
+      "published_at": "2025-12-09",
+      "event_date": "2025-12-09",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "promotional_study_guide",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_generalization",
+      "summary": {
+        "en": "Electrical engineering, computer science, AI, materials/semiconductors and biotechnology were highlighted as strong study-to-work fields.",
+        "fa": "مهندسی برق، علوم کامپیوتر، AI، مواد/نیمه‌هادی و بیوتکنولوژی به‌عنوان رشته‌های قوی study-to-work برجسته شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-TECH-INDUSTRY-008-E4",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "9"
+      },
+      "published_at": "2025-12-10",
+      "event_date": "2025-12-10",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "university_profile",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "NTHU and NYCU were presented as especially strong in engineering, science and semiconductor-linked fields in Hsinchu.",
+        "fa": "NTHU و NYCU به‌عنوان دانشگاه‌های قوی مهندسی/علوم و حوزه‌های مرتبط با نیمه‌هادی در Hsinchu معرفی شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-TECH-INDUSTRY-008-E5",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "17"
+      },
+      "published_at": "2025-12-23",
+      "event_date": "2025-12-23",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "channel_research_profile",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Faculty-industry collaboration with technology companies was highlighted as a path to applied research and later employment.",
+        "fa": "همکاری استادان با صنعت فناوری به‌عنوان مسیر پژوهش کاربردی و فرصت شغلی بعدی برجسته شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-ENGLISH-TEACHING-009-E1",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "37"
+      },
+      "published_at": "2026-02-27",
+      "event_date": "2026-02-27",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "official_linked_employment_news",
+      "firsthandness": "reported",
+      "evidence_quality": "source_embeds_official_link",
+      "summary": {
+        "en": "The channel linked an MOE notice dated February 23, 2026 and said Taiwan's government English-teaching recruitment programme was continuing in 2026.",
+        "fa": "کانال به اطلاعیه MOE مورخ ۲۳ فوریه ۲۰۲۶ لینک داده و گفته برنامه جذب دولتی نیروی آموزش زبان انگلیسی در ۲۰۲۶ ادامه دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-ENGLISH-TEACHING-009-E2",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "37"
+      },
+      "published_at": "2026-02-27",
+      "event_date": "2026-02-27",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "career_preparation_guidance",
+      "firsthandness": "reported",
+      "evidence_quality": "channel_guidance",
+      "summary": {
+        "en": "Applicants with teaching profiles were advised to prepare professional credentials, experience records and language evidence before operational calls open.",
+        "fa": "به افراد دارای رزومه Teaching توصیه شده مدارک حرفه‌ای، سوابق و مدرک زبان را پیش از بازشدن فراخوان‌های اجرایی آماده کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-IRAN-OPS-010-E1",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "26"
+      },
+      "published_at": "2026-01-17",
+      "event_date": "2026-01-17",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "service_promotion",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_but_operational",
+      "summary": {
+        "en": "The channel promoted third-party foreign-currency remittance infrastructure for families in Iran supporting relatives abroad.",
+        "fa": "کانال زیرساخت شخص ثالث حواله ارزی را برای خانواده‌های داخل ایران و بستگان خارج تبلیغ کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-IRAN-OPS-010-E2",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "27"
+      },
+      "published_at": "2026-01-18",
+      "event_date": "2026-01-18",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "service_promotion",
+      "firsthandness": "reported",
+      "evidence_quality": "promotional_but_operational",
+      "summary": {
+        "en": "During access problems, the payment service added telephone and domestic-app contact options when Telegram was unavailable.",
+        "fa": "در دوره مشکل دسترسی، سرویس پرداخت گزینه تماس تلفنی و اپ‌های داخلی را برای زمانی که تلگرام در دسترس نبود اضافه کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-IRAN-OPS-010-E3",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "47"
+      },
+      "published_at": "2026-03-14",
+      "event_date": "2026-03-14",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "source_direct_operation",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "During an internet outage, the channel said a temporary support service had been used to help applicants complete migration tasks such as interviews, but was later discontinued.",
+        "fa": "در زمان قطع اینترنت، کانال گفته سرویس موقتی برای انجام امور مهاجرتی مثل مصاحبه ارائه شده اما بعداً متوقف شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TAI-IRAN-OPS-010-E4",
+      "source_id": "taiwan-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "48"
+      },
+      "published_at": "2026-03-16",
+      "event_date": "2026-03-16",
+      "collected_at": "2026-09-17T08:14:33Z",
+      "source_type": "channel_resource_summary",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The channel collected no-internet communication guidance, land-border exit experiences and connectivity resources for applicants in Iran.",
+        "fa": "کانال راهنماهای ارتباط بدون اینترنت، تجربه خروج زمینی و منابع اتصال برای متقاضیان داخل ایران را جمع‌بندی کرده است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "TAI-STUDY-FUNDING-001",
+      "issue_cluster_id": "TAIWAN-INTERNATIONAL-STUDENT-FUNDING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TAI-SUPERVISOR-FIT-003"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "multi_layer_scholarship_ecosystem",
+        "class": "funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "Taiwan",
+          "country_code": "TWN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "computer science",
+            "AI",
+            "semiconductors",
+            "biotechnology",
+            "health sciences",
+            "management",
+            "humanities"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "MOE",
+            "TIGP",
+            "university_scholarship",
+            "professor_funding"
+          ]
+        },
+        "process_stages": [
+          "scholarship_search",
+          "admission",
+          "funding"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Taiwan funding is best treated as a multi-layer stack—government, university and research/professor funding—not as one universal 'full scholarship' route",
+          "fa": "فاند تایوان بهتر است یک stack چندلایه دیده شود—دولتی، دانشگاهی و استاد/پژوهش—نه یک مسیر واحد «فول‌اسکالرشیپ»"
+        },
+        "summary": {
+          "en": "The channel repeatedly describes MOE/Taiwan scholarships, university waivers/stipends and professor/research funding. A 2026 NCHU post with an official link is more concrete: full or partial tuition waiver with a competitive stipend and explicit uncovered fees.",
+          "fa": "کانال مکرراً MOE/Taiwan Scholarship، waiver/stipend دانشگاه و فاند استاد/پژوهش را مطرح می‌کند. پست ۲۰۲۶ NCHU با لینک رسمی مشخص‌تر است: full/partial tuition waiver، stipend رقابتی و هزینه‌های خارج از waiver."
+        },
+        "practical_impact": {
+          "en": "Applicants should compare what is actually covered—tuition, stipend, insurance, housing and fees—rather than treating the word scholarship as full funding.",
+          "fa": "متقاضی باید پوشش واقعی شهریه، stipend، بیمه، خوابگاه و fees را جدا بسنجد و صرف واژه scholarship را معادل فول‌فاند نگیرد."
+        },
+        "who_should_care": {
+          "en": "International master's/PhD applicants who need substantial funding.",
+          "fa": "متقاضیان بین‌المللی ارشد/دکتری که به فاند جدی نیاز دارند."
+        },
+        "recommended_action": {
+          "en": "Track government, university and supervisor/research funding separately and confirm uncovered costs before accepting an award.",
+          "fa": "فاند دولتی، دانشگاهی و استاد/پژوهش را جدا پیگیری کنید و هزینه‌های خارج از پوشش را قبل از قبول award روشن کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TAI-STUDY-FUNDING-001-E1",
+          "relation": "supports",
+          "independence_group": "TAI-STUDY-FUNDING-001-E1"
+        },
+        {
+          "evidence_id": "TAI-STUDY-FUNDING-001-E2",
+          "relation": "supports",
+          "independence_group": "TAI-STUDY-FUNDING-001-E2"
+        },
+        {
+          "evidence_id": "TAI-STUDY-FUNDING-001-E3",
+          "relation": "supports",
+          "independence_group": "TAI-STUDY-FUNDING-001-E3"
+        },
+        {
+          "evidence_id": "TAI-STUDY-FUNDING-001-E4",
+          "relation": "supports",
+          "independence_group": "TAI-STUDY-FUNDING-001-E4"
+        },
+        {
+          "evidence_id": "TAI-STUDY-FUNDING-001-E5",
+          "relation": "supports",
+          "independence_group": "TAI-STUDY-FUNDING-001-E5"
+        },
+        {
+          "evidence_id": "TAI-STUDY-FUNDING-001-E6",
+          "relation": "supports",
+          "independence_group": "TAI-STUDY-FUNDING-001-E6"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Funding layers recur throughout the channel; the latest NCHU item embeds an official source link."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current MOE/TIGP/NCHU coverage, amounts and eligibility were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TAI-STUDY-FUNDING-001-E1",
+            "TAI-STUDY-FUNDING-001-E2",
+            "TAI-STUDY-FUNDING-001-E3",
+            "TAI-STUDY-FUNDING-001-E4",
+            "TAI-STUDY-FUNDING-001-E5",
+            "TAI-STUDY-FUNDING-001-E6"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Taiwan public Telegram channel. Some posts embed official links, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Scholarship amounts and calls change by intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "MOE Scholarship",
+        "TIGP",
+        "NCHU",
+        "tuition waiver",
+        "stipend"
+      ],
+      "first_seen": "2025-12-08",
+      "last_seen": "2026-08-21"
+    },
+    {
+      "signal_id": "TAI-STUDY-LANGUAGE-002",
+      "issue_cluster_id": "TAIWAN-ENGLISH-PROGRAMME-LANGUAGE-FLEXIBILITY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TAI-SUPERVISOR-FIT-003"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "english_taught_programme_flexibility",
+        "class": "language"
+      },
+      "scope": {
+        "destination": {
+          "country": "Taiwan",
+          "country_code": "TWN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "computer science",
+            "AI",
+            "semiconductors",
+            "biotechnology",
+            "health sciences",
+            "management",
+            "humanities"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "English_taught_programmes",
+            "conditional_admission"
+          ]
+        },
+        "process_stages": [
+          "programme_selection",
+          "language_proof",
+          "admission"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "English-taught study is a recurring Taiwan route, but language-proof flexibility is programme-specific and should not be generalized",
+          "fa": "برنامه انگلیسی‌زبان در تایوان مسیر پرتکراری است، اما انعطاف مدرک زبان program-specific است و نباید تعمیم داده شود"
+        },
+        "summary": {
+          "en": "The channel repeatedly highlights English-taught graduate programmes. It also claims some programmes allow conditional admission, interviews/internal tests or consideration of expired scores; these claims are broad and unverified at programme level.",
+          "fa": "کانال بارها برنامه‌های انگلیسی‌زبان تحصیلات تکمیلی را برجسته کرده و ادعا کرده بعضی برنامه‌ها conditional admission، مصاحبه/آزمون داخلی یا بررسی نمره منقضی دارند؛ این ادعاها program-level تأیید نشده‌اند."
+        },
+        "practical_impact": {
+          "en": "Applicants with weak or expired English scores may have options, but assuming universal flexibility can lead to ineligible applications.",
+          "fa": "متقاضی با نمره ضعیف/منقضی ممکن است گزینه داشته باشد، اما فرض انعطاف سراسری می‌تواند اپلیکیشن نامعتبر بسازد."
+        },
+        "who_should_care": {
+          "en": "Applicants targeting English-taught bachelor's/graduate programmes.",
+          "fa": "متقاضیان برنامه‌های انگلیسی‌زبان کارشناسی/تحصیلات تکمیلی."
+        },
+        "recommended_action": {
+          "en": "Check the exact programme's accepted test, minimum score and waiver/conditional-admission policy.",
+          "fa": "آزمون پذیرفته‌شده، حداقل نمره و policy waiver/conditional admission همان program را چک کنید."
+        },
+        "known_workaround": "Where officially permitted, interview/internal assessment or conditional admission may substitute for a standard score."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TAI-STUDY-LANGUAGE-002-E1",
+          "relation": "supports",
+          "independence_group": "TAI-STUDY-LANGUAGE-002-E1"
+        },
+        {
+          "evidence_id": "TAI-STUDY-LANGUAGE-002-E2",
+          "relation": "supports",
+          "independence_group": "TAI-STUDY-LANGUAGE-002-E2"
+        },
+        {
+          "evidence_id": "TAI-STUDY-LANGUAGE-002-E3",
+          "relation": "supports",
+          "independence_group": "TAI-STUDY-LANGUAGE-002-E3"
+        },
+        {
+          "evidence_id": "TAI-STUDY-LANGUAGE-002-E4",
+          "relation": "supports",
+          "independence_group": "TAI-STUDY-LANGUAGE-002-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "English-taught availability is repeated; waiver/expired-score claims are much less reliable."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Programme-specific language requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TAI-STUDY-LANGUAGE-002-E1",
+            "TAI-STUDY-LANGUAGE-002-E2",
+            "TAI-STUDY-LANGUAGE-002-E3",
+            "TAI-STUDY-LANGUAGE-002-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Taiwan public Telegram channel. Some posts embed official links, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Language requirements change by programme/intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "English taught",
+        "IELTS",
+        "conditional admission",
+        "language waiver"
+      ],
+      "first_seen": "2025-12-08",
+      "last_seen": "2025-12-29"
+    },
+    {
+      "signal_id": "TAI-SUPERVISOR-FIT-003",
+      "issue_cluster_id": "TAIWAN-SUPERVISOR-RESEARCH-FIT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TAI-STUDY-FUNDING-001"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "TAI-TECH-INDUSTRY-008"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "targeted_supervisor_outreach",
+        "class": "academic_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Taiwan",
+          "country_code": "TWN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "computer science",
+            "AI",
+            "semiconductors",
+            "biotechnology",
+            "health sciences",
+            "management",
+            "humanities"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "research_masters",
+            "PhD"
+          ]
+        },
+        "process_stages": [
+          "faculty_search",
+          "email_outreach",
+          "interview",
+          "funding"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For research master's/PhD applicants, targeted supervisor outreach and research fit are repeatedly treated as a practical lever for admission and funding",
+          "fa": "برای ارشد پژوهشی/PhD، مکاتبه هدفمند با استاد و research fit بارها به‌عنوان اهرم عملی پذیرش و فاند مطرح شده است"
+        },
+        "summary": {
+          "en": "The channel advises referencing the professor's exact research, using concise emails and showing lab-specific motivation. It repeatedly links supervisors to applied/industry research and potential funding, while response-rate percentages remain unverified.",
+          "fa": "کانال توصیه می‌کند به پژوهش دقیق استاد اشاره شود، ایمیل کوتاه باشد و انگیزه مخصوص lab نشان داده شود. استاد بارها به پژوهش صنعتی/کاربردی و فاند وصل شده، اما درصدهای پاسخ‌دهی تأیید نشده‌اند."
+        },
+        "practical_impact": {
+          "en": "Generic mass-emailing is likely less useful than a small, research-matched supervisor list.",
+          "fa": "ایمیل انبوه عمومی احتمالاً از shortlist کوچک و research-matched استادان کم‌اثرتر است."
+        },
+        "who_should_care": {
+          "en": "Research master's and PhD applicants.",
+          "fa": "متقاضیان ارشد پژوهشی و دکتری."
+        },
+        "recommended_action": {
+          "en": "Build a research-fit shortlist and write concise, specific emails tied to the supervisor's current work.",
+          "fa": "shortlist مبتنی بر research fit بسازید و ایمیل کوتاه و مشخص به کار جاری استاد وصل کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TAI-SUPERVISOR-FIT-003-E1",
+          "relation": "supports",
+          "independence_group": "TAI-SUPERVISOR-FIT-003-E1"
+        },
+        {
+          "evidence_id": "TAI-SUPERVISOR-FIT-003-E2",
+          "relation": "supports",
+          "independence_group": "TAI-SUPERVISOR-FIT-003-E2"
+        },
+        {
+          "evidence_id": "TAI-SUPERVISOR-FIT-003-E3",
+          "relation": "supports",
+          "independence_group": "TAI-SUPERVISOR-FIT-003-E3"
+        },
+        {
+          "evidence_id": "TAI-SUPERVISOR-FIT-003-E4",
+          "relation": "supports",
+          "independence_group": "TAI-SUPERVISOR-FIT-003-E4"
+        },
+        {
+          "evidence_id": "TAI-SUPERVISOR-FIT-003-E5",
+          "relation": "supports",
+          "independence_group": "TAI-SUPERVISOR-FIT-003-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The outreach pattern repeats, but response-rate/funding success claims are channel estimates rather than verified data."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No professor response-rate or supervisor-controlled funding rate was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TAI-SUPERVISOR-FIT-003-E1",
+            "TAI-SUPERVISOR-FIT-003-E2",
+            "TAI-SUPERVISOR-FIT-003-E3",
+            "TAI-SUPERVISOR-FIT-003-E4",
+            "TAI-SUPERVISOR-FIT-003-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Taiwan public Telegram channel. Some posts embed official links, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Faculty projects and grant availability change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "professor email",
+        "research fit",
+        "supervisor",
+        "RA",
+        "funding"
+      ],
+      "first_seen": "2025-12-09",
+      "last_seen": "2026-01-04"
+    },
+    {
+      "signal_id": "TAI-STUDENT-WORK-004",
+      "issue_cluster_id": "TAIWAN-INTERNATIONAL-STUDENT-WORK",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TAI-POSTSTUDY-RESIDENCE-005"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "TAI-ENGLISH-TEACHING-009"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "student_work_permit",
+        "class": "student_employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "Taiwan",
+          "country_code": "TWN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "computer science",
+            "AI",
+            "semiconductors",
+            "biotechnology",
+            "health sciences",
+            "management",
+            "humanities"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_work_permit"
+          ]
+        },
+        "process_stages": [
+          "student_status",
+          "work_permit",
+          "part_time_work"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel consistently treats student work as permit-based rather than automatic, with a claimed 20-hour weekly limit",
+          "fa": "کانال کار دانشجویی را consistently مبتنی بر work permit می‌داند نه خودکار، با سقف ادعایی ۲۰ ساعت در هفته"
+        },
+        "summary": {
+          "en": "Two posts independently repeat the 20-hour claim and tie work to a separate permit. Work experience is also framed as useful for later employment/residence.",
+          "fa": "دو پست جدا سقف ۲۰ ساعت را تکرار کرده و کار را به مجوز جدا وصل می‌کنند. سابقه کار نیز برای استخدام/اقامت بعدی مفید توصیف شده است."
+        },
+        "practical_impact": {
+          "en": "Students should not budget living costs assuming unrestricted work rights.",
+          "fa": "دانشجو نباید هزینه زندگی را با فرض حق کار نامحدود بودجه‌بندی کند."
+        },
+        "who_should_care": {
+          "en": "International students planning part-time work in Taiwan.",
+          "fa": "دانشجویان بین‌المللی متقاضی کار پاره‌وقت در تایوان."
+        },
+        "recommended_action": {
+          "en": "Verify current work-permit eligibility and hour limits before starting employment.",
+          "fa": "قبل از شروع کار، eligibility مجوز و سقف ساعات روز را رسمی بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TAI-STUDENT-WORK-004-E1",
+          "relation": "supports",
+          "independence_group": "TAI-STUDENT-WORK-004-E1"
+        },
+        {
+          "evidence_id": "TAI-STUDENT-WORK-004-E2",
+          "relation": "supports",
+          "independence_group": "TAI-STUDENT-WORK-004-E2"
+        },
+        {
+          "evidence_id": "TAI-STUDENT-WORK-004-E3",
+          "relation": "supports",
+          "independence_group": "TAI-STUDENT-WORK-004-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The rule is repeated, but was not independently checked against the current labour authority."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Taiwan student work-permit and hour-limit rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TAI-STUDENT-WORK-004-E1",
+            "TAI-STUDENT-WORK-004-E2",
+            "TAI-STUDENT-WORK-004-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Taiwan public Telegram channel. Some posts embed official links, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Work rules are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student work",
+        "work permit",
+        "20 hours",
+        "part time"
+      ],
+      "first_seen": "2025-12-09",
+      "last_seen": "2026-02-27"
+    },
+    {
+      "signal_id": "TAI-POSTSTUDY-RESIDENCE-005",
+      "issue_cluster_id": "TAIWAN-STUDY-TO-WORK-RESIDENCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TAI-STUDENT-WORK-004"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "TAI-TECH-INDUSTRY-008"
+        }
+      ],
+      "classification": {
+        "family": "E8_POSTSTUDY_TRANSITION",
+        "type": "study_to_employment_arc_aprc",
+        "class": "poststudy"
+      },
+      "scope": {
+        "destination": {
+          "country": "Taiwan",
+          "country_code": "TWN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "computer science",
+            "AI",
+            "semiconductors",
+            "biotechnology",
+            "health sciences",
+            "management",
+            "humanities"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "poststudy_work",
+            "ARC",
+            "APRC",
+            "Gold_Card"
+          ]
+        },
+        "process_stages": [
+          "graduation",
+          "job_search",
+          "employment",
+          "residence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The durable route signal is study → local employment → work-based ARC → possible longer-term residence; Gold Card should be treated as a separate eligibility route",
+          "fa": "سیگنال پایدار مسیر تحصیل → استخدام محلی → ARC کاری → احتمال اقامت بلندمدت است؛ Gold Card باید eligibility جداگانه دیده شود"
+        },
+        "summary": {
+          "en": "The channel repeatedly describes post-study employment and ARC/APRC progression. Its suggestion that graduates can simply apply for a Gold Card is broader and potentially misleading, so it is preserved only as an unverified separate claim.",
+          "fa": "کانال چند بار اشتغال پس از تحصیل و progression به ARC/APRC را مطرح می‌کند. ادعای امکان ساده Gold Card برای فارغ‌التحصیلان گسترده‌تر و بالقوه گمراه‌کننده است و فقط به‌صورت claim جدا و تأییدنشده نگه داشته شده است."
+        },
+        "practical_impact": {
+          "en": "Applicants should evaluate employability and residence criteria separately from university admission.",
+          "fa": "متقاضی باید employability و شرایط اقامت را جدا از پذیرش دانشگاه ارزیابی کند."
+        },
+        "who_should_care": {
+          "en": "Students choosing Taiwan partly for post-study migration potential.",
+          "fa": "دانشجویانی که تایوان را با هدف ماندن بعد از تحصیل انتخاب می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Map the employment-based ARC/APRC route first; evaluate Gold Card only if the applicant independently meets its criteria.",
+          "fa": "اول مسیر employment-based ARC/APRC را map کنید؛ Gold Card را فقط در صورت احراز معیارهای مستقل خودش بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TAI-POSTSTUDY-RESIDENCE-005-E1",
+          "relation": "supports",
+          "independence_group": "TAI-POSTSTUDY-RESIDENCE-005-E1"
+        },
+        {
+          "evidence_id": "TAI-POSTSTUDY-RESIDENCE-005-E2",
+          "relation": "supports",
+          "independence_group": "TAI-POSTSTUDY-RESIDENCE-005-E2"
+        },
+        {
+          "evidence_id": "TAI-POSTSTUDY-RESIDENCE-005-E3",
+          "relation": "supports",
+          "independence_group": "TAI-POSTSTUDY-RESIDENCE-005-E3"
+        },
+        {
+          "evidence_id": "TAI-POSTSTUDY-RESIDENCE-005-E4",
+          "relation": "supports",
+          "independence_group": "TAI-POSTSTUDY-RESIDENCE-005-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Study-to-employment residence recurs, but Gold Card wording is likely overgeneralized and no rule was independently verified."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current post-study, ARC, APRC and Gold Card eligibility were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TAI-POSTSTUDY-RESIDENCE-005-E1",
+            "TAI-POSTSTUDY-RESIDENCE-005-E2",
+            "TAI-POSTSTUDY-RESIDENCE-005-E3",
+            "TAI-POSTSTUDY-RESIDENCE-005-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Taiwan public Telegram channel. Some posts embed official links, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Residence criteria change and are category-specific.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "post study",
+        "ARC",
+        "APRC",
+        "Gold Card",
+        "employment"
+      ],
+      "first_seen": "2025-12-08",
+      "last_seen": "2025-12-09"
+    },
+    {
+      "signal_id": "TAI-FAMILY-DEPENDANT-006",
+      "issue_cluster_id": "TAIWAN-STUDENT-DEPENDANT-RIGHTS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TAI-VISA-IRAN-007"
+        }
+      ],
+      "classification": {
+        "family": "E7_DEPENDANTS_FAMILY",
+        "type": "dependant_visa_separate_work_rights",
+        "class": "family"
+      },
+      "scope": {
+        "destination": {
+          "country": "Taiwan",
+          "country_code": "TWN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "computer science",
+            "AI",
+            "semiconductors",
+            "biotechnology",
+            "health sciences",
+            "management",
+            "humanities"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_dependant"
+          ]
+        },
+        "process_stages": [
+          "family_application",
+          "document_legalization",
+          "ARC",
+          "work_permit",
+          "financial_proof"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Family accompaniment is presented as possible, but dependant residence and work rights are separate: civil-document legalization, ARC and a separate work permit all matter",
+          "fa": "همراهی خانواده ممکن معرفی شده، اما اقامت و حق کار همراه جداست: legalization مدارک، ARC و work permit مستقل اهمیت دارند"
+        },
+        "summary": {
+          "en": "A dedicated checklist says spouse/under-18 children can apply, documents need legalization, the dependant needs ARC for long stay, and dependant status does not automatically grant work rights.",
+          "fa": "چک‌لیست اختصاصی می‌گوید همسر/فرزند زیر ۱۸ سال می‌توانند اقدام کنند، مدارک نیاز به تأیید دارند، برای اقامت بلندمدت ARC لازم است و همراه خودکار حق کار ندارد."
+        },
+        "practical_impact": {
+          "en": "A student's own admission/visa does not automatically solve the spouse's employment plan.",
+          "fa": "پذیرش/ویزای دانشجو خودکار برنامه اشتغال همسر را حل نمی‌کند."
+        },
+        "who_should_care": {
+          "en": "Students moving with spouse or children.",
+          "fa": "دانشجویانی که با همسر یا فرزند می‌روند."
+        },
+        "recommended_action": {
+          "en": "Budget and document the dependant case separately, including financial proof and work-permit eligibility.",
+          "fa": "پرونده همراه را جدا بودجه‌بندی و مستندسازی کنید، شامل تمکن و eligibility مجوز کار."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TAI-FAMILY-DEPENDANT-006-E1",
+          "relation": "supports",
+          "independence_group": "TAI-FAMILY-DEPENDANT-006-E1"
+        },
+        {
+          "evidence_id": "TAI-FAMILY-DEPENDANT-006-E2",
+          "relation": "supports",
+          "independence_group": "TAI-FAMILY-DEPENDANT-006-E2"
+        },
+        {
+          "evidence_id": "TAI-FAMILY-DEPENDANT-006-E3",
+          "relation": "supports",
+          "independence_group": "TAI-FAMILY-DEPENDANT-006-E3"
+        },
+        {
+          "evidence_id": "TAI-FAMILY-DEPENDANT-006-E4",
+          "relation": "supports",
+          "independence_group": "TAI-FAMILY-DEPENDANT-006-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "A detailed checklist exists, but it is a single channel post and the exact rules are unverified."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current dependant eligibility, legalization, ARC timing and work-permit rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TAI-FAMILY-DEPENDANT-006-E1",
+            "TAI-FAMILY-DEPENDANT-006-E2",
+            "TAI-FAMILY-DEPENDANT-006-E3",
+            "TAI-FAMILY-DEPENDANT-006-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Taiwan public Telegram channel. Some posts embed official links, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Family rules are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "dependant",
+        "spouse",
+        "child",
+        "ARC",
+        "work permit",
+        "financial proof"
+      ],
+      "first_seen": "2025-12-17",
+      "last_seen": "2025-12-17"
+    },
+    {
+      "signal_id": "TAI-VISA-IRAN-007",
+      "issue_cluster_id": "TAIWAN-IRAN-CONSULAR-PROCESS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TAI-FAMILY-DEPENDANT-006"
+        }
+      ],
+      "classification": {
+        "family": "E3_VISA_ADJUDICATION",
+        "type": "iran_consular_process_uncertainty",
+        "class": "student_visa"
+      },
+      "scope": {
+        "destination": {
+          "country": "Taiwan",
+          "country_code": "TWN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "computer science",
+            "AI",
+            "semiconductors",
+            "biotechnology",
+            "health sciences",
+            "management",
+            "humanities"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Applying from Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_visa",
+            "resident_visa"
+          ]
+        },
+        "process_stages": [
+          "document_preparation",
+          "legalization",
+          "visa_application",
+          "consular_location"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel's Iran-specific Taiwan visa guidance is internally inconsistent on where/how to process the case, so consular location and legalization must be rechecked from official sources",
+          "fa": "راهنمای کانال برای ویزای تایوان از ایران درباره محل/نحوه اقدام ناسازگاری داخلی دارد؛ محل کنسولی و legalization باید از منبع رسمی روز دوباره بررسی شود"
+        },
+        "summary": {
+          "en": "One post says Iranian applicants must process in Dubai and mentions Turkey as a later application location; another soon after refers to a Taipei Office/Representative Office in Iran. Fast-processing and near-zero-rejection claims are also promotional and unverified.",
+          "fa": "یک پست می‌گوید متقاضی ایرانی باید در دبی اقدام کند و از ترکیه هم مثال می‌زند؛ پست بعدی به Taipei Office/Representative Office in Iran ارجاع می‌دهد. ادعای processing سریع و ریجکتی نزدیک صفر هم تبلیغاتی و تأییدنشده است."
+        },
+        "practical_impact": {
+          "en": "Using the wrong office or legalization chain could invalidate documents or cause missed travel deadlines.",
+          "fa": "انتخاب دفتر یا زنجیره legalization اشتباه می‌تواند مدارک را نامعتبر یا deadline سفر را خراب کند."
+        },
+        "who_should_care": {
+          "en": "Iran-based Taiwan student/dependant visa applicants.",
+          "fa": "متقاضیان داخل ایران برای ویزای دانشجویی/همراه تایوان."
+        },
+        "recommended_action": {
+          "en": "Do not rely on the channel's office/location claim; confirm the currently competent Taiwan mission and document-authentication chain before paying or travelling.",
+          "fa": "به ادعای محل دفتر کانال تکیه نکنید؛ قبل از پرداخت یا سفر، mission مسئول و زنجیره تأیید مدارک را رسمی و روز بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TAI-VISA-IRAN-007-E1",
+          "relation": "supports",
+          "independence_group": "TAI-VISA-IRAN-007-E1"
+        },
+        {
+          "evidence_id": "TAI-VISA-IRAN-007-E2",
+          "relation": "supports",
+          "independence_group": "TAI-VISA-IRAN-007-E2"
+        },
+        {
+          "evidence_id": "TAI-VISA-IRAN-007-E3",
+          "relation": "contradicts",
+          "independence_group": "TAI-VISA-IRAN-007-E3"
+        },
+        {
+          "evidence_id": "TAI-VISA-IRAN-007-E4",
+          "relation": "supports",
+          "independence_group": "TAI-VISA-IRAN-007-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "uncertain",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The contradiction is explicit inside the source itself; operational consequences are significant."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current competent Taiwan mission for applicants in Iran, processing times and legalization rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TAI-VISA-IRAN-007-E1",
+            "TAI-VISA-IRAN-007-E2",
+            "TAI-VISA-IRAN-007-E3",
+            "TAI-VISA-IRAN-007-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Taiwan public Telegram channel. Some posts embed official links, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "Consular arrangements can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Iran",
+        "Taiwan visa",
+        "Dubai",
+        "Turkey",
+        "Taipei Office",
+        "legalization"
+      ],
+      "first_seen": "2025-12-12",
+      "last_seen": "2026-01-01"
+    },
+    {
+      "signal_id": "TAI-TECH-INDUSTRY-008",
+      "issue_cluster_id": "TAIWAN-SEMICONDUCTOR-TECH-STUDY-WORK",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TAI-SUPERVISOR-FIT-003"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "TAI-POSTSTUDY-RESIDENCE-005"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "university_industry_tech_alignment",
+        "class": "tech_labour_market"
+      },
+      "scope": {
+        "destination": {
+          "country": "Taiwan",
+          "country_code": "TWN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "computer science",
+            "AI",
+            "semiconductors",
+            "biotechnology",
+            "health sciences",
+            "management",
+            "humanities"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "STEM",
+            "semiconductors",
+            "AI",
+            "biotech"
+          ]
+        },
+        "process_stages": [
+          "programme_selection",
+          "research",
+          "internship",
+          "employment"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel consistently positions Taiwan's strongest study-to-work alignment around semiconductors, electronics, computing/AI and adjacent applied science fields",
+          "fa": "کانال consistently قوی‌ترین study-to-work تایوان را حول نیمه‌هادی، الکترونیک، کامپیوتر/AI و علوم کاربردی نزدیک می‌بیند"
+        },
+        "summary": {
+          "en": "Across university profiles and study guides, Taiwan's semiconductor ecosystem, Hsinchu institutions and faculty-industry links are the most repeated career-alignment theme.",
+          "fa": "در پروفایل دانشگاه‌ها و راهنماهای تحصیل، اکوسیستم نیمه‌هادی، دانشگاه‌های Hsinchu و ارتباط استاد-صنعت پرتکرارترین theme شغلی هستند."
+        },
+        "practical_impact": {
+          "en": "Taiwan may offer stronger labour-market alignment for some technical fields than for unrelated degrees, but specific employment outcomes remain programme/language/profile dependent.",
+          "fa": "برای بعضی رشته‌های فنی، تایوان ممکن است فیت بازار کار قوی‌تری از رشته‌های نامرتبط داشته باشد، اما outcome به program/زبان/پروفایل وابسته است."
+        },
+        "who_should_care": {
+          "en": "Applicants in electrical engineering, computer science, AI, materials, semiconductors and biotechnology.",
+          "fa": "متقاضیان برق، کامپیوتر، AI، مواد، نیمه‌هادی و بیوتکنولوژی."
+        },
+        "recommended_action": {
+          "en": "Prioritize programmes with visible industry/lab links and verify internship/employment outcomes rather than relying on country branding alone.",
+          "fa": "programهای دارای ارتباط روشن صنعت/lab را اولویت دهید و outcome کارآموزی/استخدام را بررسی کنید، نه صرفاً برند کشور."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TAI-TECH-INDUSTRY-008-E1",
+          "relation": "supports",
+          "independence_group": "TAI-TECH-INDUSTRY-008-E1"
+        },
+        {
+          "evidence_id": "TAI-TECH-INDUSTRY-008-E2",
+          "relation": "supports",
+          "independence_group": "TAI-TECH-INDUSTRY-008-E2"
+        },
+        {
+          "evidence_id": "TAI-TECH-INDUSTRY-008-E3",
+          "relation": "supports",
+          "independence_group": "TAI-TECH-INDUSTRY-008-E3"
+        },
+        {
+          "evidence_id": "TAI-TECH-INDUSTRY-008-E4",
+          "relation": "supports",
+          "independence_group": "TAI-TECH-INDUSTRY-008-E4"
+        },
+        {
+          "evidence_id": "TAI-TECH-INDUSTRY-008-E5",
+          "relation": "supports",
+          "independence_group": "TAI-TECH-INDUSTRY-008-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The theme is repeated consistently across multiple independent channel posts."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current programme-industry partnerships and graduate employment outcomes were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TAI-TECH-INDUSTRY-008-E1",
+            "TAI-TECH-INDUSTRY-008-E2",
+            "TAI-TECH-INDUSTRY-008-E3",
+            "TAI-TECH-INDUSTRY-008-E4",
+            "TAI-TECH-INDUSTRY-008-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Taiwan public Telegram channel. Some posts embed official links, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Industry demand and programme links evolve.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "semiconductor",
+        "TSMC",
+        "AI",
+        "Hsinchu",
+        "industry",
+        "internship"
+      ],
+      "first_seen": "2025-12-08",
+      "last_seen": "2025-12-23"
+    },
+    {
+      "signal_id": "TAI-ENGLISH-TEACHING-009",
+      "issue_cluster_id": "TAIWAN-GOVERNMENT-ENGLISH-TEACHING-RECRUITMENT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TAI-STUDENT-WORK-004"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "government_english_teaching_programme",
+        "class": "teaching_employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "Taiwan",
+          "country_code": "TWN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "computer science",
+            "AI",
+            "semiconductors",
+            "biotechnology",
+            "health sciences",
+            "management",
+            "humanities"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Teaching profile"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "English_teaching"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "credential_preparation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "An MOE-linked 2026 post indicates a government English-teaching recruitment channel remained active, creating a distinct non-tech employment lead",
+          "fa": "یک پست ۲۰۲۶ با لینک MOE نشان می‌دهد کانال جذب دولتی آموزش زبان انگلیسی فعال بوده و یک lead شغلی غیرتکنولوژی جدا ایجاد می‌کند"
+        },
+        "summary": {
+          "en": "The channel linked an official MOE notice and advised candidates with teaching backgrounds to prepare credentials, experience and language evidence ahead of operational calls.",
+          "fa": "کانال به اطلاعیه رسمی MOE لینک داده و به افراد دارای بک‌گراند تدریس توصیه کرده مدارک، سابقه و زبان را پیش از فراخوان آماده کنند."
+        },
+        "practical_impact": {
+          "en": "Taiwan employment planning need not be limited to semiconductors/tech for applicants with relevant teaching profiles.",
+          "fa": "برای پروفایل teaching، برنامه اشتغال تایوان لزوماً محدود به نیمه‌هادی/تکنولوژی نیست."
+        },
+        "who_should_care": {
+          "en": "Applicants with English-teaching credentials/experience.",
+          "fa": "متقاضیان دارای مدرک/سابقه آموزش زبان انگلیسی."
+        },
+        "recommended_action": {
+          "en": "Track the official recruitment call and verify nationality, credential and language eligibility before preparing a move around it.",
+          "fa": "فراخوان رسمی را پیگیری و eligibility ملیت/مدرک/زبان را قبل از برنامه مهاجرت بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TAI-ENGLISH-TEACHING-009-E1",
+          "relation": "supports",
+          "independence_group": "TAI-ENGLISH-TEACHING-009-E1"
+        },
+        {
+          "evidence_id": "TAI-ENGLISH-TEACHING-009-E2",
+          "relation": "supports",
+          "independence_group": "TAI-ENGLISH-TEACHING-009-E2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "medium",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The source embeds an official MOE link, but this extraction did not independently open or verify eligibility details."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The MOE recruitment notice and applicant eligibility were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TAI-ENGLISH-TEACHING-009-E1",
+            "TAI-ENGLISH-TEACHING-009-E2"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Taiwan public Telegram channel. Some posts embed official links, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Recruitment calls are annual/time-limited.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "English teaching",
+        "MOE",
+        "recruitment",
+        "teaching job"
+      ],
+      "first_seen": "2026-02-27",
+      "last_seen": "2026-02-27"
+    },
+    {
+      "signal_id": "TAI-IRAN-OPS-010",
+      "issue_cluster_id": "IRAN-TAIWAN-MIGRATION-OPERATIONAL-CONTINUITY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TAI-VISA-IRAN-007"
+        }
+      ],
+      "classification": {
+        "family": "E20_LIFE_MOBILITY_OPERATIONS",
+        "type": "iran_connectivity_payment_travel_continuity",
+        "class": "operational_continuity"
+      },
+      "scope": {
+        "destination": {
+          "country": "Taiwan",
+          "country_code": "TWN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "engineering",
+            "computer science",
+            "AI",
+            "semiconductors",
+            "biotechnology",
+            "health sciences",
+            "management",
+            "humanities"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Applying from Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "application_operations"
+          ]
+        },
+        "process_stages": [
+          "payment",
+          "communication",
+          "interview",
+          "travel_continuity"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For Iran-based applicants, connectivity, payment and travel continuity can become independent migration bottlenecks even when the Taiwan application itself is ready",
+          "fa": "برای متقاضی داخل ایران، اینترنت، پرداخت و تداوم سفر می‌توانند مستقل از آماده‌بودن اپلیکیشن تایوان گلوگاه مهاجرت شوند"
+        },
+        "summary": {
+          "en": "The channel documents reliance on third-party FX rails, alternative communication channels during access problems, temporary interview support during internet outages, and land-border travel resources.",
+          "fa": "کانال اتکا به ریل پرداخت ارزی شخص ثالث، کانال‌های ارتباطی جایگزین، پشتیبانی موقت مصاحبه هنگام قطع اینترنت و منابع سفر زمینی را ثبت کرده است."
+        },
+        "practical_impact": {
+          "en": "Deadlines can fail for operational reasons unrelated to admission merit.",
+          "fa": "deadline ممکن است به دلایل عملیاتی بی‌ربط به کیفیت پذیرش از دست برود."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants with time-sensitive admissions, payments, interviews or consular travel.",
+          "fa": "متقاضیان داخل ایران با پذیرش، پرداخت، مصاحبه یا سفر کنسولی زمان‌حساس."
+        },
+        "recommended_action": {
+          "en": "Maintain backup payment, internet/communication and travel plans for deadline-critical steps.",
+          "fa": "برای مراحل deadline-critical، backup پرداخت، اینترنت/ارتباط و سفر داشته باشید."
+        },
+        "known_workaround": "Third-party payment services, alternate messaging/phone channels and land-border information appear as operational fallbacks in the source."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TAI-IRAN-OPS-010-E1",
+          "relation": "supports",
+          "independence_group": "TAI-IRAN-OPS-010-E1"
+        },
+        {
+          "evidence_id": "TAI-IRAN-OPS-010-E2",
+          "relation": "supports",
+          "independence_group": "TAI-IRAN-OPS-010-E2"
+        },
+        {
+          "evidence_id": "TAI-IRAN-OPS-010-E3",
+          "relation": "supports",
+          "independence_group": "TAI-IRAN-OPS-010-E3"
+        },
+        {
+          "evidence_id": "TAI-IRAN-OPS-010-E4",
+          "relation": "supports",
+          "independence_group": "TAI-IRAN-OPS-010-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "episodic",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct operational posts document real disruption and fallbacks."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "This signal reflects source operational experience, not current internet/payment/border status."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TAI-IRAN-OPS-010-E1",
+            "TAI-IRAN-OPS-010-E2",
+            "TAI-IRAN-OPS-010-E3",
+            "TAI-IRAN-OPS-010-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Taiwan public Telegram channel. Some posts embed official links, but no independent web verification was performed."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "Operational conditions can change immediately.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Iran",
+        "internet outage",
+        "payment",
+        "interview",
+        "border travel"
+      ],
+      "first_seen": "2026-01-17",
+      "last_seen": "2026-03-16"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, phone numbers, Telegram handles and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 47 records, including 44 message records."
+      },
+      "source_type_classification": {
+        "status": "pass",
+        "note": "This is treated as a public branded channel, not as a first-hand peer discussion group."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Consulting discounts, generic destination hype, rankings without operational value and promotional superlatives were excluded or down-weighted."
+      },
+      "official_link_posts_separated": {
+        "status": "pass",
+        "note": "Posts embedding official MOE/NIA/university links are marked source_embeds_official_link but remain not independently verified."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "The inconsistency between Dubai-based visa guidance and later reference to a Taipei Representative Office in Iran is preserved as a consular uncertainty signal."
+      },
+      "high_risk_claims_downweighted": {
+        "status": "pass",
+        "note": "Claims such as 2-4 day visa processing, near-zero rejection, broad language waivers, automatic Gold Card access and response-rate percentages are not treated as verified rules."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Source-derived channel signals only. They are not official Taiwan visa, scholarship, student-work, Gold Card, ARC/APRC, dependant, university-language or employment rules. Verify live requirements with the relevant Taiwan authority/university before acting."
+}

@@ -1,0 +1,2079 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_germany_community_signals_candidate",
+    "generated_at": "2026-09-15T15:00:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "germany-telegram-export",
+      "name": "Germany .json / Telegram export «آلمان با پرگار»",
+      "source_type": "json",
+      "source_url": null,
+      "coverage": {
+        "status": "full",
+        "from": "2025-01-01",
+        "to": "2026-09-10",
+        "records_available": 211856,
+        "records_processed": 211856
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "DEU-STUDY-VISA-PROCESSING-VARIANCE-001-E1",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2217372"
+      },
+      "published_at": "2026-08-28",
+      "event_date": "2026-08-28",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant reported receiving a Visametric appointment in early 2025, submitting documents to TLS in September 2025, and only receiving visa approval in late August 2026.",
+        "fa": "یک متقاضی گزارش کرده اوایل ۲۰۲۵ از ویزامتریک وقت گرفته، شهریور ۱۴۰۴ مدارک را به TLS تحویل داده و تازه اواخر اوت ۲۰۲۶ ویزایش تأیید شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-STUDY-VISA-PROCESSING-VARIANCE-001-E2",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2179548"
+      },
+      "published_at": "2026-06-02",
+      "event_date": "2026-06-02",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant reported an interview on 18 December and visa approval on 15 March, roughly three months later.",
+        "fa": "یک متقاضی گزارش کرده ۱۸ دسامبر مصاحبه داشته و ۱۵ مارس ویزا شده؛ حدود سه ماه بعد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-STUDY-VISA-PROCESSING-VARIANCE-001-C1",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2223130"
+      },
+      "published_at": "2026-09-07",
+      "event_date": "2026-09-07",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community member reported that under the newer process several student applicants had been contacted about two weeks after TLS submission and received visas.",
+        "fa": "یک عضو گروه گزارش کرده در روند جدید چند متقاضی دانشجویی حدود دو هفته پس از مراجعه به TLS تماس گرفته شده‌اند و ویزا گرفته‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-TLS-STUDY-APPOINTMENT-RESTART-002-E1",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2215262"
+      },
+      "published_at": "2026-08-24",
+      "event_date": "2026-08-24",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community update on 24 August 2026 said Bachelor appointments and accelerated-skilled-worker appointments had started, while Master/PhD appointments had not yet been announced.",
+        "fa": "یک آپدیت کامیونیتی در ۲۴ اوت ۲۰۲۶ اعلام کرده وقت‌دهی Bachelor و برخی پرونده‌های نیروی متخصص شروع شده، اما Master/PhD هنوز آغاز نشده بود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-TLS-STUDY-APPOINTMENT-RESTART-002-E2",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2223082"
+      },
+      "published_at": "2026-09-07",
+      "event_date": "2026-09-07",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 7 September 2026 update reported that TLS had started issuing Master/PhD appointments for applicants in the old 18 January list and the new list opened from 15 July.",
+        "fa": "آپدیت ۷ سپتامبر ۲۰۲۶ گزارش می‌کند TLS وقت‌دهی Master/PhD را برای افراد لیست قدیمی ۱۸ ژانویه و لیست جدید از ۱۵ جولای آغاز کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-TLS-STUDY-APPOINTMENT-RESTART-002-E3",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2223954"
+      },
+      "published_at": "2026-09-08",
+      "event_date": "2026-09-08",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Master applicant reported registering in the new TLS queue on 28 August and still waiting for the second email on 8 September.",
+        "fa": "یک متقاضی مستر گفته ۲۸ اوت در صف جدید TLS ثبت‌نام کرده و تا ۸ سپتامبر هنوز منتظر ایمیل دوم بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-FAMILY-REUNIFICATION-QUEUE-003-E1",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1964961"
+      },
+      "published_at": "2025-02-22",
+      "event_date": "2025-02-22",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A family-reunification applicant said they registered in July 2024 and were still waiting in February 2025, expecting the appointment only months later.",
+        "fa": "یک متقاضی پیوست گفته از جولای ۲۰۲۴ ثبت‌نام کرده و در فوریه ۲۰۲۵ هنوز در انتظار بوده و انتظار داشته چند ماه بعد نوبت برسد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-FAMILY-REUNIFICATION-QUEUE-003-E2",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2150952"
+      },
+      "published_at": "2026-02-17",
+      "event_date": "2026-02-17",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user handling a spouse reunification case explicitly described having waited about one and a half years for the embassy process before a later document request.",
+        "fa": "یک کاربر در پرونده پیوست همسر صراحتاً گفته حدود یک سال و نیم در نوبت سفارت بوده‌اند تا پرونده به مرحله درخواست مدرک تکمیلی برسد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-FAMILY-REUNIFICATION-QUEUE-003-E3",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2207908"
+      },
+      "published_at": "2026-08-09",
+      "event_date": "2026-08-09",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In August 2026 a community member described the student-dependent reunification waiting queue as exceeding two years.",
+        "fa": "در اوت ۲۰۲۶ یک عضو گروه صف پیوست دانشجو را بیش از دو سال توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-TLS-LEGALIZATION-QUEUE-004-E1",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2179375"
+      },
+      "published_at": "2026-06-02",
+      "event_date": "2026-06-02",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A June 2026 report said legalization applicants were in a queue, with older cases receiving appointments while newer queue entrants had not heard back.",
+        "fa": "گزارشی در ژوئن ۲۰۲۶ می‌گوید متقاضیان لگال در صف بودند؛ به پرونده‌های قدیمی وقت داده می‌شد ولی افراد جدیدتر هنوز خبری نداشتند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-TLS-LEGALIZATION-QUEUE-004-E2",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2197717"
+      },
+      "published_at": "2026-07-16",
+      "event_date": "2026-07-16",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A July 2026 community report described legalization appointment waiting as approaching two months.",
+        "fa": "در جولای ۲۰۲۶ یک گزارش کامیونیتی زمان انتظار وقت لگال را نزدیک دو ماه توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-TLS-LEGALIZATION-QUEUE-004-E3",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2192509"
+      },
+      "published_at": "2026-07-07",
+      "event_date": "2026-07-07",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A legalization applicant reported receiving the second appointment email in July 2026 and needing to complete payment within 48 hours.",
+        "fa": "یک متقاضی لگال در جولای ۲۰۲۶ گزارش کرده ایمیل دوم نوبت را گرفته و برای پرداخت ۴۸ ساعت فرصت داشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-TLS-MULTIAPPLICATION-CONFLICT-005-E1",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2174556"
+      },
+      "published_at": "2026-05-22",
+      "event_date": "2026-05-22",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "After entering the legalization queue with a passport number, an applicant reported being unable to create the visa application in TLS.",
+        "fa": "یک متقاضی پس از ورود به صف لگال با شماره پاسپورت گزارش کرده دیگر نتوانسته درخواست ویزا را در TLS ایجاد کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-TLS-MULTIAPPLICATION-CONFLICT-005-E2",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2177791"
+      },
+      "published_at": "2026-05-29",
+      "event_date": "2026-05-29",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant explicitly reported the TLS 'Maximum number of groups of applications reached' error because a legalization application was already registered.",
+        "fa": "یک متقاضی صراحتاً گزارش کرده به‌دلیل وجود درخواست لگال، خطای TLS با متن «Maximum number of groups of applications reached» دریافت کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-TLS-MULTIAPPLICATION-CONFLICT-005-E3",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2223087"
+      },
+      "published_at": "2026-09-07",
+      "event_date": "2026-09-07",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same class of TLS error was reported again in September 2026 by a person already in the legalization waiting list who tried to create a Master visa application.",
+        "fa": "همین نوع خطای TLS در سپتامبر ۲۰۲۶ نیز توسط فردی که در صف لگال بوده و قصد ساخت درخواست ویزای مستر داشته گزارش شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-STUDY-PASSPORT-HANDOFF-CHANGE-006-E1",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2217350"
+      },
+      "published_at": "2026-08-28",
+      "event_date": "2026-08-28",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A late-August 2026 report said the newer student-visa process no longer retained the passport at TLS and applicants would later be contacted to bring it for visa labeling if approved.",
+        "fa": "گزارشی در اواخر اوت ۲۰۲۶ می‌گوید در روند جدید پاسپورت در TLS نگه داشته نمی‌شود و در صورت تأیید، بعداً برای الصاق ویزا از متقاضی می‌خواهند پاسپورت را بیاورد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-STUDY-PASSPORT-HANDOFF-CHANGE-006-E2",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2223130"
+      },
+      "published_at": "2026-09-07",
+      "event_date": "2026-09-07",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same user later said several student applicants had experienced this non-retention process and were contacted roughly two weeks later.",
+        "fa": "همان کاربر بعداً گفته چند متقاضی دانشجویی این روند عدم نگهداری پاسپورت را تجربه کرده‌اند و حدود دو هفته بعد با آنها تماس گرفته شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-UNIASSIST-VPD-TURNAROUND-007-E1",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1936836"
+      },
+      "published_at": "2025-01-07",
+      "event_date": "2025-01-07",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant reported that a uni-assist confirmation took about five weeks.",
+        "fa": "یک متقاضی گزارش کرده تأییدیه uni-assist حدود پنج هفته طول کشیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-UNIASSIST-VPD-TURNAROUND-007-E2",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1940930"
+      },
+      "published_at": "2025-01-13",
+      "event_date": "2025-01-13",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant reported receiving a VPD after 23 days and noted they had emailed about an imminent deadline.",
+        "fa": "یک متقاضی گزارش کرده VPD را بعد از ۲۳ روز گرفته و به‌دلیل نزدیک بودن ددلاین نیز ایمیل زده بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-UNIASSIST-VPD-TURNAROUND-007-C1",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1984266"
+      },
+      "published_at": "2025-04-02",
+      "event_date": "2025-04-02",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant reported receiving a TUM VPD in 10 days using a temporary degree certificate.",
+        "fa": "یک متقاضی گزارش کرده VPD دانشگاه TUM را با مدرک موقت در ۱۰ روز دریافت کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-UNIASSIST-VPD-TURNAROUND-007-C2",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1985467"
+      },
+      "published_at": "2025-04-04",
+      "event_date": "2025-04-04",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant reported receiving a VPD in three days.",
+        "fa": "متقاضی دیگری گزارش کرده VPD را در سه روز دریافت کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-UNIASSIST-VPD-TURNAROUND-007-E3",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2007275"
+      },
+      "published_at": "2025-05-13",
+      "event_date": "2025-05-13",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant reported multiple VPD/direct applications submitted on different days all returning together about 20 days after the first submission.",
+        "fa": "یک متقاضی گزارش کرده چند درخواست VPD/اپلای که در روزهای مختلف ثبت شده بودند، همگی حدود ۲۰ روز بعد از اولین درخواست جواب گرفته‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-STUDENT-HOUSING-WAIT-008-E1",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1932791"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A newly arrived student in Germany described student housing as difficult to obtain and advised joining waiting lists many months in advance, describing roughly one-year queues.",
+        "fa": "یک دانشجوی تازه‌وارد به آلمان گرفتن خوابگاه را سخت توصیف کرده و توصیه کرده ماه‌ها زودتر وارد صف شوید؛ با اشاره به صف‌هایی در حدود یک سال."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-STUDENT-HOUSING-WAIT-008-E2",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1932800"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same student reported being told in person that about 1,600 applicants were ahead of them on one housing waiting list.",
+        "fa": "همان دانشجو گزارش کرده حضوری به او گفته‌اند حدود ۱۶۰۰ نفر در یک لیست خوابگاه پیش از او قرار دارند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-STUDENT-HOUSING-WAIT-008-E3",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1942887"
+      },
+      "published_at": "2025-01-17",
+      "event_date": "2025-01-17",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant reported a housing letter estimating a three-to-seven-semester wait; the person still obtained the visa with only proof of being in the queue.",
+        "fa": "متقاضی دیگری گفته نامه خوابگاه زمان انتظار ۳ تا ۷ ترم را ذکر کرده بود و با وجود فقط اثبات حضور در صف، ویزا گرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-STUDENT-HOUSING-WAIT-008-E4",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2017174"
+      },
+      "published_at": "2025-05-30",
+      "event_date": "2025-05-30",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant reported being on a student-housing waiting list for about five months without an offer.",
+        "fa": "یک متقاضی گزارش کرده حدود پنج ماه در صف خوابگاه بوده و هنوز پیشنهادی دریافت نکرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-MASTERS-ECTS-SCREEN-009-E1",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1943006"
+      },
+      "published_at": "2025-01-17",
+      "event_date": "2025-01-17",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Master's applicant reported that a German university evaluated 144 Iranian bachelor's credits as 180 ECTS and required an additional 30 ECTS.",
+        "fa": "یک متقاضی مستر گزارش کرده دانشگاه آلمانی ۱۴۴ واحد کارشناسی ایران را معادل ۱۸۰ ECTS ارزیابی کرده و ۳۰ ECTS دیگر خواسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-MASTERS-ECTS-SCREEN-009-E2",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1944757"
+      },
+      "published_at": "2025-01-20",
+      "event_date": "2025-01-20",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant reported two uni-assist rejections because the bachelor's qualification was treated as a three-year/insufficient-credit degree.",
+        "fa": "یک متقاضی گزارش کرده دو درخواست از طریق uni-assist به‌دلیل ارزیابی کارشناسی به‌عنوان دوره سه‌ساله/کمبود کردیت رد شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-MASTERS-ECTS-SCREEN-009-E3",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1947118"
+      },
+      "published_at": "2025-01-24",
+      "event_date": "2025-01-24",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Dresden applicant reported a rejection for insufficient laboratory-course credits, while also noting their own form-entry error and a one-month correction opportunity.",
+        "fa": "یک متقاضی درسدن از رد شدن به‌دلیل کمبود واحدهای آزمایشگاهی گفته، هرچند خودش هم اشاره کرده فرم را اشتباه پر کرده و یک ماه فرصت اصلاح داشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-THIRD-COUNTRY-RESIDENCE-010-E1",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2157931"
+      },
+      "published_at": "2026-03-15",
+      "event_date": "2026-03-15",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "community_admin",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community-admin message during the service disruption advised that applicants who can legally reside in a third country such as Turkey for six months may then seek German consular service there.",
+        "fa": "پیام ادمین گروه در دوره اختلال خدمات گفته افرادی که امکان اقامت قانونی شش‌ماهه در کشور ثالثی مثل ترکیه دارند می‌توانند بعد از آن برای خدمات کنسولی آلمان در همان کشور اقدام کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-THIRD-COUNTRY-RESIDENCE-010-E2",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2163647"
+      },
+      "published_at": "2026-04-15",
+      "event_date": "2026-04-15",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "second_hand_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community report said Armenia required roughly six months from the residence card plus effective continuous presence before German visa applications could be pursued there.",
+        "fa": "یک گزارش کامیونیتی گفته برای مسیر ارمنستان حدود شش ماه از کارت اقامت همراه با حضور مؤثر و مداوم لازم است تا بتوان برای ویزای آلمان از آنجا اقدام کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-THIRD-COUNTRY-RESIDENCE-010-E3",
+      "source_id": "germany-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:2196505"
+      },
+      "published_at": "2026-07-15",
+      "event_date": "2026-07-15",
+      "collected_at": "2026-09-15T15:00:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user living in Turkey described holding a student-residence pathway and planning to remain for at least six months before accessing German consular services.",
+        "fa": "کاربری که در ترکیه زندگی می‌کرد از مسیر اقامت دانشجویی گفته و برنامه‌اش این بوده حداقل شش ماه بماند تا بتواند از خدمات کنسولی آلمان استفاده کند."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "DEU-STUDY-VISA-PROCESSING-VARIANCE-001",
+      "issue_cluster_id": "DEU-STUDY-VISA-PROCESSING-VARIANCE-001",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "processing_delay",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "bachelor",
+            "masters",
+            "phd"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_visa"
+          ]
+        },
+        "process_stages": [
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Extreme variance in Germany student-visa processing for Iran-origin applicants",
+          "fa": "نوسان بسیار زیاد زمان پردازش ویزای تحصیلی آلمان برای متقاضیان ایران"
+        },
+        "summary": {
+          "en": "The export supports substantial case-to-case variance, from multi-month or near-year waits to reports of roughly two-week outcomes under the newer workflow.",
+          "fa": "داده‌ها از اختلاف شدید بین پرونده‌ها پشتیبانی می‌کنند؛ از انتظار چندماهه و نزدیک به یک سال تا گزارش‌هایی از نتیجه حدود دو هفته‌ای در روند جدید."
+        },
+        "practical_impact": {
+          "en": "Start-date planning is unreliable if based on one anecdotal processing time.",
+          "fa": "برنامه‌ریزی تاریخ شروع تحصیل بر اساس یک تجربه منفرد قابل اتکا نیست."
+        },
+        "who_should_care": {
+          "en": "Iran-origin students planning enrollment, housing, travel, or deferral around visa timing.",
+          "fa": "متقاضیان تحصیلی ایران که ثبت‌نام، مسکن، سفر یا دیفر را بر اساس زمان ویزا برنامه‌ریزی می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Plan for a wide timing range and avoid irreversible commitments until the case has materially progressed.",
+          "fa": "بازه زمانی گسترده‌ای در نظر بگیرید و تا پیشرفت واقعی پرونده از تعهدات غیرقابل‌برگشت خودداری کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-STUDY-VISA-PROCESSING-VARIANCE-001-E1",
+          "relation": "supports",
+          "independence_group": "visa-r1"
+        },
+        {
+          "evidence_id": "DEU-STUDY-VISA-PROCESSING-VARIANCE-001-E2",
+          "relation": "supports",
+          "independence_group": "visa-r2"
+        },
+        {
+          "evidence_id": "DEU-STUDY-VISA-PROCESSING-VARIANCE-001-C1",
+          "relation": "contradicts",
+          "independence_group": "visa-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Independent direct cases show very long and medium waits, while newer second-hand reports show much faster outcomes; the correct signal is variance, not a universal delay."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-15",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No current official processing-time commitment was independently verified in this extraction."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-STUDY-VISA-PROCESSING-VARIANCE-001-E1",
+            "DEU-STUDY-VISA-PROCESSING-VARIANCE-001-E2",
+            "DEU-STUDY-VISA-PROCESSING-VARIANCE-001-C1"
+          ],
+          "checked_at": "2026-09-15",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-15",
+        "next_check_at": "2026-09-29",
+        "reason": "Processing conditions were changing rapidly in August-September 2026.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student visa",
+        "TLScontact",
+        "processing time",
+        "Iran",
+        "variance"
+      ],
+      "first_seen": "2026-02-06",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "signal_id": "DEU-TLS-STUDY-APPOINTMENT-RESTART-002",
+      "issue_cluster_id": "DEU-TLS-STUDY-APPOINTMENT-RESTART-002",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "appointment_availability",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "bachelor",
+            "masters",
+            "phd"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_bachelor",
+            "student_masters",
+            "student_phd"
+          ]
+        },
+        "process_stages": [
+          "appointment",
+          "visa_application"
+        ],
+        "entities": [
+          {
+            "entity_type": "service_provider",
+            "name": "TLScontact"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "Student-visa appointment issuance restarted in stages during August-September 2026",
+          "fa": "شروع مجدد مرحله‌ای وقت‌دهی ویزای تحصیلی در اوت و سپتامبر ۲۰۲۶"
+        },
+        "summary": {
+          "en": "Community updates show a staged restart: Bachelor appointments were reported first, followed by Master/PhD appointment issuance by 7 September 2026.",
+          "fa": "آپدیت‌های گروه نشان می‌دهند بازگشایی مرحله‌ای بوده است: ابتدا Bachelor و سپس تا ۷ سپتامبر ۲۰۲۶ Master/PhD وارد وقت‌دهی شدند."
+        },
+        "practical_impact": {
+          "en": "Availability for one study level should not be assumed to mean the backlog has cleared for every study category.",
+          "fa": "باز شدن وقت یک مقطع به معنی رفع بک‌لاگ برای همه مقاطع نیست."
+        },
+        "who_should_care": {
+          "en": "Applicants in new or legacy TLS student waiting lists.",
+          "fa": "متقاضیان حاضر در لیست‌های قدیمی یا جدید TLS برای ویزای تحصیلی."
+        },
+        "recommended_action": {
+          "en": "Track the exact study-category queue and preserve registration evidence; do not rely on another category's appointment activity.",
+          "fa": "صف دقیق مقطع خود را پیگیری و مدرک ثبت‌نام را نگه دارید؛ فعالیت یک دسته دیگر را به صف خود تعمیم ندهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-TLS-STUDY-APPOINTMENT-RESTART-002-E1",
+          "relation": "supports",
+          "independence_group": "restart-r1"
+        },
+        {
+          "evidence_id": "DEU-TLS-STUDY-APPOINTMENT-RESTART-002-E2",
+          "relation": "supports",
+          "independence_group": "restart-r2"
+        },
+        {
+          "evidence_id": "DEU-TLS-STUDY-APPOINTMENT-RESTART-002-E3",
+          "relation": "supports",
+          "independence_group": "restart-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "improving",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The sequence is supported by dated community updates and a first-hand waiting-list report, but the official pages were not independently re-verified."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-15",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Messages quote or summarize embassy/TLS updates, but those webpages were not independently checked for this extraction."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-TLS-STUDY-APPOINTMENT-RESTART-002-E1",
+            "DEU-TLS-STUDY-APPOINTMENT-RESTART-002-E2",
+            "DEU-TLS-STUDY-APPOINTMENT-RESTART-002-E3"
+          ],
+          "checked_at": "2026-09-15",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-15",
+        "next_check_at": "2026-09-22",
+        "reason": "Appointment categories and eligibility were changing within days.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "TLScontact",
+        "appointment",
+        "waiting list",
+        "Master",
+        "PhD",
+        "Bachelor"
+      ],
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-09-08"
+    },
+    {
+      "signal_id": "DEU-FAMILY-REUNIFICATION-QUEUE-003",
+      "issue_cluster_id": "DEU-FAMILY-REUNIFICATION-QUEUE-003",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "appointment_backlog",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "FAMILY / REUNIFICATION"
+          ],
+          "codes": [
+            "family_reunification",
+            "student_dependent"
+          ]
+        },
+        "process_stages": [
+          "appointment",
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Very long family-reunification appointment backlog reported for Iran-origin applicants",
+          "fa": "گزارش صف بسیار طولانی وقت پیوست برای متقاضیان ایران"
+        },
+        "summary": {
+          "en": "Direct and community reports describe family-reunification waits ranging from roughly many months to around 18 months, with later community estimates exceeding two years for student dependants.",
+          "fa": "تجربه‌های مستقیم و گزارش‌های گروه از انتظار چندماهه تا حدود ۱۸ ماه خبر می‌دهند و برآوردهای بعدی برای پیوست دانشجو حتی از بیش از دو سال صحبت می‌کنند."
+        },
+        "practical_impact": {
+          "en": "Families may face long periods of separation even when the principal applicant's study or work route progresses.",
+          "fa": "حتی با پیشرفت پرونده نفر اصلی، خانواده ممکن است با جدایی طولانی مواجه شود."
+        },
+        "who_should_care": {
+          "en": "Applicants planning non-simultaneous spouse or child reunification to Germany.",
+          "fa": "افرادی که برای پیوست غیرهمزمان همسر یا فرزند به آلمان برنامه‌ریزی می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Treat reunification timing as a separate critical path and register as early as the applicable process permits.",
+          "fa": "زمان‌بندی پیوست را یک مسیر بحرانی مستقل در نظر بگیرید و هر زمان روند مربوط اجازه می‌دهد زود ثبت‌نام کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-FAMILY-REUNIFICATION-QUEUE-003-E1",
+          "relation": "supports",
+          "independence_group": "family-r1"
+        },
+        {
+          "evidence_id": "DEU-FAMILY-REUNIFICATION-QUEUE-003-E2",
+          "relation": "supports",
+          "independence_group": "family-r2"
+        },
+        {
+          "evidence_id": "DEU-FAMILY-REUNIFICATION-QUEUE-003-E3",
+          "relation": "supports",
+          "independence_group": "family-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Multiple independent reports over more than a year consistently describe a severe queue; exact current wait length remains uncertain."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-15",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No official current family-reunification queue metric was independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-FAMILY-REUNIFICATION-QUEUE-003-E1",
+            "DEU-FAMILY-REUNIFICATION-QUEUE-003-E2",
+            "DEU-FAMILY-REUNIFICATION-QUEUE-003-E3"
+          ],
+          "checked_at": "2026-09-15",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-15",
+        "next_check_at": "2026-10-15",
+        "reason": "Later messages suggest the backlog may have grown, but current official queue timing is not established.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "family reunification",
+        "spouse",
+        "student dependant",
+        "appointment backlog"
+      ],
+      "first_seen": "2025-02-22",
+      "last_seen": "2026-08-09"
+    },
+    {
+      "signal_id": "DEU-TLS-LEGALIZATION-QUEUE-004",
+      "issue_cluster_id": "DEU-TLS-LEGALIZATION-QUEUE-004",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-TLS-MULTIAPPLICATION-CONFLICT-005"
+        }
+      ],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "legalization_appointment_delay",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": []
+        },
+        "process_stages": [
+          "document_legalization",
+          "appointment"
+        ],
+        "entities": [
+          {
+            "entity_type": "service_provider",
+            "name": "TLScontact"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "Document-legalization appointments can involve material TLS queue delays",
+          "fa": "وقت لگال مدارک می‌تواند با صف و تأخیر قابل‌توجه TLS همراه باشد"
+        },
+        "summary": {
+          "en": "During 2026, community reports described legalization waiting lists, priority for older cases, and waits approaching two months in some periods.",
+          "fa": "در ۲۰۲۶ گزارش‌های گروه از صف لگال، اولویت پرونده‌های قدیمی و در بعضی مقاطع انتظار نزدیک به دو ماه خبر می‌دهند."
+        },
+        "practical_impact": {
+          "en": "Applicants who need legalization for a later visa or family step can lose significant lead time if they begin too late.",
+          "fa": "افرادی که برای مرحله بعدی ویزا یا پیوست به لگال نیاز دارند، در صورت اقدام دیرهنگام ممکن است زمان زیادی از دست بدهند."
+        },
+        "who_should_care": {
+          "en": "Applicants needing German legalization of Iranian civil or academic documents.",
+          "fa": "متقاضیانی که به لگال آلمان برای مدارک هویتی یا تحصیلی ایران نیاز دارند."
+        },
+        "recommended_action": {
+          "en": "Build legalization lead time into the plan and watch the TLS queue separately from the visa queue.",
+          "fa": "برای لگال زمان مستقل در برنامه بگذارید و صف لگال را جدا از صف ویزا پیگیری کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-TLS-LEGALIZATION-QUEUE-004-E1",
+          "relation": "supports",
+          "independence_group": "legal-r1"
+        },
+        {
+          "evidence_id": "DEU-TLS-LEGALIZATION-QUEUE-004-E2",
+          "relation": "supports",
+          "independence_group": "legal-r2"
+        },
+        {
+          "evidence_id": "DEU-TLS-LEGALIZATION-QUEUE-004-E3",
+          "relation": "supports",
+          "independence_group": "legal-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Several dated reports show a queue and non-trivial wait, but the wait length is time-sensitive."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-15",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No official current legalization appointment SLA was independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-TLS-LEGALIZATION-QUEUE-004-E1",
+            "DEU-TLS-LEGALIZATION-QUEUE-004-E2",
+            "DEU-TLS-LEGALIZATION-QUEUE-004-E3"
+          ],
+          "checked_at": "2026-09-15",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-15",
+        "next_check_at": "2026-10-15",
+        "reason": "Legalization capacity can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "legalization",
+        "TLScontact",
+        "appointment queue",
+        "Iranian documents"
+      ],
+      "first_seen": "2026-06-02",
+      "last_seen": "2026-07-16"
+    },
+    {
+      "signal_id": "DEU-TLS-MULTIAPPLICATION-CONFLICT-005",
+      "issue_cluster_id": "DEU-TLS-MULTIAPPLICATION-CONFLICT-005",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-TLS-LEGALIZATION-QUEUE-004"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "portal_application_conflict",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_visa"
+          ]
+        },
+        "process_stages": [
+          "appointment",
+          "document_legalization"
+        ],
+        "entities": [
+          {
+            "entity_type": "service_provider",
+            "name": "TLScontact"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "An active TLS legalization request may block creation of a separate visa request",
+          "fa": "درخواست فعال لگال در TLS ممکن است ساخت درخواست جداگانه ویزا را مسدود کند"
+        },
+        "summary": {
+          "en": "Multiple applicants reported that an existing legalization request triggered the TLS 'Maximum number of groups of applications reached' error or otherwise prevented creation of a visa application.",
+          "fa": "چند متقاضی مستقل گزارش کرده‌اند وجود درخواست لگال باعث خطای «Maximum number of groups of applications reached» یا ناتوانی در ایجاد درخواست ویزا شده است."
+        },
+        "practical_impact": {
+          "en": "Joining the legalization queue can create an unexpected operational conflict when a visa queue opens.",
+          "fa": "ورود به صف لگال می‌تواند هنگام باز شدن صف ویزا یک تداخل عملیاتی غیرمنتظره ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Applicants who need both legalization and a TLS visa appointment.",
+          "fa": "متقاضیانی که هم لگال و هم وقت ویزا از TLS لازم دارند."
+        },
+        "recommended_action": {
+          "en": "Before opening a second TLS request, check whether the existing request can coexist; keep screenshots and contact TLS if the portal blocks the new group.",
+          "fa": "پیش از ساخت درخواست دوم بررسی کنید آیا درخواست‌ها همزمان قابل نگهداری‌اند؛ از خطا اسکرین‌شات بگیرید و در صورت مسدود شدن درخواست جدید با TLS پیگیری کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-TLS-MULTIAPPLICATION-CONFLICT-005-E1",
+          "relation": "supports",
+          "independence_group": "collision-r1"
+        },
+        {
+          "evidence_id": "DEU-TLS-MULTIAPPLICATION-CONFLICT-005-E2",
+          "relation": "supports",
+          "independence_group": "collision-r2"
+        },
+        {
+          "evidence_id": "DEU-TLS-MULTIAPPLICATION-CONFLICT-005-E3",
+          "relation": "supports",
+          "independence_group": "collision-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same portal failure was independently reported in May and again in September 2026, including an explicit linkage to an existing legalization request."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-15",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The behavior is strongly supported by community reports but no TLS product rule was independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-TLS-MULTIAPPLICATION-CONFLICT-005-E1",
+            "DEU-TLS-MULTIAPPLICATION-CONFLICT-005-E2",
+            "DEU-TLS-MULTIAPPLICATION-CONFLICT-005-E3"
+          ],
+          "checked_at": "2026-09-15",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-15",
+        "next_check_at": "2026-09-29",
+        "reason": "Portal behavior may change as TLS updates the appointment system.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "TLScontact",
+        "legalization",
+        "visa application",
+        "Maximum number of groups"
+      ],
+      "first_seen": "2026-05-22",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "signal_id": "DEU-STUDY-PASSPORT-HANDOFF-CHANGE-006",
+      "issue_cluster_id": "DEU-STUDY-PASSPORT-HANDOFF-CHANGE-006",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "DEU-STUDY-VISA-PROCESSING-VARIANCE-001"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "passport_handoff_process",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_visa"
+          ]
+        },
+        "process_stages": [
+          "document_submission",
+          "visa_decision"
+        ],
+        "entities": [
+          {
+            "entity_type": "service_provider",
+            "name": "TLScontact"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "Reports indicate a newer student-visa workflow may not retain passports at TLS",
+          "fa": "گزارش‌ها از روند جدیدی خبر می‌دهند که در آن پاسپورت در TLS نگه داشته نمی‌شود"
+        },
+        "summary": {
+          "en": "One direct source, later describing several similar cases, said applicants kept their passports after TLS submission and were contacted later to bring them for visa labeling after approval.",
+          "fa": "یک منبع مستقیم که بعداً از چند مورد مشابه نیز گفته، گزارش کرده متقاضی پاسپورت را بعد از تحویل مدارک نگه می‌دارد و پس از تأیید برای الصاق ویزا دوباره فراخوانده می‌شود."
+        },
+        "practical_impact": {
+          "en": "If accurate, this reduces the long passport-unavailability problem seen in older delayed cases.",
+          "fa": "در صورت استمرار، این روند مشکل در دسترس نبودن طولانی‌مدت پاسپورت در پرونده‌های قدیمی را کاهش می‌دهد."
+        },
+        "who_should_care": {
+          "en": "Student-visa applicants concerned about passport retention during processing.",
+          "fa": "متقاضیان ویزای تحصیلی که درباره نگهداری پاسپورت در طول بررسی نگران‌اند."
+        },
+        "recommended_action": {
+          "en": "Treat this as an emerging process change and confirm the handoff instructions given at the actual TLS appointment.",
+          "fa": "این مورد را تغییر روند نوظهور تلقی کنید و دستورالعمل تحویل پاسپورت را در وقت واقعی TLS تأیید کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-STUDY-PASSPORT-HANDOFF-CHANGE-006-E1",
+          "relation": "supports",
+          "independence_group": "passport-r1"
+        },
+        {
+          "evidence_id": "DEU-STUDY-PASSPORT-HANDOFF-CHANGE-006-E2",
+          "relation": "supports",
+          "independence_group": "passport-r1"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "anecdotal",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "low",
+          "rationale": "Both pieces trace to the same reporting user, so the process change needs independent confirmation."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-15",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No official TLS passport-retention procedure was independently verified."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-STUDY-PASSPORT-HANDOFF-CHANGE-006-E1",
+            "DEU-STUDY-PASSPORT-HANDOFF-CHANGE-006-E2"
+          ],
+          "checked_at": "2026-09-15",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-15",
+        "next_check_at": "2026-09-29",
+        "reason": "Single independence group; recheck with independent cases.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "passport",
+        "TLScontact",
+        "student visa",
+        "visa sticker"
+      ],
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-09-07"
+    },
+    {
+      "signal_id": "DEU-UNIASSIST-VPD-TURNAROUND-007",
+      "issue_cluster_id": "DEU-UNIASSIST-VPD-TURNAROUND-007",
+      "relationships": [],
+      "classification": {
+        "family": "E11_UNIVERSITY_ACADEMIC_INSTITUTION",
+        "type": "application_processing_variance",
+        "class": "institution"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "bachelor",
+            "masters"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_bachelor",
+            "student_masters"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "credential_evaluation"
+        ],
+        "entities": [
+          {
+            "entity_type": "service_provider",
+            "name": "uni-assist"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "uni-assist/VPD turnaround is highly variable and can materially affect deadline planning",
+          "fa": "زمان صدور VPD/بررسی uni-assist متغیر است و می‌تواند روی برنامه ددلاین اثر جدی بگذارد"
+        },
+        "summary": {
+          "en": "Independent first-hand reports range from about three days to five weeks, with several outcomes in the 10-23-day range.",
+          "fa": "تجربه‌های مستقیم مستقل از حدود سه روز تا پنج هفته متغیرند و چند مورد نیز در محدوده ۱۰ تا ۲۳ روز گزارش شده است."
+        },
+        "practical_impact": {
+          "en": "Applicants should not assume either the fastest reported result or a fixed four-to-six-week duration.",
+          "fa": "متقاضی نباید نه سریع‌ترین تجربه را مبنا قرار دهد و نه یک بازه ثابت ۴ تا ۶ هفته را قطعی بداند."
+        },
+        "who_should_care": {
+          "en": "Applicants whose German university requires a VPD or uni-assist processing before a separate university deadline.",
+          "fa": "افرادی که دانشگاه مقصدشان VPD یا بررسی uni-assist را پیش از ددلاین جداگانه دانشگاه می‌خواهد."
+        },
+        "recommended_action": {
+          "en": "Submit early enough to absorb several weeks of variance, especially where the VPD itself must be uploaded before the university deadline.",
+          "fa": "به‌خصوص وقتی VPD باید پیش از ددلاین دانشگاه آپلود شود، چند هفته حاشیه امن در نظر بگیرید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-UNIASSIST-VPD-TURNAROUND-007-E1",
+          "relation": "supports",
+          "independence_group": "vpd-r1"
+        },
+        {
+          "evidence_id": "DEU-UNIASSIST-VPD-TURNAROUND-007-E2",
+          "relation": "supports",
+          "independence_group": "vpd-r2"
+        },
+        {
+          "evidence_id": "DEU-UNIASSIST-VPD-TURNAROUND-007-C1",
+          "relation": "contradicts",
+          "independence_group": "vpd-r3"
+        },
+        {
+          "evidence_id": "DEU-UNIASSIST-VPD-TURNAROUND-007-C2",
+          "relation": "contradicts",
+          "independence_group": "vpd-r4"
+        },
+        {
+          "evidence_id": "DEU-UNIASSIST-VPD-TURNAROUND-007-E3",
+          "relation": "supports",
+          "independence_group": "vpd-r5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Several independent first-hand reports demonstrate a broad distribution of processing times."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-15",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "This extraction intentionally relies on the uploaded community export and does not replace uni-assist's current published timing guidance."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-UNIASSIST-VPD-TURNAROUND-007-E1",
+            "DEU-UNIASSIST-VPD-TURNAROUND-007-E2",
+            "DEU-UNIASSIST-VPD-TURNAROUND-007-C1",
+            "DEU-UNIASSIST-VPD-TURNAROUND-007-C2",
+            "DEU-UNIASSIST-VPD-TURNAROUND-007-E3"
+          ],
+          "checked_at": "2026-09-15",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-15",
+        "next_check_at": "2026-11-14",
+        "reason": "Processing speed is seasonal and load-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "uni-assist",
+        "VPD",
+        "processing time",
+        "deadline"
+      ],
+      "first_seen": "2025-01-07",
+      "last_seen": "2025-05-13"
+    },
+    {
+      "signal_id": "DEU-STUDENT-HOUSING-WAIT-008",
+      "issue_cluster_id": "DEU-STUDENT-HOUSING-WAIT-008",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "student_housing_scarcity",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "bachelor",
+            "masters",
+            "phd"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_visa"
+          ]
+        },
+        "process_stages": [
+          "pre_departure",
+          "settlement"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Student housing can involve long waiting lists, especially in high-demand locations",
+          "fa": "خوابگاه دانشجویی می‌تواند صف‌های بسیار طولانی داشته باشد، به‌خصوص در شهرهای پرتقاضا"
+        },
+        "summary": {
+          "en": "First-hand reports include roughly five months without an offer, a queue with about 1,600 people ahead, and one housing letter estimating a three-to-seven-semester wait.",
+          "fa": "تجربه‌های مستقیم شامل حدود پنج ماه انتظار بدون پیشنهاد، صفی با حدود ۱۶۰۰ نفر جلوتر، و نامه‌ای با برآورد ۳ تا ۷ ترم انتظار است."
+        },
+        "practical_impact": {
+          "en": "Students may need temporary housing or WG/sublet alternatives even when they applied for dorms well in advance.",
+          "fa": "دانشجو ممکن است حتی با ثبت‌نام زودهنگام خوابگاه، به گزینه موقت، WG یا سابلت نیاز داشته باشد."
+        },
+        "who_should_care": {
+          "en": "International students budgeting and arranging first-month accommodation in Germany.",
+          "fa": "دانشجویان بین‌المللی که برای اقامت ماه‌های اول آلمان بودجه و برنامه می‌چینند."
+        },
+        "recommended_action": {
+          "en": "Join eligible housing queues as early as possible and maintain a temporary-accommodation fallback.",
+          "fa": "هر زمان واجد شرایط شدید زود وارد صف خوابگاه شوید و یک گزینه اقامت موقت جایگزین داشته باشید."
+        },
+        "known_workaround": "Temporary sublets or WG rooms were repeatedly discussed as practical alternatives while waiting."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-STUDENT-HOUSING-WAIT-008-E1",
+          "relation": "supports",
+          "independence_group": "housing-r1"
+        },
+        {
+          "evidence_id": "DEU-STUDENT-HOUSING-WAIT-008-E2",
+          "relation": "supports",
+          "independence_group": "housing-r1"
+        },
+        {
+          "evidence_id": "DEU-STUDENT-HOUSING-WAIT-008-E3",
+          "relation": "supports",
+          "independence_group": "housing-r2"
+        },
+        {
+          "evidence_id": "DEU-STUDENT-HOUSING-WAIT-008-E4",
+          "relation": "supports",
+          "independence_group": "housing-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple first-hand reports from different users consistently show housing scarcity, although wait times vary by city and provider."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-15",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Housing availability is city/provider-specific; no universal German waiting-time rule was inferred."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-STUDENT-HOUSING-WAIT-008-E1",
+            "DEU-STUDENT-HOUSING-WAIT-008-E2",
+            "DEU-STUDENT-HOUSING-WAIT-008-E3",
+            "DEU-STUDENT-HOUSING-WAIT-008-E4"
+          ],
+          "checked_at": "2026-09-15",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-15",
+        "next_check_at": "2026-12-14",
+        "reason": "Housing scarcity is structural but local conditions vary.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student housing",
+        "dormitory",
+        "waiting list",
+        "WG",
+        "Germany"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-05-30"
+    },
+    {
+      "signal_id": "DEU-MASTERS-ECTS-SCREEN-009",
+      "issue_cluster_id": "DEU-MASTERS-ECTS-SCREEN-009",
+      "relationships": [],
+      "classification": {
+        "family": "E11_UNIVERSITY_ACADEMIC_INSTITUTION",
+        "type": "practical_credit_screen",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "masters"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_masters"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "eligibility"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Master's admission can be blocked by ECTS totals or subject-credit matching even with a completed Iranian bachelor's degree",
+          "fa": "پذیرش مستر ممکن است به‌خاطر مجموع ECTS یا تطابق واحدهای تخصصی رد شود، حتی با مدرک کامل کارشناسی ایران"
+        },
+        "summary": {
+          "en": "Direct cases show universities or uni-assist screening applicants for total-credit equivalence and specific subject/laboratory credits, sometimes resulting in rejection or additional-credit requirements.",
+          "fa": "تجربه‌های مستقیم نشان می‌دهند دانشگاه‌ها یا uni-assist هم مجموع معادل ECTS و هم واحدهای تخصصی/آزمایشگاهی را بررسی می‌کنند و این موضوع گاهی به رد یا شرط واحد اضافی منجر شده است."
+        },
+        "practical_impact": {
+          "en": "GPA alone is insufficient for fit assessment; curriculum mapping can be a hard constraint.",
+          "fa": "معدل به‌تنهایی برای سنجش شانس کافی نیست و تطابق برنامه درسی می‌تواند شرط سخت باشد."
+        },
+        "who_should_care": {
+          "en": "Iranian bachelor's graduates applying to German consecutive Master's programs.",
+          "fa": "فارغ‌التحصیلان کارشناسی ایران که برای مسترهای consecutive آلمان اقدام می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Map target-program prerequisites against your transcript/module descriptions before paying application fees.",
+          "fa": "پیش از پرداخت هزینه اپلای، پیش‌نیازهای رشته مقصد را با ریزنمرات و توضیحات دروس خود تطبیق دهید."
+        },
+        "known_workaround": "Some applicants reported correction/appeal routes when the original credit calculation or form entry was wrong."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-MASTERS-ECTS-SCREEN-009-E1",
+          "relation": "supports",
+          "independence_group": "ects-r1"
+        },
+        {
+          "evidence_id": "DEU-MASTERS-ECTS-SCREEN-009-E2",
+          "relation": "supports",
+          "independence_group": "ects-r2"
+        },
+        {
+          "evidence_id": "DEU-MASTERS-ECTS-SCREEN-009-E3",
+          "relation": "supports",
+          "independence_group": "ects-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple independent first-hand admission outcomes support credit-based screening; requirements remain program-specific."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-15",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No universal ECTS conversion rule was inferred; requirements are institution/program-specific."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-MASTERS-ECTS-SCREEN-009-E1",
+            "DEU-MASTERS-ECTS-SCREEN-009-E2",
+            "DEU-MASTERS-ECTS-SCREEN-009-E3"
+          ],
+          "checked_at": "2026-09-15",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-15",
+        "next_check_at": "2026-12-14",
+        "reason": "Program-specific requirements can change by intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "ECTS",
+        "Master",
+        "uni-assist",
+        "credit matching",
+        "module prerequisites"
+      ],
+      "first_seen": "2025-01-17",
+      "last_seen": "2025-01-24"
+    },
+    {
+      "signal_id": "DEU-THIRD-COUNTRY-RESIDENCE-010",
+      "issue_cluster_id": "DEU-THIRD-COUNTRY-RESIDENCE-010",
+      "relationships": [
+        {
+          "type": "context_for",
+          "signal_id": "DEU-TLS-STUDY-APPOINTMENT-RESTART-002"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "third_country_consular_workaround",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Considering consular application from Turkey or Armenia"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_visa",
+            "third_country_application"
+          ]
+        },
+        "process_stages": [
+          "visa_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "A six-month third-country residence pathway was widely discussed during German consular disruption",
+          "fa": "در دوره اختلال خدمات کنسولی، مسیر اقامت شش‌ماهه در کشور ثالث به‌طور گسترده مطرح شده بود"
+        },
+        "summary": {
+          "en": "Community guidance repeatedly described a need to establish lawful residence for around six months in places such as Turkey or Armenia before using German consular services there.",
+          "fa": "راهنمایی‌های گروه به‌طور مکرر از نیاز به اقامت قانونی حدود شش ماه در کشورهایی مثل ترکیه یا ارمنستان پیش از استفاده از خدمات سفارت آلمان در آن کشور صحبت می‌کنند."
+        },
+        "practical_impact": {
+          "en": "The workaround carries substantial time and living-cost overhead and was discussed mainly during disruption of normal Iran-based processing.",
+          "fa": "این راهکار هزینه زمانی و زندگی قابل‌توجهی دارد و عمدتاً در دوره اختلال مسیر عادی داخل ایران مطرح شده است."
+        },
+        "who_should_care": {
+          "en": "Applicants considering relocation to a third country solely to access German consular processing.",
+          "fa": "افرادی که صرفاً برای دسترسی به روند کنسولی آلمان به فکر اقامت در کشور ثالث هستند."
+        },
+        "recommended_action": {
+          "en": "Do not commit to a third-country move based only on community reports; verify the receiving German mission's current residence and jurisdiction rules first.",
+          "fa": "صرفاً بر اساس تجربه‌های گروه به کشور ثالث نقل مکان نکنید؛ ابتدا شرایط اقامت و صلاحیت کنسولی سفارت آلمان در کشور مقصد را بررسی کنید."
+        },
+        "known_workaround": "Lawful residence in a third country was discussed as the workaround; the uploaded source does not establish a universal guaranteed outcome."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-THIRD-COUNTRY-RESIDENCE-010-E1",
+          "relation": "supports",
+          "independence_group": "third-r1"
+        },
+        {
+          "evidence_id": "DEU-THIRD-COUNTRY-RESIDENCE-010-E2",
+          "relation": "supports",
+          "independence_group": "third-r2"
+        },
+        {
+          "evidence_id": "DEU-THIRD-COUNTRY-RESIDENCE-010-E3",
+          "relation": "supports",
+          "independence_group": "third-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "historical",
+        "evidence_maturity": "emerging",
+        "trend": "declining",
+        "severity": "high",
+        "confidence": {
+          "level": "low",
+          "rationale": "The requirement was repeated widely but the selected evidence contains no independently verified successful end-to-end case and normal Iran-based appointments were restarting by September 2026."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-15",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Third-country jurisdiction and residence requirements were not independently verified and may differ by mission."
+        },
+        "community": {
+          "status": "unverified",
+          "evidence_ids": [
+            "DEU-THIRD-COUNTRY-RESIDENCE-010-E1",
+            "DEU-THIRD-COUNTRY-RESIDENCE-010-E2",
+            "DEU-THIRD-COUNTRY-RESIDENCE-010-E3"
+          ],
+          "checked_at": "2026-09-15",
+          "note": null
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-15",
+        "next_check_at": "2026-10-15",
+        "reason": "Normal appointment issuance in Iran was restarting, reducing the relevance of this disruption-era workaround.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "third country",
+        "Turkey",
+        "Armenia",
+        "six months residence",
+        "German embassy"
+      ],
+      "first_seen": "2026-03-15",
+      "last_seen": "2026-07-15"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names and user IDs are not copied into evidence summaries."
+      },
+      "full_sources_processed": {
+        "status": "pass",
+        "note": "Loaded and scanned all 211,856 messages from the JSON export."
+      },
+      "reply_chains_considered": {
+        "status": "not_run",
+        "note": "Reply chains were inspected selectively for candidate validation, not exhaustively reconstructed."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated posts and same-user repetitions were grouped into independence groups where relevant."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Mixed timing evidence is represented as variance rather than a universal rule."
+      },
+      "resolutions_checked": {
+        "status": "pass",
+        "note": "The third-country workaround is marked historical because Iran-based appointment issuance was restarting by September 2026."
+      },
+      "country_scope_checked": {
+        "status": "pass",
+        "note": null
+      },
+      "route_scope_checked": {
+        "status": "pass",
+        "note": null
+      },
+      "institution_scope_checked": {
+        "status": "pass",
+        "note": "Program-specific admission signals are not generalized to all German universities."
+      },
+      "correlated_penalties_checked": {
+        "status": "pass",
+        "note": null
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals are evidence and planning context only. They are not official eligibility rules, approval probabilities, or substitutes for current embassy, TLScontact, uni-assist, or university instructions."
+}

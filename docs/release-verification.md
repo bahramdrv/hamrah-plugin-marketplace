@@ -17,7 +17,7 @@ The GitHub Actions workflow runs these checks on pushes and pull requests. `veri
 
 The Node suite covers request controls, publication and privacy, evidence retrieval, route claims, questions, opportunities, Lived Experiences, official statistics, IRVI, discovery, ideal candidate profiles, and version 2/3 compatibility. It uses fixtures and offline providers for deterministic behavior. It cannot establish that an external authority page is still current, that a real applicant is eligible, or that a sampled community report represents all applicants. Recheck time-sensitive official sources when answering a case.
 
-### Verification recorded on 26 September 2026
+### Verification recorded on 26 September 2026, before the origin/main merge
 
 | Check | Local result |
 | --- | --- |
@@ -29,6 +29,8 @@ The Node suite covers request controls, publication and privacy, evidence retrie
 | Dependency audit | Offline npm audit found 0 vulnerabilities; the CI network audit is still pending |
 
 The local environment could not download the pinned Python test dependencies, so the Python tests ran without `jsonschema`; the schema compiler above provided independent schema validation. A green CI run is required before deployment.
+
+The subsequent merge with `origin/main` introduced 48 additional dataset files. The combined store currently scans 49 files and rejects 44 on privacy inspection (42 `needs_review`, 2 `fail`). The release check and the bundled-dataset test remain red until those records are reviewed and corrected; the pre-merge results above do not describe the combined release.
 
 ## How to read Hamrah's measures
 

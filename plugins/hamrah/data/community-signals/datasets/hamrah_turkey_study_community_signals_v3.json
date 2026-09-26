@@ -1,0 +1,2505 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_turkey_study_signals_candidate",
+    "generated_at": "2026-09-16T13:36:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "turkey-study-telegram-export",
+      "name": "result(20260916-133352).json / Telegram export «تحصیل در ترکیه»",
+      "source_type": "private_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-16",
+        "records_available": 7061,
+        "records_processed": 7061
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "contains_first_hand_student_reports": true,
+        "contains_application_guidance": true,
+        "contains_promotional_university_posts": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "TUR-STUDY-PUBLIC-PRIVATE-001-E1",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "143793"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community summary separated public-university admission with entrance-exam competition from private-university admission that may not require an academic entrance exam, while noting language preparation can still apply.",
+        "fa": "یک جمع‌بندی گروه مسیر دانشگاه دولتی را با رقابت آزمون ورودی از مسیر دانشگاه خصوصی که ممکن است آزمون علمی ورودی نداشته باشد جدا کرده، در حالی که آمادگی زبان همچنان ممکن است لازم باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-PUBLIC-PRIVATE-001-E2",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "152177"
+      },
+      "published_at": "2025-10-11",
+      "event_date": "2025-10-11",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply again described TR-YÖS as the common public-university entrance path and said private universities may instead use language assessment when no language certificate is available.",
+        "fa": "پاسخ بعدی دوباره TR-YÖS را مسیر رایج ورود به دولتی معرفی کرده و گفته خصوصی‌ها ممکن است در نبود مدرک زبان، آزمون زبان بگیرند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-PUBLIC-PRIVATE-001-E3",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "152499"
+      },
+      "published_at": "2025-10-23",
+      "event_date": "2025-10-23",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another response distinguished public academic entrance testing from private language placement/exemption based on a submitted language certificate.",
+        "fa": "پاسخ دیگری آزمون علمی دانشگاه دولتی را از تعیین‌سطح زبان دانشگاه خصوصی و معافیت با مدرک زبان تفکیک کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-TRYOS-002-E1",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "151770"
+      },
+      "published_at": "2025-10-01",
+      "event_date": "2025-10-01",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "first_hand_test_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A 2025 TR-YÖS test taker said the same exam was presented in multiple languages and was not a different exam for each field.",
+        "fa": "یک آزمون‌دهنده TR-YÖS در ۲۰۲۵ گفته آزمون واحد به چند زبان ارائه می‌شود و برای رشته‌های مختلف آزمون جداگانه‌ای نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-TRYOS-002-E2",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "151845"
+      },
+      "published_at": "2025-10-02",
+      "event_date": "2025-10-02",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_correction",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community correction explicitly separated Türkiye Scholarships from YÖS: scholarship application and public-university entrance testing were described as distinct processes.",
+        "fa": "یک اصلاح گروه صریحاً Türkiye Bursları را از YÖS جدا کرده و بورس و آزمون ورودی دانشگاه دولتی را دو فرایند مستقل دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-TRYOS-002-E3",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "149093"
+      },
+      "published_at": "2025-07-11",
+      "event_date": "2025-07-11",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A reply said YÖS itself was not subject to the informal age cutoff the applicant feared.",
+        "fa": "یک پاسخ گفته خود YÖS مشمول سقف سنی غیررسمی مورد نگرانی متقاضی نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-TRYOS-002-E4",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "149159"
+      },
+      "published_at": "2025-07-12",
+      "event_date": "2025-07-12",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_question",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "Applicants for dentistry were actively comparing the relative role of high-school GPA and YÖS score, showing that competitive health-field selection may involve more than simply sitting the exam.",
+        "fa": "متقاضیان دندانپزشکی درباره نقش معدل دیپلم در کنار نمره YÖS سؤال داشته‌اند؛ نشانه‌ای از اینکه رقابت رشته‌های سلامت فقط به شرکت در آزمون خلاصه نمی‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-BURSLARI-003-E1",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "143897"
+      },
+      "published_at": "2025-01-05",
+      "event_date": "2025-01-05",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_post",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A 2025 Türkiye Scholarships post listed annual application/interview/result windows plus age and GPA thresholds, including higher GPA for medicine, dentistry and pharmacy.",
+        "fa": "یک پست Türkiye Bursları در ۲۰۲۵ بازه ثبت‌نام/مصاحبه/نتیجه و شروط سن و معدل را ذکر کرده و برای پزشکی، دندانپزشکی و داروسازی معدل بالاتری نوشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-BURSLARI-003-E2",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "143793"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The scholarship route was described as fully funded but highly selective, with low age and strong grades as central practical filters.",
+        "fa": "این مسیر به‌عنوان بورس کامل اما بسیار رقابتی توصیف شده و سن پایین و معدل قوی به‌عنوان فیلترهای عملی اصلی مطرح شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-BURSLARI-003-E3",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "158007"
+      },
+      "published_at": "2026-08-10",
+      "event_date": "2026-08-10",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An August 2026 master's applicant still saw an 'awaiting evaluation' status and had not received a decision.",
+        "fa": "یک متقاضی ارشد در اوت ۲۰۲۶ همچنان وضعیت awaiting evaluation داشته و جواب نگرفته بود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-BURSLARI-003-E4",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "158700"
+      },
+      "published_at": "2026-09-11",
+      "event_date": "2026-09-11",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant reported in September 2026 that the scholarship application was still under review.",
+        "fa": "متقاضی دیگری در سپتامبر ۲۰۲۶ گزارش کرده پرونده بورسلاری هنوز در حال بررسی بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-HAZIRLIK-004-E1",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "143841"
+      },
+      "published_at": "2025-01-03",
+      "event_date": "2025-01-03",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A response said students without the instruction-language certificate, or those failing the university language exam, may be placed in a one-year hazırlık language-preparation program.",
+        "fa": "یک پاسخ گفته متقاضی بدون مدرک زبانِ رشته یا فردی که آزمون زبان دانشگاه را رد کند ممکن است وارد دوره یک‌ساله hazırlık شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-HAZIRLIK-004-E2",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "151314"
+      },
+      "published_at": "2025-09-12",
+      "event_date": "2025-09-12",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same practical rule was repeated later in 2025: no accepted language proof or a failed university test could mean one year of language preparation.",
+        "fa": "همین قاعده عملی در ادامه ۲۰۲۵ تکرار شده: نبود مدرک زبان پذیرفته‌شده یا رد آزمون دانشگاه می‌تواند به یک سال آمادگی زبان منجر شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-HAZIRLIK-004-E3",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "151645"
+      },
+      "published_at": "2025-09-27",
+      "event_date": "2025-09-27",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "first_hand_student_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A student said failing their university's language exam would have left hazırlık as the only remaining route for that intake, so they would have preferred submitting TOEFL in advance.",
+        "fa": "یک دانشجو گفته رد شدن در آزمون زبان دانشگاه برای آن ورودی عملاً فقط hazırlık را باقی می‌گذاشت و ترجیح می‌داد از قبل TOEFL ارائه کرده باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-HAZIRLIK-004-E4",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "150447"
+      },
+      "published_at": "2025-08-17",
+      "event_date": "2025-08-17",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community reply distinguished standalone language courses from university-linked hazırlık and said residence eligibility should not be assumed for a standalone course.",
+        "fa": "یک پاسخ گروه دوره زبان مستقل را از hazırlık وابسته به پذیرش دانشگاه جدا کرده و گفته برای دوره مستقل نباید اقامت را بدیهی فرض کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-ENGLISH-TEST-005-E1",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "143881"
+      },
+      "published_at": "2025-01-04",
+      "event_date": "2025-01-04",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A January 2025 reply said IELTS was often not accepted by Turkish universities and TOEFL was the common alternative.",
+        "fa": "پاسخ ژانویه ۲۰۲۵ گفته IELTS در بسیاری از دانشگاه‌ها پذیرفته نمی‌شود و TOEFL گزینه رایج‌تری است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-ENGLISH-TEST-005-E2",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "143882"
+      },
+      "published_at": "2025-01-04",
+      "event_date": "2025-01-04",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another reply qualified this by saying some universities also accept PTE.",
+        "fa": "پاسخ دیگری این ادعا را تعدیل کرده و گفته بعضی دانشگاه‌ها PTE را هم می‌پذیرند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-ENGLISH-TEST-005-E3",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "151773"
+      },
+      "published_at": "2025-10-01",
+      "event_date": "2025-10-01",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "first_hand_application_research",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A user who reviewed undergraduate universities said many they checked did not accept IELTS at all.",
+        "fa": "کاربری که شرایط دانشگاه‌های کارشناسی را بررسی کرده گفته بسیاری از دانشگاه‌های مورد بررسی IELTS را اصلاً قبول نمی‌کردند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-ENGLISH-TEST-005-E4",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "158182"
+      },
+      "published_at": "2026-08-14",
+      "event_date": "2026-08-14",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A 2026 graduate applicant again encountered a university that did not accept IELTS.",
+        "fa": "یک متقاضی تحصیلات تکمیلی در ۲۰۲۶ نیز با دانشگاهی روبه‌رو شده که IELTS را قبول نمی‌کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-DOCUMENTS-006-E1",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "143848"
+      },
+      "published_at": "2025-01-03",
+      "event_date": "2025-01-03",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An early reply said application with a temporary graduation certificate could be possible, with the original diploma and YÖK-related recognition delivered later.",
+        "fa": "یک پاسخ اولیه گفته اپلای با مدرک موقت ممکن است و دانشنامه اصلی و تأیید مرتبط با YÖK بعداً تحویل شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-DOCUMENTS-006-E2",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "157353"
+      },
+      "published_at": "2026-07-28",
+      "event_date": "2026-07-28",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "first_hand_university_correspondence",
+      "firsthandness": "direct_quote",
+      "summary": {
+        "en": "A 2026 applicant shared university correspondence saying a foreign diploma needed YÖK recognition for official admission and that the university could apply for recognition on the student's behalf.",
+        "fa": "یک متقاضی در ۲۰۲۶ متن دانشگاه را منتشر کرده که برای پذیرش رسمی، شناسایی مدرک خارجی توسط YÖK را لازم دانسته و گفته دانشگاه می‌تواند از طرف دانشجو پیگیری کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-DOCUMENTS-006-C1",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "157586"
+      },
+      "published_at": "2026-07-31",
+      "event_date": "2026-07-31",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user stated that master's and PhD students do not need denklik, illustrating conflicting community understanding.",
+        "fa": "یک کاربر گفته برای ارشد و دکتری دنکلیک وجود ندارد؛ نمونه‌ای از برداشت‌های متناقض در کامیونیتی."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-DOCUMENTS-006-E3",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "157612"
+      },
+      "published_at": "2026-07-31",
+      "event_date": "2026-07-31",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "first_hand_student_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A student said their university had not required denklik for years but added it in the last two years and required it before graduation.",
+        "fa": "یک دانشجو گفته دانشگاهش سال‌ها دنکلیک نمی‌خواست اما در دو سال اخیر آن را اضافه کرده و تا قبل از فارغ‌التحصیلی مطالبه می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-GRAD-TESTS-007-E1",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "144133"
+      },
+      "published_at": "2025-01-10",
+      "event_date": "2025-01-10",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community response said GRE is common for Turkish graduate programs but requirements must be checked university by university; it also said GRE was not mandatory for Türkiye Scholarships itself.",
+        "fa": "یک پاسخ گروه گفته GRE در بسیاری از برنامه‌های تحصیلات تکمیلی رایج است اما باید نیازمندی هر دانشگاه جدا بررسی شود؛ همچنین برای خود Türkiye Bursları الزام همگانی دانسته نشده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-GRAD-TESTS-007-E2",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "156658"
+      },
+      "published_at": "2026-06-26",
+      "event_date": "2026-06-26",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A 2026 applicant said their program allowed the GRE result to be provided by registration rather than initial application.",
+        "fa": "یک متقاضی در ۲۰۲۶ گفته برنامه‌اش اجازه می‌داد نمره GRE تا زمان ثبت‌نام نهایی تکمیل شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-GRAD-TESTS-007-E3",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "158367"
+      },
+      "published_at": "2026-08-23",
+      "event_date": "2026-08-23",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "first_hand_requirement_quote",
+      "firsthandness": "direct_quote",
+      "summary": {
+        "en": "A user shared program text listing ALES/GRE thresholds while explicitly allowing application before the score is available, provided a valid score is submitted at registration.",
+        "fa": "کاربری متن برنامه‌ای را منتشر کرده که حداقل ALES/GRE تعیین کرده اما اجازه اپلای بدون نمره و ارائه آن هنگام ثبت‌نام را داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-GRAD-TESTS-007-E4",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "158436"
+      },
+      "published_at": "2026-08-29",
+      "event_date": "2026-08-29",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "first_hand_applicant_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A student reported receiving conditional admission without GRE and needing to submit the GRE score before enrollment.",
+        "fa": "یک دانشجو گزارش کرده بدون GRE پذیرش کاندیشنال گرفته و برای ثبت‌نام باید نمره GRE را ارائه می‌کرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-FUNDING-008-E1",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "157877"
+      },
+      "published_at": "2026-08-09",
+      "event_date": "2026-08-09",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community reply described university funding packages ranging from tuition waiver to tuition plus housing and, in some cases, a living stipend depending on profile strength.",
+        "fa": "یک پاسخ گروه پکیج‌های فاند دانشگاه را از معافیت شهریه تا شهریه+خوابگاه و در بعضی کیس‌ها کمک‌هزینه زندگی، بسته به رزومه، توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-FUNDING-008-E2",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "158181"
+      },
+      "published_at": "2026-08-14",
+      "event_date": "2026-08-14",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A user recommended checking whether faculty have TÜBİTAK-funded projects because project participation can add paid research support on top of tuition funding.",
+        "fa": "یک کاربر توصیه کرده بررسی شود استادان پروژه TÜBİTAK دارند یا نه، چون مشارکت در پروژه می‌تواند علاوه بر حمایت شهریه، درآمد پژوهشی ایجاد کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-FUNDING-008-E3",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "158099"
+      },
+      "published_at": "2026-08-12",
+      "event_date": "2026-08-12",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_report",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later discussion distinguished limited public-university funding from stronger packages at selected research universities and noted Türkiye Scholarships may not be the only funding route.",
+        "fa": "گفتگوی بعدی فاند محدود در بسیاری از دانشگاه‌های دولتی را از پکیج‌های قوی‌تر بعضی دانشگاه‌های پژوهشی جدا کرده و گفته Türkiye Bursları تنها مسیر فاند نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-TUITION-009-E1",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "143793"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2025 community summary said international-student tuition at public universities had shifted toward dollar-denominated and higher pricing.",
+        "fa": "جمع‌بندی گروه در ۲۰۲۵ گفته شهریه دانشجوی بین‌المللی دانشگاه‌های دولتی به سمت قیمت‌گذاری دلاری و بالاتر رفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-TUITION-009-E2",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "144730"
+      },
+      "published_at": "2025-01-26",
+      "event_date": "2025-01-26",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another response argued that after exam-preparation cost and higher public tuition, some discounted private options can become financially comparable.",
+        "fa": "پاسخ دیگری گفته با احتساب هزینه آمادگی آزمون و افزایش شهریه دولتی، بعضی آفرهای تخفیف‌دار خصوصی می‌توانند از نظر هزینه نزدیک شوند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-TUITION-009-E3",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "158623"
+      },
+      "published_at": "2026-09-06",
+      "event_date": "2026-09-06",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "promotional_university_fee_post",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A September 2026 post advertised five-figure USD annual tuition for private medicine/dentistry, illustrating how high and institution-specific professional-program fees can be.",
+        "fa": "یک پست سپتامبر ۲۰۲۶ برای پزشکی/دندانپزشکی خصوصی شهریه سالانه پنج‌رقمی دلاری اعلام کرده که بزرگی و دانشگاه‌محور بودن هزینه رشته‌های حرفه‌ای را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-RESIDENCE-010-E1",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "144338"
+      },
+      "published_at": "2025-01-17",
+      "event_date": "2025-01-17",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2025 reply said Iranian students commonly enter Turkey without obtaining a separate student visa in advance and then apply for student residence after university registration.",
+        "fa": "یک پاسخ ۲۰۲۵ گفته دانشجوی ایرانی معمولاً بدون گرفتن ویزای تحصیلی جداگانه وارد ترکیه می‌شود و بعد از ثبت‌نام دانشگاه برای اقامت دانشجویی اقدام می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-RESIDENCE-010-E2",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "156915"
+      },
+      "published_at": "2026-07-07",
+      "event_date": "2026-07-07",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same sequence was repeated in 2026: visa-free entry for the nationality, then student residence after enrollment.",
+        "fa": "همین ترتیب در ۲۰۲۶ دوباره تکرار شده: ورود بدون ویزا برای این ملیت و سپس اقامت دانشجویی بعد از ثبت‌نام."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-RESIDENCE-010-E3",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "157150"
+      },
+      "published_at": "2026-07-18",
+      "event_date": "2026-07-18",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "Another 2026 response again told an Iranian applicant to enter and apply locally for student residence.",
+        "fa": "پاسخ دیگری در ۲۰۲۶ نیز به متقاضی ایرانی گفته وارد ترکیه شود و داخل کشور برای اقامت دانشجویی اقدام کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-RESIDENCE-010-E4",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "144665"
+      },
+      "published_at": "2025-01-25",
+      "event_date": "2025-01-25",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_document_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An early residence-document discussion emphasized usable housing evidence such as dormitory confirmation or lease/title plus a utility bill.",
+        "fa": "گفتگوی مدارک اقامت بر مدرک آدرس قابل‌استفاده مثل نامه خوابگاه یا اجاره/سند به‌همراه قبض تأکید کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-THIRD-COUNTRY-011-E1",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "149631"
+      },
+      "published_at": "2025-07-25",
+      "event_date": "2025-07-25",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "first_hand_applicant_plan",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant with a stalled German family-reunion case said they were obtaining Turkish student residence and considering later applying through the German mission in Turkey.",
+        "fa": "متقاضی پرونده پیوست آلمان گفته برای اقامت دانشجویی ترکیه اقدام می‌کند تا بعداً امکان اقدام از نمایندگی آلمان در ترکیه را بررسی کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-THIRD-COUNTRY-011-E2",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "150227"
+      },
+      "published_at": "2025-08-09",
+      "event_date": "2025-08-09",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_coordination_post",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A group of applicants discussed moving to Turkey and maintaining legal student residence for about six months before approaching the German mission there.",
+        "fa": "گروهی از متقاضیان درباره رفتن به ترکیه و حفظ اقامت قانونی دانشجویی حدود شش ماه پیش از مراجعه به نمایندگی آلمان صحبت کرده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-THIRD-COUNTRY-011-E3",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "151539"
+      },
+      "published_at": "2025-09-26",
+      "event_date": "2025-09-26",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "first_hand_applicant_plan",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another user explicitly said their primary purpose for Turkish study residence was to build six months of legal residence before using German consular services in Turkey.",
+        "fa": "کاربر دیگری صریحاً گفته هدف اصلی از اقامت تحصیلی ترکیه ساختن شش ماه اقامت قانونی برای استفاده از خدمات کنسولی آلمان در ترکیه است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "TUR-STUDY-THIRD-COUNTRY-011-E4",
+      "source_id": "turkey-study-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "158616"
+      },
+      "published_at": "2026-09-05",
+      "event_date": "2026-09-05",
+      "collected_at": "2026-09-16T13:36:00Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In September 2026 a reply still advised obtaining a Turkish residence card, living in Turkey for six months, and then seeking a German embassy appointment.",
+        "fa": "در سپتامبر ۲۰۲۶ همچنان توصیه شده کارت اقامت ترکیه گرفته شود، شش ماه در ترکیه زندگی شود و سپس برای وقت سفارت آلمان اقدام شود."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "TUR-STUDY-PUBLIC-PRIVATE-001",
+      "issue_cluster_id": "TUR-STUDY-PUBLIC-PRIVATE-ADMISSION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-TRYOS-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-TUITION-009"
+        }
+      ],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "public_private_admission_split",
+        "class": "admission"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "bachelor"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "bachelor_public",
+            "bachelor_private"
+          ]
+        },
+        "process_stages": [
+          "application",
+          "entrance_exam",
+          "language_assessment"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Public and private undergraduate admission operate through materially different practical paths",
+          "fa": "مسیر عملی پذیرش کارشناسی دولتی و خصوصی در ترکیه تفاوت جدی دارد"
+        },
+        "summary": {
+          "en": "The community consistently describes public admission as more entrance-exam driven, commonly through TR-YÖS, while private universities may not use a comparable academic entrance exam but can still impose language assessment or preparation.",
+          "fa": "کامیونیتی به‌طور تکرارشونده پذیرش دولتی را آزمون‌محور و معمولاً مرتبط با TR-YÖS توصیف می‌کند؛ خصوصی ممکن است آزمون علمی مشابه نداشته باشد اما همچنان آزمون/آمادگی زبان داشته باشد."
+        },
+        "practical_impact": {
+          "en": "Applicants choosing public only for lower historical tuition may face a longer exam-preparation path than expected.",
+          "fa": "متقاضی که فقط به‌خاطر تصور شهریه پایین‌تر دولتی را انتخاب می‌کند ممکن است با مسیر طولانی‌تر آمادگی آزمون روبه‌رو شود."
+        },
+        "who_should_care": {
+          "en": "International undergraduate applicants comparing public and private universities.",
+          "fa": "متقاضیان بین‌المللی کارشناسی در حال مقایسه دولتی و خصوصی."
+        },
+        "recommended_action": {
+          "en": "Compare admissions mechanism, language requirement and full annual cost separately for every target university.",
+          "fa": "برای هر دانشگاه، سازوکار پذیرش، زبان و کل هزینه سالانه را جداگانه مقایسه کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-STUDY-PUBLIC-PRIVATE-001-E1",
+          "relation": "supports",
+          "independence_group": "route-r1"
+        },
+        {
+          "evidence_id": "TUR-STUDY-PUBLIC-PRIVATE-001-E2",
+          "relation": "supports",
+          "independence_group": "route-r2"
+        },
+        {
+          "evidence_id": "TUR-STUDY-PUBLIC-PRIVATE-001-E3",
+          "relation": "supports",
+          "independence_group": "route-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Repeated source guidance supports the practical split, but accepted exams are university-specific and should not be universalized."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current admission rules were not independently verified university by university."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-STUDY-PUBLIC-PRIVATE-001-E1",
+            "TUR-STUDY-PUBLIC-PRIVATE-001-E2",
+            "TUR-STUDY-PUBLIC-PRIVATE-001-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Turkey-study Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "University admissions policies change by intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "TR-YÖS",
+        "public university",
+        "private university",
+        "entrance exam",
+        "language exam"
+      ],
+      "first_seen": "2025-01-02",
+      "last_seen": "2025-10-23"
+    },
+    {
+      "signal_id": "TUR-STUDY-TRYOS-002",
+      "issue_cluster_id": "TUR-STUDY-TRYOS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-PUBLIC-PRIVATE-001"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-BURSLARI-003"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "tryos_route_distinction",
+        "class": "selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "bachelor"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "TR-YOS",
+            "public_undergraduate"
+          ]
+        },
+        "process_stages": [
+          "entrance_exam",
+          "selection"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "TR-YÖS should be treated separately from Türkiye Scholarships and as a score-competition tool rather than a scholarship itself",
+          "fa": "TR-YÖS باید از Türkiye Bursları جدا دیده شود و ابزار رقابت پذیرش است، نه خودِ بورس"
+        },
+        "summary": {
+          "en": "A first-hand test taker described one multi-language exam rather than separate field-specific tests. Community guidance repeatedly distinguishes YÖS admission from scholarship selection.",
+          "fa": "یک آزمون‌دهنده تجربه آزمون واحد چندزبانه را گزارش کرده و راهنمایی‌های گروه چند بار YÖS را از فرایند انتخاب بورسیه جدا کرده‌اند."
+        },
+        "practical_impact": {
+          "en": "Applicants can waste preparation effort if they assume YÖS directly creates scholarship eligibility or that each field has a different test.",
+          "fa": "اگر متقاضی تصور کند YÖS مستقیماً بورس می‌دهد یا برای هر رشته آزمون جداست، ممکن است برنامه آمادگی را اشتباه بچیند."
+        },
+        "who_should_care": {
+          "en": "Undergraduate applicants to Turkish public universities, especially competitive health fields.",
+          "fa": "متقاضیان کارشناسی دانشگاه دولتی، به‌ویژه پزشکی/دندان/داروسازی."
+        },
+        "recommended_action": {
+          "en": "Check each target university's accepted exam and weighting of TR-YÖS, GPA and other credentials.",
+          "fa": "آزمون پذیرفته‌شده و وزن TR-YÖS، معدل و سایر مدارک را برای هر دانشگاه جدا بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-STUDY-TRYOS-002-E1",
+          "relation": "supports",
+          "independence_group": "tryos-direct"
+        },
+        {
+          "evidence_id": "TUR-STUDY-TRYOS-002-E2",
+          "relation": "supports",
+          "independence_group": "tryos-burslari"
+        },
+        {
+          "evidence_id": "TUR-STUDY-TRYOS-002-E3",
+          "relation": "qualifies",
+          "independence_group": "tryos-age"
+        },
+        {
+          "evidence_id": "TUR-STUDY-TRYOS-002-E4",
+          "relation": "qualifies",
+          "independence_group": "tryos-health"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Route distinction is strong, while university-specific weighting remains unverified."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current ÖSYM/TR-YÖS format and university acceptance rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-STUDY-TRYOS-002-E1",
+            "TUR-STUDY-TRYOS-002-E2",
+            "TUR-STUDY-TRYOS-002-E3",
+            "TUR-STUDY-TRYOS-002-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Turkey-study Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "TR-YÖS and university selection rules are intake-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "TR-YÖS",
+        "YÖS",
+        "Türkiye Bursları",
+        "public admission"
+      ],
+      "first_seen": "2025-07-11",
+      "last_seen": "2025-10-02"
+    },
+    {
+      "signal_id": "TUR-STUDY-BURSLARI-003",
+      "issue_cluster_id": "TUR-STUDY-TURKIYE-BURSLARI",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-TRYOS-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-FUNDING-008"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "central_scholarship_selectivity_timeline",
+        "class": "funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "bachelor",
+            "masters",
+            "phd"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "Türkiye_Burslari"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "application",
+          "interview",
+          "decision"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Türkiye Scholarships is a separate, highly selective annual route with age/GPA gates and a long decision cycle",
+          "fa": "Türkiye Bursları مسیر سالانه جدا و بسیار رقابتی با شروط سن/معدل و چرخه تصمیم طولانی است"
+        },
+        "summary": {
+          "en": "The source circulated 2025 age/GPA thresholds and annual timing, while 2026 applicants still reported pending evaluation into August/September. Exact thresholds should be treated as year-specific.",
+          "fa": "فایل شروط سن/معدل و زمان‌بندی ۲۰۲۵ را منتشر کرده و متقاضیان ۲۰۲۶ تا اوت/سپتامبر هنوز awaiting evaluation گزارش کرده‌اند. اعداد باید سال‌محور تلقی شوند."
+        },
+        "practical_impact": {
+          "en": "Applicants should not delay university or alternative-funding applications while waiting for the centralized scholarship result.",
+          "fa": "نباید در انتظار نتیجه بورسلاری، اپلای دانشگاه یا مسیرهای فاند جایگزین را متوقف کرد."
+        },
+        "who_should_care": {
+          "en": "Applicants seeking fully funded Turkish degrees.",
+          "fa": "متقاضیان تحصیل فول‌فاند در ترکیه."
+        },
+        "recommended_action": {
+          "en": "Apply to Türkiye Scholarships in parallel with university-specific funding and verify the current year's official age/GPA criteria.",
+          "fa": "بورسلاری را موازی با فاندهای دانشگاهی اقدام کنید و شروط سن/معدل همان سال را رسمی بررسی کنید."
+        },
+        "known_workaround": "University scholarships and research-project funding are separate alternatives."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-STUDY-BURSLARI-003-E1",
+          "relation": "supports",
+          "independence_group": "burslari-2025"
+        },
+        {
+          "evidence_id": "TUR-STUDY-BURSLARI-003-E2",
+          "relation": "supports",
+          "independence_group": "burslari-guidance"
+        },
+        {
+          "evidence_id": "TUR-STUDY-BURSLARI-003-E3",
+          "relation": "supports",
+          "independence_group": "burslari-2026-r1"
+        },
+        {
+          "evidence_id": "TUR-STUDY-BURSLARI-003-E4",
+          "relation": "supports",
+          "independence_group": "burslari-2026-r2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "slow_processing",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source includes explicit annual criteria/timeline plus multiple later pending-decision experiences."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "2026/2027 official Türkiye Scholarships criteria and deadlines were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-STUDY-BURSLARI-003-E1",
+            "TUR-STUDY-BURSLARI-003-E2",
+            "TUR-STUDY-BURSLARI-003-E3",
+            "TUR-STUDY-BURSLARI-003-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Turkey-study Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Scholarship criteria and dates change annually.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Türkiye Bursları",
+        "age",
+        "GPA",
+        "scholarship",
+        "awaiting evaluation"
+      ],
+      "first_seen": "2025-01-02",
+      "last_seen": "2026-09-11"
+    },
+    {
+      "signal_id": "TUR-STUDY-HAZIRLIK-004",
+      "issue_cluster_id": "TUR-STUDY-LANGUAGE-PREPARATION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-ENGLISH-TEST-005"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "hazirlik_fallback",
+        "class": "language"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "bachelor",
+            "masters",
+            "phd"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "university_language_preparation"
+          ]
+        },
+        "process_stages": [
+          "language_proof",
+          "placement_exam",
+          "hazirlik"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Lack of accepted language proof can add a full hazırlık year; university language exams can therefore be high-stakes",
+          "fa": "نبود مدرک زبان پذیرفته‌شده می‌تواند یک سال hazırlık اضافه کند و آزمون زبان دانشگاه پرریسک باشد"
+        },
+        "summary": {
+          "en": "Repeated guidance says students either prove the language of instruction or pass the university test; otherwise a preparation year may follow. A direct student experience describes failing the test as effectively locking in hazırlık for that intake.",
+          "fa": "راهنمایی تکرارشونده می‌گوید یا باید زبان رشته اثبات شود یا آزمون دانشگاه پاس شود؛ در غیر این صورت دوره آمادگی ممکن است اضافه شود. تجربه مستقیم یک دانشجو نیز رد آزمون را عملاً منتهی به hazırlık دانسته است."
+        },
+        "practical_impact": {
+          "en": "Language planning can add one academic year and extra tuition/living cost.",
+          "fa": "برنامه زبان می‌تواند یک سال تحصیلی و هزینه شهریه/زندگی اضافه کند."
+        },
+        "who_should_care": {
+          "en": "Applicants without accepted Turkish/English proof at enrollment.",
+          "fa": "متقاضیان بدون مدرک ترکی/انگلیسی مورد قبول هنگام ثبت‌نام."
+        },
+        "recommended_action": {
+          "en": "Check accepted external certificates before relying on the university's one-shot language exam.",
+          "fa": "پیش از اتکا به آزمون دانشگاه، مدارک زبان خارجی پذیرفته‌شده را بررسی کنید."
+        },
+        "known_workaround": "An accepted external language score can sometimes bypass the university language exam/hazırlık."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-STUDY-HAZIRLIK-004-E1",
+          "relation": "supports",
+          "independence_group": "hazirlik-r1"
+        },
+        {
+          "evidence_id": "TUR-STUDY-HAZIRLIK-004-E2",
+          "relation": "supports",
+          "independence_group": "hazirlik-r2"
+        },
+        {
+          "evidence_id": "TUR-STUDY-HAZIRLIK-004-E3",
+          "relation": "supports",
+          "independence_group": "hazirlik-direct"
+        },
+        {
+          "evidence_id": "TUR-STUDY-HAZIRLIK-004-E4",
+          "relation": "qualifies",
+          "independence_group": "hazirlik-residence"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated guidance plus a direct high-stakes language-test experience support this pattern."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Exact hazırlık length, exemptions and residence consequences are university-specific and were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-STUDY-HAZIRLIK-004-E1",
+            "TUR-STUDY-HAZIRLIK-004-E2",
+            "TUR-STUDY-HAZIRLIK-004-E3",
+            "TUR-STUDY-HAZIRLIK-004-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Turkey-study Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Language rules vary by institution and intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "hazırlık",
+        "language exam",
+        "TOEFL",
+        "TÖMER",
+        "preparation year"
+      ],
+      "first_seen": "2025-01-03",
+      "last_seen": "2025-09-27"
+    },
+    {
+      "signal_id": "TUR-STUDY-ENGLISH-TEST-005",
+      "issue_cluster_id": "TUR-STUDY-ENGLISH-TEST-ACCEPTANCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-HAZIRLIK-004"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "english_test_acceptance_variance",
+        "class": "language"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "bachelor",
+            "masters",
+            "phd"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "English_taught_programs"
+          ]
+        },
+        "process_stages": [
+          "language_proof"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "IELTS acceptance is inconsistent and often weaker than applicants expect; TOEFL/PTE policies are university-specific",
+          "fa": "پذیرش IELTS یکنواخت نیست و اغلب کمتر از انتظار متقاضیان است؛ TOEFL/PTE هم دانشگاه‌محور است"
+        },
+        "summary": {
+          "en": "Across 2025-2026 the group repeatedly reports universities that do not accept IELTS, with TOEFL more commonly referenced and PTE accepted by some institutions.",
+          "fa": "در ۲۰۲۵ تا ۲۰۲۶ گروه بارها دانشگاه‌هایی را گزارش کرده که IELTS را نمی‌پذیرند؛ TOEFL بیشتر مطرح است و بعضی مؤسسات PTE را نیز قبول می‌کنند."
+        },
+        "practical_impact": {
+          "en": "An otherwise valid IELTS score may not exempt the applicant from the university test or hazırlık.",
+          "fa": "حتی IELTS معتبر ممکن است متقاضی را از آزمون دانشگاه یا hazırlık معاف نکند."
+        },
+        "who_should_care": {
+          "en": "Applicants to English-taught Turkish programs.",
+          "fa": "متقاضیان برنامه‌های انگلیسی‌زبان ترکیه."
+        },
+        "recommended_action": {
+          "en": "Use the exact program's accepted-language-test table before booking or submitting a score.",
+          "fa": "قبل از آزمون یا سابمیت نمره، جدول آزمون‌های زبان پذیرفته‌شده همان برنامه را بررسی کنید."
+        },
+        "known_workaround": "TOEFL or the university's own proficiency test is repeatedly used where IELTS is not accepted."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-STUDY-ENGLISH-TEST-005-E1",
+          "relation": "supports",
+          "independence_group": "engtest-r1"
+        },
+        {
+          "evidence_id": "TUR-STUDY-ENGLISH-TEST-005-E2",
+          "relation": "qualifies",
+          "independence_group": "engtest-r2"
+        },
+        {
+          "evidence_id": "TUR-STUDY-ENGLISH-TEST-005-E3",
+          "relation": "supports",
+          "independence_group": "engtest-r3"
+        },
+        {
+          "evidence_id": "TUR-STUDY-ENGLISH-TEST-005-E4",
+          "relation": "supports",
+          "independence_group": "engtest-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple independent reports across levels and years show IELTS non-acceptance and institution-specific alternatives."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No nationwide language-test rule is inferred; current program-level tables were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-STUDY-ENGLISH-TEST-005-E1",
+            "TUR-STUDY-ENGLISH-TEST-005-E2",
+            "TUR-STUDY-ENGLISH-TEST-005-E3",
+            "TUR-STUDY-ENGLISH-TEST-005-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Turkey-study Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Accepted tests change by institution.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "IELTS",
+        "TOEFL",
+        "PTE",
+        "English proficiency"
+      ],
+      "first_seen": "2025-01-04",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "signal_id": "TUR-STUDY-DOCUMENTS-006",
+      "issue_cluster_id": "TUR-STUDY-YOK-DENKLIK",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "yok_recognition_denklik_variance",
+        "class": "documents"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "foreign_degree_admission"
+          ]
+        },
+        "process_stages": [
+          "application",
+          "enrollment",
+          "graduation",
+          "recognition"
+        ],
+        "entities": [
+          {
+            "entity_type": "authority",
+            "name": "YÖK"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "YÖK recognition/denklik requirements are institution- and level-dependent and may surface late in the study lifecycle",
+          "fa": "الزام YÖK/denklik دانشگاه‌ و مقطع‌محور است و ممکن است حتی تا زمان فارغ‌التحصیلی ظاهر شود"
+        },
+        "summary": {
+          "en": "The source contains directly conflicting claims: some graduate students report no denklik, while university correspondence and other direct experiences require YÖK recognition either for official enrollment or before graduation.",
+          "fa": "فایل ادعاهای متناقض دارد: بعضی دانشجویان تحصیلات تکمیلی دنکلیک نداشته‌اند، در حالی که مکاتبه دانشگاه و تجربه‌های دیگر YÖK recognition را برای ثبت‌نام رسمی یا پیش از فارغ‌التحصیلی لازم دانسته‌اند."
+        },
+        "practical_impact": {
+          "en": "Assuming denklik is universally unnecessary can create a late registration or graduation block.",
+          "fa": "فرض اینکه دنکلیک هیچ‌جا لازم نیست می‌تواند در ثبت‌نام یا فارغ‌التحصیلی گلوگاه دیرهنگام ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Applicants using Iranian temporary/final degrees in Turkey.",
+          "fa": "متقاضیانی که مدارک موقت یا نهایی ایران را در ترکیه استفاده می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Ask the international registrar in writing what YÖK recognition/denklik is required and by what deadline.",
+          "fa": "کتبی از بخش بین‌الملل دانشگاه بپرسید چه نوع YÖK/denklik و تا چه تاریخی لازم است."
+        },
+        "known_workaround": "Some universities may handle recognition on the student's behalf."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-STUDY-DOCUMENTS-006-E1",
+          "relation": "supports",
+          "independence_group": "docs-r1"
+        },
+        {
+          "evidence_id": "TUR-STUDY-DOCUMENTS-006-E2",
+          "relation": "supports",
+          "independence_group": "docs-university"
+        },
+        {
+          "evidence_id": "TUR-STUDY-DOCUMENTS-006-C1",
+          "relation": "contradicts",
+          "independence_group": "docs-r3"
+        },
+        {
+          "evidence_id": "TUR-STUDY-DOCUMENTS-006-E3",
+          "relation": "supports",
+          "independence_group": "docs-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Contradictory direct experiences strongly support variance rather than a universal rule."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current YÖK recognition/denklik requirements were not independently verified for each institution/degree level."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-STUDY-DOCUMENTS-006-E1",
+            "TUR-STUDY-DOCUMENTS-006-E2",
+            "TUR-STUDY-DOCUMENTS-006-C1",
+            "TUR-STUDY-DOCUMENTS-006-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Turkey-study Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Recognition rules can change and are institution-specific.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "YÖK",
+        "denklik",
+        "recognition",
+        "temporary degree",
+        "diploma"
+      ],
+      "first_seen": "2025-01-03",
+      "last_seen": "2026-07-31"
+    },
+    {
+      "signal_id": "TUR-STUDY-GRAD-TESTS-007",
+      "issue_cluster_id": "TUR-STUDY-GRE-ALES-CONDITIONAL",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-FUNDING-008"
+        }
+      ],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "graduate_test_conditional_admission",
+        "class": "graduate_admission"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "masters",
+            "phd"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "masters",
+            "phd"
+          ]
+        },
+        "process_stages": [
+          "application",
+          "GRE",
+          "ALES",
+          "conditional_admission",
+          "enrollment"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "GRE/ALES requirements are program-specific, and some graduate programs allow conditional admission before the score is submitted",
+          "fa": "الزام GRE/ALES برنامه‌محور است و بعضی برنامه‌ها قبل از ارائه نمره پذیرش کاندیشنال می‌دهند"
+        },
+        "summary": {
+          "en": "The source shows both general advice that many graduate programs use GRE and direct 2026 examples where applicants could apply or receive conditional admission before providing the final score at registration.",
+          "fa": "فایل هم توصیه عمومی درباره رایج بودن GRE دارد و هم نمونه‌های مستقیم ۲۰۲۶ که متقاضی پیش از ارائه نمره نهایی اپلای کرده یا پذیرش کاندیشنال گرفته و نمره را هنگام ثبت‌نام تحویل داده است."
+        },
+        "practical_impact": {
+          "en": "Missing GRE at application time does not necessarily mean missing the intake, but a registration deadline can become the hard stop.",
+          "fa": "نداشتن GRE هنگام اپلای الزاماً به معنی از دست رفتن intake نیست، اما ددلاین ثبت‌نام می‌تواند گلوگاه اصلی شود."
+        },
+        "who_should_care": {
+          "en": "International master's and PhD applicants.",
+          "fa": "متقاضیان بین‌المللی ارشد و دکتری."
+        },
+        "recommended_action": {
+          "en": "Check whether the target program permits score-later/conditional admission and the exact registration threshold.",
+          "fa": "بررسی کنید برنامه هدف اپلای بدون نمره/پذیرش کاندیشنال را می‌پذیرد و حداقل نمره ثبت‌نام چیست."
+        },
+        "known_workaround": "Conditional admission with later GRE submission is reported in some programs."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-STUDY-GRAD-TESTS-007-E1",
+          "relation": "supports",
+          "independence_group": "gradtests-r1"
+        },
+        {
+          "evidence_id": "TUR-STUDY-GRAD-TESTS-007-E2",
+          "relation": "supports",
+          "independence_group": "gradtests-r2"
+        },
+        {
+          "evidence_id": "TUR-STUDY-GRAD-TESTS-007-E3",
+          "relation": "supports",
+          "independence_group": "gradtests-r3"
+        },
+        {
+          "evidence_id": "TUR-STUDY-GRAD-TESTS-007-E4",
+          "relation": "supports",
+          "independence_group": "gradtests-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct program text and applicant experience support score-later conditional pathways while showing program variance."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current GRE/ALES requirements must be verified at program level."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-STUDY-GRAD-TESTS-007-E1",
+            "TUR-STUDY-GRAD-TESTS-007-E2",
+            "TUR-STUDY-GRAD-TESTS-007-E3",
+            "TUR-STUDY-GRAD-TESTS-007-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Turkey-study Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Graduate admissions requirements change by program/intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "GRE",
+        "ALES",
+        "conditional admission",
+        "masters",
+        "PhD"
+      ],
+      "first_seen": "2025-01-10",
+      "last_seen": "2026-08-29"
+    },
+    {
+      "signal_id": "TUR-STUDY-FUNDING-008",
+      "issue_cluster_id": "TUR-STUDY-GRADUATE-FUNDING",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-BURSLARI-003"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-GRAD-TESTS-007"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "university_project_funding_stack",
+        "class": "funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "masters",
+            "phd"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "university_scholarship",
+            "TUBITAK_project"
+          ]
+        },
+        "process_stages": [
+          "funding",
+          "faculty_contact",
+          "research_project"
+        ],
+        "entities": [
+          {
+            "entity_type": "funder",
+            "name": "TÜBİTAK"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "Graduate funding is fragmented across university waivers, housing/living packages and TÜBİTAK projects—not only Türkiye Scholarships",
+          "fa": "فاند تحصیلات تکمیلی فقط Türkiye Bursları نیست و بین waiver دانشگاه، خوابگاه/کمک‌هزینه و پروژه TÜBİTAK پخش شده است"
+        },
+        "summary": {
+          "en": "Community reports describe tiered university packages and separate paid research support through faculty TÜBİTAK projects. Funding strength depends heavily on university, lab and applicant profile.",
+          "fa": "گزارش‌ها از پکیج‌های چندسطحی دانشگاهی و حمایت پژوهشی جداگانه از پروژه‌های TÜBİTAK استادان خبر می‌دهند. قدرت فاند به دانشگاه، لَب و رزومه وابسته است."
+        },
+        "practical_impact": {
+          "en": "Applicants who search only the central scholarship may miss stronger lab/university-specific funding opportunities.",
+          "fa": "متقاضی که فقط بورسلاری را جست‌وجو کند ممکن است فاندهای قوی‌تر دانشگاه/لاب را از دست بدهد."
+        },
+        "who_should_care": {
+          "en": "Research master's and PhD applicants seeking full or near-full funding.",
+          "fa": "متقاضیان پژوهش‌محور ارشد/دکتری دنبال فاند کامل یا نزدیک به کامل."
+        },
+        "recommended_action": {
+          "en": "Check university scholarship tiers and ask prospective supervisors about funded TÜBİTAK projects before accepting self-funded admission.",
+          "fa": "پیش از قبول پذیرش سلف‌فاند، پکیج بورس دانشگاه و پروژه‌های TÜBİTAK استادان را بررسی کنید."
+        },
+        "known_workaround": "Combining tuition waiver with paid project work is a recurring community strategy."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-STUDY-FUNDING-008-E1",
+          "relation": "supports",
+          "independence_group": "fund-r1"
+        },
+        {
+          "evidence_id": "TUR-STUDY-FUNDING-008-E2",
+          "relation": "supports",
+          "independence_group": "fund-r2"
+        },
+        {
+          "evidence_id": "TUR-STUDY-FUNDING-008-E3",
+          "relation": "qualifies",
+          "independence_group": "fund-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Funding-path diversity is consistent, but amounts and availability are highly lab/university specific."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current funding amounts and eligibility were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-STUDY-FUNDING-008-E1",
+            "TUR-STUDY-FUNDING-008-E2",
+            "TUR-STUDY-FUNDING-008-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Turkey-study Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Research funding availability changes by project and cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "TÜBİTAK",
+        "tuition waiver",
+        "living stipend",
+        "university funding",
+        "research project"
+      ],
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "signal_id": "TUR-STUDY-TUITION-009",
+      "issue_cluster_id": "TUR-STUDY-INTERNATIONAL-TUITION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-PUBLIC-PRIVATE-001"
+        }
+      ],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "tuition_inflation_cost_convergence",
+        "class": "financial"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [
+            "bachelor",
+            "masters",
+            "phd"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "public_university",
+            "private_university"
+          ]
+        },
+        "process_stages": [
+          "budget",
+          "tuition"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "International tuition has become a high-variance planning risk; public is not automatically cheap and private discounts can narrow the gap",
+          "fa": "شهریه بین‌المللی ریسک مالی پرنوسانی شده؛ دولتی لزوماً ارزان نیست و تخفیف خصوصی می‌تواند فاصله را کم کند"
+        },
+        "summary": {
+          "en": "The source repeatedly describes rising/dollar-denominated public tuition and private fees that vary widely by institution and field. Professional health programs show especially high private pricing.",
+          "fa": "فایل بارها از افزایش و دلاری‌شدن شهریه دولتی و پراکندگی شدید هزینه خصوصی بین دانشگاه/رشته گفته است. رشته‌های سلامت خصوصی نمونه هزینه‌های بالا هستند."
+        },
+        "practical_impact": {
+          "en": "Historical assumptions about cheap public study can substantially understate the real annual budget.",
+          "fa": "فرض قدیمی «دولتی ارزان است» می‌تواند بودجه واقعی سالانه را شدیداً کم‌برآورد کند."
+        },
+        "who_should_care": {
+          "en": "Self-funded international students, especially medicine/dentistry applicants.",
+          "fa": "دانشجویان سلف‌فاند، به‌ویژه متقاضی پزشکی/دندانپزشکی."
+        },
+        "recommended_action": {
+          "en": "Use the current university fee table for the exact program and include preparation, language year and repeat-year policies.",
+          "fa": "جدول شهریه روز همان رشته را مبنا بگیرید و هزینه آزمون، سال زبان و سیاست تکرار سال را هم حساب کنید."
+        },
+        "known_workaround": "Private-university discount campaigns can sometimes reduce the gap, but should be verified directly."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-STUDY-TUITION-009-E1",
+          "relation": "supports",
+          "independence_group": "tuition-r1"
+        },
+        {
+          "evidence_id": "TUR-STUDY-TUITION-009-E2",
+          "relation": "supports",
+          "independence_group": "tuition-r2"
+        },
+        {
+          "evidence_id": "TUR-STUDY-TUITION-009-E3",
+          "relation": "supports",
+          "independence_group": "tuition-r3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "worsening",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Cost escalation and variance are repeatedly visible, but individual fee posts may be promotional and are not independently verified."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official tuition tables were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-STUDY-TUITION-009-E1",
+            "TUR-STUDY-TUITION-009-E2",
+            "TUR-STUDY-TUITION-009-E3"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Turkey-study Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Tuition changes by academic year.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "tuition",
+        "USD",
+        "public university",
+        "private university",
+        "medicine",
+        "dentistry"
+      ],
+      "first_seen": "2025-01-02",
+      "last_seen": "2026-09-06"
+    },
+    {
+      "signal_id": "TUR-STUDY-RESIDENCE-010",
+      "issue_cluster_id": "TUR-STUDENT-RESIDENCE-AFTER-ENTRY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-THIRD-COUNTRY-011"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "student_residence_after_entry",
+        "class": "residence"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Iranian passport holder"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_residence"
+          ]
+        },
+        "process_stages": [
+          "entry",
+          "university_registration",
+          "residence_application",
+          "address_documents"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For Iranian students, the community repeatedly describes visa-free entry followed by local student-residence filing after enrollment",
+          "fa": "برای دانشجوی ایرانی، فایل بارها مسیر ورود بدون ویزای تحصیلی جدا و سپس اقدام محلی برای اقامت دانشجویی پس از ثبت‌نام را گزارش می‌کند"
+        },
+        "summary": {
+          "en": "The same sequence is reported in 2025 and 2026, with housing/address evidence becoming part of the local residence paperwork.",
+          "fa": "همین ترتیب در ۲۰۲۵ و ۲۰۲۶ تکرار شده و مدارک خانه/آدرس بخشی از پرونده اقامت محلی گزارش شده است."
+        },
+        "practical_impact": {
+          "en": "Applicants focus operational risk on enrollment, address, insurance and residence filing rather than a pre-departure student-visa appointment.",
+          "fa": "ریسک عملی پرونده بیشتر روی ثبت‌نام، آدرس، بیمه و درخواست اقامت داخل ترکیه می‌رود تا وقت ویزای تحصیلی پیش از سفر."
+        },
+        "who_should_care": {
+          "en": "Iranian nationals starting Turkish degree programs.",
+          "fa": "دارندگان پاسپورت ایران که برنامه دانشگاهی ترکیه را شروع می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Verify current visa-free entry conditions and prepare the residence-document package before travel/enrollment.",
+          "fa": "شرایط ورود بدون ویزا را برای تاریخ سفر بررسی و مدارک اقامت را پیش از ورود/ثبت‌نام آماده کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-STUDY-RESIDENCE-010-E1",
+          "relation": "supports",
+          "independence_group": "residence-r1"
+        },
+        {
+          "evidence_id": "TUR-STUDY-RESIDENCE-010-E2",
+          "relation": "supports",
+          "independence_group": "residence-r2"
+        },
+        {
+          "evidence_id": "TUR-STUDY-RESIDENCE-010-E3",
+          "relation": "supports",
+          "independence_group": "residence-r3"
+        },
+        {
+          "evidence_id": "TUR-STUDY-RESIDENCE-010-E4",
+          "relation": "supports",
+          "independence_group": "residence-docs"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The workflow is repeated over multiple years in the source, though current official entry/residence rules remain unverified."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Turkish visa-free entry and student-residence requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-STUDY-RESIDENCE-010-E1",
+            "TUR-STUDY-RESIDENCE-010-E2",
+            "TUR-STUDY-RESIDENCE-010-E3",
+            "TUR-STUDY-RESIDENCE-010-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Turkey-study Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Entry and residence rules can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student residence",
+        "Iran",
+        "visa-free entry",
+        "e-ikamet",
+        "address"
+      ],
+      "first_seen": "2025-01-17",
+      "last_seen": "2026-07-18"
+    },
+    {
+      "signal_id": "TUR-STUDY-THIRD-COUNTRY-011",
+      "issue_cluster_id": "TUR-STUDENT-RESIDENCE-THIRD-COUNTRY-CONSULAR",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "TUR-STUDY-RESIDENCE-010"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "third_country_residence_strategy",
+        "class": "consular_access"
+      },
+      "scope": {
+        "destination": {
+          "country": "Turkey",
+          "country_code": "TUR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Turkey"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Using Turkish residence to access another country's mission"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_residence",
+            "third_country_consular_access"
+          ]
+        },
+        "process_stages": [
+          "residence_build_up",
+          "foreign_embassy_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Turkish student residence is repeatedly used as a six-month third-country residence strategy for German consular access—but the legal sufficiency is unverified",
+          "fa": "اقامت دانشجویی ترکیه بارها به‌عنوان راه ساختن شش ماه اقامت کشور ثالث برای دسترسی کنسولی آلمان مطرح شده، اما کفایت حقوقی آن تأیید نشده است"
+        },
+        "summary": {
+          "en": "From mid-2025 through September 2026 multiple applicants explicitly planned Turkish student residence mainly to establish local residence before approaching the German mission. This is a durable community strategy, not an independently verified German consular rule.",
+          "fa": "از میانه ۲۰۲۵ تا سپتامبر ۲۰۲۶ چند متقاضی صریحاً اقامت دانشجویی ترکیه را عمدتاً برای ساختن سابقه اقامت و سپس مراجعه به نمایندگی آلمان برنامه‌ریزی کرده‌اند. این یک استراتژی کامیونیتی است، نه قاعده رسمی راستی‌آزمایی‌شده آلمان."
+        },
+        "practical_impact": {
+          "en": "Applicants may pay tuition and living costs primarily to establish consular jurisdiction, so a mistaken assumption about the six-month rule is financially material.",
+          "fa": "متقاضی ممکن است عمدتاً برای ایجاد صلاحیت کنسولی شهریه و هزینه زندگی بدهد؛ بنابراین اشتباه درباره قاعده شش‌ماهه اثر مالی بزرگی دارد."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants considering Turkey as a third-country base for German visa processing.",
+          "fa": "متقاضیان ایرانی که ترکیه را پایگاه کشور ثالث برای پرونده آلمان می‌بینند."
+        },
+        "recommended_action": {
+          "en": "Before enrolling for this purpose, verify the German mission's current residence/jurisdiction rule and whether the exact visa category is accepted from Turkey.",
+          "fa": "قبل از ثبت‌نام با این هدف، شرط اقامت/صلاحیت نمایندگی آلمان و پذیرش نوع ویزای دقیق از ترکیه را رسمی بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "TUR-STUDY-THIRD-COUNTRY-011-E1",
+          "relation": "supports",
+          "independence_group": "thirdcountry-r1"
+        },
+        {
+          "evidence_id": "TUR-STUDY-THIRD-COUNTRY-011-E2",
+          "relation": "supports",
+          "independence_group": "thirdcountry-r2"
+        },
+        {
+          "evidence_id": "TUR-STUDY-THIRD-COUNTRY-011-E3",
+          "relation": "supports",
+          "independence_group": "thirdcountry-r3"
+        },
+        {
+          "evidence_id": "TUR-STUDY-THIRD-COUNTRY-011-E4",
+          "relation": "supports",
+          "independence_group": "thirdcountry-r4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "uncertain",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The strategy recurs across more than a year, but no official German mission verification was performed and eligibility can be visa-category specific."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "German mission jurisdiction/third-country residence requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "TUR-STUDY-THIRD-COUNTRY-011-E1",
+            "TUR-STUDY-THIRD-COUNTRY-011-E2",
+            "TUR-STUDY-THIRD-COUNTRY-011-E3",
+            "TUR-STUDY-THIRD-COUNTRY-011-E4"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded Turkey-study Telegram export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "German consular operations and jurisdiction can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "third-country residence",
+        "Germany embassy",
+        "six months",
+        "student residence",
+        "Turkey"
+      ],
+      "first_seen": "2025-07-25",
+      "last_seen": "2026-09-05"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram handles/user IDs, phone numbers and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically scanned all 7,061 messages in the uploaded JSON export."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the full conversation graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Agency/course promotions and one-off admissions ads were excluded unless a fee post was used only as contextual evidence of cost variance."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated TR-YÖS, Burslari, language, recognition, graduate-test, funding, tuition and residence discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Conflicting denklik/YÖK and language-test claims are retained as institution-specific variance rather than forced into universal rules."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "University quotes and official-looking reposts remain source-reported until independently verified against primary sources."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal connector was disabled during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community signals are practical planning evidence only. They are not official Turkish university, YÖK, ÖSYM, Türkiye Scholarships, Göç İdaresi or foreign-consulate rules. Verify current institution- and route-specific requirements before acting."
+}

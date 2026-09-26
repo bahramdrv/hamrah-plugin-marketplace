@@ -1,0 +1,2523 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_art_architecture_signals_candidate",
+    "generated_at": "2026-09-17T07:30:27Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "art-architecture-pargar-telegram-export",
+      "name": "result(20260917-072402).json / Telegram export «هنر و معماری با پرگار»",
+      "source_type": "private_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-17",
+        "records_available": 6365,
+        "records_processed": 6365,
+        "message_records": 6364
+      },
+      "source_characteristics": {
+        "community_discussion": true,
+        "art_architecture_focused": true,
+        "contains_first_hand_applicant_experience": true,
+        "contains_university_correspondence": true,
+        "contains_promotional_posts": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "ART-PORTFOLIO-PRIORITY-001-E1",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "396493"
+      },
+      "published_at": "2025-04-23",
+      "event_date": "2025-04-23",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "When a university did not specify a project count, a community reply recommended roughly 4-7 of the applicant's strongest works rather than filling space.",
+        "fa": "وقتی دانشگاه تعداد پروژه را مشخص نکرده بود، پاسخ گروه حدود ۴ تا ۷ کار از بهترین نمونه‌ها را پیشنهاد کرده، نه پرکردن پورتفولیو با کارهای بیشتر."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-PORTFOLIO-PRIORITY-001-E2",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "390491"
+      },
+      "published_at": "2025-01-07",
+      "event_date": "2025-01-07",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_admission_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant who had been admitted to an art-education-related programme said they used a varied portfolio showing different techniques and good work.",
+        "fa": "یک فرد با تجربه پذیرش در برنامه مرتبط با آموزش هنر گفته پورتفولیوی متنوع با تکنیک‌ها و کارهای خوب ارائه کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-PORTFOLIO-PRIORITY-001-E3",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "399046"
+      },
+      "published_at": "2025-06-10",
+      "event_date": "2025-06-10",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A detailed reply said master's applicants in art/design should prioritize portfolio and CV, with portfolio/project quality ahead of early-stage research publication.",
+        "fa": "یک پاسخ تفصیلی گفته برای مستر هنر/دیزاین، پورتفولیو و CV اولویت دارند و کیفیت پروژه‌ها از انتشار پژوهش اولیه مهم‌تر است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-PORTFOLIO-PRIORITY-001-E4",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "409482"
+      },
+      "published_at": "2026-06-04",
+      "event_date": "2026-06-04",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A 2026 reply said a strong portfolio materially improves admission chances and should be directly relevant to the requested art field.",
+        "fa": "یک پاسخ ۲۰۲۶ گفته پورتفولیوی قوی شانس پذیرش را بهتر می‌کند و باید مستقیماً با رشته درخواستی مرتبط باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-PORTFOLIO-PRIORITY-001-E5",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "411526"
+      },
+      "published_at": "2026-09-10",
+      "event_date": "2026-09-10",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A late-2026 reply explicitly ranked portfolio above very high GPA for art/architecture admission and treated minimum language scores as often sufficient for admission itself.",
+        "fa": "یک پاسخ اواخر ۲۰۲۶ پورتفولیو را در پذیرش هنر/معماری مهم‌تر از معدل خیلی بالا دانسته و حداقل زبان را برای خود پذیرش غالباً کافی توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-PORTFOLIO-SPECS-002-E1",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "399791"
+      },
+      "published_at": "2025-07-01",
+      "event_date": "2025-07-01",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An architecture applicant had a programme-specific maximum of 20 portfolio sheets and was unsure whether cover/table-of-contents/back-cover pages counted.",
+        "fa": "یک متقاضی معماری با سقف ۲۰ شیت پورتفولیو روبه‌رو بوده و نمی‌دانسته کاور/فهرست/بک‌کاور جزو سقف حساب می‌شوند یا نه."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-PORTFOLIO-SPECS-002-E2",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "399087"
+      },
+      "published_at": "2025-06-11",
+      "event_date": "2025-06-11",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_upload_problem",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant followed a university's file-count and file-size limits but still saw the portfolio as 'Unsubmitted', showing portal submission can remain a separate technical failure point.",
+        "fa": "یک متقاضی با وجود رعایت تعداد فایل و سقف حجم دانشگاه، پورتفولیو را در وضعیت Unsubmitted دیده؛ یعنی خود submission پرتال یک گلوگاه فنی مستقل است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-PORTFOLIO-SPECS-002-E3",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "396063"
+      },
+      "published_at": "2025-04-13",
+      "event_date": "2025-04-13",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_application_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant applying to several Italian universities said each university site specified its own minimum project count and portfolio size.",
+        "fa": "یک متقاضی چند دانشگاه ایتالیا گفته هر دانشگاه در سایت خودش حداقل تعداد کار و حجم پورتفولیو را جدا مشخص کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-PORTFOLIO-SPECS-002-E4",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "390041"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant encountered an application field asking for a SlideRoom/portfolio URL and was unsure what should be entered.",
+        "fa": "یک متقاضی در اپلیکیشن با فیلد URL پورتفولیو/SlideRoom روبه‌رو شده و درباره محتوای آن ابهام داشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-PORTFOLIO-SPECS-002-E5",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "390045"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The reply distinguished between a university-required SlideRoom submission and an externally hosted portfolio link such as Google Slides.",
+        "fa": "پاسخ گروه بین ارسال اجباری داخل SlideRoom و لینک پورتفولیوی میزبانی‌شده در جای دیگر مثل Google Slides تفکیک کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-RECOMMENDER-003-E1",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "390020"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "When a professor had moved to another university, community advice said the recommendation could still be valid if the letter clearly explained when and how the professor taught the applicant.",
+        "fa": "وقتی استاد به دانشگاه دیگری رفته بود، راهنمایی گروه گفته ریکام همچنان می‌تواند معتبر باشد اگر رابطه آموزشی و زمان/درس مشترک روشن توضیح داده شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-RECOMMENDER-003-E2",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "390024"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A professional/non-university recommender was described as potentially appropriate when the applicant had actually worked for that person.",
+        "fa": "ریکامندر حرفه‌ای/غیردانشگاهی وقتی متقاضی واقعاً برای او کار کرده باشد، قابل‌بررسی توصیف شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-RECOMMENDER-003-E3",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "390192"
+      },
+      "published_at": "2025-01-04",
+      "event_date": "2025-01-04",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The group noted that some universities explicitly require an academic email while others may accept alternatives, so the institution should be asked directly.",
+        "fa": "گروه گفته بعضی دانشگاه‌ها صریحاً ایمیل آکادمیک می‌خواهند و بعضی جایگزین را می‌پذیرند؛ بنابراین باید از خود دانشگاه پرسید."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-RECOMMENDER-003-E4",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "390835"
+      },
+      "published_at": "2025-01-11",
+      "event_date": "2025-01-11",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "When a professor lost access to an academic account, the recommendation was to ask the university before switching to a personal email because policies differed.",
+        "fa": "وقتی استاد به ایمیل آکادمیکش دسترسی نداشت، توصیه این بوده قبل از استفاده از ایمیل شخصی از دانشگاه اجازه گرفته شود چون policyها متفاوت است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-RECOMMENDER-003-E5",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "391350"
+      },
+      "published_at": "2025-01-20",
+      "event_date": "2025-01-20",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_application_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "One applicant reported using a non-academic recommender email only after obtaining permission from the university.",
+        "fa": "یک متقاضی گزارش کرده فقط بعد از گرفتن تأیید دانشگاه از ایمیل غیرآکادمیک ریکامندر استفاده کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-FEE-WAIVER-004-E1",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "390211"
+      },
+      "published_at": "2025-01-04",
+      "event_date": "2025-01-04",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_application_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant reported that a university did waive their application fee after the applicant followed the university's instructions.",
+        "fa": "یک متقاضی گزارش کرده دانشگاه پس از طی فرایند اعلام‌شده، اپلیکیشن‌فی را برای او waive کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-FEE-WAIVER-004-E2",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "391756"
+      },
+      "published_at": "2025-01-27",
+      "event_date": "2025-01-27",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_application_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A highly active applicant said repeated emails to faculty, graduate offices and coordinators explaining Iran/payment difficulty led many universities to waive application fees; some still required the portfolio-platform fee.",
+        "fa": "یک متقاضی فعال گفته با ایمیل‌های متعدد به استاد، graduate office و coordinator و توضیح مشکل پرداخت از ایران، تعداد زیادی دانشگاه fee را waive کردند؛ بعضی جاها فقط هزینه پلتفرم پورتفولیو باقی مانده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-FEE-WAIVER-004-C1",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "390830"
+      },
+      "published_at": "2025-01-11",
+      "event_date": "2025-01-11",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_university_response",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant reported a university response saying a waiver applied only to domestic applicants, not international students.",
+        "fa": "متقاضی دیگری گزارش کرده دانشگاه گفته waiver فقط برای domestic است و شامل international نمی‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-FEE-WAIVER-004-C2",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "391871"
+      },
+      "published_at": "2025-01-28",
+      "event_date": "2025-01-28",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_university_response",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A separate applicant received a refusal of their fee-waiver request only after a long delay near the deadline.",
+        "fa": "یک متقاضی دیگر بعد از تأخیر طولانی و نزدیک deadline پاسخ منفی برای fee waiver گرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-FEE-WAIVER-004-E3",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "392675"
+      },
+      "published_at": "2025-02-12",
+      "event_date": "2025-02-12",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_university_response",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "One university reportedly denied a need-based fee waiver using a country-income classification that did not place Iran in the low-income category.",
+        "fa": "یک دانشگاه طبق گزارش متقاضی، waiver مبتنی بر نیاز را با استناد به طبقه‌بندی درآمدی کشور که ایران را low-income نمی‌دانست رد کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-PHD-FUNDING-005-E1",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "391544"
+      },
+      "published_at": "2025-01-24",
+      "event_date": "2025-01-24",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A detailed reply said U.S./Canadian PhD admission is generally programme-based rather than posted-position-based; contacting aligned faculty helps recognition, and TA support can sometimes waive tuition and cover living costs.",
+        "fa": "یک پاسخ تفصیلی گفته اپلای PhD آمریکا/کانادا عموماً program-based است نه position-based؛ ارتباط با استاد هم‌راستا برای شناخت مفید است و TA گاهی می‌تواند شهریه و بخشی از هزینه را پوشش دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-PHD-FUNDING-005-E2",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "391550"
+      },
+      "published_at": "2025-01-24",
+      "event_date": "2025-01-24",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The same discussion clarified that funding is often decided by the department after programme admission, while applicants can still search for individual RA support.",
+        "fa": "در همان بحث روشن شده فاند غالباً پس از اپلای program توسط دپارتمان تعیین می‌شود، هرچند جست‌وجوی RA استاد همچنان ارزش دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-PHD-FUNDING-005-E3",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "398373"
+      },
+      "published_at": "2025-05-28",
+      "event_date": "2025-05-28",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_funding_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An art-related applicant reported receiving funding despite ordinary grades/language and only one non-journal publication, emphasizing fit over a perfect profile.",
+        "fa": "یک متقاضی حوزه هنر گزارش کرده با معدل/زبان معمولی و یک مقاله غیرژورنالی فاند گرفته و پروفایل بی‌نقص شرط مطلق نبوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-PHD-FUNDING-005-E4",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "398375"
+      },
+      "published_at": "2025-05-28",
+      "event_date": "2025-05-28",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The same thread emphasized the alignment of SOP/CV with the programme and university environment as more important than raw scores alone.",
+        "fa": "در همان گفتگو روی فیت SOP/CV با program و فضای دانشگاه بیش از اعداد خام تأکید شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-MASTER-FUNDING-006-E1",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "391887"
+      },
+      "published_at": "2025-01-28",
+      "event_date": "2025-01-28",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_university_correspondence",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A shared university email stated that a small number of full scholarships covered tuition/fees and added a teaching assistantship, health insurance and some creative-research support.",
+        "fa": "یک ایمیل دانشگاهی به‌اشتراک‌گذاشته‌شده گفته تعداد محدودی فول‌اسکالرشیپ شهریه/fees را پوشش می‌دهد و TA، بیمه و حمایت پژوهش خلاق هم اضافه می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-MASTER-FUNDING-006-E2",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "392838"
+      },
+      "published_at": "2025-02-15",
+      "event_date": "2025-02-15",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_admission_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A master's architecture admit reported a $10,000 scholarship plus tuition waiver tied to a TA position.",
+        "fa": "یک پذیرش مستر معماری گزارش کرده ۱۰هزار دلار scholarship به‌همراه tuition waiver و TA دریافت کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-MASTER-FUNDING-006-C1",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "392329"
+      },
+      "published_at": "2025-02-04",
+      "event_date": "2025-02-04",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_university_response",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "Another applicant reported that a university did not offer full funding and could at most provide a portion of tuition support.",
+        "fa": "متقاضی دیگری گزارش کرده دانشگاه full funding نداشته و حداکثر بخشی از شهریه را پوشش می‌داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-MASTER-FUNDING-006-C2",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "395131"
+      },
+      "published_at": "2025-03-25",
+      "event_date": "2025-03-25",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_admission_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A partially funded U.S. architecture master's admit still expected to show a very large amount of proof of funds, illustrating that partial funding can leave major visa-financial exposure.",
+        "fa": "یک پذیرفته‌شده مستر معماری آمریکا با partial funding همچنان نیاز به تمکن بسیار بالا داشته؛ یعنی partial funding ریسک مالی ویزا را حذف نکرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-MASTER-FUNDING-006-E3",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "395724"
+      },
+      "published_at": "2025-04-07",
+      "event_date": "2025-04-07",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_research_summary",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A community member summarizing extensive destination research concluded that full funding at master's level in design/architecture was much less reliable than low-tuition or scholarship-based options.",
+        "fa": "یکی از اعضا بعد از تحقیق گسترده مقصدها جمع‌بندی کرده فول‌فاند مستر دیزاین/معماری به‌مراتب کم‌قابل‌اتکاتر از گزینه‌های کم‌شهریه یا scholarship است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-DEGREE-RELEASE-007-E1",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "391979"
+      },
+      "published_at": "2025-01-29",
+      "event_date": "2025-01-29",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A January 2025 reply described a workflow involving a period in the employment-office route and a minimum time since graduation/defence before degree release.",
+        "fa": "یک پاسخ ژانویه ۲۰۲۵ مسیر عدم کاریابی را وابسته به گذشت زمان در کاریابی و حداقل زمانی از فارغ‌التحصیلی/دفاع توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-DEGREE-RELEASE-007-E2",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "395605"
+      },
+      "published_at": "2025-04-05",
+      "event_date": "2025-04-05",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "An April 2025 reply said the process had moved to an online job-search system and linked eligibility to not having employment insurance history in the case discussed.",
+        "fa": "پاسخ آوریل ۲۰۲۵ گفته فرایند به سامانه جستجوی شغل منتقل شده و در کیس موردبحث نداشتن سابقه بیمه را مهم دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-DEGREE-RELEASE-007-E3",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "401640"
+      },
+      "published_at": "2025-08-30",
+      "event_date": "2025-08-30",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_process_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A detailed first-hand description said applicants use a registered employment office/job-search system, wait for an unemployment outcome, then continue in the Sajjad system with possible additional university document requests.",
+        "fa": "یک تجربه تفصیلی مستقیم گفته متقاضی از کاریابی/سامانه شغل ثبت‌شده استفاده می‌کند، برای عدم کاریابی صبر می‌کند و بعد در سامانه سجاد ادامه می‌دهد و ممکن است دانشگاه مدارک بیشتری بخواهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-DEGREE-RELEASE-007-E4",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "403569"
+      },
+      "published_at": "2025-10-16",
+      "event_date": "2025-10-16",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply warned that during the unemployment-based release period, having employment insurance reported could create a problem.",
+        "fa": "پاسخ بعدی هشدار داده در دوره آزادسازی با عدم کاریابی، ردشدن بیمه شغلی می‌تواند مشکل ایجاد کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-DEGREE-RELEASE-007-E5",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "407865"
+      },
+      "published_at": "2026-02-23",
+      "event_date": "2026-02-23",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In February 2026 the group described the alternative paid release flow through Sajjad, including possible reductions based on region status and credit for prior insured work.",
+        "fa": "در فوریه ۲۰۲۶ گروه مسیر جایگزین پرداختی در سجاد را توضیح داده که می‌تواند بررسی منطقه تحصیلی و احتساب سابقه کار بیمه‌ای را هم شامل شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-ITALY-WORKFLOW-008-E1",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "390055"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_university_correspondence",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A university admission email required a refundable deposit within a defined window to confirm the seat and stated that the admission letter would be issued after payment; it also listed legalization and DoV/comparability documents.",
+        "fa": "یک ایمیل پذیرش دانشگاهی دپازیت قابل‌استرداد را برای تأیید صندلی الزامی کرده و صدور admission letter را بعد از پرداخت دانسته؛ همچنین legalization و DoV/comparability را فهرست کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-ITALY-WORKFLOW-008-E2",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "390061"
+      },
+      "published_at": "2025-01-02",
+      "event_date": "2025-01-02",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_interpretation",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "The group interpreted that email as a seat-confirmation deposit rather than tuition, with the admission letter dependent on timely payment.",
+        "fa": "گروه آن ایمیل را دپازیت رزرو صندلی تفسیر کرده، نه شهریه، و صدور نامه پذیرش را وابسته به پرداخت به‌موقع دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-ITALY-WORKFLOW-008-E3",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "395975"
+      },
+      "published_at": "2025-04-12",
+      "event_date": "2025-04-12",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_application_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant said university response time plus waiting for the Universitaly step created a long sequence that could threaten the visa timeline.",
+        "fa": "یک متقاضی گفته زمان جواب دانشگاه و سپس انتظار برای Universitaly زنجیره‌ای طولانی می‌سازد که می‌تواند timeline ویزا را تهدید کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-ITALY-WORKFLOW-008-E4",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "405633"
+      },
+      "published_at": "2025-12-04",
+      "event_date": "2025-12-04",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_application_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "A Sapienza admit reported that after embassy disruption, not having completed CIMEA/Universitaly prevented them from progressing when the embassy reopened.",
+        "fa": "یک پذیرفته‌شده Sapienza گزارش کرده بعد از اختلال سفارت، انجام‌ندادن CIMEA/Universitaly باعث شده با بازشدن سفارت هم نتواند پرونده را جلو ببرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-FIELD-SWITCH-009-E1",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "395051"
+      },
+      "published_at": "2025-03-24",
+      "event_date": "2025-03-24",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_admission_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An applicant reported moving from a theatre bachelor's background into media using graphic work in the portfolio, suggesting adjacent-field switching can be possible.",
+        "fa": "یک متقاضی گزارش کرده از بک‌گراند کارشناسی تئاتر با نمونه‌کارهای گرافیک وارد پذیرش مدیا شده؛ یعنی تغییر فیلد مجاور می‌تواند شدنی باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-FIELD-SWITCH-009-E2",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "402024"
+      },
+      "published_at": "2025-09-07",
+      "event_date": "2025-09-07",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "For an unrelated-background applicant, the group said a strong portfolio could make admission possible, although the university might impose prerequisite courses.",
+        "fa": "برای متقاضی با بک‌گراند نامرتبط، گروه گفته پورتفولیوی قوی می‌تواند پذیرش را ممکن کند، هرچند دانشگاه ممکن است پیش‌نیاز بگذارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-FIELD-SWITCH-009-E3",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "409482"
+      },
+      "published_at": "2026-06-04",
+      "event_date": "2026-06-04",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply stressed that the portfolio must be relevant to the requested field, not merely strong in a different artistic area.",
+        "fa": "پاسخ بعدی تأکید کرده پورتفولیو باید با رشته درخواستی مرتبط باشد، نه فقط در یک حوزه هنری دیگر قوی باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-CERTIFICATE-OUTPUT-010-E1",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "399592"
+      },
+      "published_at": "2025-06-23",
+      "event_date": "2025-06-23",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "In a software-learning discussion, the group said the practical project produced after learning mattered more than the course certificate itself.",
+        "fa": "در بحث یادگیری نرم‌افزار/مهارت، گروه گفته پروژه عملی حاصل از یادگیری مهم‌تر از خود سرتیفیکیت دوره است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-CERTIFICATE-OUTPUT-010-E2",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "401228"
+      },
+      "published_at": "2025-08-18",
+      "event_date": "2025-08-18",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "summary": {
+        "en": "A later reply said applicants generally do not need to buy certificates for Coursera/edX-style courses if the learning itself is useful.",
+        "fa": "پاسخ بعدی گفته معمولاً لازم نیست برای دوره‌های Coursera/edX هزینه مدرک پرداخت شود اگر خود یادگیری مفید باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-CERTIFICATE-OUTPUT-010-E3",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "407645"
+      },
+      "published_at": "2026-02-16",
+      "event_date": "2026-02-16",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "first_hand_course_experience",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "An architecture student said some formally recognized courses had weak training quality and that useful course outputs that could enter the portfolio were more valuable.",
+        "fa": "یک دانشجوی معماری گفته بعضی دوره‌های دارای مدرک رسمی کیفیت آموزشی ضعیفی داشتند و خروجی قابل‌استفاده در پورتفولیو ارزش بیشتری داشت."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "ART-CERTIFICATE-OUTPUT-010-E4",
+      "source_id": "art-architecture-pargar-telegram-export",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "407647"
+      },
+      "published_at": "2026-02-16",
+      "event_date": "2026-02-16",
+      "collected_at": "2026-09-17T07:30:27Z",
+      "source_type": "community_guidance",
+      "firsthandness": "direct",
+      "summary": {
+        "en": "The follow-up argued that for architecture applications and work, a strong design placed in the portfolio is often more useful than the certificate from the course that produced it.",
+        "fa": "پاسخ بعدی استدلال کرده برای اپلای/کار معماری، طرح قوی داخل پورتفولیو اغلب از مدرک همان دوره کاربردی‌تر است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "ART-PORTFOLIO-PRIORITY-001",
+      "issue_cluster_id": "ART-ARCH-PORTFOLIO-SELECTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "ART-PORTFOLIO-SPECS-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "ART-FIELD-SWITCH-009"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "portfolio_quality_priority",
+        "class": "admission"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "architecture",
+            "visual arts",
+            "design",
+            "art history",
+            "fine arts"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "art_architecture_admission"
+          ]
+        },
+        "process_stages": [
+          "portfolio",
+          "profile_review"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "In art/architecture admissions, portfolio quality and programme relevance repeatedly outweigh simply maximizing project count or GPA",
+          "fa": "در پذیرش هنر/معماری، کیفیت و فیت پورتفولیو بارها مهم‌تر از زیادکردن تعداد کار یا صرفاً معدل بالا گزارش شده است"
+        },
+        "summary": {
+          "en": "Across 2025-2026 the group repeatedly prioritizes the strongest, most relevant work. First-hand and community examples favor selective, varied portfolios and explicitly state that a great portfolio can compensate for a merely good GPA better than the reverse.",
+          "fa": "در ۲۰۲۵–۲۰۲۶ گروه بارها روی انتخاب بهترین و مرتبط‌ترین کارها تأکید کرده است. تجربه‌ها از پورتفولیوی گزیده و متنوع حمایت می‌کنند و حتی می‌گویند پورتفولیوی عالی بهتر از معدل عالی با پورتفولیوی ضعیف جبران می‌کند."
+        },
+        "practical_impact": {
+          "en": "Applicants who pad the portfolio with weaker work may dilute the strongest part of their profile.",
+          "fa": "پرکردن پورتفولیو با کارهای ضعیف‌تر می‌تواند قوی‌ترین بخش پروفایل را رقیق کند."
+        },
+        "who_should_care": {
+          "en": "Art, architecture and design applicants.",
+          "fa": "متقاضیان هنر، معماری و دیزاین."
+        },
+        "recommended_action": {
+          "en": "Select the strongest work that matches the target programme; treat quantity as secondary unless the university specifies it.",
+          "fa": "قوی‌ترین کارهای متناسب با program را انتخاب کنید و تعداد را فقط وقتی دانشگاه مشخص کرده اولویت بدهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "ART-PORTFOLIO-PRIORITY-001-E1",
+          "relation": "supports",
+          "independence_group": "ART-PORTFOLIO-PRIORITY-001-E1"
+        },
+        {
+          "evidence_id": "ART-PORTFOLIO-PRIORITY-001-E2",
+          "relation": "supports",
+          "independence_group": "ART-PORTFOLIO-PRIORITY-001-E2"
+        },
+        {
+          "evidence_id": "ART-PORTFOLIO-PRIORITY-001-E3",
+          "relation": "supports",
+          "independence_group": "ART-PORTFOLIO-PRIORITY-001-E3"
+        },
+        {
+          "evidence_id": "ART-PORTFOLIO-PRIORITY-001-E4",
+          "relation": "supports",
+          "independence_group": "ART-PORTFOLIO-PRIORITY-001-E4"
+        },
+        {
+          "evidence_id": "ART-PORTFOLIO-PRIORITY-001-E5",
+          "relation": "supports",
+          "independence_group": "ART-PORTFOLIO-PRIORITY-001-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The pattern recurs over the full period and includes first-hand admission experience."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Portfolio weighting remains institution/program-specific and was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "ART-PORTFOLIO-PRIORITY-001-E1",
+            "ART-PORTFOLIO-PRIORITY-001-E2",
+            "ART-PORTFOLIO-PRIORITY-001-E3",
+            "ART-PORTFOLIO-PRIORITY-001-E4",
+            "ART-PORTFOLIO-PRIORITY-001-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Art & Architecture Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Programme portfolio rubrics change by intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "portfolio",
+        "architecture",
+        "art",
+        "quality",
+        "relevance"
+      ],
+      "first_seen": "2025-01-07",
+      "last_seen": "2026-09-10"
+    },
+    {
+      "signal_id": "ART-PORTFOLIO-SPECS-002",
+      "issue_cluster_id": "ART-ARCH-PORTFOLIO-TECHNICAL-REQUIREMENTS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "ART-PORTFOLIO-PRIORITY-001"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "portfolio_submission_specs",
+        "class": "application"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "architecture",
+            "visual arts",
+            "design",
+            "art history",
+            "fine arts"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "art_architecture_admission"
+          ]
+        },
+        "process_stages": [
+          "portfolio_upload",
+          "SlideRoom",
+          "portal"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Portfolio submission rules are highly programme-specific and technical compliance can block an otherwise complete application",
+          "fa": "قواعد ارسال پورتفولیو بسیار program-specific است و خطای فنی می‌تواند اپلیکیشن کامل را متوقف کند"
+        },
+        "summary": {
+          "en": "Page limits, project counts, file sizes, file counts and whether to use SlideRoom versus an external link all vary. A direct applicant remained stuck as Unsubmitted despite apparently meeting size/count rules.",
+          "fa": "سقف صفحه، تعداد پروژه، حجم/تعداد فایل و استفاده از SlideRoom یا لینک بیرونی متفاوت است. یک متقاضی با وجود رعایت ظاهری محدودیت‌ها همچنان Unsubmitted مانده بود."
+        },
+        "practical_impact": {
+          "en": "Portfolio content and portfolio submission are separate risk tracks.",
+          "fa": "محتوای پورتفولیو و ارسال فنی آن دو ریسک جدا هستند."
+        },
+        "who_should_care": {
+          "en": "Applicants to portfolio-based programmes.",
+          "fa": "متقاضیان برنامه‌های portfolio-based."
+        },
+        "recommended_action": {
+          "en": "Create an institution-specific checklist for pages/projects/file size/platform and verify the final submitted status before the deadline.",
+          "fa": "برای هر دانشگاه چک‌لیست صفحه/پروژه/حجم/پلتفرم بسازید و قبل از deadline وضعیت final submission را چک کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "ART-PORTFOLIO-SPECS-002-E1",
+          "relation": "supports",
+          "independence_group": "ART-PORTFOLIO-SPECS-002-E1"
+        },
+        {
+          "evidence_id": "ART-PORTFOLIO-SPECS-002-E2",
+          "relation": "supports",
+          "independence_group": "ART-PORTFOLIO-SPECS-002-E2"
+        },
+        {
+          "evidence_id": "ART-PORTFOLIO-SPECS-002-E3",
+          "relation": "supports",
+          "independence_group": "ART-PORTFOLIO-SPECS-002-E3"
+        },
+        {
+          "evidence_id": "ART-PORTFOLIO-SPECS-002-E4",
+          "relation": "supports",
+          "independence_group": "ART-PORTFOLIO-SPECS-002-E4"
+        },
+        {
+          "evidence_id": "ART-PORTFOLIO-SPECS-002-E5",
+          "relation": "supports",
+          "independence_group": "ART-PORTFOLIO-SPECS-002-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated operational questions and a direct upload failure demonstrate durable technical friction."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current technical portfolio requirements were not verified per university."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "ART-PORTFOLIO-SPECS-002-E1",
+            "ART-PORTFOLIO-SPECS-002-E2",
+            "ART-PORTFOLIO-SPECS-002-E3",
+            "ART-PORTFOLIO-SPECS-002-E4",
+            "ART-PORTFOLIO-SPECS-002-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Art & Architecture Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Upload specifications can change each cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "SlideRoom",
+        "portfolio upload",
+        "file size",
+        "page limit"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-07-01"
+    },
+    {
+      "signal_id": "ART-RECOMMENDER-003",
+      "issue_cluster_id": "ART-ARCH-RECOMMENDER-IDENTITY-EMAIL",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "recommender_relationship_and_email",
+        "class": "recommendation"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "architecture",
+            "visual arts",
+            "design",
+            "art history",
+            "fine arts"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "graduate_admission"
+          ]
+        },
+        "process_stages": [
+          "recommendation",
+          "recommender_email"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Recommendation validity depends on a real academic/professional relationship; academic-email rules vary by university",
+          "fa": "اعتبار ریکام به رابطه واقعی آموزشی/کاری وابسته است و الزام ایمیل آکادمیک بین دانشگاه‌ها فرق می‌کند"
+        },
+        "summary": {
+          "en": "The group repeatedly accepts professors who changed institutions and professional recommenders when the relationship is genuine, while personal-email use should be cleared with the university where possible.",
+          "fa": "گروه استاد منتقل‌شده به دانشگاه دیگر و ریکامندر حرفه‌ای را در صورت رابطه واقعی قابل‌قبول می‌داند؛ استفاده از ایمیل شخصی هم بهتر است با دانشگاه مقصد هماهنگ شود."
+        },
+        "practical_impact": {
+          "en": "Trying to solve recommendation problems by finding an unrelated academic email can create authenticity risk.",
+          "fa": "حل مشکل ریکام با پیدا کردن ایمیل آکادمیک فرد نامرتبط می‌تواند ریسک اصالت ایجاد کند."
+        },
+        "who_should_care": {
+          "en": "Applicants whose professors lack working academic email or have moved institutions.",
+          "fa": "متقاضیانی که استادشان ایمیل آکادمیک فعال ندارد یا دانشگاهش را عوض کرده است."
+        },
+        "recommended_action": {
+          "en": "Use a genuine recommender, explain the relationship in the letter, and ask the university before using a non-academic email.",
+          "fa": "ریکامندر واقعی انتخاب کنید، رابطه را در نامه توضیح دهید و پیش از ایمیل غیرآکادمیک از دانشگاه مقصد سؤال کنید."
+        },
+        "known_workaround": "Direct admissions/coordinator approval is repeatedly used when academic email is unavailable."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "ART-RECOMMENDER-003-E1",
+          "relation": "supports",
+          "independence_group": "ART-RECOMMENDER-003-E1"
+        },
+        {
+          "evidence_id": "ART-RECOMMENDER-003-E2",
+          "relation": "supports",
+          "independence_group": "ART-RECOMMENDER-003-E2"
+        },
+        {
+          "evidence_id": "ART-RECOMMENDER-003-E3",
+          "relation": "supports",
+          "independence_group": "ART-RECOMMENDER-003-E3"
+        },
+        {
+          "evidence_id": "ART-RECOMMENDER-003-E4",
+          "relation": "supports",
+          "independence_group": "ART-RECOMMENDER-003-E4"
+        },
+        {
+          "evidence_id": "ART-RECOMMENDER-003-E5",
+          "relation": "supports",
+          "independence_group": "ART-RECOMMENDER-003-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated cases show both relationship-based flexibility and institution-specific email rules."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Recommender/email rules were not independently verified for specific universities."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "ART-RECOMMENDER-003-E1",
+            "ART-RECOMMENDER-003-E2",
+            "ART-RECOMMENDER-003-E3",
+            "ART-RECOMMENDER-003-E4",
+            "ART-RECOMMENDER-003-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Art & Architecture Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Recommendation submission rules vary by institution.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "recommendation",
+        "academic email",
+        "recommender",
+        "professor"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-01-20"
+    },
+    {
+      "signal_id": "ART-FEE-WAIVER-004",
+      "issue_cluster_id": "ART-ARCH-APPLICATION-FEE-WAIVER",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "application_fee_waiver_variance",
+        "class": "application_fee"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "architecture",
+            "visual arts",
+            "design",
+            "art history",
+            "fine arts"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "graduate_admission"
+          ]
+        },
+        "process_stages": [
+          "application_fee",
+          "fee_waiver"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Application-fee waivers are inconsistent, but proactive outreach can materially reduce costs for Iranian applicants",
+          "fa": "fee waiver یکدست نیست، اما outreach فعال می‌تواند هزینه اپلای متقاضی ایرانی را واقعاً کم کند"
+        },
+        "summary": {
+          "en": "Some applicants obtained waivers by emailing coordinators/graduate offices and explaining payment constraints, while other universities excluded international applicants or denied requests late. Portfolio-platform fees may remain even when the application fee is waived.",
+          "fa": "بعضی متقاضیان با ایمیل به coordinator/graduate office و توضیح مشکل پرداخت waiver گرفته‌اند؛ بعضی دانشگاه‌ها international را مستثنا کرده یا دیر رد کرده‌اند. حتی با waiver ممکن است هزینه پلتفرم پورتفولیو بماند."
+        },
+        "practical_impact": {
+          "en": "Waiver outreach can save meaningful money across many applications but cannot be assumed until confirmed.",
+          "fa": "outreach برای waiver در چند اپلیکیشن صرفه‌جویی مهم می‌سازد، اما تا تأیید نباید روی آن حساب قطعی کرد."
+        },
+        "who_should_care": {
+          "en": "Applicants with high multi-school application costs.",
+          "fa": "متقاضیانی با هزینه بالای اپلای چند دانشگاه."
+        },
+        "recommended_action": {
+          "en": "Request waivers early from admissions/coordinators and keep a payment fallback until the waiver is confirmed.",
+          "fa": "waiver را زود از admissions/coordinator بخواهید و تا تأیید، fallback پرداخت داشته باشید."
+        },
+        "known_workaround": "Direct email outreach and institution-specific waiver codes are the recurring community methods."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "ART-FEE-WAIVER-004-E1",
+          "relation": "supports",
+          "independence_group": "ART-FEE-WAIVER-004-E1"
+        },
+        {
+          "evidence_id": "ART-FEE-WAIVER-004-E2",
+          "relation": "supports",
+          "independence_group": "ART-FEE-WAIVER-004-E2"
+        },
+        {
+          "evidence_id": "ART-FEE-WAIVER-004-C1",
+          "relation": "contradicts",
+          "independence_group": "ART-FEE-WAIVER-004-C1"
+        },
+        {
+          "evidence_id": "ART-FEE-WAIVER-004-C2",
+          "relation": "contradicts",
+          "independence_group": "ART-FEE-WAIVER-004-C2"
+        },
+        {
+          "evidence_id": "ART-FEE-WAIVER-004-E3",
+          "relation": "supports",
+          "independence_group": "ART-FEE-WAIVER-004-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple successful and failed first-hand cases show both opportunity and inconsistency."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current fee-waiver eligibility and country-income rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "ART-FEE-WAIVER-004-E1",
+            "ART-FEE-WAIVER-004-E2",
+            "ART-FEE-WAIVER-004-C1",
+            "ART-FEE-WAIVER-004-C2",
+            "ART-FEE-WAIVER-004-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Art & Architecture Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Fee-waiver policies change by cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "application fee",
+        "waiver",
+        "international applicant",
+        "Iran"
+      ],
+      "first_seen": "2025-01-04",
+      "last_seen": "2025-02-12"
+    },
+    {
+      "signal_id": "ART-PHD-FUNDING-005",
+      "issue_cluster_id": "ART-ARCH-PHD-FUNDING-TA",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "ART-MASTER-FUNDING-006"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "phd_department_ta_funding",
+        "class": "funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "architecture",
+            "visual arts",
+            "design",
+            "art history",
+            "fine arts"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "PhD"
+          ]
+        },
+        "process_stages": [
+          "faculty_contact",
+          "department_admission",
+          "TA",
+          "RA"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "U.S./Canadian art-architecture PhD funding is commonly programme/department based, with TA often more visible than posted RA positions",
+          "fa": "فاند PhD هنر/معماری آمریکا و کانادا غالباً program/dept-based است و TA از پوزیشن RA آگهی‌شده پرتکرارتر دیده می‌شود"
+        },
+        "summary": {
+          "en": "The community advises applying to the PhD programme and contacting aligned faculty for recognition; department decisions can then allocate funding. A first-hand funded applicant also emphasized programme fit over a perfect score profile.",
+          "fa": "گروه توصیه می‌کند به program دکتری اپلای و با استاد هم‌راستا ارتباط گرفته شود؛ سپس دپارتمان درباره فاند تصمیم می‌گیرد. یک تجربه فاندگرفته نیز فیت برنامه را مهم‌تر از پروفایل نمره‌ای بی‌نقص دانسته است."
+        },
+        "practical_impact": {
+          "en": "Searching only for advertised RA positions can miss department/TA-funded PhD routes.",
+          "fa": "جست‌وجوی صرفاً RA آگهی‌شده می‌تواند مسیرهای PhD با فاند دپارتمان/TA را از دست بدهد."
+        },
+        "who_should_care": {
+          "en": "Art/architecture PhD applicants to U.S. and Canada.",
+          "fa": "متقاضیان PhD هنر/معماری آمریکا و کانادا."
+        },
+        "recommended_action": {
+          "en": "Apply programme-first, contact aligned faculty, and ask the department how TA/RA/tuition remission are allocated.",
+          "fa": "program-first اپلای کنید، با استاد هم‌راستا ارتباط بگیرید و از دپارتمان درباره تخصیص TA/RA/tuition remission بپرسید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "ART-PHD-FUNDING-005-E1",
+          "relation": "supports",
+          "independence_group": "ART-PHD-FUNDING-005-E1"
+        },
+        {
+          "evidence_id": "ART-PHD-FUNDING-005-E2",
+          "relation": "supports",
+          "independence_group": "ART-PHD-FUNDING-005-E2"
+        },
+        {
+          "evidence_id": "ART-PHD-FUNDING-005-E3",
+          "relation": "supports",
+          "independence_group": "ART-PHD-FUNDING-005-E3"
+        },
+        {
+          "evidence_id": "ART-PHD-FUNDING-005-E4",
+          "relation": "supports",
+          "independence_group": "ART-PHD-FUNDING-005-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "A detailed route explanation plus direct funding experience supports the pattern."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Funding structures vary by department and were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "ART-PHD-FUNDING-005-E1",
+            "ART-PHD-FUNDING-005-E2",
+            "ART-PHD-FUNDING-005-E3",
+            "ART-PHD-FUNDING-005-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Art & Architecture Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Assistantship budgets change annually.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "PhD",
+        "TA",
+        "RA",
+        "funding",
+        "department"
+      ],
+      "first_seen": "2025-01-24",
+      "last_seen": "2025-05-28"
+    },
+    {
+      "signal_id": "ART-MASTER-FUNDING-006",
+      "issue_cluster_id": "ART-ARCH-MASTERS-FUNDING-VARIANCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "ART-PHD-FUNDING-005"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "masters_partial_full_funding_variance",
+        "class": "funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "architecture",
+            "visual arts",
+            "design",
+            "art history",
+            "fine arts"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "masters",
+            "MFA",
+            "MArch"
+          ]
+        },
+        "process_stages": [
+          "scholarship",
+          "TA",
+          "tuition_waiver",
+          "proof_of_funds"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Full funding for art/architecture master's study exists, but is sparse and institution-specific; partial awards often leave a large funding gap",
+          "fa": "فول‌فاند مستر هنر/معماری وجود دارد اما محدود و دانشگاه‌محور است؛ partial award اغلب شکاف مالی بزرگی باقی می‌گذارد"
+        },
+        "summary": {
+          "en": "The file contains real full/near-full scholarship and TA examples, but also schools with only partial tuition support and a partially funded MArch case still needing substantial proof of funds.",
+          "fa": "فایل نمونه واقعی full/near-full scholarship و TA دارد، اما دانشگاه‌هایی با حمایت فقط بخشی از شهریه و یک کیس MArch پارشال‌فاند با تمکن سنگین هم دارد."
+        },
+        "practical_impact": {
+          "en": "An admission with 'funding' can still be financially non-viable unless tuition, stipend, insurance and visa proof-of-funds are separated.",
+          "fa": "پذیرش دارای «فاند» ممکن است هنوز از نظر مالی عملی نباشد مگر پوشش شهریه، stipend، بیمه و تمکن ویزا جدا بررسی شوند."
+        },
+        "who_should_care": {
+          "en": "Master's/MFA/MArch applicants needing major funding.",
+          "fa": "متقاضیان مستر/MFA/MArch نیازمند فاند جدی."
+        },
+        "recommended_action": {
+          "en": "Read the award line-by-line and calculate remaining tuition, living cost and visa funds before accepting.",
+          "fa": "award را خط‌به‌خط بخوانید و شهریه باقی‌مانده، هزینه زندگی و تمکن ویزا را قبل از قبول حساب کنید."
+        },
+        "known_workaround": "TA/assistantship plus scholarship can sometimes convert a partial award into near-full coverage."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "ART-MASTER-FUNDING-006-E1",
+          "relation": "supports",
+          "independence_group": "ART-MASTER-FUNDING-006-E1"
+        },
+        {
+          "evidence_id": "ART-MASTER-FUNDING-006-E2",
+          "relation": "supports",
+          "independence_group": "ART-MASTER-FUNDING-006-E2"
+        },
+        {
+          "evidence_id": "ART-MASTER-FUNDING-006-C1",
+          "relation": "contradicts",
+          "independence_group": "ART-MASTER-FUNDING-006-C1"
+        },
+        {
+          "evidence_id": "ART-MASTER-FUNDING-006-C2",
+          "relation": "contradicts",
+          "independence_group": "ART-MASTER-FUNDING-006-C2"
+        },
+        {
+          "evidence_id": "ART-MASTER-FUNDING-006-E3",
+          "relation": "supports",
+          "independence_group": "ART-MASTER-FUNDING-006-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Both positive and negative first-hand funding outcomes are present."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current award amounts and programme budgets were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "ART-MASTER-FUNDING-006-E1",
+            "ART-MASTER-FUNDING-006-E2",
+            "ART-MASTER-FUNDING-006-C1",
+            "ART-MASTER-FUNDING-006-C2",
+            "ART-MASTER-FUNDING-006-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Art & Architecture Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Master's funding changes by programme and cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "masters",
+        "MFA",
+        "MArch",
+        "full funding",
+        "partial funding",
+        "TA"
+      ],
+      "first_seen": "2025-01-28",
+      "last_seen": "2025-04-07"
+    },
+    {
+      "signal_id": "ART-DEGREE-RELEASE-007",
+      "issue_cluster_id": "IRAN-ART-ARCH-DEGREE-RELEASE",
+      "relationships": [],
+      "classification": {
+        "family": "E6_DOCUMENTS_EVIDENCE",
+        "type": "iran_degree_release_unemployment_route",
+        "class": "source_country_document"
+      },
+      "scope": {
+        "destination": {
+          "country": "Iran",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "architecture",
+            "visual arts",
+            "design",
+            "art history",
+            "fine arts"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "degree_release",
+            "free_education_obligation"
+          ]
+        },
+        "process_stages": [
+          "job_search_system",
+          "unemployment_letter",
+          "Sajjad",
+          "release"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Degree release through the unemployment route is a long, evolving process where insurance/employment status can materially affect eligibility",
+          "fa": "آزادسازی مدرک از مسیر عدم کاریابی فرایندی طولانی و در حال تغییر است و وضعیت بیمه/اشتغال می‌تواند eligibility را تغییر دهد"
+        },
+        "summary": {
+          "en": "Community reports describe movement toward an online job-search/Sajjad workflow, waiting periods, university document requests and sensitivity to insured employment. A paid-release route also appears as an alternative.",
+          "fa": "تجربه‌ها از انتقال فرایند به سامانه شغل/سجاد، دوره انتظار، درخواست مدارک دانشگاه و حساسیت به سابقه بیمه می‌گویند. مسیر پرداختی نیز به‌عنوان جایگزین مطرح است."
+        },
+        "practical_impact": {
+          "en": "Applicants can miss foreign deadlines if they start degree release too late or accidentally create disqualifying employment evidence.",
+          "fa": "شروع دیر آزادسازی یا ایجاد سابقه اشتغال ناسازگار می‌تواند deadline خارجی را به خطر بیندازد."
+        },
+        "who_should_care": {
+          "en": "Iranian public-university art/architecture graduates.",
+          "fa": "فارغ‌التحصیلان روزانه هنر/معماری ایران."
+        },
+        "recommended_action": {
+          "en": "Start degree-release planning early and verify the current Sajjad/job-system rules before changing insurance/employment status.",
+          "fa": "برنامه آزادسازی را زود شروع کنید و قبل از تغییر وضعیت بیمه/کار، قواعد روز سجاد/سامانه شغل را بررسی کنید."
+        },
+        "known_workaround": "Paid cancellation of the education obligation appears as an alternative to the unemployment route."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "ART-DEGREE-RELEASE-007-E1",
+          "relation": "supports",
+          "independence_group": "ART-DEGREE-RELEASE-007-E1"
+        },
+        {
+          "evidence_id": "ART-DEGREE-RELEASE-007-E2",
+          "relation": "supports",
+          "independence_group": "ART-DEGREE-RELEASE-007-E2"
+        },
+        {
+          "evidence_id": "ART-DEGREE-RELEASE-007-E3",
+          "relation": "supports",
+          "independence_group": "ART-DEGREE-RELEASE-007-E3"
+        },
+        {
+          "evidence_id": "ART-DEGREE-RELEASE-007-E4",
+          "relation": "supports",
+          "independence_group": "ART-DEGREE-RELEASE-007-E4"
+        },
+        {
+          "evidence_id": "ART-DEGREE-RELEASE-007-E5",
+          "relation": "supports",
+          "independence_group": "ART-DEGREE-RELEASE-007-E5"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "evolving",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The issue recurs throughout 2025-2026 with a detailed first-hand process description."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Iranian degree-release regulations were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "ART-DEGREE-RELEASE-007-E1",
+            "ART-DEGREE-RELEASE-007-E2",
+            "ART-DEGREE-RELEASE-007-E3",
+            "ART-DEGREE-RELEASE-007-E4",
+            "ART-DEGREE-RELEASE-007-E5"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Art & Architecture Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Iranian degree-release procedures can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "degree release",
+        "Sajjad",
+        "unemployment",
+        "insurance",
+        "Iran"
+      ],
+      "first_seen": "2025-01-29",
+      "last_seen": "2026-02-23"
+    },
+    {
+      "signal_id": "ART-ITALY-WORKFLOW-008",
+      "issue_cluster_id": "ITALY-ADMISSION-UNIVERSITALY-CIMEA",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "italy_multistage_enrolment",
+        "class": "Italy"
+      },
+      "scope": {
+        "destination": {
+          "country": "Italy",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "architecture",
+            "visual arts",
+            "design",
+            "art history",
+            "fine arts"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "masters",
+            "art_architecture_admission"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "deposit",
+          "Universitaly",
+          "CIMEA",
+          "visa"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Italian admission is operationally multi-stage: university admission, seat confirmation/deposit, credential/legalization steps and Universitaly can all gate visa progress",
+          "fa": "اپلای ایتالیا چندمرحله‌ای است: پذیرش دانشگاه، دپازیت/تأیید صندلی، مدارک ارزشیابی و Universitaly هرکدام می‌توانند ویزا را متوقف کنند"
+        },
+        "summary": {
+          "en": "A direct university email tied the admission letter to a seat-confirmation deposit and listed legalization/comparability documents. A later Sapienza case showed that missing CIMEA/Universitaly could block progress even after admission and embassy reopening.",
+          "fa": "یک ایمیل دانشگاهی admission letter را به دپازیت صندلی گره زده و مدارک legalization/comparability خواسته است. کیس بعدی Sapienza نشان می‌دهد نداشتن CIMEA/Universitaly حتی بعد از پذیرش و بازشدن سفارت می‌تواند پرونده را متوقف کند."
+        },
+        "practical_impact": {
+          "en": "Getting admitted is not the end of the Italy critical path.",
+          "fa": "گرفتن پذیرش پایان critical path ایتالیا نیست."
+        },
+        "who_should_care": {
+          "en": "Iranian applicants to Italian universities.",
+          "fa": "متقاضیان ایرانی دانشگاه‌های ایتالیا."
+        },
+        "recommended_action": {
+          "en": "Track admission acceptance, deposit, document comparability/legalization, Universitaly and visa as separate deadlines.",
+          "fa": "پذیرش، دپازیت، comparability/legalization، Universitaly و ویزا را deadlineهای جدا مدیریت کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "ART-ITALY-WORKFLOW-008-E1",
+          "relation": "supports",
+          "independence_group": "ART-ITALY-WORKFLOW-008-E1"
+        },
+        {
+          "evidence_id": "ART-ITALY-WORKFLOW-008-E2",
+          "relation": "supports",
+          "independence_group": "ART-ITALY-WORKFLOW-008-E2"
+        },
+        {
+          "evidence_id": "ART-ITALY-WORKFLOW-008-E3",
+          "relation": "supports",
+          "independence_group": "ART-ITALY-WORKFLOW-008-E3"
+        },
+        {
+          "evidence_id": "ART-ITALY-WORKFLOW-008-E4",
+          "relation": "supports",
+          "independence_group": "ART-ITALY-WORKFLOW-008-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct university correspondence plus a later failed progression case show the multi-stage dependency."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current university/Universitaly/CIMEA/consular rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "ART-ITALY-WORKFLOW-008-E1",
+            "ART-ITALY-WORKFLOW-008-E2",
+            "ART-ITALY-WORKFLOW-008-E3",
+            "ART-ITALY-WORKFLOW-008-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Art & Architecture Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Italy procedures and deadlines vary by university and cycle.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Italy",
+        "Universitaly",
+        "CIMEA",
+        "deposit",
+        "admission letter"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-12-04"
+    },
+    {
+      "signal_id": "ART-FIELD-SWITCH-009",
+      "issue_cluster_id": "ART-DESIGN-BACKGROUND-SWITCH",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "ART-PORTFOLIO-PRIORITY-001"
+        }
+      ],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "field_switch_via_portfolio",
+        "class": "admission"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "architecture",
+            "visual arts",
+            "design",
+            "art history",
+            "fine arts"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "art_design_admission"
+          ]
+        },
+        "process_stages": [
+          "background_match",
+          "prerequisites",
+          "portfolio"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Switching into an art/design field from an adjacent or unrelated background can be possible when the portfolio matches the target, but prerequisites may be added",
+          "fa": "تغییر رشته به هنر/دیزاین از بک‌گراند مجاور یا نامرتبط می‌تواند با پورتفولیوی مناسب شدنی باشد، اما ممکن است پیش‌نیاز اضافه شود"
+        },
+        "summary": {
+          "en": "The file includes a first-hand theatre-to-media admission using graphic work, community guidance allowing unrelated-background applications with strong portfolios, and repeated insistence that the portfolio must match the requested field.",
+          "fa": "فایل یک تجربه پذیرش تئاتر→مدیا با نمونه‌کار گرافیک، راهنمایی برای بک‌گراند نامرتبط با پورتفولیوی قوی، و تأکید مکرر بر مرتبط‌بودن پورتفولیو با رشته هدف دارد."
+        },
+        "practical_impact": {
+          "en": "Applicants may not need a second bachelor's degree solely to change creative fields, but the target programme may require bridge coursework.",
+          "fa": "برای تغییر فیلد خلاقانه لزوماً کارشناسی دوم لازم نیست، اما program مقصد ممکن است bridge/prerequisite بخواهد."
+        },
+        "who_should_care": {
+          "en": "Career/field switchers into art, media, design or architecture-adjacent study.",
+          "fa": "افرادی که به هنر، مدیا، دیزاین یا حوزه‌های نزدیک معماری تغییر رشته می‌دهند."
+        },
+        "recommended_action": {
+          "en": "Build a target-field portfolio first, then check prerequisite/credit rules before deciding to earn another degree.",
+          "fa": "اول پورتفولیوی مرتبط با فیلد هدف بسازید و بعد قواعد پیش‌نیاز/credit را بررسی کنید، پیش از اینکه سراغ مدرک جدید بروید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "ART-FIELD-SWITCH-009-E1",
+          "relation": "supports",
+          "independence_group": "ART-FIELD-SWITCH-009-E1"
+        },
+        {
+          "evidence_id": "ART-FIELD-SWITCH-009-E2",
+          "relation": "supports",
+          "independence_group": "ART-FIELD-SWITCH-009-E2"
+        },
+        {
+          "evidence_id": "ART-FIELD-SWITCH-009-E3",
+          "relation": "supports",
+          "independence_group": "ART-FIELD-SWITCH-009-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "A direct successful switch plus repeated community guidance supports conditional flexibility."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Background/prerequisite rules were not independently verified per programme."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "ART-FIELD-SWITCH-009-E1",
+            "ART-FIELD-SWITCH-009-E2",
+            "ART-FIELD-SWITCH-009-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Art & Architecture Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Prerequisites vary by programme.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "field switch",
+        "portfolio",
+        "prerequisite",
+        "art",
+        "design"
+      ],
+      "first_seen": "2025-03-24",
+      "last_seen": "2026-06-04"
+    },
+    {
+      "signal_id": "ART-CERTIFICATE-OUTPUT-010",
+      "issue_cluster_id": "ART-ARCH-COURSE-CERTIFICATE-VS-OUTPUT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "ART-PORTFOLIO-PRIORITY-001"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "project_output_over_certificate",
+        "class": "skills"
+      },
+      "scope": {
+        "destination": {
+          "country": "Multi-country",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "architecture",
+            "visual arts",
+            "design",
+            "art history",
+            "fine arts"
+          ],
+          "education_levels": [
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "art_architecture_admission",
+            "creative_employment"
+          ]
+        },
+        "process_stages": [
+          "course_selection",
+          "skills",
+          "portfolio"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For art/architecture skill-building, practical project output is repeatedly valued more than collecting course certificates",
+          "fa": "در مهارت‌سازی هنر/معماری، خروجی پروژه عملی بارها مهم‌تر از جمع‌کردن سرتیفیکیت دوره گزارش شده است"
+        },
+        "summary": {
+          "en": "Members advise taking useful courses without necessarily paying for certificates and emphasize producing portfolio-ready work. Architecture-specific replies explicitly prefer a strong design output over the course credential itself.",
+          "fa": "اعضا توصیه می‌کنند دوره مفید را حتی بدون خرید مدرک بگذرانید و خروجی قابل‌قرارگیری در پورتفولیو بسازید. پاسخ‌های معماری صریحاً طرح قوی را از مدرک دوره مهم‌تر می‌دانند."
+        },
+        "practical_impact": {
+          "en": "Spending money on certificates without producing visible work may add little to a creative application.",
+          "fa": "هزینه برای مدرک دوره بدون خروجی قابل‌نمایش ممکن است ارزش کمی به اپلای خلاقانه اضافه کند."
+        },
+        "who_should_care": {
+          "en": "Applicants building software/design/architecture skills before applying.",
+          "fa": "متقاضیانی که پیش از اپلای مهارت نرم‌افزار/دیزاین/معماری می‌سازند."
+        },
+        "recommended_action": {
+          "en": "Choose courses for the project you can produce and demonstrate, not for the certificate label alone.",
+          "fa": "دوره را بر اساس پروژه‌ای که می‌توانید بسازید و نشان دهید انتخاب کنید، نه صرفاً نام مدرک."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "ART-CERTIFICATE-OUTPUT-010-E1",
+          "relation": "supports",
+          "independence_group": "ART-CERTIFICATE-OUTPUT-010-E1"
+        },
+        {
+          "evidence_id": "ART-CERTIFICATE-OUTPUT-010-E2",
+          "relation": "supports",
+          "independence_group": "ART-CERTIFICATE-OUTPUT-010-E2"
+        },
+        {
+          "evidence_id": "ART-CERTIFICATE-OUTPUT-010-E3",
+          "relation": "supports",
+          "independence_group": "ART-CERTIFICATE-OUTPUT-010-E3"
+        },
+        {
+          "evidence_id": "ART-CERTIFICATE-OUTPUT-010-E4",
+          "relation": "supports",
+          "independence_group": "ART-CERTIFICATE-OUTPUT-010-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "medium",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same advice recurs across software, online courses and architecture-specific discussion."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "This is a community selection/practice signal, not an official admissions rule."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "ART-CERTIFICATE-OUTPUT-010-E1",
+            "ART-CERTIFICATE-OUTPUT-010-E2",
+            "ART-CERTIFICATE-OUTPUT-010-E3",
+            "ART-CERTIFICATE-OUTPUT-010-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Art & Architecture Telegram community export."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2027-03-16",
+        "reason": "Stable practice signal.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "certificate",
+        "course",
+        "portfolio",
+        "project output"
+      ],
+      "first_seen": "2025-06-23",
+      "last_seen": "2026-02-16"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram usernames/IDs, emails and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 6,365 records from the uploaded JSON."
+      },
+      "reply_chains_considered": {
+        "status": "partial",
+        "note": "Relevant reply chains were inspected for selected signals; the full reply graph was not exhaustively reconstructed."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Portfolio-selling posts, generic consultancy advertisements and unrelated service promotions were excluded."
+      },
+      "unsafe_document_practices_filtered": {
+        "status": "pass",
+        "note": "Requests to source unrelated academic emails or impersonate recommenders were not converted into recommended actions."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated portfolio, recommendation, fee-waiver, funding, degree-release, Italy, field-switch and certificate discussions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Successful and failed fee-waiver cases and both full/partial master's funding outcomes are preserved."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "University correspondence is source-reported; no current admissions, degree-release, Universitaly/CIMEA or funding rule was independently verified."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community planning evidence only. This file does not establish official university admission, funding, Iranian degree-release, Italian pre-enrolment or visa rules. Verify current programme and authority requirements before acting."
+}

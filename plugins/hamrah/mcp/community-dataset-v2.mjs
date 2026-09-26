@@ -6,7 +6,7 @@ import { inspectDatasetPrivacy } from "./privacy-check.mjs";
 
 export const V2_SCHEMA_VERSION = "2.0";
 const SCHEMA = JSON.parse(readFileSync(
-  new URL("../skills/hamrah-signal-builder/references/output_schema.json", import.meta.url), "utf8"
+  new URL("../skills/hamrah-signal-builder/references/community_dataset_v2_schema.json", import.meta.url), "utf8"
 ));
 const validateSchema = new Ajv2020({ allErrors: true, strict: false }).compile(SCHEMA);
 

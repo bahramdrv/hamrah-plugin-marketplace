@@ -1,0 +1,393 @@
+{
+  "source": "Hamrah Community Signal Candidate Extraction",
+  "generatedAt": "2026-09-16T12:09:22Z",
+  "input": {
+    "fileName": "result(9).json",
+    "groupName": "دکتری اروپا با پرگار",
+    "groupType": "private_supergroup",
+    "messageCount": 37643,
+    "dateRange": {
+      "from": "2025-01-01T00:44:31",
+      "to": "2026-09-16T14:02:04"
+    }
+  },
+  "coverage": {
+    "filesScanned": 1,
+    "messagesScanned": 37643,
+    "signalsExtracted": 6,
+    "validationStatus": "candidate_only",
+    "truncated": false
+  },
+  "filters": {
+    "route": "phd",
+    "originCountry": "Iran",
+    "nationality": "Iranian",
+    "priorityWindow": "2026-06-01 through 2026-09-16"
+  },
+  "extractionMethod": {
+    "description": "Signals were retained when they were supported by explicit institution messages/forms or repeated practical reports across multiple participants. Blanket claims about entire countries were not accepted without stronger evidence, and contradictory evidence was preserved in the signal wording.",
+    "privacy": "Participant names and user IDs are omitted from the exported evidence. Source message IDs, dates, claims, and short excerpts are retained.",
+    "validation": "These are source-derived candidate community signals. They are not official immigration rules and have not been promoted to Hamrah's validated Community Signal Store."
+  },
+  "resultCount": 6,
+  "signals": [
+    {
+      "datasetId": "candidate:europe-phd-iran-pargar-2026",
+      "signalId": "aus-phd-iranian-applicant-processing-restrictions-2026",
+      "countryCode": "AUS",
+      "route": "phd",
+      "topic": "institution-level restrictions on Iranian PhD applicants",
+      "processStage": "admission_and_visa_precheck",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entities": [
+        "Deakin University",
+        "Griffith University"
+      ],
+      "status": "monitoring",
+      "firstObservedAt": "2026-06-24",
+      "lastObservedAt": "2026-09-13",
+      "communityEvidence": {
+        "matchedMessages": 16,
+        "distinctAuthors": 12,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Australia/Deakin/Griffith messages co-occurring with Iranian nationality, sanctions, visa restrictions, or inability to process/accept applicants."
+      },
+      "summary": "The group contains two explicit institution-level messages stating that applications from Iranian citizens could not be processed or accepted, with visa restrictions, delays, and Australian sanctions cited. Later discussion continued to treat Australia as a higher-friction destination for Iranian PhD applicants, but implementation appears institution-specific rather than a demonstrated countrywide ban.",
+      "assessment": {
+        "signalType": "nationality_specific_admission_friction",
+        "severity": "high",
+        "confidence": "high",
+        "currentApplicability": "institution_specific_and_time_sensitive",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 589010,
+          "sourceDate": "2026-06-24",
+          "claim": "A Deakin-related email said the university was unable to process applications from Iranian citizens and that deferred or conditional offers were unavailable.",
+          "excerpt": "Deakin is currently unable to process applications from Iranian citizens"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 589479,
+          "sourceDate": "2026-06-27",
+          "claim": "A Griffith-related rejection email said Iranian PhD applications could not currently be accepted because of visa restrictions and delays related to Australian Government sanctions.",
+          "excerpt": "unable to accept PhD applications from Iranian citizens due to visa restrictions and delays"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 595987,
+          "sourceDate": "2026-08-13",
+          "claim": "A participant described some Australian universities as explicitly not taking Iranian applicants while noting other institutions still appeared open, supporting an institution-specific rather than universal interpretation."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:europe-phd-iran-pargar-2026",
+      "signalId": "nld-tue-iran-resident-recruitment-pause-consular-2026",
+      "countryCode": "NLD",
+      "route": "phd",
+      "topic": "temporary recruitment pause for candidates residing in Iran",
+      "processStage": "recruitment_and_visa",
+      "originCountry": "Iran",
+      "entity": "Eindhoven University of Technology (TU/e)",
+      "status": "monitoring",
+      "firstObservedAt": "2026-06-27",
+      "lastObservedAt": "2026-07-20",
+      "communityEvidence": {
+        "matchedMessages": 4,
+        "distinctAuthors": 3,
+        "windowStart": "2026-06-01",
+        "countingMethod": "TU/e/Eindhoven messages co-occurring with Iran, embassy/visa constraints, recruitment pause, or inability to proceed."
+      },
+      "summary": "A shared TU/e message described a temporary pause on recruitment and onboarding for candidates residing in Iran because the Dutch embassy in Tehran was closed and required consular services were unavailable. The message explicitly framed the restriction around current residence rather than nationality. This is a dated operational signal, not evidence of a permanent Dutch nationality ban.",
+      "assessment": {
+        "signalType": "consular_access_recruitment_friction",
+        "severity": "high",
+        "confidence": "high",
+        "currentApplicability": "unknown_without_freshness_check",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 589461,
+          "sourceDate": "2026-06-27",
+          "claim": "A TU/e recruitment message said hiring/onboarding for candidates currently residing in Iran was temporarily paused because embassy and consular services were unavailable.",
+          "excerpt": "temporarily pause all recruitment and onboarding processes for candidates who are currently residing in Iran"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 589440,
+          "sourceDate": "2026-06-27",
+          "claim": "A participant reported receiving an Eindhoven-related message that they were temporarily not proceeding."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 589452,
+          "sourceDate": "2026-06-27",
+          "claim": "A counterexample in the same discussion noted recent Dutch visas for acquaintances, so the signal should not be generalized to all Dutch institutions or all Iranian nationals."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:europe-phd-iran-pargar-2026",
+      "signalId": "eu-research-security-iranian-university-affiliation-screening-2026",
+      "destinationScope": "Europe, institution-dependent",
+      "countryCodes": [
+        "DNK",
+        "NLD",
+        "BEL",
+        "DEU"
+      ],
+      "route": "phd_research",
+      "topic": "research-security screening tied to Iran and high-risk university affiliations",
+      "processStage": "admission_recruitment_research_collaboration",
+      "originCountry": "Iran",
+      "status": "active",
+      "firstObservedAt": "2026-06-16",
+      "lastObservedAt": "2026-09-08",
+      "communityEvidence": {
+        "matchedMessages": 23,
+        "distinctAuthors": 19,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages mentioning named Iranian universities or URIS/high-risk classifications together with sanctions, research restrictions, collaboration, admission, or visa concerns."
+      },
+      "summary": "Repeated discussion indicates that some European institutions apply research-security or sanctions screening to applicants and collaborators connected to Iran. The group includes an application question classifying recent presence in Iran as URIS/high-risk, a Danish university research-security link, and an email saying affiliations such as Sharif and Amirkabir were treated as high-risk and discouraged for collaboration. Implementation was repeatedly described as varying by institution, HR team, project, and department.",
+      "assessment": {
+        "signalType": "research_security_screening",
+        "severity": "high",
+        "confidence": "medium",
+        "currentApplicability": "current_in_dataset_but_institution_specific",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 595318,
+          "sourceDate": "2026-08-07",
+          "claim": "A participant reported an application form asking whether the applicant had been in URIS high-risk countries, explicitly including Iran, during the previous three months.",
+          "excerpt": "کشورهای URIS (کشورهای پر ریسک) شامل چین، روسیه، ایران و بلاروس"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 600820,
+          "sourceDate": "2026-09-03",
+          "claim": "A Danish university research-security/URIS policy link was shared in the discussion."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 600823,
+          "sourceDate": "2026-09-03",
+          "claim": "A participant shared an email saying Sharif and Amirkabir were treated as high-risk universities and that collaboration was seriously discouraged.",
+          "excerpt": "new and stricter sanctions have designated Sharif University ... like Amir Kabir ... as a high-risk university"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 600780,
+          "sourceDate": "2026-09-03",
+          "claim": "Community discussion explicitly noted that European rules may be interpreted differently by country, university, HR team, or collaboration type."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:europe-phd-iran-pargar-2026",
+      "signalId": "europe-phd-visa-timing-recruitment-friction-iran-resident-2026",
+      "destinationScope": "Europe, multiple destinations",
+      "route": "phd",
+      "topic": "visa timing and start-date risk influencing PhD recruitment",
+      "processStage": "recruitment_and_visa",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "status": "active",
+      "firstObservedAt": "2026-06-09",
+      "lastObservedAt": "2026-09-14",
+      "communityEvidence": {
+        "matchedMessages": 20,
+        "distinctAuthors": 18,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages co-occurring professor/supervisor/university recruitment language with Iran/Iranian and visa/clearance constraints."
+      },
+      "summary": "Across several destinations, participants repeatedly reported that visa uncertainty and the ability to start a funded project on time can affect supervisor or committee willingness to recruit candidates applying from Iran. One detailed first-hand account said treatment improved after the applicant was already resident in Europe. Other messages linked reduced interest in Iranian candidates to visa delays or clearance risk. This is a practical recruitment-friction signal, not proof of a formal blanket policy.",
+      "assessment": {
+        "signalType": "visa_timing_recruitment_risk",
+        "severity": "high",
+        "confidence": "medium",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 587192,
+          "sourceDate": "2026-06-09",
+          "claim": "A participant reported that supervisors and committees prefer candidates whose visa timing is predictable so funded projects can start on schedule, and described better treatment after becoming Europe-resident."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 587990,
+          "sourceDate": "2026-06-15",
+          "claim": "A participant said some supervisors avoid cases where visa processing is expected to take a long time."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 595840,
+          "sourceDate": "2026-08-12",
+          "claim": "A participant described TalTech as taking fewer Iranian applicants and attributed the pattern to visa issues."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 601365,
+          "sourceDate": "2026-09-05",
+          "claim": "A participant said some universities or supervisors avoid Iranian applicants because they expect visa complications."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:europe-phd-iran-pargar-2026",
+      "signalId": "eu-phd-funding-budget-delay-cancellation-2026",
+      "destinationScope": "Europe, observed examples in Germany and Belgium",
+      "countryCodes": [
+        "DEU",
+        "BEL"
+      ],
+      "route": "phd",
+      "topic": "funding and budget problems delaying or cancelling advertised PhD recruitment",
+      "processStage": "recruitment",
+      "status": "monitoring",
+      "firstObservedAt": "2026-07-24",
+      "lastObservedAt": "2026-09-10",
+      "communityEvidence": {
+        "matchedMessages": 7,
+        "distinctAuthors": 4,
+        "windowStart": "2026-06-01",
+        "countingMethod": "Messages mentioning funding/budget together with delay, cancellation, reduced funding, or stalled recruitment decisions."
+      },
+      "summary": "The group includes concrete cases where advertised or near-final PhD recruitment was delayed or cancelled because funding could not be implemented. A Belgium position was reported cancelled after application because of an administrative/budgetary problem, while a Germany case reportedly left finalists waiting far beyond the planned decision date because of budget issues. The signal is real but based on a small number of cases and should not be generalized to all European PhD hiring.",
+      "assessment": {
+        "signalType": "funding_reliability",
+        "severity": "medium",
+        "confidence": "medium",
+        "currentApplicability": "observed_in_current_cycle",
+        "needsFreshnessCheck": true
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 593267,
+          "sourceDate": "2026-07-24",
+          "claim": "A finalist reported an eight-month wait and said the selection had been paused because of budget problems."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 602226,
+          "sourceDate": "2026-09-10",
+          "claim": "A participant shared a Belgium PhD email saying the position was cancelled because allocated funding could no longer be implemented.",
+          "excerpt": "Due to an unforeseen administrative and budgetary issue, the funding allocated for this position can no longer be implemented"
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 602229,
+          "sourceDate": "2026-09-10",
+          "claim": "A participant described a Germany PhD process where two hires were expected from three finalists but the decision remained unresolved because of budget problems."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    },
+    {
+      "datasetId": "candidate:europe-phd-iran-pargar-2026",
+      "signalId": "irn-phd-standardized-english-test-access-disruption-2026",
+      "destinationScope": "Cross-destination",
+      "route": "phd",
+      "topic": "standardized English test access disruption for Iranian applicants",
+      "processStage": "language_requirement",
+      "originCountry": "Iran",
+      "nationality": "Iranian",
+      "entities": [
+        "ETS TOEFL",
+        "ETS GRE",
+        "Duolingo English Test"
+      ],
+      "status": "active",
+      "firstObservedAt": "2026-08-27",
+      "lastObservedAt": "2026-09-15",
+      "communityEvidence": {
+        "matchedMessages": 25,
+        "distinctAuthors": 24,
+        "windowStart": "2026-06-01",
+        "countingMethod": "TOEFL/GRE/Duolingo messages co-occurring with Iran/Iranian, suspension, cancellation, closure, or taking the exam abroad."
+      },
+      "summary": "A late-August 2026 testing-access shock generated sustained discussion. The group circulated a report that a US sanctions-license change could affect ETS services, followed by reports of TOEFL cancellations in Iran and Duolingo restrictions tied to Iranian identity. By September, applicants were actively planning to take TOEFL or IELTS outside Iran and asking how universities would handle missing or delayed scores.",
+      "assessment": {
+        "signalType": "test_access",
+        "severity": "high",
+        "confidence": "high",
+        "currentApplicability": "current_in_dataset",
+        "needsFreshnessCheck": true,
+        "scopeNote": "This is not Europe-specific but directly affects Iranian PhD applicants to European universities."
+      },
+      "evidence": [
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 598017,
+          "sourceDate": "2026-08-27",
+          "claim": "A community post reported suspension of a US authorization that had covered some educational services to Iran and said this could affect TOEFL/GRE, while explicitly noting ETS had not yet formally announced a stop at that moment."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 598221,
+          "sourceDate": "2026-08-28",
+          "claim": "A post said Duolingo testing would stop for Iranian users from 1 September."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 598672,
+          "sourceDate": "2026-08-30",
+          "claim": "A participant summarized that IELTS/PTE already required travel abroad, Duolingo appeared unavailable to Iranian passport holders, and TOEFL status remained uncertain."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 601965,
+          "sourceDate": "2026-09-08",
+          "claim": "A Swedish PhD applicant said ETS had cancelled tests in Iran and asked how to handle a language-score requirement."
+        },
+        {
+          "sourceType": "community_supergroup_export",
+          "sourceName": "دکتری اروپا با پرگار",
+          "sourceMessageId": 602977,
+          "sourceDate": "2026-09-15",
+          "claim": "An applicant asked whether anyone had successfully reserved TOEFL outside Iran."
+        }
+      ],
+      "validationStatus": "unvalidated_candidate"
+    }
+  ],
+  "usageNote": "Use these records as community evidence only. Time-sensitive admission, sanctions, visa, research-security, funding, and testing requirements should be checked against current official sources before making decisions."
+}

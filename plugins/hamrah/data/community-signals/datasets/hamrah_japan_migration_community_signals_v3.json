@@ -1,0 +1,2487 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_japan_migration_community_signals_candidate",
+    "generated_at": "2026-09-17T09:51:47Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "japan-migration-public-supergroup",
+      "name": "result(20260917-094651).json / Telegram export «مهاجرت به ژاپن»",
+      "source_type": "public_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2026-05-31",
+        "to": "2026-09-16",
+        "records_available": 2496,
+        "records_processed": 2496,
+        "message_records": 2272
+      },
+      "source_characteristics": {
+        "public_supergroup": true,
+        "japan_migration_focused": true,
+        "topic_threads": true,
+        "contains_first_hand_applicant_experience": true,
+        "contains_admin_analysis": true,
+        "contains_forwarded_exam_and_fellowship_notices": true,
+        "contains_legal_policy_misinformation_and_contradictions": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "JPN-LANG-001-E1",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1205"
+      },
+      "published_at": "2026-06-22",
+      "event_date": "2026-06-22",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A core community reply said JLPT N2/N1 is one of the most useful long-term preparations for Japan and that strong Japanese becomes increasingly important for staying after study.",
+        "fa": "یک پاسخ محوری گروه گفته JLPT N2/N1 از مهم‌ترین آماده‌سازی‌ها برای ژاپن است و برای ماندن بعد از تحصیل زبان قوی ژاپنی اهمیت بیشتری پیدا می‌کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-LANG-001-E2",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1231"
+      },
+      "published_at": "2026-06-22",
+      "event_date": "2026-06-22",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Another reply said many professional opportunities are perceived to prefer N2/N1, while lower JLPT levels should be judged against the applicant's actual goal.",
+        "fa": "پاسخ دیگری گفته بسیاری از موقعیت‌های حرفه‌ای N2/N1 را ترجیح می‌دهند و ارزش سطوح پایین‌تر باید با هدف فرد سنجیده شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-LANG-001-E3",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1236"
+      },
+      "published_at": "2026-06-22",
+      "event_date": "2026-06-22",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group said N2+ can strengthen some skilled-worker paths and signal language readiness to universities or employers.",
+        "fa": "گروه گفته N2+ در بعضی مسیرهای skilled worker کمک می‌کند و برای دانشگاه/کارفرما readiness زبانی را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-LANG-001-E4",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2028"
+      },
+      "published_at": "2026-07-25",
+      "event_date": "2026-07-25",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_learning_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A later language-learning discussion stressed that Japanese takes sustained structured study because learners must master kana, kanji and grammar, warning against underestimating preparation time.",
+        "fa": "بحث بعدی زبان تأکید کرده ژاپنی به مطالعه ساختاریافته و طولانی نیاز دارد چون kana، kanji و grammar همزمان درگیرند و نباید زمان آماده‌سازی دست‌کم گرفته شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-JLPT-IRAN-002-E1",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1222"
+      },
+      "published_at": "2026-06-22",
+      "event_date": "2026-06-22",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "forwarded_exam_notice",
+      "firsthandness": "reported",
+      "evidence_quality": "forwarded_official_style_notice",
+      "summary": {
+        "en": "A forwarded notice said JLPT planning in Iran resumed after a one-year interruption, with Tehran University/Japan Foundation coordination and N5-N1 levels planned.",
+        "fa": "اطلاعیه فورواردشده گفته پس از وقفه یک‌ساله، برنامه‌ریزی JLPT در ایران با هماهنگی دانشگاه تهران و بنیاد ژاپن و سطوح N5 تا N1 از سر گرفته شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-JLPT-IRAN-002-E2",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1263"
+      },
+      "published_at": "2026-06-23",
+      "event_date": "2026-06-23",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "forwarded_exam_notice",
+      "firsthandness": "reported",
+      "evidence_quality": "forwarded_notice",
+      "summary": {
+        "en": "The group circulated 2026 JLPT registration fees for all levels, indicating a concrete local registration workflow.",
+        "fa": "گروه هزینه ثبت‌نام JLPT 2026 برای همه سطوح را منتشر کرده و وجود workflow ثبت‌نام داخلی را نشان داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-JLPT-IRAN-002-E3",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1618"
+      },
+      "published_at": "2026-07-03",
+      "event_date": "2026-07-03",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "forwarded_exam_notice",
+      "firsthandness": "reported",
+      "evidence_quality": "forwarded_official_style_notice",
+      "summary": {
+        "en": "A later notice said physical registration forms could not be shipped to Iran under current conditions, so PDF forms and in-person submission were used instead.",
+        "fa": "اطلاعیه بعدی گفته به‌دلیل شرایط موجود امکان ارسال فیزیکی فرم‌ها به ایران نبود و فرم PDF و تحویل حضوری جایگزین شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-JLPT-IRAN-002-E4",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2055"
+      },
+      "published_at": "2026-07-27",
+      "event_date": "2026-07-27",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "community_report_unverified",
+      "summary": {
+        "en": "A later reply said recent cancellations/disruptions had pushed urgent test takers to consider neighboring countries.",
+        "fa": "پاسخ بعدی گفته اختلال/لغوهای اخیر باعث شده داوطلبان عجول به کشورهای همسایه برای آزمون فکر کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-MEXT-003-E1",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1412"
+      },
+      "published_at": "2026-06-27",
+      "event_date": "2026-06-27",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_mext_guidance",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A detailed MEXT guidance post said many graduate recipients first enter as non-regular research students for about six months before the main master's/PhD course, unless direct entry was pre-arranged.",
+        "fa": "راهنمای مفصل MEXT گفته بسیاری از برندگان تحصیلات تکمیلی ابتدا حدود شش ماه research student غیرdegree هستند و سپس وارد ارشد/دکتری می‌شوند، مگر direct entry از قبل هماهنگ شده باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-MEXT-003-E2",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1290"
+      },
+      "published_at": "2026-06-23",
+      "event_date": "2026-06-23",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_mext_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A reply said the MEXT interview is conducted in English in the discussed route.",
+        "fa": "پاسخ گفته مصاحبه MEXT در مسیر مورد بحث به زبان انگلیسی انجام می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-MEXT-003-E3",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2923"
+      },
+      "published_at": "2026-08-29",
+      "event_date": "2026-08-29",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_mext_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "route_specific_claim_unverified",
+      "summary": {
+        "en": "A late-August reply said separate language certificates are not necessarily required just to participate in the MEXT selection because the route has its own testing, while such certificates can still help.",
+        "fa": "پاسخ اواخر اوت گفته برای شرکت در selection مکست لزوماً مدرک زبان جدا لازم نیست چون خود مسیر آزمون دارد، هرچند داشتن مدرک می‌تواند کمک کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-MEXT-003-E4",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2294"
+      },
+      "published_at": "2026-08-10",
+      "event_date": "2026-08-10",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_funding_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "coverage_claim_unverified",
+      "summary": {
+        "en": "A member described MEXT as commonly covering student living costs, reflecting why the scholarship is treated as the main full-funding target in the group.",
+        "fa": "یکی از اعضا MEXT را معمولاً پوشش‌دهنده هزینه زندگی دانشجویی دانسته و نشان می‌دهد چرا گروه آن را هدف اصلی فول‌فاند می‌بیند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-RESEARCH-004-E1",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1311"
+      },
+      "published_at": "2026-06-24",
+      "event_date": "2026-06-24",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant asked whether a professor recommendation/introduction is mandatory, showing supervisor/reference coordination as a recurring research-application friction.",
+        "fa": "متقاضی پرسیده معرفی‌نامه استاد الزام است یا نه و friction هماهنگی استاد/reference را نشان داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-RESEARCH-004-E2",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1412"
+      },
+      "published_at": "2026-06-27",
+      "event_date": "2026-06-27",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_mext_guidance",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The MEXT guidance explicitly distinguished direct master's entry when the applicant had already coordinated with a Japanese university/professor.",
+        "fa": "راهنمای MEXT ورود مستقیم به مستر را در حالتی جدا کرده که متقاضی از قبل با دانشگاه/استاد ژاپنی هماهنگ کرده باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-RESEARCH-004-E3",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1826"
+      },
+      "published_at": "2026-07-13",
+      "event_date": "2026-07-13",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "applicant_profile_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A graduate applicant specifically asked how necessary it is to find a supervisor before applying to Japanese graduate programmes.",
+        "fa": "یک متقاضی تحصیلات تکمیلی مشخصاً درباره ضرورت پیدا کردن استاد راهنما قبل از اپلای پرسیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-RESEARCH-004-E4",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2133"
+      },
+      "published_at": "2026-07-31",
+      "event_date": "2026-07-31",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "forwarded_fellowship_call",
+      "firsthandness": "reported",
+      "evidence_quality": "forwarded_call_unverified",
+      "summary": {
+        "en": "A forwarded MIF fellowship call required an acceptance letter from a Japanese host professor/institution, illustrating a research-funding route where host alignment is explicit.",
+        "fa": "فراخوان فورواردشده MIF نامه پذیرش استاد/مؤسسه میزبان ژاپنی را الزام کرده و نمونه‌ای از مسیر پژوهشی با host alignment صریح است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-LANGSCHOOL-005-E1",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2333"
+      },
+      "published_at": "2026-08-16",
+      "event_date": "2026-08-16",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "first_hand_application",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant said they had applied to a Japanese language school and were waiting for the Certificate of Eligibility (COE).",
+        "fa": "متقاضی گفته برای مدرسه زبان ژاپنی اقدام کرده و منتظر COE است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-LANGSCHOOL-005-E2",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2487"
+      },
+      "published_at": "2026-08-19",
+      "event_date": "2026-08-19",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "first_hand_route_description",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A language-school applicant described a university-preparatory course that can lead onward to university or vocational school after completion.",
+        "fa": "متقاضی مدرسه زبان یک دوره آمادگی دانشگاه را توضیح داده که پس از اتمام می‌تواند به دانشگاه یا مدرسه فنی‌حرفه‌ای منتهی شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-LANGSCHOOL-005-E3",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2488"
+      },
+      "published_at": "2026-08-19",
+      "event_date": "2026-08-19",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "first_hand_route_opinion",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The same applicant called language school an easier entry route but emphasized that substantial financial backing is still needed.",
+        "fa": "همان متقاضی مدرسه زبان را مسیر ورود آسان‌تری دانسته ولی بر نیاز به پشتوانه مالی تأکید کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-LANGSCHOOL-005-E4",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2452"
+      },
+      "published_at": "2026-08-19",
+      "event_date": "2026-08-19",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_caution",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A separate discussion warned that part-time income is unlikely to be enough for major financial goals and that school/university restrictions still matter.",
+        "fa": "بحث جداگانه هشدار داده درآمد پارت‌تایم احتمالاً برای اهداف مالی بزرگ کافی نیست و محدودیت‌های مدرسه/دانشگاه همچنان مهم‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-STUDYWORK-006-E1",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1271"
+      },
+      "published_at": "2026-06-23",
+      "event_date": "2026-06-23",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A reply advised students to use permitted part-time work to build employer relationships that may later support a change from student to work status.",
+        "fa": "پاسخ توصیه کرده دانشجو از کار پاره‌وقت مجاز برای ساخت رابطه با employer استفاده کند تا بعداً تغییر status از تحصیلی به کاری ممکن شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-STUDYWORK-006-E2",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2234"
+      },
+      "published_at": "2026-08-10",
+      "event_date": "2026-08-10",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "procedure_claim_unverified",
+      "summary": {
+        "en": "Another reply framed post-study stay as dependent on finding work first and then changing status to a work category.",
+        "fa": "پاسخ دیگری ماندن بعد از تحصیل را وابسته به پیدا کردن کار و سپس تغییر status به کاری دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-STUDYWORK-006-E3",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2230"
+      },
+      "published_at": "2026-08-10",
+      "event_date": "2026-08-10",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "applicant_goal",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A student applicant explicitly planned to study, then find work, then stay long-term, showing the common study-to-work migration objective.",
+        "fa": "متقاضی صریحاً برنامه تحصیل، سپس کار و بعد ماندن بلندمدت را مطرح کرده و هدف رایج study-to-work را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-STUDYWORK-006-E4",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2912"
+      },
+      "published_at": "2026-08-29",
+      "event_date": "2026-08-29",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "applicant_uncertainty",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A later applicant was still unsure whether finding a job after study permits a change to work status, showing persistent information uncertainty.",
+        "fa": "متقاضی بعدی هنوز مطمئن نبوده پیدا کردن کار بعد از تحصیل اجازه change to work status می‌دهد یا نه؛ نشانه استمرار ابهام اطلاعاتی."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-PR-007-C1",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2300"
+      },
+      "published_at": "2026-08-10",
+      "event_date": "2026-08-10",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "contradictory_legal_claim",
+      "summary": {
+        "en": "One member claimed that roughly ten years of combined study/work residence leads straightforwardly to permanent residence.",
+        "fa": "یک عضو ادعا کرده حدود ده سال اقامت ترکیبی تحصیل/کار به‌سادگی به اقامت دائم منتهی می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-PR-007-C2",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2231"
+      },
+      "published_at": "2026-08-10",
+      "event_date": "2026-08-10",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "contradictory_legal_claim",
+      "summary": {
+        "en": "Another member claimed Japan generally does not grant permanent residence except in narrow situations and discouraged using Japan as a bridge country.",
+        "fa": "عضو دیگری ادعا کرده ژاپن عموماً اقامت دائم نمی‌دهد مگر در موقعیت‌های محدود و استفاده از ژاپن به‌عنوان کشور واسطه را نامناسب دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-PR-007-E3",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2319"
+      },
+      "published_at": "2026-08-14",
+      "event_date": "2026-08-14",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "legal_claim_unverified",
+      "summary": {
+        "en": "A reply correctly separated permanent residence from naturalization conceptually and said renouncing Iranian citizenship is relevant to citizenship rather than PR.",
+        "fa": "پاسخی PR را از تابعیت جدا کرده و ترک تابعیت ایرانی را مرتبط با naturalization دانسته نه خود PR."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-PR-007-C4",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2456"
+      },
+      "published_at": "2026-08-19",
+      "event_date": "2026-08-19",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_claim",
+      "firsthandness": "second_hand",
+      "evidence_quality": "contradictory_legal_claim",
+      "summary": {
+        "en": "A later message again claimed even 10-15 years may not lead to PR and conflated PR with citizenship, directly contradicting the ten-year claim.",
+        "fa": "پیام بعدی ادعا کرده حتی ۱۰ تا ۱۵ سال هم لزوماً PR نمی‌دهد و PR را با تابعیت مخلوط کرده؛ مستقیماً مخالف claim ده‌ساله است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-PROPERTY-008-E1",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2368"
+      },
+      "published_at": "2026-08-17",
+      "event_date": "2026-08-17",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant asked whether relatively cheap Japanese property could be bought by foreigners and whether this helps migration.",
+        "fa": "متقاضی درباره خرید ملک نسبتاً ارزان در ژاپن توسط خارجی‌ها و اثر آن بر مهاجرت پرسیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-PROPERTY-008-E2",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2369"
+      },
+      "published_at": "2026-08-17",
+      "event_date": "2026-08-17",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "legal_claim_unverified",
+      "summary": {
+        "en": "A reply separated property ownership from immigration status and said longer stays still require a visa/status independent of owning the property.",
+        "fa": "پاسخ مالکیت ملک را از status مهاجرتی جدا کرده و گفته ماندن طولانی همچنان به ویزا/status مستقل نیاز دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-PROPERTY-008-E3",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2449"
+      },
+      "published_at": "2026-08-19",
+      "event_date": "2026-08-19",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A language-school applicant asked whether part-time income could eventually buy a cheap house and produce residence rights.",
+        "fa": "متقاضی مدرسه زبان پرسیده آیا درآمد پارت‌تایم می‌تواند به خرید خانه ارزان و گرفتن اقامت منتهی شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-PROPERTY-008-E4",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2452"
+      },
+      "published_at": "2026-08-19",
+      "event_date": "2026-08-19",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_caution",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The reply explicitly said buying property does not itself grant Japanese residence and doubted part-time income would be sufficient.",
+        "fa": "پاسخ صریحاً گفته خرید ملک به‌خودی‌خود اقامت ژاپن نمی‌دهد و درآمد پارت‌تایم را هم برای این هدف ناکافی دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-WORKREFORM-009-E1",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "871"
+      },
+      "published_at": "2026-06-19",
+      "event_date": "2026-06-19",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "community_policy_post",
+      "firsthandness": "reported",
+      "evidence_quality": "policy_analysis_unverified",
+      "summary": {
+        "en": "A June 2026 post introduced the Training and Employment System (Ikusei Shuro) as a replacement for the older trainee framework.",
+        "fa": "پست ژوئن ۲۰۲۶ سیستم Training and Employment / Ikusei Shuro را به‌عنوان جایگزین چارچوب قدیمی کارآموزی معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-WORKREFORM-009-E2",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "891"
+      },
+      "published_at": "2026-06-19",
+      "event_date": "2026-06-19",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "longform_policy_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "policy_analysis_unverified",
+      "summary": {
+        "en": "A detailed group report said the transition would phase in from 2027 and create a clearer path toward Specified Skilled Worker for practical/semi-skilled occupations.",
+        "fa": "گزارش مفصل گروه گفته گذار از ۲۰۲۷ تدریجی است و برای مشاغل عملی/نیمه‌مهارتی مسیر روشن‌تری به Specified Skilled Worker می‌سازد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-WORKREFORM-009-E3",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "891"
+      },
+      "published_at": "2026-06-19",
+      "event_date": "2026-06-19",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "longform_policy_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "policy_analysis_unverified",
+      "summary": {
+        "en": "The same report said the reform is most relevant to factory, food, agriculture, hotel, elder-care and construction roles, while specialist professional visas are less directly affected.",
+        "fa": "همان گزارش اصلاح را برای کارخانه، صنایع غذایی، کشاورزی، هتل، مراقبت سالمندان و ساخت‌وساز مهم‌تر و برای ویزاهای تخصصی کم‌اثرتر دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-WORKREFORM-009-E4",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2207"
+      },
+      "published_at": "2026-08-08",
+      "event_date": "2026-08-08",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A later applicant asked about work-visa options for a technical trade such as machining, showing ongoing demand for semi-skilled work pathways.",
+        "fa": "متقاضی بعدی درباره ویزای کاری برای حرفه فنی مثل تراشکاری پرسیده و تقاضای واقعی برای مسیر نیمه‌مهارتی را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-ECONOMY-010-E1",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "34"
+      },
+      "published_at": "2026-06-16",
+      "event_date": "2026-06-16",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "admin_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "author_analysis_not_verified",
+      "summary": {
+        "en": "The group founder's macro analysis argued that a weak yen reduces global purchasing power while population aging creates labour shortages.",
+        "fa": "تحلیل کلان ادمین می‌گوید ین ضعیف قدرت خرید جهانی را کاهش می‌دهد و همزمان پیری جمعیت کمبود نیروی کار می‌سازد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-ECONOMY-010-E2",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "35"
+      },
+      "published_at": "2026-06-16",
+      "event_date": "2026-06-16",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "admin_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "author_analysis_not_verified",
+      "summary": {
+        "en": "A follow-up warned that labour shortage does not mean jobs are effortless; weaker demand can still intensify competition and make strong skills/profile important.",
+        "fa": "ادامه تحلیل هشدار داده کمبود نیرو به معنی کاریابی آسان نیست و افت تقاضا همچنان می‌تواند رقابت را بالا ببرد؛ مهارت و رزومه قوی مهم می‌ماند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-ECONOMY-010-E3",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "34"
+      },
+      "published_at": "2026-06-16",
+      "event_date": "2026-06-16",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "admin_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "author_analysis_not_verified",
+      "summary": {
+        "en": "The same analysis framed local-yen salary as less attractive for frequent international spending despite domestic stability.",
+        "fa": "همان تحلیل حقوق محلی ین را برای هزینه‌کرد بین‌المللی کم‌جذاب‌تر دانسته، هرچند ثبات داخلی را مثبت دیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "JPN-ECONOMY-010-E4",
+      "source_id": "japan-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "891"
+      },
+      "published_at": "2026-06-19",
+      "event_date": "2026-06-19",
+      "collected_at": "2026-09-17T09:51:47Z",
+      "source_type": "longform_policy_analysis",
+      "firsthandness": "reported",
+      "evidence_quality": "policy_analysis_unverified",
+      "summary": {
+        "en": "The work-route analysis separately linked Japan's migration reforms to structural labour shortages and a desire to retain more foreign workers.",
+        "fa": "تحلیل مسیر کاری جداگانه اصلاحات مهاجرتی ژاپن را به کمبود ساختاری نیروی کار و تمایل به نگه‌داشتن نیروی خارجی وصل کرده است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "JPN-LANG-001",
+      "issue_cluster_id": "JAPAN-JAPANESE-LANGUAGE-EMPLOYABILITY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "JPN-JLPT-IRAN-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "JPN-STUDYWORK-006"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "jlpt_n2_n1_employability",
+        "class": "language"
+      },
+      "scope": {
+        "destination": {
+          "country": "Japan",
+          "country_code": "JPN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Japan",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK",
+            "BUSINESS / INVESTMENT"
+          ],
+          "codes": [
+            "study",
+            "employment",
+            "poststudy_work"
+          ]
+        },
+        "process_stages": [
+          "language_preparation",
+          "job_search"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For applicants planning to stay and work in Japan, Japanese proficiency—often framed around JLPT N2/N1—is treated as a major employability asset",
+          "fa": "برای متقاضیانی که قصد ماندن و کار در ژاپن دارند، زبان ژاپنی—اغلب در سطح JLPT N2/N1—یک asset مهم employability دیده می‌شود"
+        },
+        "summary": {
+          "en": "The group repeatedly distinguishes short-term admission needs from long-term work/life needs and says N2/N1 can strengthen professional, skilled-worker and employer-facing profiles.",
+          "fa": "گروه نیاز admission کوتاه‌مدت را از نیاز کار/زندگی بلندمدت جدا می‌کند و N2/N1 را تقویت‌کننده پروفایل حرفه‌ای، skilled-worker و employer-facing می‌داند."
+        },
+        "practical_impact": {
+          "en": "English-taught study does not remove the need to build Japanese for a broader labour market.",
+          "fa": "تحصیل انگلیسی‌زبان نیاز به ساختن زبان ژاپنی برای بازار کار گسترده‌تر را حذف نمی‌کند."
+        },
+        "who_should_care": {
+          "en": "Students and workers targeting long-term Japan residence.",
+          "fa": "دانشجویان و کارکنان با هدف ماندن بلندمدت در ژاپن."
+        },
+        "recommended_action": {
+          "en": "Start Japanese early and use N2/N1 as a practical long-term target when relevant to the intended occupation.",
+          "fa": "زبان ژاپنی را زود شروع کنید و در صورت تناسب با شغل هدف، N2/N1 را هدف عملی بلندمدت بگیرید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "JPN-LANG-001-E1",
+          "relation": "supports",
+          "independence_group": "JPN-LANG-001-E1"
+        },
+        {
+          "evidence_id": "JPN-LANG-001-E2",
+          "relation": "supports",
+          "independence_group": "JPN-LANG-001-E2"
+        },
+        {
+          "evidence_id": "JPN-LANG-001-E3",
+          "relation": "supports",
+          "independence_group": "JPN-LANG-001-E3"
+        },
+        {
+          "evidence_id": "JPN-LANG-001-E4",
+          "relation": "supports",
+          "independence_group": "JPN-LANG-001-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Language is one of the most repeated actionable themes in the export."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current occupation-specific JLPT requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "JPN-LANG-001-E1",
+            "JPN-LANG-001-E2",
+            "JPN-LANG-001-E3",
+            "JPN-LANG-001-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Japan Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Employer/program language expectations vary.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "JLPT",
+        "N2",
+        "N1",
+        "Japanese",
+        "employment"
+      ],
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-07-25"
+    },
+    {
+      "signal_id": "JPN-JLPT-IRAN-002",
+      "issue_cluster_id": "JAPAN-JLPT-IRAN-ACCESS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "JPN-LANG-001"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "jlpt_iran_exam_access_disruption",
+        "class": "test_access"
+      },
+      "scope": {
+        "destination": {
+          "country": "Japan",
+          "country_code": "JPN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Japan",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Testing from Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK",
+            "BUSINESS / INVESTMENT"
+          ],
+          "codes": [
+            "JLPT"
+          ]
+        },
+        "process_stages": [
+          "registration",
+          "test_access"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "JLPT access in Iran was operationally unstable in 2026, with resumption planning, logistics disruption and discussion of neighboring-country fallback",
+          "fa": "دسترسی JLPT در ایران در ۲۰۲۶ از نظر عملیاتی ناپایدار بود؛ برنامه بازگشت آزمون، اختلال لجستیک و fallback کشورهای همسایه همزمان دیده می‌شود"
+        },
+        "summary": {
+          "en": "Forwarded notices show a planned Tehran exam after interruption, but later physical-form shipping problems and community reports of cancellation uncertainty persisted.",
+          "fa": "اطلاعیه‌های فورواردشده از برنامه برگزاری تهران بعد از وقفه می‌گویند، اما مشکل ارسال فرم و بحث لغو/عدم قطعیت ادامه داشته است."
+        },
+        "practical_impact": {
+          "en": "Applicants who need JLPT by a fixed application/job deadline may need a backup test-country plan.",
+          "fa": "کسی که JLPT را تا deadline مشخص لازم دارد ممکن است به پلن کشور جایگزین نیاز پیدا کند."
+        },
+        "who_should_care": {
+          "en": "Iran-based applicants relying on JLPT for study or work.",
+          "fa": "متقاضیان داخل ایران که JLPT را برای تحصیل/کار نیاز دارند."
+        },
+        "recommended_action": {
+          "en": "Track the official local test channel and keep neighboring-country options as contingency when deadlines are tight.",
+          "fa": "کانال رسمی آزمون را track کنید و برای deadlineهای فشرده گزینه کشور همسایه را contingency نگه دارید."
+        },
+        "known_workaround": "Neighboring-country JLPT is discussed as a fallback when Iran testing is disrupted."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "JPN-JLPT-IRAN-002-E1",
+          "relation": "supports",
+          "independence_group": "JPN-JLPT-IRAN-002-E1"
+        },
+        {
+          "evidence_id": "JPN-JLPT-IRAN-002-E2",
+          "relation": "supports",
+          "independence_group": "JPN-JLPT-IRAN-002-E2"
+        },
+        {
+          "evidence_id": "JPN-JLPT-IRAN-002-E3",
+          "relation": "supports",
+          "independence_group": "JPN-JLPT-IRAN-002-E3"
+        },
+        {
+          "evidence_id": "JPN-JLPT-IRAN-002-E4",
+          "relation": "supports",
+          "independence_group": "JPN-JLPT-IRAN-002-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unstable",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple dated notices and discussions show operational instability."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current JLPT Iran schedule was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "JPN-JLPT-IRAN-002-E1",
+            "JPN-JLPT-IRAN-002-E2",
+            "JPN-JLPT-IRAN-002-E3",
+            "JPN-JLPT-IRAN-002-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Japan Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Test access can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "JLPT Iran",
+        "Tehran",
+        "registration",
+        "cancellation"
+      ],
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-08-29"
+    },
+    {
+      "signal_id": "JPN-MEXT-003",
+      "issue_cluster_id": "JAPAN-MEXT-DISTINCT-WORKFLOW",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "JPN-RESEARCH-004"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "mext_full_funding_and_research_student_stage",
+        "class": "funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "Japan",
+          "country_code": "JPN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Japan",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK",
+            "BUSINESS / INVESTMENT"
+          ],
+          "codes": [
+            "MEXT",
+            "graduate_study"
+          ]
+        },
+        "process_stages": [
+          "scholarship",
+          "exam",
+          "interview",
+          "research_student"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "MEXT is treated as a distinct, highly valuable funding route with its own testing/interview workflow and a common research-student bridge before the main graduate programme",
+          "fa": "MEXT مسیر فاند مجزا و بسیار مهمی دیده می‌شود که آزمون/مصاحبه خاص خود را دارد و برای تحصیلات تکمیلی اغلب research-student bridge قبل از دوره اصلی مطرح است"
+        },
+        "summary": {
+          "en": "The group repeatedly separates MEXT from ordinary university admission and says separate language certificates may be optional for selection while the route's own tests matter. Coverage is described as including major living-cost support.",
+          "fa": "گروه MEXT را از admission عادی جدا می‌کند و می‌گوید برای selection ممکن است مدرک زبان جدا الزامی نباشد چون آزمون خود مسیر مهم است. پوشش آن نیز به‌صورت کمک جدی هزینه زندگی توصیف می‌شود."
+        },
+        "practical_impact": {
+          "en": "Applicants should prepare for the MEXT-specific selection sequence rather than treating it like a normal university scholarship form.",
+          "fa": "متقاضی باید برای sequence خاص MEXT آماده شود، نه اینکه آن را مثل فرم scholarship عادی دانشگاه ببیند."
+        },
+        "who_should_care": {
+          "en": "Graduate applicants seeking full funding.",
+          "fa": "متقاضیان تحصیلات تکمیلی دنبال فول‌فاند."
+        },
+        "recommended_action": {
+          "en": "Plan around the current embassy/university MEXT track, its exams/interviews and research-student/direct-entry structure.",
+          "fa": "بر اساس track روز MEXT سفارت/دانشگاه، آزمون/مصاحبه و ساختار research-student/direct-entry برنامه‌ریزی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "JPN-MEXT-003-E1",
+          "relation": "supports",
+          "independence_group": "JPN-MEXT-003-E1"
+        },
+        {
+          "evidence_id": "JPN-MEXT-003-E2",
+          "relation": "supports",
+          "independence_group": "JPN-MEXT-003-E2"
+        },
+        {
+          "evidence_id": "JPN-MEXT-003-E3",
+          "relation": "supports",
+          "independence_group": "JPN-MEXT-003-E3"
+        },
+        {
+          "evidence_id": "JPN-MEXT-003-E4",
+          "relation": "supports",
+          "independence_group": "JPN-MEXT-003-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "MEXT is a heavily repeated and structured topic in the group."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current MEXT eligibility, coverage and selection procedure were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "JPN-MEXT-003-E1",
+            "JPN-MEXT-003-E2",
+            "JPN-MEXT-003-E3",
+            "JPN-MEXT-003-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Japan Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "MEXT calls update annually.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "MEXT",
+        "research student",
+        "interview",
+        "scholarship"
+      ],
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-08-29"
+    },
+    {
+      "signal_id": "JPN-RESEARCH-004",
+      "issue_cluster_id": "JAPAN-RESEARCH-SUPERVISOR-HOST-ALIGNMENT",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "JPN-MEXT-003"
+        }
+      ],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "supervisor_host_alignment",
+        "class": "academic_research"
+      },
+      "scope": {
+        "destination": {
+          "country": "Japan",
+          "country_code": "JPN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Japan",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK",
+            "BUSINESS / INVESTMENT"
+          ],
+          "codes": [
+            "graduate_research",
+            "fellowship"
+          ]
+        },
+        "process_stages": [
+          "supervisor_search",
+          "host_letter",
+          "admission"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Research routes repeatedly depend on professor/host alignment, especially when direct entry or fellowship funding is involved",
+          "fa": "مسیرهای پژوهشی مکرراً به alignment با استاد/میزبان وابسته‌اند، مخصوصاً وقتی direct entry یا fellowship مطرح است"
+        },
+        "summary": {
+          "en": "Applicants repeatedly ask about supervisor necessity, while MEXT direct-entry guidance and a research fellowship both explicitly depend on prior professor/host coordination.",
+          "fa": "متقاضیان بارها درباره ضرورت استاد می‌پرسند و هم راهنمای direct-entry مکست و هم fellowship پژوهشی به هماهنگی قبلی professor/host وابسته‌اند."
+        },
+        "practical_impact": {
+          "en": "A generic strong CV may not be enough for research routes without a host/supervisor fit.",
+          "fa": "رزومه قوی عمومی ممکن است بدون fit استاد/میزبان برای مسیر پژوهشی کافی نباشد."
+        },
+        "who_should_care": {
+          "en": "Master's/PhD/research-fellowship applicants.",
+          "fa": "متقاضیان ارشد/دکتری/fellowship پژوهشی."
+        },
+        "recommended_action": {
+          "en": "Map suitable labs and supervisors early and confirm whether the route requires a host or acceptance letter before formal submission.",
+          "fa": "lab/استاد مناسب را زود پیدا کنید و قبل از submission رسمی مشخص کنید route به host/acceptance letter نیاز دارد یا نه."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "JPN-RESEARCH-004-E1",
+          "relation": "supports",
+          "independence_group": "JPN-RESEARCH-004-E1"
+        },
+        {
+          "evidence_id": "JPN-RESEARCH-004-E2",
+          "relation": "supports",
+          "independence_group": "JPN-RESEARCH-004-E2"
+        },
+        {
+          "evidence_id": "JPN-RESEARCH-004-E3",
+          "relation": "supports",
+          "independence_group": "JPN-RESEARCH-004-E3"
+        },
+        {
+          "evidence_id": "JPN-RESEARCH-004-E4",
+          "relation": "supports",
+          "independence_group": "JPN-RESEARCH-004-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The pattern is clear across several research contexts, but programme rules vary."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current programme-specific supervisor requirements were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "JPN-RESEARCH-004-E1",
+            "JPN-RESEARCH-004-E2",
+            "JPN-RESEARCH-004-E3",
+            "JPN-RESEARCH-004-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Japan Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Supervisor requirements differ by programme/funder.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "supervisor",
+        "host professor",
+        "acceptance letter",
+        "research"
+      ],
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-07-31"
+    },
+    {
+      "signal_id": "JPN-LANGSCHOOL-005",
+      "issue_cluster_id": "JAPAN-LANGUAGE-SCHOOL-BRIDGE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "JPN-STUDYWORK-006"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "language_school_to_university_vocational_bridge",
+        "class": "study_route"
+      },
+      "scope": {
+        "destination": {
+          "country": "Japan",
+          "country_code": "JPN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Japan",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK",
+            "BUSINESS / INVESTMENT"
+          ],
+          "codes": [
+            "language_school",
+            "university",
+            "vocational_school"
+          ]
+        },
+        "process_stages": [
+          "COE",
+          "language_study",
+          "progression"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Japanese language school functions as a practical bridge into university/vocational study, but it needs financial backing and does not itself solve long-term residence",
+          "fa": "مدرسه زبان ژاپنی می‌تواند پل عملی به دانشگاه/سن‌مون‌گاکو باشد، اما پشتوانه مالی می‌خواهد و خودش مسئله اقامت بلندمدت را حل نمی‌کند"
+        },
+        "summary": {
+          "en": "A first-hand applicant was waiting for COE and described a university-preparatory course leading onward to university or vocational school. The same discussion emphasized funding needs and limits of part-time income.",
+          "fa": "یک متقاضی مستقیم منتظر COE بوده و دوره آمادگی دانشگاه را مسیر ورود بعدی به دانشگاه/مدرسه فنی توصیف کرده است. همان بحث روی نیاز مالی و محدودیت درآمد پارت‌تایم تأکید دارد."
+        },
+        "practical_impact": {
+          "en": "Language school can lower entry friction but can also add tuition/living-cost exposure before a degree or job route is secured.",
+          "fa": "مدرسه زبان friction ورود را کم می‌کند اما پیش از قطعی‌شدن دانشگاه/کار هزینه شهریه و زندگی اضافه می‌سازد."
+        },
+        "who_should_care": {
+          "en": "Applicants lacking Japanese or direct university admission.",
+          "fa": "متقاضیان فاقد زبان ژاپنی یا direct university admission."
+        },
+        "recommended_action": {
+          "en": "Treat language school as a bridge with a defined next step, COE plan and full financial runway—not as a settlement shortcut.",
+          "fa": "مدرسه زبان را پل با next step مشخص، برنامه COE و runway مالی کامل ببینید، نه shortcut اقامت."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "JPN-LANGSCHOOL-005-E1",
+          "relation": "supports",
+          "independence_group": "JPN-LANGSCHOOL-005-E1"
+        },
+        {
+          "evidence_id": "JPN-LANGSCHOOL-005-E2",
+          "relation": "supports",
+          "independence_group": "JPN-LANGSCHOOL-005-E2"
+        },
+        {
+          "evidence_id": "JPN-LANGSCHOOL-005-E3",
+          "relation": "supports",
+          "independence_group": "JPN-LANGSCHOOL-005-E3"
+        },
+        {
+          "evidence_id": "JPN-LANGSCHOOL-005-E4",
+          "relation": "supports",
+          "independence_group": "JPN-LANGSCHOOL-005-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The strongest evidence is first-hand and operational, though from a small number of cases."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current COE, language-school and part-time work rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "JPN-LANGSCHOOL-005-E1",
+            "JPN-LANGSCHOOL-005-E2",
+            "JPN-LANGSCHOOL-005-E3",
+            "JPN-LANGSCHOOL-005-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Japan Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "School/COE requirements vary.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "language school",
+        "COE",
+        "university prep",
+        "vocational school"
+      ],
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "signal_id": "JPN-STUDYWORK-006",
+      "issue_cluster_id": "JAPAN-STUDY-TO-WORK-STATUS-CONVERSION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "JPN-LANG-001"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "JPN-LANGSCHOOL-005"
+        }
+      ],
+      "classification": {
+        "family": "E8_POSTSTUDY_TRANSITION",
+        "type": "student_to_work_status_job_dependency",
+        "class": "poststudy"
+      },
+      "scope": {
+        "destination": {
+          "country": "Japan",
+          "country_code": "JPN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Japan",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK",
+            "BUSINESS / INVESTMENT"
+          ],
+          "codes": [
+            "student_status",
+            "work_status"
+          ]
+        },
+        "process_stages": [
+          "part_time_work",
+          "job_search",
+          "status_change"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Study-to-work transition is treated as job/employer-dependent; part-time work is valuable mainly as network/experience, not as an automatic residence conversion",
+          "fa": "تبدیل تحصیل به کار job/employer-dependent دیده می‌شود؛ ارزش کار پاره‌وقت بیشتر در شبکه/تجربه است نه تبدیل خودکار اقامت"
+        },
+        "summary": {
+          "en": "Community guidance says students should use permitted part-time work to build employer relationships and later change to a work status after obtaining qualifying employment.",
+          "fa": "راهنمای گروه می‌گوید دانشجو از کار پاره‌وقت مجاز برای ساخت رابطه با employer استفاده کند و بعد از گرفتن شغل qualifying به status کاری تغییر دهد."
+        },
+        "practical_impact": {
+          "en": "Graduation alone does not create durable stay; employability and an appropriate work category must line up.",
+          "fa": "فارغ‌التحصیلی به‌تنهایی ماندن پایدار نمی‌سازد؛ employability و category کاری مناسب باید هم‌زمان جور شوند."
+        },
+        "who_should_care": {
+          "en": "International students intending to remain in Japan after graduation.",
+          "fa": "دانشجویان بین‌المللی با هدف ماندن بعد از فارغ‌التحصیلی."
+        },
+        "recommended_action": {
+          "en": "Build Japanese, employer relationships and role eligibility before graduation; verify the exact status-change route for the intended job.",
+          "fa": "قبل از فارغ‌التحصیلی زبان، employer relationship و role eligibility را بسازید و change-of-status شغل هدف را رسمی بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "JPN-STUDYWORK-006-E1",
+          "relation": "supports",
+          "independence_group": "JPN-STUDYWORK-006-E1"
+        },
+        {
+          "evidence_id": "JPN-STUDYWORK-006-E2",
+          "relation": "supports",
+          "independence_group": "JPN-STUDYWORK-006-E2"
+        },
+        {
+          "evidence_id": "JPN-STUDYWORK-006-E3",
+          "relation": "supports",
+          "independence_group": "JPN-STUDYWORK-006-E3"
+        },
+        {
+          "evidence_id": "JPN-STUDYWORK-006-E4",
+          "relation": "supports",
+          "independence_group": "JPN-STUDYWORK-006-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The objective is repeated but procedural details in the group are inconsistent."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current student work and change-of-status rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "JPN-STUDYWORK-006-E1",
+            "JPN-STUDYWORK-006-E2",
+            "JPN-STUDYWORK-006-E3",
+            "JPN-STUDYWORK-006-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Japan Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Immigration status-change rules are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student to work",
+        "part-time",
+        "employer",
+        "status change"
+      ],
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-08-29"
+    },
+    {
+      "signal_id": "JPN-PR-007",
+      "issue_cluster_id": "JAPAN-PR-CITIZENSHIP-MISINFORMATION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "JPN-STUDYWORK-006"
+        }
+      ],
+      "classification": {
+        "family": "E8_POSTSTUDY_TRANSITION",
+        "type": "permanent_residence_citizenship_contradiction",
+        "class": "long_term_residence"
+      },
+      "scope": {
+        "destination": {
+          "country": "Japan",
+          "country_code": "JPN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Japan",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK",
+            "BUSINESS / INVESTMENT"
+          ],
+          "codes": [
+            "permanent_residence",
+            "naturalization"
+          ]
+        },
+        "process_stages": [
+          "long_term_residence",
+          "citizenship"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Permanent-residence and citizenship advice in the group is highly contradictory; blanket claims such as 'ten years guarantees PR' or 'Japan never gives PR' are not reliable",
+          "fa": "اطلاعات PR و تابعیت در گروه شدیداً متناقض است؛ claimهای کلی مثل «ده سال = PR قطعی» یا «ژاپن اصلاً PR نمی‌دهد» قابل اتکا نیستند"
+        },
+        "summary": {
+          "en": "The export contains directly conflicting messages on ten-year PR, no-PR claims and citizenship renunciation. One useful distinction is that PR and naturalization are separate legal concepts.",
+          "fa": "فایل پیام‌های کاملاً متضاد درباره PR ده‌ساله، عدم اعطای PR و ترک تابعیت دارد. تمایز مفید این است که PR و naturalization دو مفهوم حقوقی جدا هستند."
+        },
+        "practical_impact": {
+          "en": "Long-term migration plans can be badly distorted by forum folklore.",
+          "fa": "برنامه مهاجرت بلندمدت می‌تواند با اطلاعات عامیانه گروه شدیداً منحرف شود."
+        },
+        "who_should_care": {
+          "en": "Applicants choosing Japan for permanent settlement.",
+          "fa": "متقاضیانی که ژاپن را برای settlement دائمی انتخاب می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Do not use community PR timelines as a decision rule; verify the current residence-category and naturalization requirements officially.",
+          "fa": "timelineهای PR کامیونیتی را مبنای تصمیم نگذارید؛ requirements روز اقامت دائم و تابعیت را رسمی بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "JPN-PR-007-C1",
+          "relation": "supports",
+          "independence_group": "JPN-PR-007-C1"
+        },
+        {
+          "evidence_id": "JPN-PR-007-C2",
+          "relation": "contradicts",
+          "independence_group": "JPN-PR-007-C2"
+        },
+        {
+          "evidence_id": "JPN-PR-007-E3",
+          "relation": "supports",
+          "independence_group": "JPN-PR-007-E3"
+        },
+        {
+          "evidence_id": "JPN-PR-007-C4",
+          "relation": "contradicts",
+          "independence_group": "JPN-PR-007-C4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "conflicted",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Contradiction is explicit and repeated within days."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Japanese PR and naturalization law was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "JPN-PR-007-C1",
+            "JPN-PR-007-C2",
+            "JPN-PR-007-E3",
+            "JPN-PR-007-C4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Japan Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Long-term residence law is material and should be checked before relying on it.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "permanent residence",
+        "PR",
+        "citizenship",
+        "10 years"
+      ],
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "signal_id": "JPN-PROPERTY-008",
+      "issue_cluster_id": "JAPAN-PROPERTY-NOT-RESIDENCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "JPN-PR-007"
+        }
+      ],
+      "classification": {
+        "family": "E16_PROPERTY_INVESTMENT",
+        "type": "property_ownership_separate_from_immigration_status",
+        "class": "property"
+      },
+      "scope": {
+        "destination": {
+          "country": "Japan",
+          "country_code": "JPN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Japan",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK",
+            "BUSINESS / INVESTMENT"
+          ],
+          "codes": [
+            "property_purchase",
+            "residence"
+          ]
+        },
+        "process_stages": [
+          "property_search",
+          "immigration_status"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Cheap property/house ownership should be treated separately from immigration status; the community repeatedly warns that buying property does not itself create residence rights",
+          "fa": "خرید خانه/ملک ارزان باید کاملاً جدا از status مهاجرتی دیده شود؛ گروه هشدار می‌دهد خرید ملک به‌خودی‌خود حق اقامت ایجاد نمی‌کند"
+        },
+        "summary": {
+          "en": "Applicants were attracted by cheap listings and asked whether buying could produce residence. Replies consistently separated ownership from visa/status and warned that part-time income is not a realistic shortcut.",
+          "fa": "متقاضیان با دیدن آگهی‌های ارزان پرسیده‌اند آیا خرید ملک اقامت می‌سازد. پاسخ‌ها مالکیت را از ویزا/status جدا کرده و پارت‌تایم را shortcut واقع‌بینانه ندانسته‌اند."
+        },
+        "practical_impact": {
+          "en": "Applicants can waste capital if they buy property assuming it provides a migration route.",
+          "fa": "اگر فرد با تصور ایجاد مسیر مهاجرت ملک بخرد ممکن است سرمایه‌اش را در strategy اشتباه قفل کند."
+        },
+        "who_should_care": {
+          "en": "Applicants exploring cheap Japanese houses or investment.",
+          "fa": "متقاضیان علاقه‌مند به خانه ارزان یا سرمایه‌گذاری ملکی ژاپن."
+        },
+        "recommended_action": {
+          "en": "Evaluate property ownership and immigration eligibility as separate decisions; verify any business/investor route independently.",
+          "fa": "خرید ملک و eligibility مهاجرت را دو تصمیم جدا ببینید و هر مسیر business/investor را مستقل بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "JPN-PROPERTY-008-E1",
+          "relation": "supports",
+          "independence_group": "JPN-PROPERTY-008-E1"
+        },
+        {
+          "evidence_id": "JPN-PROPERTY-008-E2",
+          "relation": "supports",
+          "independence_group": "JPN-PROPERTY-008-E2"
+        },
+        {
+          "evidence_id": "JPN-PROPERTY-008-E3",
+          "relation": "supports",
+          "independence_group": "JPN-PROPERTY-008-E3"
+        },
+        {
+          "evidence_id": "JPN-PROPERTY-008-E4",
+          "relation": "supports",
+          "independence_group": "JPN-PROPERTY-008-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source directly addresses and rejects the property-equals-residence assumption."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Japanese property ownership and investor/business immigration rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "JPN-PROPERTY-008-E1",
+            "JPN-PROPERTY-008-E2",
+            "JPN-PROPERTY-008-E3",
+            "JPN-PROPERTY-008-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Japan Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Property and immigration law should be verified before purchase.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "property",
+        "house",
+        "residence",
+        "investment"
+      ],
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-19"
+    },
+    {
+      "signal_id": "JPN-WORKREFORM-009",
+      "issue_cluster_id": "JAPAN-IKUSEI-SHURO-SKILLED-WORK-REFORM",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "JPN-LANG-001"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "ikusei_shuro_to_specified_skilled_worker",
+        "class": "work_route_reform"
+      },
+      "scope": {
+        "destination": {
+          "country": "Japan",
+          "country_code": "JPN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Japan",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK",
+            "BUSINESS / INVESTMENT"
+          ],
+          "codes": [
+            "Ikusei_Shuro",
+            "Specified_Skilled_Worker",
+            "semi_skilled_work"
+          ]
+        },
+        "process_stages": [
+          "work_route",
+          "employer",
+          "skills"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The group identifies the 2027 Ikusei Shuro reform as a potentially important route shift for practical/semi-skilled foreign workers",
+          "fa": "گروه اصلاح Ikusei Shuro از ۲۰۲۷ را تغییر بالقوه مهم برای نیروی کار عملی/نیمه‌مهارتی خارجی می‌داند"
+        },
+        "summary": {
+          "en": "A detailed admin report says Japan is phasing out the old TITP model and building a more employment-oriented bridge toward Specified Skilled Worker, especially for factory, food, agriculture, hotel, care and construction sectors.",
+          "fa": "گزارش مفصل ادمین می‌گوید ژاپن TITP قدیمی را کنار می‌گذارد و پل employment-oriented‌تری به Specified Skilled Worker می‌سازد، مخصوصاً برای کارخانه، غذا، کشاورزی، هتل، care و ساخت‌وساز."
+        },
+        "practical_impact": {
+          "en": "Applicants without university degrees may have a more relevant route than standard professional visas, but implementation details matter.",
+          "fa": "افراد بدون مدرک دانشگاهی ممکن است route مناسب‌تری از ویزای حرفه‌ای استاندارد داشته باشند، اما جزئیات اجرا حیاتی است."
+        },
+        "who_should_care": {
+          "en": "Technical, service and semi-skilled applicants.",
+          "fa": "متقاضیان فنی، خدماتی و نیمه‌مهارتی."
+        },
+        "recommended_action": {
+          "en": "Treat this as a policy transition to monitor, not a ready-made guaranteed route; verify sector, language, skill test and employer rules when implementation begins.",
+          "fa": "این را policy transition برای monitor کردن ببینید نه مسیر قطعی آماده؛ هنگام اجرا sector، زبان، skill test و employer rules را رسمی چک کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "JPN-WORKREFORM-009-E1",
+          "relation": "supports",
+          "independence_group": "JPN-WORKREFORM-009-E1"
+        },
+        {
+          "evidence_id": "JPN-WORKREFORM-009-E2",
+          "relation": "supports",
+          "independence_group": "JPN-WORKREFORM-009-E2"
+        },
+        {
+          "evidence_id": "JPN-WORKREFORM-009-E3",
+          "relation": "supports",
+          "independence_group": "JPN-WORKREFORM-009-E3"
+        },
+        {
+          "evidence_id": "JPN-WORKREFORM-009-E4",
+          "relation": "supports",
+          "independence_group": "JPN-WORKREFORM-009-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The signal is concentrated in one detailed policy analysis plus applicant demand; implementation is future-facing."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current/future Ikusei Shuro implementation rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "JPN-WORKREFORM-009-E1",
+            "JPN-WORKREFORM-009-E2",
+            "JPN-WORKREFORM-009-E3",
+            "JPN-WORKREFORM-009-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Japan Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Implementation details may change before/through 2027.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Ikusei Shuro",
+        "TITP",
+        "Specified Skilled Worker",
+        "technical work"
+      ],
+      "first_seen": "2026-06-19",
+      "last_seen": "2026-08-08"
+    },
+    {
+      "signal_id": "JPN-ECONOMY-010",
+      "issue_cluster_id": "JAPAN-WEAK-YEN-LABOUR-SHORTAGE-TRADEOFF",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "JPN-WORKREFORM-009"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "weak_yen_labour_shortage_tradeoff",
+        "class": "macro_labour_context"
+      },
+      "scope": {
+        "destination": {
+          "country": "Japan",
+          "country_code": "JPN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Japan",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "high school",
+            "bachelors",
+            "masters",
+            "PhD"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "POST-STUDY WORK",
+            "BUSINESS / INVESTMENT"
+          ],
+          "codes": [
+            "employment",
+            "living"
+          ]
+        },
+        "process_stages": [
+          "salary",
+          "labour_market",
+          "migration_planning"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The group's macro framing is a tradeoff: demographic labour shortage may create demand, while weak-yen purchasing power and economic stagnation can limit the global value of local salaries",
+          "fa": "فریم کلان گروه یک tradeoff است: کمبود نیروی ناشی از جمعیت می‌تواند تقاضا بسازد، اما ین ضعیف و رکود می‌تواند ارزش جهانی حقوق محلی را محدود کند"
+        },
+        "summary": {
+          "en": "The founder's analysis explicitly cautions that labour shortage does not mean effortless hiring and that strong skills/profile remain important. These are source analyses, not verified economic facts in this dataset.",
+          "fa": "تحلیل ادمین صریحاً هشدار می‌دهد کمبود نیرو مساوی استخدام آسان نیست و مهارت/رزومه قوی همچنان مهم است. این موارد تحلیل منبع‌اند، نه fact اقتصادی independently verified."
+        },
+        "practical_impact": {
+          "en": "Applicants should compare local living affordability with international purchasing power and role-specific hiring prospects.",
+          "fa": "متقاضی باید affordability داخل ژاپن را جدا از قدرت خرید بین‌المللی و شانس استخدام role-specific بسنجد."
+        },
+        "who_should_care": {
+          "en": "Workers and students choosing Japan partly for income/lifestyle.",
+          "fa": "کارکنان و دانشجویانی که ژاپن را partly برای درآمد/سبک زندگی انتخاب می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Benchmark the actual role salary, rent and savings in yen, then stress-test it against foreign-currency goals rather than relying on generic labour-shortage narratives.",
+          "fa": "حقوق واقعی role، اجاره و پس‌انداز ینی را benchmark کنید و بعد در برابر اهداف ارزی خارجی stress-test کنید، نه اینکه فقط به روایت کمبود نیرو تکیه کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "JPN-ECONOMY-010-E1",
+          "relation": "supports",
+          "independence_group": "JPN-ECONOMY-010-E1"
+        },
+        {
+          "evidence_id": "JPN-ECONOMY-010-E2",
+          "relation": "supports",
+          "independence_group": "JPN-ECONOMY-010-E2"
+        },
+        {
+          "evidence_id": "JPN-ECONOMY-010-E3",
+          "relation": "supports",
+          "independence_group": "JPN-ECONOMY-010-E3"
+        },
+        {
+          "evidence_id": "JPN-ECONOMY-010-E4",
+          "relation": "supports",
+          "independence_group": "JPN-ECONOMY-010-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "low",
+          "rationale": "This is mainly founder analysis and policy interpretation rather than independent labour-market evidence."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Macroeconomic statistics and current labour shortages were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "JPN-ECONOMY-010-E1",
+            "JPN-ECONOMY-010-E2",
+            "JPN-ECONOMY-010-E3",
+            "JPN-ECONOMY-010-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Japan Telegram public supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Macro and exchange-rate conditions change continuously.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "yen",
+        "labour shortage",
+        "salary",
+        "economy"
+      ],
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-19"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, usernames, IDs, phone numbers and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 2,496 records, including 2,272 message records."
+      },
+      "service_noise_filtered": {
+        "status": "pass",
+        "note": "Join/invite/service events, greetings and low-information chat were excluded."
+      },
+      "admin_analysis_separated": {
+        "status": "pass",
+        "note": "Founder macroeconomic commentary is retained as source analysis with low confidence, not treated as verified fact."
+      },
+      "forwarded_notices_separated": {
+        "status": "pass",
+        "note": "JLPT/MIF forwarded notices are marked as reported rather than independently verified."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated language, JLPT access, MEXT, research-supervisor, language-school, study-to-work, PR, property and work-reform discussions were clustered."
+      },
+      "contradictions_preserved": {
+        "status": "pass",
+        "note": "Conflicting permanent-residence/citizenship claims are preserved and explicitly flagged rather than reconciled."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "No current Japanese immigration, MEXT, JLPT, property, PR or work-status rule was independently verified."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community planning evidence only. This is not an official source for Japanese immigration status, MEXT, JLPT, COE, student work, permanent residence, naturalization, property, or Ikusei Shuro/Specified Skilled Worker rules. Verify current official requirements before acting."
+}

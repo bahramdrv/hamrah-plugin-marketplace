@@ -1,0 +1,2025 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_applyabroad_global_policy_signals_candidate",
+    "generated_at": "2026-09-17T06:45:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "applyabroad-pargar-public-channel",
+      "name": "result(20260917-062706).json / Telegram export «ApplyAbroad | هلدینگ پرگار»",
+      "source_type": "public_channel_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-16",
+        "records_available": 3309,
+        "records_processed": 3309,
+        "message_records": 3212
+      },
+      "source_characteristics": {
+        "public_news_channel": true,
+        "multi_country": true,
+        "contains_forwarded_country_news": true,
+        "contains_promotional_posts": true,
+        "contains_commentary_and_opinion": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "CAN-STUDY-PAL-CAP-001-E1",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14556"
+      },
+      "published_at": "2025-11-19",
+      "event_date": "2025-11-19",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_news_digest",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A November 2025 post said that from 1 January 2026, master's and PhD students at Canadian public universities would be outside the general international-student cap and could receive faster processing in some cases.",
+        "fa": "پست نوامبر ۲۰۲۵ گفته از ۱ ژانویه ۲۰۲۶ دانشجویان ارشد و دکتری دانشگاه‌های دولتی کانادا از سقف عمومی دانشجوی خارجی خارج می‌شوند و در برخی کیس‌ها پردازش سریع‌تر دارند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-PAL-CAP-001-E2",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14606"
+      },
+      "published_at": "2025-11-26",
+      "event_date": "2025-11-26",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_news_digest",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A later post described a 2026 study-permit framework with a 408,000 overall cap but exemptions for eligible public-DLI master's and PhD applicants from the cap and PAL/TAL requirement.",
+        "fa": "پست بعدی چارچوب ۲۰۲۶ را با سقف کلی ۴۰۸هزار مجوز توضیح داده اما ارشد/دکتری واجدشرایط در مؤسسات دولتی را از سقف و PAL/TAL معاف دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-PAL-CAP-001-E3",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "15027"
+      },
+      "published_at": "2026-02-12",
+      "event_date": "2026-02-12",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "forwarded_country_news",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A February 2026 update repeated that eligible master's and PhD students at public institutions remained exempt from PAL/TAL, while transfers or status-restoration cases could still trigger the requirement.",
+        "fa": "به‌روزرسانی فوریه ۲۰۲۶ دوباره معافیت ارشد/دکتری واجدشرایط از PAL/TAL را تکرار کرده و انتقال رشته/مؤسسه یا restoration را به‌عنوان مواردی که ممکن است دوباره PAL/TAL بخواهند ذکر کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CAN-STUDY-PAL-CAP-001-E4",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "15200"
+      },
+      "published_at": "2026-02-26",
+      "event_date": "2026-02-26",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_news_digest_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A 26 February 2026 digest linked to IRCC pages and again summarized graduate-degree PAL/TAL exemptions and calendar-year validity rules for PAL/TAL letters.",
+        "fa": "خبرنامه ۲۶ فوریه ۲۰۲۶ با لینک به صفحات IRCC دوباره معافیت بعضی graduate degreeها و اعتبار سالانه PAL/TAL را جمع‌بندی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-STUDY-VISA-FEE-002-E1",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "12109"
+      },
+      "published_at": "2025-01-01",
+      "event_date": "2025-01-01",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_news_post",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "On 1 January 2025 the channel reported that Australia's Temporary Graduate visa application charge would rise from AUD 1,945 to AUD 2,235 from 1 February 2025.",
+        "fa": "در ۱ ژانویه ۲۰۲۵ کانال گزارش کرده هزینه درخواست Temporary Graduate استرالیا از ۱۹۴۵ به ۲۲۳۵ دلار استرالیا از ۱ فوریه افزایش می‌یابد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-STUDY-VISA-FEE-002-E2",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "13457"
+      },
+      "published_at": "2025-07-01",
+      "event_date": "2025-07-01",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "forwarded_country_news",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A July 2025 post said visa application charges rose, with the student-visa and dependant charge increasing from AUD 1,600 to AUD 2,000.",
+        "fa": "پست جولای ۲۰۲۵ گفته هزینه‌های درخواست ویزا افزایش یافته و هزینه ویزای دانشجویی/همراه از ۱۶۰۰ به ۲۰۰۰ دلار استرالیا رسیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-STUDY-VISA-FEE-002-E3",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14115"
+      },
+      "published_at": "2025-09-27",
+      "event_date": "2025-09-27",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "forwarded_country_news",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A September 2025 post described industry pressure to reduce the AUD 2,000 student-visa charge and linked the high fee to pressure on short-course providers and international enrolment.",
+        "fa": "پست سپتامبر ۲۰۲۵ از فشار صنعت برای کاهش هزینه ۲۰۰۰ دلاری ویزای دانشجویی و اثر آن بر دوره‌های کوتاه‌مدت و ثبت‌نام بین‌المللی گفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-STUDY-CAP-003-E1",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "13773"
+      },
+      "published_at": "2025-08-04",
+      "event_date": "2025-08-04",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "forwarded_country_news",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An August 2025 post said Australia's 2026 national planning level for international students would be 295,000, up from 270,000 for 2025, with different growth allocations across provider types.",
+        "fa": "پست اوت ۲۰۲۵ سطح برنامه‌ریزی ملی دانشجویان بین‌المللی ۲۰۲۶ استرالیا را ۲۹۵هزار نفر در برابر ۲۷۰هزار نفر ۲۰۲۵ گزارش کرده و از تخصیص متفاوت بین مؤسسات گفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-STUDY-CAP-003-E2",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14454"
+      },
+      "published_at": "2025-11-08",
+      "event_date": "2025-11-08",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "forwarded_country_news",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A November 2025 post emphasized that provider-level limits were tightening competition even while the national system still admitted international students.",
+        "fa": "پست نوامبر ۲۰۲۵ تأکید کرده محدودیت‌های سطح مؤسسه رقابت پذیرش را بالا برده، حتی در حالی که سیستم ملی همچنان دانشجوی بین‌المللی می‌پذیرد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-WORK-LANGUAGE-GRADUATE-004-E1",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14246"
+      },
+      "published_at": "2025-10-15",
+      "event_date": "2025-10-15",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "forwarded_country_news",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An October 2025 post said UK work routes including Skilled Worker, Scale-up and HPI would require B2 English from January 2026, while HPI eligibility would expand but be capped annually; it also reported an 18-month Graduate-route job-search period.",
+        "fa": "پست اکتبر ۲۰۲۵ گفته مسیرهای کاری از جمله Skilled Worker، Scale-up و HPI از ژانویه ۲۰۲۶ به B2 نیاز خواهند داشت؛ HPI گسترده‌تر اما دارای سقف سالانه می‌شود و Graduate Route به ۱۸ ماه کاهش می‌یابد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-WORK-LANGUAGE-GRADUATE-004-E2",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14797"
+      },
+      "published_at": "2026-01-05",
+      "event_date": "2026-01-05",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_global_policy_digest",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A January 2026 migration digest repeated that first-time Skilled Worker applicants would move from B1 to B2 English from 8 January 2026.",
+        "fa": "خبرنامه ژانویه ۲۰۲۶ تکرار کرده متقاضیان بار اول Skilled Worker از ۸ ژانویه ۲۰۲۶ باید به‌جای B1 سطح B2 ارائه کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "GBR-WORK-LANGUAGE-GRADUATE-004-E3",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14799"
+      },
+      "published_at": "2026-01-06",
+      "event_date": "2026-01-06",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_global_policy_digest",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A second January 2026 digest again highlighted the Skilled Worker B1-to-B2 change and broader UK process changes.",
+        "fa": "خبرنامه دوم ژانویه ۲۰۲۶ دوباره تغییر زبان Skilled Worker از B1 به B2 و تغییرات فرایندی بریتانیا را برجسته کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NZL-STUDY-ADEPT-005-E1",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "13916"
+      },
+      "published_at": "2025-08-22",
+      "event_date": "2025-08-22",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_news_post",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An August 2025 post said New Zealand student-visa applications were moving into the ADEPT online platform and that paper student-visa applications would stop being accepted from 18 September.",
+        "fa": "پست اوت ۲۰۲۵ گفته درخواست‌های ویزای دانشجویی نیوزیلند به سامانه ADEPT منتقل می‌شوند و از ۱۸ سپتامبر درخواست کاغذی دیگر پذیرفته نخواهد شد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NZL-POSTSTUDY-006-E1",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "15956"
+      },
+      "published_at": "2026-07-13",
+      "event_date": "2026-07-13",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_news_post",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A July 2026 post said Pathway Student Visa holders would gain more flexibility to change study programmes in some cases without filing a completely new visa application.",
+        "fa": "پست جولای ۲۰۲۶ گفته دارندگان Pathway Student Visa در بعضی شرایط می‌توانند بدون درخواست ویزای کاملاً جدید رشته/برنامه را تغییر دهند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NZL-POSTSTUDY-006-E2",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "16148"
+      },
+      "published_at": "2026-09-10",
+      "event_date": "2026-09-10",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "forwarded_country_news",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A September 2026 post said that from 16 November 2026, eligible students completing a Level 7 Graduate Diploma in New Zealand after a prior bachelor's degree could qualify for up to one year of post-study work.",
+        "fa": "پست سپتامبر ۲۰۲۶ گفته از ۱۶ نوامبر ۲۰۲۶ بعضی دانشجویان دارای Bachelor قبلی که Graduate Diploma سطح 7 نیوزیلند را تمام کنند می‌توانند تا یک سال ویزای کار پس از تحصیل بگیرند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-CITIZENSHIP-007-E1",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "12830"
+      },
+      "published_at": "2025-04-15",
+      "event_date": "2025-04-15",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "forwarded_country_news",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An April 2025 post said Germany's incoming coalition intended to remove the three-year accelerated naturalisation path while keeping the five-year standard path and dual citizenship.",
+        "fa": "پست آوریل ۲۰۲۵ گفته ائتلاف جدید آلمان قصد حذف مسیر سریع سه‌ساله تابعیت را دارد و مسیر استاندارد پنج‌ساله و تابعیت دوگانه باقی می‌ماند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-CITIZENSHIP-007-E2",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14237"
+      },
+      "published_at": "2025-10-12",
+      "event_date": "2025-10-12",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "forwarded_country_news",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An October 2025 update said the three-year fast-track had been abolished and the standard route was five years of consecutive legal residence.",
+        "fa": "به‌روزرسانی اکتبر ۲۰۲۵ گفته مسیر سه‌ساله لغو شده و مسیر استاندارد به پنج سال اقامت قانونی متوالی برگشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "DEU-CITIZENSHIP-007-E3",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "15961"
+      },
+      "published_at": "2026-07-16",
+      "event_date": "2026-07-16",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_guide",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A July 2026 guide described the five-year residence route as the current baseline for German citizenship, alongside language, financial and civic-integration conditions.",
+        "fa": "راهنمای جولای ۲۰۲۶ مسیر پنج‌ساله را baseline فعلی تابعیت آلمان دانسته و شروط زبان، مالی و ادغام مدنی را نیز ذکر کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NOR-STUDY-TUITION-008-E1",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "13472"
+      },
+      "published_at": "2025-07-03",
+      "event_date": "2025-07-03",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_news_post",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A July 2025 post said Norway would let higher-education institutions set tuition for non-EU/EEA students rather than imposing one centrally determined structure; it also reported PhD-related concessions.",
+        "fa": "پست جولای ۲۰۲۵ گفته نروژ تعیین شهریه دانشجویان خارج EU/EEA را به خود مؤسسات آموزش عالی واگذار می‌کند و همزمان تسهیلاتی برای PhD گزارش شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NOR-STUDY-TUITION-008-E2",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "13857"
+      },
+      "published_at": "2025-08-14",
+      "event_date": "2025-08-14",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_news_analysis",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An August 2025 post referred to reforms intended to reopen international-student opportunities, including more freedom over tuition setting.",
+        "fa": "پست اوت ۲۰۲۵ به اصلاحاتی برای بازترکردن فرصت دانشجویان بین‌المللی، از جمله آزادی بیشتر در تعیین شهریه، اشاره کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "NOR-STUDY-TUITION-008-E3",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14289"
+      },
+      "published_at": "2025-10-23",
+      "event_date": "2025-10-23",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_news_post",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "An October 2025 post again said Norwegian universities would have authority to set tuition for non-EU/EEA international students.",
+        "fa": "پست اکتبر ۲۰۲۵ دوباره گفته دانشگاه‌های نروژ اختیار تعیین شهریه دانشجویان بین‌المللی خارج EU/EEA را خواهند داشت."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "LANG-TOEFL-FORMAT-009-E1",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14431"
+      },
+      "published_at": "2025-11-06",
+      "event_date": "2025-11-06",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_promotional_news",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A November 2025 post warned that a new TOEFL version would change test structure, cost and evaluation approach, requiring candidates to update preparation plans.",
+        "fa": "پست نوامبر ۲۰۲۵ هشدار داده نسخه جدید TOEFL ساختار، هزینه و شیوه ارزیابی را تغییر می‌دهد و برنامه آمادگی باید به‌روز شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "LANG-TOEFL-FORMAT-009-E2",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "14538"
+      },
+      "published_at": "2025-11-16",
+      "event_date": "2025-11-16",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_education_podcast",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A later November 2025 post said the new TOEFL format would take effect on 21 January 2026 and would alter Reading, Listening, Writing and Speaking.",
+        "fa": "پست بعدی نوامبر ۲۰۲۵ گفته فرمت جدید TOEFL از ۲۱ ژانویه ۲۰۲۶ اجرا می‌شود و هر چهار بخش Reading، Listening، Writing و Speaking تغییر می‌کنند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "LANG-IRAN-ETS-SUSPENSION-010-E1",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "16079"
+      },
+      "published_at": "2026-08-26",
+      "event_date": "2026-08-26",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "forwarded_test_news",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "On 26 August 2026 the channel reported suspension of Iran General License G and warned that this could affect ETS services and TOEFL/GRE delivery in Iran after the wind-down window.",
+        "fa": "در ۲۶ اوت ۲۰۲۶ کانال تعلیق Iran General License G را گزارش کرده و هشدار داده این موضوع می‌تواند پس از مهلت wind-down روی خدمات ETS و برگزاری TOEFL/GRE در ایران اثر بگذارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "LANG-IRAN-ETS-SUSPENSION-010-E2",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "16092"
+      },
+      "published_at": "2026-08-29",
+      "event_date": "2026-08-29",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "forwarded_test_news",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "On 29 August 2026 the channel reported widespread removal of future TOEFL dates in Iran and cancellations at a local centre, describing in-person TOEFL as effectively halted.",
+        "fa": "در ۲۹ اوت ۲۰۲۶ کانال حذف گسترده وقت‌های آینده TOEFL در ایران و لغو آزمون یک سنتر داخلی را گزارش کرده و برگزاری حضوری را عملاً متوقف دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "LANG-IRAN-ETS-SUSPENSION-010-E3",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "16128"
+      },
+      "published_at": "2026-09-02",
+      "event_date": "2026-09-02",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "forwarded_test_notice",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "On 2 September 2026 a post presented an ETS user message saying all future TOEFL and GRE exams in Iran were stopped, with direct-payment refunds, free rescheduling for voucher users after resumption, and an 8 September score-reporting deadline.",
+        "fa": "در ۲ سپتامبر ۲۰۲۶ پستی با عنوان پیام ETS به کاربران گفته همه آزمون‌های آینده TOEFL/GRE در ایران متوقف شده، پرداخت مستقیم ریفاند می‌شود، voucherها بعد از بازگشت آزمون امکان reschedule رایگان دارند و برای report نمره مهلت ۸ سپتامبر مطرح شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "LANG-IRAN-ETS-SUSPENSION-010-E4",
+      "source_id": "applyabroad-pargar-public-channel",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "16134"
+      },
+      "published_at": "2026-09-04",
+      "event_date": "2026-09-04",
+      "collected_at": "2026-09-17T06:45:00Z",
+      "source_type": "channel_operational_guidance",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A 4 September 2026 post shifted practical guidance toward test centres in neighbouring countries such as Turkey, showing immediate cross-border testing substitution.",
+        "fa": "پست ۴ سپتامبر ۲۰۲۶ راهنمایی عملی را به سمت سنترهای کشورهای همسایه مثل ترکیه برده که نشان‌دهنده جایگزینی فوری با آزمون برون‌مرزی است."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "CAN-STUDY-PAL-CAP-001",
+      "issue_cluster_id": "CAN-2026-GRADUATE-STUDY-PERMIT",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "graduate_cap_pal_exemption",
+        "class": "study_permit"
+      },
+      "scope": {
+        "destination": {
+          "country": "Canada",
+          "country_code": "CAN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "CITIZENSHIP / SETTLEMENT",
+            "LANGUAGE TEST"
+          ],
+          "codes": [
+            "study_permit",
+            "masters",
+            "phd"
+          ]
+        },
+        "process_stages": [
+          "eligibility",
+          "PAL_TAL",
+          "study_permit"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Canada's 2026 study-permit framework became more favorable for eligible public-institution master's/PhD applicants than for capped undergraduate/college routes",
+          "fa": "چارچوب Study Permit کانادا در ۲۰۲۶ برای ارشد/دکتری واجدشرایطِ مؤسسات دولتی نسبت به مسیرهای سقف‌دار کارشناسی/کالج تسهیل‌شده‌تر گزارش شده است"
+        },
+        "summary": {
+          "en": "The channel repeatedly reports that eligible graduate-degree applicants at public institutions are exempt from PAL/TAL and, in the channel's framing, from parts of the general cap logic, while undergraduate/private/college applicants remain more constrained.",
+          "fa": "کانال چند بار گزارش کرده متقاضیان واجدشرایط graduate degree در مؤسسات دولتی از PAL/TAL و بخشی از منطق سقف عمومی معاف‌اند، در حالی که کارشناسی/کالج/بخش خصوصی محدودتر باقی می‌مانند."
+        },
+        "practical_impact": {
+          "en": "Program level and institution type can materially change document requirements and cap exposure.",
+          "fa": "مقطع و نوع مؤسسه می‌تواند نیاز مدارک و قرارگرفتن زیر سقف را جدی تغییر دهد."
+        },
+        "who_should_care": {
+          "en": "Canada study-permit applicants for 2026 intakes.",
+          "fa": "متقاضیان Study Permit کانادا برای ورودی‌های ۲۰۲۶."
+        },
+        "recommended_action": {
+          "en": "Confirm whether the exact program and DLI fall inside the graduate exemption before relying on a PAL/TAL waiver.",
+          "fa": "قبل از اتکا به معافیت PAL/TAL، وضعیت دقیق برنامه و DLI را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CAN-STUDY-PAL-CAP-001-E1",
+          "relation": "supports",
+          "independence_group": "CAN-STUDY-PAL-CAP-001-E1"
+        },
+        {
+          "evidence_id": "CAN-STUDY-PAL-CAP-001-E2",
+          "relation": "supports",
+          "independence_group": "CAN-STUDY-PAL-CAP-001-E2"
+        },
+        {
+          "evidence_id": "CAN-STUDY-PAL-CAP-001-E3",
+          "relation": "supports",
+          "independence_group": "CAN-STUDY-PAL-CAP-001-E3"
+        },
+        {
+          "evidence_id": "CAN-STUDY-PAL-CAP-001-E4",
+          "relation": "supports",
+          "independence_group": "CAN-STUDY-PAL-CAP-001-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Repeated posts over several months converge on the graduate-program exemption, though exact scope must remain program-specific."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current IRCC cap, exemption and processing details were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CAN-STUDY-PAL-CAP-001-E1",
+            "CAN-STUDY-PAL-CAP-001-E2",
+            "CAN-STUDY-PAL-CAP-001-E3",
+            "CAN-STUDY-PAL-CAP-001-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded ApplyAbroad public-channel export; posts may cite official sources, but no independent verification was performed in this extraction run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Study-permit caps and exemptions are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Canada",
+        "Study Permit",
+        "PAL",
+        "TAL",
+        "Master",
+        "PhD",
+        "2026"
+      ],
+      "first_seen": "2025-11-19",
+      "last_seen": "2026-02-26"
+    },
+    {
+      "signal_id": "AUS-STUDY-VISA-FEE-002",
+      "issue_cluster_id": "AUS-STUDENT-VISA-COST-ESCALATION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "AUS-STUDY-CAP-003"
+        }
+      ],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "visa_fee_increase",
+        "class": "study_cost"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "CITIZENSHIP / SETTLEMENT",
+            "LANGUAGE TEST"
+          ],
+          "codes": [
+            "student_visa",
+            "temporary_graduate"
+          ]
+        },
+        "process_stages": [
+          "visa_fee",
+          "budget"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Australia materially increased visa-application costs for students and graduates during 2025",
+          "fa": "هزینه درخواست ویزاهای دانشجویی و فارغ‌التحصیلی استرالیا در ۲۰۲۵ به‌طور محسوس افزایش یافته است"
+        },
+        "summary": {
+          "en": "The channel reports a Temporary Graduate fee rise to AUD 2,235 and a later student-visa/dependant fee increase from AUD 1,600 to AUD 2,000, followed by sector pressure to reduce the charge.",
+          "fa": "کانال افزایش Temporary Graduate به ۲۲۳۵ دلار و سپس افزایش هزینه ویزای دانشجویی/همراه از ۱۶۰۰ به ۲۰۰۰ دلار را گزارش کرده و بعدتر فشار صنعت برای کاهش هزینه را پوشش داده است."
+        },
+        "practical_impact": {
+          "en": "Visa fees became a meaningful upfront budget item, especially for short courses and families.",
+          "fa": "هزینه ویزا به آیتم جدی بودجه اولیه، به‌خصوص برای دوره‌های کوتاه و خانواده‌ها، تبدیل شده است."
+        },
+        "who_should_care": {
+          "en": "Australia student and graduate-route applicants.",
+          "fa": "متقاضیان ویزای دانشجویی و مسیر پس از تحصیل استرالیا."
+        },
+        "recommended_action": {
+          "en": "Use current visa-charge tables in budgeting instead of historical fee assumptions.",
+          "fa": "در بودجه‌ریزی از جدول هزینه روز استفاده کنید و به اعداد قدیمی تکیه نکنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-STUDY-VISA-FEE-002-E1",
+          "relation": "supports",
+          "independence_group": "AUS-STUDY-VISA-FEE-002-E1"
+        },
+        {
+          "evidence_id": "AUS-STUDY-VISA-FEE-002-E2",
+          "relation": "supports",
+          "independence_group": "AUS-STUDY-VISA-FEE-002-E2"
+        },
+        {
+          "evidence_id": "AUS-STUDY-VISA-FEE-002-E3",
+          "relation": "supports",
+          "independence_group": "AUS-STUDY-VISA-FEE-002-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple posts document fee increases and subsequent sector reaction."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Australian visa application charges were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-STUDY-VISA-FEE-002-E1",
+            "AUS-STUDY-VISA-FEE-002-E2",
+            "AUS-STUDY-VISA-FEE-002-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded ApplyAbroad public-channel export; posts may cite official sources, but no independent verification was performed in this extraction run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Visa charges can be indexed or amended.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Australia",
+        "student visa",
+        "Temporary Graduate",
+        "visa fee",
+        "AUD 2000"
+      ],
+      "first_seen": "2025-01-01",
+      "last_seen": "2025-09-27"
+    },
+    {
+      "signal_id": "AUS-STUDY-CAP-003",
+      "issue_cluster_id": "AUS-INTERNATIONAL-STUDENT-PLANNING-LEVEL",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "AUS-STUDY-VISA-FEE-002"
+        }
+      ],
+      "classification": {
+        "family": "E1_ELIGIBILITY_RULES",
+        "type": "institutional_international_student_limit",
+        "class": "admission_capacity"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "CITIZENSHIP / SETTLEMENT",
+            "LANGUAGE TEST"
+          ],
+          "codes": [
+            "international_student"
+          ]
+        },
+        "process_stages": [
+          "admission_capacity",
+          "provider_allocation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Australia retained managed international-student capacity while raising the 2026 national planning level above 2025",
+          "fa": "استرالیا ظرفیت دانشجوی بین‌المللی را همچنان مدیریت‌شده نگه داشت اما سطح برنامه‌ریزی ۲۰۲۶ را بالاتر از ۲۰۲۵ برد"
+        },
+        "summary": {
+          "en": "The channel reports a 2026 planning level of 295,000 versus 270,000 in 2025, while later posts still describe provider-level caps and increased competition for international places.",
+          "fa": "کانال سطح برنامه‌ریزی ۲۰۲۶ را ۲۹۵هزار در برابر ۲۷۰هزار سال ۲۰۲۵ گزارش کرده، اما پست‌های بعدی همچنان محدودیت سطح مؤسسه و رقابت بالاتر برای ظرفیت بین‌المللی را مطرح می‌کنند."
+        },
+        "practical_impact": {
+          "en": "A higher national number does not mean unlimited capacity at each institution or program.",
+          "fa": "بالاتررفتن عدد ملی به معنی ظرفیت نامحدود در هر دانشگاه یا رشته نیست."
+        },
+        "who_should_care": {
+          "en": "Australia applicants targeting competitive providers/programs.",
+          "fa": "متقاضیان استرالیا برای دانشگاه‌ها/رشته‌های رقابتی."
+        },
+        "recommended_action": {
+          "en": "Track provider-specific allocation and intake availability, not only the headline national cap.",
+          "fa": "به‌جای اتکا به عدد ملی، allocation و ظرفیت intake همان مؤسسه را پیگیری کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-STUDY-CAP-003-E1",
+          "relation": "supports",
+          "independence_group": "aus-cap-a"
+        },
+        {
+          "evidence_id": "AUS-STUDY-CAP-003-E2",
+          "relation": "qualifies",
+          "independence_group": "aus-cap-b"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The national increase is explicit, while the practical provider-level effect remains institution-specific."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current 2026 provider allocations were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-STUDY-CAP-003-E1",
+            "AUS-STUDY-CAP-003-E2"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded ApplyAbroad public-channel export; posts may cite official sources, but no independent verification was performed in this extraction run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Provider allocations can change by intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Australia",
+        "international students",
+        "295000",
+        "cap",
+        "2026"
+      ],
+      "first_seen": "2025-08-04",
+      "last_seen": "2025-11-08"
+    },
+    {
+      "signal_id": "GBR-WORK-LANGUAGE-GRADUATE-004",
+      "issue_cluster_id": "GBR-2026-WORK-GRADUATE-TIGHTENING",
+      "relationships": [],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "work_language_and_poststudy_tightening",
+        "class": "work_poststudy"
+      },
+      "scope": {
+        "destination": {
+          "country": "United Kingdom",
+          "country_code": "GBR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "CITIZENSHIP / SETTLEMENT",
+            "LANGUAGE TEST"
+          ],
+          "codes": [
+            "Skilled_Worker",
+            "Scale_up",
+            "HPI",
+            "Graduate"
+          ]
+        },
+        "process_stages": [
+          "language",
+          "eligibility",
+          "poststudy"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "The channel reports a 2026 tightening of UK work/post-study routes, led by B2 English for first-time Skilled Worker applicants",
+          "fa": "کانال از سخت‌ترشدن مسیرهای کار/پس از تحصیل بریتانیا در ۲۰۲۶ گزارش می‌دهد که مهم‌ترین بخش آن B2 برای متقاضیان بار اول Skilled Worker است"
+        },
+        "summary": {
+          "en": "Posts repeatedly cite the Skilled Worker B1-to-B2 change from 8 January 2026. An earlier post also bundles HPI expansion/capping and a shorter Graduate-route period into the same policy shift.",
+          "fa": "پست‌ها چند بار تغییر Skilled Worker از B1 به B2 از ۸ ژانویه ۲۰۲۶ را تکرار می‌کنند. یک پست قبلی نیز گسترش/سقف HPI و کوتاه‌شدن Graduate Route را در همان بسته تغییرات آورده است."
+        },
+        "practical_impact": {
+          "en": "Applicants who previously planned around B1 may need additional language preparation before sponsorship or switching routes.",
+          "fa": "افرادی که بر مبنای B1 برنامه‌ریزی کرده بودند ممکن است قبل از اسپانسرشیپ یا تغییر مسیر به آمادگی زبان بیشتری نیاز داشته باشند."
+        },
+        "who_should_care": {
+          "en": "UK work-route and post-study applicants.",
+          "fa": "متقاضیان مسیر کاری و پس از تحصیل بریتانیا."
+        },
+        "recommended_action": {
+          "en": "Re-check the exact route's current English and post-study-duration requirements before filing.",
+          "fa": "قبل از اقدام، سطح زبان و مدت post-study همان route را دوباره با منبع روز بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "GBR-WORK-LANGUAGE-GRADUATE-004-E1",
+          "relation": "supports",
+          "independence_group": "GBR-WORK-LANGUAGE-GRADUATE-004-E1"
+        },
+        {
+          "evidence_id": "GBR-WORK-LANGUAGE-GRADUATE-004-E2",
+          "relation": "supports",
+          "independence_group": "GBR-WORK-LANGUAGE-GRADUATE-004-E2"
+        },
+        {
+          "evidence_id": "GBR-WORK-LANGUAGE-GRADUATE-004-E3",
+          "relation": "supports",
+          "independence_group": "GBR-WORK-LANGUAGE-GRADUATE-004-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The B2 change is repeated in multiple posts; other bundled route changes are less independently repeated."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Home Office language, HPI and Graduate-route rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "GBR-WORK-LANGUAGE-GRADUATE-004-E1",
+            "GBR-WORK-LANGUAGE-GRADUATE-004-E2",
+            "GBR-WORK-LANGUAGE-GRADUATE-004-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded ApplyAbroad public-channel export; posts may cite official sources, but no independent verification was performed in this extraction run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "UK immigration route rules can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "UK",
+        "Skilled Worker",
+        "B2",
+        "HPI",
+        "Graduate Route"
+      ],
+      "first_seen": "2025-10-15",
+      "last_seen": "2026-01-06"
+    },
+    {
+      "signal_id": "NZL-STUDY-ADEPT-005",
+      "issue_cluster_id": "NZL-STUDENT-VISA-DIGITISATION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "NZL-POSTSTUDY-006"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "student_visa_platform_migration",
+        "class": "digital_process"
+      },
+      "scope": {
+        "destination": {
+          "country": "New Zealand",
+          "country_code": "NZL",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "CITIZENSHIP / SETTLEMENT",
+            "LANGUAGE TEST"
+          ],
+          "codes": [
+            "student_visa"
+          ]
+        },
+        "process_stages": [
+          "online_application",
+          "paper_application"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "New Zealand moved student-visa processing into ADEPT and ended paper student-visa filing",
+          "fa": "نیوزیلند پردازش ویزای دانشجویی را به ADEPT منتقل کرد و درخواست کاغذی را کنار گذاشت"
+        },
+        "summary": {
+          "en": "The source says student-visa categories were migrated to the ADEPT online system and paper applications would no longer be accepted from 18 September 2025.",
+          "fa": "منبع می‌گوید دسته‌های ویزای دانشجویی به سامانه آنلاین ADEPT منتقل شدند و از ۱۸ سپتامبر ۲۰۲۵ درخواست کاغذی دیگر پذیرفته نمی‌شود."
+        },
+        "practical_impact": {
+          "en": "Applicants need to plan around a fully digital submission flow and online document readiness.",
+          "fa": "متقاضی باید برای فرایند کاملاً دیجیتال و آماده‌بودن فایل‌های آنلاین برنامه داشته باشد."
+        },
+        "who_should_care": {
+          "en": "New Zealand student-visa applicants.",
+          "fa": "متقاضیان ویزای دانشجویی نیوزیلند."
+        },
+        "recommended_action": {
+          "en": "Use the current online portal and avoid relying on legacy paper procedures.",
+          "fa": "از پرتال آنلاین روز استفاده کنید و روی فرایند کاغذی قدیمی حساب نکنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "NZL-STUDY-ADEPT-005-E1",
+          "relation": "supports",
+          "independence_group": "adept-2025"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The change is specific and operational, but only one source post was found in this export."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Immigration New Zealand ADEPT implementation was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "NZL-STUDY-ADEPT-005-E1"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded ApplyAbroad public-channel export; posts may cite official sources, but no independent verification was performed in this extraction run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Digital platform procedures can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "New Zealand",
+        "ADEPT",
+        "student visa",
+        "paper application"
+      ],
+      "first_seen": "2025-08-22",
+      "last_seen": "2025-08-22"
+    },
+    {
+      "signal_id": "NZL-POSTSTUDY-006",
+      "issue_cluster_id": "NZL-STUDENT-ROUTE-FLEXIBILITY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "NZL-STUDY-ADEPT-005"
+        }
+      ],
+      "classification": {
+        "family": "E8_POST_STUDY_WORK",
+        "type": "pathway_and_poststudy_expansion",
+        "class": "poststudy"
+      },
+      "scope": {
+        "destination": {
+          "country": "New Zealand",
+          "country_code": "NZL",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "CITIZENSHIP / SETTLEMENT",
+            "LANGUAGE TEST"
+          ],
+          "codes": [
+            "Pathway_Student_Visa",
+            "Post_Study_Work_Visa"
+          ]
+        },
+        "process_stages": [
+          "study_change",
+          "poststudy_work"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "New Zealand expanded flexibility inside the student-to-work pathway in 2026",
+          "fa": "نیوزیلند در ۲۰۲۶ انعطاف مسیر دانشجو به کار را بیشتر کرد"
+        },
+        "summary": {
+          "en": "The channel reports more flexibility for some Pathway Student Visa programme changes and a later expansion allowing eligible Level 7 Graduate Diploma completers with a prior bachelor's degree to access up to one year of post-study work from 16 November 2026.",
+          "fa": "کانال از انعطاف بیشتر برای بعضی تغییرات برنامه در Pathway Student Visa و سپس توسعه post-study work برای دارندگان Bachelor قبلی و Graduate Diploma سطح 7 از ۱۶ نوامبر ۲۰۲۶ گزارش کرده است."
+        },
+        "practical_impact": {
+          "en": "Programme design can now affect post-study eligibility in ways that make shorter Level 7 pathways more relevant for some applicants.",
+          "fa": "طراحی برنامه تحصیلی می‌تواند eligibility پس از تحصیل را طوری تغییر دهد که بعضی مسیرهای Level 7 کوتاه‌تر برای برخی متقاضیان مهم‌تر شوند."
+        },
+        "who_should_care": {
+          "en": "New Zealand students choosing Pathway or Graduate Diploma routes.",
+          "fa": "دانشجویان نیوزیلند در مسیر Pathway یا Graduate Diploma."
+        },
+        "recommended_action": {
+          "en": "Confirm that the exact qualification, prior bachelor's degree and study mode meet current post-study rules before enrolling.",
+          "fa": "قبل از ثبت‌نام، مدرک دقیق، Bachelor قبلی و شیوه تحصیل را با قواعد روز post-study تطبیق دهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "NZL-POSTSTUDY-006-E1",
+          "relation": "supports",
+          "independence_group": "NZL-POSTSTUDY-006-E1"
+        },
+        {
+          "evidence_id": "NZL-POSTSTUDY-006-E2",
+          "relation": "supports",
+          "independence_group": "NZL-POSTSTUDY-006-E2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Two 2026 policy posts show a consistent direction toward route flexibility."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Immigration New Zealand eligibility wording was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "NZL-POSTSTUDY-006-E1",
+            "NZL-POSTSTUDY-006-E2"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded ApplyAbroad public-channel export; posts may cite official sources, but no independent verification was performed in this extraction run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Post-study and pathway rules can change by qualification type.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "New Zealand",
+        "Pathway Student Visa",
+        "Graduate Diploma",
+        "Post-Study Work"
+      ],
+      "first_seen": "2026-07-13",
+      "last_seen": "2026-09-10"
+    },
+    {
+      "signal_id": "DEU-CITIZENSHIP-007",
+      "issue_cluster_id": "DEU-CITIZENSHIP-FASTTRACK-REVERSAL",
+      "relationships": [],
+      "classification": {
+        "family": "E9_SETTLEMENT_CITIZENSHIP",
+        "type": "fasttrack_naturalisation_removed",
+        "class": "citizenship"
+      },
+      "scope": {
+        "destination": {
+          "country": "Germany",
+          "country_code": "DEU",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "CITIZENSHIP / SETTLEMENT",
+            "LANGUAGE TEST"
+          ],
+          "codes": [
+            "naturalisation"
+          ]
+        },
+        "process_stages": [
+          "citizenship",
+          "residence_duration"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Germany's three-year accelerated naturalisation path was reported as removed, leaving five years as the standard baseline",
+          "fa": "مسیر سریع سه‌ساله تابعیت آلمان حذف شده و پنج سال به‌عنوان baseline استاندارد گزارش شده است"
+        },
+        "summary": {
+          "en": "The channel first reported an intention to repeal the three-year route, then later reported its abolition and continued to describe five years of legal residence as the standard baseline in 2026.",
+          "fa": "کانال ابتدا قصد حذف مسیر سه‌ساله را گزارش کرده، سپس از لغو آن نوشته و در ۲۰۲۶ پنج سال اقامت قانونی را baseline استاندارد معرفی کرده است."
+        },
+        "practical_impact": {
+          "en": "Long-term settlement planning based on a three-year citizenship timeline became obsolete in the source's reporting.",
+          "fa": "برنامه‌ریزی اقامت بلندمدت بر پایه تابعیت سه‌ساله طبق گزارش منبع دیگر معتبر نیست."
+        },
+        "who_should_care": {
+          "en": "Germany residents planning naturalisation.",
+          "fa": "افراد مقیم آلمان که برای تابعیت برنامه‌ریزی می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Use the five-year baseline unless a current official exception specifically applies.",
+          "fa": "پنج سال را baseline در نظر بگیرید مگر اینکه استثنای رسمی روز برای پرونده شما اعمال شود."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "DEU-CITIZENSHIP-007-E1",
+          "relation": "supports",
+          "independence_group": "DEU-CITIZENSHIP-007-E1"
+        },
+        {
+          "evidence_id": "DEU-CITIZENSHIP-007-E2",
+          "relation": "supports",
+          "independence_group": "DEU-CITIZENSHIP-007-E2"
+        },
+        {
+          "evidence_id": "DEU-CITIZENSHIP-007-E3",
+          "relation": "supports",
+          "independence_group": "DEU-CITIZENSHIP-007-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The timeline evolves from proposed repeal to later guidance treating five years as the current baseline."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current German citizenship statute and exceptions were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "DEU-CITIZENSHIP-007-E1",
+            "DEU-CITIZENSHIP-007-E2",
+            "DEU-CITIZENSHIP-007-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded ApplyAbroad public-channel export; posts may cite official sources, but no independent verification was performed in this extraction run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Citizenship law can be amended.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Germany",
+        "citizenship",
+        "naturalisation",
+        "3 years",
+        "5 years"
+      ],
+      "first_seen": "2025-04-15",
+      "last_seen": "2026-07-16"
+    },
+    {
+      "signal_id": "NOR-STUDY-TUITION-008",
+      "issue_cluster_id": "NOR-NON_EU-TUITION-DECENTRALISATION",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "institution_set_tuition",
+        "class": "study_cost"
+      },
+      "scope": {
+        "destination": {
+          "country": "Norway",
+          "country_code": "NOR",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "CITIZENSHIP / SETTLEMENT",
+            "LANGUAGE TEST"
+          ],
+          "codes": [
+            "international_student",
+            "phd"
+          ]
+        },
+        "process_stages": [
+          "tuition",
+          "financial_requirement"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Norway shifted non-EU tuition-setting toward individual institutions, increasing university-specific cost variance",
+          "fa": "نروژ تعیین شهریه غیراروپایی‌ها را بیشتر به خود مؤسسات سپرد و تفاوت هزینه بین دانشگاه‌ها را افزایش داد"
+        },
+        "summary": {
+          "en": "Posts in July, August and October 2025 repeatedly describe a move from centrally imposed tuition toward institution-level discretion for non-EU/EEA students, alongside reported PhD concessions.",
+          "fa": "پست‌های جولای، اوت و اکتبر ۲۰۲۵ چند بار از حرکت از شهریه متمرکز به اختیار سطح مؤسسه برای دانشجویان خارج EU/EEA و همزمان تسهیلاتی برای PhD گفته‌اند."
+        },
+        "practical_impact": {
+          "en": "Norway can no longer be budgeted with one national tuition assumption; the exact university matters more.",
+          "fa": "دیگر نمی‌توان نروژ را با یک فرض شهریه ملی بودجه‌بندی کرد؛ دانشگاه دقیق اهمیت بیشتری دارد."
+        },
+        "who_should_care": {
+          "en": "Non-EU/EEA applicants comparing Norwegian universities.",
+          "fa": "متقاضیان خارج EU/EEA که دانشگاه‌های نروژ را مقایسه می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Check the exact university's current tuition and PhD financial rules before applying.",
+          "fa": "قبل از اپلای شهریه همان دانشگاه و قواعد مالی PhD را جداگانه بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "NOR-STUDY-TUITION-008-E1",
+          "relation": "supports",
+          "independence_group": "NOR-STUDY-TUITION-008-E1"
+        },
+        {
+          "evidence_id": "NOR-STUDY-TUITION-008-E2",
+          "relation": "supports",
+          "independence_group": "NOR-STUDY-TUITION-008-E2"
+        },
+        {
+          "evidence_id": "NOR-STUDY-TUITION-008-E3",
+          "relation": "supports",
+          "independence_group": "NOR-STUDY-TUITION-008-E3"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same decentralisation direction is repeated across multiple posts."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Norwegian tuition legislation and each institution's fee schedule were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "NOR-STUDY-TUITION-008-E1",
+            "NOR-STUDY-TUITION-008-E2",
+            "NOR-STUDY-TUITION-008-E3"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded ApplyAbroad public-channel export; posts may cite official sources, but no independent verification was performed in this extraction run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "University fees vary annually.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Norway",
+        "tuition",
+        "non-EU",
+        "international students",
+        "PhD"
+      ],
+      "first_seen": "2025-07-03",
+      "last_seen": "2025-10-23"
+    },
+    {
+      "signal_id": "LANG-TOEFL-FORMAT-009",
+      "issue_cluster_id": "TOEFL-2026-FORMAT-CHANGE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "LANG-IRAN-ETS-SUSPENSION-010"
+        }
+      ],
+      "classification": {
+        "family": "E13_EXTERNAL_TEST_SERVICE",
+        "type": "test_format_change",
+        "class": "language_test"
+      },
+      "scope": {
+        "destination": {
+          "country": "Global",
+          "country_code": null,
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "CITIZENSHIP / SETTLEMENT",
+            "LANGUAGE TEST"
+          ],
+          "codes": [
+            "TOEFL"
+          ]
+        },
+        "process_stages": [
+          "test_preparation",
+          "test_booking"
+        ],
+        "entities": [
+          {
+            "entity_type": "test_provider",
+            "name": "ETS"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "TOEFL preparation needed a reset for the new format taking effect in January 2026",
+          "fa": "آمادگی TOEFL برای فرمت جدیدی که از ژانویه ۲۰۲۶ اجرا شد نیاز به بازتنظیم داشت"
+        },
+        "summary": {
+          "en": "The source first warned of upcoming TOEFL structural and scoring changes and later specified 21 January 2026 as the rollout date, with changes across all four test sections.",
+          "fa": "منبع ابتدا درباره تغییر ساختار/ارزیابی TOEFL هشدار داده و بعدتر ۲۱ ژانویه ۲۰۲۶ را تاریخ اجرا اعلام کرده و تغییر هر چهار بخش را مطرح کرده است."
+        },
+        "practical_impact": {
+          "en": "Candidates preparing on old-format materials risked misaligned practice and timing.",
+          "fa": "داوطلبی که با منابع فرمت قدیم می‌خواند در معرض تمرین و زمان‌بندی نامتناسب قرار می‌گرفت."
+        },
+        "who_should_care": {
+          "en": "TOEFL candidates taking the test in 2026.",
+          "fa": "داوطلبان TOEFL در ۲۰۲۶."
+        },
+        "recommended_action": {
+          "en": "Use preparation resources explicitly aligned to the current TOEFL format.",
+          "fa": "از منابعی استفاده کنید که صریحاً با فرمت فعلی TOEFL همسو باشند."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "LANG-TOEFL-FORMAT-009-E1",
+          "relation": "supports",
+          "independence_group": "LANG-TOEFL-FORMAT-009-E1"
+        },
+        {
+          "evidence_id": "LANG-TOEFL-FORMAT-009-E2",
+          "relation": "supports",
+          "independence_group": "LANG-TOEFL-FORMAT-009-E2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source gives a concrete rollout date and repeated preparation warnings."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current ETS TOEFL format documentation was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "LANG-TOEFL-FORMAT-009-E1",
+            "LANG-TOEFL-FORMAT-009-E2"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded ApplyAbroad public-channel export; posts may cite official sources, but no independent verification was performed in this extraction run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2027-01-15",
+        "reason": "Test format may continue evolving.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "TOEFL",
+        "2026",
+        "format",
+        "Reading",
+        "Listening",
+        "Writing",
+        "Speaking"
+      ],
+      "first_seen": "2025-11-06",
+      "last_seen": "2025-11-16"
+    },
+    {
+      "signal_id": "LANG-IRAN-ETS-SUSPENSION-010",
+      "issue_cluster_id": "IRAN-TOEFL-GRE-ACCESS",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "LANG-TOEFL-FORMAT-009"
+        }
+      ],
+      "classification": {
+        "family": "E13_EXTERNAL_TEST_SERVICE",
+        "type": "test_service_suspension",
+        "class": "language_test_access"
+      },
+      "scope": {
+        "destination": {
+          "country": "Iran",
+          "country_code": "IRN",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Resident in Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK",
+            "CITIZENSHIP / SETTLEMENT",
+            "LANGUAGE TEST"
+          ],
+          "codes": [
+            "TOEFL",
+            "GRE"
+          ]
+        },
+        "process_stages": [
+          "test_booking",
+          "score_reporting",
+          "refund",
+          "cross_border_testing"
+        ],
+        "entities": [
+          {
+            "entity_type": "test_provider",
+            "name": "ETS"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "TOEFL/GRE access in Iran experienced an abrupt late-August 2026 shutdown, forcing refunds, rescheduling and cross-border testing",
+          "fa": "دسترسی TOEFL/GRE در ایران در اواخر اوت ۲۰۲۶ ناگهان متوقف شد و متقاضیان را به ریفاند، reschedule و آزمون خارج کشور سوق داد"
+        },
+        "summary": {
+          "en": "The source tracks the issue from suspension of General License G, through removal/cancellation of Iranian TOEFL dates, to a reported ETS user message saying future TOEFL/GRE exams in Iran were stopped and score reporting faced an 8 September deadline.",
+          "fa": "منبع مسیر را از تعلیق General License G، حذف/لغو وقت‌های TOEFL ایران، تا پیام منتسب به ETS درباره توقف آزمون‌های آینده TOEFL/GRE و مهلت ۸ سپتامبر برای report نمره دنبال کرده است."
+        },
+        "practical_impact": {
+          "en": "Iran-based candidates with admissions deadlines could lose booked test dates or score-reporting access and need rapid travel alternatives.",
+          "fa": "داوطلب داخل ایران با ددلاین پذیرش ممکن است وقت رزروشده یا امکان report نمره را از دست بدهد و سریع به گزینه سفر نیاز پیدا کند."
+        },
+        "who_should_care": {
+          "en": "Iran-based TOEFL/GRE candidates and applicants with imminent score-reporting deadlines.",
+          "fa": "داوطلبان TOEFL/GRE داخل ایران و متقاضیان دارای ددلاین نزدیک report نمره."
+        },
+        "recommended_action": {
+          "en": "Do not rely on domestic test availability; verify ETS status and maintain a nearby-country fallback for urgent deadlines.",
+          "fa": "روی دسترسی داخلی حساب قطعی نکنید؛ وضعیت ETS را بررسی و برای ددلاین فوری گزینه کشور همسایه داشته باشید."
+        },
+        "known_workaround": "The channel immediately shifted toward test centres in nearby countries such as Turkey."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "LANG-IRAN-ETS-SUSPENSION-010-E1",
+          "relation": "supports",
+          "independence_group": "LANG-IRAN-ETS-SUSPENSION-010-E1"
+        },
+        {
+          "evidence_id": "LANG-IRAN-ETS-SUSPENSION-010-E2",
+          "relation": "supports",
+          "independence_group": "LANG-IRAN-ETS-SUSPENSION-010-E2"
+        },
+        {
+          "evidence_id": "LANG-IRAN-ETS-SUSPENSION-010-E3",
+          "relation": "supports",
+          "independence_group": "LANG-IRAN-ETS-SUSPENSION-010-E3"
+        },
+        {
+          "evidence_id": "LANG-IRAN-ETS-SUSPENSION-010-E4",
+          "relation": "supports",
+          "independence_group": "LANG-IRAN-ETS-SUSPENSION-010-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "worsening",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple posts over one week show a clear operational shutdown and immediate fallback behavior."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "OFAC and ETS current status were not independently verified in this extraction run."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "LANG-IRAN-ETS-SUSPENSION-010-E1",
+            "LANG-IRAN-ETS-SUSPENSION-010-E2",
+            "LANG-IRAN-ETS-SUSPENSION-010-E3",
+            "LANG-IRAN-ETS-SUSPENSION-010-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded ApplyAbroad public-channel export; posts may cite official sources, but no independent verification was performed in this extraction run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "Test-service availability can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Iran",
+        "TOEFL",
+        "GRE",
+        "ETS",
+        "General License G",
+        "score report"
+      ],
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-09-04"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Personal names, Telegram handles, contact details and promotional contact information are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically scanned all 3,309 records in the uploaded JSON export."
+      },
+      "source_type_classification": {
+        "status": "pass",
+        "note": "This source is treated as a public news/analysis channel, not as a first-hand community discussion. Evidence is therefore marked reported rather than direct applicant experience."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Discounts, service ads, motivational posts, consultation promotions and generic position advertisements were excluded from signals."
+      },
+      "opinion_prediction_filtered": {
+        "status": "pass",
+        "note": "Personal forecasts and speculative political commentary were excluded from signals."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated posts on Canada PAL/TAL, Australia fees/caps, UK language rules, German citizenship, Norway tuition and ETS disruptions were clustered."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Later clarifications are preserved where they narrow earlier broad claims, especially for Canada graduate exemptions and Australia capacity."
+      },
+      "official_vs_channel_separated": {
+        "status": "pass",
+        "note": "Posts may cite official pages or quote notices, but official verification remains not_verified because this run did not independently browse or confirm them."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search failed with 'Resource not found', so remote-store deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "These are source-derived news/policy signals from the uploaded public Telegram channel, not independently verified official rules. Before acting, verify current requirements with the relevant immigration authority, university, test provider or mission."
+}

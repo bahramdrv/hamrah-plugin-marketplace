@@ -1,0 +1,2053 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_australia_news_signals_candidate",
+    "generated_at": "2026-09-16T08:30:00Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "australia-news-telegram-export",
+      "name": "Australia News.json / Telegram export «اخبار استرالیا با پرگار»",
+      "source_type": "public_channel_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full",
+        "from": "2025-01-04",
+        "to": "2026-09-10",
+        "records_available": 262,
+        "records_processed": 262
+      },
+      "source_characteristics": {
+        "editorial_channel": true,
+        "contains_promotional_content": true,
+        "contains_forwarded_content": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "AUS-NEWS-STUDENT-VISA-PROCESSING-001-E1",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1410"
+      },
+      "published_at": "2025-12-03",
+      "event_date": "2025-12-03",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported a backlog of about 50,000 Australian student-visa cases in December 2025, with international students facing multi-month delays.",
+        "fa": "کانال در دسامبر ۲۰۲۵ از انباشت حدود ۵۰ هزار پرونده ویزای دانشجویی استرالیا و تأخیرهای چندماهه خبر داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-STUDENT-VISA-PROCESSING-001-C1",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1446"
+      },
+      "published_at": "2026-02-22",
+      "event_date": "2026-02-22",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "In February 2026 the channel cited the Home Affairs processing-times page and reported a median Student processing time of about 20 days for December 2025 data.",
+        "fa": "در فوریه ۲۰۲۶ کانال با ارجاع به صفحه زمان پردازش Home Affairs، میانه زمان پردازش دسته Student را حدود ۲۰ روز گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-STUDENT-VISA-PROCESSING-001-C2",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1448"
+      },
+      "published_at": "2026-02-27",
+      "event_date": "2026-02-27",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel_with_official_link",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A later February 2026 update again reported a 20-day median and noted that offshore student cases were prioritized under Ministerial Directions 111/115 depending on lodgement date.",
+        "fa": "آپدیت بعدی در فوریه ۲۰۲۶ نیز میانه ۲۰ روز را تکرار کرده و به اولویت‌بندی پرونده‌های offshore تحت Direction 111/115 بر اساس تاریخ لاج اشاره کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-STUDENT-SCRUTINY-002-E1",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1325"
+      },
+      "published_at": "2025-09-18",
+      "event_date": "2025-09-18",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported that student-visa applications fell to about 427,000 in FY2024-25 from nearly 600,000 the year before, alongside tighter scrutiny and the Genuine Student requirement.",
+        "fa": "کانال گزارش کرده درخواست‌های ویزای دانشجویی در سال مالی ۲۰۲۴–۲۵ به حدود ۴۲۷ هزار مورد از نزدیک ۶۰۰ هزار مورد سال قبل کاهش یافته و هم‌زمان نظارت و معیار Genuine Student سخت‌گیرانه‌تر شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-STUDENT-SCRUTINY-002-E2",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1325"
+      },
+      "published_at": "2025-09-18",
+      "event_date": "2025-09-18",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The same report identified weak study progression, downgrading and weak financial evidence as common reasons cited for refusal under the Genuine Student framework.",
+        "fa": "همان گزارش، مسیر تحصیلی ضعیف، downgrading و مدارک مالی ضعیف را از دلایل رایج رد تحت چارچوب Genuine Student معرفی کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-INTERNATIONAL-CAPACITY-003-E1",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1386"
+      },
+      "published_at": "2025-11-07",
+      "event_date": "2025-11-07",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A November 2025 post said international-student intake capacity was being constrained and described competition for limited institutional places.",
+        "fa": "یک پست نوامبر ۲۰۲۵ از محدود شدن ظرفیت پذیرش دانشجویان بین‌المللی و افزایش رقابت برای ظرفیت مؤسسات خبر داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-INTERNATIONAL-CAPACITY-003-E2",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1482"
+      },
+      "published_at": "2026-08-13",
+      "event_date": "2026-08-13",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "In August 2026 the channel said a new higher-education funding bill had revived international-student cap powers, but explicitly noted that the new caps were not yet final.",
+        "fa": "در اوت ۲۰۲۶ کانال گفته لایحه جدید آموزش عالی دوباره بحث سقف دانشجویان خارجی را مطرح کرده، اما صراحتاً نوشته سقف‌های جدید هنوز نهایی نشده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-STUDENT-DEPENDANT-RESTRICTIONS-004-E1",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1485"
+      },
+      "published_at": "2026-08-18",
+      "event_date": "2026-08-18",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "On 18 August 2026 the channel described growing speculation about new restrictions on student dependants but stated that no new formal ban had yet been announced.",
+        "fa": "در ۱۸ اوت ۲۰۲۶ کانال از افزایش گمانه‌زنی درباره محدودیت همراه دانشجو خبر داده اما نوشته هنوز ممنوعیت رسمی جدیدی اعلام نشده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-STUDENT-DEPENDANT-RESTRICTIONS-004-E2",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1491"
+      },
+      "published_at": "2026-08-28",
+      "event_date": "2026-08-28",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "On 28 August 2026 the channel said a September package might restrict student dependants, onshore student-visa applications and university-to-VET switching, while noting the measures were not final.",
+        "fa": "در ۲۸ اوت ۲۰۲۶ کانال گفته بسته‌ای احتمالی در سپتامبر می‌تواند همراه، درخواست دانشجویی از داخل و تغییر دانشگاه به VET را محدود کند، اما تأکید کرده مقررات هنوز نهایی نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-BSB80120-BAN-005-E1",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1497"
+      },
+      "published_at": "2026-09-08",
+      "event_date": "2026-09-08",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported that from 5 October 2026 new international enrolments in Graduate Diploma of Management (Learning) BSB80120 would stop.",
+        "fa": "کانال گزارش کرده از ۵ اکتبر ۲۰۲۶ ثبت‌نام جدید دانشجوی بین‌المللی در Graduate Diploma of Management (Learning) BSB80120 متوقف می‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-BSB80120-BAN-005-E2",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1497"
+      },
+      "published_at": "2026-09-08",
+      "event_date": "2026-09-08",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The report said current students were not covered by the ban and that it did not amount to a general ban on Graduate Diplomas.",
+        "fa": "گزارش تصریح کرده دانشجویان فعلی شامل ممنوعیت نیستند و این تصمیم ممنوعیت کلی Graduate Diplomaها نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-RESEARCH-SECURITY-006-E1",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1486"
+      },
+      "published_at": "2026-08-19",
+      "event_date": "2026-08-19",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported several Australian university collaborations with institutions in China, Russia and Belarus being stopped or blocked on national-security grounds.",
+        "fa": "کانال گزارش کرده چند همکاری دانشگاهی استرالیا با مؤسساتی در چین، روسیه و بلاروس با استناد به ملاحظات امنیت ملی متوقف یا مسدود شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-RESEARCH-SECURITY-006-E2",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1496"
+      },
+      "published_at": "2026-09-03",
+      "event_date": "2026-09-03",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A September 2026 post said Australia was considering making research-security and national-security requirements a formal condition of university registration/operation, while noting the proposal was still under consideration.",
+        "fa": "پست سپتامبر ۲۰۲۶ می‌گوید استرالیا در حال بررسی تبدیل امنیت پژوهش و الزامات امنیت ملی به شرط رسمی ثبت/فعالیت دانشگاه‌هاست و این طرح هنوز در مرحله بررسی قرار دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-HORIZON-EUROPE-007-E1",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1471"
+      },
+      "published_at": "2026-06-14",
+      "event_date": "2026-06-14",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported that Australia would join the second pillar of Horizon Europe from 2027, enabling Australian institutions to access funding and lead international projects.",
+        "fa": "کانال گزارش کرده استرالیا از ۲۰۲۷ به بخش دوم Horizon Europe می‌پیوندد و مؤسسات استرالیایی امکان دسترسی به فاند و رهبری پروژه‌های بین‌المللی را خواهند داشت."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-HORIZON-EUROPE-007-E2",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1495"
+      },
+      "published_at": "2026-09-02",
+      "event_date": "2026-09-02",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A September 2026 update said Australia was considering support for universities and researchers to prepare proposals and build European partnerships before 2027 access.",
+        "fa": "آپدیت سپتامبر ۲۰۲۶ می‌گوید دولت استرالیا در حال بررسی حمایت از دانشگاه‌ها و پژوهشگران برای تهیه پروپوزال و ساخت همکاری‌های اروپایی پیش از دسترسی ۲۰۲۷ است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-189-INVITATION-DISPERSION-008-E1",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1398"
+      },
+      "published_at": "2025-11-18",
+      "event_date": "2025-11-18",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "A November 2025 post described a subclass 189 round in which most selected applicants were reported at about 85 EOI points or above, including offshore applicants.",
+        "fa": "پست نوامبر ۲۰۲۵ یک راند ۱۸۹ را توصیف کرده که بیشتر دعوت‌شدگان حدود ۸۵ امتیاز EOI یا بیشتر داشته‌اند و متقاضیان offshore نیز پوشش داده شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-189-INVITATION-DISPERSION-008-E2",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1472"
+      },
+      "published_at": "2026-06-28",
+      "event_date": "2026-06-28",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported 10,000 subclass 189 invitations in the 4 June 2026 SkillSelect round, with occupation-specific points ranging from 65 to 100.",
+        "fa": "کانال گزارش کرده در راند SkillSelect مورخ ۴ ژوئن ۲۰۲۶، ده‌هزار دعوتنامه ۱۸۹ صادر شده و امتیازها بسته به شغل از ۶۵ تا ۱۰۰ متغیر بوده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-SPONSOR-SALARY-009-E1",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1473"
+      },
+      "published_at": "2026-07-09",
+      "event_date": "2026-07-09",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported that from 1 July 2026 the Core Skills salary threshold rose from AUD 76,515 to 78,700 and Specialist Skills from AUD 141,210 to 145,000, affecting employer-sponsored routes including 482 and 186.",
+        "fa": "کانال گزارش کرده از ۱ جولای ۲۰۲۶ حداقل حقوق Core Skills از ۷۶٬۵۱۵ به ۷۸٬۷۰۰ و Specialist Skills از ۱۴۱٬۲۱۰ به ۱۴۵٬۰۰۰ دلار افزایش یافته و مسیرهای اسپانسری از جمله ۴۸۲ و ۱۸۶ را تحت تأثیر قرار می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-VISA-FEE-INCREASE-010-E1",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1474"
+      },
+      "published_at": "2026-07-11",
+      "event_date": "2026-07-11",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported visa application charge increases from 1 July 2026, including student subclass 500 rising from AUD 2,000 to 2,500.",
+        "fa": "کانال گزارش کرده از ۱ جولای ۲۰۲۶ هزینه درخواست ویزا افزایش یافته و هزینه ساب‌کلس ۵۰۰ دانشجویی از ۲۰۰۰ به ۲۵۰۰ دلار استرالیا رسیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-VISA-FEE-INCREASE-010-E2",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1474"
+      },
+      "published_at": "2026-07-11",
+      "event_date": "2026-07-11",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The same post reported subclass 482 at AUD 4,015 and employer/regional permanent routes 186/494 at AUD 6,140.",
+        "fa": "همان پست هزینه ۴۸۲ را ۴۰۱۵ دلار و مسیرهای ۱۸۶/۴۹۴ را ۶۱۴۰ دلار گزارش کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-VIC-DIGITAL-NOMINATION-011-E1",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1436"
+      },
+      "published_at": "2026-02-08",
+      "event_date": "2026-02-08",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel_with_named_authority",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel said Live in Melbourne announced that from 1 March 2026 nomination-condition forms for 190/491 and some 188/888 streams would be digital-only, with scanned signed forms no longer accepted.",
+        "fa": "کانال نوشته Live in Melbourne اعلام کرده از ۱ مارس ۲۰۲۶ فرم‌های Nomination Conditions برای ۱۹۰/۴۹۱ و برخی ۱۸۸/۸۸۸ فقط دیجیتال هستند و فرم اسکن‌شده پذیرفته نمی‌شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-TNE-GS-SCRUTINY-012-E1",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1443"
+      },
+      "published_at": "2026-02-19",
+      "event_date": "2026-02-19",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The channel reported that some student-visa cases were being refused where an equivalent Australian program was available through transnational education outside Australia.",
+        "fa": "کانال گزارش کرده برخی پرونده‌های ویزای دانشجویی در صورت وجود برنامه معادل TNE خارج از استرالیا رد شده‌اند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "AUS-NEWS-TNE-GS-SCRUTINY-012-E2",
+      "source_id": "australia-news-telegram-export",
+      "locator": {
+        "type": "citation",
+        "value": "telegram_message_id:1443"
+      },
+      "published_at": "2026-02-19",
+      "event_date": "2026-02-19",
+      "collected_at": "2026-09-16T08:30:00Z",
+      "source_type": "public_news_channel",
+      "firsthandness": "reported",
+      "summary": {
+        "en": "The post framed TNE availability as a factor within Genuine Student scrutiny and advised applicants to explain why physical presence in Australia is necessary.",
+        "fa": "پست، وجود TNE را عاملی در بررسی Genuine Student دانسته و توصیه کرده متقاضی ضرورت حضور فیزیکی در استرالیا را توضیح دهد."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "AUS-NEWS-STUDENT-VISA-PROCESSING-001",
+      "issue_cluster_id": "AUS-STUDENT-VISA-PROCESSING",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "processing_time_volatility",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_visa_500"
+          ]
+        },
+        "process_stages": [
+          "visa_application",
+          "visa_processing"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Student-visa processing conditions shifted sharply between late 2025 backlog reports and early-2026 median timing",
+          "fa": "شرایط پردازش ویزای دانشجویی از بک‌لاگ اواخر ۲۰۲۵ تا میانه زمانی اوایل ۲۰۲۶ تغییر شدید داشته است"
+        },
+        "summary": {
+          "en": "The channel reported a 50,000-case backlog with multi-month delays in December 2025, then cited Home Affairs in February 2026 with a 20-day median Student processing time. The evidence supports volatility and prioritization effects, not a guaranteed 20-day outcome.",
+          "fa": "کانال در دسامبر ۲۰۲۵ از بک‌لاگ ۵۰ هزار پرونده و تأخیر چندماهه گفته و در فوریه ۲۰۲۶ با ارجاع به Home Affairs میانه ۲۰ روز را گزارش کرده است. این شواهد از نوسان و اثر اولویت‌بندی پشتیبانی می‌کنند، نه تضمین نتیجه ۲۰روزه."
+        },
+        "practical_impact": {
+          "en": "Applicants should not plan term start, housing or travel around a single processing-time figure.",
+          "fa": "شروع ترم، مسکن و سفر نباید بر اساس یک عدد ثابت زمان پردازش برنامه‌ریزی شود."
+        },
+        "who_should_care": {
+          "en": "Offshore and onshore student-visa applicants.",
+          "fa": "متقاضیان ویزای دانشجویی داخل و خارج استرالیا."
+        },
+        "recommended_action": {
+          "en": "Use current Home Affairs timing plus provider/direction priority as planning inputs and keep buffer for outliers.",
+          "fa": "برای برنامه‌ریزی، زمان رسمی روز، اولویت provider/direction و حاشیه امن برای پرونده‌های خارج از میانه را همزمان در نظر بگیرید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-NEWS-STUDENT-VISA-PROCESSING-001-E1",
+          "relation": "supports",
+          "independence_group": "news-backlog"
+        },
+        {
+          "evidence_id": "AUS-NEWS-STUDENT-VISA-PROCESSING-001-C1",
+          "relation": "contradicts",
+          "independence_group": "official-summary-1"
+        },
+        {
+          "evidence_id": "AUS-NEWS-STUDENT-VISA-PROCESSING-001-C2",
+          "relation": "contradicts",
+          "independence_group": "official-summary-2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "established",
+        "trend": "improving",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The source itself contains a clear before/after contrast and cites Home Affairs for the later median; the correct interpretation is volatility, not one universal delay."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The linked Home Affairs page was not independently re-opened in this extraction."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-NEWS-STUDENT-VISA-PROCESSING-001-E1",
+            "AUS-NEWS-STUDENT-VISA-PROCESSING-001-C1",
+            "AUS-NEWS-STUDENT-VISA-PROCESSING-001-C2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public Telegram news channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Processing medians and Ministerial Directions are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student visa",
+        "processing time",
+        "backlog",
+        "Direction 111",
+        "Direction 115"
+      ],
+      "first_seen": "2025-12-03",
+      "last_seen": "2026-02-27"
+    },
+    {
+      "signal_id": "AUS-NEWS-STUDENT-SCRUTINY-002",
+      "issue_cluster_id": "AUS-STUDENT-GS-SCRUTINY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "AUS-NEWS-TNE-GS-SCRUTINY-012"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "genuine_student_scrutiny",
+        "class": "selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_visa_500"
+          ]
+        },
+        "process_stages": [
+          "visa_application",
+          "eligibility"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Student-visa demand contracted while Genuine Student scrutiny was described as more consequential",
+          "fa": "همزمان با کاهش درخواست‌های دانشجویی، سخت‌گیری Genuine Student پررنگ‌تر گزارش شده است"
+        },
+        "summary": {
+          "en": "The channel reported applications falling from nearly 600,000 to about 427,000 in FY2024-25 and described study progression, downgrading and financial evidence as common refusal-pressure points under Genuine Student scrutiny.",
+          "fa": "کانال کاهش درخواست‌ها از نزدیک ۶۰۰ هزار به حدود ۴۲۷ هزار در سال مالی ۲۰۲۴–۲۵ را گزارش کرده و مسیر تحصیلی، downgrading و مدارک مالی را از نقاط فشار در بررسی Genuine Student دانسته است."
+        },
+        "practical_impact": {
+          "en": "A technically complete application may still face substantive scrutiny of study rationale and finances.",
+          "fa": "کامل بودن فنی پرونده لزوماً کافی نیست و منطق مسیر تحصیلی و تمکن می‌تواند موضوع بررسی ماهوی باشد."
+        },
+        "who_should_care": {
+          "en": "Student applicants with field changes, lower-level progression or weak financial narratives.",
+          "fa": "متقاضیان دارای تغییر رشته، تنزل مقطع یا روایت مالی ضعیف."
+        },
+        "recommended_action": {
+          "en": "Document coherent study progression, course rationale and financial capacity rather than relying on generic GS wording.",
+          "fa": "به‌جای متن کلی، پیوستگی مسیر تحصیلی، منطق انتخاب دوره و توان مالی را مستند کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-NEWS-STUDENT-SCRUTINY-002-E1",
+          "relation": "supports",
+          "independence_group": "news-1325"
+        },
+        {
+          "evidence_id": "AUS-NEWS-STUDENT-SCRUTINY-002-E2",
+          "relation": "supports",
+          "independence_group": "news-1325"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The source provides a detailed policy-style summary but only one channel report was selected for this cluster."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Application-volume and refusal-driver claims were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-NEWS-STUDENT-SCRUTINY-002-E1",
+            "AUS-NEWS-STUDENT-SCRUTINY-002-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public Telegram news channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "GS implementation and refusal patterns can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Genuine Student",
+        "GS",
+        "student visa",
+        "refusal",
+        "downgrading"
+      ],
+      "first_seen": "2025-09-18",
+      "last_seen": "2025-09-18"
+    },
+    {
+      "signal_id": "AUS-NEWS-INTERNATIONAL-CAPACITY-003",
+      "issue_cluster_id": "AUS-INTERNATIONAL-STUDENT-CAPACITY",
+      "relationships": [],
+      "classification": {
+        "family": "E11_UNIVERSITY_ACADEMIC_INSTITUTION",
+        "type": "international_student_capacity_control",
+        "class": "policy_watch"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "international_enrolment"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "policy"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "International-student capacity controls remain an active policy risk rather than a settled universal cap",
+          "fa": "کنترل ظرفیت دانشجوی بین‌المللی همچنان یک ریسک سیاستی فعال است، نه سقف نهایی و یکسان برای همه"
+        },
+        "summary": {
+          "en": "A 2025 post described constrained international intake, while an August 2026 post said a new bill again raised cap powers but explicitly stated that new caps were not yet final.",
+          "fa": "یک پست ۲۰۲۵ از محدودیت ظرفیت پذیرش گفته و پست اوت ۲۰۲۶ اعلام کرده لایحه جدید دوباره اختیار سقف‌گذاری را مطرح کرده، اما سقف‌های جدید هنوز نهایی نشده‌اند."
+        },
+        "practical_impact": {
+          "en": "Institution-level seat availability can become more policy-sensitive and should not be inferred solely from historic admission rates.",
+          "fa": "ظرفیت پذیرش دانشگاه می‌تواند بیشتر تحت تأثیر سیاست قرار گیرد و نباید صرفاً از نرخ‌های تاریخی پذیرش نتیجه‌گیری کرد."
+        },
+        "who_should_care": {
+          "en": "International applicants targeting high-demand Australian providers.",
+          "fa": "متقاضیان بین‌المللی دانشگاه‌ها و مؤسسات پرتقاضای استرالیا."
+        },
+        "recommended_action": {
+          "en": "Treat provider intake capacity as a live variable and verify each institution/intake before relying on a prior-year pattern.",
+          "fa": "ظرفیت هر دانشگاه و intake را متغیر زنده در نظر بگیرید و به الگوی سال قبل اتکا نکنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-NEWS-INTERNATIONAL-CAPACITY-003-E1",
+          "relation": "supports",
+          "independence_group": "news-cap-2025"
+        },
+        {
+          "evidence_id": "AUS-NEWS-INTERNATIONAL-CAPACITY-003-E2",
+          "relation": "qualifies",
+          "independence_group": "news-cap-2026"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The source shows recurring capacity-control policy discussion but the later report explicitly says new caps were not final."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The legislative status and provider allocations were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-NEWS-INTERNATIONAL-CAPACITY-003-E1",
+            "AUS-NEWS-INTERNATIONAL-CAPACITY-003-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public Telegram news channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Pending legislation/policy design requires recheck.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "international student cap",
+        "Atec",
+        "provider capacity",
+        "enrolment"
+      ],
+      "first_seen": "2025-11-07",
+      "last_seen": "2026-08-13"
+    },
+    {
+      "signal_id": "AUS-NEWS-STUDENT-DEPENDANT-RESTRICTIONS-004",
+      "issue_cluster_id": "AUS-STUDENT-DEPENDANT-ONSHORE-WATCH",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "pending_student_route_restrictions",
+        "class": "policy_watch"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Possible onshore switching restrictions"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "FAMILY / REUNIFICATION"
+          ],
+          "codes": [
+            "student_visa_500",
+            "student_dependant"
+          ]
+        },
+        "process_stages": [
+          "policy"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Student-dependant and onshore-switching restrictions were a late-August 2026 watchlist item, not a final rule",
+          "fa": "محدودیت همراه دانشجو و تغییر ویزا از داخل کشور در اواخر اوت ۲۰۲۶ در حد watchlist بود، نه قانون نهایی"
+        },
+        "summary": {
+          "en": "Two late-August posts described possible restrictions on dependants, onshore student applications and university-to-VET switching, while explicitly stating that no final formal rules had yet been announced.",
+          "fa": "دو پست اواخر اوت از محدودیت احتمالی همراه، درخواست دانشجویی از داخل و تغییر دانشگاه به VET گفته‌اند و همزمان تصریح کرده‌اند مقررات نهایی هنوز اعلام نشده است."
+        },
+        "practical_impact": {
+          "en": "Applicants should avoid making irreversible family or course-switch decisions based on speculation alone.",
+          "fa": "نباید صرفاً بر اساس گمانه‌زنی تصمیم غیرقابل‌برگشت درباره همراه یا تغییر دوره گرفت."
+        },
+        "who_should_care": {
+          "en": "Married student applicants, onshore visa switchers and university-to-VET switchers.",
+          "fa": "متقاضیان متأهل، افراد داخل استرالیا و کسانی که قصد تغییر از دانشگاه به VET دارند."
+        },
+        "recommended_action": {
+          "en": "Monitor for a formal instrument or Home Affairs update before treating the reported package as operative.",
+          "fa": "تا انتشار مقرره یا آپدیت رسمی Home Affairs، این بسته را اجرایی تلقی نکنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-NEWS-STUDENT-DEPENDANT-RESTRICTIONS-004-E1",
+          "relation": "supports",
+          "independence_group": "news-watch-1"
+        },
+        {
+          "evidence_id": "AUS-NEWS-STUDENT-DEPENDANT-RESTRICTIONS-004-E2",
+          "relation": "supports",
+          "independence_group": "news-watch-2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "uncertain",
+        "evidence_maturity": "anecdotal",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "low",
+          "rationale": "Both source posts explicitly frame the measures as speculation/pending policy rather than final rules."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No final rule was established by the uploaded source itself."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-NEWS-STUDENT-DEPENDANT-RESTRICTIONS-004-E1",
+            "AUS-NEWS-STUDENT-DEPENDANT-RESTRICTIONS-004-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public Telegram news channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-23",
+        "reason": "The source expected possible September 2026 announcements.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student dependant",
+        "onshore student visa",
+        "VET switching",
+        "policy watch"
+      ],
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-28"
+    },
+    {
+      "signal_id": "AUS-NEWS-BSB80120-BAN-005",
+      "issue_cluster_id": "AUS-BSB80120-INTERNATIONAL-ENROLMENT-BAN",
+      "relationships": [],
+      "classification": {
+        "family": "E11_UNIVERSITY_ACADEMIC_INSTITUTION",
+        "type": "course_enrolment_ban",
+        "class": "policy"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_visa_500"
+          ]
+        },
+        "process_stages": [
+          "admission",
+          "course_selection"
+        ],
+        "entities": [
+          {
+            "entity_type": "course",
+            "name": "Graduate Diploma of Management (Learning) – BSB80120"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "New international enrolments in BSB80120 were reported to stop from 5 October 2026",
+          "fa": "توقف پذیرش جدید بین‌المللی در BSB80120 از ۵ اکتبر ۲۰۲۶ گزارش شده است"
+        },
+        "summary": {
+          "en": "The channel reported a targeted stop on new international enrolments in Graduate Diploma of Management (Learning) BSB80120 from 5 October 2026, while current students could continue and other Graduate Diplomas were not generally banned.",
+          "fa": "کانال از توقف هدفمند پذیرش جدید دانشجوی بین‌المللی در BSB80120 از ۵ اکتبر ۲۰۲۶ خبر داده؛ دانشجویان فعلی می‌توانند ادامه دهند و سایر Graduate Diplomaها به‌طور کلی ممنوع نشده‌اند."
+        },
+        "practical_impact": {
+          "en": "Applicants targeting this exact course need an alternative program; the signal should not be generalized to all Graduate Diplomas.",
+          "fa": "متقاضی این دوره مشخص به گزینه جایگزین نیاز دارد و نباید این تصمیم را به همه Graduate Diplomaها تعمیم داد."
+        },
+        "who_should_care": {
+          "en": "Prospective international students considering BSB80120.",
+          "fa": "دانشجویان بین‌المللی متقاضی BSB80120."
+        },
+        "recommended_action": {
+          "en": "Do not submit a new enrolment plan for this course after the stated effective date without verifying current provider/government rules.",
+          "fa": "پس از تاریخ اعلام‌شده، بدون بررسی آخرین مقررات دولت/ارائه‌دهنده روی ثبت‌نام جدید این دوره برنامه‌ریزی نکنید."
+        },
+        "known_workaround": "Choose a different eligible course rather than assuming all Graduate Diplomas are affected."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-NEWS-BSB80120-BAN-005-E1",
+          "relation": "supports",
+          "independence_group": "news-1497"
+        },
+        {
+          "evidence_id": "AUS-NEWS-BSB80120-BAN-005-E2",
+          "relation": "qualifies",
+          "independence_group": "news-1497"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The source is specific about course, effective date and exclusions, but it remains a channel report rather than independently verified primary evidence."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "The government instrument was not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-NEWS-BSB80120-BAN-005-E1",
+            "AUS-NEWS-BSB80120-BAN-005-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public Telegram news channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Effective date is 5 October 2026; verify implementation.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "BSB80120",
+        "Graduate Diploma of Management",
+        "international enrolment",
+        "course ban"
+      ],
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-08"
+    },
+    {
+      "signal_id": "AUS-NEWS-RESEARCH-SECURITY-006",
+      "issue_cluster_id": "AUS-RESEARCH-SECURITY-TIGHTENING",
+      "relationships": [],
+      "classification": {
+        "family": "E11_UNIVERSITY_ACADEMIC_INSTITUTION",
+        "type": "research_security_scrutiny",
+        "class": "research"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Sensitive international research collaboration"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "RESEARCH"
+          ],
+          "codes": [
+            "phd",
+            "research_collaboration"
+          ]
+        },
+        "process_stages": [
+          "research",
+          "institutional_compliance"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Research-security scrutiny around foreign university collaborations is tightening",
+          "fa": "سخت‌گیری امنیت پژوهش در همکاری‌های دانشگاهی بین‌المللی رو به افزایش گزارش شده است"
+        },
+        "summary": {
+          "en": "The channel reported actual collaboration stoppages involving China/Russia/Belarus and, separately, a proposal to make research-security requirements part of university registration and oversight, including discussion of links involving Iran.",
+          "fa": "کانال هم از توقف واقعی برخی همکاری‌ها با چین/روسیه/بلاروس گزارش داده و هم از طرحی برای تبدیل امنیت پژوهش به بخشی از نظارت دانشگاهی خبر داده که در آن همکاری‌هایی مرتبط با ایران نیز مورد توجه قرار گرفته‌اند."
+        },
+        "practical_impact": {
+          "en": "Sensitive fields, data transfer and foreign institutional links may face greater university/compliance review.",
+          "fa": "حوزه‌های حساس، انتقال داده و ارتباط با مؤسسات خارجی ممکن است با بررسی دانشگاهی/کامپلاینس بیشتری روبه‌رو شوند."
+        },
+        "who_should_care": {
+          "en": "Researchers and PhD applicants in sensitive technologies or cross-border projects.",
+          "fa": "پژوهشگران و متقاضیان دکتری در فناوری‌های حساس یا پروژه‌های بین‌مرزی."
+        },
+        "recommended_action": {
+          "en": "Expect enhanced disclosure/compliance review and avoid assuming an international collaboration will be approved because it was acceptable historically.",
+          "fa": "برای disclosure و بررسی کامپلاینس بیشتر آماده باشید و تأیید تاریخی یک همکاری را تضمین ادامه آن ندانید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-NEWS-RESEARCH-SECURITY-006-E1",
+          "relation": "supports",
+          "independence_group": "news-security-actions"
+        },
+        {
+          "evidence_id": "AUS-NEWS-RESEARCH-SECURITY-006-E2",
+          "relation": "supports",
+          "independence_group": "news-security-proposal"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "emerging",
+        "trend": "worsening",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The source contains both reported concrete interventions and a pending broader regulatory proposal; the trend is clearer than the final rule."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Specific government decisions and the proposed regulatory text were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-NEWS-RESEARCH-SECURITY-006-E1",
+            "AUS-NEWS-RESEARCH-SECURITY-006-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public Telegram news channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-10-16",
+        "reason": "Pending proposal and security decisions require frequent recheck.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "research security",
+        "national security",
+        "Iran",
+        "China",
+        "Russia",
+        "university collaboration"
+      ],
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-09-03"
+    },
+    {
+      "signal_id": "AUS-NEWS-HORIZON-EUROPE-007",
+      "issue_cluster_id": "AUS-HORIZON-EUROPE-2027",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "research_funding_opportunity",
+        "class": "research_opportunity"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "RESEARCH",
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "research_funding",
+            "phd",
+            "postdoc"
+          ]
+        },
+        "process_stages": [
+          "research",
+          "funding"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Australia's 2027 Horizon Europe access creates a new research-funding and consortium opportunity",
+          "fa": "دسترسی استرالیا به Horizon Europe از ۲۰۲۷ فرصت تازه فاند و کنسرسیوم پژوهشی ایجاد می‌کند"
+        },
+        "summary": {
+          "en": "The channel reported Australia joining Horizon Europe from 2027 and later said support was being considered for proposal preparation and European partnerships.",
+          "fa": "کانال از پیوستن استرالیا به Horizon Europe از ۲۰۲۷ خبر داده و بعداً از بررسی حمایت برای تهیه پروپوزال و ساخت همکاری اروپایی گزارش کرده است."
+        },
+        "practical_impact": {
+          "en": "Australian research teams may have broader European funding/leadership options from 2027.",
+          "fa": "تیم‌های پژوهشی استرالیا از ۲۰۲۷ می‌توانند گزینه‌های بیشتری برای فاند و رهبری پروژه‌های اروپایی داشته باشند."
+        },
+        "who_should_care": {
+          "en": "PhD candidates, postdocs and researchers targeting internationally networked Australian groups.",
+          "fa": "متقاضیان دکتری، پست‌داک و پژوهشگرانی که گروه‌های استرالیایی با شبکه بین‌المللی را هدف می‌گیرند."
+        },
+        "recommended_action": {
+          "en": "Track Australian groups building EU consortia and proposal pipelines for 2027 calls.",
+          "fa": "گروه‌های استرالیایی در حال ساخت کنسرسیوم اروپایی و پروپوزال برای فراخوان‌های ۲۰۲۷ را رصد کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-NEWS-HORIZON-EUROPE-007-E1",
+          "relation": "supports",
+          "independence_group": "news-horizon-1"
+        },
+        {
+          "evidence_id": "AUS-NEWS-HORIZON-EUROPE-007-E2",
+          "relation": "supports",
+          "independence_group": "news-horizon-2"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "improving",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Two channel reports consistently describe the 2027 opportunity, but programme terms were not independently verified."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Horizon Europe association terms were not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-NEWS-HORIZON-EUROPE-007-E1",
+            "AUS-NEWS-HORIZON-EUROPE-007-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public Telegram news channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Funding implementation and eligible calls will evolve before 2027.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Horizon Europe",
+        "research funding",
+        "EU",
+        "Australia",
+        "2027"
+      ],
+      "first_seen": "2026-06-14",
+      "last_seen": "2026-09-02"
+    },
+    {
+      "signal_id": "AUS-NEWS-189-INVITATION-DISPERSION-008",
+      "issue_cluster_id": "AUS-189-INVITATION-THRESHOLD-VARIANCE",
+      "relationships": [],
+      "classification": {
+        "family": "E21_PRACTICAL_PROFILE_SELECTION_SIGNALS",
+        "type": "occupation_specific_invitation_threshold",
+        "class": "practical_selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "189"
+          ]
+        },
+        "process_stages": [
+          "eoi",
+          "invitation"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Subclass 189 invitation points vary materially by occupation and round",
+          "fa": "امتیاز دعوتنامه ۱۸۹ به‌طور جدی به شغل و راند وابسته است"
+        },
+        "summary": {
+          "en": "The channel described a November 2025 round as mostly around 85+ points, then reported a June 2026 round with 10,000 invitations and occupation thresholds ranging from 65 to 100.",
+          "fa": "کانال راند نوامبر ۲۰۲۵ را عمدتاً حدود ۸۵ امتیاز به بالا توصیف کرده و برای راند ژوئن ۲۰۲۶ از ۱۰ هزار دعوتنامه با بازه شغلی ۶۵ تا ۱۰۰ امتیاز خبر داده است."
+        },
+        "practical_impact": {
+          "en": "The nominal 65-point eligibility floor is not a reliable invitation forecast across occupations.",
+          "fa": "کف اسمی ۶۵ امتیاز پیش‌بینی قابل اتکایی برای دعوتنامه همه مشاغل نیست."
+        },
+        "who_should_care": {
+          "en": "Subclass 189 EOI candidates, including offshore applicants.",
+          "fa": "متقاضیان EOI ساب‌کلس ۱۸۹، از جمله offshore."
+        },
+        "recommended_action": {
+          "en": "Benchmark against the exact occupation and recent rounds, not a single national score.",
+          "fa": "به‌جای یک عدد ملی، کد شغلی و راندهای اخیر همان شغل را مبنا قرار دهید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-NEWS-189-INVITATION-DISPERSION-008-E1",
+          "relation": "supports",
+          "independence_group": "news-189-2025"
+        },
+        {
+          "evidence_id": "AUS-NEWS-189-INVITATION-DISPERSION-008-E2",
+          "relation": "supports",
+          "independence_group": "news-189-2026"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "monitoring",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "Two different rounds in the source show substantial threshold dispersion by occupation and time."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "SkillSelect round tables were not independently reconciled with the channel report."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-NEWS-189-INVITATION-DISPERSION-008-E1",
+            "AUS-NEWS-189-INVITATION-DISPERSION-008-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public Telegram news channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Invitation thresholds change each round.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "189",
+        "SkillSelect",
+        "EOI",
+        "invitation round",
+        "points"
+      ],
+      "first_seen": "2025-11-18",
+      "last_seen": "2026-06-28"
+    },
+    {
+      "signal_id": "AUS-NEWS-SPONSOR-SALARY-009",
+      "issue_cluster_id": "AUS-SPONSORED-VISA-SALARY-THRESHOLDS",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "sponsored_salary_threshold_increase",
+        "class": "financial"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "482",
+            "186"
+          ]
+        },
+        "process_stages": [
+          "sponsorship",
+          "eligibility"
+        ],
+        "entities": [
+          {
+            "entity_type": "policy_threshold",
+            "name": "Core Skills / Specialist Skills income thresholds"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "Sponsored skilled-visa salary thresholds increased from 1 July 2026",
+          "fa": "حداقل حقوق ویزاهای مهارتی اسپانسری از ۱ جولای ۲۰۲۶ افزایش یافته است"
+        },
+        "summary": {
+          "en": "The channel reported Core Skills increasing to AUD 78,700 and Specialist Skills to AUD 145,000, affecting new employer-sponsored cases including 482/186.",
+          "fa": "کانال افزایش Core Skills به ۷۸٬۷۰۰ و Specialist Skills به ۱۴۵٬۰۰۰ دلار را گزارش کرده که پرونده‌های جدید اسپانسری از جمله ۴۸۲/۱۸۶ را تحت تأثیر قرار می‌دهد."
+        },
+        "practical_impact": {
+          "en": "Offers below the relevant threshold may not support a new sponsored application even if occupation fit is otherwise good.",
+          "fa": "جاب‌آفر زیر حداقل مربوط ممکن است برای پرونده اسپانسری جدید کافی نباشد، حتی اگر تطابق شغلی مناسب باشد."
+        },
+        "who_should_care": {
+          "en": "482/186 applicants and sponsoring employers.",
+          "fa": "متقاضیان ۴۸۲/۱۸۶ و کارفرمایان اسپانسر."
+        },
+        "recommended_action": {
+          "en": "Check the current salary threshold and market-salary rules before accepting or structuring an offer.",
+          "fa": "پیش از قبول یا تنظیم آفر، حداقل حقوق جاری و قواعد market salary را بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-NEWS-SPONSOR-SALARY-009-E1",
+          "relation": "supports",
+          "independence_group": "news-1473"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The report is precise and time-stamped but is a single channel source in this extraction."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current official threshold instrument was not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-NEWS-SPONSOR-SALARY-009-E1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public Telegram news channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Income thresholds are normally indexed and should be rechecked annually.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "482",
+        "186",
+        "Core Skills",
+        "Specialist Skills",
+        "salary threshold"
+      ],
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-09"
+    },
+    {
+      "signal_id": "AUS-NEWS-VISA-FEE-INCREASE-010",
+      "issue_cluster_id": "AUS-VISA-APPLICATION-CHARGE-2026",
+      "relationships": [],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "visa_application_charge_increase",
+        "class": "financial"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "500",
+            "482",
+            "186",
+            "494"
+          ]
+        },
+        "process_stages": [
+          "visa_application",
+          "payment"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Australian visa application charges increased materially from 1 July 2026",
+          "fa": "هزینه درخواست ویزاهای استرالیا از ۱ جولای ۲۰۲۶ به‌طور قابل‌توجهی افزایش یافته است"
+        },
+        "summary": {
+          "en": "The channel reported subclass 500 increasing from AUD 2,000 to 2,500, subclass 482 to AUD 4,015, and 186/494 to AUD 6,140, with some popular routes increasing by about 25%.",
+          "fa": "کانال افزایش هزینه ساب‌کلس ۵۰۰ از ۲۰۰۰ به ۲۵۰۰، ساب‌کلس ۴۸۲ به ۴۰۱۵ و ۱۸۶/۴۹۴ به ۶۱۴۰ دلار را گزارش کرده و گفته بعضی مسیرهای محبوب حدود ۲۵٪ افزایش داشته‌اند."
+        },
+        "practical_impact": {
+          "en": "Up-front migration budgets need to be recalculated, especially for families with additional applicants.",
+          "fa": "بودجه اولیه مهاجرت باید مجدداً محاسبه شود، خصوصاً برای پرونده‌های دارای همراه."
+        },
+        "who_should_care": {
+          "en": "Applicants lodging Australian student or work visas after 1 July 2026.",
+          "fa": "متقاضیان ویزای تحصیلی یا کاری که از ۱ جولای ۲۰۲۶ به بعد لاج می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Use the current official visa pricing estimator immediately before payment.",
+          "fa": "درست پیش از پرداخت از ابزار رسمی قیمت‌گذاری ویزا استفاده کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-NEWS-VISA-FEE-INCREASE-010-E1",
+          "relation": "supports",
+          "independence_group": "news-1474"
+        },
+        {
+          "evidence_id": "AUS-NEWS-VISA-FEE-INCREASE-010-E2",
+          "relation": "supports",
+          "independence_group": "news-1474"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The channel gives precise route-specific fees but only one selected report supports this cluster."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Home Affairs pricing was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-NEWS-VISA-FEE-INCREASE-010-E1",
+            "AUS-NEWS-VISA-FEE-INCREASE-010-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public Telegram news channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-12-15",
+        "reason": "Visa charges can change at financial-year boundaries.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "visa fee",
+        "500",
+        "482",
+        "186",
+        "494",
+        "July 2026"
+      ],
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11"
+    },
+    {
+      "signal_id": "AUS-NEWS-VIC-DIGITAL-NOMINATION-011",
+      "issue_cluster_id": "AUS-VIC-NOMINATION-DIGITAL-FORMS",
+      "relationships": [],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "digital_form_transition",
+        "class": "processing"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "190",
+            "491",
+            "188",
+            "888"
+          ]
+        },
+        "process_stages": [
+          "state_nomination"
+        ],
+        "entities": [
+          {
+            "entity_type": "state_program",
+            "name": "Live in Melbourne / Victoria"
+          }
+        ]
+      },
+      "claim": {
+        "title": {
+          "en": "Victoria nomination-condition forms moved to digital-only from 1 March 2026",
+          "fa": "فرم‌های تعهد نامینیشن ویکتوریا از ۱ مارس ۲۰۲۶ دیجیتال‌محور شده‌اند"
+        },
+        "summary": {
+          "en": "The channel said common nomination-condition forms for 190/491 and some 188/888 streams would no longer accept downloaded signed/scanned versions after the transition.",
+          "fa": "کانال نوشته فرم‌های Nomination Conditions برای ۱۹۰/۴۹۱ و برخی ۱۸۸/۸۸۸ پس از تغییر روال دیگر نسخه دانلودی امضا/اسکن‌شده را نمی‌پذیرند."
+        },
+        "practical_impact": {
+          "en": "Using the old form format can create avoidable state-nomination delay or rejection of the form submission.",
+          "fa": "استفاده از فرمت قدیمی می‌تواند باعث تأخیر یا عدم پذیرش ارسال فرم در نامینیشن ایالتی شود."
+        },
+        "who_should_care": {
+          "en": "Victoria nomination applicants in affected subclasses.",
+          "fa": "متقاضیان نامینیشن ویکتوریا در ساب‌کلس‌های مربوط."
+        },
+        "recommended_action": {
+          "en": "Use the current digital workflow rather than archived PDF/scanned forms.",
+          "fa": "از روند دیجیتال فعلی استفاده کنید، نه PDF یا فرم اسکن‌شده قدیمی."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-NEWS-VIC-DIGITAL-NOMINATION-011-E1",
+          "relation": "supports",
+          "independence_group": "news-1436"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "emerging",
+        "trend": "unknown",
+        "severity": "moderate",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Specific operational change with named state authority, but not independently verified."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Live in Melbourne page was not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-NEWS-VIC-DIGITAL-NOMINATION-011-E1"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public Telegram news channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-11-15",
+        "reason": "Operational portal/form rules can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Victoria",
+        "190",
+        "491",
+        "Nomination Conditions",
+        "digital form"
+      ],
+      "first_seen": "2026-02-08",
+      "last_seen": "2026-02-08"
+    },
+    {
+      "signal_id": "AUS-NEWS-TNE-GS-SCRUTINY-012",
+      "issue_cluster_id": "AUS-TNE-GENUINE-STUDENT-SCRUTINY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "AUS-NEWS-STUDENT-SCRUTINY-002"
+        }
+      ],
+      "classification": {
+        "family": "E2_APPLICATION_PROCESSING",
+        "type": "tne_physical_presence_scrutiny",
+        "class": "selection"
+      },
+      "scope": {
+        "destination": {
+          "country": "Australia",
+          "country_code": "AUS",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [],
+          "nationalities": [],
+          "residence_countries": [],
+          "applying_from": [],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [],
+          "education_levels": [],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Equivalent Transnational Education option available outside Australia"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC"
+          ],
+          "codes": [
+            "student_visa_500"
+          ]
+        },
+        "process_stages": [
+          "visa_application",
+          "genuine_student"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Availability of an equivalent TNE option was reported as a possible Genuine Student refusal factor",
+          "fa": "وجود گزینه معادل TNE به‌عنوان عامل احتمالی رد در بررسی Genuine Student گزارش شده است"
+        },
+        "summary": {
+          "en": "The channel said some cases were refused where an equivalent Australian program could be studied through transnational education outside Australia, and framed physical-presence justification as increasingly important.",
+          "fa": "کانال گفته برخی پرونده‌ها وقتی همان برنامه استرالیایی از طریق TNE خارج از استرالیا قابل تحصیل بوده رد شده‌اند و توضیح ضرورت حضور فیزیکی را مهم‌تر دانسته است."
+        },
+        "practical_impact": {
+          "en": "Applicants to programs with offshore branches/joint delivery may need a stronger rationale for studying physically in Australia.",
+          "fa": "متقاضی رشته‌هایی که شعبه یا ارائه مشترک خارج از استرالیا دارند ممکن است به استدلال قوی‌تری برای حضور فیزیکی نیاز داشته باشند."
+        },
+        "who_should_care": {
+          "en": "Student-visa applicants whose chosen Australian course has a comparable offshore delivery option.",
+          "fa": "متقاضیانی که دوره انتخابی‌شان گزینه مشابه خارج از استرالیا دارد."
+        },
+        "recommended_action": {
+          "en": "Document Australia-specific laboratories, supervision, industry projects or facilities rather than relying only on university brand.",
+          "fa": "آزمایشگاه، استاد، پروژه صنعتی یا امکانات مختص استرالیا را مستند کنید و صرفاً به برند دانشگاه تکیه نکنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "AUS-NEWS-TNE-GS-SCRUTINY-012-E1",
+          "relation": "supports",
+          "independence_group": "news-1443"
+        },
+        {
+          "evidence_id": "AUS-NEWS-TNE-GS-SCRUTINY-012-E2",
+          "relation": "supports",
+          "independence_group": "news-1443"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "uncertain",
+        "evidence_maturity": "anecdotal",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "low",
+          "rationale": "High-impact claim but both evidence items come from one channel post and no primary instrument was verified."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-16",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No primary Home Affairs policy or refusal decision was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "AUS-NEWS-TNE-GS-SCRUTINY-012-E1",
+            "AUS-NEWS-TNE-GS-SCRUTINY-012-E2"
+          ],
+          "checked_at": "2026-09-16",
+          "note": "Extracted from the uploaded public Telegram news channel."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-16",
+        "next_check_at": "2026-09-30",
+        "reason": "Requires primary-source verification before use as a scoring penalty.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "TNE",
+        "Transnational Education",
+        "Genuine Student",
+        "physical presence",
+        "student visa"
+      ],
+      "first_seen": "2026-02-19",
+      "last_seen": "2026-02-19"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "No personal client names or Telegram user IDs are reproduced in evidence summaries."
+      },
+      "full_sources_processed": {
+        "status": "pass",
+        "note": "Parsed and reviewed all 262 messages in the uploaded export."
+      },
+      "promotional_content_filtered": {
+        "status": "pass",
+        "note": "Pure service advertisements, discounts, generic destination promotion and unrelated country news were excluded from signal creation."
+      },
+      "news_vs_primary_source_separated": {
+        "status": "pass",
+        "note": "Posts that describe official sources remain source-reported until independently verified."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated updates on the same policy/process were clustered into one signal where appropriate."
+      },
+      "contradictions_checked": {
+        "status": "pass",
+        "note": "Backlog vs later median processing, capacity-control uncertainty and pending dependant restrictions are represented as qualified/mixed signals."
+      },
+      "resolved_or_pending_status_checked": {
+        "status": "pass",
+        "note": "Speculative August 2026 restrictions are marked uncertain rather than active rules."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal connector was unavailable during this run, so remote-store deduplication could not be completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Signals are extracted from the uploaded public news/community channel only. They preserve what the source reports and are not independently verified official policy unless separately checked against a primary authority."
+}

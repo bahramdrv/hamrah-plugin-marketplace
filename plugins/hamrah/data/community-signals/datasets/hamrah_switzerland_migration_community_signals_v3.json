@@ -1,0 +1,2508 @@
+{
+  "schema_version": "3.0.0",
+  "taxonomy_version": "2026.09",
+  "dataset": {
+    "dataset_id": "hamrah_switzerland_migration_community_signals_candidate",
+    "generated_at": "2026-09-17T09:37:30Z",
+    "generator": {
+      "name": "hamrah-signal-builder",
+      "version": "3.0"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "switzerland-migration-public-supergroup",
+      "name": "result(20260917-093201).json / Telegram export «گروه مهاجرت به سوئیس»",
+      "source_type": "public_supergroup_json",
+      "source_url": null,
+      "coverage": {
+        "status": "full_parse",
+        "from": "2025-01-01",
+        "to": "2026-09-17",
+        "records_available": 1995,
+        "records_processed": 1995,
+        "message_records": 1660
+      },
+      "source_characteristics": {
+        "public_supergroup": true,
+        "switzerland_migration_focused": true,
+        "contains_first_hand_applicant_experience": true,
+        "contains_community_legal_claims": true,
+        "contains_admin_guidance": true,
+        "contains_repeated_service_and_chatter_noise": true,
+        "primary_authority": false
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "CHE-PHD-001-E1",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "542"
+      },
+      "published_at": "2025-02-05",
+      "event_date": "2025-02-05",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A reply described a Swiss PhD position as technically employment with salary rather than ordinary unpaid study.",
+        "fa": "یک پاسخ، پوزیشن دکتری سوئیس را عملاً موقعیت حقوق‌بگیر و از نظر فنی «کار» توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-PHD-001-E2",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2383"
+      },
+      "published_at": "2026-06-15",
+      "event_date": "2026-06-15",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A 2026 reply advised PhD applicants to contact professors directly through university faculty pages rather than rely only on generic study portals.",
+        "fa": "پاسخ ۲۰۲۶ به متقاضی PhD توصیه کرده به‌جای اتکا صرف به پورتال عمومی، مستقیم از faculty page با استادان مکاتبه کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-PHD-001-E3",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2244"
+      },
+      "published_at": "2026-05-29",
+      "event_date": "2026-05-29",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A PhD applicant explicitly planned around a fully funded doctoral offer and asked whether a spouse changes the financial-proof requirement.",
+        "fa": "متقاضی PhD صریحاً روی فول‌فاند حساب کرده و پرسیده حضور همسر چه اثری بر تمکن دارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-PHD-001-E4",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2981"
+      },
+      "published_at": "2026-08-14",
+      "event_date": "2026-08-14",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "In August 2026, another applicant again asked whether a fully funded PhD still needs separate proof of funds.",
+        "fa": "در اوت ۲۰۲۶ دوباره درباره نیاز تمکن جدا برای PhD فول‌فاند سؤال شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-MASTER-FUND-002-E1",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "501"
+      },
+      "published_at": "2025-01-16",
+      "event_date": "2025-01-16",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Funding applicants were advised to work backward from the scholarship deadline and begin roughly 6-9 months earlier.",
+        "fa": "به متقاضی فاند توصیه شده deadline اسکالرشیپ را مبنا قرار دهد و حدود ۶ تا ۹ ماه زودتر شروع کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-MASTER-FUND-002-E2",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1119"
+      },
+      "published_at": "2025-07-21",
+      "event_date": "2025-07-21",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A reply said master's funding that also covers living costs is very limited and suggested targeted professor outreach for funded positions.",
+        "fa": "پاسخ گفته فاند ارشد که هزینه زندگی را هم پوشش دهد بسیار محدود است و مکاتبه هدفمند با استاد را پیشنهاد کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-MASTER-FUND-002-E3",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1948"
+      },
+      "published_at": "2026-04-28",
+      "event_date": "2026-04-28",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "applicant_case",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A Geneva master's admit reported a 20,000 CHF scholarship for one year and still questioned whether additional proof of funds was needed.",
+        "fa": "یک پذیرفته‌شده ارشد ژنو از بورس ۲۰هزار فرانکی یک‌ساله گفته و همچنان درباره نیاز تمکن اضافه سؤال داشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-MASTER-FUND-002-E4",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1605"
+      },
+      "published_at": "2025-12-04",
+      "event_date": "2025-12-04",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_opinion",
+      "firsthandness": "second_hand",
+      "evidence_quality": "overgeneralized_but_recurrent",
+      "summary": {
+        "en": "One member broadly characterized bachelor/master funding as scarce and costs as high, while warning that study should not be equated with an easy settlement route.",
+        "fa": "یکی از اعضا فاند کارشناسی/ارشد را بسیار محدود و هزینه‌ها را بالا توصیف کرده و تحصیل را معادل مسیر آسان اقامت ندانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-STUDENT-WORK-003-E1",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1509"
+      },
+      "published_at": "2025-11-04",
+      "event_date": "2025-11-04",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "policy_claim_unverified",
+      "summary": {
+        "en": "A November 2025 reply said master's students can work from the second six-month period and not during the first six months.",
+        "fa": "پاسخ نوامبر ۲۰۲۵ گفته دانشجوی ارشد از شش‌ماه دوم اجازه کار دارد و شش‌ماه اول نمی‌تواند کار کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-STUDENT-WORK-003-E2",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "622"
+      },
+      "published_at": "2025-03-01",
+      "event_date": "2025-03-01",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A March 2025 applicant had already heard the six-month no-work rule and treated it as a major budgeting constraint.",
+        "fa": "متقاضی مارس ۲۰۲۵ نیز قاعده «شش ماه اول بدون کار» را شنیده و آن را محدودیت مهم بودجه دیده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-STUDENT-WORK-003-E3",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2835"
+      },
+      "published_at": "2026-08-04",
+      "event_date": "2026-08-04",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "contradictory_time_rule",
+      "summary": {
+        "en": "An August 2026 reply instead recalled a three-month initial work restriction, showing inconsistency over the exact waiting period.",
+        "fa": "پاسخ اوت ۲۰۲۶ به‌جای شش ماه، محدودیت سه‌ماهه اولیه را به خاطر آورده و ناسازگاری در مدت دقیق را نشان می‌دهد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-STUDENT-WORK-003-E4",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1185"
+      },
+      "published_at": "2025-07-28",
+      "event_date": "2025-07-28",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A master's applicant asked whether part-time student work is realistically available to Iranians and tied that question directly to proof-of-funds needs.",
+        "fa": "متقاضی ارشد درباره دسترسی واقعی ایرانی‌ها به کار پاره‌وقت پرسیده و آن را مستقیماً به نیاز تمکن وصل کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-WORK-NONEU-004-E1",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2647"
+      },
+      "published_at": "2026-07-19",
+      "event_date": "2026-07-19",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "legal_claim_unverified",
+      "summary": {
+        "en": "A July 2026 reply said non-EU applicants face employer-side labour-market justification before they can be hired.",
+        "fa": "پاسخ ژوئیه ۲۰۲۶ گفته برای متقاضی non-EU کارفرما باید فرایند توجیه بازار کار را پشت سر بگذارد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-WORK-NONEU-004-E2",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3121"
+      },
+      "published_at": "2026-09-04",
+      "event_date": "2026-09-04",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "legal_claim_unverified",
+      "summary": {
+        "en": "A September 2026 reply described hiring priority as local residents first, EU nationals next and third-country nationals after that, while noting shortages can improve chances.",
+        "fa": "پاسخ سپتامبر ۲۰۲۶ اولویت استخدام را افراد داخل سوئیس، سپس EU و بعد اتباع ثالث توصیف کرده و کمبود نیرو را عامل بهبود شانس دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-WORK-NONEU-004-E3",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1407"
+      },
+      "published_at": "2025-10-07",
+      "event_date": "2025-10-07",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_comparison",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group described Swiss hiring as more restrictive and competitive than comparable routes elsewhere.",
+        "fa": "گروه استخدام در سوئیس را محدودتر و رقابتی‌تر از مسیرهای مشابه توصیف کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-WORK-NONEU-004-E4",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "622"
+      },
+      "published_at": "2025-03-01",
+      "event_date": "2025-03-01",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A student applicant explicitly worried that post-study hiring may still require an employer to show that a Swiss/EU worker could not fill the role.",
+        "fa": "یک متقاضی تحصیلی صریحاً نگران بوده که بعد از فارغ‌التحصیلی نیز کارفرما باید عدم دسترسی نیروی سوئیسی/EU را ثابت کند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-LANGUAGE-005-E1",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "613"
+      },
+      "published_at": "2025-02-23",
+      "event_date": "2025-02-23",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A reply clearly separated English-taught study from the labour market and said local regional language is important for finding work.",
+        "fa": "پاسخ، تحصیل انگلیسی‌زبان را از بازار کار جدا کرده و دانستن زبان بومی منطقه را برای کاریابی مهم دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-LANGUAGE-005-E2",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1210"
+      },
+      "published_at": "2025-08-04",
+      "event_date": "2025-08-04",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The group explained that language needs depend on canton and can involve German, French or Italian rather than a single 'Swiss language'.",
+        "fa": "گروه توضیح داده نیاز زبانی به کانتون بستگی دارد و می‌تواند آلمانی، فرانسوی یا ایتالیایی باشد، نه یک «زبان سوئیسی» واحد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-LANGUAGE-005-E3",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3096"
+      },
+      "published_at": "2026-09-02",
+      "event_date": "2026-09-02",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "experienced_applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A nurse with work experience in Germany and B2 German still asked whether that profile was enough for Swiss employment.",
+        "fa": "پرستاری با سابقه کار آلمان و آلمانی B2 همچنان درباره کفایت این پروفایل برای کار سوئیس سؤال داشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-LANGUAGE-005-E4",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "3120"
+      },
+      "published_at": "2026-09-04",
+      "event_date": "2026-09-04",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A later reply again described language as one of the biggest practical barriers even for an applicant with European work experience.",
+        "fa": "پاسخ بعدی دوباره زبان را یکی از بزرگ‌ترین موانع عملی حتی برای فرد دارای سابقه کار اروپایی دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-POSTSTUDY-006-E1",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1605"
+      },
+      "published_at": "2025-12-04",
+      "event_date": "2025-12-04",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_opinion",
+      "firsthandness": "second_hand",
+      "evidence_quality": "opinion_not_official",
+      "summary": {
+        "en": "A member warned that Switzerland is not an easy country for converting study into longer-term residence.",
+        "fa": "یکی از اعضا هشدار داده سوئیس برای تبدیل تحصیل به اقامت بلندمدت کشور آسانی نیست."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-POSTSTUDY-006-E2",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2376"
+      },
+      "published_at": "2026-06-14",
+      "event_date": "2026-06-14",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A graduate asked whether proof of funds must be shown again for a post-study/job-search status.",
+        "fa": "فارغ‌التحصیل پرسیده برای وضعیت پس از تحصیل/جستجوی کار آیا باید دوباره تمکن ارائه شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-POSTSTUDY-006-E3",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1476"
+      },
+      "published_at": "2025-10-21",
+      "event_date": "2025-10-21",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "applicant_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A PhD applicant explicitly asked whether completing a doctorate can realistically lead to a job and residence.",
+        "fa": "متقاضی PhD صریحاً پرسیده آیا پس از دکتری می‌توان کار پیدا کرد و اقامت گرفت."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-POSTSTUDY-006-E4",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "709"
+      },
+      "published_at": "2025-03-17",
+      "event_date": "2025-03-17",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_report",
+      "firsthandness": "reported",
+      "evidence_quality": "anecdotal_report",
+      "summary": {
+        "en": "A community post relayed the experience of a former Iranian PhD student who found the Swiss labour market difficult enough to return to Iran, prompting debate about post-study employability.",
+        "fa": "یک پیام تجربه دانشجوی دکتری ایرانی سابق را نقل کرده که بازار کار سوئیس را برای مهاجران سخت دیده و به ایران برگشته؛ این موضوع بحث employability بعد از تحصیل را برجسته کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-CANTON-VISA-007-E1",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2657"
+      },
+      "published_at": "2026-07-20",
+      "event_date": "2026-07-20",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "first_hand_visa_case",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A Geneva student-visa file was mistakenly sent to Vaud and had to be transferred because the competent canton follows intended residence.",
+        "fa": "پرونده ویزای دانشجویی ژنو اشتباهاً به Vaud رفته و چون کانتون مسئول به محل اقامت مرتبط است، نیاز به انتقال داشته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-CANTON-VISA-007-E2",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2678"
+      },
+      "published_at": "2026-07-22",
+      "event_date": "2026-07-22",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "The applicant was advised to document pending student-housing applications and keep a temporary hotel booking as a fallback accommodation plan.",
+        "fa": "به متقاضی توصیه شده درخواست‌های خوابگاه pending را توضیح دهد و رزرو موقت هتل را به‌عنوان fallback اقامت داشته باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-CANTON-VISA-007-E3",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2290"
+      },
+      "published_at": "2026-06-04",
+      "event_date": "2026-06-04",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "applicant_case",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A Geneva master's applicant found that embassy and canton financial-document instructions were not identical and was redirected to canton guidance.",
+        "fa": "متقاضی ارشد ژنو دیده دستورهای مالی سفارت و کانتون یکسان نیست و سفارت او را به راهنمای کانتون ارجاع داده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-CANTON-VISA-007-E4",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1865"
+      },
+      "published_at": "2026-02-28",
+      "event_date": "2026-02-28",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "first_hand_visa_interview",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A student reported an English visa interview covering study motivation, travel history, ties and post-study plans, and said banking acceptance depended on canton.",
+        "fa": "یک دانشجو تجربه مصاحبه انگلیسی درباره انگیزه تحصیل، سابقه سفر، ties و برنامه بعد از تحصیل را گزارش کرده و پذیرش بانک را وابسته به کانتون دانسته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-FUNDS-008-E1",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1244"
+      },
+      "published_at": "2025-08-11",
+      "event_date": "2025-08-11",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "canton_specific_claim",
+      "summary": {
+        "en": "A 2025 reply said Iranian banks were not accepted for Zurich proof of funds and advised checking with the canton.",
+        "fa": "پاسخ ۲۰۲۵ گفته بانک‌های ایران برای تمکن زوریخ پذیرفته نمی‌شوند و توصیه کرده با کانتون چک شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-FUNDS-008-E2",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2007"
+      },
+      "published_at": "2026-05-04",
+      "event_date": "2026-05-04",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "first_hand_search_for_guarantor",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant spent months looking for a Swiss guarantor because they believed Iranian bank statements might not be accepted, while acknowledging canton variation.",
+        "fa": "یک متقاضی ماه‌ها دنبال guarantor سوئیسی بوده چون نگران عدم پذیرش بانک ایران بوده، ولی همزمان تفاوت کانتون‌ها را پذیرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-FUNDS-008-E3",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2594"
+      },
+      "published_at": "2026-07-17",
+      "event_date": "2026-07-17",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "first_hand_canton_case",
+      "firsthandness": "direct",
+      "evidence_quality": "contradicts_general_rejection_claim",
+      "summary": {
+        "en": "A Basel applicant reported that their canton accepted an Iranian bank for proof of funds.",
+        "fa": "یک متقاضی بازل گزارش کرده کانتون او تمکن بانک ایرانی را پذیرفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-FUNDS-008-E4",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2605"
+      },
+      "published_at": "2026-07-17",
+      "event_date": "2026-07-17",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "first_hand_canton_case",
+      "firsthandness": "direct",
+      "evidence_quality": "canton_specific_direct",
+      "summary": {
+        "en": "Another 2026 applicant described a Basel-linked case where Iranian rial/foreign-currency account evidence was reviewed and additional funds in the applicant's own name were requested.",
+        "fa": "کیس ۲۰۲۶ دیگری از بررسی گردش ریالی/حساب ارزی ایرانی و درخواست تمکن تکمیلی به نام خود متقاضی گفته است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-IRAN-CONSULAR-009-E1",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1956"
+      },
+      "published_at": "2026-04-29",
+      "event_date": "2026-04-29",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "first_hand_disruption",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A student reported missing an intake after war-related Swiss embassy closures and later struggling again when services closed during another disruption.",
+        "fa": "یک دانشجو گزارش کرده به‌دلیل بسته‌شدن سفارت در جریان جنگ به intake نرسیده و بعداً دوباره با تعطیلی خدمات مواجه شده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-IRAN-CONSULAR-009-E2",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1963"
+      },
+      "published_at": "2026-04-29",
+      "event_date": "2026-04-29",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "first_hand_embassy_reply",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "An applicant said the embassy replied that appointments were temporarily unavailable and neighbouring-country posts would not take the case.",
+        "fa": "متقاضی گفته سفارت پاسخ داده فعلاً وقت ویزا نمی‌دهد و کشورهای همسایه نیز پرونده را نمی‌پذیرند."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-IRAN-CONSULAR-009-E3",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1822"
+      },
+      "published_at": "2026-02-25",
+      "event_date": "2026-02-25",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_operational_update",
+      "firsthandness": "reported",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "During a reopening window, the group advised emailing the Tehran visa section with admission letter and passport to request a student-visa appointment.",
+        "fa": "در دوره بازگشایی، گروه توصیه کرده با admission letter و پاسپورت به بخش ویزای تهران ایمیل زده شود تا وقت دانشجویی گرفته شود."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-IRAN-CONSULAR-009-E4",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "1858"
+      },
+      "published_at": "2026-02-27",
+      "event_date": "2026-02-27",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "first_hand_disruption",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "Another applicant linked missed study timing to both embassy closure and internet disruption and urged early appointment booking when the embassy reopened.",
+        "fa": "متقاضی دیگری از اثر همزمان تعطیلی سفارت و اختلال اینترنت بر زمان‌بندی تحصیل گفته و هنگام بازگشایی توصیه به گرفتن سریع وقت کرده است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-COST-010-E1",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2817"
+      },
+      "published_at": "2026-08-04",
+      "event_date": "2026-08-04",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_budget_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A detailed reply described Switzerland as expensive, warned that general student work may take time to find and recommended having several months of living costs available.",
+        "fa": "یک پاسخ تفصیلی سوئیس را پرهزینه توصیف کرده، گفته پیدا کردن کار دانشجویی عمومی ممکن است زمان ببرد و توصیه کرده چند ماه هزینه زندگی از قبل آماده باشد."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-COST-010-E2",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2835"
+      },
+      "published_at": "2026-08-04",
+      "event_date": "2026-08-04",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "community_budget_guidance",
+      "firsthandness": "second_hand",
+      "evidence_quality": "anecdotal_cost_estimate",
+      "summary": {
+        "en": "A Zurich-related anecdote put dormitory plus basic living costs at a level that still required a multi-month cash buffer.",
+        "fa": "یک تجربه مرتبط با زوریخ نشان داده حتی با خوابگاه، اجاره و هزینه‌های پایه نیازمند buffer چندماهه است."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-COST-010-E3",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2500"
+      },
+      "published_at": "2026-07-06",
+      "event_date": "2026-07-06",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "housing_question",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A newcomer asked how to rent a small apartment or studio in Switzerland, reflecting recurrent housing friction in the group.",
+        "fa": "یک تازه‌وارد پرسیده چگونه می‌توان آپارتمان یا استودیوی کوچک در سوئیس اجاره کرد؛ نشانه friction تکرارشونده مسکن."
+      },
+      "privacy_redacted": true
+    },
+    {
+      "evidence_id": "CHE-COST-010-E4",
+      "source_id": "switzerland-migration-public-supergroup",
+      "locator": {
+        "type": "telegram_message_id",
+        "value": "2535"
+      },
+      "published_at": "2026-07-10",
+      "event_date": "2026-07-10",
+      "collected_at": "2026-09-17T09:37:30Z",
+      "source_type": "first_hand_housing_source",
+      "firsthandness": "direct",
+      "evidence_quality": "reported",
+      "summary": {
+        "en": "A student reported obtaining housing through the university housing office, showing institutional housing channels can materially reduce the search burden.",
+        "fa": "یک دانشجو گزارش کرده از housing office دانشگاه مسکن گرفته؛ یعنی کانال مسکن دانشگاهی می‌تواند فشار جستجو را کم کند."
+      },
+      "privacy_redacted": true
+    }
+  ],
+  "signals": [
+    {
+      "signal_id": "CHE-PHD-001",
+      "issue_cluster_id": "SWITZERLAND-PHD-SALARIED-POSITION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHE-MASTER-FUND-002"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "CHE-POSTSTUDY-006"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "phd_as_salaried_research_position",
+        "class": "doctoral_funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "Switzerland",
+          "country_code": "CHE",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Switzerland",
+            "EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "PhD",
+            "doctoral_research"
+          ]
+        },
+        "process_stages": [
+          "position_search",
+          "supervisor_outreach",
+          "funding"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Swiss PhD migration is best modelled as a salaried research-position search, not as ordinary self-funded degree admission",
+          "fa": "مسیر PhD سوئیس بهتر است به‌عنوان جستجوی پوزیشن پژوهشی حقوق‌بگیر دیده شود، نه پذیرش self-funded معمولی"
+        },
+        "summary": {
+          "en": "The group explicitly describes doctoral positions as technically employment and repeatedly points applicants toward professor/faculty vacancies and full-funding packages.",
+          "fa": "گروه صریحاً پوزیشن دکتری را از نظر فنی «کار» توصیف کرده و متقاضیان را مکرراً به vacancy استاد/faculty و package فول‌فاند هدایت می‌کند."
+        },
+        "practical_impact": {
+          "en": "Professor/lab fit and funded vacancy availability matter more than simply identifying a university that offers a PhD programme.",
+          "fa": "فیت استاد/lab و وجود vacancy فانددار از صرف پیدا کردن دانشگاه دارای PhD مهم‌تر می‌شود."
+        },
+        "who_should_care": {
+          "en": "Research-oriented master's graduates targeting Switzerland.",
+          "fa": "فارغ‌التحصیلان ارشد پژوهش‌محور متقاضی سوئیس."
+        },
+        "recommended_action": {
+          "en": "Search professor/lab vacancies and contract/funding details first, then map visa and family finances around the actual offer.",
+          "fa": "اول vacancy استاد/lab و جزئیات قرارداد/فاند را پیدا کنید، بعد ویزا و مالی خانواده را بر اساس offer واقعی بچینید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHE-PHD-001-E1",
+          "relation": "supports",
+          "independence_group": "CHE-PHD-001-E1"
+        },
+        {
+          "evidence_id": "CHE-PHD-001-E2",
+          "relation": "supports",
+          "independence_group": "CHE-PHD-001-E2"
+        },
+        {
+          "evidence_id": "CHE-PHD-001-E3",
+          "relation": "supports",
+          "independence_group": "CHE-PHD-001-E3"
+        },
+        {
+          "evidence_id": "CHE-PHD-001-E4",
+          "relation": "supports",
+          "independence_group": "CHE-PHD-001-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The salaried-position framing is explicit and recurs alongside funding questions."
+        },
+        "impact_direction": "positive",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current university contract, salary and permit treatment for doctoral positions was not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHE-PHD-001-E1",
+            "CHE-PHD-001-E2",
+            "CHE-PHD-001-E3",
+            "CHE-PHD-001-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Switzerland public Telegram supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "PhD funding and employment treatment vary by institution/canton.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "PhD",
+        "doctoral position",
+        "salary",
+        "professor",
+        "full funding"
+      ],
+      "first_seen": "2025-02-05",
+      "last_seen": "2026-08-14"
+    },
+    {
+      "signal_id": "CHE-MASTER-FUND-002",
+      "issue_cluster_id": "SWITZERLAND-MASTER-FUNDING-SCARCITY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHE-PHD-001"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "CHE-FUNDS-008"
+        }
+      ],
+      "classification": {
+        "family": "E10_SCHOLARSHIP_FUNDING",
+        "type": "master_funding_limited_and_partial",
+        "class": "graduate_funding"
+      },
+      "scope": {
+        "destination": {
+          "country": "Switzerland",
+          "country_code": "CHE",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Switzerland",
+            "EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "masters",
+            "scholarship",
+            "professor_funding"
+          ]
+        },
+        "process_stages": [
+          "scholarship_search",
+          "admission",
+          "proof_of_funds"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Master's funding appears limited and often partial, so scholarship planning and living-cost proof must be treated as separate problems",
+          "fa": "فاند ارشد محدود و اغلب partial دیده می‌شود؛ بنابراین scholarship و اثبات هزینه زندگی باید دو مسئله جدا باشند"
+        },
+        "summary": {
+          "en": "The group recommends starting scholarship work months ahead, says living-cost-covering master's funding is rare, and includes a Geneva case with a 20,000 CHF scholarship that still raised proof-of-funds questions.",
+          "fa": "گروه توصیه می‌کند چند ماه زودتر برای scholarship شروع شود، فاند ارشدِ پوشش‌دهنده زندگی را کمیاب می‌داند و یک کیس ژنو با بورس ۲۰هزار فرانک دارد که باز هم مسئله تمکن باقی مانده است."
+        },
+        "practical_impact": {
+          "en": "An admission or tuition scholarship may not make the move financially viable by itself.",
+          "fa": "پذیرش یا بورس شهریه به‌تنهایی ممکن است مهاجرت را از نظر مالی عملی نکند."
+        },
+        "who_should_care": {
+          "en": "Self-funded or partially funded master's applicants.",
+          "fa": "متقاضیان ارشد self-funded یا partial-funded."
+        },
+        "recommended_action": {
+          "en": "Separate tuition award, living-cost coverage and visa proof-of-funds in the budget; start scholarship applications well before admission deadlines.",
+          "fa": "بورس شهریه، هزینه زندگی و تمکن ویزا را جدا بودجه‌بندی کنید و فاند را خیلی زودتر از deadline شروع کنید."
+        },
+        "known_workaround": "Targeted professor-linked positions may exist, but the group describes full living-cost coverage at master's level as uncommon."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHE-MASTER-FUND-002-E1",
+          "relation": "supports",
+          "independence_group": "CHE-MASTER-FUND-002-E1"
+        },
+        {
+          "evidence_id": "CHE-MASTER-FUND-002-E2",
+          "relation": "supports",
+          "independence_group": "CHE-MASTER-FUND-002-E2"
+        },
+        {
+          "evidence_id": "CHE-MASTER-FUND-002-E3",
+          "relation": "supports",
+          "independence_group": "CHE-MASTER-FUND-002-E3"
+        },
+        {
+          "evidence_id": "CHE-MASTER-FUND-002-E4",
+          "relation": "supports",
+          "independence_group": "CHE-MASTER-FUND-002-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "Funding scarcity recurs, but some messages are broad community generalizations."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current scholarship inventories and exact coverage were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHE-MASTER-FUND-002-E1",
+            "CHE-MASTER-FUND-002-E2",
+            "CHE-MASTER-FUND-002-E3",
+            "CHE-MASTER-FUND-002-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Switzerland public Telegram supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Scholarships vary by university/intake.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "master",
+        "funding",
+        "scholarship",
+        "20,000 CHF",
+        "living costs"
+      ],
+      "first_seen": "2025-01-16",
+      "last_seen": "2026-04-28"
+    },
+    {
+      "signal_id": "CHE-STUDENT-WORK-003",
+      "issue_cluster_id": "SWITZERLAND-STUDENT-WORK-WAITING-PERIOD",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHE-COST-010"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "student_work_waiting_period_uncertainty",
+        "class": "student_employment"
+      },
+      "scope": {
+        "destination": {
+          "country": "Switzerland",
+          "country_code": "CHE",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Switzerland",
+            "EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_work",
+            "masters"
+          ]
+        },
+        "process_stages": [
+          "study",
+          "part_time_work",
+          "budgeting"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Student work is not a safe first-month funding assumption; the community reports an initial waiting period but disagrees on its exact length",
+          "fa": "کار دانشجویی منبع امن برای ماه‌های اول نیست؛ گروه از waiting period اولیه می‌گوید اما درباره طول دقیق آن اختلاف دارد"
+        },
+        "summary": {
+          "en": "Several messages use a six-month no-work rule for master's students, while a later message recalls three months. The durable signal is that new non-EU students should budget for a period with no employment income.",
+          "fa": "چند پیام قاعده شش‌ماه بدون کار برای مستر را مطرح می‌کنند و پیام بعدی سه ماه را به خاطر می‌آورد. سیگنال پایدار این است که دانشجوی جدید non-EU باید برای مدتی بدون درآمد کاری بودجه داشته باشد."
+        },
+        "practical_impact": {
+          "en": "Applicants who require immediate part-time income to survive face a material funding risk.",
+          "fa": "متقاضی‌ای که از ماه اول به درآمد پاره‌وقت نیاز دارد با ریسک مالی واقعی روبه‌روست."
+        },
+        "who_should_care": {
+          "en": "Self-funded master's students and low-buffer applicants.",
+          "fa": "دانشجویان ارشد self-funded و افراد با buffer مالی پایین."
+        },
+        "recommended_action": {
+          "en": "Budget the first months with zero student income and verify the current canton/federal work rule before accepting a job.",
+          "fa": "ماه‌های اول را با درآمد کاری صفر ببندید و قبل از شروع کار rule روز را رسمی بررسی کنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHE-STUDENT-WORK-003-E1",
+          "relation": "supports",
+          "independence_group": "CHE-STUDENT-WORK-003-E1"
+        },
+        {
+          "evidence_id": "CHE-STUDENT-WORK-003-E2",
+          "relation": "supports",
+          "independence_group": "CHE-STUDENT-WORK-003-E2"
+        },
+        {
+          "evidence_id": "CHE-STUDENT-WORK-003-E3",
+          "relation": "contradicts",
+          "independence_group": "CHE-STUDENT-WORK-003-E3"
+        },
+        {
+          "evidence_id": "CHE-STUDENT-WORK-003-E4",
+          "relation": "supports",
+          "independence_group": "CHE-STUDENT-WORK-003-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "uncertain",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The contradiction on exact duration is explicit; the no-immediate-income implication is consistent."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Swiss student-work waiting period and hour limits were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHE-STUDENT-WORK-003-E1",
+            "CHE-STUDENT-WORK-003-E2",
+            "CHE-STUDENT-WORK-003-E3",
+            "CHE-STUDENT-WORK-003-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Switzerland public Telegram supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Student work rules are legal and time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "student work",
+        "waiting period",
+        "six months",
+        "three months"
+      ],
+      "first_seen": "2025-03-01",
+      "last_seen": "2026-08-04"
+    },
+    {
+      "signal_id": "CHE-WORK-NONEU-004",
+      "issue_cluster_id": "SWITZERLAND-NON-EU-WORK-PERMIT-FRICTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHE-LANGUAGE-005"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "CHE-POSTSTUDY-006"
+        }
+      ],
+      "classification": {
+        "family": "E11_EMPLOYER_LABOUR_MARKET",
+        "type": "third_country_hiring_priority_friction",
+        "class": "work_migration"
+      },
+      "scope": {
+        "destination": {
+          "country": "Switzerland",
+          "country_code": "CHE",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Switzerland",
+            "EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Third-country / non-EU applicant"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "employment",
+            "poststudy_work"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "employer_sponsorship",
+          "work_permit"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Non-EU/EFTA applicants face a structurally harder Swiss labour-market path because employer sponsorship and labour-market priority remain central",
+          "fa": "برای متقاضی non‑EU/EFTA مسیر بازار کار سوئیس ساختاری سخت‌تر است چون اسپانسر کارفرما و اولویت بازار کار نقش مرکزی دارد"
+        },
+        "summary": {
+          "en": "The source repeatedly describes local/EU priority and employer-side justification for hiring a third-country national. Even graduates worry that Swiss study does not automatically remove this friction.",
+          "fa": "منبع مکرراً اولویت نیروی محلی/EU و توجیه کارفرما برای استخدام تبعه ثالث را مطرح می‌کند. حتی فارغ‌التحصیلان نگران‌اند تحصیل سوئیس این friction را خودکار حذف نکند."
+        },
+        "practical_impact": {
+          "en": "A degree or strong CV does not automatically create a sponsorable work route.",
+          "fa": "مدرک یا رزومه قوی خودبه‌خود مسیر کاری قابل اسپانسر ایجاد نمی‌کند."
+        },
+        "who_should_care": {
+          "en": "Iranian graduates and direct-work applicants.",
+          "fa": "فارغ‌التحصیلان ایرانی و متقاضیان کار مستقیم."
+        },
+        "recommended_action": {
+          "en": "Target shortage/specialist roles and employers with prior third-country hiring experience; do not treat a generic job match as permit-ready.",
+          "fa": "نقش‌های shortage/specialist و employer باتجربه در استخدام اتباع ثالث را هدف بگیرید و job match عمومی را permit-ready فرض نکنید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHE-WORK-NONEU-004-E1",
+          "relation": "supports",
+          "independence_group": "CHE-WORK-NONEU-004-E1"
+        },
+        {
+          "evidence_id": "CHE-WORK-NONEU-004-E2",
+          "relation": "supports",
+          "independence_group": "CHE-WORK-NONEU-004-E2"
+        },
+        {
+          "evidence_id": "CHE-WORK-NONEU-004-E3",
+          "relation": "supports",
+          "independence_group": "CHE-WORK-NONEU-004-E3"
+        },
+        {
+          "evidence_id": "CHE-WORK-NONEU-004-E4",
+          "relation": "supports",
+          "independence_group": "CHE-WORK-NONEU-004-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "This is one of the most repeated work-migration constraints in the export."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Swiss third-country work-permit quotas, labour-market test and graduate exceptions were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHE-WORK-NONEU-004-E1",
+            "CHE-WORK-NONEU-004-E2",
+            "CHE-WORK-NONEU-004-E3",
+            "CHE-WORK-NONEU-004-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Switzerland public Telegram supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Work-permit rules and quotas can change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "non-EU",
+        "employer sponsorship",
+        "EU priority",
+        "work permit"
+      ],
+      "first_seen": "2025-03-01",
+      "last_seen": "2026-09-04"
+    },
+    {
+      "signal_id": "CHE-LANGUAGE-005",
+      "issue_cluster_id": "SWITZERLAND-CANTON-LANGUAGE-EMPLOYABILITY",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHE-WORK-NONEU-004"
+        }
+      ],
+      "classification": {
+        "family": "E4_LANGUAGE_REQUIREMENTS",
+        "type": "canton_language_employability",
+        "class": "labour_market_language"
+      },
+      "scope": {
+        "destination": {
+          "country": "Switzerland",
+          "country_code": "CHE",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Switzerland",
+            "EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "employment",
+            "poststudy_work"
+          ]
+        },
+        "process_stages": [
+          "job_search",
+          "local_integration"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "English can be enough for some academic programmes, but employability is repeatedly tied to the local canton language",
+          "fa": "انگلیسی برای بعضی programهای دانشگاهی کافی است، اما employability مکرراً به زبان محلی کانتون گره می‌خورد"
+        },
+        "summary": {
+          "en": "The group separates study-language from labour-market language and repeatedly points applicants toward German, French or Italian depending on the canton.",
+          "fa": "گروه زبان تحصیل را از زبان بازار کار جدا می‌کند و بسته به کانتون روی آلمانی، فرانسوی یا ایتالیایی تأکید دارد."
+        },
+        "practical_impact": {
+          "en": "An English-taught master's/PhD does not imply an English-only post-study labour market.",
+          "fa": "مستر/PhD انگلیسی‌زبان به معنی بازار کار انگلیسی‌محور بعد از تحصیل نیست."
+        },
+        "who_should_care": {
+          "en": "Students choosing Switzerland for long-term work.",
+          "fa": "دانشجویانی که سوئیس را با هدف کار بلندمدت انتخاب می‌کنند."
+        },
+        "recommended_action": {
+          "en": "Start the target canton language during study and align language choice with where you actually want to work.",
+          "fa": "زبان کانتون هدف را حین تحصیل شروع کنید و انتخاب زبان را با محل واقعی کار آینده هماهنگ کنید."
+        },
+        "known_workaround": "International research/technology environments may have more English usage, but the source does not support treating that as universal."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHE-LANGUAGE-005-E1",
+          "relation": "supports",
+          "independence_group": "CHE-LANGUAGE-005-E1"
+        },
+        {
+          "evidence_id": "CHE-LANGUAGE-005-E2",
+          "relation": "supports",
+          "independence_group": "CHE-LANGUAGE-005-E2"
+        },
+        {
+          "evidence_id": "CHE-LANGUAGE-005-E3",
+          "relation": "supports",
+          "independence_group": "CHE-LANGUAGE-005-E3"
+        },
+        {
+          "evidence_id": "CHE-LANGUAGE-005-E4",
+          "relation": "supports",
+          "independence_group": "CHE-LANGUAGE-005-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "high",
+          "rationale": "The same distinction appears across generic work and nursing discussions."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "No occupation-specific language threshold was independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHE-LANGUAGE-005-E1",
+            "CHE-LANGUAGE-005-E2",
+            "CHE-LANGUAGE-005-E3",
+            "CHE-LANGUAGE-005-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Switzerland public Telegram supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-12-16",
+        "reason": "Language expectations differ by canton/occupation.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "German",
+        "French",
+        "Italian",
+        "canton language",
+        "employment"
+      ],
+      "first_seen": "2025-02-23",
+      "last_seen": "2026-09-04"
+    },
+    {
+      "signal_id": "CHE-POSTSTUDY-006",
+      "issue_cluster_id": "SWITZERLAND-STUDY-TO-SETTLEMENT-FRICTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHE-WORK-NONEU-004"
+        }
+      ],
+      "classification": {
+        "family": "E8_POSTSTUDY_TRANSITION",
+        "type": "study_to_work_not_automatic",
+        "class": "poststudy"
+      },
+      "scope": {
+        "destination": {
+          "country": "Switzerland",
+          "country_code": "CHE",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Switzerland",
+            "EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "poststudy_work",
+            "job_search",
+            "long_term_residence"
+          ]
+        },
+        "process_stages": [
+          "graduation",
+          "job_search",
+          "work_residence"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Swiss study is not an automatic settlement route; post-study success still depends on a qualifying job, permit conditions, finances and labour-market fit",
+          "fa": "تحصیل در سوئیس مسیر خودکار settlement نیست؛ موفقیت بعد از تحصیل همچنان به شغل qualifying، شرایط permit، تمکن و فیت بازار کار وابسته است"
+        },
+        "summary": {
+          "en": "The community repeatedly questions the study-to-residence conversion, asks about renewed financial proof for job-search status and reports difficult post-PhD labour-market experiences.",
+          "fa": "کامیونیتی بارها درباره تبدیل تحصیل به اقامت سؤال دارد، درباره تمکن مجدد برای status جستجوی کار می‌پرسد و تجربه‌های سخت بازار کار بعد از PhD را نقل می‌کند."
+        },
+        "practical_impact": {
+          "en": "Applicants optimizing for permanent migration should evaluate work-permit conversion before choosing a degree solely for Swiss settlement.",
+          "fa": "فردی که هدف اصلی‌اش مهاجرت دائمی است باید conversion به work permit را قبل از انتخاب رشته صرفاً برای settlement بسنجد."
+        },
+        "who_should_care": {
+          "en": "Master's/PhD applicants with long-term migration goals.",
+          "fa": "متقاضیان ارشد/دکتری با هدف مهاجرت بلندمدت."
+        },
+        "recommended_action": {
+          "en": "Treat post-study job-search and work-permit conversion as a separate project from university admission.",
+          "fa": "job search و تبدیل به work permit را پروژه‌ای جدا از admission دانشگاه ببینید."
+        },
+        "known_workaround": null
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHE-POSTSTUDY-006-E1",
+          "relation": "supports",
+          "independence_group": "CHE-POSTSTUDY-006-E1"
+        },
+        {
+          "evidence_id": "CHE-POSTSTUDY-006-E2",
+          "relation": "supports",
+          "independence_group": "CHE-POSTSTUDY-006-E2"
+        },
+        {
+          "evidence_id": "CHE-POSTSTUDY-006-E3",
+          "relation": "supports",
+          "independence_group": "CHE-POSTSTUDY-006-E3"
+        },
+        {
+          "evidence_id": "CHE-POSTSTUDY-006-E4",
+          "relation": "supports",
+          "independence_group": "CHE-POSTSTUDY-006-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The friction is repeated, though exact legal post-study rights were not verified."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current Swiss post-study job-search period and residence conversion rules were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHE-POSTSTUDY-006-E1",
+            "CHE-POSTSTUDY-006-E2",
+            "CHE-POSTSTUDY-006-E3",
+            "CHE-POSTSTUDY-006-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Switzerland public Telegram supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Post-study rules and permit exceptions are time-sensitive.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "post-study",
+        "job search",
+        "residence",
+        "PhD",
+        "work permit"
+      ],
+      "first_seen": "2025-03-17",
+      "last_seen": "2026-06-14"
+    },
+    {
+      "signal_id": "CHE-CANTON-VISA-007",
+      "issue_cluster_id": "SWITZERLAND-CANTON-DRIVEN-STUDENT-VISA",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHE-FUNDS-008"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "CHE-COST-010"
+        }
+      ],
+      "classification": {
+        "family": "E3_VISA_ADJUDICATION",
+        "type": "canton_specific_student_visa_processing",
+        "class": "student_visa"
+      },
+      "scope": {
+        "destination": {
+          "country": "Switzerland",
+          "country_code": "CHE",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Switzerland",
+            "EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_visa",
+            "student_residence"
+          ]
+        },
+        "process_stages": [
+          "embassy",
+          "canton_review",
+          "housing",
+          "interview"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Swiss student-visa processing is materially canton-driven: intended residence, housing, financial evidence and canton review can shape the file beyond the embassy checklist",
+          "fa": "پردازش ویزای دانشجویی سوئیس materially کانتون‌محور است؛ محل اقامت، مسکن، تمکن و بررسی کانتون فراتر از چک‌لیست سفارت روی پرونده اثر می‌گذارد"
+        },
+        "summary": {
+          "en": "A Geneva file was misrouted to Vaud and had to be transferred. Other applicants report embassy-vs-canton differences in financial evidence and visa interviews covering ties and post-study plans.",
+          "fa": "پرونده ژنو اشتباهاً به Vaud رفته و منتقل شده است. کیس‌های دیگر تفاوت سفارت/کانتون در تمکن و مصاحبه درباره ties و برنامه بعد از تحصیل را گزارش می‌کنند."
+        },
+        "practical_impact": {
+          "en": "Using the wrong canton assumptions can delay the visa even when university admission is valid.",
+          "fa": "فرض اشتباه درباره کانتون می‌تواند حتی با پذیرش معتبر ویزا را عقب بیندازد."
+        },
+        "who_should_care": {
+          "en": "All Swiss student-visa applicants, especially Geneva/Vaud/Zurich/Basel applicants.",
+          "fa": "همه متقاضیان ویزای تحصیلی سوئیس، مخصوصاً ژنو/Vaud/زوریخ/بازل."
+        },
+        "recommended_action": {
+          "en": "Check both embassy and competent-canton requirements and make sure intended residence/housing information is consistent across the file.",
+          "fa": "هم requirements سفارت و هم کانتون مسئول را بررسی کنید و اطلاعات محل اقامت/مسکن را در کل پرونده یکسان نگه دارید."
+        },
+        "known_workaround": "Temporary accommodation evidence can serve as a fallback when permanent student housing is still pending, according to community guidance."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHE-CANTON-VISA-007-E1",
+          "relation": "supports",
+          "independence_group": "CHE-CANTON-VISA-007-E1"
+        },
+        {
+          "evidence_id": "CHE-CANTON-VISA-007-E2",
+          "relation": "supports",
+          "independence_group": "CHE-CANTON-VISA-007-E2"
+        },
+        {
+          "evidence_id": "CHE-CANTON-VISA-007-E3",
+          "relation": "supports",
+          "independence_group": "CHE-CANTON-VISA-007-E3"
+        },
+        {
+          "evidence_id": "CHE-CANTON-VISA-007-E4",
+          "relation": "supports",
+          "independence_group": "CHE-CANTON-VISA-007-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Direct 2026 cases show canton routing and document differences clearly."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current canton and embassy checklists were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHE-CANTON-VISA-007-E1",
+            "CHE-CANTON-VISA-007-E2",
+            "CHE-CANTON-VISA-007-E3",
+            "CHE-CANTON-VISA-007-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Switzerland public Telegram supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-17",
+        "reason": "Canton procedures can differ and change.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "canton",
+        "Geneva",
+        "Vaud",
+        "student visa",
+        "housing"
+      ],
+      "first_seen": "2026-02-28",
+      "last_seen": "2026-07-22"
+    },
+    {
+      "signal_id": "CHE-FUNDS-008",
+      "issue_cluster_id": "SWITZERLAND-IRAN-PROOF-OF-FUNDS-CANTON-VARIANCE",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHE-CANTON-VISA-007"
+        }
+      ],
+      "classification": {
+        "family": "E5_FINANCIAL_REQUIREMENTS",
+        "type": "iranian_bank_acceptance_canton_variance",
+        "class": "proof_of_funds"
+      },
+      "scope": {
+        "destination": {
+          "country": "Switzerland",
+          "country_code": "CHE",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Switzerland",
+            "EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Iran-issued bank evidence"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_visa",
+            "student_residence"
+          ]
+        },
+        "process_stages": [
+          "proof_of_funds",
+          "bank_evidence",
+          "guarantor"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "For Iranian applicants, proof-of-funds acceptance varies by canton and case; the source directly contradicts any blanket 'Iranian banks always accepted/rejected' rule",
+          "fa": "برای ایرانی‌ها پذیرش تمکن بانک ایران بر اساس کانتون/کیس متفاوت است؛ خود فایل هر قانون کلی «همیشه قبول/همیشه رد» را نقض می‌کند"
+        },
+        "summary": {
+          "en": "Zurich-oriented guidance says Iranian banks are not accepted, while direct Basel cases in 2026 report Iranian bank evidence being accepted and reviewed. Guarantor and Swiss-account routes also appear but can be difficult.",
+          "fa": "راهنمای مرتبط با زوریخ می‌گوید بانک ایران پذیرفته نمی‌شود، اما کیس‌های مستقیم بازل در ۲۰۲۶ از پذیرش و بررسی تمکن ایرانی خبر می‌دهند. مسیر guarantor/حساب سوئیس هم مطرح است ولی دشوار."
+        },
+        "practical_impact": {
+          "en": "Applicants can waste major time/money if they assume another canton's proof-of-funds practice applies to them.",
+          "fa": "اگر practice یک کانتون به کانتون دیگر تعمیم داده شود ممکن است زمان و پول زیادی هدر برود."
+        },
+        "who_should_care": {
+          "en": "Iran-based self-funded students.",
+          "fa": "دانشجویان self-funded داخل ایران."
+        },
+        "recommended_action": {
+          "en": "Ask the competent canton what bank/evidence format is acceptable before moving or blocking funds; keep source-of-funds documentation.",
+          "fa": "قبل از جابه‌جایی/بلوکه‌کردن پول، از کانتون مسئول فرمت قابل‌قبول بانک/evidence را بپرسید و source-of-funds را مستند نگه دارید."
+        },
+        "known_workaround": "Some applicants use a Swiss guarantor/university guarantee or Swiss/approved account when Iranian bank evidence is not accepted."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHE-FUNDS-008-E1",
+          "relation": "supports",
+          "independence_group": "CHE-FUNDS-008-E1"
+        },
+        {
+          "evidence_id": "CHE-FUNDS-008-E2",
+          "relation": "supports",
+          "independence_group": "CHE-FUNDS-008-E2"
+        },
+        {
+          "evidence_id": "CHE-FUNDS-008-E3",
+          "relation": "contradicts",
+          "independence_group": "CHE-FUNDS-008-E3"
+        },
+        {
+          "evidence_id": "CHE-FUNDS-008-E4",
+          "relation": "contradicts",
+          "independence_group": "CHE-FUNDS-008-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "variable",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "The contradiction is supported by direct canton-specific 2026 cases."
+        },
+        "impact_direction": "mixed",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current canton-specific financial-proof rules and accepted Iranian banks were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHE-FUNDS-008-E1",
+            "CHE-FUNDS-008-E2",
+            "CHE-FUNDS-008-E3",
+            "CHE-FUNDS-008-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Switzerland public Telegram supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-10-01",
+        "reason": "Bank/canton acceptance can change quickly.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "proof of funds",
+        "Iranian bank",
+        "FINMA",
+        "Basel",
+        "Zurich",
+        "guarantor"
+      ],
+      "first_seen": "2025-08-11",
+      "last_seen": "2026-07-17"
+    },
+    {
+      "signal_id": "CHE-IRAN-CONSULAR-009",
+      "issue_cluster_id": "SWITZERLAND-IRAN-CONSULAR-DISRUPTION",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHE-CANTON-VISA-007"
+        }
+      ],
+      "classification": {
+        "family": "E20_LIFE_MOBILITY_OPERATIONS",
+        "type": "tehran_embassy_service_disruption",
+        "class": "consular_continuity"
+      },
+      "scope": {
+        "destination": {
+          "country": "Switzerland",
+          "country_code": "CHE",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Switzerland",
+            "EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": [
+            "Applying from Iran"
+          ]
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_visa"
+          ]
+        },
+        "process_stages": [
+          "appointment",
+          "embassy_service",
+          "intake_timing"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "Embassy-service interruptions in Iran became an independent risk to Swiss study migration, causing missed intakes and weak third-country fallback",
+          "fa": "وقفه خدمات سفارت در ایران به ریسک مستقل مهاجرت تحصیلی سوئیس تبدیل شده و باعث از دست‌رفتن intake و ضعف fallback کشور ثالث شده است"
+        },
+        "summary": {
+          "en": "Direct 2026 reports link embassy closures and internet disruption to missed study timing. Applicants also reported periods when Tehran offered no appointments and neighbouring posts would not accept the cases.",
+          "fa": "گزارش‌های مستقیم ۲۰۲۶ تعطیلی سفارت و اختلال اینترنت را به از دست رفتن زمان تحصیل وصل کرده‌اند. همچنین دوره‌هایی گزارش شده که تهران وقت نمی‌داد و کشورهای همسایه هم پرونده نمی‌گرفتند."
+        },
+        "practical_impact": {
+          "en": "Admission can become unusable if consular access disappears near the programme start date.",
+          "fa": "پذیرش ممکن است نزدیک شروع program به‌خاطر قطع دسترسی کنسولی عملاً غیرقابل‌استفاده شود."
+        },
+        "who_should_care": {
+          "en": "Iran-based students with fixed Swiss intake dates.",
+          "fa": "دانشجویان داخل ایران با intake ثابت سوئیس."
+        },
+        "recommended_action": {
+          "en": "Request appointments early, keep the university informed and maintain deferral/seat-hold contingencies rather than assuming third-country processing is available.",
+          "fa": "وقت را زود بگیرید، دانشگاه را در جریان نگه دارید و contingency برای defer/حفظ صندلی داشته باشید؛ fallback کشور ثالث را فرض نکنید."
+        },
+        "known_workaround": "University seat deferral/hold was used successfully in at least one source-reported disruption case."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHE-IRAN-CONSULAR-009-E1",
+          "relation": "supports",
+          "independence_group": "CHE-IRAN-CONSULAR-009-E1"
+        },
+        {
+          "evidence_id": "CHE-IRAN-CONSULAR-009-E2",
+          "relation": "supports",
+          "independence_group": "CHE-IRAN-CONSULAR-009-E2"
+        },
+        {
+          "evidence_id": "CHE-IRAN-CONSULAR-009-E3",
+          "relation": "supports",
+          "independence_group": "CHE-IRAN-CONSULAR-009-E3"
+        },
+        {
+          "evidence_id": "CHE-IRAN-CONSULAR-009-E4",
+          "relation": "supports",
+          "independence_group": "CHE-IRAN-CONSULAR-009-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "episodic",
+        "severity": "critical",
+        "confidence": {
+          "level": "high",
+          "rationale": "Multiple direct accounts show missed intakes and appointment shutdowns."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "This is historical source evidence; current Swiss embassy service status was not independently checked."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHE-IRAN-CONSULAR-009-E1",
+            "CHE-IRAN-CONSULAR-009-E2",
+            "CHE-IRAN-CONSULAR-009-E3",
+            "CHE-IRAN-CONSULAR-009-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Switzerland public Telegram supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-09-24",
+        "reason": "Consular operations can change immediately.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "Swiss embassy Tehran",
+        "closure",
+        "appointment",
+        "Iran",
+        "intake"
+      ],
+      "first_seen": "2026-02-25",
+      "last_seen": "2026-04-29"
+    },
+    {
+      "signal_id": "CHE-COST-010",
+      "issue_cluster_id": "SWITZERLAND-LIVING-COST-HOUSING-BUFFER",
+      "relationships": [
+        {
+          "type": "related_to",
+          "signal_id": "CHE-STUDENT-WORK-003"
+        },
+        {
+          "type": "related_to",
+          "signal_id": "CHE-FUNDS-008"
+        }
+      ],
+      "classification": {
+        "family": "E20_LIFE_MOBILITY_OPERATIONS",
+        "type": "high_living_cost_and_housing_buffer",
+        "class": "living_cost"
+      },
+      "scope": {
+        "destination": {
+          "country": "Switzerland",
+          "country_code": "CHE",
+          "region": null,
+          "city": null
+        },
+        "applicants": {
+          "origin_countries": [
+            "Iran"
+          ],
+          "nationalities": [
+            "Iranian"
+          ],
+          "residence_countries": [],
+          "applying_from": [
+            "Iran",
+            "Switzerland",
+            "EU countries",
+            "third countries"
+          ],
+          "age_groups": [],
+          "occupations": [],
+          "fields": [
+            "multi-field"
+          ],
+          "education_levels": [
+            "bachelors",
+            "masters",
+            "PhD",
+            "postdoc"
+          ],
+          "regulated_professions": [],
+          "other_conditions": []
+        },
+        "routes": {
+          "families": [
+            "STUDY / ACADEMIC",
+            "POST-STUDY WORK",
+            "EMPLOYMENT / WORK"
+          ],
+          "codes": [
+            "student_life",
+            "housing"
+          ]
+        },
+        "process_stages": [
+          "budgeting",
+          "housing_search",
+          "arrival"
+        ],
+        "entities": []
+      },
+      "claim": {
+        "title": {
+          "en": "High living costs plus delayed access to student work make a multi-month cash and housing buffer operationally important",
+          "fa": "هزینه بالای زندگی همراه با تأخیر دسترسی به کار دانشجویی، buffer چندماهه پول و مسکن را عملیاتی و مهم می‌کند"
+        },
+        "summary": {
+          "en": "The group repeatedly treats housing and early living costs as a separate migration bottleneck. University housing offices can help, but general rentals and early expenses remain significant.",
+          "fa": "گروه مسکن و هزینه ماه‌های اول را گلوگاه مستقل می‌بیند. housing office دانشگاه می‌تواند کمک کند، اما اجاره آزاد و هزینه شروع همچنان بالاست."
+        },
+        "practical_impact": {
+          "en": "Applicants who arrive with only the minimum visa funds may still be financially fragile before work starts or stable housing is found.",
+          "fa": "فردی که فقط حداقل پول ویزا را دارد ممکن است پیش از شروع کار یا پیدا شدن مسکن پایدار از نظر مالی شکننده باشد."
+        },
+        "who_should_care": {
+          "en": "Self-funded students and new arrivals.",
+          "fa": "دانشجویان self-funded و تازه‌واردها."
+        },
+        "recommended_action": {
+          "en": "Secure university housing early where possible and keep several months of liquid living-cost buffer beyond tuition.",
+          "fa": "در صورت امکان زود برای مسکن دانشگاهی اقدام کنید و چند ماه هزینه نقدشونده زندگی را علاوه بر شهریه نگه دارید."
+        },
+        "known_workaround": "University housing offices are a recurring lower-friction route in the source."
+      },
+      "evidence_links": [
+        {
+          "evidence_id": "CHE-COST-010-E1",
+          "relation": "supports",
+          "independence_group": "CHE-COST-010-E1"
+        },
+        {
+          "evidence_id": "CHE-COST-010-E2",
+          "relation": "supports",
+          "independence_group": "CHE-COST-010-E2"
+        },
+        {
+          "evidence_id": "CHE-COST-010-E3",
+          "relation": "supports",
+          "independence_group": "CHE-COST-010-E3"
+        },
+        {
+          "evidence_id": "CHE-COST-010-E4",
+          "relation": "supports",
+          "independence_group": "CHE-COST-010-E4"
+        }
+      ],
+      "assessment": {
+        "lifecycle": "active",
+        "evidence_maturity": "established",
+        "trend": "unknown",
+        "severity": "high",
+        "confidence": {
+          "level": "medium",
+          "rationale": "The high-cost/housing theme is repeated, but numerical estimates are anecdotal and city-specific."
+        },
+        "impact_direction": "negative",
+        "assessed_at": "2026-09-17",
+        "method": {
+          "name": "hamrah-signal-builder",
+          "version": "3.0"
+        }
+      },
+      "verification": {
+        "official": {
+          "status": "not_verified",
+          "evidence_ids": [],
+          "checked_at": null,
+          "note": "Current city-specific rents and living costs were not independently verified."
+        },
+        "community": {
+          "status": "source_reported",
+          "evidence_ids": [
+            "CHE-COST-010-E1",
+            "CHE-COST-010-E2",
+            "CHE-COST-010-E3",
+            "CHE-COST-010-E4"
+          ],
+          "checked_at": "2026-09-17",
+          "note": "Extracted from the uploaded Switzerland public Telegram supergroup. No independent official web verification was performed in this extraction-only run."
+        }
+      },
+      "review": {
+        "status": "recheck_required",
+        "last_checked_at": "2026-09-17",
+        "next_check_at": "2026-11-16",
+        "reason": "Housing and prices change continuously.",
+        "confirmation_criteria": []
+      },
+      "keywords": [
+        "housing",
+        "living cost",
+        "Zurich",
+        "student work",
+        "cash buffer"
+      ],
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-08-04"
+    }
+  ],
+  "quality": {
+    "checks": {
+      "privacy": {
+        "status": "pass",
+        "note": "Names, Telegram usernames/IDs, phone numbers, addresses and direct contact details are omitted from evidence summaries."
+      },
+      "full_source_parsed": {
+        "status": "pass",
+        "note": "Loaded and programmatically parsed all 1,995 records, including 1,660 message records."
+      },
+      "service_noise_filtered": {
+        "status": "pass",
+        "note": "Join/leave/invite service records, greetings, repeated questions and low-information chatter were excluded from signal evidence."
+      },
+      "duplicates_merged": {
+        "status": "pass",
+        "note": "Repeated PhD, funding, student-work, non-EU work, language, post-study, canton-visa, proof-of-funds, consular and cost/housing discussions were clustered."
+      },
+      "contradictions_preserved": {
+        "status": "pass",
+        "note": "Contradictions on student-work waiting period and Iranian-bank acceptance are preserved rather than reconciled."
+      },
+      "official_vs_community_separated": {
+        "status": "pass",
+        "note": "Legal/administrative claims remain source-reported and official.status=not_verified in this extraction-only run."
+      },
+      "current_rule_verification": {
+        "status": "not_run",
+        "note": "No external official Swiss federal/cantonal/embassy verification was performed."
+      },
+      "existing_hamrah_dataset_merge": {
+        "status": "not_run",
+        "note": "Hamrah Community Signal search returned Resource not found, so remote deduplication/merge was not completed."
+      }
+    }
+  },
+  "qualityControl": {
+    "personal_identifiers_removed": true
+  },
+  "missingSignalIds": [],
+  "usageNote": "Community planning evidence only. This is not an official source for Swiss PhD employment, student-work rules, third-country work permits, canton visa procedure, proof-of-funds acceptance, post-study residence, embassy operations or living-cost requirements. Verify current federal, cantonal, university and embassy rules before acting."
+}

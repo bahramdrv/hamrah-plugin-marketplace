@@ -41,7 +41,7 @@ function signalStore(t, count) {
   const root = mkdtempSync(path.join(tmpdir(), "hamrah-budget-"));
   t.after(() => rmSync(root, { recursive: true, force: true }));
   const fixture = readFileSync(
-    new URL("../../skills/hamrah-signal-builder/examples/gold_standard.json", import.meta.url), "utf8"
+    new URL("../../skills/hamrah-signal-builder/examples/gold_standard_v2.json", import.meta.url), "utf8"
   );
   for (let index = 0; index < count; index++) writeFileSync(path.join(root, `dataset-${index}.json`), fixture);
   return root;
