@@ -1,0 +1,6051 @@
+{
+  "reviewed_on": "2026-09-26",
+  "scope": "All 49 published datasets; exact path and phrase of every two-capitalized-word match in string values",
+  "files": [
+    {
+      "file": "2026/09/20260925174655-de-study-opportunity-card-78f7f8bd21.json",
+      "reviewed_titlecase_matches": 41,
+      "matches": [
+        {
+          "path": "provenance.method",
+          "phrase": "Federal Foreign"
+        },
+        {
+          "path": "source_coverage[0].source_name",
+          "phrase": "Residence Act"
+        },
+        {
+          "path": "source_coverage[0].source_name",
+          "phrase": "Federal Ministry"
+        },
+        {
+          "path": "source_coverage[1].source_name",
+          "phrase": "Residence Act"
+        },
+        {
+          "path": "source_coverage[1].source_name",
+          "phrase": "Federal Ministry"
+        },
+        {
+          "path": "source_coverage[2].source_name",
+          "phrase": "Residence Act"
+        },
+        {
+          "path": "source_coverage[2].source_name",
+          "phrase": "Federal Ministry"
+        },
+        {
+          "path": "source_coverage[3].source_name",
+          "phrase": "Federal Foreign"
+        },
+        {
+          "path": "watchlist[0].reason",
+          "phrase": "Federal Foreign"
+        },
+        {
+          "path": "watchlist[0].what_would_confirm_it",
+          "phrase": "Consular Services"
+        },
+        {
+          "path": "watchlist[1].topic",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "watchlist[1].reason",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "watchlist[1].what_would_confirm_it",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "sources[0].source_name",
+          "phrase": "Federal Foreign"
+        },
+        {
+          "path": "sources[1].source_name",
+          "phrase": "Residence Act"
+        },
+        {
+          "path": "sources[1].source_name",
+          "phrase": "Federal Ministry"
+        },
+        {
+          "path": "sources[3].source_name",
+          "phrase": "Residence Act"
+        },
+        {
+          "path": "sources[3].source_name",
+          "phrase": "Federal Ministry"
+        },
+        {
+          "path": "sources[5].source_name",
+          "phrase": "Residence Act"
+        },
+        {
+          "path": "sources[5].source_name",
+          "phrase": "Federal Ministry"
+        },
+        {
+          "path": "evidence[1].evidence_summary",
+          "phrase": "Federal Foreign"
+        },
+        {
+          "path": "evidence[1].evidence_summary",
+          "phrase": "Consular Services"
+        },
+        {
+          "path": "evidence[3].evidence_summary",
+          "phrase": "Residence Act"
+        },
+        {
+          "path": "evidence[4].evidence_summary",
+          "phrase": "Residence Act"
+        },
+        {
+          "path": "evidence[4].evidence_summary",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[5].evidence_summary",
+          "phrase": "Residence Act"
+        },
+        {
+          "path": "signals[0].entities[0].name",
+          "phrase": "German Embassy"
+        },
+        {
+          "path": "signals[1].entities[0].name",
+          "phrase": "German Embassy"
+        },
+        {
+          "path": "signals[1].summary_en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[1].practical_impact",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[1].who_should_care",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[1].recommended_action",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[1].keywords[0]",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[2].who_should_care",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "route_claims[2].statement_en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "route_claims[2].statement_en",
+          "phrase": "Federal Employment"
+        },
+        {
+          "path": "route_claims[3].statement_en",
+          "phrase": "Consular Services"
+        },
+        {
+          "path": "route_claims[4].statement_en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "route_claims[5].statement_en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "route_claims[6].statement_en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "route_claims[9].statement_en",
+          "phrase": "Opportunity Card"
+        }
+      ]
+    },
+    {
+      "file": "Global Talent ans Skilled Worker - UK - 2026-09-11.json",
+      "reviewed_titlecase_matches": 330,
+      "matches": [
+        {
+          "path": "source_coverage[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "source_coverage[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "summary.countries_detected[0]",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[0].title",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[0].applicant_scope.other_conditions[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].applicant_scope.other_conditions[0]",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].applicant_scope.other_conditions[0]",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "signals[0].entities[0].name",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].entities[1].name",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "signals[0].summary_en",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].summary_en",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "signals[0].summary_en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].summary_fa",
+          "phrase": "Peer Review"
+        },
+        {
+          "path": "signals[0].summary_fa",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].summary_fa",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "signals[0].summary_fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].who_should_care",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].who_should_care",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].who_should_care",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "signals[0].official_verification.source_title",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].official_verification.note",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "signals[0].conditional_adjustment.apply_when",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].conditional_adjustment.apply_when",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "signals[0].keywords[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].keywords[3]",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].keywords[4]",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "signals[0].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[0].evidence[0].evidence_summary",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].evidence[0].evidence_summary",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[0].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[0].evidence[1].evidence_summary",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].evidence[1].evidence_summary",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[0].evidence[2].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].evidence[2].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[0].evidence[2].evidence_summary",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "signals[0].evidence[3].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].evidence[3].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[0].evidence[3].evidence_summary",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[0].evidence[3].evidence_summary",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[0].evidence[4].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].evidence[4].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[0].evidence[4].evidence_summary",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].evidence[5].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].evidence[5].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[0].evidence[5].evidence_summary",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].evidence[5].evidence_summary",
+          "phrase": "Engineering Stage"
+        },
+        {
+          "path": "signals[0].evidence[6].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].evidence[6].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[0].evidence[6].evidence_summary",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].evidence[7].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].evidence[7].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[0].evidence[7].evidence_summary",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "signals[0].evidence[8].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].evidence[8].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[0].evidence[8].evidence_summary",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].evidence[9].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].evidence[9].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[0].evidence[9].evidence_summary",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[0].evidence[9].evidence_summary",
+          "phrase": "Engineering Route"
+        },
+        {
+          "path": "signals[0].evidence[10].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].evidence[11].source_name",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "signals[0].evidence[11].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].evidence[11].evidence_summary",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "signals[0].evidence[11].evidence_summary",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[1].title",
+          "phrase": "Visa Application"
+        },
+        {
+          "path": "signals[1].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[1].applicant_scope.other_conditions[0]",
+          "phrase": "Visa Application"
+        },
+        {
+          "path": "signals[1].entities[0].name",
+          "phrase": "Visa Application"
+        },
+        {
+          "path": "signals[1].summary_en",
+          "phrase": "The Tehran"
+        },
+        {
+          "path": "signals[1].summary_en",
+          "phrase": "Visa Application"
+        },
+        {
+          "path": "signals[1].summary_en",
+          "phrase": "The British"
+        },
+        {
+          "path": "signals[1].who_should_care",
+          "phrase": "Visa Application"
+        },
+        {
+          "path": "signals[1].official_verification.note",
+          "phrase": "Visa Application"
+        },
+        {
+          "path": "signals[1].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[1].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[1].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[1].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[1].evidence[2].evidence_summary",
+          "phrase": "Visa Application"
+        },
+        {
+          "path": "signals[1].evidence[3].evidence_summary",
+          "phrase": "British Embassy"
+        },
+        {
+          "path": "signals[1].evidence[3].evidence_summary",
+          "phrase": "Visa Application"
+        },
+        {
+          "path": "signals[1].resolution.resolution_summary",
+          "phrase": "Visa Application"
+        },
+        {
+          "path": "signals[2].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[2].applicant_scope.other_conditions[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[2].entities[0].name",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "signals[2].entities[1].name",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "signals[2].entities[2].name",
+          "phrase": "British Academy"
+        },
+        {
+          "path": "signals[2].official_verification.source_title",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[2].keywords[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[2].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[2].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[2].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[2].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[2].evidence[2].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[2].evidence[2].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[2].evidence[3].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[2].evidence[3].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[2].evidence[4].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[2].evidence[4].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[2].evidence[5].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[2].evidence[5].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[2].evidence[6].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].title",
+          "phrase": "Digital Technology"
+        },
+        {
+          "path": "signals[3].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[3].applicant_scope.other_conditions[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].entities[0].name",
+          "phrase": "Tech Nation"
+        },
+        {
+          "path": "signals[3].summary_en",
+          "phrase": "Tech Nation"
+        },
+        {
+          "path": "signals[3].summary_fa",
+          "phrase": "Tech Nation"
+        },
+        {
+          "path": "signals[3].who_should_care",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].official_verification.source_title",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].keywords[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].keywords[2]",
+          "phrase": "Tech Nation"
+        },
+        {
+          "path": "signals[3].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[3].evidence[0].evidence_summary",
+          "phrase": "Tech Nation"
+        },
+        {
+          "path": "signals[3].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[3].evidence[2].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].evidence[2].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[3].evidence[2].evidence_summary",
+          "phrase": "Tech Nation"
+        },
+        {
+          "path": "signals[3].evidence[3].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].evidence[4].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[4].title",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[4].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[4].applicant_scope.other_conditions[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[4].entities[0].name",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[4].practical_impact",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[4].who_should_care",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[4].official_verification.source_title",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[4].keywords[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[4].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[4].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[4].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[4].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[4].evidence[2].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[4].evidence[2].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[4].evidence[3].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[5].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[5].summary_en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[5].summary_fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[5].who_should_care",
+          "phrase": "Eligible Global"
+        },
+        {
+          "path": "signals[5].who_should_care",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[5].keywords[2]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[5].keywords[3]",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[5].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[5].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[5].evidence[0].evidence_summary",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[5].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[5].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[5].evidence[1].evidence_summary",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[5].evidence[2].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[5].evidence[2].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[5].evidence[2].evidence_summary",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].title",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[6].applicant_scope.other_conditions[2]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].entities[0].name",
+          "phrase": "Academic Technology"
+        },
+        {
+          "path": "signals[6].entities[0].name",
+          "phrase": "Approval Scheme"
+        },
+        {
+          "path": "signals[6].summary_en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].summary_en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].summary_en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].summary_fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].summary_fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].summary_fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].who_should_care",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].reason_for_adjustment",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].keywords[1]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[6].evidence[0].evidence_summary",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[6].evidence[2].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].evidence[2].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[6].evidence[2].evidence_summary",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].evidence[3].evidence_summary",
+          "phrase": "Current Appendix"
+        },
+        {
+          "path": "signals[6].evidence[4].source_name",
+          "phrase": "Academic Technology"
+        },
+        {
+          "path": "signals[6].evidence[4].source_name",
+          "phrase": "Approval Scheme"
+        },
+        {
+          "path": "signals[6].evidence[4].evidence_summary",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[7].title",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[7].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[7].applicant_scope.other_conditions[0]",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[7].summary_en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[7].who_should_care",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[7].recommended_action",
+          "phrase": "Start Ecctis"
+        },
+        {
+          "path": "signals[7].official_verification.source_title",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[7].keywords[0]",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[7].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[7].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[7].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[7].evidence[1].evidence_summary",
+          "phrase": "Secure English"
+        },
+        {
+          "path": "signals[7].evidence[1].evidence_summary",
+          "phrase": "Language Test"
+        },
+        {
+          "path": "signals[8].title",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[8].applicant_scope.other_conditions[0]",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].summary_en",
+          "phrase": "Skilled Workers"
+        },
+        {
+          "path": "signals[8].summary_en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].summary_fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].summary_fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].who_should_care",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].official_verification.source_title",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].keywords[0]",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[8].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[8].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].evidence[1].evidence_summary",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].evidence[2].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[8].evidence[2].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].evidence[2].evidence_summary",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].evidence[3].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[9].title",
+          "phrase": "Historical Route"
+        },
+        {
+          "path": "signals[9].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[9].applicant_scope.other_conditions[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[9].who_should_care",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[9].recommended_action",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[9].keywords[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[9].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[9].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[9].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[9].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[9].evidence[2].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[9].evidence[2].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[9].evidence[2].evidence_summary",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[9].evidence[3].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[9].evidence[3].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[10].title",
+          "phrase": "Historical Iran"
+        },
+        {
+          "path": "signals[10].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[10].applicant_scope.other_conditions[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[10].entities[0].name",
+          "phrase": "Tech Nation"
+        },
+        {
+          "path": "signals[10].entities[1].name",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[10].who_should_care",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[10].keywords[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[10].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[10].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[10].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[10].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[10].evidence[1].evidence_summary",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[11].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[11].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[11].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[11].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[11].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[11].evidence[2].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[11].evidence[2].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[12].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[12].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[12].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[12].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[12].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[12].evidence[2].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[12].evidence[2].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[13].title",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[13].applicant_scope.other_conditions[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].entities[0].name",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[13].summary_en",
+          "phrase": "Earned Settlement"
+        },
+        {
+          "path": "signals[13].summary_en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].summary_en",
+          "phrase": "The Earned"
+        },
+        {
+          "path": "signals[13].summary_fa",
+          "phrase": "Earned Settlement"
+        },
+        {
+          "path": "signals[13].summary_fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].summary_fa",
+          "phrase": "Earned Settlement"
+        },
+        {
+          "path": "signals[13].practical_impact",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].who_should_care",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].recommended_action",
+          "phrase": "Immigration Rules"
+        },
+        {
+          "path": "signals[13].recommended_action",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].recommended_action",
+          "phrase": "Earned Settlement"
+        },
+        {
+          "path": "signals[13].official_verification.source_title",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].official_verification.note",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].conditional_adjustment.apply_when",
+          "phrase": "Immigration Rule"
+        },
+        {
+          "path": "signals[13].keywords[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[13].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].evidence[1].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[13].evidence[2].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].evidence[2].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[13].evidence[3].evidence_summary",
+          "phrase": "The Earned"
+        },
+        {
+          "path": "signals[13].evidence[3].evidence_summary",
+          "phrase": "Immigration Rule"
+        },
+        {
+          "path": "signals[13].evidence[4].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[13].evidence[4].evidence_summary",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[14].title",
+          "phrase": "Pending Global"
+        },
+        {
+          "path": "signals[14].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[14].applicant_scope.other_conditions[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[14].entities[0].name",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[14].summary_en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[14].who_should_care",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[14].known_workaround",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[14].official_verification.source_title",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[14].keywords[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[14].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[14].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[14].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[14].evidence[2].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[15].title",
+          "phrase": "Historical Arts"
+        },
+        {
+          "path": "signals[15].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[15].applicant_scope.other_conditions[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[15].applicant_scope.other_conditions[0]",
+          "phrase": "Arts Council"
+        },
+        {
+          "path": "signals[15].entities[0].name",
+          "phrase": "Arts Council"
+        },
+        {
+          "path": "signals[15].who_should_care",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[15].who_should_care",
+          "phrase": "Arts Council"
+        },
+        {
+          "path": "signals[15].official_verification.source_title",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[15].keywords[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[15].keywords[1]",
+          "phrase": "Arts Council"
+        },
+        {
+          "path": "signals[15].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[15].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[15].evidence[0].evidence_summary",
+          "phrase": "Arts Council"
+        },
+        {
+          "path": "signals[15].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[16].destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[16].official_verification.source_title",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[16].keywords[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[16].evidence[0].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[16].evidence[0].source_name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[16].evidence[0].evidence_summary",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[16].evidence[1].source_name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[16].evidence[1].evidence_summary",
+          "phrase": "Current Route"
+        },
+        {
+          "path": "watchlist[0].country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "watchlist[0].topic",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "watchlist[1].country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "watchlist[1].topic",
+          "phrase": "Visa Application"
+        },
+        {
+          "path": "watchlist[1].reason",
+          "phrase": "One August"
+        },
+        {
+          "path": "watchlist[2].country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "watchlist[2].reason",
+          "phrase": "One September"
+        },
+        {
+          "path": "watchlist[3].country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "watchlist[3].topic",
+          "phrase": "Earned Settlement"
+        },
+        {
+          "path": "watchlist[3].reason",
+          "phrase": "Immigration Rule"
+        },
+        {
+          "path": "watchlist[3].current_evidence",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "watchlist[3].what_would_confirm_it",
+          "phrase": "Immigration Rules"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_applyabroad_global_policy_signals_v3 (1).json",
+      "reviewed_titlecase_matches": 60,
+      "matches": [
+        {
+          "path": "evidence[4].summary.en",
+          "phrase": "Temporary Graduate"
+        },
+        {
+          "path": "evidence[4].summary.fa",
+          "phrase": "Temporary Graduate"
+        },
+        {
+          "path": "evidence[9].summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[9].summary.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[9].summary.fa",
+          "phrase": "Graduate Route"
+        },
+        {
+          "path": "evidence[10].summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[10].summary.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[11].summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[11].summary.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[12].summary.en",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "evidence[13].summary.en",
+          "phrase": "Pathway Student"
+        },
+        {
+          "path": "evidence[13].summary.fa",
+          "phrase": "Pathway Student"
+        },
+        {
+          "path": "evidence[14].summary.en",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "evidence[14].summary.en",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "evidence[14].summary.fa",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "evidence[23].summary.en",
+          "phrase": "Iran General"
+        },
+        {
+          "path": "evidence[23].summary.fa",
+          "phrase": "Iran General"
+        },
+        {
+          "path": "signals[0].claim.title.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[0].claim.who_should_care.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[0].keywords[1]",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[1].claim.summary.en",
+          "phrase": "Temporary Graduate"
+        },
+        {
+          "path": "signals[1].claim.summary.fa",
+          "phrase": "Temporary Graduate"
+        },
+        {
+          "path": "signals[1].verification.official.note",
+          "phrase": "Current Australian"
+        },
+        {
+          "path": "signals[1].keywords[2]",
+          "phrase": "Temporary Graduate"
+        },
+        {
+          "path": "signals[3].scope.destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[3].claim.title.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[3].claim.title.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[3].claim.summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[3].claim.summary.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[3].claim.summary.fa",
+          "phrase": "Graduate Route"
+        },
+        {
+          "path": "signals[3].verification.official.note",
+          "phrase": "Current Home"
+        },
+        {
+          "path": "signals[3].keywords[1]",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[3].keywords[4]",
+          "phrase": "Graduate Route"
+        },
+        {
+          "path": "signals[4].scope.destination.country",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[4].claim.title.en",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[4].claim.who_should_care.en",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[4].verification.official.note",
+          "phrase": "Current Immigration"
+        },
+        {
+          "path": "signals[4].verification.official.note",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[4].keywords[0]",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[5].scope.destination.country",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[5].claim.title.en",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[5].claim.summary.en",
+          "phrase": "Pathway Student"
+        },
+        {
+          "path": "signals[5].claim.summary.en",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[5].claim.summary.fa",
+          "phrase": "Pathway Student"
+        },
+        {
+          "path": "signals[5].claim.summary.fa",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[5].claim.who_should_care.en",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[5].claim.who_should_care.en",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[5].claim.who_should_care.fa",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[5].verification.official.note",
+          "phrase": "Current Immigration"
+        },
+        {
+          "path": "signals[5].verification.official.note",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[5].keywords[0]",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[5].keywords[1]",
+          "phrase": "Pathway Student"
+        },
+        {
+          "path": "signals[5].keywords[2]",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[5].keywords[3]",
+          "phrase": "Study Work"
+        },
+        {
+          "path": "signals[6].verification.official.note",
+          "phrase": "Current German"
+        },
+        {
+          "path": "signals[7].verification.official.note",
+          "phrase": "Current Norwegian"
+        },
+        {
+          "path": "signals[9].claim.summary.en",
+          "phrase": "General License"
+        },
+        {
+          "path": "signals[9].claim.summary.fa",
+          "phrase": "General License"
+        },
+        {
+          "path": "signals[9].keywords[4]",
+          "phrase": "General License"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_applyabroad_global_policy_signals_v3.json",
+      "reviewed_titlecase_matches": 60,
+      "matches": [
+        {
+          "path": "evidence[4].summary.en",
+          "phrase": "Temporary Graduate"
+        },
+        {
+          "path": "evidence[4].summary.fa",
+          "phrase": "Temporary Graduate"
+        },
+        {
+          "path": "evidence[9].summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[9].summary.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[9].summary.fa",
+          "phrase": "Graduate Route"
+        },
+        {
+          "path": "evidence[10].summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[10].summary.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[11].summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[11].summary.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[12].summary.en",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "evidence[13].summary.en",
+          "phrase": "Pathway Student"
+        },
+        {
+          "path": "evidence[13].summary.fa",
+          "phrase": "Pathway Student"
+        },
+        {
+          "path": "evidence[14].summary.en",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "evidence[14].summary.en",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "evidence[14].summary.fa",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "evidence[23].summary.en",
+          "phrase": "Iran General"
+        },
+        {
+          "path": "evidence[23].summary.fa",
+          "phrase": "Iran General"
+        },
+        {
+          "path": "signals[0].claim.title.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[0].claim.who_should_care.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[0].keywords[1]",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[1].claim.summary.en",
+          "phrase": "Temporary Graduate"
+        },
+        {
+          "path": "signals[1].claim.summary.fa",
+          "phrase": "Temporary Graduate"
+        },
+        {
+          "path": "signals[1].verification.official.note",
+          "phrase": "Current Australian"
+        },
+        {
+          "path": "signals[1].keywords[2]",
+          "phrase": "Temporary Graduate"
+        },
+        {
+          "path": "signals[3].scope.destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[3].claim.title.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[3].claim.title.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[3].claim.summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[3].claim.summary.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[3].claim.summary.fa",
+          "phrase": "Graduate Route"
+        },
+        {
+          "path": "signals[3].verification.official.note",
+          "phrase": "Current Home"
+        },
+        {
+          "path": "signals[3].keywords[1]",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[3].keywords[4]",
+          "phrase": "Graduate Route"
+        },
+        {
+          "path": "signals[4].scope.destination.country",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[4].claim.title.en",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[4].claim.who_should_care.en",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[4].verification.official.note",
+          "phrase": "Current Immigration"
+        },
+        {
+          "path": "signals[4].verification.official.note",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[4].keywords[0]",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[5].scope.destination.country",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[5].claim.title.en",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[5].claim.summary.en",
+          "phrase": "Pathway Student"
+        },
+        {
+          "path": "signals[5].claim.summary.en",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[5].claim.summary.fa",
+          "phrase": "Pathway Student"
+        },
+        {
+          "path": "signals[5].claim.summary.fa",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[5].claim.who_should_care.en",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[5].claim.who_should_care.en",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[5].claim.who_should_care.fa",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[5].verification.official.note",
+          "phrase": "Current Immigration"
+        },
+        {
+          "path": "signals[5].verification.official.note",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[5].keywords[0]",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "signals[5].keywords[1]",
+          "phrase": "Pathway Student"
+        },
+        {
+          "path": "signals[5].keywords[2]",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[5].keywords[3]",
+          "phrase": "Study Work"
+        },
+        {
+          "path": "signals[6].verification.official.note",
+          "phrase": "Current German"
+        },
+        {
+          "path": "signals[7].verification.official.note",
+          "phrase": "Current Norwegian"
+        },
+        {
+          "path": "signals[9].claim.summary.en",
+          "phrase": "General License"
+        },
+        {
+          "path": "signals[9].claim.summary.fa",
+          "phrase": "General License"
+        },
+        {
+          "path": "signals[9].keywords[4]",
+          "phrase": "General License"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_art_architecture_community_signals_v3 (1).json",
+      "reviewed_titlecase_matches": 14,
+      "matches": [
+        {
+          "path": "evidence[9].summary.en",
+          "phrase": "Google Slides"
+        },
+        {
+          "path": "evidence[9].summary.fa",
+          "phrase": "Google Slides"
+        },
+        {
+          "path": "signals[0].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[1].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[2].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[3].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[4].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[5].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[6].verification.official.note",
+          "phrase": "Current Iranian"
+        },
+        {
+          "path": "signals[6].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[7].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[8].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[9].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_art_architecture_community_signals_v3.json",
+      "reviewed_titlecase_matches": 14,
+      "matches": [
+        {
+          "path": "evidence[9].summary.en",
+          "phrase": "Google Slides"
+        },
+        {
+          "path": "evidence[9].summary.fa",
+          "phrase": "Google Slides"
+        },
+        {
+          "path": "signals[0].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[1].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[2].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[3].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[4].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[5].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[6].verification.official.note",
+          "phrase": "Current Iranian"
+        },
+        {
+          "path": "signals[6].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[7].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[8].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "signals[9].verification.community.note",
+          "phrase": "Architecture Telegram"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_australia_news_community_signals_v3.json",
+      "reviewed_titlecase_matches": 69,
+      "matches": [
+        {
+          "path": "sources[0].name",
+          "phrase": "Australia News"
+        },
+        {
+          "path": "evidence[1].summary.en",
+          "phrase": "Home Affairs"
+        },
+        {
+          "path": "evidence[1].summary.fa",
+          "phrase": "Home Affairs"
+        },
+        {
+          "path": "evidence[2].summary.en",
+          "phrase": "Ministerial Directions"
+        },
+        {
+          "path": "evidence[3].summary.en",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "evidence[3].summary.fa",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "evidence[4].summary.en",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "evidence[4].summary.fa",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "evidence[9].summary.en",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "evidence[9].summary.fa",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "evidence[10].summary.en",
+          "phrase": "Graduate Diplomas"
+        },
+        {
+          "path": "evidence[10].summary.fa",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "evidence[13].summary.en",
+          "phrase": "Horizon Europe"
+        },
+        {
+          "path": "evidence[13].summary.fa",
+          "phrase": "Horizon Europe"
+        },
+        {
+          "path": "evidence[17].summary.en",
+          "phrase": "Core Skills"
+        },
+        {
+          "path": "evidence[17].summary.en",
+          "phrase": "Specialist Skills"
+        },
+        {
+          "path": "evidence[17].summary.fa",
+          "phrase": "Core Skills"
+        },
+        {
+          "path": "evidence[17].summary.fa",
+          "phrase": "Specialist Skills"
+        },
+        {
+          "path": "evidence[20].summary.fa",
+          "phrase": "Nomination Conditions"
+        },
+        {
+          "path": "evidence[22].summary.en",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "evidence[22].summary.fa",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "signals[0].claim.summary.en",
+          "phrase": "Home Affairs"
+        },
+        {
+          "path": "signals[0].claim.summary.fa",
+          "phrase": "Home Affairs"
+        },
+        {
+          "path": "signals[0].claim.recommended_action.en",
+          "phrase": "Home Affairs"
+        },
+        {
+          "path": "signals[0].assessment.confidence.rationale",
+          "phrase": "Home Affairs"
+        },
+        {
+          "path": "signals[0].verification.official.note",
+          "phrase": "Home Affairs"
+        },
+        {
+          "path": "signals[0].review.reason",
+          "phrase": "Ministerial Directions"
+        },
+        {
+          "path": "signals[1].claim.title.en",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "signals[1].claim.title.fa",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "signals[1].claim.summary.en",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "signals[1].claim.summary.fa",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "signals[1].keywords[0]",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "signals[3].claim.recommended_action.en",
+          "phrase": "Home Affairs"
+        },
+        {
+          "path": "signals[3].claim.recommended_action.fa",
+          "phrase": "Home Affairs"
+        },
+        {
+          "path": "signals[4].scope.entities[0].name",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[4].claim.summary.en",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[4].claim.summary.en",
+          "phrase": "Graduate Diplomas"
+        },
+        {
+          "path": "signals[4].claim.summary.fa",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[4].claim.practical_impact.en",
+          "phrase": "Graduate Diplomas"
+        },
+        {
+          "path": "signals[4].claim.practical_impact.fa",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[4].claim.known_workaround",
+          "phrase": "Graduate Diplomas"
+        },
+        {
+          "path": "signals[4].keywords[1]",
+          "phrase": "Graduate Diploma"
+        },
+        {
+          "path": "signals[6].claim.title.en",
+          "phrase": "Horizon Europe"
+        },
+        {
+          "path": "signals[6].claim.title.fa",
+          "phrase": "Horizon Europe"
+        },
+        {
+          "path": "signals[6].claim.summary.en",
+          "phrase": "Horizon Europe"
+        },
+        {
+          "path": "signals[6].claim.summary.fa",
+          "phrase": "Horizon Europe"
+        },
+        {
+          "path": "signals[6].claim.recommended_action.en",
+          "phrase": "Track Australian"
+        },
+        {
+          "path": "signals[6].verification.official.note",
+          "phrase": "Horizon Europe"
+        },
+        {
+          "path": "signals[6].keywords[0]",
+          "phrase": "Horizon Europe"
+        },
+        {
+          "path": "signals[8].scope.entities[0].name",
+          "phrase": "Core Skills"
+        },
+        {
+          "path": "signals[8].scope.entities[0].name",
+          "phrase": "Specialist Skills"
+        },
+        {
+          "path": "signals[8].claim.summary.en",
+          "phrase": "Core Skills"
+        },
+        {
+          "path": "signals[8].claim.summary.en",
+          "phrase": "Specialist Skills"
+        },
+        {
+          "path": "signals[8].claim.summary.fa",
+          "phrase": "Core Skills"
+        },
+        {
+          "path": "signals[8].claim.summary.fa",
+          "phrase": "Specialist Skills"
+        },
+        {
+          "path": "signals[8].keywords[2]",
+          "phrase": "Core Skills"
+        },
+        {
+          "path": "signals[8].keywords[3]",
+          "phrase": "Specialist Skills"
+        },
+        {
+          "path": "signals[9].verification.official.note",
+          "phrase": "Current Home"
+        },
+        {
+          "path": "signals[10].claim.summary.fa",
+          "phrase": "Nomination Conditions"
+        },
+        {
+          "path": "signals[10].keywords[3]",
+          "phrase": "Nomination Conditions"
+        },
+        {
+          "path": "signals[11].scope.applicants.other_conditions[0]",
+          "phrase": "Equivalent Transnational"
+        },
+        {
+          "path": "signals[11].claim.title.en",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "signals[11].claim.title.fa",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "signals[11].claim.recommended_action.en",
+          "phrase": "Document Australia"
+        },
+        {
+          "path": "signals[11].verification.official.note",
+          "phrase": "Home Affairs"
+        },
+        {
+          "path": "signals[11].keywords[1]",
+          "phrase": "Transnational Education"
+        },
+        {
+          "path": "signals[11].keywords[2]",
+          "phrase": "Genuine Student"
+        },
+        {
+          "path": "quality.checks.resolved_or_pending_status_checked.note",
+          "phrase": "Speculative August"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_australia_work_community_signals_v3 (1).json",
+      "reviewed_titlecase_matches": 10,
+      "matches": [
+        {
+          "path": "evidence[0].summary.en",
+          "phrase": "Civil Engineering"
+        },
+        {
+          "path": "evidence[20].summary.en",
+          "phrase": "Industrial Engineering"
+        },
+        {
+          "path": "evidence[21].summary.en",
+          "phrase": "Civil Engineering"
+        },
+        {
+          "path": "evidence[21].summary.fa",
+          "phrase": "Civil Engineering"
+        },
+        {
+          "path": "evidence[22].summary.en",
+          "phrase": "Web Administrator"
+        },
+        {
+          "path": "evidence[22].summary.fa",
+          "phrase": "Web Administrator"
+        },
+        {
+          "path": "signals[0].claim.summary.en",
+          "phrase": "Civil Engineering"
+        },
+        {
+          "path": "signals[0].claim.known_workaround",
+          "phrase": "Improving English"
+        },
+        {
+          "path": "signals[5].keywords[5]",
+          "phrase": "Engineers Australia"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Home Affairs"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_australia_work_community_signals_v3.json",
+      "reviewed_titlecase_matches": 10,
+      "matches": [
+        {
+          "path": "evidence[0].summary.en",
+          "phrase": "Civil Engineering"
+        },
+        {
+          "path": "evidence[20].summary.en",
+          "phrase": "Industrial Engineering"
+        },
+        {
+          "path": "evidence[21].summary.en",
+          "phrase": "Civil Engineering"
+        },
+        {
+          "path": "evidence[21].summary.fa",
+          "phrase": "Civil Engineering"
+        },
+        {
+          "path": "evidence[22].summary.en",
+          "phrase": "Web Administrator"
+        },
+        {
+          "path": "evidence[22].summary.fa",
+          "phrase": "Web Administrator"
+        },
+        {
+          "path": "signals[0].claim.summary.en",
+          "phrase": "Civil Engineering"
+        },
+        {
+          "path": "signals[0].claim.known_workaround",
+          "phrase": "Improving English"
+        },
+        {
+          "path": "signals[5].keywords[5]",
+          "phrase": "Engineers Australia"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Home Affairs"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_belgium_migration_community_signals_v3.json",
+      "reviewed_titlecase_matches": 37,
+      "matches": [
+        {
+          "path": "evidence[5].summary.en",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[5].summary.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[6].summary.en",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[6].summary.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[7].summary.en",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[7].summary.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[8].summary.en",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[8].summary.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[9].summary.en",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[9].summary.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[10].summary.en",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[10].summary.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[11].summary.en",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[11].summary.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[14].summary.en",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[14].summary.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "evidence[27].summary.en",
+          "phrase": "National Register"
+        },
+        {
+          "path": "evidence[27].summary.fa",
+          "phrase": "National Register"
+        },
+        {
+          "path": "evidence[34].summary.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "signals[0].verification.official.note",
+          "phrase": "Current Belgian"
+        },
+        {
+          "path": "signals[1].claim.title.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "signals[1].keywords[0]",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "signals[2].claim.title.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "signals[2].claim.who_should_care.en",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "signals[2].claim.who_should_care.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "signals[2].claim.known_workaround",
+          "phrase": "Temporary Annex"
+        },
+        {
+          "path": "signals[2].keywords[0]",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "signals[3].claim.title.en",
+          "phrase": "The Belgian"
+        },
+        {
+          "path": "signals[3].claim.title.fa",
+          "phrase": "Search Year"
+        },
+        {
+          "path": "signals[3].claim.summary.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "signals[3].keywords[3]",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "signals[5].verification.official.note",
+          "phrase": "Current Belgian"
+        },
+        {
+          "path": "signals[8].claim.summary.fa",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "signals[9].claim.title.en",
+          "phrase": "The Belgian"
+        },
+        {
+          "path": "quality.checks.duplicates_merged.note",
+          "phrase": "Single Permit"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Single Permit"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_build_abroad_community_signals_v3.json",
+      "reviewed_titlecase_matches": 16,
+      "matches": [
+        {
+          "path": "sources[0].name",
+          "phrase": "Build Abroad"
+        },
+        {
+          "path": "signals[0].verification.community.note",
+          "phrase": "Build Abroad"
+        },
+        {
+          "path": "signals[1].verification.official.note",
+          "phrase": "Current Armenian"
+        },
+        {
+          "path": "signals[1].verification.community.note",
+          "phrase": "Build Abroad"
+        },
+        {
+          "path": "signals[2].verification.official.note",
+          "phrase": "Current Armenian"
+        },
+        {
+          "path": "signals[2].verification.community.note",
+          "phrase": "Build Abroad"
+        },
+        {
+          "path": "signals[3].verification.community.note",
+          "phrase": "Build Abroad"
+        },
+        {
+          "path": "signals[4].claim.title.en",
+          "phrase": "For Iranian"
+        },
+        {
+          "path": "signals[4].verification.community.note",
+          "phrase": "Build Abroad"
+        },
+        {
+          "path": "signals[5].verification.community.note",
+          "phrase": "Build Abroad"
+        },
+        {
+          "path": "signals[6].verification.community.note",
+          "phrase": "Build Abroad"
+        },
+        {
+          "path": "signals[7].verification.community.note",
+          "phrase": "Build Abroad"
+        },
+        {
+          "path": "signals[8].verification.community.note",
+          "phrase": "Build Abroad"
+        },
+        {
+          "path": "signals[9].verification.community.note",
+          "phrase": "Build Abroad"
+        },
+        {
+          "path": "quality.checks.duplicates_merged.note",
+          "phrase": "Repeated Armenia"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_canada_news_community_signals_v3.json",
+      "reviewed_titlecase_matches": 60,
+      "matches": [
+        {
+          "path": "sources[0].name",
+          "phrase": "Canada News"
+        },
+        {
+          "path": "evidence[0].summary.fa",
+          "phrase": "Open Work"
+        },
+        {
+          "path": "evidence[3].summary.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "evidence[7].summary.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[7].summary.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[13].summary.en",
+          "phrase": "Grandparents Program"
+        },
+        {
+          "path": "evidence[15].summary.en",
+          "phrase": "Super Visa"
+        },
+        {
+          "path": "evidence[15].summary.fa",
+          "phrase": "Super Visa"
+        },
+        {
+          "path": "evidence[16].summary.en",
+          "phrase": "Francophone Minority"
+        },
+        {
+          "path": "evidence[16].summary.en",
+          "phrase": "Community Student"
+        },
+        {
+          "path": "evidence[17].summary.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[17].summary.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[18].summary.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "evidence[21].summary.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "evidence[22].summary.fa",
+          "phrase": "Procedural Fairness"
+        },
+        {
+          "path": "evidence[24].summary.fa",
+          "phrase": "Public Policy"
+        },
+        {
+          "path": "evidence[24].summary.fa",
+          "phrase": "Work Permit"
+        },
+        {
+          "path": "evidence[24].summary.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "evidence[25].summary.fa",
+          "phrase": "Work Permit"
+        },
+        {
+          "path": "evidence[26].summary.fa",
+          "phrase": "Work Permit"
+        },
+        {
+          "path": "evidence[26].summary.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[0].claim.title.fa",
+          "phrase": "Open Work"
+        },
+        {
+          "path": "signals[0].claim.practical_impact.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[0].claim.practical_impact.fa",
+          "phrase": "Work Permit"
+        },
+        {
+          "path": "signals[1].claim.title.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[2].claim.summary.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[2].claim.summary.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[2].claim.who_should_care.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[2].claim.who_should_care.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[2].verification.official.note",
+          "phrase": "The Express"
+        },
+        {
+          "path": "signals[2].keywords[0]",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[5].scope.routes.codes[1]",
+          "phrase": "Super Visa"
+        },
+        {
+          "path": "signals[5].claim.title.en",
+          "phrase": "Grandparents Program"
+        },
+        {
+          "path": "signals[5].claim.title.en",
+          "phrase": "Super Visa"
+        },
+        {
+          "path": "signals[5].claim.title.fa",
+          "phrase": "Super Visa"
+        },
+        {
+          "path": "signals[5].claim.summary.en",
+          "phrase": "Super Visa"
+        },
+        {
+          "path": "signals[5].claim.summary.fa",
+          "phrase": "Super Visa"
+        },
+        {
+          "path": "signals[5].claim.recommended_action.en",
+          "phrase": "Super Visa"
+        },
+        {
+          "path": "signals[5].claim.recommended_action.fa",
+          "phrase": "Super Visa"
+        },
+        {
+          "path": "signals[5].claim.known_workaround",
+          "phrase": "Super Visa"
+        },
+        {
+          "path": "signals[5].verification.official.note",
+          "phrase": "Super Visa"
+        },
+        {
+          "path": "signals[5].keywords[3]",
+          "phrase": "Super Visa"
+        },
+        {
+          "path": "signals[6].claim.summary.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[6].claim.summary.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[7].claim.title.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[7].claim.who_should_care.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[8].claim.who_should_care.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[9].claim.title.fa",
+          "phrase": "Work Permit"
+        },
+        {
+          "path": "signals[9].claim.title.fa",
+          "phrase": "Public Policy"
+        },
+        {
+          "path": "signals[9].claim.title.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[9].claim.summary.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[9].claim.summary.fa",
+          "phrase": "Work Permit"
+        },
+        {
+          "path": "signals[9].claim.practical_impact.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "signals[9].claim.who_should_care.fa",
+          "phrase": "Work Permit"
+        },
+        {
+          "path": "signals[9].claim.recommended_action.fa",
+          "phrase": "Work Permit"
+        },
+        {
+          "path": "signals[9].verification.official.note",
+          "phrase": "The Temporary"
+        },
+        {
+          "path": "signals[9].verification.official.note",
+          "phrase": "Public Policy"
+        },
+        {
+          "path": "signals[10].claim.summary.fa",
+          "phrase": "Work Permit"
+        },
+        {
+          "path": "signals[10].claim.summary.fa",
+          "phrase": "Study Permit"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_canada_work_community_signals_v3.json",
+      "reviewed_titlecase_matches": 39,
+      "matches": [
+        {
+          "path": "evidence[15].summary.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[15].summary.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[17].summary.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[17].summary.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[19].summary.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[19].summary.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[26].summary.en",
+          "phrase": "Job Bank"
+        },
+        {
+          "path": "evidence[26].summary.fa",
+          "phrase": "Job Bank"
+        },
+        {
+          "path": "evidence[38].summary.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[38].summary.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[39].summary.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[39].summary.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[41].summary.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[41].summary.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[42].summary.en",
+          "phrase": "Federal Skilled"
+        },
+        {
+          "path": "evidence[42].summary.fa",
+          "phrase": "Federal Skilled"
+        },
+        {
+          "path": "signals[3].claim.summary.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[3].claim.summary.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[3].keywords[3]",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[4].claim.title.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[4].claim.title.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[4].claim.who_should_care.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[4].claim.who_should_care.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[4].review.reason",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[4].keywords[0]",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[6].claim.summary.en",
+          "phrase": "Job Bank"
+        },
+        {
+          "path": "signals[6].claim.summary.fa",
+          "phrase": "Job Bank"
+        },
+        {
+          "path": "signals[6].claim.known_workaround",
+          "phrase": "Job Bank"
+        },
+        {
+          "path": "signals[6].keywords[2]",
+          "phrase": "Job Bank"
+        },
+        {
+          "path": "signals[9].claim.title.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[9].claim.title.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[9].claim.who_should_care.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[9].claim.who_should_care.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[9].assessment.confidence.rationale",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[9].verification.official.note",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[9].review.reason",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[9].keywords[0]",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "quality.checks.duplicates_merged.note",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_china_news_channel_signals_v3.json",
+      "reviewed_titlecase_matches": 9,
+      "matches": [
+        {
+          "path": "evidence[3].summary.en",
+          "phrase": "Xiamen University"
+        },
+        {
+          "path": "evidence[3].summary.fa",
+          "phrase": "Xiamen University"
+        },
+        {
+          "path": "evidence[5].summary.en",
+          "phrase": "Chinese Government"
+        },
+        {
+          "path": "evidence[5].summary.en",
+          "phrase": "Shanghai Government"
+        },
+        {
+          "path": "evidence[5].summary.fa",
+          "phrase": "Shanghai Government"
+        },
+        {
+          "path": "evidence[6].summary.en",
+          "phrase": "Donghua University"
+        },
+        {
+          "path": "evidence[14].summary.en",
+          "phrase": "The Donghua"
+        },
+        {
+          "path": "signals[1].claim.who_should_care.en",
+          "phrase": "All China"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_china_study_community_signals_v3_083403.json",
+      "reviewed_titlecase_matches": 10,
+      "matches": [
+        {
+          "path": "evidence[1].summary.en",
+          "phrase": "International Admissions"
+        },
+        {
+          "path": "evidence[1].summary.fa",
+          "phrase": "International Admissions"
+        },
+        {
+          "path": "evidence[12].summary.en",
+          "phrase": "International Admissions"
+        },
+        {
+          "path": "evidence[12].summary.fa",
+          "phrase": "International Admissions"
+        },
+        {
+          "path": "signals[2].claim.who_should_care.en",
+          "phrase": "All China"
+        },
+        {
+          "path": "signals[2].keywords[1]",
+          "phrase": "International Admissions"
+        },
+        {
+          "path": "signals[4].verification.official.note",
+          "phrase": "Current Chinese"
+        },
+        {
+          "path": "signals[8].claim.recommended_action.en",
+          "phrase": "Treat Chinese"
+        },
+        {
+          "path": "signals[8].verification.official.note",
+          "phrase": "Current Chinese"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_china_study_community_signals_v3.json",
+      "reviewed_titlecase_matches": 10,
+      "matches": [
+        {
+          "path": "evidence[1].summary.en",
+          "phrase": "International Admissions"
+        },
+        {
+          "path": "evidence[1].summary.fa",
+          "phrase": "International Admissions"
+        },
+        {
+          "path": "evidence[12].summary.en",
+          "phrase": "International Admissions"
+        },
+        {
+          "path": "evidence[12].summary.fa",
+          "phrase": "International Admissions"
+        },
+        {
+          "path": "signals[2].claim.who_should_care.en",
+          "phrase": "All China"
+        },
+        {
+          "path": "signals[2].keywords[1]",
+          "phrase": "International Admissions"
+        },
+        {
+          "path": "signals[4].verification.official.note",
+          "phrase": "Current Chinese"
+        },
+        {
+          "path": "signals[8].claim.recommended_action.en",
+          "phrase": "Treat Chinese"
+        },
+        {
+          "path": "signals[8].verification.official.note",
+          "phrase": "Current Chinese"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_china_work_community_signals_v3.json",
+      "reviewed_titlecase_matches": 7,
+      "matches": [
+        {
+          "path": "signals[0].claim.title.en",
+          "phrase": "Direct China"
+        },
+        {
+          "path": "signals[1].claim.recommended_action.en",
+          "phrase": "Treat Chinese"
+        },
+        {
+          "path": "signals[4].verification.official.note",
+          "phrase": "Current China"
+        },
+        {
+          "path": "signals[5].claim.title.en",
+          "phrase": "For Iran"
+        },
+        {
+          "path": "signals[5].verification.official.note",
+          "phrase": "Current Chinese"
+        },
+        {
+          "path": "signals[7].verification.official.note",
+          "phrase": "Current Chinese"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_europe_phd_signals_result9.json",
+      "reviewed_titlecase_matches": 10,
+      "matches": [
+        {
+          "path": "source",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "source",
+          "phrase": "Signal Candidate"
+        },
+        {
+          "path": "extractionMethod.validation",
+          "phrase": "Community Signal"
+        },
+        {
+          "path": "signals[0].entities[0]",
+          "phrase": "Deakin University"
+        },
+        {
+          "path": "signals[0].entities[1]",
+          "phrase": "Griffith University"
+        },
+        {
+          "path": "signals[0].evidence[1].claim",
+          "phrase": "Australian Government"
+        },
+        {
+          "path": "signals[1].entity",
+          "phrase": "Eindhoven University"
+        },
+        {
+          "path": "signals[2].evidence[2].excerpt",
+          "phrase": "Sharif University"
+        },
+        {
+          "path": "signals[2].evidence[2].excerpt",
+          "phrase": "Amir Kabir"
+        },
+        {
+          "path": "signals[5].entities[2]",
+          "phrase": "Duolingo English"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_france_signals_result16.json",
+      "reviewed_titlecase_matches": 17,
+      "matches": [
+        {
+          "path": "source",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "source",
+          "phrase": "Signal Candidate"
+        },
+        {
+          "path": "extractionMethod.validation",
+          "phrase": "Community Signal"
+        },
+        {
+          "path": "signals[0].summary",
+          "phrase": "Campus France"
+        },
+        {
+          "path": "signals[0].evidence[2].claim",
+          "phrase": "Campus France"
+        },
+        {
+          "path": "signals[2].topic",
+          "phrase": "Campus France"
+        },
+        {
+          "path": "signals[2].entity",
+          "phrase": "Campus France"
+        },
+        {
+          "path": "signals[2].communityEvidence.countingMethod",
+          "phrase": "Campus France"
+        },
+        {
+          "path": "signals[2].summary",
+          "phrase": "Campus France"
+        },
+        {
+          "path": "signals[2].evidence[1].claim",
+          "phrase": "Campus France"
+        },
+        {
+          "path": "signals[2].evidence[2].claim",
+          "phrase": "Campus France"
+        },
+        {
+          "path": "signals[3].entity",
+          "phrase": "Campus France"
+        },
+        {
+          "path": "signals[3].summary",
+          "phrase": "Campus France"
+        },
+        {
+          "path": "signals[3].evidence[2].claim",
+          "phrase": "Campus France"
+        },
+        {
+          "path": "signals[5].entities[1]",
+          "phrase": "Duolingo English"
+        },
+        {
+          "path": "signals[5].summary",
+          "phrase": "Separate September"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Campus France"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_german_language_community_signals_v3.json",
+      "reviewed_titlecase_matches": 1,
+      "matches": [
+        {
+          "path": "signals[8].claim.title.en",
+          "phrase": "Online German"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_germany_ausbildung_community_signals_v3.json",
+      "reviewed_titlecase_matches": 3,
+      "matches": [
+        {
+          "path": "sources[0].name",
+          "phrase": "Germany Aus"
+        },
+        {
+          "path": "signals[3].claim.title.en",
+          "phrase": "Low Ausbildung"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_germany_college_community_signals_v3.json",
+      "reviewed_titlecase_matches": 3,
+      "matches": [
+        {
+          "path": "signals[0].verification.official.note",
+          "phrase": "Current Tehran"
+        },
+        {
+          "path": "signals[8].verification.official.note",
+          "phrase": "Current Studienkolleg"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_germany_community_signals_v3.json",
+      "reviewed_titlecase_matches": 0,
+      "matches": []
+    },
+    {
+      "file": "hamrah_germany_community_signals.json",
+      "reviewed_titlecase_matches": 7,
+      "matches": [
+        {
+          "path": "signals[0].official_verification.note",
+          "phrase": "German Foreign"
+        },
+        {
+          "path": "signals[5].title",
+          "phrase": "Limited German"
+        },
+        {
+          "path": "signals[5].recommended_action",
+          "phrase": "Treat German"
+        },
+        {
+          "path": "signals[6].applicant_scope.other_conditions[0]",
+          "phrase": "German Embassy"
+        },
+        {
+          "path": "signals[6].entities[0].name",
+          "phrase": "German Embassy"
+        },
+        {
+          "path": "signals[6].keywords[2]",
+          "phrase": "German Embassy"
+        },
+        {
+          "path": "watchlist[0].reason",
+          "phrase": "The September"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_germany_news_community_signals_v3.json",
+      "reviewed_titlecase_matches": 30,
+      "matches": [
+        {
+          "path": "sources[0].name",
+          "phrase": "Germany News"
+        },
+        {
+          "path": "evidence[1].summary.en",
+          "phrase": "German Foreign"
+        },
+        {
+          "path": "evidence[15].summary.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[15].summary.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[16].summary.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[16].summary.fa",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[18].summary.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[18].summary.fa",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[19].summary.en",
+          "phrase": "German Foreign"
+        },
+        {
+          "path": "evidence[24].summary.en",
+          "phrase": "The German"
+        },
+        {
+          "path": "evidence[24].summary.en",
+          "phrase": "Foreign Office"
+        },
+        {
+          "path": "signals[0].claim.summary.en",
+          "phrase": "German Foreign"
+        },
+        {
+          "path": "signals[0].assessment.confidence.rationale",
+          "phrase": "German Foreign"
+        },
+        {
+          "path": "signals[0].keywords[0]",
+          "phrase": "Consular Services"
+        },
+        {
+          "path": "signals[2].claim.recommended_action.en",
+          "phrase": "Treat Tehran"
+        },
+        {
+          "path": "signals[2].verification.official.note",
+          "phrase": "Current Tehran"
+        },
+        {
+          "path": "signals[5].claim.title.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].claim.title.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].claim.who_should_care.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].claim.who_should_care.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].claim.recommended_action.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].claim.known_workaround",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].verification.official.note",
+          "phrase": "Current Make"
+        },
+        {
+          "path": "signals[5].keywords[0]",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[6].claim.title.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[6].claim.title.fa",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[6].keywords[0]",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[8].claim.summary.en",
+          "phrase": "Foreign Office"
+        },
+        {
+          "path": "quality.checks.contradictions_checked.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_germany_opportunity_card_community_signals_v3.json",
+      "reviewed_titlecase_matches": 39,
+      "matches": [
+        {
+          "path": "evidence[0].summary.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[1].summary.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[1].summary.fa",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[2].summary.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[4].summary.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[6].summary.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[6].summary.fa",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[15].summary.en",
+          "phrase": "The Turkey"
+        },
+        {
+          "path": "evidence[16].summary.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[32].summary.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "evidence[35].summary.en",
+          "phrase": "The September"
+        },
+        {
+          "path": "signals[0].claim.summary.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[0].claim.summary.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[0].claim.who_should_care.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[0].claim.recommended_action.en",
+          "phrase": "Treat Tehran"
+        },
+        {
+          "path": "signals[0].verification.official.note",
+          "phrase": "Current Tehran"
+        },
+        {
+          "path": "signals[0].verification.official.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[0].verification.community.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[1].claim.title.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[1].claim.who_should_care.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[1].verification.community.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[2].claim.title.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[2].verification.community.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[3].claim.summary.en",
+          "phrase": "The Italy"
+        },
+        {
+          "path": "signals[3].verification.community.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[4].claim.title.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[4].claim.who_should_care.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[4].verification.community.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[5].verification.community.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[6].claim.summary.en",
+          "phrase": "One Iranian"
+        },
+        {
+          "path": "signals[6].claim.who_should_care.en",
+          "phrase": "Iranian Opportunity"
+        },
+        {
+          "path": "signals[6].verification.community.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[7].verification.community.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[8].verification.community.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[9].verification.community.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "quality.checks.duplicates_merged.note",
+          "phrase": "Repeated Iran"
+        },
+        {
+          "path": "quality.checks.contradictions_checked.note",
+          "phrase": "The July"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Opportunity Card"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_germany_work_community_signals_v3.json",
+      "reviewed_titlecase_matches": 43,
+      "matches": [
+        {
+          "path": "evidence[1].summary.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[1].summary.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[16].summary.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[16].summary.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[16].summary.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[16].summary.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[21].summary.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[21].summary.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[22].summary.en",
+          "phrase": "Germany Blue"
+        },
+        {
+          "path": "evidence[22].summary.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[23].summary.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[23].summary.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[25].summary.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[25].summary.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "evidence[26].summary.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[5].claim.title.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].claim.title.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].claim.summary.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].claim.summary.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].claim.summary.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].claim.summary.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].claim.who_should_care.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].claim.who_should_care.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].verification.official.note",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[5].keywords[0]",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[8].claim.summary.en",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[8].claim.summary.fa",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[8].keywords[2]",
+          "phrase": "Blue Card"
+        },
+        {
+          "path": "signals[9].claim.title.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[9].claim.summary.en",
+          "phrase": "Opportunity Cards"
+        },
+        {
+          "path": "signals[9].claim.who_should_care.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[9].claim.who_should_care.fa",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[9].claim.who_should_care.fa",
+          "phrase": "Job Seeker"
+        },
+        {
+          "path": "signals[9].claim.recommended_action.en",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[9].claim.recommended_action.fa",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[9].claim.recommended_action.fa",
+          "phrase": "Job Seeker"
+        },
+        {
+          "path": "signals[9].assessment.confidence.rationale",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[9].verification.official.note",
+          "phrase": "Current Iran"
+        },
+        {
+          "path": "signals[9].verification.official.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "signals[9].keywords[0]",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "quality.checks.contradictions_checked.note",
+          "phrase": "Opportunity Card"
+        },
+        {
+          "path": "quality.checks.contradictions_checked.note",
+          "phrase": "Job Seeker"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_humanities_channel_signals_v3.json",
+      "reviewed_titlecase_matches": 9,
+      "matches": [
+        {
+          "path": "evidence[0].summary.en",
+          "phrase": "Travel Ban"
+        },
+        {
+          "path": "evidence[0].summary.fa",
+          "phrase": "Travel Ban"
+        },
+        {
+          "path": "evidence[3].summary.en",
+          "phrase": "Diversity Visa"
+        },
+        {
+          "path": "signals[0].scope.destination.country",
+          "phrase": "United States"
+        },
+        {
+          "path": "signals[0].claim.summary.en",
+          "phrase": "Travel Ban"
+        },
+        {
+          "path": "signals[0].claim.summary.fa",
+          "phrase": "Travel Ban"
+        },
+        {
+          "path": "signals[0].keywords[0]",
+          "phrase": "United States"
+        },
+        {
+          "path": "signals[0].keywords[1]",
+          "phrase": "Travel Ban"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_humanities_community_signals_v3.json",
+      "reviewed_titlecase_matches": 19,
+      "matches": [
+        {
+          "path": "evidence[36].summary.en",
+          "phrase": "Middle Eastern"
+        },
+        {
+          "path": "evidence[37].summary.en",
+          "phrase": "Middle East"
+        },
+        {
+          "path": "signals[0].verification.community.note",
+          "phrase": "Humanities Telegram"
+        },
+        {
+          "path": "signals[1].claim.summary.en",
+          "phrase": "North America"
+        },
+        {
+          "path": "signals[1].verification.community.note",
+          "phrase": "Humanities Telegram"
+        },
+        {
+          "path": "signals[2].verification.community.note",
+          "phrase": "Humanities Telegram"
+        },
+        {
+          "path": "signals[3].verification.community.note",
+          "phrase": "Humanities Telegram"
+        },
+        {
+          "path": "signals[4].claim.title.en",
+          "phrase": "For Germany"
+        },
+        {
+          "path": "signals[4].verification.official.note",
+          "phrase": "Current German"
+        },
+        {
+          "path": "signals[4].verification.community.note",
+          "phrase": "Humanities Telegram"
+        },
+        {
+          "path": "signals[5].verification.community.note",
+          "phrase": "Humanities Telegram"
+        },
+        {
+          "path": "signals[6].verification.community.note",
+          "phrase": "Humanities Telegram"
+        },
+        {
+          "path": "signals[7].verification.official.note",
+          "phrase": "Current Iranian"
+        },
+        {
+          "path": "signals[7].verification.community.note",
+          "phrase": "Humanities Telegram"
+        },
+        {
+          "path": "signals[8].verification.community.note",
+          "phrase": "Humanities Telegram"
+        },
+        {
+          "path": "signals[9].claim.summary.en",
+          "phrase": "Middle Eastern"
+        },
+        {
+          "path": "signals[9].verification.community.note",
+          "phrase": "Humanities Telegram"
+        },
+        {
+          "path": "signals[9].keywords[1]",
+          "phrase": "Middle East"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_ielts_community_signals_v3.json",
+      "reviewed_titlecase_matches": 9,
+      "matches": [
+        {
+          "path": "evidence[6].summary.en",
+          "phrase": "British Council"
+        },
+        {
+          "path": "evidence[6].summary.fa",
+          "phrase": "British Council"
+        },
+        {
+          "path": "evidence[24].summary.en",
+          "phrase": "Official Guide"
+        },
+        {
+          "path": "evidence[24].summary.fa",
+          "phrase": "Official Guide"
+        },
+        {
+          "path": "signals[5].claim.recommended_action.en",
+          "phrase": "Anchor Listening"
+        },
+        {
+          "path": "signals[7].keywords[4]",
+          "phrase": "One Skill"
+        },
+        {
+          "path": "signals[8].claim.title.en",
+          "phrase": "For Speaking"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "British Council"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_italy_candidate_signals.json",
+      "reviewed_titlecase_matches": 5,
+      "matches": [
+        {
+          "path": "source",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "source",
+          "phrase": "Signal Candidate"
+        },
+        {
+          "path": "signals[3].entity",
+          "phrase": "Duolingo English"
+        },
+        {
+          "path": "signals[3].summary",
+          "phrase": "Duolingo English"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Community Signal"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_italy_signals_result8.json",
+      "reviewed_titlecase_matches": 5,
+      "matches": [
+        {
+          "path": "source",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "source",
+          "phrase": "Signal Candidate"
+        },
+        {
+          "path": "extractionMethod.validation",
+          "phrase": "Community Signal"
+        },
+        {
+          "path": "signals[4].entity",
+          "phrase": "Duolingo English"
+        },
+        {
+          "path": "signals[4].assessment.scopeNote",
+          "phrase": "Not Italy"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_japan_migration_community_signals_v3 (1).json",
+      "reviewed_titlecase_matches": 31,
+      "matches": [
+        {
+          "path": "evidence[4].summary.en",
+          "phrase": "Tehran University"
+        },
+        {
+          "path": "evidence[4].summary.en",
+          "phrase": "Japan Foundation"
+        },
+        {
+          "path": "evidence[32].summary.en",
+          "phrase": "Employment System"
+        },
+        {
+          "path": "evidence[32].summary.en",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "evidence[32].summary.fa",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "evidence[33].summary.en",
+          "phrase": "Specified Skilled"
+        },
+        {
+          "path": "evidence[33].summary.fa",
+          "phrase": "Specified Skilled"
+        },
+        {
+          "path": "signals[0].claim.recommended_action.en",
+          "phrase": "Start Japanese"
+        },
+        {
+          "path": "signals[0].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[1].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[2].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[3].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[4].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[5].claim.recommended_action.en",
+          "phrase": "Build Japanese"
+        },
+        {
+          "path": "signals[5].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[6].verification.official.note",
+          "phrase": "Current Japanese"
+        },
+        {
+          "path": "signals[6].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[7].verification.official.note",
+          "phrase": "Current Japanese"
+        },
+        {
+          "path": "signals[7].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[8].claim.title.en",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "signals[8].claim.title.fa",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "signals[8].claim.summary.en",
+          "phrase": "Specified Skilled"
+        },
+        {
+          "path": "signals[8].claim.summary.fa",
+          "phrase": "Specified Skilled"
+        },
+        {
+          "path": "signals[8].verification.official.note",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "signals[8].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[8].keywords[0]",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "signals[8].keywords[2]",
+          "phrase": "Specified Skilled"
+        },
+        {
+          "path": "signals[9].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Specified Skilled"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_japan_migration_community_signals_v3.json",
+      "reviewed_titlecase_matches": 31,
+      "matches": [
+        {
+          "path": "evidence[4].summary.en",
+          "phrase": "Tehran University"
+        },
+        {
+          "path": "evidence[4].summary.en",
+          "phrase": "Japan Foundation"
+        },
+        {
+          "path": "evidence[32].summary.en",
+          "phrase": "Employment System"
+        },
+        {
+          "path": "evidence[32].summary.en",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "evidence[32].summary.fa",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "evidence[33].summary.en",
+          "phrase": "Specified Skilled"
+        },
+        {
+          "path": "evidence[33].summary.fa",
+          "phrase": "Specified Skilled"
+        },
+        {
+          "path": "signals[0].claim.recommended_action.en",
+          "phrase": "Start Japanese"
+        },
+        {
+          "path": "signals[0].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[1].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[2].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[3].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[4].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[5].claim.recommended_action.en",
+          "phrase": "Build Japanese"
+        },
+        {
+          "path": "signals[5].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[6].verification.official.note",
+          "phrase": "Current Japanese"
+        },
+        {
+          "path": "signals[6].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[7].verification.official.note",
+          "phrase": "Current Japanese"
+        },
+        {
+          "path": "signals[7].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[8].claim.title.en",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "signals[8].claim.title.fa",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "signals[8].claim.summary.en",
+          "phrase": "Specified Skilled"
+        },
+        {
+          "path": "signals[8].claim.summary.fa",
+          "phrase": "Specified Skilled"
+        },
+        {
+          "path": "signals[8].verification.official.note",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "signals[8].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "signals[8].keywords[0]",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "signals[8].keywords[2]",
+          "phrase": "Specified Skilled"
+        },
+        {
+          "path": "signals[9].verification.community.note",
+          "phrase": "Japan Telegram"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Ikusei Shuro"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Specified Skilled"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_lookup_canada_migration_signals_v3.json",
+      "reviewed_titlecase_matches": 28,
+      "matches": [
+        {
+          "path": "evidence[2].summary.fa",
+          "phrase": "Open Work"
+        },
+        {
+          "path": "evidence[24].summary.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[24].summary.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "evidence[28].summary.en",
+          "phrase": "Canada Start"
+        },
+        {
+          "path": "evidence[32].summary.en",
+          "phrase": "Judicial Review"
+        },
+        {
+          "path": "evidence[32].summary.en",
+          "phrase": "Federal Court"
+        },
+        {
+          "path": "evidence[32].summary.fa",
+          "phrase": "Judicial Review"
+        },
+        {
+          "path": "evidence[33].summary.en",
+          "phrase": "Federal Court"
+        },
+        {
+          "path": "signals[6].claim.title.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[6].claim.title.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[6].claim.who_should_care.en",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[6].claim.who_should_care.fa",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[6].verification.official.note",
+          "phrase": "Current Express"
+        },
+        {
+          "path": "signals[6].review.reason",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[6].keywords[0]",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "signals[7].claim.title.en",
+          "phrase": "Canada Start"
+        },
+        {
+          "path": "signals[8].claim.title.en",
+          "phrase": "Judicial Review"
+        },
+        {
+          "path": "signals[8].claim.title.fa",
+          "phrase": "Judicial Review"
+        },
+        {
+          "path": "signals[8].claim.summary.en",
+          "phrase": "Federal Court"
+        },
+        {
+          "path": "signals[8].claim.recommended_action.en",
+          "phrase": "Get Canada"
+        },
+        {
+          "path": "signals[8].claim.recommended_action.en",
+          "phrase": "Federal Court"
+        },
+        {
+          "path": "signals[8].verification.official.note",
+          "phrase": "Federal Court"
+        },
+        {
+          "path": "signals[8].keywords[0]",
+          "phrase": "Judicial Review"
+        },
+        {
+          "path": "signals[8].keywords[1]",
+          "phrase": "Federal Court"
+        },
+        {
+          "path": "quality.checks.duplicates_merged.note",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Express Entry"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Federal Court"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_medical_sciences_channel_signals_v3.json",
+      "reviewed_titlecase_matches": 20,
+      "matches": [
+        {
+          "path": "evidence[1].summary.en",
+          "phrase": "Travel Ban"
+        },
+        {
+          "path": "evidence[1].summary.fa",
+          "phrase": "Travel Ban"
+        },
+        {
+          "path": "evidence[4].summary.en",
+          "phrase": "New Zealand"
+        },
+        {
+          "path": "evidence[7].summary.en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "evidence[7].summary.fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].scope.destination.country",
+          "phrase": "United States"
+        },
+        {
+          "path": "signals[0].claim.title.fa",
+          "phrase": "Travel Ban"
+        },
+        {
+          "path": "signals[0].claim.summary.en",
+          "phrase": "From June"
+        },
+        {
+          "path": "signals[0].claim.summary.fa",
+          "phrase": "Travel Ban"
+        },
+        {
+          "path": "signals[0].keywords[0]",
+          "phrase": "United States"
+        },
+        {
+          "path": "signals[0].keywords[1]",
+          "phrase": "Travel Ban"
+        },
+        {
+          "path": "signals[3].claim.summary.en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].claim.summary.fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].claim.recommended_action.en",
+          "phrase": "Treat Chile"
+        },
+        {
+          "path": "signals[3].claim.recommended_action.en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].claim.recommended_action.fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].verification.official.note",
+          "phrase": "Current Chile"
+        },
+        {
+          "path": "signals[3].verification.official.note",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[3].keywords[2]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_medical_sciences_community_signals_v3.json",
+      "reviewed_titlecase_matches": 10,
+      "matches": [
+        {
+          "path": "evidence[10].summary.en",
+          "phrase": "German Approbation"
+        },
+        {
+          "path": "signals[0].scope.applicants.other_conditions[0]",
+          "phrase": "Iranian Ministry"
+        },
+        {
+          "path": "signals[0].claim.title.en",
+          "phrase": "For Iranian"
+        },
+        {
+          "path": "signals[0].verification.official.note",
+          "phrase": "Current Iranian"
+        },
+        {
+          "path": "signals[2].claim.summary.en",
+          "phrase": "German Approbation"
+        },
+        {
+          "path": "signals[5].verification.official.note",
+          "phrase": "Current Italian"
+        },
+        {
+          "path": "signals[6].verification.official.note",
+          "phrase": "Iranian Ministry"
+        },
+        {
+          "path": "signals[8].scope.destination.country",
+          "phrase": "United States"
+        },
+        {
+          "path": "quality.checks.official_vs_community_separated.note",
+          "phrase": "All Ministry"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_north_america_undergrad_community_signals_v3.json",
+      "reviewed_titlecase_matches": 53,
+      "matches": [
+        {
+          "path": "evidence[6].summary.en",
+          "phrase": "Common App"
+        },
+        {
+          "path": "evidence[6].summary.fa",
+          "phrase": "Common App"
+        },
+        {
+          "path": "evidence[13].summary.en",
+          "phrase": "Common App"
+        },
+        {
+          "path": "evidence[13].summary.fa",
+          "phrase": "Common App"
+        },
+        {
+          "path": "evidence[16].summary.en",
+          "phrase": "Common App"
+        },
+        {
+          "path": "evidence[16].summary.fa",
+          "phrase": "Common App"
+        },
+        {
+          "path": "evidence[17].summary.en",
+          "phrase": "Common App"
+        },
+        {
+          "path": "evidence[17].summary.fa",
+          "phrase": "Common App"
+        },
+        {
+          "path": "evidence[26].summary.en",
+          "phrase": "College Board"
+        },
+        {
+          "path": "evidence[26].summary.fa",
+          "phrase": "College Board"
+        },
+        {
+          "path": "evidence[33].summary.en",
+          "phrase": "Common App"
+        },
+        {
+          "path": "evidence[33].summary.fa",
+          "phrase": "Common App"
+        },
+        {
+          "path": "evidence[34].summary.en",
+          "phrase": "Document Evaluation"
+        },
+        {
+          "path": "evidence[34].summary.fa",
+          "phrase": "Document Evaluation"
+        },
+        {
+          "path": "signals[0].scope.destination.country",
+          "phrase": "United States"
+        },
+        {
+          "path": "signals[0].claim.practical_impact.en",
+          "phrase": "Common App"
+        },
+        {
+          "path": "signals[0].claim.practical_impact.fa",
+          "phrase": "Common App"
+        },
+        {
+          "path": "signals[0].verification.community.note",
+          "phrase": "North America"
+        },
+        {
+          "path": "signals[0].keywords[4]",
+          "phrase": "Common App"
+        },
+        {
+          "path": "signals[1].scope.destination.country",
+          "phrase": "United States"
+        },
+        {
+          "path": "signals[1].claim.title.en",
+          "phrase": "Common App"
+        },
+        {
+          "path": "signals[1].claim.title.fa",
+          "phrase": "Common App"
+        },
+        {
+          "path": "signals[1].verification.community.note",
+          "phrase": "North America"
+        },
+        {
+          "path": "signals[2].scope.destination.country",
+          "phrase": "United States"
+        },
+        {
+          "path": "signals[2].claim.practical_impact.en",
+          "phrase": "Submitting Common"
+        },
+        {
+          "path": "signals[2].claim.practical_impact.fa",
+          "phrase": "Common App"
+        },
+        {
+          "path": "signals[2].claim.who_should_care.en",
+          "phrase": "Regular Decision"
+        },
+        {
+          "path": "signals[2].claim.who_should_care.fa",
+          "phrase": "Regular Decision"
+        },
+        {
+          "path": "signals[2].verification.community.note",
+          "phrase": "North America"
+        },
+        {
+          "path": "signals[3].scope.destination.country",
+          "phrase": "United States"
+        },
+        {
+          "path": "signals[3].scope.process_stages[1]",
+          "phrase": "Common App"
+        },
+        {
+          "path": "signals[3].assessment.confidence.rationale",
+          "phrase": "Multiple Common"
+        },
+        {
+          "path": "signals[3].verification.community.note",
+          "phrase": "North America"
+        },
+        {
+          "path": "signals[3].keywords[3]",
+          "phrase": "Common App"
+        },
+        {
+          "path": "signals[4].scope.destination.country",
+          "phrase": "United States"
+        },
+        {
+          "path": "signals[4].verification.community.note",
+          "phrase": "North America"
+        },
+        {
+          "path": "signals[5].scope.destination.country",
+          "phrase": "United States"
+        },
+        {
+          "path": "signals[5].verification.community.note",
+          "phrase": "North America"
+        },
+        {
+          "path": "signals[6].scope.destination.country",
+          "phrase": "United States"
+        },
+        {
+          "path": "signals[6].claim.summary.en",
+          "phrase": "Official College"
+        },
+        {
+          "path": "signals[6].claim.summary.fa",
+          "phrase": "College Board"
+        },
+        {
+          "path": "signals[6].verification.community.note",
+          "phrase": "North America"
+        },
+        {
+          "path": "signals[6].keywords[3]",
+          "phrase": "College Board"
+        },
+        {
+          "path": "signals[7].scope.destination.country",
+          "phrase": "United States"
+        },
+        {
+          "path": "signals[7].verification.community.note",
+          "phrase": "North America"
+        },
+        {
+          "path": "signals[8].claim.title.en",
+          "phrase": "Common App"
+        },
+        {
+          "path": "signals[8].claim.title.fa",
+          "phrase": "Common App"
+        },
+        {
+          "path": "signals[8].claim.summary.en",
+          "phrase": "Common App"
+        },
+        {
+          "path": "signals[8].claim.summary.fa",
+          "phrase": "Common App"
+        },
+        {
+          "path": "signals[8].verification.community.note",
+          "phrase": "North America"
+        },
+        {
+          "path": "signals[9].scope.destination.country",
+          "phrase": "United States"
+        },
+        {
+          "path": "signals[9].verification.community.note",
+          "phrase": "North America"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_pargar_francaise_signals_20260916.json",
+      "reviewed_titlecase_matches": 3,
+      "matches": [
+        {
+          "path": "source",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "source",
+          "phrase": "Signal Candidate"
+        },
+        {
+          "path": "extractionMethod.validation",
+          "phrase": "Community Signal"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_russia_study_community_signals_v3.json",
+      "reviewed_titlecase_matches": 17,
+      "matches": [
+        {
+          "path": "evidence[0].summary.en",
+          "phrase": "Open Doors"
+        },
+        {
+          "path": "evidence[0].summary.fa",
+          "phrase": "Open Doors"
+        },
+        {
+          "path": "evidence[3].summary.en",
+          "phrase": "Open Doors"
+        },
+        {
+          "path": "evidence[3].summary.fa",
+          "phrase": "Open Doors"
+        },
+        {
+          "path": "evidence[10].summary.en",
+          "phrase": "Open Doors"
+        },
+        {
+          "path": "evidence[10].summary.fa",
+          "phrase": "Open Doors"
+        },
+        {
+          "path": "signals[0].claim.title.en",
+          "phrase": "Open Doors"
+        },
+        {
+          "path": "signals[0].claim.title.fa",
+          "phrase": "Open Doors"
+        },
+        {
+          "path": "signals[0].claim.summary.en",
+          "phrase": "Open Doors"
+        },
+        {
+          "path": "signals[0].claim.summary.en",
+          "phrase": "Open Doors"
+        },
+        {
+          "path": "signals[0].claim.summary.fa",
+          "phrase": "Open Doors"
+        },
+        {
+          "path": "signals[0].claim.summary.fa",
+          "phrase": "Open Doors"
+        },
+        {
+          "path": "signals[0].keywords[1]",
+          "phrase": "Open Doors"
+        },
+        {
+          "path": "signals[3].claim.known_workaround",
+          "phrase": "Accepted Russian"
+        },
+        {
+          "path": "signals[4].verification.official.note",
+          "phrase": "Current Russian"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Open Doors"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_scandinavia_community_signals_v3.json",
+      "reviewed_titlecase_matches": 31,
+      "matches": [
+        {
+          "path": "evidence[0].summary.en",
+          "phrase": "University Admissions"
+        },
+        {
+          "path": "evidence[0].summary.fa",
+          "phrase": "University Admissions"
+        },
+        {
+          "path": "evidence[4].summary.en",
+          "phrase": "University Admissions"
+        },
+        {
+          "path": "evidence[4].summary.fa",
+          "phrase": "University Admissions"
+        },
+        {
+          "path": "evidence[5].summary.en",
+          "phrase": "Uppsala University"
+        },
+        {
+          "path": "evidence[12].summary.en",
+          "phrase": "Foreign Affairs"
+        },
+        {
+          "path": "signals[0].claim.summary.en",
+          "phrase": "University Admissions"
+        },
+        {
+          "path": "signals[0].claim.summary.fa",
+          "phrase": "University Admissions"
+        },
+        {
+          "path": "signals[0].claim.who_should_care.en",
+          "phrase": "University Admissions"
+        },
+        {
+          "path": "signals[0].claim.who_should_care.fa",
+          "phrase": "University Admissions"
+        },
+        {
+          "path": "signals[0].verification.official.note",
+          "phrase": "University Admissions"
+        },
+        {
+          "path": "signals[0].verification.community.note",
+          "phrase": "Pargar Scandinavia"
+        },
+        {
+          "path": "signals[0].keywords[1]",
+          "phrase": "University Admissions"
+        },
+        {
+          "path": "signals[1].claim.summary.en",
+          "phrase": "Uppsala University"
+        },
+        {
+          "path": "signals[1].claim.summary.en",
+          "phrase": "Swedish Migration"
+        },
+        {
+          "path": "signals[1].verification.official.note",
+          "phrase": "Swedish Migration"
+        },
+        {
+          "path": "signals[1].verification.community.note",
+          "phrase": "Pargar Scandinavia"
+        },
+        {
+          "path": "signals[2].verification.official.note",
+          "phrase": "Current Finland"
+        },
+        {
+          "path": "signals[2].verification.community.note",
+          "phrase": "Pargar Scandinavia"
+        },
+        {
+          "path": "signals[3].claim.known_workaround",
+          "phrase": "Specialized English"
+        },
+        {
+          "path": "signals[3].verification.community.note",
+          "phrase": "Pargar Scandinavia"
+        },
+        {
+          "path": "signals[4].claim.title.en",
+          "phrase": "Direct Norway"
+        },
+        {
+          "path": "signals[4].verification.official.note",
+          "phrase": "Current Norwegian"
+        },
+        {
+          "path": "signals[4].verification.community.note",
+          "phrase": "Pargar Scandinavia"
+        },
+        {
+          "path": "signals[5].verification.community.note",
+          "phrase": "Pargar Scandinavia"
+        },
+        {
+          "path": "signals[6].verification.community.note",
+          "phrase": "Pargar Scandinavia"
+        },
+        {
+          "path": "signals[7].verification.community.note",
+          "phrase": "Pargar Scandinavia"
+        },
+        {
+          "path": "signals[8].verification.community.note",
+          "phrase": "Pargar Scandinavia"
+        },
+        {
+          "path": "signals[9].verification.community.note",
+          "phrase": "Pargar Scandinavia"
+        },
+        {
+          "path": "quality.checks.duplicates_merged.note",
+          "phrase": "Repeated University"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_south_korea_migration_community_signals_v3.json",
+      "reviewed_titlecase_matches": 42,
+      "matches": [
+        {
+          "path": "evidence[0].summary.fa",
+          "phrase": "University Track"
+        },
+        {
+          "path": "evidence[0].summary.fa",
+          "phrase": "Embassy Track"
+        },
+        {
+          "path": "evidence[1].summary.fa",
+          "phrase": "University Track"
+        },
+        {
+          "path": "signals[0].scope.destination.country",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[0].scope.applicants.applying_from[1]",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[0].claim.summary.en",
+          "phrase": "University Track"
+        },
+        {
+          "path": "signals[0].claim.summary.fa",
+          "phrase": "University Track"
+        },
+        {
+          "path": "signals[0].verification.community.note",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[0].keywords[1]",
+          "phrase": "Embassy Track"
+        },
+        {
+          "path": "signals[0].keywords[2]",
+          "phrase": "University Track"
+        },
+        {
+          "path": "signals[1].scope.destination.country",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[1].scope.applicants.applying_from[1]",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[1].verification.community.note",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[2].scope.destination.country",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[2].scope.applicants.applying_from[1]",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[2].verification.community.note",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[3].scope.destination.country",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[3].scope.applicants.applying_from[1]",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[3].claim.recommended_action.en",
+          "phrase": "Treat Korean"
+        },
+        {
+          "path": "signals[3].claim.known_workaround",
+          "phrase": "Some English"
+        },
+        {
+          "path": "signals[3].verification.community.note",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[4].scope.destination.country",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[4].scope.applicants.applying_from[1]",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[4].verification.community.note",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[5].scope.destination.country",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[5].scope.applicants.applying_from[1]",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[5].verification.official.note",
+          "phrase": "Current Korean"
+        },
+        {
+          "path": "signals[5].verification.community.note",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[6].scope.destination.country",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[6].scope.applicants.applying_from[1]",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[6].verification.community.note",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[7].scope.destination.country",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[7].scope.applicants.applying_from[1]",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[7].verification.community.note",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[8].scope.destination.country",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[8].scope.applicants.applying_from[1]",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[8].verification.official.note",
+          "phrase": "Current Iran"
+        },
+        {
+          "path": "signals[8].verification.community.note",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[9].scope.destination.country",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[9].scope.applicants.applying_from[1]",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "signals[9].verification.community.note",
+          "phrase": "South Korea"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_spain_signals_result10.json",
+      "reviewed_titlecase_matches": 5,
+      "matches": [
+        {
+          "path": "source",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "source",
+          "phrase": "Signal Candidate"
+        },
+        {
+          "path": "extractionMethod.validation",
+          "phrase": "Community Signal"
+        },
+        {
+          "path": "signals[0].entity",
+          "phrase": "Spain Visa"
+        },
+        {
+          "path": "signals[0].entity",
+          "phrase": "Application Centre"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_switzerland_migration_community_signals_v3.json",
+      "reviewed_titlecase_matches": 6,
+      "matches": [
+        {
+          "path": "signals[2].verification.official.note",
+          "phrase": "Current Swiss"
+        },
+        {
+          "path": "signals[3].verification.official.note",
+          "phrase": "Current Swiss"
+        },
+        {
+          "path": "signals[5].verification.official.note",
+          "phrase": "Current Swiss"
+        },
+        {
+          "path": "signals[6].claim.who_should_care.en",
+          "phrase": "All Swiss"
+        },
+        {
+          "path": "signals[7].claim.title.en",
+          "phrase": "For Iranian"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_taiwan_study_channel_signals_v3.json",
+      "reviewed_titlecase_matches": 35,
+      "matches": [
+        {
+          "path": "evidence[1].summary.en",
+          "phrase": "Taiwan Scholarship"
+        },
+        {
+          "path": "evidence[1].summary.fa",
+          "phrase": "Taiwan Scholarship"
+        },
+        {
+          "path": "evidence[4].summary.en",
+          "phrase": "Taipei Medical"
+        },
+        {
+          "path": "evidence[4].summary.fa",
+          "phrase": "Taipei Medical"
+        },
+        {
+          "path": "evidence[9].summary.en",
+          "phrase": "Taipei Medical"
+        },
+        {
+          "path": "evidence[9].summary.fa",
+          "phrase": "Taipei Medical"
+        },
+        {
+          "path": "evidence[11].summary.en",
+          "phrase": "Top Taiwan"
+        },
+        {
+          "path": "evidence[20].summary.en",
+          "phrase": "Taiwan Employment"
+        },
+        {
+          "path": "evidence[20].summary.en",
+          "phrase": "Gold Card"
+        },
+        {
+          "path": "evidence[20].summary.fa",
+          "phrase": "Gold Card"
+        },
+        {
+          "path": "evidence[28].summary.en",
+          "phrase": "Taipei Office"
+        },
+        {
+          "path": "evidence[28].summary.en",
+          "phrase": "Taipei Representative"
+        },
+        {
+          "path": "evidence[28].summary.fa",
+          "phrase": "Taipei Office"
+        },
+        {
+          "path": "evidence[28].summary.fa",
+          "phrase": "Taipei Representative"
+        },
+        {
+          "path": "signals[0].claim.summary.fa",
+          "phrase": "Taiwan Scholarship"
+        },
+        {
+          "path": "signals[3].verification.official.note",
+          "phrase": "Current Taiwan"
+        },
+        {
+          "path": "signals[4].claim.title.en",
+          "phrase": "Gold Card"
+        },
+        {
+          "path": "signals[4].claim.title.fa",
+          "phrase": "Gold Card"
+        },
+        {
+          "path": "signals[4].claim.summary.en",
+          "phrase": "Gold Card"
+        },
+        {
+          "path": "signals[4].claim.summary.fa",
+          "phrase": "Gold Card"
+        },
+        {
+          "path": "signals[4].claim.recommended_action.en",
+          "phrase": "Gold Card"
+        },
+        {
+          "path": "signals[4].claim.recommended_action.fa",
+          "phrase": "Gold Card"
+        },
+        {
+          "path": "signals[4].assessment.confidence.rationale",
+          "phrase": "Gold Card"
+        },
+        {
+          "path": "signals[4].verification.official.note",
+          "phrase": "Gold Card"
+        },
+        {
+          "path": "signals[4].keywords[3]",
+          "phrase": "Gold Card"
+        },
+        {
+          "path": "signals[6].claim.summary.en",
+          "phrase": "Taipei Office"
+        },
+        {
+          "path": "signals[6].claim.summary.en",
+          "phrase": "Representative Office"
+        },
+        {
+          "path": "signals[6].claim.summary.fa",
+          "phrase": "Taipei Office"
+        },
+        {
+          "path": "signals[6].claim.summary.fa",
+          "phrase": "Representative Office"
+        },
+        {
+          "path": "signals[6].keywords[4]",
+          "phrase": "Taipei Office"
+        },
+        {
+          "path": "signals[9].claim.title.en",
+          "phrase": "For Iran"
+        },
+        {
+          "path": "quality.checks.contradictions_checked.note",
+          "phrase": "Taipei Representative"
+        },
+        {
+          "path": "quality.checks.high_risk_claims_downweighted.note",
+          "phrase": "Gold Card"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "Gold Card"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_testinno_ielts_community_signals_v3.json",
+      "reviewed_titlecase_matches": 8,
+      "matches": [
+        {
+          "path": "evidence[25].summary.en",
+          "phrase": "British Council"
+        },
+        {
+          "path": "evidence[25].summary.fa",
+          "phrase": "British Council"
+        },
+        {
+          "path": "evidence[27].summary.en",
+          "phrase": "For Listening"
+        },
+        {
+          "path": "signals[5].claim.title.en",
+          "phrase": "Recent Cambridge"
+        },
+        {
+          "path": "signals[7].claim.summary.en",
+          "phrase": "British Council"
+        },
+        {
+          "path": "signals[7].claim.summary.fa",
+          "phrase": "British Council"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        },
+        {
+          "path": "usageNote",
+          "phrase": "British Council"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_turkey_residence_community_signals_v3.json",
+      "reviewed_titlecase_matches": 3,
+      "matches": [
+        {
+          "path": "signals[7].verification.official.note",
+          "phrase": "Current Ministry"
+        },
+        {
+          "path": "signals[8].claim.recommended_action.en",
+          "phrase": "Improve Turkish"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_turkey_study_community_signals_v3.json",
+      "reviewed_titlecase_matches": 4,
+      "matches": [
+        {
+          "path": "signals[9].claim.title.en",
+          "phrase": "For Iranian"
+        },
+        {
+          "path": "signals[9].verification.official.note",
+          "phrase": "Current Turkish"
+        },
+        {
+          "path": "signals[10].scope.applicants.other_conditions[0]",
+          "phrase": "Using Turkish"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    },
+    {
+      "file": "hamrah_uk_global_talent_skilled_worker_community_signals_v3.json",
+      "reviewed_titlecase_matches": 115,
+      "matches": [
+        {
+          "path": "sources[0].name",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "sources[0].name",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[0].summary.en",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "evidence[0].summary.fa",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "evidence[3].summary.en",
+          "phrase": "Endorsed Funder"
+        },
+        {
+          "path": "evidence[3].summary.en",
+          "phrase": "Research Assistant"
+        },
+        {
+          "path": "evidence[3].summary.fa",
+          "phrase": "Endorsed Funder"
+        },
+        {
+          "path": "evidence[3].summary.fa",
+          "phrase": "Research Assistant"
+        },
+        {
+          "path": "evidence[5].summary.en",
+          "phrase": "Endorsed Funder"
+        },
+        {
+          "path": "evidence[5].summary.fa",
+          "phrase": "Endorsed Funder"
+        },
+        {
+          "path": "evidence[9].summary.en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "evidence[9].summary.en",
+          "phrase": "Exceptional Talent"
+        },
+        {
+          "path": "evidence[9].summary.fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "evidence[9].summary.fa",
+          "phrase": "Exceptional Talent"
+        },
+        {
+          "path": "evidence[10].summary.en",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "evidence[10].summary.en",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "evidence[10].summary.fa",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "evidence[10].summary.fa",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "evidence[12].summary.en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "evidence[12].summary.fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "evidence[15].summary.en",
+          "phrase": "British Academy"
+        },
+        {
+          "path": "evidence[15].summary.en",
+          "phrase": "Royal Academy"
+        },
+        {
+          "path": "evidence[15].summary.en",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "evidence[15].summary.en",
+          "phrase": "Arts Council"
+        },
+        {
+          "path": "evidence[15].summary.fa",
+          "phrase": "British Academy"
+        },
+        {
+          "path": "evidence[15].summary.fa",
+          "phrase": "Royal Society"
+        },
+        {
+          "path": "evidence[19].summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[19].summary.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[23].summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[23].summary.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[24].summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[24].summary.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[26].summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[27].summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[27].summary.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[28].summary.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "evidence[28].summary.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[0].scope.destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[0].claim.who_should_care.en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[0].claim.known_workaround",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[0].verification.official.note",
+          "phrase": "Current Route"
+        },
+        {
+          "path": "signals[0].keywords[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[1].scope.destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[1].claim.title.en",
+          "phrase": "Endorsed Funder"
+        },
+        {
+          "path": "signals[1].claim.title.fa",
+          "phrase": "Endorsed Funder"
+        },
+        {
+          "path": "signals[1].claim.summary.en",
+          "phrase": "Research Assistant"
+        },
+        {
+          "path": "signals[1].claim.summary.fa",
+          "phrase": "Research Assistant"
+        },
+        {
+          "path": "signals[1].claim.practical_impact.en",
+          "phrase": "Endorsed Funder"
+        },
+        {
+          "path": "signals[1].claim.practical_impact.fa",
+          "phrase": "Endorsed Funder"
+        },
+        {
+          "path": "signals[1].claim.who_should_care.en",
+          "phrase": "Endorsed Funder"
+        },
+        {
+          "path": "signals[1].claim.who_should_care.fa",
+          "phrase": "Endorsed Funder"
+        },
+        {
+          "path": "signals[1].claim.known_workaround",
+          "phrase": "Endorsed Funder"
+        },
+        {
+          "path": "signals[1].claim.known_workaround",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[1].verification.official.note",
+          "phrase": "Current Endorsed"
+        },
+        {
+          "path": "signals[1].keywords[0]",
+          "phrase": "Endorsed Funder"
+        },
+        {
+          "path": "signals[1].keywords[3]",
+          "phrase": "Research Associate"
+        },
+        {
+          "path": "signals[2].scope.destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[2].claim.title.fa",
+          "phrase": "Recommendation Letter"
+        },
+        {
+          "path": "signals[2].claim.title.fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[2].claim.summary.en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[2].claim.summary.fa",
+          "phrase": "Recommendation Letter"
+        },
+        {
+          "path": "signals[2].claim.summary.fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[2].claim.who_should_care.en",
+          "phrase": "Peer Review"
+        },
+        {
+          "path": "signals[2].claim.who_should_care.fa",
+          "phrase": "Peer Review"
+        },
+        {
+          "path": "signals[2].verification.official.note",
+          "phrase": "Current Peer"
+        },
+        {
+          "path": "signals[2].keywords[0]",
+          "phrase": "Peer Review"
+        },
+        {
+          "path": "signals[3].scope.destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[3].claim.summary.en",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[3].claim.summary.fa",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[3].claim.who_should_care.en",
+          "phrase": "Peer Review"
+        },
+        {
+          "path": "signals[3].claim.who_should_care.fa",
+          "phrase": "Peer Review"
+        },
+        {
+          "path": "signals[3].claim.recommended_action.en",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[3].claim.recommended_action.fa",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[3].claim.known_workaround",
+          "phrase": "Provide Route"
+        },
+        {
+          "path": "signals[3].claim.known_workaround",
+          "phrase": "Home Office"
+        },
+        {
+          "path": "signals[4].scope.destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[4].claim.title.en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[4].keywords[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[5].scope.destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[5].claim.title.en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[5].claim.who_should_care.en",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[5].claim.who_should_care.fa",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[5].keywords[0]",
+          "phrase": "Global Talent"
+        },
+        {
+          "path": "signals[6].scope.destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[6].verification.official.note",
+          "phrase": "Current Home"
+        },
+        {
+          "path": "signals[7].scope.destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[7].claim.title.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[7].claim.title.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[7].claim.who_should_care.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[7].claim.who_should_care.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[7].keywords[0]",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].scope.destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[8].claim.who_should_care.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].claim.who_should_care.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[8].verification.official.note",
+          "phrase": "Current English"
+        },
+        {
+          "path": "signals[8].review.reason",
+          "phrase": "Accepted English"
+        },
+        {
+          "path": "signals[8].keywords[0]",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[9].scope.destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[9].claim.title.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[9].claim.title.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[9].claim.who_should_care.en",
+          "phrase": "Overseas Skilled"
+        },
+        {
+          "path": "signals[9].claim.who_should_care.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[9].keywords[0]",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[10].scope.destination.country",
+          "phrase": "United Kingdom"
+        },
+        {
+          "path": "signals[10].claim.title.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[10].claim.title.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[10].claim.practical_impact.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[10].claim.who_should_care.en",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[10].claim.who_should_care.fa",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "signals[10].verification.official.note",
+          "phrase": "Current Skilled"
+        },
+        {
+          "path": "signals[10].keywords[0]",
+          "phrase": "Skilled Worker"
+        },
+        {
+          "path": "quality.checks.duplicates_merged.note",
+          "phrase": "Repeated Route"
+        },
+        {
+          "path": "quality.checks.duplicates_merged.note",
+          "phrase": "Peer Review"
+        },
+        {
+          "path": "quality.checks.contradictions_checked.note",
+          "phrase": "Endorsed Funder"
+        },
+        {
+          "path": "quality.checks.existing_hamrah_dataset_merge.note",
+          "phrase": "Hamrah Community"
+        }
+      ]
+    }
+  ]
+}

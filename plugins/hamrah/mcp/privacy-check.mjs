@@ -11,19 +11,8 @@ const ID_FIELDS = new Set([
   "evidence_ids", "opposing_evidence_ids", "correlated_signal_ids"
 ]);
 const STABLE_ID = /^(?:sig|qst|opp|exp|clm|src|evd)_[0-9a-f]{32}$/;
-// Reviewed route, law, and institution labels that look like "First Last" names. Each use is reported as an exception.
-const DOMAIN_PHRASES = new Set([
-  "Global Talent", "United Kingdom", "Peer Review", "Example Community",
-  "Opportunity Card", "Residence Act", "Consular Services",
-  "Federal Ministry", "Federal Foreign", "Federal Employment",
-  // Reviewed route, authority, institution, exam, and source labels in the published legacy datasets.
-  "Academic Technology", "Application Centre", "Approval Scheme", "Arts Council", "Australia News",
-  "British Academy", "Build Abroad", "Campus France", "Canada News", "Core Skills",
-  "Deakin University", "Duolingo English", "Eindhoven University", "Germany Aus",
-  "Germany News", "Graduate Diploma", "Griffith University", "Hamrah Community",
-  "Home Office", "Royal Academy", "Royal Society", "Signal Candidate", "Skilled Worker",
-  "Spain Visa", "Specialist Skills", "Tech Nation", "Visa Application"
-]);
+// Exact title-case phrases reviewed in the publication corpus. New phrases remain blocked.
+const DOMAIN_PHRASES = new Set(JSON.parse(readFileSync(new URL("./reviewed-domain-phrases.json", import.meta.url), "utf8")));
 const KNOWN_INSTITUTIONS = new Map([
   ["vac", new Set(["Tehran UK Visa Application Centre"])],
   ["embassy", new Set(["German Embassy Tehran"])]
@@ -50,9 +39,8 @@ function inspectString(value, path, field, parent, findings, exceptions) {
     && /(?:\+|00)\d[\d\s().-]{7,}\d|(?<!\d)\d{9,15}(?!\d)/u.test(digitsNormalized)) add("fail", "phone");
   if (/@[A-Za-z0-9_]{3,}/u.test(decoded)) add("fail", "handle");
   if (/(?:t\.me|telegram\.me)\/|tg:\/\//i.test(decoded)) add("fail", "telegram_locator");
-  const identifier = /\b(telegram|account|chat|user|application|passport|national)[ _-]?(id|number|no\.?)[\s:#=-]*([A-Za-z0-9_-]{4,})\b/i.exec(decoded);
-  if (identifier && (identifier[1].toLowerCase() !== "national" || /\d/u.test(identifier[3]))) {
-    add("fail", "personal_identifier");
+  for (const identifier of decoded.matchAll(/\b(telegram|account|chat|user|application|passport|national)[ _-]?(id|number|no\.?)[\s:#=-]*([A-Za-z0-9_-]{4,})\b/gi)) {
+    if (identifier[1].toLowerCase() !== "national" || /\d/u.test(identifier[3])) add("fail", "personal_identifier");
   }
   if (/(?:کد\s*ملی|شماره\s*ملی|شماره\s*(?:گذرنامه|پاسپورت|درخواست))\s*[:：]?\s*\d{6,15}/u.test(digitsNormalized)) {
     add("fail", "personal_identifier");
@@ -73,11 +61,9 @@ function inspectString(value, path, field, parent, findings, exceptions) {
   if (NARRATIVE_FIELDS.has(field) || NARRATIVE_FIELDS.has(baseField) || baseField === "name" || baseField === "title" || field === "source_name") {
     const explicitName = /\b(?:[Mm]r\.?|[Mm]rs\.?|[Mm]s\.?|[Dd]r\.?|[Nn]amed|[Aa]pplicant named|[Pp]erson named)\s+[A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}\b/u.test(decoded);
     const titleName = baseField === "title" && /\b[A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}\s+(?:applied|filed|reported|said|shared)\b/.test(decoded);
-    const englishNames = baseField === "name" || field === "source_name"
-      ? (decoded.match(/\b[A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}\b/g) || [])
-      : [];
+    const englishNames = decoded.match(/\b[A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}\b/g) || [];
     for (const phrase of englishNames.filter((candidate) => DOMAIN_PHRASES.has(candidate))) {
-      exceptions.push({ path, rule: "domain_phrase", reason: `${phrase} is an exact route, country, or process label.` });
+      exceptions.push({ path, rule: "domain_phrase", reason: `${phrase} is an exact reviewed title-case phrase.` });
     }
     const personAction = /\b([A-Z][a-z]{2,}\s+[A-Z][a-z]{2,})\s+(?:applied|confirmed|enrolled|filed|graduated|obtained|received|reported|said|shared|submitted)\b/u.exec(decoded);
     const namedAction = /\b(?:[Aa]sk|[Cc]ontact|[Ee]mail|[Cc]all)\s+([A-Z][a-z]{2,}\s+[A-Z][a-z]{2,})\b/u.exec(decoded);
