@@ -125,3 +125,20 @@ test("published German skilled-worker questions expose embassy-backed official a
     ));
   }
 });
+
+test("Opportunity Card degree choice stays partial and legalization questions stay unresolved", async () => {
+  const degreeId = "qst_8b89acac79869b700b7b4f1cd8f218a6";
+  const degree = await executeTool("answerCommunityQuestion", { questionId: degreeId, asOf: "2026-09-26" }, offline);
+  assert.equal(degree.isError, false);
+  assert.equal(degree.structuredContent.answerType, "partially_answered");
+  assert.equal(degree.structuredContent.storedAnswerStatus, "partially_answered");
+  assert.ok(degree.structuredContent.citations.some((citation) =>
+    citation.sourceUrl === "https://www.make-it-in-germany.com/en/visa-residence/opportunity-card/questions-answers"
+  ));
+  for (const questionId of ["qst_17b48540d670fd552ec96ef472539596", "qst_cad2045f8511716b781f8a9d4d0eb0d1"]) {
+    const answer = await executeTool("answerCommunityQuestion", { questionId, asOf: "2026-09-26" }, offline);
+    assert.equal(answer.isError, false);
+    assert.equal(answer.structuredContent.answerType, "research_required");
+    assert.equal(answer.structuredContent.storedAnswerStatus, "unresolved");
+  }
+});

@@ -1,7 +1,28 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-26T12:03:00Z",
+  "updated_at": "2026-09-26T12:15:00Z",
   "datasets": [
+    {
+      "path": "datasets/2026/09/20260926121500-de-answers-fe350b6888.json",
+      "sha256": "fe350b68884814a11dd1472c32471c98aa3ccccc0a410128e695c619cc06ff38",
+      "content_digest": "f95b7e2b58220c6bde04d26d401fd6f711fa529c9a388dd3af1009fa4c99bf1a",
+      "schema_version": "4.0.0",
+      "generated_at": "2026-09-26T12:15:00Z",
+      "countries": [],
+      "routes": [],
+      "statuses": [],
+      "signal_count": 0,
+      "source_ids": [
+        "src_04111d0c166dc7286dbac3e9b70d7fa9",
+        "src_04fd13d22aa3c567a01dd1393ed1099a",
+        "src_4d1dc2283cf3bff9e901cabbcb02c20d",
+        "src_58b90ff40a974614ffdb33a9f3142586",
+        "src_66e4d2e5bf8ab8740099e0f8b7a2aa38",
+        "src_72a57cabbc4918123ce42770807b775e",
+        "src_b75a241833fc844f08a1d30563408290",
+        "src_d9f2008a688550afee99f8cc9cf8afd6"
+      ]
+    },
     {
       "path": "datasets/2026/09/20260926120300-de-answers-6f6aed2e5e.json",
       "sha256": "6f6aed2e5eefedc533cb968c3c423292f98d03f15aafdaee3c2d8c9c036d4a24",
