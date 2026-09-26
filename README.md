@@ -2,6 +2,8 @@
 
 Hamrah guides facilitators and applicants through immigration intake, profile normalization, live Visa Atlas route assessment, reusable community signals, academic program matching, explainable scorecards, and scorecard visuals. The plugin now bundles a local MCP adapter for the curated Visa Atlas Core OpenAPI 1.3.0 contract.
 
+For copy-ready Persian requests and the current limits of Telegram-question extraction, lived-experience search, and route assessment, see the [Hamrah user guide](docs/hamrah-user-guide-fa.md).
+
 This repository is self-contained in the `Hamrah Plugin` folder. Its development intake contract is in `packages/hamrah-intake-contract`; no files from the Immi folder are needed. From this folder, run `npm ci` and `npm test` to install dependencies and run the test suite.
 
 Before deployment, run `npm run verify:release` and follow the [release verification guide](docs/release-verification.md) for the complete CI checks, scoring definitions, privacy gate, and Persian example output.
