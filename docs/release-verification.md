@@ -9,7 +9,7 @@ npm run check:static
 python3 -m compileall -q plugins/hamrah/skills
 npm run verify:release
 npm test
-python3 -m pytest -q plugins/hamrah/skills/hamrah-profile-normalizer/tests plugins/hamrah/skills/hamrah-scorecard-engine/tests plugins/hamrah/skills/hamrah-signal-builder/tests
+python3 -m pytest -q plugins/hamrah/skills/hamrah-profile-normalizer/tests plugins/hamrah/skills/hamrah-scorecard-engine/tests plugins/hamrah/skills/hamrah-signal-builder/tests plugins/hamrah/skills/hamrah-program-finder/tests
 npm audit --omit=dev --audit-level=high
 ```
 

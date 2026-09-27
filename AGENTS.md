@@ -32,7 +32,7 @@ Run before every commit; CI (`.github/workflows/verify-release.yml`) runs the sa
 npm test
 npm run verify:release
 npm run check:static
-python3 -m pytest -q plugins/hamrah/skills/hamrah-profile-normalizer/tests plugins/hamrah/skills/hamrah-scorecard-engine/tests plugins/hamrah/skills/hamrah-signal-builder/tests
+python3 -m pytest -q plugins/hamrah/skills/hamrah-profile-normalizer/tests plugins/hamrah/skills/hamrah-scorecard-engine/tests plugins/hamrah/skills/hamrah-signal-builder/tests plugins/hamrah/skills/hamrah-program-finder/tests
 ```
 
 `npm run verify:live` checks the deployed MCP endpoint; it only reflects a change after deployment.

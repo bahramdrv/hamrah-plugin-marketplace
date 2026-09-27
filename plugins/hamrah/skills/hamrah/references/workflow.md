@@ -7,6 +7,7 @@ Choose one entry point before asking questions:
 1. **Community evidence:** only when the user asks to analyze a specified Telegram JSON, forum export, post set, URL, or similar source for Community Signals, run Hamrah Signal Builder. Extract Questions from that same reviewed source in the same pass, validate the candidate dataset, and offer local persistence. Do not start a separate question-harvesting campaign from an unspecified source. Applicant intake starts only when requested.
 2. **Applicant journey:** a facilitator or applicant wants guidance, route assessment, or a scorecard. Continue through the stages below.
 3. **Existing artifact:** validate a supplied profile, state, scorecard, academic-match file, or stored signal catalog and resume from the earliest incomplete stage.
+4. **Academic program request:** when the user explicitly asks for programs, go directly to Hamrah Program Finder. Use relevant profile facts if available and collect only missing facts that change the search; a route scorecard is optional.
 
 ## Applicant journey
 
@@ -32,7 +33,7 @@ Run Hamrah Scorecard Engine and validate its JSON. Present rankable routes in th
 
 ### 6. Optional next layers
 
-- For study/research, use Hamrah Program Finder only when the user asks for academic recommendations. Until a user-selected program API is connected and working, search current official university and funding pages online for that request. When the user supplies an API and requests integration, add it to MCP and query it on demand. Do not build a persistent university or program catalog.
+- For study/research, use Hamrah Program Finder only when the user asks for academic recommendations. Until a user-selected program API is connected and working, search current official university and funding pages online for that request. When the user supplies an API and requests integration, add it to MCP and query it on demand. Keep discovery queries limited to needed search terms and compare personal profile facts within Hamrah. Do not build a persistent university or program catalog.
 - Search for or curate a person who actually completed a route only when the user explicitly requests that work. A future automated search requires a separate user instruction.
 - For a shareable visual, offer Hamrah Scorecard Visualizer. It uses ChatGPT image generation after validating the visual model.
 - Offer profile/state export when the case must resume elsewhere.
