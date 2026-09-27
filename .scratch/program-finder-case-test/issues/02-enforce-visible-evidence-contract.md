@@ -16,4 +16,4 @@ Make the user-visible shortlist consume a validated request-scoped representatio
 - [x] Each application and funding status has exactly one supported value.
 - [x] A verified dated deadline has a named intake/year and an official source for that same call; otherwise the dated deadline is unknown.
 - [x] Admission and scholarship deadlines remain separate, and competitive funding says what it covers.
-- [ ] The anonymous Case A and Case B behavior checks pass without claiming a visa or admission probability. Case B passed after the primary-text renderer change. The final Case A replay was rejected by automatic approval review and remains untested.
+- [ ] The anonymous Case A and Case B behavior checks pass without claiming a visa or admission probability. Case B passed after the primary-text renderer change. The owner approved a destination-specific Case A replay; it passed the renderer and feature-boundary checks but labelled two programs `supported_fit` despite missing required applicant evidence. The requirement-completeness rule now needs a replay.
