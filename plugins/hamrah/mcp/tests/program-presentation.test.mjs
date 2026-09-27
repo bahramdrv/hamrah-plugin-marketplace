@@ -33,6 +33,8 @@ test("renders a request-scoped shortlist with one status per field and explicit 
   const result = await render(example());
   assert.equal(result.isError, false);
   assert.equal(result.structuredContent.status, "valid");
+  assert.equal(result.content[0].text, result.structuredContent.markdown);
+  assert.match(result.content[0].text, /^### \[Example University/);
   assert.match(result.structuredContent.markdown, /conditional_fit/);
   assert.match(result.structuredContent.markdown, /published academic evidence: A physics bachelor's degree meets the stated subject requirement/);
   assert.match(result.structuredContent.markdown, /application: `unknown`/);

@@ -786,7 +786,12 @@ const TOOL_REGISTRY = [
       kind: "assessment",
       handler: async (args) => {
         const result = renderAcademicProgramShortlist(args);
-        return toolResult(result, Boolean(result.error));
+        if (result.error) return toolResult(result, true);
+        return {
+          isError: false,
+          content: [{ type: "text", text: result.markdown }],
+          structuredContent: result
+        };
       }
     }
   }),
