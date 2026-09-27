@@ -16,6 +16,7 @@ import { getAcademicOpportunity, OpportunityNotFoundError, searchAcademicOpportu
 import { CLAIM_TYPES, searchRouteClaims } from "./community-route-claim-tools.mjs";
 import { findViableRoutesForIranians, InvalidRouteDiscoveryInput } from "./community-route-discovery.mjs";
 import { getIdealCandidateProfile, InvalidIdealCandidateProfileInput } from "./ideal-candidate-profile.mjs";
+import { PROGRAM_PRESENTATION_TOOL, renderAcademicProgramShortlist } from "./program-presentation.mjs";
 import { getIranianRouteViability, InvalidIranianApplicantError } from "./community-route-viability.mjs";
 import { searchOfficialApprovalStatistics } from "./community-statistics-tools.mjs";
 import { getCommunityQuestion, QuestionNotFoundError, searchCommunityQuestions } from "./community-question-tools.mjs";
@@ -779,6 +780,15 @@ const TOOL_REGISTRY = [
   }),
   ...registerTools([ROUTE_FACT_PACK_TOOL], {
     getRouteFactPack: { kind: "visaAtlas", handler: getRouteFactPackHandler, ownsDeadline: true }
+  }),
+  ...registerTools([PROGRAM_PRESENTATION_TOOL], {
+    renderAcademicProgramShortlist: {
+      kind: "assessment",
+      handler: async (args) => {
+        const result = renderAcademicProgramShortlist(args);
+        return toolResult(result, Boolean(result.error));
+      }
+    }
   }),
   ...registerTools(ASSESSMENT_TOOLS, {
     normalizeApplicantProfile: assessmentTool(normalizeApplicantProfile),

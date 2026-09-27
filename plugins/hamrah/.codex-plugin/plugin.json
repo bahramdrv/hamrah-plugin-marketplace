@@ -1,6 +1,6 @@
 {
   "name": "hamrah",
-  "version": "0.1.2+codex.20260927153542",
+  "version": "0.1.3+codex.20260927155425",
   "description": "Guide immigration intake, query the curated Visa Atlas API, assess current routes, find academic programs, and create explainable scorecards and visuals.",
   "homepage": "https://chatgpt.com/g/g-6aa416931f7c819182afa0360333e530-hamrah-main-gpt",
   "author": {
