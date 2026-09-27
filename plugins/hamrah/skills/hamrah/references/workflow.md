@@ -4,6 +4,8 @@
 
 Choose one entry point before asking questions:
 
+For a facilitator's sample labelled as a product test, establish the feature under test from the request and recent context. Complete only that feature's acceptance slice and report what passed, failed, or remains untested. Continue the applicant journey only if the user asks to use the sample as a real case.
+
 1. **Community evidence:** only when the user asks to analyze a specified Telegram JSON, forum export, post set, URL, or similar source for Community Signals, run Hamrah Signal Builder. Extract Questions from that same reviewed source in the same pass, validate the candidate dataset, and offer local persistence. Do not start a separate question-harvesting campaign from an unspecified source. Applicant intake starts only when requested.
 2. **Applicant journey:** a facilitator or applicant wants guidance, route assessment, or a scorecard. Continue through the stages below.
 3. **Existing artifact:** validate a supplied profile, state, scorecard, academic-match file, or stored signal catalog and resume from the earliest incomplete stage.
