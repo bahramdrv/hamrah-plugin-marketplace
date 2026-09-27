@@ -36,7 +36,7 @@
           "country": {"type": "string", "minLength": 2},
           "program_title": {"type": "string", "minLength": 1},
           "degree_level": {"type": "string", "minLength": 1},
-          "field": {"type": "string", "minLength": 1},
+          "field": {"type": "string", "minLength": 1, "description": "Requested research field used for matching, not necessarily the institution's published program field name."},
           "official_program_url": {"type": "string", "format": "uri", "pattern": "^https://"},
           "match_status": {
             "enum": ["supported_fit", "conditional_fit", "insufficient_evidence"],
