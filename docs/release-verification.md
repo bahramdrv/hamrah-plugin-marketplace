@@ -45,6 +45,8 @@ The subsequent merge with `origin/main` introduced 48 additional dataset files. 
 
 The combined release passed both GitHub Actions workflows on commit `1fd29d2`: [Verify release](https://github.com/bahramdrv/hamrah-plugin-marketplace/actions/runs/36221292571) and [Community signals](https://github.com/bahramdrv/hamrah-plugin-marketplace/actions/runs/36221292596). The production MCP endpoint was then exercised with `npm run verify:live`; its synthetic checks passed. Run that command after each production deployment and compare `deploymentCommit` with the commit intended for release.
 
+On 27 September 2026, `npm run verify:live` passed against the production endpoint and reported `deploymentCommit` `067f35c782fe83793fcf6c5b9fa97ffb84ce614a`, matching the then-current `main`. It reported 45 tools, 5 skills, and 56 valid datasets. The synthetic eligibility check remained `UNKNOWN` and unrankable; community coverage was `partial` with seven signals excluded for unrecorded evidence maturity. Academic opportunities, Iranian Lived Experiences, and official approval statistics each returned `no_coverage` for the synthetic query. These results verify the endpoint behavior checked by the script, not completeness of immigration evidence.
+
 ## How to read Hamrah's measures
 
 | Measure | What it means | Limit |
