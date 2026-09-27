@@ -10,7 +10,7 @@ VALIDATOR = ROOT / "scripts" / "validate_program_matches.py"
 
 def example_match():
     return {
-        "schema_version": "2.0",
+        "schema_version": "3.0",
         "generated_at": "2026-09-27T12:00:00Z",
         "profile_reference": {
             "kind": "minimal",
@@ -34,6 +34,7 @@ def example_match():
                 "gaps": ["Language evidence is missing", "Deadline is unknown", "Funding is unknown"],
                 "admissions": {
                     "requirements": [],
+                    "application": {"status": "unknown", "intake": None, "source_url": None},
                     "deadline": {"status": "unknown", "date": None, "intake": None, "source_url": None},
                 },
                 "funding": {"status": "unknown", "details": None, "source_url": None},
@@ -85,6 +86,53 @@ def test_unknown_deadline_cannot_carry_a_date(tmp_path):
     result = validate(tmp_path, data)
     assert result.returncode == 1
     assert "admissions.deadline.date" in result.stderr
+
+
+def test_closed_application_can_have_unknown_next_deadline(tmp_path):
+    data = example_match()
+    data["programs"][0]["admissions"]["application"] = {
+        "status": "closed", "intake": "2026 call", "source_url": "https://example.edu/phd-ai",
+    }
+    result = validate(tmp_path, data)
+    assert result.returncode == 0, result.stderr
+
+
+def test_open_application_requires_listed_official_source(tmp_path):
+    data = example_match()
+    data["programs"][0]["admissions"]["application"] = {
+        "status": "open", "intake": "2027 winter", "source_url": None,
+    }
+    result = validate(tmp_path, data)
+    assert result.returncode == 1
+    assert "admissions.application.source_url" in result.stderr
+
+
+def test_open_application_cannot_have_expired_deadline(tmp_path):
+    data = example_match()
+    data["programs"][0]["admissions"]["application"] = {
+        "status": "open", "intake": "2026 fall", "source_url": "https://example.edu/phd-ai",
+    }
+    data["programs"][0]["admissions"]["deadline"] = {
+        "status": "expired", "date": "2026-09-26", "intake": "2026 fall",
+        "source_url": "https://example.edu/phd-ai",
+    }
+    result = validate(tmp_path, data)
+    assert result.returncode == 1
+    assert "admissions.application.status" in result.stderr
+
+
+def test_application_and_deadline_must_name_same_intake(tmp_path):
+    data = example_match()
+    data["programs"][0]["admissions"]["application"] = {
+        "status": "open", "intake": "2027 winter", "source_url": "https://example.edu/phd-ai",
+    }
+    data["programs"][0]["admissions"]["deadline"] = {
+        "status": "verified", "date": "2027-01-15", "intake": "2027 fall",
+        "source_url": "https://example.edu/phd-ai",
+    }
+    result = validate(tmp_path, data)
+    assert result.returncode == 1
+    assert "admissions.application.intake" in result.stderr
 
 
 def test_past_deadline_cannot_be_marked_verified(tmp_path):

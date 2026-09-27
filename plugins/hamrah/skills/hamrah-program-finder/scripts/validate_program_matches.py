@@ -61,8 +61,23 @@ if isinstance(data, dict) and isinstance(data.get("programs"), list):
                 for requirement_index, requirement in enumerate(requirements):
                     if isinstance(requirement, dict):
                         require_listed_source(requirement.get("source_url"), f"admissions.requirements.{requirement_index}.source_url")
+            application = admissions.get("application")
+            if isinstance(application, dict) and application.get("status") in {"open", "not_yet_open", "closed"}:
+                require_listed_source(application.get("source_url"), "admissions.application.source_url")
+                if not application.get("intake"):
+                    errors.append(f"{prefix}.admissions.application.intake is required for a known status")
             deadline = admissions.get("deadline")
             if isinstance(deadline, dict):
+                if (
+                    isinstance(application, dict)
+                    and application.get("status") != "unknown"
+                    and isinstance(application.get("intake"), str)
+                    and isinstance(deadline.get("intake"), str)
+                    and application["intake"].casefold().strip() != deadline["intake"].casefold().strip()
+                ):
+                    errors.append(f"{prefix}.admissions.application.intake must match admissions.deadline.intake")
+                if isinstance(application, dict) and application.get("status") == "open" and deadline.get("status") == "expired":
+                    errors.append(f"{prefix}.admissions.application.status cannot be open with an expired deadline")
                 if deadline.get("status") in {"verified", "expired"}:
                     if not deadline.get("date") or not deadline.get("intake"):
                         errors.append(f"{prefix}.admissions.deadline needs a date and intake")

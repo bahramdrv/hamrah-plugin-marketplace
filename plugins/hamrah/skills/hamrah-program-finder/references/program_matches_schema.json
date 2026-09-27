@@ -5,7 +5,7 @@
   "additionalProperties": false,
   "required": ["schema_version", "generated_at", "profile_reference", "search_scope", "programs", "warnings"],
   "properties": {
-    "schema_version": {"const": "2.0"},
+    "schema_version": {"const": "3.0"},
     "generated_at": {"type": "string", "format": "date-time"},
     "profile_reference": {
       "type": "object", "additionalProperties": false,
@@ -56,7 +56,7 @@
           "gaps": {"type": "array", "items": {"type": "string", "minLength": 1}},
           "admissions": {
             "type": "object", "additionalProperties": false,
-            "required": ["requirements", "deadline"],
+            "required": ["requirements", "application", "deadline"],
             "properties": {
               "requirements": {
                 "type": "array",
@@ -67,6 +67,15 @@
                     "criterion": {"type": "string", "minLength": 1},
                     "source_url": {"type": "string", "format": "uri", "pattern": "^https://"}
                   }
+                }
+              },
+              "application": {
+                "type": "object", "additionalProperties": false,
+                "required": ["status", "intake", "source_url"],
+                "properties": {
+                  "status": {"enum": ["open", "not_yet_open", "closed", "unknown"]},
+                  "intake": {"type": ["string", "null"]},
+                  "source_url": {"type": ["string", "null"], "format": "uri"}
                 }
               },
               "deadline": {
