@@ -1,6 +1,6 @@
 # Hamrah plugin marketplace
 
-Hamrah guides facilitators and applicants through immigration intake, profile normalization, live Visa Atlas route assessment, reusable community signals, academic program matching, explainable scorecards, and scorecard visuals. The plugin now bundles a local MCP adapter for the curated Visa Atlas Core OpenAPI 1.3.0 contract.
+Hamrah guides facilitators and applicants through immigration intake, profile normalization, live Visa Atlas route assessment, reusable community signals, academic program matching, explainable scorecards, and scorecard visuals. The installed Codex plugin connects to Hamrah's deployed MCP endpoint; this repository also contains the server code for local development and deployment.
 
 For copy-ready Persian requests and the current limits of Telegram-question extraction, lived-experience search, and route assessment, see the [Hamrah user guide](docs/hamrah-user-guide-fa.md).
 
@@ -16,7 +16,7 @@ Production MCP URL:
 https://hamrah-plugin-marketplace.vercel.app/mcp
 ```
 
-In ChatGPT Web, enable Developer mode, add a new plugin/app with the URL above, and run **Scan Tools**. The server exposes 45 read-only tools and five importable Hamrah skills. The main imported skill also contains the scorecard-image workflow so ChatGPT can use its image-generation capability after validating a scorecard.
+In ChatGPT Web, enable Developer mode, add a new plugin/app with the URL above, and run **Scan Tools**. The server exposes 46 read-only tools and five importable Hamrah skills. The main imported skill also contains the scorecard-image workflow so ChatGPT can use its image-generation capability after validating a scorecard.
 
 Each MCP request is bounded (defaults in `plugins/hamrah/mcp/budgets.mjs`): request bodies over 64 KiB receive a JSON-RPC `413`, more than 16 concurrent requests per instance receive a `503` with `Retry-After`, a tool call that exceeds 25 seconds returns `operation_deadline_exceeded`, and a community search that would scan more than 500 dataset files returns `dataset_scan_limit_exceeded` instead of a truncated result. Server-side fetches go only to fixed `https://visaatlas.org` paths and refuse redirects.
 
@@ -37,7 +37,7 @@ python plugins/hamrah/skills/hamrah-signal-builder/scripts/store_signals.py \
 
 Commit and push the generated dataset. The connected Vercel project deploys the new repository revision; Hamrah reads the new data after that deployment completes.
 
-The remote service stores no applicant profiles. The optional route-finder sends only documented coarse fields to Visa Atlas. Hamrah assumes consent was established before tool use; the MCP server does not verify it.
+Codex plugin MCP tool arguments are sent to the deployed Hamrah endpoint. The server code does not persist applicant profiles; the optional route-finder forwards only documented coarse fields to Visa Atlas. The Program Finder presentation tool accepts public program facts and categorical status fields, not the applicant profile. Hamrah assumes consent was established before tool use; the MCP server does not verify it.
 
 ## Install
 
@@ -55,6 +55,6 @@ codex plugin marketplace upgrade hamrah-marketplace
 codex plugin add hamrah@hamrah-marketplace
 ```
 
-The Visa Atlas MCP adapter uses only fixed endpoints under `https://visaatlas.org/api/public`. It applies optional filters locally so large datasets do not flood the conversation. Generated applicant profiles and community-signal stores remain local unless the user explicitly publishes them. The Vercel project is connected to the GitHub repository for production updates.
+The Visa Atlas MCP adapter uses only fixed endpoints under `https://visaatlas.org/api/public`. It applies optional filters inside Hamrah's server so large datasets do not flood the conversation. Generated applicant profiles and community-signal stores are not automatically published; the Vercel project is connected to the GitHub repository for production updates.
 
 The supplied OpenAPI currently lists `freshness`, `citation-packs`, and `answer-capsules`, but those endpoints returned HTTP 404 during the integration check on 2026-09-14. Hamrah reports those failures explicitly and falls back to catalog/record dates and primary sources without fabricating data.

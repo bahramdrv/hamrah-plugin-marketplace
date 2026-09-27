@@ -1,13 +1,8 @@
 {
   "mcpServers": {
     "visa-atlas": {
-      "cwd": ".",
-      "command": "node",
-      "args": [
-        "./mcp/server.mjs"
-      ],
-      "startup_timeout_sec": 15,
-      "tool_timeout_sec": 45
+      "type": "http",
+      "url": "https://hamrah-plugin-marketplace.vercel.app/mcp"
     }
   }
 }
