@@ -41,7 +41,7 @@ const deadlineSchema = {
 export const PROGRAM_PRESENTATION_TOOL = {
   name: "renderAcademicProgramShortlist",
   title: "Validate and render an academic program shortlist",
-  description: "Validate the public evidence fields of a request-scoped academic program shortlist, then render their statuses without mixing funding, application, or deadline claims. Supply only public program facts and categorical fit, not an applicant profile. The tool checks the structure and source excerpt supplied by the caller; it does not fetch or authenticate the cited page. Search official pages separately before using it.",
+  description: "Validate and render a request-scoped academic program shortlist with one source-linked published academic requirement per program. Supply only public program facts and categorical fit, not an applicant profile or personalized reasons. The tool prevents mixed funding, application, and deadline statuses. It checks caller-supplied excerpts but does not fetch or authenticate the cited page; research official pages first.",
   inputSchema: {
     type: "object", additionalProperties: false,
     required: ["checkedAt", "programs"],
@@ -51,10 +51,18 @@ export const PROGRAM_PRESENTATION_TOOL = {
         type: "array", minItems: 1, maxItems: 5,
         items: {
           type: "object", additionalProperties: false,
-          required: ["title", "officialProgramUrl", "matchStatus", "application", "admissionDeadline", "scholarshipDeadline", "funding", "tuition", "iranianEvidence"],
+          required: ["title", "officialProgramUrl", "matchStatus", "academicEvidence", "application", "admissionDeadline", "scholarshipDeadline", "funding", "tuition", "iranianEvidence"],
           properties: {
             title: text(200), officialProgramUrl: url,
             matchStatus: { enum: statuses.match },
+            academicEvidence: {
+              type: "array", minItems: 1, maxItems: 5,
+              items: {
+                type: "object", additionalProperties: false,
+                required: ["fact", "sourceUrl"],
+                properties: { fact: text(300), sourceUrl: url }
+              }
+            },
             application: applicationSchema,
             admissionDeadline: deadlineSchema,
             scholarshipDeadline: deadlineSchema,
@@ -173,6 +181,8 @@ function renderProgram(item, checkedAt) {
     `### [${markdownSafe(item.title)}](${item.officialProgramUrl})`,
     `- checked: ${checkedAt}`,
     `- match: \`${item.matchStatus}\``,
+    ...item.academicEvidence.map((evidence) =>
+      `- published academic evidence: ${markdownSafe(evidence.fact)}, ${linked("official page", evidence.sourceUrl)}`),
     application,
     renderDeadline("admission deadline", item.admissionDeadline),
     renderDeadline("scholarship deadline", item.scholarshipDeadline),

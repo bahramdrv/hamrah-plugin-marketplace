@@ -14,6 +14,7 @@ function example() {
       title: "Example University — M.Sc. Physics",
       officialProgramUrl: SOURCE,
       matchStatus: "conditional_fit",
+      academicEvidence: [{ fact: "A physics bachelor's degree meets the stated subject requirement", sourceUrl: SOURCE }],
       application: { status: "unknown", intake: null, sourceUrl: null, sourceExcerpt: null },
       admissionDeadline: { status: "unknown", date: null, intake: null, sourceUrl: null, sourceExcerpt: null },
       scholarshipDeadline: { status: "unknown", date: null, intake: null, sourceUrl: null, sourceExcerpt: null },
@@ -33,6 +34,7 @@ test("renders a request-scoped shortlist with one status per field and explicit 
   assert.equal(result.isError, false);
   assert.equal(result.structuredContent.status, "valid");
   assert.match(result.structuredContent.markdown, /conditional_fit/);
+  assert.match(result.structuredContent.markdown, /published academic evidence: A physics bachelor's degree meets the stated subject requirement/);
   assert.match(result.structuredContent.markdown, /application: `unknown`/);
   assert.match(result.structuredContent.markdown, /admission deadline: `unknown`/);
   assert.match(result.structuredContent.markdown, /funding: `unknown`/);
@@ -119,4 +121,12 @@ test("requires an official citation before asserting that no funding exists", as
   const result = await render(input);
   assert.equal(result.isError, true);
   assert.ok(result.structuredContent.details.some((item) => item.includes("funding.sourceUrl")));
+});
+
+test("rejects a program without a source-linked academic reason", async () => {
+  const input = example();
+  input.programs[0].academicEvidence = [];
+  const result = await render(input);
+  assert.equal(result.isError, true);
+  assert.ok(result.structuredContent.details.some((item) => item.includes("academicEvidence")));
 });
