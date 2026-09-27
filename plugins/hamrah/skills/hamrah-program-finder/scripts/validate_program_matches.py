@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import json
 import sys
+from datetime import date
 from pathlib import Path
 
 try:
@@ -66,6 +67,19 @@ if isinstance(data, dict) and isinstance(data.get("programs"), list):
                     if not deadline.get("date") or not deadline.get("intake"):
                         errors.append(f"{prefix}.admissions.deadline needs a date and intake")
                     require_listed_source(deadline.get("source_url"), "admissions.deadline.source_url")
+                    deadline_date = deadline.get("date")
+                    checked_at = program.get("checked_at")
+                    if isinstance(deadline_date, str) and isinstance(checked_at, str):
+                        try:
+                            deadline_day = date.fromisoformat(deadline_date)
+                            checked_day = date.fromisoformat(checked_at)
+                        except ValueError:
+                            pass  # The schema reports invalid date formats.
+                        else:
+                            if deadline.get("status") == "verified" and deadline_day < checked_day:
+                                errors.append(f"{prefix}.admissions.deadline.status must be expired after the deadline")
+                            elif deadline.get("status") == "expired" and deadline_day >= checked_day:
+                                errors.append(f"{prefix}.admissions.deadline.status cannot be expired before the deadline")
                 elif deadline.get("status") == "unknown" and deadline.get("date") is not None:
                     errors.append(f"{prefix}.admissions.deadline.date must be null when status is unknown")
 

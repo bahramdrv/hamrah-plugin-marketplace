@@ -87,6 +87,28 @@ def test_unknown_deadline_cannot_carry_a_date(tmp_path):
     assert "admissions.deadline.date" in result.stderr
 
 
+def test_past_deadline_cannot_be_marked_verified(tmp_path):
+    data = example_match()
+    data["programs"][0]["admissions"]["deadline"] = {
+        "status": "verified", "date": "2026-09-26", "intake": "2026 fall",
+        "source_url": "https://example.edu/phd-ai",
+    }
+    result = validate(tmp_path, data)
+    assert result.returncode == 1
+    assert "admissions.deadline.status" in result.stderr
+
+
+def test_future_deadline_cannot_be_marked_expired(tmp_path):
+    data = example_match()
+    data["programs"][0]["admissions"]["deadline"] = {
+        "status": "expired", "date": "2026-10-19", "intake": "2026 winter",
+        "source_url": "https://example.edu/phd-ai",
+    }
+    result = validate(tmp_path, data)
+    assert result.returncode == 1
+    assert "admissions.deadline.status" in result.stderr
+
+
 def test_claim_source_must_appear_in_program_sources(tmp_path):
     data = example_match()
     data["programs"][0]["funding"] = {
