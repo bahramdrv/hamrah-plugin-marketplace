@@ -1,7 +1,7 @@
 # Enforce the visible Program Finder evidence contract
 
 Blocked by: none
-Status: ready-for-agent
+Status: in-progress
 
 ## Finding
 
@@ -13,7 +13,7 @@ Make the user-visible shortlist consume a validated request-scoped representatio
 
 ## Acceptance
 
-- [ ] Each application and funding status has exactly one supported value.
-- [ ] A verified dated deadline has a named intake/year and an official source for that same call; otherwise the dated deadline is unknown.
-- [ ] Admission and scholarship deadlines remain separate, and competitive funding says what it covers.
-- [ ] The anonymous Case A and Case B behavior checks pass without claiming a visa or admission probability.
+- [x] Each application and funding status has exactly one supported value.
+- [x] A verified dated deadline has a named intake/year and an official source for that same call; otherwise the dated deadline is unknown.
+- [x] Admission and scholarship deadlines remain separate, and competitive funding says what it covers.
+- [ ] The anonymous Case A and Case B behavior checks pass without claiming a visa or admission probability. Case B passed after the primary-text renderer change. The final Case A replay was rejected by automatic approval review and remains untested.
