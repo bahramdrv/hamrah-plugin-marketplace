@@ -25,7 +25,9 @@ These anonymous prompts test user-visible behavior. Run with current official so
 **Expected checks:**
 
 1. Start the program search directly with the known country, level, and field; do not require a complete immigration intake or scorecard.
-2. Return three named programs with official pages and the same per-program fields as Case A. Keep language and funding evidence `unknown` where unsupported, and make the resulting fit conditional or insufficient as appropriate.
+2. Return three named programs with official pages and the same per-program fields as Case A. Every stated deadline identifies its intake and year; a recurring day/month without a confirmed intake remains an unknown dated deadline. Keep language and funding evidence `unknown` where unsupported, and make the resulting fit conditional or insufficient as appropriate.
 3. Ask at most the next decision-changing question after the shortlist. Do not present a visa eligibility decision or immigration route ranking.
 
-**Run status:** Pending a fresh skill invocation; this document is the reproducible acceptance prompt and rubric, not a claim that a model replay has passed.
+**Observed in installed-skill replay (2026-09-27):** The request went directly to program search and returned three named German physics master's programs with official links and most required fields. The visible deadline for at least one program was only a recurring day/month without an intake year, and another did not name the intake alongside the date. Check 1 and 3 passed; check 2 was partial. This is a behavioral observation, not a verified program catalog.
+
+**Case A replay status (2026-09-27):** Not run. Automatic approval review rejected sending the sample profile through a separate CLI model replay because the payload contains personal details. The earlier, pre-change observation above is still the only behavioral result for Case A; do not infer a post-change pass.
