@@ -2,6 +2,20 @@
 
 Hamrah is an MCP plugin that presents source-linked immigration evidence for Iranian applicants. Read `CONTEXT.md` for the domain vocabulary; each term lists aliases to avoid. Respect the decisions in `docs/adr/`.
 
+## Agent skills
+
+### Issue tracker
+
+Work is tracked in local Markdown files under `.scratch/`. See `docs/agents/issue-tracker.md` when creating, finding, or reviewing a ticket.
+
+### Triage labels
+
+Triage roles use the default local status names. See `docs/agents/triage-labels.md` when triaging an incoming report.
+
+### Domain docs
+
+This is a single-context repository. See `docs/agents/domain.md` before changing domain behavior or language.
+
 ## Where things are
 
 - MCP server and tools: `plugins/hamrah/mcp/` (tool registry and dispatch in `server.mjs`; tests in `tests/`). The root `server.mjs` is the deployed app.
