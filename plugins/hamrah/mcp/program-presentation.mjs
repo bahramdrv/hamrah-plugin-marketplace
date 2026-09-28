@@ -41,7 +41,7 @@ const deadlineSchema = {
 export const PROGRAM_PRESENTATION_TOOL = {
   name: "renderAcademicProgramShortlist",
   title: "Validate and render an academic program shortlist",
-  description: "Validate and render a request-scoped academic program shortlist with one source-linked published academic requirement per program. Supply only public program facts and categorical fit, not an applicant profile or personalized reasons. The tool prevents mixed funding, application, and deadline statuses. It checks caller-supplied excerpts but does not fetch or authenticate the cited page; research official pages first.",
+  description: "Validate and render a request-scoped academic program shortlist with at least one source-linked published admission requirement per program. Classify each academic fact as admission_requirement or program_context and supply a short exact source excerpt. Supply only public program facts and categorical fit, not an applicant profile or personalized reasons. The tool checks caller-supplied excerpts but does not fetch or authenticate the cited page; research official pages first.",
   inputSchema: {
     type: "object", additionalProperties: false,
     required: ["checkedAt", "programs"],
@@ -59,8 +59,11 @@ export const PROGRAM_PRESENTATION_TOOL = {
               type: "array", minItems: 1, maxItems: 5,
               items: {
                 type: "object", additionalProperties: false,
-                required: ["fact", "sourceUrl"],
-                properties: { fact: text(300), sourceUrl: url }
+                required: ["kind", "fact", "sourceExcerpt", "sourceUrl"],
+                properties: {
+                  kind: { enum: ["admission_requirement", "program_context"] },
+                  fact: text(300), sourceExcerpt: text(300), sourceUrl: url
+                }
               }
             },
             application: applicationSchema,
@@ -129,6 +132,9 @@ function checkCall(call, path, checkedAt, errors, { application = false } = {}) 
 
 function checkProgram(item, index, checkedAt, errors) {
   const path = `programs.${index}`;
+  if (!item.academicEvidence.some((evidence) => evidence.kind === "admission_requirement")) {
+    errors.push(`${path}.academicEvidence needs at least one published admission requirement`);
+  }
   checkCall(item.application, `${path}.application`, checkedAt, errors, { application: true });
   checkCall(item.admissionDeadline, `${path}.admissionDeadline`, checkedAt, errors);
   checkCall(item.scholarshipDeadline, `${path}.scholarshipDeadline`, checkedAt, errors);
@@ -182,7 +188,7 @@ function renderProgram(item, checkedAt) {
     `- checked: ${checkedAt}`,
     `- match: \`${item.matchStatus}\``,
     ...item.academicEvidence.map((evidence) =>
-      `- published academic evidence: ${markdownSafe(evidence.fact)}, ${linked("official page", evidence.sourceUrl)}`),
+      `- ${evidence.kind === "admission_requirement" ? "admission requirement" : "program context"}: ${markdownSafe(evidence.fact)}, ${linked("official page", evidence.sourceUrl)}`),
     application,
     renderDeadline("admission deadline", item.admissionDeadline),
     renderDeadline("scholarship deadline", item.scholarshipDeadline),

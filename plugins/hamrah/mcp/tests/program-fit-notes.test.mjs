@@ -9,7 +9,7 @@ const rendererMarkdown = [
   "### [Example University — M.Sc. Physics](https://example.edu/physics/msc)",
   "- checked: 2026-09-27",
   "- match: `conditional_fit`",
-  `- published academic evidence: B2 English required, official page ([source](${academicUrl}))`,
+  `- admission requirement: B2 English required, official page ([source](${academicUrl}))`,
   "- application: `unknown`",
   "- admission deadline: `unknown`",
   "- scholarship deadline: `unknown`",
@@ -27,7 +27,7 @@ function render(input) {
 test("local fit-note renderer preserves the MCP block and links each private note to published academic evidence", () => {
   const result = render({
     rendererMarkdown,
-    fitNotes: [{ academicEvidenceIndex: 0, reason: "Physics degree aligns []().", gaps: ["B2 English proof missing"] }]
+    fitNotes: [{ admissionRequirementIndex: 0, reason: "Physics degree aligns []().", gaps: ["B2 English proof missing"] }]
   });
   assert.equal(result.status, 0, result.stderr);
   assert.ok(result.stdout.startsWith(`${rendererMarkdown}\n\n**Applicant Fit Notes**\n`));
@@ -43,8 +43,18 @@ test("local fit-note renderer refuses a missing or unlinked program note", () =>
 
   const wrongEvidence = render({
     rendererMarkdown,
-    fitNotes: [{ academicEvidenceIndex: 4, reason: "Physics degree aligns.", gaps: ["B2 proof missing"] }]
+    fitNotes: [{ admissionRequirementIndex: 4, reason: "Physics degree aligns.", gaps: ["B2 proof missing"] }]
   });
   assert.notEqual(wrongEvidence.status, 0);
-  assert.match(wrongEvidence.stderr, /academicEvidenceIndex/);
+  assert.match(wrongEvidence.stderr, /admissionRequirementIndex/);
+});
+
+test("local fit notes cannot cite a program description as an admission requirement", () => {
+  const input = {
+    rendererMarkdown: rendererMarkdown.replace("- admission requirement:", "- program context:"),
+    fitNotes: [{ admissionRequirementIndex: 0, reason: "Physics degree aligns.", gaps: ["B2 proof missing"] }]
+  };
+  const result = render(input);
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /admissionRequirementIndex/);
 });

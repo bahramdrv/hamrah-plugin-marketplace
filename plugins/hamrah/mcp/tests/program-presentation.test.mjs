@@ -14,7 +14,12 @@ function example() {
       title: "Example University — M.Sc. Physics",
       officialProgramUrl: SOURCE,
       matchStatus: "conditional_fit",
-      academicEvidence: [{ fact: "A physics bachelor's degree meets the stated subject requirement", sourceUrl: SOURCE }],
+      academicEvidence: [{
+        kind: "admission_requirement",
+        fact: "A physics bachelor's degree is required",
+        sourceExcerpt: "Applicants must hold a bachelor's degree in physics.",
+        sourceUrl: SOURCE
+      }],
       application: { status: "unknown", intake: null, sourceUrl: null, sourceExcerpt: null },
       admissionDeadline: { status: "unknown", date: null, intake: null, sourceUrl: null, sourceExcerpt: null },
       scholarshipDeadline: { status: "unknown", date: null, intake: null, sourceUrl: null, sourceExcerpt: null },
@@ -36,7 +41,7 @@ test("renders a request-scoped shortlist with one status per field and explicit 
   assert.equal(result.content[0].text, result.structuredContent.markdown);
   assert.match(result.content[0].text, /^### \[Example University/);
   assert.match(result.structuredContent.markdown, /conditional_fit/);
-  assert.match(result.structuredContent.markdown, /published academic evidence: A physics bachelor's degree meets the stated subject requirement/);
+  assert.match(result.structuredContent.markdown, /admission requirement: A physics bachelor's degree is required/);
   assert.match(result.structuredContent.markdown, /application: `unknown`/);
   assert.match(result.structuredContent.markdown, /admission deadline: `unknown`/);
   assert.match(result.structuredContent.markdown, /funding: `unknown`/);
@@ -131,4 +136,39 @@ test("rejects a program without a source-linked academic reason", async () => {
   const result = await render(input);
   assert.equal(result.isError, true);
   assert.ok(result.structuredContent.details.some((item) => item.includes("academicEvidence")));
+});
+
+test("rejects program descriptions when no published admission requirement is cited", async () => {
+  const input = example();
+  input.programs[0].academicEvidence = [{
+    kind: "program_context",
+    fact: "The program is taught in English and includes a master's project",
+    sourceExcerpt: "The program is taught in English and includes a master's project.",
+    sourceUrl: SOURCE
+  }];
+  const result = await render(input);
+  assert.equal(result.isError, true);
+  assert.ok(result.structuredContent.details.some((item) => item.includes("admission requirement")));
+});
+
+test("requires a short source excerpt for each claimed admission requirement", async () => {
+  const input = example();
+  delete input.programs[0].academicEvidence[0].sourceExcerpt;
+  const result = await render(input);
+  assert.equal(result.isError, true);
+  assert.ok(result.structuredContent.details.some((item) => item.includes("sourceExcerpt")));
+});
+
+test("renders admission requirements separately from program context", async () => {
+  const input = example();
+  input.programs[0].academicEvidence.push({
+    kind: "program_context",
+    fact: "The program is taught in English",
+    sourceExcerpt: "This master's program is taught in English.",
+    sourceUrl: SOURCE
+  });
+  const result = await render(input);
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.match(result.structuredContent.markdown, /- admission requirement: A physics bachelor's degree is required/);
+  assert.match(result.structuredContent.markdown, /- program context: The program is taught in English/);
 });

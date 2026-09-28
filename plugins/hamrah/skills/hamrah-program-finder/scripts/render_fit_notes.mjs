@@ -13,13 +13,13 @@ function programsIn(markdown) {
   for (const line of markdown.split("\n")) {
     const heading = line.match(/^### \[([^\]]+)\]\(https:\/\/[^)\s]+\)$/);
     if (heading) {
-      current = { title: heading[1], academicUrls: [] };
+      current = { title: heading[1], requirementUrls: [] };
       programs.push(current);
       continue;
     }
-    if (current && line.startsWith("- published academic evidence: ")) {
+    if (current && line.startsWith("- admission requirement: ")) {
       const source = line.match(/\(\[source\]\((https:\/\/[^)\s]+)\)\)/);
-      if (source) current.academicUrls.push(source[1]);
+      if (source) current.requirementUrls.push(source[1]);
     }
   }
   return programs;
@@ -36,8 +36,8 @@ function render(input) {
   }
   const notes = input.fitNotes.map((note, index) => {
     const program = programs[index];
-    if (!Number.isInteger(note?.academicEvidenceIndex) || !program.academicUrls[note.academicEvidenceIndex]) {
-      throw new Error(`fitNotes.${index}.academicEvidenceIndex must select a cited academic requirement`);
+    if (!Number.isInteger(note?.admissionRequirementIndex) || !program.requirementUrls[note.admissionRequirementIndex]) {
+      throw new Error(`fitNotes.${index}.admissionRequirementIndex must select a cited admission requirement`);
     }
     if (typeof note.reason !== "string" || !note.reason.trim() || note.reason.length > 1000) {
       throw new Error(`fitNotes.${index}.reason is required and must be under 1000 characters`);
@@ -46,7 +46,7 @@ function render(input) {
       || note.gaps.some((gap) => typeof gap !== "string" || !gap.trim() || gap.length > 300)) {
       throw new Error(`fitNotes.${index}.gaps needs 1–10 short gaps`);
     }
-    return `- [${program.title}](${program.academicUrls[note.academicEvidenceIndex]}): ${safeText(note.reason)} Gaps: ${note.gaps.map(safeText).join("; ")}.`;
+    return `- [${program.title}](${program.requirementUrls[note.admissionRequirementIndex]}): ${safeText(note.reason)} Gaps: ${note.gaps.map(safeText).join("; ")}.`;
   });
   return `${block}\n\n**Applicant Fit Notes**\n${notes.join("\n")}\n`;
 }
