@@ -10,6 +10,22 @@ const sourceEvidence = {
   required: ["sourceUrl", "sourceExcerpt"],
   properties: { sourceUrl: url, sourceExcerpt: text(500) }
 };
+const searchScope = {
+  type: "object", additionalProperties: false,
+  required: ["countryCode", "degreeLevel", "field"],
+  properties: { countryCode: { const: "DEU" }, degreeLevel: { const: "phd" }, field: { const: "Physics" } }
+};
+const coverage = {
+  type: "object", additionalProperties: false,
+  required: ["candidatesChecked", "excluded"],
+  properties: {
+    candidatesChecked: { type: "integer", minimum: 0 },
+    excluded: { type: "array", maxItems: 20, items: {
+      type: "object", additionalProperties: false, required: ["reason", "count"],
+      properties: { reason: { enum: ["not_currently_open", "expired_deadline", "unverified_funding", "missing_official_posting", "out_of_scope", "unverified_conditions", "other_unverified"] }, count: { type: "integer", minimum: 1 } }
+    } }
+  }
+};
 
 export const OPPORTUNITY_PRESENTATION_TOOL = {
   name: "renderVerifiedOpenAcademicOpportunityShortlist",
@@ -17,17 +33,29 @@ export const OPPORTUNITY_PRESENTATION_TOOL = {
   description: "Render request-scoped advertised openings using only public facts and caller-supplied official-page excerpts. Research the current pages first; this tool validates structure and consistency but does not fetch or authenticate a source. Do not send applicant profile details.",
   inputSchema: {
     type: "object", additionalProperties: false,
-    required: ["checkedAt", "openings"],
+    required: ["checkedAt", "searchScope", "coverage", "openings"],
     properties: {
       checkedAt: date,
+      searchScope,
+      coverage,
       openings: {
-        type: "array", minItems: 1, maxItems: 5,
+        type: "array", maxItems: 5,
         items: {
           type: "object", additionalProperties: false,
-          required: ["title", "institution", "countryCode", "degreeLevel", "field", "officialPostingUrl", "postingEvidence", "application", "funding"],
+          required: ["title", "institution", "countryCode", "degreeLevel", "field", "officialPostingUrl", "postingEvidence", "application", "funding", "academicConditions", "nationalityEvidence"],
           properties: {
             title: text(200), institution: text(200), countryCode: text(3), degreeLevel: { const: "phd" },
             field: text(120), officialPostingUrl: url, postingEvidence: sourceEvidence,
+            academicConditions: { type: "array", minItems: 1, maxItems: 10, items: {
+              type: "object", additionalProperties: false,
+              required: ["condition", "sourceUrl", "sourceExcerpt"],
+              properties: { condition: text(300), sourceUrl: url, sourceExcerpt: text(500) }
+            } },
+            nationalityEvidence: {
+              type: "object", additionalProperties: false,
+              required: ["status", "sourceUrl", "sourceExcerpt"],
+              properties: { status: { const: "unknown" }, sourceUrl: { type: "null" }, sourceExcerpt: { type: "null" } }
+            },
             application: {
               type: "object", additionalProperties: false,
               required: ["status", "mode", "deadline", "sourceUrl", "sourceExcerpt"],
@@ -108,9 +136,12 @@ function renderOpening(item, checkedAt) {
     `- scope: ${escapeMarkdown(item.countryCode)} · ${escapeMarkdown(item.degreeLevel)} · ${escapeMarkdown(item.field)}`,
     `- checked: ${checkedAt}`,
     `- advertised opening: ${escapeMarkdown(item.postingEvidence.sourceExcerpt)}, ${cite(item.postingEvidence.sourceUrl)}`,
+    ...item.academicConditions.map((condition) =>
+      `- academic condition: ${escapeMarkdown(condition.condition)} — ${escapeMarkdown(condition.sourceExcerpt)}, ${cite(condition.sourceUrl)}`),
     `- application: \`open\` — ${escapeMarkdown(item.application.sourceExcerpt)}, ${cite(item.application.sourceUrl)}`,
     `- deadline: ${deadline}`,
-    `- ${item.funding.type}: ${escapeMarkdown(funding)} — ${escapeMarkdown(item.funding.sourceExcerpt)}, ${cite(item.funding.sourceUrl)}`
+    `- ${item.funding.type}: ${escapeMarkdown(funding)} — ${escapeMarkdown(item.funding.sourceExcerpt)}, ${cite(item.funding.sourceUrl)}`,
+    "- Iranian-nationality evidence: `unknown`"
   ].join("\n");
 }
 
@@ -131,6 +162,10 @@ export function renderVerifiedOpenAcademicOpportunityShortlist(input) {
     errors.push("checkedAt must be within one calendar day of today");
   }
   input.openings.forEach((item, index) => {
+    if (item.countryCode !== input.searchScope.countryCode || item.degreeLevel !== input.searchScope.degreeLevel
+      || normalized(item.field) !== normalized(input.searchScope.field)) {
+      errors.push(`openings.${index} must match the requested country, degree and field`);
+    }
     if (!excerptContains(item.postingEvidence.sourceExcerpt, item.title)) {
       errors.push(`openings.${index}.postingEvidence.sourceExcerpt must name the advertised opening`);
     }
@@ -177,11 +212,19 @@ export function renderVerifiedOpenAcademicOpportunityShortlist(input) {
       errors.push(`openings.${index}.funding needs exactly one salary scale, named stipend package, or positive amount with currency and period matching its type`);
     }
   });
+  const excludedCount = input.coverage.excluded.reduce((sum, item) => sum + item.count, 0);
+  if (input.coverage.candidatesChecked !== input.openings.length + excludedCount) {
+    errors.push("coverage.candidatesChecked must equal displayed plus excluded candidates");
+  }
   if (errors.length) return { error: "invalid_opportunity_presentation", details: errors };
+  const count = input.openings.length;
+  const coverageNote = `${count} verified openings from ${input.coverage.candidatesChecked} candidates checked in ${input.searchScope.countryCode} / ${input.searchScope.degreeLevel} / ${input.searchScope.field}.`;
+  const exclusions = input.coverage.excluded.map((item) => `- excluded ${item.count}: ${item.reason}`).join("\n");
+  const limitNote = count < 3 ? "This checked search returned fewer than three qualified openings; unsearched opportunities remain unknown." : null;
   return {
     status: "valid",
-    openingCount: input.openings.length,
+    openingCount: count,
     validationScope: "structure_and_caller_supplied_excerpt_only",
-    markdown: input.openings.map((item) => renderOpening(item, input.checkedAt)).join("\n\n")
+    markdown: [coverageNote, exclusions, limitNote, ...input.openings.map((item) => renderOpening(item, input.checkedAt))].filter(Boolean).join("\n\n")
   };
 }

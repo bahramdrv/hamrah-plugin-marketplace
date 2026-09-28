@@ -12,6 +12,8 @@ const YESTERDAY = new Date(Date.parse(`${TODAY}T00:00:00Z`) - 86_400_000).toISOS
 function opening() {
   return {
     checkedAt: TODAY,
+    searchScope: { countryCode: "DEU", degreeLevel: "phd", field: "Physics" },
+    coverage: { candidatesChecked: 1, excluded: [] },
     openings: [{
       title: "Doctoral Researcher in Experimental Physics",
       institution: "Example University",
@@ -23,6 +25,9 @@ function opening() {
         sourceUrl: POSTING,
         sourceExcerpt: "Doctoral Researcher in Experimental Physics (PhD position)"
       },
+      academicConditions: [{ condition: "Master's degree in physics required", sourceUrl: POSTING,
+        sourceExcerpt: "A master's degree in physics is required." }],
+      nationalityEvidence: { status: "unknown", sourceUrl: null, sourceExcerpt: null },
       application: {
         status: "open", mode: "dated", deadline: FUTURE_DEADLINE,
         sourceUrl: POSTING,
@@ -256,4 +261,61 @@ test("a source-stated monthly euro stipend remains renderable", async () => {
   const result = await render(input);
   assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
   assert.match(result.content[0].text, /1500 EUR\/month/);
+});
+
+test("a request-scoped shortlist shows multiple openings, academic conditions and unknown nationality", async () => {
+  const input = opening();
+  input.searchScope = { countryCode: "DEU", degreeLevel: "phd", field: "Physics" };
+  input.coverage = { candidatesChecked: 2, excluded: [] };
+  input.openings[0].academicConditions = [{
+    condition: "Master's degree in physics required",
+    sourceUrl: POSTING,
+    sourceExcerpt: "A master's degree in physics is required."
+  }];
+  input.openings[0].nationalityEvidence = { status: "unknown", sourceUrl: null, sourceExcerpt: null };
+  const second = structuredClone(input.openings[0]);
+  second.title = "Doctoral Researcher in Experimental Physics II";
+  second.postingEvidence.sourceExcerpt = second.title;
+  second.officialPostingUrl = "https://example.edu/jobs/phd-physics-2027-b";
+  second.postingEvidence.sourceUrl = second.officialPostingUrl;
+  input.openings.push(second);
+  const result = await render(input);
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.equal(result.structuredContent.openingCount, 2);
+  assert.match(result.content[0].text, /2 verified openings/);
+  assert.match(result.content[0].text, /academic condition: Master's degree in physics required/);
+  assert.match(result.content[0].text, /Iranian-nationality evidence: `unknown`/);
+  assert.match(result.content[0].text, /phd-physics-2027-b/);
+});
+
+test("zero qualified openings reports the checked scope and exclusions without asserting no positions exist", async () => {
+  const input = opening();
+  input.openings = [];
+  input.coverage = { candidatesChecked: 2, excluded: [
+    { reason: "expired_deadline", count: 1 },
+    { reason: "unverified_funding", count: 1 }
+  ] };
+  const result = await render(input);
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.equal(result.structuredContent.openingCount, 0);
+  assert.match(result.content[0].text, /0 verified openings from 2 candidates checked/);
+  assert.match(result.content[0].text, /expired_deadline/);
+  assert.match(result.content[0].text, /unsearched opportunities remain unknown/);
+  assert.doesNotMatch(result.content[0].text, /no openings exist/i);
+});
+
+test("a candidate outside the requested country, degree or field cannot appear in the shortlist", async () => {
+  const input = opening();
+  input.openings[0].countryCode = "CAN";
+  const result = await render(input);
+  assert.equal(result.isError, true);
+  assert.ok(result.structuredContent.details.some((item) => item.includes("requested country")));
+});
+
+test("coverage must account for every checked candidate", async () => {
+  const input = opening();
+  input.coverage.candidatesChecked = 3;
+  const result = await render(input);
+  assert.equal(result.isError, true);
+  assert.ok(result.structuredContent.details.some((item) => item.includes("displayed plus excluded")));
 });
