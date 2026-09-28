@@ -17,6 +17,7 @@ import { CLAIM_TYPES, searchRouteClaims } from "./community-route-claim-tools.mj
 import { findViableRoutesForIranians, InvalidRouteDiscoveryInput } from "./community-route-discovery.mjs";
 import { getIdealCandidateProfile, InvalidIdealCandidateProfileInput } from "./ideal-candidate-profile.mjs";
 import { PROGRAM_PRESENTATION_TOOL, renderAcademicProgramShortlist } from "./program-presentation.mjs";
+import { OPPORTUNITY_PRESENTATION_TOOL, renderVerifiedOpenAcademicOpportunityShortlist } from "./opportunity-presentation.mjs";
 import { getIranianRouteViability, InvalidIranianApplicantError } from "./community-route-viability.mjs";
 import { searchOfficialApprovalStatistics } from "./community-statistics-tools.mjs";
 import { getCommunityQuestion, QuestionNotFoundError, searchCommunityQuestions } from "./community-question-tools.mjs";
@@ -786,6 +787,20 @@ const TOOL_REGISTRY = [
       kind: "assessment",
       handler: async (args) => {
         const result = renderAcademicProgramShortlist(args);
+        if (result.error) return toolResult(result, true);
+        return {
+          isError: false,
+          content: [{ type: "text", text: result.markdown }],
+          structuredContent: result
+        };
+      }
+    }
+  }),
+  ...registerTools([OPPORTUNITY_PRESENTATION_TOOL], {
+    renderVerifiedOpenAcademicOpportunityShortlist: {
+      kind: "assessment",
+      handler: async (args) => {
+        const result = renderVerifiedOpenAcademicOpportunityShortlist(args);
         if (result.error) return toolResult(result, true);
         return {
           isError: false,

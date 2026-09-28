@@ -48,6 +48,10 @@ _Avoid_: Published evidence
 A source-linked record of a specific academic opening with its own evidence, verification state, and freshness. A mention of a university or professor alone does not establish an opening.
 _Avoid_: University listing, professor profile
 
+**Verified Open Academic Opportunity**:
+An advertised Academic Opportunity whose current official source explicitly confirms that applications are being accepted at the check date, through a future deadline or a rolling call. A record marked active without that confirmation, or with unknown or expired application status, is not a verified open opportunity.
+_Avoid_: Active dataset record, available program
+
 **Academic Program Match**:
 A request-scoped comparison of a named admissions program with an applicant's stated academic goals and relevant profile facts, backed by a current official program page. It identifies fit and gaps without implying admission or an open funded position.
 _Avoid_: Admission chance, professor match, open position
