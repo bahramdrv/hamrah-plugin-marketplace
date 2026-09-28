@@ -1,7 +1,7 @@
 # Enforce the visible Program Finder evidence contract
 
 Blocked by: none
-Status: in-progress
+Status: done
 
 ## Finding
 
@@ -16,4 +16,4 @@ Make the user-visible shortlist consume a validated request-scoped representatio
 - [x] Each application and funding status has exactly one supported value.
 - [x] A verified dated deadline has a named intake/year and an official source for that same call; otherwise the dated deadline is unknown.
 - [x] Admission and scholarship deadlines remain separate, and competitive funding says what it covers.
-- [ ] The anonymous Case A and Case B behavior checks pass without claiming a visa or admission probability. Case B passed. A fourth approved Case A replay used the local fit-note formatter successfully and passed the visible-field, fit-status, citation-format, privacy-boundary, and scope checks. Evidence substance remained partial for one program. The renderer now separates `admission_requirement` from `program_context`, requires a source excerpt, and rejects a program with no cited admission requirement; repeat the installed-skill behavior check. It still cannot authenticate the linked page's meaning.
+- [x] The anonymous Case A and Case B behavior checks pass without claiming a visa or admission probability. Case B passed in the primary-text renderer replay. The 2026-09-28 installed-skill Case A replay used the deployed renderer and local fit-note formatter, kept four fit statuses conditional, linked each note to a labelled admission requirement, and stayed within the feature boundary. Source-page authenticity remains outside this structural validator's scope.
