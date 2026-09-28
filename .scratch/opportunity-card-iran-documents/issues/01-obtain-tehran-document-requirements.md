@@ -2,7 +2,9 @@
 
 Blocked by: None
 
-Status: ready-for-human
+Status: wontfix
+
+The owner declined the embassy enquiry on 28 September 2026. No further follow-up is planned. The two published questions remain unresolved unless a current, attributable Tehran source becomes available independently.
 
 ## Evidence gap
 
