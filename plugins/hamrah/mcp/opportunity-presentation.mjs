@@ -10,6 +10,11 @@ const sourceEvidence = {
   required: ["sourceUrl", "sourceExcerpt"],
   properties: { sourceUrl: url, sourceExcerpt: text(500) }
 };
+const statedTerm = {
+  type: "object", additionalProperties: false,
+  required: ["value", "sourceUrl", "sourceExcerpt"],
+  properties: { value: text(200), sourceUrl: url, sourceExcerpt: text(500) }
+};
 const searchScope = {
   type: "object", additionalProperties: false,
   required: ["countryCode", "degreeLevel", "field"],
@@ -22,7 +27,11 @@ const coverage = {
     candidatesChecked: { type: "integer", minimum: 0 },
     excluded: { type: "array", maxItems: 20, items: {
       type: "object", additionalProperties: false, required: ["reason", "count"],
-      properties: { reason: { enum: ["not_currently_open", "expired_deadline", "unverified_funding", "missing_official_posting", "out_of_scope", "unverified_conditions", "other_unverified"] }, count: { type: "integer", minimum: 1 } }
+      properties: {
+        reason: { enum: ["not_currently_open", "expired_deadline", "unverified_funding", "missing_official_posting", "out_of_scope", "unverified_conditions", "other_unverified", "iranian_nationality_restriction"] },
+        count: { type: "integer", minimum: 1 }, title: text(200), officialPostingUrl: url,
+        sourceUrl: url, sourceExcerpt: text(500)
+      }
     } }
   }
 };
@@ -51,6 +60,10 @@ export const OPPORTUNITY_PRESENTATION_TOOL = {
               required: ["condition", "sourceUrl", "sourceExcerpt"],
               properties: { condition: text(300), sourceUrl: url, sourceExcerpt: text(500) }
             } },
+            employmentTerms: {
+              type: "object", additionalProperties: false, minProperties: 1,
+              properties: { workload: statedTerm, contractDuration: statedTerm }
+            },
             nationalityEvidence: {
               type: "object", additionalProperties: false,
               required: ["status", "sourceUrl", "sourceExcerpt"],
@@ -120,9 +133,20 @@ const currentApplicationPhrases = [
   /\bposition is (?:now|currently) open for applications\b/,
   /\bbewerbungen sind (?:ab sofort|derzeit|aktuell) möglich\b/,
   /\bwir nehmen (?:ab sofort|derzeit|aktuell) bewerbungen an\b/,
-  /\bjetzt bewerben\b/
+  /\bjetzt bewerben\b/,
+  /\buse only the online application form to submit your application\b/
 ];
 const acceptanceNow = (excerpt) => currentApplicationPhrases.some((pattern) => pattern.test(normalized(excerpt)));
+const explicitIranianBar = (excerpt) => {
+  const subject = "(?:iranian (?:applicants?|citizens?|nationals?)|(?:applicants?|candidates?) (?:with|holding) iranian (?:citizenship|nationality)|citizens? of iran|nationals? of iran|applicants? from iran)";
+  const barred = "(?:(?:are|is) (?:not eligible|ineligible) (?:to apply|for (?:this|the) (?:position|opening|call))|(?:are|is) (?:barred|excluded) from applying|(?:are|is) not (?:permitted|allowed) to apply|(?:cannot|may not|must not) apply|(?:are|is) not accepted for (?:this|the) (?:position|opening|call))";
+  const targetedBar = new RegExp(`\\b${subject}\\s+${barred}\\b`);
+  const reverseBar = new RegExp(`\\b(?:this|the) (?:position|opening|call) is not open to ${subject}\\b`);
+  const germanBar = /\biranische staatsangehörige\s+(?:sind (?:für diese stelle )?nicht zugelassen|dürfen sich nicht bewerben|sind ausgeschlossen)\b/;
+  return normalized(excerpt).split(/\bbut\b|\bhowever\b|\bwhereas\b|[.!?;]+/)
+    .some((clause) => !/\b(?:if|unless|without|provided|sofern|ohne)\b/.test(clause)
+      && (targetedBar.test(clause) || reverseBar.test(clause) || germanBar.test(clause)));
+};
 const validDate = (value) => typeof value === "string" && !Number.isNaN(Date.parse(`${value}T00:00:00Z`))
   && new Date(`${value}T00:00:00Z`).toISOString().slice(0, 10) === value;
 
@@ -141,6 +165,8 @@ function renderOpening(item, checkedAt) {
     `- application: \`open\` — ${escapeMarkdown(item.application.sourceExcerpt)}, ${cite(item.application.sourceUrl)}`,
     `- deadline: ${deadline}`,
     `- ${item.funding.type}: ${escapeMarkdown(funding)} — ${escapeMarkdown(item.funding.sourceExcerpt)}, ${cite(item.funding.sourceUrl)}`,
+    ...(item.employmentTerms?.workload ? [`- workload: ${escapeMarkdown(item.employmentTerms.workload.value)} — ${escapeMarkdown(item.employmentTerms.workload.sourceExcerpt)}, ${cite(item.employmentTerms.workload.sourceUrl)}`] : []),
+    ...(item.employmentTerms?.contractDuration ? [`- contract duration: ${escapeMarkdown(item.employmentTerms.contractDuration.value)} — ${escapeMarkdown(item.employmentTerms.contractDuration.sourceExcerpt)}, ${cite(item.employmentTerms.contractDuration.sourceUrl)}`] : []),
     "- Iranian-nationality evidence: `unknown`"
   ].join("\n");
 }
@@ -162,6 +188,11 @@ export function renderVerifiedOpenAcademicOpportunityShortlist(input) {
     errors.push("checkedAt must be within one calendar day of today");
   }
   input.openings.forEach((item, index) => {
+    for (const [kind, term] of Object.entries(item.employmentTerms ?? {})) {
+      if (!excerptContains(term.sourceExcerpt, term.value)) {
+        errors.push(`openings.${index}.employmentTerms.${kind}.sourceExcerpt must state the displayed term`);
+      }
+    }
     if (item.countryCode !== input.searchScope.countryCode || item.degreeLevel !== input.searchScope.degreeLevel
       || normalized(item.field) !== normalized(input.searchScope.field)) {
       errors.push(`openings.${index} must match the requested country, degree and field`);
@@ -212,6 +243,22 @@ export function renderVerifiedOpenAcademicOpportunityShortlist(input) {
       errors.push(`openings.${index}.funding needs exactly one salary scale, named stipend package, or positive amount with currency and period matching its type`);
     }
   });
+  input.coverage.excluded.forEach((item, index) => {
+    const path = `coverage.excluded.${index}`;
+    if (item.reason === "iranian_nationality_restriction") {
+      if (item.count !== 1 || !item.title || !item.officialPostingUrl || !item.sourceUrl || !item.sourceExcerpt) {
+        errors.push(`${path} needs one named opening and its official restriction excerpt`);
+      } else {
+        if (item.sourceUrl !== item.officialPostingUrl) errors.push(`${path}.sourceUrl must be the official posting URL`);
+        if (!explicitIranianBar(item.sourceExcerpt)) errors.push(`${path}.sourceExcerpt must explicitly bar Iranian applicants`);
+        if (input.openings.some((opening) => opening.officialPostingUrl === item.officialPostingUrl)) {
+          errors.push(`${path} must not also appear as an opening when excluded by an official nationality restriction`);
+        }
+      }
+    } else if (item.title || item.officialPostingUrl || item.sourceUrl || item.sourceExcerpt) {
+      errors.push(`${path} only an official Iranian-nationality restriction may carry a named source-linked exclusion`);
+    }
+  });
   const excludedCount = input.coverage.excluded.reduce((sum, item) => sum + item.count, 0);
   if (input.coverage.candidatesChecked !== input.openings.length + excludedCount) {
     errors.push("coverage.candidatesChecked must equal displayed plus excluded candidates");
@@ -219,7 +266,9 @@ export function renderVerifiedOpenAcademicOpportunityShortlist(input) {
   if (errors.length) return { error: "invalid_opportunity_presentation", details: errors };
   const count = input.openings.length;
   const coverageNote = `${count} verified openings from ${input.coverage.candidatesChecked} candidates checked in ${input.searchScope.countryCode} / ${input.searchScope.degreeLevel} / ${input.searchScope.field}.`;
-  const exclusions = input.coverage.excluded.map((item) => `- excluded ${item.count}: ${item.reason}`).join("\n");
+  const exclusions = input.coverage.excluded.map((item) => item.reason === "iranian_nationality_restriction"
+    ? `- excluded 1: ${item.reason} — ${escapeMarkdown(item.title)}: ${escapeMarkdown(item.sourceExcerpt)}, ${cite(item.sourceUrl)}`
+    : `- excluded ${item.count}: ${item.reason}`).join("\n");
   const limitNote = count < 3 ? "This checked search returned fewer than three qualified openings; unsearched opportunities remain unknown." : null;
   return {
     status: "valid",

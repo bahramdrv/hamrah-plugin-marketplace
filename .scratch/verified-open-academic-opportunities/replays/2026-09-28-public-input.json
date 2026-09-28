@@ -1,0 +1,161 @@
+{
+  "checkedAt": "2026-09-28",
+  "searchScope": {
+    "countryCode": "DEU",
+    "degreeLevel": "phd",
+    "field": "Physics"
+  },
+  "coverage": {
+    "candidatesChecked": 4,
+    "excluded": [
+      {
+        "reason": "expired_deadline",
+        "count": 1
+      },
+      {
+        "reason": "unverified_funding",
+        "count": 1
+      }
+    ]
+  },
+  "openings": [
+    {
+      "title": "Research Associate for the Project “Modeling non-local interaction phenomena in real materials: electrons, lattice & topology” § 28 Subsection 3 HmbHG",
+      "institution": "Universität Hamburg",
+      "countryCode": "DEU",
+      "degreeLevel": "phd",
+      "field": "Physics",
+      "officialPostingUrl": "https://stellen.uni-hamburg.de/jobposting/78344fe75700d155e4528290a845337c21ae8019",
+      "postingEvidence": {
+        "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/78344fe75700d155e4528290a845337c21ae8019",
+        "sourceExcerpt": "Research Associate for the Project “Modeling non-local interaction phenomena in real materials: electrons, lattice & topology” § 28 Subsection 3 HmbHG"
+      },
+      "academicConditions": [
+        {
+          "condition": "University degree in a relevant field",
+          "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/78344fe75700d155e4528290a845337c21ae8019",
+          "sourceExcerpt": "A university degree in a relevant field."
+        },
+        {
+          "condition": "Master of Science in Physics or related field",
+          "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/78344fe75700d155e4528290a845337c21ae8019",
+          "sourceExcerpt": "Master of Science in Physics or related field, with experience in condensed matter physics and, ideally, theoretical solid-state physics."
+        },
+        {
+          "condition": "Experience in condensed matter physics",
+          "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/78344fe75700d155e4528290a845337c21ae8019",
+          "sourceExcerpt": "Master of Science in Physics or related field, with experience in condensed matter physics and, ideally, theoretical solid-state physics."
+        },
+        {
+          "condition": "Theoretical solid-state physics background preferred",
+          "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/78344fe75700d155e4528290a845337c21ae8019",
+          "sourceExcerpt": "Master of Science in Physics or related field, with experience in condensed matter physics and, ideally, theoretical solid-state physics."
+        },
+        {
+          "condition": "Strongly correlated systems, Green’s-function methods, or electron-phonon/lattice dynamics desirable",
+          "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/78344fe75700d155e4528290a845337c21ae8019",
+          "sourceExcerpt": "Experience in the theory of strongly correlated systems using e.g. Green’s-function-based methods as well as electron-phonon physics or electron-lattice dynamics is desirable."
+        }
+      ],
+      "nationalityEvidence": {
+        "status": "unknown",
+        "sourceUrl": null,
+        "sourceExcerpt": null
+      },
+      "application": {
+        "status": "open",
+        "mode": "dated",
+        "deadline": "2026-10-12",
+        "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/78344fe75700d155e4528290a845337c21ae8019",
+        "sourceExcerpt": "2026-10-12 Use only the online application form to submit your application with the following documents:"
+      },
+      "funding": {
+        "type": "salary",
+        "amount": null,
+        "currency": null,
+        "period": null,
+        "salaryScale": "EGR. 13 TV-L",
+        "packageName": null,
+        "packageTerms": null,
+        "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/78344fe75700d155e4528290a845337c21ae8019",
+        "sourceExcerpt": "Salary level: EGR. 13 TV-L"
+      },
+      "employmentTerms": {
+        "workload": {
+          "value": "75 % of standard work hours per week",
+          "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/78344fe75700d155e4528290a845337c21ae8019",
+          "sourceExcerpt": "Weekly hours: 75 % of standard work hours per week"
+        },
+        "contractDuration": {
+          "value": "fixed until 30.11.2029",
+          "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/78344fe75700d155e4528290a845337c21ae8019",
+          "sourceExcerpt": "Start date: 01.12.2026, fixed until 30.11.2029"
+        }
+      }
+    },
+    {
+      "title": "Research Associate for the Project “Observational studies of compact hot stars using large scale sky surveys” § 28 Subsection 3 HmbHG",
+      "institution": "Universität Hamburg",
+      "countryCode": "DEU",
+      "degreeLevel": "phd",
+      "field": "Physics",
+      "officialPostingUrl": "https://stellen.uni-hamburg.de/jobposting/8d8889efd47d2917caf51813821a63226bc38f9d",
+      "postingEvidence": {
+        "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/8d8889efd47d2917caf51813821a63226bc38f9d",
+        "sourceExcerpt": "Research Associate for the Project “Observational studies of compact hot stars using large scale sky surveys” § 28 Subsection 3 HmbHG"
+      },
+      "academicConditions": [
+        {
+          "condition": "University degree in a relevant field",
+          "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/8d8889efd47d2917caf51813821a63226bc38f9d",
+          "sourceExcerpt": "A university degree in a relevant field."
+        },
+        {
+          "condition": "Knowledge of astrophysics and late stellar binary evolution",
+          "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/8d8889efd47d2917caf51813821a63226bc38f9d",
+          "sourceExcerpt": "The successful candidate has good knowledge of fundamental topics in Astrophysics and a profound knowledge in late stellar binary stellar evolution."
+        },
+        {
+          "condition": "Spectral modelling of compact hot stars encouraged",
+          "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/8d8889efd47d2917caf51813821a63226bc38f9d",
+          "sourceExcerpt": "Candidates which have additional expertise in spectral modelling of compact hot stars are particularly encouraged to apply."
+        }
+      ],
+      "nationalityEvidence": {
+        "status": "unknown",
+        "sourceUrl": null,
+        "sourceExcerpt": null
+      },
+      "application": {
+        "status": "open",
+        "mode": "dated",
+        "deadline": "2026-10-15",
+        "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/8d8889efd47d2917caf51813821a63226bc38f9d",
+        "sourceExcerpt": "2026-10-15 Use only the online application form to submit your application with the following documents:"
+      },
+      "funding": {
+        "type": "salary",
+        "amount": null,
+        "currency": null,
+        "period": null,
+        "salaryScale": "EGR. 13 TV-L",
+        "packageName": null,
+        "packageTerms": null,
+        "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/8d8889efd47d2917caf51813821a63226bc38f9d",
+        "sourceExcerpt": "Salary level: EGR. 13 TV-L"
+      },
+      "employmentTerms": {
+        "workload": {
+          "value": "66,67 % of standard work hours per week",
+          "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/8d8889efd47d2917caf51813821a63226bc38f9d",
+          "sourceExcerpt": "Weekly hours: 66,67 % of standard work hours per week"
+        },
+        "contractDuration": {
+          "value": "fixed for a period of three years",
+          "sourceUrl": "https://stellen.uni-hamburg.de/jobposting/8d8889efd47d2917caf51813821a63226bc38f9d",
+          "sourceExcerpt": "Start date: as early as 01.02.2027 or according to agreement, fixed for a period of three years"
+        }
+      }
+    }
+  ]
+}

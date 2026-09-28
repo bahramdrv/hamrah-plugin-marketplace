@@ -319,3 +319,125 @@ test("coverage must account for every checked candidate", async () => {
   assert.equal(result.isError, true);
   assert.ok(result.structuredContent.details.some((item) => item.includes("displayed plus excluded")));
 });
+
+test("an explicit official Iranian-nationality bar is a sourced exclusion, never a qualifying opening", async () => {
+  const input = opening();
+  const restrictedUrl = "https://example.edu/jobs/restricted-physics";
+  input.coverage = { candidatesChecked: 2, excluded: [{
+    reason: "iranian_nationality_restriction", count: 1,
+    title: "Restricted doctoral physics position", officialPostingUrl: restrictedUrl,
+    sourceUrl: restrictedUrl, sourceExcerpt: "Applicants with Iranian citizenship are not eligible to apply."
+  }] };
+  const result = await render(input);
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.equal(result.structuredContent.openingCount, 1);
+  assert.match(result.content[0].text, /Restricted doctoral physics position/);
+  assert.match(result.content[0].text, /iranian_nationality_restriction/);
+  assert.match(result.content[0].text, /https:\/\/example\.edu\/jobs\/restricted-physics/);
+  assert.doesNotMatch(result.content[0].text, /^### \[Restricted doctoral physics position\]/m);
+
+  input.openings[0].officialPostingUrl = restrictedUrl;
+  const duplicate = await render(input);
+  assert.equal(duplicate.isError, true);
+  assert.ok(duplicate.structuredContent.details.some((item) => item.includes("excluded by an official nationality restriction")));
+});
+
+test("a vague or absent Iranian-nationality claim cannot become an official exclusion", async () => {
+  const input = opening();
+  input.openings = [];
+  input.coverage = { candidatesChecked: 1, excluded: [{
+    reason: "iranian_nationality_restriction", count: 1,
+    title: "Physics position", officialPostingUrl: POSTING,
+    sourceUrl: POSTING, sourceExcerpt: "Applicants should check visa rules before applying."
+  }] };
+  const vague = await render(input);
+  assert.equal(vague.isError, true);
+  assert.ok(vague.structuredContent.details.some((item) => item.includes("explicitly bar Iranian applicants")));
+
+  input.coverage.excluded[0].sourceExcerpt = "Iranian applicants are not excluded from applying.";
+  const negated = await render(input);
+  assert.equal(negated.isError, true);
+  assert.ok(negated.structuredContent.details.some((item) => item.includes("explicitly bar Iranian applicants")));
+
+  input.coverage.excluded[0].sourceExcerpt = "Iranian applicants may apply. Applicants without a master's degree are not eligible.";
+  const unrelatedCondition = await render(input);
+  assert.equal(unrelatedCondition.isError, true);
+  assert.ok(unrelatedCondition.structuredContent.details.some((item) => item.includes("explicitly bar Iranian applicants")));
+
+  input.coverage.excluded[0].sourceExcerpt = "Iranian applicants are eligible, but applicants without a master's degree are not eligible to apply.";
+  const unrelatedClause = await render(input);
+  assert.equal(unrelatedClause.isError, true);
+  assert.ok(unrelatedClause.structuredContent.details.some((item) => item.includes("explicitly bar Iranian applicants")));
+
+  input.coverage.excluded[0].sourceExcerpt = "Iranian applicants without a master's degree are not eligible to apply.";
+  const academicQualifier = await render(input);
+  assert.equal(academicQualifier.isError, true);
+  assert.ok(academicQualifier.structuredContent.details.some((item) => item.includes("explicitly bar Iranian applicants")));
+
+  input.coverage.excluded[0].sourceExcerpt = "Iranian applicants are not eligible to apply without a master's degree.";
+  const trailingQualifier = await render(input);
+  assert.equal(trailingQualifier.isError, true);
+  assert.ok(trailingQualifier.structuredContent.details.some((item) => item.includes("explicitly bar Iranian applicants")));
+
+  input.coverage.excluded[0].sourceExcerpt = "Iranische Staatsangehörige ohne Masterabschluss sind für diese Stelle nicht zugelassen.";
+  const germanAcademicQualifier = await render(input);
+  assert.equal(germanAcademicQualifier.isError, true);
+  assert.ok(germanAcademicQualifier.structuredContent.details.some((item) => item.includes("explicitly bar Iranian applicants")));
+
+  input.coverage.excluded[0].sourceExcerpt = "Applicants with Iranian citizenship are not eligible to apply.";
+  input.coverage.excluded[0].sourceUrl = "https://unrelated.example/claim";
+  const unrelated = await render(input);
+  assert.equal(unrelated.isError, true);
+  assert.ok(unrelated.structuredContent.details.some((item) => item.includes("official posting URL")));
+});
+
+test("an explicit citizenship-of-Iran bar is recognized without inferring from a generic eligibility rule", async () => {
+  const input = opening();
+  input.openings = [];
+  input.coverage = { candidatesChecked: 1, excluded: [{
+    reason: "iranian_nationality_restriction", count: 1,
+    title: "Physics position", officialPostingUrl: POSTING,
+    sourceUrl: POSTING, sourceExcerpt: "Citizens of Iran are barred from applying to this position."
+  }] };
+  const result = await render(input);
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.match(result.content[0].text, /Citizens of Iran are barred/);
+
+  input.coverage.excluded[0].sourceExcerpt = "Iranische Staatsangehörige sind für diese Stelle nicht zugelassen.";
+  const german = await render(input);
+  assert.equal(german.isError, false, JSON.stringify(german.structuredContent));
+});
+
+test("an active official online application form with a future dated deadline proves current acceptance", async () => {
+  const input = opening();
+  input.openings[0].application.sourceExcerpt = `Application deadline: ${FUTURE_DEADLINE}. Use only the online application form to submit your application.`;
+  const result = await render(input);
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+
+  input.openings[0].application.deadline = YESTERDAY;
+  input.openings[0].application.sourceExcerpt = `Application deadline: ${YESTERDAY}. Use only the online application form to submit your application.`;
+  const expired = await render(input);
+  assert.equal(expired.isError, true);
+  assert.ok(expired.structuredContent.details.some((item) => item.includes("valid future date")));
+});
+
+test("published workload and contract duration stay separate from the salary scale", async () => {
+  const input = opening();
+  input.openings[0].employmentTerms = {
+    workload: { value: "75 % of standard work hours per week", sourceUrl: POSTING,
+      sourceExcerpt: "Weekly hours: 75 % of standard work hours per week" },
+    contractDuration: { value: "fixed for a period of three years", sourceUrl: POSTING,
+      sourceExcerpt: "Start date: 01.12.2026, fixed for a period of three years" }
+  };
+  const result = await render(input);
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.match(result.content[0].text, /salary: 65% TV-L E13/);
+  assert.match(result.content[0].text, /workload: 75 % of standard work hours per week/);
+  assert.match(result.content[0].text, /contract duration: fixed for a period of three years/);
+  assert.match(result.content[0].text, /Weekly hours: 75 % of standard work hours per week, \[official page\]/);
+
+  input.openings[0].employmentTerms.workload.sourceExcerpt = "Working hours vary.";
+  const unsupported = await render(input);
+  assert.equal(unsupported.isError, true);
+  assert.ok(unsupported.structuredContent.details.some((item) => item.includes("employmentTerms.workload")));
+});
