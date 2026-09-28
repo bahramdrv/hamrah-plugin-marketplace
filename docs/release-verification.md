@@ -47,6 +47,12 @@ The combined release passed both GitHub Actions workflows on commit `1fd29d2`: [
 
 On 27 September 2026, `npm run verify:live` passed against the production endpoint and reported `deploymentCommit` `067f35c782fe83793fcf6c5b9fa97ffb84ce614a`, matching the then-current `main`. It reported 45 tools, 5 skills, and 56 valid datasets. The synthetic eligibility check remained `UNKNOWN` and unrankable; community coverage was `partial` with seven signals excluded for unrecorded evidence maturity. Academic opportunities, Iranian Lived Experiences, and official approval statistics each returned `no_coverage` for the synthetic query. These results verify the endpoint behavior checked by the script, not completeness of immigration evidence.
 
+### Verified Open Academic Opportunities deployment check
+
+After deploying the opportunity slice, run `npm run verify:live:opportunities -- https://hamrah-plugin-marketplace.vercel.app <deployed-commit-sha>`. This checks `/health`, confirms the intended commit and registered tool, then calls the public-fact renderer with clearly synthetic opening and nationality-exclusion evidence. It sends no applicant profile. Passing this smoke test proves the deployed renderer accepts and presents the synthetic contract; it does not prove a real posting is current or that a live search found one. The separate anonymous acceptance replay in the feature ticket checks current official pages.
+
+The broader `npm run verify:live` sends a complete synthetic applicant profile to the remote endpoint. Review its data boundary before using it for this feature's deployment check.
+
 ## How to read Hamrah's measures
 
 | Measure | What it means | Limit |

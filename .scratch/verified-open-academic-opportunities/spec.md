@@ -1,6 +1,6 @@
 # Verified Open Academic Opportunities — first request-scoped slice
 
-Status: ready-for-agent
+Status: done
 
 ## Problem Statement
 

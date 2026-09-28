@@ -9,6 +9,7 @@
     "test": "node --test plugins/hamrah/mcp/tests/*.test.mjs web/*.test.mjs",
     "verify:release": "node scripts/verify-release.mjs",
     "verify:live": "node scripts/verify-live-mcp.mjs",
+    "verify:live:opportunities": "node scripts/verify-live-opportunities.mjs",
     "check:static": "find plugins web packages scripts -name '*.mjs' -type f -exec node --check {} \\;"
   },
   "engines": {
