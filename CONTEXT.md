@@ -56,6 +56,10 @@ _Avoid_: Active dataset record, available program
 A request-scoped comparison of a named admissions program with an applicant's stated academic goals and relevant profile facts, backed by a current official program page. It identifies fit and gaps without implying admission or an open funded position.
 _Avoid_: Admission chance, professor match, open position
 
+**Academic Supervisor Lead**:
+A request-scoped, source-linked professor or research-group contact prospect whose official page documents relevant research. Student recruitment and a former Iranian-student connection have separate evidence states; neither follows from research relevance alone.
+_Avoid_: Academic Program Match, Verified Open Academic Opportunity, available supervisor
+
 **Public Person Evidence**:
 A public source that explicitly documents a person's connection to Iran and a relevant immigration or academic milestone. A reviewed source URL may be retained while the person's name is omitted from ordinary results; names, appearance, and language alone do not establish an Iranian connection.
 _Avoid_: Inferred nationality, success anecdote

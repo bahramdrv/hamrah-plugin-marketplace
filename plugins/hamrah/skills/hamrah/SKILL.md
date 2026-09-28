@@ -17,6 +17,7 @@ Use the named Skill as the implementation contract for each output:
 - Immigration scorecard → `../hamrah-scorecard-engine/SKILL.md`, then `references/scorecard_presentation.md`. Use `evaluateCommunityAdjustment` for every candidate route and `finalizeAssessment` before treating the scorecard as final.
 - Academic program shortlist → `../hamrah-program-finder/SKILL.md`, on the user's explicit request; a prior route assessment is optional.
 - Advertised funded doctoral opening → `references/verified_open_academic_opportunities.md`, on the user's explicit request; check the current official advertisement before rendering a Verified Open Academic Opportunity.
+- Academic Supervisor Lead → `references/academic_supervisor_leads.md`, on the user's explicit request; check current official research and public person evidence before rendering a contact prospect.
 - Shareable scorecard image → `../hamrah-scorecard-visualizer/SKILL.md`, after scorecard validation. In ChatGPT web skill imports, where only five top-level skills are accepted, use the bundled equivalent at `references/web_scorecard_visualizer.md` and ChatGPT's image-generation capability.
 
 Track progress with `references/hamrah_state_schema.json`. Reevaluate only affected downstream outputs when facts change.

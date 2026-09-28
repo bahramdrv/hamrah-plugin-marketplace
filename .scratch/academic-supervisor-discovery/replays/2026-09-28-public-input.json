@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-09-28",
+  "searchScope": {
+    "countryCode": "DEU",
+    "field": "Physics",
+    "researchFocus": "Astrobiology"
+  },
+  "coverage": {
+    "candidatesChecked": 1,
+    "excluded": []
+  },
+  "leads": [
+    {
+      "name": "Astrobiology Research Group",
+      "institution": "Technische Universität Berlin",
+      "countryCode": "DEU",
+      "field": "Physics",
+      "officialProfileUrl": "https://www-astro.physik.tu-berlin.de/Astrobiology/node/18",
+      "research": {
+        "focus": "Microbial Survival and Viability in Saline Environments on Mars",
+        "sourceUrl": "https://www-astro.physik.tu-berlin.de/Astrobiology/node/18",
+        "sourceExcerpt": "Microbial Survival and Viability in Saline Environments on Mars (BRINES)"
+      },
+      "recruitment": { "status": "unknown", "sourceUrl": null, "sourceExcerpt": null },
+      "contact": {
+        "status": "published",
+        "sourceUrl": "https://www-astro.physik.tu-berlin.de/Astrobiology/node/18",
+        "sourceExcerpt": "Tel.: +4930 - 314 23734"
+      },
+      "iranianStudent": { "status": "unknown", "sourceUrl": null, "sourceExcerpt": null }
+    }
+  ]
+}
