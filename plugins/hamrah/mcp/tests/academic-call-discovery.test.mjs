@@ -169,6 +169,7 @@ test("global research jobs check both validated boards and exclude research inte
     if (url.includes("/tri?")) return new Response(JSON.stringify([]), { status: 200 });
     if (url.includes("/waabi?")) return new Response(JSON.stringify([]), { status: 200 });
     if (url.includes("boards-api.greenhouse.io")) return new Response('{"jobs":[]}', { status: 200 });
+    if (url.includes("api.ashbyhq.com")) return new Response('{"jobs":[]}', { status: 200 });
     return new Response(JSON.stringify([
       { id: "ae1", text: "Research Scientist - Machine Learning", country: "AE",
         descriptionPlain: "Machine learning", hostedUrl: "https://jobs.lever.co/ifm-us/ae1" },
@@ -181,7 +182,8 @@ test("global research jobs check both validated boards and exclude research inte
     "https://api.lever.co/v0/postings/tri?mode=json",
     "https://api.lever.co/v0/postings/ifm-us?mode=json",
     "https://api.lever.co/v0/postings/waabi?mode=json",
-    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true"
+    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
+    "https://api.ashbyhq.com/posting-api/job-board/faculty"
   ]);
   assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["ae1"]);
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["AE", "US"]);
@@ -208,6 +210,7 @@ test("one failed research board preserves leads from the other and reports parti
     if (url.includes("/ifm-us?")) throw new Error("board unavailable");
     if (url.includes("/waabi?")) return new Response("[]", { status: 200 });
     if (url.includes("boards-api.greenhouse.io")) return new Response('{"jobs":[]}', { status: 200 });
+    if (url.includes("api.ashbyhq.com")) return new Response('{"jobs":[]}', { status: 200 });
     return new Response(JSON.stringify([{ id: "tri1", text: "Robotics Research Scientist",
       country: "US", descriptionPlain: "Robotics research", hostedUrl: "https://jobs.lever.co/tri/tri1" }]), { status: 200 });
   });
@@ -215,6 +218,33 @@ test("one failed research board preserves leads from the other and reports parti
   assert.equal(result.structuredContent.status, "partial");
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.deepEqual(result.structuredContent.coverage.failures.map((item) => item.source), ["lever:ifm-us"]);
+});
+
+test("UK research-job discovery accepts only listed title-matched Faculty postings with a UK primary address", async () => {
+  const urls = [];
+  const board = { jobs: [
+    { id: "gb1", title: "Research Scientist - AI Safety", isListed: true,
+      address: { postalAddress: { addressCountry: "United Kingdom" } },
+      descriptionPlain: "AI safety research", jobUrl: "https://jobs.ashbyhq.com/faculty/gb1" },
+    { id: "gb2", title: "Data Scientist", isListed: true,
+      address: { postalAddress: { addressCountry: "United Kingdom" } },
+      descriptionPlain: "Works with the AI safety research team", jobUrl: "https://jobs.ashbyhq.com/faculty/gb2" },
+    { id: "gb3", title: "Research Scientist - AI Safety", isListed: false,
+      address: { postalAddress: { addressCountry: "United Kingdom" } },
+      descriptionPlain: "AI safety research", jobUrl: "https://jobs.ashbyhq.com/faculty/gb3" },
+    { id: "fr1", title: "Research Scientist - AI Safety", isListed: true,
+      address: { postalAddress: { addressCountry: "France" } },
+      descriptionPlain: "AI safety research", jobUrl: "https://jobs.ashbyhq.com/faculty/fr1" }
+  ] };
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "AI Safety", targetCategory: "research_job", countryCode: "GB"
+  }, async (url) => { urls.push(url); return new Response(JSON.stringify(board), { status: 200 }); });
+  assert.equal(result.isError, false);
+  assert.deepEqual(urls, ["https://api.ashbyhq.com/posting-api/job-board/faculty"]);
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["gb1"]);
+  assert.equal(result.structuredContent.candidates[0].countryCode, "GB");
+  assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
+  assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["GB"]);
 });
 
 test("Canadian research-job discovery uses Waabi's public board and requires title and primary country match", async () => {

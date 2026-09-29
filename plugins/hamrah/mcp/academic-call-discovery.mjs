@@ -127,6 +127,25 @@ function parseAi2Greenhouse(body, input) {
   }));
 }
 
+function parseFacultyAshby(body, input) {
+  if (!body || !Array.isArray(body.jobs)) throw new Error("Ashby returned an unexpected jobs format.");
+  return body.jobs.filter((item) => {
+    const title = String(item?.title ?? "");
+    return item?.isListed === true
+      && item?.address?.postalAddress?.addressCountry === "United Kingdom"
+      && !/\bintern(?:ship)?\b/i.test(title)
+      && /\bresearch(?:er)?\b|\bscientist\b/i.test(title)
+      && relevant(title, input.field)
+      && typeof item?.jobUrl === "string"
+      && /^https:\/\/jobs\.ashbyhq\.com\/faculty\/[^/?#]+\/?$/.test(item.jobUrl);
+  }).map((item) => ({
+    sourceId: String(item.id ?? item.jobUrl), discoverySource: "ashby:faculty",
+    title: plain(item.title), url: item.jobUrl, countryCode: "GB", targetCategory: input.targetCategory,
+    discoveryMatch: "title", summary: plain(item.descriptionPlain).slice(0, 1000),
+    publishedText: item.publishedAt ?? null, deadlineText: null, verificationStatus: "unverified"
+  }));
+}
+
 export async function discoverAcademicCallCandidates(input, fetchImpl = globalThis.fetch, signal) {
   if (!validate(input)) return {
     error: "invalid_academic_call_input",
@@ -209,6 +228,28 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       if (postings.jobs.some((item) => item?.offices?.some((office) => /\bUnited States\b/i.test(office?.location ?? ""))
         && !coverage.countriesChecked.includes("US"))) coverage.countriesChecked.push("US");
       candidates.push(...parseAi2Greenhouse(postings, input));
+      coverage.apiCoverage = "partial";
+    } catch (error) {
+      coverage.failures.push({ source, reason: error instanceof Error ? error.message : String(error) });
+    }
+  }
+  if (input.targetCategory === "research_job" && (!input.countryCode || input.countryCode === "GB")) {
+    const source = "ashby:faculty";
+    coverage.apiSources.push(source);
+    try {
+      const requestSignal = AbortSignal.any([signal ?? new AbortController().signal, AbortSignal.timeout(8000)]);
+      const response = await fetchImpl("https://api.ashbyhq.com/posting-api/job-board/faculty",
+        { method: "GET", headers: { Accept: "application/json" }, signal: requestSignal });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const body = await response.text();
+      if (body.length > 2_000_000) throw new Error("jobs response exceeds size limit");
+      const postings = JSON.parse(body);
+      if (!postings || !Array.isArray(postings.jobs)) throw new Error("Ashby returned an unexpected jobs format.");
+      if (postings.jobs.some((item) => item?.isListed === true
+        && item?.address?.postalAddress?.addressCountry === "United Kingdom")) {
+        coverage.countriesChecked.push("GB");
+      }
+      candidates.push(...parseFacultyAshby(postings, input));
       coverage.apiCoverage = "partial";
     } catch (error) {
       coverage.failures.push({ source, reason: error instanceof Error ? error.message : String(error) });
