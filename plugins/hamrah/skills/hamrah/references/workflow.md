@@ -10,7 +10,7 @@ For a facilitator's sample labelled as a product test, establish the feature und
 2. **Applicant journey:** a facilitator or applicant wants guidance, route assessment, or a scorecard. Continue through the stages below.
 3. **Existing artifact:** validate a supplied profile, state, scorecard, academic-match file, or stored signal catalog and resume from the earliest incomplete stage.
 4. **Academic program request:** when the user explicitly asks for programs, go directly to Hamrah Program Finder. Use relevant profile facts if available and collect only missing facts that change the search; a route scorecard is optional.
-5. **Advertised academic opening request:** when the user explicitly asks for a funded doctoral research position, use `verified_open_academic_opportunities.md`. Research the live official advertisement for this request; a previously published Academic Opportunity or a professor profile does not establish current availability. A route scorecard is optional.
+5. **Open academic call request:** when the user explicitly asks for a current Master's or PhD admission/funding call, doctoral/postdoctoral vacancy, or research job, use `api_assisted_academic_calls.md`. Query available free API/feed leads and search live official pages. A previously published Academic Opportunity, API hit, or professor profile does not establish current availability. A route scorecard is optional.
 6. **Professor or group request:** when the user explicitly asks whom to contact about a research topic, use `academic_supervisor_leads.md`. A research profile establishes an Academic Supervisor Lead, with recruitment and former Iranian-student evidence evaluated separately. A route scorecard is optional.
 
 ## Applicant journey
@@ -38,7 +38,7 @@ Run Hamrah Scorecard Engine and validate its JSON. Present rankable routes in th
 ### 6. Optional next layers
 
 - For study/research, use Hamrah Program Finder only when the user asks for academic recommendations. Until a user-selected program API is connected and working, search current official university and funding pages online for that request. When the user supplies an API and requests integration, add it to MCP and query it on demand. Keep discovery queries limited to needed search terms and compare personal profile facts within Hamrah. Do not build a persistent university or program catalog.
-- For a requested advertised research opening, use `verified_open_academic_opportunities.md`; this search is distinct from matching an admissions program and from the published Academic Opportunity store.
+- For a requested current academic admission/funding call or research vacancy, use `api_assisted_academic_calls.md`; this search is distinct from matching a general admissions program and from the published Academic Opportunity store.
 - For a requested professor or research-group shortlist, use `academic_supervisor_leads.md`; keep it separate from program and opening searches.
 - Search for or curate a person who actually completed a route only when the user explicitly requests that work. A future automated search requires a separate user instruction.
 - For a shareable visual, offer Hamrah Scorecard Visualizer. It uses ChatGPT image generation after validating the visual model.

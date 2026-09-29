@@ -13,6 +13,8 @@ import { RouteClaimNotFoundError, validateRouteClaim } from "./community-claim-c
 import { getLivedExperience, LivedExperienceNotFoundError, searchIranianLivedExperiences } from "./community-experience-tools.mjs";
 import { MILESTONES, OUTCOMES } from "./community-experiences.mjs";
 import { getAcademicOpportunity, OpportunityNotFoundError, searchAcademicOpportunities } from "./community-opportunity-tools.mjs";
+import { ACADEMIC_CALL_DISCOVERY_TOOL, discoverAcademicCallCandidates } from "./academic-call-discovery.mjs";
+import { OPEN_ACADEMIC_CALL_REPORT_TOOL, renderOpenAcademicCallReport } from "./academic-call-report.mjs";
 import { CLAIM_TYPES, searchRouteClaims } from "./community-route-claim-tools.mjs";
 import { findViableRoutesForIranians, InvalidRouteDiscoveryInput } from "./community-route-discovery.mjs";
 import { getIdealCandidateProfile, InvalidIdealCandidateProfileInput } from "./ideal-candidate-profile.mjs";
@@ -761,6 +763,15 @@ const TOOL_REGISTRY = [
     searchAcademicOpportunities: communityStoreTool(searchAcademicOpportunities),
     getAcademicOpportunity: communityStoreTool(getAcademicOpportunity)
   }),
+  ...registerTools([ACADEMIC_CALL_DISCOVERY_TOOL], {
+    discoverAcademicCallCandidates: {
+      kind: "assessment",
+      handler: async (args, { fetchImpl, signal }) => {
+        const result = await discoverAcademicCallCandidates(args, fetchImpl, signal);
+        return toolResult(result, Boolean(result.error));
+      }
+    }
+  }),
   ...registerTools(LIVED_EXPERIENCE_TOOLS, {
     searchIranianLivedExperiences: communityStoreTool(searchIranianLivedExperiences),
     getLivedExperience: communityStoreTool(getLivedExperience)
@@ -808,6 +819,16 @@ const TOOL_REGISTRY = [
           content: [{ type: "text", text: result.markdown }],
           structuredContent: result
         };
+      }
+    }
+  }),
+  ...registerTools([OPEN_ACADEMIC_CALL_REPORT_TOOL], {
+    renderOpenAcademicCallReport: {
+      kind: "assessment",
+      handler: async (args) => {
+        const result = renderOpenAcademicCallReport(args);
+        if (result.error) return toolResult(result, true);
+        return { isError: false, content: [{ type: "text", text: result.markdown }], structuredContent: result };
       }
     }
   }),

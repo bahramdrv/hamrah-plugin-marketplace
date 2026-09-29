@@ -56,6 +56,14 @@ _Avoid_: Active dataset record, available program
 A request-scoped comparison of a named admissions program with an applicant's stated academic goals and relevant profile facts, backed by a current official program page. It identifies fit and gaps without implying admission or an open funded position.
 _Avoid_: Admission chance, professor match, open position
 
+**Academic Admission Call**:
+A named admissions intake with its own application window and official conditions. A program listing alone does not establish that its current intake is open.
+_Avoid_: Academic Program Match, university listing
+
+**Academic Funding Call**:
+A scholarship or stipend application with its own eligibility, terms, and application window. Being eligible to apply does not establish that an applicant has been awarded funding.
+_Avoid_: Funded admission, guaranteed scholarship
+
 **Academic Supervisor Lead**:
 A request-scoped, source-linked professor or research-group contact prospect whose official page documents relevant research. Student recruitment and a former Iranian-student connection have separate evidence states; neither follows from research relevance alone.
 _Avoid_: Academic Program Match, Verified Open Academic Opportunity, available supervisor
