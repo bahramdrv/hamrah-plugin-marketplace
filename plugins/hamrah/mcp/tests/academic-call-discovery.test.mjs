@@ -189,6 +189,27 @@ test("global research jobs check both validated boards and exclude research inte
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["AE", "US"]);
 });
 
+test("global source requests start together so one slow provider does not delay the others", async () => {
+  const started = [];
+  let release;
+  const hold = new Promise((resolve) => { release = resolve; });
+  const operation = executeTool("discoverAcademicCallCandidates", {
+    field: "robotics", targetCategory: "research_job"
+  }, async (url) => {
+    started.push(url);
+    await hold;
+    return new Response(url.includes("api.ashbyhq.com") || url.includes("boards-api.greenhouse.io")
+      ? '{"jobs":[]}' : "[]", { status: 200 });
+  });
+  try {
+    await new Promise((resolve) => setImmediate(resolve));
+    assert.equal(started.length, 5);
+  } finally {
+    release();
+    await operation;
+  }
+});
+
 test("an Emirati research job request checks the regional IFM board", async () => {
   const urls = [];
   const result = await executeTool("discoverAcademicCallCandidates", {

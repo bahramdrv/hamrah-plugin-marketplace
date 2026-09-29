@@ -156,23 +156,7 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
   const coverage = { apiSources: [], countriesChecked: [], candidateCount: 0, matchedCount: 0, expiredKnownCount: 0,
     truncated: false, failures: [], apiCoverage: "unavailable" };
   const candidates = [];
-  if (input.targetCategory === "phd" && (!input.countryCode || input.countryCode === "DE")) {
-    coverage.apiSources.push("daad_phdgermany");
-    try {
-      const requestSignal = AbortSignal.any([signal ?? new AbortController().signal, AbortSignal.timeout(8000)]);
-      const response = await fetchImpl(DAAD_FEED, { method: "GET", headers: { Accept: "application/rss+xml, application/xml" }, signal: requestSignal });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const body = await response.text();
-      if (body.length > 1_000_000) throw new Error("feed exceeds size limit");
-      candidates.push(...parseDaad(body, input.field.trim()));
-      coverage.countriesChecked.push("DE");
-      coverage.apiCoverage = "partial";
-    } catch (error) {
-      coverage.failures.push({ source: "daad_phdgermany", reason: error instanceof Error ? error.message : String(error) });
-    }
-  }
-  // These publisher board identifiers were checked against their current public careers pages
-  // and their live Lever API response. They cover only their own posted jobs.
+  // The fixed public boards are organization-scoped, not a global academic catalog.
   const defaultBoards = [];
   if (["postdoc", "research_job"].includes(input.targetCategory)
     && (!input.countryCode || input.countryCode === "US")) {
@@ -188,13 +172,50 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
   }
   const boards = [...defaultBoards, ...(input.publisherBoards ?? [])]
     .filter((board, index, all) => all.findIndex((candidate) => candidate.boardId === board.boardId) === index);
+  const greenhouseUrl = "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true";
+  const ashbyUrl = "https://api.ashbyhq.com/posting-api/job-board/faculty";
+  const useGreenhouse = ["postdoc", "research_job"].includes(input.targetCategory)
+    && (!input.countryCode || input.countryCode === "US");
+  const useAshby = input.targetCategory === "research_job" && (!input.countryCode || input.countryCode === "GB");
+  const requests = [
+    ...(input.targetCategory === "phd" && (!input.countryCode || input.countryCode === "DE")
+      ? [{ url: DAAD_FEED, accept: "application/rss+xml, application/xml" }] : []),
+    ...boards.map((board) => ({ url: `https://api.lever.co/v0/postings/${board.boardId}?mode=json`, accept: "application/json" })),
+    ...(useGreenhouse ? [{ url: greenhouseUrl, accept: "application/json" }] : []),
+    ...(useAshby ? [{ url: ashbyUrl, accept: "application/json" }] : [])
+  ];
+  const pending = new Map(requests.map(({ url, accept }) => {
+    const requestSignal = AbortSignal.any([signal ?? new AbortController().signal, AbortSignal.timeout(8000)]);
+    const promise = Promise.resolve().then(() => fetchImpl(url,
+      { method: "GET", headers: { Accept: accept }, signal: requestSignal }))
+      .then((response) => ({ response }), (error) => ({ error }));
+    return [url, promise];
+  }));
+  const fetchSource = async (url) => {
+    const outcome = await pending.get(url);
+    if (outcome.error) throw outcome.error;
+    return outcome.response;
+  };
+  if (input.targetCategory === "phd" && (!input.countryCode || input.countryCode === "DE")) {
+    coverage.apiSources.push("daad_phdgermany");
+    try {
+      const response = await fetchSource(DAAD_FEED);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const body = await response.text();
+      if (body.length > 1_000_000) throw new Error("feed exceeds size limit");
+      candidates.push(...parseDaad(body, input.field.trim()));
+      coverage.countriesChecked.push("DE");
+      coverage.apiCoverage = "partial";
+    } catch (error) {
+      coverage.failures.push({ source: "daad_phdgermany", reason: error instanceof Error ? error.message : String(error) });
+    }
+  }
   for (const board of boards) {
     const source = `lever:${board.boardId}`;
     coverage.apiSources.push(source);
     try {
-      const requestSignal = AbortSignal.any([signal ?? new AbortController().signal, AbortSignal.timeout(8000)]);
       const url = `https://api.lever.co/v0/postings/${board.boardId}?mode=json`;
-      const response = await fetchImpl(url, { method: "GET", headers: { Accept: "application/json" }, signal: requestSignal });
+      const response = await fetchSource(url);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const body = await response.text();
       if (body.length > 3_000_000) throw new Error("postings response exceeds size limit");
@@ -212,14 +233,11 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       coverage.failures.push({ source, reason: error instanceof Error ? error.message : String(error) });
     }
   }
-  if (["postdoc", "research_job"].includes(input.targetCategory)
-    && (!input.countryCode || input.countryCode === "US")) {
+  if (useGreenhouse) {
     const source = "greenhouse:thealleninstitute";
     coverage.apiSources.push(source);
     try {
-      const requestSignal = AbortSignal.any([signal ?? new AbortController().signal, AbortSignal.timeout(8000)]);
-      const response = await fetchImpl("https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
-        { method: "GET", headers: { Accept: "application/json" }, signal: requestSignal });
+      const response = await fetchSource(greenhouseUrl);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const body = await response.text();
       if (body.length > 1_000_000) throw new Error("jobs response exceeds size limit");
@@ -233,13 +251,11 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       coverage.failures.push({ source, reason: error instanceof Error ? error.message : String(error) });
     }
   }
-  if (input.targetCategory === "research_job" && (!input.countryCode || input.countryCode === "GB")) {
+  if (useAshby) {
     const source = "ashby:faculty";
     coverage.apiSources.push(source);
     try {
-      const requestSignal = AbortSignal.any([signal ?? new AbortController().signal, AbortSignal.timeout(8000)]);
-      const response = await fetchImpl("https://api.ashbyhq.com/posting-api/job-board/faculty",
-        { method: "GET", headers: { Accept: "application/json" }, signal: requestSignal });
+      const response = await fetchSource(ashbyUrl);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const body = await response.text();
       if (body.length > 2_000_000) throw new Error("jobs response exceeds size limit");
