@@ -41,6 +41,7 @@ test("a public research board API adds scoped postdoctoral leads without calling
     publisherBoards: [{ provider: "lever", boardId: "research-institute" }]
   }, async (url) => {
     requestUrls.push(url);
+    if (url.includes("/tri?")) return new Response("[]", { status: 200 });
     return new Response(JSON.stringify([
       { id: "p1", text: "Postdoctoral Researcher in Quantum Physics", country: "US",
         descriptionPlain: "Quantum physics research", hostedUrl: "https://jobs.lever.co/research-institute/p1" },
@@ -49,11 +50,28 @@ test("a public research board API adds scoped postdoctoral leads without calling
     ]), { status: 200, headers: { "content-type": "application/json" } });
   });
   assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
-  assert.deepEqual(requestUrls, ["https://api.lever.co/v0/postings/research-institute?mode=json"]);
+  assert.deepEqual(requestUrls, [
+    "https://api.lever.co/v0/postings/tri?mode=json",
+    "https://api.lever.co/v0/postings/research-institute?mode=json"
+  ]);
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.equal(result.structuredContent.candidates[0].countryCode, "US");
   assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["US"]);
+});
+
+test("supplying a known default board does not fetch it twice", async () => {
+  const urls = [];
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "robotics", targetCategory: "postdoc", countryCode: "US",
+    publisherBoards: [{ provider: "lever", boardId: "tri" }]
+  }, async (url) => {
+    urls.push(url);
+    return new Response("[]", { status: 200 });
+  });
+  assert.equal(result.isError, false);
+  assert.deepEqual(urls, ["https://api.lever.co/v0/postings/tri?mode=json"]);
+  assert.deepEqual(result.structuredContent.coverage.apiSources, ["lever:tri"]);
 });
 
 test("candidate discovery rejects applicant facts before making an external request", async () => {

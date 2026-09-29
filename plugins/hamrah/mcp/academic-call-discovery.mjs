@@ -139,7 +139,8 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
     && (!input.countryCode || ["US", "AE", "FR"].includes(input.countryCode))) {
     defaultBoards.push({ provider: "lever", boardId: "ifm-us" });
   }
-  const boards = input.publisherBoards?.length ? input.publisherBoards : defaultBoards;
+  const boards = [...defaultBoards, ...(input.publisherBoards ?? [])]
+    .filter((board, index, all) => all.findIndex((candidate) => candidate.boardId === board.boardId) === index);
   for (const board of boards) {
     const source = `lever:${board.boardId}`;
     coverage.apiSources.push(source);
