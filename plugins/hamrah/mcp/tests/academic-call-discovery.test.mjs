@@ -116,3 +116,23 @@ test("a bounded result reports how many matching leads were omitted", async () =
   assert.equal(result.structuredContent.coverage.matchedCount, 3);
   assert.equal(result.structuredContent.coverage.truncated, true);
 });
+
+test("a known expired DAAD deadline does not consume the bounded shortlist", async () => {
+  const today = new Date();
+  const past = new Date(today.getTime() - 14 * 86400_000);
+  const future = new Date(today.getTime() + 30 * 86400_000);
+  const dateText = (date) => `${date.getUTCDate()}. ${date.toLocaleString("en-US", { month: "short", timeZone: "UTC" })} ${date.getUTCFullYear()}`;
+  const feed = `<?xml version="1.0"?><rss><channel>
+    <item><guid>old</guid><title>Physics PhD old</title><description>Physics</description>
+    <link>https://www.daad.de/detail/old</link><applicationDeadline>${dateText(past)}</applicationDeadline></item>
+    <item><guid>new</guid><title>Physics PhD new</title><description>Physics</description>
+    <link>https://www.daad.de/detail/new</link><applicationDeadline>${dateText(future)}</applicationDeadline></item>
+  </channel></rss>`;
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "physics", targetCategory: "phd", limit: 1
+  }, async () => new Response(feed, { status: 200 }));
+  assert.equal(result.isError, false);
+  assert.equal(result.structuredContent.candidates[0].sourceId, "new");
+  assert.equal(result.structuredContent.coverage.expiredKnownCount, 1);
+  assert.equal(result.structuredContent.coverage.matchedCount, 1);
+});

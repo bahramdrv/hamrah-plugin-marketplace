@@ -34,6 +34,20 @@ const plain = (value) => String(value ?? "").replace(/^<!\[CDATA\[|\]\]>$/g, "")
 const fieldOf = (xml, name) => plain(xml.match(new RegExp(`<${name}>([\\s\\S]*?)</${name}>`))?.[1] ?? "");
 const relevant = (body, field) => field.toLowerCase().split(/\s+/).filter(Boolean)
   .every((token) => body.toLowerCase().includes(token));
+const monthNumbers = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6,
+  jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
+
+function knownDeadlineDay(value) {
+  const iso = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  const english = value.match(/^(\d{1,2})\.\s+([A-Za-z]{3})\.?\s+(\d{4})$/);
+  const parts = iso ? [Number(iso[1]), Number(iso[2]), Number(iso[3])]
+    : english ? [Number(english[3]), monthNumbers[english[2].toLowerCase()], Number(english[1])] : null;
+  if (!parts || !parts[1]) return null;
+  const [year, month, date] = parts;
+  const parsed = new Date(Date.UTC(year, month - 1, date));
+  return parsed.getUTCFullYear() === year && parsed.getUTCMonth() + 1 === month && parsed.getUTCDate() === date
+    ? parsed.toISOString().slice(0, 10) : null;
+}
 
 function parseDaad(xml, field) {
   if (!/<rss\b/.test(xml) || !/<channel>/.test(xml)) throw new Error("DAAD returned an unexpected feed format.");
@@ -95,7 +109,7 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
   };
   const limit = input.limit ?? 5;
   const scope = { field: input.field.trim(), targetCategory: input.targetCategory, countryCode: input.countryCode ?? null };
-  const coverage = { apiSources: [], countriesChecked: [], candidateCount: 0, matchedCount: 0,
+  const coverage = { apiSources: [], countriesChecked: [], candidateCount: 0, matchedCount: 0, expiredKnownCount: 0,
     truncated: false, failures: [], apiCoverage: "unavailable" };
   const candidates = [];
   if (input.targetCategory === "phd" && (!input.countryCode || input.countryCode === "DE")) {
@@ -141,8 +155,17 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       coverage.failures.push({ source, reason: error instanceof Error ? error.message : String(error) });
     }
   }
+  const today = new Date().toISOString().slice(0, 10);
+  const currentCandidates = candidates.filter((candidate) => {
+    const deadline = knownDeadlineDay(candidate.deadlineText ?? "");
+    if (deadline && deadline <= today) {
+      coverage.expiredKnownCount++;
+      return false;
+    }
+    return true;
+  });
   const seen = new Set();
-  const ordered = candidates.filter((candidate) => {
+  const ordered = currentCandidates.filter((candidate) => {
     if (seen.has(candidate.url)) return false;
     seen.add(candidate.url);
     return true;
