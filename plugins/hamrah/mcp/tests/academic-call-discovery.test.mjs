@@ -318,6 +318,21 @@ test("global research jobs check both validated boards and exclude research inte
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["AE", "US"]);
 });
 
+test("a Lever postdoctoral researcher appears only in the postdoc category", async () => {
+  const postings = [{ id: "p1", text: "Postdoctoral Researcher, Robotics", country: "US",
+    descriptionPlain: "Robotics research", hostedUrl: "https://jobs.lever.co/tri/p1" }];
+  const fetchBoard = async (url) => new Response(url.includes("/tri?") ? JSON.stringify(postings)
+    : url.includes("boards-api.greenhouse.io") || url.includes("api.ashbyhq.com") ? '{"jobs":[]}' : "[]");
+  const postdoc = await executeTool("discoverAcademicCallCandidates", {
+    field: "robotics", targetCategory: "postdoc", countryCode: "US"
+  }, fetchBoard);
+  const research = await executeTool("discoverAcademicCallCandidates", {
+    field: "robotics", targetCategory: "research_job", countryCode: "US"
+  }, fetchBoard);
+  assert.deepEqual(postdoc.structuredContent.candidates.map((item) => item.sourceId), ["p1"]);
+  assert.deepEqual(research.structuredContent.candidates.map((item) => item.sourceId), []);
+});
+
 test("global source requests start together so one slow provider does not delay the others", async () => {
   const started = [];
   let release;
@@ -384,7 +399,10 @@ test("UK research-job discovery accepts only listed title-matched Faculty postin
       descriptionPlain: "AI safety research", jobUrl: "https://jobs.ashbyhq.com/faculty/gb3" },
     { id: "fr1", title: "Research Scientist - AI Safety", isListed: true,
       address: { postalAddress: { addressCountry: "France" } },
-      descriptionPlain: "AI safety research", jobUrl: "https://jobs.ashbyhq.com/faculty/fr1" }
+      descriptionPlain: "AI safety research", jobUrl: "https://jobs.ashbyhq.com/faculty/fr1" },
+    { id: "gb4", title: "Postdoctoral Research Scientist - AI Safety", isListed: true,
+      address: { postalAddress: { addressCountry: "United Kingdom" } },
+      descriptionPlain: "AI safety research", jobUrl: "https://jobs.ashbyhq.com/faculty/gb4" }
   ] };
   const result = await executeTool("discoverAcademicCallCandidates", {
     field: "AI Safety", targetCategory: "research_job", countryCode: "GB"
@@ -427,15 +445,21 @@ test("Canadian research-job discovery uses Waabi's public board and requires tit
 test("Ai2 Greenhouse public API adds only scoped research jobs and postdoctoral program leads", async () => {
   const jobs = { jobs: [
     { id: 11, title: "Research Scientist, Robotics", absolute_url: "https://job-boards.greenhouse.io/thealleninstitute/jobs/11",
+      location: { name: "Seattle, WA" },
       offices: [{ location: "Seattle, WA, United States" }], content: "Robotics research", updated_at: "2026-09-28T12:00:00Z" },
     { id: 12, title: "Young Investigator, Robotics", absolute_url: "https://job-boards.greenhouse.io/thealleninstitute/jobs/12",
+      location: { name: "Seattle, WA" },
       offices: [{ location: "Seattle, WA, United States" }], content: "Postdoctoral robotics program" },
     { id: 13, title: "Predoctoral Young Investigator, Robotics", absolute_url: "https://job-boards.greenhouse.io/thealleninstitute/jobs/13",
       offices: [{ location: "Seattle, WA, United States" }], content: "Predoctoral robotics program" },
     { id: 14, title: "Research Intern, Robotics", absolute_url: "https://job-boards.greenhouse.io/thealleninstitute/jobs/14",
       offices: [{ location: "Seattle, WA, United States" }], content: "Robotics internship" },
     { id: 15, title: "Young Investigator, Climate Modeling", absolute_url: "https://job-boards.greenhouse.io/thealleninstitute/jobs/15",
-      offices: [{ location: "Seattle, WA, United States" }], content: "Our institute also has a robotics team." }
+      offices: [{ location: "Seattle, WA, United States" }], content: "Our institute also has a robotics team." },
+    { id: 16, title: "Research Scientist, Robotics", absolute_url: "https://job-boards.greenhouse.io/thealleninstitute/jobs/16",
+      location: { name: "Oxford, England" }, offices: [{ location: "Seattle, WA, United States" }] },
+    { id: 17, title: "Research Scientist, Robotics", absolute_url: "https://job-boards.greenhouse.io/thealleninstitute/jobs/17",
+      offices: [{ location: "Seattle, WA, United States" }] }
   ] };
   const fetchBoard = async (url) => new Response(url.includes("boards-api.greenhouse.io")
     ? JSON.stringify(jobs) : "[]", { status: 200 });

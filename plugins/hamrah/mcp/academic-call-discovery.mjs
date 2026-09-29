@@ -83,7 +83,7 @@ function parseDaad(xml, field) {
 function leverTitleMatches(title, category) {
   if (category === "postdoc") return /\bpostdoc(?:toral)?\b/i.test(title);
   if (category === "phd") return /\bphd\b|\bdoctoral\b/i.test(title);
-  if (category === "research_job") return !/\bintern(?:ship)?\b/i.test(title)
+  if (category === "research_job") return !/\b(?:intern(?:ship)?|predoctoral|postdoc(?:toral)?|young investigator)\b/i.test(title)
     && /\bresearch(?:er)?\b|\bscientist\b|\bfellow\b/i.test(title);
   return false;
 }
@@ -111,6 +111,12 @@ function parseLever(body, boardId, input) {
   }));
 }
 
+function ai2PrimaryIsUs(item) {
+  const primary = String(item?.location?.name ?? "").trim();
+  return Boolean(primary) && (item?.offices ?? []).some((office) =>
+    office?.location === `${primary}, United States`);
+}
+
 function parseAi2Greenhouse(body, input) {
   if (!body || !Array.isArray(body.jobs)) throw new Error("Greenhouse returned an unexpected jobs format.");
   return body.jobs.filter((item) => {
@@ -118,9 +124,10 @@ function parseAi2Greenhouse(body, input) {
     const postdoc = !/\bpredoctoral\b/i.test(title) && /\bpostdoc(?:toral)?\b|\byoung investigator\b/i.test(title);
     const researchJob = !/\b(?:intern(?:ship)?|predoctoral|postdoc(?:toral)?|young investigator)\b/i.test(title)
       && /\bresearch(?:er)?\b|\bscientist\b/i.test(title);
-    const countryCode = item?.offices?.some((office) => /\bUnited States\b/i.test(office?.location ?? "")) ? "US" : null;
+    const countryCode = ai2PrimaryIsUs(item) ? "US" : null;
     return (input.targetCategory === "postdoc" ? postdoc : researchJob)
       && relevant(title, input.field)
+      && countryCode === "US"
       && (!input.countryCode || countryCode === input.countryCode)
       && typeof item?.absolute_url === "string"
       && /^https:\/\/job-boards\.greenhouse\.io\/thealleninstitute\/jobs\/\d+$/.test(item.absolute_url);
@@ -140,7 +147,7 @@ function parseFacultyAshby(body, input) {
     const title = String(item?.title ?? "");
     return item?.isListed === true
       && item?.address?.postalAddress?.addressCountry === "United Kingdom"
-      && !/\bintern(?:ship)?\b/i.test(title)
+      && !/\b(?:intern(?:ship)?|predoctoral|postdoc(?:toral)?|young investigator)\b/i.test(title)
       && /\bresearch(?:er)?\b|\bscientist\b/i.test(title)
       && relevant(title, input.field)
       && typeof item?.jobUrl === "string"
@@ -332,8 +339,8 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       if (body.length > 1_000_000) throw new Error("jobs response exceeds size limit");
       const postings = JSON.parse(body);
       if (!postings || !Array.isArray(postings.jobs)) throw new Error("Greenhouse returned an unexpected jobs format.");
-      if (postings.jobs.some((item) => item?.offices?.some((office) => /\bUnited States\b/i.test(office?.location ?? ""))
-        && !coverage.countriesChecked.includes("US"))) coverage.countriesChecked.push("US");
+      if (postings.jobs.some(ai2PrimaryIsUs)
+        && !coverage.countriesChecked.includes("US")) coverage.countriesChecked.push("US");
       candidates.push(...parseAi2Greenhouse(postings, input));
       coverage.apiCoverage = "partial";
     } catch (error) {
