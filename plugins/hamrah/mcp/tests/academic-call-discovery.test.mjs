@@ -136,3 +136,40 @@ test("a known expired DAAD deadline does not consume the bounded shortlist", asy
   assert.equal(result.structuredContent.coverage.expiredKnownCount, 1);
   assert.equal(result.structuredContent.coverage.matchedCount, 1);
 });
+
+test("global research jobs check both validated boards and exclude research internships", async () => {
+  const urls = [];
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "machine learning", targetCategory: "research_job"
+  }, async (url) => {
+    urls.push(url);
+    if (url.includes("/tri?")) return new Response(JSON.stringify([]), { status: 200 });
+    return new Response(JSON.stringify([
+      { id: "ae1", text: "Research Scientist - Machine Learning", country: "AE",
+        descriptionPlain: "Machine learning", hostedUrl: "https://jobs.lever.co/ifm-us/ae1" },
+      { id: "us1", text: "AI Research Internship - Machine Learning", country: "US",
+        descriptionPlain: "Machine learning", hostedUrl: "https://jobs.lever.co/ifm-us/us1" }
+    ]), { status: 200 });
+  });
+  assert.equal(result.isError, false);
+  assert.deepEqual(urls, [
+    "https://api.lever.co/v0/postings/tri?mode=json",
+    "https://api.lever.co/v0/postings/ifm-us?mode=json"
+  ]);
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["ae1"]);
+  assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["AE", "US"]);
+});
+
+test("an Emirati research job request checks the regional IFM board", async () => {
+  const urls = [];
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "machine learning", targetCategory: "research_job", countryCode: "AE"
+  }, async (url) => {
+    urls.push(url);
+    return new Response(JSON.stringify([{ id: "a1", text: "Research Scientist - Machine Learning",
+      country: "AE", descriptionPlain: "Machine learning", hostedUrl: "https://jobs.lever.co/ifm-us/a1" }]), { status: 200 });
+  });
+  assert.equal(result.isError, false);
+  assert.deepEqual(urls, ["https://api.lever.co/v0/postings/ifm-us?mode=json"]);
+  assert.equal(result.structuredContent.candidates[0].countryCode, "AE");
+});

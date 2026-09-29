@@ -76,7 +76,8 @@ function parseDaad(xml, field) {
 function leverTitleMatches(title, category) {
   if (category === "postdoc") return /\bpostdoc(?:toral)?\b/i.test(title);
   if (category === "phd") return /\bphd\b|\bdoctoral\b/i.test(title);
-  if (category === "research_job") return /\bresearch(?:er)?\b|\bscientist\b|\bfellow\b/i.test(title);
+  if (category === "research_job") return !/\bintern(?:ship)?\b/i.test(title)
+    && /\bresearch(?:er)?\b|\bscientist\b|\bfellow\b/i.test(title);
   return false;
 }
 
@@ -127,10 +128,17 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       coverage.failures.push({ source: "daad_phdgermany", reason: error instanceof Error ? error.message : String(error) });
     }
   }
-  // TRI is a currently checked research institute board; other boards must be identified from
-  // a publisher's own current careers page before the caller supplies their public token.
-  const defaultBoards = ["postdoc", "research_job"].includes(input.targetCategory)
-    && (!input.countryCode || input.countryCode === "US") ? [{ provider: "lever", boardId: "tri" }] : [];
+  // These publisher board identifiers were checked against their current public careers pages
+  // and their live Lever API response. They cover only their own posted jobs.
+  const defaultBoards = [];
+  if (["postdoc", "research_job"].includes(input.targetCategory)
+    && (!input.countryCode || input.countryCode === "US")) {
+    defaultBoards.push({ provider: "lever", boardId: "tri" });
+  }
+  if (input.targetCategory === "research_job"
+    && (!input.countryCode || ["US", "AE", "FR"].includes(input.countryCode))) {
+    defaultBoards.push({ provider: "lever", boardId: "ifm-us" });
+  }
   const boards = input.publisherBoards?.length ? input.publisherBoards : defaultBoards;
   for (const board of boards) {
     const source = `lever:${board.boardId}`;
