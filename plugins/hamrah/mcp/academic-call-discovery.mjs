@@ -4,6 +4,7 @@ const DAAD_FEED = "https://api.daad.de/api/feeds/rss/en/phd.xml";
 const STUDYINFO_SOURCE = "studyinfo:fi";
 const STUDYINFO_SEARCH = "https://opintopolku.fi/konfo-backend/external/search/toteutukset-koulutuksittain";
 const STUDYINFO_HEADERS = { Accept: "application/json", "Caller-Id": "hamrah-plugin-marketplace" };
+const STUDYINFO_DETAIL_LIMIT = 12;
 const INPUT_SCHEMA = {
   type: "object", additionalProperties: false,
   required: ["field", "targetCategory"],
@@ -177,13 +178,15 @@ function parseStudyinfoDetail(body, field, now) {
       && window.alkaa <= now && now < window.paattyy);
     if (!currentWindows.length) return [];
     const end = currentWindows.map((window) => window.paattyy).sort()[0];
+    const priorStudyPathway = /\bopen UAS\b|\bon the basis of Finnish higher education studies\b/i.test(`${title} ${intake}`);
     return [{
       sourceId: target.oid, discoverySource: STUDYINFO_SOURCE,
       title: plain(title), url: `https://opintopolku.fi/konfo/en/hakukohde/${target.oid}`,
       countryCode: "FI", targetCategory: "masters", discoveryMatch: "title",
+      admissionPathway: priorStudyPathway ? "restricted_prior_studies" : "general_or_unknown",
       summary: plain(`${translated(target.organisaatio?.nimi)}; ${intake}${
-        /\bopen UAS\b/i.test(`${title} ${intake}`)
-          ? "; restricted Open UAS admission pathway: verify prior-study and work-experience requirements" : ""
+        priorStudyPathway
+          ? "; restricted prior-study admission pathway: verify prior credits and other eligibility requirements" : ""
       }`).slice(0, 1000),
       publishedText: target.modified ?? null, deadlineText: end.slice(0, 10),
       verificationStatus: "unverified"
@@ -334,15 +337,33 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       if (!search || !Array.isArray(search.hits)) throw new Error("Studyinfo returned an unexpected search format.");
       coverage.countriesChecked.push("FI");
       coverage.apiCoverage = "partial";
-      if (search.total > search.hits.length) coverage.truncated = true;
-      const details = search.hits.flatMap((hit) => (hit.toteutukset ?? []).filter((item) => {
+      const searchHits = [...search.hits];
+      if (search.total > searchHits.length) {
+        const pageTwo = new URL(studyinfoUrl);
+        pageTwo.searchParams.set("page", "2");
+        try {
+          const requestSignal = AbortSignal.any([signal ?? new AbortController().signal, AbortSignal.timeout(8000)]);
+          const secondResponse = await fetchImpl(pageTwo.href,
+            { method: "GET", headers: STUDYINFO_HEADERS, signal: requestSignal });
+          if (!secondResponse.ok) throw new Error(`HTTP ${secondResponse.status}`);
+          const secondText = await secondResponse.text();
+          if (secondText.length > 1_000_000) throw new Error("Studyinfo search page exceeds size limit");
+          const secondPage = JSON.parse(secondText);
+          if (!secondPage || !Array.isArray(secondPage.hits)) throw new Error("Studyinfo returned an unexpected search page.");
+          searchHits.push(...secondPage.hits);
+        } catch (error) {
+          coverage.failures.push({ source: STUDYINFO_SOURCE, reason: error instanceof Error ? error.message : String(error) });
+        }
+      }
+      if (search.total > searchHits.length) coverage.truncated = true;
+      const details = searchHits.flatMap((hit) => (hit.toteutukset ?? []).filter((item) => {
         const title = translated(item?.toteutusNimi) || translated(hit?.nimi);
         return /^master(?:'s)?\b/i.test(title) && !/\bbachelor\b/i.test(title)
           && relevant(title, input.field) && studyinfoOid(item?.toteutusOid, "17");
       }).map((item) => item.toteutusOid));
       const uniqueDetails = [...new Set(details)];
-      if (uniqueDetails.length > 8) coverage.truncated = true;
-      const results = await Promise.all(uniqueDetails.slice(0, 8).map(async (oid) => {
+      if (uniqueDetails.length > STUDYINFO_DETAIL_LIMIT) coverage.truncated = true;
+      const results = await Promise.all(uniqueDetails.slice(0, STUDYINFO_DETAIL_LIMIT).map(async (oid) => {
         try {
           const url = `https://opintopolku.fi/konfo-backend/external/toteutus/${oid}?hakukohteet=true&haut=true&koulutus=true`;
           const requestSignal = AbortSignal.any([signal ?? new AbortController().signal, AbortSignal.timeout(8000)]);
@@ -382,6 +403,7 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
     seen.add(candidate.url);
     return true;
   }).sort((a, b) => Number(b.discoveryMatch === "title") - Number(a.discoveryMatch === "title")
+    || Number(a.admissionPathway === "restricted_prior_studies") - Number(b.admissionPathway === "restricted_prior_studies")
     || a.url.localeCompare(b.url));
   coverage.matchedCount = ordered.length;
   coverage.truncated ||= ordered.length > limit;

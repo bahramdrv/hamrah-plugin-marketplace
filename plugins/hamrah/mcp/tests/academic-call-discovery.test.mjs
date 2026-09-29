@@ -67,6 +67,81 @@ test("Finnish Master's discovery reports a failed detail call without inventing 
   assert.equal(result.structuredContent.coverage.failures[0].source, "studyinfo:fi");
 });
 
+test("Finnish Master's discovery searches a bounded second page before declaring no matches", async () => {
+  const today = new Date();
+  const day = (offset) => new Date(today.getTime() + offset * 86400_000).toISOString().slice(0, 10);
+  const calls = [];
+  const oid = "1.2.246.562.17.00000000000000080001";
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "robotics", targetCategory: "masters", countryCode: "FI"
+  }, async (url) => {
+    calls.push(url);
+    if (url.includes("/external/search/")) {
+      const page = new URL(url).searchParams.get("page");
+      return new Response(JSON.stringify(page === "2" ? { total: 51, hits: [{
+        nimi: { en: "Master of Robotics" }, toteutukset: [{ toteutusOid: oid,
+          toteutusNimi: { en: "Master of Robotics" } }]
+      }] } : { total: 51, hits: Array.from({ length: 50 }, () => ({
+        nimi: { en: "Bachelor of Robotics" }, toteutukset: []
+      })) }));
+    }
+    return new Response(JSON.stringify({ oid, hakuAuki: true, hakukohteet: [{
+      oid: "1.2.246.562.20.00000000000000080001", tila: "julkaistu",
+      nimi: { en: "Master of Robotics" }, odwKkTasot: { ylempiKkAste: true },
+      hakuajat: [{ alkaa: `${day(-1)}T08:00`, paattyy: `${day(20)}T15:00` }]
+    }] }));
+  });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.equal(calls.filter((url) => url.includes("/external/search/")).length, 2);
+  assert.equal(result.structuredContent.candidates.length, 1);
+  assert.equal(result.structuredContent.coverage.truncated, false);
+});
+
+test("a failed Studyinfo second page keeps first-page leads and reports incomplete coverage", async () => {
+  const today = new Date();
+  const day = (offset) => new Date(today.getTime() + offset * 86400_000).toISOString().slice(0, 10);
+  const oid = "1.2.246.562.17.00000000000000080002";
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "robotics", targetCategory: "masters", countryCode: "FI"
+  }, async (url) => {
+    if (url.includes("page=2")) return new Response("unavailable", { status: 503 });
+    if (url.includes("/external/search/")) return new Response(JSON.stringify({ total: 51, hits: [{
+      nimi: { en: "Master of Robotics" }, toteutukset: [{ toteutusOid: oid,
+        toteutusNimi: { en: "Master of Robotics" } }]
+    }] }));
+    return new Response(JSON.stringify({ oid, hakuAuki: true, hakukohteet: [{
+      oid: "1.2.246.562.20.00000000000000080002", tila: "julkaistu",
+      nimi: { en: "Master of Robotics" }, odwKkTasot: { ylempiKkAste: true },
+      hakuajat: [{ alkaa: `${day(-1)}T08:00`, paattyy: `${day(20)}T15:00` }]
+    }] }));
+  });
+  assert.equal(result.structuredContent.status, "partial");
+  assert.equal(result.structuredContent.candidates.length, 1);
+  assert.equal(result.structuredContent.coverage.truncated, true);
+  assert.equal(result.structuredContent.coverage.failures[0].source, "studyinfo:fi");
+});
+
+test("Finnish Master's discovery labels restricted prior-study routes and ranks general routes first", async () => {
+  const today = new Date();
+  const day = (offset) => new Date(today.getTime() + offset * 86400_000).toISOString().slice(0, 10);
+  const oid = "1.2.246.562.17.00000000000000080003";
+  const target = (id, title) => ({ oid: `1.2.246.562.20.${id}`, tila: "julkaistu",
+    nimi: { en: title }, odwKkTasot: { ylempiKkAste: true },
+    hakuajat: [{ alkaa: `${day(-1)}T08:00`, paattyy: `${day(20)}T15:00` }] });
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "engineering", targetCategory: "masters", countryCode: "FI", limit: 1
+  }, async (url) => new Response(JSON.stringify(url.includes("/external/search/")
+    ? { total: 1, hits: [{ nimi: { en: "Master of Engineering" },
+      toteutukset: [{ toteutusOid: oid, toteutusNimi: { en: "Master of Engineering" } }] }] }
+    : { oid, hakuAuki: true, hakukohteet: [
+      target("1", "Application on the Basis of Finnish Higher Education Studies: Master of Engineering"),
+      target("2", "International admission: Master of Engineering")
+    ] })));
+  assert.equal(result.structuredContent.candidates[0].sourceId, "1.2.246.562.20.2");
+  assert.equal(result.structuredContent.coverage.matchedCount, 2);
+  assert.equal(result.structuredContent.coverage.truncated, true);
+});
+
 test("an explicit PhD search returns DAAD API/feed leads with honest unverified status", async () => {
   const requests = [];
   const result = await executeTool("discoverAcademicCallCandidates", {
