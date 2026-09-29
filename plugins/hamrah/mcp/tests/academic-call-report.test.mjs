@@ -195,3 +195,42 @@ test("a future deadline does not override an explicit closed-application stateme
   const result = await render(input);
   assert.equal(result.isError, true);
 });
+
+test("a future deadline alone cannot establish currently open applications", async () => {
+  const input = base();
+  input.calls[0].application.sourceExcerpt = `Application deadline: 15 October ${NEXT_YEAR}.`;
+  const result = await render(input);
+  assert.equal(result.isError, true);
+  assert.ok(result.structuredContent.details.some((item) => item.includes("positive open-application evidence")));
+});
+
+test("an explicit Finnish open-application statement can support a dated call", async () => {
+  const input = base();
+  input.calls[0].application.sourceExcerpt = `Haku on käynnissä 15.10.${NEXT_YEAR} asti.`;
+  const result = await render(input);
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+});
+
+test("a dated call with a future exact closing time remains open on its final UTC day", {
+  skip: Date.now() >= Date.parse(`${TODAY}T23:59:00Z`)
+}, async () => {
+  const input = base();
+  input.calls[0].application.deadline = TODAY;
+  input.calls[0].application.deadlineAt = `${TODAY}T23:59:00Z`;
+  const result = await render(input);
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.match(result.content[0].text, /23:59:00Z/);
+});
+
+test("a dated call rejects an exact closing time already past", async () => {
+  const input = base();
+  input.calls[0].application.deadlineAt = `${NEXT_YEAR}-10-15T15:00:00+03:00`;
+  input.calls[0].application.deadline = DEADLINE;
+  const accepted = await render(input);
+  assert.equal(accepted.isError, false, JSON.stringify(accepted.structuredContent));
+  input.calls[0].application.deadlineAt = `${TODAY}T00:00:00Z`;
+  input.calls[0].application.deadline = TODAY;
+  const expired = await render(input);
+  assert.equal(expired.isError, true);
+  assert.ok(expired.structuredContent.details.some((item) => item.includes("deadline")));
+});

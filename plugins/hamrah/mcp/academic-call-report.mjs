@@ -19,6 +19,7 @@ const call = {
     application: { type: "object", additionalProperties: false,
       required: ["mode", "deadline", "sourceUrl", "sourceExcerpt"],
       properties: { mode: { enum: ["dated", "rolling"] }, deadline: nullable(day),
+        deadlineAt: { type: "string", pattern: "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:Z|[+-]\\d{2}:\\d{2})$" },
         sourceUrl: url, sourceExcerpt: str(500) } },
     conditions: { type: "array", minItems: 1, maxItems: 15, items: {
       type: "object", additionalProperties: false, required: ["text", "sourceUrl", "sourceExcerpt"],
@@ -81,7 +82,8 @@ const names = { admission_call: "فراخوان پذیرش", funding_call: "فر
 const fundingNames = { verified: "شرایط مالی تأییدشده", competitive: "فاند رقابتی؛ دریافت آن قطعی نیست", unknown: "فاند نامعلوم" };
 const fundingRank = { verified: 0, competitive: 1, unknown: 2 };
 const rollingEvidence = /\b(?:rolling|(?:applications?|submissions?) (?:are |is )?(?:accepted |open )?(?:continuously|on an ongoing basis)|until filled|until (?:the )?(?:position|post|vacancy) (?:is )?filled|no (?:fixed )?deadline|bewerbungen? (?:werden )?(?:laufend|fortlaufend)|bis auf weiteres)\b|au fil de l'eau|پذیرش شناور|درخواست‌ها? (?:به‌صورت )?پیوسته|تا تکمیل ظرفیت/i;
-const closedEvidence = /\b(?:applications? (?:are |is )?(?:now )?closed|no longer accepting|not (?:yet )?open|will open|position (?:has been )?filled|vacancy (?:has been )?filled)\b|پذیرش بسته|درخواست‌ها بسته/i;
+const datedOpenEvidence = /\b(?:applications? (?:are |is )?(?:now )?open|application (?:period|window) (?:is |now )?open|(?:we are |currently )?accepting applications?|apply now|apply by|submit your application|bewerbungen? (?:sind )?offen|jetzt bewerben|candidatures? (?:sont )?ouvertes?|postulez maintenant)\b|haku on käynnissä|hae nyt|پذیرش (?:اکنون )?باز است|درخواست‌ها? پذیرفته می‌شود/i;
+const closedEvidence = /\b(?:applications? (?:are |is )?(?:now )?closed|applications? are no longer open|application (?:period|window) has ended|no longer accepting|not (?:yet )?open|will open|position (?:has been )?filled|vacancy (?:has been )?filled|bewerbungen? geschlossen|candidatures? (?:sont )?closes?)\b|پذیرش بسته|درخواست‌ها بسته/i;
 
 function rankedCalls(calls, field) {
   const query = normalized(field);
@@ -108,10 +110,18 @@ function checkCall(item, input, ids, errors) {
   if (!validDay(input.checkedAt) || input.checkedAt !== new Date().toISOString().slice(0, 10)) errors.push("checkedAt: must be today's UTC date");
   const app = item.application;
   if (closedEvidence.test(app.sourceExcerpt)) errors.push(`calls.${item.id}: application evidence says not currently open`);
-  if (app.mode === "dated" && (!app.deadline || !validDay(app.deadline) || app.deadline <= input.checkedAt)) {
+  const validDeadlineAt = app.deadlineAt && app.deadlineAt.slice(0, 10) === app.deadline
+    && validDay(app.deadlineAt.slice(0, 10)) && Number.isFinite(Date.parse(app.deadlineAt));
+  if (app.mode === "dated" && (!app.deadline || !validDay(app.deadline)
+    || (app.deadlineAt ? !validDeadlineAt || Date.parse(app.deadlineAt) <= Date.now()
+      : app.deadline <= input.checkedAt))) {
     errors.push(`calls.${item.id}: deadline is not future and valid`);
   }
+  if (app.mode === "dated" && !datedOpenEvidence.test(app.sourceExcerpt)) {
+    errors.push(`calls.${item.id}: dated call needs positive open-application evidence`);
+  }
   if (app.mode === "rolling" && app.deadline !== null) errors.push(`calls.${item.id}: rolling call must have null deadline`);
+  if (app.mode === "rolling" && app.deadlineAt) errors.push(`calls.${item.id}: rolling call cannot have a closing timestamp`);
   if (app.mode === "rolling" && !rollingEvidence.test(app.sourceExcerpt)) {
     errors.push(`calls.${item.id}: rolling mode needs explicit official wording`);
   }
@@ -156,7 +166,8 @@ function renderCall(item) {
     `- موضوع: ${safe(item.field)}`,
     `- مدرک عنوان: ${safe(item.titleEvidence.sourceExcerpt)} ([منبع رسمی](${item.titleEvidence.sourceUrl}))`,
     `- پذیرش درخواست: باز؛ ${safe(item.application.sourceExcerpt)} ([منبع رسمی](${item.application.sourceUrl}))`,
-    `- مهلت: ${item.application.mode === "rolling" ? "شناور" : item.application.deadline}`,
+    `- مهلت: ${item.application.mode === "rolling" ? "شناور" : `${item.application.deadline}${
+      item.application.deadlineAt ? ` · ${item.application.deadlineAt}` : ""}`}`,
     ...item.conditions.map((condition) => `- شرط: ${safe(condition.text)} — ${safe(condition.sourceExcerpt)} ([منبع رسمی](${condition.sourceUrl}))`),
     `- فاند: ${fundingNames[item.funding.status]}${item.funding.terms ? `؛ ${safe(item.funding.terms)} ([منبع رسمی](${item.funding.sourceUrl}))` : ""}`,
     `- وضعیت شرط تابعیت ایرانی: ${item.nationalityEvidence.status === "unknown" ? "نامعلوم" : `مجوز صریح؛ ${safe(item.nationalityEvidence.sourceExcerpt)} ([منبع رسمی](${item.nationalityEvidence.sourceUrl}))`}`,
