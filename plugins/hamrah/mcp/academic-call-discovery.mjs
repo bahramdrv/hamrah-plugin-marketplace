@@ -1,6 +1,10 @@
 import Ajv from "ajv";
 
 const DAAD_FEED = "https://api.daad.de/api/feeds/rss/en/phd.xml";
+const NTNU_JOBBNORGE_SOURCE = "jobbnorge:ntnu";
+const NTNU_JOBBNORGE_LIST = "https://publicapi.jobbnorge.no/v3/Jobs?employer=688";
+const NTNU_JOBBNORGE_LIST_LIMIT = 200;
+const NTNU_JOBBNORGE_BYTE_LIMIT = 1_000_000;
 const STUDYINFO_SOURCE = "studyinfo:fi";
 const STUDYINFO_SEARCH = "https://opintopolku.fi/konfo-backend/external/search/toteutukset-koulutuksittain";
 const STUDYINFO_HEADERS = { Accept: "application/json", "Caller-Id": "hamrah-plugin-marketplace" };
@@ -88,6 +92,68 @@ function parseDaad(xml, field) {
     });
   }
   return candidates;
+}
+
+function ntnuDomesticPrimary(item) {
+  const primary = (Array.isArray(item?.locations) ? item.locations : [])
+    .filter((location) => location?.isPrimary === true);
+  return primary.length === 1 && primary[0].isDomestic === true;
+}
+
+function ntnuDeadline(value) {
+  const match = typeof value === "string" && value.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+  if (!match) return null;
+  return knownDeadlineDay(`${match[3]}-${match[2].padStart(2, "0")}-${match[1].padStart(2, "0")}`);
+}
+
+function ntnuJobLinkMatches(link, id) {
+  return typeof link === "string" && new RegExp(
+    `^https://www\\.jobbnorge\\.no/(?:ledige-stillinger/stilling|en/available-jobs/job)/${id}(?:/[a-z0-9-]+)?$`, "i"
+  ).test(link);
+}
+
+function parseNtnuJobbnorge(body, input) {
+  if (!body || !Array.isArray(body.jobs)) throw new Error("Jobbnorge returned an unexpected jobs format.");
+  return body.jobs.filter((item) => {
+    const title = String(item?.title ?? "");
+    return Number.isSafeInteger(item?.id) && item.id > 0
+      && item.employerID === 688
+      && item.employer === "NTNU - Norges teknisk-naturvitenskapelige universitet"
+      && ntnuDomesticPrimary(item)
+      && /\bphd\b|\bdoctoral\b|\bstipendiat\b/i.test(title)
+      && !/\bpostdoc(?:toral)?\b/i.test(title)
+      && relevant(title, input.field)
+      && ntnuJobLinkMatches(item.link, item.id)
+      && ntnuDeadline(item.deadline);
+  }).map((item) => ({
+    sourceId: String(item.id), discoverySource: NTNU_JOBBNORGE_SOURCE,
+    title: plain(item.title), url: item.link, countryCode: "NO", targetCategory: "phd",
+    discoveryMatch: "title", summary: plain(item.summary).slice(0, 1000),
+    publishedText: item.publicationDate ?? null, deadlineText: ntnuDeadline(item.deadline),
+    verificationStatus: "unverified"
+  }));
+}
+
+async function readNtnuJobbnorgeResponse(response) {
+  const reader = response.body?.getReader();
+  if (!reader) throw new Error("Jobbnorge returned an empty jobs response.");
+  const chunks = [];
+  let byteCount = 0;
+  try {
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      byteCount += value.byteLength;
+      if (byteCount > NTNU_JOBBNORGE_BYTE_LIMIT) {
+        await reader.cancel();
+        throw new Error("Jobbnorge jobs response exceeds size limit");
+      }
+      chunks.push(Buffer.from(value));
+    }
+  } finally {
+    reader.releaseLock();
+  }
+  return JSON.parse(Buffer.concat(chunks).toString("utf8"));
 }
 
 function leverTitleMatches(title, category) {
@@ -400,6 +466,7 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
   const useIonq = input.targetCategory === "research_job"
     && (!input.countryCode || Object.values(IONQ_COUNTRIES).includes(input.countryCode));
   const useStudyinfo = input.targetCategory === "masters" && (!input.countryCode || input.countryCode === "FI");
+  const useNtnuJobbnorge = input.targetCategory === "phd" && (!input.countryCode || input.countryCode === "NO");
   const studyinfoUrl = new URL(STUDYINFO_SEARCH);
   studyinfoUrl.searchParams.set("keyword", input.field.trim());
   studyinfoUrl.searchParams.set("hakukaynnissa", "true");
@@ -408,6 +475,7 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
   const requests = [
     ...(input.targetCategory === "phd" && (!input.countryCode || input.countryCode === "DE")
       ? [{ url: DAAD_FEED, accept: "application/rss+xml, application/xml" }] : []),
+    ...(useNtnuJobbnorge ? [{ url: NTNU_JOBBNORGE_LIST, accept: "application/json" }] : []),
     ...boards.map((board) => ({ url: `https://api.lever.co/v0/postings/${board.boardId}?mode=json`, accept: "application/json" })),
     ...(useGreenhouse ? [{ url: greenhouseUrl, accept: "application/json" }] : []),
     ...(useArc ? [{ url: arcUrl, accept: "application/json" }] : []),
@@ -441,6 +509,25 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       coverage.apiCoverage = "partial";
     } catch (error) {
       coverage.failures.push({ source: "daad_phdgermany", reason: error instanceof Error ? error.message : String(error) });
+    }
+  }
+  if (useNtnuJobbnorge) {
+    coverage.apiSources.push(NTNU_JOBBNORGE_SOURCE);
+    try {
+      const response = await fetchSource(NTNU_JOBBNORGE_LIST);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const postings = await readNtnuJobbnorgeResponse(response);
+      if (!postings || !Array.isArray(postings.jobs)) throw new Error("Jobbnorge returned an unexpected jobs format.");
+      if (postings.jobs.length > NTNU_JOBBNORGE_LIST_LIMIT) coverage.truncated = true;
+      const inspectedPostings = { jobs: postings.jobs.slice(0, NTNU_JOBBNORGE_LIST_LIMIT) };
+      if (inspectedPostings.jobs.some((item) => item?.employerID === 688 && ntnuDomesticPrimary(item))) {
+        coverage.countriesChecked.push("NO");
+      }
+      candidates.push(...parseNtnuJobbnorge(inspectedPostings, input));
+      coverage.apiCoverage = "partial";
+    } catch (error) {
+      coverage.failures.push({ source: NTNU_JOBBNORGE_SOURCE,
+        reason: error instanceof Error ? error.message : String(error) });
     }
   }
   for (const board of boards) {

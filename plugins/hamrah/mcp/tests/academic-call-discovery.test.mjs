@@ -162,6 +162,91 @@ test("an explicit PhD search returns DAAD API/feed leads with honest unverified 
   assert.equal(TOOLS.find((tool) => tool.name === "discoverAcademicCallCandidates")?.annotations?.readOnlyHint, true);
 });
 
+test("NTNU public Jobbnorge API adds only exact domestic doctoral vacancies", async () => {
+  const urls = [];
+  const today = new Date();
+  const past = new Date(today.getTime() - 14 * 86400_000);
+  const future = new Date(today.getTime() + 30 * 86400_000);
+  const dotted = (date) => `${String(date.getUTCDate()).padStart(2, "0")}.${String(date.getUTCMonth() + 1).padStart(2, "0")}.${date.getUTCFullYear()}`;
+  const posting = (id, overrides = {}) => ({ id, employerID: 688,
+    employer: "NTNU - Norges teknisk-naturvitenskapelige universitet",
+    title: "PhD Candidate in Robotics", deadline: dotted(future),
+    link: `https://www.jobbnorge.no/ledige-stillinger/stilling/${id}`,
+    locations: [{ isPrimary: true, isDomestic: true, municipality: "Trondheim" }],
+    summary: "Doctoral research in robotics", ...overrides });
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "Robotics", targetCategory: "phd", countryCode: "NO"
+  }, async (url) => {
+    urls.push(url);
+    return new Response(JSON.stringify({ jobs: [
+      posting(101), posting(102, { employerID: 999 }),
+      posting(103, { locations: [{ isPrimary: true, isDomestic: false, municipality: "London" }] }),
+      posting(104, { link: "https://example.com/jobs/104" }),
+      posting(105, { deadline: dotted(past) }),
+      posting(106, { title: "Research Scientist in Robotics" }),
+      posting(107, { title: "PhD Candidate in Marine Biology" }),
+      posting(108, { deadline: "31.02.2027" }),
+      posting(109, { locations: { isPrimary: true, isDomestic: true } }),
+      posting(110, { link: "https://www.jobbnorge.no/ledige-stillinger/stilling/110/phd-candidate-in-robotics" }),
+      posting(111, { link: "https://www.jobbnorge.no/ledige-stillinger/stilling/1110/phd-candidate-in-robotics" })
+    ] }));
+  });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.deepEqual(urls, ["https://publicapi.jobbnorge.no/v3/Jobs?employer=688"]);
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["101", "110"]);
+  assert.equal(result.structuredContent.candidates[0].discoverySource, "jobbnorge:ntnu");
+  assert.equal(result.structuredContent.candidates[0].countryCode, "NO");
+  assert.equal(result.structuredContent.candidates[0].deadlineText, future.toISOString().slice(0, 10));
+  assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
+  assert.equal(result.structuredContent.coverage.expiredKnownCount, 1);
+  assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["NO"]);
+});
+
+test("global PhD discovery preserves DAAD leads when Jobbnorge fails", async () => {
+  const urls = [];
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "physics", targetCategory: "phd"
+  }, async (url) => {
+    urls.push(url);
+    if (url.includes("jobbnorge.no")) throw new Error("Jobbnorge unavailable");
+    return new Response(FEED);
+  });
+  assert.equal(result.isError, false);
+  assert.deepEqual(urls, [
+    "https://api.daad.de/api/feeds/rss/en/phd.xml",
+    "https://publicapi.jobbnorge.no/v3/Jobs?employer=688"
+  ]);
+  assert.equal(result.structuredContent.status, "partial");
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.discoverySource), ["daad_phdgermany"]);
+  assert.deepEqual(result.structuredContent.coverage.failures.map((item) => item.source), ["jobbnorge:ntnu"]);
+});
+
+test("NTNU inspection stops at 200 records and reports truncation", async () => {
+  const jobs = Array.from({ length: 201 }, (_, index) => ({
+    id: index + 1, employerID: 688,
+    employer: "NTNU - Norges teknisk-naturvitenskapelige universitet",
+    title: "PhD Candidate in Robotics", deadline: "01.01.2030",
+    link: `https://www.jobbnorge.no/ledige-stillinger/stilling/${index + 1}`,
+    locations: [{ isPrimary: true, isDomestic: index === 200 }]
+  }));
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "Robotics", targetCategory: "phd", countryCode: "NO"
+  }, async () => new Response(JSON.stringify({ jobs })));
+  assert.equal(result.isError, false);
+  assert.equal(result.structuredContent.coverage.truncated, true);
+  assert.deepEqual(result.structuredContent.coverage.countriesChecked, []);
+  assert.deepEqual(result.structuredContent.candidates, []);
+});
+
+test("NTNU rejects a response over one million UTF-8 bytes", async () => {
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "Robotics", targetCategory: "phd", countryCode: "NO"
+  }, async () => new Response(JSON.stringify({ jobs: [], padding: "ø".repeat(550_000) })));
+  assert.equal(result.isError, false);
+  assert.deepEqual(result.structuredContent.coverage.failures.map((item) => item.source), ["jobbnorge:ntnu"]);
+  assert.match(result.structuredContent.coverage.failures[0].reason, /size limit/);
+});
+
 test("a public research board API adds scoped postdoctoral leads without calling them verified", async () => {
   const requestUrls = [];
   const result = await executeTool("discoverAcademicCallCandidates", {
@@ -262,7 +347,7 @@ test("a field named in the posting title outranks incidental description mention
     <link>https://www.daad.de/detail/2</link></item></channel></rss>`;
   const result = await executeTool("discoverAcademicCallCandidates", {
     field: "physics", targetCategory: "phd", limit: 1
-  }, async () => new Response(feed, { status: 200 }));
+  }, async (url) => new Response(url.includes("jobbnorge.no") ? '{"jobs":[]}' : feed, { status: 200 }));
   assert.equal(result.isError, false);
   assert.equal(result.structuredContent.candidates[0].title, "Doctoral researcher in physics");
 });
@@ -273,7 +358,7 @@ test("a bounded result reports how many matching leads were omitted", async () =
   ).join("")}</channel></rss>`;
   const result = await executeTool("discoverAcademicCallCandidates", {
     field: "physics", targetCategory: "phd", limit: 1
-  }, async () => new Response(feed, { status: 200 }));
+  }, async (url) => new Response(url.includes("jobbnorge.no") ? '{"jobs":[]}' : feed, { status: 200 }));
   assert.equal(result.isError, false);
   assert.equal(result.structuredContent.coverage.candidateCount, 1);
   assert.equal(result.structuredContent.coverage.matchedCount, 3);
@@ -293,7 +378,7 @@ test("a known expired DAAD deadline does not consume the bounded shortlist", asy
   </channel></rss>`;
   const result = await executeTool("discoverAcademicCallCandidates", {
     field: "physics", targetCategory: "phd", limit: 1
-  }, async () => new Response(feed, { status: 200 }));
+  }, async (url) => new Response(url.includes("jobbnorge.no") ? '{"jobs":[]}' : feed, { status: 200 }));
   assert.equal(result.isError, false);
   assert.equal(result.structuredContent.candidates[0].sourceId, "new");
   assert.equal(result.structuredContent.coverage.expiredKnownCount, 1);
