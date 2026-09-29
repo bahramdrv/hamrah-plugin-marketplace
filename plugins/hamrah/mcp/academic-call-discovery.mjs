@@ -6,6 +6,9 @@ const STUDYINFO_SEARCH = "https://opintopolku.fi/konfo-backend/external/search/t
 const STUDYINFO_HEADERS = { Accept: "application/json", "Caller-Id": "hamrah-plugin-marketplace" };
 const STUDYINFO_DETAIL_LIMIT = 12;
 const ARC_SOURCE = "greenhouse:arcinstitute";
+const AUCKLAND_SOURCE = "smartrecruiters:theuniversityofauckland";
+const AUCKLAND_LIST = "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings?limit=100&offset=0&destination=PUBLIC";
+const AUCKLAND_DETAIL_LIMIT = 12;
 const IONQ_SOURCE = "greenhouse:ionq";
 const IONQ_COUNTRIES = { "United States": "US", "United Kingdom": "GB", Sweden: "SE",
   Switzerland: "CH", Canada: "CA", "South Korea": "KR" };
@@ -166,6 +169,31 @@ function parseArcGreenhouse(body, input) {
   }));
 }
 
+function aucklandPostdocTitle(title) {
+  return /\bpost[ -]?doc(?:toral|tural)?\b/i.test(title);
+}
+
+function aucklandPostingIdentity(item) {
+  return /^\d+$/.test(String(item?.id ?? ""))
+    && item?.company?.identifier === "TheUniversityOfAuckland"
+    && item?.location?.country === "nz" && item?.visibility === "PUBLIC";
+}
+
+function parseAucklandDetail(item, listed, input) {
+  if (!aucklandPostingIdentity(item) || item.active !== true || String(item.id) !== String(listed.id)
+    || !aucklandPostdocTitle(String(item.name ?? "")) || !relevant(String(item.name ?? ""), input.field)
+    || typeof item.postingUrl !== "string"
+    || !new RegExp(`^https://jobs\\.smartrecruiters\\.com/TheUniversityOfAuckland/${item.id}(?:-[^/?#]+)?$`).test(item.postingUrl)) return null;
+  return {
+    sourceId: String(item.id), discoverySource: AUCKLAND_SOURCE,
+    title: plain(item.name), url: item.postingUrl,
+    countryCode: "NZ", targetCategory: "postdoc", discoveryMatch: "title",
+    summary: plain(item.jobAd?.sections?.jobDescription?.text).slice(0, 1000),
+    publishedText: item.releasedDate ?? null, deadlineText: null,
+    verificationStatus: "unverified"
+  };
+}
+
 function parseFacultyAshby(body, input) {
   if (!body || !Array.isArray(body.jobs)) throw new Error("Ashby returned an unexpected jobs format.");
   return body.jobs.filter((item) => {
@@ -289,6 +317,7 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
   const useGreenhouse = ["postdoc", "research_job"].includes(input.targetCategory)
     && (!input.countryCode || input.countryCode === "US");
   const useArc = input.targetCategory === "postdoc" && (!input.countryCode || input.countryCode === "US");
+  const useAuckland = input.targetCategory === "postdoc" && (!input.countryCode || input.countryCode === "NZ");
   const useAshby = input.targetCategory === "research_job" && (!input.countryCode || input.countryCode === "GB");
   const useIonq = input.targetCategory === "research_job"
     && (!input.countryCode || Object.values(IONQ_COUNTRIES).includes(input.countryCode));
@@ -304,6 +333,7 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
     ...boards.map((board) => ({ url: `https://api.lever.co/v0/postings/${board.boardId}?mode=json`, accept: "application/json" })),
     ...(useGreenhouse ? [{ url: greenhouseUrl, accept: "application/json" }] : []),
     ...(useArc ? [{ url: arcUrl, accept: "application/json" }] : []),
+    ...(useAuckland ? [{ url: AUCKLAND_LIST, accept: "application/json" }] : []),
     ...(useAshby ? [{ url: ashbyUrl, accept: "application/json" }] : []),
     ...(useIonq ? [{ url: ionqUrl, accept: "application/json" }] : []),
     ...(useStudyinfo ? [{ url: studyinfoUrl.href, accept: "application/json", headers: STUDYINFO_HEADERS }] : [])
@@ -391,6 +421,45 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       coverage.apiCoverage = "partial";
     } catch (error) {
       coverage.failures.push({ source: ARC_SOURCE, reason: error instanceof Error ? error.message : String(error) });
+    }
+  }
+  if (useAuckland) {
+    coverage.apiSources.push(AUCKLAND_SOURCE);
+    try {
+      const response = await fetchSource(AUCKLAND_LIST);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const body = await response.text();
+      if (body.length > 1_000_000) throw new Error("Auckland postings response exceeds size limit");
+      const postings = JSON.parse(body);
+      if (!postings || !Array.isArray(postings.content) || !Number.isInteger(postings.totalFound)
+        || postings.totalFound < 0) throw new Error("Auckland returned an unexpected postings format.");
+      coverage.apiCoverage = "partial";
+      if (postings.totalFound > postings.content.length) coverage.truncated = true;
+      if (postings.content.some(aucklandPostingIdentity) && !coverage.countriesChecked.includes("NZ")) {
+        coverage.countriesChecked.push("NZ");
+      }
+      const matches = postings.content.filter((item) => aucklandPostingIdentity(item)
+        && aucklandPostdocTitle(String(item.name ?? "")) && relevant(String(item.name ?? ""), input.field));
+      if (matches.length > AUCKLAND_DETAIL_LIMIT) coverage.truncated = true;
+      const details = await Promise.all(matches.slice(0, AUCKLAND_DETAIL_LIMIT).map(async (item) => {
+        try {
+          const url = `https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings/${item.id}`;
+          const requestSignal = AbortSignal.any([signal ?? new AbortController().signal, AbortSignal.timeout(8000)]);
+          const detailResponse = await fetchImpl(url, { method: "GET", headers: { Accept: "application/json" }, signal: requestSignal });
+          if (!detailResponse.ok) throw new Error(`HTTP ${detailResponse.status}`);
+          const detailText = await detailResponse.text();
+          if (detailText.length > 500_000) throw new Error("Auckland posting detail exceeds size limit");
+          return { candidate: parseAucklandDetail(JSON.parse(detailText), item, input) };
+        } catch (error) {
+          return { error: `${item.id}: ${error instanceof Error ? error.message : String(error)}` };
+        }
+      }));
+      for (const detail of details) {
+        if (detail.error) coverage.failures.push({ source: AUCKLAND_SOURCE, reason: detail.error });
+        else if (detail.candidate) candidates.push(detail.candidate);
+      }
+    } catch (error) {
+      coverage.failures.push({ source: AUCKLAND_SOURCE, reason: error instanceof Error ? error.message : String(error) });
     }
   }
   if (useAshby) {

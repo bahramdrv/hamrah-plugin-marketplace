@@ -225,13 +225,15 @@ test("global postdoc discovery checks the validated research-institute board wit
   }, async (url) => {
     urls.push(url);
     if (url.includes("boards-api.greenhouse.io")) return new Response('{"jobs":[]}', { status: 200 });
+    if (url.includes("api.smartrecruiters.com")) return new Response('{"content":[],"totalFound":0}', { status: 200 });
     return new Response(JSON.stringify([{ id: "r1", text: "Postdoctoral Researcher in Robotics",
       country: "US", descriptionPlain: "Robotics research", hostedUrl: "https://jobs.lever.co/tri/r1" }]), { status: 200 });
   });
   assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
   assert.deepEqual(urls, ["https://api.lever.co/v0/postings/tri?mode=json",
     "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
-    "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true"]);
+    "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true",
+    "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings?limit=100&offset=0&destination=PUBLIC"]);
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["US"]);
 });
@@ -512,6 +514,43 @@ test("Arc Institute public Greenhouse board adds only field-matched Palo Alto po
   assert.equal(result.structuredContent.candidates[0].discoverySource, "greenhouse:arcinstitute");
   assert.equal(result.structuredContent.candidates[0].countryCode, "US");
   assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
+});
+
+test("Auckland public SmartRecruiters API adds only active exact NZ postdoctoral postings", async () => {
+  const urls = [];
+  const list = { totalFound: 4, content: [
+    { id: "101", name: "Postdoctoral Fellow - MRI", company: { identifier: "TheUniversityOfAuckland" },
+      location: { country: "nz" }, visibility: "PUBLIC" },
+    { id: "102", name: "Postdoctoral Fellow - MRI", company: { identifier: "TheUniversityOfAuckland" },
+      location: { country: "nz" }, visibility: "PUBLIC" },
+    { id: "103", name: "Research Fellow - MRI", company: { identifier: "TheUniversityOfAuckland" },
+      location: { country: "nz" }, visibility: "PUBLIC" },
+    { id: "104", name: "Postdoctoral Fellow - MRI", company: { identifier: "TheUniversityOfAuckland" },
+      location: { country: "au" }, visibility: "PUBLIC" }
+  ] };
+  const detail = (id, active) => ({ id, name: "Postdoctoral Fellow - MRI", active,
+    company: { identifier: "TheUniversityOfAuckland" }, location: { country: "nz" }, visibility: "PUBLIC",
+    postingUrl: `https://jobs.smartrecruiters.com/TheUniversityOfAuckland/${id}-postdoctoral-fellow-mri`,
+    releasedDate: "2026-09-29T08:00:00Z", jobAd: { sections: { jobDescription: { text: "<p>MRI research.</p>" } } } });
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "MRI", targetCategory: "postdoc", countryCode: "NZ"
+  }, async (url) => {
+    urls.push(url);
+    return new Response(JSON.stringify(url.includes("/postings?") ? list
+      : url.endsWith("/101") ? detail("101", true) : detail("102", false)));
+  });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.deepEqual(urls, [
+    "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings?limit=100&offset=0&destination=PUBLIC",
+    "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings/101",
+    "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings/102"
+  ]);
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["101"]);
+  assert.equal(result.structuredContent.candidates[0].url,
+    "https://jobs.smartrecruiters.com/TheUniversityOfAuckland/101-postdoctoral-fellow-mri");
+  assert.equal(result.structuredContent.candidates[0].countryCode, "NZ");
+  assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
+  assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["NZ"]);
 });
 
 test("IonQ public Greenhouse board scopes research jobs by primary posting location, not offices", async () => {
