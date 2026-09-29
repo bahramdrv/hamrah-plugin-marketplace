@@ -50,6 +50,7 @@ const relevant = (body, field) => field.toLowerCase().split(/\s+/).filter(Boolea
   .every((token) => body.toLowerCase().includes(token));
 const monthNumbers = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6,
   jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
+const monthNamePattern = "January|February|March|April|May|June|July|August|September|October|November|December";
 
 function knownDeadlineDay(value) {
   const iso = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
@@ -191,6 +192,25 @@ function smartRecruitersPostingIdentity(item, source) {
     && item?.location?.country === source.apiCountry && item?.visibility === "PUBLIC";
 }
 
+function smartRecruitersDeadline(item) {
+  const sections = item.jobAd?.sections ?? {};
+  const text = plain(`${sections.jobDescription?.text ?? ""} ${sections.additionalInformation?.text ?? ""}`
+    .replace(/&#(?:x[\da-f]+|\d+);/gi, " "));
+  for (const label of text.matchAll(/\b(?:closing date(?: of)?|application deadline|applications close(?: on)?)\s*:?\s*/gi)) {
+    const nearby = text.slice(label.index + label[0].length, label.index + label[0].length + 70);
+    const dayFirst = nearby.match(new RegExp(`\\b(\\d{1,2})\\s+(${monthNamePattern})\\s+(\\d{4})\\b`, "i"));
+    const monthFirst = nearby.match(new RegExp(`\\b(${monthNamePattern})\\s+(\\d{1,2}),?\\s+(\\d{4})\\b`, "i"));
+    const numeric = nearby.match(/\b(\d{1,2})\.(\d{1,2})\.(\d{4})\b/);
+    const parts = dayFirst ? [Number(dayFirst[3]), monthNumbers[dayFirst[2].slice(0, 3).toLowerCase()], Number(dayFirst[1])]
+      : monthFirst ? [Number(monthFirst[3]), monthNumbers[monthFirst[1].slice(0, 3).toLowerCase()], Number(monthFirst[2])]
+        : numeric ? [Number(numeric[3]), Number(numeric[2]), Number(numeric[1])] : null;
+    if (!parts) continue;
+    const iso = `${parts[0]}-${String(parts[1]).padStart(2, "0")}-${String(parts[2]).padStart(2, "0")}`;
+    if (knownDeadlineDay(iso)) return iso;
+  }
+  return null;
+}
+
 function parseSmartRecruitersDetail(item, listed, input, source) {
   if (!smartRecruitersPostingIdentity(item, source) || item.active !== true || String(item.id) !== String(listed.id)
     || !smartRecruitersPostdocTitle(String(item.name ?? "")) || !relevant(String(item.name ?? ""), input.field)
@@ -201,7 +221,7 @@ function parseSmartRecruitersDetail(item, listed, input, source) {
     title: plain(item.name), url: item.postingUrl,
     countryCode: source.country, targetCategory: "postdoc", discoveryMatch: "title",
     summary: plain(item.jobAd?.sections?.jobDescription?.text).slice(0, 1000),
-    publishedText: item.releasedDate ?? null, deadlineText: null,
+    publishedText: item.releasedDate ?? null, deadlineText: smartRecruitersDeadline(item),
     verificationStatus: "unverified"
   };
 }

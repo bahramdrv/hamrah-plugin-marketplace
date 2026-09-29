@@ -618,6 +618,33 @@ test("Western Sydney public SmartRecruiters API adds only active exact Australia
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["AU"]);
 });
 
+test("SmartRecruiters labeled closing dates remove expired leads despite an active API flag", async () => {
+  const today = new Date();
+  const past = new Date(today.getTime() - 14 * 86400_000);
+  const future = new Date(today.getTime() + 30 * 86400_000);
+  const longDate = (date) => `${date.getUTCDate()} ${date.toLocaleString("en-US", { month: "long", timeZone: "UTC" })} ${date.getUTCFullYear()}`;
+  const monthFirst = (date) => `${date.toLocaleString("en-US", { month: "long", timeZone: "UTC" })} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
+  const list = { totalFound: 2, content: ["301", "302"].map((id) => ({ id,
+    name: `Postdoctoral Researcher in Plant Science ${id}`,
+    company: { identifier: "WesternSydneyUniversity" }, location: { country: "au" }, visibility: "PUBLIC" })) };
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "Plant Science", targetCategory: "postdoc", countryCode: "AU"
+  }, async (url) => {
+    if (url.includes("/postings?")) return new Response(JSON.stringify(list));
+    const id = url.split("/").at(-1);
+    return new Response(JSON.stringify({ id, name: list.content.find((x) => x.id === id).name, active: true,
+      company: { identifier: "WesternSydneyUniversity" }, location: { country: "au" }, visibility: "PUBLIC",
+      postingUrl: `https://jobs.smartrecruiters.com/WesternSydneyUniversity/${id}-postdoctoral-researcher-in-plant-science`,
+      jobAd: { sections: { jobDescription: { text: id === "301"
+        ? `<p><strong>Closing Date: </strong>11:59pm, Wed ${longDate(past).replace(" ", "&#xa0;")}</p>`
+        : `<p><strong>Closing Date: </strong>${monthFirst(future)}</p>` } } } }));
+  });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["302"]);
+  assert.equal(result.structuredContent.coverage.expiredKnownCount, 1);
+  assert.equal(result.structuredContent.candidates[0].deadlineText, future.toISOString().slice(0, 10));
+});
+
 test("IonQ public Greenhouse board scopes research jobs by primary posting location, not offices", async () => {
   const urls = [];
   const jobs = { jobs: [
