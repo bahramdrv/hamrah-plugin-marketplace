@@ -5,6 +5,9 @@ const STUDYINFO_SOURCE = "studyinfo:fi";
 const STUDYINFO_SEARCH = "https://opintopolku.fi/konfo-backend/external/search/toteutukset-koulutuksittain";
 const STUDYINFO_HEADERS = { Accept: "application/json", "Caller-Id": "hamrah-plugin-marketplace" };
 const STUDYINFO_DETAIL_LIMIT = 12;
+const IONQ_SOURCE = "greenhouse:ionq";
+const IONQ_COUNTRIES = { "United States": "US", "United Kingdom": "GB", Sweden: "SE",
+  Switzerland: "CH", Canada: "CA", "South Korea": "KR" };
 const INPUT_SCHEMA = {
   type: "object", additionalProperties: false,
   required: ["field", "targetCategory"],
@@ -150,6 +153,33 @@ function parseFacultyAshby(body, input) {
   }));
 }
 
+function ionqPrimaryCountry(item) {
+  const location = String(item?.location?.name ?? "");
+  return Object.entries(IONQ_COUNTRIES).find(([name]) => location === name || location.endsWith(`, ${name}`))?.[1] ?? null;
+}
+
+function parseIonqGreenhouse(body, input) {
+  if (!body || !Array.isArray(body.jobs)) throw new Error("IonQ Greenhouse returned an unexpected jobs format.");
+  return body.jobs.filter((item) => {
+    const title = String(item?.title ?? "");
+    const country = ionqPrimaryCountry(item);
+    return !/\b(?:intern(?:ship)?|postdoc(?:toral)?)\b/i.test(title)
+      && /\bresearch(?:er)?\b|\bscientist\b|\bfellow\b/i.test(title)
+      && relevant(title, input.field)
+      && country && (!input.countryCode || country === input.countryCode)
+      && typeof item?.absolute_url === "string"
+      && /^https:\/\/job-boards\.greenhouse\.io\/ionq\/jobs\/\d+$/.test(item.absolute_url);
+  }).map((item) => ({
+      sourceId: String(item.id ?? item.absolute_url), discoverySource: IONQ_SOURCE,
+      title: plain(item.title), url: item.absolute_url,
+      countryCode: ionqPrimaryCountry(item),
+      targetCategory: "research_job", discoveryMatch: "title",
+      summary: plain(String(item.content ?? "").replace(/&lt;/g, "<").replace(/&gt;/g, ">")).slice(0, 1000),
+      publishedText: item.first_published ?? item.updated_at ?? null,
+      deadlineText: item.application_deadline ?? null, verificationStatus: "unverified"
+  }));
+}
+
 const translated = (value) => String(value?.en ?? value?.fi ?? value?.sv ?? "").trim();
 const studyinfoOid = (value, kind) => typeof value === "string"
   && new RegExp(`^1\\.2\\.246\\.562\\.${kind}\\.[0-9]+$`).test(value);
@@ -222,9 +252,12 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
     .filter((board, index, all) => all.findIndex((candidate) => candidate.boardId === board.boardId) === index);
   const greenhouseUrl = "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true";
   const ashbyUrl = "https://api.ashbyhq.com/posting-api/job-board/faculty";
+  const ionqUrl = "https://boards-api.greenhouse.io/v1/boards/ionq/jobs?content=true";
   const useGreenhouse = ["postdoc", "research_job"].includes(input.targetCategory)
     && (!input.countryCode || input.countryCode === "US");
   const useAshby = input.targetCategory === "research_job" && (!input.countryCode || input.countryCode === "GB");
+  const useIonq = input.targetCategory === "research_job"
+    && (!input.countryCode || Object.values(IONQ_COUNTRIES).includes(input.countryCode));
   const useStudyinfo = input.targetCategory === "masters" && (!input.countryCode || input.countryCode === "FI");
   const studyinfoUrl = new URL(STUDYINFO_SEARCH);
   studyinfoUrl.searchParams.set("keyword", input.field.trim());
@@ -237,6 +270,7 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
     ...boards.map((board) => ({ url: `https://api.lever.co/v0/postings/${board.boardId}?mode=json`, accept: "application/json" })),
     ...(useGreenhouse ? [{ url: greenhouseUrl, accept: "application/json" }] : []),
     ...(useAshby ? [{ url: ashbyUrl, accept: "application/json" }] : []),
+    ...(useIonq ? [{ url: ionqUrl, accept: "application/json" }] : []),
     ...(useStudyinfo ? [{ url: studyinfoUrl.href, accept: "application/json", headers: STUDYINFO_HEADERS }] : [])
   ];
   const pending = new Map(requests.map(({ url, accept, headers }) => {
@@ -324,6 +358,24 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       coverage.apiCoverage = "partial";
     } catch (error) {
       coverage.failures.push({ source, reason: error instanceof Error ? error.message : String(error) });
+    }
+  }
+  if (useIonq) {
+    coverage.apiSources.push(IONQ_SOURCE);
+    try {
+      const response = await fetchSource(ionqUrl);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const body = await response.text();
+      if (body.length > 3_000_000) throw new Error("IonQ jobs response exceeds size limit");
+      const postings = JSON.parse(body);
+      if (!postings || !Array.isArray(postings.jobs)) throw new Error("IonQ Greenhouse returned an unexpected jobs format.");
+      const countries = [...new Set(postings.jobs.map(ionqPrimaryCountry).filter(Boolean))].sort();
+      for (const country of countries) if ((!input.countryCode || country === input.countryCode)
+        && !coverage.countriesChecked.includes(country)) coverage.countriesChecked.push(country);
+      candidates.push(...parseIonqGreenhouse(postings, input));
+      coverage.apiCoverage = "partial";
+    } catch (error) {
+      coverage.failures.push({ source: IONQ_SOURCE, reason: error instanceof Error ? error.message : String(error) });
     }
   }
   if (useStudyinfo) {

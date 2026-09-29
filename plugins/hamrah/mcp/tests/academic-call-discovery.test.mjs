@@ -311,7 +311,8 @@ test("global research jobs check both validated boards and exclude research inte
     "https://api.lever.co/v0/postings/ifm-us?mode=json",
     "https://api.lever.co/v0/postings/waabi?mode=json",
     "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
-    "https://api.ashbyhq.com/posting-api/job-board/faculty"
+    "https://api.ashbyhq.com/posting-api/job-board/faculty",
+    "https://boards-api.greenhouse.io/v1/boards/ionq/jobs?content=true"
   ]);
   assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["ae1"]);
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["AE", "US"]);
@@ -331,7 +332,7 @@ test("global source requests start together so one slow provider does not delay 
   });
   try {
     await new Promise((resolve) => setImmediate(resolve));
-    assert.equal(started.length, 5);
+    assert.equal(started.length, 6);
   } finally {
     release();
     await operation;
@@ -389,7 +390,8 @@ test("UK research-job discovery accepts only listed title-matched Faculty postin
     field: "AI Safety", targetCategory: "research_job", countryCode: "GB"
   }, async (url) => { urls.push(url); return new Response(JSON.stringify(board), { status: 200 }); });
   assert.equal(result.isError, false);
-  assert.deepEqual(urls, ["https://api.ashbyhq.com/posting-api/job-board/faculty"]);
+  assert.deepEqual(urls, ["https://api.ashbyhq.com/posting-api/job-board/faculty",
+    "https://boards-api.greenhouse.io/v1/boards/ionq/jobs?content=true"]);
   assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["gb1"]);
   assert.equal(result.structuredContent.candidates[0].countryCode, "GB");
   assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
@@ -412,10 +414,11 @@ test("Canadian research-job discovery uses Waabi's public board and requires tit
     field: "robotics", targetCategory: "research_job", countryCode: "CA"
   }, async (url) => {
     urls.push(url);
-    return new Response(JSON.stringify(postings), { status: 200 });
+    return new Response(url.includes("boards-api.greenhouse.io") ? '{"jobs":[]}' : JSON.stringify(postings), { status: 200 });
   });
   assert.equal(result.isError, false);
-  assert.deepEqual(urls, ["https://api.lever.co/v0/postings/waabi?mode=json"]);
+  assert.deepEqual(urls, ["https://api.lever.co/v0/postings/waabi?mode=json",
+    "https://boards-api.greenhouse.io/v1/boards/ionq/jobs?content=true"]);
   assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["ca1"]);
   assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["CA"]);
@@ -448,4 +451,40 @@ test("Ai2 Greenhouse public API adds only scoped research jobs and postdoctoral 
   assert.equal(postdoc.isError, false);
   assert.deepEqual(postdoc.structuredContent.candidates.map((item) => item.sourceId), ["12"]);
   assert.equal(postdoc.structuredContent.candidates[0].verificationStatus, "unverified");
+});
+
+test("IonQ public Greenhouse board scopes research jobs by primary posting location, not offices", async () => {
+  const urls = [];
+  const jobs = { jobs: [
+    { id: 10, title: "Senior Quantum Scientist", absolute_url: "https://job-boards.greenhouse.io/ionq/jobs/10",
+      location: { name: "Boulder, Colorado, United States" },
+      offices: [{ location: "Boulder, Colorado, United States" }, { location: "Oxford, England, United Kingdom" }],
+      content: "Quantum research" },
+    { id: 11, title: "Research Intern, Quantum", absolute_url: "https://job-boards.greenhouse.io/ionq/jobs/11",
+      location: { name: "Oxford, England, United Kingdom" },
+      offices: [{ location: "Oxford, England, United Kingdom" }] },
+    { id: 12, title: "Senior Quantum Scientist", absolute_url: "https://job-boards.greenhouse.io/ionq/jobs/12",
+      location: { name: "Geneva, Switzerland" }, offices: [{ location: "Geneva, Switzerland" }] },
+    { id: 13, title: "Senior Quantum Scientist", absolute_url: "https://job-boards.greenhouse.io/ionq/jobs/13",
+      location: { name: "Oxford, England, United Kingdom" },
+      offices: [{ location: "Boulder, Colorado, United States" }, { location: "Oxford, England, United Kingdom" }] },
+    { id: 14, title: "Senior Quantum Scientist", absolute_url: "https://job-boards.greenhouse.io/ionq/jobs/14",
+      offices: [{ location: "Oxford, England, United Kingdom" }] }
+  ] };
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "quantum", targetCategory: "research_job", countryCode: "GB"
+  }, async (url) => {
+    urls.push(url);
+    return new Response(url.includes("api.ashbyhq.com") ? '{"jobs":[]}' : JSON.stringify(jobs));
+  });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.deepEqual(urls, [
+    "https://api.ashbyhq.com/posting-api/job-board/faculty",
+    "https://boards-api.greenhouse.io/v1/boards/ionq/jobs?content=true"
+  ]);
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["13"]);
+  assert.equal(result.structuredContent.candidates[0].countryCode, "GB");
+  assert.equal("countryCodes" in result.structuredContent.candidates[0], false);
+  assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
+  assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["GB"]);
 });
