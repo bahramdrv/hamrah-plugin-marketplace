@@ -183,7 +183,8 @@ test("a public research board API adds scoped postdoctoral leads without calling
     "https://api.lever.co/v0/postings/tri?mode=json",
     "https://api.lever.co/v0/postings/research-institute?mode=json",
     "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
-    "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true"
+    "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true",
+    "https://api.smartrecruiters.com/v1/companies/UniversityOfNotreDame/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral"
   ]);
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.equal(result.structuredContent.candidates[0].countryCode, "US");
@@ -203,9 +204,10 @@ test("supplying a known default board does not fetch it twice", async () => {
   assert.equal(result.isError, false);
   assert.deepEqual(urls, ["https://api.lever.co/v0/postings/tri?mode=json",
     "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
-    "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true"]);
+    "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true",
+    "https://api.smartrecruiters.com/v1/companies/UniversityOfNotreDame/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral"]);
   assert.deepEqual(result.structuredContent.coverage.apiSources,
-    ["lever:tri", "greenhouse:thealleninstitute", "greenhouse:arcinstitute"]);
+    ["lever:tri", "greenhouse:thealleninstitute", "greenhouse:arcinstitute", "smartrecruiters:universityofnotredame"]);
 });
 
 test("candidate discovery rejects applicant facts before making an external request", async () => {
@@ -235,7 +237,8 @@ test("global postdoc discovery checks the validated research-institute board wit
     "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true",
     "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings?limit=100&offset=0&destination=PUBLIC",
     "https://api.smartrecruiters.com/v1/companies/UniversityHealthNetwork/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral",
-    "https://api.smartrecruiters.com/v1/companies/WesternSydneyUniversity/postings?limit=100&offset=0&destination=PUBLIC"]);
+    "https://api.smartrecruiters.com/v1/companies/WesternSydneyUniversity/postings?limit=100&offset=0&destination=PUBLIC",
+    "https://api.smartrecruiters.com/v1/companies/UniversityOfNotreDame/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral"]);
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["US"]);
 });
@@ -514,7 +517,8 @@ test("Arc Institute public Greenhouse board adds only field-matched Palo Alto po
   assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
   assert.deepEqual(urls, ["https://api.lever.co/v0/postings/tri?mode=json",
     "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
-    "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true"]);
+    "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true",
+    "https://api.smartrecruiters.com/v1/companies/UniversityOfNotreDame/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral"]);
   assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["21"]);
   assert.equal(result.structuredContent.candidates[0].discoverySource, "greenhouse:arcinstitute");
   assert.equal(result.structuredContent.candidates[0].countryCode, "US");
@@ -653,6 +657,43 @@ test("Western Sydney public SmartRecruiters API adds only active exact Australia
   assert.equal(result.structuredContent.candidates[0].countryCode, "AU");
   assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["AU"]);
+});
+
+test("Notre Dame public SmartRecruiters API adds only exact US postdoctoral openings", async () => {
+  const urls = [];
+  const list = { totalFound: 3, content: [
+    { id: "501", name: "Postdoctoral Research Fellow - Integrated Assessment of Data Centers",
+      company: { identifier: "UniversityOfNotreDame" }, location: { country: "us" }, visibility: "PUBLIC" },
+    { id: "502", name: "Postdoctoral Research Fellow - Integrated Assessment of Data Centers",
+      company: { identifier: "UniversityOfNotreDame" }, location: { country: "gb" }, visibility: "PUBLIC" },
+    { id: "503", name: "Research Fellow - Integrated Assessment of Data Centers",
+      company: { identifier: "UniversityOfNotreDame" }, location: { country: "us" }, visibility: "PUBLIC" }
+  ] };
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "Data Centers", targetCategory: "postdoc", countryCode: "US"
+  }, async (url) => {
+    urls.push(url);
+    if (url.includes("api.lever.co")) return new Response("[]");
+    if (url.includes("boards-api.greenhouse.io")) return new Response('{"jobs":[]}');
+    if (url.includes("/postings?")) return new Response(JSON.stringify(list));
+    return new Response(JSON.stringify({ id: "501", name: list.content[0].name, active: true,
+      company: { identifier: "UniversityOfNotreDame" }, location: { country: "us" }, visibility: "PUBLIC",
+      postingUrl: "https://jobs.smartrecruiters.com/UniversityOfNotreDame/501-postdoctoral-research-fellow-integrated-assessment-of-data-centers",
+      jobAd: { sections: { jobDescription: { text: "<p>Applications will be reviewed on a rolling basis until the position is filled.</p>" } } } }));
+  });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.deepEqual(urls, [
+    "https://api.lever.co/v0/postings/tri?mode=json",
+    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
+    "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true",
+    "https://api.smartrecruiters.com/v1/companies/UniversityOfNotreDame/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral",
+    "https://api.smartrecruiters.com/v1/companies/UniversityOfNotreDame/postings/501"
+  ]);
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["501"]);
+  assert.equal(result.structuredContent.candidates[0].countryCode, "US");
+  assert.equal(result.structuredContent.candidates[0].discoverySource,
+    "smartrecruiters:universityofnotredame");
+  assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
 });
 
 test("SmartRecruiters labeled closing dates remove expired leads despite an active API flag", async () => {

@@ -10,7 +10,8 @@ const SMARTRECRUITERS_DETAIL_LIMIT = 12;
 const SMARTRECRUITERS_SOURCES = [
   { id: "smartrecruiters:theuniversityofauckland", company: "TheUniversityOfAuckland", country: "NZ", apiCountry: "nz", categories: ["postdoc", "research_job"] },
   { id: "smartrecruiters:universityhealthnetwork", company: "UniversityHealthNetwork", country: "CA", apiCountry: "ca", query: "postdoctoral", categories: ["postdoc"] },
-  { id: "smartrecruiters:westernsydneyuniversity", company: "WesternSydneyUniversity", country: "AU", apiCountry: "au", categories: ["postdoc"] }
+  { id: "smartrecruiters:westernsydneyuniversity", company: "WesternSydneyUniversity", country: "AU", apiCountry: "au", categories: ["postdoc"] },
+  { id: "smartrecruiters:universityofnotredame", company: "UniversityOfNotreDame", country: "US", apiCountry: "us", query: "postdoctoral", categories: ["postdoc"] }
 ];
 const IONQ_SOURCE = "greenhouse:ionq";
 const IONQ_COUNTRIES = { "United States": "US", "United Kingdom": "GB", Sweden: "SE",
