@@ -1,4 +1,4 @@
-1 supervisor leads from 1 official candidates checked in DEU / Physics / Astrobiology.
+1 supervisor lead from 1 official candidate checked in DEU / Physics / Astrobiology.
 
 This bounded search returned fewer than three leads; unsearched faculty remain unknown.
 

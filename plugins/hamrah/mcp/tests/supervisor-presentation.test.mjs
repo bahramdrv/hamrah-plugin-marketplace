@@ -32,6 +32,7 @@ test("source-linked supervisor lead keeps research, recruitment, contact and Ira
   assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
   assert.equal(result.structuredContent.leadCount, 1);
   assert.equal(result.content[0].text, result.structuredContent.markdown);
+  assert.match(result.content[0].text, /^1 supervisor lead from 1 official candidate checked/);
   assert.match(result.content[0].text, /Astrobiology/);
   assert.match(result.content[0].text, /student recruitment: `unknown`/);
   assert.match(result.content[0].text, /former Iranian student: `unknown`/);

@@ -112,7 +112,7 @@ export function renderAcademicSupervisorShortlist(input) {
   }
   if (errors.length) return { error: "invalid_supervisor_presentation", details: errors };
   const lines = [
-    `${input.leads.length} supervisor leads from ${input.coverage.candidatesChecked} official candidates checked in ${input.searchScope.countryCode} / ${escapeMarkdown(input.searchScope.field)} / ${escapeMarkdown(input.searchScope.researchFocus)}.`,
+    `${input.leads.length} supervisor ${input.leads.length === 1 ? "lead" : "leads"} from ${input.coverage.candidatesChecked} official ${input.coverage.candidatesChecked === 1 ? "candidate" : "candidates"} checked in ${input.searchScope.countryCode} / ${escapeMarkdown(input.searchScope.field)} / ${escapeMarkdown(input.searchScope.researchFocus)}.`,
     ...input.coverage.excluded.map((item) => `- excluded ${item.count}: ${item.reason}`),
     ...(input.leads.length < 3 ? ["This bounded search returned fewer than three leads; unsearched faculty remain unknown."] : []),
     ...input.leads.map((lead) => [
