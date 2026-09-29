@@ -731,6 +731,40 @@ test("Simula public Greenhouse API adds only title-matched Oslo postdoctoral ope
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["NO"]);
 });
 
+test("Simula extracts only an immediate labeled deadline and drops an expired API lead", async () => {
+  const today = new Date();
+  const past = new Date(today.getTime() - 14 * 86400_000);
+  const future = new Date(today.getTime() + 30 * 86400_000);
+  const longDate = (date) => `${date.toLocaleString("en-US", { month: "long", timeZone: "UTC" })} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
+  const jobs = { jobs: [
+    { id: 11, title: "Postdoctoral Fellow in Scientific Computing",
+      absolute_url: "https://job-boards.greenhouse.io/simula/jobs/11", location: { name: "Oslo" },
+      offices: [{ location: "Fornebu" }], content: `&lt;p&gt;Application deadline:&amp;nbsp;&lt;/p&gt; &lt;p&gt;${longDate(past)}. Applications are reviewed.&lt;/p&gt;` },
+    { id: 12, title: "Postdoctoral Fellow in Scientific Computing",
+      absolute_url: "https://job-boards.greenhouse.io/simula/jobs/12", location: { name: "Oslo" },
+      offices: [{ location: "Fornebu" }], content: `&lt;p&gt;Application deadline:&lt;/p&gt; &lt;p&gt;${longDate(future)}.&lt;/p&gt;` },
+    { id: 13, title: "Postdoctoral Fellow in Scientific Computing",
+      absolute_url: "https://job-boards.greenhouse.io/simula/jobs/13", location: { name: "Oslo" },
+      offices: [{ location: "Fornebu" }], content: `&lt;p&gt;Application deadline: to be announced. Start date ${longDate(future)}.&lt;/p&gt;` },
+    { id: 14, title: "Postdoctoral Fellow in Scientific Computing",
+      absolute_url: "https://job-boards.greenhouse.io/simula/jobs/14", location: { name: "Oslo" },
+      offices: [{ location: "Fornebu" }], content: "&lt;p&gt;Application deadline: February 30, 2027.&lt;/p&gt;" },
+    { id: 15, title: "Postdoctoral Fellow in Scientific Computing",
+      absolute_url: "https://job-boards.greenhouse.io/simula/jobs/15", location: { name: "Oslo" },
+      offices: [{ location: "Fornebu" }], application_deadline: future.toISOString().slice(0, 10) }
+  ] };
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "Scientific Computing", targetCategory: "postdoc", countryCode: "NO"
+  }, async () => new Response(JSON.stringify(jobs)));
+  assert.equal(result.isError, false);
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["12", "13", "14", "15"]);
+  assert.equal(result.structuredContent.coverage.expiredKnownCount, 1);
+  assert.equal(result.structuredContent.candidates[0].deadlineText, future.toISOString().slice(0, 10));
+  assert.equal(result.structuredContent.candidates[1].deadlineText, null);
+  assert.equal(result.structuredContent.candidates[2].deadlineText, null);
+  assert.equal(result.structuredContent.candidates[3].deadlineText, future.toISOString().slice(0, 10));
+});
+
 test("SmartRecruiters labeled closing dates remove expired leads despite an active API flag", async () => {
   const today = new Date();
   const past = new Date(today.getTime() - 14 * 86400_000);

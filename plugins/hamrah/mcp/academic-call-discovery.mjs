@@ -180,6 +180,17 @@ function simulaNorwayPrimary(item) {
     && (item?.offices ?? []).some((office) => office?.location === "Fornebu");
 }
 
+function simulaDeadline(content) {
+  const text = plain(String(content ?? "").replace(/&lt;/gi, "<").replace(/&gt;/gi, ">")
+    .replace(/&amp;nbsp;/gi, " "));
+  const monthFirst = text.match(new RegExp(`\\bapplication deadline\\s*:\\s*(${monthNamePattern})\\s+(\\d{1,2})(?:st|nd|rd|th)?,?\\s+(\\d{4})\\b`, "i"));
+  const numeric = text.match(/\bapplication deadline\s*:\s*(\d{1,2})\.(\d{1,2})\.(\d{4})\b/i);
+  const parts = monthFirst ? [Number(monthFirst[3]), monthNumbers[monthFirst[1].slice(0, 3).toLowerCase()], Number(monthFirst[2])]
+    : numeric ? [Number(numeric[3]), Number(numeric[2]), Number(numeric[1])] : null;
+  if (!parts) return null;
+  return knownDeadlineDay(`${parts[0]}-${String(parts[1]).padStart(2, "0")}-${String(parts[2]).padStart(2, "0")}`);
+}
+
 function parseSimulaGreenhouse(body, input) {
   if (!body || !Array.isArray(body.jobs)) throw new Error("Simula Greenhouse returned an unexpected jobs format.");
   return body.jobs.filter((item) => {
@@ -195,7 +206,8 @@ function parseSimulaGreenhouse(body, input) {
     discoveryMatch: "title",
     summary: plain(String(item.content ?? "").replace(/&lt;/g, "<").replace(/&gt;/g, ">")).slice(0, 1000),
     publishedText: item.first_published ?? item.updated_at ?? null,
-    deadlineText: item.application_deadline ?? null, verificationStatus: "unverified"
+    deadlineText: knownDeadlineDay(item.application_deadline ?? "") ?? simulaDeadline(item.content),
+    verificationStatus: "unverified"
   }));
 }
 
