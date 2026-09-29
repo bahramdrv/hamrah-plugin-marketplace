@@ -238,7 +238,8 @@ test("global postdoc discovery checks the validated research-institute board wit
     "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings?limit=100&offset=0&destination=PUBLIC",
     "https://api.smartrecruiters.com/v1/companies/UniversityHealthNetwork/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral",
     "https://api.smartrecruiters.com/v1/companies/WesternSydneyUniversity/postings?limit=100&offset=0&destination=PUBLIC",
-    "https://api.smartrecruiters.com/v1/companies/UniversityOfNotreDame/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral"]);
+    "https://api.smartrecruiters.com/v1/companies/UniversityOfNotreDame/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral",
+    "https://boards-api.greenhouse.io/v1/boards/simula/jobs?content=true"]);
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["US"]);
 });
@@ -694,6 +695,40 @@ test("Notre Dame public SmartRecruiters API adds only exact US postdoctoral open
   assert.equal(result.structuredContent.candidates[0].discoverySource,
     "smartrecruiters:universityofnotredame");
   assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
+});
+
+test("Simula public Greenhouse API adds only title-matched Oslo postdoctoral openings", async () => {
+  const urls = [];
+  const board = { jobs: [
+    { id: 8173288, title: "Postdoctoral fellowship available in Scientific Computing at Simula Research Laboratory",
+      absolute_url: "https://job-boards.greenhouse.io/simula/jobs/8173288", location: { name: "Oslo" },
+      offices: [{ location: "Fornebu" }] },
+    { id: 2, title: "Postdoctoral fellowship available in Scientific Computing",
+      absolute_url: "https://job-boards.greenhouse.io/simula/jobs/2", location: { name: "Bergen" },
+      offices: [{ location: "Fornebu" }] },
+    { id: 3, title: "Postdoctoral fellowship available in Scientific Computing",
+      absolute_url: "https://job-boards.greenhouse.io/simula/jobs/3", location: { name: "Oslo" },
+      offices: [{ location: "London" }] },
+    { id: 4, title: "Postdoctoral fellowship available in Scientific Computing",
+      absolute_url: "https://job-boards.greenhouse.io/other/jobs/4", location: { name: "Oslo" },
+      offices: [{ location: "Fornebu" }] },
+    { id: 5, title: "Research Scientist in Scientific Computing",
+      absolute_url: "https://job-boards.greenhouse.io/simula/jobs/5", location: { name: "Oslo" },
+      offices: [{ location: "Fornebu" }] }
+  ] };
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "Scientific Computing", targetCategory: "postdoc", countryCode: "NO"
+  }, async (url) => {
+    urls.push(url);
+    return new Response(JSON.stringify(board));
+  });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.deepEqual(urls, ["https://boards-api.greenhouse.io/v1/boards/simula/jobs?content=true"]);
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["8173288"]);
+  assert.equal(result.structuredContent.candidates[0].discoverySource, "greenhouse:simula");
+  assert.equal(result.structuredContent.candidates[0].countryCode, "NO");
+  assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
+  assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["NO"]);
 });
 
 test("SmartRecruiters labeled closing dates remove expired leads despite an active API flag", async () => {
