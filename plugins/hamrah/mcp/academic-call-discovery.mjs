@@ -87,7 +87,8 @@ function parseLever(body, boardId, input) {
     const title = String(item?.text ?? "");
     const description = String(item?.descriptionPlain ?? "");
     return leverTitleMatches(title, input.targetCategory)
-      && relevant(`${title} ${description}`, input.field)
+      && (boardId === "waabi" ? relevant(title, input.field) && item.country === "CA"
+        : relevant(`${title} ${description}`, input.field))
       && (!input.countryCode || item.country === input.countryCode)
       && typeof item.hostedUrl === "string"
       && item.hostedUrl.startsWith(`https://jobs.lever.co/${boardId}/`);
@@ -162,6 +163,10 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
     && (!input.countryCode || ["US", "AE", "FR"].includes(input.countryCode))) {
     defaultBoards.push({ provider: "lever", boardId: "ifm-us" });
   }
+  if (input.targetCategory === "research_job"
+    && (!input.countryCode || input.countryCode === "CA")) {
+    defaultBoards.push({ provider: "lever", boardId: "waabi" });
+  }
   const boards = [...defaultBoards, ...(input.publisherBoards ?? [])]
     .filter((board, index, all) => all.findIndex((candidate) => candidate.boardId === board.boardId) === index);
   for (const board of boards) {
@@ -173,11 +178,12 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       const response = await fetchImpl(url, { method: "GET", headers: { Accept: "application/json" }, signal: requestSignal });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const body = await response.text();
-      if (body.length > 1_000_000) throw new Error("postings response exceeds size limit");
+      if (body.length > 3_000_000) throw new Error("postings response exceeds size limit");
       const postings = JSON.parse(body);
       for (const item of postings) {
         const country = item?.country;
-        if (typeof country === "string" && /^[A-Z]{2}$/.test(country) && !coverage.countriesChecked.includes(country)) {
+        if (typeof country === "string" && /^[A-Z]{2}$/.test(country)
+          && (!input.countryCode || country === input.countryCode) && !coverage.countriesChecked.includes(country)) {
           coverage.countriesChecked.push(country);
         }
       }

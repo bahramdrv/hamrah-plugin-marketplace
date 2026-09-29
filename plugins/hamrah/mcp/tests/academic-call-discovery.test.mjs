@@ -167,6 +167,7 @@ test("global research jobs check both validated boards and exclude research inte
   }, async (url) => {
     urls.push(url);
     if (url.includes("/tri?")) return new Response(JSON.stringify([]), { status: 200 });
+    if (url.includes("/waabi?")) return new Response(JSON.stringify([]), { status: 200 });
     if (url.includes("boards-api.greenhouse.io")) return new Response('{"jobs":[]}', { status: 200 });
     return new Response(JSON.stringify([
       { id: "ae1", text: "Research Scientist - Machine Learning", country: "AE",
@@ -179,6 +180,7 @@ test("global research jobs check both validated boards and exclude research inte
   assert.deepEqual(urls, [
     "https://api.lever.co/v0/postings/tri?mode=json",
     "https://api.lever.co/v0/postings/ifm-us?mode=json",
+    "https://api.lever.co/v0/postings/waabi?mode=json",
     "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true"
   ]);
   assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["ae1"]);
@@ -204,6 +206,7 @@ test("one failed research board preserves leads from the other and reports parti
     field: "robotics", targetCategory: "research_job", countryCode: "US"
   }, async (url) => {
     if (url.includes("/ifm-us?")) throw new Error("board unavailable");
+    if (url.includes("/waabi?")) return new Response("[]", { status: 200 });
     if (url.includes("boards-api.greenhouse.io")) return new Response('{"jobs":[]}', { status: 200 });
     return new Response(JSON.stringify([{ id: "tri1", text: "Robotics Research Scientist",
       country: "US", descriptionPlain: "Robotics research", hostedUrl: "https://jobs.lever.co/tri/tri1" }]), { status: 200 });
@@ -212,6 +215,31 @@ test("one failed research board preserves leads from the other and reports parti
   assert.equal(result.structuredContent.status, "partial");
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.deepEqual(result.structuredContent.coverage.failures.map((item) => item.source), ["lever:ifm-us"]);
+});
+
+test("Canadian research-job discovery uses Waabi's public board and requires title and primary country match", async () => {
+  const urls = [];
+  const postings = [
+    { id: "ca1", text: "Research Scientist, Robotics", country: "CA", descriptionPlain: `Robotics ${"x".repeat(1_100_000)}`,
+      hostedUrl: "https://jobs.lever.co/waabi/ca1" },
+    { id: "ca2", text: "Research Scientist, Climate", country: "CA", descriptionPlain: "Works with a robotics team",
+      hostedUrl: "https://jobs.lever.co/waabi/ca2" },
+    { id: "us1", text: "Research Scientist, Robotics", country: "US", descriptionPlain: "Robotics",
+      hostedUrl: "https://jobs.lever.co/waabi/us1" },
+    { id: "ca3", text: "2026 Intern, PhD Research Scientist, Robotics", country: "CA", descriptionPlain: "Robotics",
+      hostedUrl: "https://jobs.lever.co/waabi/ca3" }
+  ];
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "robotics", targetCategory: "research_job", countryCode: "CA"
+  }, async (url) => {
+    urls.push(url);
+    return new Response(JSON.stringify(postings), { status: 200 });
+  });
+  assert.equal(result.isError, false);
+  assert.deepEqual(urls, ["https://api.lever.co/v0/postings/waabi?mode=json"]);
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["ca1"]);
+  assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
+  assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["CA"]);
 });
 
 test("Ai2 Greenhouse public API adds only scoped research jobs and postdoctoral program leads", async () => {
