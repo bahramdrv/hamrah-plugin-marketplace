@@ -5,6 +5,7 @@ const STUDYINFO_SOURCE = "studyinfo:fi";
 const STUDYINFO_SEARCH = "https://opintopolku.fi/konfo-backend/external/search/toteutukset-koulutuksittain";
 const STUDYINFO_HEADERS = { Accept: "application/json", "Caller-Id": "hamrah-plugin-marketplace" };
 const STUDYINFO_DETAIL_LIMIT = 12;
+const ARC_SOURCE = "greenhouse:arcinstitute";
 const IONQ_SOURCE = "greenhouse:ionq";
 const IONQ_COUNTRIES = { "United States": "US", "United Kingdom": "GB", Sweden: "SE",
   Switzerland: "CH", Canada: "CA", "South Korea": "KR" };
@@ -141,6 +142,30 @@ function parseAi2Greenhouse(body, input) {
   }));
 }
 
+function arcUsPrimary(item) {
+  return item?.location?.name === "Palo Alto, CA"
+    && (item?.offices ?? []).some((office) => office?.location === "Palo Alto, California, United States");
+}
+
+function parseArcGreenhouse(body, input) {
+  if (!body || !Array.isArray(body.jobs)) throw new Error("Arc Greenhouse returned an unexpected jobs format.");
+  return body.jobs.filter((item) => {
+    const title = String(item?.title ?? "");
+    return /\bpostdoc(?:toral)?\b/i.test(title)
+      && relevant(title, input.field)
+      && arcUsPrimary(item)
+      && typeof item?.absolute_url === "string"
+      && /^https:\/\/job-boards\.greenhouse\.io\/arcinstitute\/jobs\/\d+$/.test(item.absolute_url);
+  }).map((item) => ({
+    sourceId: String(item.id ?? item.absolute_url), discoverySource: ARC_SOURCE,
+    title: plain(item.title), url: item.absolute_url, countryCode: "US", targetCategory: "postdoc",
+    discoveryMatch: "title",
+    summary: plain(String(item.content ?? "").replace(/&lt;/g, "<").replace(/&gt;/g, ">")).slice(0, 1000),
+    publishedText: item.first_published ?? item.updated_at ?? null,
+    deadlineText: item.application_deadline ?? null, verificationStatus: "unverified"
+  }));
+}
+
 function parseFacultyAshby(body, input) {
   if (!body || !Array.isArray(body.jobs)) throw new Error("Ashby returned an unexpected jobs format.");
   return body.jobs.filter((item) => {
@@ -258,10 +283,12 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
   const boards = [...defaultBoards, ...(input.publisherBoards ?? [])]
     .filter((board, index, all) => all.findIndex((candidate) => candidate.boardId === board.boardId) === index);
   const greenhouseUrl = "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true";
+  const arcUrl = "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true";
   const ashbyUrl = "https://api.ashbyhq.com/posting-api/job-board/faculty";
   const ionqUrl = "https://boards-api.greenhouse.io/v1/boards/ionq/jobs?content=true";
   const useGreenhouse = ["postdoc", "research_job"].includes(input.targetCategory)
     && (!input.countryCode || input.countryCode === "US");
+  const useArc = input.targetCategory === "postdoc" && (!input.countryCode || input.countryCode === "US");
   const useAshby = input.targetCategory === "research_job" && (!input.countryCode || input.countryCode === "GB");
   const useIonq = input.targetCategory === "research_job"
     && (!input.countryCode || Object.values(IONQ_COUNTRIES).includes(input.countryCode));
@@ -276,6 +303,7 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       ? [{ url: DAAD_FEED, accept: "application/rss+xml, application/xml" }] : []),
     ...boards.map((board) => ({ url: `https://api.lever.co/v0/postings/${board.boardId}?mode=json`, accept: "application/json" })),
     ...(useGreenhouse ? [{ url: greenhouseUrl, accept: "application/json" }] : []),
+    ...(useArc ? [{ url: arcUrl, accept: "application/json" }] : []),
     ...(useAshby ? [{ url: ashbyUrl, accept: "application/json" }] : []),
     ...(useIonq ? [{ url: ionqUrl, accept: "application/json" }] : []),
     ...(useStudyinfo ? [{ url: studyinfoUrl.href, accept: "application/json", headers: STUDYINFO_HEADERS }] : [])
@@ -345,6 +373,24 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       coverage.apiCoverage = "partial";
     } catch (error) {
       coverage.failures.push({ source, reason: error instanceof Error ? error.message : String(error) });
+    }
+  }
+  if (useArc) {
+    coverage.apiSources.push(ARC_SOURCE);
+    try {
+      const response = await fetchSource(arcUrl);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const body = await response.text();
+      if (body.length > 3_000_000) throw new Error("Arc jobs response exceeds size limit");
+      const postings = JSON.parse(body);
+      if (!postings || !Array.isArray(postings.jobs)) throw new Error("Arc Greenhouse returned an unexpected jobs format.");
+      if (postings.jobs.some(arcUsPrimary) && !coverage.countriesChecked.includes("US")) {
+        coverage.countriesChecked.push("US");
+      }
+      candidates.push(...parseArcGreenhouse(postings, input));
+      coverage.apiCoverage = "partial";
+    } catch (error) {
+      coverage.failures.push({ source: ARC_SOURCE, reason: error instanceof Error ? error.message : String(error) });
     }
   }
   if (useAshby) {

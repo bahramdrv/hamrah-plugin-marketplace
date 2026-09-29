@@ -182,7 +182,8 @@ test("a public research board API adds scoped postdoctoral leads without calling
   assert.deepEqual(requestUrls, [
     "https://api.lever.co/v0/postings/tri?mode=json",
     "https://api.lever.co/v0/postings/research-institute?mode=json",
-    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true"
+    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
+    "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true"
   ]);
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.equal(result.structuredContent.candidates[0].countryCode, "US");
@@ -201,8 +202,10 @@ test("supplying a known default board does not fetch it twice", async () => {
   });
   assert.equal(result.isError, false);
   assert.deepEqual(urls, ["https://api.lever.co/v0/postings/tri?mode=json",
-    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true"]);
-  assert.deepEqual(result.structuredContent.coverage.apiSources, ["lever:tri", "greenhouse:thealleninstitute"]);
+    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
+    "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true"]);
+  assert.deepEqual(result.structuredContent.coverage.apiSources,
+    ["lever:tri", "greenhouse:thealleninstitute", "greenhouse:arcinstitute"]);
 });
 
 test("candidate discovery rejects applicant facts before making an external request", async () => {
@@ -227,7 +230,8 @@ test("global postdoc discovery checks the validated research-institute board wit
   });
   assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
   assert.deepEqual(urls, ["https://api.lever.co/v0/postings/tri?mode=json",
-    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true"]);
+    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
+    "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true"]);
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["US"]);
 });
@@ -475,6 +479,39 @@ test("Ai2 Greenhouse public API adds only scoped research jobs and postdoctoral 
   assert.equal(postdoc.isError, false);
   assert.deepEqual(postdoc.structuredContent.candidates.map((item) => item.sourceId), ["12"]);
   assert.equal(postdoc.structuredContent.candidates[0].verificationStatus, "unverified");
+});
+
+test("Arc Institute public Greenhouse board adds only field-matched Palo Alto postdocs", async () => {
+  const urls = [];
+  const jobs = { jobs: [
+    { id: 21, title: "Postdoctoral Researcher, ML for Biology, Hsu Lab",
+      absolute_url: "https://job-boards.greenhouse.io/arcinstitute/jobs/21",
+      location: { name: "Palo Alto, CA" }, offices: [{ location: "Palo Alto, California, United States" }] },
+    { id: 22, title: "Postdoctoral Researcher, ML for Biology, Hsu Lab",
+      absolute_url: "https://job-boards.greenhouse.io/arcinstitute/jobs/22",
+      location: { name: "Oxford, UK" }, offices: [{ location: "Palo Alto, California, United States" }] },
+    { id: 23, title: "Postdoctoral Researcher, Horns Lab",
+      absolute_url: "https://job-boards.greenhouse.io/arcinstitute/jobs/23",
+      location: { name: "Palo Alto, CA" }, offices: [{ location: "Palo Alto, California, United States" }] },
+    { id: 24, title: "Research Scientist, ML for Biology",
+      absolute_url: "https://job-boards.greenhouse.io/arcinstitute/jobs/24",
+      location: { name: "Palo Alto, CA" }, offices: [{ location: "Palo Alto, California, United States" }] }
+  ] };
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "biology", targetCategory: "postdoc", countryCode: "US"
+  }, async (url) => {
+    urls.push(url);
+    return new Response(url.includes("arcinstitute") ? JSON.stringify(jobs)
+      : url.includes("boards-api.greenhouse.io") ? '{"jobs":[]}' : "[]");
+  });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.deepEqual(urls, ["https://api.lever.co/v0/postings/tri?mode=json",
+    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
+    "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true"]);
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["21"]);
+  assert.equal(result.structuredContent.candidates[0].discoverySource, "greenhouse:arcinstitute");
+  assert.equal(result.structuredContent.candidates[0].countryCode, "US");
+  assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
 });
 
 test("IonQ public Greenhouse board scopes research jobs by primary posting location, not offices", async () => {
