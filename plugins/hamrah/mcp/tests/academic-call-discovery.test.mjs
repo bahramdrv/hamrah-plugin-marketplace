@@ -233,7 +233,8 @@ test("global postdoc discovery checks the validated research-institute board wit
   assert.deepEqual(urls, ["https://api.lever.co/v0/postings/tri?mode=json",
     "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
     "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true",
-    "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings?limit=100&offset=0&destination=PUBLIC"]);
+    "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings?limit=100&offset=0&destination=PUBLIC",
+    "https://api.smartrecruiters.com/v1/companies/UniversityHealthNetwork/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral"]);
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["US"]);
 });
@@ -551,6 +552,38 @@ test("Auckland public SmartRecruiters API adds only active exact NZ postdoctoral
   assert.equal(result.structuredContent.candidates[0].countryCode, "NZ");
   assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["NZ"]);
+});
+
+test("UHN public SmartRecruiters API adds only active field-matched Canadian postdocs", async () => {
+  const urls = [];
+  const list = { totalFound: 3, content: [
+    { id: "201", name: "Postdoctoral Researcher - Synthetic Medicinal Chemistry",
+      company: { identifier: "UniversityHealthNetwork" }, location: { country: "ca" }, visibility: "PUBLIC" },
+    { id: "202", name: "Postdoctoral Researcher",
+      company: { identifier: "UniversityHealthNetwork" }, location: { country: "ca" }, visibility: "PUBLIC" },
+    { id: "203", name: "Postdoctoral Researcher - Synthetic Medicinal Chemistry",
+      company: { identifier: "UniversityHealthNetwork" }, location: { country: "us" }, visibility: "PUBLIC" }
+  ] };
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "Chemistry", targetCategory: "postdoc", countryCode: "CA"
+  }, async (url) => {
+    urls.push(url);
+    if (url.includes("/postings?")) return new Response(JSON.stringify(list));
+    return new Response(JSON.stringify({ id: "201", name: list.content[0].name, active: true,
+      company: { identifier: "UniversityHealthNetwork" }, location: { country: "ca" }, visibility: "PUBLIC",
+      postingUrl: "https://jobs.smartrecruiters.com/UniversityHealthNetwork/201-postdoctoral-researcher-synthetic-medicinal-chemistry",
+      jobAd: { sections: { jobDescription: { text: "<p>Medicinal chemistry research.</p>" } } } }));
+  });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.deepEqual(urls, [
+    "https://api.smartrecruiters.com/v1/companies/UniversityHealthNetwork/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral",
+    "https://api.smartrecruiters.com/v1/companies/UniversityHealthNetwork/postings/201"
+  ]);
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["201"]);
+  assert.equal(result.structuredContent.candidates[0].discoverySource,
+    "smartrecruiters:universityhealthnetwork");
+  assert.equal(result.structuredContent.candidates[0].countryCode, "CA");
+  assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
 });
 
 test("IonQ public Greenhouse board scopes research jobs by primary posting location, not offices", async () => {
