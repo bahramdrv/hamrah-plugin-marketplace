@@ -7,10 +7,10 @@ const STUDYINFO_HEADERS = { Accept: "application/json", "Caller-Id": "hamrah-plu
 const STUDYINFO_DETAIL_LIMIT = 12;
 const ARC_SOURCE = "greenhouse:arcinstitute";
 const SMARTRECRUITERS_DETAIL_LIMIT = 12;
-const SMARTRECRUITERS_POSTDOC_SOURCES = [
-  { id: "smartrecruiters:theuniversityofauckland", company: "TheUniversityOfAuckland", country: "NZ", apiCountry: "nz" },
-  { id: "smartrecruiters:universityhealthnetwork", company: "UniversityHealthNetwork", country: "CA", apiCountry: "ca", query: "postdoctoral" },
-  { id: "smartrecruiters:westernsydneyuniversity", company: "WesternSydneyUniversity", country: "AU", apiCountry: "au" }
+const SMARTRECRUITERS_SOURCES = [
+  { id: "smartrecruiters:theuniversityofauckland", company: "TheUniversityOfAuckland", country: "NZ", apiCountry: "nz", categories: ["postdoc", "research_job"] },
+  { id: "smartrecruiters:universityhealthnetwork", company: "UniversityHealthNetwork", country: "CA", apiCountry: "ca", query: "postdoctoral", categories: ["postdoc"] },
+  { id: "smartrecruiters:westernsydneyuniversity", company: "WesternSydneyUniversity", country: "AU", apiCountry: "au", categories: ["postdoc"] }
 ];
 const IONQ_SOURCE = "greenhouse:ionq";
 const IONQ_COUNTRIES = { "United States": "US", "United Kingdom": "GB", Sweden: "SE",
@@ -173,8 +173,12 @@ function parseArcGreenhouse(body, input) {
   }));
 }
 
-function smartRecruitersPostdocTitle(title) {
-  return /\bpost[ -]?doc(?:toral|tural)?\b/i.test(title);
+function smartRecruitersTitleMatches(title, category) {
+  const postdoc = /\bpost[ -]?doc(?:toral|tural)?\b/i.test(title);
+  if (category === "postdoc") return postdoc;
+  return category === "research_job" && !postdoc
+    && !/\b(?:intern(?:ship)?|predoctoral|student)\b/i.test(title)
+    && /\bresearch(?:er)?\b|\bscientist\b/i.test(title);
 }
 
 function smartRecruitersListUrl(source) {
@@ -198,8 +202,8 @@ function smartRecruitersDeadline(item) {
     .replace(/&#(?:x[\da-f]+|\d+);/gi, " "));
   for (const label of text.matchAll(/\b(?:closing date(?: of)?|application deadline|applications close(?: on)?)\s*:?\s*/gi)) {
     const nearby = text.slice(label.index + label[0].length, label.index + label[0].length + 70);
-    const dayFirst = nearby.match(new RegExp(`\\b(\\d{1,2})\\s+(${monthNamePattern})\\s+(\\d{4})\\b`, "i"));
-    const monthFirst = nearby.match(new RegExp(`\\b(${monthNamePattern})\\s+(\\d{1,2}),?\\s+(\\d{4})\\b`, "i"));
+    const dayFirst = nearby.match(new RegExp(`\\b(\\d{1,2})(?:st|nd|rd|th)?\\s+(${monthNamePattern})\\s+(\\d{4})\\b`, "i"));
+    const monthFirst = nearby.match(new RegExp(`\\b(${monthNamePattern})\\s+(\\d{1,2})(?:st|nd|rd|th)?,?\\s+(\\d{4})\\b`, "i"));
     const numeric = nearby.match(/\b(\d{1,2})\.(\d{1,2})\.(\d{4})\b/);
     const parts = dayFirst ? [Number(dayFirst[3]), monthNumbers[dayFirst[2].slice(0, 3).toLowerCase()], Number(dayFirst[1])]
       : monthFirst ? [Number(monthFirst[3]), monthNumbers[monthFirst[1].slice(0, 3).toLowerCase()], Number(monthFirst[2])]
@@ -213,13 +217,14 @@ function smartRecruitersDeadline(item) {
 
 function parseSmartRecruitersDetail(item, listed, input, source) {
   if (!smartRecruitersPostingIdentity(item, source) || item.active !== true || String(item.id) !== String(listed.id)
-    || !smartRecruitersPostdocTitle(String(item.name ?? "")) || !relevant(String(item.name ?? ""), input.field)
+    || !smartRecruitersTitleMatches(String(item.name ?? ""), input.targetCategory)
+    || !relevant(String(item.name ?? ""), input.field)
     || typeof item.postingUrl !== "string"
     || !new RegExp(`^https://jobs\\.smartrecruiters\\.com/${source.company}/${item.id}(?:-[^/?#]+)?$`).test(item.postingUrl)) return null;
   return {
     sourceId: String(item.id), discoverySource: source.id,
     title: plain(item.name), url: item.postingUrl,
-    countryCode: source.country, targetCategory: "postdoc", discoveryMatch: "title",
+    countryCode: source.country, targetCategory: input.targetCategory, discoveryMatch: "title",
     summary: plain(item.jobAd?.sections?.jobDescription?.text).slice(0, 1000),
     publishedText: item.releasedDate ?? null, deadlineText: smartRecruitersDeadline(item),
     verificationStatus: "unverified"
@@ -349,9 +354,8 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
   const useGreenhouse = ["postdoc", "research_job"].includes(input.targetCategory)
     && (!input.countryCode || input.countryCode === "US");
   const useArc = input.targetCategory === "postdoc" && (!input.countryCode || input.countryCode === "US");
-  const smartRecruitersSources = input.targetCategory === "postdoc"
-    ? SMARTRECRUITERS_POSTDOC_SOURCES.filter((source) => !input.countryCode || input.countryCode === source.country)
-    : [];
+  const smartRecruitersSources = SMARTRECRUITERS_SOURCES.filter((source) =>
+    source.categories.includes(input.targetCategory) && (!input.countryCode || input.countryCode === source.country));
   const useAshby = input.targetCategory === "research_job" && (!input.countryCode || input.countryCode === "GB");
   const useIonq = input.targetCategory === "research_job"
     && (!input.countryCode || Object.values(IONQ_COUNTRIES).includes(input.countryCode));
@@ -474,7 +478,8 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
         coverage.countriesChecked.push(source.country);
       }
       const matches = postings.content.filter((item) => smartRecruitersPostingIdentity(item, source)
-        && smartRecruitersPostdocTitle(String(item.name ?? "")) && relevant(String(item.name ?? ""), input.field));
+        && smartRecruitersTitleMatches(String(item.name ?? ""), input.targetCategory)
+        && relevant(String(item.name ?? ""), input.field));
       if (matches.length > SMARTRECRUITERS_DETAIL_LIMIT) coverage.truncated = true;
       const details = await Promise.all(matches.slice(0, SMARTRECRUITERS_DETAIL_LIMIT).map(async (item) => {
         try {

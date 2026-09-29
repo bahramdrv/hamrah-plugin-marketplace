@@ -305,6 +305,7 @@ test("global research jobs check both validated boards and exclude research inte
     if (url.includes("/tri?")) return new Response(JSON.stringify([]), { status: 200 });
     if (url.includes("/waabi?")) return new Response(JSON.stringify([]), { status: 200 });
     if (url.includes("boards-api.greenhouse.io")) return new Response('{"jobs":[]}', { status: 200 });
+    if (url.includes("api.smartrecruiters.com")) return new Response('{"totalFound":0,"content":[]}', { status: 200 });
     if (url.includes("api.ashbyhq.com")) return new Response('{"jobs":[]}', { status: 200 });
     return new Response(JSON.stringify([
       { id: "ae1", text: "Research Scientist - Machine Learning", country: "AE",
@@ -319,6 +320,7 @@ test("global research jobs check both validated boards and exclude research inte
     "https://api.lever.co/v0/postings/ifm-us?mode=json",
     "https://api.lever.co/v0/postings/waabi?mode=json",
     "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
+    "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings?limit=100&offset=0&destination=PUBLIC",
     "https://api.ashbyhq.com/posting-api/job-board/faculty",
     "https://boards-api.greenhouse.io/v1/boards/ionq/jobs?content=true"
   ]);
@@ -350,12 +352,13 @@ test("global source requests start together so one slow provider does not delay 
   }, async (url) => {
     started.push(url);
     await hold;
-    return new Response(url.includes("api.ashbyhq.com") || url.includes("boards-api.greenhouse.io")
-      ? '{"jobs":[]}' : "[]", { status: 200 });
+    return new Response(url.includes("api.smartrecruiters.com") ? '{"totalFound":0,"content":[]}'
+      : url.includes("api.ashbyhq.com") || url.includes("boards-api.greenhouse.io")
+        ? '{"jobs":[]}' : "[]", { status: 200 });
   });
   try {
     await new Promise((resolve) => setImmediate(resolve));
-    assert.equal(started.length, 6);
+  assert.equal(started.length, 7);
   } finally {
     release();
     await operation;
@@ -553,6 +556,40 @@ test("Auckland public SmartRecruiters API adds only active exact NZ postdoctoral
   assert.equal(result.structuredContent.candidates[0].countryCode, "NZ");
   assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["NZ"]);
+});
+
+test("Auckland research fellowship is a research job with an ordinal deadline, separate from postdocs", async () => {
+  const urls = [];
+  const future = new Date(Date.now() + 60 * 86400_000);
+  const day = future.getUTCDate();
+  const suffix = day % 100 >= 11 && day % 100 <= 13 ? "th"
+    : day % 10 === 1 ? "st" : day % 10 === 2 ? "nd" : day % 10 === 3 ? "rd" : "th";
+  const deadline = `${day}${suffix} ${future.toLocaleString("en-US", { month: "long", timeZone: "UTC" })} ${future.getUTCFullYear()}`;
+  const list = { totalFound: 2, content: [
+    { id: "401", name: "Research Fellow - Department of Physics",
+      company: { identifier: "TheUniversityOfAuckland" }, location: { country: "nz" }, visibility: "PUBLIC" },
+    { id: "402", name: "Postdoctoral Research Fellow - Physics",
+      company: { identifier: "TheUniversityOfAuckland" }, location: { country: "nz" }, visibility: "PUBLIC" }
+  ] };
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "Physics", targetCategory: "research_job", countryCode: "NZ"
+  }, async (url) => {
+    urls.push(url);
+    if (url.includes("/postings?")) return new Response(JSON.stringify(list));
+    return new Response(JSON.stringify({ id: "401", name: list.content[0].name, active: true,
+      company: { identifier: "TheUniversityOfAuckland" }, location: { country: "nz" }, visibility: "PUBLIC",
+      postingUrl: "https://jobs.smartrecruiters.com/TheUniversityOfAuckland/401-research-fellow-department-of-physics",
+      jobAd: { sections: { jobDescription: { text: `<p>Applications must be submitted online by the closing date of ${deadline} to be considered.</p>` } } } }));
+  });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.deepEqual(urls, [
+    "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings?limit=100&offset=0&destination=PUBLIC",
+    "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings/401"
+  ]);
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["401"]);
+  assert.equal(result.structuredContent.candidates[0].targetCategory, "research_job");
+  assert.equal(result.structuredContent.candidates[0].deadlineText, future.toISOString().slice(0, 10));
+  assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
 });
 
 test("UHN public SmartRecruiters API adds only active field-matched Canadian postdocs", async () => {
