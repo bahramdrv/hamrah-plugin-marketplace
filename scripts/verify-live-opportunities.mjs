@@ -72,6 +72,10 @@ async function main() {
   requireResult(listed.tools.length === health.tools, "live tool count differs from health");
   requireResult(listed.tools.some((item) => item.name === "renderVerifiedOpenAcademicOpportunityShortlist"),
     "verified opportunity renderer is not deployed");
+  requireResult(listed.tools.some((item) => item.name === "discoverAcademicCallCandidates"),
+    "academic call discovery is not deployed");
+  requireResult(listed.tools.some((item) => item.name === "renderOpenAcademicCallReport"),
+    "academic call report is not deployed");
 
   // Synthetic public facts only: no applicant profile or actual opportunity is sent.
   const result = await rpc(2, "tools/call", {
@@ -88,9 +92,43 @@ async function main() {
     !/^### \[Synthetic restricted doctoral physics position\]/m.test(rendered.markdown),
     "nationality restriction was not kept out of the shortlist");
 
+  const discovery = await rpc(3, "tools/call", {
+    name: "discoverAcademicCallCandidates",
+    arguments: { field: "Physics", targetCategory: "masters", countryCode: "CA" }
+  });
+  requireResult(discovery.structuredContent?.status === "no_candidates" &&
+    discovery.structuredContent.coverage.apiCoverage === "unavailable",
+  "uncovered country/category was not reported honestly");
+  const academicUrl = "https://example.edu/jobs/synthetic-academic-call";
+  const academic = await rpc(4, "tools/call", {
+    name: "renderOpenAcademicCallReport", arguments: {
+      checkedAt: today,
+      scope: { field: "Physics", targetCategory: "phd", countryCodes: ["DE"], fundingRequired: false },
+      coverage: { apiSources: [], webSearches: ["synthetic official posting"], countriesChecked: ["DE"],
+        candidatesChecked: 1, excluded: [], failures: [], truncated: false },
+      calls: [{ id: "synthetic-academic-call", kind: "research_vacancy", targetCategory: "phd",
+        title: "Synthetic Doctoral Researcher in Physics", institution: "Example University",
+        countryCode: "DE", field: "Physics", officialUrl: academicUrl,
+        titleEvidence: { sourceUrl: academicUrl, sourceExcerpt: "Synthetic Doctoral Researcher in Physics" },
+        application: { mode: "dated", deadline: `${deadlineYear}-10-15`, sourceUrl: academicUrl,
+          sourceExcerpt: `Applications are now open until 15 October ${deadlineYear}.` },
+        conditions: [{ text: "Master's degree in Physics", sourceUrl: academicUrl,
+          sourceExcerpt: "A Master's degree in Physics is required." }],
+        funding: { status: "unknown", terms: null, sourceUrl: null, sourceExcerpt: null },
+        nationalityEvidence: { status: "unknown", sourceUrl: null, sourceExcerpt: null },
+        linkedAdmissionId: null, applicabilityEvidence: null }]
+    }
+  });
+  requireResult(academic.structuredContent?.status === "results" &&
+    academic.structuredContent.results.length === 1 &&
+    academic.content?.[0]?.text === academic.structuredContent.markdown,
+  "academic call report did not render the synthetic open call consistently");
+
   process.stdout.write(`${JSON.stringify({
     baseUrl, deploymentCommit: health.deploymentCommit, tools: listed.tools.length,
-    syntheticOpeningCount: rendered.openingCount, sourcedRestrictionExcluded: true
+    syntheticOpeningCount: rendered.openingCount, sourcedRestrictionExcluded: true,
+    academicDiscoveryCoverage: discovery.structuredContent.coverage.apiCoverage,
+    syntheticAcademicCallCount: academic.structuredContent.results.length
   }, null, 2)}\n`);
 }
 

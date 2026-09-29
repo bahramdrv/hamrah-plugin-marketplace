@@ -42,6 +42,7 @@ test("a public research board API adds scoped postdoctoral leads without calling
   }, async (url) => {
     requestUrls.push(url);
     if (url.includes("/tri?")) return new Response("[]", { status: 200 });
+    if (url.includes("boards-api.greenhouse.io")) return new Response('{"jobs":[]}', { status: 200 });
     return new Response(JSON.stringify([
       { id: "p1", text: "Postdoctoral Researcher in Quantum Physics", country: "US",
         descriptionPlain: "Quantum physics research", hostedUrl: "https://jobs.lever.co/research-institute/p1" },
@@ -52,7 +53,8 @@ test("a public research board API adds scoped postdoctoral leads without calling
   assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
   assert.deepEqual(requestUrls, [
     "https://api.lever.co/v0/postings/tri?mode=json",
-    "https://api.lever.co/v0/postings/research-institute?mode=json"
+    "https://api.lever.co/v0/postings/research-institute?mode=json",
+    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true"
   ]);
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.equal(result.structuredContent.candidates[0].countryCode, "US");
@@ -67,11 +69,12 @@ test("supplying a known default board does not fetch it twice", async () => {
     publisherBoards: [{ provider: "lever", boardId: "tri" }]
   }, async (url) => {
     urls.push(url);
-    return new Response("[]", { status: 200 });
+    return new Response(url.includes("boards-api.greenhouse.io") ? '{"jobs":[]}' : "[]", { status: 200 });
   });
   assert.equal(result.isError, false);
-  assert.deepEqual(urls, ["https://api.lever.co/v0/postings/tri?mode=json"]);
-  assert.deepEqual(result.structuredContent.coverage.apiSources, ["lever:tri"]);
+  assert.deepEqual(urls, ["https://api.lever.co/v0/postings/tri?mode=json",
+    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true"]);
+  assert.deepEqual(result.structuredContent.coverage.apiSources, ["lever:tri", "greenhouse:thealleninstitute"]);
 });
 
 test("candidate discovery rejects applicant facts before making an external request", async () => {
@@ -90,11 +93,13 @@ test("global postdoc discovery checks the validated research-institute board wit
     field: "robotics", targetCategory: "postdoc"
   }, async (url) => {
     urls.push(url);
+    if (url.includes("boards-api.greenhouse.io")) return new Response('{"jobs":[]}', { status: 200 });
     return new Response(JSON.stringify([{ id: "r1", text: "Postdoctoral Researcher in Robotics",
       country: "US", descriptionPlain: "Robotics research", hostedUrl: "https://jobs.lever.co/tri/r1" }]), { status: 200 });
   });
   assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
-  assert.deepEqual(urls, ["https://api.lever.co/v0/postings/tri?mode=json"]);
+  assert.deepEqual(urls, ["https://api.lever.co/v0/postings/tri?mode=json",
+    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true"]);
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["US"]);
 });
@@ -162,6 +167,7 @@ test("global research jobs check both validated boards and exclude research inte
   }, async (url) => {
     urls.push(url);
     if (url.includes("/tri?")) return new Response(JSON.stringify([]), { status: 200 });
+    if (url.includes("boards-api.greenhouse.io")) return new Response('{"jobs":[]}', { status: 200 });
     return new Response(JSON.stringify([
       { id: "ae1", text: "Research Scientist - Machine Learning", country: "AE",
         descriptionPlain: "Machine learning", hostedUrl: "https://jobs.lever.co/ifm-us/ae1" },
@@ -172,7 +178,8 @@ test("global research jobs check both validated boards and exclude research inte
   assert.equal(result.isError, false);
   assert.deepEqual(urls, [
     "https://api.lever.co/v0/postings/tri?mode=json",
-    "https://api.lever.co/v0/postings/ifm-us?mode=json"
+    "https://api.lever.co/v0/postings/ifm-us?mode=json",
+    "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true"
   ]);
   assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["ae1"]);
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["AE", "US"]);
@@ -197,6 +204,7 @@ test("one failed research board preserves leads from the other and reports parti
     field: "robotics", targetCategory: "research_job", countryCode: "US"
   }, async (url) => {
     if (url.includes("/ifm-us?")) throw new Error("board unavailable");
+    if (url.includes("boards-api.greenhouse.io")) return new Response('{"jobs":[]}', { status: 200 });
     return new Response(JSON.stringify([{ id: "tri1", text: "Robotics Research Scientist",
       country: "US", descriptionPlain: "Robotics research", hostedUrl: "https://jobs.lever.co/tri/tri1" }]), { status: 200 });
   });
@@ -204,4 +212,33 @@ test("one failed research board preserves leads from the other and reports parti
   assert.equal(result.structuredContent.status, "partial");
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.deepEqual(result.structuredContent.coverage.failures.map((item) => item.source), ["lever:ifm-us"]);
+});
+
+test("Ai2 Greenhouse public API adds only scoped research jobs and postdoctoral program leads", async () => {
+  const jobs = { jobs: [
+    { id: 11, title: "Research Scientist, Robotics", absolute_url: "https://job-boards.greenhouse.io/thealleninstitute/jobs/11",
+      offices: [{ location: "Seattle, WA, United States" }], content: "Robotics research", updated_at: "2026-09-28T12:00:00Z" },
+    { id: 12, title: "Young Investigator, Robotics", absolute_url: "https://job-boards.greenhouse.io/thealleninstitute/jobs/12",
+      offices: [{ location: "Seattle, WA, United States" }], content: "Postdoctoral robotics program" },
+    { id: 13, title: "Predoctoral Young Investigator, Robotics", absolute_url: "https://job-boards.greenhouse.io/thealleninstitute/jobs/13",
+      offices: [{ location: "Seattle, WA, United States" }], content: "Predoctoral robotics program" },
+    { id: 14, title: "Research Intern, Robotics", absolute_url: "https://job-boards.greenhouse.io/thealleninstitute/jobs/14",
+      offices: [{ location: "Seattle, WA, United States" }], content: "Robotics internship" },
+    { id: 15, title: "Young Investigator, Climate Modeling", absolute_url: "https://job-boards.greenhouse.io/thealleninstitute/jobs/15",
+      offices: [{ location: "Seattle, WA, United States" }], content: "Our institute also has a robotics team." }
+  ] };
+  const fetchBoard = async (url) => new Response(url.includes("boards-api.greenhouse.io")
+    ? JSON.stringify(jobs) : "[]", { status: 200 });
+  const research = await executeTool("discoverAcademicCallCandidates", {
+    field: "robotics", targetCategory: "research_job", countryCode: "US"
+  }, fetchBoard);
+  assert.equal(research.isError, false);
+  assert.deepEqual(research.structuredContent.candidates.map((item) => item.sourceId), ["11"]);
+  assert.equal(research.structuredContent.candidates[0].discoverySource, "greenhouse:thealleninstitute");
+  const postdoc = await executeTool("discoverAcademicCallCandidates", {
+    field: "robotics", targetCategory: "postdoc", countryCode: "US"
+  }, fetchBoard);
+  assert.equal(postdoc.isError, false);
+  assert.deepEqual(postdoc.structuredContent.candidates.map((item) => item.sourceId), ["12"]);
+  assert.equal(postdoc.structuredContent.candidates[0].verificationStatus, "unverified");
 });

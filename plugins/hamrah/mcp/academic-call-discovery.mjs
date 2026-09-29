@@ -103,6 +103,29 @@ function parseLever(body, boardId, input) {
   }));
 }
 
+function parseAi2Greenhouse(body, input) {
+  if (!body || !Array.isArray(body.jobs)) throw new Error("Greenhouse returned an unexpected jobs format.");
+  return body.jobs.filter((item) => {
+    const title = String(item?.title ?? "");
+    const postdoc = !/\bpredoctoral\b/i.test(title) && /\bpostdoc(?:toral)?\b|\byoung investigator\b/i.test(title);
+    const researchJob = !/\b(?:intern(?:ship)?|predoctoral|postdoc(?:toral)?|young investigator)\b/i.test(title)
+      && /\bresearch(?:er)?\b|\bscientist\b/i.test(title);
+    const countryCode = item?.offices?.some((office) => /\bUnited States\b/i.test(office?.location ?? "")) ? "US" : null;
+    return (input.targetCategory === "postdoc" ? postdoc : researchJob)
+      && relevant(title, input.field)
+      && (!input.countryCode || countryCode === input.countryCode)
+      && typeof item?.absolute_url === "string"
+      && /^https:\/\/job-boards\.greenhouse\.io\/thealleninstitute\/jobs\/\d+$/.test(item.absolute_url);
+  }).map((item) => ({
+    sourceId: String(item.id ?? item.absolute_url), discoverySource: "greenhouse:thealleninstitute",
+    title: plain(item.title), url: item.absolute_url, countryCode: "US", targetCategory: input.targetCategory,
+    discoveryMatch: "title",
+    summary: plain(String(item.content ?? "").replace(/&lt;/g, "<").replace(/&gt;/g, ">")).slice(0, 1000),
+    publishedText: item.first_published ?? item.updated_at ?? null,
+    deadlineText: item.application_deadline ?? null, verificationStatus: "unverified"
+  }));
+}
+
 export async function discoverAcademicCallCandidates(input, fetchImpl = globalThis.fetch, signal) {
   if (!validate(input)) return {
     error: "invalid_academic_call_input",
@@ -159,6 +182,27 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
         }
       }
       candidates.push(...parseLever(postings, board.boardId, input));
+      coverage.apiCoverage = "partial";
+    } catch (error) {
+      coverage.failures.push({ source, reason: error instanceof Error ? error.message : String(error) });
+    }
+  }
+  if (["postdoc", "research_job"].includes(input.targetCategory)
+    && (!input.countryCode || input.countryCode === "US")) {
+    const source = "greenhouse:thealleninstitute";
+    coverage.apiSources.push(source);
+    try {
+      const requestSignal = AbortSignal.any([signal ?? new AbortController().signal, AbortSignal.timeout(8000)]);
+      const response = await fetchImpl("https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
+        { method: "GET", headers: { Accept: "application/json" }, signal: requestSignal });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const body = await response.text();
+      if (body.length > 1_000_000) throw new Error("jobs response exceeds size limit");
+      const postings = JSON.parse(body);
+      if (!postings || !Array.isArray(postings.jobs)) throw new Error("Greenhouse returned an unexpected jobs format.");
+      if (postings.jobs.some((item) => item?.offices?.some((office) => /\bUnited States\b/i.test(office?.location ?? ""))
+        && !coverage.countriesChecked.includes("US"))) coverage.countriesChecked.push("US");
+      candidates.push(...parseAi2Greenhouse(postings, input));
       coverage.apiCoverage = "partial";
     } catch (error) {
       coverage.failures.push({ source, reason: error instanceof Error ? error.message : String(error) });
