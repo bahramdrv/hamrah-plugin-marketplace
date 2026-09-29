@@ -14,6 +14,59 @@ const FEED = `<?xml version="1.0"?><rss><channel><title>PhDGermany</title>
 <pubDate>28. Sep 2026</pubDate><applicationDeadline>20. Oct 2026</applicationDeadline></item>
 </channel></rss>`;
 
+test("Finnish Master's discovery returns only the exact currently open admission target", async () => {
+  const now = new Date();
+  const day = (offset) => new Date(now.getTime() + offset * 86400_000).toISOString().slice(0, 10);
+  const calls = [];
+  const oid = "1.2.246.562.17.00000000000000035135";
+  const target = (id, start, end, level = true) => ({
+    oid: `1.2.246.562.20.${id}`, tila: "julkaistu", nimi: { en: "Master of Engineering, Data Engineering and AI" },
+    organisaatio: { nimi: { en: "Example University" } },
+    odwKkTasot: { ylempiKkAste: level },
+    hakuajat: [{ alkaa: `${start}T08:00`, paattyy: `${end}T15:00` }]
+  });
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "data engineering", targetCategory: "masters", countryCode: "FI"
+  }, async (url, options) => {
+    calls.push({ url, options });
+    if (url.includes("/external/search/")) return new Response(JSON.stringify({ total: 2, hits: [
+      { nimi: { en: "Master of Engineering, Data Engineering and AI" }, toteutukset: [{ toteutusOid: oid,
+        toteutusNimi: { en: "Master of Engineering, Data Engineering and AI" } }] },
+      { nimi: { en: "Bachelor of Engineering, Data Engineering" }, toteutukset: [{ toteutusOid: "1.2.246.562.17.00000000000000000001",
+        toteutusNimi: { en: "Bachelor of Engineering, Data Engineering" } }] }
+    ] }), { status: 200 });
+    return new Response(JSON.stringify({ hakuAuki: true, hakukohteet: [
+      target("1", day(-20), day(-1)), target("2", day(10), day(20)),
+      target("3", day(-1), day(20), false), target("4", day(-1), day(20)),
+      { ...target("5", day(-1), day(20)), nimi: { en: "Internal transfer, Master of Engineering, Data Engineering" } }
+    ] }), { status: 200 });
+  });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.equal(calls.length, 2);
+  assert.match(calls[0].url, /keyword=data\+engineering.*hakukaynnissa=true/);
+  assert.equal(calls[0].options.headers["Caller-Id"], "hamrah-plugin-marketplace");
+  assert.equal(calls[1].options.headers["Caller-Id"], "hamrah-plugin-marketplace");
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["1.2.246.562.20.4"]);
+  assert.equal(result.structuredContent.candidates[0].url,
+    "https://opintopolku.fi/konfo/en/hakukohde/1.2.246.562.20.4");
+  assert.equal(result.structuredContent.candidates[0].targetCategory, "masters");
+  assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
+  assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["FI"]);
+});
+
+test("Finnish Master's discovery reports a failed detail call without inventing an open intake", async () => {
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "physics", targetCategory: "masters", countryCode: "FI"
+  }, async (url) => url.includes("/external/search/")
+    ? new Response(JSON.stringify({ total: 1, hits: [{ nimi: { en: "Master of Physics" },
+      toteutukset: [{ toteutusOid: "1.2.246.562.17.123", toteutusNimi: { en: "Master of Physics" } }] }] }))
+    : new Response("unavailable", { status: 503 }));
+  assert.equal(result.isError, false);
+  assert.equal(result.structuredContent.status, "partial");
+  assert.deepEqual(result.structuredContent.candidates, []);
+  assert.equal(result.structuredContent.coverage.failures[0].source, "studyinfo:fi");
+});
+
 test("an explicit PhD search returns DAAD API/feed leads with honest unverified status", async () => {
   const requests = [];
   const result = await executeTool("discoverAcademicCallCandidates", {

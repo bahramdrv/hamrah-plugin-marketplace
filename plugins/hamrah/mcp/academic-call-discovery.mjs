@@ -1,6 +1,9 @@
 import Ajv from "ajv";
 
 const DAAD_FEED = "https://api.daad.de/api/feeds/rss/en/phd.xml";
+const STUDYINFO_SOURCE = "studyinfo:fi";
+const STUDYINFO_SEARCH = "https://opintopolku.fi/konfo-backend/external/search/toteutukset-koulutuksittain";
+const STUDYINFO_HEADERS = { Accept: "application/json", "Caller-Id": "hamrah-plugin-marketplace" };
 const INPUT_SCHEMA = {
   type: "object", additionalProperties: false,
   required: ["field", "targetCategory"],
@@ -146,6 +149,48 @@ function parseFacultyAshby(body, input) {
   }));
 }
 
+const translated = (value) => String(value?.en ?? value?.fi ?? value?.sv ?? "").trim();
+const studyinfoOid = (value, kind) => typeof value === "string"
+  && new RegExp(`^1\\.2\\.246\\.562\\.${kind}\\.[0-9]+$`).test(value);
+
+function helsinkiWallTime() {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Europe/Helsinki", year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", hourCycle: "h23"
+  }).formatToParts(new Date()).map(({ type, value }) => [type, value]));
+  return `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}`;
+}
+
+function parseStudyinfoDetail(body, field, now) {
+  if (!body || !Array.isArray(body.hakukohteet)) throw new Error("Studyinfo returned an unexpected admissions format.");
+  if (body.hakuAuki !== true) return [];
+  return body.hakukohteet.flatMap((target) => {
+    const title = translated(target?.nimi);
+    const intake = translated(target?.hakuNimi);
+    if (/\binternal transfer\b|\bcomplete your degree\b|\btransfer application\b/i.test(`${title} ${intake}`)) return [];
+    if (target?.tila !== "julkaistu" || target?.odwKkTasot?.ylempiKkAste !== true
+      || !studyinfoOid(target?.oid, "20") || !relevant(title, field)) return [];
+    const currentWindows = (target.hakuajat ?? []).filter((window) =>
+      typeof window?.alkaa === "string" && typeof window?.paattyy === "string"
+      && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(window.alkaa)
+      && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(window.paattyy)
+      && window.alkaa <= now && now < window.paattyy);
+    if (!currentWindows.length) return [];
+    const end = currentWindows.map((window) => window.paattyy).sort()[0];
+    return [{
+      sourceId: target.oid, discoverySource: STUDYINFO_SOURCE,
+      title: plain(title), url: `https://opintopolku.fi/konfo/en/hakukohde/${target.oid}`,
+      countryCode: "FI", targetCategory: "masters", discoveryMatch: "title",
+      summary: plain(`${translated(target.organisaatio?.nimi)}; ${intake}${
+        /\bopen UAS\b/i.test(`${title} ${intake}`)
+          ? "; restricted Open UAS admission pathway: verify prior-study and work-experience requirements" : ""
+      }`).slice(0, 1000),
+      publishedText: target.modified ?? null, deadlineText: end.slice(0, 10),
+      verificationStatus: "unverified"
+    }];
+  });
+}
+
 export async function discoverAcademicCallCandidates(input, fetchImpl = globalThis.fetch, signal) {
   if (!validate(input)) return {
     error: "invalid_academic_call_input",
@@ -177,17 +222,24 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
   const useGreenhouse = ["postdoc", "research_job"].includes(input.targetCategory)
     && (!input.countryCode || input.countryCode === "US");
   const useAshby = input.targetCategory === "research_job" && (!input.countryCode || input.countryCode === "GB");
+  const useStudyinfo = input.targetCategory === "masters" && (!input.countryCode || input.countryCode === "FI");
+  const studyinfoUrl = new URL(STUDYINFO_SEARCH);
+  studyinfoUrl.searchParams.set("keyword", input.field.trim());
+  studyinfoUrl.searchParams.set("hakukaynnissa", "true");
+  studyinfoUrl.searchParams.set("lng", "en");
+  studyinfoUrl.searchParams.set("size", "50");
   const requests = [
     ...(input.targetCategory === "phd" && (!input.countryCode || input.countryCode === "DE")
       ? [{ url: DAAD_FEED, accept: "application/rss+xml, application/xml" }] : []),
     ...boards.map((board) => ({ url: `https://api.lever.co/v0/postings/${board.boardId}?mode=json`, accept: "application/json" })),
     ...(useGreenhouse ? [{ url: greenhouseUrl, accept: "application/json" }] : []),
-    ...(useAshby ? [{ url: ashbyUrl, accept: "application/json" }] : [])
+    ...(useAshby ? [{ url: ashbyUrl, accept: "application/json" }] : []),
+    ...(useStudyinfo ? [{ url: studyinfoUrl.href, accept: "application/json", headers: STUDYINFO_HEADERS }] : [])
   ];
-  const pending = new Map(requests.map(({ url, accept }) => {
+  const pending = new Map(requests.map(({ url, accept, headers }) => {
     const requestSignal = AbortSignal.any([signal ?? new AbortController().signal, AbortSignal.timeout(8000)]);
     const promise = Promise.resolve().then(() => fetchImpl(url,
-      { method: "GET", headers: { Accept: accept }, signal: requestSignal }))
+      { method: "GET", headers: headers ?? { Accept: accept }, signal: requestSignal }))
       .then((response) => ({ response }), (error) => ({ error }));
     return [url, promise];
   }));
@@ -271,8 +323,52 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
       coverage.failures.push({ source, reason: error instanceof Error ? error.message : String(error) });
     }
   }
+  if (useStudyinfo) {
+    coverage.apiSources.push(STUDYINFO_SOURCE);
+    try {
+      const response = await fetchSource(studyinfoUrl.href);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const body = await response.text();
+      if (body.length > 1_000_000) throw new Error("Studyinfo search exceeds size limit");
+      const search = JSON.parse(body);
+      if (!search || !Array.isArray(search.hits)) throw new Error("Studyinfo returned an unexpected search format.");
+      coverage.countriesChecked.push("FI");
+      coverage.apiCoverage = "partial";
+      if (search.total > search.hits.length) coverage.truncated = true;
+      const details = search.hits.flatMap((hit) => (hit.toteutukset ?? []).filter((item) => {
+        const title = translated(item?.toteutusNimi) || translated(hit?.nimi);
+        return /^master(?:'s)?\b/i.test(title) && !/\bbachelor\b/i.test(title)
+          && relevant(title, input.field) && studyinfoOid(item?.toteutusOid, "17");
+      }).map((item) => item.toteutusOid));
+      const uniqueDetails = [...new Set(details)];
+      if (uniqueDetails.length > 8) coverage.truncated = true;
+      const results = await Promise.all(uniqueDetails.slice(0, 8).map(async (oid) => {
+        try {
+          const url = `https://opintopolku.fi/konfo-backend/external/toteutus/${oid}?hakukohteet=true&haut=true&koulutus=true`;
+          const requestSignal = AbortSignal.any([signal ?? new AbortController().signal, AbortSignal.timeout(8000)]);
+          const detailResponse = await fetchImpl(url, { method: "GET", headers: STUDYINFO_HEADERS, signal: requestSignal });
+          if (!detailResponse.ok) throw new Error(`HTTP ${detailResponse.status}`);
+          const detailText = await detailResponse.text();
+          if (detailText.length > 400_000) throw new Error("Studyinfo detail exceeds size limit");
+          const detail = JSON.parse(detailText);
+          if (detail.oid !== undefined && detail.oid !== oid) throw new Error("Studyinfo detail identity mismatch");
+          return { candidates: parseStudyinfoDetail(detail, input.field.trim(), helsinkiWallTime()) };
+        } catch (error) {
+          return { error: error instanceof Error ? error.message : String(error) };
+        }
+      }));
+      for (const result of results) {
+        if (result.error) coverage.failures.push({ source: STUDYINFO_SOURCE, reason: result.error });
+        else candidates.push(...result.candidates);
+      }
+    } catch (error) {
+      coverage.failures.push({ source: STUDYINFO_SOURCE, reason: error instanceof Error ? error.message : String(error) });
+    }
+  }
   const today = new Date().toISOString().slice(0, 10);
   const currentCandidates = candidates.filter((candidate) => {
+    // Studyinfo windows were already checked to the minute in Finland's local time.
+    if (candidate.discoverySource === STUDYINFO_SOURCE) return true;
     const deadline = knownDeadlineDay(candidate.deadlineText ?? "");
     if (deadline && deadline <= today) {
       coverage.expiredKnownCount++;
@@ -288,7 +384,7 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
   }).sort((a, b) => Number(b.discoveryMatch === "title") - Number(a.discoveryMatch === "title")
     || a.url.localeCompare(b.url));
   coverage.matchedCount = ordered.length;
-  coverage.truncated = ordered.length > limit;
+  coverage.truncated ||= ordered.length > limit;
   candidates.splice(0, candidates.length, ...ordered.slice(0, limit));
   coverage.candidateCount = candidates.length;
   return {
