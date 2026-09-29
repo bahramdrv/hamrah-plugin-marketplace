@@ -155,3 +155,43 @@ test("no verified calls and a failed source preserve honest partial coverage", a
   assert.deepEqual(result.structuredContent.results, []);
   assert.match(result.content[0].text, /نبود نتیجه به معنی نبود فرصت نیست/);
 });
+
+test("a job cannot label an unawarded competition as its own verified funding", async () => {
+  const input = base();
+  input.calls[0].funding.status = "competitive";
+  const result = await render(input);
+  assert.equal(result.isError, true);
+  assert.ok(result.structuredContent.details.some((item) => item.includes("competitive funding requires a separate funding call")));
+});
+
+test("a funding application is represented as competitive, never an awarded benefit", async () => {
+  const input = base();
+  input.calls[0].kind = "funding_call";
+  const result = await render(input);
+  assert.equal(result.isError, true);
+  assert.ok(result.structuredContent.details.some((item) => item.includes("funding calls are competitive")));
+});
+
+test("a rolling opening needs explicit rolling evidence beyond an Apply button", async () => {
+  const input = base();
+  input.calls[0].application = { mode: "rolling", deadline: null, sourceUrl: URL,
+    sourceExcerpt: "Apply for this job" };
+  const weak = await render(input);
+  assert.equal(weak.isError, true);
+  input.calls[0].application.sourceExcerpt = "Ongoing research project. Apply for this job.";
+  const incidental = await render(input);
+  assert.equal(incidental.isError, true);
+  input.calls[0].application.sourceExcerpt = "Applications are accepted on a rolling basis.";
+  const supported = await render(input);
+  assert.equal(supported.isError, false, JSON.stringify(supported.structuredContent));
+  input.calls[0].application.sourceExcerpt = "Rolling applications are now closed.";
+  const closed = await render(input);
+  assert.equal(closed.isError, true);
+});
+
+test("a future deadline does not override an explicit closed-application statement", async () => {
+  const input = base();
+  input.calls[0].application.sourceExcerpt = `Applications are not open yet. Deadline ${DEADLINE}.`;
+  const result = await render(input);
+  assert.equal(result.isError, true);
+});

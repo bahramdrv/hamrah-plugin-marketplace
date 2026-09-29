@@ -173,3 +173,17 @@ test("an Emirati research job request checks the regional IFM board", async () =
   assert.deepEqual(urls, ["https://api.lever.co/v0/postings/ifm-us?mode=json"]);
   assert.equal(result.structuredContent.candidates[0].countryCode, "AE");
 });
+
+test("one failed research board preserves leads from the other and reports partial coverage", async () => {
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "robotics", targetCategory: "research_job", countryCode: "US"
+  }, async (url) => {
+    if (url.includes("/ifm-us?")) throw new Error("board unavailable");
+    return new Response(JSON.stringify([{ id: "tri1", text: "Robotics Research Scientist",
+      country: "US", descriptionPlain: "Robotics research", hostedUrl: "https://jobs.lever.co/tri/tri1" }]), { status: 200 });
+  });
+  assert.equal(result.isError, false);
+  assert.equal(result.structuredContent.status, "partial");
+  assert.equal(result.structuredContent.candidates.length, 1);
+  assert.deepEqual(result.structuredContent.coverage.failures.map((item) => item.source), ["lever:ifm-us"]);
+});

@@ -80,6 +80,8 @@ const validDay = (value) => !Number.isNaN(Date.parse(`${value}T00:00:00Z`))
 const names = { admission_call: "فراخوان پذیرش", funding_call: "فراخوان فاند", research_vacancy: "آگهی پژوهشی" };
 const fundingNames = { verified: "شرایط مالی تأییدشده", competitive: "فاند رقابتی؛ دریافت آن قطعی نیست", unknown: "فاند نامعلوم" };
 const fundingRank = { verified: 0, competitive: 1, unknown: 2 };
+const rollingEvidence = /\b(?:rolling|(?:applications?|submissions?) (?:are |is )?(?:accepted |open )?(?:continuously|on an ongoing basis)|until filled|until (?:the )?(?:position|post|vacancy) (?:is )?filled|no (?:fixed )?deadline|bewerbungen? (?:werden )?(?:laufend|fortlaufend)|bis auf weiteres)\b|au fil de l'eau|پذیرش شناور|درخواست‌ها? (?:به‌صورت )?پیوسته|تا تکمیل ظرفیت/i;
+const closedEvidence = /\b(?:applications? (?:are |is )?(?:now )?closed|no longer accepting|not (?:yet )?open|will open|position (?:has been )?filled|vacancy (?:has been )?filled)\b|پذیرش بسته|درخواست‌ها بسته/i;
 
 function rankedCalls(calls, field) {
   const query = normalized(field);
@@ -105,11 +107,21 @@ function checkCall(item, input, ids, errors) {
   if (!normalized(item.titleEvidence.sourceExcerpt).includes(normalized(item.title))) errors.push(`calls.${item.id}: title not found in official excerpt`);
   if (!validDay(input.checkedAt) || input.checkedAt !== new Date().toISOString().slice(0, 10)) errors.push("checkedAt: must be today's UTC date");
   const app = item.application;
+  if (closedEvidence.test(app.sourceExcerpt)) errors.push(`calls.${item.id}: application evidence says not currently open`);
   if (app.mode === "dated" && (!app.deadline || !validDay(app.deadline) || app.deadline <= input.checkedAt)) {
     errors.push(`calls.${item.id}: deadline is not future and valid`);
   }
   if (app.mode === "rolling" && app.deadline !== null) errors.push(`calls.${item.id}: rolling call must have null deadline`);
+  if (app.mode === "rolling" && !rollingEvidence.test(app.sourceExcerpt)) {
+    errors.push(`calls.${item.id}: rolling mode needs explicit official wording`);
+  }
   const fund = item.funding;
+  if (item.kind === "funding_call" && fund.status !== "competitive") {
+    errors.push(`calls.${item.id}: funding calls are competitive applications, not awarded benefits`);
+  }
+  if (item.kind !== "funding_call" && fund.status === "competitive") {
+    errors.push(`calls.${item.id}: competitive funding requires a separate funding call`);
+  }
   if (fund.status === "unknown" && [fund.terms, fund.sourceUrl, fund.sourceExcerpt].some((value) => value !== null)) {
     errors.push(`calls.${item.id}: unknown funding cannot carry verified terms`);
   }
