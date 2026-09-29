@@ -234,7 +234,8 @@ test("global postdoc discovery checks the validated research-institute board wit
     "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
     "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true",
     "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings?limit=100&offset=0&destination=PUBLIC",
-    "https://api.smartrecruiters.com/v1/companies/UniversityHealthNetwork/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral"]);
+    "https://api.smartrecruiters.com/v1/companies/UniversityHealthNetwork/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral",
+    "https://api.smartrecruiters.com/v1/companies/WesternSydneyUniversity/postings?limit=100&offset=0&destination=PUBLIC"]);
   assert.equal(result.structuredContent.candidates.length, 1);
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["US"]);
 });
@@ -584,6 +585,37 @@ test("UHN public SmartRecruiters API adds only active field-matched Canadian pos
     "smartrecruiters:universityhealthnetwork");
   assert.equal(result.structuredContent.candidates[0].countryCode, "CA");
   assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
+});
+
+test("Western Sydney public SmartRecruiters API adds only active exact Australian postdocs", async () => {
+  const urls = [];
+  const list = { totalFound: 2, content: [
+    { id: "6000000001364650", name: "Postdoctoral Researcher in Plant Science",
+      company: { identifier: "WesternSydneyUniversity" }, location: { country: "au" }, visibility: "PUBLIC" },
+    { id: "6000000001364651", name: "Postdoctoral Researcher in Plant Science",
+      company: { identifier: "WesternSydneyUniversity" }, location: { country: "nz" }, visibility: "PUBLIC" }
+  ] };
+  const result = await executeTool("discoverAcademicCallCandidates", {
+    field: "Plant Science", targetCategory: "postdoc", countryCode: "AU"
+  }, async (url) => {
+    urls.push(url);
+    if (url.includes("/postings?")) return new Response(JSON.stringify(list));
+    return new Response(JSON.stringify({ id: list.content[0].id, name: list.content[0].name, active: true,
+      company: { identifier: "WesternSydneyUniversity" }, location: { country: "au" }, visibility: "PUBLIC",
+      postingUrl: "https://jobs.smartrecruiters.com/WesternSydneyUniversity/6000000001364650-postdoctoral-researcher-in-plant-science",
+      jobAd: { sections: { jobDescription: { text: "<p>Plant science research.</p>" } } } }));
+  });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.deepEqual(urls, [
+    "https://api.smartrecruiters.com/v1/companies/WesternSydneyUniversity/postings?limit=100&offset=0&destination=PUBLIC",
+    "https://api.smartrecruiters.com/v1/companies/WesternSydneyUniversity/postings/6000000001364650"
+  ]);
+  assert.deepEqual(result.structuredContent.candidates.map((item) => item.sourceId), ["6000000001364650"]);
+  assert.equal(result.structuredContent.candidates[0].discoverySource,
+    "smartrecruiters:westernsydneyuniversity");
+  assert.equal(result.structuredContent.candidates[0].countryCode, "AU");
+  assert.equal(result.structuredContent.candidates[0].verificationStatus, "unverified");
+  assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["AU"]);
 });
 
 test("IonQ public Greenhouse board scopes research jobs by primary posting location, not offices", async () => {

@@ -9,7 +9,8 @@ const ARC_SOURCE = "greenhouse:arcinstitute";
 const SMARTRECRUITERS_DETAIL_LIMIT = 12;
 const SMARTRECRUITERS_POSTDOC_SOURCES = [
   { id: "smartrecruiters:theuniversityofauckland", company: "TheUniversityOfAuckland", country: "NZ", apiCountry: "nz" },
-  { id: "smartrecruiters:universityhealthnetwork", company: "UniversityHealthNetwork", country: "CA", apiCountry: "ca", query: "postdoctoral" }
+  { id: "smartrecruiters:universityhealthnetwork", company: "UniversityHealthNetwork", country: "CA", apiCountry: "ca", query: "postdoctoral" },
+  { id: "smartrecruiters:westernsydneyuniversity", company: "WesternSydneyUniversity", country: "AU", apiCountry: "au" }
 ];
 const IONQ_SOURCE = "greenhouse:ionq";
 const IONQ_COUNTRIES = { "United States": "US", "United Kingdom": "GB", Sweden: "SE",
