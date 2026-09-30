@@ -29,3 +29,17 @@ The shortlist is request-scoped. Its public-fact renderer receives no applicant 
 ## Boundaries
 
 Program admission, advertised opening availability, funding, employment, nationality eligibility, and visa outcomes require their own evidence paths. This slice neither sends emails nor collects contact details into published datasets. A user-selected university API is not assumed.
+
+## Next slice: API-assisted discovery (owner-approved)
+
+- A search returns a structured, evidence-backed report even when zero leads qualify. A fixed number of leads is not guaranteed.
+- Individual professors and research groups may both appear, with an explicit result type.
+- APIs generate and disambiguate candidates; current official institution pages establish the claims shown as verified. An API record alone does not establish current affiliation, topic match, contact, recruitment, or a funded opening.
+- Use bounded, anonymous OpenAlex work search for candidate names and ROR for organization identity. A paid API key is not required. An API failure or quota limit is a coverage gap.
+- Never show an API-only name in the final answer. Check a current official institutional page for every displayed lead, including names retrieved from the database.
+- Search for a former Iranian student only for officially verified leads, within a bounded source review. Missing or ambiguous evidence is `unknown`.
+- On every requested discovery, save the public professional candidate names and minimum source identifiers in the shared Redis REST database, scoped by a hash of the public search terms, with a 30-day expiry. Read cached candidates on later matching requests, but recheck their official pages before display. Do not persist applicant data, former-student names, contact details, page excerpts, or verification conclusions. Report cache outages; do not present cached names as verified.
+- Run a fresh bounded API search even when the cache has candidates, to avoid hiding newly indexed research. If the API fails, cached names remain research hints for a bounded official-page search.
+- The minimum search input is country, research field, and a specific topic. Ask only for a missing input that changes the search.
+- If an API is unavailable or yields no officially verifiable leads, perform a bounded web search within the same requested scope and report the API failure and actual search coverage.
+- Order qualifying results first by the strength of topic relevance supported on a current official page, then by evidence freshness and explicit recruitment status. Citation count and reputation do not supply an independent ranking boost.

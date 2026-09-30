@@ -68,6 +68,10 @@ _Avoid_: Funded admission, guaranteed scholarship
 A request-scoped, source-linked professor or research-group contact prospect whose official page documents relevant research. Student recruitment and a former Iranian-student connection have separate evidence states; neither follows from research relevance alone.
 _Avoid_: Academic Program Match, Verified Open Academic Opportunity, available supervisor
 
+**Supervisor Discovery Candidate**:
+A public professional name found through a bounded research API or an expiring shared candidate cache. It is only a hint for a fresh official institutional-page check in the current request.
+_Avoid_: Academic Supervisor Lead, verified professor, available supervisor
+
 **Public Person Evidence**:
 A public source that explicitly documents a person's connection to Iran and a relevant immigration or academic milestone. A reviewed source URL may be retained while the person's name is omitted from ordinary results; names, appearance, and language alone do not establish an Iranian connection.
 _Avoid_: Inferred nationality, success anecdote
