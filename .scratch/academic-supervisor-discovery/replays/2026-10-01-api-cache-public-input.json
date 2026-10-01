@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-01",
+  "searchScope": { "countryCode": "DEU", "field": "Computer Science", "researchFocus": "Machine Learning" },
+  "coverage": { "candidatesChecked": 4, "excluded": [{ "reason": "out_of_scope", "count": 2 }] },
+  "leads": [
+    {
+      "name": "Benjamin Risse",
+      "institution": "University of Münster",
+      "countryCode": "DEU",
+      "field": "Computer Science",
+      "officialProfileUrl": "https://www.uni-muenster.de/AlleInformatiken/professoren/risse.shtml",
+      "research": {
+        "focus": "Machine Learning",
+        "sourceUrl": "https://www.uni-muenster.de/AlleInformatiken/professoren/risse.shtml",
+        "sourceExcerpt": "Machine Learning Deep Learning; Pattern Recognition"
+      },
+      "recruitment": { "status": "unknown", "sourceUrl": null, "sourceExcerpt": null },
+      "contact": {
+        "status": "published",
+        "sourceUrl": "https://www.uni-muenster.de/AlleInformatiken/professoren/risse.shtml",
+        "sourceExcerpt": "b.risse@uni-muenster.de"
+      },
+      "iranianStudent": { "status": "unknown", "sourceUrl": null, "sourceExcerpt": null }
+    },
+    {
+      "name": "Niklas Kühl",
+      "institution": "University of Bayreuth",
+      "countryCode": "DEU",
+      "field": "Computer Science",
+      "officialProfileUrl": "https://www.wi.uni-bayreuth.de/de/team/niklas_kuehl/index.php",
+      "research": {
+        "focus": "fairness in machine learning",
+        "sourceUrl": "https://www.philcs.uni-bayreuth.de/en/faculty/index.html",
+        "sourceExcerpt": "fairness in machine learning"
+      },
+      "recruitment": { "status": "unknown", "sourceUrl": null, "sourceExcerpt": null },
+      "contact": {
+        "status": "published",
+        "sourceUrl": "https://www.wi.uni-bayreuth.de/de/team/niklas_kuehl/index.php",
+        "sourceExcerpt": "E-Mail: kuehl@uni-bayreuth.de"
+      },
+      "iranianStudent": { "status": "unknown", "sourceUrl": null, "sourceExcerpt": null }
+    }
+  ]
+}
