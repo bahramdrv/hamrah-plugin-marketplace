@@ -23,6 +23,7 @@ const INSTRUCTIONS = [
   "Use evaluateCommunityAdjustment for every candidate route before final scoring; missing coverage means adjustment zero plus an explicit coverage warning.",
   "Use finalizeAssessment before treating a scorecard as final; do not bypass failed evidence, freshness, arithmetic, eligibility, or community gates.",
   "Never send the full applicant profile to route-finder; only its documented coarse fields after consent.",
+  "On an explicit academic request, use discoverAcademicMatches with public search terms, continue web search for coverage gaps, verify exact current institutional evidence with verifyAcademicEvidence, and renderAcademicDiscoveryReport. Separate verified results from candidates, research relevance from recruitment/funding, and research grants from student funding. Keep applicant facts and personal comparisons local. An immigration assessment is not a prerequisite.",
   "Community evidence is context, never official eligibility. Match the user's language."
 ].join(" ");
 

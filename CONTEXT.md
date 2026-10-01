@@ -64,6 +64,10 @@ _Avoid_: Academic Program Match, university listing
 A scholarship or stipend application with its own eligibility, terms, and application window. Being eligible to apply does not establish that an applicant has been awarded funding.
 _Avoid_: Funded admission, guaranteed scholarship
 
+**Academic Research Grant**:
+An award to support a research project, with its own recipient, purpose and recorded period. Its existence does not establish an Academic Funding Call, uncommitted student funding or current student recruitment.
+_Avoid_: Available student funding, guaranteed scholarship
+
 **Academic Supervisor Lead**:
 A request-scoped, source-linked professor or research-group contact prospect whose official page documents relevant research. Student recruitment and a former Iranian-student connection have separate evidence states; neither follows from research relevance alone.
 _Avoid_: Academic Program Match, Verified Open Academic Opportunity, available supervisor
@@ -71,6 +75,14 @@ _Avoid_: Academic Program Match, Verified Open Academic Opportunity, available s
 **Supervisor Discovery Candidate**:
 A public professional name found through a bounded research API or an expiring shared candidate cache. It is only a hint for a fresh official institutional-page check in the current request.
 _Avoid_: Academic Supervisor Lead, verified professor, available supervisor
+
+**Academic Discovery Report**:
+A request-scoped, source-linked report that distinguishes verified academic results from unverified discovery candidates, states its evidence coverage, and explains academic fit separately from funding. Its presentation and comparison rules stay consistent while its conclusions may change with current evidence.
+_Avoid_: Complete global academic catalog, admission prediction
+
+**Academic Evidence Change**:
+A documented difference between the public evidence used in two Academic Discovery Reports, such as a changed application window or funding condition. It explains a changed result without implying a change in the applicant's facts.
+_Avoid_: Random ranking change, applicant score change
 
 **Public Person Evidence**:
 A public source that explicitly documents a person's connection to Iran and a relevant immigration or academic milestone. A reviewed source URL may be retained while the person's name is omitted from ordinary results; names, appearance, and language alone do not establish an Iranian connection.

@@ -92,7 +92,8 @@ export async function discoverJsearchCandidates(input, fetchImpl, signal, option
     } catch (error) {
       // Never echo provider bodies, URLs, request headers or credentials.
       const reason = /^HTTP \d{3}$|^JSearch response exceeds size limit$|^Unexpected JSearch response$/.test(error?.message)
-        ? error.message : "jsearch_source_failed";
+        ? error.message : ["TimeoutError", "AbortError"].includes(error?.name) ? "jsearch_source_timeout"
+          : error instanceof SyntaxError ? "jsearch_invalid_json" : "jsearch_source_failed";
       result.failures.push({ source: SOURCE, countryCode: country, reason });
       if (["HTTP 401", "HTTP 402", "HTTP 403", "HTTP 429"].includes(reason)) break;
     }

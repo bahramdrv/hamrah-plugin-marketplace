@@ -1,0 +1,360 @@
+{
+  "checkedAt": "2026-10-01T15:28:04.027Z",
+  "base": "https://hamrah-plugin-marketplace-hedz8sajx-bahramd-s-projects2.vercel.app",
+  "health": {
+    "status": "ok",
+    "tools": 54,
+    "skills": 5,
+    "rateLimitStore": "redis",
+    "deploymentCommit": "940fb1f0f6d23aa84e6c075cee2b06b0b11c5aeb"
+  },
+  "cases": [
+    {
+      "tool": "discoverAcademicMatches",
+      "type": "university",
+      "durationMs": 5530,
+      "status": "partial",
+      "candidates": 3,
+      "verified": 0,
+      "sources": [
+        {
+          "source": "ror",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:03.451Z",
+          "observedAt": "2026-10-01T15:27:03.451Z",
+          "cache": "saved"
+        },
+        {
+          "source": "tavily",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:03.451Z",
+          "observedAt": "2026-10-01T15:27:03.451Z",
+          "cache": "disabled"
+        }
+      ],
+      "failures": []
+    },
+    {
+      "tool": "discoverAcademicMatches",
+      "type": "university",
+      "durationMs": 3448,
+      "status": "partial",
+      "candidates": 3,
+      "verified": 0,
+      "sources": [
+        {
+          "source": "ror",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:08.626Z",
+          "observedAt": "2026-10-01T15:27:03.451Z",
+          "cache": "hit"
+        },
+        {
+          "source": "tavily",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:08.626Z",
+          "observedAt": "2026-10-01T15:27:08.626Z",
+          "cache": "disabled"
+        }
+      ],
+      "failures": []
+    },
+    {
+      "tool": "discoverAcademicMatches",
+      "type": "program",
+      "durationMs": 5549,
+      "status": "partial",
+      "candidates": 3,
+      "verified": 0,
+      "sources": [
+        {
+          "source": "ror",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:12.504Z",
+          "observedAt": "2026-10-01T15:27:12.504Z",
+          "cache": "saved"
+        },
+        {
+          "source": "tavily",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:12.504Z",
+          "observedAt": "2026-10-01T15:27:12.504Z",
+          "cache": "disabled"
+        }
+      ],
+      "failures": []
+    },
+    {
+      "tool": "discoverAcademicMatches",
+      "type": "supervisor",
+      "durationMs": 4876,
+      "status": "partial",
+      "candidates": 3,
+      "verified": 0,
+      "sources": [
+        {
+          "source": "crossref",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:17.867Z",
+          "observedAt": "2026-10-01T15:27:17.867Z",
+          "cache": "saved"
+        },
+        {
+          "source": "openalex:GB",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:17.867Z",
+          "observedAt": "2026-10-01T15:27:17.867Z",
+          "cache": "disabled"
+        },
+        {
+          "source": "ror",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:17.867Z",
+          "observedAt": "2026-10-01T15:27:17.867Z",
+          "cache": "saved"
+        },
+        {
+          "source": "tavily",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:17.867Z",
+          "observedAt": "2026-10-01T15:27:17.867Z",
+          "cache": "disabled"
+        }
+      ],
+      "failures": []
+    },
+    {
+      "tool": "discoverAcademicMatches",
+      "type": "masters",
+      "durationMs": 5055,
+      "status": "partial",
+      "candidates": 3,
+      "verified": 0,
+      "sources": [
+        {
+          "source": "official_and_job_apis",
+          "status": "unavailable",
+          "fetchedAt": "2026-10-01T15:27:24.082Z",
+          "observedAt": "2026-10-01T15:27:24.082Z",
+          "cache": "disabled",
+          "providers": []
+        },
+        {
+          "source": "tavily",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:24.082Z",
+          "observedAt": "2026-10-01T15:27:24.082Z",
+          "cache": "disabled"
+        }
+      ],
+      "failures": [
+        {
+          "source": "official_and_job_apis",
+          "reason": "no_configured_source_for_scope"
+        }
+      ]
+    },
+    {
+      "tool": "discoverAcademicMatches",
+      "type": "phd",
+      "durationMs": 5102,
+      "status": "partial",
+      "candidates": 3,
+      "verified": 0,
+      "sources": [
+        {
+          "source": "official_and_job_apis",
+          "status": "unavailable",
+          "fetchedAt": "2026-10-01T15:27:28.167Z",
+          "observedAt": "2026-10-01T15:27:28.167Z",
+          "cache": "disabled",
+          "providers": []
+        },
+        {
+          "source": "tavily",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:28.167Z",
+          "observedAt": "2026-10-01T15:27:28.167Z",
+          "cache": "disabled"
+        }
+      ],
+      "failures": [
+        {
+          "source": "official_and_job_apis",
+          "reason": "no_configured_source_for_scope"
+        }
+      ]
+    },
+    {
+      "tool": "discoverAcademicMatches",
+      "type": "postdoc",
+      "durationMs": 4652,
+      "status": "partial",
+      "candidates": 3,
+      "verified": 0,
+      "sources": [
+        {
+          "source": "official_and_job_apis",
+          "status": "unavailable",
+          "fetchedAt": "2026-10-01T15:27:32.786Z",
+          "observedAt": "2026-10-01T15:27:32.786Z",
+          "cache": "disabled",
+          "providers": []
+        },
+        {
+          "source": "tavily",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:32.786Z",
+          "observedAt": "2026-10-01T15:27:32.786Z",
+          "cache": "disabled"
+        }
+      ],
+      "failures": [
+        {
+          "source": "official_and_job_apis",
+          "reason": "no_configured_source_for_scope"
+        }
+      ]
+    },
+    {
+      "tool": "discoverAcademicMatches",
+      "type": "research_job",
+      "durationMs": 4984,
+      "status": "partial",
+      "candidates": 3,
+      "verified": 0,
+      "sources": [
+        {
+          "source": "official_and_job_apis",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:37.683Z",
+          "observedAt": "2026-10-01T15:27:37.683Z",
+          "cache": "disabled",
+          "providers": [
+            {
+              "source": "ashby:faculty",
+              "status": "ok"
+            },
+            {
+              "source": "greenhouse:ionq",
+              "status": "ok"
+            }
+          ]
+        },
+        {
+          "source": "tavily",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:37.683Z",
+          "observedAt": "2026-10-01T15:27:37.683Z",
+          "cache": "disabled"
+        }
+      ],
+      "failures": []
+    },
+    {
+      "tool": "discoverAcademicMatches",
+      "type": "funding",
+      "durationMs": 5547,
+      "status": "partial",
+      "candidates": 3,
+      "verified": 0,
+      "sources": [
+        {
+          "source": "tavily",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:43.016Z",
+          "observedAt": "2026-10-01T15:27:43.016Z",
+          "cache": "disabled"
+        }
+      ],
+      "failures": []
+    },
+    {
+      "tool": "discoverAcademicMatches",
+      "type": "grant",
+      "durationMs": 4401,
+      "status": "partial",
+      "candidates": 3,
+      "verified": 0,
+      "sources": [
+        {
+          "source": "crossref",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:47.966Z",
+          "observedAt": "2026-10-01T15:27:47.966Z",
+          "cache": "saved"
+        },
+        {
+          "source": "openalex:awards",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:47.966Z",
+          "observedAt": "2026-10-01T15:27:47.966Z",
+          "cache": "saved"
+        },
+        {
+          "source": "ror",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:47.966Z",
+          "observedAt": "2026-10-01T15:27:47.966Z",
+          "cache": "saved"
+        },
+        {
+          "source": "tavily",
+          "status": "ok",
+          "fetchedAt": "2026-10-01T15:27:47.966Z",
+          "observedAt": "2026-10-01T15:27:47.966Z",
+          "cache": "disabled"
+        }
+      ],
+      "failures": []
+    },
+    {
+      "tool": "verifyAcademicEvidence",
+      "type": "program",
+      "durationMs": 4341,
+      "status": "verified_official_record",
+      "reasons": []
+    },
+    {
+      "tool": "renderAcademicDiscoveryReport",
+      "type": "program",
+      "durationMs": 3439,
+      "status": "partial",
+      "candidates": 0,
+      "verified": 1,
+      "sources": [
+        {
+          "source": "official:mit.edu",
+          "status": "ok"
+        }
+      ],
+      "failures": []
+    },
+    {
+      "tool": "verifyAcademicEvidence",
+      "type": "program",
+      "durationMs": 3942,
+      "status": "unverified",
+      "reasons": [
+        "official_claim_not_found"
+      ]
+    },
+    {
+      "tool": "renderAcademicDiscoveryReport",
+      "type": "program",
+      "durationMs": 3354,
+      "status": "partial",
+      "candidates": 0,
+      "verified": 0,
+      "sources": [],
+      "failures": []
+    }
+  ],
+  "latency": {
+    "sampleCount": 14,
+    "includesCliOverhead": true,
+    "p50Ms": 4652,
+    "p95Ms": 5549,
+    "interpretation": "small acceptance sample, not a performance guarantee"
+  }
+}

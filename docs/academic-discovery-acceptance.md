@@ -1,0 +1,28 @@
+# Academic Discovery acceptance, 2026-10-01
+
+Cases below were fixed before running `scripts/verify-live-academic-discovery.mjs` against the final Preview. Results describe this small sample, not global coverage or an accuracy promise.
+
+| Case | Expected observation |
+|---|---|
+| Oxford / university / AI / GB | Tavily and ROR return; exact ROR institution precedes similar names; no discovery result is verified |
+| Same request with Persian topic | Same public query plan; ROR public cache hit; live web results may differ |
+| Program / supervisor / masters / PhD / postdoc / research job / scholarship / grant | Each returns bounded partial coverage; source failures stay visible; discovery never asserts open recruitment/funding |
+| MIT EECS graduate FAQ official page | Fresh ROR institutional identity, program title and actual degree requirement support an official program record; no guaranteed funding inferred |
+| Same page with invented guaranteed stipend | No signed verification token |
+| Funded-only rendering of that program | Excluded because guaranteed funding is unknown |
+
+The initial positive verification case was the [Oxford course](https://www.ox.ac.uk/admissions/graduate/courses/msc-advanced-computer-science), ROR `052gg0110`. Both the Preview fetch and direct local fetch returned HTTP 403; verification correctly stayed unverified. Before repeating acceptance, the positive case was explicitly changed to the [MIT EECS official FAQ](https://www.eecs.mit.edu/academics/graduate-programs/admission-process/graduate-admissions-faqs/), ROR `042nb2s44`. This change is a coverage limitation, not a pass for the blocked Oxford page. The program case intentionally claims neither an application window nor complete personal eligibility. The host must read and compare every decisive requirement for a personal shortlist.
+
+Local seam tests additionally cover equivalent input with fixed evidence/time, source order, unsafe DNS, expired calls, funding negation, competitive funding, research grants, forged tokens, public cache reuse and private-input rejection. Runtime observations below will record actual successes/failures and latency; unsupported/unknown coverage does not become a negative opportunity claim.
+
+Preview acceptance on `hnzfnawoe` passed all 14 tool calls. Observed ROR, Tavily, OpenAlex supervisor discovery, OpenAlex awards and Crossref responses succeeded; public ROR metadata was saved and reused. MIT current-page verification and signed rendering succeeded, an invented stipend failed verification, and the funded-only renderer excluded unknown funding. The 14-call sample had p50 3.585s and p95 4.789s **including CLI/protection overhead**; these are acceptance observations, not service latency promises. A subsequent correction distinguishes unavailable job-API scopes and exposes actual provider statuses; a successful orchestration return is not evidence of a provider's coverage.
+
+Redis actual acceptance ran in the Preview build `29qY12cUtz3Xpj6sGLu2GiFPodgG`: eight concurrent writes of one public ROR record succeeded, a three-second expiry was confirmed with Redis TTL, a read did not renew it, and the expired record returned null. The temporary record/index entry were cleaned up. Production retention remains seven days; this acceptance exercises the same writer with a shorter test-only TTL. The custom build config and acceptance flag were supplied only to that Preview deployment.
+
+Enabled configuration: `HAMRAH_ACADEMIC_DISCOVERY_ENABLED`, `HAMRAH_TAVILY_ENABLED`, `HAMRAH_TAVILY_FREE_PLAN_CONFIRMED`; `TAVILY_API_KEY` is a Vercel sensitive variable. Public metadata requires `HAMRAH_ACADEMIC_PUBLIC_STORE_ENABLED` and the existing Redis credentials. Setting `HAMRAH_ROR_ENABLED`, `HAMRAH_OPENALEX_ENABLED`, `HAMRAH_CROSSREF_ENABLED` or `HAMRAH_ACADEMIC_JOB_APIS_ENABLED` to `false` disables that discovery source and reports a gap. Tavily searches use basic depth, at most ten results and no raw content/answer; web snippets and official verification are never put in shared storage. The Tavily dashboard showed Researcher, 1,000 monthly credits and unchecked Pay as you go; no card, billing address or paid upgrade was submitted.
+
+Rollback: create a deployment with the global discovery flag false to stop new acquisition, or turn off the affected source only; shared cache can be disabled independently. Flags apply to a new deployment. The previous Production deployment remains available for rollback. Signed evidence has a 15-minute current-verification lifetime; historical tokens explain source changes only. PDFs, JS-only content, foreign redirects and unsupported date syntax remain unverified. Personal admission/nationality checks stay local.
+
+Final Preview `hedz8sajx` passed the same 14 cases with corrected provider coverage (GB masters/PhD/postdoc had no configured job API in Preview; Tavily still returned leads). Sample p50/p95 were 4.652s/5.549s including CLI overhead. Build `FCBJZ5dK8fHLZs1GV8tEP5DK76er` repeated Redis acceptance and repaired counting of four public records without renewing their TTL. The shared index lifetime is independent of a short test record's lifetime. Acquisition is bounded at 8s per new provider and 18s for the existing aggregate job API flow, within the outer MCP request budget.
+
+Final repository checks: `npm test` 361 passed; `npm run verify:release` 19 schemas, 57 published datasets (one withdrawn); `npm run check:static` passed; `/opt/anaconda3/bin/python -m pytest -q` over the four instructed suites: 47 passed. No community dataset or immigration scoring policy changed. The local public example is [here](examples/academic-discovery-public-report-fa.md).

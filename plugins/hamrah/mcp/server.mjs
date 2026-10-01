@@ -14,6 +14,9 @@ import { getLivedExperience, LivedExperienceNotFoundError, searchIranianLivedExp
 import { MILESTONES, OUTCOMES } from "./community-experiences.mjs";
 import { getAcademicOpportunity, OpportunityNotFoundError, searchAcademicOpportunities } from "./community-opportunity-tools.mjs";
 import { ACADEMIC_CALL_DISCOVERY_TOOL, discoverAcademicCallCandidates } from "./academic-call-discovery.mjs";
+import { ACADEMIC_DISCOVERY_TOOL, discoverAcademicMatches } from "./academic-discovery.mjs";
+import { ACADEMIC_EVIDENCE_TOOL, verifyAcademicEvidence } from "./academic-evidence.mjs";
+import { ACADEMIC_DISCOVERY_REPORT_TOOL, renderAcademicDiscoveryReport } from "./academic-discovery-report.mjs";
 import { OPEN_ACADEMIC_CALL_REPORT_TOOL, renderOpenAcademicCallReport } from "./academic-call-report.mjs";
 import { CLAIM_TYPES, searchRouteClaims } from "./community-route-claim-tools.mjs";
 import { findViableRoutesForIranians, InvalidRouteDiscoveryInput } from "./community-route-discovery.mjs";
@@ -743,6 +746,26 @@ function registerTools(definitions, handlersByName) {
 
 // The single source for tools: TOOLS (tools/list) and the dispatcher both read it, in this order.
 const TOOL_REGISTRY = [
+  ...registerTools([ACADEMIC_EVIDENCE_TOOL, ACADEMIC_DISCOVERY_REPORT_TOOL], {
+    verifyAcademicEvidence: { kind: "assessment", handler: async (args, { fetchImpl, signal, options }) => {
+      const result = await verifyAcademicEvidence(args, fetchImpl, signal, options.academicDiscovery);
+      return toolResult(result, Boolean(result.error));
+    } },
+    renderAcademicDiscoveryReport: { kind: "assessment", handler: async (args, { options }) => {
+      const result = renderAcademicDiscoveryReport(args, options.academicDiscovery);
+      const response = toolResult(result, Boolean(result.error));
+      if (result.markdown) response.content = [{ type: "text", text: result.markdown }];
+      return response;
+    } }
+  }),
+  ...registerTools([ACADEMIC_DISCOVERY_TOOL], {
+    discoverAcademicMatches: { kind: "assessment", handler: async (args, { fetchImpl, signal, options }) => {
+      const result = await discoverAcademicMatches(args, fetchImpl, signal, options.academicDiscovery);
+      const response = toolResult(result, Boolean(result.error));
+      if (result.markdown) response.content = [{ type: "text", text: result.markdown }];
+      return response;
+    } }
+  }),
   ...registerTools(STANDARD_DISCOVERY_TOOLS, {
     search: visaAtlasTool(searchVisaAtlas),
     fetch: visaAtlasTool(fetchVisaAtlasResult)
