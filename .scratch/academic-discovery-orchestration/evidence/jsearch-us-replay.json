@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-01T17:55:14.011Z",
+  "publicRequest": {
+    "countryCode": "US",
+    "field": "Physics",
+    "targetCategory": "phd",
+    "limit": 3
+  },
+  "status": "partial",
+  "candidateCount": 0,
+  "coverage": {
+    "apiSources": [
+      "jsearch:openwebninja"
+    ],
+    "countriesChecked": [],
+    "candidateCount": 0,
+    "matchedCount": 0,
+    "expiredKnownCount": 0,
+    "truncated": false,
+    "failures": [
+      {
+        "source": "jsearch:openwebninja",
+        "countryCode": "US",
+        "reason": "jsearch_source_timeout"
+      }
+    ],
+    "apiCoverage": "partial",
+    "sourceScopes": [
+      {
+        "source": "jsearch:openwebninja",
+        "countriesRequested": [
+          "US"
+        ],
+        "pagesPerCountry": 1,
+        "maxResultsPerCountry": 10,
+        "persistence": "disabled",
+        "note": "Google for Jobs leads only; no published university coverage denominator. Title/language, first-page and sampled-country limits make coverage partial. Provider direct-apply flags are unverified; check the current exact institutional posting."
+      }
+    ]
+  }
+}

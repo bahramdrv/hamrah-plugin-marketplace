@@ -1,6 +1,6 @@
 # Academic Discovery design tree
 
-Status: in-progress
+Status: complete
 
 Source: [Persian design](../../docs/academic-discovery-plan-fa.md).
 
@@ -8,6 +8,6 @@ Resolved: current evidence with stable presentation (Q1); separate verified resu
 
 Resolved: ROR/OpenAlex/Crossref + official/ATS/JSearch + Tavily/web (Q6); bounded existing Redis (Q7, ADR 0009); up to ten main results and separate candidates with continuation (Q8).
 
-The design frontier is empty. The owner confirmed the full design and Tavily free-account terms. Implementation and Preview acceptance have passed; final Production acceptance is in progress. Record actual source coverage, including unavailable scopes and the observed JSearch failure.
+The design frontier is empty. The owner confirmed the full design and Tavily free-account terms. Implementation, Preview, actual Redis and exact-version Production acceptance passed. All tickets are done. Actual unavailable scopes and intermittent JSearch timeout/recovery are recorded in docs/academic-discovery-acceptance.md; public observations are in evidence/.
 
 Implementation order: 01 → 02/03 → 04 → 05 → 06 → 07. Parallelizable ticket numbers describe dependencies, not permission to delegate implementation.

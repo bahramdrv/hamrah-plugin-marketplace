@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-01T17:56:06.941Z",
+  "publicRequest": {
+    "type": "phd",
+    "field": "physics",
+    "countryCode": "US",
+    "limit": 3
+  },
+  "status": "partial",
+  "verified": 0,
+  "candidates": 3,
+  "sources": [
+    {
+      "source": "official_and_job_apis",
+      "status": "ok",
+      "fetchedAt": "2026-10-01T17:56:03.505Z",
+      "observedAt": "2026-10-01T17:56:03.505Z",
+      "cache": "disabled",
+      "providers": [
+        {
+          "source": "jsearch:openwebninja",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "source": "tavily",
+      "status": "ok",
+      "fetchedAt": "2026-10-01T17:56:03.505Z",
+      "observedAt": "2026-10-01T17:56:03.505Z",
+      "cache": "disabled"
+    }
+  ],
+  "failures": []
+}
