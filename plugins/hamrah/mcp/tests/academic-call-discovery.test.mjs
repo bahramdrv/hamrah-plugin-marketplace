@@ -159,7 +159,7 @@ test("an explicit PhD search returns DAAD API/feed leads with honest unverified 
   assert.equal(result.structuredContent.candidates[0].discoverySource, "daad_phdgermany");
   assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["DE"]);
   assert.equal(result.structuredContent.coverage.candidateCount, 1);
-  assert.equal(TOOLS.find((tool) => tool.name === "discoverAcademicCallCandidates")?.annotations?.readOnlyHint, true);
+  assert.equal(TOOLS.find((tool) => tool.name === "discoverAcademicCallCandidates")?.annotations?.readOnlyHint, false);
 });
 
 test("NTNU public Jobbnorge API adds only exact domestic doctoral vacancies", async () => {
@@ -311,13 +311,14 @@ test("global postdoc discovery checks the validated research-institute board wit
     field: "robotics", targetCategory: "postdoc"
   }, async (url) => {
     urls.push(url);
+    if (url.includes("jobsearch.api.jobtechdev.se")) return new Response('{"hits":[],"total":{"value":0}}');
     if (url.includes("boards-api.greenhouse.io")) return new Response('{"jobs":[]}', { status: 200 });
     if (url.includes("api.smartrecruiters.com")) return new Response('{"content":[],"totalFound":0}', { status: 200 });
     return new Response(JSON.stringify([{ id: "r1", text: "Postdoctoral Researcher in Robotics",
       country: "US", descriptionPlain: "Robotics research", hostedUrl: "https://jobs.lever.co/tri/r1" }]), { status: 200 });
   });
   assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
-  assert.deepEqual(urls, ["https://api.lever.co/v0/postings/tri?mode=json",
+  assert.deepEqual(urls, ["https://jobsearch.api.jobtechdev.se/search?q=postdoc&limit=100", "https://api.lever.co/v0/postings/tri?mode=json",
     "https://boards-api.greenhouse.io/v1/boards/thealleninstitute/jobs?content=true",
     "https://boards-api.greenhouse.io/v1/boards/arcinstitute/jobs?content=true",
     "https://api.smartrecruiters.com/v1/companies/TheUniversityOfAuckland/postings?limit=100&offset=0&destination=PUBLIC",
@@ -326,7 +327,7 @@ test("global postdoc discovery checks the validated research-institute board wit
     "https://api.smartrecruiters.com/v1/companies/UniversityOfNotreDame/postings?limit=100&offset=0&destination=PUBLIC&q=postdoctoral",
     "https://boards-api.greenhouse.io/v1/boards/simula/jobs?content=true"]);
   assert.equal(result.structuredContent.candidates.length, 1);
-  assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["US"]);
+  assert.deepEqual(result.structuredContent.coverage.countriesChecked, ["US", "SE"]);
 });
 
 test("an unavailable free feed yields explicit partial coverage instead of an empty complete search", async () => {

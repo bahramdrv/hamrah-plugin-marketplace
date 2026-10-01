@@ -767,8 +767,8 @@ const TOOL_REGISTRY = [
   ...registerTools([ACADEMIC_CALL_DISCOVERY_TOOL], {
     discoverAcademicCallCandidates: {
       kind: "assessment",
-      handler: async (args, { fetchImpl, signal }) => {
-        const result = await discoverAcademicCallCandidates(args, fetchImpl, signal);
+      handler: async (args, { fetchImpl, signal, options }) => {
+        const result = await discoverAcademicCallCandidates(args, fetchImpl, signal, options.academicOpeningDiscovery);
         return toolResult(result, Boolean(result.error));
       }
     }

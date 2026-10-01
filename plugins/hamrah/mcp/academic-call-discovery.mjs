@@ -1,4 +1,6 @@
 import Ajv from "ajv";
+import { discoverJsearchCandidates } from "./jsearch-academic-discovery.mjs";
+import { JOBTECH_SOURCE, discoverSwedishPostdocCandidates } from "./academic-opening-store.mjs";
 
 const DAAD_FEED = "https://api.daad.de/api/feeds/rss/en/phd.xml";
 const NTNU_JOBBNORGE_SOURCE = "jobbnorge:ntnu";
@@ -40,9 +42,9 @@ const validate = new Ajv({ allErrors: true }).compile(INPUT_SCHEMA);
 export const ACADEMIC_CALL_DISCOVERY_TOOL = {
   name: "discoverAcademicCallCandidates",
   title: "Discover academic call candidates from free sources",
-  description: "Find request-scoped leads in no-cost structured sources. Candidates are not verified open calls: inspect the current official publisher page and use web search for uncovered countries and types. Send only public field, category and geography, never an applicant profile.",
+  description: "Find leads in no-cost structured sources; an explicitly enabled bounded cache may store public Swedish postdoc metadata. Candidates are not verified open calls: inspect the current official publisher page and use web search for uncovered countries and types. Send only public field, category and geography, never an applicant profile.",
   inputSchema: INPUT_SCHEMA,
-  annotations: { readOnlyHint: true, openWorldHint: true, destructiveHint: false }
+  annotations: { readOnlyHint: false, openWorldHint: true, destructiveHint: false }
 };
 
 const plain = (value) => String(value ?? "").replace(/^<!\[CDATA\[|\]\]>$/g, "")
@@ -425,7 +427,7 @@ function parseStudyinfoDetail(body, field, now) {
   });
 }
 
-export async function discoverAcademicCallCandidates(input, fetchImpl = globalThis.fetch, signal) {
+export async function discoverAcademicCallCandidates(input, fetchImpl = globalThis.fetch, signal, options = {}) {
   if (!validate(input)) return {
     error: "invalid_academic_call_input",
     details: validate.errors?.map((item) => `${item.instancePath || "root"}: ${item.message}`) ?? []
@@ -435,6 +437,11 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
   const coverage = { apiSources: [], countriesChecked: [], candidateCount: 0, matchedCount: 0, expiredKnownCount: 0,
     truncated: false, failures: [], apiCoverage: "unavailable" };
   const candidates = [];
+  const jsearchPending = discoverJsearchCandidates(input, fetchImpl, signal, options);
+  const useJobtech = input.targetCategory === "postdoc" && (!input.countryCode || input.countryCode === "SE");
+  // Start independently; a Swedish-source failure cannot hold up other sources.
+  const jobtechPending = useJobtech ? discoverSwedishPostdocCandidates(input, fetchImpl, signal, options)
+    .then((result) => ({ result }), (error) => ({ error })) : null;
   // The fixed public boards are organization-scoped, not a global academic catalog.
   const defaultBoards = [];
   if (["postdoc", "research_job"].includes(input.targetCategory)
@@ -745,6 +752,31 @@ export async function discoverAcademicCallCandidates(input, fetchImpl = globalTh
     } catch (error) {
       coverage.failures.push({ source: STUDYINFO_SOURCE, reason: error instanceof Error ? error.message : String(error) });
     }
+  }
+  if (jobtechPending) {
+    coverage.apiSources.push(JOBTECH_SOURCE);
+    const outcome = await jobtechPending;
+    if (outcome.error) coverage.failures.push({ source: JOBTECH_SOURCE,
+      reason: outcome.error instanceof Error ? outcome.error.message : String(outcome.error) });
+    else {
+      candidates.push(...outcome.result.candidates);
+      coverage.truncated ||= outcome.result.truncated;
+      if (!outcome.result.failure && !coverage.countriesChecked.includes("SE")) coverage.countriesChecked.push("SE");
+      coverage.apiCoverage = "partial";
+      coverage.sourceScopes = [outcome.result.scope];
+      coverage.openingCache = outcome.result.cache;
+      if (outcome.result.failure) coverage.failures.push({ source: JOBTECH_SOURCE, reason: outcome.result.failure });
+    }
+  }
+  const jsearch = await jsearchPending;
+  if (jsearch) {
+    coverage.apiSources.push(jsearch.source);
+    candidates.push(...jsearch.candidates);
+    coverage.failures.push(...jsearch.failures);
+    coverage.truncated ||= jsearch.truncated;
+    coverage.countriesChecked = [...new Set([...coverage.countriesChecked, ...jsearch.countriesChecked])];
+    coverage.sourceScopes = [...(coverage.sourceScopes ?? []), jsearch.scope];
+    coverage.apiCoverage = "partial";
   }
   const today = new Date().toISOString().slice(0, 10);
   const currentCandidates = candidates.filter((candidate) => {

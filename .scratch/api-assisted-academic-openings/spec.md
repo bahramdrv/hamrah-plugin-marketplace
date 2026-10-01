@@ -83,3 +83,7 @@ The response envelope keeps these fields in every state; empty arrays and explic
 ## Existing boundaries
 
 This expands the first German doctoral-physics slice without changing published evidence snapshots or turning a request result into a catalog. It does not implement professor discovery, university ranking, a separate plugin/backend, automatic monitoring, admission decisions, or immigration eligibility. No new ADR is proposed: source authority and publication/privacy decisions remain governed by the existing ADRs.
+
+## Shared opening store follow-up — 2026-10-01
+
+The owner requested a concrete design. See `../shared-academic-opening-store/spec.md` and `docs/shared-academic-opening-store.md`. Opening persistence remains inactive. A proposed source-level ten-minute refresh window differs from the earlier every-request fresh API option; it needs a documented decision before implementation. Public web discovery and current exact official-page verification remain per request. Supervisor cache implementation is separate.

@@ -1,0 +1,9 @@
+# JobTech source slice acceptance, 2026-10-01
+
+A local live `executeTool` request with public field `geochemistry`, category `postdoc`, country `SE`, and persistence disabled called the fixed free JobSearch endpoint successfully. It returned one exact government lead, ID 31501673, Luleå Tekniska Universitet organization ID 2021002841, deadline 2026-10-12, and `verificationStatus: unverified`. Coverage remained explicitly partial.
+
+The employer posting [reference 4830-2026, ReachMee 10568](https://web103.reachmee.com/ext/I003/583/job?job_id=10568&lang=SE&notrack=true&site=6&validator=e4575239eb8c0828707e2b716f86c5f8) independently showed the matching title and deadline, a two-year postdoc, a related PhD and documented microalgae experiment experience. This page comparison is a source replay, not a claim of applicant eligibility; application interaction and employer delegation from the main LTU page were not verified by this replay. It does not establish a deployed integration or working Redis Lua.
+
+Current Platsbanken ads are CC0 in the [official dataset catalog](https://data.arbetsformedlingen.se/dataset/). The [official API guide](https://arbetsformedlingen.se/om-webbplatsen/apier-och-oppna-data) describes free public use. The adapter only requests public minimal fields, strips descriptions/contacts, uses bounded bytes and does not send an applicant or a caller's field to the source.
+
+Public seam tests cover repeated source reuse across fields, refresh/new additions, failures/staleness, blocked quota/concurrency, expired/corrupt records, minimal persistence, opt-in configuration, 429 cooldown and missing credentials. Actual Redis Lua, distributed concurrency, real expiry and shared account headroom are pending, so production persistence remains disabled and ADR 0007 remains proposed. No account plan or payment setting changed.
