@@ -11,14 +11,14 @@ export function renderPrivateAcademicFit({ publicReport, fitNotes }) {
     if (!result || seen.has(note.resultId) || !Array.isArray(note.checks) || !Array.isArray(note.gaps)
       || note.gaps.some((g) => typeof g !== "string" || !g.trim())) throw new Error("Invalid local fit note.");
     seen.add(note.resultId);
-    const requirements = (result.claims ?? []).map((c, index) => ({ ...c, index })).filter((c) => c.kind === "requirement");
+    const requirements = (result.claims ?? []).map((c, index) => ({ ...c, index })).filter((c) => ["requirement", "nationality"].includes(c.kind));
     const indexes = new Set();
     for (const check of note.checks) {
       if (!requirements.some((r) => r.index === check.claimIndex) || indexes.has(check.claimIndex)
         || !["met", "not_met", "unknown"].includes(check.result) || typeof check.applicantEvidence !== "string" || !check.applicantEvidence.trim()) throw new Error("Every personal comparison must reference one actual official requirement and stated applicant evidence.");
       indexes.add(check.claimIndex);
     }
-    const complete = requirements.length > 0 && note.checks.length === requirements.length;
+    const complete = requirements.some((r) => r.kind === "requirement") && note.checks.length === requirements.length;
     const status = note.checks.some((c) => c.result === "not_met") ? "requirement_not_met" : !complete ? "insufficient_evidence"
       : note.checks.some((c) => c.result === "unknown") || note.gaps.length ? "conditional_fit" : "supported_fit";
     const labels = { requirement_not_met: "شرط بررسی‌شده برآورده نشده؛ از فهرست اصلی شخصی کنار گذاشته شد", insufficient_evidence: "شواهد تطبیق کافی نیست", conditional_fit: "تطبیق مشروط", supported_fit: "تطبیق با شرایط بررسی‌شده پشتیبانی می‌شود" };

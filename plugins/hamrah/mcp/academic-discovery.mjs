@@ -28,13 +28,23 @@ export function canonicalTerm(value) {
     .toLowerCase().replace(/\s+/g, " ").trim();
   return aliases.get(term) ?? term;
 }
+export function canonicalResearchText(value) {
+  let text = canonicalTerm(value);
+  for (const [alias, canonical] of [...aliases].sort((a, b) => b[0].length - a[0].length)) {
+    const escaped = alias.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    text = text.replace(new RegExp(`(?<![\\p{L}\\p{N}])${escaped}(?![\\p{L}\\p{N}])`, "gu"), canonical);
+  }
+  return text;
+}
 export function publicSearchText(value) {
   return !/[<>@`\r\n]|https?:|www\.|\b(?:passport|email|phone|address)\b|ایمیل|شماره|آدرس|\d[\d\s().+-]{6,}\d/iu.test(value);
 }
 export function academicId(value) { return createHash("sha256").update(JSON.stringify(value)).digest("hex").slice(0, 24); }
 export function normalizeAcademicInput(input) {
   if (!validate(input) || [input.field, input.researchFocus, input.institution].filter(Boolean).some((v) => !publicSearchText(v))) return null;
-  return { type: input.type, field: canonicalTerm(input.field), researchFocus: input.researchFocus ? canonicalTerm(input.researchFocus) : null,
+  const field = canonicalResearchText(input.field), focus = input.researchFocus ? canonicalResearchText(input.researchFocus) : null;
+  if (field.length > 160 || focus?.length > 160) return null;
+  return { type: input.type, field, researchFocus: focus,
     institution: input.institution ? canonicalTerm(input.institution) : null, countryCode: input.countryCode ?? null,
     fundingRequired: input.fundingRequired ?? false, limit: input.limit ?? 10 };
 }
@@ -53,10 +63,10 @@ export async function discoverAcademicMatches(input, fetchImpl, signal, options 
     if (!byUrl.has(key)) byUrl.set(key, { ...result, url, id: academicId(key), fundingStatus: "unknown", applicationStatus: "unknown" });
   }
   const candidateRank = (r) => (scope.institution && canonicalTerm(r.institution ?? r.title) === scope.institution ? 100 : 0)
-    + (r.discoverySource === "ror" ? 10 : 0) + ([scope.field, scope.researchFocus].filter(Boolean).filter((term) => canonicalTerm(r.title).includes(term)).length);
+    + (r.discoverySource === "ror" ? 10 : 0) + ([scope.field, scope.researchFocus].filter(Boolean).filter((term) => canonicalResearchText(r.title).includes(term)).length);
   const candidates = [...byUrl.values()].sort((a, b) => candidateRank(b) - candidateRank(a) || a.url.localeCompare(b.url, "en"));
   const report = { schemaVersion: "1.0.0", reportId: academicId({ scope, checkedAt, candidates, sources: collected.sources, researchContext: collected.researchContext }), checkedAt, scope,
-    policyVersions: { query: "1", ranking: "1", evidence: "2" },
+    policyVersions: { query: "2", ranking: "2", evidence: "3" },
     inputCompleteness: { mode: "exploratory", missing: ["applicant_academic_facts", ...(!scope.countryCode ? ["country_scope"] : [])] },
     queryPlan, status: "partial", coverage: { sources: collected.sources, countriesChecked: collected.countriesChecked, failures: collected.failures, truncated: collected.truncated || candidates.length > scope.limit, globalCoverage: "not_established" },
     verifiedResults: [], discoveryCandidates: candidates.slice(0, scope.limit), researchContext: collected.researchContext, exclusions: [], changes: [],

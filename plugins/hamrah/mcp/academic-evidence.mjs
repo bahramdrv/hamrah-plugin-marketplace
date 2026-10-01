@@ -41,7 +41,7 @@ export function readAcademicEvidenceToken(token, options = {}) {
     if (signature.length !== expected.length || !timingSafeEqual(signature, expected)) return null;
     const record = JSON.parse(Buffer.from(parts[0], "base64url").toString());
     const now = (options.now?.() ?? new Date()).getTime();
-    if ((options.allowHistorical ? !["1", "2"].includes(record.policyVersion) : record.policyVersion !== "2") || !Number.isFinite(Date.parse(record.checkedAt))
+    if ((options.allowHistorical ? !["1", "2", "3"].includes(record.policyVersion) : record.policyVersion !== "3") || !Number.isFinite(Date.parse(record.checkedAt))
       || (!options.allowHistorical && (Date.parse(record.checkedAt) > now || now - Date.parse(record.checkedAt) > 15 * 60000))) return null;
     return record;
   } catch { return null; }
@@ -59,7 +59,8 @@ function hasText(text, excerpt) { return text.toLowerCase().includes(officialTex
 function validDay(day) { return /^\d{4}-\d{2}-\d{2}$/.test(day) && new Date(`${day}T00:00:00Z`).toISOString().slice(0, 10) === day; }
 function applicationValid(claim, today) {
   if (!claim || /closed|no longer|not accepting|expired|بسته|پایان یافته/i.test(claim.excerpt)) return false;
-  if (claim.mode === "rolling") return /rolling|applications? (?:are )?(?:open|accepted)|پذیرش مستمر/i.test(claim.excerpt);
+  if (claim.mode === "rolling") return /rolling|until (?:the position is )?filled|پذیرش مستمر/i.test(claim.excerpt)
+    && !/deadline|closing date|until\s+\d|will\s+(?:open|start|begin|accept)/i.test(claim.excerpt) && !claim.deadline;
   if (claim.mode !== "dated" || !claim.deadline || !validDay(claim.deadline) || claim.deadline <= today) return false;
   // Require a literal date in the fetched excerpt, rather than trusting a supplied date field.
   const date = new Date(`${claim.deadline}T00:00:00Z`);
@@ -106,8 +107,12 @@ export async function verifyAcademicEvidence(input, fetchImpl, signal, options =
       if (input.type === "program" && !input.claims.some((c) => c.kind === "requirement")) return { ...base, reasons: ["admission_requirements_not_confirmed"] };
       const application = input.claims.find((c) => c.kind === "application");
       const call = ["masters", "phd", "postdoc", "research_job", "funding"].includes(input.type);
-      const isOpen = applicationValid(application, checkedAt.slice(0, 10));
-      if (call && (!isOpen || /(?:applications?|position|vacancy|call) (?:are |is )?(?:closed|filled)|no longer accepting applications/i.test(content))) return { ...base, reasons: ["current_open_call_not_confirmed"] };
+      const applicationPosition = application ? content.toLowerCase().indexOf(officialText(application.excerpt).toLowerCase()) : -1;
+      const applicationContext = applicationPosition < 0 ? "" : content.slice(Math.max(0, applicationPosition - 100), applicationPosition + officialText(application.excerpt).length + 200);
+      const rollingHasCutoff = application?.mode === "rolling" && /(?:deadline|closing date|closes|until)[^.!?]{0,50}\d/i.test(applicationContext);
+      const isOpen = applicationValid(application, checkedAt.slice(0, 10)) && !rollingHasCutoff;
+      const closureText = content.replace(/until (?:the )?(?:position|vacancy|call) is filled/gi, "rolling window");
+      if (call && (!isOpen || /(?:applications?|position|vacancy|call) (?:are |is |has been |have been |was |were )?(?:closed|filled)|no longer accepting applications/i.test(closureText))) return { ...base, reasons: ["current_open_call_not_confirmed"] };
       if (input.type === "supervisor" && !input.claims.some((c) => c.kind === "research")) return { ...base, reasons: ["research_relevance_not_confirmed"] };
       if (input.type === "supervisor") {
         const affiliation = input.claims.find((c) => c.kind === "affiliation" && hasText(c.excerpt, input.title) && hasText(c.excerpt, input.institution));
@@ -121,7 +126,7 @@ export async function verifyAcademicEvidence(input, fetchImpl, signal, options =
       const fundingStatus = input.type === "grant" ? "unknown" : funding?.fundingStatus === "guaranteed" && /salary|stipend|fully funded|tuition waiver|حقوق|کمک هزینه/i.test(funding.excerpt)
         && !["funding", "grant", "university"].includes(input.type) && !/\bno\b|\bnot\b|without|competitive|\bmay\b|subject to|conditional|depending on|مشروط|رقابتی|ندارد|بدون/i.test(fundingContext) ? "guaranteed"
         : funding?.fundingStatus === "competitive" ? "competitive" : "unknown";
-      const record = { policyVersion: "2", type: input.type, title: input.title, institution: input.institution, countryCode: input.countryCode,
+      const record = { policyVersion: "3", type: input.type, title: input.title, institution: input.institution, countryCode: input.countryCode,
         rorId: input.rorId, url: page.url, checkedAt, verificationStatus: call ? "verified_open" : "verified_official_record",
         applicationStatus: isOpen ? "open" : "unknown", deadline: isOpen ? application.deadline ?? null : null,
         fundingStatus, recruitmentStatus: input.claims.some((c) => c.kind === "recruitment" && /accepting|recruiting|open position|جذب/i.test(c.excerpt)

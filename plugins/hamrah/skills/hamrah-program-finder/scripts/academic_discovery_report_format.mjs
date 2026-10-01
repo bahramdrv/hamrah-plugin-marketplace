@@ -8,7 +8,8 @@ export function renderDiscoveryMarkdown(report) {
   const fundingLabels = { guaranteed: "حقوق یا بستهٔ فاند مستند", competitive: "فاند رقابتی؛ دریافت تضمین نشده", unknown: "فاند نامعلوم" };
   for (const result of report.verifiedResults) {
     lines.push(`- **${result.title}** — ${result.institution} · ${result.countryCode} · [منبع رسمی](${result.url})`);
-    lines.push(`  وضعیت: ${result.applicationStatus === "open" ? "فراخوان باز" : "رکورد رسمی؛ بازبودن جذب احراز نشده"}؛ ${fundingLabels[result.fundingStatus] ?? "فاند نامعلوم"}؛ مهلت: ${result.deadline ?? "نامعلوم/ذکر نشده"}`);
+    lines.push(`  وضعیت: ${result.applicationStatus === "open" ? "فراخوان باز" : "وضعیت فراخوان نامعلوم"}؛ ${fundingLabels[result.fundingStatus] ?? "فاند نامعلوم"}؛ مهلت: ${result.deadline ?? "نامعلوم/ذکر نشده"}`);
+    if (result.kind === "supervisor") lines.push(`  جذب پژوهشی: ${result.recruitmentStatus === "documented" ? "شاهد رسمی جذب موجود است" : "نامعلوم"}`);
     if (result.researchFit) lines.push(`  ارتباط پژوهشی: ${result.researchFit.matchedTopics.join("، ") || "نیازمند بررسی"}؛ ${result.researchFit.explanation}`);
     lines.push(`  تاریخ بررسی رسمی: ${result.checkedAt}`);
     for (const claim of result.claims ?? []) lines.push(`  شاهد ${claim.kind}: ${claim.excerpt.replace(/[\r\n]/g, " ")}`);

@@ -1,5 +1,5 @@
 import Ajv from "ajv";
-import { ACADEMIC_TYPES, ACADEMIC_DISCOVERY_TOOL, academicId, canonicalTerm, normalizeAcademicInput, renderDiscoveryMarkdown } from "./academic-discovery.mjs";
+import { ACADEMIC_TYPES, ACADEMIC_DISCOVERY_TOOL, academicId, canonicalTerm, canonicalResearchText, normalizeAcademicInput, renderDiscoveryMarkdown } from "./academic-discovery.mjs";
 import { readAcademicEvidenceToken } from "./academic-evidence.mjs";
 import { canonicalAcademicUrl, safeAcademicText } from "./academic-source-contract.mjs";
 
@@ -32,7 +32,7 @@ export function renderAcademicDiscoveryReport(input, options = {}) {
     if (record.type !== scope.type || (scope.countryCode && record.countryCode !== scope.countryCode)
       || (scope.institution && canonicalTerm(record.institution) !== scope.institution)) { exclusions.push({ url: record.url, reason: "outside_requested_scope" }); continue; }
     if (scope.fundingRequired && record.fundingStatus !== "guaranteed") { exclusions.push({ url: record.url, reason: "guaranteed_funding_not_confirmed" }); continue; }
-    const publicEvidence = canonicalTerm([record.title, ...record.claims.filter((c) => ["research", "program"].includes(c.kind)).map((c) => c.excerpt)].join(" "));
+    const publicEvidence = canonicalResearchText([record.title, ...record.claims.filter((c) => ["research", "program"].includes(c.kind)).map((c) => c.excerpt)].join(" "));
     const topics = [scope.field, scope.researchFocus].filter(Boolean);
     const matchedTopics = topics.filter((term) => publicEvidence.includes(term));
     if (!matchedTopics.length && !["university", "grant"].includes(scope.type)) { exclusions.push({ url: record.url, reason: "research_relevance_not_confirmed" }); continue; }
@@ -52,7 +52,7 @@ export function renderAcademicDiscoveryReport(input, options = {}) {
   const sources = [...(input.sourceCoverage ?? [])].sort((a, b) => a.source.localeCompare(b.source, "en"));
   for (const source of sources.filter((s) => s.status !== "ok")) failures.push({ source: source.source, reason: "source_not_successfully_checked" });
   const report = { schemaVersion: "1.0.0", reportId: academicId({ scope, checkedAt, records: ordered.map((r) => [r.id, r.sourceHash]) }), checkedAt, scope,
-    policyVersions: { query: "1", ranking: "1", evidence: "2" },
+    policyVersions: { query: "2", ranking: "2", evidence: "3" },
     inputCompleteness: { mode: "exploratory", missing: ["complete_requirement_comparison"] },
     status: "partial", coverage: { sources, countriesChecked: [...new Set(ordered.map((r) => r.countryCode))].sort(), failures,
       truncated: ordered.length > scope.limit || candidates.length > scope.limit, globalCoverage: "not_established" },

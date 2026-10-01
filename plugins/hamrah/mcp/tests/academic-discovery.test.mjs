@@ -66,6 +66,12 @@ test("verified results require freshly retrieved official evidence; source excer
   const replay = await executeTool("renderAcademicDiscoveryReport", replayArgs, changedFetcher, options);
   assert.equal(replay.structuredContent.changes[0].status, "official_evidence_changed");
   assert.deepEqual(replay, await executeTool("renderAcademicDiscoveryReport", replayArgs, changedFetcher, options));
+  const abbreviated = { ...input, title: "Doctoral Researcher in AI", claims: claims.map((c) => ["title", "research"].includes(c.kind) ? { ...c, excerpt: c.excerpt.replaceAll("artificial intelligence", "AI") } : c) };
+  const abbreviatedFetcher = async (url) => url.startsWith("https://api.ror.org/") ? fetcher(url)
+    : new Response(abbreviated.claims.map((c) => c.excerpt).join(" "), { headers: { "content-type": "text/html" } });
+  const abbreviationEvidence = await executeTool("verifyAcademicEvidence", abbreviated, abbreviatedFetcher, options);
+  const abbreviationReport = await executeTool("renderAcademicDiscoveryReport", { request: { type: "phd", field: "هوش مصنوعی" }, evidenceTokens: [abbreviationEvidence.structuredContent.evidenceToken], candidates: [] }, abbreviatedFetcher, options);
+  assert.equal(abbreviationReport.structuredContent.verifiedResults.length, 1, "registered aliases in primary evidence must match the canonical field");
   const conditionalFetcher = async (url) => url.startsWith("https://api.ror.org/") ? fetcher(url)
     : new Response(`${claims.map((c) => c.excerpt).join(" ")} subject to external funding approval.`, { headers: { "content-type": "text/html" } });
   const conditional = await executeTool("verifyAcademicEvidence", input, conditionalFetcher, options);
@@ -143,6 +149,20 @@ test("unsafe DNS, expired calls and competitive funding never produce a verified
   assert.equal(report.structuredContent.exclusions[0].reason, "guaranteed_funding_not_confirmed");
   const expired = await executeTool("verifyAcademicEvidence", input, fetcher, { academicDiscovery: { ...publicOptions.academicDiscovery, now: () => new Date("2026-10-16T10:00:00Z") } });
   assert.equal(expired.structuredContent.verificationStatus, "unverified");
+  const mislabeledRolling = await executeTool("verifyAcademicEvidence", { ...input, claims: input.claims.map((c) => c.kind === "application"
+    ? { kind: c.kind, excerpt: c.excerpt, mode: "rolling" } : c) }, fetcher,
+    { academicDiscovery: { ...publicOptions.academicDiscovery, now: () => new Date("2026-10-16T10:00:00Z") } });
+  assert.equal(mislabeledRolling.structuredContent.verificationStatus, "unverified", "calling a dated expired application rolling must not reopen it");
+  const rolling = { ...input, claims: input.claims.map((c) => c.kind === "application"
+    ? { kind: c.kind, excerpt: "Applications are accepted on a rolling basis until the position is filled", mode: "rolling" } : c) };
+  const rollingFetcher = async (url) => url.startsWith("https://api.ror.org/") ? fetcher(url)
+    : new Response(rolling.claims.map((c) => c.excerpt).join(" "), { headers: { "content-type": "text/html" } });
+  const genuinelyRolling = await executeTool("verifyAcademicEvidence", rolling, rollingFetcher, publicOptions);
+  assert.equal(genuinelyRolling.structuredContent.verificationStatus, "verified_open");
+  const clippedFetcher = async (url) => url.startsWith("https://api.ror.org/") ? fetcher(url)
+    : new Response(`${rolling.claims.map((c) => c.excerpt).join(" ")} Final application deadline: 15 September 2026.`, { headers: { "content-type": "text/html" } });
+  const clipped = await executeTool("verifyAcademicEvidence", rolling, clippedFetcher, publicOptions);
+  assert.equal(clipped.structuredContent.verificationStatus, "unverified");
 });
 
 test("a funding claim with negation and recruitment that is explicitly closed remain unknown", async () => {
@@ -265,6 +285,12 @@ test("private fit compares actual official requirements locally and cannot claim
   const failed = renderPrivateAcademicFit({ publicReport: fullReport, fitNotes: [{ ...note, checks: [{ ...note.checks[0], result: "not_met" }] }] });
   assert.doesNotMatch(failed.split("## سرنخ‌های نیازمند بررسی")[0], /Physics PhD/);
   assert.match(failed, /شرط بررسی‌شده برآورده نشده/);
+  const nationalityReport = { ...fullReport, verifiedResults: [{ ...fullReport.verifiedResults[0], claims: [...fullReport.verifiedResults[0].claims,
+    { kind: "nationality", excerpt: "Applicants must be EU citizens", sourceUrl: "https://uni.example/jobs/42" }] }] };
+  const nationalityFailed = renderPrivateAcademicFit({ publicReport: nationalityReport, fitNotes: [{ ...note,
+    checks: [{ claimIndex: 3, result: "not_met", applicantEvidence: "کاربر فقط تابعیت ایران دارد" }] }] });
+  assert.doesNotMatch(nationalityFailed.split("## سرنخ‌های نیازمند بررسی")[0], /Physics PhD/);
+  assert.match(nationalityFailed, /Applicants must be EU citizens/);
 });
 
 test("an unsupported job API scope is unavailable, not a successfully received source", async () => {
