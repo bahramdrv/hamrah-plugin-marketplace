@@ -56,7 +56,7 @@ export async function discoverAcademicMatches(input, fetchImpl, signal, options 
     + (r.discoverySource === "ror" ? 10 : 0) + ([scope.field, scope.researchFocus].filter(Boolean).filter((term) => canonicalTerm(r.title).includes(term)).length);
   const candidates = [...byUrl.values()].sort((a, b) => candidateRank(b) - candidateRank(a) || a.url.localeCompare(b.url, "en"));
   const report = { schemaVersion: "1.0.0", reportId: academicId({ scope, checkedAt, candidates, sources: collected.sources, researchContext: collected.researchContext }), checkedAt, scope,
-    policyVersions: { query: "1", ranking: "1", evidence: "1" },
+    policyVersions: { query: "1", ranking: "1", evidence: "2" },
     inputCompleteness: { mode: "exploratory", missing: ["applicant_academic_facts", ...(!scope.countryCode ? ["country_scope"] : [])] },
     queryPlan, status: "partial", coverage: { sources: collected.sources, countriesChecked: collected.countriesChecked, failures: collected.failures, truncated: collected.truncated || candidates.length > scope.limit, globalCoverage: "not_established" },
     verifiedResults: [], discoveryCandidates: candidates.slice(0, scope.limit), researchContext: collected.researchContext, exclusions: [], changes: [],

@@ -6,7 +6,7 @@ import { fetchOfficialAcademicPage } from "./academic-official-http.mjs";
 
 const types = ["university", "program", "supervisor", "masters", "phd", "postdoc", "research_job", "funding", "grant"];
 const claimSchema = { type: "object", additionalProperties: false, required: ["kind", "excerpt"], properties: {
-  kind: { enum: ["title", "research", "program", "recruitment", "application", "funding", "requirement", "nationality"] },
+  kind: { enum: ["title", "affiliation", "research", "program", "recruitment", "application", "funding", "requirement", "nationality"] },
   excerpt: { type: "string", minLength: 12, maxLength: 1200 }, mode: { enum: ["dated", "rolling"] },
   deadline: { type: "string", pattern: "^\\d{4}-\\d{2}-\\d{2}$" }, fundingStatus: { enum: ["guaranteed", "competitive", "none", "unknown"] }
 } };
@@ -17,7 +17,7 @@ const schema = { type: "object", additionalProperties: false, required: ["type",
 } };
 const validate = new Ajv({ allErrors: true }).compile(schema);
 export const ACADEMIC_EVIDENCE_TOOL = { name: "verifyAcademicEvidence", title: "Check fresh official academic evidence",
-  description: "Verify a public academic record against its ROR identity and freshly retrieved exact institutional page. Supply literal excerpts for each claim, never applicant facts. A supported future application window is required for open calls; research relevance never establishes recruitment or funding. External job boards require current official delegation. Returns signed, short-lived evidence for renderAcademicDiscoveryReport. Blocked or ambiguous sources stay unverified; continue host/browser research.",
+  description: "Verify a public academic record against its ROR identity and freshly retrieved exact institutional page. Supply literal excerpts for each claim, never applicant facts. For supervisors, title is the public professional name/title and an affiliation excerpt must explicitly contain that name/title and institution and establish current membership; research relevance alone is insufficient. A supported future application window is required for open calls; research relevance never establishes recruitment or funding. External job boards require current official delegation. Returns signed, short-lived evidence for renderAcademicDiscoveryReport. Blocked or ambiguous sources stay unverified; continue host/browser research.",
   inputSchema: schema, annotations: { readOnlyHint: true, openWorldHint: true, destructiveHint: false } };
 
 export function academicEvidenceKey(options = {}) {
@@ -41,7 +41,7 @@ export function readAcademicEvidenceToken(token, options = {}) {
     if (signature.length !== expected.length || !timingSafeEqual(signature, expected)) return null;
     const record = JSON.parse(Buffer.from(parts[0], "base64url").toString());
     const now = (options.now?.() ?? new Date()).getTime();
-    if (record.policyVersion !== "1" || !Number.isFinite(Date.parse(record.checkedAt))
+    if ((options.allowHistorical ? !["1", "2"].includes(record.policyVersion) : record.policyVersion !== "2") || !Number.isFinite(Date.parse(record.checkedAt))
       || (!options.allowHistorical && (Date.parse(record.checkedAt) > now || now - Date.parse(record.checkedAt) > 15 * 60000))) return null;
     return record;
   } catch { return null; }
@@ -109,13 +109,19 @@ export async function verifyAcademicEvidence(input, fetchImpl, signal, options =
       const isOpen = applicationValid(application, checkedAt.slice(0, 10));
       if (call && (!isOpen || /(?:applications?|position|vacancy|call) (?:are |is )?(?:closed|filled)|no longer accepting applications/i.test(content))) return { ...base, reasons: ["current_open_call_not_confirmed"] };
       if (input.type === "supervisor" && !input.claims.some((c) => c.kind === "research")) return { ...base, reasons: ["research_relevance_not_confirmed"] };
+      if (input.type === "supervisor") {
+        const affiliation = input.claims.find((c) => c.kind === "affiliation" && hasText(c.excerpt, input.title) && hasText(c.excerpt, input.institution));
+        const position = affiliation ? content.toLowerCase().indexOf(officialText(affiliation.excerpt).toLowerCase()) : -1;
+        const context = position < 0 ? "" : content.slice(Math.max(0, position - 100), position + officialText(affiliation.excerpt).length + 100);
+        if (!affiliation || /(?:former|previous)\s+(?:professor|researcher|faculty|member)|(?:not|no longer)\s+(?:affiliated|employed|at|a professor|a researcher)|سابق|پیشین|قبلاً/i.test(context)) return { ...base, reasons: ["current_affiliation_not_confirmed"] };
+      }
       const funding = input.claims.find((c) => c.kind === "funding");
       const fundingPosition = funding ? content.toLowerCase().indexOf(officialText(funding.excerpt).toLowerCase()) : -1;
       const fundingContext = fundingPosition < 0 ? "" : content.slice(Math.max(0, fundingPosition - 160), fundingPosition + officialText(funding.excerpt).length + 160);
       const fundingStatus = input.type === "grant" ? "unknown" : funding?.fundingStatus === "guaranteed" && /salary|stipend|fully funded|tuition waiver|حقوق|کمک هزینه/i.test(funding.excerpt)
         && !["funding", "grant", "university"].includes(input.type) && !/\bno\b|\bnot\b|without|competitive|\bmay\b|subject to|conditional|depending on|مشروط|رقابتی|ندارد|بدون/i.test(fundingContext) ? "guaranteed"
         : funding?.fundingStatus === "competitive" ? "competitive" : "unknown";
-      const record = { policyVersion: "1", type: input.type, title: input.title, institution: input.institution, countryCode: input.countryCode,
+      const record = { policyVersion: "2", type: input.type, title: input.title, institution: input.institution, countryCode: input.countryCode,
         rorId: input.rorId, url: page.url, checkedAt, verificationStatus: call ? "verified_open" : "verified_official_record",
         applicationStatus: isOpen ? "open" : "unknown", deadline: isOpen ? application.deadline ?? null : null,
         fundingStatus, recruitmentStatus: input.claims.some((c) => c.kind === "recruitment" && /accepting|recruiting|open position|جذب/i.test(c.excerpt)

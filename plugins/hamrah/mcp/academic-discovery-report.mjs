@@ -52,7 +52,7 @@ export function renderAcademicDiscoveryReport(input, options = {}) {
   const sources = [...(input.sourceCoverage ?? [])].sort((a, b) => a.source.localeCompare(b.source, "en"));
   for (const source of sources.filter((s) => s.status !== "ok")) failures.push({ source: source.source, reason: "source_not_successfully_checked" });
   const report = { schemaVersion: "1.0.0", reportId: academicId({ scope, checkedAt, records: ordered.map((r) => [r.id, r.sourceHash]) }), checkedAt, scope,
-    policyVersions: { query: "1", ranking: "1", evidence: "1" },
+    policyVersions: { query: "1", ranking: "1", evidence: "2" },
     inputCompleteness: { mode: "exploratory", missing: ["complete_requirement_comparison"] },
     status: "partial", coverage: { sources, countriesChecked: [...new Set(ordered.map((r) => r.countryCode))].sort(), failures,
       truncated: ordered.length > scope.limit || candidates.length > scope.limit, globalCoverage: "not_established" },

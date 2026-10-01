@@ -147,6 +147,7 @@ test("unsafe DNS, expired calls and competitive funding never produce a verified
 
 test("a funding claim with negation and recruitment that is explicitly closed remain unknown", async () => {
   const claims = [{ kind: "title", excerpt: "Professor of artificial intelligence" },
+    { kind: "affiliation", excerpt: "Professor of artificial intelligence at Example University" },
     { kind: "research", excerpt: "Research on artificial intelligence" },
     { kind: "funding", excerpt: "No salary or stipend is provided", fundingStatus: "guaranteed" },
     { kind: "recruitment", excerpt: "We are not accepting new students" }];
@@ -157,6 +158,10 @@ test("a funding claim with negation and recruitment that is explicitly closed re
   const result = await executeTool("verifyAcademicEvidence", input, fetcher, { academicDiscovery: { ...disabled, evidenceKey: "fixture-signing-key-that-is-long-enough", resolveHost: async () => [{ address: "93.184.216.34", family: 4 }] } });
   assert.equal(result.structuredContent.fundingStatus, "unknown");
   assert.equal(result.structuredContent.recruitmentStatus, "unknown");
+  const unsupportedAffiliation = await executeTool("verifyAcademicEvidence", { ...input, claims: claims.filter((c) => c.kind !== "affiliation") }, fetcher,
+    { academicDiscovery: { ...disabled, evidenceKey: "fixture-signing-key-that-is-long-enough", resolveHost: async () => [{ address: "93.184.216.34", family: 4 }] } });
+  assert.equal(unsupportedAffiliation.structuredContent.verificationStatus, "unverified");
+  assert.ok(unsupportedAffiliation.structuredContent.reasons.includes("current_affiliation_not_confirmed"));
 });
 
 test("an exact requested institution survives the result limit and provider reordering", async () => {
@@ -211,7 +216,8 @@ test("one timed-out provider and a database outage preserve successful web cover
 
 test("ROR official web subdomains support sibling faculties without trusting another private-domain tenant", async () => {
   const input = { type: "supervisor", title: "Professor of artificial intelligence", institution: "Example University", countryCode: "US", rorId: "https://ror.org/03yrm5c26", url: "https://faculty.university.edu/person/42",
-    claims: [{ kind: "title", excerpt: "Professor of artificial intelligence" }, { kind: "research", excerpt: "Research on artificial intelligence" }] };
+    claims: [{ kind: "title", excerpt: "Professor of artificial intelligence" }, { kind: "research", excerpt: "Research on artificial intelligence" },
+      { kind: "affiliation", excerpt: "Professor of artificial intelligence at Example University" }] };
   let homepage = "https://web.university.edu/";
   const fetcher = async (url) => url.startsWith("https://api.ror.org/") ? Response.json({ id: input.rorId, status: "active", types: ["education"],
     names: [{ value: input.institution }], links: [{ type: "website", value: homepage }], locations: [{ geonames_details: { country_code: "US" } }] })
@@ -219,6 +225,11 @@ test("ROR official web subdomains support sibling faculties without trusting ano
   const options = { academicDiscovery: { ...disabled, evidenceKey: "fixture-signing-key-that-is-long-enough", resolveHost: async () => [{ address: "93.184.216.34", family: 4 }] } };
   const faculty = await executeTool("verifyAcademicEvidence", input, fetcher, options);
   assert.equal(faculty.structuredContent.verificationStatus, "verified_official_record");
+  const formerFetcher = async (url) => url.startsWith("https://api.ror.org/") ? fetcher(url)
+    : new Response(`Former ${input.claims.map((c) => c.excerpt).join(" ")}`, { headers: { "content-type": "text/html" } });
+  const former = await executeTool("verifyAcademicEvidence", input, formerFetcher, options);
+  assert.equal(former.structuredContent.verificationStatus, "unverified");
+  assert.ok(former.structuredContent.reasons.includes("current_affiliation_not_confirmed"));
   homepage = "https://university.github.io/";
   const impostor = await executeTool("verifyAcademicEvidence", { ...input, url: "https://other.github.io/person/42" }, fetcher, options);
   assert.equal(impostor.structuredContent.verificationStatus, "unverified");
