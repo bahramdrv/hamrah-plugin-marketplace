@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-02T07:10:06.852Z",
+  "base": "https://hamrah-plugin-marketplace.vercel.app",
+  "deploymentCommit": "b4a8470e8b249064e49341ec672d7e962760697a",
+  "localPluginVersion": "0.1.4",
+  "tools": 54,
+  "skills": 5,
+  "advertisedResourcesMatched": 111,
+  "actualResourcesMatched": 8,
+  "note": "Verifies server resources against the local release; installed Codex plugins update separately through the marketplace."
+}

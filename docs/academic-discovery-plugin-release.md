@@ -27,6 +27,8 @@ npm run verify:live:plugin -- https://hamrah-plugin-marketplace.vercel.app <expe
 
 This read-only command checks the three academic tools, compares every advertised skill-resource digest with the local release, and reads eight academic workflow/script resources to compare their actual content. It sends no applicant facts and makes no paid API request. It verifies the server bundle, not the installed Codex cache.
 
+Production acceptance passed on implementation commit `b4a8470e8b249064e49341ec672d7e962760697a`, deployment `dpl_F7H2u649dGoVyQudNcko693ztUA7`: all 111 advertised resource digests and eight actual academic resource bodies matched the local source; the final live MCP script passed on the same commit. Fourteen real API/web/official-verification/report calls had also passed on `6e91872` before the catalog-only correction. That small direct-HTTP sample had p50/p95 1.463s/9.176s; it is not a latency or global-coverage guarantee. GB masters job-API coverage remained unavailable, with web leads kept separate. Public records are in `.scratch/academic-discovery-orchestration/evidence/plugin-014-live-bundle.json` and `plugin-014-academic-acceptance.json`.
+
 ## Publishing and installed-plugin update
 
 At preparation time, `git ls-remote origin refs/heads/main` returned `940fb1f0f6d23aa84e6c075cee2b06b0b11c5aeb`. A normal authorized push to `origin/main` is required before GitHub marketplace users can obtain this release. AGENTS.md requires an explicit request to push. Until that authorization, the code may be deployed directly to Vercel while the GitHub package remains at the previous version.
