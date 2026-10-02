@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-02T07:22:47.704Z",
+  "plugin": "hamrah@hamrah-marketplace",
+  "version": "0.1.4",
+  "skillResourcesMatched": 111,
+  "configurationFilesMatched": 4,
+  "mcpUrl": "https://hamrah-plugin-marketplace.vercel.app/mcp",
+  "note": "Verified installed files; a new chat loads the refreshed skills and tool catalog.",
+  "enabled": true,
+  "cacheLocation": "plugins/cache/hamrah-marketplace/hamrah/0.1.4 (relative to Codex home)"
+}

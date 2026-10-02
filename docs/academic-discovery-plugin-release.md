@@ -1,4 +1,4 @@
-# Academic Discovery plugin 0.1.4 — release readiness
+# Academic Discovery plugin 0.1.4 — published and installed
 
 Client date: 2026-10-02. This is a plugin-package release, separate from the live MCP server deployment recorded in [implementation acceptance](academic-discovery-acceptance.md).
 
@@ -41,3 +41,9 @@ codex plugin add hamrah@hamrah-marketplace
 ```
 
 The local CLI documents these commands. Verify the installed manifest declares 0.1.4 and its skill resources match the release, then open a new Codex chat to load the refreshed skills and MCP tool catalog. ChatGPT MCP skill imports use the separately published server resources and need re-import/refresh in that client. Do not claim the installed plugin is updated before checking its installed files.
+
+## Completed publication and installation
+
+The owner explicitly authorized push and installed-plugin update on 2026-10-02. Commit `815c1f1816509c51e78f4b810a338f13ca67ecfc` was pushed normally to origin/main. Both [Verify release](https://github.com/bahramdrv/hamrah-plugin-marketplace/actions/runs/36977791186) and [community-signals-validate](https://github.com/bahramdrv/hamrah-plugin-marketplace/actions/runs/36977791187) succeeded. The GitHub CLI had no login, so the workflow statuses were read from the public GitHub API without introducing credentials.
+
+Vercel automatically deployed the published commit; the expected commit, all 111 advertised skill-resource digests and eight actual resource bodies matched. Marketplace upgrade returned no errors and plugin add reported version 0.1.4. Installed files were read and checked: the version is 0.1.4, the plugin is enabled, all 111 skill resources and four configuration/assets files match the release, and the MCP URL points to the expected Production endpoint. A new chat loads the refreshed skills and tools. Public records are in `evidence/plugin-014-published-live-bundle.json` and `evidence/plugin-014-installed-acceptance.json` under the feature tracker; workstation-specific absolute paths are omitted.
