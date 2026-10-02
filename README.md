@@ -16,13 +16,21 @@ Production MCP URL:
 https://hamrah-plugin-marketplace.vercel.app/mcp
 ```
 
-In ChatGPT Web, enable Developer mode, add a new plugin/app with the URL above, and run **Scan Tools**. The server exposes 51 tools and five importable Hamrah skills. The supervisor discovery tool writes only minimal public candidate names to an expiring shared cache when Redis REST is configured. The main imported skill also contains the scorecard-image workflow so ChatGPT can use its image-generation capability after validating a scorecard.
+In ChatGPT Web, enable Developer mode, add a new plugin/app with the URL above, and run **Scan Tools**. The server exposes 54 tools and five importable Hamrah skills. The supervisor discovery tool writes only minimal public candidate names to an expiring shared cache when Redis REST is configured. The main imported skill also contains the scorecard-image workflow so ChatGPT can use its image-generation capability after validating a scorecard.
 
-Each MCP request is bounded (defaults in `plugins/hamrah/mcp/budgets.mjs`): request bodies over 64 KiB receive a JSON-RPC `413`, more than 16 concurrent requests per instance receive a `503` with `Retry-After`, a tool call that exceeds 25 seconds returns `operation_deadline_exceeded`, and a community search that would scan more than 500 dataset files returns `dataset_scan_limit_exceeded` instead of a truncated result. Visa Atlas calls use fixed paths; academic discovery calls use their documented provider endpoints and bounded responses. These server-side fetches refuse redirects.
+Each MCP request is bounded (defaults in `plugins/hamrah/mcp/budgets.mjs`): request bodies over 64 KiB receive a JSON-RPC `413`, more than 16 concurrent requests per instance receive a `503` with `Retry-After`, a tool call that exceeds 25 seconds returns `operation_deadline_exceeded`, and a community search that would scan more than 500 dataset files returns `dataset_scan_limit_exceeded` instead of a truncated result. Visa Atlas calls use fixed paths; academic discovery calls use their documented provider endpoints and bounded responses. Provider fetches refuse redirects; the exact official-page verifier permits bounded same-origin redirects after public-DNS validation.
 
 Requests are also rate limited per client IP (120 per minute; IPv6 grouped by /64) and per `Mcp-Session-Id` (60 per minute); an exceeded budget receives a JSON-RPC `429` with `Retry-After`. On Vercel the client IP comes from Vercel's `X-Forwarded-For`; elsewhere forwarding headers are ignored. Counters are shared across serverless instances only when a Redis REST store is configured with `KV_REST_API_URL` and `KV_REST_API_TOKEN` (Vercel KV) or `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`; without one, each instance counts in memory and `/health` reports `"rateLimitStore": "memory"`. The same Redis configuration persists supervisor discovery candidate names for 30 days; without it, that tool reports cache storage as unavailable. If the rate-limit store is unreachable, requests are served and the failure is logged.
 
 After deploying supervisor discovery, run `npm run verify:live:supervisors -- https://hamrah-plugin-marketplace.vercel.app <deployed-commit-sha>` to check the live OpenAlex/ROR lookup and Redis write/read cycle. The script uses only public research search terms; it does not turn candidate names into verified supervisor leads.
+
+## Academic Discovery
+
+On an explicit academic request, `discoverAcademicMatches` combines ROR, OpenAlex, Crossref, configured job APIs and Tavily web search. Discovery results remain unverified leads. `verifyAcademicEvidence` checks current institutional identity and literal evidence on the exact official page; `renderAcademicDiscoveryReport` produces the common Persian report. The host continues web research for coverage gaps and compares personal admission requirements locally. Research grants do not establish available student funding.
+
+The workflow is bundled in `plugins/hamrah/skills/hamrah/references/academic_discovery_workflow.md`, with a portable report formatter and private fit renderer in the Program Finder skill. API keys stay on the server; the plugin contains no Tavily key and requires no card entry. The opt-in shared Redis cache holds only limited licensed public metadata with expiry; profiles and personal reports remain local.
+
+The server and downloadable MCP skill resources are live. Installed Codex skills update separately through the marketplace, followed by a new chat. For real-source checks, coverage limits and the public report example, see [Academic Discovery acceptance](docs/academic-discovery-acceptance.md).
 
 ## Shared Community Signals
 

@@ -1,5 +1,7 @@
 # Open academic calls: free API leads and live official verification
 
+For current general searches, read `academic_discovery_workflow.md` first and use its common discovery, signed official verification and Persian report tools. This reference documents provider-specific checks and the older call contract. Use its renderer only as a compatibility fallback when the common tools are unavailable or when explicitly replaying that older contract; preserve local personal comparisons and transparent coverage in either path.
+
 Use this path only after an explicit request for a specific open Master's or PhD admission/funding call, doctoral or postdoctoral vacancy, or research job. It does not search professors or general university rankings. A program's existence, a professor profile, or a search result is not an open call.
 
 1. Obtain the requested research field/topic and target category (`masters`, `phd`, `postdoc`, or `research_job`). If either is absent, return one targeted `needs_input` question. Country is optional; an omitted country permits a bounded global search. Record whether funding is required. Do not demand a complete immigration profile.

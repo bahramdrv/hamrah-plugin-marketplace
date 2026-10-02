@@ -11,6 +11,7 @@
     "verify:live": "node scripts/verify-live-mcp.mjs",
     "verify:live:opportunities": "node scripts/verify-live-opportunities.mjs",
     "verify:live:supervisors": "node scripts/verify-live-supervisors.mjs",
+    "verify:live:plugin": "node scripts/verify-live-plugin-bundle.mjs",
     "check:static": "find plugins web packages scripts -name '*.mjs' -type f -exec node --check {} \\;"
   },
   "engines": {

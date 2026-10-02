@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "hamrah",
-  "version": "0.1.3+codex.20260927161635",
-  "description": "Facilitated immigration intake, profile normalization, live route research, community signals, academic matching, and explainable scorecards.",
+  "version": "0.1.4",
+  "description": "Facilitated immigration intake, source-backed academic discovery, live route research, community signals, and explainable scorecards.",
   "author": {
     "name": "Bahram"
   },
