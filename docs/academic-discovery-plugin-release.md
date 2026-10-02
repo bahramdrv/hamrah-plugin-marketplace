@@ -10,12 +10,14 @@ Both plugin manifests declare 0.1.4. The release bundles the common workflow, re
 
 ## Local verification
 
-- `npm test`: 361 passed.
+- `npm test`: 362 passed.
 - `npm run verify:release`: 19 schemas; 57 published datasets, one withdrawn.
 - `npm run check:static`: passed.
 - The four required Python suites with `/opt/anaconda3/bin/python -m pytest -q`: 47 passed.
 - `npm audit fix --ignore-scripts` changed only two transitive dependencies in the lockfile: fast-uri 3.1.7 → 3.1.8 and ip-address 10.7.0 → 10.7.3; audit reported zero vulnerabilities afterward. The fixes correspond to [fast-uri host normalization](https://github.com/advisories/GHSA-hrr3-gc8f-f4qj), [IP family comparison](https://github.com/advisories/GHSA-j6r3-76f7-8jcv) and [IPv6 diagnostic size](https://github.com/advisories/GHSA-h3mg-xc3c-68pw). Tests above ran again after the lockfile update.
 - Both plugin manifest versions and required bundled resources were checked; five importable skills remain, with 39 resources in the main skill and ten in Program Finder.
+
+The first live-resource comparison failed because the catalog included local pytest artifacts; a cached `.gitignore` differed between the local tree and deployment. Publication now excludes hidden files/directories as well as Python bytecode/cache directories. A regression case first reproduced publication of a temporary hidden artifact, then passed after the filter change. The catalog now advertises 111 resources and no hidden artifacts. The full checks above ran after this correction.
 
 For deployed-resource acceptance, run:
 

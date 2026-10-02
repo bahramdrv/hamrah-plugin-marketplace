@@ -14,7 +14,7 @@ const PUBLISHED_SKILLS = [
 
 function walkFiles(directory) {
   return readdirSync(directory, { withFileTypes: true })
-    .filter((entry) => entry.name !== "__pycache__" && !entry.name.endsWith(".pyc"))
+    .filter((entry) => !entry.name.startsWith(".") && entry.name !== "__pycache__" && !entry.name.endsWith(".pyc"))
     .flatMap((entry) => {
       const absolutePath = path.join(directory, entry.name);
       return entry.isDirectory() ? walkFiles(absolutePath) : [absolutePath];
