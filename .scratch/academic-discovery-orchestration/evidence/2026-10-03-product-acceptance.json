@@ -1,0 +1,80 @@
+{
+  "checkedAt": "2026-10-03T09:16:35.978Z",
+  "deploymentCommit": "d212c826c8c169d7021703e111c9dc9d65887fdc",
+  "publicScope": {
+    "type": "phd",
+    "field": "artificial intelligence",
+    "researchFocus": null,
+    "institution": null,
+    "countryCode": "DE",
+    "fundingRequired": false,
+    "limit": 5
+  },
+  "verifiedResults": [
+    {
+      "id": "faba0cc33821ade06b1f83dd",
+      "title": "MP-AIX Ph.D. Program",
+      "url": "https://ai.mpg.de/en/news/max-planck-artificial-intelligence-network-starts-call-for-applications-for-second-cohort-of-its-ph-d-program",
+      "sourceHash": "28b5a49e27ad325837afd8e704db66e9cc9b5cda4054332f8ca1168626d592e4",
+      "verificationStatus": "verified_open",
+      "fundingStatus": "guaranteed",
+      "deadline": "2026-10-31"
+    }
+  ],
+  "unverifiedCandidates": [
+    {
+      "title": "PhD Project on AI-Driven Cancer Prevention Using App-Collected Digital Health and Nutrition Data at Scale",
+      "url": "https://www.daad.de/en/studying-in-germany/phd-studies-research/phd-germany/detail/10407/?phd-id=10407",
+      "verificationStatus": "unverified"
+    },
+    {
+      "title": "Max Planck School of Biomedical AI – Fully funded PhD Positions at German leading research institutions",
+      "url": "https://www.daad.de/en/studying-in-germany/phd-studies-research/phd-germany/detail/10419/?phd-id=10419",
+      "verificationStatus": "unverified"
+    }
+  ],
+  "coverage": {
+    "sources": [
+      {
+        "source": "daad_phdgermany",
+        "status": "ok"
+      },
+      {
+        "source": "host_web_search",
+        "status": "ok",
+        "query": "official Max Planck AI PhD 2026"
+      },
+      {
+        "source": "jsearch:openwebninja",
+        "status": "ok"
+      },
+      {
+        "source": "MP-AIX_official_notice",
+        "status": "ok"
+      },
+      {
+        "source": "ROR_identity",
+        "status": "ok"
+      },
+      {
+        "source": "tavily",
+        "status": "ok"
+      }
+    ],
+    "countriesChecked": [
+      "DE"
+    ],
+    "failures": [],
+    "truncated": false,
+    "globalCoverage": "not_established"
+  },
+  "checks": {
+    "aliasAndStableOrder": true,
+    "unchangedEvidence": true,
+    "fundedOnlyRetained": true,
+    "pastOrMismatchedDeadlineRejected": true,
+    "inventedFundingRejected": true
+  },
+  "sourceCaveat": "The timeline page has inconsistent October/November wording; the year-specific official notice establishes the reported deadline. Only one call was formally verified.",
+  "privacy": "No applicant facts, service keys or signed evidence tokens included."
+}
