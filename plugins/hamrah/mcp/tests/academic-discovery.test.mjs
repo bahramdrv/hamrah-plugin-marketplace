@@ -78,6 +78,42 @@ test("verified results require freshly retrieved official evidence; source excer
   assert.equal(conditional.structuredContent.fundingStatus, "unknown", "a clipped excerpt cannot hide adjacent conditional funding terms");
 });
 
+test("an HTTP homepage in ROR supports freshly verified HTTPS institutional evidence", async () => {
+  const input = { type: "phd", title: "MP-AIX Ph.D. Program", institution: "Max Planck Society", countryCode: "DE",
+    rorId: "https://ror.org/01hhn8329", url: "https://ai.mpg.de/news/call", claims: [
+      { kind: "title", excerpt: "MP-AIX Ph.D. Program" }, { kind: "research", excerpt: "AI methodology" },
+      { kind: "application", excerpt: "Apply by 31 October 2026", mode: "dated", deadline: "2026-10-31" }
+    ] };
+  const fetcher = async (url) => {
+    assert.ok(url.startsWith("https://"), "institutional evidence must never be retrieved over HTTP");
+    return url.startsWith("https://api.ror.org/") ? Response.json({ id: input.rorId, status: "active", types: ["funder", "nonprofit"],
+      names: [{ value: input.institution }], links: [{ type: "website", value: "http://www.mpg.de/en" }],
+      locations: [{ geonames_details: { country_code: "DE" } }] })
+      : new Response(input.claims.map((c) => c.excerpt).join(" "), { headers: { "content-type": "text/html" } });
+  };
+  const options = { academicDiscovery: { ...disabled, evidenceKey: "fixture-signing-key-that-is-long-enough",
+    resolveHost: async () => [{ address: "93.184.216.34", family: 4 }] } };
+  const verified = await executeTool("verifyAcademicEvidence", input, fetcher, options);
+  assert.equal(verified.structuredContent.verificationStatus, "verified_open");
+  const insecure = await executeTool("verifyAcademicEvidence", { ...input, url: "http://ai.mpg.de/news/call" }, fetcher, options);
+  assert.equal(insecure.structuredContent.verificationStatus, "unverified");
+  assert.deepEqual(insecure.structuredContent.reasons, ["unsafe_source_url"]);
+});
+
+test("university discovery retains HTTPS leads from HTTP ROR homepages without trusting unsafe identities", async () => {
+  const result = await executeTool("discoverAcademicMatches", { type: "university", field: "AI", institution: "Example University", countryCode: "DE" },
+    async () => Response.json({ items: ["http://uni.example/", "http://127.0.0.1/", "http://user:password@uni.example/"].map((homepage) => ({
+      id: "https://ror.org/03yrm5c26", status: "active", types: ["education"],
+      names: [{ value: "Example University", types: ["ror_display"] }],
+      links: [{ type: "website", value: homepage }], locations: [{ geonames_details: { country_code: "DE" } }]
+    })) }), { academicDiscovery: { ...disabled, env: { HAMRAH_ACADEMIC_DISCOVERY_ENABLED: "true", HAMRAH_ROR_ENABLED: "true",
+      HAMRAH_OPENALEX_ENABLED: "false", HAMRAH_CROSSREF_ENABLED: "false" } } });
+  assert.equal(result.isError, false, JSON.stringify(result.structuredContent));
+  assert.equal(result.structuredContent.discoveryCandidates.length, 1);
+  assert.equal(result.structuredContent.discoveryCandidates[0].url, "https://uni.example/");
+  assert.deepEqual(result.structuredContent.verifiedResults, []);
+});
+
 test("API and web discovery remain unverified, use bounded public queries, and keep partial source failures", async () => {
   const requests = [];
   const result = await executeTool("discoverAcademicMatches", { type: "program", field: "AI", countryCode: "DE" }, async (url, options) => {

@@ -12,6 +12,10 @@ export function canonicalAcademicUrl(value) {
     return url.href;
   } catch { return null; }
 }
+// ROR sometimes records an HTTP homepage; use its identity only over HTTPS.
+export function canonicalRorHomepage(value) {
+  return canonicalAcademicUrl(typeof value === "string" ? value.replace(/^http:\/\//i, "https://") : value);
+}
 export function safeAcademicText(value, max = 300) {
   return typeof value === "string" && value.trim().length > 1 && value.length <= max && !/[<>@`\r\n\[\]{}]/.test(value)
     ? value.trim() : null;

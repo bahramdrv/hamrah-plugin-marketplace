@@ -1,7 +1,7 @@
 import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 import Ajv from "ajv";
 import { getDomain } from "tldts";
-import { canonicalAcademicUrl, safeAcademicText, readBounded, safeSourceFailure, withinAcademicBudget } from "./academic-source-contract.mjs";
+import { canonicalAcademicUrl, canonicalRorHomepage, safeAcademicText, readBounded, safeSourceFailure, withinAcademicBudget } from "./academic-source-contract.mjs";
 import { fetchOfficialAcademicPage } from "./academic-official-http.mjs";
 
 const types = ["university", "program", "supervisor", "masters", "phd", "postdoc", "research_job", "funding", "grant"];
@@ -77,7 +77,7 @@ export async function verifyAcademicEvidence(input, fetchImpl, signal, options =
     return await withinAcademicBudget(async (child) => {
       const ror = JSON.parse(await readBounded(await fetchImpl(`https://api.ror.org/v2/organizations/${input.rorId.split("/").at(-1)}`,
         { redirect: "error", headers: { Accept: "application/json" }, signal: child })));
-      const homepage = canonicalAcademicUrl(ror.links?.find((l) => l.type === "website")?.value);
+      const homepage = canonicalRorHomepage(ror.links?.find((l) => l.type === "website")?.value);
       if (ror.id !== input.rorId || ror.status !== "active" || !ror.types?.some((t) => ["education", "government", "nonprofit", "facility"].includes(t))
         || !homepage || !ror.names?.some((n) => n.value?.toLowerCase() === input.institution.toLowerCase())
         || !ror.locations?.some((l) => l.geonames_details?.country_code === input.countryCode)) return { ...base, reasons: ["institution_identity_not_confirmed"] };

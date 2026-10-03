@@ -1,4 +1,4 @@
-import { canonicalAcademicUrl, safeAcademicText, readBounded, safeSourceFailure, withinAcademicBudget } from "./academic-source-contract.mjs";
+import { canonicalAcademicUrl, canonicalRorHomepage, safeAcademicText, readBounded, safeSourceFailure, withinAcademicBudget } from "./academic-source-contract.mjs";
 import { discoverAcademicCallCandidates } from "./academic-call-discovery.mjs";
 import { discoverAcademicSupervisorCandidates } from "./supervisor-discovery.mjs";
 import { withPublicAcademicCache } from "./academic-public-store.mjs";
@@ -52,7 +52,7 @@ export async function collectAcademicSources(scope, fetchImpl, signal, options) 
       if (!Array.isArray(data.items)) throw new Error("source_schema_error");
       const organizations = data.items.slice(0, 10).flatMap((r) => {
         const name = safeAcademicText(r.names?.find((n) => n.types?.includes("ror_display"))?.value);
-        const homepage = canonicalAcademicUrl(r.links?.find((l) => l.type === "website")?.value);
+        const homepage = canonicalRorHomepage(r.links?.find((l) => l.type === "website")?.value);
         const country = r.locations?.[0]?.geonames_details?.country_code;
         return name && homepage && /^https:\/\/ror.org\/[a-z0-9]{9}$/.test(r.id) && r.types?.includes("education")
           && r.status === "active" && (!scope.countryCode || country === scope.countryCode) ? [{ title: name, url: homepage, officialHomepage: homepage,
