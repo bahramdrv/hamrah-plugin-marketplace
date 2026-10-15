@@ -7,11 +7,11 @@ const FEED = `<?xml version="1.0"?><rss><channel><title>PhDGermany</title>
 <item><guid>101</guid><title><![CDATA[Doctoral researcher in quantum physics]]></title>
 <description><![CDATA[<p>Physics research at Example University.</p>]]></description>
 <link>https://www.daad.de/en/studying-in-germany/phd-studies-research/phd-germany/detail/101/</link>
-<pubDate>28. Sep 2026</pubDate><applicationDeadline>15. Oct 2026</applicationDeadline></item>
+<pubDate>28. Sep 2026</pubDate><applicationDeadline>${new Date(Date.now() + 30 * 86400_000).toISOString().slice(0, 10)}</applicationDeadline></item>
 <item><guid>102</guid><title><![CDATA[Doctoral researcher in plant biology]]></title>
 <description><![CDATA[<p>Biology research at Another University.</p>]]></description>
 <link>https://www.daad.de/en/studying-in-germany/phd-studies-research/phd-germany/detail/102/</link>
-<pubDate>28. Sep 2026</pubDate><applicationDeadline>20. Oct 2026</applicationDeadline></item>
+<pubDate>28. Sep 2026</pubDate><applicationDeadline>${new Date(Date.now() + 35 * 86400_000).toISOString().slice(0, 10)}</applicationDeadline></item>
 </channel></rss>`;
 
 test("Finnish Master's discovery returns only the exact currently open admission target", async () => {

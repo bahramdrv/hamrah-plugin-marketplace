@@ -1,0 +1,1239 @@
+{
+  "schema_version": 1,
+  "scope": "iran-start",
+  "source_url": "https://kooch.app/wp-json/kooch/v1/visa-catalog?scope=iran-start&limit=100&offset=0",
+  "retrieved_at": "2026-10-15T08:29:56.014Z",
+  "provider": "Visa Atlas via Kooch",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "provider_url": "https://visaatlas.org/data",
+  "total": 29,
+  "coverage": {
+    "catalog": 1414,
+    "reviewed": 76,
+    "unreviewed": 1338,
+    "documented_start": 29,
+    "scope": "application_channel_only",
+    "freshness_days": 14
+  },
+  "routes": [
+    {
+      "id": "am:work-residence-permit",
+      "destination": "am",
+      "slug": "work-residence-permit",
+      "name_fa": "اقامت کاری ارمنستان",
+      "name": "Temporary Residence for Employment",
+      "category": "work-sponsored",
+      "page_url": "https://kooch.app/visas/am/work-residence-permit/",
+      "application": {
+        "route_key": "am:work-residence-permit",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "am-welfare-work",
+          "am-mcs-work"
+        ],
+        "reason_fa": "راهنمای دولتی صریحاً ثبت کارفرما در workpermit.am را وقتی متقاضی خارج ارمنستان است مجاز می‌داند و درباره اتباع ایران نیز توضیح دارد. پس متقاضی می‌تواند در ایران بماند و کارفرما شروع کند؛ دریافت کارت و اجرای قرارداد بعداً نیازمند ورود ارمنستان است.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "ca:express-entry-cec",
+      "destination": "ca",
+      "slug": "express-entry-cec",
+      "name_fa": "اقامت کانادا با سابقه کار کانادایی",
+      "name": "Express Entry — Canadian Experience Class (CEC)",
+      "category": "skilled-migration",
+      "page_url": "https://kooch.app/visas/ca/express-entry-cec/",
+      "application": {
+        "route_key": "ca:express-entry-cec",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active_conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "audit-ca-iran-passport",
+          "audit-ca-cec",
+          "audit-ca-ee-apply",
+          "audit-ca-biometrics",
+          "audit-ca-fees"
+        ],
+        "reason_fa": "واجدشرایط دارای سابقه کار مجاز کانادایی می‌تواند پروفایل و پس از دعوت، درخواست را آنلاین ارسال کند؛ اقامت فعلی ایران جای سابقه لازم کانادایی را نمی‌گیرد.",
+        "in_person_followup_fa": "بیومتریک حضوری احتمالی: یادداشت مشترک کانادا را ببینید.",
+        "conditions_fa": "گذرنامه ایرانی برای اقدام معمول، مشروط به شرایط برنامه و پذیرش‌پذیری فردی؛ این وضعیت حکم تأیید پرونده نیست.",
+        "application_fee": {
+          "amount": 1590,
+          "currency": "CAD",
+          "scope_fa": "متقاضی اصلی: ۹۹۰ رسیدگی + ۶۰۰ حق اقامت دائم؛ بیومتریک و هزینه شخص ثالث جدا",
+          "source_ids": [
+            "audit-ca-fees"
+          ]
+        },
+        "unknowns": [
+          "دعوت جاری و صلاحیت فردی ارزیابی نشده‌اند.",
+          "در دسترس‌بودن وقت بیومتریک و ورود کشور ثالث تضمین نشده است."
+        ],
+        "additional_notes": [
+          {
+            "id": "canada-biometrics-followup",
+            "body_fa": "ارسال آنلاین، الزام احتمالی بیومتریک حضوری را حذف نمی‌کند؛ اگر در کشور محل اقدام مرکز نباشد، می‌توان از مرکز کشور دیگر استفاده کرد. ورود قانونی و وقت آن کشور جدا تأیید شود.",
+            "source_ids": [
+              "audit-ca-biometrics"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca:express-entry-fst",
+      "destination": "ca",
+      "slug": "express-entry-fst",
+      "name_fa": "اقامت کانادا برای مشاغل فنی",
+      "name": "Express Entry — Federal Skilled Trades (FST)",
+      "category": "skilled-migration",
+      "page_url": "https://kooch.app/visas/ca/express-entry-fst/",
+      "application": {
+        "route_key": "ca:express-entry-fst",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active_conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "audit-ca-iran-passport",
+          "audit-ca-fst",
+          "audit-ca-ee-apply",
+          "audit-ca-biometrics",
+          "audit-ca-fees"
+        ],
+        "reason_fa": "متقاضی حرفه فنی با سابقه لازم و پیشنهاد معتبر یا گواهی کانادایی، پس از دعوت درخواست آنلاین دارد؛ اخذ گواهی حرفه ممکن است حضور در استان بخواهد.",
+        "in_person_followup_fa": "بیومتریک حضوری احتمالی: یادداشت مشترک کانادا را ببینید.",
+        "conditions_fa": "گذرنامه ایرانی برای اقدام معمول، مشروط به شرایط برنامه و پذیرش‌پذیری فردی؛ این وضعیت حکم تأیید پرونده نیست.",
+        "application_fee": {
+          "amount": 1590,
+          "currency": "CAD",
+          "scope_fa": "متقاضی اصلی: ۹۹۰ رسیدگی + ۶۰۰ حق اقامت دائم؛ بیومتریک و هزینه شخص ثالث جدا",
+          "source_ids": [
+            "audit-ca-fees"
+          ]
+        },
+        "unknowns": [
+          "دعوت جاری و صلاحیت فردی ارزیابی نشده‌اند.",
+          "در دسترس‌بودن وقت بیومتریک و ورود کشور ثالث تضمین نشده است."
+        ],
+        "additional_notes": [
+          {
+            "id": "canada-biometrics-followup",
+            "body_fa": "ارسال آنلاین، الزام احتمالی بیومتریک حضوری را حذف نمی‌کند؛ اگر در کشور محل اقدام مرکز نباشد، می‌توان از مرکز کشور دیگر استفاده کرد. ورود قانونی و وقت آن کشور جدا تأیید شود.",
+            "source_ids": [
+              "audit-ca-biometrics"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca:express-entry-fsw",
+      "destination": "ca",
+      "slug": "express-entry-fsw",
+      "name_fa": "اقامت کانادا با نیروی متخصص فدرال",
+      "name": "Express Entry — Federal Skilled Worker (FSW)",
+      "category": "skilled-migration",
+      "page_url": "https://kooch.app/visas/ca/express-entry-fsw/",
+      "application": {
+        "route_key": "ca:express-entry-fsw",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active_conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "audit-ca-iran-passport",
+          "audit-ca-fsw",
+          "audit-ca-ee-apply",
+          "audit-ca-biometrics",
+          "audit-ca-fees"
+        ],
+        "reason_fa": "فرد دارای سابقه تخصصی، زبان و ارزیابی تحصیل لازم می‌تواند از بیرون کانادا پروفایل بسازد؛ درخواست اقامت پس از دعوت آنلاین است.",
+        "in_person_followup_fa": "بیومتریک حضوری احتمالی: یادداشت مشترک کانادا را ببینید.",
+        "conditions_fa": "گذرنامه ایرانی برای اقدام معمول، مشروط به شرایط برنامه و پذیرش‌پذیری فردی؛ این وضعیت حکم تأیید پرونده نیست.",
+        "application_fee": {
+          "amount": 1590,
+          "currency": "CAD",
+          "scope_fa": "متقاضی اصلی: ۹۹۰ رسیدگی + ۶۰۰ حق اقامت دائم؛ بیومتریک و هزینه شخص ثالث جدا",
+          "source_ids": [
+            "audit-ca-fees"
+          ]
+        },
+        "unknowns": [
+          "دعوت جاری و صلاحیت فردی ارزیابی نشده‌اند.",
+          "در دسترس‌بودن وقت بیومتریک و ورود کشور ثالث تضمین نشده است."
+        ],
+        "additional_notes": [
+          {
+            "id": "canada-biometrics-followup",
+            "body_fa": "ارسال آنلاین، الزام احتمالی بیومتریک حضوری را حذف نمی‌کند؛ اگر در کشور محل اقدام مرکز نباشد، می‌توان از مرکز کشور دیگر استفاده کرد. ورود قانونی و وقت آن کشور جدا تأیید شود.",
+            "source_ids": [
+              "audit-ca-biometrics"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca:pgwp",
+      "destination": "ca",
+      "slug": "pgwp",
+      "name_fa": "اجازه کار پس از تحصیل کانادا",
+      "name": "Post-Graduation Work Permit (PGWP)",
+      "category": "work-unsponsored",
+      "page_url": "https://kooch.app/visas/ca/pgwp/",
+      "application": {
+        "route_key": "ca:pgwp",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active_conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "audit-ca-iran-passport",
+          "audit-ca-pgwp-apply",
+          "audit-ca-pgwp-eligible",
+          "audit-ca-fees",
+          "audit-ca-biometrics"
+        ],
+        "reason_fa": "فارغ‌التحصیل واجد شرایط می‌تواند از خارج کانادا هم آنلاین درخواست دهد؛ ساکن ایران بدون تحصیل واجد کانادایی از این مسیر شروع نمی‌کند.",
+        "in_person_followup_fa": "بیومتریک حضوری احتمالی: یادداشت مشترک کانادا را ببینید.",
+        "application_fee": {
+          "amount": 255,
+          "currency": "CAD",
+          "scope_fa": "PGWP؛ اعاده وضعیت و بیومتریک احتمالی جدا",
+          "source_ids": [
+            "audit-ca-pgwp-apply"
+          ]
+        },
+        "unknowns": [
+          "تاریخ پایان تحصیل و مهلت ۱۸۰ روز، دوره و رشته و زبان و محل تحصیل باید تطبیق شوند."
+        ],
+        "additional_notes": [
+          {
+            "id": "canada-biometrics-followup",
+            "body_fa": "ارسال آنلاین، الزام احتمالی بیومتریک حضوری را حذف نمی‌کند؛ اگر در کشور محل اقدام مرکز نباشد، می‌توان از مرکز کشور دیگر استفاده کرد. ورود قانونی و وقت آن کشور جدا تأیید شود.",
+            "source_ids": [
+              "audit-ca-biometrics"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca:pnp",
+      "destination": "ca",
+      "slug": "pnp",
+      "name_fa": "اقامت کانادا با نامزدی استانی",
+      "name": "Provincial Nominee Program (PNP)",
+      "category": "skilled-migration",
+      "page_url": "https://kooch.app/visas/ca/pnp/",
+      "application": {
+        "route_key": "ca:pnp",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active_conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "audit-ca-iran-passport",
+          "audit-ca-pnp",
+          "audit-ca-pnp-apply",
+          "audit-ca-fees",
+          "audit-ca-biometrics"
+        ],
+        "reason_fa": "مرحله فدرال پس از نامزدی استانی آنلاین است؛ این نتیجه به معنی بازبودن همه جریان‌های استان‌ها یا امکان شروع هر جریان از ایران نیست.",
+        "in_person_followup_fa": "بیومتریک حضوری احتمالی: یادداشت مشترک کانادا را ببینید.",
+        "conditions_fa": "گذرنامه ایرانی برای اقدام معمول، مشروط به شرایط برنامه و پذیرش‌پذیری فردی؛ این وضعیت حکم تأیید پرونده نیست.",
+        "application_fee": {
+          "amount": 1590,
+          "currency": "CAD",
+          "scope_fa": "متقاضی اصلی: ۹۹۰ رسیدگی + ۶۰۰ حق اقامت دائم؛ بیومتریک و هزینه شخص ثالث جدا",
+          "source_ids": [
+            "audit-ca-fees"
+          ]
+        },
+        "unknowns": [
+          "استان و جریان مشخص، محل اقامت لازم و پذیرش روز آن باید تعیین شوند.",
+          "هزینه استانی افزون بر هزینه فدرال است."
+        ],
+        "additional_notes": [
+          {
+            "id": "canada-biometrics-followup",
+            "body_fa": "ارسال آنلاین، الزام احتمالی بیومتریک حضوری را حذف نمی‌کند؛ اگر در کشور محل اقدام مرکز نباشد، می‌توان از مرکز کشور دیگر استفاده کرد. ورود قانونی و وقت آن کشور جدا تأیید شود.",
+            "source_ids": [
+              "audit-ca-biometrics"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca:spousal-sponsorship",
+      "destination": "ca",
+      "slug": "spousal-sponsorship",
+      "name_fa": "اقامت کانادا از طریق همسر یا شریک",
+      "name": "Spousal / common-law sponsorship (Canada)",
+      "category": "family",
+      "page_url": "https://kooch.app/visas/ca/spousal-sponsorship/",
+      "application": {
+        "route_key": "ca:spousal-sponsorship",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active_conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "audit-ca-spouse-apply",
+          "audit-ca-spouse-elig",
+          "audit-ca-iran-passport",
+          "audit-ca-fees",
+          "audit-ca-biometrics"
+        ],
+        "reason_fa": "متقاضی اصلی درخواست حمایت و اقامت را با هم در PR Portal می‌فرستد؛ می‌تواند همسر خارج کانادا باشد. حامی باید شرایط اقامت/تابعیت و رابطه را داشته باشد؛ مقیم دائم ساکن خارج کانادا نمی‌تواند حامی شود.",
+        "in_person_followup_fa": "بیومتریک حضوری احتمالی: یادداشت مشترک کانادا را ببینید.",
+        "application_fee": {
+          "amount": 1260,
+          "currency": "CAD",
+          "scope_fa": "همسر: حمایت، رسیدگی و حق اقامت دائم؛ فرزند و بیومتریک جدا",
+          "source_ids": [
+            "audit-ca-fees"
+          ]
+        },
+        "unknowns": [
+          "وضعیت حامی و رابطه و دستورالعمل اسناد ایران باید تطبیق شوند."
+        ],
+        "additional_notes": [
+          {
+            "id": "canada-biometrics-followup",
+            "body_fa": "ارسال آنلاین، الزام احتمالی بیومتریک حضوری را حذف نمی‌کند؛ اگر در کشور محل اقدام مرکز نباشد، می‌توان از مرکز کشور دیگر استفاده کرد. ورود قانونی و وقت آن کشور جدا تأیید شود.",
+            "source_ids": [
+              "audit-ca-biometrics"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca:study-permit-ca",
+      "destination": "ca",
+      "slug": "study-permit-ca",
+      "name_fa": "اجازه تحصیل کانادا",
+      "name": "Canadian Study Permit",
+      "category": "study",
+      "page_url": "https://kooch.app/visas/ca/study-permit-ca/",
+      "application": {
+        "route_key": "ca:study-permit-ca",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active_conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "audit-ca-study-apply",
+          "audit-ca-iran-passport",
+          "audit-ca-fees",
+          "audit-ca-biometrics"
+        ],
+        "reason_fa": "دستورالعمل رسمی درخواست خارج کانادا آنلاین است و ایران در انتخاب کشور محل اقدام قرار دارد؛ پذیرش دانشگاه، مدارک مالی و استثناهای PAL/TAL جدا بررسی شوند.",
+        "in_person_followup_fa": "بیومتریک حضوری احتمالی: یادداشت مشترک کانادا را ببینید.",
+        "application_fee": {
+          "amount": 150,
+          "currency": "CAD",
+          "scope_fa": "اجازه تحصیل هر نفر؛ بیومتریک احتمالی ۸۵ دلار جدا؛ شهریه و تمکن جدا",
+          "source_ids": [
+            "audit-ca-fees"
+          ]
+        },
+        "unknowns": [
+          "قواعد برنامه دانشگاهی و پرداخت عملی از ایران بررسی فردی می‌خواهند."
+        ],
+        "additional_notes": [
+          {
+            "id": "canada-biometrics-followup",
+            "body_fa": "ارسال آنلاین، الزام احتمالی بیومتریک حضوری را حذف نمی‌کند؛ اگر در کشور محل اقدام مرکز نباشد، می‌توان از مرکز کشور دیگر استفاده کرد. ورود قانونی و وقت آن کشور جدا تأیید شود.",
+            "source_ids": [
+              "audit-ca-biometrics"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "de:eu-blue-card",
+      "destination": "de",
+      "slug": "eu-blue-card",
+      "name_fa": "بلوکارت آلمان؛ کار تخصصی با قرارداد و حقوق مشخص",
+      "name": "EU Blue Card (Germany)",
+      "category": "work-sponsored",
+      "page_url": "https://kooch.app/visas/de/eu-blue-card-catalog/",
+      "application": {
+        "route_key": "de:eu-blue-card",
+        "iran_passport_status": "supported",
+        "start_from_iran": "iran_office",
+        "application_acceptance": "conditional",
+        "legal_status": "active",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "de-tehran-current"
+        ],
+        "reason_fa": "اطلاعیه جاری تهران، پذیرش محدود ایرانیان ساکن ایران در دسته مربوط را تأیید می‌کند. ثبت صف و وقت با شروط دسته است؛ بازبودن کانال به معنی موجودبودن وقت فوری یا احراز صلاحیت نیست.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "de:skilled-worker-de",
+      "destination": "de",
+      "slug": "skilled-worker-de",
+      "name_fa": "اقامت کاری نیروی متخصص آلمان",
+      "name": "Skilled Worker residence permit (§18a/§18b AufenthG)",
+      "category": "work-sponsored",
+      "page_url": "https://kooch.app/visas/de/skilled-worker-de-catalog/",
+      "application": {
+        "route_key": "de:skilled-worker-de",
+        "iran_passport_status": "supported",
+        "start_from_iran": "iran_office",
+        "application_acceptance": "conditional",
+        "legal_status": "active",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "de-tehran-current"
+        ],
+        "reason_fa": "برای فرایند تسریع‌شده دارای پیش‌موافقت ماده۸۱a و برخی پیش‌موافقت‌های پزشکی/مراقبت، وقت محدود اعلام شده است. همه پرونده‌های عادی۱۸a/۱۸b مشمول این پذیرش نیستند؛ برای سایر زیرشاخه‌ها وقت تازه تأیید نشده است.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "de:student-de",
+      "destination": "de",
+      "slug": "student-de",
+      "name_fa": "ویزای تحصیلی آلمان؛ پذیرش، معیشت و حقوق دانشجو",
+      "name": "German Student residence permit",
+      "category": "study",
+      "page_url": "https://kooch.app/visas/de/student-de-catalog/",
+      "application": {
+        "route_key": "de:student-de",
+        "iran_passport_status": "supported",
+        "start_from_iran": "iran_office",
+        "application_acceptance": "conditional",
+        "legal_status": "active",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "de-tehran-current"
+        ],
+        "reason_fa": "اطلاعیه جاری تهران، پذیرش محدود ایرانیان ساکن ایران در دسته مربوط را تأیید می‌کند. ثبت صف و وقت با شروط دسته است؛ بازبودن کانال به معنی موجودبودن وقت فوری یا احراز صلاحیت نیست.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "es:entrepreneur-visa",
+      "destination": "es",
+      "slug": "entrepreneur-visa",
+      "name_fa": "مسیر کارآفرین نوآور اسپانیا",
+      "name": "Entrepreneur Visa (Ley 14/2013)",
+      "category": "entrepreneur",
+      "page_url": "https://kooch.app/visas/es/entrepreneur-visa/",
+      "application": {
+        "route_key": "es:entrepreneur-visa",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "es-entre",
+          "es-entre-instructions",
+          "es-tehran"
+        ],
+        "reason_fa": "دستور مستقیمUGE درخواست از خارج را با ثبتENISA، درخواست الکترونیکی مجوز و سپس ویزای کنسولی توضیح می‌دهد؛ شروع پرونده در حالی که متقاضی ایران است ممکن است، اما پذیرش ویزا در تهران مستقل است.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "es:family-reunification-es",
+      "destination": "es",
+      "slug": "family-reunification-es",
+      "name_fa": "الحاق خانواده اسپانیا",
+      "name": "Family reunification (Spain)",
+      "category": "family",
+      "page_url": "https://kooch.app/visas/es/family-reunification-es/",
+      "application": {
+        "route_key": "es:family-reunification-es",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "es-family",
+          "es-tehran"
+        ],
+        "reason_fa": "متقاضی اصلیِ الحاق، میزبان است و می‌تواند باMercurio ثبت کند، در حالی که خانواده ایران مانده‌اند. پس از تأیید، خانواده از کنسولگری محل اقامت ویزا می‌گیرند؛ پذیرش عملی تهران جداست.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "es:highly-qualified-professional",
+      "destination": "es",
+      "slug": "highly-qualified-professional",
+      "name_fa": "مجوز متخصص واجدصلاحیت اسپانیا",
+      "name": "Highly Qualified Professional (HQP) permit",
+      "category": "work-sponsored",
+      "page_url": "https://kooch.app/visas/es/highly-qualified-professional/",
+      "application": {
+        "route_key": "es:highly-qualified-professional",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "es-hqp",
+          "es-law14",
+          "es-tehran"
+        ],
+        "reason_fa": "درخواست مجوز این بخش طبق ماده۷۶ از کانال اینترنتیUGE انجام می‌شود؛ کارفرما/نماینده می‌تواند هنگام ماندن متقاضی در ایران شروع کند. ویزای کنسولی پس از تأیید و عملیات امروز تهران جداست.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "it:citizenship-by-descent",
+      "destination": "it",
+      "slug": "citizenship-by-descent",
+      "name_fa": "تابعیت ایتالیا از تبار",
+      "name": "Citizenship by Descent (Jure Sanguinis)",
+      "category": "citizenship-by-descent",
+      "page_url": "https://kooch.app/visas/it/citizenship-by-descent/",
+      "application": {
+        "route_key": "it:citizenship-by-descent",
+        "iran_passport_status": "supported",
+        "start_from_iran": "iran_office",
+        "application_acceptance": "conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "it-citizenship",
+          "it-reopen"
+        ],
+        "reason_fa": "مرجع فرد مقیم خارج، کنسولگری صالح محل اقامت است؛ ایران در حوزه سفارت تهران قرار می‌گیرد. اطلاعیه بازگشت همه خدمات وجود دارد، اما نوبت اختصاصی تبار امروز تأیید نشده.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "it:digital-nomad-italy",
+      "destination": "it",
+      "slug": "digital-nomad-italy",
+      "name_fa": "ویزای نومد و دورکاری ایتالیا",
+      "name": "Digital Nomad Visa (Visto per Nomadi Digitali)",
+      "category": "digital-nomad",
+      "page_url": "https://kooch.app/visas/it/digital-nomad-italy/",
+      "application": {
+        "route_key": "it:digital-nomad-italy",
+        "iran_passport_status": "supported",
+        "start_from_iran": "iran_office",
+        "application_acceptance": "conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "it-dn",
+          "it-reopen"
+        ],
+        "reason_fa": "مسیر ملی برای خارجی واجدشرط است و تهران اعلام پذیرش همه دسته‌های ویزا دارد. چک‌لیست ملی از منبع کنسولی رسمی تطبیق داده شده؛ مدارک محلی پاریس به ایرانی تعمیم نشده و دستور دقیق تهران باید گرفته شود.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "it:elective-residence",
+      "destination": "it",
+      "slug": "elective-residence",
+      "name_fa": "ویزای اقامت انتخابی ایتالیا",
+      "name": "Elective Residence Visa (Residenza Elettiva)",
+      "category": "residence-general",
+      "page_url": "https://kooch.app/visas/it/elective-residence/",
+      "application": {
+        "route_key": "it:elective-residence",
+        "iran_passport_status": "supported",
+        "start_from_iran": "iran_office",
+        "application_acceptance": "conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "it-elective",
+          "it-elective-2026",
+          "it-reopen"
+        ],
+        "reason_fa": "تهران دریافت همه دسته‌های ویزا را اعلام کرده؛ مبنای ملی اقامت انتخابی برای فرد دارای منابع مستقل قابل بررسی است. وقت و کف مالی اختصاصی ایران باید تأیید شود.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "it:eu-blue-card-italy",
+      "destination": "it",
+      "slug": "eu-blue-card-italy",
+      "name_fa": "بلوکارت ایتالیا",
+      "name": "EU Blue Card (Carta Blu UE)",
+      "category": "work-sponsored",
+      "page_url": "https://kooch.app/visas/it/eu-blue-card-italy/",
+      "application": {
+        "route_key": "it:eu-blue-card-italy",
+        "iran_passport_status": "supported",
+        "start_from_iran": "iran_office",
+        "application_acceptance": "conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "it-blue",
+          "it-reopen"
+        ],
+        "reason_fa": "کارفرما ابتدا پرونده استخدام را در ایتالیا آغاز می‌کند؛ پس از پذیرش، متقاضی ویزا را در سفارت کشور مبدأ می‌گیرد. تهران بازگشت خدمات همه دسته‌ها را اعلام کرده؛ تکمیل مجوز قبل از وقت لازم است.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "it:student-visa-italy",
+      "destination": "it",
+      "slug": "student-visa-italy",
+      "name_fa": "ویزای تحصیلی ایتالیا",
+      "name": "Student Visa (Visto per Studio)",
+      "category": "study",
+      "page_url": "https://kooch.app/visas/it/student-visa-italy/",
+      "application": {
+        "route_key": "it:student-visa-italy",
+        "iran_passport_status": "supported",
+        "start_from_iran": "iran_office",
+        "application_acceptance": "conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "it-study-tehran",
+          "it-study-funds",
+          "it-study-fee",
+          "it-universitaly"
+        ],
+        "reason_fa": "تهران برای ثبت‌نام۲۰۲۶/۲۷ اعلام کرده VisaMetric پس از بررسی پیش‌ثبت‌نام با ایمیل ثبت‌شدهUniversitaly تماس می‌گیرد؛ رزرو عادی وقت لازم نیست. پذیرش دانشگاه و دعوت، تضمین صدور نیست.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "pt:golden-visa",
+      "destination": "pt",
+      "slug": "golden-visa",
+      "name_fa": "اقامت طلایی پرتغال",
+      "name": "Portugal Golden Visa (residence by investment)",
+      "category": "investor",
+      "page_url": "https://kooch.app/visas/pt/golden-visa/",
+      "application": {
+        "route_key": "pt:golden-visa",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "pt-ari-portal",
+          "pt-ari-current",
+          "pt-ari-faq"
+        ],
+        "reason_fa": "درگاه جاری AIMA ثبت متقاضی یا نماینده و بارگذاری اسناد را پیش‌بینی می‌کند؛ متقاضی می‌تواند پیش از سفر شروع کند. سفر بعدی برای بیومتریک لازم است؛ ورود قانونی و مسیر ویزای سفر از ایران جداگانه باید تأیید شود.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "uk:family-spouse",
+      "destination": "uk",
+      "slug": "family-spouse",
+      "name_fa": "ویزای پیوستن به همسر بریتانیا",
+      "name": "Family visa (partner/spouse)",
+      "category": "family",
+      "page_url": "https://kooch.app/visas/uk/family-spouse-catalog/",
+      "application": {
+        "route_key": "uk:family-spouse",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "uk-family-partner",
+          "uk-iran",
+          "uk-brake"
+        ],
+        "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "uk:global-talent",
+      "destination": "uk",
+      "slug": "global-talent",
+      "name_fa": "ویزای استعداد جهانی بریتانیا",
+      "name": "Global Talent visa",
+      "category": "work-unsponsored",
+      "page_url": "https://kooch.app/visas/uk/global-talent-catalog/",
+      "application": {
+        "route_key": "uk:global-talent",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "uk-gt-apply",
+          "uk-iran",
+          "uk-brake"
+        ],
+        "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "uk:health-and-care-worker",
+      "destination": "uk",
+      "slug": "health-and-care-worker",
+      "name_fa": "ویزای کادر درمان و سلامت بریتانیا",
+      "name": "Health and Care Worker visa",
+      "category": "work-sponsored",
+      "page_url": "https://kooch.app/visas/uk/health-and-care-worker-catalog/",
+      "application": {
+        "route_key": "uk:health-and-care-worker",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "uk-hc-apply",
+          "uk-iran",
+          "uk-brake",
+          "uk-hc-job"
+        ],
+        "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است. ورود تازه خارج کشور برایcare worker وsenior care worker مجاز نیست؛ این حمایت فقط شاخه‌های درمانی واجدشرایط را شامل می‌شود.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "uk:high-potential-individual",
+      "destination": "uk",
+      "slug": "high-potential-individual",
+      "name_fa": "ویزای فارغ‌التحصیل دانشگاه برتر بریتانیا",
+      "name": "High Potential Individual visa",
+      "category": "work-unsponsored",
+      "page_url": "https://kooch.app/visas/uk/high-potential-individual-catalog/",
+      "application": {
+        "route_key": "uk:high-potential-individual",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "uk-hpi",
+          "uk-iran",
+          "uk-brake"
+        ],
+        "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "uk:innovator-founder",
+      "destination": "uk",
+      "slug": "innovator-founder",
+      "name_fa": "ویزای بنیان‌گذار نوآور بریتانیا",
+      "name": "Innovator Founder visa",
+      "category": "entrepreneur",
+      "page_url": "https://kooch.app/visas/uk/innovator-founder-catalog/",
+      "application": {
+        "route_key": "uk:innovator-founder",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "uk-innovator",
+          "uk-iran",
+          "uk-brake"
+        ],
+        "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "uk:scale-up",
+      "destination": "uk",
+      "slug": "scale-up",
+      "name_fa": "ویزای کار در شرکت در حال رشد بریتانیا",
+      "name": "Scale-up visa",
+      "category": "work-sponsored",
+      "page_url": "https://kooch.app/visas/uk/scale-up-catalog/",
+      "application": {
+        "route_key": "uk:scale-up",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "uk-scale",
+          "uk-iran",
+          "uk-brake"
+        ],
+        "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "uk:skilled-worker",
+      "destination": "uk",
+      "slug": "skilled-worker",
+      "name_fa": "ویزای نیروی متخصص بریتانیا",
+      "name": "Skilled Worker visa",
+      "category": "work-sponsored",
+      "page_url": "https://kooch.app/visas/uk/skilled-worker-catalog/",
+      "application": {
+        "route_key": "uk:skilled-worker",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "uk-sw-apply",
+          "uk-iran",
+          "uk-brake"
+        ],
+        "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "uk:student",
+      "destination": "uk",
+      "slug": "student",
+      "name_fa": "ویزای تحصیلی بریتانیا",
+      "name": "Student visa",
+      "category": "study",
+      "page_url": "https://kooch.app/visas/uk/student-catalog/",
+      "application": {
+        "route_key": "uk:student",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "uk-student-apply",
+          "uk-iran",
+          "uk-brake"
+        ],
+        "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
+        "additional_notes": []
+      }
+    },
+    {
+      "id": "uk:visit-visa-standard",
+      "destination": "uk",
+      "slug": "visit-visa-standard",
+      "name_fa": "ویزای بازدید بریتانیا",
+      "name": "Standard Visitor visa",
+      "category": "short-term-business",
+      "page_url": "https://kooch.app/visas/uk/visit-visa-standard-catalog/",
+      "application": {
+        "route_key": "uk:visit-visa-standard",
+        "iran_passport_status": "supported",
+        "start_from_iran": "online",
+        "application_acceptance": "conditional",
+        "legal_status": "active",
+        "evidence_checked_on": "2026-10-15",
+        "valid_until": "2026-10-29",
+        "source_ids": [
+          "uk-visitor-apply",
+          "uk-iran",
+          "uk-brake"
+        ],
+        "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
+        "additional_notes": []
+      }
+    }
+  ],
+  "sources": {
+    "am-welfare-work": {
+      "id": "am-welfare-work",
+      "url": "https://welfare.gov.am/migrant-workers-guide",
+      "title": "Official migrant-worker guide: offshore applications; Iranian nationals",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "am-mcs-work": {
+      "id": "am-mcs-work",
+      "url": "https://migration.mia.gov.am/en/acquiring-employment-based-residence-status",
+      "title": "MCS — Employment residence application",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-iran-passport": {
+      "id": "audit-ca-iran-passport",
+      "url": "https://cbsa.gc.ca/transparency-transparence/pd-dp/bbp-rpp/cimm/2026-04-20/factsheets-fichesinfo-eng.html",
+      "title": "CBSA — 2026 briefing: Iranian nationals must apply for visas",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-cec": {
+      "id": "audit-ca-cec",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html",
+      "title": "IRCC — CEC eligibility",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-ee-apply": {
+      "id": "audit-ca-ee-apply",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/apply-permanent-residence.html",
+      "title": "IRCC — Express Entry permanent residence application",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-biometrics": {
+      "id": "audit-ca-biometrics",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/biometrics/where-to-give.html",
+      "title": "IRCC — Biometrics locations",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-fees": {
+      "id": "audit-ca-fees",
+      "url": "https://www.ircc.canada.ca/english/information/fees/fees.asp",
+      "title": "IRCC — Current fee list",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-fst": {
+      "id": "audit-ca-fst",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-trades.html",
+      "title": "IRCC — FST eligibility",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-fsw": {
+      "id": "audit-ca-fsw",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
+      "title": "IRCC — FSW eligibility",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-pgwp-apply": {
+      "id": "audit-ca-pgwp-apply",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/apply.html",
+      "title": "IRCC — PGWP application inside or outside Canada",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-pgwp-eligible": {
+      "id": "audit-ca-pgwp-eligible",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html",
+      "title": "IRCC — PGWP eligibility",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-pnp": {
+      "id": "audit-ca-pnp",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html",
+      "title": "IRCC — PNP: streams and processes",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-pnp-apply": {
+      "id": "audit-ca-pnp-apply",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/non-express-entry/apply.html",
+      "title": "IRCC — PNP non Express Entry application",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-spouse-apply": {
+      "id": "audit-ca-spouse-apply",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/apply.html",
+      "title": "IRCC — Spousal sponsorship online application",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-spouse-elig": {
+      "id": "audit-ca-spouse-elig",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/eligibility.html",
+      "title": "IRCC — Sponsor eligibility",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "audit-ca-study-apply": {
+      "id": "audit-ca-study-apply",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/apply.html",
+      "title": "IRCC — Study permit application and local country instructions",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "de-tehran-current": {
+      "id": "de-tehran-current",
+      "url": "https://teheran.diplo.de/ir-de/2752046-2752046",
+      "title": "سفارت آلمان تهران — فعالیت محدود جاری",
+      "authority": "primary",
+      "checked_on": "2026-10-15",
+      "retrieval_method": "official_page_text"
+    },
+    "es-entre": {
+      "id": "es-entre",
+      "url": "https://www.inclusion.gob.es/web/unidadgrandesempresas/emprendedores",
+      "title": "UGE؛ کارآفرین نوآور و گزارش ENISA",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "es-entre-instructions": {
+      "id": "es-entre-instructions",
+      "url": "https://www.inclusion.gob.es/documents/1823432/1826098/Instrucciones%2Bsolicitud%2Bemprendedores.pdf/3a4d0b60-71bf-1c53-9f9d-fff7f94cbf5d?t=1682675484705",
+      "title": "UGE؛ مراحل آنلاین درخواست کارآفرین از خارج",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "es-tehran": {
+      "id": "es-tehran",
+      "url": "https://www.exteriores.gob.es/Embajadas/teheran/es/Embajada/Paginas/Horarios%2C-Localizaci%C3%B3n-y-Contacto.aspx",
+      "title": "سفارت اسپانیا تهران؛ کانال امور ویزا و نوبت",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "es-family": {
+      "id": "es-family",
+      "url": "https://www.inclusion.gob.es/web/migraciones/w/autorizacion-de-residencia-temporal-por-reagrupacion-familiar",
+      "title": "وزارت مهاجرت؛ الحاق خانواده، Mercurio و مرحله کنسولی",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "es-hqp": {
+      "id": "es-hqp",
+      "url": "https://www.inclusion.gob.es/web/unidadgrandesempresas/profesionales-altamente-cualificados",
+      "title": "UGE؛ متخصصان دارای پیشنهاد شغل",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "es-law14": {
+      "id": "es-law14",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074",
+      "title": "قانون جاری۱۴/۲۰۱۳؛ مواد۷۵،۷۶ و مسیرهای تخصصی",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "it-citizenship": {
+      "id": "it-citizenship",
+      "url": "https://www.esteri.it/it/servizi-opportunita/italiani-all-estero/cittadinanza/",
+      "title": "وزارت خارجه ایتالیا؛ تبار، تغییر۲۰۲۵، صلاحیت کنسولی و۶۰۰یورو",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "it-reopen": {
+      "id": "it-reopen",
+      "url": "https://ambteheran.esteri.it/it/news/dall_ambasciata/2026/08/lambasciata-ditalia-comunica-la-ripresa-delle-attivita-a-teheran-a-partire-dal-19-giugno-2026/",
+      "title": "سفارت ایتالیا تهران؛ ازسرگیری همه خدمات و همه دسته‌های ویزا",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "it-dn": {
+      "id": "it-dn",
+      "url": "https://consparigi.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/visto-per-nomadi-digitali-e-lavoratori-da-remoto/",
+      "title": "کنسولگری رسمی ایتالیا؛ شرایط ملی نومد (دستور محل پاریس به ایران تعمیم نشده)",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "it-elective": {
+      "id": "it-elective",
+      "url": "https://consparigi.esteri.it/fr/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/residenza-elettiva-elective-residency/",
+      "title": "کنسولگری ایتالیا؛ اقامت انتخابی و تعرفه۱۱۶یورو",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "it-elective-2026": {
+      "id": "it-elective-2026",
+      "url": "https://consizmir.esteri.it/wp-content/uploads/2026/05/06_RESIDENZA-ELETTIVA_.pdf",
+      "title": "کنسولگری ایتالیا ازمیر؛ چک‌لیست انتخابی۲۰۲۶ (تطبیق محلی ایران لازم)",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "it-blue": {
+      "id": "it-blue",
+      "url": "https://home-affairs.ec.europa.eu/policies/migration-and-asylum/eu-immigration-portal/highly-qualified-worker-italy_en",
+      "title": "درگاه رسمی مهاجرت اتحادیه اروپا؛ بلوکارت ایتالیا",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "it-study-tehran": {
+      "id": "it-study-tehran",
+      "url": "https://ambteheran.esteri.it/it/news/dall_ambasciata/2026/06/domande-di-visto-per-studio-immatricolazione-anno-accademico-2026-2027-avviso-allutenza/",
+      "title": "اطلاعیه مخصوص دانشجویان تهران۲۰۲۶/۲۷؛ دعوت VisaMetric",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "it-study-funds": {
+      "id": "it-study-funds",
+      "url": "https://www.esteri.it/it/ministero/sportello_info/domandefrequenti/studiare-in-italia/",
+      "title": "وزارت خارجه؛ تمکن سالانه دانشجویان۲۰۲۶/۲۷",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "it-study-fee": {
+      "id": "it-study-fee",
+      "url": "https://ambmanila.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/quanto-costa-un-visto-e-come-pagare/",
+      "title": "تعرفه کنسولی جاری سه‌ماهه چهارم۲۰۲۶؛ ویزای دانشجویی۵۰یورو",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "it-universitaly": {
+      "id": "it-universitaly",
+      "url": "https://www.universitaly.it/it/studenti-stranieri",
+      "title": "رویه ملی تحصیل۲۰۲۶/۲۷ و۲۰۲۷/۲۸؛ Universitaly",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "pt-ari-portal": {
+      "id": "pt-ari-portal",
+      "url": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari",
+      "title": "AIMA؛ درخواست اولیه ARI و حضور بعدی بیومتریک",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "pt-ari-current": {
+      "id": "pt-ari-current",
+      "url": "https://aima.gov.pt/en/viver/autorizacao-de-residencia-para-investimento-art-90-o-a",
+      "title": "AIMA؛ مبانی فعلی سرمایه‌گذاری ARI",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "pt-ari-faq": {
+      "id": "pt-ari-faq",
+      "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/autorizacao-de-residencia-para-investimento-ari",
+      "title": "AIMA؛ FAQ فعلی سرمایه‌گذاری و پرداخت",
+      "authority": "primary",
+      "checked_on": "2026-10-15"
+    },
+    "uk-family-partner": {
+      "id": "uk-family-partner",
+      "url": "https://www.gov.uk/uk-family-visa/partner-spouse",
+      "title": "GOV.UK — Family partner/spouse",
+      "authority": "primary",
+      "checked_on": "2026-10-15",
+      "retrieval_method": "official_page_text"
+    },
+    "uk-iran": {
+      "id": "uk-iran",
+      "url": "https://www.gov.uk/world/iran/news",
+      "title": "GOV.UK — Iran and the UK",
+      "authority": "primary",
+      "checked_on": "2026-10-15",
+      "retrieval_method": "official_page_text"
+    },
+    "uk-brake": {
+      "id": "uk-brake",
+      "url": "https://www.gov.uk/guidance/visa-brake-changes-to-the-uk-visa-system",
+      "title": "GOV.UK — Visa brake",
+      "authority": "primary",
+      "checked_on": "2026-10-15",
+      "retrieval_method": "official_page_text"
+    },
+    "uk-gt-apply": {
+      "id": "uk-gt-apply",
+      "url": "https://www.gov.uk/global-talent/apply-from-outside-the-uk",
+      "title": "uk-gt-apply — official overseas application",
+      "authority": "primary",
+      "checked_on": "2026-10-15",
+      "retrieval_method": "official_page_text"
+    },
+    "uk-hc-apply": {
+      "id": "uk-hc-apply",
+      "url": "https://www.gov.uk/health-care-worker-visa/apply-from-outside-the-uk",
+      "title": "uk-hc-apply — official overseas application",
+      "authority": "primary",
+      "checked_on": "2026-10-15",
+      "retrieval_method": "official_page_text"
+    },
+    "uk-hc-job": {
+      "id": "uk-hc-job",
+      "url": "https://www.gov.uk/health-care-worker-visa/your-job",
+      "title": "GOV.UK — Health and Care Worker job",
+      "authority": "primary",
+      "checked_on": "2026-10-15",
+      "retrieval_method": "official_page_text"
+    },
+    "uk-hpi": {
+      "id": "uk-hpi",
+      "url": "https://www.gov.uk/high-potential-individual-visa",
+      "title": "GOV.UK — HPI overview",
+      "authority": "primary",
+      "checked_on": "2026-10-15",
+      "retrieval_method": "official_page_text"
+    },
+    "uk-innovator": {
+      "id": "uk-innovator",
+      "url": "https://www.gov.uk/innovator-founder-visa",
+      "title": "GOV.UK — Innovator Founder overview",
+      "authority": "primary",
+      "checked_on": "2026-10-15",
+      "retrieval_method": "official_page_text"
+    },
+    "uk-scale": {
+      "id": "uk-scale",
+      "url": "https://www.gov.uk/scale-up-worker-visa",
+      "title": "GOV.UK — Scale-up Worker overview",
+      "authority": "primary",
+      "checked_on": "2026-10-15",
+      "retrieval_method": "official_page_text"
+    },
+    "uk-sw-apply": {
+      "id": "uk-sw-apply",
+      "url": "https://www.gov.uk/skilled-worker-visa/apply-from-outside-the-uk",
+      "title": "uk-sw-apply — official overseas application",
+      "authority": "primary",
+      "checked_on": "2026-10-15",
+      "retrieval_method": "official_page_text"
+    },
+    "uk-student-apply": {
+      "id": "uk-student-apply",
+      "url": "https://www.gov.uk/student-visa/apply-online",
+      "title": "uk-student-apply — official overseas application",
+      "authority": "primary",
+      "checked_on": "2026-10-15",
+      "retrieval_method": "official_page_text"
+    },
+    "uk-visitor-apply": {
+      "id": "uk-visitor-apply",
+      "url": "https://www.gov.uk/standard-visitor/apply-standard-visitor-visa",
+      "title": "GOV.UK — Visitor application",
+      "authority": "primary",
+      "checked_on": "2026-10-15",
+      "retrieval_method": "official_page_text"
+    }
+  }
+}
