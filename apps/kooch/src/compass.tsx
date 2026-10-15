@@ -5,6 +5,8 @@ import type { CompassConfig, CompassResult } from './api';
 import { Budget, Choices, Destinations } from './controls';
 import { Evidence, Results } from './result';
 import type { RetrievalStatus } from './retrieval';
+import { accountRequest, invalidateAccountRequests, StaleAccountRequest } from './account/client';
+import { consentVersion, type SavedCase } from './account/contract';
 
 const storageKey = 'kooch.compass.guest.v1';
 type View = 'form' | 'prerequisites' | 'result';
@@ -21,6 +23,9 @@ export function Compass() {
   const [draftNotice, setDraftNotice] = useState('');
   const [amount, setAmount] = useState('');
   const [currency, setCurrency] = useState('EUR');
+  const [privateCase, setPrivateCase] = useState<SavedCase | null>(null);
+  const [accountNotice, setAccountNotice] = useState('');
+  const privateMode = useRef(false);
   const revision = useRef(0);
   const abort = useRef<AbortController | null>(null);
   const heading = useRef<HTMLHeadingElement>(null);
@@ -36,6 +41,18 @@ export function Compass() {
   }
   useEffect(() => {
     void loadConfig();
+    const resume = new URLSearchParams(window.location.search).get('resume') === '1';
+    if (resume) {
+      privateMode.current = true;
+      void accountRequest('case').then(({ response, data }) => {
+        const parsed = answersSchema.safeParse(data.case?.answers);
+        if (!response.ok || !parsed.success) throw new Error(data.message ?? 'پرونده‌ای برای ادامه در دسترس نیست.');
+        setAnswers(parsed.data); setStep(data.case.step); setPrivateCase(data.case);
+        setAmount(parsed.data.budget?.amount.toString() ?? ''); setCurrency(parsed.data.budget?.currency ?? 'EUR');
+        setAccountNotice('پاسخ‌های حساب دریافت شدند؛ تغییرات را با دکمهٔ ذخیره ثبت کن.'); setReady(true);
+      }).catch(e => { if (!(e instanceof StaleAccountRequest)) setError(e.message); setReady(true); });
+      return () => { abort.current?.abort(); };
+    }
     try {
       const saved = sessionStorage.getItem(storageKey);
       if (saved) {
@@ -51,13 +68,23 @@ export function Compass() {
     return () => { abort.current?.abort(); };
   }, []);
   useEffect(() => {
-    if (!ready) return;
+    if (!ready || privateMode.current) return;
     try {
       if (step === 0 && JSON.stringify(answers) === JSON.stringify(emptyAnswers)) sessionStorage.removeItem(storageKey);
       else sessionStorage.setItem(storageKey, JSON.stringify({ version: 1, answers, step }));
     }
     catch { setDraftNotice('پیش‌نویس در این مرورگر قابل نگهداری نیست؛ فرم همچنان کار می‌کند.'); }
   }, [answers, step, ready]);
+  useEffect(() => {
+    const channel = new BroadcastChannel('kooch.account');
+    channel.onmessage = () => {
+      invalidateAccountRequests();
+      if (!privateMode.current) return;
+      revision.current++; abort.current?.abort(); setPrivateCase(null); setAnswers(emptyAnswers); setResult(null);
+      setAmount(''); setStep(0); setView('form'); setAccountNotice('از حساب خارج شدی؛ پاسخ‌های خصوصی از این صفحه پاک شدند.');
+    };
+    return () => channel.close();
+  }, []);
   useEffect(() => { heading.current?.focus(); if (view === 'result') document.getElementById('result-title')?.focus(); }, [step, view]);
 
   function update(next: Answers) {
@@ -67,6 +94,22 @@ export function Compass() {
     revision.current++; abort.current?.abort(); setBusy(false); setAnswers(emptyAnswers); setStep(0); setView('form');
     setAmount(''); setCurrency('EUR'); setResult(null); setError(''); setDraftNotice('پاسخ‌های این نشست پاک شدند.');
     try { sessionStorage.removeItem(storageKey); } catch { /* optional browser storage */ }
+  }
+  async function savePrivateCase() {
+    const input = currentAnswers(); if (!input || !privateCase || busy) return;
+    const savingRevision = ++revision.current; setBusy(true); setError(''); setAccountNotice('');
+    try {
+      const { response, data } = await accountRequest(`case/${privateCase.id}`, {
+        answers: input, step, expected_revision: privateCase.revision, request_id: crypto.randomUUID(), consent: consentVersion,
+      });
+      if (savingRevision !== revision.current) return;
+      if (!response.ok) {
+        if (response.status === 401) { setAnswers(emptyAnswers); setResult(null); setAmount(''); setPrivateCase(null); setStep(0); setView('form'); }
+        throw new Error(data.message);
+      }
+      setAnswers(input); setPrivateCase(data.case); setAccountNotice('تغییرات در پرونده ذخیره شدند.');
+    } catch (e) { if (savingRevision === revision.current && !(e instanceof StaleAccountRequest)) setError(e instanceof Error ? e.message : 'ذخیره انجام نشد؛ دوباره تلاش کن.'); }
+    finally { if (savingRevision === revision.current) setBusy(false); }
   }
   function currentAnswers(): Answers | null {
     if (view !== 'form' || config?.questions[step]?.id !== 'budget') return answers;
@@ -105,8 +148,10 @@ export function Compass() {
     <a className="skip-link" href="#main">رفتن به محتوا</a>
     <header><a className="brand" href="/" aria-label="کوچ، خانهٔ قطب‌نما"><strong>کوچ</strong><span>قطب‌نمای مهاجرت</span></a>
       <ol className="progress" aria-label="مراحل قطب‌نما">{['اطلاعات پایه', 'مسیرهای مرتبط', 'نتیجه'].map((label, index) => <li key={label} aria-current={index === stage ? 'step' : undefined} className={index <= stage ? 'active' : ''}><span className="dot" />{label}</li>)}</ol>
-      <button className="text-button clear" onClick={clear}>پاک‌کردن پاسخ‌ها</button></header>
+      <div className="header-actions"><a href="/account">حساب من</a><button className="text-button clear" onClick={clear}>{privateMode.current ? 'پاک‌کردن فرم جاری' : 'پاک‌کردن پاسخ‌ها'}</button></div></header>
     <main id="main">
+      {privateMode.current && <section className="case-toolbar"><p>{privateCase ? `پروندهٔ ذخیره‌شده · نسخهٔ ${privateCase.revision.toLocaleString('fa-IR')} · پاک‌شدن پس از بی‌فعالیتی: ${new Date(privateCase.delete_after).toLocaleDateString('fa-IR')}` : 'برای دریافت یا ادامهٔ پرونده به حساب من برو.'}</p>{privateCase && <button className="primary" disabled={busy} onClick={() => void savePrivateCase()}>ذخیرهٔ تغییرات پرونده</button>}</section>}
+      {accountNotice && <p className="notice" role="status">{accountNotice}</p>}
       {view === 'result' && result ? <Results result={result} busy={busy} retrieval={config?.retrieval} editPrerequisites={() => void run('edit-prerequisites')} edit={() => { setResult(null); setStep(0); setView('form'); }} /> : <div className="workspace">
         <section className="question-panel" aria-busy={busy}>
           <h1>{view === 'form' ? 'از کجا شروع کنیم؟' : 'یک قدم به مسیرهای مرتبط نزدیک‌تر'}</h1>
@@ -128,11 +173,12 @@ export function Compass() {
             <div className="actions"><button className="primary" disabled={busy} onClick={() => void run('result')}>{busy ? 'در حال بررسی…' : 'دیدن مسیرهای قابل بررسی'}</button><button className="text-button" onClick={() => { setResult(null); setView('form'); }}>برگشت به پاسخ‌ها</button></div>
           </div> : null}
           {config && 'error' in config.data && <p className="error" role="status">{config.data.message}</p>}
-          <p className="privacy-note">پاسخ‌ها فقط در همین نشست مرورگر می‌مانند.</p>
+          <p className="privacy-note">{privateMode.current ? 'تغییرات تا زدن دکمهٔ ذخیره فقط در حافظهٔ همین صفحه می‌مانند.' : 'پاسخ‌ها فقط در همین نشست مرورگر می‌مانند.'}</p>
           {draftNotice && <p className="draft-notice" role="status">{draftNotice}</p>}
         </section>
-        <aside className="guidance"><h2>مسیر تو، با اطلاعات خودت</h2><p>به چند سؤال ساده دربارهٔ شرایط و هدفت پاسخ بده تا مسیرهای مرتبط را برای بررسی پیدا کنی.</p><p>اگر پاسخ بعضی سؤال‌ها را نمی‌دانی، «نمی‌دانم» را انتخاب کن. موارد نامعلوم در نتیجه آشکار می‌مانند.</p><p>این ابزار برای دارندهٔ گذرنامهٔ ایرانی ساکن ایران است. شروع آنلاین ممکن است همچنان به سفر برای بیومتریک نیاز داشته باشد.</p><p>به‌صورت مهمان ادامه می‌دهی. پاسخ‌ها در سرور ذخیره نمی‌شوند و هر زمان می‌توانی پیش‌نویس را پاک کنی.</p><p className="guidance-footer">این فهرست، تأیید شرایط یا احتمال ویزا نیست.</p></aside>
+        <aside className="guidance"><h2>مسیر تو، با اطلاعات خودت</h2><p>به چند سؤال ساده دربارهٔ شرایط و هدفت پاسخ بده تا مسیرهای مرتبط را برای بررسی پیدا کنی.</p><p>اگر پاسخ بعضی سؤال‌ها را نمی‌دانی، «نمی‌دانم» را انتخاب کن. موارد نامعلوم در نتیجه آشکار می‌مانند.</p><p>این ابزار برای دارندهٔ گذرنامهٔ ایرانی ساکن ایران است. شروع آنلاین ممکن است همچنان به سفر برای بیومتریک نیاز داشته باشد.</p><p>{privateMode.current ? 'پروندهٔ حساب را ادامه می‌دهی. تغییرات فقط با دکمهٔ ذخیره در حساب ثبت می‌شوند؛ مدیریت و حذف پرونده در حساب من است.' : 'به‌صورت مهمان ادامه می‌دهی. پاسخ‌ها در سرور ذخیره نمی‌شوند و هر زمان می‌توانی پیش‌نویس را پاک کنی.'}</p><p className="guidance-footer">این فهرست، تأیید شرایط یا احتمال ویزا نیست.</p></aside>
       </div>}
+      {view === 'result' && !privateMode.current && <section className="save-invitation"><h2>این مسیر را بعداً ادامه بده</h2><p>با حساب کوچ می‌توانی پاسخ‌ها را با اجازهٔ خودت ذخیره و بعداً ادامه بدهی.</p><a className="primary" href="/account">ذخیرهٔ پاسخ‌ها و ادامه در حساب</a></section>}
       {error && <div className="error" role="alert"><p>{error}</p>{!config && <button className="secondary" onClick={() => void loadConfig()}>تلاش دوباره</button>}</div>}
       {view !== 'result' && evidence && <Evidence result={evidence} retrieval={config?.retrieval} />}
     </main><footer>کوچ · هر مسیر، با منبع و محدودهٔ روشن</footer>

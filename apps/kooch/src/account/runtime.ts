@@ -1,0 +1,32 @@
+import pg from 'pg';
+import { AuthProvider } from './auth';
+import { AccountStore } from './store';
+import { createAccountApi } from './api';
+type Runtime = ReturnType<typeof createAccountApi>;
+let runtime: Promise<Runtime> | undefined;
+export function accountConfigured() {
+  return ['local', 'hosted'].includes(process.env.KOOCH_ACCOUNT_MODE ?? '') &&
+    Boolean(process.env.KOOCH_DATABASE_URL && process.env.KOOCH_AUTH_URL && process.env.KOOCH_AUTH_SERVICE_KEY && process.env.KOOCH_SESSION_ENCRYPTION_KEY && process.env.KOOCH_APP_ORIGIN);
+}
+export async function accountRuntime() {
+  if (!accountConfigured()) return null;
+  if (!runtime) runtime = (async () => {
+    const mode = process.env.KOOCH_ACCOUNT_MODE as 'local' | 'hosted';
+    const origin = new URL(process.env.KOOCH_APP_ORIGIN!).origin;
+    const authUrl = new URL(process.env.KOOCH_AUTH_URL!);
+    const databaseUrl = new URL(process.env.KOOCH_DATABASE_URL!);
+    const localHosts = ['127.0.0.1', 'localhost', '[::1]'];
+    if (mode === 'local' && [new URL(origin).hostname, authUrl.hostname, databaseUrl.hostname].some(host => !localHosts.includes(host))) throw new Error('Local mode requires loopback services.');
+    if (mode === 'hosted' && (new URL(origin).protocol !== 'https:' || authUrl.protocol !== 'https:')) throw new Error('Hosted mode requires HTTPS.');
+    if (mode === 'hosted') {
+      // Prevent URL options from silently disabling certificate verification in pg.
+      for (const key of ['sslmode', 'sslcert', 'sslkey', 'sslrootcert']) databaseUrl.searchParams.delete(key);
+    }
+    const pool = new pg.Pool({ connectionString: databaseUrl.href, ...(mode === 'hosted' ? { ssl: { rejectUnauthorized: true } } : {}), max: 5, connectionTimeoutMillis: 5000, statement_timeout: 10000 });
+    const store = new AccountStore(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!);
+    await store.validateRole();
+    return createAccountApi({ store, mode, origin, auth: new AuthProvider({ url: authUrl.href.replace(/\/$/, ''),
+      key: process.env.KOOCH_AUTH_PUBLISHABLE_KEY, serviceKey: process.env.KOOCH_AUTH_SERVICE_KEY!, origin }) });
+  })().catch(error => { runtime = undefined; throw error; });
+  return runtime;
+}

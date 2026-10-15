@@ -21,6 +21,10 @@ jobs:
           cache: npm
           cache-dependency-path: apps/kooch/package-lock.json
       - run: npm ci --no-audit --no-fund
+      - run: npm run account:setup
+      - run: docker compose --env-file local/.env -f local/compose.yml up -d --wait
+      - run: npm run account:migrate
+      - run: npm run test:account
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
