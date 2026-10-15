@@ -1,5 +1,5 @@
 // Discovery prerequisites only; these are not a complete eligibility policy.
-export const policyVersion = 'compass-discovery-1';
+export const policyVersion = 'compass-discovery-2';
 export const facts = {
   'am.job_offer': 'پیشنهاد کار از کارفرمای ارمنی داری؟',
   'ca.work': 'سابقهٔ کار واجد شرایط CEC در کانادا داری؟',
@@ -27,6 +27,24 @@ export const facts = {
   'uk.admission': 'پذیرش تحصیلی و گواهی حمایت تحصیلی بریتانیا داری؟',
 } as const;
 export type FactId = keyof typeof facts;
+// Existing destination history is different from a prerequisite a newcomer can prepare.
+export const priorHistoryFacts = new Set<FactId>(['ca.work', 'ca.study', 'uk.degree']);
+export const preparationSteps: Partial<Record<FactId, string>> = {
+  'am.job_offer': 'ابتدا پیشنهاد کار از کارفرمای ارمنی بگیر؛ کارفرما درخواست را شروع می‌کند.',
+  'ca.admission': 'ابتدا پذیرش از مؤسسهٔ آموزشی مجاز کانادا بگیر.',
+  'de.admission': 'ابتدا پذیرش دانشگاه یا دورهٔ واجد شرایط آلمان را بگیر.',
+  'it.admission': 'پذیرش و پیش‌ثبت‌نام لازم برای تحصیل در ایتالیا را آماده کن.',
+  'uk.admission': 'ابتدا پذیرش و CAS از مؤسسهٔ آموزشی مجاز بریتانیا بگیر.',
+  'de.job_offer': 'ابتدا پیشنهاد کار تخصصی از کارفرمای آلمانی پیدا کن.',
+  'es.job_offer': 'ابتدا پیشنهاد شغل تخصصی از کارفرمای اسپانیایی پیدا کن.',
+  'it.job_offer': 'ابتدا پیشنهاد کار تخصصی و مراحل مجوز کارفرمای ایتالیایی را پیگیری کن.',
+  'uk.job_offer': 'ابتدا شغل واجد شرایط و کارفرمای دارای مجوز حمایت این مسیر را پیدا کن.',
+  'es.project': 'طرح نوآورانه و فرایند تأیید لازم در اسپانیا را آماده کن.',
+  'uk.project': 'طرح کسب‌وکار نوآور و تأییدیهٔ نهاد مجاز را آماده کن.',
+  'uk.talent': 'شرایط تأییدیهٔ استعداد جهانی و مدارک حرفه‌ای لازم را بررسی کن.',
+  'ca.province': 'ابتدا استان و جریان نامزدی قابل اقدام از خارج کانادا را مشخص کن.',
+  'pt.investment': 'گزینهٔ سرمایه‌گذاری مجاز و منابع مالی لازم را بررسی کن.',
+};
 type Goal = 'work' | 'study' | 'family' | 'business' | 'investment';
 export type DiscoveryPolicy = { goal: Goal; requires: FactId[]; prerequisite: string };
 const route = (goal: Goal, requires: FactId[], prerequisite: string): DiscoveryPolicy => ({ goal, requires, prerequisite });

@@ -10,6 +10,7 @@ const pageUrl = publicUrl.refine(value => {
   const url = new URL(value);
   return url.origin === 'https://kooch.app' && url.pathname.startsWith('/visas/') && !url.search && !url.hash;
 });
+const sourceSchema = z.object({ id: z.string(), url: publicUrl, title: z.string(), authority: z.literal('primary'), checked_on: day }).passthrough();
 const applicationSchema = z.object({
   route_key: z.string(), iran_passport_status: z.string(), start_from_iran: z.string(),
   application_acceptance: z.string(), legal_status: z.string().optional(),
@@ -19,17 +20,19 @@ const applicationSchema = z.object({
 export const routeSchema = z.object({
   id: z.string(), destination: z.string().regex(/^[a-z]{2}$/), slug: z.string(),
   name_fa: z.string().min(1), name: z.string(), category: z.string(),
+  summary_fa: z.string().min(1).optional(),
+  facts: z.array(z.object({ label: z.string().min(1), value: z.string().min(1), sources: z.array(sourceSchema).min(1) })).max(5).default([]),
   page_url: pageUrl.nullable(), application: applicationSchema,
 });
 export const snapshotSchema = z.object({
-  schema_version: z.literal(1), scope: z.literal('iran-start'), source_url: z.literal(sourceUrl),
+  schema_version: z.literal(2), scope: z.literal('iran-start'), source_url: z.literal(sourceUrl),
   retrieved_at: z.iso.datetime({ offset: true }), provider: z.string(), license: z.string(),
   license_url: publicUrl, provider_url: publicUrl, total: z.number().int().min(0).max(100),
   coverage: z.object({ catalog: z.number().int().nonnegative(), reviewed: z.number().int().nonnegative(),
     unreviewed: z.number().int().nonnegative(), documented_start: z.number().int().nonnegative(),
     scope: z.literal('application_channel_only'), freshness_days: z.literal(14) }),
   routes: z.array(routeSchema).max(100),
-  sources: z.record(z.string(), z.object({ id: z.string(), url: publicUrl, title: z.string(), authority: z.literal('primary'), checked_on: day }).passthrough()),
+  sources: z.record(z.string(), sourceSchema),
 }).superRefine((value, ctx) => {
   if (value.total !== value.routes.length || value.total !== value.coverage.documented_start ||
       value.coverage.catalog !== value.coverage.reviewed + value.coverage.unreviewed ||

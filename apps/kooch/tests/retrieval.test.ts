@@ -15,6 +15,10 @@ test('bounded public-only scoped retrieval retains reviewed evidence and actual 
   assert.equal(refreshed.status.state, 'ok');
   const config = await (await createCompassApi({ snapshot: refreshed.snapshot, now }).GET()).json();
   assert.equal(config.data.coverage.current, 29);
+  const study = await (await createCompassApi({ snapshot: refreshed.snapshot, now }).POST(new Request('http://localhost/api/compass', {
+    method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ goal: 'study', destinations: ['de'] }),
+  }))).json();
+  assert.ok(study.routes[0].facts.some((fact: { value: string }) => fact.value.includes('۱۱٬۹۰۴')));
 });
 
 test('failed or changed upstream data preserves the previous snapshot without extending review freshness', async () => {

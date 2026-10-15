@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "scope": "iran-start",
   "source_url": "https://kooch.app/wp-json/kooch/v1/visa-catalog?scope=iran-start&limit=100&offset=0",
   "retrieved_at": "2026-10-15T08:29:56.014Z",
@@ -38,7 +38,56 @@
         ],
         "reason_fa": "راهنمای دولتی صریحاً ثبت کارفرما در workpermit.am را وقتی متقاضی خارج ارمنستان است مجاز می‌داند و درباره اتباع ایران نیز توضیح دارد. پس متقاضی می‌تواند در ایران بماند و کارفرما شروع کند؛ دریافت کارت و اجرای قرارداد بعداً نیازمند ورود ارمنستان است.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "برای استخدام نزد کارفرمای ارمنی؛ درخواست اصلی را کارفرما ثبت می‌کند.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "کارفرمای ارمنی و درخواست شغلی",
+          "sources": [
+            {
+              "id": "am-mcs-work",
+              "title": "MCS — Employment residence application",
+              "url": "https://migration.mia.gov.am/en/acquiring-employment-based-residence-status",
+              "authority": "primary",
+              "checked_on": "2026-10-15"
+            }
+          ]
+        },
+        {
+          "label": "ثبت درخواست",
+          "value": "آنلاین؛ توسط کارفرما",
+          "sources": [
+            {
+              "id": "am-mcs-work",
+              "title": "MCS — Employment residence application",
+              "url": "https://migration.mia.gov.am/en/acquiring-employment-based-residence-status",
+              "authority": "primary",
+              "checked_on": "2026-10-15"
+            }
+          ]
+        },
+        {
+          "label": "هزینه کارت فعلی",
+          "value": "۱۰۵٬۰۰۰ درام؛ تا پیش از تغییر نوامبر",
+          "sources": [
+            {
+              "id": "am-mcs-work",
+              "title": "MCS — Employment residence application",
+              "url": "https://migration.mia.gov.am/en/acquiring-employment-based-residence-status",
+              "authority": "primary",
+              "checked_on": "2026-10-15"
+            },
+            {
+              "id": "am-mcs-nov2026",
+              "title": "اطلاعیه رسمی ۶ اکتبر: تغییر روند و تعرفه از ۱ نوامبر ۲۰۲۶",
+              "url": "https://migration.mia.gov.am/articles/news/digitalization",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "ca:express-entry-cec",
@@ -87,7 +136,49 @@
             ]
           }
         ]
-      }
+      },
+      "summary_fa": "برای فردی که سابقه کار تخصصیِ مجاز در کانادا دارد و به دنبال اقامت دائم است.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "یک سال کار مجاز کانادایی در سه سال اخیر",
+          "sources": [
+            {
+              "id": "ca-cec",
+              "title": "IRCC — Canadian Experience Class",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "تحصیلات",
+          "value": "حداقل مدرک مستقل ندارد",
+          "sources": [
+            {
+              "id": "ca-cec",
+              "title": "IRCC — Canadian Experience Class",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "تمکن",
+          "value": "CEC از تمکن استقرار معاف است",
+          "sources": [
+            {
+              "id": "ca-funds",
+              "title": "IRCC — Express Entry proof of funds",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "ca:express-entry-fst",
@@ -136,7 +227,49 @@
             ]
           }
         ]
-      }
+      },
+      "summary_fa": "برای سابقه حرفه فنی واجد شرایط، همراه پیشنهاد شغلی معتبر یا گواهی صلاحیت کانادایی.",
+      "facts": [
+        {
+          "label": "سابقه فنی",
+          "value": "دو سال در پنج سال اخیر",
+          "sources": [
+            {
+              "id": "ca-fst",
+              "title": "IRCC — Federal Skilled Trades",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-trades.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "شرط اصلی",
+          "value": "پیشنهاد معتبر یک‌ساله یا گواهی کانادایی",
+          "sources": [
+            {
+              "id": "ca-fst",
+              "title": "IRCC — Federal Skilled Trades",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-trades.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "تمکن",
+          "value": "اصولاً لازم؛ با استثنای کار و پیشنهاد معتبر",
+          "sources": [
+            {
+              "id": "ca-funds",
+              "title": "IRCC — Express Entry proof of funds",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "ca:express-entry-fsw",
@@ -185,7 +318,49 @@
             ]
           }
         ]
-      }
+      },
+      "summary_fa": "مسیر اقامت دائم برای سابقه کار تخصصی بیرون کانادا، با ارزیابی زبان، تحصیل و سابقه.",
+      "facts": [
+        {
+          "label": "سابقه کار",
+          "value": "یک سال پیوسته تخصصی در ده سال اخیر",
+          "sources": [
+            {
+              "id": "ca-fsw",
+              "title": "IRCC — Federal Skilled Worker",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "زبان",
+          "value": "حداقل CLB ۷ در چهار مهارت",
+          "sources": [
+            {
+              "id": "ca-fsw",
+              "title": "IRCC — Federal Skilled Worker",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "انتخاب اولیه",
+          "value": "حداقل ۶۷ از ۱۰۰؛ جدا از CRS",
+          "sources": [
+            {
+              "id": "ca-fsw",
+              "title": "IRCC — Federal Skilled Worker",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "ca:pgwp",
@@ -232,7 +407,49 @@
             ]
           }
         ]
-      }
+      },
+      "summary_fa": "برای فارغ‌التحصیل برنامه واجد شرایط در کانادا؛ پذیرش دانشگاه به‌تنهایی کافی نیست.",
+      "facts": [
+        {
+          "label": "مهلت اقدام",
+          "value": "تا ۱۸۰ روز پس از تأیید پایان تحصیل",
+          "sources": [
+            {
+              "id": "ca-pgwp",
+              "title": "IRCC — PGWP eligibility",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "شرط اصلی",
+          "value": "فارغ‌التحصیلی از دوره واجد PGWP",
+          "sources": [
+            {
+              "id": "ca-pgwp",
+              "title": "IRCC — PGWP eligibility",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "هزینه درخواست",
+          "value": "۲۵۵ دلار کانادا؛ اعاده وضعیت جدا",
+          "sources": [
+            {
+              "id": "ca-pgwp-apply",
+              "title": "IRCC — Apply for PGWP",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/apply.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "ca:pnp",
@@ -281,7 +498,49 @@
             ]
           }
         ]
-      }
+      },
+      "summary_fa": "چتر چندین برنامه استانی؛ معیار واحدی برای همه استان‌ها وجود ندارد.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "نامزدی جریان مشخصِ استان",
+          "sources": [
+            {
+              "id": "ca-pnp",
+              "title": "IRCC — Provincial Nominee Program",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "Express Entry",
+          "value": "نامزدی همسو: ۶۰۰ امتیاز اضافه",
+          "sources": [
+            {
+              "id": "ca-pnp",
+              "title": "IRCC — Provincial Nominee Program",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "محل استقرار",
+          "value": "همان استان یا قلمرو نامزدکننده",
+          "sources": [
+            {
+              "id": "ca-pnp",
+              "title": "IRCC — Provincial Nominee Program",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "ca:spousal-sponsorship",
@@ -328,7 +587,49 @@
             ]
           }
         ]
-      }
+      },
+      "summary_fa": "اسپانسرشیپ خانوادگی با احراز وضعیت حامی و رابطه واجد شرایط.",
+      "facts": [
+        {
+          "label": "حامی",
+          "value": "شهروند یا مقیم دائم واجد شرایط، ۱۸ سال به بالا",
+          "sources": [
+            {
+              "id": "ca-spouse",
+              "title": "IRCC — Sponsorship eligibility",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/eligibility.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "محل حامی",
+          "value": "مقیم دائم خارج کانادا نمی‌تواند حامی شود",
+          "sources": [
+            {
+              "id": "ca-spouse",
+              "title": "IRCC — Sponsorship eligibility",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/eligibility.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "درآمد",
+          "value": "عموماً حداقل ثابت ندارد؛ با استثنا",
+          "sources": [
+            {
+              "id": "ca-spouse",
+              "title": "IRCC — Sponsorship eligibility",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/eligibility.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "ca:study-permit-ca",
@@ -374,7 +675,49 @@
             ]
           }
         ]
-      }
+      },
+      "summary_fa": "برای تحصیل در مؤسسه تعیین‌شده، با پذیرش معتبر و مدارک مالی و اقامتی لازم.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "پذیرش معتبر؛ PAL/TAL در بیشتر موارد",
+          "sources": [
+            {
+              "id": "ca-study-docs",
+              "title": "IRCC — Study permit documents",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "تمکن زندگی",
+          "value": "یک نفر خارج کبک: سالانه ۲۲۸۹۵ دلار کانادا",
+          "sources": [
+            {
+              "id": "ca-study-funds",
+              "title": "IRCC — Study permit financial support",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "بودجه جدا",
+          "value": "شهریه و رفت‌وبرگشت افزون بر زندگی",
+          "sources": [
+            {
+              "id": "ca-study-funds",
+              "title": "IRCC — Study permit financial support",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "de:eu-blue-card",
@@ -397,7 +740,49 @@
         ],
         "reason_fa": "اطلاعیه جاری تهران، پذیرش محدود ایرانیان ساکن ایران در دسته مربوط را تأیید می‌کند. ثبت صف و وقت با شروط دسته است؛ بازبودن کانال به معنی موجودبودن وقت فوری یا احراز صلاحیت نیست.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "برای متخصصان دارای پیشنهاد شغلی واجد شرایط؛ رقم حقوق و شاخه مدرک تعیین‌کننده‌اند. پذیرش محدود درخواست از ایران باید جدا بررسی شود.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "پیشنهاد کار تخصصی حداقل ۶ ماه",
+          "sources": [
+            {
+              "id": "de-law-18g",
+              "title": "قانون اقامت آلمان، ماده 18g",
+              "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18g.html",
+              "checked_on": "2026-10-13",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "حقوق ناخالص ۲۰۲۶",
+          "value": "از ۵۰٬۷۰۰ یورو درسال؛ شاخه‌های کمتر مشروط",
+          "sources": [
+            {
+              "id": "de-mi-blue",
+              "title": "Make it in Germany — EU Blue Card",
+              "url": "https://www.make-it-in-germany.com/en/visa-residence/types/eu-blue-card",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "مدت اقامت",
+          "value": "حداکثر ۴ سال؛ وابسته به قرارداد",
+          "sources": [
+            {
+              "id": "de-law-18",
+              "title": "قانون اقامت آلمان، ماده 18",
+              "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18.html",
+              "checked_on": "2026-10-13",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "de:skilled-worker-de",
@@ -420,7 +805,49 @@
         ],
         "reason_fa": "برای فرایند تسریع‌شده دارای پیش‌موافقت ماده۸۱a و برخی پیش‌موافقت‌های پزشکی/مراقبت، وقت محدود اعلام شده است. همه پرونده‌های عادی۱۸a/۱۸b مشمول این پذیرش نیستند؛ برای سایر زیرشاخه‌ها وقت تازه تأیید نشده است.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "با مدرک قابل‌قبول و پیشنهاد کار تخصصی، این مسیر باید جدا از بلوکارت بررسی شود؛ عنوان شغل، مجوز حرفه و سن از ورودی‌های مهم‌اند.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "مدرک قابل‌قبول و پیشنهاد کار تخصصی",
+          "sources": [
+            {
+              "id": "de-mi-skilled",
+              "title": "Make it in Germany — Work visa for qualified professionals",
+              "url": "https://www.make-it-in-germany.com/en/visa-residence/types/work-qualified-professionals",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "مدت اقامت",
+          "value": "تا ۴ سال؛ وابسته به قرارداد",
+          "sources": [
+            {
+              "id": "de-law-18",
+              "title": "قانون اقامت آلمان، ماده 18",
+              "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18.html",
+              "checked_on": "2026-10-13",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "هزینه پایه ویزا",
+          "value": "بزرگسال ۷۵ یورو؛ پیش از معافیت و خدمات",
+          "sources": [
+            {
+              "id": "de-ffo-fees",
+              "title": "وزارت خارجه آلمان — Visas for Germany",
+              "url": "https://www.auswaertiges-amt.de/en/visa-service/215870-215870",
+              "checked_on": "2026-10-13",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "de:student-de",
@@ -443,7 +870,49 @@
         ],
         "reason_fa": "اطلاعیه جاری تهران، پذیرش محدود ایرانیان ساکن ایران در دسته مربوط را تأیید می‌کند. ثبت صف و وقت با شروط دسته است؛ بازبودن کانال به معنی موجودبودن وقت فوری یا احراز صلاحیت نیست.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "برای تحصیل در دانشگاه قابل‌قبول آلمان و بعضی دوره‌های آماده‌سازی مرتبط؛ پذیرش ویزا، تمکن و بودجه دانشگاه باید مستقل بررسی شوند.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "پذیرش مؤسسه آموزش عالی موردقبول",
+          "sources": [
+            {
+              "id": "de-mi-study",
+              "title": "Make it in Germany — Studying",
+              "url": "https://www.make-it-in-germany.com/en/visa-residence/types/studying",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "تمکن ۲۰۲۶",
+          "value": "حساب مسدود ۱۱٬۹۰۴ یورو؛ راه‌های اثبات دیگر مجاز",
+          "sources": [
+            {
+              "id": "de-mi-study",
+              "title": "Make it in Germany — Studying",
+              "url": "https://www.make-it-in-germany.com/en/visa-residence/types/studying",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "پس از فارغ‌التحصیلی",
+          "value": "جست‌وجوی کار تا ۱۸ ماه با شرایط مستقل",
+          "sources": [
+            {
+              "id": "de-mi-study",
+              "title": "Make it in Germany — Studying",
+              "url": "https://www.make-it-in-germany.com/en/visa-residence/types/studying",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "es:entrepreneur-visa",
@@ -467,7 +936,9 @@
         ],
         "reason_fa": "دستور مستقیمUGE درخواست از خارج را با ثبتENISA، درخواست الکترونیکی مجوز و سپس ویزای کنسولی توضیح می‌دهد؛ شروع پرونده در حالی که متقاضی ایران است ممکن است، اما پذیرش ویزا در تهران مستقل است.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "تأییدENISA و پرونده اینترنتی؛ ثبت شرکت به‌تنهایی کافی نیست.",
+      "facts": []
     },
     {
       "id": "es:family-reunification-es",
@@ -490,7 +961,9 @@
         ],
         "reason_fa": "متقاضی اصلیِ الحاق، میزبان است و می‌تواند باMercurio ثبت کند، در حالی که خانواده ایران مانده‌اند. پس از تأیید، خانواده از کنسولگری محل اقامت ویزا می‌گیرند؛ پذیرش عملی تهران جداست.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "میزبان دراسپانیا شروع می‌کند؛ عضو خانواده مرحله ویزا را در ایران طی می‌کند.",
+      "facts": []
     },
     {
       "id": "es:highly-qualified-professional",
@@ -514,7 +987,9 @@
         ],
         "reason_fa": "درخواست مجوز این بخش طبق ماده۷۶ از کانال اینترنتیUGE انجام می‌شود؛ کارفرما/نماینده می‌تواند هنگام ماندن متقاضی در ایران شروع کند. ویزای کنسولی پس از تأیید و عملیات امروز تهران جداست.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "پیشنهاد شغل تخصصی و اقدامUGE؛ بعداً ویزای ورود برای فرد ایران.",
+      "facts": []
     },
     {
       "id": "it:citizenship-by-descent",
@@ -537,7 +1012,9 @@
         ],
         "reason_fa": "مرجع فرد مقیم خارج، کنسولگری صالح محل اقامت است؛ ایران در حوزه سفارت تهران قرار می‌گیرد. اطلاعیه بازگشت همه خدمات وجود دارد، اما نوبت اختصاصی تبار امروز تأیید نشده.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "تابعیت ایرانی به‌تنهایی کافی نیست؛ زنجیره تبار و تغییرات۲۰۲۵ تعیین‌کننده‌اند.",
+      "facts": []
     },
     {
       "id": "it:digital-nomad-italy",
@@ -560,7 +1037,9 @@
         ],
         "reason_fa": "مسیر ملی برای خارجی واجدشرط است و تهران اعلام پذیرش همه دسته‌های ویزا دارد. چک‌لیست ملی از منبع کنسولی رسمی تطبیق داده شده؛ مدارک محلی پاریس به ایرانی تعمیم نشده و دستور دقیق تهران باید گرفته شود.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "فعالیت تخصصی از راه دور؛ اسناد درآمد، تجربه و اقامت.",
+      "facts": []
     },
     {
       "id": "it:elective-residence",
@@ -584,7 +1063,9 @@
         ],
         "reason_fa": "تهران دریافت همه دسته‌های ویزا را اعلام کرده؛ مبنای ملی اقامت انتخابی برای فرد دارای منابع مستقل قابل بررسی است. وقت و کف مالی اختصاصی ایران باید تأیید شود.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "برای زندگی با درآمد پایدار مستقل؛ مسیر اشتغال نیست.",
+      "facts": []
     },
     {
       "id": "it:eu-blue-card-italy",
@@ -607,7 +1088,9 @@
         ],
         "reason_fa": "کارفرما ابتدا پرونده استخدام را در ایتالیا آغاز می‌کند؛ پس از پذیرش، متقاضی ویزا را در سفارت کشور مبدأ می‌گیرد. تهران بازگشت خدمات همه دسته‌ها را اعلام کرده؛ تکمیل مجوز قبل از وقت لازم است.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "پیشنهاد استخدام تخصصی، مجوز کارفرما، سپس ویزای ورود.",
+      "facts": []
     },
     {
       "id": "it:student-visa-italy",
@@ -632,7 +1115,9 @@
         ],
         "reason_fa": "تهران برای ثبت‌نام۲۰۲۶/۲۷ اعلام کرده VisaMetric پس از بررسی پیش‌ثبت‌نام با ایمیل ثبت‌شدهUniversitaly تماس می‌گیرد؛ رزرو عادی وقت لازم نیست. پذیرش دانشگاه و دعوت، تضمین صدور نیست.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "پیش‌ثبت‌نامUniversitaly و دعوت مخصوص تهران برای ثبت پرونده.",
+      "facts": []
     },
     {
       "id": "pt:golden-visa",
@@ -656,7 +1141,9 @@
         ],
         "reason_fa": "درگاه جاری AIMA ثبت متقاضی یا نماینده و بارگذاری اسناد را پیش‌بینی می‌کند؛ متقاضی می‌تواند پیش از سفر شروع کند. سفر بعدی برای بیومتریک لازم است؛ ورود قانونی و مسیر ویزای سفر از ایران جداگانه باید تأیید شود.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "ثبت اولیه آنلاین؛ بیومتریک و تکمیل پرونده در پرتغال.",
+      "facts": []
     },
     {
       "id": "uk:family-spouse",
@@ -681,7 +1168,51 @@
         ],
         "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "برای رابطه واجدشرایط با حامی دارای وضعیت مجاز؛ با همراه ویزای کار یا تحصیل فرق دارد.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "رابطه واقعی باحامی واجدشرایط",
+          "sources": [
+            {
+              "id": "uk-family-partner",
+              "title": "GOV.UK — Family partner/spouse",
+              "url": "https://www.gov.uk/uk-family-visa/partner-spouse",
+              "authority": "primary",
+              "checked_on": "2026-10-15",
+              "retrieval_method": "official_page_text"
+            }
+          ]
+        },
+        {
+          "label": "درآمد معمول",
+          "value": "سالانه ۲۹٬۰۰۰ پوند؛ استثناها و قواعدانتقالی جدا",
+          "sources": [
+            {
+              "id": "uk-family-income",
+              "title": "GOV.UK — Family financial requirement",
+              "url": "https://www.gov.uk/uk-family-visa/proof-income-partner",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "مدت ورود معمول",
+          "value": "۲ سال و ۹ ماه؛ نامزدی قواعددیگر دارد",
+          "sources": [
+            {
+              "id": "uk-family-partner",
+              "title": "GOV.UK — Family partner/spouse",
+              "url": "https://www.gov.uk/uk-family-visa/partner-spouse",
+              "authority": "primary",
+              "checked_on": "2026-10-15",
+              "retrieval_method": "official_page_text"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "uk:global-talent",
@@ -706,7 +1237,49 @@
         ],
         "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "برای رهبران یا استعدادهای آینده در پژوهش، هنر و فناوری دیجیتال؛ شواهد حرفه‌ای باید با شاخه تخصصی تطبیق داده شوند.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "تأیید تخصص یا جایزه معتبر درفهرست رسمی",
+          "sources": [
+            {
+              "id": "uk-gt",
+              "title": "GOV.UK — Global Talent overview",
+              "url": "https://www.gov.uk/global-talent",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "مدت اقامت",
+          "value": "هربار تا ۵ سال",
+          "sources": [
+            {
+              "id": "uk-gt",
+              "title": "GOV.UK — Global Talent overview",
+              "url": "https://www.gov.uk/global-talent",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "ادامه اقامت",
+          "value": "تمدید مشروط؛ دائم پس از ۳ یا ۵ سال برحسب شاخه",
+          "sources": [
+            {
+              "id": "uk-gt",
+              "title": "GOV.UK — Global Talent overview",
+              "url": "https://www.gov.uk/global-talent",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "uk:health-and-care-worker",
@@ -732,7 +1305,49 @@
         ],
         "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است. ورود تازه خارج کشور برایcare worker وsenior care worker مجاز نیست؛ این حمایت فقط شاخه‌های درمانی واجدشرایط را شامل می‌شود.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "مسیر کار واجدشرایط در حوزه سلامت با اسپانسر؛ مراقبت از سالمند را با استخدام تازه پزشک یا پرستار یکسان نگیرید.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "شغل درمانی واجدشرایط و اسپانسر مجاز",
+          "sources": [
+            {
+              "id": "uk-hc",
+              "title": "GOV.UK — Health and Care Worker overview",
+              "url": "https://www.gov.uk/health-care-worker-visa",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "هزینه پایه",
+          "value": "تا ۳ سال ۳۲۴ پوند؛ شرایط پرونده جدا",
+          "sources": [
+            {
+              "id": "uk-hc-cost",
+              "title": "GOV.UK — Health and Care costs",
+              "url": "https://www.gov.uk/health-care-worker-visa/how-much-it-costs",
+              "checked_on": "2026-10-13",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "هزینه سلامت",
+          "value": "متقاضی و همراه مجاز از IHS معاف‌اند",
+          "sources": [
+            {
+              "id": "uk-hc",
+              "title": "GOV.UK — Health and Care Worker overview",
+              "url": "https://www.gov.uk/health-care-worker-visa",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "uk:high-potential-individual",
@@ -757,7 +1372,49 @@
         ],
         "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "ورود بدون پیشنهاد شغلی برای مدرک تازه دانشگاه واجدشرایط؛ فهرست سال اعطای مدرک تعیین‌کننده است.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "مدرک ۵ سال اخیر ازدانشگاه فهرست همان سال",
+          "sources": [
+            {
+              "id": "uk-hpi-elig",
+              "title": "GOV.UK — HPI eligibility",
+              "url": "https://www.gov.uk/high-potential-individual-visa/eligibility",
+              "checked_on": "2026-10-13",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "هزینه پایه ویزا",
+          "value": "۸۸۰ پوند؛ Ecctis و IHS جدا",
+          "sources": [
+            {
+              "id": "uk-hpi-cost",
+              "title": "GOV.UK — HPI costs",
+              "url": "https://www.gov.uk/high-potential-individual-visa/how-much-it-costs",
+              "checked_on": "2026-10-13",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "تمکن معمول",
+          "value": "۱٬۲۷۰ پوند؛ معافیت‌ها جدا",
+          "sources": [
+            {
+              "id": "uk-hpi-cost",
+              "title": "GOV.UK — HPI costs",
+              "url": "https://www.gov.uk/high-potential-individual-visa/how-much-it-costs",
+              "checked_on": "2026-10-13",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "uk:innovator-founder",
@@ -782,7 +1439,52 @@
         ],
         "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "برای تأسیس کسب‌وکار نوآورانه و قابل رشد با تأیید نهاد مجاز؛ هزینه ویزا با سرمایه طرح فرق دارد.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "طرح نوآورانه با تأیید نهاد مجاز",
+          "sources": [
+            {
+              "id": "uk-innovator",
+              "title": "GOV.UK — Innovator Founder overview",
+              "url": "https://www.gov.uk/innovator-founder-visa",
+              "authority": "primary",
+              "checked_on": "2026-10-15",
+              "retrieval_method": "official_page_text"
+            }
+          ]
+        },
+        {
+          "label": "مدت اقامت",
+          "value": "۳ سال؛ تمدید و دائم با شروط جدا",
+          "sources": [
+            {
+              "id": "uk-innovator",
+              "title": "GOV.UK — Innovator Founder overview",
+              "url": "https://www.gov.uk/innovator-founder-visa",
+              "authority": "primary",
+              "checked_on": "2026-10-15",
+              "retrieval_method": "official_page_text"
+            }
+          ]
+        },
+        {
+          "label": "هزینه پایه خارج کشور",
+          "value": "۱٬۳۵۷ پوند؛ تأییدیه و IHS جدا",
+          "sources": [
+            {
+              "id": "uk-innovator",
+              "title": "GOV.UK — Innovator Founder overview",
+              "url": "https://www.gov.uk/innovator-founder-visa",
+              "authority": "primary",
+              "checked_on": "2026-10-15",
+              "retrieval_method": "official_page_text"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "uk:scale-up",
@@ -807,7 +1509,51 @@
         ],
         "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "مسیر کاری با اسپانسر Scale-up در مرحله نخست؛ ادامه اقامت به درآمد ثبت‌شده و شروط تمدید وابسته است.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "اسپانسر Scale-up برای ۶ ماه نخست",
+          "sources": [
+            {
+              "id": "uk-scale",
+              "title": "GOV.UK — Scale-up Worker overview",
+              "url": "https://www.gov.uk/scale-up-worker-visa",
+              "authority": "primary",
+              "checked_on": "2026-10-15",
+              "retrieval_method": "official_page_text"
+            }
+          ]
+        },
+        {
+          "label": "حقوق پایه",
+          "value": "۳۹٬۱۰۰ پوند درسال؛ نرخ شغل هم لازم است",
+          "sources": [
+            {
+              "id": "uk-scale-job",
+              "title": "GOV.UK — Scale-up job",
+              "url": "https://www.gov.uk/scale-up-worker-visa/your-job",
+              "checked_on": "2026-10-13",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "مدت نخست",
+          "value": "۲ سال؛ تمدید شروط درآمد مستقل دارد",
+          "sources": [
+            {
+              "id": "uk-scale",
+              "title": "GOV.UK — Scale-up Worker overview",
+              "url": "https://www.gov.uk/scale-up-worker-visa",
+              "authority": "primary",
+              "checked_on": "2026-10-15",
+              "retrieval_method": "official_page_text"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "uk:skilled-worker",
@@ -832,7 +1578,49 @@
         ],
         "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "مسیر کار با پیشنهاد شغلی و اسپانسر مجاز؛ حقوق، کد شغل، زبان و امکان همراه باید جدا بررسی شوند.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "شغل و اسپانسر مجاز با CoS",
+          "sources": [
+            {
+              "id": "uk-sw-job",
+              "title": "GOV.UK — Skilled Worker job",
+              "url": "https://www.gov.uk/skilled-worker-visa/your-job",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "حقوق معمول",
+          "value": "۴۱٬۷۰۰ پوند درسال یا نرخ شغل؛ هرکدام بیشتر",
+          "sources": [
+            {
+              "id": "uk-sw-job",
+              "title": "GOV.UK — Skilled Worker job",
+              "url": "https://www.gov.uk/skilled-worker-visa/your-job",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "هزینه پایه خارج کشور",
+          "value": "تا ۳ سال ۸۱۹ پوند؛ IHS جدا",
+          "sources": [
+            {
+              "id": "uk-sw-cost",
+              "title": "GOV.UK — Skilled Worker costs",
+              "url": "https://www.gov.uk/skilled-worker-visa/how-much-it-costs",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "uk:student",
@@ -857,7 +1645,49 @@
         ],
         "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "تحصیل با پذیرش و CAS از اسپانسر مجاز؛ شهریه، تمکن، ATAS و شروط همراه از هم جدا بررسی می‌شوند.",
+      "facts": [
+        {
+          "label": "شرط اصلی",
+          "value": "پذیرش و CAS ازاسپانسر آموزشی مجاز",
+          "sources": [
+            {
+              "id": "uk-student",
+              "title": "GOV.UK — Student overview",
+              "url": "https://www.gov.uk/student-visa",
+              "checked_on": "2026-10-13",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "تمکن زندگی",
+          "value": "ماهانه ۱٬۵۲۹ لندن یا ۱٬۱۷۱ پوند خارج؛ تا ۹ ماه",
+          "sources": [
+            {
+              "id": "uk-student-money",
+              "title": "GOV.UK — Student money",
+              "url": "https://www.gov.uk/student-visa/money",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "هزینه پایه درخواست",
+          "value": "۵۵۸ پوند؛ شهریه و IHS جدا",
+          "sources": [
+            {
+              "id": "uk-student",
+              "title": "GOV.UK — Student overview",
+              "url": "https://www.gov.uk/student-visa",
+              "checked_on": "2026-10-13",
+              "authority": "primary"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "uk:visit-visa-standard",
@@ -882,7 +1712,50 @@
         ],
         "reason_fa": "صفحه رسمی امکان درخواست آنلاین ازخارج بریتانیا راشرح می‌دهد وGOV.UK مرکز درخواست ویزای تهران را برای همه دسته‌ها معرفی می‌کند. این نتیجه درباره کانال شروع است؛ شروط مسیر و احراز هویت/بیومتریک جداست و وقت یا پرداخت قابل استفاده فردی تأیید نشده است.",
         "additional_notes": []
-      }
+      },
+      "summary_fa": "برای سفر کوتاه و فعالیت مجاز؛ مجوز کار عادی یا سکونت طولانی در بریتانیا نیست.",
+      "facts": [
+        {
+          "label": "هدف اقامت",
+          "value": "بازدید کوتاه؛ مجوز کار معمول نیست",
+          "sources": [
+            {
+              "id": "uk-visitor",
+              "title": "GOV.UK — Standard Visitor overview",
+              "url": "https://www.gov.uk/standard-visitor",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "مدت معمول",
+          "value": "تا ۶ ماه",
+          "sources": [
+            {
+              "id": "uk-visitor",
+              "title": "GOV.UK — Standard Visitor overview",
+              "url": "https://www.gov.uk/standard-visitor",
+              "checked_on": "2026-10-14",
+              "authority": "primary"
+            }
+          ]
+        },
+        {
+          "label": "هزینه پایه",
+          "value": "ویزای ۶ ماهه ۱۳۵ پوند",
+          "sources": [
+            {
+              "id": "uk-visitor-apply",
+              "title": "GOV.UK — Visitor application",
+              "url": "https://www.gov.uk/standard-visitor/apply-standard-visitor-visa",
+              "authority": "primary",
+              "checked_on": "2026-10-15",
+              "retrieval_method": "official_page_text"
+            }
+          ]
+        }
+      ]
     }
   ],
   "sources": {

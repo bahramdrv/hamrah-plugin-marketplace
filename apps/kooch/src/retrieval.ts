@@ -38,7 +38,8 @@ export async function refreshSnapshot(previous: unknown, options: { fetch?: type
       const id = `${route.destination}:${route.slug}`;
       const reviewed = snapshot.routes.find(r => r.id === id);
       if (!reviewed || !isDeepStrictEqual(route.application_from_iran, reviewed.application)) throw new Error();
-      return { id, destination: route.destination, slug: route.slug, name: route.name,
+      // Reviewed route summaries/facts have their own sources; a catalog fetch cannot replace them.
+      return { ...reviewed, id, destination: route.destination, slug: route.slug, name: route.name,
         name_fa: route.name_fa, category: route.category, page_url: route.page_url, application: reviewed.application };
     });
     const next = snapshotSchema.parse({ ...snapshot, retrieved_at: attempted_at, total: incoming.total,
