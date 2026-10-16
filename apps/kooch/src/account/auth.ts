@@ -7,10 +7,13 @@ export class AuthProvider {
   constructor(private config: { url: string; key?: string; serviceKey: string; origin: string; fetch?: typeof fetch }) {}
   private async call(path: string, method: string, body?: unknown, bearer?: string, admin = false, missingIsDeleted = false) {
     let response: Response;
+    const apiKey = admin ? this.config.serviceKey : this.config.key;
+    // Hosted secret keys are opaque API keys; only legacy/local service JWTs belong in Authorization.
+    const authorization = admin ? (this.config.serviceKey.startsWith('sb_secret_') ? undefined : this.config.serviceKey) : bearer;
     try {
       response = await (this.config.fetch ?? fetch)(`${this.config.url}${path}`, {
-        method, headers: { 'Content-Type': 'application/json', ...(this.config.key ? { apikey: this.config.key } : {}),
-          ...(bearer || admin ? { Authorization: `Bearer ${admin ? this.config.serviceKey : bearer}` } : {}) },
+        method, headers: { 'Content-Type': 'application/json', ...(apiKey ? { apikey: apiKey } : {}),
+          ...(authorization ? { Authorization: `Bearer ${authorization}` } : {}) },
         ...(body === undefined ? {} : { body: JSON.stringify(body) }), redirect: 'error',
         cache: 'no-store', signal: AbortSignal.timeout(12000),
       });

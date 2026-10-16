@@ -44,11 +44,17 @@ npm start
 سرویس میزبان هنوز باید واقعاً تنظیم و پذیرفته شود. مراحل مشخص اتصال:
 
 - پروژهٔ Free منتخب، منطقه، سهمیه و وضعیت پرداخت/ارتقای خودکار ثبت شوند؛ پلن پولی فعال نشود.
-- URL Auth برابر نشانی پروژه با پسوند `/auth/v1`؛ کلید publishable و service-role فقط در env سرور، نه NEXT_PUBLIC. service-role فقط برای حذف Auth به کار می‌رود.
-- schema با migration credential اعمال شود؛ برای `kooch_account_api` رمز مجزا تنظیم و آن نقش به رشتهٔ اتصال runtime داده شود. اتصال TLS و pooler با تنظیم واقعی پروژه بررسی شوند؛ رمز DB و service-role در چت نوشته نشوند.
+- URL Auth برابر نشانی پروژه با پسوند `/auth/v1`؛ کلید publishable و secret (`sb_secret_`) فقط در env سرور، نه NEXT_PUBLIC. کلید secret فقط برای حذف Auth به کار می‌رود.
+- schema با migration credential اعمال شود؛ برای `kooch_account_api` رمز مجزا تنظیم و آن نقش به رشتهٔ اتصال runtime داده شود. اتصال TLS و pooler با تنظیم واقعی پروژه بررسی شوند؛ رمز DB و کلید secret در چت نوشته نشوند.
 - Site URL و redirect فقط origin اپ انتخابی و `/account` باشند؛ ایمیل باید تأیید شود. قالب‌های فارسی `local/confirmation.html` و `local/recovery.html` در Auth میزبان تنظیم شوند؛ پیوندها با fragment `token_hash` و type هستند تا توکن به access log یا query نرود.
 - SMTP عملیاتی و دامنهٔ فرستندهٔ تأییدشده انتخاب شود. دو ایمیل واقعی تأیید و بازیابی با حساب آزمایشی در صندوق گیرنده بررسی و رسید بدون توکن ذخیره شود. SMTP پیش‌فرض محدود Supabase جای اتصال عمومی نیست.
 - `KOOCH_ACCOUNT_MODE=hosted`، origin HTTPS، URL/کلیدهای Auth، رشتهٔ اتصال runtime و کلید رمزگذاری مستقل روی سرور تنظیم شوند. کلید migration برای اجرای عادی لازم نیست.
 - سناریوهای دو حساب، حذف، export، لغو نشست و no-store دوباره روی همان محیط اجرا شوند. بدون این شواهد، تیکت کاملِ اتصال عمومی محسوب نمی‌شود.
 
 مبنای رفتار provider: [رمز و تأیید ایمیل](https://supabase.com/docs/guides/auth/passwords)، [محدودیت SMTP پیش‌فرض](https://supabase.com/docs/guides/auth/auth-smtp)، [Auth رسمی](https://github.com/supabase/auth)، [RLS PostgreSQL](https://www.postgresql.org/docs/current/ddl-rowsecurity.html).
+
+پروژهٔ میزبان در ۱۶ اکتبر ۲۰۲۶ در داشبورد تأیید شد: `kooch`، شناسهٔ `ifjtceqlcsmypuuflwlx`، سازمان `Kooch` با پلن Free، منطقهٔ `eu-west-1` (ایرلند). ساخت پروژه به‌تنهایی به معنی اتصال اپ یا پذیرش SMTP نیست؛ در زمان بررسی اولیه وضعیت زیرساخت `Coming up` بود.
+
+در ادامهٔ همان روز، وضعیت پروژه `Healthy` شد و اسکریپت طرح حساب با تأیید مالک در SQL Editor اجرا شد: پنج جدول، دو سیاست RLS و دو نقش محدود ساخته شدند. پرس‌وجوی مستقل FORCE RLS پرونده/رسید، نبود superuser/BYPASSRLS در هر دو نقش و عدم USAGE نقش‌های anon/authenticated روی schema خصوصی را تأیید کرد. رمز نقش اپ هنوز تعیین نشده و اتصال runtime هنوز پذیرفته نشده است. Site URL برابر `https://my.kooch.app/account` و حداقل رمز برابر ۱۲ نویسه ثبت شدند؛ تأیید ایمیل فعال ماند. دامنه هنگام بررسی DNS پاسخ نداد. تغییر قالب‌های ایمیل در داشبورد تا تنظیم SMTP سفارشی در دسترس نیست. Resend فقط بررسی شده، متصل نشده است.
+
+اصلاح اتصال کلیدهای جدید: در درخواست مدیریتی، کلید `sb_secret_` فقط در هدر `apikey` فرستاده می‌شود؛ نشست کاربر همچنان Bearer مستقل دارد. JWT سرویس محلی نیز پشتیبانی می‌شود. [مستند Supabase](https://supabase.com/docs/guides/getting-started/api-keys) استفاده از کلیدهای جدید را به جای JWT قدیمی توصیه می‌کند. دو آزمون این مرز شامل شکست اولیهٔ کلید جدید و سپس عبور هر دو حالت ثبت شدند.
