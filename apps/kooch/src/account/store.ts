@@ -1,6 +1,8 @@
 import { createHash, createHmac, randomBytes, createCipheriv, createDecipheriv } from 'node:crypto';
 import type { Pool, PoolClient } from 'pg';
 import { AccountError, unauthorized, type CaseInput, type SavedCase } from './contract';
+import type { FormInput } from '../form/contract';
+import { formRecords, relevantQuestions, validateAnswer, applyFormAnswer, reconcileCompass } from '../form/workflow';
 const hash = (value: string) => createHash('sha256').update(value).digest('hex');
 export type AppSession = { owner: string; accessToken: string; purpose: 'account' | 'recovery'; deleted: boolean; expiresAt: Date };
 
@@ -67,7 +69,7 @@ export class AccountStore {
     } catch (error) { await client.query('ROLLBACK'); throw error; } finally { client.release(); }
   }
   private visible(row: Record<string, any>): SavedCase {
-    return { id: row.id, revision: row.revision, answers: row.answers, step: row.step,
+    return { form: row.form, id: row.id, revision: row.revision, answers: row.answers, step: row.step,
       consent_version: row.consent_version, last_activity_at: row.last_activity_at.toISOString(), delete_after: row.delete_after.toISOString() };
   }
   async read(owner: string, id?: string) {
@@ -92,8 +94,36 @@ export class AccountStore {
       const now = this.now(); const deleteAfter = new Date(now.getTime() + 90 * 86400000);
       const saved = await client.query(`INSERT INTO kooch.cases(owner,answers,step,consent_version,consented_at,last_activity_at,delete_after)
         VALUES($1,$2,$3,$4,$5,$5,$6) ON CONFLICT(owner) DO UPDATE SET answers=$2,step=$3,
-        revision=kooch.cases.revision+1,consent_version=$4,last_activity_at=$5,delete_after=$6 RETURNING *`,
-      [owner, input.answers, input.step, input.consent, now, deleteAfter]);
+        revision=kooch.cases.revision+1,consent_version=$4,last_activity_at=$5,delete_after=$6,form=$7 RETURNING *`,
+      [owner, input.answers, input.step, input.consent, now, deleteAfter, current ? reconcileCompass(this.visible(current), input.answers) : { schema_version: 1, answers: {} }]);
+      const row = saved.rows[0];
+      await client.query('INSERT INTO kooch.requests(owner,request_id,payload_hash,case_id,revision) VALUES($1,$2,$3,$4,$5)',
+        [owner, input.request_id, payloadHash, row.id, row.revision]);
+      return this.visible(row);
+    });
+  }
+  async saveForm(owner: string, input: FormInput) {
+    return this.owned(owner, async client => {
+      const payloadHash = hash(JSON.stringify({ operation: 'form', ...input }));
+      const { rows } = await client.query('SELECT * FROM kooch.cases WHERE owner=$1', [owner]);
+      const current = rows[0];
+      if (!current) throw new AccountError('not_found', 404, 'ابتدا پاسخ‌های قطب‌نما را ذخیره کن.');
+      const receipt = await client.query('SELECT * FROM kooch.requests WHERE owner=$1 AND request_id=$2', [owner, input.request_id]);
+      if (receipt.rows[0]) {
+        if (receipt.rows[0].payload_hash !== payloadHash) throw new AccountError('request_conflict', 409, 'این درخواست قبلاً با پاسخ دیگری ثبت شده است.');
+        if (receipt.rows[0].revision !== current.revision) throw new AccountError('revision_conflict', 409, 'پاسخ‌ها تغییر کرده‌اند؛ نسخهٔ تازه را دریافت کن.');
+        return this.visible(current);
+      }
+      if (current.revision !== input.expected_revision) throw new AccountError('revision_conflict', 409, 'پاسخ‌ها تغییر کرده‌اند؛ نسخهٔ تازه را دریافت کن.');
+      const records = formRecords(this.visible(current));
+      const question = relevantQuestions(records).find(q => q.id === input.question_id);
+      if (!question) throw new AccountError('invalid_question', 400, 'این سؤال در وضعیت فعلی مرتبط نیست.');
+      if (question.version !== input.question_version) throw new AccountError('question_conflict', 409, 'نسخهٔ سؤال تغییر کرده است؛ فرم تازه را دریافت کن.');
+      if (!validateAnswer(question, input.answer)) throw new AccountError('invalid_answer', 400, 'پاسخ با گزینه‌ها یا واحد این سؤال سازگار نیست.');
+      const now = this.now();
+      const { form, answers } = applyFormAnswer(this.visible(current), input, now);
+      const saved = await client.query(`UPDATE kooch.cases SET form=$2,revision=revision+1,last_activity_at=$3,delete_after=$4,answers=$5
+        WHERE owner=$1 RETURNING *`, [owner, form, now, new Date(now.getTime() + 90 * 86400000), answers]);
       const row = saved.rows[0];
       await client.query('INSERT INTO kooch.requests(owner,request_id,payload_hash,case_id,revision) VALUES($1,$2,$3,$4,$5)',
         [owner, input.request_id, payloadHash, row.id, row.revision]);

@@ -3,6 +3,8 @@ import { AuthProvider } from './auth';
 import { AccountStore } from './store';
 import { AccountError, unauthorized, credentialsSchema, caseInputSchema } from './contract';
 import { GoogleOAuth } from './google';
+import { formView } from '../form/workflow';
+import { formInputSchema } from '../form/contract';
 
 const neutralMessage = 'اگر این ایمیل قابل استفاده باشد، پیام لازم برای آن ارسال می‌شود. صندوق ورودی و پوشهٔ هرزنامه را بررسی کن.';
 const reply = (body: unknown, status = 200, headers: Record<string, string> = {}) => Response.json(body, {
@@ -129,6 +131,11 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
           await store.rateLimit(`delete:${session.owner}`);
           const start = options.google.beginDeletion(session.owner, cookieToken(request)!);
           return reply({ url: start.url }, 200, { 'Set-Cookie': start.cookie });
+        }
+        if (operation === 'form') {
+          const saved = method === 'GET' ? await store.read(session.owner) : await store.saveForm(session.owner, formInputSchema.parse(await body(request)));
+          if (!saved) throw new AccountError('not_found', 404, 'ابتدا پاسخ‌های قطب‌نما را در حساب ذخیره کن.');
+          return reply(formView(saved));
         }
         if (operation === 'case') {
           if (path.length > 2 || (path[1] && !z.uuid().safeParse(path[1]).success)) throw invalid();

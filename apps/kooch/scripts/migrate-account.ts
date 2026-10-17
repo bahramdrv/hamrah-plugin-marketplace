@@ -10,7 +10,9 @@ try {
     IF NOT EXISTS(SELECT FROM pg_roles WHERE rolname='kooch_runtime') THEN CREATE ROLE kooch_runtime NOLOGIN NOSUPERUSER NOBYPASSRLS; END IF;
     IF NOT EXISTS(SELECT FROM pg_roles WHERE rolname='kooch_account_api') THEN CREATE ROLE kooch_account_api LOGIN NOSUPERUSER NOBYPASSRLS; END IF;
   END $$; GRANT kooch_runtime TO kooch_account_api;`);
-  await db.query(await readFile(new URL('../db/001-account.sql', import.meta.url), 'utf8'));
+  for (const name of ['001-account.sql', '002-form.sql']) {
+    await db.query(await readFile(new URL(`../db/${name}`, import.meta.url), 'utf8'));
+  }
   if (process.env.KOOCH_ACCOUNT_MODE === 'local' && process.env.KOOCH_DATABASE_URL) {
     const runtimePassword = new URL(process.env.KOOCH_DATABASE_URL).password;
     // Generated hexadecimal local secret only; never accept arbitrary SQL text here.
