@@ -148,7 +148,7 @@ export function Compass() {
     <a className="skip-link" href="#main">رفتن به محتوا</a>
     <header><a className="brand" href="/" aria-label="کوچ، خانهٔ قطب‌نما"><strong>کوچ</strong><span>قطب‌نمای مهاجرت</span></a>
       <ol className="progress" aria-label="مراحل قطب‌نما">{['اطلاعات پایه', 'مسیرهای مرتبط', 'نتیجه'].map((label, index) => <li key={label} aria-current={index === stage ? 'step' : undefined} className={index <= stage ? 'active' : ''}><span className="dot" />{label}</li>)}</ol>
-      <div className="header-actions"><a href="/account">حساب من</a><button className="text-button clear" onClick={clear}>{privateMode.current ? 'پاک‌کردن فرم جاری' : 'پاک‌کردن پاسخ‌ها'}</button></div></header>
+      <div className="header-actions"><a href="/knowledge" target="_blank" rel="noopener">راهنمای فرم</a><a href="/account">حساب من</a><button className="text-button clear" onClick={clear}>{privateMode.current ? 'پاک‌کردن فرم جاری' : 'پاک‌کردن پاسخ‌ها'}</button></div></header>
     <main id="main">
       {privateMode.current && <section className="case-toolbar"><p>{privateCase ? `پروندهٔ ذخیره‌شده · نسخهٔ ${privateCase.revision.toLocaleString('fa-IR')} · پاک‌شدن پس از بی‌فعالیتی: ${new Date(privateCase.delete_after).toLocaleDateString('fa-IR')}` : 'برای دریافت یا ادامهٔ پرونده به حساب من برو.'}</p>{privateCase && <button className="primary" disabled={busy} onClick={() => void savePrivateCase()}>ذخیرهٔ تغییرات پرونده</button>}</section>}
       {accountNotice && <p className="notice" role="status">{accountNotice}</p>}
