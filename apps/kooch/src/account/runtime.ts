@@ -22,7 +22,10 @@ export async function accountRuntime() {
       // Prevent URL options from silently disabling certificate verification in pg.
       for (const key of ['sslmode', 'sslcert', 'sslkey', 'sslrootcert']) databaseUrl.searchParams.delete(key);
     }
-    const pool = new pg.Pool({ connectionString: databaseUrl.href, ...(mode === 'hosted' ? { ssl: { rejectUnauthorized: true } } : {}), max: 5, connectionTimeoutMillis: 5000, statement_timeout: 10000 });
+    const pool = new pg.Pool({ connectionString: databaseUrl.href, ...(mode === 'hosted' ? { ssl: {
+      rejectUnauthorized: true,
+      ...(process.env.KOOCH_DATABASE_CA_CERT ? { ca: process.env.KOOCH_DATABASE_CA_CERT } : {}),
+    } } : {}), max: 5, connectionTimeoutMillis: 5000, statement_timeout: 10000 });
     const store = new AccountStore(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!);
     await store.validateRole();
     return createAccountApi({ store, mode, origin, auth: new AuthProvider({ url: authUrl.href.replace(/\/$/, ''),

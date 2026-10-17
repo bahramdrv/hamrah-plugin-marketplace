@@ -46,6 +46,7 @@ npm start
 - پروژهٔ Free منتخب، منطقه، سهمیه و وضعیت پرداخت/ارتقای خودکار ثبت شوند؛ پلن پولی فعال نشود.
 - URL Auth برابر نشانی پروژه با پسوند `/auth/v1`؛ کلید publishable و secret (`sb_secret_`) فقط در env سرور، نه NEXT_PUBLIC. کلید secret فقط برای حذف Auth به کار می‌رود.
 - schema با migration credential اعمال شود؛ برای `kooch_account_api` رمز مجزا تنظیم و آن نقش به رشتهٔ اتصال runtime داده شود. اتصال TLS و pooler با تنظیم واقعی پروژه بررسی شوند؛ رمز DB و کلید secret در چت نوشته نشوند.
+- برای Supabase، گواهی ریشهٔ عمومی را از Database Settings → SSL configuration دریافت و متن PEM را در `KOOCH_DATABASE_CA_CERT` محیط سرور قرار دهید. `rejectUnauthorized` همیشه روشن می‌ماند؛ در نبود این متغیر، اعتماد پیش‌فرض Node استفاده می‌شود. [راهنمای رسمی SSL](https://supabase.com/docs/guides/platform/ssl-enforcement).
 - Site URL و redirect فقط origin اپ انتخابی و `/account` باشند؛ ایمیل باید تأیید شود. قالب‌های فارسی `local/confirmation.html` و `local/recovery.html` در Auth میزبان تنظیم شوند؛ پیوندها با fragment `token_hash` و type هستند تا توکن به access log یا query نرود.
 - SMTP عملیاتی و دامنهٔ فرستندهٔ تأییدشده انتخاب شود. دو ایمیل واقعی تأیید و بازیابی با حساب آزمایشی در صندوق گیرنده بررسی و رسید بدون توکن ذخیره شود. SMTP پیش‌فرض محدود Supabase جای اتصال عمومی نیست.
 - `KOOCH_ACCOUNT_MODE=hosted`، origin HTTPS، URL/کلیدهای Auth، رشتهٔ اتصال runtime و کلید رمزگذاری مستقل روی سرور تنظیم شوند. کلید migration برای اجرای عادی لازم نیست.
