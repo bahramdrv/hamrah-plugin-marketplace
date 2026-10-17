@@ -47,3 +47,13 @@ Site URL روی https://my.kooch.app/account ثبت شد؛ Confirm email فعا�
 پشتیبانی کلید جدید sb_secret با دو آزمون مرز REST (شکست اولیه و سپس عبور) افزوده شد. ۱۹ آزمون بدون شبکهٔ اپ، TypeScript و build موفق شدند؛ ۷ آزمون یکپارچهٔ نیازمند Docker در این اجرا skip شدند زیرا daemon خاموش است و راه‌اندازی UI مجوز ندارد. آزمون‌های HTTP مخزن ابتدا با listen EPERM شکست خوردند و با دسترسی localhost هر ۳۸۴ آزمون پاس شدند. verify:release، check:static و ۴۷ آزمون Python نیز پاس شدند.
 
 بازبینی Standards یک ایراد P2 در اولویت گزینه‌های SSL رشتهٔ اتصال ابزار موقت پیدا کرد؛ ابزار اکنون هر query string را پیش از pg.Client رد می‌کند و target را ثابت می‌سنجد. بازبینی دوباره رفع را تأیید کرد. بازبینی Spec مانعی نیافت. راهنمای موقت اتصال از قالب wizard با کتابخانهٔ بدون تغییر ساخته و با bash -n و node --check بررسی شد؛ هیچ credential واقعی به آن داده نشده و اجرا نشده است.
+
+## پذیرش ورود گوگل روی میزبانی — ۱۷ اکتبر ۲۰۲۶
+
+سورس کامیت `358ee85` با Vercel Drop در deployment `FzdMpnSM3tRK9ABRBcnidXFStkJy` با وضعیت Ready منتشر و به `https://my.kooch.app` متصل شد. تنظیم Production برابر `KOOCH_GOOGLE_AUTH_ENABLED=true` و Google provider پروژهٔ Supabase فعال است. Client Secret فقط در همان provider ذخیره شد؛ بررسی nonce و الزام ایمیل غیرفعال نشدند. نشانی بازگشت فقط `https://my.kooch.app/api/account/google-callback` است.
+
+مرورگر واقعی: دکمهٔ «ادامه با گوگل» روی دامنهٔ اصلی ظاهر شد؛ POST آغاز ورود به انتخاب حساب رسمی گوگل رفت و انتخاب حساب مالک، به «پروندهٔ من» با نشست معتبر و عملیات خصوصی حساب برگشت. هیچ رمز یا توکن به چت، سورس یا فایل شواهد منتقل نشد. تصاویر `google-deployment-ready.jpg`، `google-signin-live.jpg` و `google-signin-accepted.jpg` در `.scratch/kooch-self-service-app/evidence/` ثبت شدند. این پذیرش برای حساب مالک است؛ audience عمومی همهٔ حساب‌ها بررسی نشده است.
+
+۳۳ آزمون اپ با سرویس‌های واقعی محلی، بدون skip، شامل PKCE، cookie مخدوش/منقضی، بازپخش کد، callback نامعتبر بدون مصرف سهمیهٔ مالک، و حذف حساب صرفاً گوگل با proof متصل به مالک و نشست پاس شدند. Typecheck، build تولید و دو بازبینی مجدد Standards/Spec پاس شدند؛ یافته‌های حذف حساب صرفاً گوگل و محدودیت مشترک callback رفع شدند. ۳۸۴ آزمون ریشه، verify:release، check:static و ۴۷ آزمون Python نیز پاس شدند.
+
+تیکت ۰۲ هنوز برای پذیرش بازیابی ایمیل عمومی و job نگهداری میزبانی باز است؛ تأیید ایمیل SMTP و ورود واقعی گوگل به معنی بسته‌شدن همهٔ پذیرش‌ها نیست.
