@@ -9,3 +9,5 @@
 @media(max-width:640px){.header-actions{width:100%;justify-content:space-between}.account-tabs{gap:12px}.account-actions{flex-direction:column}.case-toolbar{flex-direction:column;align-items:stretch}.save-invitation{padding:22px}.save-invitation h2{font-size:20px}}
 
 .google-signin { width: 100%; }
+
+.knowledge-search{display:flex;flex-direction:column;gap:12px}.knowledge-search label{font-weight:600}.knowledge-search input{width:100%;border:1px solid var(--line);border-radius:var(--radius);padding:12px;min-height:50px;background:#fff}.knowledge-results{margin-top:28px}.knowledge-match{padding:22px 0;border-bottom:1px solid var(--line)}.knowledge-match h3{font-size:18px;margin:0 0 10px}.knowledge-match a{display:inline-block;margin-top:12px;font-size:14px;min-height:44px}.knowledge-library{margin-top:48px;max-width:760px}.knowledge-library h2{margin-bottom:18px}.knowledge-library details{padding:15px 0;border-bottom:1px solid var(--line);scroll-margin-top:24px}.knowledge-library summary{min-height:44px;font-weight:600}.knowledge-library p{margin-top:12px;color:var(--muted)}
