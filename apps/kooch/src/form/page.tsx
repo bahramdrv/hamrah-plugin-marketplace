@@ -96,7 +96,7 @@ export function DeepForm() {
   }
   return <div className="app-shell">
     <a className="skip-link" href="#deep-form">رفتن به محتوا</a>
-    <header><a className="brand" href="/"><strong>کوچ</strong><span>نقشهٔ من</span></a><a href="/account">حساب و ادامهٔ بعدی</a></header>
+    <header><a className="brand" href="/"><strong>کوچ</strong><span>نقشهٔ من</span></a><nav className="header-actions" aria-label="بخش‌های کوچ"><a href="/knowledge" target="_blank" rel="noopener">راهنمای فرم</a><a href="/account">حساب و ادامهٔ بعدی</a></nav></header>
     <main id="deep-form"><div className="workspace">
       <section className="question-panel" aria-busy={busy}>
         <h1>{summary ? 'خلاصهٔ پاسخ‌های من' : 'قدم بعدی نقشهٔ تو'}</h1>
