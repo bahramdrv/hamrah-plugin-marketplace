@@ -1,5 +1,7 @@
 import type { SavedCase } from '../account/contract';
 import { formQuestions, type FormState, type Question, type AnswerRecord, type FormInput } from './contract';
+import { reportFactsSchema } from '../report/contract';
+import { routeQuestionId } from '../report/questions';
 
 export function formRecords(saved: SavedCase): Record<string, AnswerRecord> {
   const records: Record<string, AnswerRecord> = {};
@@ -10,9 +12,14 @@ export function formRecords(saved: SavedCase): Record<string, AnswerRecord> {
   if (saved.answers.work === 'none') records.work_years = { answer: { state: 'known', value: 0 }, question_version: 1, source: 'compass', answered_at: saved.last_activity_at };
   return { ...records, ...saved.form?.answers };
 }
-export function relevantQuestions(records: Record<string, AnswerRecord>): Question[] {
+export function relevantQuestions(records: Record<string, AnswerRecord>, destinations: string[] = []): Question[] {
   const value = (id: string) => { const r = records[id]; return r && !r.needs_review && r.answer.state === 'known' ? r.answer.value : undefined; };
   return formQuestions.filter(q => {
+    if (q.route_id && (value('goal') !== 'study' || (destinations.length > 0 && !destinations.includes('uk')))) return false;
+    if (['passport', 'dependants'].includes(q.id)) return value('goal') === 'study';
+    if (q.id === 'uk_student_cas_issued_on') return value('uk_student_cas') === 'valid_unused';
+    if (q.id === 'uk_student_atas_issued_on') return value('uk_student_atas') === 'valid_certificate';
+    if (q.id === 'uk_student_tb_issued_on') return value('uk_student_tb') === 'valid_certificate';
     if (q.id === 'study_level') return value('goal') === 'study';
     if (q.id === 'study_offer') return ['bachelor', 'master', 'phd'].includes(String(value('study_level')));
     if (q.id === 'work_years') return ['work', 'business'].includes(String(value('goal')));
@@ -23,7 +30,7 @@ export function relevantQuestions(records: Record<string, AnswerRecord>): Questi
 }
 export function formView(saved: SavedCase) {
   const records = formRecords(saved);
-  const questions = relevantQuestions(records);
+  const questions = relevantQuestions(records, saved.answers.destinations);
   const review = questions.filter(q => records[q.id]?.needs_review);
   const unanswered = questions.filter(q => !records[q.id]);
   const order = { important: 0, impact: 1, optional: 2 };
@@ -44,6 +51,8 @@ export function validateAnswer(question: Question, input: import('./contract').F
   if (input.state === 'unknown') return question.allow_unknown;
   if (input.state === 'declined') return question.allow_declined;
   const value = input.value;
+  const key = (Object.keys(reportFactsSchema.shape) as (keyof typeof reportFactsSchema.shape)[]).find(key => routeQuestionId(key) === question.id);
+  if (key) return reportFactsSchema.shape[key].safeParse(value).success;
   if (question.input === 'choice') return typeof value === 'string' && question.options.some(o => o.value === value);
   if (question.input === 'number') return typeof value === 'number' && value >= (question.min ?? 0) && value <= (question.max ?? Infinity) && (!question.integer || Number.isInteger(value));
   return typeof value === 'object'; // Money shape, amount and currency are validated by the input schema.

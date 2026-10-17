@@ -1,9 +1,11 @@
 import { z } from 'zod';
 import { questions as compassQuestions } from '../questions';
+import { routeQuestions } from '../report/questions';
 
 export type Question = {
   id: string; version: number; title: string; help: string;
-  input: 'choice' | 'number' | 'money'; options: { value: string; label: string }[];
+  input: 'choice' | 'number' | 'money' | 'date'; options: { value: string; label: string }[];
+  route_id?: string;
   unit?: string; min?: number; max?: number; integer?: boolean;
   allow_unknown: boolean; allow_declined: boolean;
   priority: 'important' | 'impact' | 'optional'; depends_on: string[];
@@ -29,6 +31,7 @@ export const formQuestions: Question[] = [
   extra({ id: 'language_score', title: 'نمرهٔ کل مدرکت چقدر است؟', help: 'فقط نمرهٔ کل را ثبت کن؛ مهارت‌ها، تاریخ اعتبار و پذیرش مدرک جداگانه لازم‌اند.', input: 'number', unit: 'score', priority: 'impact', depends_on: ['language_exam'], min: 0, max: 120 }),
   extra({ id: 'budget', title: 'بودجهٔ در دسترس تو چقدر است؟', help: 'مقدار دقیق و ارز خودت را بنویس؛ تبدیل ارز و تأیید تمکن انجام نمی‌شود.', input: 'money', unit: 'currency', allow_declined: true }),
   choice('timeline'),
+  ...routeQuestions,
 ];
 export const answerSchema = z.discriminatedUnion('state', [
   z.object({ state: z.literal('known'), value: z.union([z.string().max(50), z.number().finite(), z.object({ amount: z.number().finite().min(0).max(1e15), currency: z.enum(['EUR', 'USD', 'CAD', 'AUD', 'GBP', 'IRR', 'IRT']) }).strict()]) }).strict(),

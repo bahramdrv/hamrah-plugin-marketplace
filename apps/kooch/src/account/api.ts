@@ -5,6 +5,7 @@ import { AccountError, unauthorized, credentialsSchema, caseInputSchema } from '
 import { GoogleOAuth } from './google';
 import { formView } from '../form/workflow';
 import { formInputSchema } from '../form/contract';
+import { reportInputSchema } from '../report/contract';
 
 const neutralMessage = 'اگر این ایمیل قابل استفاده باشد، پیام لازم برای آن ارسال می‌شود. صندوق ورودی و پوشهٔ هرزنامه را بررسی کن.';
 const reply = (body: unknown, status = 200, headers: Record<string, string> = {}) => Response.json(body, {
@@ -41,7 +42,7 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
     async handle(request: Request, path: string[]): Promise<Response> {
       try {
         const operation = path[0]; const method = request.method;
-        if (!operation || (operation !== 'case' && path.length !== 1)) throw invalid();
+        if (!operation || (!['case', 'report'].includes(operation) && path.length !== 1)) throw invalid();
         if (!['GET', 'POST'].includes(method)) return reply({ error: 'method_not_allowed' }, 405);
         if (method === 'POST' && request.headers.get('origin') !== options.origin)
           throw new AccountError('invalid_origin', 403, 'درخواست باید از همین اپ ارسال شود.');
@@ -137,6 +138,12 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
           if (!saved) throw new AccountError('not_found', 404, 'ابتدا پاسخ‌های قطب‌نما را در حساب ذخیره کن.');
           return reply(formView(saved));
         }
+        if (operation === 'report') {
+          if (path.length > 2 || (path[1] && !z.uuid().safeParse(path[1]).success) || (method === 'POST' && path.length !== 1)) throw invalid();
+          if (method === 'GET') return reply(await store.readReport(session.owner, path[1]));
+          const report = await store.saveReport(session.owner, reportInputSchema.parse(await body(request)));
+          return reply(await store.readReport(session.owner, report.id));
+        }
         if (operation === 'case') {
           if (path.length > 2 || (path[1] && !z.uuid().safeParse(path[1]).success)) throw invalid();
           if (method === 'GET') return reply({ case: await store.read(session.owner, path[1]) });
@@ -148,7 +155,7 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
         }
         if (operation === 'export' && method === 'GET') {
           if (path.length !== 1) throw invalid();
-          return reply({ schema_version: 1, email: session.email, case: await store.read(session.owner) }, 200,
+          return reply({ schema_version: 1, email: session.email, case: await store.read(session.owner), reports: await store.exportReports(session.owner) }, 200,
             { 'Content-Disposition': 'attachment; filename="kooch-account.json"' });
         }
         if (operation === 'delete' && method === 'POST') {

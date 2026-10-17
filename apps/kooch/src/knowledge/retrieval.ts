@@ -7,7 +7,7 @@ const aliases: Record<string, string> = {
   language_exam: 'آزمون زبان آیلتس تافل', language_score: 'نمره زبان آیلتس تافل', study_offer: 'پذیرش دانشگاه',
 };
 export const knowledgeDocuments = [
-  ...formQuestions.map(q => ({ id: `question-${q.id}`, title: q.title,
+  ...formQuestions.filter(q => !q.route_id).map(q => ({ id: `question-${q.id}`, title: q.title,
     keywords: aliases[q.id] ?? '', text: q.help,
     source: { path: 'apps/kooch/src/form/contract.ts', version: `question-${q.version}` } })),
   ...articles,

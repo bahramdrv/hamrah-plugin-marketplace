@@ -66,6 +66,8 @@ export function DeepForm() {
     else if (question.input === 'choice') {
       if (!value) { setError('یکی از گزینه‌ها را انتخاب کن.'); return; }
       answer = { state, value };
+    } else if (question.input === 'date') {
+      answer = { state, value: normalizeDigits(value.trim()) };
     } else {
       const normalized = normalizeDigits(value).replace(/[,٬]/g, '').replace('٫', '.');
       const amount = Number(normalized);
@@ -112,7 +114,8 @@ export function DeepForm() {
               <legend ref={heading} tabIndex={-1}>{question.title}</legend>
               <p className="help">{question.help}</p>
               {entry?.needs_review && <p className="notice">{entry.review_reason === 'compass_conflict' ? 'مقدار دقیق با پاسخ قطب‌نما متفاوت است. آن را اصلاح کن یا مقدار دقیق را تأیید کن تا پاسخ قبلی هم اصلاح شود.' : 'یکی از پاسخ‌های مرتبط تغییر کرده است؛ این پاسخ را دوباره بررسی و ثبت کن.'}</p>}
-              {question.input === 'choice' ? <Choices name={question.id} options={question.options} value={value} onChange={setValue} /> : question.input === 'money' ? <Budget amount={value} currency={currency} changeAmount={setValue} changeCurrency={setCurrency} /> : <label className="number-answer">{question.unit === 'years' ? 'سال کامل' : `نمرهٔ کل (${question.unit})`}<input autoComplete="off" inputMode={question.integer ? 'numeric' : 'decimal'} value={value} onChange={e => setValue(e.target.value)} aria-describedby="number-help" /><span id="number-help" className="help">از {question.min?.toLocaleString('fa-IR')} تا {question.max?.toLocaleString('fa-IR')}{question.integer ? '، بدون اعشار' : ''}</span></label>}
+              {question.route_id && <p className="help">اطلاعات تکمیلی برای بررسی تحصیل بریتانیا در همین پرونده</p>}
+              {question.input === 'choice' ? <Choices name={question.id} options={question.options} value={value} onChange={setValue} /> : question.input === 'money' ? <Budget amount={value} currency={currency} changeAmount={setValue} changeCurrency={setCurrency} /> : question.input === 'date' ? <label className="number-answer">تاریخ میلادی<input type="date" dir="ltr" value={value} onChange={e => setValue(e.target.value)} /></label> : <label className="number-answer">{({ years: 'سال کامل', months: 'ماه کامل', days: 'روز متوالی', people: 'تعداد نفر', GBP: 'مقدار به پوند' } as Record<string, string>)[question.unit ?? ''] ?? `نمرهٔ کل (${question.unit})`}<input autoComplete="off" inputMode={question.integer ? 'numeric' : 'decimal'} value={value} onChange={e => setValue(e.target.value)} aria-describedby="number-help" /><span id="number-help" className="help">از {question.min?.toLocaleString('fa-IR')} تا {question.max?.toLocaleString('fa-IR')}{question.integer ? '، بدون اعشار' : ''}</span></label>}
               <div className="actions"><button type="submit" className="primary">{busy ? 'در حال ذخیره…' : entry?.review_reason === 'compass_conflict' ? 'تأیید مقدار دقیق' : 'ثبت پاسخ و ادامه'}</button></div>
               <div className="answer-alternatives">{question.allow_unknown && <button type="button" className="text-button" onClick={() => void save('unknown')}>نمی‌دانم</button>}{question.allow_declined && <button type="button" className="text-button" onClick={() => void save('declined')}>ترجیح می‌دهم پاسخ ندهم</button>}</div>
             </fieldset>
@@ -122,7 +125,7 @@ export function DeepForm() {
             <h2>پاسخ‌های ثبت‌شده</h2><p className="help">همهٔ پاسخ‌ها خوداظهاری‌اند. این خلاصه، ارزیابی صلاحیت یا کارنامهٔ مهاجرتی نیست.</p>
             {form.answers.length ? <dl>{form.answers.map(r => <div key={r.question.id}><dt>{r.question.title}</dt><dd><span>{answerLabel(r)}{r.needs_review ? ' · نیازمند بازبینی' : ''}</span><button className="text-button" disabled={busy} onClick={() => { setEditing(r.question.id); setSummary(false); setError(''); }}>اصلاح<span className="sr-only"> {r.question.title}</span></button></dd></div>)}</dl> : <p>هنوز پاسخی ثبت نشده است.</p>}
             <h2>اطلاعات ناقص یا نیازمند بازبینی</h2>{form.missing.length ? <ul>{form.missing.map(q => <li key={q.id}><button className="text-button" disabled={busy} onClick={() => { setEditing(q.id); setSummary(false); setError(''); }}>{q.title}</button></li>)}</ul> : <p>پرسش‌های این برش پاسخ دارند؛ شروط مستند مسیرها هنوز ارزیابی نشده‌اند.</p>}
-            <p className="notice">کارنامهٔ مقدماتی در مرحلهٔ بعد اضافه می‌شود. هنوز هیچ شرط رسمی، تمکن یا مدرکی تأیید نشده است.</p>
+            <p className="notice"><a href="/report">دیدن و ساخت کارنامهٔ مقدماتی من</a> · با اطلاعات ناقص هم می‌توانی ادامه بدهی؛ پوشش فعلی ارزیابی فقط ماژول تحصیل بریتانیاست و مدارک هنوز تأیید نشده‌اند.</p>
           </div>}
           {notice && <p role="status" className="draft-notice">{notice}</p>}
         </>}

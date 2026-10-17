@@ -6,6 +6,11 @@ const request = (body: unknown, headers: Record<string, string> = {}) => new Req
   method: 'POST', headers: { 'content-type': 'application/json', origin: 'https://my.kooch.app', ...headers }, body: JSON.stringify(body),
 });
 
+test('route-specific legal rules do not silently enter the general product-help corpus', async () => {
+  const result = await (await POST(request({ query: 'مدت دوره ماه تمکن' }))).json();
+  assert.ok(!result.results.some((r: { id: string; text: string }) => r.id.startsWith('question-uk_student_') || /نه ماه/.test(r.text)));
+});
+
 test('Persian spelling variants and everyday vocabulary retrieve the same source; absent coverage stays empty', async () => {
   for (const query of ['بُودجه و ارز', 'پول به كدام ارز', 'بودجه\u200cو ارز']) {
     const result = await (await POST(request({ query }))).json();

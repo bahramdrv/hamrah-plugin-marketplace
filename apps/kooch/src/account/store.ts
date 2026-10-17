@@ -3,6 +3,9 @@ import type { Pool, PoolClient } from 'pg';
 import { AccountError, unauthorized, type CaseInput, type SavedCase } from './contract';
 import type { FormInput } from '../form/contract';
 import { formRecords, relevantQuestions, validateAnswer, applyFormAnswer, reconcileCompass } from '../form/workflow';
+import { buildReport, type GuidanceReport } from '../report/evaluate';
+import type { ReportInput } from '../report/contract';
+import { policyDigest } from '../report/policy';
 const hash = (value: string) => createHash('sha256').update(value).digest('hex');
 export type AppSession = { owner: string; accessToken: string; purpose: 'account' | 'recovery'; deleted: boolean; expiresAt: Date };
 
@@ -116,7 +119,7 @@ export class AccountStore {
       }
       if (current.revision !== input.expected_revision) throw new AccountError('revision_conflict', 409, 'پاسخ‌ها تغییر کرده‌اند؛ نسخهٔ تازه را دریافت کن.');
       const records = formRecords(this.visible(current));
-      const question = relevantQuestions(records).find(q => q.id === input.question_id);
+      const question = relevantQuestions(records, current.answers.destinations).find(q => q.id === input.question_id);
       if (!question) throw new AccountError('invalid_question', 400, 'این سؤال در وضعیت فعلی مرتبط نیست.');
       if (question.version !== input.question_version) throw new AccountError('question_conflict', 409, 'نسخهٔ سؤال تغییر کرده است؛ فرم تازه را دریافت کن.');
       if (!validateAnswer(question, input.answer)) throw new AccountError('invalid_answer', 400, 'پاسخ با گزینه‌ها یا واحد این سؤال سازگار نیست.');
@@ -139,6 +142,49 @@ export class AccountStore {
       await client.query('DELETE FROM kooch.cases WHERE owner=$1', [owner]);
       await client.query('COMMIT');
     } catch (error) { await client.query('ROLLBACK'); throw error; } finally { client.release(); }
+  }
+  async readReport(owner: string, id?: string) {
+    return this.owned(owner, async client => {
+      const result = await client.query('SELECT id,version,snapshot FROM kooch.reports WHERE owner=$1 AND ($2::uuid IS NULL OR id=$2) ORDER BY version DESC LIMIT 1', [owner, id ?? null]);
+      if (id && !result.rows[0]) throw new AccountError('not_found', 404, 'کارنامه در دسترس نیست.');
+      const row = result.rows[0];
+      if (!row) return { report: null, report_state: null };
+      const report = { ...row.snapshot, id: row.id, version: row.version } as GuidanceReport;
+      const current = await client.query('SELECT revision FROM kooch.cases WHERE owner=$1', [owner]);
+      const latest = await client.query('SELECT max(version)::int AS version FROM kooch.reports WHERE owner=$1', [owner]);
+      const fresh = report.route_results.every(route => route.route_id === 'uk:student' && route.evidence_version === policyDigest && route.sources.every(s => Date.parse(s.checked_at) <= this.now().getTime() && this.now().getTime() < Date.parse(s.expires_at)));
+      return { report, report_state: { current: fresh && current.rows[0]?.revision === report.case_revision && latest.rows[0].version === report.version,
+        evidence_current: fresh, answers_current: current.rows[0]?.revision === report.case_revision, latest_version: latest.rows[0].version } };
+    });
+  }
+  async exportReports(owner: string): Promise<GuidanceReport[]> {
+    return this.owned(owner, async client => {
+      const { rows } = await client.query('SELECT id,version,snapshot FROM kooch.reports WHERE owner=$1 ORDER BY version', [owner]);
+      return rows.map(row => ({ ...row.snapshot, id: row.id, version: row.version }));
+    });
+  }
+  async saveReport(owner: string, input: ReportInput) {
+    return this.owned(owner, async client => {
+      const payloadHash = hash(JSON.stringify({ operation: 'report', ...input }));
+      const receipt = await client.query('SELECT * FROM kooch.reports WHERE owner=$1 AND request_id=$2', [owner, input.request_id]);
+      if (receipt.rows[0]) {
+        const row = receipt.rows[0];
+        if (row.payload_hash !== payloadHash) throw new AccountError('request_conflict', 409, 'این درخواست قبلاً با اطلاعات دیگری ثبت شده است.');
+        return { ...row.snapshot, id: row.id, version: row.version } as GuidanceReport;
+      }
+      const current = await client.query('SELECT * FROM kooch.cases WHERE owner=$1', [owner]);
+      if (!current.rows[0]) throw new AccountError('not_found', 404, 'ابتدا پاسخ‌های قطب‌نما را ذخیره کن.');
+      const saved = this.visible(current.rows[0]);
+      if (saved.revision !== input.expected_revision) throw new AccountError('revision_conflict', 409, 'پاسخ‌ها تغییر کرده‌اند؛ نسخهٔ تازه را دریافت کن.');
+      const count = await client.query('SELECT count(*)::int AS count FROM kooch.reports WHERE owner=$1', [owner]);
+      if (count.rows[0].count >= 100) throw new AccountError('report_limit', 429, 'سقف نسخه‌های کارنامهٔ این پرونده پر شده است؛ نسخه‌های موجود در دسترس‌اند.');
+      const now = this.now();
+      const snapshot = buildReport(saved, now);
+      const result = await client.query('INSERT INTO kooch.reports(owner,case_id,version,request_id,payload_hash,snapshot) VALUES($1,$2,$3,$4,$5,$6) RETURNING id,version',
+        [owner, saved.id, count.rows[0].count + 1, input.request_id, payloadHash, snapshot]);
+      await client.query('UPDATE kooch.cases SET last_activity_at=$2,delete_after=$3 WHERE owner=$1', [owner, now, new Date(now.getTime() + 90 * 86400000)]);
+      return { ...snapshot, ...result.rows[0] } as GuidanceReport;
+    });
   }
   async finishDelete(owner: string) {
     await this.pool.query('UPDATE kooch.account_state SET auth_deleted=true WHERE owner=$1', [owner]);
