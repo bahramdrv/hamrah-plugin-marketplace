@@ -2,6 +2,7 @@ import { z } from 'zod';
 import { AuthProvider } from './auth';
 import { AccountStore } from './store';
 import { AccountError, unauthorized, credentialsSchema, caseInputSchema } from './contract';
+import { GoogleOAuth } from './google';
 
 const neutralMessage = 'اگر این ایمیل قابل استفاده باشد، پیام لازم برای آن ارسال می‌شود. صندوق ورودی و پوشهٔ هرزنامه را بررسی کن.';
 const reply = (body: unknown, status = 200, headers: Record<string, string> = {}) => Response.json(body, {
@@ -21,7 +22,7 @@ async function body(request: Request) {
   }
   try { return JSON.parse(Buffer.concat(chunks).toString('utf8')); } catch { throw invalid(); }
 }
-export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted' }) {
+export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth }) {
   const { store, auth } = options;
   const cookie = (token: string, expiresAt?: Date) => `${cookieName}=${token}; Path=/; HttpOnly; SameSite=Strict; ${options.mode === 'hosted' ? 'Secure; ' : ''}${expiresAt ? `Expires=${expiresAt.toUTCString()}` : 'Max-Age=0'}`;
   async function authenticated(request: Request, purpose: 'account' | 'recovery' = 'account', allowDeleted = false) {
@@ -42,7 +43,36 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
         if (!['GET', 'POST'].includes(method)) return reply({ error: 'method_not_allowed' }, 405);
         if (method === 'POST' && request.headers.get('origin') !== options.origin)
           throw new AccountError('invalid_origin', 403, 'درخواست باید از همین اپ ارسال شود.');
-        if (operation === 'status' && method === 'GET') return reply({ configured: true, mode: options.mode, email_delivery: options.mode === 'local' ? 'local_test_only' : 'configured' });
+        if ((['google', 'google-delete'].includes(operation) && method !== 'POST') || (operation === 'google-callback' && method !== 'GET')) return reply({ error: 'method_not_allowed' }, 405);
+        if (operation === 'google' && method === 'POST') {
+          if (!options.google) throw new AccountError('google_unavailable', 503, 'ورود با گوگل هنوز آماده نیست؛ از ایمیل استفاده کن.');
+          z.object({}).strict().parse(await body(request));
+          await store.rateLimit('global');
+          const start = options.google.begin();
+          return reply({ url: start.url }, 200, { 'Set-Cookie': start.cookie });
+        }
+        if (operation === 'google-callback' && method === 'GET') {
+          const headers = new Headers({ 'Cache-Control': 'no-store', 'Pragma': 'no-cache', 'Vary': 'Cookie', 'Referrer-Policy': 'no-referrer' });
+          if (options.google) headers.append('Set-Cookie', options.google.clearCookie());
+          try {
+            if (!options.google) throw unauthorized();
+            const { session, deletionCookie } = await options.google.complete(request);
+            await store.rateLimit(`google-callback:${session.user.id}`);
+            if (deletionCookie) {
+              headers.append('Set-Cookie', deletionCookie);
+              headers.set('Location', `${options.origin}/account?delete=google-ready`);
+              return new Response(null, { status: 303, headers });
+            }
+            const saved = await store.createSession(session.user.id, session.access_token, session.expires_in, 'account');
+            headers.append('Set-Cookie', cookie(saved.token, saved.expiresAt));
+            headers.set('Location', `${options.origin}/account`);
+          } catch {
+            // Never echo provider errors, codes or redirect parameters to the page or logs.
+            headers.set('Location', `${options.origin}/account?signin=google-failed`);
+          }
+          return new Response(null, { status: 303, headers });
+        }
+        if (operation === 'status' && method === 'GET') return reply({ configured: true, mode: options.mode, google_enabled: Boolean(options.google), email_delivery: options.mode === 'local' ? 'local_test_only' : 'configured' });
         if (operation === 'session' && method === 'GET') {
           const state = await store.session(cookieToken(request));
           if (state.purpose === 'recovery') { await authenticated(request, 'recovery'); return reply({ signed_in: false, recovery: true }); }
@@ -93,6 +123,13 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
           return reply({ message: 'از حساب خارج شدی.' }, 200, { 'Set-Cookie': cookie('') });
         }
         const session = await authenticated(request, 'account', operation === 'delete');
+        if (operation === 'google-delete' && method === 'POST') {
+          if (!options.google) throw unauthorized();
+          z.object({}).strict().parse(await body(request));
+          await store.rateLimit(`delete:${session.owner}`);
+          const start = options.google.beginDeletion(session.owner, cookieToken(request)!);
+          return reply({ url: start.url }, 200, { 'Set-Cookie': start.cookie });
+        }
         if (operation === 'case') {
           if (path.length > 2 || (path[1] && !z.uuid().safeParse(path[1]).success)) throw invalid();
           if (method === 'GET') return reply({ case: await store.read(session.owner, path[1]) });
@@ -108,16 +145,21 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
             { 'Content-Disposition': 'attachment; filename="kooch-account.json"' });
         }
         if (operation === 'delete' && method === 'POST') {
-          const input = z.object({ password: credentialsSchema.shape.password, confirmation: z.literal('حذف حساب') }).strict().parse(await body(request));
+          const input = z.object({ password: credentialsSchema.shape.password.optional(), confirmation: z.literal('حذف حساب') }).strict().parse(await body(request));
           if (!session.deleted) {
             await store.rateLimit(`delete:${session.owner}`);
-            const check = await auth.signin(session.email, input.password);
-            if (check.user.id !== session.owner) throw unauthorized();
+            if (!options.google?.isDeletionAuthorized(request, session.owner, cookieToken(request)!)) {
+              if (!input.password) throw unauthorized();
+              const check = await auth.signin(session.email, input.password);
+              if (check.user.id !== session.owner) throw unauthorized();
+            }
           }
           await store.beginDelete(session.owner);
           await auth.deleteUser(session.owner);
           await store.finishDelete(session.owner);
-          return reply({ message: 'حساب و پرونده حذف شدند.' }, 200, { 'Set-Cookie': cookie('') });
+          const response = reply({ message: 'حساب و پرونده حذف شدند.' }, 200, { 'Set-Cookie': cookie('') });
+          if (options.google) response.headers.append('Set-Cookie', options.google.clearDeletionCookie());
+          return response;
         }
         return reply({ error: 'not_found', message: 'این بخش پیدا نشد.' }, 404);
       } catch (error) {

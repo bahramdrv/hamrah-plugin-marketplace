@@ -2,6 +2,7 @@ import pg from 'pg';
 import { AuthProvider } from './auth';
 import { AccountStore } from './store';
 import { createAccountApi } from './api';
+import { GoogleOAuth } from './google';
 type Runtime = ReturnType<typeof createAccountApi>;
 let runtime: Promise<Runtime> | undefined;
 export function accountConfigured() {
@@ -28,8 +29,11 @@ export async function accountRuntime() {
     } } : {}), max: 5, connectionTimeoutMillis: 5000, statement_timeout: 10000 });
     const store = new AccountStore(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!);
     await store.validateRole();
-    return createAccountApi({ store, mode, origin, auth: new AuthProvider({ url: authUrl.href.replace(/\/$/, ''),
-      key: process.env.KOOCH_AUTH_PUBLISHABLE_KEY, serviceKey: process.env.KOOCH_AUTH_SERVICE_KEY!, origin }) });
+    const auth = new AuthProvider({ url: authUrl.href.replace(/\/$/, ''),
+      key: process.env.KOOCH_AUTH_PUBLISHABLE_KEY, serviceKey: process.env.KOOCH_AUTH_SERVICE_KEY!, origin });
+    const google = process.env.KOOCH_GOOGLE_AUTH_ENABLED === 'true' ? new GoogleOAuth({ auth, origin,
+      key: process.env.KOOCH_SESSION_ENCRYPTION_KEY!, secure: mode === 'hosted' }) : undefined;
+    return createAccountApi({ store, mode, origin, auth, google });
   })().catch(error => { runtime = undefined; throw error; });
   return runtime;
 }

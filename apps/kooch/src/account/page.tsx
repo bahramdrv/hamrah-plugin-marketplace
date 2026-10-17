@@ -7,6 +7,7 @@ type Mode = 'signin' | 'signup' | 'recover';
 export function AccountPage() {
   const [configured, setConfigured] = useState<boolean | null>(null);
   const [local, setLocal] = useState(false);
+  const [googleEnabled, setGoogleEnabled] = useState(false);
   const [email, setEmail] = useState(''); const [password, setPassword] = useState('');
   const [signedEmail, setSignedEmail] = useState(''); const [mode, setMode] = useState<Mode>('signin');
   const [saved, setSaved] = useState<SavedCase | null>(null);
@@ -15,9 +16,10 @@ export function AccountPage() {
   const [link, setLink] = useState<{ token_hash: string; type: 'signup' | 'recovery' } | null>(null);
   const [recovery, setRecovery] = useState(false);
   const [message, setMessage] = useState(''); const [error, setError] = useState(''); const [busy, setBusy] = useState(false);
+  const [googleDeletionReady, setGoogleDeletionReady] = useState(false);
   const [deleteOpen, setDeleteOpen] = useState(false); const [confirmation, setConfirmation] = useState('');
   async function refresh() {
-    const status = await accountRequest('status'); setConfigured(status.data.configured); setLocal(status.data.mode === 'local');
+    const status = await accountRequest('status'); setConfigured(status.data.configured); setLocal(status.data.mode === 'local'); setGoogleEnabled(status.data.google_enabled === true);
     if (!status.data.configured) return;
     const session = await accountRequest('session');
     if (session.response.ok && session.data.recovery) { setRecovery(true); setSignedEmail(''); setSaved(null); return; }
@@ -31,6 +33,14 @@ export function AccountPage() {
   useEffect(() => {
     // Tokens remain in memory, never query parameters, storage or application logs.
     const fragment = new URLSearchParams(window.location.hash.slice(1));
+    if (new URLSearchParams(window.location.search).get('signin') === 'google-failed') {
+      setError('ورود با گوگل کامل نشد؛ دوباره امتحان کن یا با ایمیل وارد شو.');
+      window.history.replaceState(null, '', '/account');
+    }
+    if (new URLSearchParams(window.location.search).get('delete') === 'google-ready') {
+      setGoogleDeletionReady(true); setDeleteOpen(true);
+      window.history.replaceState(null, '', '/account');
+    }
     const token_hash = fragment.get('token_hash'); const type = fragment.get('type');
     if (window.location.hash) window.history.replaceState(null, '', '/account');
     if (token_hash && /^[a-f0-9]{32,128}$/.test(token_hash) && (type === 'signup' || type === 'recovery')) setLink({ token_hash, type });
@@ -77,6 +87,9 @@ export function AccountPage() {
       {configured && recovery ? <form className="account-form" onSubmit={e => { e.preventDefault(); void action(async () => {
         const data = await send('reset', { password }); setRecovery(false); setMessage(data.message); notifySignout();
       }); }}><label>رمز تازه، دست‌کم ۱۲ نویسه<input type="password" autoComplete="new-password" minLength={12} maxLength={128} required value={password} onChange={e => setPassword(e.target.value)} /></label><button className="primary" disabled={busy}>ثبت رمز تازه</button></form> : configured && !signedEmail && !link ? <>
+        {googleEnabled && <div className="account-section"><button className="secondary google-signin" disabled={busy} onClick={() => void action(async () => {
+          const data = await send('google', {}); window.location.assign(data.url);
+        })}>ادامه با گوگل</button></div>}
         <div className="account-tabs" aria-label="عملیات حساب">{([['signin', 'ورود'], ['signup', 'ساخت حساب'], ['recover', 'بازیابی رمز']] as const).map(([value, label]) => <button className={mode === value ? 'secondary' : 'text-button'} aria-pressed={mode === value} key={value} onClick={() => { setMode(value); setError(''); setMessage(''); setPassword(''); }}>{label}</button>)}</div>
         <form className="account-form" onSubmit={e => { e.preventDefault(); void action(async () => {
           const data = await send(mode, mode === 'recover' ? { email } : { email, password }); setMessage(data.message);
@@ -97,10 +110,12 @@ export function AccountPage() {
         })}>دریافت فایل اطلاعات من</button><button className="secondary" disabled={busy} onClick={() => void action(async () => {
           const data = await send('signout', {}); setSignedEmail(''); setSaved(null); setMessage(data.message); notifySignout();
         })}>خروج از حساب</button></div>
-        <details className="account-section" open={deleteOpen} onToggle={e => setDeleteOpen(e.currentTarget.open)}><summary>حذف حساب و پرونده</summary><p>با حذف، دسترسی قطع و پرونده و حساب پاک می‌شوند. این کار برگشت‌پذیر نیست.</p><form className="account-form" onSubmit={e => { e.preventDefault(); void action(async () => {
-          const data = await send('delete', { password, confirmation }); setSignedEmail(''); setSaved(null); setGuest(null); setMessage(data.message); notifySignout();
+        <details className="account-section" open={deleteOpen} onToggle={e => setDeleteOpen(e.currentTarget.open)}><summary>حذف حساب و پرونده</summary><p>با حذف، دسترسی قطع و پرونده و حساب پاک می‌شوند. این کار برگشت‌پذیر نیست.</p>{googleEnabled && <button className="secondary" disabled={busy} onClick={() => void action(async () => {
+          const data = await send('google-delete', {}); window.location.assign(data.url);
+        })}>تأیید دوباره با گوگل برای حذف حساب</button>}{googleDeletionReady && <p>تأیید گوگل انجام شد؛ برای حذف نهایی عبارت زیر را بنویس. این تأیید ۵ دقیقه معتبر است.</p>}<form className="account-form" onSubmit={e => { e.preventDefault(); void action(async () => {
+          const data = await send('delete', { ...(googleDeletionReady ? {} : { password }), confirmation }); setSignedEmail(''); setSaved(null); setGuest(null); setMessage(data.message); notifySignout();
           try { sessionStorage.removeItem('kooch.compass.guest.v1'); } catch { /* optional storage */ }
-        }); }}><label>رمز فعلی<input type="password" autoComplete="current-password" required value={password} onChange={e => setPassword(e.target.value)} /></label><label>برای تأیید بنویس: حذف حساب<input value={confirmation} onChange={e => setConfirmation(e.target.value)} required /></label><button className="danger" disabled={busy || confirmation !== 'حذف حساب'}>حذف حساب و همهٔ پاسخ‌ها</button></form></details>
+        }); }}>{!googleDeletionReady && <label>رمز فعلی<input type="password" autoComplete="current-password" required value={password} onChange={e => setPassword(e.target.value)} /></label>}<label>برای تأیید بنویس: حذف حساب<input value={confirmation} onChange={e => setConfirmation(e.target.value)} required /></label><button className="danger" disabled={busy || confirmation !== 'حذف حساب'}>حذف حساب و همهٔ پاسخ‌ها</button></form></details>
       </>}
       {message && <p className="notice" role="status">{message}</p>}{error && <p className="error" role="alert">{error}</p>}
     </section><aside className="guidance"><h2>پاسخ‌ها در اختیار تو</h2><p>فقط پاسخ‌های ساختارمند قطب‌نما ذخیره می‌شوند؛ مدرک، گذرنامه، نشانی یا تماس دریافت نمی‌کنیم.</p><p>دیدن صفحه، خروج و ورود یا اجرای پاک‌سازی، تاریخ نگهداری را تمدید نمی‌کند. ثبت یا اصلاح پاسخ، بازهٔ ۹۰روزه را از نو آغاز می‌کند.</p><p>اگر روی رایانهٔ مشترک هستی، پس از پایان از حساب خارج شو. نسخهٔ ذخیره‌شده فقط پس از ورود قابل ادامه است.</p></aside></main></div>;

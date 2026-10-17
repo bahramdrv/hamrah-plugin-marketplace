@@ -39,6 +39,17 @@ export class AuthProvider {
     if (!result.user.email_confirmed_at) throw unauthorized();
     return result;
   }
+  googleAuthorization(challenge: string, callback: string) {
+    const url = new URL(`${this.config.url}/authorize`);
+    url.search = new URLSearchParams({ provider: 'google', redirect_to: callback, scopes: 'openid email profile',
+      code_challenge: challenge, code_challenge_method: 's256', access_type: 'online', prompt: 'select_account' }).toString();
+    return url.href;
+  }
+  async exchangeGoogle(code: string, verifier: string) {
+    const result = sessionSchema.parse(await this.call('/token?grant_type=pkce', 'POST', { auth_code: code, code_verifier: verifier }));
+    if (!result.user.email_confirmed_at) throw unauthorized();
+    return result;
+  }
   async user(accessToken: string) {
     const user = userSchema.parse(await this.call('/user', 'GET', undefined, accessToken));
     if (!user.email_confirmed_at) throw unauthorized();
