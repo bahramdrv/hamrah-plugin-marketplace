@@ -26,6 +26,25 @@ const completion = (content: unknown, extra: Record<string, unknown> = {}) => Re
 });
 const selection = { question_id: 'age_exact', question_version: 1, wording_id: 'plain-1' };
 
+test('empty provider message metadata preserves a valid selection while nonempty metadata is rejected', async () => {
+  const empty = { refusal: null, annotations: [], audio: null, function_call: null, reasoning: null, reasoning_content: null, tool_calls: null };
+  const response = (metadata: Record<string, unknown>) => completion(selection, { choices: [{ finish_reason: 'stop', message: { role: 'assistant', content: JSON.stringify(selection), ...metadata } }] });
+  const original = view();
+  const valid = await createQuestionAssistance({ simulation: true, transport: async () => response(empty) })(original);
+  assert.equal(valid.question_assistance.status, 'simulated_wording');
+  assert.equal(valid.next_question?.title, 'چند سالت است؟');
+  for (const metadata of [
+    { ...empty, annotations: [{ type: 'url_citation', url: 'https://example.com' }] },
+    { ...empty, audio: {} }, { ...empty, function_call: {} },
+    { ...empty, reasoning: 'hidden prose' }, { ...empty, reasoning_content: 'hidden prose' },
+    { ...empty, tool_calls: [] }, { ...empty, unrecognized: null },
+  ]) {
+    const invalid = await createQuestionAssistance({ simulation: true, transport: async () => response(metadata) })(original);
+    assert.equal(invalid.question_assistance.status, 'invalid_response');
+    assert.deepEqual(invalid.next_question, original.next_question);
+  }
+});
+
 test('simulated wording selects reviewed Persian copy using descriptors only; controls and all facts remain unchanged', async () => {
   let payload: any;
   const assistance = createQuestionAssistance({ simulation: true, transport: async (url, init) => {

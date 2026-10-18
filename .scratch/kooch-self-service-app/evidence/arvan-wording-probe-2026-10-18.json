@@ -1,0 +1,56 @@
+{
+  "at": "2026-10-18T15:44:39.728Z",
+  "kind": "isolated_real_wording_prompt_diagnostic",
+  "endpoint": "https://api.arvancloudai.ir/v1/chat/completions",
+  "model": "Qwen3.5-35B-A3B",
+  "max_tokens": 128,
+  "retry": false,
+  "attempts": 1,
+  "status": "diagnostic_complete_invoice_pending",
+  "budget_cap_irr": 500000,
+  "shared_budget_envelope": "arvan-synthetic-diagnostics-2026-10-18",
+  "production_accepted": false,
+  "origin": "local_diagnostic_not_deployed_server",
+  "http_status": 200,
+  "reported_model": "Qwen3.5-35B-A3B",
+  "reported_usage": {
+    "prompt_tokens": 762,
+    "total_tokens": 797,
+    "completion_tokens": 35,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "message_keys": [
+        "role",
+        "content",
+        "refusal",
+        "annotations",
+        "audio",
+        "function_call",
+        "reasoning"
+      ],
+      "content": "{\n  \"question_id\": \"age_exact\",\n  \"question_version\": 1,\n  \"wording_id\": \"fixed-1\"\n}",
+      "reasoning_present": false,
+      "tools_present": false
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 762,
+    "completion_tokens": 35,
+    "total_tokens": 797
+  },
+  "latency_ms": 1311,
+  "validator_status": "invalid_response",
+  "accepted_wording": false,
+  "question_id": "age_exact",
+  "question_title": "سن دقیق تو چند سال است؟"
+}

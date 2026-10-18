@@ -38,7 +38,9 @@ test('accepted synthetic policy reserves before dispatch, authenticates one fixe
     const receipt = await ledger.receipt(owner, 'private-case:7:age_exact:1', policy.version);
     assert.equal(receipt?.state, 'sent');
     assert.equal(receipt?.reserved_minor, 4224);
-    return aiCompletion();
+    const raw = await aiCompletion().json();
+    Object.assign(raw.choices[0].message, { annotations: [], audio: null, function_call: null, reasoning: null });
+    return Response.json(raw);
   } });
   try {
     const result = await assist(view(), currentOwner(owner));
@@ -81,18 +83,20 @@ test('missing prices, expired acceptance or a changed connection never reads a k
   } finally { await pool.end(); }
 });
 
-test('a previously accepted thinking contract cannot enable the new non-thinking request', async () => {
+test('a previously accepted response contract cannot enable the new response envelope', async () => {
   const pool = new pg.Pool({ connectionString: 'postgres://invalid.invalid/never' });
   const oldPolicy = acceptedPolicy();
-  const legacy = { ...oldPolicy, connection: { ...oldPolicy.connection, contract_version: 'chat-completions-wording-1' } };
   let calls = 0;
   try {
-    const result = await createGatewayQuestionAssistance({ policy: legacy, ledger: new AiBudgetLedger(pool, 'e'.repeat(64)), now: aiNow,
-      getCredential: () => { calls++; return 'must-not-read'; }, transport: async () => { calls++; return aiCompletion(); },
-    })(view(), currentOwner(randomUUID()));
-    assert.equal(result.question_assistance.status, 'configuration_invalid');
-    assert.equal(calls, 0);
-    assert.deepEqual(result.next_question, view().next_question);
+    for (const version of ['chat-completions-wording-1', 'chat-completions-wording-2']) {
+      const legacy = { ...oldPolicy, connection: { ...oldPolicy.connection, contract_version: version } };
+      const result = await createGatewayQuestionAssistance({ policy: legacy, ledger: new AiBudgetLedger(pool, 'e'.repeat(64)), now: aiNow,
+        getCredential: () => { calls++; return 'must-not-read'; }, transport: async () => { calls++; return aiCompletion(); },
+      })(view(), currentOwner(randomUUID()));
+      assert.equal(result.question_assistance.status, 'configuration_invalid');
+      assert.equal(calls, 0);
+      assert.deepEqual(result.next_question, view().next_question);
+    }
   } finally { await pool.end(); }
 });
 

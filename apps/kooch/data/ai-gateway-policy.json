@@ -7,7 +7,7 @@
     "model": "Qwen3.5-35B-A3B",
     "authorization": null,
     "upstream_identity": null,
-    "contract_version": "chat-completions-wording-2",
+    "contract_version": "chat-completions-wording-3",
     "prompt_version": "question-wording-1",
     "guardrail_version": null
   },
