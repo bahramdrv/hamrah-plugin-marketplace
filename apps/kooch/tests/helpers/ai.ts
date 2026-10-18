@@ -1,7 +1,13 @@
 import { randomUUID } from 'node:crypto';
+import type { Pool } from 'pg';
 import source from '../../data/ai-gateway-policy.json';
 import { acceptanceFingerprint, type GatewayPolicy } from '../../src/ai/policy';
 export const aiNow = () => new Date('2040-06-01T12:00:00Z');
+export async function activeBudgetOwner(pool: Pool) {
+  const owner = randomUUID();
+  await pool.query('INSERT INTO kooch.account_state(owner) VALUES($1)', [owner]);
+  return owner;
+}
 export function acceptedPolicy(): GatewayPolicy {
   const policy = structuredClone(source) as GatewayPolicy;
   policy.version = `fixture-${randomUUID()}`;

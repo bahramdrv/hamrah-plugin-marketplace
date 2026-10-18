@@ -42,7 +42,7 @@ export function createGatewayQuestionAssistance(options: { policy: unknown; ledg
           if (init?.signal?.aborted || elapsed() >= deadline) throw Error('Deadline.');
           const reserved = await ledger.reserve({ owner: context.owner, operation, policy: policy.version, reserved_minor: reservation, limits: policy.limits, tariff: policy.tariff! });
           if (reserved.status !== 'reserved') {
-            failure = reserved.status === 'duplicate' ? 'already_requested' : reserved.status === 'busy' ? 'accounting_unavailable' : reserved.status;
+            failure = reserved.status === 'duplicate' ? 'already_requested' : reserved.status === 'busy' ? 'accounting_unavailable' : reserved.status === 'owner_unavailable' ? 'stale' : reserved.status;
             throw Error('Reservation unavailable.');
           }
           id = reserved.id!;

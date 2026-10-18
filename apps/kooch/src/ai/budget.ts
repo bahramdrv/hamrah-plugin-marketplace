@@ -31,12 +31,16 @@ export class AiBudgetLedger {
       await db.query('COMMIT'); return result;
     } catch (error) { await db.query('ROLLBACK'); throw error; } finally { db.release(); }
   }
-  async reserve(input: ReservationInput): Promise<{ status: 'reserved' | 'duplicate' | 'budget_exhausted' | 'busy' | 'cooldown' | 'policy_blocked'; id?: string }> {
+  async reserve(input: ReservationInput): Promise<{ status: 'reserved' | 'duplicate' | 'budget_exhausted' | 'busy' | 'cooldown' | 'policy_blocked' | 'owner_unavailable'; id?: string }> {
     const { limits } = input;
     if (![input.reserved_minor, limits.monthly_global_minor, limits.daily_global_minor, limits.daily_user_minor, limits.daily_user_requests].every(integer)) throw Error('Invalid accounting limits.');
     if (input.reserved_minor === 0 || Math.min(limits.monthly_global_minor, limits.daily_global_minor, limits.daily_user_minor, limits.daily_user_requests) === 0) return { status: 'budget_exhausted' };
     const operationHash = this.operationHash(input.owner, input.operation, input.policy), subject = this.subject(input.owner), now = this.now();
     return await this.transaction(async db => {
+      // Share AccountStore's owner lock: deletion either waits for this insert and
+      // erases it, or commits first and prevents any later identity-bearing insert.
+      const owner = await db.query('SELECT owner FROM kooch.account_state WHERE owner=$1 AND deleted_at IS NULL FOR UPDATE', [input.owner]);
+      if (!owner.rowCount) return { status: 'owner_unavailable' as const };
       const existing = await db.query('SELECT id FROM kooch.ai_budget_requests WHERE operation_hash=$1', [operationHash]);
       if (existing.rowCount) return { status: 'duplicate' as const, id: existing.rows[0].id as string };
       const gates = await db.query(`SELECT bool_or(blocked) AS blocked, max(retry_after) AS retry_after FROM kooch.ai_budget_requests WHERE policy=$1`, [input.policy]);

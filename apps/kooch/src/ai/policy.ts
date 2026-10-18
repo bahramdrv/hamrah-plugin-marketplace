@@ -22,7 +22,7 @@ export const gatewayPolicySchema = z.object({
 }).strict();
 export type GatewayPolicy = z.infer<typeof gatewayPolicySchema>;
 export function acceptanceFingerprint(policy: GatewayPolicy) {
-  return createHash('sha256').update(JSON.stringify({ connection: policy.connection, tariff: policy.tariff })).digest('hex');
+  return createHash('sha256').update(JSON.stringify({ version: policy.version, connection: policy.connection, tariff: policy.tariff })).digest('hex');
 }
 export function usageCost(policy: Pick<GatewayPolicy, 'tariff'>, usage: Pick<Usage, 'prompt_tokens' | 'completion_tokens'>) {
   const t = policy.tariff;

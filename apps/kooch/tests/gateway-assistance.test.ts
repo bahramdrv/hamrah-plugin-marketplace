@@ -21,13 +21,13 @@ test('the unaccepted deployed policy cannot read credentials, touch the ledger o
   } finally { await pool.end(); }
 });
 
-import { acceptedPolicy, aiNow, aiCompletion } from './helpers/ai';
+import { acceptedPolicy, aiNow, aiCompletion, activeBudgetOwner } from './helpers/ai';
 import { randomUUID } from 'node:crypto';
 const enabled = Boolean(process.env.KOOCH_DATABASE_URL);
 const currentOwner = (owner: string) => ({ owner, isCurrent: async () => true });
 test('accepted synthetic policy reserves before dispatch, authenticates one fixed endpoint and settles actual usage once', { skip: !enabled }, async () => {
   const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL });
-  const ledger = new AiBudgetLedger(pool, 'e'.repeat(64), aiNow), policy = acceptedPolicy(), owner = randomUUID();
+  const ledger = new AiBudgetLedger(pool, 'e'.repeat(64), aiNow), policy = acceptedPolicy(), owner = await activeBudgetOwner(pool);
   let calls = 0;
   const assist = createGatewayQuestionAssistance({ policy, ledger, getCredential: () => 'fixture-key', now: aiNow, transport: async (url, init) => {
     calls++;
@@ -56,6 +56,7 @@ test('missing prices, expired acceptance or a changed connection never reads a k
   const pool = new pg.Pool({ connectionString: 'postgres://invalid.invalid/never' });
   const variants = [
     (p: ReturnType<typeof acceptedPolicy>) => { p.tariff = null; },
+    (p: ReturnType<typeof acceptedPolicy>) => { p.version += '-renamed'; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.limits.monthly_global_minor = 0; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.tariff!.all_charges_included = false; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.tariff!.expires_at = '2040-05-01T00:00:00Z'; },
@@ -72,7 +73,7 @@ test('missing prices, expired acceptance or a changed connection never reads a k
       const policy = acceptedPolicy(); mutate(policy);
       let calls = 0;
       const result = await createGatewayQuestionAssistance({ policy, ledger: new AiBudgetLedger(pool, 'e'.repeat(64)), now: aiNow,
-        getCredential: () => { calls++; return 'fixture'; }, transport: async () => { calls++; return aiCompletion(); } })(view(), { owner: randomUUID() });
+        getCredential: () => { calls++; return undefined; }, transport: async () => { calls++; return aiCompletion(); } })(view(), currentOwner(randomUUID()));
       assert.ok(['budget_zero', 'capability_unaccepted', 'pricing_unknown'].includes(result.question_assistance.status));
       assert.equal(calls, 0);
     }
@@ -84,7 +85,7 @@ test('missing usage and post-send timeout preserve reservations while invalid pr
   const ledger = new AiBudgetLedger(pool, 'e'.repeat(64), aiNow);
   try {
     for (const kind of ['no-usage', 'invalid-prose', 'timeout'] as const) {
-      const policy = acceptedPolicy(), owner = randomUUID();
+      const policy = acceptedPolicy(), owner = await activeBudgetOwner(pool);
       let release: () => void = () => {};
       const result = await createGatewayQuestionAssistance({ policy, ledger, getCredential: () => 'fixture', now: aiNow, deadlineMs: 100,
         transport: async () => {
@@ -143,7 +144,7 @@ test('authorization failures stop the accepted policy and Retry-After gates fres
   const ledger = new AiBudgetLedger(pool, 'e'.repeat(64), aiNow);
   try {
     for (const status of [401, 403, 429]) {
-      const policy = acceptedPolicy(), owner = randomUUID(); let calls = 0;
+      const policy = acceptedPolicy(), owner = await activeBudgetOwner(pool); let calls = 0;
       const assist = createGatewayQuestionAssistance({ policy, ledger, now: aiNow, getCredential: () => 'fixture', transport: async () => { calls++; return new Response('private error', { status, headers: { 'Retry-After': '300' } }); } });
       const result = await assist(view(), currentOwner(owner));
       assert.equal(result.question_assistance.status, 'unavailable');
@@ -157,7 +158,7 @@ test('authorization failures stop the accepted policy and Retry-After gates fres
 
 test('the complete assistance deadline includes waiting for a database connection and never sends after expiry', { skip: !enabled }, async () => {
   const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL, max: 1 });
-  const ledger = new AiBudgetLedger(pool, 'e'.repeat(64), aiNow), policy = acceptedPolicy(), owner = randomUUID();
+  const ledger = new AiBudgetLedger(pool, 'e'.repeat(64), aiNow), policy = acceptedPolicy(), owner = await activeBudgetOwner(pool);
   const held = await pool.connect(); let calls = 0, released = false;
   try {
     const started = performance.now();
@@ -172,4 +173,26 @@ test('the complete assistance deadline includes waiting for a database connectio
     assert.equal(receipt?.state, 'cancelled');
     assert.equal(calls, 0);
   } finally { if (!released) held.release(); await pool.end(); }
+});
+
+test('deleting an account while its reservation waits cannot recreate accounting identity links', { skip: !enabled }, async () => {
+  const { harness, saveInput } = await import('./helpers/account');
+  const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL, max: 1 });
+  const controlPool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL });
+  const ledger = new AiBudgetLedger(pool, 'e'.repeat(64), aiNow), eraser = new AiBudgetLedger(controlPool, 'e'.repeat(64), aiNow), policy = acceptedPolicy();
+  let calls = 0;
+  const h = await harness(undefined, createGatewayQuestionAssistance({ policy, ledger, now: aiNow, getCredential: () => 'fixture', transport: async () => { calls++; return aiCompletion(); } }), eraser);
+  const held = await pool.connect(); let released = false;
+  try {
+    const c = await h.verifiedClient(); await c.request('case', saveInput());
+    const owner = (await h.store.session(c.cookie.split('=')[1])).owner;
+    const delayed = c.request('form');
+    for (let n = 0; n < 100 && pool.waitingCount === 0; n++) await new Promise(r => setTimeout(r, 5));
+    assert.equal(pool.waitingCount, 1);
+    assert.equal((await c.request('delete', { password: c.password, confirmation: 'حذف حساب' })).status, 200);
+    held.release(); released = true;
+    assert.equal((await delayed).status, 401);
+    assert.equal(calls, 0);
+    assert.deepEqual(await eraser.exportOwner(owner), []);
+  } finally { if (!released) held.release(); await h.close(); await pool.end(); await controlPool.end(); }
 });
