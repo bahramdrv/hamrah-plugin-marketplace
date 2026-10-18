@@ -1,0 +1,59 @@
+{
+  "at": "2026-10-18T15:51:20.119Z",
+  "status": "stopped_on_first_failure",
+  "contract_version": "chat-completions-wording-3",
+  "shared_budget_envelope": "arvan-synthetic-diagnostics-2026-10-18",
+  "shared_total_budget_irr": 500000,
+  "invoice_status": "pending",
+  "production_accepted": false,
+  "origin": "local_not_deployed_server",
+  "max_requests": 3,
+  "retries": 0,
+  "stop_on_first_failure": true,
+  "results": [
+    {
+      "question_id": "age_exact",
+      "attempts": 1,
+      "status": "complete_invoice_pending",
+      "http_status": 200,
+      "reported_model": "Qwen3.5-35B-A3B",
+      "reported_usage": {
+        "prompt_tokens": 762,
+        "total_tokens": 797,
+        "completion_tokens": 35,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 0,
+          "multimodal_tokens": null
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "choices": [
+        {
+          "finish_reason": "stop",
+          "message_metadata": {
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "reasoning": null
+          },
+          "content_sha256": "0005c4087f388358c9ada1369b2d4f10ac9836c696d3f52eb95c07b57b2836d3"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 762,
+        "completion_tokens": 35,
+        "total_tokens": 797
+      },
+      "latency_ms": 2319,
+      "validator_status": "invalid_response",
+      "accepted_wording": false
+    }
+  ],
+  "completed_at": "2026-10-18T15:51:22.445Z",
+  "requests_sent": 1,
+  "reported_total_tokens": 797
+}

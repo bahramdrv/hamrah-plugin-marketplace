@@ -34,7 +34,7 @@ const completionSchema = z.object({
     finish_reason: z.literal('stop'),
     message: z.object({
       role: z.literal('assistant'), content: z.string().min(1).max(1000), refusal: z.null().optional(),
-      annotations: z.array(z.never()).max(0).optional(), audio: z.null().optional(), function_call: z.null().optional(),
+      annotations: z.array(z.never()).max(0).nullable().optional(), audio: z.null().optional(), function_call: z.null().optional(),
       reasoning: z.null().optional(), reasoning_content: z.null().optional(), tool_calls: z.null().optional(),
     }).strict(),
   }).strict()).length(1),

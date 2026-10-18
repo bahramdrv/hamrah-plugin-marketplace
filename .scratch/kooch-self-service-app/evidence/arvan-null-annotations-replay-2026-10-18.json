@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-18T15:52:12.822Z",
+  "kind": "offline_reconstructed_envelope_replay",
+  "live_receipt": "arvan-final-acceptance-result-2026-10-18.json",
+  "content_sha256_matches_prior_receipt": true,
+  "contract_version": "chat-completions-wording-4",
+  "network_calls": 0,
+  "validator_status": "simulated_wording",
+  "question_id": "age_exact",
+  "selected_title": "سن دقیق تو چند سال است؟",
+  "limitation": "Minimal envelope reconstructed from recorded model/usage/finish/content/metadata; assistant role supplied; not a new live acceptance."
+}

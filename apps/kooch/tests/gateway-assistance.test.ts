@@ -39,7 +39,7 @@ test('accepted synthetic policy reserves before dispatch, authenticates one fixe
     assert.equal(receipt?.state, 'sent');
     assert.equal(receipt?.reserved_minor, 4224);
     const raw = await aiCompletion().json();
-    Object.assign(raw.choices[0].message, { annotations: [], audio: null, function_call: null, reasoning: null });
+    Object.assign(raw.choices[0].message, { annotations: null, audio: null, function_call: null, reasoning: null });
     return Response.json(raw);
   } });
   try {
@@ -88,7 +88,7 @@ test('a previously accepted response contract cannot enable the new response env
   const oldPolicy = acceptedPolicy();
   let calls = 0;
   try {
-    for (const version of ['chat-completions-wording-1', 'chat-completions-wording-2']) {
+    for (const version of ['chat-completions-wording-1', 'chat-completions-wording-2', 'chat-completions-wording-3']) {
       const legacy = { ...oldPolicy, connection: { ...oldPolicy.connection, contract_version: version } };
       const result = await createGatewayQuestionAssistance({ policy: legacy, ledger: new AiBudgetLedger(pool, 'e'.repeat(64)), now: aiNow,
         getCredential: () => { calls++; return 'must-not-read'; }, transport: async () => { calls++; return aiCompletion(); },

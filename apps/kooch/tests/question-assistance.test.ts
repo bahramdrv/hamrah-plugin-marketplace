@@ -33,6 +33,9 @@ test('empty provider message metadata preserves a valid selection while nonempty
   const valid = await createQuestionAssistance({ simulation: true, transport: async () => response(empty) })(original);
   assert.equal(valid.question_assistance.status, 'simulated_wording');
   assert.equal(valid.next_question?.title, 'چند سالت است؟');
+  const nullAnnotations = await createQuestionAssistance({ simulation: true, transport: async () => response({ ...empty, annotations: null }) })(original);
+  assert.equal(nullAnnotations.question_assistance.status, 'simulated_wording');
+  assert.equal(nullAnnotations.next_question?.title, 'چند سالت است؟');
   for (const metadata of [
     { ...empty, annotations: [{ type: 'url_citation', url: 'https://example.com' }] },
     { ...empty, audio: {} }, { ...empty, function_call: {} },
