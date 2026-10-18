@@ -7,6 +7,7 @@ import { formView } from '../form/workflow';
 import { formInputSchema } from '../form/contract';
 import { reportInputSchema } from '../report/contract';
 import { createQuestionAssistance, fixedQuestion, type QuestionAssistance } from '../ai/question-assistance';
+import type { AiBudgetLedger } from '../ai/budget';
 
 const neutralMessage = 'اگر این ایمیل قابل استفاده باشد، پیام لازم برای آن ارسال می‌شود. صندوق ورودی و پوشهٔ هرزنامه را بررسی کن.';
 const reply = (body: unknown, status = 200, headers: Record<string, string> = {}) => Response.json(body, {
@@ -26,7 +27,7 @@ async function body(request: Request) {
   }
   try { return JSON.parse(Buffer.concat(chunks).toString('utf8')); } catch { throw invalid(); }
 }
-export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth; questionAssistance?: QuestionAssistance }) {
+export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth; questionAssistance?: QuestionAssistance; accounting?: AiBudgetLedger }) {
   const { store, auth } = options;
   const questionAssistance = options.questionAssistance ?? createQuestionAssistance();
   const cookie = (token: string, expiresAt?: Date) => `${cookieName}=${token}; Path=/; HttpOnly; SameSite=Strict; ${options.mode === 'hosted' ? 'Secure; ' : ''}${expiresAt ? `Expires=${expiresAt.toUTCString()}` : 'Max-Age=0'}`;
@@ -138,10 +139,17 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
         if (operation === 'form') {
           const saved = method === 'GET' ? await store.read(session.owner) : await store.saveForm(session.owner, formInputSchema.parse(await body(request)));
           if (!saved) throw new AccountError('not_found', 404, 'ابتدا پاسخ‌های قطب‌نما را در حساب ذخیره کن.');
-          const assisted = await questionAssistance(formView(saved));
+          const isCurrent = async () => {
+            const active = await store.session(cookieToken(request));
+            if (active.owner !== session.owner || active.purpose !== 'account') throw unauthorized();
+            const current = await store.read(session.owner);
+            return current?.id === saved.id && current.revision === saved.revision;
+          };
+          const assisted = await questionAssistance(formView(saved), { owner: session.owner, isCurrent });
           if (assisted.question_assistance.status !== 'budget_zero') {
             // A delayed provider response must not survive logout, deletion or a case edit.
-            await authenticated(request);
+            const active = await store.session(cookieToken(request));
+            if (active.owner !== session.owner || active.purpose !== 'account') throw unauthorized();
             const current = await store.read(session.owner);
             if (!current) throw new AccountError('not_found', 404, 'ابتدا پاسخ‌های قطب‌نما را در حساب ذخیره کن.');
             if (current.id !== saved.id || current.revision !== saved.revision) return reply(fixedQuestion(formView(current), 'stale'));
@@ -165,7 +173,7 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
         }
         if (operation === 'export' && method === 'GET') {
           if (path.length !== 1) throw invalid();
-          return reply({ schema_version: 1, email: session.email, case: await store.read(session.owner), reports: await store.exportReports(session.owner) }, 200,
+          return reply({ schema_version: 1, email: session.email, case: await store.read(session.owner), reports: await store.exportReports(session.owner), ...(options.accounting ? { ai_usage: await options.accounting.exportOwner(session.owner) } : {}) }, 200,
             { 'Content-Disposition': 'attachment; filename="kooch-account.json"' });
         }
         if (operation === 'delete' && method === 'POST') {
@@ -179,6 +187,7 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
             }
           }
           await store.beginDelete(session.owner);
+          await options.accounting?.forgetOwner(session.owner);
           await auth.deleteUser(session.owner);
           await store.finishDelete(session.owner);
           const response = reply({ message: 'حساب و پرونده حذف شدند.' }, 200, { 'Set-Cookie': cookie('') });

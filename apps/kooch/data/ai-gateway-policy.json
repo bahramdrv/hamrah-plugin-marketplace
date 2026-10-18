@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "version": "arvan-kooch-1",
+  "connection": {
+    "base_url": "https://api.arvancloudai.ir/v1",
+    "api_path": "/chat/completions",
+    "model": "Qwen3.5-35B-A3B",
+    "authorization": null,
+    "upstream_identity": null,
+    "contract_version": "chat-completions-wording-1",
+    "prompt_version": "question-wording-1",
+    "guardrail_version": null
+  },
+  "acceptance": {
+    "fingerprint": null,
+    "expires_at": null,
+    "iam_scoped": false,
+    "gateway_retry_disabled": false,
+    "tasks": {
+      "question-wording": false,
+      "answer-interpretation": false
+    }
+  },
+  "tariff": {
+    "version": "arvan-marketplace-qwen35-2026-10-18",
+    "verified_at": "2026-10-18T14:05:02Z",
+    "expires_at": "2026-10-19T14:05:02Z",
+    "currency": "IRR",
+    "unit": "minor",
+    "tokens_per_unit": 1000000,
+    "input_minor_per_unit": 4200000,
+    "output_minor_per_unit": 4200000,
+    "max_input_tokens": 4096,
+    "max_output_tokens": 128,
+    "max_request_minor": 18000,
+    "all_charges_included": false
+  },
+  "limits": {
+    "currency": "IRR",
+    "monthly_global_minor": 500000,
+    "daily_global_minor": 500000,
+    "daily_user_minor": 500000,
+    "daily_user_requests": 20
+  }
+}

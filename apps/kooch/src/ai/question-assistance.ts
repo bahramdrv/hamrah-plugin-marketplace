@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import type { FormView } from '../form/workflow';
+import type { Usage } from './budget';
 
 // Preparation only. No environment variable or browser input can enable paid inference.
 export const gatewayProfile = Object.freeze({
@@ -35,12 +36,14 @@ const completionSchema = z.object({
   }).strict()).length(1),
   usage: z.object({ prompt_tokens: z.number().int().nonnegative(), completion_tokens: z.number().int().nonnegative().max(128), total_tokens: z.number().int().nonnegative() }),
 });
-type Status = 'budget_zero' | 'simulated_wording' | 'invalid_response' | 'unavailable' | 'timeout' | 'no_question' | 'stale';
+export type Status = 'budget_zero' | 'simulated_wording' | 'worded' | 'invalid_response' | 'unavailable' | 'timeout' | 'no_question' | 'stale' |
+  'configuration_invalid' | 'pricing_unknown' | 'capability_unaccepted' | 'budget_exhausted' | 'cooldown' | 'policy_blocked' | 'already_requested' | 'accounting_unavailable' | 'credentials_missing';
 export type AssistedFormView = FormView & { question_assistance: {
   policy_version: string; status: Status; model_listed: boolean;
-  inference_accepted: false; answer_interpretation_accepted: false;
+  inference_accepted: boolean; answer_interpretation_accepted: boolean;
+  daily_request_limit?: number;
 } };
-export type QuestionAssistance = (view: FormView) => Promise<AssistedFormView>;
+export type QuestionAssistance = (view: FormView, context?: { owner: string; isCurrent?: () => Promise<boolean> }) => Promise<AssistedFormView>;
 export function fixedQuestion(view: FormView, status: Status = 'budget_zero'): AssistedFormView {
   return { ...view, question_assistance: {
     policy_version: policyVersion, status, model_listed: gatewayProfile.model_listed,
@@ -48,7 +51,9 @@ export function fixedQuestion(view: FormView, status: Status = 'budget_zero'): A
   } };
 }
 
-async function readCompletion(response: Response, signal: AbortSignal) {
+type UsageObserver = (usage: Usage, reportedModel: unknown) => Promise<void>;
+const usageSchema = z.object({ prompt_tokens: z.number().int().nonnegative().safe(), completion_tokens: z.number().int().nonnegative().safe(), total_tokens: z.number().int().nonnegative().safe() });
+async function readCompletion(response: Response, signal: AbortSignal, onUsage?: UsageObserver) {
   if (!response.ok || !response.headers.get('content-type')?.startsWith('application/json')) {
     void response.body?.cancel().catch(() => {});
     throw Error('unavailable');
@@ -65,14 +70,18 @@ async function readCompletion(response: Response, signal: AbortSignal) {
       if (size > 16000) throw Error('invalid_response');
       chunks.push(value);
     }
-    return completionSchema.parse(JSON.parse(Buffer.concat(chunks).toString('utf8')));
+    const raw = JSON.parse(Buffer.concat(chunks).toString('utf8'));
+    const usage = usageSchema.safeParse(raw?.usage);
+    // Billing is independent of whether the proposed wording is usable.
+    if (usage.success && usage.data.total_tokens === usage.data.prompt_tokens + usage.data.completion_tokens) await onUsage?.(usage.data, raw?.model);
+    return completionSchema.parse(raw);
   } finally { signal.removeEventListener('abort', cancel); cancel(); }
 }
 
-export function createQuestionAssistance(options: { transport?: typeof fetch; simulation?: boolean; deadlineMs?: number } = {}): QuestionAssistance {
+export function createQuestionAssistance(options: { transport?: typeof fetch; simulation?: boolean; deadlineMs?: number; onUsage?: UsageObserver } = {}): QuestionAssistance {
   return async view => {
-    // The ONLY transport path is a credential-free simulation at a reserved .invalid host.
-    // Production always returns here, even if a transport is accidentally supplied.
+    // The standalone engine uses a credential-free placeholder. The metered server
+    // adapter may replace it only after policy acceptance and budget reservation.
     if (!options.simulation || !options.transport) return fixedQuestion(view);
     const question = view.next_question;
     if (!question) return fixedQuestion(view, 'no_question');
@@ -94,9 +103,9 @@ export function createQuestionAssistance(options: { transport?: typeof fetch; si
         const response = await options.transport!('https://arvan.invalid/v1/chat/completions', {
           method: 'POST', redirect: 'error', cache: 'no-store',
           headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload), signal: controller.signal,
-        });
+        }).catch(() => { throw Error('unavailable'); });
         if (controller.signal.aborted) { void response.body?.cancel().catch(() => {}); throw Error('timeout'); }
-        const completion = await readCompletion(response, controller.signal);
+        const completion = await readCompletion(response, controller.signal, options.onUsage);
         if (completion.usage.total_tokens !== completion.usage.prompt_tokens + completion.usage.completion_tokens) throw Error('invalid_response');
         const selected = selectionSchema.parse(JSON.parse(completion.choices[0].message.content));
         const wording = wordings.find(w => w.id === selected.wording_id);

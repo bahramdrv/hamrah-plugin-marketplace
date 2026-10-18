@@ -7,6 +7,12 @@ import { answerSchema, type FormAnswer, type FormInput } from './contract';
 import type { AssistedFormView as FormView } from '../ai/question-assistance';
 
 type Entry = FormView['answers'][number];
+function assistanceNotice(status: FormView['question_assistance']['status']) {
+  if (status === 'worded') return 'بیان این سؤال با کمک هوشمند انتخاب شده؛ گزینه‌ها و قواعد فرم ثابت‌اند.';
+  if (status === 'budget_exhausted') return 'سهم فعلی کمک هوشمند تمام شده؛ سؤال‌های ثابت فرم همچنان ادامه دارند.';
+  if (status === 'cooldown') return 'کمک هوشمند کمی بعد دوباره در دسترس قرار می‌گیرد؛ اکنون سؤال ثابت را ادامه بده.';
+  return 'این سؤال با متن ثابت فرم ادامه دارد؛ کمک هوشمند در این مرحله اعمال نشده است.';
+}
 function answerLabel(entry: Entry): string {
   if (entry.answer.state === 'unknown') return 'نمی‌دانم';
   if (entry.answer.state === 'declined') return 'ترجیح می‌دهم پاسخ ندهم';
@@ -108,7 +114,8 @@ export function DeepForm() {
         {(!form && !busy && !unavailable || conflict) && <button className="secondary" onClick={() => void load()}>دریافت نسخهٔ تازه</button>}
         {unavailable && <p className="notice"><a href="/account">ورود یا ذخیرهٔ پاسخ‌های قطب‌نما</a></p>}
         {form && <>
-          <p className="help">کمک هوشمند فعلاً غیرفعال است؛ سؤال‌های ثابت فرم بدون آن ادامه دارند.</p>
+          <p className="help">{assistanceNotice(form.question_assistance?.status)}</p>
+          {form.question_assistance?.daily_request_limit !== undefined && <p className="help">حداکثر {form.question_assistance.daily_request_limit.toLocaleString('fa-IR')} بار کمک هوشمند در روز؛ سهم مشترک ممکن است زودتر تمام شود. ثبت پاسخ و ادامهٔ فرم به این سهم وابسته نیست.</p>}
           <p className="draft-notice">نسخهٔ ذخیره‌شده: {form.revision.toLocaleString('fa-IR')} · پاک‌شدن پس از بی‌فعالیتی: {new Date(form.delete_after).toLocaleDateString('fa-IR')}</p>
           {!summary && question ? <form onSubmit={e => { e.preventDefault(); void save('known'); }}>
             <fieldset disabled={busy || conflict}>

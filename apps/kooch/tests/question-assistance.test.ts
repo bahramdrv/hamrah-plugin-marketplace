@@ -111,3 +111,9 @@ test('provider failures and a hung transport never retry or use another provider
   assert.equal(result.next_question?.title, 'سن دقیق تو چند سال است؟');
   assert.equal(result.question_assistance.status, 'timeout');
 });
+
+test('a connection failure is reported as unavailable rather than invalid model prose', async () => {
+  const result = await createQuestionAssistance({ simulation: true, transport: async () => { throw Error('private network detail'); } })(view());
+  assert.equal(result.question_assistance.status, 'unavailable');
+  assert.ok(!JSON.stringify(result).includes('private network detail'));
+});
