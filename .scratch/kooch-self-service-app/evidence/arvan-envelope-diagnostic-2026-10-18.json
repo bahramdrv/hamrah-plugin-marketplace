@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-18T15:59:06.029Z",
+  "kind": "synthetic_envelope_diagnostic",
+  "http_status": 429,
+  "latency_ms": 299,
+  "shared_total_budget_irr": 500000,
+  "invoice_status": "pending",
+  "attempts": 1,
+  "retry": false
+}

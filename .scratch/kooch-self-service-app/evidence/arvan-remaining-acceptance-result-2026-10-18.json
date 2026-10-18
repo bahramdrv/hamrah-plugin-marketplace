@@ -1,0 +1,58 @@
+{
+  "at": "2026-10-18T15:57:07.874Z",
+  "authorization": "owner_requested_continue_to_completion_after_parser_fix",
+  "contract_version": "chat-completions-wording-4",
+  "max_requests": 2,
+  "retries": 0,
+  "shared_total_budget_irr": 500000,
+  "shared_budget_envelope": "arvan-synthetic-diagnostics-2026-10-18",
+  "invoice_status": "pending",
+  "origin": "local_not_deployed_server",
+  "production_accepted": false,
+  "results": [
+    {
+      "question_id": "study_level",
+      "attempts": 1,
+      "status": "complete_invoice_pending",
+      "http_status": 200,
+      "reported_usage": {
+        "prompt_tokens": 771,
+        "total_tokens": 806,
+        "completion_tokens": 35,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 0,
+          "multimodal_tokens": null
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "message_metadata": [
+        {
+          "finish_reason": "stop",
+          "role": "assistant",
+          "fields": {
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "reasoning": null
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 771,
+        "completion_tokens": 35,
+        "total_tokens": 806
+      },
+      "reported_model": "Qwen3.5-35B-A3B",
+      "latency_ms": 1163,
+      "validator_status": "invalid_response",
+      "accepted": false
+    }
+  ],
+  "status": "stopped_on_first_failure",
+  "completed_at": "2026-10-18T15:57:09.046Z",
+  "requests_sent": 1
+}

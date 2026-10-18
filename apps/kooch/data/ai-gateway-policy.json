@@ -5,9 +5,9 @@
     "base_url": "https://api.arvancloudai.ir/v1",
     "api_path": "/chat/completions",
     "model": "Qwen3.5-35B-A3B",
-    "authorization": null,
+    "authorization": "apikey",
     "upstream_identity": null,
-    "contract_version": "chat-completions-wording-4",
+    "contract_version": "chat-completions-wording-5",
     "prompt_version": "question-wording-1",
     "guardrail_version": null
   },

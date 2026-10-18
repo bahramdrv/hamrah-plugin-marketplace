@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import { createQuestionAssistance } from '../src/ai/question-assistance';
 import { formView } from '../src/form/workflow';
 import { answersSchema } from '../src/questions';
+import { formQuestions } from '../src/form/contract';
+import arvanEnvelope from './fixtures/arvan-wording-envelope.json';
 
 const view = () => formView({ id: 'private-case', revision: 7, answers: answersSchema.parse({ goal: 'study', age: 'under-30' }), step: 2, consent_version: 'account-save-1', last_activity_at: '2026-10-18T00:00:00Z', delete_after: '2027-01-16T00:00:00Z' });
 
@@ -25,6 +27,22 @@ const completion = (content: unknown, extra: Record<string, unknown> = {}) => Re
   usage: { prompt_tokens: 50, completion_tokens: 20, total_tokens: 70 }, ...extra,
 });
 const selection = { question_id: 'age_exact', question_version: 1, wording_id: 'plain-1' };
+
+test('the observed Arvan choice envelope accepts its single final selection but rejects nonempty extra metadata', async () => {
+  // Captured synthetic response, with only JSON content whitespace normalized.
+  const question = formQuestions.find(q => q.id === 'study_level')!;
+  const original = { ...view(), next_question: question };
+  const result = await createQuestionAssistance({ simulation: true, transport: async () => Response.json(arvanEnvelope) })(original);
+  assert.equal(result.question_assistance.status, 'simulated_wording');
+  assert.deepEqual(result.next_question, question);
+  for (const fields of [{ index: 1 }, { logprobs: {} }, { stop_reason: 'eos' }, { token_ids: [] }, { routed_experts: {} }, { unknown: null }]) {
+    const raw = structuredClone(arvanEnvelope);
+    Object.assign(raw.choices[0], fields);
+    const invalid = await createQuestionAssistance({ simulation: true, transport: async () => Response.json(raw) })(original);
+    assert.equal(invalid.question_assistance.status, 'invalid_response');
+    assert.deepEqual(invalid.next_question, question);
+  }
+});
 
 test('empty provider message metadata preserves a valid selection while nonempty metadata is rejected', async () => {
   const empty = { refusal: null, annotations: [], audio: null, function_call: null, reasoning: null, reasoning_content: null, tool_calls: null };

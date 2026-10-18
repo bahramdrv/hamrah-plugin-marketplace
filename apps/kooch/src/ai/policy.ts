@@ -9,7 +9,7 @@ export const gatewayPolicySchema = z.object({
     base_url: z.enum(['https://api.arvancloudai.ir/v1', 'https://arvan.invalid/v1']),
     api_path: z.literal('/chat/completions'), model: z.literal('Qwen3.5-35B-A3B'),
     authorization: z.enum(['apikey', 'Bearer']).nullable(), upstream_identity: z.string().min(1).nullable(),
-    contract_version: z.literal('chat-completions-wording-4'), prompt_version: z.literal('question-wording-1'), guardrail_version: z.string().nullable(),
+    contract_version: z.literal('chat-completions-wording-5'), prompt_version: z.literal('question-wording-1'), guardrail_version: z.string().nullable(),
   }).strict(),
   acceptance: z.object({ fingerprint: z.string().nullable(), expires_at: z.iso.datetime().nullable(), iam_scoped: z.boolean(), gateway_retry_disabled: z.boolean(),
     tasks: z.object({ 'question-wording': z.boolean(), 'answer-interpretation': z.boolean() }).strict(),

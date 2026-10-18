@@ -31,6 +31,8 @@ const selectionSchema = z.object({ question_id: z.string(), question_version: z.
 const completionSchema = z.object({
   model: z.literal(gatewayProfile.model),
   choices: z.array(z.object({
+    index: z.literal(0).optional(), logprobs: z.null().optional(), stop_reason: z.null().optional(),
+    token_ids: z.null().optional(), routed_experts: z.null().optional(),
     finish_reason: z.literal('stop'),
     message: z.object({
       role: z.literal('assistant'), content: z.string().min(1).max(1000), refusal: z.null().optional(),

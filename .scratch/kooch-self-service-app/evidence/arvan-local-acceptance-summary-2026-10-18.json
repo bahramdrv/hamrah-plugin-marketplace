@@ -1,0 +1,59 @@
+{
+  "contract_version": "chat-completions-wording-5",
+  "model": "Qwen3.5-35B-A3B",
+  "origin": "local_not_deployed_server",
+  "local_selection_acceptance": true,
+  "production_accepted": false,
+  "batch_requests_used": 5,
+  "batch_requests_remaining": 0,
+  "batch_http_status_counts": {
+    "200": 4,
+    "429": 1
+  },
+  "invoice_status": "pending",
+  "shared_total_budget_irr": 500000,
+  "batch_budget_irr": 100000,
+  "reserved_irr": 90000,
+  "reservation_is_actual_cost": false,
+  "scenarios": [
+    {
+      "question_id": "study_level",
+      "accepted": true,
+      "latency_ms": 1723,
+      "usage": {
+        "prompt_tokens": 771,
+        "completion_tokens": 35,
+        "total_tokens": 806
+      },
+      "receipt": "arvan-debug-3-study_level-2026-10-18.json"
+    },
+    {
+      "question_id": "work_years",
+      "accepted": true,
+      "latency_ms": 1669,
+      "usage": {
+        "prompt_tokens": 761,
+        "completion_tokens": 35,
+        "total_tokens": 796
+      },
+      "receipt": "arvan-debug-4-work_years-2026-10-18.json"
+    },
+    {
+      "question_id": "age_exact",
+      "accepted": true,
+      "latency_ms": 1340,
+      "usage": {
+        "prompt_tokens": 762,
+        "completion_tokens": 35,
+        "total_tokens": 797
+      },
+      "receipt": "arvan-debug-5-age_exact-2026-10-18.json"
+    }
+  ],
+  "remaining_external_acceptance": [
+    "scoped_machine_user_permissions",
+    "gateway_upstream_retry_contract",
+    "all_inclusive_tariff",
+    "acceptance_from_deployed_server"
+  ]
+}

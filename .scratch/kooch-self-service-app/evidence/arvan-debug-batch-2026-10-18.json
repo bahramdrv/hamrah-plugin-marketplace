@@ -1,0 +1,10 @@
+{
+  "max_requests": 5,
+  "budget_irr": 100000,
+  "shared_total_budget_irr": 500000,
+  "reserved_per_request_irr": 18000,
+  "attempts": 5,
+  "invoice_status": "pending",
+  "next_not_before": "2026-10-18T16:38:51.950Z",
+  "reserved_irr": 90000
+}

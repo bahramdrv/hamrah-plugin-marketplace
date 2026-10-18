@@ -1,0 +1,61 @@
+{
+  "at": "2026-10-18T16:21:10.164Z",
+  "question_id": "study_level",
+  "batch_attempt": 3,
+  "contract_version": "chat-completions-wording-5",
+  "origin": "local_not_deployed_server",
+  "production_accepted": false,
+  "invoice_status": "pending",
+  "status": "complete_invoice_pending",
+  "attempts": 1,
+  "http_status": 200,
+  "retry_after": null,
+  "reported_usage": {
+    "prompt_tokens": 771,
+    "total_tokens": 806,
+    "completion_tokens": 35,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "reported_model": "Qwen3.5-35B-A3B",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": {
+          "question_id": "study_level",
+          "question_version": 1,
+          "wording_id": "fixed-1"
+        },
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": null,
+        "content_sha256": "85afe3615c337c0883f39f7206c73b217ad02d75c906560e0461be15f9f1beda"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 35,
+    "total_tokens": 806
+  },
+  "model": "Qwen3.5-35B-A3B",
+  "latency_ms": 1723,
+  "validator_status": "simulated_wording",
+  "accepted": true,
+  "selected_title": "برای کدام مقطع می‌خواهی اقدام کنی؟"
+}

@@ -1,0 +1,61 @@
+{
+  "at": "2026-10-18T16:28:17.779Z",
+  "question_id": "work_years",
+  "batch_attempt": 4,
+  "contract_version": "chat-completions-wording-5",
+  "origin": "local_not_deployed_server",
+  "production_accepted": false,
+  "invoice_status": "pending",
+  "status": "complete_invoice_pending",
+  "attempts": 1,
+  "http_status": 200,
+  "retry_after": null,
+  "reported_usage": {
+    "prompt_tokens": 761,
+    "total_tokens": 796,
+    "completion_tokens": 35,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "reported_model": "Qwen3.5-35B-A3B",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": {
+          "question_id": "work_years",
+          "question_version": 1,
+          "wording_id": "fixed-1"
+        },
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": null,
+        "content_sha256": "06c45cf70baadf2d773c86950adf89bc56cc360dd254dd7cce7bbb1c097d0e51"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 761,
+    "completion_tokens": 35,
+    "total_tokens": 796
+  },
+  "model": "Qwen3.5-35B-A3B",
+  "latency_ms": 1669,
+  "validator_status": "simulated_wording",
+  "accepted": true,
+  "selected_title": "چند سال سابقهٔ کار داری؟"
+}

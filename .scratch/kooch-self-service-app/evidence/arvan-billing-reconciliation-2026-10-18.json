@@ -1,0 +1,54 @@
+{
+  "kind": "read_only_interim_panel_reconciliation",
+  "observed_date": "2026-10-18",
+  "sources": [
+    "https://panel.arvancloud.ir/financial/cost-overview",
+    "https://panel.arvancloud.ir/financial/billing-cycles/current"
+  ],
+  "resource": "kooch-Qwen3-5-35B-A3B-61689-in-tokens",
+  "receipts": [
+    {
+      "receipt": "arvan-synthetic-probe-2026-10-18.json",
+      "prompt_tokens": 659,
+      "completion_tokens": 128
+    },
+    {
+      "receipt": "arvan-nonthinking-probe-2026-10-18.json",
+      "prompt_tokens": 661,
+      "completion_tokens": 11
+    },
+    {
+      "receipt": "arvan-wording-probe-2026-10-18.json",
+      "prompt_tokens": 762,
+      "completion_tokens": 35
+    },
+    {
+      "receipt": "arvan-final-acceptance-result-2026-10-18.json",
+      "prompt_tokens": 762,
+      "completion_tokens": 35
+    },
+    {
+      "receipt": "arvan-remaining-acceptance-result-2026-10-18.json",
+      "prompt_tokens": 771,
+      "completion_tokens": 35
+    },
+    {
+      "receipt": "arvan-debug-2-study_level-2026-10-18.json",
+      "prompt_tokens": 771,
+      "completion_tokens": 35
+    }
+  ],
+  "recorded_prompt_tokens": 4386,
+  "recorded_completion_tokens": 279,
+  "panel_prompt_tokens": 4386,
+  "panel_completion_tokens": 279,
+  "panel_detail_input_irr": 18421,
+  "panel_detail_output_irr": 1171,
+  "panel_detail_sum_irr": 19592,
+  "panel_overview_net_irr": 19593,
+  "panel_overview_final_irr": 21552,
+  "token_counts_match": true,
+  "invoice_final": false,
+  "rounding_contract_confirmed": false,
+  "scope": "Only six successful responses before this snapshot; later calls excluded; no unrelated account financial data."
+}

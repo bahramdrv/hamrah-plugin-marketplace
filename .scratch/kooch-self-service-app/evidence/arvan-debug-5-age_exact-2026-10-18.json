@@ -1,0 +1,61 @@
+{
+  "at": "2026-10-18T16:33:41.943Z",
+  "question_id": "age_exact",
+  "batch_attempt": 5,
+  "contract_version": "chat-completions-wording-5",
+  "origin": "local_not_deployed_server",
+  "production_accepted": false,
+  "invoice_status": "pending",
+  "status": "complete_invoice_pending",
+  "attempts": 1,
+  "http_status": 200,
+  "retry_after": null,
+  "reported_usage": {
+    "prompt_tokens": 762,
+    "total_tokens": 797,
+    "completion_tokens": 35,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "reported_model": "Qwen3.5-35B-A3B",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": {
+          "question_id": "age_exact",
+          "question_version": 1,
+          "wording_id": "fixed-1"
+        },
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": null,
+        "content_sha256": "0005c4087f388358c9ada1369b2d4f10ac9836c696d3f52eb95c07b57b2836d3"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 762,
+    "completion_tokens": 35,
+    "total_tokens": 797
+  },
+  "model": "Qwen3.5-35B-A3B",
+  "latency_ms": 1340,
+  "validator_status": "simulated_wording",
+  "accepted": true,
+  "selected_title": "سن دقیق تو چند سال است؟"
+}
