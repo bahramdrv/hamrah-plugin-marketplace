@@ -90,6 +90,7 @@ export function createQuestionAssistance(options: { transport?: typeof fetch; si
     const { id, version, title, help, priority } = question;
     const payload = {
       model: gatewayProfile.model, max_tokens: 128, temperature: 0, stream: false,
+      chat_template_kwargs: { enable_thinking: false },
       messages: [
         { role: 'system', content: 'Select one supplied Persian wording. Return only JSON with question_id, question_version, wording_id. Never add prose or fields.' },
         { role: 'user', content: JSON.stringify({ question: { id, version, title, help, priority }, wordings }) },

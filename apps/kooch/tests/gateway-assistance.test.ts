@@ -34,6 +34,7 @@ test('accepted synthetic policy reserves before dispatch, authenticates one fixe
     assert.equal(String(url), 'https://arvan.invalid/v1/chat/completions');
     assert.equal(new Headers(init?.headers).get('authorization'), 'apikey fixture-key');
     assert.equal(init?.redirect, 'error');
+    assert.deepEqual(JSON.parse(String(init?.body)).chat_template_kwargs, { enable_thinking: false });
     const receipt = await ledger.receipt(owner, 'private-case:7:age_exact:1', policy.version);
     assert.equal(receipt?.state, 'sent');
     assert.equal(receipt?.reserved_minor, 4224);
@@ -77,6 +78,21 @@ test('missing prices, expired acceptance or a changed connection never reads a k
       assert.ok(['budget_zero', 'capability_unaccepted', 'pricing_unknown'].includes(result.question_assistance.status));
       assert.equal(calls, 0);
     }
+  } finally { await pool.end(); }
+});
+
+test('a previously accepted thinking contract cannot enable the new non-thinking request', async () => {
+  const pool = new pg.Pool({ connectionString: 'postgres://invalid.invalid/never' });
+  const oldPolicy = acceptedPolicy();
+  const legacy = { ...oldPolicy, connection: { ...oldPolicy.connection, contract_version: 'chat-completions-wording-1' } };
+  let calls = 0;
+  try {
+    const result = await createGatewayQuestionAssistance({ policy: legacy, ledger: new AiBudgetLedger(pool, 'e'.repeat(64)), now: aiNow,
+      getCredential: () => { calls++; return 'must-not-read'; }, transport: async () => { calls++; return aiCompletion(); },
+    })(view(), currentOwner(randomUUID()));
+    assert.equal(result.question_assistance.status, 'configuration_invalid');
+    assert.equal(calls, 0);
+    assert.deepEqual(result.next_question, view().next_question);
   } finally { await pool.end(); }
 });
 

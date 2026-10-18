@@ -51,6 +51,7 @@ test('simulated wording selects reviewed Persian copy using descriptors only; co
   assert.equal(payload.stream, false);
   assert.equal(payload.model, 'Qwen3.5-35B-A3B');
   assert.equal(payload.max_tokens, 128);
+  assert.deepEqual(payload.chat_template_kwargs, { enable_thinking: false });
 });
 
 test('the deadline cancels an unfinished response body and late output cannot change the displayed question', async () => {
@@ -66,6 +67,7 @@ test('the deadline cancels an unfinished response body and late output cannot ch
 test('invalid or invented output, reasoning, refusal, tools, truncation and missing usage all keep the fixed contract', async () => {
   const cases = [
     () => completion('متن آزاد'),
+    () => completion('```json\n' + JSON.stringify(selection) + '\n```'),
     () => completion({ ...selection, question_id: 'invented' }),
     () => completion({ ...selection, question_version: 99 }),
     () => completion({ ...selection, wording_id: 'invented' }),
