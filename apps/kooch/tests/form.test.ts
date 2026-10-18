@@ -123,3 +123,69 @@ test('known zero work experience is reused and conflicting exact years require c
     assert.equal((await (await c.request('case')).json()).case.answers.work, '3-plus');
   } finally { await h.close(); }
 });
+
+test('saving an answer automatically returns the next fixed question with zero-budget AI status', { skip: !enabled }, async () => {
+  const h = await harness();
+  try {
+    const c = await h.verifiedClient();
+    await c.request('case', { ...saveInput(), answers: { goal: 'study', age: 'under-30' } });
+    const first = await (await c.request('form')).json();
+    assert.equal(first.question_assistance.status, 'budget_zero');
+    const response = await c.request('form', answerInput(first.revision, first.next_question.id));
+    const next = await response.json();
+    assert.equal(response.status, 200);
+    assert.equal(next.revision, 2);
+    assert.equal(next.next_question.id, 'study_level');
+    assert.equal(next.question_assistance.inference_accepted, false);
+    assert.equal((await c.request('form', { ...answerInput(2, 'study_level', 'master'), model: 'invented' })).status, 400);
+  } finally { await h.close(); }
+});
+
+test('a simulated response for an older revision cannot replace the current question', { skip: !enabled }, async () => {
+  const { createQuestionAssistance } = await import('../src/ai/question-assistance');
+  let release: (response: Response) => void = () => {};
+  let entered: () => void = () => {};
+  const waiting = new Promise<void>(resolve => { entered = resolve; });
+  let calls = 0;
+  const assistance = createQuestionAssistance({ simulation: true, transport: async (_url, init) => {
+    calls++;
+    if (calls === 1) { entered(); return new Promise<Response>(resolve => { release = resolve; }); }
+    const descriptor = JSON.parse(JSON.parse(String(init?.body)).messages[1].content).question;
+    return Response.json({ model: 'Qwen3.5-35B-A3B', choices: [{ finish_reason: 'stop', message: { role: 'assistant', content: JSON.stringify({ question_id: descriptor.id, question_version: descriptor.version, wording_id: 'fixed-1' }) } }], usage: { prompt_tokens: 20, completion_tokens: 10, total_tokens: 30 } });
+  } });
+  const h = await harness(undefined, assistance);
+  try {
+    const c = await h.verifiedClient();
+    await c.request('case', { ...saveInput(), answers: { goal: 'study', age: 'under-30' } });
+    const delayed = c.request('form');
+    await waiting;
+    const updated = await (await c.request('form', answerInput(1, 'age_exact'))).json();
+    assert.equal(updated.question_assistance.status, 'simulated_wording');
+    release(Response.json({ model: 'Qwen3.5-35B-A3B', choices: [{ finish_reason: 'stop', message: { role: 'assistant', content: JSON.stringify({ question_id: 'age_exact', question_version: 1, wording_id: 'plain-1' }) } }], usage: { prompt_tokens: 20, completion_tokens: 10, total_tokens: 30 } }));
+    const result = await (await delayed).json();
+    assert.equal(result.revision, 2);
+    assert.equal(result.next_question.id, 'study_level');
+    assert.equal(result.question_assistance.status, 'stale');
+  } finally { await h.close(); }
+});
+
+test('a delayed simulated response cannot disclose the form after logout', { skip: !enabled }, async () => {
+  const { createQuestionAssistance } = await import('../src/ai/question-assistance');
+  let release: (response: Response) => void = () => {};
+  let entered: () => void = () => {};
+  const waiting = new Promise<void>(resolve => { entered = resolve; });
+  const h = await harness(undefined, createQuestionAssistance({ simulation: true, transport: async () => {
+    entered(); return new Promise<Response>(resolve => { release = resolve; });
+  } }));
+  try {
+    const c = await h.verifiedClient();
+    await c.request('case', saveInput());
+    const delayed = c.request('form');
+    await waiting;
+    await c.request('signout', {});
+    release(new Response('provider failure', { status: 503 }));
+    const response = await delayed;
+    assert.equal(response.status, 401);
+    assert.equal((await response.json()).next_question, undefined);
+  } finally { await h.close(); }
+});

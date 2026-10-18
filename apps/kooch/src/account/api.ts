@@ -6,6 +6,7 @@ import { GoogleOAuth } from './google';
 import { formView } from '../form/workflow';
 import { formInputSchema } from '../form/contract';
 import { reportInputSchema } from '../report/contract';
+import { createQuestionAssistance, fixedQuestion, type QuestionAssistance } from '../ai/question-assistance';
 
 const neutralMessage = 'اگر این ایمیل قابل استفاده باشد، پیام لازم برای آن ارسال می‌شود. صندوق ورودی و پوشهٔ هرزنامه را بررسی کن.';
 const reply = (body: unknown, status = 200, headers: Record<string, string> = {}) => Response.json(body, {
@@ -25,8 +26,9 @@ async function body(request: Request) {
   }
   try { return JSON.parse(Buffer.concat(chunks).toString('utf8')); } catch { throw invalid(); }
 }
-export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth }) {
+export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth; questionAssistance?: QuestionAssistance }) {
   const { store, auth } = options;
+  const questionAssistance = options.questionAssistance ?? createQuestionAssistance();
   const cookie = (token: string, expiresAt?: Date) => `${cookieName}=${token}; Path=/; HttpOnly; SameSite=Strict; ${options.mode === 'hosted' ? 'Secure; ' : ''}${expiresAt ? `Expires=${expiresAt.toUTCString()}` : 'Max-Age=0'}`;
   async function authenticated(request: Request, purpose: 'account' | 'recovery' = 'account', allowDeleted = false) {
     const session = await store.session(cookieToken(request), allowDeleted);
@@ -136,7 +138,15 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
         if (operation === 'form') {
           const saved = method === 'GET' ? await store.read(session.owner) : await store.saveForm(session.owner, formInputSchema.parse(await body(request)));
           if (!saved) throw new AccountError('not_found', 404, 'ابتدا پاسخ‌های قطب‌نما را در حساب ذخیره کن.');
-          return reply(formView(saved));
+          const assisted = await questionAssistance(formView(saved));
+          if (assisted.question_assistance.status !== 'budget_zero') {
+            // A delayed provider response must not survive logout, deletion or a case edit.
+            await authenticated(request);
+            const current = await store.read(session.owner);
+            if (!current) throw new AccountError('not_found', 404, 'ابتدا پاسخ‌های قطب‌نما را در حساب ذخیره کن.');
+            if (current.id !== saved.id || current.revision !== saved.revision) return reply(fixedQuestion(formView(current), 'stale'));
+          }
+          return reply(assisted);
         }
         if (operation === 'report') {
           if (path.length > 2 || (path[1] && !z.uuid().safeParse(path[1]).success) || (method === 'POST' && path.length !== 1)) throw invalid();

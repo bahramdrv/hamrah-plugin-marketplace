@@ -4,7 +4,7 @@ import { accountRequest, invalidateAccountRequests, StaleAccountRequest } from '
 import { normalizeDigits } from '../questions';
 import { Budget, Choices } from '../controls';
 import { answerSchema, type FormAnswer, type FormInput } from './contract';
-import type { FormView } from './workflow';
+import type { AssistedFormView as FormView } from '../ai/question-assistance';
 
 type Entry = FormView['answers'][number];
 function answerLabel(entry: Entry): string {
@@ -108,6 +108,7 @@ export function DeepForm() {
         {(!form && !busy && !unavailable || conflict) && <button className="secondary" onClick={() => void load()}>دریافت نسخهٔ تازه</button>}
         {unavailable && <p className="notice"><a href="/account">ورود یا ذخیرهٔ پاسخ‌های قطب‌نما</a></p>}
         {form && <>
+          <p className="help">کمک هوشمند فعلاً غیرفعال است؛ سؤال‌های ثابت فرم بدون آن ادامه دارند.</p>
           <p className="draft-notice">نسخهٔ ذخیره‌شده: {form.revision.toLocaleString('fa-IR')} · پاک‌شدن پس از بی‌فعالیتی: {new Date(form.delete_after).toLocaleDateString('fa-IR')}</p>
           {!summary && question ? <form onSubmit={e => { e.preventDefault(); void save('known'); }}>
             <fieldset disabled={busy || conflict}>

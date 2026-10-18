@@ -1,14 +1,15 @@
+import type { QuestionAssistance } from '../../src/ai/question-assistance';
 import { randomUUID } from 'node:crypto';
 import pg from 'pg';
 import { createAccountApi } from '../../src/account/api';
 import { AuthProvider } from '../../src/account/auth';
 import { AccountStore } from '../../src/account/store';
-export async function harness(now: () => Date = () => new Date()) {
+export async function harness(now: () => Date = () => new Date(), questionAssistance?: QuestionAssistance) {
   const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL });
   const auth = new AuthProvider({ url: process.env.KOOCH_AUTH_URL!, serviceKey: process.env.KOOCH_AUTH_SERVICE_KEY!, origin: 'http://127.0.0.1:3100' });
   const store = new AccountStore(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!, now);
   await store.validateRole();
-  const api = createAccountApi({ store, auth, origin: 'http://127.0.0.1:3100', mode: 'local' });
+  const api = createAccountApi({ store, auth, origin: 'http://127.0.0.1:3100', mode: 'local', questionAssistance });
   const clients: ReturnType<typeof client>[] = [];
   function client() {
     let cookie = '';

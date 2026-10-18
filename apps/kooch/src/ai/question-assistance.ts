@@ -1,0 +1,114 @@
+import { z } from 'zod';
+import type { FormView } from '../form/workflow';
+
+// Preparation only. No environment variable or browser input can enable paid inference.
+export const gatewayProfile = Object.freeze({
+  version: 'arvan-kooch-preparation-1',
+  base_url: 'https://api.arvancloudai.ir/v1',
+  api_path: '/chat/completions',
+  model: 'Qwen3.5-35B-A3B',
+  model_listed: true,
+  header_contract: 'unverified',
+  limited_iam: 'unverified',
+  tariff: 'unknown',
+  monthly_budget_minor: 0,
+  tasks: Object.freeze({ 'question-wording': 'unaccepted', 'answer-interpretation': 'unaccepted' }),
+} as const);
+
+const policyVersion = 'question-wording-1';
+// Only reviewed title variants can be selected. Help, options, units and rules stay fixed.
+const plainTitles: Record<string, string> = {
+  age_exact: 'چند سالت است؟',
+  work_years: 'چند سال کامل کار کرده‌ای؟',
+  study_level: 'می‌خواهی در چه مقطعی درس بخوانی؟',
+  study_offer: 'برای این مقطع، پذیرش گرفته‌ای؟',
+  language_exam: 'در کدام آزمون زبان شرکت کرده‌ای؟',
+  language_score: 'نمرهٔ کل آزمونت چند است؟',
+  budget: 'چه مقدار پول در دسترس داری؟',
+};
+const selectionSchema = z.object({ question_id: z.string(), question_version: z.number().int(), wording_id: z.string() }).strict();
+const completionSchema = z.object({
+  model: z.literal(gatewayProfile.model),
+  choices: z.array(z.object({
+    finish_reason: z.literal('stop'),
+    message: z.object({ role: z.literal('assistant'), content: z.string().min(1).max(1000), refusal: z.null().optional() }).strict(),
+  }).strict()).length(1),
+  usage: z.object({ prompt_tokens: z.number().int().nonnegative(), completion_tokens: z.number().int().nonnegative().max(128), total_tokens: z.number().int().nonnegative() }),
+});
+type Status = 'budget_zero' | 'simulated_wording' | 'invalid_response' | 'unavailable' | 'timeout' | 'no_question' | 'stale';
+export type AssistedFormView = FormView & { question_assistance: {
+  policy_version: string; status: Status; model_listed: boolean;
+  inference_accepted: false; answer_interpretation_accepted: false;
+} };
+export type QuestionAssistance = (view: FormView) => Promise<AssistedFormView>;
+export function fixedQuestion(view: FormView, status: Status = 'budget_zero'): AssistedFormView {
+  return { ...view, question_assistance: {
+    policy_version: policyVersion, status, model_listed: gatewayProfile.model_listed,
+    inference_accepted: false, answer_interpretation_accepted: false,
+  } };
+}
+
+async function readCompletion(response: Response, signal: AbortSignal) {
+  if (!response.ok || !response.headers.get('content-type')?.startsWith('application/json')) {
+    void response.body?.cancel().catch(() => {});
+    throw Error('unavailable');
+  }
+  const reader = response.body?.getReader();
+  if (!reader) throw Error('invalid_response');
+  const cancel = () => { void reader.cancel().catch(() => {}); };
+  signal.addEventListener('abort', cancel, { once: true });
+  const chunks: Uint8Array[] = []; let size = 0;
+  try {
+    while (true) {
+      const { value, done } = await reader.read(); if (done) break;
+      size += value.byteLength;
+      if (size > 16000) throw Error('invalid_response');
+      chunks.push(value);
+    }
+    return completionSchema.parse(JSON.parse(Buffer.concat(chunks).toString('utf8')));
+  } finally { signal.removeEventListener('abort', cancel); cancel(); }
+}
+
+export function createQuestionAssistance(options: { transport?: typeof fetch; simulation?: boolean; deadlineMs?: number } = {}): QuestionAssistance {
+  return async view => {
+    // The ONLY transport path is a credential-free simulation at a reserved .invalid host.
+    // Production always returns here, even if a transport is accidentally supplied.
+    if (!options.simulation || !options.transport) return fixedQuestion(view);
+    const question = view.next_question;
+    if (!question) return fixedQuestion(view, 'no_question');
+    const wordings = [{ id: 'fixed-1', title: question.title }];
+    if (plainTitles[question.id]) wordings.push({ id: 'plain-1', title: plainTitles[question.id] });
+    const { id, version, title, help, priority } = question;
+    const payload = {
+      model: gatewayProfile.model, max_tokens: 128, temperature: 0, stream: false,
+      messages: [
+        { role: 'system', content: 'Select one supplied Persian wording. Return only JSON with question_id, question_version, wording_id. Never add prose or fields.' },
+        { role: 'user', content: JSON.stringify({ question: { id, version, title, help, priority }, wordings }) },
+      ],
+    };
+    const controller = new AbortController();
+    const deadline = Math.min(8000, Math.max(1, options.deadlineMs ?? 8000));
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    try {
+      const operation = (async () => {
+        const response = await options.transport!('https://arvan.invalid/v1/chat/completions', {
+          method: 'POST', redirect: 'error', cache: 'no-store',
+          headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload), signal: controller.signal,
+        });
+        if (controller.signal.aborted) { void response.body?.cancel().catch(() => {}); throw Error('timeout'); }
+        const completion = await readCompletion(response, controller.signal);
+        if (completion.usage.total_tokens !== completion.usage.prompt_tokens + completion.usage.completion_tokens) throw Error('invalid_response');
+        const selected = selectionSchema.parse(JSON.parse(completion.choices[0].message.content));
+        const wording = wordings.find(w => w.id === selected.wording_id);
+        if (!wording || selected.question_id !== id || selected.question_version !== version) throw Error('invalid_response');
+        return { ...fixedQuestion(view, 'simulated_wording'), next_question: { ...question, title: wording.title } };
+      })();
+      const timeout = new Promise<AssistedFormView>(resolve => {
+        timer = setTimeout(() => { controller.abort(); resolve(fixedQuestion(view, 'timeout')); }, deadline);
+      });
+      return await Promise.race([operation, timeout]);
+    } catch (error) {
+      return fixedQuestion(view, error instanceof Error && error.message === 'unavailable' ? 'unavailable' : 'invalid_response');
+    } finally { clearTimeout(timer); }
+  };
+}
