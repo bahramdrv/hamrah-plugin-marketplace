@@ -1,0 +1,19 @@
+{
+  "kind": "read_only_interim_panel_reconciliation",
+  "observed_date": "2026-10-19",
+  "source": "https://panel.arvancloud.ir/financial/billing-cycles/current/usages/92e89c83-b51f-4d3e-a27b-293dd4df54a0",
+  "resource": "kooch-Qwen3-5-35B-A3B-61689-in-tokens",
+  "successful_responses_covered": 9,
+  "recorded_prompt_tokens": 6680,
+  "recorded_completion_tokens": 384,
+  "panel_prompt_tokens": 6680,
+  "panel_completion_tokens": 384,
+  "panel_input_irr": 28056,
+  "panel_output_irr": 1612,
+  "panel_sum_irr": 29668,
+  "token_counts_match": true,
+  "invoice_final": false,
+  "includes_all_taxes_and_charges_confirmed": false,
+  "error_billing_contract_confirmed": false,
+  "scope": "Only the tested AI resource; panel labels this amount non-final. No new inference dispatched."
+}
