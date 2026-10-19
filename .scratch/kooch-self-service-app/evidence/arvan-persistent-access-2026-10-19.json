@@ -1,0 +1,16 @@
+{
+  "observed_date": "2026-10-19",
+  "kind": "user_approved_persistent_workspace_owner",
+  "machine_user": "kooch-ai",
+  "policy_name": "kooch-ai-workspace-owner",
+  "scope": "workspace-owner",
+  "covers_other_workspace_services": true,
+  "includes_iam_and_dns": true,
+  "retention": "until_explicit_user_revocation",
+  "creation_success_observed": true,
+  "connected_policy_observed_on_machine_user": true,
+  "resource_scoped": false,
+  "inference_dispatched": false,
+  "credential_created_or_rotated": false,
+  "production_enabled": false
+}

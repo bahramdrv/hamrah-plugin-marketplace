@@ -15,7 +15,8 @@ export function acceptedPolicy(): GatewayPolicy {
   policy.connection.authorization = 'apikey'; policy.connection.upstream_identity = 'fixture-only';
   policy.tariff = { version: 'fixture-1', verified_at: '2040-06-01T00:00:00Z', expires_at: '2040-07-01T00:00:00Z', currency: `test-${randomUUID()}`, unit: 'minor', tokens_per_unit: 1, input_minor_per_unit: 1, output_minor_per_unit: 1, max_input_tokens: 4096, max_output_tokens: 128, max_request_minor: 4224, all_charges_included: true };
   policy.limits = { currency: policy.tariff.currency, monthly_global_minor: 8448, daily_global_minor: 8448, daily_user_minor: 8448, daily_user_requests: 20, external_hold_minor: 0 };
-  policy.acceptance = { fingerprint: acceptanceFingerprint(policy), expires_at: '2040-07-01T00:00:00Z', iam_scoped: true, gateway_retry_disabled: true, tasks: { 'question-wording': true, 'answer-interpretation': false } };
+  policy.acceptance = { fingerprint: null, expires_at: '2040-07-01T00:00:00Z', iam_scope: 'resource-scoped', gateway_retry_disabled: true, tasks: { 'question-wording': true, 'answer-interpretation': false } };
+  policy.acceptance.fingerprint = acceptanceFingerprint(policy);
   return policy;
 }
 export const aiCompletion = (content: unknown = { question_id: 'age_exact', question_version: 1, wording_id: 'plain-1' }) => Response.json({ model: 'Qwen3.5-35B-A3B', choices: [{ finish_reason: 'stop', message: { role: 'assistant', content: JSON.stringify(content) } }], usage: { prompt_tokens: 3, completion_tokens: 1, total_tokens: 4 } });

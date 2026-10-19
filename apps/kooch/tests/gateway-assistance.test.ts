@@ -26,6 +26,27 @@ import { acceptedPolicy, aiNow, aiCompletion, activeBudgetOwner } from './helper
 import { randomUUID } from 'node:crypto';
 const enabled = Boolean(process.env.KOOCH_DATABASE_URL);
 const currentOwner = (owner: string) => ({ owner, isCurrent: async () => true });
+test('explicit workspace owner acceptance is recorded as broad access and changing its scope invalidates acceptance', async () => {
+  const pool = new pg.Pool({ connectionString: 'postgres://invalid.invalid/never' });
+  const policy = acceptedPolicy();
+  policy.acceptance.iam_scope = 'workspace-owner';
+  policy.acceptance.fingerprint = acceptanceFingerprint(policy);
+  let calls = 0;
+  try {
+    const assist = () => createGatewayQuestionAssistance({ policy, ledger: new AiBudgetLedger(pool, 'e'.repeat(64)), now: aiNow,
+      getCredential: () => { calls++; return undefined; } })(view(), currentOwner(randomUUID()));
+    assert.equal((await assist()).question_assistance.status, 'credentials_missing');
+    assert.equal(calls, 1);
+    policy.acceptance.iam_scope = 'resource-scoped';
+    assert.equal((await assist()).question_assistance.status, 'capability_unaccepted');
+    assert.equal(calls, 1);
+    Reflect.deleteProperty(policy.acceptance, 'iam_scope');
+    Object.assign(policy.acceptance, { iam_scoped: true });
+    assert.equal((await assist()).question_assistance.status, 'configuration_invalid');
+    assert.equal(calls, 1);
+  } finally { await pool.end(); }
+});
+
 test('external acceptance holds can exhaust the shared budget before credentials or database access', async () => {
   const pool = new pg.Pool({ connectionString: 'postgres://invalid.invalid/never' });
   const policy = acceptedPolicy();
@@ -82,7 +103,7 @@ test('missing prices, expired acceptance or a changed connection never reads a k
     (p: ReturnType<typeof acceptedPolicy>) => { p.tariff!.all_charges_included = false; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.tariff!.expires_at = '2040-05-01T00:00:00Z'; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.acceptance.tasks['question-wording'] = false; },
-    (p: ReturnType<typeof acceptedPolicy>) => { p.acceptance.iam_scoped = false; },
+    (p: ReturnType<typeof acceptedPolicy>) => { p.acceptance.iam_scope = null; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.acceptance.gateway_retry_disabled = false; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.connection.authorization = 'Bearer'; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.connection.upstream_identity = 'changed'; },

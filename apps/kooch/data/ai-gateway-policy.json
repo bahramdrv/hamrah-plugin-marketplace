@@ -14,7 +14,7 @@
   "acceptance": {
     "fingerprint": null,
     "expires_at": null,
-    "iam_scoped": false,
+    "iam_scope": "workspace-owner",
     "gateway_retry_disabled": false,
     "tasks": {
       "question-wording": false,
