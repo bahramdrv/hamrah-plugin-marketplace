@@ -6,6 +6,7 @@ import { AiBudgetLedger } from '../src/ai/budget';
 import policy from '../data/ai-gateway-policy.json';
 import { formView } from '../src/form/workflow';
 import { answersSchema } from '../src/questions';
+import { acceptanceFingerprint } from '../src/ai/policy';
 
 const view = () => formView({ id: 'private-case', revision: 7, answers: answersSchema.parse({ goal: 'study' }), step: 2, consent_version: 'account-save-1', last_activity_at: '2026-10-18T00:00:00Z', delete_after: '2027-01-16T00:00:00Z' });
 
@@ -25,6 +26,21 @@ import { acceptedPolicy, aiNow, aiCompletion, activeBudgetOwner } from './helper
 import { randomUUID } from 'node:crypto';
 const enabled = Boolean(process.env.KOOCH_DATABASE_URL);
 const currentOwner = (owner: string) => ({ owner, isCurrent: async () => true });
+test('external acceptance holds can exhaust the shared budget before credentials or database access', async () => {
+  const pool = new pg.Pool({ connectionString: 'postgres://invalid.invalid/never' });
+  const policy = acceptedPolicy();
+  policy.limits.external_hold_minor = policy.limits.monthly_global_minor;
+  policy.acceptance.fingerprint = acceptanceFingerprint(policy);
+  let calls = 0;
+  try {
+    const result = await createGatewayQuestionAssistance({ policy, ledger: new AiBudgetLedger(pool, 'e'.repeat(64)), now: aiNow,
+      getCredential: () => { calls++; return 'must-not-read'; }, transport: async () => { calls++; return aiCompletion(); } })(view(), currentOwner(randomUUID()));
+    assert.equal(result.question_assistance.status, 'budget_exhausted');
+    assert.equal(calls, 0);
+    assert.deepEqual(result.next_question, view().next_question);
+  } finally { await pool.end(); }
+});
+
 test('accepted synthetic policy reserves before dispatch, authenticates one fixed endpoint and settles actual usage once', { skip: !enabled }, async () => {
   const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL });
   const ledger = new AiBudgetLedger(pool, 'e'.repeat(64), aiNow), policy = acceptedPolicy(), owner = await activeBudgetOwner(pool);
@@ -61,6 +77,7 @@ test('missing prices, expired acceptance or a changed connection never reads a k
   const variants = [
     (p: ReturnType<typeof acceptedPolicy>) => { p.tariff = null; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.version += '-renamed'; },
+    (p: ReturnType<typeof acceptedPolicy>) => { p.limits.external_hold_minor = 1; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.limits.monthly_global_minor = 0; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.tariff!.all_charges_included = false; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.tariff!.expires_at = '2040-05-01T00:00:00Z'; },

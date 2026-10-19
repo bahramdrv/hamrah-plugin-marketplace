@@ -18,11 +18,11 @@ export const gatewayPolicySchema = z.object({
     unit: z.literal('minor'), tokens_per_unit: positive, input_minor_per_unit: money, output_minor_per_unit: money,
     max_input_tokens: positive.max(1000000), max_output_tokens: z.literal(128), max_request_minor: positive, all_charges_included: z.boolean(),
   }).strict().nullable(),
-  limits: z.object({ currency: z.string().min(3).max(64), monthly_global_minor: money, daily_global_minor: money, daily_user_minor: money, daily_user_requests: money }).strict(),
+  limits: z.object({ currency: z.string().min(3).max(64), monthly_global_minor: money, daily_global_minor: money, daily_user_minor: money, daily_user_requests: money, external_hold_minor: money }).strict(),
 }).strict();
 export type GatewayPolicy = z.infer<typeof gatewayPolicySchema>;
 export function acceptanceFingerprint(policy: GatewayPolicy) {
-  return createHash('sha256').update(JSON.stringify({ version: policy.version, connection: policy.connection, tariff: policy.tariff })).digest('hex');
+  return createHash('sha256').update(JSON.stringify({ version: policy.version, connection: policy.connection, tariff: policy.tariff, external_hold_minor: policy.limits.external_hold_minor })).digest('hex');
 }
 export function usageCost(policy: Pick<GatewayPolicy, 'tariff'>, usage: Pick<Usage, 'prompt_tokens' | 'completion_tokens'>) {
   const t = policy.tariff;
@@ -45,5 +45,7 @@ export function policyGate(value: unknown, now: Date) {
     !a.expires_at || Date.parse(a.expires_at) <= now.getTime() || a.fingerprint !== acceptanceFingerprint(policy)) return { status: 'capability_unaccepted' as const };
   const reservation = usageCost(policy, { prompt_tokens: t.max_input_tokens, completion_tokens: t.max_output_tokens });
   if (reservation <= 0 || reservation > t.max_request_minor) return { status: 'pricing_unknown' as const };
+  const held = BigInt(policy.limits.external_hold_minor) + BigInt(reservation);
+  if (held > BigInt(policy.limits.monthly_global_minor) || held > BigInt(policy.limits.daily_global_minor)) return { status: 'budget_exhausted' as const };
   return { status: 'accepted' as const, policy, reservation };
 }

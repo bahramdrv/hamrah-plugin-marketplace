@@ -6,7 +6,25 @@ import { activeBudgetOwner } from './helpers/ai';
 import { AiBudgetLedger } from '../src/ai/budget';
 
 const enabled = Boolean(process.env.KOOCH_DATABASE_URL);
-const limits = { currency: 'TST', monthly_global_minor: 10, daily_global_minor: 10, daily_user_minor: 10, daily_user_requests: 20 };
+const limits = { currency: 'TST', monthly_global_minor: 10, daily_global_minor: 10, daily_user_minor: 10, daily_user_requests: 20, external_hold_minor: 0 };
+
+test('costs held outside runtime reduce the shared allowance even in an empty ledger and after month rollover', { skip: !enabled }, async () => {
+  const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL });
+  let clock = new Date('2040-05-31T23:59:00Z');
+  const ledger = new AiBudgetLedger(pool, 'a'.repeat(64), () => clock);
+  const owner = await activeBudgetOwner(pool), scope = randomUUID();
+  const input = { owner, operation: 'first', policy: scope, reserved_minor: 6,
+    limits: { ...limits, currency: scope, external_hold_minor: 5 } };
+  try {
+    assert.equal((await ledger.reserve(input)).status, 'budget_exhausted');
+    const reserved = await ledger.reserve({ ...input, reserved_minor: 5 });
+    assert.equal(reserved.status, 'reserved');
+    await ledger.markSent(reserved.id!, 'Qwen3.5-35B-A3B');
+    await ledger.markUnknown(reserved.id!, 'timeout', 8000);
+    clock = new Date('2040-06-01T00:01:00Z');
+    assert.equal((await ledger.reserve({ ...input, owner: await activeBudgetOwner(pool), operation: 'another', reserved_minor: 1 })).status, 'budget_exhausted');
+  } finally { await pool.end(); }
+});
 
 test('two server instances reserve one shared final allowance atomically; duplicate operations never reserve twice', { skip: !enabled }, async () => {
   const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL });

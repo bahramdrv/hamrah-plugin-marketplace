@@ -2,7 +2,7 @@ import { createHash, createHmac, randomBytes } from 'node:crypto';
 import type { Pool, PoolClient } from 'pg';
 import { gatewayPolicySchema, usageCost, type GatewayPolicy } from './policy';
 
-export type BudgetLimits = { currency: string; monthly_global_minor: number; daily_global_minor: number; daily_user_minor: number; daily_user_requests: number };
+export type BudgetLimits = { currency: string; monthly_global_minor: number; daily_global_minor: number; daily_user_minor: number; daily_user_requests: number; external_hold_minor: number };
 export type ReservationInput = { owner: string; operation: string; policy: string; reserved_minor: number; limits: BudgetLimits; tariff?: NonNullable<GatewayPolicy['tariff']> };
 export type Usage = { prompt_tokens: number; completion_tokens: number; total_tokens: number };
 type Receipt = { id: string; state: 'reserved' | 'sent' | 'unknown' | 'settled' | 'cancelled'; reserved_minor: number; charged_minor: number | null; usage: Usage | null; outcome: string | null };
@@ -33,7 +33,7 @@ export class AiBudgetLedger {
   }
   async reserve(input: ReservationInput): Promise<{ status: 'reserved' | 'duplicate' | 'budget_exhausted' | 'busy' | 'cooldown' | 'policy_blocked' | 'owner_unavailable'; id?: string }> {
     const { limits } = input;
-    if (![input.reserved_minor, limits.monthly_global_minor, limits.daily_global_minor, limits.daily_user_minor, limits.daily_user_requests].every(integer)) throw Error('Invalid accounting limits.');
+    if (![input.reserved_minor, limits.monthly_global_minor, limits.daily_global_minor, limits.daily_user_minor, limits.daily_user_requests, limits.external_hold_minor].every(integer)) throw Error('Invalid accounting limits.');
     if (input.reserved_minor === 0 || Math.min(limits.monthly_global_minor, limits.daily_global_minor, limits.daily_user_minor, limits.daily_user_requests) === 0) return { status: 'budget_exhausted' };
     const operationHash = this.operationHash(input.owner, input.operation, input.policy), subject = this.subject(input.owner), now = this.now();
     return await this.transaction(async db => {
@@ -55,7 +55,9 @@ export class AiBudgetLedger {
         count(*) FILTER(WHERE subject=$4 AND (created_at >= $3 OR state IN ('reserved','sent','unknown'))) AS user_requests
         FROM kooch.ai_budget_requests WHERE currency=$1 AND state<>'cancelled'`, [limits.currency, month, day, subject]);
       const s = sums.rows[0], reservation = BigInt(input.reserved_minor);
-      if (BigInt(s.month) + reservation > BigInt(limits.monthly_global_minor) || BigInt(s.day) + reservation > BigInt(limits.daily_global_minor) ||
+      // Unreconciled acceptance calls made outside this ledger share the same budget.
+      const external = BigInt(limits.external_hold_minor);
+      if (BigInt(s.month) + external + reservation > BigInt(limits.monthly_global_minor) || BigInt(s.day) + external + reservation > BigInt(limits.daily_global_minor) ||
           BigInt(s.user_day) + reservation > BigInt(limits.daily_user_minor) || BigInt(s.user_requests) >= BigInt(limits.daily_user_requests)) return { status: 'budget_exhausted' as const };
       const id = randomBytes(32).toString('hex');
       await db.query(`INSERT INTO kooch.ai_budget_requests(id,subject,policy,currency,reserved_minor,state,created_at,updated_at,tariff,operation_hash) VALUES($1,$2,$3,$4,$5,'reserved',$6,$6,$7,$8)`,

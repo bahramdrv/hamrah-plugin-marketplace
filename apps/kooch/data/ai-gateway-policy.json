@@ -40,6 +40,7 @@
     "monthly_global_minor": 500000,
     "daily_global_minor": 500000,
     "daily_user_minor": 500000,
-    "daily_user_requests": 20
+    "daily_user_requests": 20,
+    "external_hold_minor": 500000
   }
 }
