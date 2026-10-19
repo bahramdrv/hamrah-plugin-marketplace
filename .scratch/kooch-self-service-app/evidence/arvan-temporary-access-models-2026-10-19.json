@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-19T06:52:45.698Z",
+  "method": "GET",
+  "endpoint": "https://api.arvancloudai.ir/v1/models",
+  "inference": false,
+  "retry": false,
+  "http_status": 200,
+  "model_count": 1,
+  "expected_model_listed": true
+}
