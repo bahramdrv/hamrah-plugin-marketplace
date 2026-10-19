@@ -62,6 +62,12 @@ UPDATE kooch.ai_budget_requests SET operation_hash=id WHERE operation_hash IS NU
 -- Only the server accounting adapter can read across subjects for shared caps.
 REVOKE ALL ON kooch.ai_budget_requests FROM PUBLIC, kooch_runtime;
 GRANT SELECT, INSERT, UPDATE, DELETE ON kooch.ai_budget_requests TO kooch_account_api;
+-- Fail closed even if the hosting platform supplies additional default grants.
+ALTER TABLE kooch.ai_budget_requests ENABLE ROW LEVEL SECURITY;
+ALTER TABLE kooch.ai_budget_requests FORCE ROW LEVEL SECURITY;
+DROP POLICY IF EXISTS server_budget ON kooch.ai_budget_requests;
+CREATE POLICY server_budget ON kooch.ai_budget_requests TO kooch_account_api
+  USING(true) WITH CHECK(true);
 
 SELECT cron.alter_job((SELECT jobid FROM cron.job WHERE jobname='kooch-retention-hourly'), command := $kooch_retention_05$-- Run only through the database-owned retention job, not an application endpoint.
 -- A transaction keeps timeout settings local and rolls all deletions back on error.

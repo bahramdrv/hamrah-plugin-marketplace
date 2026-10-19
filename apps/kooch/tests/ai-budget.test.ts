@@ -8,6 +8,24 @@ import { AiBudgetLedger } from '../src/ai/budget';
 const enabled = Boolean(process.env.KOOCH_DATABASE_URL);
 const limits = { currency: 'TST', monthly_global_minor: 10, daily_global_minor: 10, daily_user_minor: 10, daily_user_requests: 20, external_hold_minor: 0 };
 
+test('financial metadata stays private if a client role accidentally receives table grants', { skip: !enabled || !process.env.KOOCH_MIGRATION_DATABASE_URL }, async () => {
+  const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL });
+  const admin = new pg.Client({ connectionString: process.env.KOOCH_MIGRATION_DATABASE_URL });
+  const ledger = new AiBudgetLedger(pool, 'b'.repeat(64));
+  const owner = await activeBudgetOwner(pool), scope = randomUUID();
+  await admin.connect();
+  try {
+    assert.equal((await ledger.reserve({ owner, operation: 'private', policy: scope, reserved_minor: 5, limits: { ...limits, currency: scope } })).status, 'reserved');
+    await admin.query('BEGIN');
+    await admin.query('GRANT SELECT, INSERT ON kooch.ai_budget_requests TO kooch_runtime');
+    await admin.query('SET LOCAL ROLE kooch_runtime');
+    const result = await admin.query('SELECT id FROM kooch.ai_budget_requests WHERE currency=$1', [scope]);
+    assert.equal(result.rowCount, 0);
+    await assert.rejects(admin.query(`INSERT INTO kooch.ai_budget_requests(id,subject,policy,currency,reserved_minor,state,created_at,updated_at)
+      VALUES(repeat('1',64),repeat('2',64),'untrusted',$1,1,'reserved',now(),now())`, [scope]), /row-level security/);
+  } finally { await admin.query('ROLLBACK'); await admin.end(); await pool.end(); }
+});
+
 test('costs held outside runtime reduce the shared allowance even in an empty ledger and after month rollover', { skip: !enabled }, async () => {
   const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL });
   let clock = new Date('2040-05-31T23:59:00Z');

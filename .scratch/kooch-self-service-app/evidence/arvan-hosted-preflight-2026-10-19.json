@@ -22,10 +22,10 @@
   "source_sql_sha256": {
     "002-form.sql": "d8f36ba8b63a7476b11b6adde5009efab3924ffe9b57551ab3f4fc8477cf6f13",
     "003-reports.sql": "863f2b023c07b83e40a82bd373edcfc4e5959ce4e53896b9de45af4a67426269",
-    "004-ai-budget.sql": "0e39c45deb9fccd63851d4652a630dace7e9e4677143910ae7a8c527ff0ccb7e",
+    "004-ai-budget.sql": "773f0e5fbd70b54da279103af3c072fcfe40bd5249be3f70ce4abfe231d95030",
     "retention-cleanup.sql": "c2c4225b549c268b245b57df7eed7ba17c6cd4ec44398576684f764b50ccdcb7"
   },
-  "upgrade_sql_sha256": "266036273418b684975da23aa10742ee7a6b7725962d745bc4c2c4be4aca239c",
+  "upgrade_sql_sha256": "64d13e6885af39cf059e8b712ab8a7de24d39e2f2f2019c8ce4d6e15d9e5533a",
   "cron_alter_job_arguments_verified": [
     "job_id",
     "schedule",
@@ -33,5 +33,6 @@
     "database",
     "username",
     "active"
-  ]
+  ],
+  "financial_rls": "enabled and forced; kooch_account_api only"
 }
