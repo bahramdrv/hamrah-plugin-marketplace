@@ -1,0 +1,120 @@
+{
+  "basis": "owner_accepted_published_tariff",
+  "owner_accepted_date": "2026-10-19",
+  "rate_source": "https://panel.arvancloud.ir/aiaas/model/bazaar",
+  "rate_observed_at": "2026-10-18T14:05:02Z",
+  "model": "Qwen3.5-35B-A3B",
+  "currency": "IRR",
+  "tokens_per_unit": 1000000,
+  "input_minor_per_unit": 4200000,
+  "output_minor_per_unit": 4200000,
+  "invoice_final": false,
+  "all_charges_confirmed": false,
+  "additional_charges_contract": "unconfirmed_owner_accepts_published_rate_as_budget_basis",
+  "successful_responses": [
+    {
+      "receipt": "arvan-synthetic-probe-2026-10-18.json",
+      "usage": {
+        "prompt_tokens": 659,
+        "total_tokens": 787,
+        "completion_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 0,
+          "multimodal_tokens": null
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 128
+        }
+      },
+      "estimated_base_irr": 3306
+    },
+    {
+      "receipt": "arvan-nonthinking-probe-2026-10-18.json",
+      "usage": {
+        "prompt_tokens": 661,
+        "total_tokens": 672,
+        "completion_tokens": 11,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 0,
+          "multimodal_tokens": null
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "estimated_base_irr": 2824
+    },
+    {
+      "receipt": "arvan-wording-probe-2026-10-18.json",
+      "usage": {
+        "prompt_tokens": 762,
+        "completion_tokens": 35,
+        "total_tokens": 797
+      },
+      "estimated_base_irr": 3348
+    },
+    {
+      "receipt": "arvan-final-acceptance-result-2026-10-18.json",
+      "usage": {
+        "prompt_tokens": 762,
+        "completion_tokens": 35,
+        "total_tokens": 797
+      },
+      "estimated_base_irr": 3348
+    },
+    {
+      "receipt": "arvan-remaining-acceptance-result-2026-10-18.json",
+      "usage": {
+        "prompt_tokens": 771,
+        "completion_tokens": 35,
+        "total_tokens": 806
+      },
+      "estimated_base_irr": 3386
+    },
+    {
+      "receipt": "arvan-debug-2-study_level-2026-10-18.json",
+      "usage": {
+        "prompt_tokens": 771,
+        "completion_tokens": 35,
+        "total_tokens": 806
+      },
+      "estimated_base_irr": 3386
+    },
+    {
+      "receipt": "arvan-debug-3-study_level-2026-10-18.json",
+      "usage": {
+        "prompt_tokens": 771,
+        "completion_tokens": 35,
+        "total_tokens": 806
+      },
+      "estimated_base_irr": 3386
+    },
+    {
+      "receipt": "arvan-debug-4-work_years-2026-10-18.json",
+      "usage": {
+        "prompt_tokens": 761,
+        "completion_tokens": 35,
+        "total_tokens": 796
+      },
+      "estimated_base_irr": 3344
+    },
+    {
+      "receipt": "arvan-debug-5-age_exact-2026-10-18.json",
+      "usage": {
+        "prompt_tokens": 762,
+        "completion_tokens": 35,
+        "total_tokens": 797
+      },
+      "estimated_base_irr": 3348
+    }
+  ],
+  "known_usage_estimated_base_irr": 29676,
+  "unknown_request_receipt": "arvan-envelope-diagnostic-2026-10-18.json",
+  "unknown_request_hold_irr": 18000,
+  "external_hold_irr": 47676,
+  "shared_total_budget_irr": 500000,
+  "estimated_remaining_under_accepted_basis_irr": 452324,
+  "new_inference_requests": 0
+}

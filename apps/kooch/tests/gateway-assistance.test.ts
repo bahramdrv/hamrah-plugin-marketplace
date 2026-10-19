@@ -16,7 +16,7 @@ test('the unaccepted deployed policy cannot read credentials, touch the ledger o
   try {
     const assistance = createGatewayQuestionAssistance({ policy, now: () => new Date('2026-10-18T15:00:00Z'), ledger: new AiBudgetLedger(pool, 'e'.repeat(64)), getCredential: () => { calls++; return 'must-not-read'; }, transport: async () => { calls++; throw Error('must-not-connect'); } });
     const result = await assistance(view(), { owner: 'private-owner' });
-    assert.equal(result.question_assistance.status, 'pricing_unknown');
+    assert.equal(result.question_assistance.status, 'capability_unaccepted');
     assert.equal(calls, 0);
     assert.deepEqual(result.next_question, view().next_question);
   } finally { await pool.end(); }
@@ -26,6 +26,23 @@ import { acceptedPolicy, aiNow, aiCompletion, activeBudgetOwner } from './helper
 import { randomUUID } from 'node:crypto';
 const enabled = Boolean(process.env.KOOCH_DATABASE_URL);
 const currentOwner = (owner: string) => ({ owner, isCurrent: async () => true });
+test('published tariffs need explicit owner acceptance without pretending all invoice charges were confirmed', async () => {
+  const pool = new pg.Pool({ connectionString: 'postgres://invalid.invalid/never' });
+  const policy = acceptedPolicy();
+  policy.tariff!.all_charges_included = false;
+  let calls = 0;
+  const assist = () => createGatewayQuestionAssistance({ policy, ledger: new AiBudgetLedger(pool, 'e'.repeat(64)), now: aiNow,
+    getCredential: () => { calls++; return undefined; } })(view(), currentOwner(randomUUID()));
+  try {
+    assert.equal((await assist()).question_assistance.status, 'pricing_unknown');
+    assert.equal(calls, 0);
+    policy.acceptance.published_tariff_accepted = true;
+    policy.acceptance.fingerprint = acceptanceFingerprint(policy);
+    assert.equal((await assist()).question_assistance.status, 'credentials_missing');
+    assert.equal(calls, 1);
+  } finally { await pool.end(); }
+});
+
 test('explicit workspace owner acceptance is recorded as broad access and changing its scope invalidates acceptance', async () => {
   const pool = new pg.Pool({ connectionString: 'postgres://invalid.invalid/never' });
   const policy = acceptedPolicy();
@@ -98,6 +115,7 @@ test('missing prices, expired acceptance or a changed connection never reads a k
   const variants = [
     (p: ReturnType<typeof acceptedPolicy>) => { p.tariff = null; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.version += '-renamed'; },
+    (p: ReturnType<typeof acceptedPolicy>) => { p.acceptance.published_tariff_accepted = true; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.limits.external_hold_minor = 1; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.limits.monthly_global_minor = 0; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.tariff!.all_charges_included = false; },

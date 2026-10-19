@@ -11,7 +11,7 @@ export const gatewayPolicySchema = z.object({
     authorization: z.enum(['apikey', 'Bearer']).nullable(), upstream_identity: z.string().min(1).nullable(),
     contract_version: z.literal('chat-completions-wording-5'), prompt_version: z.literal('question-wording-1'), guardrail_version: z.string().nullable(),
   }).strict(),
-  acceptance: z.object({ fingerprint: z.string().nullable(), expires_at: z.iso.datetime().nullable(), iam_scope: z.enum(['resource-scoped', 'workspace-owner']).nullable(), gateway_retry_disabled: z.boolean(),
+  acceptance: z.object({ fingerprint: z.string().nullable(), expires_at: z.iso.datetime().nullable(), iam_scope: z.enum(['resource-scoped', 'workspace-owner']).nullable(), gateway_retry_disabled: z.boolean(), published_tariff_accepted: z.boolean(),
     tasks: z.object({ 'question-wording': z.boolean(), 'answer-interpretation': z.boolean() }).strict(),
   }).strict(),
   tariff: z.object({ version: z.string().min(1), verified_at: z.iso.datetime(), expires_at: z.iso.datetime(), currency: z.string().min(3).max(64),
@@ -22,7 +22,7 @@ export const gatewayPolicySchema = z.object({
 }).strict();
 export type GatewayPolicy = z.infer<typeof gatewayPolicySchema>;
 export function acceptanceFingerprint(policy: GatewayPolicy) {
-  return createHash('sha256').update(JSON.stringify({ version: policy.version, connection: policy.connection, tariff: policy.tariff, external_hold_minor: policy.limits.external_hold_minor, iam_scope: policy.acceptance.iam_scope })).digest('hex');
+  return createHash('sha256').update(JSON.stringify({ version: policy.version, connection: policy.connection, tariff: policy.tariff, external_hold_minor: policy.limits.external_hold_minor, iam_scope: policy.acceptance.iam_scope, published_tariff_accepted: policy.acceptance.published_tariff_accepted })).digest('hex');
 }
 export function usageCost(policy: Pick<GatewayPolicy, 'tariff'>, usage: Pick<Usage, 'prompt_tokens' | 'completion_tokens'>) {
   const t = policy.tariff;
@@ -38,7 +38,7 @@ export function policyGate(value: unknown, now: Date) {
   const policy = parsed.data;
   if (Math.min(policy.limits.monthly_global_minor, policy.limits.daily_global_minor, policy.limits.daily_user_minor, policy.limits.daily_user_requests) === 0) return { status: 'budget_zero' as const };
   const t = policy.tariff;
-  if (!t || !t.all_charges_included || t.currency !== policy.limits.currency || Date.parse(t.verified_at) > now.getTime() || Date.parse(t.expires_at) <= now.getTime() ||
+  if (!t || (!t.all_charges_included && !policy.acceptance.published_tariff_accepted) || t.currency !== policy.limits.currency || Date.parse(t.verified_at) > now.getTime() || Date.parse(t.expires_at) <= now.getTime() ||
     (!policy.connection.base_url.includes('.invalid') && !/^[A-Z]{3}$/.test(t.currency))) return { status: 'pricing_unknown' as const };
   const a = policy.acceptance;
   if (!policy.connection.authorization || !policy.connection.upstream_identity || !a.iam_scope || !a.gateway_retry_disabled || !a.tasks['question-wording'] ||

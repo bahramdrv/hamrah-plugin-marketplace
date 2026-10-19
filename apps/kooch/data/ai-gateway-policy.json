@@ -19,12 +19,13 @@
     "tasks": {
       "question-wording": false,
       "answer-interpretation": false
-    }
+    },
+    "published_tariff_accepted": true
   },
   "tariff": {
-    "version": "arvan-marketplace-qwen35-2026-10-18",
+    "version": "arvan-qwen35-owner-accepted-2026-10-19",
     "verified_at": "2026-10-18T14:05:02Z",
-    "expires_at": "2026-10-19T14:05:02Z",
+    "expires_at": "2026-10-20T07:43:44Z",
     "currency": "IRR",
     "unit": "minor",
     "tokens_per_unit": 1000000,
@@ -41,6 +42,6 @@
     "daily_global_minor": 500000,
     "daily_user_minor": 500000,
     "daily_user_requests": 20,
-    "external_hold_minor": 500000
+    "external_hold_minor": 47676
   }
 }
