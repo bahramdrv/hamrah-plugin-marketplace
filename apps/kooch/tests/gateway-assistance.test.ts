@@ -26,6 +26,27 @@ import { acceptedPolicy, aiNow, aiCompletion, activeBudgetOwner } from './helper
 import { randomUUID } from 'node:crypto';
 const enabled = Boolean(process.env.KOOCH_DATABASE_URL);
 const currentOwner = (owner: string) => ({ owner, isCurrent: async () => true });
+test('owner acceptance of undocumented gateway retries remains distinct from a confirmed disabled policy', async () => {
+  const pool = new pg.Pool({ connectionString: 'postgres://invalid.invalid/never' });
+  const policy = acceptedPolicy();
+  policy.acceptance.gateway_retry_policy = 'unknown-owner-accepted';
+  policy.acceptance.fingerprint = acceptanceFingerprint(policy);
+  let calls = 0;
+  try {
+    const assist = () => createGatewayQuestionAssistance({ policy, ledger: new AiBudgetLedger(pool, 'e'.repeat(64)), now: aiNow,
+      getCredential: () => { calls++; return undefined; } })(view(), currentOwner(randomUUID()));
+    assert.equal((await assist()).question_assistance.status, 'credentials_missing');
+    assert.equal(calls, 1);
+    policy.acceptance.gateway_retry_policy = 'disabled-confirmed';
+    assert.equal((await assist()).question_assistance.status, 'capability_unaccepted');
+    assert.equal(calls, 1);
+    Reflect.deleteProperty(policy.acceptance, 'gateway_retry_policy');
+    Object.assign(policy.acceptance, { gateway_retry_disabled: true });
+    assert.equal((await assist()).question_assistance.status, 'configuration_invalid');
+    assert.equal(calls, 1);
+  } finally { await pool.end(); }
+});
+
 test('published tariffs need explicit owner acceptance without pretending all invoice charges were confirmed', async () => {
   const pool = new pg.Pool({ connectionString: 'postgres://invalid.invalid/never' });
   const policy = acceptedPolicy();
@@ -122,7 +143,7 @@ test('missing prices, expired acceptance or a changed connection never reads a k
     (p: ReturnType<typeof acceptedPolicy>) => { p.tariff!.expires_at = '2040-05-01T00:00:00Z'; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.acceptance.tasks['question-wording'] = false; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.acceptance.iam_scope = null; },
-    (p: ReturnType<typeof acceptedPolicy>) => { p.acceptance.gateway_retry_disabled = false; },
+    (p: ReturnType<typeof acceptedPolicy>) => { p.acceptance.gateway_retry_policy = null; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.connection.authorization = 'Bearer'; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.connection.upstream_identity = 'changed'; },
     (p: ReturnType<typeof acceptedPolicy>) => { p.connection.guardrail_version = 'changed'; },

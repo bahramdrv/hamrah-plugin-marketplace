@@ -1,0 +1,37 @@
+{
+  "observed_date": "2026-10-19",
+  "supabase_project": "ifjtceqlcsmypuuflwlx",
+  "form_column": false,
+  "reports_table": false,
+  "ai_budget_table": false,
+  "retention_job": {
+    "name": "kooch-retention-hourly",
+    "active": true,
+    "schedule": "0 * * * *",
+    "command_md5": "41c0dfaecfdd620bbc0e41edd4b9c397"
+  },
+  "vercel_project": "bahramd-s-projects2/kooch",
+  "production_source_commit": "9d8730ccbe48dc75bdc99c248a8072d25e1991ef",
+  "production_source_branch": "codex/kooch-knowledge",
+  "account_environment_scope_observed": "Production only",
+  "arvan_server_environment_present": false,
+  "accounting_server_environment_present": false,
+  "database_changed": false,
+  "deployment_created": false,
+  "secrets_revealed_or_transferred": false,
+  "source_sql_sha256": {
+    "002-form.sql": "d8f36ba8b63a7476b11b6adde5009efab3924ffe9b57551ab3f4fc8477cf6f13",
+    "003-reports.sql": "863f2b023c07b83e40a82bd373edcfc4e5959ce4e53896b9de45af4a67426269",
+    "004-ai-budget.sql": "0e39c45deb9fccd63851d4652a630dace7e9e4677143910ae7a8c527ff0ccb7e",
+    "retention-cleanup.sql": "c2c4225b549c268b245b57df7eed7ba17c6cd4ec44398576684f764b50ccdcb7"
+  },
+  "upgrade_sql_sha256": "266036273418b684975da23aa10742ee7a6b7725962d745bc4c2c4be4aca239c",
+  "cron_alter_job_arguments_verified": [
+    "job_id",
+    "schedule",
+    "command",
+    "database",
+    "username",
+    "active"
+  ]
+}

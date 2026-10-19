@@ -15,7 +15,7 @@
     "fingerprint": null,
     "expires_at": null,
     "iam_scope": "workspace-owner",
-    "gateway_retry_disabled": false,
+    "gateway_retry_policy": "unknown-owner-accepted",
     "tasks": {
       "question-wording": false,
       "answer-interpretation": false
