@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { answersSchema, emptyAnswers, normalizeDigits, type Answers } from './questions';
 import type { CompassConfig, CompassResult } from './api';
+import { compassRequest } from './compass-transport';
 import { Budget, Choices, Destinations } from './controls';
 import { Evidence, Results } from './result';
 import type { RetrievalStatus } from './retrieval';
@@ -33,7 +34,7 @@ export function Compass() {
   async function loadConfig() {
     setError('');
     try {
-      const response = await fetch('/api/config', { cache: 'no-store', credentials: 'omit' });
+      const response = await compassRequest('/api/config', { cache: 'no-store' }, { origin: window.location.origin });
       const body = await response.json();
       if (!body.questions) throw new Error();
       setConfig(body);
@@ -125,8 +126,8 @@ export function Compass() {
     const requestRevision = ++revision.current; setBusy(true); setError(''); setAnswers(input);
     const timeout = setTimeout(() => controller.abort(), 10000);
     try {
-      const response = await fetch('/api/compass', { method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(input), credentials: 'omit', cache: 'no-store', signal: controller.signal });
+      const response = await compassRequest('/api/compass', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(input), cache: 'no-store', signal: controller.signal }, { origin: window.location.origin });
       const body = await response.json();
       if (requestRevision !== revision.current) return;
       if (!response.ok) { setError(body.message ?? 'دریافت نتیجه ناموفق بود.'); return; }

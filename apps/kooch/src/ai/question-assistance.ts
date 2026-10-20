@@ -2,7 +2,7 @@ import { z } from 'zod';
 import type { FormView } from '../form/workflow';
 import type { Usage } from './budget';
 
-// Preparation only. No environment variable or browser input can enable paid inference.
+// Fallback metadata only. Paid inference requires a separately validated gateway policy.
 export const gatewayProfile = Object.freeze({
   version: 'arvan-kooch-preparation-1',
   base_url: 'https://api.arvancloudai.ir/v1',

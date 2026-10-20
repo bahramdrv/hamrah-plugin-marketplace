@@ -4,7 +4,7 @@ import { AccountStore } from './store';
 import { createAccountApi } from './api';
 import { GoogleOAuth } from './google';
 import { AiBudgetLedger } from '../ai/budget';
-import { createGatewayQuestionAssistance } from '../ai/gateway';
+import { createScopedQuestionAssistance } from '../ai/preview-acceptance';
 import aiPolicy from '../../data/ai-gateway-policy.json';
 type Runtime = ReturnType<typeof createAccountApi>;
 let runtime: Promise<Runtime> | undefined;
@@ -39,7 +39,7 @@ export async function accountRuntime() {
     const accountingKey = process.env.KOOCH_AI_ACCOUNTING_KEY;
     const stableKey = /^[a-f0-9]{64}$/.test(accountingKey ?? '');
     const ledger = new AiBudgetLedger(pool, stableKey ? accountingKey! : process.env.KOOCH_SESSION_ENCRYPTION_KEY!);
-    const questionAssistance = createGatewayQuestionAssistance({ policy: aiPolicy, ledger,
+    const questionAssistance = createScopedQuestionAssistance({ policy: aiPolicy, ledger, environment: process.env,
       getCredential: () => stableKey ? process.env.KOOCH_ARVAN_API_KEY : undefined });
     return createAccountApi({ store, mode, origin, auth, google, questionAssistance, accounting: stableKey ? ledger : undefined });
   })().catch(error => { runtime = undefined; throw error; });
