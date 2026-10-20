@@ -15,8 +15,8 @@
   "production_environment_changes": false,
   "two_factor_prompt_skip": "Explicitly approved by owner after automatic review rejection; no enabled 2FA disabled",
   "database_credential_created": true,
-  "paid_requests_this_phase": 2,
-  "runtime_acceptance": false,
+  "paid_requests_this_phase": 3,
+  "runtime_acceptance": true,
   "dedicated_role": "kooch_preview_account_api",
   "security_model": "API privileges inherited without SET; separate runtime SET permission; no default role",
   "role_template": "preview-browser-role-2026-10-20.sql",
@@ -31,17 +31,17 @@
     "build": "pass",
     "release": "pass",
     "static": "pass",
-    "reviews": "no findings; operator stop/inspect/disable obligations recorded"
+    "reviews": "Spec and Standards: no unresolved findings for bounded hosted Preview acceptance"
   },
   "preview_source_commit": "f133a2142720d4a313f7ecc9fe03ec0e9f4322e1",
-  "preview_ready_deployment": "AQmh6qn6u9r8nnCam2S4o5EHGCSF",
+  "preview_ready_deployment": "GWy9bA6AmhKDZDAw8AJ8fyAGcJW6",
   "supabase_server_version_num": 170011,
   "credential_template_loaded_in_browser": true,
   "credential_template_full_text_matched": true,
   "credential_template_submitted": true,
   "credential_password_value": "entered and submitted by human; omitted from evidence",
   "handoff_sql_url": "https://supabase.com/dashboard/project/ifjtceqlcsmypuuflwlx/sql/9708426f-c8bb-4e8d-a294-b3d6cf081cc7",
-  "pending": "Owner re-signin, then one remaining authorized form attempt and at most one model call, followed by flag and dedicated-login cleanup.",
+  "pending": null,
   "tariff_window_expires_at": "2026-10-20T07:43:44Z",
   "credential_first_human_submission": {
     "status": "failed before CREATE ROLE",
@@ -89,7 +89,6 @@
     "ai_flag": "disabled",
     "result": "form loaded successfully with fixed wording; no model invocation"
   },
-  "operational_review": "No finding: prerequisite failure before transport with zero ledger rows did not consume model package; stop at first inference failure remains mandatory.",
   "hosted_results": [
     {
       "question": "age_exact",
@@ -130,6 +129,26 @@
       "created_at": "2026-10-20T06:54:52.219Z",
       "blocked": false,
       "retry_after": null
+    },
+    {
+      "question": "work_years",
+      "policy": "arvan-kooch-preview-20261020-af3522ee26ea",
+      "state": "settled",
+      "outcome": "worded",
+      "reserved_minor": 17742,
+      "charged_minor": 3344,
+      "currency": "IRR",
+      "usage": {
+        "prompt_tokens": 761,
+        "completion_tokens": 35,
+        "total_tokens": 796
+      },
+      "requested_model": "Qwen3.5-35B-A3B",
+      "reported_model": "Qwen3.5-35B-A3B",
+      "latency_ms": 3987,
+      "created_at": "2026-10-20T07:30:25.861Z",
+      "blocked": false,
+      "retry_after": null
     }
   ],
   "auth_prerequisite_failures_after_second_inference": {
@@ -148,11 +167,18 @@
     "retry_or_auth_security_changes": false
   },
   "synthetic_case_revision": 3,
-  "remaining_question": "work_years",
-  "automatic_review_rejection": "Activation for the third inference rejected: stop-on-first-failure interpreted to include prior auth prerequisite failures. No workaround attempted; explicit renewed approval required.",
-  "preview_activation": "one synthetic case enabled under renewed approval; only one of three model calls remains; owner signin required",
-  "dedicated_login_cleanup": "pending conclusion of renewed-approval request; no permanent Arvan grant revocation requested",
-  "base_tariff_total_IRR": 6734,
+  "remaining_question": null,
+  "automatic_review_rejection": "Historical: activation for third inference was rejected under stop-on-first-failure after auth failures. No workaround was attempted. Owner subsequently gave explicit renewed approval recorded below.",
+  "preview_activation": "disabled",
+  "dedicated_login_cleanup": {
+    "executed": true,
+    "login_enabled": false,
+    "api_member": false,
+    "runtime_member": false,
+    "live_connections": 0,
+    "terminated_connections": 1
+  },
+  "base_tariff_total_IRR": 10078,
   "renewed_approval": {
     "approved": true,
     "purpose": "one remaining work_years inference after prior auth failures",
@@ -166,7 +192,37 @@
     "cleanup_after": true
   },
   "last_active_preview_deployment": "AQmh6qn6u9r8nnCam2S4o5EHGCSF",
-  "renewed_auth_attempts_used": 1,
-  "renewed_attempt_result": "Sign-in required before model; ledger remains two settled rows. Owner asked to sign in again; no password requested in chat.",
-  "previous_disabled_preview_deployment": "6yxVSqXhY121TxLFg1yqeoycwrqB"
+  "renewed_auth_attempts_used": 2,
+  "renewed_attempt_result": "Owner signed in again; second and final approved form attempt successfully returned work_years worded. No fourth model invocation.",
+  "previous_disabled_preview_deployment": "6yxVSqXhY121TxLFg1yqeoycwrqB",
+  "historical_operational_review_before_automatic_rejection": "No finding: prerequisite failure before transport with zero ledger rows did not consume model package; stop at first inference failure remains mandatory. Historical assessment only; subsequent automatic action review rejected continuation, and explicit renewed owner approval was obtained.",
+  "owner_resignin_success": true,
+  "base_tariff_total_toman": 1007.8,
+  "ledger_final": {
+    "requests": 3,
+    "settled": 3,
+    "unsettled": 0,
+    "blocked": 0,
+    "charged_IRR": 10078
+  },
+  "remaining_phase_model_calls": 0,
+  "arvan_permanent_owner_grant": "preserved as explicitly requested",
+  "scope_of_acceptance": "Question wording accepted on protected Preview hosted server for three synthetic scenarios. Public Production activation and full pilot are outside this authorized Preview phase.",
+  "known_limitations": [
+    "Published-tariff basis is owner-accepted, not final invoice reconciliation.",
+    "Gateway internal retry behavior remains unknown and owner-accepted.",
+    "Intermittent auth prerequisite failures were observed; no permanent network fix is claimed; retest in full pilot.",
+    "Hosting identity is the recorded marketplace observation, not immutable provider weights."
+  ],
+  "completed_question": "work_years",
+  "historical_checkpoint_review_notes": {
+    "standards": "No actionable privacy or standards finding; no secrets or raw owner/case IDs in evidence.",
+    "spec": "Two results and costs accurate; historical interpretation explicitly labeled; current pending state is owner re-signin before one remaining approved attempt."
+  },
+  "current_review_notes": {
+    "spec": "No independent criterion remains in ticket05 for bounded hosted Preview acceptance; public activation/full pilot remain in ticket10. Live negative cases not claimed.",
+    "standards": "No actionable finding in final three-document diff: exact totals, bounded Preview scope, auth follow-up, cleanup and no secrets/raw identifiers verified."
+  },
+  "pilot_10_followup": "Retest intermittent hosted auth prerequisite failures and reliable account recovery before full public pilot; root cause and permanent network fix not established.",
+  "ticket_status": "done - bounded hosted Preview acceptance"
 }

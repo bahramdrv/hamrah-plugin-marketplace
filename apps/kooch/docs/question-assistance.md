@@ -94,3 +94,12 @@ The shipped policy stays unaccepted. `previewAcceptanceProfile` can construct a 
 Execution is operator-controlled, with one actual browser form action followed by a read-only shared-ledger check before any next action. The operator stops after the first unsuccessful result, disables the Preview activation and runs the dedicated-login teardown. This is not a new server-side failure latch. Respect the gateway5-minute interval and never reload a paid form to retry.
 
 Protected Preview compass requests need their existing same-origin Vercel authentication cookie. Only the exact stable acceptance origin uses same-origin credentials for the two existing public compass APIs; Production and every other origin still force omit. Deployment protection is not disabled.
+
+
+## پذیرش محدود میزبان — ۲۰ اکتبر۲۰۲۶
+
+سه سناریوی ساختگی سن، مقطع تحصیلی و سابقهٔ کار از مسیر واقعی فرم در Preview محافظت‌شده اجرا شدند. هر سه `settled/worded`، مدل درخواستی و گزارش‌شده `Qwen3.5-35B-A3B` و تأخیرها۴۰۰۱/۳۸۳۹/۳۹۸۷ms بودند. مجموع۲۳۹۹توکن و۱۰٬۰۷۸ریال بر مبنای تعرفهٔ پذیرفته‌شده تسویه شد؛ این رقم صورتحساب نهایی نیست. هیچ درخواست چهارم یا رزرو باز تازه‌ای وجود ندارد. [رسید کامل میزبان](../../../.scratch/kooch-self-service-app/evidence/arvan-hosted-progress-2026-10-20.json).
+
+پس از آزمون، پرچم Preview روی disabled مستقر شد. login اختصاصی NOLOGIN است، عضویت API/runtime لغو شده و تعداد اتصال‌های آن صفر است. نقش دائمی مالک میزکار آروان و کلید حسابداری حفظ شدند. سیاست پایه و Production خاموش‌اند؛ این پذیرش، فعال‌سازی عمومی یا پذیرش پاسخ نوشتنی نیست.
+
+خطاهای متناوب احراز هویت پیش از فراخوانی مدل جدا ثبت شدند. یک ورود دوباره نیز پس از پایان نشست لازم شد؛ مدل در آن تلاش‌ها مصرف نداشت. probe موقت حذف شد و تغییر دائمی auth یا retry اضافه نشده است. علت شبکه قطعی نشده و پایداری حساب و بازیابی آن باید در پایلوت۱۰ دوباره سنجیده شود.
