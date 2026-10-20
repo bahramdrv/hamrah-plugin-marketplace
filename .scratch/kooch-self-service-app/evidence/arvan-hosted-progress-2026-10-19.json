@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-19",
+  "source_commit": "40cccfa",
+  "supabase_project": "ifjtceqlcsmypuuflwlx",
+  "migrations_applied": [
+    "002-form.sql",
+    "003-reports.sql",
+    "004-ai-budget.sql"
+  ],
+  "form_column": true,
+  "reports_rls_forced": true,
+  "financial_rls_forced": true,
+  "financial_policy_role": "kooch_account_api",
+  "financial_client_privileges": false,
+  "public_roles_are_server_members": false,
+  "retention_job": {
+    "active": true,
+    "schedule": "0 * * * *",
+    "role": "postgres",
+    "role_bypassrls": true,
+    "command_md5_observed": "f934fce93cab5a6b866a2b539af0b261",
+    "command_md5_expected": "f934fce93cab5a6b866a2b539af0b261"
+  },
+  "git_push_branch": "codex/kooch-arvan-acceptance",
+  "preview_deployment": "5jZmEKbL1D7yP5UFZ8JmAY4X9Trk",
+  "preview_ready": true,
+  "preview_url": "https://kooch-git-codex-kooch-arvan-acceptance-bahramd-s-projects2.vercel.app/",
+  "protection": {
+    "require_vercel_login": true,
+    "type": "Standard Protection",
+    "exceptions": []
+  },
+  "ai_secret_names_saved": [
+    "KOOCH_ARVAN_API_KEY",
+    "KOOCH_AI_ACCOUNTING_KEY"
+  ],
+  "ai_secret_scope": "Preview branch codex/kooch-arvan-acceptance only",
+  "production_deployment_unchanged": "6btoi4AChXxxpb8WJYJSyd5sZmVN",
+  "production_source_unchanged": "9d8730ccbe48dc75bdc99c248a8072d25e1991ef",
+  "paid_requests_this_phase": 0,
+  "runtime_acceptance": false,
+  "blocker": "Existing Production account secrets are write-only. UI cannot duplicate them to only this Preview branch while preserving Production. No original hosted env backup found in app directory. Owner asked to supply backup path or populate Preview records; no values requested in chat. Existing Production scope edit cancelled without saving.",
+  "test_counts": {
+    "app": 80,
+    "root": 384,
+    "python": 47
+  },
+  "reviews": {
+    "spec": "no findings",
+    "standards": "no findings"
+  },
+  "credential_handoff": {
+    "wizard": ".scratch/kooch-self-service-app/setup-preview-account.sh",
+    "status": "prepared, not executed",
+    "scope": "new dedicated Preview login as member of existing restricted account role; Production password untouched",
+    "local_probe": "ALTER ROLE SET role=kooch_account_api supported; probe rolled back",
+    "checks": [
+      "bash -n passed",
+      "template library unchanged",
+      "both private output paths gitignored"
+    ],
+    "human_required": [
+      "copy complete existing Supabase service secret into hidden wizard input",
+      "choose new Preview password and personally submit credential SQL"
+    ],
+    "source_key_retrieval": "copy/reveal attempted through official UI; full key was not obtained; no key saved",
+    "ui_draft": "found invalid-length value and Production target; changed draft target to only authorized Preview branch; did not save",
+    "browser_state": "IAB tabs closed/reset before final draft cleanup; no surviving tab assumed"
+  }
+}

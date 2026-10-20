@@ -146,3 +146,19 @@ verified_atمشاهدهٔ اصلی۱۸اکتبر حفظ شد؛ اعتبار فر
 بررسی خواندنی واقعی میزبان: ProductionVercel هنوز9d8730c رویcodex/kooch-knowledge است؛ سهmigrationویژگی رویSupabaseاعمال نشده وjobقدیمی ساعتی فعال است. دو متغیر AIسرور وجود ندارند و تنظیمات حساب فقطProductionهستند. هیچsecretباز یا منتقل نشد. [شاهد](../evidence/arvan-hosted-preflight-2026-10-19.json)،[SQLاتمیک آماده](../arvan-hosted-upgrade-2026-10-19.sql) و[بستهٔ مرحلهٔ بعد](../arvan-hosted-acceptance-plan-2026-10-19.md) آماده‌اند؛ SQLمیزبان اجرا نشده،push/deployیاinferenceتازه انجام نشده است.
 
 شروط تصمیم مالک دربارهٔ دسترسی،مبنای تعرفه ونامعلومیretryرفع شده‌اند. باقی‌مانده فقط مرحلهٔ اجرایی میزبان وپذیرش ازهمان سرور است؛ مجوز مشخص انتقالsecretبهPreview،pushشاخهٔ آزمایشی و بستهٔ پولی جدید هنوز درخواست خواهد شد، زیرا مجوز پنج‌فراخوانی قبلی مصرف شده است.
+
+## اجرای مرحلهٔ آزمایشی با مجوز صریح مالک — ۱۹اکتبر
+
+مالک بستهٔ مشخص SQL،pushشاخه،Previewمحافظت‌شده،secretهای همان شاخه وmax3درخواست ساختگی/۶هزار تومان را تأیید کرد. پیش از اجرای SQL،هشدارRLS بررسی و اجرای اولیه لغو شد؛ اصلاحforcedRLS جدول مالی با تستred→green،۸۰آزمون اپ،۳۸۴ریشه،۴۷Python،typecheck/release/static ودو بازبینی بدونیافته در40cccfa ثبت شد. migrationهای۲تا۴ وcommandهمانjob سپس در تراکنش واقعی Supabase اعمال شدند. تأییدخواندنی:formموجود،reportsوai_budget هر دوforcedRLS،financial_client_privileges=false،policyمالی فقطkooch_account_api؛jobباpostgresدارایBYPASSRLS و همانactive=true/schedule=0 * * * * حفظ شد وhashcommandباSQLمحلی مطابق است.
+
+فقطcodex/kooch-arvan-acceptance بهoriginpushشد. Preview5jZmEKbL1D7yP5UFZ8JmAY4X9Trk آماده است وVercelAuthentication/StandardProtection فعال است. کلید موجود آروان وHMACمستقل فقط بهPreviewهمان شاخه منتقل شدند؛Productionودامنه‌ها دست‌نخورده‌اند. انتقال secretهایحساب هنوز کامل نیست:سهsecretموجودProductionفقط‌نوشتنی‌اند،ویرایشscopeبرایbranchتنها،Productionرا حذف می‌کرد،پس بدونSaveلغو شد. نسخهٔ اصلی.env.hosted در پوشهٔاپ موجود نیست. ازمالک مسیرپشتیبان یا ثبت مستقیم رکوردهایPreview خواسته شد؛مقادیر درچت درخواست نشدند.
+
+هیچinferenceتازه اجرا نشد؛taskgateهنوزخاموش وپذیرشruntimeمیزبان انجام نشده است. وضعیتin-progress محفوظ است. [شاهد اجرایی](../evidence/arvan-hosted-progress-2026-10-19.json).
+
+## ادامهٔ مستقیم با مرورگر — ۲۰اکتبر
+
+به درخواست مالک ویزارد کنار گذاشته شد. Vercel اکنون شش Config شاملoriginدقیقشاخه،accountmode،authURL،publishablekey،Google=falseوگواهیTLS وکلیدرمزگذاری مستقلsession را فقطبرایPreviewشاخهcodex/kooch-arvan-acceptance ثبت کرده است. رکوردکلیدسرویسPreviewباهمانمقدارموجوددر.env.preview-account.localبه‌روزرسانی شد؛مقادیرsecretدرگزارشنیامده‌اند. Productionتغییرنکرد. بستنپیشنهادراه‌اندازی2FAابتداتوسطبازبینیخودکارردشد؛پسازتأییدصریحمالکفقطهمانپیشنهادبستهشدوهیچ2FAفعالیخاموشنشد.
+
+بازبینیSQLاولیهخطرSETبهloginاصلیوحداعتبارVALIDUNTILرایافت. قالباصلاح‌شدهPreviewعضویتAPIراINHERITTRUE/SETFALSEومی‌گیردوSETبهruntimeجداست؛defaultroleندارد. validateRoleنامثابتPreview،loginمستقیم،امتیازهاوانقضارامی‌سنجد. تستواقعیPostgreSQLابتداredوسپسgreen:نشستوحسابداریفعال،SETیاALTERنقشاصلیرد،تغییرعضویتبهSETTRUEوامتیازCREATEROLEوانقضارد. هر۸۱آزموناپ،۳۸۴ریشه،۴۷Python،typecheck/build/release/staticودوبازبینیبدونیافته. اسکریپتپایانکارNOLOGIN،لغوعضویتوقطعاتصالهمانloginدارد.
+
+هیچcredentialدیتابیسجدیددرمیزبانساختهنشدهوهیچدرخواستپولیاینمرحلهارسالنشده. ورودوتأییدوارسالرمزتازهدرمرورگربایدمستقیماًتوسطانسانانجامشود؛agentفقطقالببدونرمزراآماده‌می‌کند. پنجرهٔاعتبارتعرفهفعلیتاساعت۰۷:۴۳:۴۴UTC۲۰اکتبر(۱۱:۱۳:۴۴تهران)است؛انقضابی‌اجازهتمدیدنمی‌شود.

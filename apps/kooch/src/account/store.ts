@@ -25,8 +25,20 @@ export class AccountStore {
     cipher.setAuthTag(buffer.subarray(12, 28)); return Buffer.concat([cipher.update(buffer.subarray(28)), cipher.final()]).toString('utf8');
   }
   async validateRole() {
-    const { rows } = await this.pool.query(`SELECT rolname, rolsuper, rolbypassrls FROM pg_roles WHERE rolname=current_user`);
-    if (rows[0]?.rolname !== 'kooch_account_api' || rows[0]?.rolsuper || rows[0]?.rolbypassrls) throw new Error('Application connection must use the restricted account role.');
+    const { rows } = await this.pool.query(`SELECT rolname, rolsuper, rolbypassrls, rolcreaterole, rolcreatedb, rolreplication,
+      session_user=current_user AS direct_login,
+      CASE WHEN current_user='kooch_preview_account_api' THEN
+        rolcanlogin AND rolvaliduntil IS NOT NULL AND rolvaliduntil>now() AND rolvaliduntil<>'infinity'::timestamptz
+        AND pg_has_role(current_user,'kooch_account_api','USAGE')
+        AND NOT pg_has_role(current_user,'kooch_account_api','SET')
+        AND pg_has_role(current_user,'kooch_runtime','SET')
+      ELSE false END AS preview_scoped
+      FROM pg_roles WHERE rolname=current_user`);
+    const role = rows[0];
+    if (!role?.direct_login || role.rolsuper || role.rolbypassrls || role.rolcreaterole || role.rolcreatedb || role.rolreplication ||
+      !(role.rolname === 'kooch_account_api' || (role.rolname === 'kooch_preview_account_api' && role.preview_scoped))) {
+      throw new Error('Application connection must use the restricted account role.');
+    }
   }
   async createSession(owner: string, accessToken: string, expiresIn: number, purpose: AppSession['purpose']) {
     const client = await this.pool.connect();

@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-20",
+  "preview_branch": "codex/kooch-arvan-acceptance",
+  "config_names_saved": [
+    "KOOCH_ACCOUNT_MODE",
+    "KOOCH_AUTH_URL",
+    "KOOCH_AUTH_PUBLISHABLE_KEY",
+    "KOOCH_APP_ORIGIN",
+    "KOOCH_GOOGLE_AUTH_ENABLED",
+    "KOOCH_DATABASE_CA_CERT"
+  ],
+  "encryption_key_saved": true,
+  "existing_service_key_refreshed": true,
+  "scope": "Preview branch only",
+  "production_environment_changes": false,
+  "two_factor_prompt_skip": "Explicitly approved by owner after automatic review rejection; no enabled 2FA disabled",
+  "database_credential_created": false,
+  "paid_requests_this_phase": 0,
+  "runtime_acceptance": false,
+  "dedicated_role": "kooch_preview_account_api",
+  "security_model": "API privileges inherited without SET; separate runtime SET permission; no default role",
+  "role_template": "preview-browser-role-2026-10-20.sql",
+  "cleanup_template": "preview-browser-role-disable-2026-10-20.sql",
+  "wizard": "discarded as requested; unsafe superseded untracked script removed",
+  "human_required": "choose, enter and personally submit new database credential in browser",
+  "checks": {
+    "app": 81,
+    "root": 384,
+    "python": 47,
+    "typecheck": "pass",
+    "build": "pass",
+    "release": "pass",
+    "static": "pass",
+    "standards_review": "no findings after correction",
+    "spec_review": "no findings after correction"
+  }
+}
