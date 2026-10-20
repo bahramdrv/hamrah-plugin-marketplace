@@ -15,14 +15,14 @@
   "production_environment_changes": false,
   "two_factor_prompt_skip": "Explicitly approved by owner after automatic review rejection; no enabled 2FA disabled",
   "database_credential_created": true,
-  "paid_requests_this_phase": 0,
+  "paid_requests_this_phase": 2,
   "runtime_acceptance": false,
   "dedicated_role": "kooch_preview_account_api",
   "security_model": "API privileges inherited without SET; separate runtime SET permission; no default role",
   "role_template": "preview-browser-role-2026-10-20.sql",
   "cleanup_template": "preview-browser-role-disable-2026-10-20.sql",
   "wizard": "discarded as requested; unsafe superseded untracked script removed",
-  "human_required": "choose, enter and personally submit new database credential in browser",
+  "human_required": "completed by owner",
   "checks": {
     "app": 84,
     "root": 384,
@@ -33,15 +33,15 @@
     "static": "pass",
     "reviews": "no findings; operator stop/inspect/disable obligations recorded"
   },
-  "preview_source_commit": "e584ffe1e9c5e6a5d7ef1bf738273815135d11db",
-  "preview_ready_deployment": "4CUMUQi2hMLbSnCjUQ6kHAUa7WTY",
+  "preview_source_commit": "f133a2142720d4a313f7ecc9fe03ec0e9f4322e1",
+  "preview_ready_deployment": "AQmh6qn6u9r8nnCam2S4o5EHGCSF",
   "supabase_server_version_num": 170011,
   "credential_template_loaded_in_browser": true,
   "credential_template_full_text_matched": true,
-  "credential_template_submitted": false,
-  "credential_password_value": "blank; no credential entered by agent",
+  "credential_template_submitted": true,
+  "credential_password_value": "entered and submitted by human; omitted from evidence",
   "handoff_sql_url": "https://supabase.com/dashboard/project/ifjtceqlcsmypuuflwlx/sql/9708426f-c8bb-4e8d-a294-b3d6cf081cc7",
-  "pending": "Human must choose and enter password into the blank declaration and personally Run; agent then copies resulting existing connection URL to branch-specific Vercel and tests runtime.",
+  "pending": "Owner re-signin, then one remaining authorized form attempt and at most one model call, followed by flag and dedicated-login cleanup.",
   "tariff_window_expires_at": "2026-10-20T07:43:44Z",
   "credential_first_human_submission": {
     "status": "failed before CREATE ROLE",
@@ -50,7 +50,7 @@
     "private_value_handling": "human password unchanged; agent changed only three non-credential expressions through Monaco Find/Replace; full corrected SQL compared in memory, not stored",
     "verification": "PostgreSQL local read-only encoding tests passed for punctuation and UTF-8; no actual credentials used",
     "agent_resubmitted": false,
-    "next_step": "Human presses Run again to personally submit new credential"
+    "next_step": "completed: second human submission succeeded"
   },
   "database_credential_entered_and_submitted_by": "human owner",
   "database_connection_saved_scope": "Preview branch codex/kooch-arvan-acceptance only",
@@ -70,5 +70,103 @@
   "account_runtime_connected": true,
   "owner_signin_success": true,
   "owner_case_before_test": "no saved case",
-  "preview_compass_blocker": "credentials omit excluded Vercel Authentication cookie; exact acceptance origin now uses same-origin, all others omit"
+  "preview_compass_blocker": "credentials omit excluded Vercel Authentication cookie; exact acceptance origin now uses same-origin, all others omit",
+  "synthetic_case_created": true,
+  "hosted_attempt": {
+    "deployment": "2MWiZsFdJ1SHJa1rG1ZhUjTVGtcu",
+    "time": "2026-10-20T06:45:10.193Z",
+    "route": "/api/account/form",
+    "http_status": 503,
+    "duration_ms": 12980,
+    "ui_error": "auth_unavailable",
+    "ledger_rows_after": 0,
+    "model_requests": 0,
+    "note": "AuthProvider network catch; 12-second timeout is consistent with observed duration, exact network cause not logged."
+  },
+  "model_acceptance_deployment": "51TVJymJfacLG59hMzXTcZucPn7B",
+  "account_prerequisite_recheck": {
+    "deployment": "7qvSyCkxJ58Yuz2U8a9koyrAbTaR",
+    "ai_flag": "disabled",
+    "result": "form loaded successfully with fixed wording; no model invocation"
+  },
+  "operational_review": "No finding: prerequisite failure before transport with zero ledger rows did not consume model package; stop at first inference failure remains mandatory.",
+  "hosted_results": [
+    {
+      "question": "age_exact",
+      "policy": "arvan-kooch-preview-20261020-af3522ee26ea",
+      "state": "settled",
+      "outcome": "worded",
+      "reserved_minor": 17742,
+      "charged_minor": 3348,
+      "currency": "IRR",
+      "usage": {
+        "prompt_tokens": 762,
+        "completion_tokens": 35,
+        "total_tokens": 797
+      },
+      "requested_model": "Qwen3.5-35B-A3B",
+      "reported_model": "Qwen3.5-35B-A3B",
+      "latency_ms": 4001,
+      "created_at": "2026-10-20T06:49:19.738Z",
+      "blocked": false,
+      "retry_after": null
+    },
+    {
+      "question": "study_level",
+      "policy": "arvan-kooch-preview-20261020-af3522ee26ea",
+      "state": "settled",
+      "outcome": "worded",
+      "reserved_minor": 17742,
+      "charged_minor": 3386,
+      "currency": "IRR",
+      "usage": {
+        "prompt_tokens": 771,
+        "completion_tokens": 35,
+        "total_tokens": 806
+      },
+      "requested_model": "Qwen3.5-35B-A3B",
+      "reported_model": "Qwen3.5-35B-A3B",
+      "latency_ms": 3839,
+      "created_at": "2026-10-20T06:54:52.219Z",
+      "blocked": false,
+      "retry_after": null
+    }
+  ],
+  "auth_prerequisite_failures_after_second_inference": {
+    "count": 2,
+    "model_calls_on_those_attempts": 0,
+    "ledger_rows_after": 2,
+    "ui_error": "auth_unavailable",
+    "exact_network_cause": "not established"
+  },
+  "temporary_probe": {
+    "commit": "0b432a1",
+    "preview_deployment": "PwNuy3yoLF6ouCNzUYW1EqhWN5fE",
+    "AI": "disabled",
+    "result": "Two GET form reads and one POST goal change succeeded; no transport failure reproduced, no network cause established.",
+    "removed_in_commit": "f133a21",
+    "retry_or_auth_security_changes": false
+  },
+  "synthetic_case_revision": 3,
+  "remaining_question": "work_years",
+  "automatic_review_rejection": "Activation for the third inference rejected: stop-on-first-failure interpreted to include prior auth prerequisite failures. No workaround attempted; explicit renewed approval required.",
+  "preview_activation": "one synthetic case enabled under renewed approval; only one of three model calls remains; owner signin required",
+  "dedicated_login_cleanup": "pending conclusion of renewed-approval request; no permanent Arvan grant revocation requested",
+  "base_tariff_total_IRR": 6734,
+  "renewed_approval": {
+    "approved": true,
+    "purpose": "one remaining work_years inference after prior auth failures",
+    "max_model_calls": 1,
+    "max_auth_attempts": 2,
+    "max_output_tokens": 128,
+    "deadline_ms": 8000,
+    "max_cost_IRR": 18000,
+    "included_in_original_phase_and_shared_budget": true,
+    "model_retry": false,
+    "cleanup_after": true
+  },
+  "last_active_preview_deployment": "AQmh6qn6u9r8nnCam2S4o5EHGCSF",
+  "renewed_auth_attempts_used": 1,
+  "renewed_attempt_result": "Sign-in required before model; ledger remains two settled rows. Owner asked to sign in again; no password requested in chat.",
+  "previous_disabled_preview_deployment": "6yxVSqXhY121TxLFg1yqeoycwrqB"
 }
