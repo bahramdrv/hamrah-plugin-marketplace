@@ -17,18 +17,7 @@ export class AuthProvider {
         ...(body === undefined ? {} : { body: JSON.stringify(body) }), redirect: 'error',
         cache: 'no-store', signal: AbortSignal.timeout(12000),
       });
-    } catch (error) {
-      if (process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_GIT_COMMIT_REF === 'codex/kooch-arvan-acceptance') {
-        const cause = error instanceof Error ? error.cause : undefined;
-        const code = cause && typeof cause === 'object' && 'code' in cause ? cause.code : undefined;
-        const allowedCodes = ['UND_ERR_CONNECT_TIMEOUT', 'UND_ERR_HEADERS_TIMEOUT', 'UND_ERR_SOCKET', 'ENOTFOUND', 'EAI_AGAIN', 'ECONNRESET', 'CERT_HAS_EXPIRED', 'UNABLE_TO_VERIFY_LEAF_SIGNATURE'];
-        console.warn('[DEBUG-arvan-auth-net]', {
-          kind: error instanceof Error && ['TimeoutError', 'AbortError', 'TypeError'].includes(error.name) ? error.name : 'other',
-          code: typeof code === 'string' && allowedCodes.includes(code) ? code : 'other',
-        });
-      }
-      throw new AccountError('auth_unavailable', 503, 'سرویس حساب در دسترس نیست؛ دوباره تلاش کن.');
-    }
+    } catch { throw new AccountError('auth_unavailable', 503, 'سرویس حساب در دسترس نیست؛ دوباره تلاش کن.'); }
     if (!response.ok) {
       if (missingIsDeleted && response.status === 404) return null;
       if (response.status === 429) throw new AccountError('rate_limited', 429, 'تعداد تلاش‌ها زیاد است؛ کمی بعد دوباره امتحان کن.');
