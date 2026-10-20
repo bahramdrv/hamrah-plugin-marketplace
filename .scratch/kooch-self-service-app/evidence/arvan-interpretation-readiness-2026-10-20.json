@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-20T15:23:42Z",
+  "scope": "read-only readiness; no inference or account mutation",
+  "model": "Qwen3.5-35B-A3B",
+  "marketplace": {
+    "source": "https://panel.arvancloud.ir/aiaas/model/bazaar",
+    "hosting_label": "Hosted by ArvanCloud",
+    "label_establishes_processing_country": false,
+    "input_IRR_per_million_tokens": 4200000,
+    "output_IRR_per_million_tokens": 4200000,
+    "all_invoice_charges_confirmed": false,
+    "runtime_tariff_renewed": false
+  },
+  "support": {
+    "source": "https://panel.arvancloud.ir/support/168-32679C3A-00E9",
+    "latest_visible_reply_date_fa": "1405/07/27 09:14",
+    "latest_visible_reply_topic": "IAM workspace-wide access requirement",
+    "processing_retention_reply_present": false,
+    "new_message_sent": false
+  },
+  "budget": {
+    "existing_shared_cap_IRR": 500000,
+    "recorded_external_hold_IRR": 47676,
+    "recorded_hosted_wording_charges_IRR": 10078,
+    "recorded_base_and_hold_total_IRR": 57754,
+    "arithmetic_remainder_IRR": 442246,
+    "remainder_is_current_balance_or_final_invoice": false,
+    "hosted_ledger_requeried": false,
+    "previous_wording_phase_remaining_model_calls": 0,
+    "new_interpretation_model_calls": 0
+  },
+  "interpretation": {
+    "personal_text_enabled": false,
+    "processing_country_verified": false,
+    "model_specific_upstream_and_retention_verified": false,
+    "support_followup_status": "draft awaiting explicit send authorization",
+    "synthetic_probe_status": "not executed; separate bounded package and current ledger reconciliation required before dispatch"
+  }
+}
