@@ -4,6 +4,8 @@ import { AccountStore } from './store';
 import { createAccountApi } from './api';
 import { GoogleOAuth } from './google';
 import { AiBudgetLedger } from '../ai/budget';
+import { policyGate } from '../ai/policy';
+import { createGatewayAnswerInterpretation } from '../ai/answer-interpretation';
 import { createScopedQuestionAssistance } from '../ai/preview-acceptance';
 import aiPolicy from '../../data/ai-gateway-policy.json';
 type Runtime = ReturnType<typeof createAccountApi>;
@@ -30,18 +32,25 @@ export async function accountRuntime() {
       rejectUnauthorized: true,
       ...(process.env.KOOCH_DATABASE_CA_CERT ? { ca: process.env.KOOCH_DATABASE_CA_CERT } : {}),
     } } : {}), max: 5, connectionTimeoutMillis: 5000, statement_timeout: 10000 });
-    const store = new AccountStore(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!);
+    const accountingKey = process.env.KOOCH_AI_ACCOUNTING_KEY;
+    const stableKey = /^[a-f0-9]{64}$/.test(accountingKey ?? '');
+    const ledger = new AiBudgetLedger(pool, stableKey ? accountingKey! : process.env.KOOCH_SESSION_ENCRYPTION_KEY!);
+    const store = new AccountStore(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!, undefined, async (owner, saved, client) => {
+      const draft = saved.form?.draft;
+      if (draft?.accounting_policy) await ledger.detachOperation(owner, `answer-interpretation:${saved.id}:${draft.revision}:${draft.id}`, draft.accounting_policy, client);
+    });
     await store.validateRole();
     const auth = new AuthProvider({ url: authUrl.href.replace(/\/$/, ''),
       key: process.env.KOOCH_AUTH_PUBLISHABLE_KEY, serviceKey: process.env.KOOCH_AUTH_SERVICE_KEY!, origin });
     const google = process.env.KOOCH_GOOGLE_AUTH_ENABLED === 'true' ? new GoogleOAuth({ auth, origin,
       key: process.env.KOOCH_SESSION_ENCRYPTION_KEY!, secure: mode === 'hosted' }) : undefined;
-    const accountingKey = process.env.KOOCH_AI_ACCOUNTING_KEY;
-    const stableKey = /^[a-f0-9]{64}$/.test(accountingKey ?? '');
-    const ledger = new AiBudgetLedger(pool, stableKey ? accountingKey! : process.env.KOOCH_SESSION_ENCRYPTION_KEY!);
     const questionAssistance = createScopedQuestionAssistance({ policy: aiPolicy, ledger, environment: process.env,
       getCredential: () => stableKey ? process.env.KOOCH_ARVAN_API_KEY : undefined });
-    return createAccountApi({ store, mode, origin, auth, google, questionAssistance, accounting: stableKey ? ledger : undefined });
+    const answerInterpretation = createGatewayAnswerInterpretation({ policy: aiPolicy, ledger,
+      getCredential: () => stableKey ? process.env.KOOCH_ARVAN_API_KEY : undefined });
+    const interpretationGate = policyGate(aiPolicy, new Date(), 'answer-interpretation');
+    const interpretationDisclosure = interpretationGate.status === 'accepted' ? interpretationGate.policy.interpretation : null;
+    return createAccountApi({ store, mode, origin, auth, google, questionAssistance, answerInterpretation, interpretationDisclosure, accounting: stableKey ? ledger : undefined });
   })().catch(error => { runtime = undefined; throw error; });
   return runtime;
 }

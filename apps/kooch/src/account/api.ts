@@ -7,6 +7,8 @@ import { formView } from '../form/workflow';
 import { formInputSchema } from '../form/contract';
 import { reportInputSchema } from '../report/contract';
 import { createQuestionAssistance, fixedQuestion, type QuestionAssistance } from '../ai/question-assistance';
+import type { AnswerInterpretation } from '../ai/answer-interpretation';
+import { interpretationInputSchema } from '../form/interpretation';
 import type { AiBudgetLedger } from '../ai/budget';
 
 const neutralMessage = 'اگر این ایمیل قابل استفاده باشد، پیام لازم برای آن ارسال می‌شود. صندوق ورودی و پوشهٔ هرزنامه را بررسی کن.';
@@ -27,8 +29,9 @@ async function body(request: Request) {
   }
   try { return JSON.parse(Buffer.concat(chunks).toString('utf8')); } catch { throw invalid(); }
 }
-export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth; questionAssistance?: QuestionAssistance; accounting?: AiBudgetLedger }) {
+export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth; questionAssistance?: QuestionAssistance; accounting?: AiBudgetLedger; answerInterpretation?: AnswerInterpretation; interpretationDisclosure?: import('../ai/question-assistance').AssistedFormView['interpretation_disclosure'] }) {
   const { store, auth } = options;
+  const formReply = (view: object) => reply({ ...view, interpretation_disclosure: options.interpretationDisclosure ?? null });
   const questionAssistance = options.questionAssistance ?? createQuestionAssistance();
   const cookie = (token: string, expiresAt?: Date) => `${cookieName}=${token}; Path=/; HttpOnly; SameSite=Strict; ${options.mode === 'hosted' ? 'Secure; ' : ''}${expiresAt ? `Expires=${expiresAt.toUTCString()}` : 'Max-Age=0'}`;
   async function authenticated(request: Request, purpose: 'account' | 'recovery' = 'account', allowDeleted = false) {
@@ -136,6 +139,34 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
           const start = options.google.beginDeletion(session.owner, cookieToken(request)!);
           return reply({ url: start.url }, 200, { 'Set-Cookie': start.cookie });
         }
+        if (operation === 'interpretation' && method === 'POST') {
+          const input = interpretationInputSchema.parse(await body(request));
+          if (input.action !== 'submit') {
+            const resolved = await store.resolveInterpretation(session.owner, input);
+            return formReply(formView(resolved));
+          }
+          const { saved, started } = await store.startInterpretation(session.owner, input);
+          if (!started) return formReply(formView(saved));
+          const isCurrent = async () => {
+            const active = await store.session(cookieToken(request));
+            if (active.owner !== session.owner || active.purpose !== 'account') throw unauthorized();
+            const current = await store.read(session.owner);
+            return current?.id === saved.id && current.revision === saved.revision && current.form?.draft?.id === input.request_id;
+          };
+          const view = formView(saved);
+          const question = view.questions.find(q => q.id === input.question_id)!;
+          let result;
+          try { result = options.answerInterpretation ? await options.answerInterpretation({ question, text: input.text, draft: { case_id: saved.id, revision: saved.revision, id: input.request_id }, operation: `${saved.id}:${saved.revision}:${input.request_id}` }, { owner: session.owner, isCurrent }) : { status: 'capability_unaccepted' }; }
+          catch { result = { status: 'unavailable' }; }
+          let current;
+          try { current = await isCurrent(); } catch (error) {
+            if (result.accounting_policy) await options.accounting?.detachOperation(session.owner, `answer-interpretation:${saved.id}:${saved.revision}:${input.request_id}`, result.accounting_policy);
+            throw error;
+          }
+          if (!current && result.accounting_policy) await options.accounting?.detachOperation(session.owner, `answer-interpretation:${saved.id}:${saved.revision}:${input.request_id}`, result.accounting_policy);
+          if (!current) return reply({ error: 'revision_conflict', message: 'پرونده تغییر کرده است؛ فرم تازه را دریافت کن.' }, 409);
+          return formReply(formView(await store.finishInterpretation(session.owner, saved.id, saved.revision, input.request_id, result)));
+        }
         if (operation === 'form') {
           const saved = method === 'GET' ? await store.read(session.owner) : await store.saveForm(session.owner, formInputSchema.parse(await body(request)));
           if (!saved) throw new AccountError('not_found', 404, 'ابتدا پاسخ‌های قطب‌نما را در حساب ذخیره کن.');
@@ -152,9 +183,9 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
             if (active.owner !== session.owner || active.purpose !== 'account') throw unauthorized();
             const current = await store.read(session.owner);
             if (!current) throw new AccountError('not_found', 404, 'ابتدا پاسخ‌های قطب‌نما را در حساب ذخیره کن.');
-            if (current.id !== saved.id || current.revision !== saved.revision) return reply(fixedQuestion(formView(current), 'stale'));
+            if (current.id !== saved.id || current.revision !== saved.revision) return formReply(fixedQuestion(formView(current), 'stale'));
           }
-          return reply(assisted);
+          return formReply(assisted);
         }
         if (operation === 'report') {
           if (path.length > 2 || (path[1] && !z.uuid().safeParse(path[1]).success) || (method === 'POST' && path.length !== 1)) throw invalid();
@@ -169,7 +200,8 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
             // Explicit server ownership check complements RLS before mutation.
             await store.read(session.owner, path[1]);
           }
-          return reply({ case: await store.save(session.owner, caseInputSchema.parse(await body(request))) });
+          const saved = await store.save(session.owner, caseInputSchema.parse(await body(request)));
+          return reply({ case: saved });
         }
         if (operation === 'export' && method === 'GET') {
           if (path.length !== 1) throw invalid();

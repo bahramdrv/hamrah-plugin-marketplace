@@ -1,3 +1,4 @@
+import type { AnswerInterpretation } from '../../src/ai/answer-interpretation';
 import type { QuestionAssistance } from '../../src/ai/question-assistance';
 import type { AiBudgetLedger } from '../../src/ai/budget';
 import { randomUUID } from 'node:crypto';
@@ -5,12 +6,15 @@ import pg from 'pg';
 import { createAccountApi } from '../../src/account/api';
 import { AuthProvider } from '../../src/account/auth';
 import { AccountStore } from '../../src/account/store';
-export async function harness(now: () => Date = () => new Date(), questionAssistance?: QuestionAssistance, accounting?: AiBudgetLedger) {
+export async function harness(now: () => Date = () => new Date(), questionAssistance?: QuestionAssistance, accounting?: AiBudgetLedger, answerInterpretation?: AnswerInterpretation) {
   const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL });
   const auth = new AuthProvider({ url: process.env.KOOCH_AUTH_URL!, serviceKey: process.env.KOOCH_AUTH_SERVICE_KEY!, origin: 'http://127.0.0.1:3100' });
-  const store = new AccountStore(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!, now);
+  const store = new AccountStore(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!, now, async (owner, saved, client) => {
+    const draft = saved.form?.draft;
+    if (draft?.accounting_policy) await accounting?.detachOperation(owner, `answer-interpretation:${saved.id}:${draft.revision}:${draft.id}`, draft.accounting_policy, client);
+  });
   await store.validateRole();
-  const api = createAccountApi({ store, auth, origin: 'http://127.0.0.1:3100', mode: 'local', questionAssistance, accounting });
+  const api = createAccountApi({ store, auth, origin: 'http://127.0.0.1:3100', mode: 'local', questionAssistance, accounting, answerInterpretation });
   const clients: ReturnType<typeof client>[] = [];
   function client() {
     let cookie = '';

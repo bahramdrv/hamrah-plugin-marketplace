@@ -37,7 +37,7 @@ export function formView(saved: SavedCase) {
   const next = review[0] ?? unanswered.sort((a, b) => order[a.priority] - order[b.priority])[0] ?? null;
   return {
     schema_version: 1, policy_version: 'fixed-intake-1', case_id: saved.id, revision: saved.revision,
-    next_question: next, questions,
+    next_question: next, questions, draft: saved.form?.draft ?? null,
     answers: questions.filter(q => records[q.id]).map(question => ({ question, ...records[question.id] })),
     missing: questions.filter(q => !records[q.id] || records[q.id].needs_review || records[q.id].answer.state !== 'known'),
     review_required: review.map(q => q.id), assessment_status: 'not_evaluated',
@@ -63,6 +63,7 @@ export function applyFormAnswer(saved: SavedCase, input: FormInput, now: Date) {
   const form: FormState = structuredClone(saved.form ?? { schema_version: 1, answers: {} });
   const records = formRecords(saved);
   form.answers = structuredClone(records);
+  delete form.draft;
   const previous = records[input.question_id];
   const changed = JSON.stringify(previous?.answer) !== JSON.stringify(input.answer);
   if (changed) {
@@ -101,6 +102,7 @@ export function applyFormAnswer(saved: SavedCase, input: FormInput, now: Date) {
 // Editing the original compass must not leave deeper answers silently authoritative.
 export function reconcileCompass(saved: SavedCase, next: SavedCase['answers']): FormState {
   const form: FormState = structuredClone(saved.form ?? { schema_version: 1, answers: {} });
+  delete form.draft;
   if (JSON.stringify(saved.answers) === JSON.stringify(next)) return form;
   for (const id of Object.keys(form.answers)) {
     if (['goal', 'education', 'language', 'timeline', 'budget'].includes(id)) delete form.answers[id];

@@ -10,7 +10,7 @@ try {
     IF NOT EXISTS(SELECT FROM pg_roles WHERE rolname='kooch_runtime') THEN CREATE ROLE kooch_runtime NOLOGIN NOSUPERUSER NOBYPASSRLS; END IF;
     IF NOT EXISTS(SELECT FROM pg_roles WHERE rolname='kooch_account_api') THEN CREATE ROLE kooch_account_api LOGIN NOSUPERUSER NOBYPASSRLS; END IF;
   END $$; GRANT kooch_runtime TO kooch_account_api;`);
-  for (const name of ['001-account.sql', '002-form.sql', '003-reports.sql', '004-ai-budget.sql']) {
+  for (const name of ['001-account.sql', '002-form.sql', '003-reports.sql', '004-ai-budget.sql', '005-detached-ai-quota.sql']) {
     await db.query(await readFile(new URL(`../db/${name}`, import.meta.url), 'utf8'));
   }
   if (process.env.KOOCH_ACCOUNT_MODE === 'local' && process.env.KOOCH_DATABASE_URL) {

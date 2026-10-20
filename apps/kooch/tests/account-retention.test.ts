@@ -13,7 +13,7 @@ test('scheduled cleanup is bounded, cascades expired receipts and preserves acti
   const activeOwner = owners[501]; const key = `retention-test-${randomUUID()}`;
   try {
     await pool.query(`CREATE SCHEMA ${schema}`);
-    for (const table of ['account_state', 'cases', 'requests', 'sessions', 'rate_limits', 'ai_budget_requests']) {
+    for (const table of ['account_state', 'cases', 'requests', 'sessions', 'rate_limits', 'ai_budget_requests', 'ai_detached_quota']) {
       await pool.query(`CREATE TABLE ${schema}.${table} (LIKE kooch.${table} INCLUDING ALL)`);
     }
     await pool.query(`ALTER TABLE ${schema}.requests ADD FOREIGN KEY(case_id) REFERENCES ${schema}.cases(id) ON DELETE CASCADE`);
@@ -34,10 +34,17 @@ test('scheduled cleanup is bounded, cascades expired receipts and preserves acti
       (repeat('3',64),repeat('a',64),'blocked','TST',10,11,'settled',true,now()-interval '100 days',now()-interval '100 days'),
       (repeat('4',64),repeat('a',64),'recent','TST',10,4,'settled',false,now(),now())`);
     await query('UPDATE kooch.ai_budget_requests SET operation_hash=id');
+    await query(`INSERT INTO kooch.ai_budget_requests(id,subject,policy,currency,reserved_minor,state,created_at,updated_at,operation_hash)
+      VALUES(repeat('5',64),repeat('a',64),'late-draft','TST',10,'unknown',now()-interval '100 days',now(),repeat('5',64))`);
+    await query(`UPDATE kooch.cases SET delete_after=now()-interval '2 days',form=jsonb_set(form,'{draft}','{"id":"synthetic","accounting_id":"5555555555555555555555555555555555555555555555555555555555555555"}') WHERE owner=$1`, [owners[0]]);
+    await query(`INSERT INTO kooch.ai_detached_quota(subject,currency,day,charged_minor) VALUES(repeat('a',64),'TST',current_date-100,4),(repeat('a',64),'TST',current_date,4)`);
     const sql = await readFile(new URL('../db/retention-cleanup.sql', import.meta.url), 'utf8');
     await query(sql);
     const accounting = await query('SELECT policy,subject,operation_hash FROM kooch.ai_budget_requests ORDER BY policy');
-    assert.deepEqual(accounting.rows.map(r => r.policy), ['blocked','recent','unknown']);
+    assert.deepEqual(accounting.rows.map(r => r.policy), ['blocked','late-draft','recent','unknown']);
+    assert.equal(accounting.rows.find(r => r.policy === 'late-draft').subject, '0'.repeat(64));
+    assert.equal(accounting.rows.find(r => r.policy === 'late-draft').operation_hash, null);
+    assert.equal(Number((await query('SELECT count(*) FROM kooch.ai_detached_quota')).rows[0].count), 1);
     assert.equal(accounting.rows.find(r => r.policy === 'unknown').subject, '0'.repeat(64));
     assert.equal(accounting.rows.find(r => r.policy === 'blocked').subject, '0'.repeat(64));
     assert.equal(accounting.rows.find(r => r.policy === 'recent').subject, 'a'.repeat(64));

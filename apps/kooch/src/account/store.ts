@@ -1,6 +1,7 @@
 import { createHash, createHmac, randomBytes, createCipheriv, createDecipheriv } from 'node:crypto';
 import type { Pool, PoolClient } from 'pg';
 import { AccountError, unauthorized, type CaseInput, type SavedCase } from './contract';
+import type { InterpretationInput, InterpretationResult } from '../form/interpretation';
 import type { FormInput } from '../form/contract';
 import { formRecords, relevantQuestions, validateAnswer, applyFormAnswer, reconcileCompass } from '../form/workflow';
 import { buildReport, type GuidanceReport } from '../report/evaluate';
@@ -11,7 +12,7 @@ export type AppSession = { owner: string; accessToken: string; purpose: 'account
 
 export class AccountStore {
   private key: Buffer;
-  constructor(private pool: Pool, key: string, private now: () => Date = () => new Date()) {
+  constructor(private pool: Pool, key: string, private now: () => Date = () => new Date(), private detachDraft?: (owner: string, saved: SavedCase, client: PoolClient) => Promise<void>) {
     if (!/^[a-f0-9]{64}$/.test(key)) throw new Error('Session encryption key must be 32 bytes in hex.');
     this.key = Buffer.from(key, 'hex');
   }
@@ -78,6 +79,8 @@ export class AccountStore {
       if (!state.rows[0] || (state.rows[0].deleted_at && !allowDeleted)) throw unauthorized();
       await client.query('SET LOCAL ROLE kooch_runtime');
       await client.query("SELECT set_config('kooch.owner',$1,true)", [owner]);
+      const expired = await client.query('SELECT * FROM kooch.cases WHERE owner=$1 AND delete_after<=$2', [owner, this.now()]);
+      for (const row of expired.rows) await this.detachDraft?.(owner, this.visible(row), client);
       await client.query('DELETE FROM kooch.cases WHERE owner=$1 AND delete_after<=$2', [owner, this.now()]);
       const result = await action(client);
       await client.query('COMMIT'); return result;
@@ -106,6 +109,7 @@ export class AccountStore {
         return this.visible(current);
       }
       if ((current?.revision ?? 0) !== input.expected_revision) throw new AccountError('revision_conflict', 409, 'پاسخ‌ها در جای دیگری تغییر کرده‌اند؛ نسخهٔ تازه را دریافت کن.');
+      if (current) await this.detachDraft?.(owner, this.visible(current), client);
       const now = this.now(); const deleteAfter = new Date(now.getTime() + 90 * 86400000);
       const saved = await client.query(`INSERT INTO kooch.cases(owner,answers,step,consent_version,consented_at,last_activity_at,delete_after)
         VALUES($1,$2,$3,$4,$5,$5,$6) ON CONFLICT(owner) DO UPDATE SET answers=$2,step=$3,
@@ -117,9 +121,9 @@ export class AccountStore {
       return this.visible(row);
     });
   }
-  async saveForm(owner: string, input: FormInput) {
+  async saveForm(owner: string, input: FormInput, draftId?: string) {
     return this.owned(owner, async client => {
-      const payloadHash = hash(JSON.stringify({ operation: 'form', ...input }));
+      const payloadHash = hash(JSON.stringify({ operation: 'form', ...(draftId ? { draftId } : {}), ...input }));
       const { rows } = await client.query('SELECT * FROM kooch.cases WHERE owner=$1', [owner]);
       const current = rows[0];
       if (!current) throw new AccountError('not_found', 404, 'ابتدا پاسخ‌های قطب‌نما را ذخیره کن.');
@@ -130,12 +134,14 @@ export class AccountStore {
         return this.visible(current);
       }
       if (current.revision !== input.expected_revision) throw new AccountError('revision_conflict', 409, 'پاسخ‌ها تغییر کرده‌اند؛ نسخهٔ تازه را دریافت کن.');
+      if (draftId && (current.form?.draft?.id !== draftId || current.form.draft.status !== 'proposed' || current.form.draft.question_id !== input.question_id || current.form.draft.question_version !== input.question_version)) throw new AccountError('draft_conflict', 409, 'برداشت قابل تأیید نیست؛ فرم تازه را دریافت کن.');
       const records = formRecords(this.visible(current));
       const question = relevantQuestions(records, current.answers.destinations).find(q => q.id === input.question_id);
       if (!question) throw new AccountError('invalid_question', 400, 'این سؤال در وضعیت فعلی مرتبط نیست.');
       if (question.version !== input.question_version) throw new AccountError('question_conflict', 409, 'نسخهٔ سؤال تغییر کرده است؛ فرم تازه را دریافت کن.');
       if (!validateAnswer(question, input.answer)) throw new AccountError('invalid_answer', 400, 'پاسخ با گزینه‌ها یا واحد این سؤال سازگار نیست.');
       const now = this.now();
+      await this.detachDraft?.(owner, this.visible(current), client);
       const { form, answers } = applyFormAnswer(this.visible(current), input, now);
       const saved = await client.query(`UPDATE kooch.cases SET form=$2,revision=revision+1,last_activity_at=$3,delete_after=$4,answers=$5
         WHERE owner=$1 RETURNING *`, [owner, form, now, new Date(now.getTime() + 90 * 86400000), answers]);
@@ -143,6 +149,65 @@ export class AccountStore {
       await client.query('INSERT INTO kooch.requests(owner,request_id,payload_hash,case_id,revision) VALUES($1,$2,$3,$4,$5)',
         [owner, input.request_id, payloadHash, row.id, row.revision]);
       return this.visible(row);
+    });
+  }
+  async startInterpretation(owner: string, input: Extract<InterpretationInput, { action: 'submit' }>) {
+    return this.owned(owner, async client => {
+      const { rows } = await client.query('SELECT * FROM kooch.cases WHERE owner=$1', [owner]);
+      if (!rows[0]) throw new AccountError('not_found', 404, 'ابتدا قطب‌نما را ذخیره کن.');
+      const saved = this.visible(rows[0]);
+      const payloadHash = hash(JSON.stringify({ operation: 'interpretation', ...input }));
+      const receipt = await client.query('SELECT * FROM kooch.requests WHERE owner=$1 AND request_id=$2', [owner, input.request_id]);
+      if (receipt.rows[0]) {
+        if (receipt.rows[0].payload_hash !== payloadHash || receipt.rows[0].revision !== saved.revision) throw new AccountError('request_conflict', 409, 'نسخه یا متن درخواست تغییر کرده؛ فرم تازه را دریافت کن.');
+        return { saved, started: false };
+      }
+      if (saved.revision !== input.expected_revision) throw new AccountError('revision_conflict', 409, 'نسخهٔ تازهٔ فرم را دریافت کن.');
+      const question = relevantQuestions(formRecords(saved), saved.answers.destinations).find(q => q.id === input.question_id);
+      if (!question) throw new AccountError('invalid_question', 400, 'این سؤال مرتبط نیست.');
+      if (question.version !== input.question_version) throw new AccountError('question_conflict', 409, 'نسخهٔ سؤال تغییر کرده است.');
+      const form = structuredClone(saved.form ?? { schema_version: 1 as const, answers: {} });
+      await this.detachDraft?.(owner, saved, client);
+      form.draft = { id: input.request_id, revision: saved.revision + 1, question_id: question.id, question_version: question.version, text: input.text, disclosure: input.disclosure, status: 'pending' };
+      const now = this.now();
+      const result = await client.query('UPDATE kooch.cases SET form=$2,revision=revision+1,last_activity_at=$3,delete_after=$4 WHERE owner=$1 RETURNING *', [owner, form, now, new Date(now.getTime() + 90 * 86400000)]);
+      await client.query('INSERT INTO kooch.requests(owner,request_id,payload_hash,case_id,revision) VALUES($1,$2,$3,$4,$5)', [owner, input.request_id, payloadHash, saved.id, saved.revision + 1]);
+      return { saved: this.visible(result.rows[0]), started: true };
+    });
+  }
+  async finishInterpretation(owner: string, caseId: string, revision: number, draftId: string, result: InterpretationResult) {
+    return this.owned(owner, async client => {
+      const { rows } = await client.query('SELECT * FROM kooch.cases WHERE owner=$1', [owner]);
+      if (!rows[0]) throw new AccountError('not_found', 404, 'پرونده در دسترس نیست.');
+      const saved = this.visible(rows[0]);
+      if (saved.id !== caseId || saved.revision !== revision || saved.form?.draft?.id !== draftId || saved.form.draft.status !== 'pending') return saved;
+      const form = structuredClone(saved.form);
+      form.draft = { ...form.draft!, ...result };
+      await client.query('UPDATE kooch.cases SET form=$2 WHERE owner=$1', [owner, form]);
+      return { ...saved, form };
+    });
+  }
+  async resolveInterpretation(owner: string, input: Exclude<InterpretationInput, { action: 'submit' }>) {
+    // Confirmation goes through the same answer validation, conflict and receipt path as fixed inputs.
+    if (input.action === 'confirm') {
+      // The draft check and revision check happen under the saveForm owner lock.
+      // Retried confirmations use their stored receipt even after the draft is gone.
+      return this.saveForm(owner, { expected_revision: input.expected_revision, request_id: input.request_id, question_id: input.question_id, question_version: input.question_version, answer: input.answer, confirm_conflict: input.confirm_conflict }, input.draft_id);
+    }
+    return this.owned(owner, async client => {
+      const { rows } = await client.query('SELECT * FROM kooch.cases WHERE owner=$1', [owner]);
+      const payloadHash = hash(JSON.stringify({ operation: 'interpretation-reject', ...input }));
+      const receipt = await client.query('SELECT * FROM kooch.requests WHERE owner=$1 AND request_id=$2', [owner, input.request_id]);
+      if (receipt.rows[0]) {
+        if (!rows[0] || receipt.rows[0].payload_hash !== payloadHash || receipt.rows[0].revision !== rows[0].revision) throw new AccountError('request_conflict', 409, 'نسخهٔ درخواست تغییر کرده است.');
+        return this.visible(rows[0]);
+      }
+      if (!rows[0] || rows[0].revision !== input.expected_revision || rows[0].form?.draft?.id !== input.draft_id) throw new AccountError('draft_conflict', 409, 'پیش‌نویس تغییر کرده است؛ فرم تازه را دریافت کن.');
+      await this.detachDraft?.(owner, this.visible(rows[0]), client);
+      const form = structuredClone(rows[0].form); delete form.draft;
+      const result = await client.query('UPDATE kooch.cases SET form=$2,revision=revision+1 WHERE owner=$1 RETURNING *', [owner, form]);
+      await client.query('INSERT INTO kooch.requests(owner,request_id,payload_hash,case_id,revision) VALUES($1,$2,$3,$4,$5)', [owner, input.request_id, payloadHash, rows[0].id, result.rows[0].revision]);
+      return this.visible(result.rows[0]);
     });
   }
   async beginDelete(owner: string) {

@@ -40,7 +40,7 @@ export const answerSchema = z.discriminatedUnion('state', [
 ]);
 export type FormAnswer = z.infer<typeof answerSchema>;
 export type AnswerRecord = { answer: FormAnswer; question_version: number; source: 'self_reported' | 'compass'; answered_at: string; needs_review?: boolean; review_reason?: 'compass_conflict' | 'dependency_changed' };
-export type FormState = { schema_version: 1; answers: Record<string, AnswerRecord> };
+export type FormState = { schema_version: 1; answers: Record<string, AnswerRecord>; draft?: import('./interpretation').InterpretationDraft };
 export const formInputSchema = z.object({
   expected_revision: z.number().int().positive(), request_id: z.uuid(),
   confirm_conflict: z.boolean().default(false), question_id: z.string().max(50), question_version: z.number().int().positive(), answer: answerSchema,

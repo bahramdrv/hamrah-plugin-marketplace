@@ -49,3 +49,5 @@ npm run refresh:data
 ## بررسی رابط
 
 طرح مرجع و قواعد اجرا در [docs/design.md](docs/design.md) و شواهد پذیرش در [docs/acceptance.md](docs/acceptance.md) ثبت شده‌اند. قلم Vazirmatn محلی است و مجوز آن در `public/OFL.txt` قرار دارد.
+
+قرارداد پاسخ نوشتنیِ پروندهٔ حساب، مرز تأیید کاربر، پذیرش مستقل تفسیر و migration۰۰۵ در [راهنمای پاسخ نوشتنی](docs/answer-interpretation.md) آمده است. تفسیر واقعی در سیاست فعلی غیرفعال است.
