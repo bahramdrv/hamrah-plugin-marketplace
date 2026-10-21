@@ -1,0 +1,61 @@
+{
+  "ticket": 9,
+  "date": "2026-10-21",
+  "base_commit": "d8fed0cf0acd897caa0662a953a1b290a53b6524",
+  "scope": "local synthetic case; no deployment or hosted migration",
+  "checks": {
+    "app_tests": {
+      "passed": 118,
+      "failed": 0,
+      "skipped": 0
+    },
+    "root_tests": {
+      "passed": 384,
+      "failed": 0
+    },
+    "python_tests": {
+      "passed": 47,
+      "failed": 0
+    },
+    "release": "passed",
+    "static": "passed",
+    "typecheck": "passed",
+    "production_build": "passed"
+  },
+  "reviews": {
+    "standards_open_findings": 0,
+    "spec_open_findings": 0,
+    "resolved": "Provincial majority: age 18 needs review until exact province is known. Expired derived CAD threshold is null."
+  },
+  "browser": {
+    "build": "production local loopback",
+    "rtl": true,
+    "font": "loaded",
+    "widths": [
+      {
+        "viewport": 1280,
+        "scroll": 1280
+      },
+      {
+        "viewport": 390,
+        "scroll": 390
+      },
+      {
+        "viewport": 320,
+        "scroll": 320
+      }
+    ],
+    "routes_in_one_saved_report": [
+      "uk:student",
+      "ca:study-permit-ca"
+    ],
+    "evidence": [
+      "ticket9-canada-desktop.png",
+      "ticket9-canada-mobile.png",
+      "ticket9-canada-costs-mobile.png",
+      "ticket9-canada-form.png"
+    ],
+    "shared_form": "Viewed saved common answers and opened Canadian scope question for editing in the same /form and case."
+  },
+  "test_environment_note": "Loopback access needed escalation. Accumulated local auth rate counters were reset in the loopback test DB before the clean full run; runtime limits unchanged."
+}

@@ -1,10 +1,11 @@
+import { evaluateCanada } from './canada-evaluate';
 import type { SavedCase } from '../account/contract';
 import { reportFactsSchema, type EvidenceReview } from './contract';
 import { routeQuestionId } from './questions';
 import { reportPolicy, policyDigest } from './policy';
 import { formRecords, formView } from '../form/workflow';
-type State = 'self_reported_met' | 'action_needed' | 'unknown' | 'needs_review' | 'not_applicable' | 'not_assessed';
-type Condition = { id: string; title: string; state: State; reason: string; document_verified: false; source_ids: string[];
+export type State = 'self_reported_met' | 'action_needed' | 'unknown' | 'needs_review' | 'not_applicable' | 'not_assessed';
+export type Condition = { id: string; title: string; state: State; reason: string; document_verified: false; source_ids: string[];
   rule: { version: string; value: string | number | null; unit: string | null; exceptions: string } };
 const daysBetween = (a: string, b: string) => (Date.parse(b) - Date.parse(a)) / 86400000;
 // Calendar months, clamped at month-end; never substitute 180 days for six months.
@@ -124,8 +125,11 @@ export function buildReport(saved: SavedCase, now: Date, review: EvidenceReview 
   return { schema_version: 1, kind: 'self_service_guidance', assessment: 'preliminary',
     created_at: now.toISOString(), case_revision: saved.revision, coverage: 'partial',
     dependencies: { case: saved },
-    route_results: study && (!destinations.length || destinations.includes('uk')) ? [evaluateStudent(saved, now, review.routeIds.includes('uk:student'), review.retrievalFailed)] : [],
-    coverage_note: 'پوشش ارزیابی فعلی فقط ماژول تحصیل بریتانیاست؛ نبود نتیجه برای مقصد یا هدف دیگر به معنی بسته‌بودن مسیر نیست.',
+    route_results: study ? [
+      ...(!destinations.length || destinations.includes('uk') ? [evaluateStudent(saved, now, review.routeIds.includes('uk:student'), review.retrievalFailed)] : []),
+      ...(!destinations.length || destinations.includes('ca') ? [evaluateCanada(saved, now, review.routeIds.includes('ca:study-permit-ca'), review.retrievalFailed)] : []),
+    ] : [],
+    coverage_note: 'پوشش ارزیابی فعلی شامل تحصیل بریتانیا و درخواست اولیهٔ مجوز تحصیل کاناداست؛ نبود نتیجه برای مقصد یا هدف دیگر به معنی بسته‌بودن مسیر نیست.',
   };
 }
 export type GuidanceReport = ReturnType<typeof buildReport> & { id: string; version: number };

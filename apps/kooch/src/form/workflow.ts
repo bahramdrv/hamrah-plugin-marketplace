@@ -1,5 +1,6 @@
 import type { SavedCase } from '../account/contract';
 import { formQuestions, type FormState, type Question, type AnswerRecord, type FormInput } from './contract';
+import { canadaFactsSchema, canadaQuestionId } from '../report/canada-policy';
 import { reportFactsSchema } from '../report/contract';
 import { routeQuestionId } from '../report/questions';
 
@@ -15,8 +16,15 @@ export function formRecords(saved: SavedCase): Record<string, AnswerRecord> {
 export function relevantQuestions(records: Record<string, AnswerRecord>, destinations: string[] = []): Question[] {
   const value = (id: string) => { const r = records[id]; return r && !r.needs_review && r.answer.state === 'known' ? r.answer.value : undefined; };
   return formQuestions.filter(q => {
-    if (q.route_id && (value('goal') !== 'study' || (destinations.length > 0 && !destinations.includes('uk')))) return false;
+    if (q.route_id && (value('goal') !== 'study' || (destinations.length > 0 && !destinations.includes(q.route_id.split(':')[0])))) return false;
     if (['passport', 'dependants'].includes(q.id)) return value('goal') === 'study';
+    if (q.id === 'ca_study_caq') return value('ca_study_province') === 'quebec';
+    if (['ca_study_pal', 'ca_study_pal_expires_on'].includes(q.id)) {
+      if (value('ca_study_province') === 'quebec') return false;
+      if (['master', 'phd'].includes(String(value('study_level'))) && value('ca_study_institution') === 'public') return false;
+      if (q.id.endsWith('expires_on')) return value('ca_study_pal') === 'valid_2026';
+    }
+    if (q.id === 'ca_study_later_years') return typeof value('ca_study_duration_months') !== 'number' || Number(value('ca_study_duration_months')) > 12;
     if (q.id === 'uk_student_cas_issued_on') return value('uk_student_cas') === 'valid_unused';
     if (q.id === 'uk_student_atas_issued_on') return value('uk_student_atas') === 'valid_certificate';
     if (q.id === 'uk_student_tb_issued_on') return value('uk_student_tb') === 'valid_certificate';
@@ -53,6 +61,8 @@ export function validateAnswer(question: Question, input: import('./contract').F
   const value = input.value;
   const key = (Object.keys(reportFactsSchema.shape) as (keyof typeof reportFactsSchema.shape)[]).find(key => routeQuestionId(key) === question.id);
   if (key) return reportFactsSchema.shape[key].safeParse(value).success;
+  const canadaKey = (Object.keys(canadaFactsSchema.shape) as (keyof typeof canadaFactsSchema.shape)[]).find(key => canadaQuestionId(key) === question.id);
+  if (canadaKey) return canadaFactsSchema.shape[canadaKey].safeParse(value).success;
   if (question.input === 'choice') return typeof value === 'string' && question.options.some(o => o.value === value);
   if (question.input === 'number') return typeof value === 'number' && value >= (question.min ?? 0) && value <= (question.max ?? Infinity) && (!question.integer || Number.isInteger(value));
   return typeof value === 'object'; // Money shape, amount and currency are validated by the input schema.

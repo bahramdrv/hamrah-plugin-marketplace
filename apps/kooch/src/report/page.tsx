@@ -45,7 +45,7 @@ export function GuidancePage() {
     <header><a className="brand" href="/"><strong>کوچ</strong><span>کارنامهٔ من</span></a><nav className="header-actions" aria-label="بخش‌های کوچ"><a href="/form">ادامه و اصلاح پاسخ‌ها</a><a href="/account">حساب من</a></nav></header>
     <main id="report-main"><h1>کارنامهٔ مقدماتی من</h1>
       <p className="intro">نتیجهٔ مسیرهای بررسی‌شده از پاسخ‌های همان پرونده؛ اطلاعات را یک بار در نقشهٔ من کامل می‌کنی.</p>
-      <p className="notice">پوشش فعلی ارزیابی فقط تحصیل بریتانیاست. برای بقیهٔ مسیرها هنوز ماژول ارزیابی مستند نداریم؛ نبود نتیجه به معنی بسته‌بودن آن‌ها نیست.</p>
+      <p className="notice">پوشش فعلی شامل تحصیل بریتانیا و درخواست اولیهٔ مجوز تحصیل کاناداست. برای بقیهٔ مسیرها هنوز ماژول ارزیابی مستند نداریم؛ نبود نتیجه به معنی بسته‌بودن آن‌ها نیست.</p>
       {error && <p role="alert" className="error">{error}</p>}{busy && <p role="status">در حال دریافت یا ذخیرهٔ کارنامه…</p>}
       <div className="actions"><a className="secondary" href="/form">ادامهٔ همان پرسش‌نامه و اصلاح پاسخ‌ها</a><button className="secondary" disabled={busy} onClick={() => void load()}>دریافت نسخهٔ تازهٔ پرونده</button></div>
       {revision ? <><p className="help">نسخهٔ پاسخ‌های ذخیره‌شده: {revision.toLocaleString('fa-IR')} · با اطلاعات ناقص هم می‌توانی کارنامه بسازی؛ هیچ پاسخ تازه‌ای در این صفحه لازم نیست.</p><button className="primary" disabled={busy || conflict} onClick={() => void generate()}>ساخت و ذخیرهٔ کارنامه از همین پاسخ‌ها</button></> : <a href="/account">ورود و ذخیرهٔ پاسخ‌های قطب‌نما</a>}

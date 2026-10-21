@@ -156,3 +156,13 @@ test('a guest can revise yes and no prerequisites without clearing the base answ
     assert.equal(revised.routes[0].preparation_status, admission === 'yes' ? 'preparation_needed' : 'prerequisites_reported');
   }
 });
+
+test('Canada card uses the reviewed 2026 financial policy and never revives an old Atlas amount when it expires', async () => {
+  for (const [clock, expected] of [['2026-10-21T12:00:00Z', true], ['2026-10-28T00:00:00Z', false]] as const) {
+    const r = await (await createCompassApi({ snapshot, now: () => new Date(clock) }).POST(post({ goal: 'study', destinations: ['ca'] }))).json();
+    const card = r.routes.find((r: any) => r.id === 'ca:study-permit-ca'); assert.ok(card);
+    assert.ok(!JSON.stringify(card.facts).includes('۲۲۸۹۵'));
+    assert.equal(card.facts.some((f: any) => f.value.includes('۲۳٬۴۴۸')), expected);
+    if (expected) assert.ok(card.facts.some((f: any) => f.sources.every((s: any) => s.checked_on === '2026-10-21')));
+  }
+});

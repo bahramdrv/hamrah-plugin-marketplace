@@ -1,3 +1,4 @@
+import { canadaCardFacts } from './report/canada-card';
 import { answersSchema, questions, type Answers } from './questions';
 import { channelState, snapshotSchema, type PublicRoute } from './snapshot';
 import { countries, facts, goalLabels, policies, policyVersion, priorHistoryFacts, preparationSteps } from './policy';
@@ -69,7 +70,7 @@ function evaluate(answers: Answers, options: { snapshot: unknown; now?: () => Da
     const routes = ordered.slice(0, 5).map(r => {
       const remaining = policies[r.id].requires.filter(id => answers.facts[id] !== 'yes');
       const today = now().toISOString().slice(0, 10);
-      const routeFacts = r.facts.filter(fact => fact.sources.every(source => source.checked_on <= today && Date.parse(today) - Date.parse(source.checked_on) <= 14 * 86400000));
+      const routeFacts = r.id === 'ca:study-permit-ca' ? canadaCardFacts(now()) : r.facts.filter(fact => fact.sources.every(source => source.checked_on <= today && Date.parse(today) - Date.parse(source.checked_on) <= 14 * 86400000));
       return {
       id: r.id, name_fa: r.name_fa, official_name: r.name, destination: r.destination,
       country: countries[r.destination]?.name ?? r.destination, flag: countries[r.destination]?.flag ?? '',

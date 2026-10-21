@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 import { harness, saveInput } from './helpers/account';
 const enabled = Boolean(process.env.KOOCH_DATABASE_URL && process.env.KOOCH_AUTH_URL);
-const checkedNow = () => new Date('2026-10-17T12:00:00Z');
+const checkedNow = () => new Date('2026-10-21T12:00:00Z');
 type Client = ReturnType<Awaited<ReturnType<typeof harness>>['client']>;
 const completeFacts = {
   application_scope: 'iran_entry_full_time_degree', passport: 'yes', cas: 'valid_unused',
