@@ -29,5 +29,7 @@ export type ReportHistoryItem = Pick<GuidanceReport, 'id' | 'version' | 'created
 };
 export const changeLabels: Record<ReportChange, string> = {
   initial: 'نخستین کارنامهٔ ذخیره‌شده', answers_changed: 'پاسخ‌های پرونده تغییر کرده‌اند',
-  evidence_changed: 'نسخهٔ شواهد یا قواعد تغییر کرده است', recreated: 'ساخت دوباره از همان پاسخ‌ها و نسخهٔ شواهد',
+  evidence_changed: 'شواهد یا وضعیت بازبینی آن‌ها تغییر کرده است', recreated: 'ساخت دوباره از همان پاسخ‌ها و نسخهٔ شواهد',
 };
+
+export type EvidenceReview = { routeIds: readonly string[]; retrievalFailed: boolean };

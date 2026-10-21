@@ -1,5 +1,5 @@
 import type { SavedCase } from '../account/contract';
-import { reportFactsSchema } from './contract';
+import { reportFactsSchema, type EvidenceReview } from './contract';
 import { routeQuestionId } from './questions';
 import { reportPolicy, policyDigest } from './policy';
 import { formRecords, formView } from '../form/workflow';
@@ -15,7 +15,7 @@ function addMonths(date: string, months: number) {
   result.setUTCDate(Math.min(day, end)); return result.toISOString().slice(0, 10);
 }
 const round = (n: number) => Math.round(n * 100) / 100;
-function evaluateStudent(saved: SavedCase, now: Date) {
+function evaluateStudent(saved: SavedCase, now: Date, sourceReview: boolean, retrievalFailed: boolean) {
   const p = reportPolicy.values; const records = formRecords(saved);
   const value = (id: string) => { const r = records[id]; return r && !r.needs_review && r.answer.state === 'known' ? r.answer.value : undefined; };
   const active = new Set(formView(saved).questions.map(q => q.id));
@@ -78,7 +78,9 @@ function evaluateStudent(saved: SavedCase, now: Date) {
     f.dependants === 0 ? 'اعلام کرده‌ای همراه نداری.' : 'حق همراه به نوع دوره یا حمایت دولتی و شروط مستقل رابطه و فرزند وابسته است؛ هر همراه درخواست جداگانه دارد. ارشد آموزشی به‌خودی‌خود حق همراه نمی‌دهد.', ['family'], null, null, reportPolicy.exceptions.family);
   if (formView(saved).review_required.length) condition('answer_conflict', 'پاسخ‌های نیازمند بازبینی', 'needs_review', 'در فرم، تعارض یا پاسخ وابستهٔ بررسی‌نشده وجود دارد؛ پیش از نتیجه‌گیری آن‌ها را دوباره تأیید کن.', ['rules']);
   condition('unassessed', 'بررسی‌های مستقل باقی‌مانده', 'not_assessed', 'اصالت و پذیرش مدارک، Genuine Student، Part Suitability، محدودیت سابقهٔ تحصیل/حمایت مالی و ارزیابی خود اسپانسر و دوره در این گزارش تأیید نمی‌شوند.', ['rules', 'documents']);
-  const fresh = reportPolicy.sources.every(s => Date.parse(s.checked_at) <= now.getTime() && now.getTime() < Date.parse(s.expires_at));
+  if (sourceReview) condition('source_change', 'تغییر شواهد در انتظار بازبینی', 'needs_review', 'تغییر مؤثر در دادهٔ عمومی این مسیر تشخیص داده شده است؛ تا بازبینی منابع و قواعد، نتیجهٔ تازه قطعی نمی‌شود.', ['rules']);
+  if (retrievalFailed) condition('source_sync', 'دریافت شواهد نیازمند بازبینی است', 'needs_review', 'دریافت تازه یا دسترسی به وضعیت شواهد ممکن نشد؛ این خطا به‌تنهایی وقوع تغییر در شرط‌ها را ثابت نمی‌کند. برای نتیجهٔ تازه بازبینی لازم است.', ['rules']);
+  const fresh = !sourceReview && !retrievalFailed && reportPolicy.sources.every(s => Date.parse(s.checked_at) <= now.getTime() && now.getTime() < Date.parse(s.expires_at));
   if (!fresh) for (const c of conditions) if (!['unknown', 'not_assessed'].includes(c.state)) { c.state = 'needs_review'; c.reason = `منبع نیازمند بازبینی است؛ تطبیق قطعی تازه انجام نشد. ${c.reason}`; }
   const state = !fresh || conditions.some(c => c.state === 'needs_review') ? 'needs_review' : conditions.some(c => c.state === 'action_needed') ? 'action_needed' : conditions.some(c => c.state === 'unknown') ? 'needs_information' : 'preliminary_conditions_met';
   const dependantRate = f.location === 'london' ? p.dependant_london : f.location === 'outside_london' ? p.dependant_outside : null;
@@ -115,14 +117,14 @@ function evaluateStudent(saved: SavedCase, now: Date) {
   };
 }
 // Each evaluation contributes a route result to the same case report; it owns no intake.
-export function buildReport(saved: SavedCase, now: Date) {
+export function buildReport(saved: SavedCase, now: Date, review: EvidenceReview = { routeIds: [], retrievalFailed: false }) {
   const goal = formRecords(saved).goal;
   const study = goal?.answer.state === 'known' && goal.answer.value === 'study' && !goal.needs_review;
   const destinations = saved.answers.destinations;
   return { schema_version: 1, kind: 'self_service_guidance', assessment: 'preliminary',
     created_at: now.toISOString(), case_revision: saved.revision, coverage: 'partial',
     dependencies: { case: saved },
-    route_results: study && (!destinations.length || destinations.includes('uk')) ? [evaluateStudent(saved, now)] : [],
+    route_results: study && (!destinations.length || destinations.includes('uk')) ? [evaluateStudent(saved, now, review.routeIds.includes('uk:student'), review.retrievalFailed)] : [],
     coverage_note: 'پوشش ارزیابی فعلی فقط ماژول تحصیل بریتانیاست؛ نبود نتیجه برای مقصد یا هدف دیگر به معنی بسته‌بودن مسیر نیست.',
   };
 }

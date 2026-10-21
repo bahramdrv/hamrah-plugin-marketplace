@@ -12,11 +12,12 @@
     "start": "NEXT_TELEMETRY_DISABLED=1 next start --hostname 127.0.0.1 --port 3100",
     "test": "node --import tsx --test --test-concurrency=1 tests/*.test.ts",
     "typecheck": "tsc --noEmit",
-    "refresh:data": "node --import tsx scripts/refresh-data.ts",
+    "refresh:data": "node --import tsx scripts/sync-evidence.ts",
     "account:setup": "node --import tsx scripts/setup-local-account.ts",
     "account:migrate": "node --env-file=.env.local --import tsx scripts/migrate-account.ts",
     "account:purge": "node --env-file=.env.local --import tsx scripts/purge-inactive.ts",
-    "test:account": "node --env-file=.env.local --import tsx --test tests/account.test.ts"
+    "test:account": "node --env-file=.env.local --import tsx --test tests/account.test.ts",
+    "evidence:sync": "node --import tsx scripts/sync-evidence.ts"
   },
   "dependencies": {
     "next": "16.4.1",

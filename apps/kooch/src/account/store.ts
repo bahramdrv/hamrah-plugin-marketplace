@@ -5,16 +5,24 @@ import type { InterpretationInput, InterpretationResult } from '../form/interpre
 import type { FormInput } from '../form/contract';
 import { formRecords, relevantQuestions, validateAnswer, applyFormAnswer, reconcileCompass } from '../form/workflow';
 import { buildReport, type GuidanceReport } from '../report/evaluate';
-import type { ReportHistoryItem, ReportInput } from '../report/contract';
+import type { EvidenceReview, ReportHistoryItem, ReportInput } from '../report/contract';
 import { reportState, reportChanges } from '../report/history';
 const hash = (value: string) => createHash('sha256').update(value).digest('hex');
 export type AppSession = { owner: string; accessToken: string; purpose: 'account' | 'recovery'; deleted: boolean; expiresAt: Date };
 
 export class AccountStore {
   private key: Buffer;
-  constructor(private pool: Pool, key: string, private now: () => Date = () => new Date(), private detachDraft?: (owner: string, saved: SavedCase, client: PoolClient) => Promise<void>) {
+  constructor(private pool: Pool, key: string, private now: () => Date = () => new Date(), private detachDraft?: (owner: string, saved: SavedCase, client: PoolClient) => Promise<void>, private evidenceReview?: (client: PoolClient) => Promise<EvidenceReview>) {
     if (!/^[a-f0-9]{64}$/.test(key)) throw new Error('Session encryption key must be 32 bytes in hex.');
     this.key = Buffer.from(key, 'hex');
+  }
+  private async evidenceReviewState(client: PoolClient): Promise<EvidenceReview> {
+    if (!this.evidenceReview) return { routeIds: [], retrievalFailed: false };
+    await client.query('SAVEPOINT evidence_read');
+    await client.query('SET LOCAL ROLE NONE');
+    try { return await this.evidenceReview(client); }
+    catch { await client.query('ROLLBACK TO SAVEPOINT evidence_read'); return { routeIds: [], retrievalFailed: true }; }
+    finally { await client.query('SET LOCAL ROLE kooch_runtime'); await client.query('RELEASE SAVEPOINT evidence_read'); }
   }
   private encrypt(token: string) {
     const iv = randomBytes(12); const cipher = createCipheriv('aes-256-gcm', this.key, iv);
@@ -229,7 +237,7 @@ export class AccountStore {
       const report = { ...row.snapshot, id: row.id, version: row.version } as GuidanceReport;
       const current = await client.query('SELECT revision FROM kooch.cases WHERE owner=$1', [owner]);
       const latest = await client.query('SELECT max(version)::int AS version FROM kooch.reports WHERE owner=$1', [owner]);
-      return { report, report_state: reportState(report, current.rows[0]?.revision, latest.rows[0].version, this.now()) };
+      return { report, report_state: reportState(report, current.rows[0]?.revision, latest.rows[0].version, this.now(), await this.evidenceReviewState(client)) };
     });
   }
   async listReports(owner: string): Promise<ReportHistoryItem[]> {
@@ -237,10 +245,10 @@ export class AccountStore {
       const { rows } = await client.query('SELECT id,version,snapshot FROM kooch.reports WHERE owner=$1 ORDER BY version', [owner]);
       const current = await client.query('SELECT revision FROM kooch.cases WHERE owner=$1', [owner]);
       const reports = rows.map(row => ({ ...row.snapshot, id: row.id, version: row.version }) as GuidanceReport);
-      const latest = reports.at(-1)?.version ?? 0; const now = this.now();
+      const latest = reports.at(-1)?.version ?? 0; const now = this.now(); const reviews = await this.evidenceReviewState(client);
       return reports.map((report, index) => ({ id: report.id, version: report.version, created_at: report.created_at,
         case_revision: report.case_revision, coverage: report.coverage, changes: reportChanges(report, reports[index - 1]),
-        report_state: reportState(report, current.rows[0]?.revision, latest, now) })).reverse();
+        report_state: reportState(report, current.rows[0]?.revision, latest, now, reviews) })).reverse();
     });
   }
   async exportReports(owner: string): Promise<GuidanceReport[]> {
@@ -265,7 +273,7 @@ export class AccountStore {
       const count = await client.query('SELECT count(*)::int AS count FROM kooch.reports WHERE owner=$1', [owner]);
       if (count.rows[0].count >= 100) throw new AccountError('report_limit', 429, 'سقف نسخه‌های کارنامهٔ این پرونده پر شده است؛ نسخه‌های موجود در دسترس‌اند.');
       const now = this.now();
-      const snapshot = buildReport(saved, now);
+      const snapshot = buildReport(saved, now, await this.evidenceReviewState(client));
       const result = await client.query('INSERT INTO kooch.reports(owner,case_id,version,request_id,payload_hash,snapshot) VALUES($1,$2,$3,$4,$5,$6) RETURNING id,version',
         [owner, saved.id, count.rows[0].count + 1, input.request_id, payloadHash, snapshot]);
       await client.query('UPDATE kooch.cases SET last_activity_at=$2,delete_after=$3 WHERE owner=$1', [owner, now, new Date(now.getTime() + 90 * 86400000)]);

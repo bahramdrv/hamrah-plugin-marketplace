@@ -1,4 +1,6 @@
 import pg from 'pg';
+import snapshot from '../../data/iran-start-snapshot.json';
+import { EvidenceStore } from '../evidence/store';
 import { AuthProvider } from './auth';
 import { AccountStore } from './store';
 import { createAccountApi } from './api';
@@ -10,6 +12,8 @@ import { createScopedQuestionAssistance } from '../ai/preview-acceptance';
 import aiPolicy from '../../data/ai-gateway-policy.json';
 type Runtime = ReturnType<typeof createAccountApi>;
 let runtime: Promise<Runtime> | undefined;
+let evidenceStore: EvidenceStore | undefined;
+export async function publicEvidenceStore() { await accountRuntime(); return evidenceStore; }
 export function accountConfigured() {
   return ['local', 'hosted'].includes(process.env.KOOCH_ACCOUNT_MODE ?? '') &&
     Boolean(process.env.KOOCH_DATABASE_URL && process.env.KOOCH_AUTH_URL && process.env.KOOCH_AUTH_SERVICE_KEY && process.env.KOOCH_SESSION_ENCRYPTION_KEY && process.env.KOOCH_APP_ORIGIN);
@@ -32,13 +36,14 @@ export async function accountRuntime() {
       rejectUnauthorized: true,
       ...(process.env.KOOCH_DATABASE_CA_CERT ? { ca: process.env.KOOCH_DATABASE_CA_CERT } : {}),
     } } : {}), max: 5, connectionTimeoutMillis: 5000, statement_timeout: 10000 });
+    evidenceStore = new EvidenceStore({ pool, baseline: snapshot });
     const accountingKey = process.env.KOOCH_AI_ACCOUNTING_KEY;
     const stableKey = /^[a-f0-9]{64}$/.test(accountingKey ?? '');
     const ledger = new AiBudgetLedger(pool, stableKey ? accountingKey! : process.env.KOOCH_SESSION_ENCRYPTION_KEY!);
     const store = new AccountStore(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!, undefined, async (owner, saved, client) => {
       const draft = saved.form?.draft;
       if (draft?.accounting_policy) await ledger.detachOperation(owner, `answer-interpretation:${saved.id}:${draft.revision}:${draft.id}`, draft.accounting_policy, client);
-    });
+    }, client => evidenceStore!.reportReview(client));
     await store.validateRole();
     const auth = new AuthProvider({ url: authUrl.href.replace(/\/$/, ''),
       key: process.env.KOOCH_AUTH_PUBLISHABLE_KEY, serviceKey: process.env.KOOCH_AUTH_SERVICE_KEY!, origin });

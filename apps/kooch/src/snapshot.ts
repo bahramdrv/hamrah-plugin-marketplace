@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 export const sourceUrl = 'https://kooch.app/wp-json/kooch/v1/visa-catalog?scope=iran-start&limit=100&offset=0';
+export const sourceManifestUrl = 'https://kooch.app/wp-json/kooch/v2/evidence-manifest';
 const day = z.iso.date();
 const publicUrl = z.url().refine(value => {
   const url = new URL(value);
@@ -25,13 +26,13 @@ export const routeSchema = z.object({
   page_url: pageUrl.nullable(), application: applicationSchema,
 });
 export const snapshotSchema = z.object({
-  schema_version: z.literal(2), scope: z.literal('iran-start'), source_url: z.literal(sourceUrl),
+  schema_version: z.literal(2), scope: z.literal('iran-start'), source_url: z.enum([sourceUrl, sourceManifestUrl]),
   retrieved_at: z.iso.datetime({ offset: true }), provider: z.string(), license: z.string(),
-  license_url: publicUrl, provider_url: publicUrl, total: z.number().int().min(0).max(100),
+  license_url: publicUrl, provider_url: publicUrl, total: z.number().int().min(0).max(500),
   coverage: z.object({ catalog: z.number().int().nonnegative(), reviewed: z.number().int().nonnegative(),
     unreviewed: z.number().int().nonnegative(), documented_start: z.number().int().nonnegative(),
     scope: z.literal('application_channel_only'), freshness_days: z.literal(14) }),
-  routes: z.array(routeSchema).max(100),
+  routes: z.array(routeSchema).max(500),
   sources: z.record(z.string(), sourceSchema),
 }).superRefine((value, ctx) => {
   if (value.total !== value.routes.length || value.total !== value.coverage.documented_start ||

@@ -1,0 +1,30 @@
+name: Refresh Kooch public evidence
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: kooch-public-evidence
+  cancel-in-progress: false
+jobs:
+  sync:
+    # No paid service is provisioned. Configure the worker secret only after deployment acceptance.
+    if: vars.KOOCH_EVIDENCE_SYNC_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: apps/kooch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: apps/kooch/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npm run evidence:sync
+        env:
+          KOOCH_EVIDENCE_SYNC_SECRET: ${{ secrets.KOOCH_EVIDENCE_SYNC_SECRET }}

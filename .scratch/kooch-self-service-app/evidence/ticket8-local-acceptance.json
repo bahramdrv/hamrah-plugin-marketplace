@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-21",
+  "scope": "ticket8 local acceptance; production rollout belongs to ticket10",
+  "base_commit": "60e7fae7bac8844b6ea454e91c15caeb11d580ae",
+  "checks": {
+    "app_tests": 111,
+    "repository_tests": 384,
+    "python_tests": 47,
+    "release": "pass",
+    "static": "pass",
+    "build_typecheck": "pass",
+    "standards_review": "clear",
+    "spec_review": "clear"
+  },
+  "wordpress_export": {
+    "pages": 2,
+    "routes": 29,
+    "payload_sha256": "pass",
+    "source_dates_preserved": true,
+    "expired_cursor_410": "pass",
+    "private_fields_excluded": "pass"
+  },
+  "cross_runtime": {
+    "state": "ok",
+    "code": null,
+    "last_attempt_at": "2026-10-21T08:48:50.925Z",
+    "last_success_at": "2026-10-21T08:48:50.925Z",
+    "active_id": "a1f9736f2f134aec61ba079ec486ac40353593e8c3165fb6fce29c7f2400be29",
+    "checkpoint": null,
+    "expected_pages": null,
+    "coverage": {
+      "total": 29,
+      "current": 29,
+      "expired": 0,
+      "review_required": 0
+    },
+    "reviews": []
+  },
+  "admin_browser": {
+    "fixture": "synthetic public UK application change",
+    "review_queue": 1,
+    "current_coverage": 28,
+    "desktop_width": 1280,
+    "mobile_width": 390,
+    "horizontal_overflow": false,
+    "direction": "rtl",
+    "secret_input_cleared": true,
+    "fixture_restored": true
+  },
+  "production_modified": false
+}
