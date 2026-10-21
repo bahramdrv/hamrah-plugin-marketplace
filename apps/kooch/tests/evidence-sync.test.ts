@@ -250,3 +250,27 @@ test('operator diagnostics distinguish expired pricing, an unsupported model and
     }
   } finally { await h.close(); }
 });
+
+test('the hosted worker accepts an empty streamed POST body and rejects actual payload without advancing sync', { skip: !enabled }, async () => {
+  const h = await setup(sourceFixture().fetch);
+  try {
+    const api = createEvidenceApi({ store: h.store, fetch: sourceFixture().fetch, adminSecret, syncSecret });
+    const request = (body: string) => new Request('http://localhost/api/evidence/sync', { method: 'POST', headers: { authorization: `Bearer ${syncSecret}` }, body });
+    assert.notEqual(request('').body, null);
+    const empty = await api.handle(request(''), 'sync');
+    assert.equal(empty.status, 200); assert.equal((await empty.json()).checkpoint, 1);
+    const payload = await api.handle(request('{}'), 'sync');
+    assert.equal(payload.status, 400); assert.equal((await h.store.read()).checkpoint?.page_payloads.length, 1);
+  } finally { await h.close(); }
+});
+
+
+test('the worker bounds a stalled body after authentication and never advances its checkpoint', { skip: !enabled, timeout: 5000 }, async () => {
+  const h = await setup(sourceFixture().fetch);
+  try {
+    const api = createEvidenceApi({ store: h.store, fetch: sourceFixture().fetch, adminSecret, syncSecret });
+    const init = { method: 'POST', headers: { authorization: `Bearer ${syncSecret}` }, body: new ReadableStream<Uint8Array>(), duplex: 'half' };
+    const response = await api.handle(new Request('http://localhost/api/evidence/sync', init), 'sync');
+    assert.equal(response.status, 400); assert.equal((await h.store.read()).checkpoint, null);
+  } finally { await h.close(); }
+});
