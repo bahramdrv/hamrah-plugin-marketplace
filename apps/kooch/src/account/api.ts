@@ -6,6 +6,7 @@ import { GoogleOAuth } from './google';
 import { formView } from '../form/workflow';
 import { formInputSchema } from '../form/contract';
 import { reportInputSchema } from '../report/contract';
+import { printReport } from '../report/print';
 import { createQuestionAssistance, fixedQuestion, type QuestionAssistance } from '../ai/question-assistance';
 import type { AnswerInterpretation } from '../ai/answer-interpretation';
 import { interpretationInputSchema } from '../form/interpretation';
@@ -187,9 +188,19 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
           }
           return formReply(assisted);
         }
+        if (operation === 'reports' && method === 'GET') return reply({ reports: await store.listReports(session.owner) });
         if (operation === 'report') {
-          if (path.length > 2 || (path[1] && !z.uuid().safeParse(path[1]).success) || (method === 'POST' && path.length !== 1)) throw invalid();
-          if (method === 'GET') return reply(await store.readReport(session.owner, path[1]));
+          const printing = path.length === 3 && path[2] === 'print' && method === 'GET';
+          if ((!printing && path.length > 2) || (path[1] && !z.uuid().safeParse(path[1]).success) || (method === 'POST' && path.length !== 1)) throw invalid();
+          if (method === 'GET') {
+            const result = await store.readReport(session.owner, path[1]);
+            if (printing && result.report) return new Response(printReport(result.report, result.report_state), {
+              headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store', 'Pragma': 'no-cache', 'Vary': 'Cookie',
+                'Referrer-Policy': 'no-referrer', 'X-Content-Type-Options': 'nosniff',
+                'Content-Security-Policy': "default-src 'none'; style-src 'self'; font-src 'self'; script-src 'self'; frame-ancestors 'none'; base-uri 'none'" },
+            });
+            return reply(result);
+          }
           const report = await store.saveReport(session.owner, reportInputSchema.parse(await body(request)));
           return reply(await store.readReport(session.owner, report.id));
         }

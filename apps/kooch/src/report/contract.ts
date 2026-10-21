@@ -1,3 +1,4 @@
+import type { GuidanceReport } from './evaluate';
 import { z } from 'zod';
 const date = z.iso.date().nullable().optional();
 const choice = <T extends readonly [string, ...string[]]>(values: T) => z.enum(values).nullable().optional();
@@ -20,3 +21,13 @@ export const reportInputSchema = z.object({
   expected_revision: z.number().int().positive(), request_id: z.uuid(),
 }).strict();
 export type ReportInput = z.infer<typeof reportInputSchema>;
+
+export type ReportState = { current: boolean; evidence_current: boolean; answers_current: boolean; latest_version: number };
+export type ReportChange = 'initial' | 'answers_changed' | 'evidence_changed' | 'recreated';
+export type ReportHistoryItem = Pick<GuidanceReport, 'id' | 'version' | 'created_at' | 'case_revision' | 'coverage'> & {
+  changes: ReportChange[]; report_state: ReportState;
+};
+export const changeLabels: Record<ReportChange, string> = {
+  initial: 'نخستین کارنامهٔ ذخیره‌شده', answers_changed: 'پاسخ‌های پرونده تغییر کرده‌اند',
+  evidence_changed: 'نسخهٔ شواهد یا قواعد تغییر کرده است', recreated: 'ساخت دوباره از همان پاسخ‌ها و نسخهٔ شواهد',
+};

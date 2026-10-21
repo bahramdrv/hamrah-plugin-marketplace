@@ -5,8 +5,8 @@ import type { InterpretationInput, InterpretationResult } from '../form/interpre
 import type { FormInput } from '../form/contract';
 import { formRecords, relevantQuestions, validateAnswer, applyFormAnswer, reconcileCompass } from '../form/workflow';
 import { buildReport, type GuidanceReport } from '../report/evaluate';
-import type { ReportInput } from '../report/contract';
-import { policyDigest } from '../report/policy';
+import type { ReportHistoryItem, ReportInput } from '../report/contract';
+import { reportState, reportChanges } from '../report/history';
 const hash = (value: string) => createHash('sha256').update(value).digest('hex');
 export type AppSession = { owner: string; accessToken: string; purpose: 'account' | 'recovery'; deleted: boolean; expiresAt: Date };
 
@@ -229,9 +229,18 @@ export class AccountStore {
       const report = { ...row.snapshot, id: row.id, version: row.version } as GuidanceReport;
       const current = await client.query('SELECT revision FROM kooch.cases WHERE owner=$1', [owner]);
       const latest = await client.query('SELECT max(version)::int AS version FROM kooch.reports WHERE owner=$1', [owner]);
-      const fresh = report.route_results.every(route => route.route_id === 'uk:student' && route.evidence_version === policyDigest && route.sources.every(s => Date.parse(s.checked_at) <= this.now().getTime() && this.now().getTime() < Date.parse(s.expires_at)));
-      return { report, report_state: { current: fresh && current.rows[0]?.revision === report.case_revision && latest.rows[0].version === report.version,
-        evidence_current: fresh, answers_current: current.rows[0]?.revision === report.case_revision, latest_version: latest.rows[0].version } };
+      return { report, report_state: reportState(report, current.rows[0]?.revision, latest.rows[0].version, this.now()) };
+    });
+  }
+  async listReports(owner: string): Promise<ReportHistoryItem[]> {
+    return this.owned(owner, async client => {
+      const { rows } = await client.query('SELECT id,version,snapshot FROM kooch.reports WHERE owner=$1 ORDER BY version', [owner]);
+      const current = await client.query('SELECT revision FROM kooch.cases WHERE owner=$1', [owner]);
+      const reports = rows.map(row => ({ ...row.snapshot, id: row.id, version: row.version }) as GuidanceReport);
+      const latest = reports.at(-1)?.version ?? 0; const now = this.now();
+      return reports.map((report, index) => ({ id: report.id, version: report.version, created_at: report.created_at,
+        case_revision: report.case_revision, coverage: report.coverage, changes: reportChanges(report, reports[index - 1]),
+        report_state: reportState(report, current.rows[0]?.revision, latest, now) })).reverse();
     });
   }
   async exportReports(owner: string): Promise<GuidanceReport[]> {

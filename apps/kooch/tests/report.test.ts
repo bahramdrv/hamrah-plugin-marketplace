@@ -182,3 +182,71 @@ test('shared reports remain private and immutable across retries, edits, expiry,
     await bob.request('signin', { email: bob.email, password: bob.password }); assert.equal((await (await bob.request('export')).json()).reports.length, 0);
   } finally { await h.close(); }
 });
+
+test('owner history explains versions and print reads the exact saved incomplete report with private access', { skip: !enabled }, async () => {
+  let now = checkedNow(); const h = await harness(() => now);
+  try {
+    const alice = await h.verifiedClient(), bob = await h.verifiedClient();
+    assert.deepEqual((await (await alice.request('reports')).json()).reports, []);
+    await alice.request('case', saveInput());
+    const first = (await (await alice.request('report', { expected_revision: 1, request_id: randomUUID() })).json()).report;
+    await answer(alice, 1, 'budget', { amount: 2000, currency: 'GBP' });
+    const second = (await (await alice.request('report', { expected_revision: 2, request_id: randomUUID() })).json()).report;
+    const response = await alice.request('reports'); assert.equal(response.status, 200);
+    assert.equal(response.headers.get('cache-control'), 'no-store'); assert.equal(response.headers.get('vary'), 'Cookie');
+    const history = (await response.json()).reports;
+    assert.deepEqual(history.map((r: any) => r.id), [second.id, first.id]);
+    assert.deepEqual(history[0].changes, ['answers_changed']); assert.deepEqual(history[1].changes, ['initial']);
+    assert.equal(history[1].report_state.answers_current, false); assert.equal(history[0].report_state.current, true);
+    assert.equal(history[0].coverage, 'partial'); assert.ok(!('dependencies' in history[0]));
+    assert.deepEqual((await (await bob.request('reports')).json()).reports, []);
+    assert.equal((await bob.request(`report/${first.id}/print`)).status, 404);
+    assert.equal((await h.client().request(`report/${first.id}/print`)).status, 401);
+    assert.equal((await alice.request(`report/${first.id}/print/extra`)).status, 400);
+    assert.equal((await alice.request(`report/${first.id}/print`, {}, 'POST')).status, 400);
+    const printed = await alice.request(`report/${first.id}/print`); assert.equal(printed.status, 200);
+    assert.match(printed.headers.get('content-type')!, /text\/html/); assert.equal(printed.headers.get('cache-control'), 'no-store');
+    const html = await printed.text();
+    assert.match(html, /dir="rtl"/); assert.match(html, /کارنامهٔ مقدماتی/); assert.match(html, /نامعلوم/);
+    assert.match(html, /پاسخ‌های فرم بعد از آن تغییر کرده‌اند/); assert.match(html, /https:\/\/www.gov.uk\//);
+    assert.match(html, /report-print.css/); assert.match(html, /details open/);
+    assert.deepEqual((await (await alice.request(`report/${first.id}`)).json()).report, first);
+    now = new Date('2026-10-25T12:00:00Z'); await alice.request('signin', { email: alice.email, password: alice.password });
+    const stale = (await (await alice.request('reports')).json()).reports;
+    assert.equal(stale[0].report_state.evidence_current, false);
+    assert.match(await (await alice.request(`report/${second.id}/print`)).text(), /شواهد.*نیازمند بازبینی/);
+    await alice.request('signout', {}); assert.equal((await alice.request(`report/${first.id}/print`)).status, 401);
+  } finally { await h.close(); }
+});
+
+test('a new evidence version is explained separately from unchanged applicant answers and old sources survive print', { skip: !enabled }, async () => {
+  const h = await harness(checkedNow);
+  try {
+    const c = await h.verifiedClient(); await c.request('case', saveInput());
+    // Seed a historical snapshot at the database boundary, as if saved by an older release.
+    const { buildReport } = await import('../src/report/evaluate');
+    const saved = (await (await c.request('case')).json()).case;
+    const historical = buildReport(saved, checkedNow());
+    historical.route_results[0].evidence_version = 'historical-evidence-digest';
+    historical.route_results[0].sources = historical.route_results[0].sources.map(s => ({ ...s, checked_at: '2026-10-10T00:00:00Z' }));
+    const session = await h.store.session(c.cookie.split('=')[1]);
+    const db = await h.pool.connect(); let id: string;
+    try {
+      await db.query('BEGIN'); await db.query('SET LOCAL ROLE kooch_runtime');
+      await db.query("SELECT set_config('kooch.owner',$1,true)", [session.owner]);
+      const inserted = await db.query('INSERT INTO kooch.reports(owner,case_id,version,request_id,payload_hash,snapshot) VALUES($1,$2,1,$3,$4,$5) RETURNING id', [session.owner, saved.id, randomUUID(), 'historical-fixture', historical]);
+      id = inserted.rows[0].id; await db.query('COMMIT');
+    } finally { db.release(); }
+    const before = (await (await c.request(`report/${id}`)).json()).report;
+    const created = (await (await c.request('report', { expected_revision: 1, request_id: randomUUID() })).json()).report;
+    const history = (await (await c.request('reports')).json()).reports;
+    assert.deepEqual(history[0].changes, ['evidence_changed']); assert.equal(created.case_revision, before.case_revision);
+    assert.equal(history[1].report_state.evidence_current, false); assert.equal(history[1].report_state.answers_current, true);
+    assert.deepEqual((await (await c.request(`report/${id}`)).json()).report, before);
+    const html = await (await c.request(`report/${id}/print`)).text();
+    assert.match(html, /شواهد.*نیازمند بازبینی/);
+    assert.ok(!html.includes('پاسخ‌های فرم بعد از آن تغییر کرده‌اند'));
+    await c.request('report', { expected_revision: 1, request_id: randomUUID() });
+    assert.deepEqual((await (await c.request('reports')).json()).reports[0].changes, ['recreated']);
+  } finally { await h.close(); }
+});

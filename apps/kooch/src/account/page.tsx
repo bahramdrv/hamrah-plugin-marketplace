@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { answersSchema, type Answers } from '../questions';
 import { accountRequest, notifySignout, invalidateAccountRequests, StaleAccountRequest } from './client';
 import { consentVersion, type SavedCase } from './contract';
+import { ReportHistory } from '../report/history-list';
 type Mode = 'signin' | 'signup' | 'recover';
 export function AccountPage() {
   const [configured, setConfigured] = useState<boolean | null>(null);
@@ -102,6 +103,7 @@ export function AccountPage() {
       </> : null}
       {signedEmail && <><p className="signed-email" dir="ltr">{signedEmail}</p>
         {saved ? <section className="account-section"><h2>پاسخ‌های ذخیره‌شده</h2><p>نسخهٔ {saved.revision.toLocaleString('fa-IR')} · پاسخ‌های تأییدشده برای ادامه آماده‌اند</p><p>تاریخ پاک‌شدن در صورت بی‌فعالیتی: <strong>{new Date(saved.delete_after).toLocaleDateString('fa-IR', { dateStyle: 'long' })}</strong></p><a className="primary" href="/form">ادامهٔ نقشهٔ من</a></section> : <p className="account-section">هنوز پاسخی در حساب ذخیره نشده است.</p>}
+        <ReportHistory key={signedEmail} />
         {guest && <section className="account-section"><h2>ذخیرهٔ پاسخ‌های مهمان</h2><p>{saved ? 'این کار پاسخ‌های فعلی پرونده را با پاسخ‌های مهمان همین نشست جایگزین می‌کند.' : 'پاسخ‌های قطب‌نمای همین نشست را در حساب خودت ذخیره کن.'}</p><label className="choice"><input type="checkbox" checked={consent} onChange={e => setConsent(e.target.checked)} />اجازه می‌دهم پاسخ‌ها در حساب ذخیره شوند و تا ۹۰ روز پس از آخرین ثبت یا اصلاح پاسخ نگهداری شوند.</label><button className="primary" disabled={busy || !consent} onClick={() => void action(saveGuest)}>ذخیره با اجازهٔ من</button></section>}
         <div className="account-actions"><button className="secondary" disabled={busy} onClick={() => void action(async () => {
           const result = await accountRequest('export'); if (!result.response.ok) throw new Error(result.data.message);
