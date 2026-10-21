@@ -1,0 +1,39 @@
+{
+  "scope": "synthetic_answer_interpretation_only",
+  "original_run": "arvan-interpretation-acceptance-2026-10-21.json",
+  "original_http_status_recorded": false,
+  "diagnosis": "HTTP 429 inferred from the only gateway path that sets retry_after without blocked=true; confirmed API reproduction shows initial 429 was mislabeled invalid_response",
+  "local_receipt_metadata": {
+    "state": "unknown",
+    "outcome_before_fix": "invalid_response",
+    "blocked": false,
+    "retry_after": "2026-10-21T03:53:32.473Z",
+    "usage": null,
+    "charged_minor": null
+  },
+  "regression_command": "node --env-file=.env.local --import tsx --test --test-name-pattern='a 429 keeps' tests/answer-interpretation.test.ts",
+  "before_fix": {
+    "expected": "cooldown",
+    "actual": "invalid_response",
+    "passed": false
+  },
+  "after_fix": {
+    "initial_status": "cooldown",
+    "receipt_outcome": "http_429",
+    "state": "unknown",
+    "draft_preserved": true,
+    "automatic_retry": false,
+    "passed": true
+  },
+  "authorization_regression": {
+    "statuses": [
+      401,
+      403
+    ],
+    "initial_status": "policy_blocked",
+    "http_outcome_preserved": true,
+    "passed": true
+  },
+  "original_unknown_reservation_released": false,
+  "raw_provider_text_recorded": false
+}

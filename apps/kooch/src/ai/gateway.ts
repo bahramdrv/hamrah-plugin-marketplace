@@ -32,6 +32,7 @@ export async function runGatewayTask<T extends TaskResult>(options: GatewayOptio
     if (!credential || !/^[a-zA-Z0-9+/_=.\-]+$/.test(credential)) return fallback('credentials_missing');
     let id: string | undefined, dispatched = false, settled = false;
     let failure: Status | undefined;
+    let httpFailureOutcome: string | undefined;
     const operation = request.operation;
     const ledger = options.ledger;
     const cancelUnsent = async (receipt: string) => {
@@ -59,7 +60,9 @@ export async function runGatewayTask<T extends TaskResult>(options: GatewayOptio
           headers.set('Authorization', `${policy.connection.authorization} ${credential}`);
           const response = await (options.transport ?? fetch)(`${policy.connection.base_url}${policy.connection.api_path}`, { ...init, headers, redirect: 'error' });
           if ([401, 403, 429].includes(response.status)) {
-            await ledger.markUnknown(id, `http_${response.status}`, elapsed(), { blocked: response.status !== 429, retryAfter: retryAfter(response.headers.get('Retry-After'), now()) });
+            failure = response.status === 429 ? 'cooldown' : 'policy_blocked';
+            httpFailureOutcome = `http_${response.status}`;
+            await ledger.markUnknown(id, httpFailureOutcome, elapsed(), { blocked: response.status !== 429, retryAfter: retryAfter(response.headers.get('Retry-After'), now()) });
           }
           return response;
         } catch (error) {
@@ -80,7 +83,7 @@ export async function runGatewayTask<T extends TaskResult>(options: GatewayOptio
     // Unknown post-dispatch costs stay reserved, including errors, absent usage and timeouts.
     const finalize = async () => {
       try {
-        if (id && dispatched && !settled) await ledger.markUnknown(id, result.status, elapsed());
+        if (id && dispatched && !settled) await ledger.markUnknown(id, httpFailureOutcome ?? result.status, elapsed());
         else if (id && settled) await ledger.recordOutcome(id, result.status, elapsed());
         else if (id && !dispatched) await cancelUnsent(id);
       } catch { failure = 'accounting_unavailable'; }

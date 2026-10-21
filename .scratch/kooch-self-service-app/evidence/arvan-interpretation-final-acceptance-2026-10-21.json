@@ -1,0 +1,79 @@
+{
+  "ticket": "06-free-text-confirmation",
+  "status": "accepted_with_owner_recorded_data_unknowns",
+  "accepted_at": "2026-10-21",
+  "model": "Qwen3.5-35B-A3B",
+  "endpoint": "https://api.arvancloudai.ir/v1/chat/completions",
+  "task_contract": "answer-interpretation-1",
+  "acceptance_basis": {
+    "kind": "owner_accepted_unknowns",
+    "reference": "docs/adr/0013-owner-accepted-ai-data-uncertainty.md",
+    "provider_data_handling_verified": false
+  },
+  "scenarios": [
+    {
+      "question": "age_exact",
+      "status": "proposed",
+      "charged_IRR": 3625,
+      "source": "arvan-interpretation-acceptance-2026-10-21.json",
+      "draft_resolution_verified": true,
+      "resolution_evidence": "runner exited zero after confirm/reject; later scenario reached"
+    },
+    {
+      "question": "budget",
+      "status": "proposed",
+      "charged_IRR": 3634,
+      "source": "arvan-interpretation-acceptance-2026-10-21-rate-limit-follow-up.json",
+      "draft_resolution_verified": true,
+      "resolution_evidence": "runner exited zero after confirm/reject; later scenario reached"
+    },
+    {
+      "question": "study_level",
+      "status": "ambiguous",
+      "charged_IRR": 3617,
+      "source": "arvan-interpretation-acceptance-2026-10-21-ambiguity-session-follow-up.json",
+      "draft_resolution_verified": true,
+      "resolution_evidence": "resolution_passed=true in receipt"
+    }
+  ],
+  "source_runs": [
+    "arvan-interpretation-acceptance-2026-10-21.json",
+    "arvan-interpretation-acceptance-2026-10-21-rate-limit-follow-up.json",
+    "arvan-interpretation-acceptance-2026-10-21-ambiguity-session-follow-up.json"
+  ],
+  "total_dispatches": 4,
+  "successful_model_responses": 3,
+  "unknown_cost_requests": 1,
+  "automatic_retry": false,
+  "synthetic_only": true,
+  "raw_provider_text_recorded": false,
+  "hosted_accounting": {
+    "verified_at": "2026-10-21T04:05:50.606861Z",
+    "successful_acceptance_charged_IRR": 10876,
+    "unknown_reserved_IRR": 18000,
+    "unsent_cancelled": 2,
+    "prior_hosted_charged_IRR": 10078,
+    "prior_external_hold_IRR": 47676,
+    "shared_exposure_IRR": 86630,
+    "shared_cap_IRR": 500000,
+    "remaining_IRR": 413370,
+    "screenshot": "interpretation-final-ledger-2026-10-21.png"
+  },
+  "checks": {
+    "app_tests_passed": 98,
+    "app_tests_skipped": 0,
+    "root_tests_passed": 384,
+    "python_tests_passed": 47,
+    "build": "passed",
+    "typecheck": "passed",
+    "verify_release": "passed",
+    "static": "passed",
+    "standards_review_open_findings": 0,
+    "spec_review_open_findings": 0
+  },
+  "release": {
+    "production_activation": false,
+    "hosted_migration_005_applied": false,
+    "remaining_ticket": "10-pilot-and-release"
+  }
+}

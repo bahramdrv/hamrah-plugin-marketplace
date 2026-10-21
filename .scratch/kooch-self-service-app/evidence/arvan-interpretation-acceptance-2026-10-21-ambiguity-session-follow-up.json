@@ -1,0 +1,48 @@
+{
+  "checked_at": "2026-10-21T04:03:49.028Z",
+  "policy": "arvan-kooch-interpretation-acceptance-20261021-ambiguity-session-follow-up",
+  "acceptance_basis": "owner_accepted_unknowns",
+  "model": "Qwen3.5-35B-A3B",
+  "endpoint": "https://api.arvancloudai.ir/v1/chat/completions",
+  "max_calls": 1,
+  "max_batch_IRR": 18000,
+  "spacing_ms": 0,
+  "shared_cap_IRR": 500000,
+  "max_output_tokens": 128,
+  "deadline_ms": 8000,
+  "retry": false,
+  "synthetic_only": true,
+  "cases": [
+    {
+      "question_id": "study_level",
+      "text": "شاید ارشد یا دکتری؛ هنوز تصمیم نگرفته‌ام",
+      "expected_status": "ambiguous"
+    }
+  ],
+  "dispatches": 1,
+  "results": [
+    {
+      "resolution_passed": true,
+      "scenario": 1,
+      "question": "study_level",
+      "status": "ambiguous",
+      "passed": true,
+      "elapsed_ms": 1327,
+      "state": "settled",
+      "charged_IRR": "3617",
+      "usage": {
+        "total_tokens": 861,
+        "prompt_tokens": 829,
+        "completion_tokens": 32
+      },
+      "outcome": "ambiguous",
+      "http": {
+        "status": 200,
+        "retry_after": null
+      },
+      "hosted_hold_id": "e6bca7fc28ddfd0e384c357245246761cd86679a5bcc327088b3855077d1dd5d"
+    }
+  ],
+  "completed": true,
+  "raw_provider_text_recorded": false
+}

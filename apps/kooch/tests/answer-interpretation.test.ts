@@ -286,6 +286,10 @@ test('a 429 keeps the submitted draft and gates fresh interpretation attempts wi
     const input = draftInput();
     const r = await (await c.request('interpretation', input)).json();
     assert.equal(r.draft.text, input.text); assert.equal(calls, 1);
+    assert.equal(r.draft.status, 'cooldown');
+    const receipt = (await (await c.request('export')).json()).ai_usage.at(-1);
+    assert.equal(receipt.state, 'unknown');
+    assert.equal(receipt.outcome, 'http_429');
     await c.request('interpretation', input); assert.equal(calls, 1);
     const next = await (await c.request('interpretation', draftInput(r.revision))).json();
     assert.equal(next.draft.status, 'cooldown'); assert.equal(calls, 1);

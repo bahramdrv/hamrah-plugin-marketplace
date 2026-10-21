@@ -245,7 +245,10 @@ test('authorization failures stop the accepted policy and Retry-After gates fres
       const policy = acceptedPolicy(), owner = await activeBudgetOwner(pool); let calls = 0;
       const assist = createGatewayQuestionAssistance({ policy, ledger, now: aiNow, getCredential: () => 'fixture', transport: async () => { calls++; return new Response('private error', { status, headers: { 'Retry-After': '300' } }); } });
       const result = await assist(view(), currentOwner(owner));
-      assert.equal(result.question_assistance.status, 'unavailable');
+      assert.equal(result.question_assistance.status, status === 429 ? 'cooldown' : 'policy_blocked');
+      const [receipt] = await ledger.exportOwner(owner);
+      assert.equal(receipt.state, 'unknown');
+      assert.equal(receipt.outcome, `http_${status}`);
       const fresh = await assist({ ...view(), revision: 8 }, currentOwner(owner));
       assert.equal(fresh.question_assistance.status, status === 429 ? 'cooldown' : 'policy_blocked');
       assert.equal(calls, 1);

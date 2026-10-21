@@ -1,0 +1,67 @@
+{
+  "checked_at": "2026-10-21T04:02:01.234Z",
+  "policy": "arvan-kooch-interpretation-acceptance-20261021-rate-limit-follow-up",
+  "acceptance_basis": "owner_accepted_unknowns",
+  "model": "Qwen3.5-35B-A3B",
+  "endpoint": "https://api.arvancloudai.ir/v1/chat/completions",
+  "max_calls": 2,
+  "max_batch_IRR": 36000,
+  "spacing_ms": 310000,
+  "shared_cap_IRR": 500000,
+  "max_output_tokens": 128,
+  "deadline_ms": 8000,
+  "retry": false,
+  "synthetic_only": true,
+  "cases": [
+    {
+      "question_id": "budget",
+      "text": "۱۲۰۰۰ یورو دارم",
+      "expected_status": "proposed",
+      "answer": {
+        "state": "known",
+        "value": {
+          "amount": 12000,
+          "currency": "EUR"
+        }
+      }
+    },
+    {
+      "question_id": "study_level",
+      "text": "شاید ارشد یا دکتری؛ هنوز تصمیم نگرفته‌ام",
+      "expected_status": "ambiguous"
+    }
+  ],
+  "dispatches": 1,
+  "results": [
+    {
+      "scenario": 1,
+      "question": "budget",
+      "status": "proposed",
+      "passed": true,
+      "elapsed_ms": 1327,
+      "state": "settled",
+      "charged_IRR": "3634",
+      "usage": {
+        "total_tokens": 865,
+        "prompt_tokens": 832,
+        "completion_tokens": 33
+      },
+      "outcome": "proposed",
+      "http": {
+        "status": 200,
+        "retry_after": null
+      },
+      "hosted_hold_id": "62a7ca78b10be618be7e25b579355eb68e107556f5829c8907c67882859c0850"
+    },
+    {
+      "scenario": 2,
+      "question": "study_level",
+      "status": "unauthorized",
+      "passed": false,
+      "elapsed_ms": 13,
+      "hosted_hold_id": "7cbfb93d80bf757de5f396620c1077f5b2fe91e9c6ac15790b63cddf455486f3"
+    }
+  ],
+  "completed": false,
+  "raw_provider_text_recorded": false
+}
