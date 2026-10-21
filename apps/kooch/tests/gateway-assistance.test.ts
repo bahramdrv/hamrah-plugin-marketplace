@@ -16,7 +16,7 @@ test('the unaccepted deployed policy cannot read credentials, touch the ledger o
   try {
     const assistance = createGatewayQuestionAssistance({ policy, now: () => new Date('2026-10-18T15:00:00Z'), ledger: new AiBudgetLedger(pool, 'e'.repeat(64)), getCredential: () => { calls++; return 'must-not-read'; }, transport: async () => { calls++; throw Error('must-not-connect'); } });
     const result = await assistance(view(), { owner: 'private-owner' });
-    assert.equal(result.question_assistance.status, 'capability_unaccepted');
+    assert.equal(result.question_assistance.status, 'budget_zero');
     assert.equal(calls, 0);
     assert.deepEqual(result.next_question, view().next_question);
   } finally { await pool.end(); }

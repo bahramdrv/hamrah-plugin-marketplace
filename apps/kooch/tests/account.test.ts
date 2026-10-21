@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { randomUUID } from 'node:crypto';
+import { randomUUID, randomBytes } from 'node:crypto';
 import pg from 'pg';
 import { createAccountApi } from '../src/account/api';
 import { AuthProvider } from '../src/account/auth';
@@ -93,7 +93,7 @@ test('an OAuth-only account can reauthenticate with the same Google owner and de
 test('verified guest saves with consent, signs out and resumes the same case after login', { skip: !enabled }, async () => {
   const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL });
   const auth = new AuthProvider({ url: process.env.KOOCH_AUTH_URL!, serviceKey: process.env.KOOCH_AUTH_SERVICE_KEY!, origin: 'http://127.0.0.1:3100' });
-  const api = createAccountApi({ store: new AccountStore(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!), auth,
+  const api = createAccountApi({ store: new AccountStore(pool, randomBytes(32).toString('hex')), auth,
     origin: 'http://127.0.0.1:3100', mode: 'local' });
   let cookie = '';
   const request = async (path: string, body?: unknown, method = body === undefined ? 'GET' : 'POST') => {

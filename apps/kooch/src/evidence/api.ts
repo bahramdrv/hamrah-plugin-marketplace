@@ -8,7 +8,7 @@ function authorized(request: Request, secret: string | undefined) {
   const hash = (s: string) => createHash('sha256').update(s).digest();
   return timingSafeEqual(hash(value), hash(`Bearer ${secret}`));
 }
-export function createEvidenceApi(options: { store: EvidenceStore; adminSecret?: string; syncSecret?: string; fetch?: typeof fetch; deadlineMs?: number }) {
+export function createEvidenceApi(options: { store: EvidenceStore; adminSecret?: string; syncSecret?: string; fetch?: typeof fetch; deadlineMs?: number; operations?: () => import('../operations/status').OperationStatus }) {
   return { async handle(request: Request, path: string) {
     try {
       if (!['status', 'candidate', 'sync'].includes(path)) return reply({ error: 'not_found' }, 404);
@@ -18,7 +18,7 @@ export function createEvidenceApi(options: { store: EvidenceStore; adminSecret?:
       if (path === 'candidate') return reply({ candidate: (await options.store.read()).candidate });
       const state = path === 'status' ? await options.store.read() : await syncStep(options.store, options.fetch, options.deadlineMs);
       if (!state) return reply({ error: 'sync_busy' }, 409);
-      return reply(evidenceStatus(state, options.store.now()));
+      return reply({ ...evidenceStatus(state, options.store.now()), ...(path === 'status' && options.operations ? { operations: options.operations() } : {}) });
     } catch { return reply({ error: 'evidence_unavailable' }, 503); }
   } };
 }

@@ -77,6 +77,7 @@ export function AccountPage() {
   }
   return <div className="app-shell"><header><a href="/" className="brand"><strong>کوچ</strong><span>حساب من</span></a><a href="/">بازگشت به قطب‌نما</a></header>
     <main className="account-layout"><section className="account-panel" aria-busy={busy}>
+      <p className="help"><a href="/privacy">پیش از ساخت حساب یا ذخیرهٔ پاسخ‌ها، گیرندگان داده و نگهداری آن را بخوان.</a></p>
       <h1>{recovery ? 'رمز تازهٔ تو' : signedEmail ? 'پروندهٔ من' : 'ادامهٔ مسیر با حساب کوچ'}</h1>
       {local && <p className="notice">نسخهٔ آزمایشی محلی؛ ایمیل‌ها فقط در صندوق تست همین رایانه تحویل می‌شوند. از ایمیل و رمز واقعی استفاده نکن.</p>}
       {configured === null && !error && <p role="status">در حال دریافت وضعیت…</p>}

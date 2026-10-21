@@ -1,7 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import pg from 'pg';
-import policy from '../data/ai-gateway-policy.json';
+import shippedPolicy from '../data/ai-gateway-policy.json';
+// Historical Preview authorization is a fixture; the shipped pilot defaults to zero.
+const policy = structuredClone(shippedPolicy);
+policy.limits = { ...policy.limits, monthly_global_minor: 500000, daily_global_minor: 500000, daily_user_minor: 500000, daily_user_requests: 20 };
 import { previewAcceptanceProfile, createScopedQuestionAssistance } from '../src/ai/preview-acceptance';
 import { acceptanceFingerprint, policyGate } from '../src/ai/policy';
 import { AiBudgetLedger } from '../src/ai/budget';

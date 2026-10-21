@@ -214,3 +214,39 @@ test('network failure puts consuming reports under review without claiming that 
     assert.ok(!created.report.route_results[0].conditions.some((r:any)=>r.id==='source_change'));
   } finally {await h.close();await sync.close();}
 });
+
+test('release and AI reasons are visible to the independent operator without exposing any credential to applicants', { skip: !enabled }, async () => {
+  const h = await setup(sourceFixture().fetch);
+  try {
+    const { operationStatus } = await import('../src/operations/status');
+    const operations = () => operationStatus({ VERCEL_ENV: 'production', KOOCH_APP_ORIGIN: 'https://my.kooch.app', KOOCH_AI_ROLLOUT: 'public', KOOCH_ARVAN_API_KEY: 'secret-not-for-the-response' }, new Date('2026-10-21T12:00:00Z'));
+    const api = createEvidenceApi({ store: h.store, adminSecret, syncSecret, operations });
+    const request = (secret: string) => api.handle(new Request('http://localhost/api/evidence/status', { headers: { authorization: `Bearer ${secret}` } }), 'status');
+    assert.equal((await request(syncSecret)).status, 401);
+    assert.equal((await request('ordinary-applicant-cookie')).status, 401);
+    const response = await request(adminSecret); assert.equal(response.status, 200); assert.equal(response.headers.get('cache-control'), 'no-store');
+    const body = await response.text(); assert.ok(!body.includes('secret-not-for-the-response'));
+    const data = JSON.parse(body); assert.equal(data.operations.ai.wording, 'credentials_missing'); assert.equal(data.operations.ai.interpretation, 'credentials_missing');
+    assert.equal(data.operations.ai.limits.monthly_global_minor, 500000);
+    assert.equal(data.operations.ai.report_explanation, 'not_implemented');
+  } finally { await h.close(); }
+});
+
+// The configuration seam is supplied by the operator; no applicant input chooses a model.
+test('operator diagnostics distinguish expired pricing, an unsupported model and an unsupported schema', { skip: !enabled }, async () => {
+  const h = await setup(sourceFixture().fetch);
+  try {
+    const { operationStatus } = await import('../src/operations/status');
+    const source = (await import('../data/ai-gateway-policy.json')).default;
+    const env = { VERCEL_ENV: 'production', KOOCH_APP_ORIGIN: 'https://my.kooch.app', KOOCH_AI_ROLLOUT: 'public' };
+    for (const [value, now, expected] of [
+      [source, new Date('2026-10-22T10:04:01Z'), 'pricing_unknown'],
+      [{ ...source, connection: { ...source.connection, model: 'unaccepted-model' } }, new Date('2026-10-21T12:00:00Z'), 'model_unaccepted'],
+      [{ ...source, schema_version: 999 }, new Date('2026-10-21T12:00:00Z'), 'schema_unsupported'],
+    ] as const) {
+      const api = createEvidenceApi({ store: h.store, adminSecret, syncSecret, operations: () => operationStatus(env, now, value) });
+      const r = await api.handle(new Request('http://localhost/api/evidence/status', { headers: { authorization: `Bearer ${adminSecret}` } }), 'status');
+      assert.equal((await r.json()).operations.ai.wording, expected);
+    }
+  } finally { await h.close(); }
+});

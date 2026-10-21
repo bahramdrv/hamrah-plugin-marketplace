@@ -1,7 +1,8 @@
 'use client';
 import { useState } from 'react';
 import type { evidenceStatus } from '../../../src/evidence/sync';
-type Status = ReturnType<typeof evidenceStatus>;
+type Status = ReturnType<typeof evidenceStatus> & { operations?: import('../../../src/operations/status').OperationStatus };
+const aiLabels: Record<string,string> = { bounded_arvan:'آروان با سقف مصرف',synthetic_acceptance_only:'فقط پذیرش مصنوعی',disabled_by_operator:'خاموش به انتخاب مدیر',environment_unaccepted:'محیط انتشار پذیرفته نشده',acceptance_case_invalid:'پروندهٔ پذیرش معتبر نیست',model_unaccepted:'مدل پذیرفته نشده',schema_unsupported:'نسخهٔ قرارداد پشتیبانی نمی‌شود',credentials_missing:'تنظیم محرمانهٔ لازم موجود نیست',budget_zero:'بودجه صفر',budget_exhausted:'سقف مصرف',pricing_unknown:'تعرفه نامعلوم',capability_unaccepted:'قابلیت پذیرفته نشده',configuration_invalid:'قرارداد پیکربندی نامعتبر' };
 const labels = { idle:'هنوز اجرا نشده',fetching:'دریافت در حال ادامه',ok:'دریافت کامل',review_required:'تغییر نیازمند بازبینی',error:'خطای دریافت' };
 export default function EvidenceAdminPage() {
   const [secret,setSecret]=useState(''),[status,setStatus]=useState<Status|null>(null),[error,setError]=useState(''),[busy,setBusy]=useState(false);
@@ -24,6 +25,7 @@ export default function EvidenceAdminPage() {
       <p>مسیرهای نسخهٔ بازبینی‌شده: {status.coverage.total.toLocaleString('fa-IR')} · پوشش جاری: {status.coverage.current.toLocaleString('fa-IR')} · منقضی: {status.coverage.expired.toLocaleString('fa-IR')} · نیازمند بازبینی: {status.coverage.review_required.toLocaleString('fa-IR')}</p>
       {status.checkpoint!==null&&<p>صفحه‌های دریافت‌شده: {status.checkpoint.toLocaleString('fa-IR')} از {status.expected_pages?.toLocaleString('fa-IR')}؛ نسخهٔ نیمه‌تمام فعال نیست.</p>}
       <p>شناسهٔ برداشت: <bdi style={{overflowWrap:'anywhere'}}>{status.active_id}</bdi></p>
+      {status.operations && <section><h2>کمک هوشمند و انتشار</h2><p>بیان سؤال: {aiLabels[status.operations.ai.wording] ?? status.operations.ai.wording} · تفسیر پاسخ: {aiLabels[status.operations.ai.interpretation] ?? status.operations.ai.interpretation}</p><p>توضیح مولد کارنامه هنوز پیاده نشده است.</p><p>سقف مشترک ماهانه: {status.operations.ai.limits.monthly_global_minor.toLocaleString('fa-IR')} ریال · سقف روزانهٔ کاربر: {status.operations.ai.limits.daily_user_minor.toLocaleString('fa-IR')} ریال</p><p>{status.operations.ai.note}</p><p>نسخهٔ انتشار: <bdi style={{overflowWrap:'anywhere'}}>{status.operations.release ?? 'ثبت نشده'}</bdi></p></section>}
       <h2>صف بازبینی</h2>{!status.reviews.length?<p>تغییر شناخته‌شده‌ای در صف نیست؛ این وضعیت تأیید کامل همهٔ مسیرها نیست.</p>:<ul>{status.reviews.map(r=><li key={r.route_id}><bdi>{r.route_id}</bdi> · {r.reason==='added'?'مسیر تازه':r.reason==='removed'?'حذف از برداشت جاری':'تغییر شواهد'} · <bdi>{r.fields.join(', ')}</bdi></li>)}</ul>}
       <p>برای رفع بازبینی، منبع اولیه و نسخهٔ قواعد را بررسی و نسخهٔ بازبینی‌شدهٔ تازه منتشر کن. این صفحه قواعد را خودکار فعال نمی‌کند.</p>
     </section>}

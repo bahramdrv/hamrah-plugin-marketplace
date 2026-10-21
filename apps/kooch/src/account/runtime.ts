@@ -6,6 +6,8 @@ import { AccountStore } from './store';
 import { createAccountApi } from './api';
 import { GoogleOAuth } from './google';
 import { AiBudgetLedger } from '../ai/budget';
+import { productionAcceptanceProfile } from '../ai/production-acceptance';
+import { fixedQuestion } from '../ai/question-assistance';
 import { policyGate } from '../ai/policy';
 import { createGatewayAnswerInterpretation } from '../ai/answer-interpretation';
 import { createScopedQuestionAssistance } from '../ai/preview-acceptance';
@@ -49,13 +51,17 @@ export async function accountRuntime() {
       key: process.env.KOOCH_AUTH_PUBLISHABLE_KEY, serviceKey: process.env.KOOCH_AUTH_SERVICE_KEY!, origin });
     const google = process.env.KOOCH_GOOGLE_AUTH_ENABLED === 'true' ? new GoogleOAuth({ auth, origin,
       key: process.env.KOOCH_SESSION_ENCRYPTION_KEY!, secure: mode === 'hosted' }) : undefined;
-    const questionAssistance = createScopedQuestionAssistance({ policy: aiPolicy, ledger, environment: process.env,
+    const release = productionAcceptanceProfile(aiPolicy, process.env, new Date());
+    const effectivePolicy = release?.policy ?? aiPolicy;
+    const wording = createScopedQuestionAssistance({ policy: effectivePolicy, ledger, environment: process.env,
       getCredential: () => stableKey ? process.env.KOOCH_ARVAN_API_KEY : undefined });
-    const answerInterpretation = createGatewayAnswerInterpretation({ policy: aiPolicy, ledger,
+    const interpret = createGatewayAnswerInterpretation({ policy: effectivePolicy, ledger,
       getCredential: () => stableKey ? process.env.KOOCH_ARVAN_API_KEY : undefined });
-    const interpretationGate = policyGate(aiPolicy, new Date(), 'answer-interpretation');
+    const questionAssistance: typeof wording = (view, context) => release?.mode === 'synthetic' && view.case_id !== release.caseId ? Promise.resolve(fixedQuestion(view, 'capability_unaccepted')) : wording(view, context);
+    const answerInterpretation: typeof interpret = (request, context) => release?.mode === 'synthetic' && request.draft.case_id !== release.caseId ? Promise.resolve({ status: 'capability_unaccepted' }) : interpret(request, context);
+    const interpretationGate = policyGate(effectivePolicy, new Date(), 'answer-interpretation');
     const interpretationDisclosure = interpretationGate.status === 'accepted' ? { ...interpretationGate.policy.interpretation!, acceptance_notice: interpretationGate.policy.interpretation?.acceptance_basis?.kind === 'owner_accepted_unknowns' ? 'محل پردازش، گیرندهٔ بالادست و حدود نگهداری محتوایی احراز نشده‌اند؛ استفاده با پذیرش این نامعلومی‌ها توسط مالک سرویس فعال شده است. می‌توانی پاسخ ساختارمند بدهی.' : undefined } : null;
-    return createAccountApi({ store, mode, origin, auth, google, questionAssistance, answerInterpretation, interpretationDisclosure, accounting: stableKey ? ledger : undefined });
+    return createAccountApi({ store, mode, origin, auth, google, questionAssistance, answerInterpretation, interpretationDisclosure, pilotAi: () => release?.mode === 'public' && policyGate(release.policy, new Date()).status === 'accepted' && stableKey && Boolean(process.env.KOOCH_ARVAN_API_KEY) ? 'bounded_arvan' : 'disabled', accounting: stableKey ? ledger : undefined });
   })().catch(error => { runtime = undefined; throw error; });
   return runtime;
 }

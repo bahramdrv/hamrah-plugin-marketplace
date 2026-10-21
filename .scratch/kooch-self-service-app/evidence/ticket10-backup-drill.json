@@ -1,0 +1,16 @@
+{
+  "checked_on": "2026-10-21",
+  "environment": "synthetic local only; hosted recovery not exercised",
+  "encryption": "AES-256-GCM",
+  "schemas": [
+    "auth",
+    "kooch"
+  ],
+  "restore_target": "isolated loopback database",
+  "api_report_exact": true,
+  "api_cross_owner": 404,
+  "restored_auth_users": 10,
+  "unsafe_restore_rejections": 2,
+  "production_modified": false,
+  "conflicting_libpq_environment_ignored": true
+}

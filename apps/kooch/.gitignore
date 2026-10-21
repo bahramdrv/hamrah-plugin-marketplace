@@ -4,3 +4,6 @@ node_modules/
 .env*
 !.env.example
 local/.env
+
+.backups/
+*.kooch-backup

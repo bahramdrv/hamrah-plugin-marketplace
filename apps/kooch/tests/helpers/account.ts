@@ -2,7 +2,7 @@ import type { EvidenceReview } from '../../src/report/contract';
 import type { AnswerInterpretation } from '../../src/ai/answer-interpretation';
 import type { QuestionAssistance } from '../../src/ai/question-assistance';
 import type { AiBudgetLedger } from '../../src/ai/budget';
-import { randomUUID } from 'node:crypto';
+import { randomUUID, randomBytes } from 'node:crypto';
 import pg, { type PoolClient } from 'pg';
 import { createAccountApi } from '../../src/account/api';
 import { AuthProvider } from '../../src/account/auth';
@@ -10,7 +10,8 @@ import { AccountStore } from '../../src/account/store';
 export async function harness(now: () => Date = () => new Date(), questionAssistance?: QuestionAssistance, accounting?: AiBudgetLedger, answerInterpretation?: AnswerInterpretation, evidenceReview?: (client?: PoolClient) => Promise<EvidenceReview>, poolOptions: { max?: number; connectionTimeoutMillis?: number } = {}) {
   const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL, ...poolOptions });
   const auth = new AuthProvider({ url: process.env.KOOCH_AUTH_URL!, serviceKey: process.env.KOOCH_AUTH_SERVICE_KEY!, origin: 'http://127.0.0.1:3100' });
-  const store = new AccountStore(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!, now, async (owner, saved, client) => {
+  // Independent fixture keys prevent unrelated tests sharing the global rate bucket.
+  const store = new AccountStore(pool, randomBytes(32).toString('hex'), now, async (owner, saved, client) => {
     const draft = saved.form?.draft;
     if (draft?.accounting_policy) await accounting?.detachOperation(owner, `answer-interpretation:${saved.id}:${draft.revision}:${draft.id}`, draft.accounting_policy, client);
   }, evidenceReview);

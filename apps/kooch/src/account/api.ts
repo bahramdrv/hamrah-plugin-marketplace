@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { pilotNotice } from '../pilot';
 import { AuthProvider } from './auth';
 import { AccountStore } from './store';
 import { AccountError, unauthorized, credentialsSchema, caseInputSchema } from './contract';
@@ -30,7 +31,7 @@ async function body(request: Request) {
   }
   try { return JSON.parse(Buffer.concat(chunks).toString('utf8')); } catch { throw invalid(); }
 }
-export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth; questionAssistance?: QuestionAssistance; accounting?: AiBudgetLedger; answerInterpretation?: AnswerInterpretation; interpretationDisclosure?: import('../ai/question-assistance').AssistedFormView['interpretation_disclosure'] }) {
+export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth; pilotAi?: () => 'disabled' | 'bounded_arvan'; questionAssistance?: QuestionAssistance; accounting?: AiBudgetLedger; answerInterpretation?: AnswerInterpretation; interpretationDisclosure?: import('../ai/question-assistance').AssistedFormView['interpretation_disclosure'] }) {
   const { store, auth } = options;
   const formReply = (view: object) => reply({ ...view, interpretation_disclosure: options.interpretationDisclosure ?? null });
   const questionAssistance = options.questionAssistance ?? createQuestionAssistance();
@@ -82,7 +83,7 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
           }
           return new Response(null, { status: 303, headers });
         }
-        if (operation === 'status' && method === 'GET') return reply({ configured: true, mode: options.mode, google_enabled: Boolean(options.google), email_delivery: options.mode === 'local' ? 'local_test_only' : 'configured' });
+        if (operation === 'status' && method === 'GET') return reply({ configured: true, pilot: { ...pilotNotice, ai: options.pilotAi?.() ?? 'disabled' }, mode: options.mode, google_enabled: Boolean(options.google), email_delivery: options.mode === 'local' ? 'local_test_only' : 'configured' });
         if (operation === 'session' && method === 'GET') {
           const state = await store.session(cookieToken(request));
           if (state.purpose === 'recovery') { await authenticated(request, 'recovery'); return reply({ signed_in: false, recovery: true }); }

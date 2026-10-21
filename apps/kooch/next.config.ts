@@ -9,7 +9,10 @@ const config: NextConfig = {
       { key: 'X-Content-Type-Options', value: 'nosniff' },
       { key: 'X-Frame-Options', value: 'DENY' },
       { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-    ] }];
+    ] }, ...['/account/:path*', '/form/:path*', '/report/:path*', '/admin/:path*'].map(source => ({ source, headers: [
+      { key: 'Cache-Control', value: 'private, no-store, max-age=0' },
+      { key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive' },
+    ] }))];
   },
 };
 export default config;

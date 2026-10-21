@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "arvan-kooch-1",
+  "version": "kooch-personal-pilot-no-ai-1",
   "connection": {
     "base_url": "https://api.arvancloudai.ir/v1",
     "api_path": "/chat/completions",
@@ -38,10 +38,10 @@
   },
   "limits": {
     "currency": "IRR",
-    "monthly_global_minor": 500000,
-    "daily_global_minor": 500000,
-    "daily_user_minor": 500000,
-    "daily_user_requests": 20,
+    "monthly_global_minor": 0,
+    "daily_global_minor": 0,
+    "daily_user_minor": 0,
+    "daily_user_requests": 0,
     "external_hold_minor": 47676
   }
 }

@@ -1,0 +1,50 @@
+{
+  "checked_on": "2026-10-21",
+  "vercel_plan": "Hobby",
+  "scope_authorized": "personal_noncommercial; later user requested public Arvan AI activation",
+  "current_production_commit": "60e7fae7bac8844b6ea454e91c15caeb11d580ae",
+  "current_deployment_id": "dpl_E5CMV9ebru3hWqNA6QPRP3UoaWbJ",
+  "supabase_plan": "Free",
+  "supabase_region": "eu-west-1",
+  "supabase_version": "17.11",
+  "evidence_table_present_before_upgrade": false,
+  "quota_table_present": true,
+  "retention": {
+    "active": true,
+    "schedule": "0 * * * *",
+    "command_md5": "064f9bd7f3649fb5c06655b2a0337603",
+    "successful_runs_last_day": 24
+  },
+  "preview_role": {
+    "login": false,
+    "expired": true,
+    "super": false,
+    "bypass": false
+  },
+  "preview_server_secrets_still_configured": true,
+  "backup_dashboard": "No backups",
+  "arvan_model": "Qwen3.5-35B-A3B",
+  "marketplace_label": "Hosted by ArvanCloud",
+  "tariff_checked_at": "2026-10-21T10:04:01Z",
+  "tariff_review_expires_at": "2026-10-22T10:04:01Z",
+  "input_IRR_per_million": 4200000,
+  "output_IRR_per_million": 4200000,
+  "tariff_source": "https://panel.arvancloud.ir/aiaas/model/bazaar?fullText=Qwen3.5-35B-A3B",
+  "invoice_all_charges_verified": false,
+  "provider_processing_and_retention_verified": false,
+  "paid_requests_in_this_audit": 0,
+  "hosted_changes_applied": [
+    "006-evidence-sync.sql",
+    "existing Arvan key stored in Production secret",
+    "existing accounting HMAC stored in Production secret"
+  ],
+  "migration_acceptance": {
+    "rls": true,
+    "force_rls": true,
+    "public_read": false,
+    "runtime_read": false,
+    "server_write": true
+  },
+  "public_ai_enabled": false,
+  "deployment_pending": true
+}
