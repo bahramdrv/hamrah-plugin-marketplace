@@ -292,3 +292,21 @@ test('a 429 keeps the submitted draft and gates fresh interpretation attempts wi
     assert.equal(next.draft.text, input.text);
   } finally { await h.close(); }
 });
+
+test('an explicit owner acceptance of data-handling unknowns permits the bounded task without claiming provider verification', { skip: !enabled }, async () => {
+  const { aiCompletion } = await import('./helpers/ai');
+  const h = await interpretedHarness(async () => aiCompletion({ question_id: 'age_exact', question_version: 1, candidate_id: 'candidate-1' }), p => {
+    Object.assign(p.interpretation!, {
+      processing_location: 'نامعلوم؛ با پذیرش مالک', recipient: 'درگاه آروان؛ بالادست مدل احراز نشده', retention: 'حدود نگهداری محتوایی احراز نشده',
+      acceptance_basis: { kind: 'owner_accepted_unknowns', accepted_at: '2040-06-01T00:00:00Z', reference: 'docs/adr/0013-owner-accepted-ai-data-uncertainty.md', unknowns: ['processing_location', 'upstream_recipient', 'content_retention'] },
+    });
+  });
+  try {
+    const c = await h.verifiedClient(); await c.request('case', saveInput());
+    const response = await c.request('interpretation', draftInput());
+    assert.equal(response.status, 200);
+    const data = await response.json();
+    assert.equal(data.draft.status, 'proposed');
+    assert.ok(!data.answers.some((r: any) => r.question.id === 'age_exact'));
+  } finally { await h.close(); }
+});

@@ -18,6 +18,12 @@ export const gatewayPolicySchema = z.object({
     contract_version: z.literal('answer-interpretation-1'), processing_location: z.string().min(1).max(500),
     recipient: z.string().min(1).max(500), retention: z.string().min(1).max(1000), evidence: z.url().max(1000),
     checked_at: z.iso.datetime(), expires_at: z.iso.datetime(),
+    acceptance_basis: z.discriminatedUnion('kind', [
+      z.object({ kind: z.literal('official_evidence') }).strict(),
+      z.object({ kind: z.literal('owner_accepted_unknowns'), accepted_at: z.iso.datetime(), reference: z.string().min(1).max(500),
+        unknowns: z.tuple([z.literal('processing_location'), z.literal('upstream_recipient'), z.literal('content_retention')]),
+      }).strict(),
+    ]).optional(),
   }).strict().optional(),
   tariff: z.object({ version: z.string().min(1), verified_at: z.iso.datetime(), expires_at: z.iso.datetime(), currency: z.string().min(3).max(64),
     unit: z.literal('minor'), tokens_per_unit: positive, input_minor_per_unit: money, output_minor_per_unit: money,
@@ -49,6 +55,7 @@ export function policyGate(value: unknown, now: Date, task: 'question-wording' |
   if (!policy.connection.authorization || !policy.connection.upstream_identity || !a.iam_scope || !a.gateway_retry_policy || !a.tasks[task] ||
     !a.expires_at || Date.parse(a.expires_at) <= now.getTime() || a.fingerprint !== acceptanceFingerprint(policy)) return { status: 'capability_unaccepted' as const };
   if (task === 'answer-interpretation' && (!policy.interpretation || Date.parse(policy.interpretation.checked_at) > now.getTime() || Date.parse(policy.interpretation.expires_at) <= now.getTime())) return { status: 'capability_unaccepted' as const };
+  if (task === 'answer-interpretation' && policy.interpretation?.acceptance_basis?.kind === 'owner_accepted_unknowns' && Date.parse(policy.interpretation.acceptance_basis.accepted_at) > now.getTime()) return { status: 'capability_unaccepted' as const };
   const reservation = usageCost(policy, { prompt_tokens: t.max_input_tokens, completion_tokens: t.max_output_tokens });
   if (reservation <= 0 || reservation > t.max_request_minor) return { status: 'pricing_unknown' as const };
   const held = BigInt(policy.limits.external_hold_minor) + BigInt(reservation);

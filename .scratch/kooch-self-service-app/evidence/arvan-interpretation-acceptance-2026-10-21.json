@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-10-21T03:48:32.544Z",
+  "policy": "arvan-kooch-interpretation-acceptance-20261021",
+  "acceptance_basis": "owner_accepted_unknowns",
+  "model": "Qwen3.5-35B-A3B",
+  "endpoint": "https://api.arvancloudai.ir/v1/chat/completions",
+  "max_calls": 3,
+  "max_batch_IRR": 54000,
+  "shared_cap_IRR": 500000,
+  "max_output_tokens": 128,
+  "deadline_ms": 8000,
+  "retry": false,
+  "synthetic_only": true,
+  "cases": [
+    {
+      "question_id": "age_exact",
+      "text": "۲۷ سال دارم",
+      "expected_status": "proposed",
+      "answer": {
+        "state": "known",
+        "value": 27
+      }
+    },
+    {
+      "question_id": "budget",
+      "text": "۱۲۰۰۰ یورو دارم",
+      "expected_status": "proposed",
+      "answer": {
+        "state": "known",
+        "value": {
+          "amount": 12000,
+          "currency": "EUR"
+        }
+      }
+    },
+    {
+      "question_id": "study_level",
+      "text": "شاید ارشد یا دکتری؛ هنوز تصمیم نگرفته‌ام",
+      "expected_status": "ambiguous"
+    }
+  ],
+  "dispatches": 2,
+  "results": [
+    {
+      "scenario": 1,
+      "question": "age_exact",
+      "status": "proposed",
+      "passed": true,
+      "elapsed_ms": 1165,
+      "state": "settled",
+      "charged_IRR": "3625",
+      "usage": {
+        "total_tokens": 863,
+        "prompt_tokens": 829,
+        "completion_tokens": 34
+      },
+      "outcome": "proposed",
+      "hosted_hold_id": "a670d8affc5f84b6352783745c642a7a80a9ad9c082a0ddedd0137606321ef4e"
+    },
+    {
+      "scenario": 2,
+      "question": "budget",
+      "status": "invalid_response",
+      "passed": false,
+      "elapsed_ms": 135,
+      "state": "unknown",
+      "charged_IRR": null,
+      "usage": null,
+      "outcome": "invalid_response",
+      "hosted_hold_id": "01ce885640ba45895ff9aa16db67d0883183271b786f7e97b7ad28d876039c77"
+    }
+  ],
+  "completed": false,
+  "raw_provider_text_recorded": false,
+  "hosted_reconciliation": {
+    "verified_in_sql_editor": true,
+    "settled_IRR": 3625,
+    "unknown_reserved_IRR": 18000,
+    "unsent_cancelled": 1,
+    "previous_hosted_IRR": 10078,
+    "previous_external_hold_IRR": 47676,
+    "shared_exposure_IRR": 79379,
+    "shared_cap_IRR": 500000,
+    "screenshot": "interpretation-hosted-ledger-2026-10-21.png"
+  }
+}

@@ -49,7 +49,7 @@ export async function accountRuntime() {
     const answerInterpretation = createGatewayAnswerInterpretation({ policy: aiPolicy, ledger,
       getCredential: () => stableKey ? process.env.KOOCH_ARVAN_API_KEY : undefined });
     const interpretationGate = policyGate(aiPolicy, new Date(), 'answer-interpretation');
-    const interpretationDisclosure = interpretationGate.status === 'accepted' ? interpretationGate.policy.interpretation : null;
+    const interpretationDisclosure = interpretationGate.status === 'accepted' ? { ...interpretationGate.policy.interpretation!, acceptance_notice: interpretationGate.policy.interpretation?.acceptance_basis?.kind === 'owner_accepted_unknowns' ? 'محل پردازش، گیرندهٔ بالادست و حدود نگهداری محتوایی احراز نشده‌اند؛ استفاده با پذیرش این نامعلومی‌ها توسط مالک سرویس فعال شده است. می‌توانی پاسخ ساختارمند بدهی.' : undefined } : null;
     return createAccountApi({ store, mode, origin, auth, google, questionAssistance, answerInterpretation, interpretationDisclosure, accounting: stableKey ? ledger : undefined });
   })().catch(error => { runtime = undefined; throw error; });
   return runtime;

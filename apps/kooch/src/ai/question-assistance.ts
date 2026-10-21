@@ -44,7 +44,7 @@ const completionSchema = z.object({
 });
 export type Status = 'budget_zero' | 'simulated_wording' | 'worded' | 'invalid_response' | 'unavailable' | 'timeout' | 'no_question' | 'stale' |
   'configuration_invalid' | 'pricing_unknown' | 'capability_unaccepted' | 'budget_exhausted' | 'cooldown' | 'policy_blocked' | 'already_requested' | 'accounting_unavailable' | 'credentials_missing';
-export type AssistedFormView = FormView & { interpretation_disclosure?: { recipient: string; processing_location: string; retention: string; evidence: string } | null; question_assistance: {
+export type AssistedFormView = FormView & { interpretation_disclosure?: { recipient: string; processing_location: string; retention: string; evidence: string; acceptance_notice?: string } | null; question_assistance: {
   policy_version: string; status: Status; model_listed: boolean;
   inference_accepted: boolean; answer_interpretation_accepted: boolean;
   daily_request_limit?: number;
