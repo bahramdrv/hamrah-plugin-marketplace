@@ -2,8 +2,8 @@
   "checked_on": "2026-10-21",
   "vercel_plan": "Hobby",
   "scope_authorized": "personal_noncommercial; later user requested public Arvan AI activation",
-  "current_production_commit": "60e7fae7bac8844b6ea454e91c15caeb11d580ae",
-  "current_deployment_id": "dpl_E5CMV9ebru3hWqNA6QPRP3UoaWbJ",
+  "current_production_commit": "8973303f2d58d35c6703a586110b15e8594b99fd",
+  "current_deployment_id": "dpl_DMY6m6DPAve9cRWj1ftuYfmRjSXU",
   "supabase_plan": "Free",
   "supabase_region": "eu-west-1",
   "supabase_version": "17.11",
@@ -21,7 +21,7 @@
     "super": false,
     "bypass": false
   },
-  "preview_server_secrets_still_configured": true,
+  "preview_server_secrets_still_configured": false,
   "backup_dashboard": "No backups",
   "arvan_model": "Qwen3.5-35B-A3B",
   "marketplace_label": "Hosted by ArvanCloud",
@@ -32,11 +32,14 @@
   "tariff_source": "https://panel.arvancloud.ir/aiaas/model/bazaar?fullText=Qwen3.5-35B-A3B",
   "invoice_all_charges_verified": false,
   "provider_processing_and_retention_verified": false,
-  "paid_requests_in_this_audit": 0,
+  "paid_requests_in_this_audit": 2,
   "hosted_changes_applied": [
     "006-evidence-sync.sql",
     "existing Arvan key stored in Production secret",
-    "existing accounting HMAC stored in Production secret"
+    "existing accounting HMAC stored in Production secret",
+    "public evidence exporter 1.0.0 installed and accepted; 29 routes, 2 pages",
+    "8973303 deployed and public rollout enabled",
+    "five sensitive Preview environment settings removed"
   ],
   "migration_acceptance": {
     "rls": true,
@@ -45,6 +48,44 @@
     "runtime_read": false,
     "server_write": true
   },
-  "public_ai_enabled": false,
-  "deployment_pending": true
+  "public_ai_enabled": true,
+  "deployment_pending": false,
+  "previous_production_commit": "60e7fae7bac8844b6ea454e91c15caeb11d580ae",
+  "previous_deployment_id": "dpl_E5CMV9ebru3hWqNA6QPRP3UoaWbJ",
+  "synthetic_acceptance_deployment_id": "dpl_7he865yxk79CYKaED4MXMqyVDmHu",
+  "historical_deployment_env_not_erased": true,
+  "public_status": "bounded_arvan",
+  "final_checked_at": "2026-10-21T15:13:32.659617+00:00",
+  "financial_IRR": {
+    "cap": 500000,
+    "external_hold": 47676,
+    "hosted_charged": 27931,
+    "hosted_unknown_hold": 18000,
+    "total_exposure": 93607,
+    "remaining": 406393,
+    "new_acceptance_charged": 6977
+  },
+  "iran_reachability": {
+    "owner_reported_opened": true,
+    "request_specified_without_vpn": true,
+    "network_provider": null,
+    "independently_verified": false
+  },
+  "remaining_release_gates": [
+    "independent operator and worker secrets plus complete hosted sync and scheduler",
+    "actual hosted backup and isolated Auth recovery acceptance",
+    "complete mobile/keyboard/zoom acceptance"
+  ],
+  "synthetic_accounts": {
+    "created": 2,
+    "second_deleted_with_explicit_approval": true,
+    "second_case_export_signin_status": 401,
+    "first_retained_for_recovery_acceptance": true
+  },
+  "evidence_operator_secrets": {
+    "owner_reported_saved": true,
+    "verified_present": false,
+    "fresh_ui_search": "No Results Found for KOOCH_EVIDENCE",
+    "handoff": "two Secret names prepared; values and Save by owner"
+  }
 }

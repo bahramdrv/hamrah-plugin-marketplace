@@ -1,0 +1,18 @@
+{
+  "source_commit": "8973303f2d58d35c6703a586110b15e8594b99fd",
+  "origin": "https://my.kooch.app",
+  "synthetic_only": true,
+  "paid_attempts": 2,
+  "other_case_guard": true,
+  "wording_attempted_at": "2026-10-21T14:56:24.253Z",
+  "wording_status": "worded",
+  "wording_completed_at": "2026-10-21T14:56:31.061Z",
+  "wording_question": "age_exact",
+  "interpretation_attempted_at": "2026-10-21T15:02:09.190Z",
+  "interpretation_status": "proposed",
+  "interpretation_completed_at": "2026-10-21T15:02:20.902Z",
+  "age_answer": {
+    "state": "known",
+    "value": 27
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-21T15:14:22.671Z",
+  "origin": "https://my.kooch.app",
+  "status": {
+    "configured": true,
+    "pilot": {
+      "kind": "personal_noncommercial",
+      "ai": "bounded_arvan",
+      "privacy_notice_version": "personal-pilot-privacy-2-arvan",
+      "coverage": "partial",
+      "report_explanation": "not_enabled"
+    },
+    "mode": "hosted",
+    "google_enabled": true,
+    "email_delivery": "configured"
+  },
+  "source_commit": "8973303f2d58d35c6703a586110b15e8594b99fd",
+  "deployment_id": "dpl_DMY6m6DPAve9cRWj1ftuYfmRjSXU",
+  "scope": "all authenticated owners; personal noncommercial synthetic pilot",
+  "tasks": [
+    "question-wording",
+    "answer-interpretation"
+  ],
+  "report_explanation": "not_implemented",
+  "tariff_acceptance_expires_at": "2026-10-22T10:04:01Z",
+  "monthly_global_cap_IRR": 500000,
+  "daily_owner_cap_IRR": 60000,
+  "daily_owner_dispatches": 3,
+  "paid_acceptance_calls": 2,
+  "automatic_retries": 0
+}

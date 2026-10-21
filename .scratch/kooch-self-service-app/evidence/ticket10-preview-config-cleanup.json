@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-21T15:08:29.257Z",
+  "settings": [
+    {
+      "key": "KOOCH_DATABASE_URL",
+      "production": true,
+      "preview": false
+    },
+    {
+      "key": "KOOCH_AUTH_SERVICE_KEY",
+      "production": true,
+      "preview": false
+    },
+    {
+      "key": "KOOCH_SESSION_ENCRYPTION_KEY",
+      "production": true,
+      "preview": false
+    },
+    {
+      "key": "KOOCH_AI_ACCOUNTING_KEY",
+      "production": true,
+      "preview": false
+    },
+    {
+      "key": "KOOCH_ARVAN_API_KEY",
+      "production": true,
+      "preview": false
+    }
+  ],
+  "historical_deployment_environment_not_erased": true,
+  "old_preview_database_role": "NOLOGIN; expired",
+  "source_credentials_not_revoked": true
+}
