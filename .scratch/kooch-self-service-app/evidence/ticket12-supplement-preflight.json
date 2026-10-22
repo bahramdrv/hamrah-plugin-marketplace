@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-22T17:44:43.806Z",
+  "model_calls": 0,
+  "results": [
+    {
+      "kind": "incomplete",
+      "routes": 2,
+      "conservative_input_bound": 9091,
+      "maximum_input_bound": 12000
+    },
+    {
+      "kind": "conflicting",
+      "routes": 1,
+      "conservative_input_bound": 3883,
+      "maximum_input_bound": 12000
+    }
+  ]
+}

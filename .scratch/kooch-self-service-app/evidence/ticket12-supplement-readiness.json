@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-22T17:59:00.011499+00:00",
+  "owner_approved": true,
+  "maximum_paid_calls": 2,
+  "maximum_reservation_minor": 101876,
+  "currency": "IRR",
+  "global_cap_minor": 500000,
+  "expires_at": "2026-10-23T15:16:59Z",
+  "prepared_cases": [
+    "incomplete",
+    "conflicting"
+  ],
+  "temporary_ordinary_accounts": 2,
+  "preparation_model_calls": 0,
+  "paid_attempts_executed": 2,
+  "waiting_for": null,
+  "public_explanation_enabled": true,
+  "cleanup_pending_after_tests": false,
+  "configuration_updated_via": "Official Vercel CLI 65.1.0 using pre-existing authenticated team access; exact --project ID and production environment",
+  "deployment_id": "dpl_GwfJWqovfxfCDRjkqPCE2sdnWwH7",
+  "source": "1bc3daf61f386e4ab7e9adc07f31cbdd4f247d0a",
+  "deployment_url": "https://kooch-6hcadtyjo-bahramd-s-projects2.vercel.app",
+  "paid_attempts_successful": 2,
+  "temporary_accounts_deleted": 2,
+  "public_activation_receipt": "ticket12-public-activation.json"
+}

@@ -1,0 +1,48 @@
+{
+  "checked_at": "2026-10-22T17:53:08.971Z",
+  "origin": "https://my.kooch.app",
+  "public_explanation_enabled": false,
+  "maximum_attempts": 2,
+  "maximum_total_reservation_minor": 101876,
+  "currency": "IRR",
+  "attempts": [
+    {
+      "index": 1,
+      "kind": "incomplete",
+      "started_at": "2026-10-22T17:45:56.643Z",
+      "max_reservation_minor": 50938,
+      "success": true,
+      "status": "ready",
+      "receipt": {
+        "state": "settled",
+        "reserved_minor": 50938,
+        "charged_minor": 10568,
+        "policy": "arvan-kooch-explanation-production-20261022",
+        "outcome": "ready"
+      },
+      "snapshot_unchanged": true,
+      "cards_grounded": true,
+      "replay_and_refresh_no_new_dispatch": true,
+      "completed_at": "2026-10-22T17:46:17.776Z"
+    },
+    {
+      "index": 2,
+      "kind": "conflicting",
+      "started_at": "2026-10-22T17:52:48.967Z",
+      "max_reservation_minor": 50938,
+      "success": true,
+      "status": "ready",
+      "receipt": {
+        "state": "settled",
+        "reserved_minor": 50938,
+        "charged_minor": 5730,
+        "policy": "arvan-kooch-explanation-production-20261022",
+        "outcome": "ready"
+      },
+      "snapshot_unchanged": true,
+      "cards_grounded": true,
+      "replay_and_refresh_no_new_dispatch": true,
+      "completed_at": "2026-10-22T17:53:08.971Z"
+    }
+  ]
+}

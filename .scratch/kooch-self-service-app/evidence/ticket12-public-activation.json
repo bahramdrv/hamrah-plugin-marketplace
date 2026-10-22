@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-10-22T17:57:05.513Z",
+  "origin": "https://my.kooch.app",
+  "source_commit": "1bc3daf61f386e4ab7e9adc07f31cbdd4f247d0a",
+  "deployment_id": "dpl_48tcAaabUDK2DVemU8uZjcCLEnGX",
+  "deployment_url": "https://kooch-odt86uh2f-bahramd-s-projects2.vercel.app",
+  "public_status": {
+    "kind": "personal_noncommercial",
+    "ai": "bounded_arvan",
+    "privacy_notice_version": "personal-pilot-privacy-2-arvan",
+    "coverage": "partial",
+    "report_explanation": "bounded_arvan"
+  },
+  "operations": {
+    "release": "1bc3daf61f386e4ab7e9adc07f31cbdd4f247d0a",
+    "checked_at": "2026-10-22T17:57:05.394Z",
+    "rollout": "public",
+    "ai": {
+      "wording": "bounded_arvan",
+      "interpretation": "bounded_arvan",
+      "report_explanation": "bounded_arvan",
+      "acceptance_expires_at": "2026-10-23T15:16:59Z",
+      "limits": {
+        "currency": "IRR",
+        "monthly_global_minor": 500000,
+        "daily_global_minor": 500000,
+        "daily_user_minor": 60000,
+        "daily_user_requests": 3,
+        "external_hold_minor": 47676
+      },
+      "note": "این وضعیت مجوز و پیکربندی است؛ سلامت لحظه‌ای upstream یا باقی‌ماندهٔ واقعی دفتر مالی را تضمین نمی‌کند."
+    }
+  },
+  "model_calls_during_activation_check": 0,
+  "synthetic_scenarios_passed": [
+    "complete",
+    "incomplete",
+    "conflicting"
+  ],
+  "temporary_accounts_deleted_original": 2,
+  "temporary_accounts_deleted_supplement": 2,
+  "original_synthetic_account_retained": true,
+  "explanation_charged_minor": 21830,
+  "wording_incident_unknown_reserved_minor": 17742,
+  "currency": "IRR",
+  "final_ledger": {
+    "settled_count": 13,
+    "charged_minor": 56491,
+    "unknown_count": 2,
+    "unknown_reserved_minor": 35742,
+    "external_hold_minor": 47676,
+    "global_exposure_minor": 139909,
+    "remaining_global_minor": 360091
+  }
+}

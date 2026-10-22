@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-22T17:26:25.017415+00:00",
+  "origin": "https://my.kooch.app",
+  "release": "1bc3daf61f386e4ab7e9adc07f31cbdd4f247d0a",
+  "deployment_id": "dpl_51zHxj1ZpHHVwpRh9ueKQRNuhQvr",
+  "deployment_url": "https://kooch-cc1tplvqy-bahramd-s-projects2.vercel.app",
+  "operations": {
+    "wording": "bounded_arvan",
+    "interpretation": "bounded_arvan",
+    "report_explanation": "synthetic_acceptance_only",
+    "expires_at": "2026-10-23T15:16:59Z"
+  },
+  "browser_refresh": {
+    "base_report_visible": true,
+    "saved_explanation_notice_visible": true,
+    "no_automatic_open": true,
+    "case_revision": 25,
+    "base_report_version": 2
+  },
+  "ledger_before_and_after_equal": {
+    "settled_count": 11,
+    "charged_minor": 40193,
+    "unknown_count": 2,
+    "unknown_reserved_minor": 35742,
+    "external_hold_minor": 47676
+  },
+  "new_model_dispatches_on_refresh": 0,
+  "total_global_exposure_minor": 123611,
+  "global_remaining_minor": 376389,
+  "public_explanation_enabled": false,
+  "paid_acceptance_stopped": true,
+  "temporary_accounts_deleted": 2,
+  "next_step_requires_revised_paid_acceptance_approval": true,
+  "verification": {
+    "app_tests": 131,
+    "root_tests": 384,
+    "python_tests": 47,
+    "typecheck": true,
+    "build": true,
+    "release": true,
+    "static": true,
+    "standards_findings": 0,
+    "spec_findings": 0
+  }
+}
