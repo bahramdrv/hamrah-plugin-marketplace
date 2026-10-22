@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-10-22T06:39:31.871626+00:00",
+  "origin": "existing Supabase kooch project",
+  "connection_private_file_ready": true,
+  "connection_placeholder": false,
+  "connection_query_options": false,
+  "provider_root_ca_present": true,
+  "private_file_mode": "0600",
+  "backup_attempt": {
+    "state": "failed",
+    "encrypted_archive_created": false,
+    "incomplete_output_removed": true,
+    "provider_error_text_logged": false
+  },
+  "diagnosis": {
+    "provider_pooler": true,
+    "port": 5432,
+    "admin_role": true,
+    "database_postgres": true,
+    "connection_failure_cause": "not_established",
+    "automatic_approval_review_timeouts": true,
+    "one_time_retry_pending": false,
+    "final_simple_admin_connection_authenticated": true,
+    "tcp_reachable": true,
+    "tls_verified": "TLSv1.3",
+    "production_database_probe_http": 200
+  },
+  "hosted_database_modified": false,
+  "restore_started": true,
+  "hosted_recovery_accepted": true,
+  "successful_retry": {
+    "state": "encrypted_backup_created",
+    "client": "existing Linux PostgreSQL 18.4 container via temporary pg_dump executable adapter",
+    "created_at": "2026-10-22T06:56:20.452Z",
+    "bytes": 176649,
+    "provider_tls_verify_full": true,
+    "hosted_database_modified": false
+  },
+  "final_checked_at": "2026-10-22T07:10:01.857625+00:00",
+  "note": "Earlier failed attempts removed incomplete output. No exact root cause is claimed for initial client/connection stalls. Final restore acceptance is in ticket10-hosted-recovery.json."
+}
