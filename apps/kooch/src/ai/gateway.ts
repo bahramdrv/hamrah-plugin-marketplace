@@ -11,7 +11,7 @@ function retryAfter(value: string | null, now: Date): Date | undefined {
 export type GatewayOptions = { policy: unknown; ledger: AiBudgetLedger; getCredential: () => string | undefined; transport?: typeof fetch; now?: () => Date; deadlineMs?: number };
 export type TaskResult = { status: string; accounting_policy?: string };
 export async function runGatewayTask<T extends TaskResult>(options: GatewayOptions, request: {
-  task: 'question-wording' | 'answer-interpretation'; operation: string; draft?: { case_id: string; revision: number; id: string };
+  task: 'question-wording' | 'answer-interpretation' | 'report-explanation'; operation: string; draft?: { case_id: string; revision: number; id: string };
   context?: { owner: string; isCurrent?: () => Promise<boolean> };
   execute: (options: { transport: typeof fetch; deadlineMs: number; onUsage: (usage: Usage, model: unknown) => Promise<void> }) => Promise<T>;
   fallback: (status: Status) => T;

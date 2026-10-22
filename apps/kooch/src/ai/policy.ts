@@ -12,7 +12,7 @@ export const gatewayPolicySchema = z.object({
     contract_version: z.literal('chat-completions-wording-5'), prompt_version: z.literal('question-wording-1'), guardrail_version: z.string().nullable(),
   }).strict(),
   acceptance: z.object({ fingerprint: z.string().nullable(), expires_at: z.iso.datetime().nullable(), iam_scope: z.enum(['resource-scoped', 'workspace-owner']).nullable(), gateway_retry_policy: z.enum(['disabled-confirmed', 'unknown-owner-accepted']).nullable(), published_tariff_accepted: z.boolean(),
-    tasks: z.object({ 'question-wording': z.boolean(), 'answer-interpretation': z.boolean() }).strict(),
+    tasks: z.object({ 'question-wording': z.boolean(), 'answer-interpretation': z.boolean(), 'report-explanation': z.boolean().optional() }).strict(),
   }).strict(),
   interpretation: z.object({
     contract_version: z.literal('answer-interpretation-1'), processing_location: z.string().min(1).max(500),
@@ -25,6 +25,7 @@ export const gatewayPolicySchema = z.object({
       }).strict(),
     ]).optional(),
   }).strict().optional(),
+  explanation: z.object({ contract_version: z.literal('report-explanation-1'), prompt_version: z.literal('report-explanation-1'), data_acceptance: z.object({ recipient: z.string().min(1).max(500), processing_location: z.string().min(1).max(500), retention: z.string().min(1).max(1000), accepted_at: z.iso.datetime(), expires_at: z.iso.datetime(), reference: z.string().min(1).max(500) }).strict().optional() }).strict().optional(),
   tariff: z.object({ version: z.string().min(1), verified_at: z.iso.datetime(), expires_at: z.iso.datetime(), currency: z.string().min(3).max(64),
     unit: z.literal('minor'), tokens_per_unit: positive, input_minor_per_unit: money, output_minor_per_unit: money,
     max_input_tokens: positive.max(1000000), max_output_tokens: z.literal(128), max_request_minor: positive, all_charges_included: z.boolean(),
@@ -33,7 +34,7 @@ export const gatewayPolicySchema = z.object({
 }).strict();
 export type GatewayPolicy = z.infer<typeof gatewayPolicySchema>;
 export function acceptanceFingerprint(policy: GatewayPolicy) {
-  return createHash('sha256').update(JSON.stringify({ version: policy.version, ...(policy.interpretation ? { interpretation: policy.interpretation, tasks: policy.acceptance.tasks } : {}), connection: policy.connection, tariff: policy.tariff, external_hold_minor: policy.limits.external_hold_minor, iam_scope: policy.acceptance.iam_scope, gateway_retry_policy: policy.acceptance.gateway_retry_policy, published_tariff_accepted: policy.acceptance.published_tariff_accepted })).digest('hex');
+  return createHash('sha256').update(JSON.stringify({ version: policy.version, ...(policy.explanation ? { explanation: policy.explanation, tasks: policy.acceptance.tasks } : {}), ...(policy.interpretation ? { interpretation: policy.interpretation, tasks: policy.acceptance.tasks } : {}), connection: policy.connection, tariff: policy.tariff, external_hold_minor: policy.limits.external_hold_minor, iam_scope: policy.acceptance.iam_scope, gateway_retry_policy: policy.acceptance.gateway_retry_policy, published_tariff_accepted: policy.acceptance.published_tariff_accepted })).digest('hex');
 }
 export function usageCost(policy: Pick<GatewayPolicy, 'tariff'>, usage: Pick<Usage, 'prompt_tokens' | 'completion_tokens'>) {
   const t = policy.tariff;
@@ -43,7 +44,7 @@ export function usageCost(policy: Pick<GatewayPolicy, 'tariff'>, usage: Pick<Usa
   if (total > BigInt(Number.MAX_SAFE_INTEGER)) throw Error('Cost out of range.');
   return Number(total);
 }
-export function policyGate(value: unknown, now: Date, task: 'question-wording' | 'answer-interpretation' = 'question-wording') {
+export function policyGate(value: unknown, now: Date, task: 'question-wording' | 'answer-interpretation' | 'report-explanation' = 'question-wording') {
   const parsed = gatewayPolicySchema.safeParse(value);
   if (!parsed.success) return { status: 'configuration_invalid' as const };
   const policy = parsed.data;
@@ -56,6 +57,10 @@ export function policyGate(value: unknown, now: Date, task: 'question-wording' |
     !a.expires_at || Date.parse(a.expires_at) <= now.getTime() || a.fingerprint !== acceptanceFingerprint(policy)) return { status: 'capability_unaccepted' as const };
   if (task === 'answer-interpretation' && (!policy.interpretation || Date.parse(policy.interpretation.checked_at) > now.getTime() || Date.parse(policy.interpretation.expires_at) <= now.getTime())) return { status: 'capability_unaccepted' as const };
   if (task === 'answer-interpretation' && policy.interpretation?.acceptance_basis?.kind === 'owner_accepted_unknowns' && Date.parse(policy.interpretation.acceptance_basis.accepted_at) > now.getTime()) return { status: 'capability_unaccepted' as const };
+  if (task === 'report-explanation') {
+    const accepted = policy.explanation?.data_acceptance;
+    if (!accepted || Date.parse(accepted.accepted_at) > now.getTime() || Date.parse(accepted.expires_at) <= now.getTime()) return { status: 'capability_unaccepted' as const };
+  }
   const reservation = usageCost(policy, { prompt_tokens: t.max_input_tokens, completion_tokens: t.max_output_tokens });
   if (reservation <= 0 || reservation > t.max_request_minor) return { status: 'pricing_unknown' as const };
   const held = BigInt(policy.limits.external_hold_minor) + BigInt(reservation);

@@ -6,6 +6,7 @@ import type { FormInput } from '../form/contract';
 import { formRecords, relevantQuestions, validateAnswer, applyFormAnswer, reconcileCompass } from '../form/workflow';
 import { buildReport, type GuidanceReport } from '../report/evaluate';
 import type { EvidenceReview, ReportHistoryItem, ReportInput } from '../report/contract';
+import { groundedSelection, type ExplanationResult, type SavedExplanation } from '../report/explanation';
 import { reportState, reportChanges } from '../report/history';
 const hash = (value: string) => createHash('sha256').update(value).digest('hex');
 export type AppSession = { owner: string; accessToken: string; purpose: 'account' | 'recovery'; deleted: boolean; expiresAt: Date };
@@ -278,6 +279,58 @@ export class AccountStore {
         [owner, saved.id, count.rows[0].count + 1, input.request_id, payloadHash, snapshot]);
       await client.query('UPDATE kooch.cases SET last_activity_at=$2,delete_after=$3 WHERE owner=$1', [owner, now, new Date(now.getTime() + 90 * 86400000)]);
       return { ...snapshot, ...result.rows[0] } as GuidanceReport;
+    });
+  }
+  async readExplanations(owner: string, reportId?: string): Promise<SavedExplanation[]> {
+    return this.owned(owner, async client => {
+      const result = await client.query(`SELECT e.snapshot FROM kooch.report_explanations e
+        JOIN kooch.report_explanation_jobs j ON j.id=e.job_id WHERE e.owner=$1
+        AND ($2::uuid IS NULL OR j.report_id=$2) ORDER BY j.created_at,j.version`, [owner, reportId ?? null]);
+      return result.rows.map(row => row.snapshot);
+    });
+  }
+  async explanationState(owner: string, reportId: string) {
+    return this.owned(owner, async client => {
+      const { rows } = await client.query(`SELECT j.request_id,e.snapshot FROM kooch.report_explanation_jobs j
+        LEFT JOIN kooch.report_explanations e ON e.job_id=j.id WHERE j.owner=$1 AND j.report_id=$2 ORDER BY j.version DESC LIMIT 1`, [owner, reportId]);
+      const row = rows[0];
+      return { status: row ? row.snapshot?.status ?? 'pending' : 'not_requested', explanation: row?.snapshot ?? null, request_id: row?.request_id ?? null };
+    });
+  }
+  async startExplanation(owner: string, report: GuidanceReport, requestId: string) {
+    return this.owned(owner, async client => {
+      const previous = await client.query('SELECT * FROM kooch.report_explanation_jobs WHERE owner=$1 AND request_id=$2', [owner, requestId]);
+      if (previous.rows[0]) {
+        if (previous.rows[0].report_id !== report.id) throw new AccountError('request_conflict', 409, 'درخواست متعلق به نسخهٔ دیگری است.');
+        return { started: false, job: previous.rows[0] };
+      }
+      const current = await client.query('SELECT revision FROM kooch.cases WHERE owner=$1', [owner]);
+      const latest = await client.query('SELECT max(version)::int AS version FROM kooch.reports WHERE owner=$1', [owner]);
+      if (!reportState(report, current.rows[0]?.revision, latest.rows[0].version, this.now(), await this.evidenceReviewState(client)).current)
+        throw new AccountError('revision_conflict', 409, 'کارنامه تغییر کرده یا نیازمند بازبینی است؛ نسخهٔ تازه بساز.');
+      const count = await client.query(`SELECT count(*)::int AS count, count(*) FILTER (WHERE e.job_id IS NULL OR e.snapshot ? 'accounting_policy')::int AS dispatched FROM kooch.report_explanation_jobs j LEFT JOIN kooch.report_explanations e ON e.job_id=j.id WHERE j.owner=$1 AND j.report_id=$2`, [owner, report.id]);
+      if (count.rows[0].dispatched >= 3 || count.rows[0].count >= 100) throw new AccountError('explanation_limit', 429, 'سقف تولید توضیح این نسخه پر شده است؛ کارنامهٔ پایه در دسترس است.');
+      const result = await client.query(`INSERT INTO kooch.report_explanation_jobs(owner,report_id,request_id,version,created_at)
+        VALUES($1,$2,$3,$4,$5) RETURNING *`, [owner, report.id, requestId, count.rows[0].count + 1, this.now()]);
+      return { started: true, job: result.rows[0] };
+    });
+  }
+  async finishExplanation(owner: string, report: GuidanceReport, jobId: string, result: ExplanationResult) {
+    return this.owned(owner, async client => {
+      const job = await client.query('SELECT * FROM kooch.report_explanation_jobs WHERE owner=$1 AND id=$2', [owner, jobId]);
+      if (!job.rows[0]) throw new AccountError('not_found', 404, 'کارنامه در دسترس نیست.');
+      const current = await client.query('SELECT revision FROM kooch.cases WHERE owner=$1', [owner]);
+      const latest = await client.query('SELECT max(version)::int AS version FROM kooch.reports WHERE owner=$1', [owner]);
+      if (!reportState(report, current.rows[0]?.revision, latest.rows[0].version, this.now(), await this.evidenceReviewState(client)).current)
+        throw new AccountError('revision_conflict', 409, 'پاسخ یا شواهد تغییر کرده‌اند؛ توضیح دیررس ذخیره نشد.');
+      // Reconstruct cards from this report, even if an injected adapter misbehaves.
+      const grounded = result.status === 'ready' ? groundedSelection(report, { reasons: result.reasons?.map(c => c.id), actions: result.actions?.map(c => c.id) }) : {};
+      const snapshot: SavedExplanation = { status: result.status, ...grounded,
+        ...(result.accounting_policy ? { accounting_policy: result.accounting_policy } : {}),
+        ...(result.model ? { model: result.model, contract_version: result.contract_version, prompt_version: result.prompt_version } : {}),
+        id: jobId, report_id: report.id, report_version: report.version, version: job.rows[0].version, created_at: this.now().toISOString() };
+      await client.query('INSERT INTO kooch.report_explanations(job_id,owner,snapshot) VALUES($1,$2,$3) ON CONFLICT DO NOTHING', [jobId, owner, snapshot]);
+      return snapshot;
     });
   }
   async finishDelete(owner: string) {

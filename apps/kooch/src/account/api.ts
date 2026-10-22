@@ -1,4 +1,6 @@
 import { z } from 'zod';
+import { explanationInput } from '../report/explanation';
+import type { ReportExplanation } from '../ai/report-explanation';
 import { pilotNotice } from '../pilot';
 import { AuthProvider } from './auth';
 import { AccountStore } from './store';
@@ -31,7 +33,7 @@ async function body(request: Request) {
   }
   try { return JSON.parse(Buffer.concat(chunks).toString('utf8')); } catch { throw invalid(); }
 }
-export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth; pilotAi?: () => 'disabled' | 'bounded_arvan'; questionAssistance?: QuestionAssistance; accounting?: AiBudgetLedger; answerInterpretation?: AnswerInterpretation; interpretationDisclosure?: import('../ai/question-assistance').AssistedFormView['interpretation_disclosure'] }) {
+export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth; pilotAi?: () => 'disabled' | 'bounded_arvan'; questionAssistance?: QuestionAssistance; accounting?: AiBudgetLedger; answerInterpretation?: AnswerInterpretation; reportExplanation?: ReportExplanation; interpretationDisclosure?: import('../ai/question-assistance').AssistedFormView['interpretation_disclosure'] }) {
   const { store, auth } = options;
   const formReply = (view: object) => reply({ ...view, interpretation_disclosure: options.interpretationDisclosure ?? null });
   const questionAssistance = options.questionAssistance ?? createQuestionAssistance();
@@ -190,6 +192,37 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
           return formReply(assisted);
         }
         if (operation === 'reports' && method === 'GET') return reply({ reports: await store.listReports(session.owner) });
+        if (operation === 'report' && path.length === 3 && path[2] === 'explanation') {
+          if (!z.uuid().safeParse(path[1]).success) throw invalid();
+          const { report } = await store.readReport(session.owner, path[1]);
+          if (!report) throw invalid();
+          const input = method === 'POST' ? explanationInput.parse(await body(request)) : null;
+          if (!input) return reply(await store.explanationState(session.owner, report.id));
+          if (!options.reportExplanation) return reply({ status: 'capability_unaccepted', explanation: null });
+          if (!report.route_results.length) return reply({ status: 'insufficient_coverage', explanation: null });
+          const { started, job } = await store.startExplanation(session.owner, report, input.request_id);
+          if (!started) {
+            const explanation = (await store.readExplanations(session.owner, report.id)).find(e => e.id === job.id) ?? null;
+            return reply({ status: explanation?.status ?? 'pending', explanation, request_id: job.request_id });
+          }
+          const isCurrent = async () => {
+            const active = await store.session(cookieToken(request));
+            if (active.owner !== session.owner || active.purpose !== 'account') throw unauthorized();
+            return (await store.readReport(session.owner, report.id)).report_state?.current === true;
+          };
+          const operation = `report-explanation:${report.id}:${report.version}:${input.request_id}`;
+          let result;
+          try { result = await options.reportExplanation(report, operation, { owner: session.owner, isCurrent }); }
+          catch { result = { status: 'unavailable' }; }
+          try {
+            if (!await isCurrent()) throw new AccountError('revision_conflict', 409, 'کارنامه تغییر کرده است؛ توضیح دیررس ذخیره نشد.');
+            const explanation = await store.finishExplanation(session.owner, report, job.id, result);
+            return reply({ status: explanation.status, explanation });
+          } catch (error) {
+            if (result.accounting_policy) await options.accounting?.detachOperation(session.owner, operation, result.accounting_policy);
+            throw error;
+          }
+        }
         if (operation === 'report') {
           const printing = path.length === 3 && path[2] === 'print' && method === 'GET';
           if ((!printing && path.length > 2) || (path[1] && !z.uuid().safeParse(path[1]).success) || (method === 'POST' && path.length !== 1)) throw invalid();
@@ -217,7 +250,7 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
         }
         if (operation === 'export' && method === 'GET') {
           if (path.length !== 1) throw invalid();
-          return reply({ schema_version: 1, email: session.email, case: await store.read(session.owner), reports: await store.exportReports(session.owner), ...(options.accounting ? { ai_usage: await options.accounting.exportOwner(session.owner) } : {}) }, 200,
+          return reply({ schema_version: 1, email: session.email, case: await store.read(session.owner), reports: await store.exportReports(session.owner), report_explanations: await store.readExplanations(session.owner), ...(options.accounting ? { ai_usage: await options.accounting.exportOwner(session.owner) } : {}) }, 200,
             { 'Content-Disposition': 'attachment; filename="kooch-account.json"' });
         }
         if (operation === 'delete' && method === 'POST') {

@@ -9,6 +9,7 @@ import { AiBudgetLedger } from '../ai/budget';
 import { productionAcceptanceProfile } from '../ai/production-acceptance';
 import { fixedQuestion } from '../ai/question-assistance';
 import { policyGate } from '../ai/policy';
+import { createGatewayReportExplanation } from '../ai/report-explanation';
 import { createGatewayAnswerInterpretation } from '../ai/answer-interpretation';
 import { createScopedQuestionAssistance } from '../ai/preview-acceptance';
 import aiPolicy from '../../data/ai-gateway-policy.json';
@@ -59,9 +60,11 @@ export async function accountRuntime() {
       getCredential: () => stableKey ? process.env.KOOCH_ARVAN_API_KEY : undefined });
     const questionAssistance: typeof wording = (view, context) => release?.mode === 'synthetic' && view.case_id !== release.caseId ? Promise.resolve(fixedQuestion(view, 'capability_unaccepted')) : wording(view, context);
     const answerInterpretation: typeof interpret = (request, context) => release?.mode === 'synthetic' && request.draft.case_id !== release.caseId ? Promise.resolve({ status: 'capability_unaccepted' }) : interpret(request, context);
+    const explain = createGatewayReportExplanation({ policy: effectivePolicy, ledger, getCredential: () => stableKey ? process.env.KOOCH_ARVAN_API_KEY : undefined });
+    const reportExplanation: typeof explain = (report, operation, context) => release?.mode === 'synthetic' && report.dependencies.case.id !== release.caseId ? Promise.resolve({ status: 'capability_unaccepted' }) : explain(report, operation, context);
     const interpretationGate = policyGate(effectivePolicy, new Date(), 'answer-interpretation');
     const interpretationDisclosure = interpretationGate.status === 'accepted' ? { ...interpretationGate.policy.interpretation!, acceptance_notice: interpretationGate.policy.interpretation?.acceptance_basis?.kind === 'owner_accepted_unknowns' ? 'محل پردازش، گیرندهٔ بالادست و حدود نگهداری محتوایی احراز نشده‌اند؛ استفاده با پذیرش این نامعلومی‌ها توسط مالک سرویس فعال شده است. می‌توانی پاسخ ساختارمند بدهی.' : undefined } : null;
-    return createAccountApi({ store, mode, origin, auth, google, questionAssistance, answerInterpretation, interpretationDisclosure, pilotAi: () => release?.mode === 'public' && policyGate(release.policy, new Date()).status === 'accepted' && stableKey && Boolean(process.env.KOOCH_ARVAN_API_KEY) ? 'bounded_arvan' : 'disabled', accounting: stableKey ? ledger : undefined });
+    return createAccountApi({ store, mode, origin, auth, google, questionAssistance, answerInterpretation, reportExplanation, interpretationDisclosure, pilotAi: () => release?.mode === 'public' && policyGate(release.policy, new Date()).status === 'accepted' && stableKey && Boolean(process.env.KOOCH_ARVAN_API_KEY) ? 'bounded_arvan' : 'disabled', accounting: stableKey ? ledger : undefined });
   })().catch(error => { runtime = undefined; throw error; });
   return runtime;
 }

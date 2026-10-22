@@ -1,6 +1,6 @@
 import type { GuidanceReport, RouteReport } from './evaluate';
 import type { ReportState } from './contract';
-const states: Record<string, string> = { self_reported_met: 'بر پایهٔ پاسخ تو برقرار', action_needed: 'نیازمند اقدام', unknown: 'اطلاعات لازم است', needs_review: 'نیازمند بازبینی', not_applicable: 'طبق پاسخ تو لازم نیست', not_assessed: 'بررسی نشده' };
+export const conditionLabels: Record<string, string> = { self_reported_met: 'بر پایهٔ پاسخ تو برقرار', action_needed: 'نیازمند اقدام', unknown: 'اطلاعات لازم است', needs_review: 'نیازمند بازبینی', not_applicable: 'طبق پاسخ تو لازم نیست', not_assessed: 'بررسی نشده' };
 const summary: Record<string, string> = { preliminary_conditions_met: 'موارد بررسی‌شده با پاسخ‌های تو سازگارند', action_needed: 'پیش از اقدام، چند شرط آماده نیست', needs_information: 'برای ادامه، اطلاعات بیشتری لازم است', needs_review: 'پیش از نتیجه‌گیری، بازبینی لازم است' };
 
 export function RouteResult({ report, version, print = false }: { report: RouteReport; version: number; print?: boolean }) {
@@ -13,7 +13,7 @@ export function RouteResult({ report, version, print = false }: { report: RouteR
         <p className="eyebrow">کارنامهٔ مقدماتی · نسخهٔ {version.toLocaleString('fa-IR')} · {new Date(report.created_at).toLocaleDateString('fa-IR', { timeZone: 'Asia/Tehran' })}</p>
         <h2>{summary[report.status]}</h2><p>{report.scope}</p><p className="notice">پوشش جزئی است. این نتیجه، تأیید صلاحیت، آماده‌بودن برای ارسال یا احتمال دریافت ویزا نیست.</p>
 
-        <h3>شرط‌ها و دلیل</h3><div className="report-conditions">{report.conditions.map(c => <section key={c.id} className="report-condition"><h4>{c.title} <span>{states[c.state]}</span></h4><p>{c.reason}</p><details open={print || undefined}><summary>قاعده و منابع</summary><p>{c.rule.value == null ? 'آستانهٔ عددی ندارد یا نامعلوم است' : `${c.rule.value} ${c.rule.unit ?? ''}`}</p><p>{c.rule.exceptions}</p><p className="report-sources">{links(c.source_ids)}</p></details></section>)}</div>
+        <h3>شرط‌ها و دلیل</h3><div className="report-conditions">{report.conditions.map(c => <section key={c.id} className="report-condition"><h4>{c.title} <span>{conditionLabels[c.state]}</span></h4><p>{c.reason}</p><details open={print || undefined}><summary>قاعده و منابع</summary><p>{c.rule.value == null ? 'آستانهٔ عددی ندارد یا نامعلوم است' : `${c.rule.value} ${c.rule.unit ?? ''}`}</p><p>{c.rule.exceptions}</p><p className="report-sources">{links(c.source_ids)}</p></details></section>)}</div>
         <h3>هزینه و تمکن، جدا از هم</h3><dl className="report-costs">
           <div><dt>هزینهٔ دولتی متقاضی اصلی</dt><dd>{money(report.costs.government_fee.amount)}<p className="help">{report.costs.government_fee.note}</p>{links(report.costs.government_fee.source_ids)}</dd></div>
           <div><dt>{canada ? 'بیمه و معاینهٔ متقاضی اصلی' : 'IHS متقاضی اصلی'}</dt><dd>کل: {money(report.costs.healthcare.amount)}{!canada && <> · نرخ سالانه: {money(report.costs.healthcare.annual_rate)}</>}<p className="help">{report.costs.healthcare.note}</p>{links(report.costs.healthcare.source_ids)}</dd></div>
