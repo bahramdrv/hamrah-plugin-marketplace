@@ -1,0 +1,72 @@
+{
+  "checked_at": "2026-10-21T15:56:31.957Z",
+  "source_commit": "12aeffc49e7380309cc4e491e1ff9d1c90c7d6f1",
+  "deployment_id": "dpl_9HQR61K41ejqiCc7VL6ZWyviZyok",
+  "origin": "https://my.kooch.app",
+  "admin_http": 200,
+  "cache_control": "no-store",
+  "sync_steps": [
+    {
+      "state": "fetching",
+      "checkpoint": 1,
+      "expected_pages": 2,
+      "review_required": 0
+    },
+    {
+      "state": "ok",
+      "checkpoint": null,
+      "expected_pages": null,
+      "review_required": 0
+    }
+  ],
+  "status": {
+    "state": "ok",
+    "code": null,
+    "last_attempt_at": "2026-10-21T15:55:49.819Z",
+    "last_success_at": "2026-10-21T15:55:49.819Z",
+    "active_id": "66ac1ca49fb7cc928a4976ad567d8c0021b18a5d494e8c1ea902e89fb5ef707b",
+    "checkpoint": null,
+    "expected_pages": null,
+    "coverage": {
+      "total": 29,
+      "current": 29,
+      "expired": 0,
+      "review_required": 0
+    },
+    "reviews": [],
+    "operations": {
+      "release": "12aeffc49e7380309cc4e491e1ff9d1c90c7d6f1",
+      "checked_at": "2026-10-21T15:56:30.506Z",
+      "rollout": "public",
+      "ai": {
+        "wording": "bounded_arvan",
+        "interpretation": "bounded_arvan",
+        "report_explanation": "not_implemented",
+        "acceptance_expires_at": "2026-10-22T10:04:01Z",
+        "limits": {
+          "currency": "IRR",
+          "monthly_global_minor": 500000,
+          "daily_global_minor": 500000,
+          "daily_user_minor": 60000,
+          "daily_user_requests": 3,
+          "external_hold_minor": 47676
+        },
+        "note": "این وضعیت مجوز و پیکربندی است؛ سلامت لحظه‌ای upstream یا باقی‌ماندهٔ واقعی دفتر مالی را تضمین نمی‌کند."
+      }
+    }
+  },
+  "public_status": {
+    "configured": true,
+    "pilot": {
+      "kind": "personal_noncommercial",
+      "ai": "bounded_arvan",
+      "privacy_notice_version": "personal-pilot-privacy-2-arvan",
+      "coverage": "partial",
+      "report_explanation": "not_enabled"
+    },
+    "mode": "hosted",
+    "google_enabled": true,
+    "email_delivery": "configured"
+  },
+  "paid_ai_calls_during_sync_acceptance": 0
+}

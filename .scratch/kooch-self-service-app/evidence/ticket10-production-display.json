@@ -1,0 +1,69 @@
+{
+  "checked_at": "2026-10-22T06:21:40.100Z",
+  "origin": "https://my.kooch.app",
+  "source_commit": "12aeffc49e7380309cc4e491e1ff9d1c90c7d6f1",
+  "synthetic_existing_owner": true,
+  "read_only_flow": true,
+  "measurements": [
+    {
+      "page": "/account",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "page": "/form",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "page": "/form",
+      "scrollWidth": 360,
+      "width": 360
+    },
+    {
+      "page": "/report",
+      "scrollWidth": 360,
+      "width": 360
+    },
+    {
+      "page": "/report",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "page": "/privacy",
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "page": "/privacy",
+      "scrollWidth": 360,
+      "width": 360
+    },
+    {
+      "page": "/account",
+      "scrollWidth": 360,
+      "width": 360
+    },
+    {
+      "page": "/report",
+      "scrollWidth": 1280,
+      "width": 1280
+    }
+  ],
+  "keyboard": {
+    "form_tab_to_radio": true,
+    "report_skip_link_enter_changed_fragment": true,
+    "report_source_disclosure_enter_opened": true
+  },
+  "zoom": {
+    "accepted": false,
+    "reason": "Browser key commands did not change measured CSS viewport; no verified zoom control."
+  },
+  "limits": [
+    "Responsive viewport override; not physical phone/device acceptance.",
+    "No answer submitted or report created.",
+    "Form displayed assisted wording; additional dispatch or cache reuse not audited."
+  ],
+  "viewport_override_reset": true
+}

@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-10-22T06:23:39.668827+00:00",
+  "repository": "bahramdrv/hamrah-plugin-marketplace",
+  "workflow": ".github/workflows/sync-kooch-evidence.yml",
+  "source_commit": "12aeffc49e7380309cc4e491e1ff9d1c90c7d6f1",
+  "secret_name": "KOOCH_EVIDENCE_SYNC_SECRET",
+  "existing_worker_secret_saved": true,
+  "enabled_variable": {
+    "KOOCH_EVIDENCE_SYNC_ENABLED": "true"
+  },
+  "schedule_utc": "03:17 daily",
+  "schedule_tehran": "06:47 daily",
+  "first_run": {
+    "event": "workflow_dispatch",
+    "url": "https://github.com/bahramdrv/hamrah-plugin-marketplace/actions/runs/39731639931",
+    "job_url": "https://github.com/bahramdrv/hamrah-plugin-marketplace/actions/runs/39731639931/job/119667800801",
+    "conclusion": "success",
+    "duration_seconds": 21,
+    "steps": [
+      {
+        "state": "fetching",
+        "checkpoint": 1,
+        "expected_pages": 2,
+        "review_required": 0
+      },
+      {
+        "state": "ok",
+        "checkpoint": null,
+        "expected_pages": null,
+        "review_required": 0
+      }
+    ]
+  },
+  "scheduled_event_observed": false,
+  "note": "Manual acceptance of the same enabled scheduled workflow; no subsequent schedule run claimed."
+}
