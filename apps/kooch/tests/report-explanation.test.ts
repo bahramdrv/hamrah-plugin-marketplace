@@ -32,15 +32,16 @@ test('a metered explanation selects grounded cards once, exports its immutable a
   policy.acceptance.tasks['report-explanation'] = true;
   policy.explanation = { contract_version: 'report-explanation-1', prompt_version: 'report-explanation-1', data_acceptance: { recipient: 'fixture Arvan', processing_location: 'fixture only', retention: 'fixture only', accepted_at: '2026-10-21T00:00:00Z', expires_at: '2026-10-22T00:00:00Z', reference: 'local synthetic task acceptance' } };
   policy.tariff!.verified_at = '2026-10-21T00:00:00Z'; policy.tariff!.expires_at = '2026-10-22T00:00:00Z';
-  policy.tariff!.max_input_tokens = 24000; policy.tariff!.max_request_minor = 24128;
+  policy.tariff!.max_input_tokens = 12000; policy.tariff!.max_request_minor = 12128;
   policy.limits.monthly_global_minor = policy.limits.daily_global_minor = policy.limits.daily_user_minor = 100000;
   policy.acceptance.expires_at = policy.tariff!.expires_at;
   policy.acceptance.fingerprint = acceptanceFingerprint(policy);
   const ledger = new AiBudgetLedger(pool, 'd'.repeat(64), now);
-  let calls = 0;
+  let calls = 0; let projectionBytes = 0;
   const engine = createGatewayReportExplanation({ policy, ledger, now, getCredential: () => 'fixture', transport: async (_url, init) => {
     calls++;
     const wire = String(init?.body);
+    projectionBytes = Buffer.byteLength(wire, 'utf8') + 512;
     for (const forbidden of ['email', 'case_id', 'last_activity_at', 'dependencies', 'answers', 'delete_after', 'owner']) assert.ok(!wire.includes(`"${forbidden}"`), forbidden);
     const projection = JSON.parse(JSON.parse(wire).messages[1].content);
     assert.equal(projection.routes[0].conditions[0].state, 'unknown');
@@ -54,6 +55,7 @@ test('a metered explanation selects grounded cards once, exports its immutable a
     const [a,b] = await Promise.all([alice.request(`report/${report.id}/explanation`, input), alice.request(`report/${report.id}/explanation`, input)]);
     assert.equal(a.status, 200); assert.equal(b.status, 200);
     const saved = (await a.json()).explanation;
+    assert.ok(projectionBytes <= 12000, `projection size ${projectionBytes} exceeds the task allowance`);
     assert.equal(saved.status, 'ready'); assert.equal(saved.report_id, report.id); assert.equal(saved.version, 1);
     assert.equal(saved.reasons[0].state, 'unknown'); assert.match(saved.reasons[0].text, /روشن کن/);
     assert.deepEqual(saved.reasons[0].source_ids, ['rules', 'apply']);
@@ -79,7 +81,7 @@ async function explanationHarness(transport: typeof fetch) {
   policy.acceptance.tasks['report-explanation'] = true;
   policy.explanation = { contract_version: 'report-explanation-1', prompt_version: 'report-explanation-1', data_acceptance: { recipient: 'fixture Arvan', processing_location: 'fixture only', retention: 'fixture only', accepted_at: '2026-10-21T00:00:00Z', expires_at: '2026-10-22T00:00:00Z', reference: 'local synthetic task acceptance' } };
   policy.tariff!.verified_at = '2026-10-21T00:00:00Z'; policy.tariff!.expires_at = '2026-10-22T00:00:00Z';
-  policy.tariff!.max_input_tokens = 24000; policy.tariff!.max_request_minor = 24128;
+  policy.tariff!.max_input_tokens = 12000; policy.tariff!.max_request_minor = 12128;
   policy.limits.monthly_global_minor = policy.limits.daily_global_minor = policy.limits.daily_user_minor = 100000;
   policy.acceptance.expires_at = policy.tariff!.expires_at;
   policy.acceptance.fingerprint = acceptanceFingerprint(policy);

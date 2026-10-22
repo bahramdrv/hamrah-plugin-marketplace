@@ -1,0 +1,24 @@
+{
+  "source_commit": "c13b193",
+  "accepted_at_date": "2026-10-22",
+  "environment": "loopback-only disposable API harness with actual built Next UI",
+  "model_transport": "simulation only; no Arvan request",
+  "checks": {
+    "synthetic_signin": true,
+    "base_report_visible_before_explanation": true,
+    "ready_notice_without_auto_open": true,
+    "explicit_open": true,
+    "keyboard_enter_open": true,
+    "unknown_and_self_reported_labels_preserved": true,
+    "official_links_from_saved_report": true,
+    "refresh_reads_saved_addition": true,
+    "explicit_regeneration_explanation_version": 2,
+    "base_report_version_after_regeneration": 1,
+    "no_horizontal_overflow_at_css_widths": [360,390]
+  },
+  "simulation_dispatches": 2,
+  "paid_dispatches": 0,
+  "cleanup": {"disposable_account_deleted":true,"credential_file_removed":true,"temporary_servers_stopped":true},
+  "limits": ["Not a hosted acceptance", "Not acceptance of actual model selection quality", "No new PDF work", "No browser zoom acceptance claimed"],
+  "screenshots": ["ticket12-local-explanation.png","ticket12-local-mobile.png"]
+}

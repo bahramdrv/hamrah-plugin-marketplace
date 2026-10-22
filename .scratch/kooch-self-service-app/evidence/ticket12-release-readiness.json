@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-22T15:16:59Z",
+  "tariff_source": "https://panel.arvancloud.ir/aiaas/model/bazaar?fullText=Qwen3.5-35B-A3B",
+  "model": "Qwen3.5-35B-A3B",
+  "hosted_label_observed": "Hosted by ArvanCloud",
+  "input_irr_per_million_tokens": 4200000,
+  "output_irr_per_million_tokens": 4200000,
+  "existing_acceptance_expired_at": "2026-10-22T10:04:01Z",
+  "public_status_ai": "disabled",
+  "public_status_report_explanation": "not_enabled",
+  "renewed": false,
+  "hosted_migration_007_applied": false,
+  "paid_dispatches": 0,
+  "new_task_input_bound": 12000,
+  "new_task_output_bound": 128,
+  "proposed_reservation_irr": 50938,
+  "existing_global_budget_irr": 500000,
+  "verification": {
+    "app_passed": 129,
+    "root_passed": 384,
+    "python_passed": 47,
+    "typecheck": true,
+    "build": true,
+    "verify_release": true,
+    "check_static": true,
+    "spec_open_findings": 0,
+    "standards_open_findings": 0,
+    "initial_parallel_run": "one existing root deadline assertion and one local signup fixture failed; sequential reruns passed without modifying these tests"
+  }
+}
