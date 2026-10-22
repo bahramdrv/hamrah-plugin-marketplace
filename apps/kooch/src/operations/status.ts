@@ -1,15 +1,17 @@
 import source from '../../data/ai-gateway-policy.json';
-import { productionActivation } from '../ai/production-acceptance';
+import { productionActivation, productionExplanationActivation } from '../ai/production-acceptance';
 import { policyGate } from '../ai/policy';
 export function operationStatus(environment: Readonly<Record<string, string | undefined>> = process.env, now = new Date(), configuration: unknown = source) {
   const activation = productionActivation(configuration, environment, now);
   const release = activation.status === 'accepted' ? activation.profile : undefined;
   const reason = (task: 'question-wording' | 'answer-interpretation' | 'report-explanation') => {
-    if (!release) return activation.status;
-    const gate = policyGate(release.policy, now, task);
+    const selected = task === 'report-explanation' ? productionExplanationActivation(configuration, environment, now) : activation;
+    if (selected.status !== 'accepted') return selected.status;
+    const taskRelease = selected.profile;
+    const gate = policyGate(taskRelease.policy, now, task);
     if (gate.status !== 'accepted') return gate.status;
     if (!/^[a-f0-9]{64}$/.test(environment.KOOCH_AI_ACCOUNTING_KEY ?? '') || !environment.KOOCH_ARVAN_API_KEY) return 'credentials_missing';
-    return release.mode === 'synthetic' ? 'synthetic_acceptance_only' : 'bounded_arvan';
+    return taskRelease.mode === 'synthetic' ? 'synthetic_acceptance_only' : 'bounded_arvan';
   };
   return { release: environment.VERCEL_GIT_COMMIT_SHA?.match(/^[a-f0-9]{40}$/)?.[0] ?? null,
     checked_at: now.toISOString(), rollout: release?.mode ?? 'off',

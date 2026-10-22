@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-22T16:12:29.587Z",
+  "migration": "007-report-explanations.sql",
+  "project": "ifjtceqlcsmypuuflwlx",
+  "forced_rls": [
+    {
+      "relname": "report_explanation_jobs",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true
+    },
+    {
+      "relname": "report_explanations",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true
+    }
+  ],
+  "app_update": false,
+  "anonymous_reads": false,
+  "existing_reports_unchanged": true,
+  "paid_calls": 0
+}

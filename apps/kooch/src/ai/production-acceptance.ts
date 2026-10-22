@@ -34,6 +34,14 @@ export function productionActivation(value: unknown, env: Readonly<Record<string
   // Hosted receipts are NOT added to external_hold again.
   policy.limits = { currency: 'IRR', monthly_global_minor: 500000, daily_global_minor: 500000,
     daily_user_minor: 60000, daily_user_requests: 3, external_hold_minor: externalHold };
+  if (env.KOOCH_AI_ACCEPTANCE_WINDOW === 'ticket12-20261022') {
+    if (now.getTime() < Date.parse('2026-10-22T16:07:49Z')) return { status: 'capability_unaccepted' as const };
+    policy.version = 'arvan-kooch-production-20261022';
+    policy.connection.upstream_identity = 'ArvanCloud gateway; hosted label rechecked 2026-10-22; downstream not verified';
+    policy.tariff = { ...policy.tariff!, version: 'arvan-qwen35-marketplace-rechecked-20261022', verified_at: '2026-10-22T15:16:59Z', expires_at: '2026-10-23T15:16:59Z' };
+    policy.acceptance.expires_at = policy.tariff.expires_at;
+    policy.interpretation = { ...policy.interpretation!, checked_at: policy.tariff.verified_at, expires_at: policy.tariff.expires_at };
+  }
   policy.acceptance.fingerprint = acceptanceFingerprint(policy);
   for (const task of ['question-wording', 'answer-interpretation'] as const) {
     const gate = policyGate(policy, now, task);
@@ -45,4 +53,29 @@ export function productionActivation(value: unknown, env: Readonly<Record<string
 export function productionAcceptanceProfile(value: unknown, env: Readonly<Record<string, string | undefined>>, now: Date) {
   const activation = productionActivation(value, env, now);
   return activation.status === 'accepted' ? activation.profile : undefined;
+}
+
+// The owner approved this one window and task independently; no automatic renewal.
+export function productionExplanationActivation(value: unknown, env: Readonly<Record<string, string | undefined>>, now: Date) {
+  const mode = env.KOOCH_REPORT_EXPLANATION_ROLLOUT;
+  if (!['synthetic', 'public'].includes(mode ?? '')) return { status: 'disabled_by_operator' as const };
+  if (env.KOOCH_AI_ACCEPTANCE_WINDOW !== 'ticket12-20261022') return { status: 'capability_unaccepted' as const };
+  const activation = productionActivation(value, env, now);
+  if (activation.status !== 'accepted') return { status: activation.status };
+  const rawIds = mode === 'synthetic' ? (env.KOOCH_REPORT_EXPLANATION_ACCEPTANCE_CASE_IDS ?? '').split(',') : [];
+  if (mode === 'synthetic' && (rawIds.length !== 3 || new Set(rawIds).size !== 3 || rawIds.some(id => !z.uuid().safeParse(id).success))) return { status: 'acceptance_case_invalid' as const };
+  const policy = structuredClone(activation.profile.policy);
+  policy.version = 'arvan-kooch-explanation-production-20261022';
+  policy.tariff = { ...policy.tariff!, max_input_tokens: 12000, max_request_minor: 51000 };
+  policy.acceptance.tasks = { 'question-wording': false, 'answer-interpretation': false, 'report-explanation': true };
+  policy.explanation = { contract_version: 'report-explanation-1', prompt_version: 'report-explanation-1', data_acceptance: {
+    recipient: 'درگاه موجود آروان؛ گیرندهٔ بالادستی احراز نشده و مالک پذیرفته است', processing_location: 'نامعلوم؛ پذیرفته‌شده توسط مالک برای projection کارنامه',
+    retention: 'حدود نگهداری محتوایی احراز نشده؛ مالک این نامعلومی را برای همین task پذیرفته است',
+    accepted_at: '2026-10-22T16:07:49Z', expires_at: policy.tariff.expires_at,
+    reference: 'ticket12-release-plan; explicit owner approval of all five items on 2026-10-22',
+  } };
+  policy.acceptance.fingerprint = acceptanceFingerprint(policy);
+  const gate = policyGate(policy, now, 'report-explanation');
+  if (gate.status !== 'accepted') return { status: gate.status };
+  return { status: 'accepted' as const, profile: { policy, mode: mode as 'synthetic' | 'public', caseIds: rawIds } };
 }

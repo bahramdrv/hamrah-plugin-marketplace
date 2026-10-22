@@ -43,3 +43,29 @@ test('production activation stays scoped during acceptance, supports both public
   assert.equal(synthetic.mode, 'synthetic'); assert.ok(synthetic.caseId);
   assert.equal(productionAcceptanceProfile(policy, env, new Date('2026-10-22T10:04:01Z')), undefined);
 });
+
+test('approved ticket12 window meters explanations independently and expires without changing the total cap', async () => {
+  const { productionExplanationActivation, productionAcceptanceProfile } = await import('../src/ai/production-acceptance');
+  const { policyGate } = await import('../src/ai/policy');
+  const now = new Date('2026-10-22T16:10:00Z');
+  const ids = [randomUUID(), randomUUID(), randomUUID()];
+  const env = { VERCEL_ENV:'production', KOOCH_APP_ORIGIN:'https://my.kooch.app', KOOCH_AI_ROLLOUT:'public', KOOCH_AI_ACCEPTANCE_WINDOW:'ticket12-20261022', KOOCH_REPORT_EXPLANATION_ROLLOUT:'synthetic', KOOCH_REPORT_EXPLANATION_ACCEPTANCE_CASE_IDS:ids.join(',') };
+  const renewed = productionAcceptanceProfile(policy,env,now)!;
+  assert.ok(renewed); assert.equal(renewed.policy.tariff!.max_input_tokens,4096);
+  const activation = productionExplanationActivation(policy,env,now);
+  assert.equal(activation.status,'accepted');
+  if(activation.status !== 'accepted') throw Error('Expected accepted profile.');
+  assert.deepEqual(activation.profile.caseIds,ids);
+  const gate = policyGate(activation.profile.policy,now,'report-explanation');
+  assert.equal(gate.status,'accepted');
+  if(gate.status === 'accepted') assert.equal(gate.reservation,50938);
+  assert.equal(activation.profile.policy.limits.monthly_global_minor,500000);
+  assert.equal(activation.profile.policy.limits.daily_user_minor,60000);
+  assert.equal(productionExplanationActivation(policy,{...env,VERCEL_ENV:'preview'},now).status,'environment_unaccepted');
+  assert.equal(productionExplanationActivation(policy,{...env,KOOCH_REPORT_EXPLANATION_ACCEPTANCE_CASE_IDS:ids[0]},now).status,'acceptance_case_invalid');
+  assert.equal(productionExplanationActivation(policy,{...env,KOOCH_REPORT_EXPLANATION_ROLLOUT:'off'},now).status,'disabled_by_operator');
+  assert.notEqual(productionExplanationActivation(policy,env,new Date('2026-10-23T15:16:59Z')).status,'accepted');
+  const publicRelease = productionExplanationActivation(policy,{...env,KOOCH_REPORT_EXPLANATION_ROLLOUT:'public'},now);
+  assert.equal(publicRelease.status,'accepted');
+  if(publicRelease.status === 'accepted') assert.deepEqual(publicRelease.profile.caseIds,[]);
+});

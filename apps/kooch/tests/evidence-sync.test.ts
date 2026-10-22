@@ -228,7 +228,7 @@ test('release and AI reasons are visible to the independent operator without exp
     const body = await response.text(); assert.ok(!body.includes('secret-not-for-the-response'));
     const data = JSON.parse(body); assert.equal(data.operations.ai.wording, 'credentials_missing'); assert.equal(data.operations.ai.interpretation, 'credentials_missing');
     assert.equal(data.operations.ai.limits.monthly_global_minor, 500000);
-    assert.equal(data.operations.ai.report_explanation, 'capability_unaccepted');
+    assert.equal(data.operations.ai.report_explanation, 'disabled_by_operator');
   } finally { await h.close(); }
 });
 
