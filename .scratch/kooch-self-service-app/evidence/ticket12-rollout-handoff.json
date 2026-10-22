@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-22T17:22:54.290560+00:00",
+  "source_commit": "ca8ca55b82decd0a2b70b81f393386ffdee030ba",
+  "deployment_verified": true,
+  "blockers": [],
+  "public_status_verified": {
+    "ai": "bounded_arvan",
+    "report_explanation": "not_enabled",
+    "privacy_notice_version": "personal-pilot-privacy-2-arvan"
+  },
+  "acceptance_runner_prepared": true,
+  "acceptance_runner_executed": true,
+  "next_action": "Publish the read-only report-load correction; verify no new ledger entries on report refresh. Further paid acceptance requires an explicitly approved revised package.",
+  "expires_at": "2026-10-23T15:16:59Z",
+  "deployment_id": "dpl_6SnvPNv23JtA52dhMkbxvaMFGbkv",
+  "deployment_url": "https://kooch-oa5mjbo47-bahramd-s-projects2.vercel.app",
+  "acceptance_complete": false,
+  "public_activation_allowed": false,
+  "paid_dispatches": 2,
+  "successful_explanation_tests": 1,
+  "stopped_reason": "Unintended question-wording request from report-page GET form; HTTP429 with unknown reservation retained.",
+  "temporary_accounts_deleted": 2,
+  "original_synthetic_account_retained": true,
+  "verification": {
+    "app_tests": 131,
+    "root_tests": 384,
+    "python_tests": 47,
+    "typecheck": true,
+    "build": true,
+    "verify_release": true,
+    "check_static": true,
+    "standards_findings": 0,
+    "spec_findings": 0
+  }
+}

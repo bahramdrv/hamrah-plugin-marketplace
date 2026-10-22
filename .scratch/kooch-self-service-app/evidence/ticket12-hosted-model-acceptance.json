@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-10-22T17:15:24.360Z",
+  "origin": "https://my.kooch.app",
+  "public_explanation_enabled": false,
+  "maximum_attempts": 3,
+  "maximum_total_reservation_minor": 153000,
+  "currency": "IRR",
+  "attempts": [
+    {
+      "index": 0,
+      "kind": "complete",
+      "started_at": "2026-10-22T17:15:03.547Z",
+      "max_reservation_minor": 50938,
+      "success": true,
+      "status": "ready",
+      "receipt": {
+        "state": "settled",
+        "reserved_minor": 50938,
+        "charged_minor": 5532,
+        "policy": "arvan-kooch-explanation-production-20261022",
+        "outcome": "ready"
+      },
+      "snapshot_unchanged": true,
+      "cards_grounded": true,
+      "replay_and_refresh_no_new_dispatch": true,
+      "completed_at": "2026-10-22T17:15:24.360Z"
+    }
+  ],
+  "acceptance_complete": false,
+  "stopped": {
+    "at": "2026-10-22T17:18:40.168789+00:00",
+    "reason": "Report page GET form invoked question assistance; HTTP429; unknown reservation 17742IRR; no more paid tests."
+  },
+  "additional_dispatch": {
+    "task": "question-wording",
+    "policy": "arvan-kooch-production-20261022",
+    "created_at": "2026-10-22T17:16:43.076Z",
+    "state": "unknown",
+    "outcome": "http_429",
+    "reserved_minor": 17742,
+    "charged_minor": null
+  },
+  "total_dispatches_this_acceptance": 2,
+  "total_reservation_minor": 68680,
+  "public_activation_allowed": false
+}

@@ -1,7 +1,7 @@
 export class StaleAccountRequest extends Error {}
 export function createAccountClient(fetcher: typeof fetch = fetch) {
   let generation = 0;
-  return {
+  const client = {
     invalidate() { generation++; },
     async request(path: string, body?: unknown): Promise<{ response: Response; data: Record<string, any> }> {
       const started = generation;
@@ -15,9 +15,16 @@ export function createAccountClient(fetcher: typeof fetch = fetch) {
       return { response, data };
     },
   };
+  return { ...client, async readReportContext(reportId?: string) {
+    const [currentCase, savedReport] = await Promise.all([
+      client.request('case'), client.request(reportId ? `report/${encodeURIComponent(reportId)}` : 'report'),
+    ]);
+    return { currentCase, savedReport };
+  } };
 }
 const client = createAccountClient();
 export const accountRequest = client.request;
+export const readReportContext = client.readReportContext;
 export const invalidateAccountRequests = client.invalidate;
 export function notifySignout() {
   invalidateAccountRequests();

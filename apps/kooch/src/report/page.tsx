@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import { accountRequest, invalidateAccountRequests, StaleAccountRequest } from '../account/client';
+import { accountRequest, readReportContext, invalidateAccountRequests, StaleAccountRequest } from '../account/client';
 import type { GuidanceReport } from './evaluate';
 import type { ReportState } from './contract';
 import { ExplanationView } from './explanation-view';
@@ -36,10 +36,10 @@ export function GuidancePage() {
   async function load() {
     if (lock.current) return; lock.current = true; const started = ++generation.current; clearExplanation(); setBusy(true); setError('');
     try {
-      const [f, r] = await Promise.all([accountRequest('form'), accountRequest(new URLSearchParams(window.location.search).has('id') ? `report/${encodeURIComponent(new URLSearchParams(window.location.search).get('id')!)}` : 'report')]);
+      const { currentCase: f, savedReport: r } = await readReportContext(new URLSearchParams(window.location.search).get('id') ?? undefined);
       if (started !== generation.current) return;
       if (!f.response.ok || !r.response.ok) { setRevision(null); setReport(null); setState(null); setError(f.response.ok ? r.data.message : f.data.message); return; }
-      setRevision(f.data.revision); setReport(r.data.report); setState(r.data.report_state); setConflict(false); retry.current = null;
+      setRevision(f.data.case?.revision ?? null); setReport(r.data.report); setState(r.data.report_state); setConflict(false); retry.current = null;
       if (r.data.report) void explain(r.data.report, false, started);
     } catch (e) { if (started === generation.current && !(e instanceof StaleAccountRequest)) setError('دریافت پرونده ممکن نشد؛ دوباره تلاش کن.'); }
     finally { if (started === generation.current) { lock.current = false; setBusy(false); } }
