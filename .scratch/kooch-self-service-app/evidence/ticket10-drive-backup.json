@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-22T07:29:16.546Z",
+  "provider": "Google Drive",
+  "owner_explicitly_approved_encrypted_archive_upload": true,
+  "folder_created_in_user_root": true,
+  "folder_shared": false,
+  "folder_permissions": [
+    "owner"
+  ],
+  "file_shared": false,
+  "file_permissions": [
+    "owner"
+  ],
+  "mime_type": "application/octet-stream",
+  "remote_bytes": 176649,
+  "downloaded_bytes": 176649,
+  "sha256": "7db7ed2320d49e299cc3e9b580949219c71615fd994d46fa1490a1f2ae31ed52",
+  "sha256_matches_accepted_restore_archive": true,
+  "downloaded_gcm_authenticated": true,
+  "postgres_custom_archive_magic_valid": true,
+  "encryption_key_uploaded": false,
+  "database_url_uploaded": false,
+  "public_share_created": false,
+  "automatic_backup_schedule_enabled": false,
+  "retention_deletion_enabled": false,
+  "off_device_key_custody_confirmed": false,
+  "restore_reference": "ticket10-hosted-recovery.json"
+}
