@@ -4,6 +4,8 @@ import { answersSchema, type Answers } from '../questions';
 import { accountRequest, notifySignout, invalidateAccountRequests, StaleAccountRequest } from './client';
 import { consentVersion, type SavedCase } from './contract';
 import { ReportHistory } from '../report/history-list';
+import { AppFooter, AppHeader } from '../shell';
+import { continuationPath } from './navigation';
 type Mode = 'signin' | 'signup' | 'recover';
 export function AccountPage() {
   const [configured, setConfigured] = useState<boolean | null>(null);
@@ -19,19 +21,38 @@ export function AccountPage() {
   const [message, setMessage] = useState(''); const [error, setError] = useState(''); const [busy, setBusy] = useState(false);
   const [googleDeletionReady, setGoogleDeletionReady] = useState(false);
   const [deleteOpen, setDeleteOpen] = useState(false); const [confirmation, setConfirmation] = useState('');
+  const [loading, setLoading] = useState(false); const [loadError, setLoadError] = useState(false);
+  const [continuation, setContinuation] = useState<ReturnType<typeof continuationPath>>(null);
   async function refresh() {
-    const status = await accountRequest('status'); setConfigured(status.data.configured); setLocal(status.data.mode === 'local'); setGoogleEnabled(status.data.google_enabled === true);
+    const status = await accountRequest('status');
+    if (!status.response.ok || typeof status.data.configured !== 'boolean') throw new Error('دریافت وضعیت حساب ممکن نشد.');
+    setConfigured(status.data.configured); setLocal(status.data.mode === 'local'); setGoogleEnabled(status.data.google_enabled === true);
     if (!status.data.configured) return;
     const session = await accountRequest('session');
     if (session.response.ok && session.data.recovery) { setRecovery(true); setSignedEmail(''); setSaved(null); return; }
     if (session.response.ok) {
       const result = await accountRequest('case');
       if (!result.response.ok) throw new Error(result.data.message);
-      setSignedEmail(session.data.email); setSaved(result.data.case);
+      setSignedEmail(session.data.email); setSaved(result.data.case); return result.data.case as SavedCase | null;
     } else if (session.response.status === 401) { setSignedEmail(''); setSaved(null); }
     else throw new Error(session.data.message);
   }
+  async function loadAccount(clearError = true) {
+    if (loading) return;
+    setLoading(true); setLoadError(false); if (clearError) setError('');
+    try { await refresh(); }
+    catch (e) { if (!(e instanceof StaleAccountRequest)) { setLoadError(true); setError('دریافت وضعیت حساب ممکن نشد؛ اتصال را بررسی کن و دوباره تلاش کن.'); } }
+    finally { setLoading(false); }
+  }
   useEffect(() => {
+    const task = new URLSearchParams(window.location.search).get('next');
+    try {
+      if (task !== null) {
+        if (continuationPath(task)) sessionStorage.setItem('kooch.account.next', task);
+        else sessionStorage.removeItem('kooch.account.next');
+      }
+      setContinuation(continuationPath(task ?? sessionStorage.getItem('kooch.account.next')));
+    } catch { setContinuation(continuationPath(task)); }
     // Tokens remain in memory, never query parameters, storage or application logs.
     const fragment = new URLSearchParams(window.location.hash.slice(1));
     if (new URLSearchParams(window.location.search).get('signin') === 'google-failed') {
@@ -50,7 +71,7 @@ export function AccountPage() {
       const answers = answersSchema.safeParse(value?.answers);
       if (value?.version === 1 && answers.success) setGuest({ answers: answers.data, step: Number.isInteger(value.step) ? Math.max(0, Math.min(7, value.step)) : 0 });
     } catch { /* guest storage optional */ }
-    void refresh().catch(e => { if (!(e instanceof StaleAccountRequest)) setError('دریافت وضعیت حساب ممکن نشد؛ دوباره تلاش کن.'); });
+    void loadAccount(false);
     const channel = new BroadcastChannel('kooch.account');
     channel.onmessage = () => { invalidateAccountRequests(); setSignedEmail(''); setSaved(null); setRecovery(false); setBusy(false); };
     return () => { invalidateAccountRequests(); channel.close(); };
@@ -74,13 +95,19 @@ export function AccountPage() {
     setSaved(result.case); setGuest(null); setConsent(false);
     try { sessionStorage.removeItem('kooch.compass.guest.v1'); } catch { /* optional storage */ }
     setMessage('پاسخ‌ها با اجازهٔ تو در پرونده ذخیره شدند.');
+    continueTask();
   }
-  return <div className="app-shell"><header><a href="/" className="brand"><strong>کوچ</strong><span>حساب من</span></a><a href="/">بازگشت به قطب‌نما</a></header>
-    <main className="account-layout"><section className="account-panel" aria-busy={busy}>
-      <p className="help"><a href="/privacy">پیش از ساخت حساب یا ذخیرهٔ پاسخ‌ها، گیرندگان داده و نگهداری آن را بخوان.</a></p>
+  function continueTask() {
+    if (!continuation) return;
+    try { sessionStorage.removeItem('kooch.account.next'); } catch { /* navigation preference is optional */ }
+    window.location.assign(continuation);
+  }
+  return <div className="app-shell"><a className="skip-link" href="#account-main">رفتن به حساب</a><AppHeader current="account"/>
+    <main id="account-main" className="account-layout"><section className="account-panel" aria-busy={busy || loading}>
       <h1>{recovery ? 'رمز تازهٔ تو' : signedEmail ? 'پروندهٔ من' : 'ادامهٔ مسیر با حساب کوچ'}</h1>
       {local && <p className="notice">نسخهٔ آزمایشی محلی؛ ایمیل‌ها فقط در صندوق تست همین رایانه تحویل می‌شوند. از ایمیل و رمز واقعی استفاده نکن.</p>}
-      {configured === null && !error && <p role="status">در حال دریافت وضعیت…</p>}
+      <p className="intro">{signedEmail ? 'پاسخ‌ها و کارنامه‌هایت را از همین‌جا ادامه بده.' : 'بررسی‌ات را ذخیره کن و بعداً از همین‌جا ادامه بده.'}</p>
+      {loading && <p role="status">در حال دریافت وضعیت…</p>}
       {configured === false && <p className="notice">سرویس حساب هنوز متصل نشده است. می‌توانی قطب‌نما را به‌صورت مهمان ادامه بدهی.</p>}
       {link && <section className="account-section"><h2>{link.type === 'recovery' ? 'تأیید پیوند بازیابی' : 'تأیید ایمیل'}</h2><p>برای مصرف پیوند یک‌بارمصرف، دکمه را بزن.</p><button className="primary" disabled={busy || !configured} onClick={() => void action(async () => {
         const data = await send('verify', link); setLink(null); setRecovery(data.recovery); setMessage(data.message);
@@ -95,15 +122,15 @@ export function AccountPage() {
         <div className="account-tabs" aria-label="عملیات حساب">{([['signin', 'ورود'], ['signup', 'ساخت حساب'], ['recover', 'بازیابی رمز']] as const).map(([value, label]) => <button className={mode === value ? 'secondary' : 'text-button'} aria-pressed={mode === value} key={value} onClick={() => { setMode(value); setError(''); setMessage(''); setPassword(''); }}>{label}</button>)}</div>
         <form className="account-form" onSubmit={e => { e.preventDefault(); void action(async () => {
           const data = await send(mode, mode === 'recover' ? { email } : { email, password }); setMessage(data.message);
-          if (mode === 'signin') await refresh();
+          if (mode === 'signin') { const savedCase = await refresh(); if (savedCase && !guest) continueTask(); }
         }); }}>
           <label>ایمیل<input type="email" autoComplete="email" maxLength={254} required dir="ltr" value={email} onChange={e => setEmail(e.target.value)} /></label>
           {mode !== 'recover' && <label>رمز، دست‌کم ۱۲ نویسه<input type="password" autoComplete={mode === 'signup' ? 'new-password' : 'current-password'} minLength={12} maxLength={128} required value={password} onChange={e => setPassword(e.target.value)} /></label>}
           <button className="primary" disabled={busy}>{busy ? 'در حال انجام…' : mode === 'signin' ? 'ورود به حساب' : mode === 'signup' ? 'ساخت حساب و ارسال تأیید' : 'ارسال پیوند بازیابی'}</button>
-        </form><p className="help">پاسخ‌های مهمان با ثبت‌نام یا ورود خودکار ذخیره نمی‌شوند؛ بعد از ورود اجازهٔ ذخیره را جدا می‌دهی.</p>
+        </form><details className="context-details"><summary>دربارهٔ حساب و ذخیرهٔ پاسخ‌ها</summary><p>پاسخ‌های مهمان با ورود یا ثبت‌نام خودکار ذخیره نمی‌شوند؛ بعد از ورود انتخاب می‌کنی که ذخیره شوند.</p><a href="/privacy">حریم خصوصی و نگهداری</a></details>
       </> : null}
       {signedEmail && <><p className="signed-email" dir="ltr">{signedEmail}</p>
-        {saved ? <section className="account-section"><h2>پاسخ‌های ذخیره‌شده</h2><p>نسخهٔ {saved.revision.toLocaleString('fa-IR')} · پاسخ‌های تأییدشده برای ادامه آماده‌اند</p><p>تاریخ پاک‌شدن در صورت بی‌فعالیتی: <strong>{new Date(saved.delete_after).toLocaleDateString('fa-IR', { dateStyle: 'long' })}</strong></p><a className="primary" href="/form">ادامهٔ نقشهٔ من</a></section> : <p className="account-section">هنوز پاسخی در حساب ذخیره نشده است.</p>}
+        {saved ? <section className="account-section"><h2>پاسخ‌های ذخیره‌شده</h2><p>برای ادامهٔ بررسی آماده‌اند.</p><a className="primary" href={continuation ?? '/form'} onClick={() => { try { sessionStorage.removeItem('kooch.account.next'); } catch { /* optional */ } }}>{continuation === '/report' ? 'دیدن کارنامهٔ مقدماتی' : continuation === '/?resume=1' ? 'ادامهٔ پیدا کردن مسیر' : 'ادامهٔ پاسخ‌های من'}</a><a className="text-button" href="/?resume=1">اصلاح هدف و مقصدها</a><details className="context-details"><summary>اطلاعات پرونده</summary><p>نسخهٔ {saved.revision.toLocaleString('fa-IR')} · تاریخ پاک‌شدن در صورت بی‌فعالیتی: <strong>{new Date(saved.delete_after).toLocaleDateString('fa-IR', { dateStyle: 'long' })}</strong></p></details></section> : <p className="account-section">هنوز پاسخی در حساب ذخیره نشده است.</p>}
         <ReportHistory key={signedEmail} />
         {guest && <section className="account-section"><h2>ذخیرهٔ پاسخ‌های مهمان</h2><p>{saved ? 'این کار پاسخ‌های فعلی پرونده را با پاسخ‌های مهمان همین نشست جایگزین می‌کند.' : 'پاسخ‌های قطب‌نمای همین نشست را در حساب خودت ذخیره کن.'}</p><label className="choice"><input type="checkbox" checked={consent} onChange={e => setConsent(e.target.checked)} />اجازه می‌دهم پاسخ‌ها در حساب ذخیره شوند و تا ۹۰ روز پس از آخرین ثبت یا اصلاح پاسخ نگهداری شوند.</label><button className="primary" disabled={busy || !consent} onClick={() => void action(saveGuest)}>ذخیره با اجازهٔ من</button></section>}
         <div className="account-actions"><button className="secondary" disabled={busy} onClick={() => void action(async () => {
@@ -120,6 +147,6 @@ export function AccountPage() {
           try { sessionStorage.removeItem('kooch.compass.guest.v1'); } catch { /* optional storage */ }
         }); }}>{!googleDeletionReady && <label>رمز فعلی<input type="password" autoComplete="current-password" required value={password} onChange={e => setPassword(e.target.value)} /></label>}<label>برای تأیید بنویس: حذف حساب<input value={confirmation} onChange={e => setConfirmation(e.target.value)} required /></label><button className="danger" disabled={busy || confirmation !== 'حذف حساب'}>حذف حساب و همهٔ پاسخ‌ها</button></form></details>
       </>}
-      {message && <p className="notice" role="status">{message}</p>}{error && <p className="error" role="alert">{error}</p>}
-    </section><aside className="guidance"><h2>پاسخ‌ها در اختیار تو</h2><p>پاسخ‌های ساختارمند قطب‌نما و نقشهٔ تو در پرونده ذخیره می‌شوند؛ مدرک، گذرنامه، نشانی یا تماس دریافت نمی‌کنیم.</p><p>دیدن صفحه، خروج و ورود یا اجرای پاک‌سازی، تاریخ نگهداری را تمدید نمی‌کند. ثبت یا اصلاح پاسخ و ساخت نسخهٔ تازهٔ کارنامه، بازهٔ ۹۰روزه را از نو آغاز می‌کند.</p><p>اگر روی رایانهٔ مشترک هستی، پس از پایان از حساب خارج شو. نسخهٔ ذخیره‌شده فقط پس از ورود قابل ادامه است.</p></aside></main></div>;
+      {message && <p className="notice" role="status">{message}</p>}{error && <p className="error" role="alert">{error}</p>}{loadError && <button className="secondary" disabled={loading} onClick={() => void loadAccount()}>تلاش دوباره برای دریافت حساب</button>}
+    </section><aside className="guidance"><h2>شروع کرده‌ای؟ ادامه بده.</h2><p>با همان حساب وارد شو تا پاسخ‌ها و کارنامه‌های ذخیره‌شده‌ات را ببینی.</p><p><a href="/">شروع بررسی بدون حساب</a></p><details className="context-details"><summary>نگهداری و مدیریت اطلاعات</summary><p>ثبت یا اصلاح پاسخ و ساخت کارنامه، بازهٔ نگهداری ۹۰روزه را از نو آغاز می‌کند؛ دیدن صفحه و ورود این تاریخ را تمدید نمی‌کند.</p><a href="/privacy">جزئیات حریم خصوصی</a></details></aside></main><AppFooter/></div>;
 }

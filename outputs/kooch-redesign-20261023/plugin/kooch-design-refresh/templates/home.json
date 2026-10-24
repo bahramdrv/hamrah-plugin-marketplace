@@ -1,0 +1,961 @@
+{
+  "version": "0.4",
+  "type": "page",
+  "title": "کوچ | یک قدم روشن‌تر برای مهاجرت",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "445654a",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-hero",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "e062b79",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-hero-copy",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "91f0fad",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "مهاجرت،<br> با یک قدم<br> <span>روشن‌تر.</span>",
+                "header_size": "h1",
+                "_css_classes": "kr-hero-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "b44fd12",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>مسیرت را پیدا کن، مقصدت را بشناس و برای تصمیم بعدی آماده شو. کوچ از جایی شروع می‌کند که تو ایستاده‌ای.</p>",
+                "_css_classes": "kr-lead"
+              },
+              "elements": []
+            },
+            {
+              "id": "febc457",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-actions",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "1f614ce",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "مسیرم را پیدا کنم ←",
+                    "link": {
+                      "url": "https://my.kooch.app/"
+                    },
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "cfc3c34",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "نمونهٔ خروجی کوچ",
+                    "link": {
+                      "url": "/sample-report/"
+                    },
+                    "_css_classes": "kr-secondary"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "c2d66a7",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>برای ایرانیانی که به یک شروع روشن‌تر فکر می‌کنند.</p>",
+                "_css_classes": "kr-quiet"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "2736094",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-hero-media",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "9f9a4f9",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "{{ASSET_URL}}/arrival.webp",
+                  "id": ""
+                },
+                "image_size": "full",
+                "alt": "تصویر مفهومی یک صبح آرام در شهر؛ ساخته‌شده با هوش مصنوعی",
+                "_css_classes": "kr-hero-image"
+              },
+              "elements": []
+            },
+            {
+              "id": "1d3c7ab",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<span>یک مقصد تازه،<br><strong>یک شروع به انتخاب تو.</strong></span>",
+                "_css_classes": "kr-image-caption"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "343ab58",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-selector",
+        "html_tag": "section",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "css_id": "next-step"
+      },
+      "elements": [
+        {
+          "id": "fa1a9be",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "الان به چه کمکی نیاز داری؟",
+            "header_size": "h2",
+            "_css_classes": "kr-choice-title"
+          },
+          "elements": []
+        },
+        {
+          "id": "0c55783",
+          "elType": "widget",
+          "widgetType": "shortcode",
+          "settings": {
+            "shortcode": "[kooch_next_step]"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "4cc0516",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-atlas",
+        "html_tag": "section",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "50fa16f",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-section-heading",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "9648863",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "قبل از انتخاب،<br>زندگی در مقصد را بشناس.",
+                "header_size": "h2",
+                "_css_classes": ""
+              },
+              "elements": []
+            },
+            {
+              "id": "6fe2885",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>کار و تحصیل، هزینه‌ها، خانه و زندگی روزمره؛ راهنمای ۲۴ کشور را یک‌جا مرور کن.</p>",
+                "_css_classes": ""
+              },
+              "elements": []
+            },
+            {
+              "id": "ea0692d",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "دیدن همهٔ کشورها ←",
+                "link": {
+                  "url": "/wiki/"
+                },
+                "_css_classes": "kr-link-button"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "91f0d76",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-country-grid",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "e145bd4",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-country",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "ecc2587",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "https://kooch.app/wp-content/uploads/2026/10/country-germany-v1-768x512.webp",
+                      "id": ""
+                    },
+                    "image_size": "full",
+                    "alt": "تصویرسازی مفهومی آلمان",
+                    "_css_classes": "kr-country-image"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "5f7e896",
+                  "elType": "container",
+                  "isInner": false,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "kr-country-copy",
+                    "html_tag": "div",
+                    "flex_gap": {
+                      "column": "0",
+                      "row": "0",
+                      "unit": "px"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "424d330",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<span lang=\"en\" dir=\"ltr\">Germany</span>",
+                        "_css_classes": "kr-country-en"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "358e5d0",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "آلمان",
+                        "header_size": "h3",
+                        "_css_classes": ""
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "b28a506",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>کار، زندگی و شروع دوباره</p>",
+                        "_css_classes": ""
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "91de35e",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "راهنمای آلمان ←",
+                        "link": {
+                          "url": "/wiki/germany/"
+                        },
+                        "_css_classes": "kr-link-button"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "9d4b47b",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-country",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "7648a8c",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "https://kooch.app/wp-content/uploads/2026/10/country-canada-v1-768x512.webp",
+                      "id": ""
+                    },
+                    "image_size": "full",
+                    "alt": "تصویرسازی مفهومی کانادا",
+                    "_css_classes": "kr-country-image"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "4f2df29",
+                  "elType": "container",
+                  "isInner": false,
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "kr-country-copy",
+                    "html_tag": "div",
+                    "flex_gap": {
+                      "column": "0",
+                      "row": "0",
+                      "unit": "px"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "b7ba200",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<span lang=\"en\" dir=\"ltr\">Canada</span>",
+                        "_css_classes": "kr-country-en"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "c9e9231",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "کانادا",
+                        "header_size": "h3",
+                        "_css_classes": ""
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "873ae1a",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>از شناخت مقصد تا زندگی روزمره</p>",
+                        "_css_classes": ""
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "22eedb1",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "راهنمای کانادا ←",
+                        "link": {
+                          "url": "/wiki/canada/"
+                        },
+                        "_css_classes": "kr-link-button"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "56a3835",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-proof",
+        "html_tag": "section",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "0da1b63",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-proof-copy",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "f24cdd3",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "فقط یک جواب نه؛<br>یک قدم قابل انجام.",
+                "header_size": "h2",
+                "_css_classes": ""
+              },
+              "elements": []
+            },
+            {
+              "id": "b4e288f",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>ببین چه چیزهایی را می‌دانی، کدام سؤال‌ها هنوز باز مانده‌اند و برای ادامه از کجا شروع کنی.</p>",
+                "_css_classes": ""
+              },
+              "elements": []
+            },
+            {
+              "id": "0c82c71",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "دیدن نمونهٔ کامل ←",
+                "link": {
+                  "url": "/sample-report/"
+                },
+                "_css_classes": "kr-link-button"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "a4b1a3f",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<div class=\"kr-report\"><div class=\"kr-report-top\"><span>نمونهٔ خروجی کوچ</span><span class=\"kr-tag\">پروفایل فرضی</span></div><h3>قدم بعدی، مشخص‌تر از قبل.</h3><div class=\"kr-report-row\"><span>هدف</span><strong>کار در آلمان</strong></div><div class=\"kr-report-row\"><span>برای بررسی بیشتر</span><strong>ویزای کار نیروی متخصص</strong></div><div class=\"kr-report-next\"><span>قدم بعدی این نمونه</span><p>شرط پیشنهاد شغلی و وضعیت اعتبار مدرک را در منبع رسمی بررسی کن.</p></div><a class=\"kr-text-link\" href=\"/sample-report/\">نمونهٔ کامل را ببین <span aria-hidden=\"true\">←</span></a></div>",
+            "_css_classes": "kr-report-widget"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "c6dd456",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-consult",
+        "html_tag": "section",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "0704901",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-consult-copy",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "7d166a7",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "برای سؤال‌های مهمت،<br>وقت گفت‌وگو بگذار.",
+                "header_size": "h2",
+                "_css_classes": ""
+              },
+              "elements": []
+            },
+            {
+              "id": "88c4c53",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>با نقشهٔ کوچ برای جلسه آماده شو؛ بعد زمان گفت‌وگوی آنلاین با مشاور را انتخاب کن.</p>",
+                "_css_classes": ""
+              },
+              "elements": []
+            },
+            {
+              "id": "1a46a9b",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "آماده‌سازی و رزرو جلسه ←",
+                "link": {
+                  "url": "/consultation/"
+                },
+                "_css_classes": "kr-light-button"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "ff32a18",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-consult-aside",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "155aad1",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<span class=\"kr-consult-duration\">۶۰<span>دقیقه</span></span>",
+                "_css_classes": ""
+              },
+              "elements": []
+            },
+            {
+              "id": "975803f",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "گفت‌وگو دربارهٔ<br>شرایط و اولویت‌های تو",
+                "header_size": "h3",
+                "_css_classes": ""
+              },
+              "elements": []
+            },
+            {
+              "id": "5bd65db",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>آنلاین · با انتخاب زمان جلسه</p>",
+                "_css_classes": ""
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d177e7c",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-guides",
+        "html_tag": "section",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "dd49821",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-heading-line",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "a5c7d43",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "راهنماهایی برای تصمیم بعدی",
+                "header_size": "h2",
+                "_css_classes": ""
+              },
+              "elements": []
+            },
+            {
+              "id": "f9f19cd",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "همهٔ راهنماها ←",
+                "link": {
+                  "url": "/blog/"
+                },
+                "_css_classes": "kr-link-button"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "08e581b",
+          "elType": "widget",
+          "widgetType": "kooch_dynamic",
+          "settings": {
+            "view": "latest"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "c0d1e8a",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-home-faq",
+        "html_tag": "section",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "6e59960",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "چند سؤال، قبل از شروع",
+            "header_size": "h2",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "fef39b3",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<div class=\"kr-faq\"><details><summary>از کجا شروع کنم؟</summary><p>اگر می‌خواهی مسیرها را بشناسی، قطب‌نمای کوچ را باز کن. برای ادامهٔ تحصیل، فرم تحصیلی را انتخاب کن؛ برای گفت‌وگو، از صفحهٔ مشاوره شروع کن.</p></details><details><summary>هنوز مقصدی انتخاب نکرده‌ام؛ می‌توانم شروع کنم؟</summary><p>بله. در قطب‌نما می‌توانی با هدفت شروع کنی و مقصدها را در قدم بعد انتخاب کنی.</p></details><details><summary>نتیجه به من چه کمکی می‌کند؟</summary><p>مسیرهای مرتبط برای مطالعه، سؤال‌های باقی‌مانده و قدم بعدی را روشن‌تر می‌بینی. بررسی مسیر با تصمیم نهایی مرجع مهاجرت متفاوت است.</p></details></div>",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "417d313",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "همهٔ پرسش‌ها ←",
+            "link": {
+              "url": "/faq/"
+            },
+            "_css_classes": "kr-link-button"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

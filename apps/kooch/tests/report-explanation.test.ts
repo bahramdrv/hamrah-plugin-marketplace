@@ -4,6 +4,26 @@ import { randomUUID } from 'node:crypto';
 import { harness, saveInput } from './helpers/account';
 const enabled = Boolean(process.env.KOOCH_DATABASE_URL && process.env.KOOCH_AUTH_URL);
 const now = () => new Date('2026-10-21T12:00:00Z');
+test('a work briefing explains only source-backed prerequisite and action IDs without sending profile values', { skip: !enabled }, async () => {
+  const { aiCompletion } = await import('./helpers/ai');
+  let projection: any;
+  const { h, pool } = await explanationHarness(async (_url, init) => {
+    projection = JSON.parse(JSON.parse(String(init?.body)).messages[1].content);
+    return aiCompletion({ reasons: ['de:eu-blue-card/de.job_offer'], actions: ['de:eu-blue-card/next_step'] });
+  });
+  try {
+    const c = await h.verifiedClient();
+    await c.request('case', { ...saveInput(), answers: { goal: 'work', destinations: ['de'], budget: { amount: 12345, currency: 'EUR' }, facts: { 'de.job_offer': 'no' } } });
+    const { report } = await (await c.request('report', { expected_revision: 1, request_id: randomUUID() })).json();
+    const data = await (await c.request(`report/${report.id}/explanation`, { request_id: randomUUID() })).json();
+    assert.equal(data.explanation.status, 'ready');
+    assert.match(data.explanation.actions[0].text, /ابتدا پیشنهاد کار تخصصی/);
+    assert.ok(data.explanation.actions[0].source_ids.length > 0);
+    assert.ok(!JSON.stringify(projection).includes('12345'));
+    assert.ok(!JSON.stringify(projection).includes('dependencies'));
+    assert.equal(projection.routes[0].conditions[0].state, 'action_needed');
+  } finally { await h.close(); await pool.end(); }
+});
 test('unaccepted report explanation preserves the saved base report and never starts inference on reads', { skip: !enabled }, async () => {
   const h = await harness(now);
   try {

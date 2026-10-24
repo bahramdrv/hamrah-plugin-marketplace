@@ -1,0 +1,116 @@
+{
+  "version": "0.4",
+  "type": "page",
+  "title": "پرسش‌های متداول",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "e191e0c",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-page-intro",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "b040945",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "پیش از شروع،<br>جواب چند سؤال.",
+            "header_size": "h1",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "caba63b",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>برای انتخاب ابزار و قدم بعدی.</p>",
+            "_css_classes": "kr-lead"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "cc213b8",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-faq-page",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "096259c",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<div class=\"kr-faq\"><details><summary>از کجا شروع کنم؟</summary><p>اگر می‌خواهی مسیرها را بشناسی، قطب‌نمای کوچ را باز کن. برای ادامهٔ تحصیل، فرم تحصیلی را انتخاب کن؛ برای گفت‌وگو، از صفحهٔ مشاوره شروع کن.</p></details><details><summary>هنوز مقصدی انتخاب نکرده‌ام؛ می‌توانم شروع کنم؟</summary><p>بله. در قطب‌نما می‌توانی با هدفت شروع کنی و مقصدها را در قدم بعد انتخاب کنی.</p></details><details><summary>نتیجه به من چه کمکی می‌کند؟</summary><p>مسیرهای مرتبط برای مطالعه، سؤال‌های باقی‌مانده و قدم بعدی را روشن‌تر می‌بینی. بررسی مسیر با تصمیم نهایی مرجع مهاجرت متفاوت است.</p></details></div>",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "21871c0",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>برای جزئیات بیشتر دربارهٔ منابع و اطلاعات حساب، <a href=\"/methodology/\">روش بررسی</a> و <a href=\"/privacy/\">سیاست حریم خصوصی</a> را ببین.</p>",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "fcbceea",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "انتخاب قدم بعدی ←",
+            "link": {
+              "url": "/start/"
+            },
+            "_css_classes": ""
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

@@ -50,7 +50,7 @@ export class EvidenceStore {
   async read(client?: Pick<PoolClient, 'query'>): Promise<EvidenceState> { return this.load(client ?? this.options.pool); }
   async reportReview(client?: Pick<PoolClient, 'query'>): Promise<EvidenceReview> {
     const state = await this.read(client);
-    return { routeIds: state.reviews.map(r => r.route_id), retrievalFailed: state.state === 'error' };
+    return { routeIds: state.reviews.map(r => r.route_id), retrievalFailed: state.state === 'error', discoverySnapshot: state.active.snapshot };
   }
   async advance(run: (state: EvidenceState) => Promise<EvidenceState>): Promise<EvidenceState | null> {
     const client = await this.options.pool.connect();

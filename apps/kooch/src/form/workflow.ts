@@ -9,6 +9,7 @@ export function formRecords(saved: SavedCase): Record<string, AnswerRecord> {
   for (const id of ['goal', 'education', 'language', 'budget', 'timeline'] as const) {
     const value = saved.answers[id];
     if (value !== null && value !== 'unknown') records[id] = { answer: { state: 'known', value }, question_version: 1, source: 'compass', answered_at: saved.last_activity_at };
+    else if (saved.answers.answered?.includes(id)) records[id] = { answer: { state: 'unknown' }, question_version: 1, source: 'compass', answered_at: saved.last_activity_at };
   }
   if (saved.answers.work === 'none') records.work_years = { answer: { state: 'known', value: 0 }, question_version: 1, source: 'compass', answered_at: saved.last_activity_at };
   return { ...records, ...saved.form?.answers };
@@ -16,6 +17,10 @@ export function formRecords(saved: SavedCase): Record<string, AnswerRecord> {
 export function relevantQuestions(records: Record<string, AnswerRecord>, destinations: string[] = []): Question[] {
   const value = (id: string) => { const r = records[id]; return r && !r.needs_review && r.answer.state === 'known' ? r.answer.value : undefined; };
   return formQuestions.filter(q => {
+    const goal = String(value('goal') ?? 'unknown');
+    if (q.id === 'age_exact') return goal === 'study';
+    if (['education', 'language', 'language_exam', 'language_score'].includes(q.id) && !['study', 'work', 'unknown'].includes(goal)) return false;
+    if (q.id === 'budget' && goal === 'family') return false;
     if (q.route_id && (value('goal') !== 'study' || (destinations.length > 0 && !destinations.includes(q.route_id.split(':')[0])))) return false;
     if (['passport', 'dependants'].includes(q.id)) return value('goal') === 'study';
     if (q.id === 'ca_study_caq') return value('ca_study_province') === 'quebec';
@@ -113,10 +118,29 @@ export function applyFormAnswer(saved: SavedCase, input: FormInput, now: Date) {
 export function reconcileCompass(saved: SavedCase, next: SavedCase['answers']): FormState {
   const form: FormState = structuredClone(saved.form ?? { schema_version: 1, answers: {} });
   delete form.draft;
-  if (JSON.stringify(saved.answers) === JSON.stringify(next)) return form;
-  for (const id of Object.keys(form.answers)) {
-    if (['goal', 'education', 'language', 'timeline', 'budget'].includes(id)) delete form.answers[id];
-    else form.answers[id] = { ...form.answers[id], needs_review: true, review_reason: 'dependency_changed' };
+  const changed = (id: keyof SavedCase['answers']) => JSON.stringify(saved.answers[id]) !== JSON.stringify(next[id]);
+  const affected = new Set<string>();
+  for (const id of ['goal', 'education', 'language', 'timeline', 'budget'] as const) {
+    if (changed(id)) { affected.add(id); delete form.answers[id]; }
+  }
+  if (changed('age')) affected.add('age_exact');
+  if (changed('work')) affected.add('work_years');
+  const inScope = (destinations: string[], route: string) => !destinations.length || destinations.includes(route.split(':')[0]);
+  for (const q of formQuestions) {
+    if (q.route_id && inScope(saved.answers.destinations, q.route_id) !== inScope(next.destinations, q.route_id)) affected.add(q.id);
+  }
+  for (const id of new Set([...Object.keys(saved.answers.facts), ...Object.keys(next.facts)])) {
+    if (saved.answers.facts[id] !== next.facts[id]) {
+      for (const q of formQuestions) if (q.route_id?.startsWith(`${id.split('.')[0]}:`)) affected.add(q.id);
+    }
+  }
+  let count = -1;
+  while (count !== affected.size) {
+    count = affected.size;
+    for (const q of formQuestions) if (q.depends_on.some(id => affected.has(id))) affected.add(q.id);
+  }
+  for (const id of affected) {
+    if (form.answers[id]) form.answers[id] = { ...form.answers[id], needs_review: true, review_reason: 'dependency_changed' };
   }
   return form;
 }

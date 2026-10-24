@@ -1,0 +1,455 @@
+{
+  "version": "0.4",
+  "type": "page",
+  "title": "چطور کمکت کنیم؟",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "a34b61a",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-page-intro",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "caed946",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "برای چه موضوعی کمک می‌خواهی؟",
+            "header_size": "h1",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "0a9435e",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>از مسیر مرتبط شروع کن تا سریع‌تر به پاسخ برسی.</p>",
+            "_css_classes": "kr-lead"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "94d6258",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-task-list",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "2f932d7",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-task-row",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "43ff5dc",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-copy",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "a8d4dd4",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "نحوهٔ استفاده از کوچ",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "32372b6",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>برای شروع، انتخاب ابزار و برگشت به جمع‌بندی‌ها.</p>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "d42b40f",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-action",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "968bf5f",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "راهنمای استفاده ←",
+                    "link": {
+                      "url": "/help/"
+                    },
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7df7da3",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-task-row",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "9385b4b",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-copy",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "5a552af",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "سؤال دربارهٔ شرایط خودم",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "907bcf0",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>اولویت‌ها و سؤال‌هایت را پیش از یک جلسهٔ آنلاین مرتب کن.</p>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "d3b626e",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-action",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "71be9b3",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "صفحهٔ مشاوره ←",
+                    "link": {
+                      "url": "/consultation/"
+                    },
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "c36f0a5",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-task-row",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "5276be4",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-copy",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "d424f74",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "سؤال دربارهٔ زندگی در مقصد",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "f779064",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>راهنماها و گفت‌وگوهای کشور موردنظرت را پیدا کن.</p>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "ac9660a",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-action",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "8c4cced",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "دیدن کامیونیتی‌ها ←",
+                    "link": {
+                      "url": "/community/"
+                    },
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3102931",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-prose",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "c670d87",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>ارسال مستقیم پیام از این صفحه فعلاً در دسترس نیست.</p>",
+            "_css_classes": ""
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

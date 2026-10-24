@@ -1,0 +1,250 @@
+{
+  "version": "0.4",
+  "type": "page",
+  "title": "از هدف تو،<br>به شناخت مسیرها.",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "771dc47",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-page-intro",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "836da13",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "از هدف تو،<br>به شناخت مسیرها.",
+            "header_size": "h1",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "6378eb5",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>لازم نیست از قبل نام ویزاها را بدانی. از هدفت شروع کن و مسیرهای مرتبط را برای مطالعه پیدا کن.</p>",
+            "_css_classes": "kr-lead"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "abb2711",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-actions kr-service-actions",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "0edc32a",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "مسیرم را پیدا کنم ←",
+            "link": {
+              "url": "https://my.kooch.app/"
+            },
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "314bf20",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "انتخاب کمک دیگر",
+            "link": {
+              "url": "/start/"
+            },
+            "_css_classes": "kr-secondary"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "94020aa",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-prose",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "3eee34a",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "چه چیزی می‌بینی؟",
+            "header_size": "h2",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "2a79452",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>راهنمای مسیرها، شرایط و منابع هرکدام؛ همراه با سؤال‌هایی که برای ادامه باید روشن کنی. در کاتالوگ مسیرها می‌توانی کشور و نوع مسیر را هم فیلتر کنی.</p><p><a href=\"/visas/\">مرور مستقیم مسیرها ←</a></p>",
+            "_css_classes": ""
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "fcc90b9",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-prose",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "c43d06f",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "چطور شروع کنی؟",
+            "header_size": "h2",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "1922500",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<ol><li>هدفت را انتخاب کن.</li><li>مقصدها و جزئیات برنامه‌ات را مشخص کن.</li><li>انتخاب‌ها را مرور کن و راهنماهای مرتبط را بخوان.</li></ol>",
+            "_css_classes": ""
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "44894d4",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-prose",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "c3ac8a8",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "برای تصمیم شخصی، یک قدم بیشتر",
+            "header_size": "h2",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "7ad051b",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>قطب‌نما ابزار شناخت مسیرهاست. برای روشن‌کردن شرایط و اولویت‌های خودت می‌توانی از <a href=\"/consultation/\">مشاورهٔ کوچ</a> شروع کنی.</p>",
+            "_css_classes": ""
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

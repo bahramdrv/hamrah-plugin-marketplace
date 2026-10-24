@@ -4,6 +4,7 @@ import { reportFactsSchema, type EvidenceReview } from './contract';
 import { routeQuestionId } from './questions';
 import { reportPolicy, policyDigest } from './policy';
 import { formRecords, formView } from '../form/workflow';
+import { buildDiscovery, type DiscoveryBriefing } from './discovery';
 export type State = 'self_reported_met' | 'action_needed' | 'unknown' | 'needs_review' | 'not_applicable' | 'not_assessed';
 export type Condition = { id: string; title: string; state: State; reason: string; document_verified: false; source_ids: string[];
   rule: { version: string; value: string | number | null; unit: string | null; exceptions: string } };
@@ -125,6 +126,7 @@ export function buildReport(saved: SavedCase, now: Date, review: EvidenceReview 
   return { schema_version: 1, kind: 'self_service_guidance', assessment: 'preliminary',
     created_at: now.toISOString(), case_revision: saved.revision, coverage: 'partial',
     dependencies: { case: saved },
+    discovery: buildDiscovery(saved, now, review),
     route_results: study ? [
       ...(!destinations.length || destinations.includes('uk') ? [evaluateStudent(saved, now, review.routeIds.includes('uk:student'), review.retrievalFailed)] : []),
       ...(!destinations.length || destinations.includes('ca') ? [evaluateCanada(saved, now, review.routeIds.includes('ca:study-permit-ca'), review.retrievalFailed)] : []),
@@ -132,5 +134,5 @@ export function buildReport(saved: SavedCase, now: Date, review: EvidenceReview 
     coverage_note: 'پوشش ارزیابی فعلی شامل تحصیل بریتانیا و درخواست اولیهٔ مجوز تحصیل کاناداست؛ نبود نتیجه برای مقصد یا هدف دیگر به معنی بسته‌بودن مسیر نیست.',
   };
 }
-export type GuidanceReport = ReturnType<typeof buildReport> & { id: string; version: number };
+export type GuidanceReport = Omit<ReturnType<typeof buildReport>, 'discovery'> & { id: string; version: number; discovery?: DiscoveryBriefing };
 export type RouteReport = GuidanceReport['route_results'][number];

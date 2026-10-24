@@ -1,9 +1,14 @@
+'use client';
+import { useEffect, useRef, useState } from 'react';
 import type { CompassResult } from './api';
 import type { RetrievalStatus } from './retrieval';
+import { GuidanceSummary } from './guidance-summary';
+import { RouteComparison } from './route-comparison';
+import { date } from './display';
+import { RouteResearch } from './research/view';
+export { date } from './display';
 const num = (n: number) => n.toLocaleString('fa-IR');
-export function date(value: string) {
-  return new Date(value).toLocaleDateString('fa-IR', { dateStyle: 'medium', timeZone: 'Asia/Tehran' });
-}
+
 export function Evidence({ result, retrieval }: { result: CompassResult; retrieval?: RetrievalStatus }) {
   return <details className="evidence"><summary>منبع، تاریخ و محدودهٔ پوشش</summary>
     <p>روش اقدام {num(result.coverage.current)} مسیر در این داده اعتبار دارد. از {num(result.coverage.catalog)} رکورد کاتالوگ، {num(result.coverage.unreviewed)} مورد هنوز بررسی روش اقدام ندارند. نبود پوشش، به معنی بسته‌بودن مسیر نیست.</p>
@@ -15,21 +20,46 @@ export function Evidence({ result, retrieval }: { result: CompassResult; retriev
   </details>;
 }
 export function Results({ result, edit, editPrerequisites, busy, retrieval }: { result: CompassResult; edit: () => void; editPrerequisites: () => void; busy: boolean; retrieval?: RetrievalStatus }) {
+  const [selected, setSelected] = useState<string[]>([]);
+  const [comparing, setComparing] = useState(false);
+  const comparison = useRef<HTMLHeadingElement>(null);
+  const comparisonButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => { setSelected([]); setComparing(false); }, [result]);
+  useEffect(() => { if (comparing) comparison.current?.focus(); }, [comparing]);
+  const selectedRoutes = result.routes.filter(route => selected.includes(route.id));
+  function toggle(id: string) {
+    setComparing(false);
+    setSelected(current => current.includes(id) ? current.filter(value => value !== id) : current.length < 3 ? [...current, id] : current);
+  }
   return <section aria-labelledby="result-title" className="results">
     <div className="result-heading"><div><h1 id="result-title" tabIndex={-1}>مسیرهای قابل بررسی</h1><p>این فهرست، تأیید شرایط یا احتمال ویزا نیست.</p></div><button className="secondary" disabled={busy} onClick={edit}>مرور و اصلاح پاسخ‌ها</button></div>
-    {result.editable_questions.length > 0 && <button className="text-button" disabled={busy} onClick={editPrerequisites}>{busy ? 'در حال دریافت…' : 'اصلاح پاسخ‌های پیش‌نیاز'}</button>}
+    {result.routes.length > 0 && result.guidance && <GuidanceSummary guidance={result.guidance}/>}
     {!result.routes.length && <div className="empty-state"><h2>{result.status === 'review_required' ? 'اطلاعات مسیرها به بازبینی تازه نیاز دارند' : 'این انتخاب را با هدف یا مقصد دیگری بررسی کن'}</h2><p>{result.status === 'review_required' ? 'اعتبار شواهد تمام شده است؛ دادهٔ قدیمی را جایگزین نتیجه نمی‌کنیم.' : result.no_match_reason === 'prerequisite_required' ? 'مسیرهای این انتخاب به سابقه یا شرط مشخصی نیاز دارند که در پاسخ‌هایت تأیید نشده است. می‌توانی پاسخ‌های پیش‌نیاز را اصلاح کنی.' : 'برای ترکیب این هدف و مقصد، هنوز مسیر مستندی در داده‌های فعلی نداریم. این به معنی بسته‌بودن راه مهاجرت نیست.'}</p></div>}
+    {result.routes.length > 1 && <div className="comparison-toolbar"><div><h2>مقایسهٔ مسیرها</h2><p className="help">دو یا سه مسیر را انتخاب کن تا شرط‌ها و قدم بعدی را کنار هم ببینی.</p></div><button ref={comparisonButton} className="secondary" disabled={selected.length < 2 || busy} onClick={() => setComparing(true)} aria-controls={comparing ? 'route-comparison' : undefined}>مقایسهٔ انتخاب‌ها{selected.length > 0 && ` (${num(selected.length)})`}</button></div>}
+    {comparing && selectedRoutes.length >= 2 && <section id="route-comparison" className="comparison-section" aria-labelledby="comparison-title"><div className="result-heading"><h2 id="comparison-title" ref={comparison} tabIndex={-1}>تفاوت مسیرهای انتخاب‌شده</h2><button className="text-button" onClick={() => { setComparing(false); comparisonButton.current?.focus(); }}>بستن مقایسه</button></div><RouteComparison routes={selectedRoutes}/></section>}
     <div className="route-grid">{result.routes.map(route => <article className="route-card" key={route.id}>
       <div className="route-title"><span className="flag" aria-hidden="true">{route.flag}</span><div><h2>{route.name_fa.split('؛')[0]}</h2><p>{route.country} · {route.category}</p></div></div>
+      {result.routes.length > 1 && <label className="compare-choice"><input type="checkbox" aria-label={`مقایسهٔ ${route.name_fa.split('؛')[0]}`} checked={selected.includes(route.id)} disabled={busy || (!selected.includes(route.id) && selected.length >= 3)} onChange={() => toggle(route.id)}/><span>مقایسه</span></label>}
       <p>{route.summary}</p>
+      <p className="route-reason"><strong>چرا بررسی‌اش کنی؟ </strong>{route.reason}</p>
       <dl>{route.facts.length ? route.facts.map(fact => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>) : <div><dt>شرط اصلی</dt><dd>{route.prerequisite}</dd></div>}<div><dt>روش اقدام</dt><dd>{route.application_method}</dd></div></dl>
-      <p className="route-next-step"><strong>گام بعدی تو: </strong>{route.next_step}</p>
+      {route.next_step !== result.guidance?.main_action && <p className="route-next-step"><strong>گام بعدی این مسیر: </strong>{route.next_step}</p>}
       <details><summary>منابع و تاریخ اطلاعات</summary><p lang="en" dir="ltr">{route.official_name}</p><p>{route.channel_note}</p>{route.followup && <p>{route.followup}</p>}<p>بررسی روش اقدام: {date(route.checked_on)} · اعتبار تا {date(route.valid_until)}</p><ul>{[...new Map([...route.sources, ...route.facts.flatMap(fact => fact.sources)].map(source => [`${source.id}:${source.checked_on}`, source])).values()].map(source => <li key={`${source.id}:${source.checked_on}`}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a> · {date(source.checked_on)}</li>)}</ul></details>
-      {route.page_url ? <a className="route-link" href={route.page_url} target="_blank" rel="noreferrer">بررسی مسیر <span aria-hidden="true">←</span></a> : <p className="muted">صفحهٔ عمومی این مسیر هنوز منتشر نشده است.</p>}
+      {route.page_url ? <a className="route-link" href={route.page_url} target="_blank" rel="noreferrer">خواندن راهنمای مسیر <span className="sr-only">در تب تازه؛ مسیرها در این صفحه می‌مانند</span><span aria-hidden="true">←</span></a> : <p className="muted">صفحهٔ عمومی این مسیر هنوز منتشر نشده است.</p>}
+      <RouteResearch routeId={route.id} academic={route.category === 'تحصیل'}/>
     </article>)}</div>
     {result.omitted_by_limit > 0 && <p>{num(result.omitted_by_limit)} مسیر مرتبط دیگر هم وجود دارد. با انتخاب مقصد، فهرست را محدود کن.</p>}
     {result.unknowns.length > 0 && <details className="evidence"><summary>اطلاعاتی که هنوز نامعلوم‌اند</summary><ul>{result.unknowns.map(item => <li key={item}>{item}</li>)}</ul></details>}
-    <section className="next-steps"><h2>قدم بعدی تو</h2><ul>{result.next_steps.map(item => <li key={item}>{item}</li>)}</ul></section>
+    {result.routes.length > 0 && !result.guidance && <NextActions key={JSON.stringify(result.routes.map(route => [route.id, route.next_step]))} routes={result.routes}/>}
+    <details className="next-steps context-details"><summary>موارد دیگر برای آماده‌سازی</summary><ul>{result.next_steps.map(item => <li key={item}>{item}</li>)}</ul></details>
     <Evidence result={result} retrieval={retrieval} />
   </section>;
+}
+
+export { RouteComparison } from './route-comparison';
+
+function NextActions({ routes }: { routes: CompassResult['routes'] }) {
+  const [completed, setCompleted] = useState<string[]>([]);
+  const actions = [...new Set(routes.map(route => route.next_step))];
+  return <section className="next-actions" aria-labelledby="next-actions-title"><h2 id="next-actions-title">از این قدم شروع کن</h2><p className="help">کارهای مربوط به همین مسیرها؛ علامت‌ها فقط در این صفحه می‌مانند.</p>{actions.map(action => <label className="action-task" key={action}><input type="checkbox" checked={completed.includes(action)} onChange={event => setCompleted(current => event.target.checked ? [...current, action] : current.filter(item => item !== action))}/><span>{action}</span></label>)}</section>;
 }

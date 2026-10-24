@@ -32,4 +32,4 @@ export const changeLabels: Record<ReportChange, string> = {
   evidence_changed: 'شواهد یا وضعیت بازبینی آن‌ها تغییر کرده است', recreated: 'ساخت دوباره از همان پاسخ‌ها و نسخهٔ شواهد',
 };
 
-export type EvidenceReview = { routeIds: readonly string[]; retrievalFailed: boolean };
+export type EvidenceReview = { routeIds: readonly string[]; retrievalFailed: boolean; discoverySnapshot?: unknown };

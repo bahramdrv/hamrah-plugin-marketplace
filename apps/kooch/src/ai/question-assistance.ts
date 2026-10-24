@@ -42,7 +42,7 @@ const completionSchema = z.object({
   }).strict()).length(1),
   usage: z.object({ prompt_tokens: z.number().int().nonnegative(), completion_tokens: z.number().int().nonnegative().max(128), total_tokens: z.number().int().nonnegative() }),
 });
-export type Status = 'budget_zero' | 'simulated_wording' | 'worded' | 'invalid_response' | 'unavailable' | 'timeout' | 'no_question' | 'stale' |
+export type Status = 'fixed_wording' | 'budget_zero' | 'simulated_wording' | 'worded' | 'invalid_response' | 'unavailable' | 'timeout' | 'no_question' | 'stale' |
   'configuration_invalid' | 'pricing_unknown' | 'capability_unaccepted' | 'budget_exhausted' | 'cooldown' | 'policy_blocked' | 'already_requested' | 'accounting_unavailable' | 'credentials_missing';
 export type AssistedFormView = FormView & { interpretation_disclosure?: { recipient: string; processing_location: string; retention: string; evidence: string; acceptance_notice?: string } | null; question_assistance: {
   policy_version: string; status: Status; model_listed: boolean;

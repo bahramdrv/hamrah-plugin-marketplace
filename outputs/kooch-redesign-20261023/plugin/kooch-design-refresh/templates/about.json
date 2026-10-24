@@ -1,0 +1,177 @@
+{
+  "version": "0.4",
+  "type": "page",
+  "title": "کوچ؛ همراه قدم بعدی",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "ba5f5e7",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-page-intro",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "04038d3",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "تصمیم بزرگ،<br>با قدم‌های روشن‌تر.",
+            "header_size": "h1",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "b3a7e44",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>کوچ برای ایرانیانی ساخته می‌شود که می‌خواهند مهاجرت را با شناخت بیشتر از خودشان و مقصد بررسی کنند.</p>",
+            "_css_classes": "kr-lead"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "4557a74",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-prose",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "067dc1b",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "از اطلاعات پراکنده تا یک نقطهٔ شروع",
+            "header_size": "h2",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "ddc498d",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>گاهی سؤال اصلی هنوز این نیست که کدام ویزا را انتخاب کنی؛ می‌خواهی بدانی چه چیزی را باید بشناسی و از کجا شروع کنی. کوچ راهنماهای کشورها، مسیرهای مهاجرت، ابزارهای شناخت شرایط و آماده‌سازی مشاوره را کنار هم می‌آورد.</p>",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "52138bc",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "قدم اول را پیدا کن ←",
+            "link": {
+              "url": "/start/"
+            },
+            "_css_classes": ""
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "8a1345f",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-prose",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "7999c7d",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "کمک متناسب با تصمیم تو",
+            "header_size": "h2",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "ed7a7a5",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>از مرور راهنمای یک کشور تا مرتب‌کردن سوابق تحصیلی و آماده‌شدن برای جلسه؛ نقطهٔ شروع را خودت انتخاب می‌کنی.</p>",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "0a85309",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "کوچ چطور کمکت می‌کند؟ ←",
+            "link": {
+              "url": "/services/"
+            },
+            "_css_classes": "kr-link-button"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

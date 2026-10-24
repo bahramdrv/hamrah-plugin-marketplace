@@ -1,0 +1,561 @@
+{
+  "version": "0.4",
+  "type": "page",
+  "title": "از کجای مسیر شروع کنیم؟",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "c946fd2",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-page-intro",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "c7b51a0",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "الان کجای مسیر هستی؟",
+            "header_size": "h1",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "94ab16c",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>کاری را انتخاب کن که امروز یک قدم جلوتر می‌بردت.</p>",
+            "_css_classes": "kr-lead"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "e4c8884",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-task-list",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "b92ba20",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-task-row",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "1b966c3",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-copy",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "9d2e9c6",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "می‌خواهم مسیرها را بشناسم",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "7bfd60f",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>با هدفت شروع کن و راهنماهای مرتبط با مقصدهایت را پیدا کن.</p>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "d9773c5",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-action",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "d2ee971",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<span>سؤال‌ها متناسب با پاسخ‌های تو</span>",
+                    "_css_classes": "kr-quiet"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "73ea142",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "مسیرم را پیدا کنم ←",
+                    "link": {
+                      "url": "https://my.kooch.app/"
+                    },
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8a3cc74",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-task-row",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "733fd4a",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-copy",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "3d40f73",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "برای ادامهٔ تحصیل برنامه دارم",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "86b2c42",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>سابقه، علاقه‌ها و شرایط تحصیلی‌ات را یک‌جا مرتب کن.</p>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "264f515",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-action",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "4ae2de8",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<span>از هدف و شرایطت شروع کن</span>",
+                    "_css_classes": "kr-quiet"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "408d03b",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "شروع بررسی تحصیلی ←",
+                    "link": {
+                      "url": "https://my.kooch.app/?goal=study"
+                    },
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7e06848",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-task-row",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "124df74",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-copy",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "0fa631e",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "می‌خواهم با مشاور صحبت کنم",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "64fbfd6",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>نقشهٔ کوچ را کامل کن و برای جلسهٔ آنلاین آماده شو.</p>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "321e9f4",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-action",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "d8b7e46",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<span>جلسهٔ آنلاین ۶۰ دقیقه‌ای</span>",
+                    "_css_classes": "kr-quiet"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "6863b28",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "دیدن مراحل مشاوره ←",
+                    "link": {
+                      "url": "/consultation/"
+                    },
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bd3fbd0",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-task-row",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "60b1f75",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-copy",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "ea16e18",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "فعلاً می‌خواهم تحقیق کنم",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "b28bbfc",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>راهنمای کشورها و شرایط مسیرها را بدون پر کردن فرم بخوان.</p>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "68d4aad",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-action",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "2a2306d",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "مرور کشورها ←",
+                    "link": {
+                      "url": "/wiki/"
+                    },
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -8,6 +8,8 @@ import { Evidence, Results } from './result';
 import type { RetrievalStatus } from './retrieval';
 import { accountRequest, invalidateAccountRequests, StaleAccountRequest } from './account/client';
 import { consentVersion, type SavedCase } from './account/contract';
+import { AppFooter, AppHeader, CompassGuidance } from './shell';
+import type { InterviewQuestion } from './journey';
 
 const storageKey = 'kooch.compass.guest.v1';
 type View = 'form' | 'prerequisites' | 'result';
@@ -15,6 +17,9 @@ export function Compass() {
   const [config, setConfig] = useState<(CompassConfig & { retrieval?: RetrievalStatus }) | null>(null);
   const [answers, setAnswers] = useState<Answers>(emptyAnswers);
   const [step, setStep] = useState(0);
+  const [question, setQuestion] = useState<InterviewQuestion | null>(null);
+  const [plan, setPlan] = useState<CompassResult['interview'] | null>(null);
+  const planned = useRef(false);
   const [view, setView] = useState<View>('form');
   const [editingPrerequisites, setEditingPrerequisites] = useState(false);
   const [result, setResult] = useState<CompassResult | null>(null);
@@ -26,6 +31,7 @@ export function Compass() {
   const [currency, setCurrency] = useState('EUR');
   const [privateCase, setPrivateCase] = useState<SavedCase | null>(null);
   const [accountNotice, setAccountNotice] = useState('');
+  const [undo, setUndo] = useState<{ answers: Answers; step: number; view: View; result: CompassResult | null; amount: string; currency: string; editingPrerequisites: boolean; question: InterviewQuestion | null; plan: CompassResult['interview'] | null } | null>(null);
   const privateMode = useRef(false);
   const revision = useRef(0);
   const abort = useRef<AbortController | null>(null);
@@ -38,6 +44,7 @@ export function Compass() {
       const body = await response.json();
       if (!body.questions) throw new Error();
       setConfig(body);
+      if (body.data.interview) { setQuestion(body.data.interview.next_question); setPlan(body.data.interview); }
     } catch { setError('داده‌ها دریافت نشدند. اتصال را بررسی کن و دوباره تلاش کن.'); }
   }
   useEffect(() => {
@@ -63,11 +70,19 @@ export function Compass() {
           setAmount(parsed.data.budget?.amount.toString() ?? ''); setCurrency(parsed.data.budget?.currency ?? 'EUR');
           setDraftNotice('پیش‌نویس همین نشست بازیابی شد؛ می‌توانی پاسخ‌ها را اصلاح کنی.');
         }
+      } else {
+        const goal = new URLSearchParams(window.location.search).get('goal');
+        if (goal && ['work', 'study', 'family', 'business', 'investment'].includes(goal)) setAnswers({ ...emptyAnswers, goal, answered: ['goal'] });
       }
     } catch { setDraftNotice('پیش‌نویس در این مرورگر قابل نگهداری نیست؛ فرم همچنان کار می‌کند.'); }
     setReady(true);
     return () => { abort.current?.abort(); };
   }, []);
+  useEffect(() => {
+    if (!ready || !config || planned.current) return;
+    planned.current = true;
+    if (JSON.stringify(answers) !== JSON.stringify(emptyAnswers)) void run('interview', answers);
+  }, [ready, config]);
   useEffect(() => {
     if (!ready || privateMode.current) return;
     try {
@@ -81,20 +96,30 @@ export function Compass() {
     channel.onmessage = () => {
       invalidateAccountRequests();
       if (!privateMode.current) return;
-      revision.current++; abort.current?.abort(); setPrivateCase(null); setAnswers(emptyAnswers); setResult(null);
-      setAmount(''); setStep(0); setView('form'); setAccountNotice('از حساب خارج شدی؛ پاسخ‌های خصوصی از این صفحه پاک شدند.');
+      revision.current++; abort.current?.abort(); setPrivateCase(null); setAnswers(emptyAnswers); setResult(null); setUndo(null);
+      setAmount(''); setStep(0); setQuestion(null); setPlan(null); setView('form'); setAccountNotice('از حساب خارج شدی؛ پاسخ‌های خصوصی از این صفحه پاک شدند.');
     };
     return () => channel.close();
   }, []);
-  useEffect(() => { heading.current?.focus(); if (view === 'result') document.getElementById('result-title')?.focus(); }, [step, view]);
+  useEffect(() => { heading.current?.focus(); if (view === 'result') document.getElementById('result-title')?.focus(); }, [question?.id, view]);
+  useEffect(() => { if (!undo) return; const timer = setTimeout(() => setUndo(null), 12000); return () => clearTimeout(timer); }, [undo]);
 
   function update(next: Answers) {
     revision.current++; abort.current?.abort(); setBusy(false); setAnswers(next); setResult(null); setError('');
   }
   function clear() {
+    setUndo({ answers, step, view, result, amount, currency, editingPrerequisites, question, plan });
     revision.current++; abort.current?.abort(); setBusy(false); setAnswers(emptyAnswers); setStep(0); setView('form');
-    setAmount(''); setCurrency('EUR'); setResult(null); setError(''); setDraftNotice('پاسخ‌های این نشست پاک شدند.');
+    setAmount(''); setCurrency('EUR'); setResult(null); setQuestion(config && !('error' in config.data) ? config.data.interview.next_question : null); setPlan(null); setError(''); setDraftNotice('پاسخ‌های این نشست پاک شدند.');
     try { sessionStorage.removeItem(storageKey); } catch { /* optional browser storage */ }
+  }
+  function restore() {
+    if (!undo) return;
+    revision.current++; abort.current?.abort(); setBusy(false); setError('');
+    setAnswers(undo.answers); setStep(undo.step); setView(undo.view); setResult(undo.result);
+    setAmount(undo.amount); setCurrency(undo.currency); setEditingPrerequisites(undo.editingPrerequisites);
+    setQuestion(undo.question); setPlan(undo.plan);
+    setUndo(null); setDraftNotice('پاسخ‌ها بازگردانده شدند.');
   }
   async function savePrivateCase() {
     const input = currentAnswers(); if (!input || !privateCase || busy) return;
@@ -105,7 +130,7 @@ export function Compass() {
       });
       if (savingRevision !== revision.current) return;
       if (!response.ok) {
-        if (response.status === 401) { setAnswers(emptyAnswers); setResult(null); setAmount(''); setPrivateCase(null); setStep(0); setView('form'); }
+        if (response.status === 401) { setAnswers(emptyAnswers); setResult(null); setAmount(''); setPrivateCase(null); setUndo(null); setStep(0); setView('form'); }
         throw new Error(data.message);
       }
       setAnswers(input); setPrivateCase(data.case); setAccountNotice('تغییرات در پرونده ذخیره شدند.');
@@ -113,14 +138,14 @@ export function Compass() {
     finally { if (savingRevision === revision.current) setBusy(false); }
   }
   function currentAnswers(): Answers | null {
-    if (view !== 'form' || config?.questions[step]?.id !== 'budget') return answers;
+    if (view !== 'form' || question?.id !== 'budget') return answers;
     if (!amount.trim()) return { ...answers, budget: null };
     const normalized = normalizeDigits(amount).replace(/[,٬]/g, '').replace('٫', '.');
     const parsed = answersSchema.safeParse({ ...answers, budget: { amount: Number(normalized), currency } });
     if (!/^[0-9]+(?:\.[0-9]+)?$/.test(normalized) || !parsed.success) { setError('مقدار بودجه باید عدد صفر یا بیشتر و بدون واحد نوشتاری باشد.'); return null; }
     return parsed.data;
   }
-  async function run(mode: 'prerequisites' | 'edit-prerequisites' | 'result', input: Answers | null = currentAnswers()) {
+  async function run(mode: 'interview' | 'edit-prerequisites' | 'result', input: Answers | null = currentAnswers()) {
     if (!input) return;
     abort.current?.abort(); const controller = new AbortController(); abort.current = controller;
     const requestRevision = ++revision.current; setBusy(true); setError(''); setAnswers(input);
@@ -132,56 +157,60 @@ export function Compass() {
       if (requestRevision !== revision.current) return;
       if (!response.ok) { setError(body.message ?? 'دریافت نتیجه ناموفق بود.'); return; }
       setEditingPrerequisites(mode === 'edit-prerequisites');
-      const questionSet = mode === 'edit-prerequisites' ? body.editable_questions : body.questions;
-      setResult(body); setView(mode !== 'result' && questionSet.length ? 'prerequisites' : 'result');
+      setResult(body); setPlan(body.interview);
+      const nextQuestion = body.interview.next_question;
+      setQuestion(nextQuestion);
+      if (nextQuestion) setStep(Math.max(0, config?.questions.findIndex(q => q.id === nextQuestion.id) ?? 0));
+      setView(mode === 'edit-prerequisites' ? 'prerequisites' : mode === 'interview' && nextQuestion ? 'form' : 'result');
     } catch { if (requestRevision === revision.current) setError('دریافت نتیجه ناموفق بود. پاسخ‌هایت حفظ شده‌اند؛ دوباره تلاش کن.'); }
     finally { clearTimeout(timeout); if (requestRevision === revision.current) setBusy(false); }
   }
   function next() {
-    const input = currentAnswers(); if (!input) return; update(input);
-    if (step < 7) setStep(step + 1); else void run('prerequisites', input);
+    const input = currentAnswers(); if (!input || !question) return;
+    const submitted = question.kind === 'fact' ? { ...input, facts: { ...input.facts, [question.id]: input.facts[question.id] ?? 'unknown' as const } } :
+      { ...input, answered: [...new Set([...input.answered, question.id as Answers['answered'][number]])] };
+    void run('interview', submitted);
   }
-  const question = config?.questions[step];
   const evidence = config && !('error' in config.data) ? config.data : null;
-  const prerequisiteQuestions = (editingPrerequisites ? result?.editable_questions : result?.questions) ?? [];
-  const stage = view === 'form' ? 0 : view === 'prerequisites' ? 1 : 2;
+  const reviewQuestions = plan?.questions ?? [];
+  const stage = view === 'result' ? 2 : question?.kind === 'fact' || view === 'prerequisites' ? 1 : 0;
+  function editQuestion(q: InterviewQuestion) {
+    setQuestion(q); setView('form'); setError('');
+    setStep(Math.max(0, config?.questions.findIndex(item => item.id === q.id) ?? 0));
+    if (q.id === 'budget') { setAmount(answers.budget?.amount.toString() ?? ''); setCurrency(answers.budget?.currency ?? 'EUR'); }
+  }
   return <div className="app-shell">
     <a className="skip-link" href="#main">رفتن به محتوا</a>
-    <header><a className="brand" href="/" aria-label="کوچ، خانهٔ قطب‌نما"><strong>کوچ</strong><span>قطب‌نمای مهاجرت</span></a>
-      <ol className="progress" aria-label="مراحل قطب‌نما">{['اطلاعات پایه', 'مسیرهای مرتبط', 'نتیجه'].map((label, index) => <li key={label} aria-current={index === stage ? 'step' : undefined} className={index <= stage ? 'active' : ''}><span className="dot" />{label}</li>)}</ol>
-      <div className="header-actions"><a href="/knowledge" target="_blank" rel="noopener">راهنمای فرم</a><a href="/account">حساب من</a><button className="text-button clear" onClick={clear}>{privateMode.current ? 'پاک‌کردن فرم جاری' : 'پاک‌کردن پاسخ‌ها'}</button></div></header>
+    <AppHeader current="compass"/>
     <main id="main">
-      {privateMode.current && <section className="case-toolbar"><p>{privateCase ? `پروندهٔ ذخیره‌شده · نسخهٔ ${privateCase.revision.toLocaleString('fa-IR')} · پاک‌شدن پس از بی‌فعالیتی: ${new Date(privateCase.delete_after).toLocaleDateString('fa-IR')}` : 'برای دریافت یا ادامهٔ پرونده به حساب من برو.'}</p>{privateCase && <button className="primary" disabled={busy} onClick={() => void savePrivateCase()}>ذخیرهٔ تغییرات پرونده</button>}</section>}
+      <div className="compass-toolbar"><ol className="progress" aria-label="مراحل بررسی">{['شرایط تو', 'پیش‌نیازهای مرتبط', 'مسیرها و قدم بعدی'].map((label, index) => <li key={label} aria-current={index === stage ? 'step' : undefined} className={index <= stage ? 'active' : ''}><span className="dot" />{label}</li>)}</ol><button className="text-button clear" onClick={clear}>{privateMode.current ? 'پاک‌کردن فرم جاری' : 'پاک‌کردن پاسخ‌ها'}</button></div>
+      {undo && <div className="undo-notice" role="status"><span>پاسخ‌های فرم پاک شدند.</span><button className="text-button" onClick={restore}>بازگردانی</button><button className="text-button" onClick={() => setUndo(null)}>بستن</button></div>}
+      {privateMode.current && <section className="case-toolbar"><details><summary>اطلاعات پرونده</summary><p>{privateCase ? `نسخهٔ ${privateCase.revision.toLocaleString('fa-IR')} · پاک‌شدن پس از بی‌فعالیتی: ${new Date(privateCase.delete_after).toLocaleDateString('fa-IR')}` : 'برای دریافت یا ادامهٔ پرونده به حساب برو.'}</p><p>تغییرات فقط با دکمهٔ ذخیره در حساب ثبت می‌شوند.</p></details>{privateCase && <button className="primary" disabled={busy} onClick={() => void savePrivateCase()}>ذخیرهٔ تغییرات پرونده</button>}</section>}
       {accountNotice && <p className="notice" role="status">{accountNotice}</p>}
-      {view === 'result' && result ? <Results result={result} busy={busy} retrieval={config?.retrieval} editPrerequisites={() => void run('edit-prerequisites')} edit={() => { setResult(null); setStep(0); setView('form'); }} /> : <div className="workspace">
+      {view === 'result' && result ? <Results result={result} busy={busy} retrieval={config?.retrieval} editPrerequisites={() => void run('edit-prerequisites')} edit={() => setView('prerequisites')} /> : <div className="workspace">
         <section className="question-panel" aria-busy={busy}>
-          <h1>{view === 'form' ? 'از کجا شروع کنیم؟' : 'یک قدم به مسیرهای مرتبط نزدیک‌تر'}</h1>
+          <h1>{view === 'form' ? 'قدم بعدی مهاجرتت را روشن کن.' : 'یک قدم به مسیرهای مرتبط نزدیک‌تر'}</h1>
           <p className="intro">{view === 'form' ? 'چند پاسخ کوتاه، چند مسیر برای بررسی.' : 'فقط پیش‌نیازهایی که به هدف و مقصدت مربوط‌اند.'}</p>
           {!ready || (!config && !error) ? <p role="status">در حال آماده‌سازی…</p> : view === 'form' && question ? <form onSubmit={e => { e.preventDefault(); next(); }}>
-            <p className="step-count">سؤال {(step + 1).toLocaleString('fa-IR')} از ۸ اطلاعات پایه</p>
-            <fieldset><legend ref={heading as React.Ref<HTMLLegendElement>} tabIndex={-1}>{question.title}</legend><p className="help">{question.help}</p>
-              {question.id === 'budget' ? <><Budget amount={amount} currency={currency} changeAmount={value => { setAmount(value); update({ ...answers, budget: null }); }} changeCurrency={value => { setCurrency(value); update({ ...answers, budget: null }); }} /><button type="button" className="text-button" onClick={() => { setAmount(''); update({ ...answers, budget: null }); }}>نمی‌دانم / بدون بودجهٔ مشخص</button></> : question.id === 'destinations' ? <Destinations countries={config!.countries} value={answers.destinations} onChange={destinations => update({ ...answers, destinations })} /> : <Choices name={question.id} options={question.options} value={String(answers[question.id as keyof Answers])} onChange={value => update({ ...answers, [question.id]: value })} />}
+            <p className="step-count">{plan?.answered_ids.length ? `${plan.answered_ids.length.toLocaleString('fa-IR')} پاسخ ثبت‌شده` : 'از همین‌جا شروع کنیم'}</p>
+            <fieldset disabled={busy}><legend ref={heading as React.Ref<HTMLLegendElement>} tabIndex={-1}>{question.title}</legend><details className="question-help"><summary>چرا این سؤال؟</summary><p className="help">{question.help}</p></details>
+              {question.id === 'budget' ? <><Budget amount={amount} currency={currency} changeAmount={value => { setAmount(value); update({ ...answers, budget: null }); }} changeCurrency={value => { setCurrency(value); update({ ...answers, budget: null }); }} /><button type="button" className="text-button" onClick={() => { setAmount(''); update({ ...answers, budget: null }); }}>نمی‌دانم / بدون بودجهٔ مشخص</button></> : question.id === 'destinations' ? <Destinations countries={config!.countries} value={answers.destinations} onChange={destinations => update({ ...answers, destinations })} /> : <Choices name={question.id} options={question.options} value={question.kind === 'fact' ? answers.facts[question.id] ?? 'unknown' : String(answers[question.id as keyof Answers])} onChange={value => update(question.kind === 'fact' ? { ...answers, facts: { ...answers.facts, [question.id]: value as 'yes' | 'no' | 'unknown' } } : { ...answers, [question.id]: value })} />}
             </fieldset>
-            <div className="actions"><button className="primary" disabled={busy} type="submit">{busy ? 'در حال بررسی…' : step === 7 ? 'بررسی پیش‌نیازها' : 'ادامه'}</button><button type="button" className="text-button" disabled={busy} onClick={() => void run('result')}>دیدن نتیجه با همین پاسخ‌ها</button></div>
-            {step > 0 && <button type="button" className="back text-button" disabled={busy} onClick={() => { const input = currentAnswers(); if (input) { update(input); setStep(step - 1); } }}>→ سؤال قبلی</button>}
+            <div className="actions"><button className="primary" disabled={busy} type="submit">{busy ? 'در حال بررسی…' : 'ثبت پاسخ و ادامه'}</button><button type="button" className="text-button" disabled={busy} onClick={() => void run('result')}>دیدن خلاصه با همین پاسخ‌ها</button></div>
+            {plan && plan.question_order.indexOf(question.id) > 0 && <button type="button" className="back text-button" disabled={busy} onClick={() => { const input = currentAnswers(); const previous = plan.questions[plan.question_order.indexOf(question.id) - 1]; if (input && previous) { update(input); editQuestion(previous); } }}>→ سؤال قبلی</button>}
           </form> : view === 'prerequisites' ? <div>
-            <h2 ref={heading} tabIndex={-1}>پیش‌نیازهای مسیر</h2><p className="help">پاسخ «بله» فقط خوداظهاری است؛ باقی شروط مسیر هنوز بررسی نشده‌اند.</p>
-            {prerequisiteQuestions.map(q => <fieldset key={q.id} className="conditional"><legend>{q.title}</legend><Choices name={q.id} options={[{ value: 'yes', label: 'بله' }, { value: 'no', label: 'خیر' }, { value: 'unknown', label: 'نمی‌دانم' }]} value={answers.facts[q.id] ?? 'unknown'} onChange={value => {
-              // Keep the question set visible while editing; a fresh API result replaces it on submit.
-              revision.current++; abort.current?.abort(); setBusy(false); setError('');
-              setAnswers({ ...answers, facts: { ...answers.facts, [q.id]: value as 'yes' | 'no' | 'unknown' } });
-            }} /></fieldset>)}
-            <div className="actions"><button className="primary" disabled={busy} onClick={() => void run('result')}>{busy ? 'در حال بررسی…' : 'دیدن مسیرهای قابل بررسی'}</button><button className="text-button" onClick={() => { setResult(null); setView('form'); }}>برگشت به پاسخ‌ها</button></div>
+            <h2 ref={heading} tabIndex={-1}>مرور پاسخ‌های تو</h2><dl className="answer-review">{reviewQuestions.map(q => <div key={q.id}><dt>{q.title}</dt><dd><span>{q.kind === 'fact' ? ({ yes: 'بله', no: 'خیر', unknown: 'نمی‌دانم' }[answers.facts[q.id] ?? 'unknown']) : q.id === 'budget' ? answers.budget ? `${answers.budget.amount.toLocaleString('fa-IR')} ${answers.budget.currency}` : 'نامعلوم' : q.id === 'destinations' ? answers.destinations.map(c => config?.countries[c]?.name ?? c).join('، ') || 'بدون ترجیح' : q.options.find(o => o.value === answers[q.id as keyof Answers])?.label ?? 'نامعلوم'}</span><button className="text-button" disabled={busy} onClick={() => editQuestion(q)}>اصلاح<span className="sr-only"> {q.title}</span></button></dd></div>)}</dl>
+            <div className="actions"><button className="primary" disabled={busy} onClick={() => void run('result')}>{busy ? 'در حال بررسی…' : 'دیدن خلاصه و قدم بعدی'}</button><button className="text-button" disabled={busy} onClick={() => { if (plan?.next_question) editQuestion(plan.next_question); else if (reviewQuestions[0]) editQuestion(reviewQuestions[0]); }}>ادامهٔ سؤال‌ها</button></div>
           </div> : null}
           {config && 'error' in config.data && <p className="error" role="status">{config.data.message}</p>}
-          <p className="privacy-note">{privateMode.current ? 'تغییرات تا زدن دکمهٔ ذخیره فقط در حافظهٔ همین صفحه می‌مانند.' : 'پاسخ‌ها فقط در همین نشست مرورگر می‌مانند.'}</p>
+          <details className="context-details"><summary>{privateMode.current ? 'ذخیرهٔ تغییرات' : 'ادامهٔ بررسی در دفعات بعد'}</summary><p>{privateMode.current ? 'تغییرات تا زدن دکمهٔ ذخیره فقط در حافظهٔ همین صفحه می‌مانند.' : 'بدون حساب شروع کرده‌ای؛ پاسخ‌ها فقط در همین نشست مرورگر می‌مانند. برای ادامه در دفعات بعد می‌توانی پس از دیدن مسیرها، آن‌ها را در حساب ذخیره کنی.'}</p></details>
           {draftNotice && <p className="draft-notice" role="status">{draftNotice}</p>}
         </section>
-        <aside className="guidance"><h2>مسیر تو، با اطلاعات خودت</h2><p>به چند سؤال ساده دربارهٔ شرایط و هدفت پاسخ بده تا مسیرهای مرتبط را برای بررسی پیدا کنی.</p><p>اگر پاسخ بعضی سؤال‌ها را نمی‌دانی، «نمی‌دانم» را انتخاب کن. موارد نامعلوم در نتیجه آشکار می‌مانند.</p><p>این ابزار برای دارندهٔ گذرنامهٔ ایرانی ساکن ایران است. شروع آنلاین ممکن است همچنان به سفر برای بیومتریک نیاز داشته باشد.</p><p>{privateMode.current ? 'پروندهٔ حساب را ادامه می‌دهی. تغییرات فقط با دکمهٔ ذخیره در حساب ثبت می‌شوند؛ مدیریت و حذف پرونده در حساب من است.' : 'به‌صورت مهمان ادامه می‌دهی. پاسخ‌ها در سرور ذخیره نمی‌شوند و هر زمان می‌توانی پیش‌نویس را پاک کنی.'}</p><p className="guidance-footer">این فهرست، تأیید شرایط یا احتمال ویزا نیست.</p></aside>
+        <CompassGuidance/>
       </div>}
-      {view === 'result' && !privateMode.current && <section className="save-invitation"><h2>این مسیر را بعداً ادامه بده</h2><p>با حساب کوچ می‌توانی پاسخ‌ها را با اجازهٔ خودت ذخیره و بعداً ادامه بدهی.</p><a className="primary" href="/account">ذخیرهٔ پاسخ‌ها و ادامه در حساب</a></section>}
+      {view === 'result' && !privateMode.current && <section className="save-invitation"><h2>خلاصه‌ات را نگه دار و ادامه بده</h2><p>{result?.guidance.report_kind === 'route_modules' ? 'خلاصهٔ مسیرها و بررسی تکمیلی تحصیل بریتانیا یا کانادا در حساب در دسترس است.' : 'خلاصهٔ همین مسیرها و قدم‌های آماده‌سازی در کارنامه ذخیره می‌شود؛ ارزیابی کامل شرایط این مسیرها هنوز پوشش داده نشده است.'}</p><a className="primary" href="/account?next=report">ذخیرهٔ پاسخ‌ها و دیدن کارنامه</a></section>}
       {error && <div className="error" role="alert"><p>{error}</p>{!config && <button className="secondary" onClick={() => void loadConfig()}>تلاش دوباره</button>}</div>}
       {view !== 'result' && evidence && <Evidence result={evidence} retrieval={config?.retrieval} />}
-    </main><footer>کوچ · هر مسیر، با منبع و محدودهٔ روشن</footer>
+    </main><AppFooter/>
   </div>;
 }

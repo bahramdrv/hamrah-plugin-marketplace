@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import type { KnowledgeResult, knowledgeDocuments } from './retrieval';
+import { AppFooter, AppHeader } from '../shell';
 
 export function KnowledgeSearch({ documents }: { documents: typeof knowledgeDocuments }) {
   const [query, setQuery] = useState('');
@@ -23,7 +24,7 @@ export function KnowledgeSearch({ documents }: { documents: typeof knowledgeDocu
   }
   return <div className="app-shell">
     <a className="skip-link" href="#knowledge-main">رفتن به راهنما</a>
-    <header><a className="brand" href="/"><strong>کوچ</strong><span>راهنمای استفاده</span></a><nav className="header-actions" aria-label="بخش‌های کوچ"><a href="/">قطب‌نما</a><a href="/account">حساب من</a></nav></header>
+    <AppHeader current="knowledge"/>
     <main id="knowledge-main"><div className="workspace">
       <section className="question-panel"><h1>دربارهٔ کار با کوچ بپرس</h1>
         <p className="intro">متن مرتبط را از راهنمای فرم پیدا کن و منبعش را بخوان.</p>
@@ -37,12 +38,12 @@ export function KnowledgeSearch({ documents }: { documents: typeof knowledgeDocu
         <div aria-live="polite" aria-busy={busy}>
           {busy && <p className="muted" role="status">متن راهنما را پیدا می‌کنیم…</p>}
           {result?.status === 'no_coverage' && <p className="notice">برای این پرسش در راهنمای فعلی متنی پیدا نشد. می‌توانی کوتاه‌تر بپرسی یا موضوع‌های پایین را بخوانی. این بخش فقط راهنمای استفاده از کوچ است.</p>}
-          {result && result.results.length > 0 && <section className="knowledge-results" aria-label="نتیجه‌های راهنما"><h2>متن‌های مرتبط</h2>{result.results.map(item => <article className="knowledge-match" key={item.id}><h3>{item.title}</h3><p>{item.text}</p><a href={item.url}>منبع در راهنمای کوچ</a></article>)}<p className="muted">نسخهٔ راهنما: <bdi>{result.corpus_version.slice(0, 8)}</bdi></p></section>}
+          {result && result.results.length > 0 && <section className="knowledge-results" aria-label="نتیجه‌های راهنما"><h2>متن‌های مرتبط</h2>{result.results.map(item => <article className="knowledge-match" key={item.id}><h3>{item.title}</h3><p>{item.text}</p><a href={item.url}>منبع در راهنمای کوچ</a></article>)}</section>}
         </div>
       </section>
-      <aside className="guidance"><h2>راهنمای فرم، با متن قابل پیگیری</h2><p>این بخش دربارهٔ ثبت و اصلاح پاسخ، مقدار و واحد و ادامهٔ فرم توضیح می‌دهد. هر نتیجه از یک متن مشخص در راهنمای کوچ آمده است.</p><p>شرایط مسیرهای مهاجرتی باید جداگانه با منبع رسمی بررسی شوند. متن این صفحه به معنی ارزیابی صلاحیت یا احتمال دریافت ویزا نیست.</p><p className="guidance-footer">پرسش این صفحه ذخیره نمی‌شود و به سرویس AI فرستاده نمی‌شود. راهنماهای موضوعی همیشه در همین صفحه در دسترس‌اند.</p></aside>
+      <aside className="guidance"><h2>برای ادامهٔ فرم، راه بگیر.</h2><p>دربارهٔ ثبت، اصلاح و ادامهٔ پاسخ‌ها بپرس یا راهنماهای موضوعی پایین صفحه را بخوان.</p><details className="context-details"><summary>دربارهٔ این راهنما</summary><p>نتیجه‌ها از متن راهنمای استفادهٔ کوچ می‌آیند؛ شرایط مهاجرتی باید در راهنمای مسیر بررسی شوند. پرسش این بخش ذخیره یا به سرویس AI فرستاده نمی‌شود.</p></details></aside>
     </div>
     <section className="knowledge-library" aria-label="راهنماهای موضوعی"><h2>راهنماهای موضوعی</h2>{documents.map(doc => <details id={doc.id} key={doc.id}><summary>{doc.title}</summary><p>{doc.text}</p></details>)}</section>
-    </main><footer>کوچ · راهنمای عمومی فرم · متن‌ها نسخه‌دار و قابل بازبینی‌اند.</footer>
+    </main><AppFooter/>
   </div>;
 }

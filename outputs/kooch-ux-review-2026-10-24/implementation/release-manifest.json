@@ -1,0 +1,67 @@
+{
+  "baseline_commit": "afa47751ae41678f869ec00081d00b3b55fa8bed",
+  "app_source_files": 159,
+  "app_overlay": [
+    "apps/kooch/app/api/research/route.ts",
+    "apps/kooch/app/layout.tsx",
+    "apps/kooch/app/privacy/page.tsx",
+    "apps/kooch/app/ux.css",
+    "apps/kooch/docs/design.md",
+    "apps/kooch/docs/guided-journey.md",
+    "apps/kooch/public/report-print.css",
+    "apps/kooch/src/account/api.ts",
+    "apps/kooch/src/account/contract.ts",
+    "apps/kooch/src/account/navigation.ts",
+    "apps/kooch/src/account/page.tsx",
+    "apps/kooch/src/account/runtime.ts",
+    "apps/kooch/src/ai/question-assistance.ts",
+    "apps/kooch/src/api.ts",
+    "apps/kooch/src/compass.tsx",
+    "apps/kooch/src/controls.tsx",
+    "apps/kooch/src/display.ts",
+    "apps/kooch/src/evidence/store.ts",
+    "apps/kooch/src/form/page.tsx",
+    "apps/kooch/src/form/workflow.ts",
+    "apps/kooch/src/guidance-summary.tsx",
+    "apps/kooch/src/journey.ts",
+    "apps/kooch/src/knowledge/page.tsx",
+    "apps/kooch/src/questions.ts",
+    "apps/kooch/src/report/contract.ts",
+    "apps/kooch/src/report/discovery.ts",
+    "apps/kooch/src/report/evaluate.ts",
+    "apps/kooch/src/report/explanation-view.tsx",
+    "apps/kooch/src/report/explanation.ts",
+    "apps/kooch/src/report/history.ts",
+    "apps/kooch/src/report/page.tsx",
+    "apps/kooch/src/report/view.tsx",
+    "apps/kooch/src/research/api.ts",
+    "apps/kooch/src/research/contract.ts",
+    "apps/kooch/src/research/view.tsx",
+    "apps/kooch/src/result.tsx",
+    "apps/kooch/src/route-comparison.tsx",
+    "apps/kooch/src/shell.tsx",
+    "apps/kooch/tests/form.test.ts",
+    "apps/kooch/tests/journey.test.ts",
+    "apps/kooch/tests/report-explanation.test.ts",
+    "apps/kooch/tests/report.test.ts",
+    "apps/kooch/tests/research.test.ts",
+    "apps/kooch/tests/ux.test.ts"
+  ],
+  "packages": {
+    "kooch-guided-app-source.zip": {
+      "sha256": "b270b13b2f40d4e3352a53be6378d35d25bfb12d2a1d40bb5a6f55f61a4320a0",
+      "bytes": 1678619
+    },
+    "kooch-design-refresh-1.0.4.zip": {
+      "sha256": "0ac46ab97f8e186d5d064ba7898a0e3e1b0c5704da5a0429504635d7680b502a",
+      "bytes": 335222
+    }
+  },
+  "credentials_included": false,
+  "deployed": false,
+  "excluded_unrelated_work": [
+    "academic discovery changes",
+    "backup changes",
+    "AI budget/production-window changes not authored by this task"
+  ]
+}

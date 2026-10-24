@@ -4,6 +4,20 @@ import { randomUUID } from 'node:crypto';
 import { harness, saveInput } from './helpers/account';
 
 const enabled = Boolean(process.env.KOOCH_DATABASE_URL && process.env.KOOCH_AUTH_URL);
+test('an explicitly unknown guest answer is reused and family intake omits unrelated work and study details', { skip: !enabled }, async () => {
+  const h = await harness();
+  try {
+    const c = await h.verifiedClient();
+    await c.request('case', { ...saveInput(), answers: { goal: 'work', answered: ['budget'], budget: null } });
+    const work = await (await c.request('form')).json();
+    assert.equal(work.answers.find((a: any) => a.question.id === 'budget').answer.state, 'unknown');
+    assert.notEqual(work.next_question.id, 'budget');
+    await c.request('case', { ...saveInput(1), answers: { goal: 'family' } });
+    const family = await (await c.request('form')).json();
+    assert.ok(!family.questions.some((q: any) => ['work_years', 'age_exact', 'study_level', 'education', 'language'].includes(q.id)));
+    assert.equal(family.next_question.id, 'timeline');
+  } finally { await h.close(); }
+});
 test('saved compass answers are reused and the next question exposes a versioned exact input without AI', { skip: !enabled }, async () => {
   const h = await harness();
   try {
@@ -28,6 +42,23 @@ test('saved compass answers are reused and the next question exposes a versioned
 });
 
 const answerInput = (revision: number, id: string, value: unknown = 27) => ({ expected_revision: revision, request_id: randomUUID(), question_id: id, question_version: 1, answer: { state: 'known', value } });
+test('editing guest budget reopens only dependent finance answers and preserves independent exact age and language', { skip: !enabled }, async () => {
+  const h = await harness();
+  try {
+    const c = await h.verifiedClient();
+    await c.request('case', { ...saveInput(), answers: { goal: 'study', age: 'under-30', language: 'certified', budget: { amount: 10000, currency: 'GBP' } } });
+    await c.request('form', answerInput(1, 'age_exact', 27));
+    await c.request('form', answerInput(2, 'language_exam', 'ielts'));
+    await c.request('form', answerInput(3, 'uk_student_funds_held_days', 28));
+    const original = (await (await c.request('case')).json()).case;
+    await c.request('case', { ...saveInput(original.revision), answers: { ...original.answers, budget: { amount: 20000, currency: 'GBP' } } });
+    const revised = await (await c.request('form')).json();
+    assert.ok(revised.review_required.includes('uk_student_funds_held_days'));
+    assert.ok(!revised.review_required.includes('age_exact'));
+    assert.ok(!revised.review_required.includes('language_exam'));
+    assert.equal(revised.answers.find((a: any) => a.question.id === 'language_exam').answer.value, 'ielts');
+  } finally { await h.close(); }
+});
 test('answers are validated, saved once across retries and resumed after signout; stale answers never overwrite a newer revision', { skip: !enabled }, async () => {
   const h = await harness();
   try {

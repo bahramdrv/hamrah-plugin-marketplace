@@ -37,6 +37,59 @@ async function create(c: Client, facts: Record<string, unknown>) {
   assert.equal(response.status, 200); return (await response.json()).report;
 }
 
+test('a work applicant saves a dated route briefing with one shared next action and printable sources', { skip: !enabled }, async () => {
+  const h = await harness(checkedNow);
+  try {
+    const c = await h.verifiedClient();
+    await c.request('case', { ...saveInput(), answers: { goal: 'work', destinations: ['de'], facts: { 'de.job_offer': 'no' } } });
+    const response = await c.request('report', { expected_revision: 1, request_id: randomUUID() });
+    assert.equal(response.status, 200);
+    const { report } = await response.json();
+    assert.equal(report.discovery.result.routes.length, 2);
+    assert.equal(report.discovery.result.guidance.actions.length, 1);
+    assert.equal(report.discovery.result.guidance.report_kind, 'discovery');
+    assert.deepEqual(report.route_results, []);
+    const printed = await c.request(`report/${report.id}/print`);
+    assert.equal(printed.status, 200);
+    const printedHtml = await printed.text();
+    assert.match(printedHtml, /ابتدا پیشنهاد کار تخصصی/);
+    assert.doesNotMatch(printedHtml, /<details(?![^>]*\bopen\b)[^>]*>/);
+    assert.deepEqual((await (await c.request(`report/${report.id}`)).json()).report, report);
+  } finally { await h.close(); }
+});
+
+test('an old work briefing stays immutable and loses current status after its source window expires', { skip: !enabled }, async () => {
+  let clock = new Date('2026-10-21T12:00:00Z');
+  const h = await harness(() => clock);
+  try {
+    const c = await h.verifiedClient();
+    await c.request('case', { ...saveInput(), answers: { goal: 'work', destinations: ['de'], facts: { 'de.job_offer': 'no' } } });
+    const saved = await (await c.request('report', { expected_revision: 1, request_id: randomUUID() })).json();
+    assert.equal(saved.report_state.current, true);
+    clock = new Date('2026-10-30T12:00:00Z');
+    assert.equal((await c.request('signin', { email: c.email, password: c.password })).status, 200);
+    const viewed = await (await c.request(`report/${saved.report.id}`)).json();
+    assert.equal(viewed.report_state.evidence_current, false);
+    assert.deepEqual(viewed.report, saved.report);
+    const next = await (await c.request('report', { expected_revision: 1, request_id: randomUUID() })).json();
+    assert.deepEqual(next.report.discovery.result.routes, []);
+    assert.deepEqual(next.report.discovery.result.guidance.actions, []);
+  } finally { await h.close(); }
+});
+
+test('changing destination creates an answer-change version without inventing a source change', { skip: !enabled }, async () => {
+  const h = await harness(checkedNow);
+  try {
+    const c = await h.verifiedClient();
+    await c.request('case', { ...saveInput(), answers: { goal: 'work', destinations: ['de'] } });
+    await c.request('report', { expected_revision: 1, request_id: randomUUID() });
+    await c.request('case', { ...saveInput(1), answers: { goal: 'work', destinations: ['uk'] } });
+    await c.request('report', { expected_revision: 2, request_id: randomUUID() });
+    const { reports } = await (await c.request('reports')).json();
+    assert.deepEqual(reports[0].changes, ['answers_changed']);
+  } finally { await h.close(); }
+});
+
 test('one shared questionnaire supplies route gaps and one report without a second intake or repeated common answers', { skip: !enabled }, async () => {
   const h = await harness(checkedNow);
   try {

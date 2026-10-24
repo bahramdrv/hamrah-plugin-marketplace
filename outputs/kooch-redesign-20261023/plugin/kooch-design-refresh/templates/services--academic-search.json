@@ -1,0 +1,250 @@
+{
+  "version": "0.4",
+  "type": "page",
+  "title": "شروع ادامهٔ تحصیل،<br>از شناخت شرایط تو.",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "0ae5687",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-page-intro",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "8c11c73",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "شروع ادامهٔ تحصیل،<br>از شناخت شرایط تو.",
+            "header_size": "h1",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "e8ca629",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>تحصیل قبلی، زبان، علاقه‌های پژوهشی و زمان شروع را در یک پروفایل تحصیلی مرتب کن.</p>",
+            "_css_classes": "kr-lead"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "b9f0bb8",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-actions kr-service-actions",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "84fd648",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "شروع بررسی تحصیلی ←",
+            "link": {
+              "url": "https://my.kooch.app/?goal=study"
+            },
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "8f3fd35",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "انتخاب کمک دیگر",
+            "link": {
+              "url": "/start/"
+            },
+            "_css_classes": "kr-secondary"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "b5853bd",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-prose",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "2b79de8",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "چه چیزهایی را آماده می‌کنی؟",
+            "header_size": "h2",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "24bd16d",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>سوابق تحصیلی، مقطع و رشتهٔ موردنظر، زبان، موضوع پژوهش، بودجه و ترجیح‌های مقصد. هر بار یک سؤال مرتبط می‌بینی و می‌توانی پاسخ‌ها را مرور و اصلاح کنی.</p>",
+            "_css_classes": ""
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "3ae3cf7",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-prose",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "fdff36c",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "بعد از تکمیل فرم",
+            "header_size": "h2",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "95cbbcb",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>اطلاعاتت مبنای بررسی درخواست تحصیلی می‌شود. تکمیل فرم به‌تنهایی به معنی پیدا شدن برنامه، فاند یا پذیرش نیست.</p>",
+            "_css_classes": ""
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "67677b2",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-prose",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "d35ffb9",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "هنوز دربارهٔ مقصد مطمئن نیستی؟",
+            "header_size": "h2",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "d502a54",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>از <a href=\"/wiki/\">راهنمای کشورها</a> برای شناخت زندگی و تحصیل در مقصد شروع کن. برای گفت‌وگو دربارهٔ اولویت‌هایت، <a href=\"/consultation/\">مشاورهٔ کوچ</a> هم در دسترس است.</p>",
+            "_css_classes": ""
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

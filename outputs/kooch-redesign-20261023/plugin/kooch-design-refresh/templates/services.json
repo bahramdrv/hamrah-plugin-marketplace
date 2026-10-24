@@ -1,0 +1,531 @@
+{
+  "version": "0.4",
+  "type": "page",
+  "title": "کوچ چطور کمکت می‌کند؟",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "2e0e2f6",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-page-intro",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "413c546",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "برای تصمیم بعدی،<br>کمک متناسب با نیازت.",
+            "header_size": "h1",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "e86b003",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>از شناخت مسیر تا آماده‌شدن برای ادامهٔ تحصیل و مشاوره.</p>",
+            "_css_classes": "kr-lead"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "c08eb8f",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-task-list",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "b0c504d",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-task-row",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "5c5f06a",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-copy",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "a33e299",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "شناخت مسیرهای مهاجرت",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "d674838",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>هدف و مقصدت را انتخاب کن؛ راهنماهای مرتبط و شرایط هر مسیر را ببین.</p>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "1f16f76",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-action",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "e0dda94",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "شناخت این خدمت ←",
+                    "link": {
+                      "url": "/services/route-assessment/"
+                    },
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "67a452b",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-task-row",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "0ac9fc3",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-copy",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "06b41a4",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "آمادگی برای ادامهٔ تحصیل",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "64921dc",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>سوابق و اولویت‌هایت را در پروفایل تحصیلی کوچ مرتب کن.</p>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "6bbb792",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-action",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "650e7c8",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "شناخت این خدمت ←",
+                    "link": {
+                      "url": "/services/academic-search/"
+                    },
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "42e2cb3",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-task-row",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "4f08641",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-copy",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "5439225",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "مشاورهٔ مهاجرت",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "50cd23b",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>با شناخت بهتر از اولویت‌هایت، برای یک گفت‌وگوی متمرکز آماده شو.</p>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "32d3fd8",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-action",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "962bf24",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "مراحل و رزرو جلسه ←",
+                    "link": {
+                      "url": "/consultation/"
+                    },
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3432013",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-task-row",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "fe5b637",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-copy",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "d88e823",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "راهنمای منبع‌دار",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "9ec33dd",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>دربارهٔ کشور، مسیر و سؤال‌های مهاجرتی‌ات مطالعه کن.</p>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "6e26eb4",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-task-action",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "226da31",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "دیدن راهنماها ←",
+                    "link": {
+                      "url": "/services/evidence-answers/"
+                    },
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

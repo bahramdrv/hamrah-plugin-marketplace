@@ -20,6 +20,7 @@ export const answersSchema = z.object({
   budget: z.object({ amount: z.number().finite().min(0).max(1e15), currency: z.enum(['EUR', 'USD', 'CAD', 'AUD', 'GBP', 'IRR', 'IRT']) }).strict().nullable().default(null),
   destinations: z.array(z.string().regex(/^[a-z]{2}$/)).max(10).refine(a => new Set(a).size === a.length).default([]),
   facts: z.record(z.string(), z.enum(['yes', 'no', 'unknown'])).refine(value => Object.keys(value).every(k => ids.includes(k))).default({}),
+  answered: z.array(z.enum(['goal', 'age', 'education', 'work', 'language', 'budget', 'destinations', 'timeline'])).max(8).refine(a => new Set(a).size === a.length).default([]),
 }).strict();
 export type Answers = z.infer<typeof answersSchema>;
 export const emptyAnswers = answersSchema.parse({});

@@ -199,7 +199,7 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
           const input = method === 'POST' ? explanationInput.parse(await body(request)) : null;
           if (!input) return reply(await store.explanationState(session.owner, report.id));
           if (!options.reportExplanation) return reply({ status: 'capability_unaccepted', explanation: null });
-          if (!report.route_results.length) return reply({ status: 'insufficient_coverage', explanation: null });
+          if (!report.route_results.length && !report.discovery?.result?.routes.length) return reply({ status: 'insufficient_coverage', explanation: null });
           const { started, job } = await store.startExplanation(session.owner, report, input.request_id);
           if (!started) {
             const explanation = (await store.readExplanations(session.owner, report.id)).find(e => e.id === job.id) ?? null;

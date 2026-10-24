@@ -1,0 +1,168 @@
+{
+  "version": "0.4",
+  "type": "page",
+  "title": "نقطهٔ شروع من",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "3c8860e",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-page-intro",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "c641095",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "قدم بعدی تو کدام است؟",
+            "header_size": "h1",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "d110a91",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>برای شروع یک بررسی تازه یا برگشتن به جمع‌بندی‌هایت.</p>",
+            "_css_classes": "kr-lead"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "6ee8508",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-personal",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "7e0f266",
+          "elType": "widget",
+          "widgetType": "shortcode",
+          "settings": {
+            "shortcode": "[kooch_next_step]"
+          },
+          "elements": []
+        },
+        {
+          "id": "486cbc3",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "حساب و ادامهٔ بررسی ←",
+            "link": {
+              "url": "https://my.kooch.app/account"
+            },
+            "_css_classes": "kr-secondary"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "127883d",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "fc9dcfa",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "از مقصدت بیشتر بدان",
+            "header_size": "h2",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "6c6a022",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "اطلس کشورها ←",
+            "link": {
+              "url": "/wiki/"
+            },
+            "_css_classes": "kr-link-button"
+          },
+          "elements": []
+        },
+        {
+          "id": "fd70204",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "مسیرهای مهاجرت ←",
+            "link": {
+              "url": "/visas/"
+            },
+            "_css_classes": "kr-link-button"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

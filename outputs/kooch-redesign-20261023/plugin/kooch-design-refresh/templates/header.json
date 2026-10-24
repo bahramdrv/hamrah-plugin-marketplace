@@ -1,0 +1,73 @@
+{
+  "version": "0.4",
+  "type": "page",
+  "title": "سربرگ کوچ",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "b7bb255",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kooch-header kr-header",
+        "html_tag": "header",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "4406164",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+            "image": {
+              "url": "/wp-content/themes/kooch-child/assets/kooch-logo-transparent.png",
+              "id": ""
+            },
+            "image_size": "full",
+            "alt": "کوچ",
+            "_css_classes": "native-logo",
+            "link_to": "custom",
+            "link": {
+              "url": "/"
+            }
+          },
+          "elements": []
+        },
+        {
+          "id": "716e553",
+          "elType": "widget",
+          "widgetType": "shortcode",
+          "settings": {
+            "shortcode": "[kooch_refresh_nav]"
+          },
+          "elements": []
+        },
+        {
+          "id": "35b3197",
+          "elType": "widget",
+          "widgetType": "shortcode",
+          "settings": {
+            "shortcode": "[kooch_refresh_actions]"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

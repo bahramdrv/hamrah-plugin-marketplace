@@ -1,0 +1,250 @@
+{
+  "version": "0.4",
+  "type": "page",
+  "title": "سؤال بهتر،<br>تصمیم روشن‌تر.",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "8169653",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-page-intro",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "5134395",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "سؤال بهتر،<br>تصمیم روشن‌تر.",
+            "header_size": "h1",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "60bb2a1",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>دربارهٔ کشور، مسیر و قدم‌های اقدام بخوان؛ منبع هر موضوع را هم کنار همان راهنما پیدا کن.</p>",
+            "_css_classes": "kr-lead"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "d14a418",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-actions kr-service-actions",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "7a71b63",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "جستجو در راهنماها ←",
+            "link": {
+              "url": "/blog/"
+            },
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "1ea1224",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+            "text": "انتخاب کمک دیگر",
+            "link": {
+              "url": "/start/"
+            },
+            "_css_classes": "kr-secondary"
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "99c39c4",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-prose",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "ee0b6ba",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "برای شناخت کشور",
+            "header_size": "h2",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "3bd7c77",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>هزینه، خانه، کار، تحصیل و شروع زندگی را در <a href=\"/wiki/\">اطلس کشورها</a> بخوان.</p>",
+            "_css_classes": ""
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "247892a",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-prose",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "267938b",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "برای شناخت مسیر",
+            "header_size": "h2",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "084e7d9",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>کشور و نوع مسیر را در <a href=\"/visas/\">کاتالوگ مسیرهای مهاجرت</a> انتخاب کن؛ شرایط و منابع هر مسیر در صفحهٔ خودش آمده‌اند.</p>",
+            "_css_classes": ""
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "b4d973b",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-section kr-prose",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "22c6cfa",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "برای سؤال خودت",
+            "header_size": "h2",
+            "_css_classes": ""
+          },
+          "elements": []
+        },
+        {
+          "id": "6a6c4cc",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>اگر موضوع به شرایط شخصی‌ات وابسته است، از <a href=\"/consultation/\">صفحهٔ مشاوره</a> برای آماده‌سازی جلسه شروع کن.</p>",
+            "_css_classes": ""
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

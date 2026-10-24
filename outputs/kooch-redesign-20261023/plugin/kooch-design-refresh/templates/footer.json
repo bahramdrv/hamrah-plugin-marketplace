@@ -1,0 +1,268 @@
+{
+  "version": "0.4",
+  "type": "page",
+  "title": "پاورقی کوچ",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "0f39e01",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "kr-footer",
+        "html_tag": "div",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "unit": "px"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "7f03fce",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "kr-footer-grid",
+            "html_tag": "div",
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "dbb9d19",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-footer-brand",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "d1c6da8",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "/wp-content/themes/kooch-child/assets/kooch-logo-transparent.png",
+                      "id": ""
+                    },
+                    "image_size": "full",
+                    "alt": "کوچ",
+                    "_css_classes": "native-logo",
+                    "link_to": "custom",
+                    "link": {
+                      "url": "/"
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "71b1c26",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>برای ایرانیانی که به<br>یک شروع روشن‌تر فکر می‌کنند.</p>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "0370c6d",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-footer-group",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "62b3fff",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "قدم بعدی",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "4c4998f",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<a href=\"/test/kooch-aghaz/\">پیدا کردن مسیر</a><a href=\"/study-compass/\">ادامهٔ تحصیل</a><a href=\"/consultation/\">مشاورهٔ مهاجرت</a><a href=\"/app/\">فضای من</a>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "c2aa423",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-footer-group",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "41ffab0",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "کشف و مطالعه",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "5c7aa42",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<a href=\"/wiki/\">اطلس کشورها</a><a href=\"/visas/\">مسیرهای مهاجرت</a><a href=\"/blog/\">راهنمای کوچ</a><a href=\"/community/\">کامیونیتی‌ها</a>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "c0034c4",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "kr-footer-group",
+                "html_tag": "div",
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "6fb9b1b",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "دربارهٔ کوچ",
+                    "header_size": "h2",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "9b777d6",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<a href=\"/about/\">دربارهٔ ما</a><a href=\"/contact/\">ارتباط با کوچ</a><a href=\"/faq/\">پرسش‌های متداول</a><a href=\"/methodology/\">روش بررسی</a>",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "761c0b1",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<span>کوچ · ۲۰۲۶</span><span><a href=\"/privacy/\">حریم خصوصی</a><a href=\"/terms/\">شرایط استفاده</a><a href=\"/editorial-policy/\">سیاست تحریریه</a></span>",
+            "_css_classes": "kr-footer-bottom"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import type { Answers } from './questions';
 import type { CompassConfig } from './api';
 export function Choices({ options, value, onChange, name }: { options: { value: string; label: string }[]; value: string; onChange: (value: string) => void; name: string }) {
-  return <div className="choices">{options.map(option => <label className={`choice ${value === option.value ? 'selected' : ''}`} key={option.value}>
+  return <div className={`choices${name === 'goal' ? ' goal-choices' : ''}`}>{options.map(option => <label className={`choice ${value === option.value ? 'selected' : ''}`} key={option.value}>
     <input type="radio" name={name} value={option.value} checked={value === option.value} onChange={() => onChange(option.value)} />{option.label}
   </label>)}</div>;
 }

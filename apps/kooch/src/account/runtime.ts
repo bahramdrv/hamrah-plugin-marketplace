@@ -7,11 +7,10 @@ import { createAccountApi } from './api';
 import { GoogleOAuth } from './google';
 import { AiBudgetLedger } from '../ai/budget';
 import { productionAcceptanceProfile, productionExplanationActivation } from '../ai/production-acceptance';
-import { fixedQuestion } from '../ai/question-assistance';
+import { fixedQuestion, type QuestionAssistance } from '../ai/question-assistance';
 import { policyGate } from '../ai/policy';
 import { createGatewayReportExplanation } from '../ai/report-explanation';
 import { createGatewayAnswerInterpretation } from '../ai/answer-interpretation';
-import { createScopedQuestionAssistance } from '../ai/preview-acceptance';
 import aiPolicy from '../../data/ai-gateway-policy.json';
 type Runtime = ReturnType<typeof createAccountApi>;
 let runtime: Promise<Runtime> | undefined;
@@ -54,11 +53,11 @@ export async function accountRuntime() {
       key: process.env.KOOCH_SESSION_ENCRYPTION_KEY!, secure: mode === 'hosted' }) : undefined;
     const release = productionAcceptanceProfile(aiPolicy, process.env, new Date());
     const effectivePolicy = release?.policy ?? aiPolicy;
-    const wording = createScopedQuestionAssistance({ policy: effectivePolicy, ledger, environment: process.env,
-      getCredential: () => stableKey ? process.env.KOOCH_ARVAN_API_KEY : undefined });
     const interpret = createGatewayAnswerInterpretation({ policy: effectivePolicy, ledger,
       getCredential: () => stableKey ? process.env.KOOCH_ARVAN_API_KEY : undefined });
-    const questionAssistance: typeof wording = (view, context) => release?.mode === 'synthetic' && view.case_id !== release.caseId ? Promise.resolve(fixedQuestion(view, 'capability_unaccepted')) : wording(view, context);
+    // A fixed question needs no paid wording call. Keep inference for interpreting
+    // the submitted answer and explaining the saved report.
+    const questionAssistance: QuestionAssistance = view => Promise.resolve(fixedQuestion(view, 'fixed_wording'));
     const answerInterpretation: typeof interpret = (request, context) => release?.mode === 'synthetic' && request.draft.case_id !== release.caseId ? Promise.resolve({ status: 'capability_unaccepted' }) : interpret(request, context);
     const explanationActivation = productionExplanationActivation(aiPolicy, process.env, new Date());
     const explanationRelease = explanationActivation.status === 'accepted' ? explanationActivation.profile : undefined;

@@ -13,4 +13,4 @@ export type SavedCase = { form?: FormState; id: string; revision: number; answer
 export class AccountError extends Error {
   constructor(public code: string, public status: number, public userMessage: string) { super(code); }
 }
-export const unauthorized = () => new AccountError('unauthorized', 401, 'برای ادامه دوباره وارد حساب شو.');
+export const unauthorized = () => new AccountError('unauthorized', 401, 'برای ادامه وارد حساب شو.');

@@ -3,6 +3,7 @@ import { answersSchema, questions, type Answers } from './questions';
 import { channelState, snapshotSchema, type PublicRoute } from './snapshot';
 import { countries, facts, goalLabels, policies, policyVersion, priorHistoryFacts, preparationSteps } from './policy';
 import type { RetrievalStatus } from './retrieval';
+import { buildJourney } from './journey';
 
 const response = (body: unknown, status = 200) => Response.json(body, { status, headers: { 'Cache-Control': 'no-store' } });
 
@@ -10,7 +11,7 @@ export function createCompassApi(options: { snapshot: unknown; now?: () => Date;
 
   return {
     async GET() {
-      const result = evaluate(answersSchema.parse({}), options);
+      const result = evaluateCompass(answersSchema.parse({}), options);
       return response({ questions, countries, goalLabels, data: result, retrieval: options.retrieval }, 'error' in result ? 503 : 200);
     },
     async POST(request: Request) {
@@ -39,14 +40,14 @@ export function createCompassApi(options: { snapshot: unknown; now?: () => Date;
       } catch { return response({ error: 'invalid_input', message: 'پاسخ‌ها خوانا نیستند؛ دوباره تلاش کن.' }, 400); }
       const answers = answersSchema.safeParse(body);
       if (!answers.success) return response({ error: 'invalid_input', message: 'یکی از پاسخ‌ها معتبر نیست؛ پاسخ‌ها را مرور کن.' }, 400);
-      const result = evaluate(answers.data, options);
+      const result = evaluateCompass(answers.data, options);
       return response(result, 'error' in result ? 503 : 200);
     },
   };
 }
 
 
-function evaluate(answers: Answers, options: { snapshot: unknown; now?: () => Date }) {
+export function evaluateCompass(answers: Answers, options: { snapshot: unknown; now?: () => Date }) {
     const now = options.now ?? (() => new Date());
     const parsed = snapshotSchema.safeParse(options.snapshot);
     if (!parsed.success || (parsed.success && Date.parse(parsed.data.retrieved_at) > now().getTime()))
@@ -75,7 +76,7 @@ function evaluate(answers: Answers, options: { snapshot: unknown; now?: () => Da
       id: r.id, name_fa: r.name_fa, official_name: r.name, destination: r.destination,
       country: countries[r.destination]?.name ?? r.destination, flag: countries[r.destination]?.flag ?? '',
       category: goalLabels[policies[r.id].goal], page_url: r.page_url,
-      reason: answers.goal === 'unknown' ? 'برای آشنایی و بررسی بیشتر؛ هدف تو هنوز مشخص نیست.' : `مرتبط با هدف «${goalLabels[policies[r.id].goal]}» تو؛ پیش‌نیازها در گام بعد بررسی می‌شوند.`,
+      reason: answers.goal === 'unknown' ? 'برای آشنایی و بررسی بیشتر؛ هدف تو هنوز مشخص نیست.' : `مرتبط با هدف «${goalLabels[policies[r.id].goal]}» تو.`,
       summary: r.summary_fa ?? policies[r.id].prerequisite,
       facts: routeFacts,
       preparation_status: remaining.length ? 'preparation_needed' : 'prerequisites_reported',
@@ -96,8 +97,10 @@ function evaluate(answers: Answers, options: { snapshot: unknown; now?: () => Da
       answers.budget ? `بودجهٔ خوداظهاری ${answers.budget.amount.toLocaleString('fa-IR')} ${answers.budget.currency} است؛ هزینه و تمکن مسیر جدا بررسی می‌شوند.` : 'بودجه و ارز هنوز مشخص نیست؛ دربارهٔ توان مالی نتیجه‌ای نمی‌دهیم.',
       answers.timeline === 'under-6' ? 'برای افق کمتر از شش ماه، وقت، مدارک و زمان رسمی بررسی را پیش از اقدام بررسی کن.' : 'زمان آماده‌سازی و رسیدگی رسمی را برای برنامهٔ زمانی خودت جدا بررسی کن.',
     ];
+    const status = current.length ? (routes.length ? 'routes_to_investigate' : 'no_matches') : (expired ? 'review_required' : 'no_coverage');
+    const journey = buildJourney(answers, routes.map(r => r.id), status, [...new Set(relevant.flatMap(r => policies[r.id].requires))]);
     return {
-      status: current.length ? (routes.length ? 'routes_to_investigate' : 'no_matches') : (expired ? 'review_required' : 'no_coverage'),
+      status, ...journey,
       no_match_reason: relevant.length ? 'prerequisite_required' : 'coverage_gap',
       official_eligibility: 'not_assessed', policy_version: policyVersion,
       routes, omitted_by_limit: Math.max(0, ordered.length - 5), needs_information: pending.length - ready.length,
@@ -112,5 +115,5 @@ function evaluate(answers: Answers, options: { snapshot: unknown; now?: () => Da
         snapshot_version: `${snapshot.schema_version}:${snapshot.retrieved_at}` },
     };
   }
-export type CompassResult = Exclude<ReturnType<typeof evaluate>, { error: string }>;
-export type CompassConfig = { questions: typeof questions; countries: typeof countries; goalLabels: typeof goalLabels; data: ReturnType<typeof evaluate> };
+export type CompassResult = Exclude<ReturnType<typeof evaluateCompass>, { error: string }>;
+export type CompassConfig = { questions: typeof questions; countries: typeof countries; goalLabels: typeof goalLabels; data: ReturnType<typeof evaluateCompass> };
