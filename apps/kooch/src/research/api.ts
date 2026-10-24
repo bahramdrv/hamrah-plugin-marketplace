@@ -1,15 +1,18 @@
 import { z } from 'zod';
-import { policies } from '../policy';
+import { countries, policies } from '../policy';
+import globalCatalog from '../../data/global-catalog.json';
+const routeIds = new Set([...Object.keys(policies), ...globalCatalog.routes.map(route => route.id)]);
 
 import { researchTopics, type Topic, type EvidenceCard, type ResearchResult } from './contract';
+import { expandCommunityContext } from './community';
 export { researchTopics } from './contract';
 export type { ResearchResult } from './contract';
 type Tool = (name: string, args: Record<string, unknown>) => Promise<unknown>;
-const schema = z.object({ route_id: z.string().max(100).refine(id => Object.hasOwn(policies, id)), topic: z.enum(Object.keys(researchTopics) as [Topic, ...Topic[]]),
+const schema = z.object({ route_id: z.string().max(100).refine(id => routeIds.has(id)), topic: z.enum(Object.keys(researchTopics) as [Topic, ...Topic[]]),
   explicit_request: z.boolean().default(false), academic_api: z.literal('hamrah').optional(), field: z.string().trim().min(2).max(120).optional(),
 }).strict();
-const alpha3: Record<string, string> = { de: 'DEU', ca: 'CAN', uk: 'GBR', it: 'ITA', es: 'ESP', pt: 'PRT', am: 'ARM' };
-const routeAliases: Record<string, string> = { 'de:eu-blue-card': 'eu_blue_card', 'de:skilled-worker-de': 'skilled_worker', 'de:student-de': 'student_masters_taught', 'uk:student': 'student_masters_taught', 'ca:study-permit-ca': 'student_masters_taught' };
+const alpha3 = Object.fromEntries(Object.entries(countries).map(([code, value]) => [code, value.alpha3 ?? code.toUpperCase()]));
+const routeAliases: Record<string, string> = { 'de:chancenkarte': 'opportunity_card', 'de:recognition-partnership': 'recognition_partnership', 'de:eu-blue-card': 'eu_blue_card', 'de:skilled-worker-de': 'skilled_worker', 'de:student-de': 'student_masters_taught', 'uk:student': 'student_masters_taught', 'ca:study-permit-ca': 'student_masters_taught' };
 
 function safePublicLink(url: unknown, title: unknown): EvidenceCard['links'] {
   try { const u = new URL(String(url)); return u.protocol === 'https:' && !u.username && !u.password ? [{ title: String(title ?? 'منبع').slice(0, 160), url: u.href }] : []; } catch { return []; }
@@ -39,6 +42,8 @@ function incompleteEvidence(value: unknown, depth = 0): boolean {
   if (!value || typeof value !== 'object' || depth > 5) return false;
   if (Array.isArray(value)) return value.some(item => incompleteEvidence(item, depth + 1));
   const r = value as Record<string, unknown>;
+  if (typeof r.totalMatches === 'number' && typeof r.resultCount === 'number' && r.totalMatches > r.resultCount ||
+      typeof r.total === 'number' && typeof r.returned === 'number' && r.total > r.returned) return true;
   if (['partial', 'unavailable', 'no_coverage', 'missing', 'timeout', 'failed', 'failure', 'error'].includes(String(r.status)) ||
       ['partially_answered', 'unresolved', 'outdated', 'research_required'].includes(String(r.answerType)) || r.truncated === true || r.scanLimited === true ||
       (typeof r.excluded === 'number' && r.excluded > 0) || (typeof r.unknownDeadlineExcluded === 'number' && r.unknownDeadlineExcluded > 0)) return true;
@@ -116,7 +121,7 @@ export function createResearchApi(options: { tool: Tool; now?: () => Date }) {
       costs: ['getVisaFees', 'getCostToComplete', 'getSalaryThresholds'].map(name => [name, atlas]),
       time: ['getProcessingTimes', 'getProcessingReliability'].map(name => [name, atlas]),
       questions: [['searchCommunityQuestions', { countryCode: scope.countryCode, route: scope.route, limit: 3 }]],
-      community: [['searchCommunitySignals', { ...scope, limit: 5 }], ['evaluateCommunityAdjustment', { ...scope, limit: 10 }]],
+      community: [['searchCommunitySignals', { ...scope, limit: 5 }], ['evaluateCommunityAdjustment', { ...scope, limit: 10 }], ['searchCommunitySignals', { countryCode: scope.countryCode, limit: 3 }]],
       viability: [['getIranianRouteViability', scope], ['getIdealCandidateProfile', scope]],
       statistics: [['searchOfficialApprovalStatistics', { ...scope, limit: 3 }]],
       changes: ['getPolicyUpdates', 'getFactChanges', 'getSourceFreshness'].map(name => [name, atlas]),
@@ -142,7 +147,9 @@ export function createResearchApi(options: { tool: Tool; now?: () => Date }) {
       partial ||= values.some(value => !academicDetail.safeParse(value).success);
     }
     partial ||= values.some(value => incompleteEvidence(value));
-    const cards = input.topic === 'academic' ? opportunityCards(values) : values.flatMap(value => contextualCards(value, country === 'uk' ? 'gb' : country, slug) ?? publicCards(value));
+    const community = input.topic === 'community' ? await expandCommunityContext(results, options.tool, (options.now ?? (() => new Date()))()) : null;
+    partial ||= community?.partial ?? false;
+    const cards = community?.cards ?? (input.topic === 'academic' ? opportunityCards(values) : values.flatMap(value => contextualCards(value, country === 'uk' ? 'gb' : country, slug) ?? publicCards(value)));
     const note = input.topic === 'statistics' ? 'آمار فقط برای جمعیت و دورهٔ منبع رسمی است؛ احتمال نتیجهٔ شخصی نیست. نبود آمار، نرخ صفر نیست.' : input.topic === 'viability' ? 'زمینهٔ مسیر و اعتماد شواهد، احتمال دریافت ویزا نیستند. این بخش شرایط فردی تو را ارزیابی نمی‌کند.' : input.topic === 'academic' ? 'منبع انتخاب‌شده: API داده‌های بررسی‌شدهٔ همراه. بازبودن فراخوان و فاند را در منبع رسمی همان فرصت بررسی کن.' : 'اطلاعات عمومی همین مسیر؛ موارد پوشش‌داده‌نشده نامعلوم می‌مانند.';
     return reply({ title: researchTopics[input.topic], checked_at: (options.now ?? (() => new Date()))().toISOString(), status: failure ? values.length ? 'partial' : 'unavailable' : partial ? 'partial' : 'available', cards,
       note: cards.length ? note : `${failure ? 'دریافت بخشی از اطلاعات ممکن نشد.' : partial ? 'پوشش شواهد این موضوع ناقص است.' : 'برای این موضوع، دادهٔ قابل ارائه در این جست‌وجو پیدا نشد.'} ${note}` } satisfies ResearchResult);

@@ -1,0 +1,3035 @@
+{
+  "as_of": "2026-10-24",
+  "provider": "Local Hamrah executeTool; validated published store with withdrawals",
+  "countries": [
+    {
+      "code": "ae",
+      "name": "امارات متحدهٔ عربی",
+      "scope": {
+        "countryCode": "ARE",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "au",
+      "name": "استرالیا",
+      "scope": {
+        "countryCode": "AUS",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "at",
+      "name": "اتریش",
+      "scope": {
+        "countryCode": "AUT",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ar",
+      "name": "آرژانتین",
+      "scope": {
+        "countryCode": "ARG",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ag",
+      "name": "آنتیگوا و باربودا",
+      "scope": {
+        "countryCode": "ATG",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "am",
+      "name": "ارمنستان",
+      "scope": {
+        "countryCode": "ARM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "al",
+      "name": "آلبانی",
+      "scope": {
+        "countryCode": "ALB",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "az",
+      "name": "جمهوری آذربایجان",
+      "scope": {
+        "countryCode": "AZE",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ad",
+      "name": "آندورا",
+      "scope": {
+        "countryCode": "AND",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ao",
+      "name": "آنگولا",
+      "scope": {
+        "countryCode": "AGO",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "aw",
+      "name": "آروبا",
+      "scope": {
+        "countryCode": "ABW",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "as",
+      "name": "ساموآی امریکا",
+      "scope": {
+        "countryCode": "ASM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ai",
+      "name": "آنگویلا",
+      "scope": {
+        "countryCode": "AIA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "af",
+      "name": "افغانستان",
+      "scope": {
+        "countryCode": "AFG",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "be",
+      "name": "بلژیک",
+      "scope": {
+        "countryCode": "BEL",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "br",
+      "name": "برزیل",
+      "scope": {
+        "countryCode": "BRA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bh",
+      "name": "بحرین",
+      "scope": {
+        "countryCode": "BHR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bb",
+      "name": "باربادوس",
+      "scope": {
+        "countryCode": "BRB",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bs",
+      "name": "باهاما",
+      "scope": {
+        "countryCode": "BHS",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bg",
+      "name": "بلغارستان",
+      "scope": {
+        "countryCode": "BGR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bw",
+      "name": "بوتسوانا",
+      "scope": {
+        "countryCode": "BWA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bz",
+      "name": "بلیز",
+      "scope": {
+        "countryCode": "BLZ",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bn",
+      "name": "برونئی",
+      "scope": {
+        "countryCode": "BRN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bd",
+      "name": "بنگلادش",
+      "scope": {
+        "countryCode": "BGD",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ba",
+      "name": "بوسنی و هرزگوین",
+      "scope": {
+        "countryCode": "BIH",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bo",
+      "name": "بولیوی",
+      "scope": {
+        "countryCode": "BOL",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "by",
+      "name": "بلاروس",
+      "scope": {
+        "countryCode": "BLR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bj",
+      "name": "بنین",
+      "scope": {
+        "countryCode": "BEN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bi",
+      "name": "بوروندی",
+      "scope": {
+        "countryCode": "BDI",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bt",
+      "name": "بوتان",
+      "scope": {
+        "countryCode": "BTN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bm",
+      "name": "برمودا",
+      "scope": {
+        "countryCode": "BMU",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bl",
+      "name": "سن بارتلمی",
+      "scope": {
+        "countryCode": "BLM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "bf",
+      "name": "بورکینافاسو",
+      "scope": {
+        "countryCode": "BFA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ca",
+      "name": "کانادا",
+      "scope": {
+        "countryCode": "CAN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ch",
+      "name": "سوئیس",
+      "scope": {
+        "countryCode": "CHE",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "cz",
+      "name": "چک",
+      "scope": {
+        "countryCode": "CZE",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "cy",
+      "name": "قبرس",
+      "scope": {
+        "countryCode": "CYP",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "cl",
+      "name": "شیلی",
+      "scope": {
+        "countryCode": "CHL",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "co",
+      "name": "کلمبیا",
+      "scope": {
+        "countryCode": "COL",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "cr",
+      "name": "کاستاریکا",
+      "scope": {
+        "countryCode": "CRI",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "cn",
+      "name": "چین",
+      "scope": {
+        "countryCode": "CHN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "cv",
+      "name": "کیپ‌ورد",
+      "scope": {
+        "countryCode": "CPV",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ci",
+      "name": "ساحل عاج",
+      "scope": {
+        "countryCode": "CIV",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "cm",
+      "name": "کامرون",
+      "scope": {
+        "countryCode": "CMR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "cd",
+      "name": "کنگو - کینشاسا",
+      "scope": {
+        "countryCode": "COD",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "cu",
+      "name": "کوبا",
+      "scope": {
+        "countryCode": "CUB",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "cw",
+      "name": "کوراسائو",
+      "scope": {
+        "countryCode": "CUW",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ck",
+      "name": "جزایر کوک",
+      "scope": {
+        "countryCode": "COK",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "cf",
+      "name": "جمهوری افریقای مرکزی",
+      "scope": {
+        "countryCode": "CAF",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "cg",
+      "name": "کنگو - برازویل",
+      "scope": {
+        "countryCode": "COG",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "de",
+      "name": "آلمان",
+      "scope": {
+        "countryCode": "DEU",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "evidence_found",
+      "total_matches": 3,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "dk",
+      "name": "دانمارک",
+      "scope": {
+        "countryCode": "DNK",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "dm",
+      "name": "دومینیکا",
+      "scope": {
+        "countryCode": "DMA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "do",
+      "name": "جمهوری دومینیکن",
+      "scope": {
+        "countryCode": "DOM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "dz",
+      "name": "الجزایر",
+      "scope": {
+        "countryCode": "DZA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "dj",
+      "name": "جیبوتی",
+      "scope": {
+        "countryCode": "DJI",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "es",
+      "name": "اسپانیا",
+      "scope": {
+        "countryCode": "ESP",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ee",
+      "name": "استونی",
+      "scope": {
+        "countryCode": "EST",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "eg",
+      "name": "مصر",
+      "scope": {
+        "countryCode": "EGY",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ec",
+      "name": "اکوادور",
+      "scope": {
+        "countryCode": "ECU",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "et",
+      "name": "اتیوپی",
+      "scope": {
+        "countryCode": "ETH",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "er",
+      "name": "اریتره",
+      "scope": {
+        "countryCode": "ERI",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "fr",
+      "name": "فرانسه",
+      "scope": {
+        "countryCode": "FRA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "fi",
+      "name": "فنلاند",
+      "scope": {
+        "countryCode": "FIN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "fj",
+      "name": "فیجی",
+      "scope": {
+        "countryCode": "FJI",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "fo",
+      "name": "جزایر فارو",
+      "scope": {
+        "countryCode": "FRO",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "fm",
+      "name": "میکرونزی",
+      "scope": {
+        "countryCode": "FSM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gr",
+      "name": "یونان",
+      "scope": {
+        "countryCode": "GRC",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gh",
+      "name": "غنا",
+      "scope": {
+        "countryCode": "GHA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ge",
+      "name": "گرجستان",
+      "scope": {
+        "countryCode": "GEO",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gd",
+      "name": "گرنادا",
+      "scope": {
+        "countryCode": "GRD",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gt",
+      "name": "گواتمالا",
+      "scope": {
+        "countryCode": "GTM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gy",
+      "name": "گویان",
+      "scope": {
+        "countryCode": "GUY",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ga",
+      "name": "گابن",
+      "scope": {
+        "countryCode": "GAB",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gm",
+      "name": "گامبیا",
+      "scope": {
+        "countryCode": "GMB",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gi",
+      "name": "جبل‌الطارق",
+      "scope": {
+        "countryCode": "GIB",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gg",
+      "name": "گرنزی",
+      "scope": {
+        "countryCode": "GGY",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gl",
+      "name": "گرینلند",
+      "scope": {
+        "countryCode": "GRL",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gu",
+      "name": "گوام",
+      "scope": {
+        "countryCode": "GUM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gw",
+      "name": "گینهٔ بیسائو",
+      "scope": {
+        "countryCode": "GNB",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gf",
+      "name": "گویان فرانسه",
+      "scope": {
+        "countryCode": "GUF",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gp",
+      "name": "گوادلوپ",
+      "scope": {
+        "countryCode": "GLP",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gq",
+      "name": "گینهٔ استوایی",
+      "scope": {
+        "countryCode": "GNQ",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "gn",
+      "name": "گینه",
+      "scope": {
+        "countryCode": "GIN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "hk",
+      "name": "هنگ‌کنگ، منطقهٔ ویژهٔ اداری چین",
+      "scope": {
+        "countryCode": "HKG",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "hr",
+      "name": "کرواسی",
+      "scope": {
+        "countryCode": "HRV",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "hu",
+      "name": "مجارستان",
+      "scope": {
+        "countryCode": "HUN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "hn",
+      "name": "هندوراس",
+      "scope": {
+        "countryCode": "HND",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ht",
+      "name": "هائیتی",
+      "scope": {
+        "countryCode": "HTI",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ie",
+      "name": "ایرلند",
+      "scope": {
+        "countryCode": "IRL",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "it",
+      "name": "ایتالیا",
+      "scope": {
+        "countryCode": "ITA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "in",
+      "name": "هند",
+      "scope": {
+        "countryCode": "IND",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "il",
+      "name": "اسرائیل",
+      "scope": {
+        "countryCode": "ISR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "id",
+      "name": "اندونزی",
+      "scope": {
+        "countryCode": "IDN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "is",
+      "name": "ایسلند",
+      "scope": {
+        "countryCode": "ISL",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "iq",
+      "name": "عراق",
+      "scope": {
+        "countryCode": "IRQ",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ir",
+      "name": "ایران",
+      "scope": {
+        "countryCode": "IRN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "im",
+      "name": "جزیرهٔ من",
+      "scope": {
+        "countryCode": "IMN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "jp",
+      "name": "ژاپن",
+      "scope": {
+        "countryCode": "JPN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "jo",
+      "name": "اردن",
+      "scope": {
+        "countryCode": "JOR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "jm",
+      "name": "جامائیکا",
+      "scope": {
+        "countryCode": "JAM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "je",
+      "name": "جرزی",
+      "scope": {
+        "countryCode": "JEY",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "kr",
+      "name": "کرهٔ جنوبی",
+      "scope": {
+        "countryCode": "KOR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ke",
+      "name": "کنیا",
+      "scope": {
+        "countryCode": "KEN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "kn",
+      "name": "سنت کیتس و نویس",
+      "scope": {
+        "countryCode": "KNA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ky",
+      "name": "جزایر کِیمن",
+      "scope": {
+        "countryCode": "CYM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "kz",
+      "name": "قزاقستان",
+      "scope": {
+        "countryCode": "KAZ",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "kh",
+      "name": "کامبوج",
+      "scope": {
+        "countryCode": "KHM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "kw",
+      "name": "کویت",
+      "scope": {
+        "countryCode": "KWT",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "kg",
+      "name": "قرقیزستان",
+      "scope": {
+        "countryCode": "KGZ",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "km",
+      "name": "کومور",
+      "scope": {
+        "countryCode": "COM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ki",
+      "name": "کیریباتی",
+      "scope": {
+        "countryCode": "KIR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "kp",
+      "name": "کرهٔ شمالی",
+      "scope": {
+        "countryCode": "PRK",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "lu",
+      "name": "لوکزامبورگ",
+      "scope": {
+        "countryCode": "LUX",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "lc",
+      "name": "سنت لوسیا",
+      "scope": {
+        "countryCode": "LCA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "lk",
+      "name": "سری‌لانکا",
+      "scope": {
+        "countryCode": "LKA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "lt",
+      "name": "لیتوانی",
+      "scope": {
+        "countryCode": "LTU",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "lv",
+      "name": "لتونی",
+      "scope": {
+        "countryCode": "LVA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "li",
+      "name": "لیختن‌اشتاین",
+      "scope": {
+        "countryCode": "LIE",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "lb",
+      "name": "لبنان",
+      "scope": {
+        "countryCode": "LBN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ls",
+      "name": "لسوتو",
+      "scope": {
+        "countryCode": "LSO",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "la",
+      "name": "لائوس",
+      "scope": {
+        "countryCode": "LAO",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "lr",
+      "name": "لیبریا",
+      "scope": {
+        "countryCode": "LBR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ly",
+      "name": "لیبی",
+      "scope": {
+        "countryCode": "LBY",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mt",
+      "name": "مالت",
+      "scope": {
+        "countryCode": "MLT",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mx",
+      "name": "مکزیک",
+      "scope": {
+        "countryCode": "MEX",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mu",
+      "name": "موریس",
+      "scope": {
+        "countryCode": "MUS",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "my",
+      "name": "مالزی",
+      "scope": {
+        "countryCode": "MYS",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ma",
+      "name": "مراکش",
+      "scope": {
+        "countryCode": "MAR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "me",
+      "name": "مونته‌نگرو",
+      "scope": {
+        "countryCode": "MNE",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "md",
+      "name": "مولداوی",
+      "scope": {
+        "countryCode": "MDA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mn",
+      "name": "مغولستان",
+      "scope": {
+        "countryCode": "MNG",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mc",
+      "name": "موناکو",
+      "scope": {
+        "countryCode": "MCO",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mv",
+      "name": "مالدیو",
+      "scope": {
+        "countryCode": "MDV",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mk",
+      "name": "مقدونیهٔ شمالی",
+      "scope": {
+        "countryCode": "MKD",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mz",
+      "name": "موزامبیک",
+      "scope": {
+        "countryCode": "MOZ",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mg",
+      "name": "ماداگاسکار",
+      "scope": {
+        "countryCode": "MDG",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mw",
+      "name": "مالاوی",
+      "scope": {
+        "countryCode": "MWI",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mo",
+      "name": "ماکائو، منطقهٔ ویژهٔ اداری چین",
+      "scope": {
+        "countryCode": "MAC",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mp",
+      "name": "جزایر ماریانای شمالی",
+      "scope": {
+        "countryCode": "MNP",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ms",
+      "name": "مونت‌سرات",
+      "scope": {
+        "countryCode": "MSR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mq",
+      "name": "مارتینیک",
+      "scope": {
+        "countryCode": "MTQ",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mf",
+      "name": "سنت مارتین",
+      "scope": {
+        "countryCode": "MAF",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mr",
+      "name": "موریتانی",
+      "scope": {
+        "countryCode": "MRT",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mh",
+      "name": "جزایر مارشال",
+      "scope": {
+        "countryCode": "MHL",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ml",
+      "name": "مالی",
+      "scope": {
+        "countryCode": "MLI",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "mm",
+      "name": "میانمار (برمه)",
+      "scope": {
+        "countryCode": "MMR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "nl",
+      "name": "هلند",
+      "scope": {
+        "countryCode": "NLD",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "nz",
+      "name": "نیوزیلند",
+      "scope": {
+        "countryCode": "NZL",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "no",
+      "name": "نروژ",
+      "scope": {
+        "countryCode": "NOR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ng",
+      "name": "نیجریه",
+      "scope": {
+        "countryCode": "NGA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "np",
+      "name": "نپال",
+      "scope": {
+        "countryCode": "NPL",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "na",
+      "name": "نامیبیا",
+      "scope": {
+        "countryCode": "NAM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "nu",
+      "name": "نیوئه",
+      "scope": {
+        "countryCode": "NIU",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ne",
+      "name": "نیجر",
+      "scope": {
+        "countryCode": "NER",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "nc",
+      "name": "کالدونیای جدید",
+      "scope": {
+        "countryCode": "NCL",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ni",
+      "name": "نیکاراگوئه",
+      "scope": {
+        "countryCode": "NIC",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "nr",
+      "name": "نائورو",
+      "scope": {
+        "countryCode": "NRU",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "om",
+      "name": "عمان",
+      "scope": {
+        "countryCode": "OMN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "pt",
+      "name": "پرتغال",
+      "scope": {
+        "countryCode": "PRT",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "pl",
+      "name": "لهستان",
+      "scope": {
+        "countryCode": "POL",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ph",
+      "name": "فیلیپین",
+      "scope": {
+        "countryCode": "PHL",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "pa",
+      "name": "پاناما",
+      "scope": {
+        "countryCode": "PAN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "py",
+      "name": "پاراگوئه",
+      "scope": {
+        "countryCode": "PRY",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "pe",
+      "name": "پرو",
+      "scope": {
+        "countryCode": "PER",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "pk",
+      "name": "پاکستان",
+      "scope": {
+        "countryCode": "PAK",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "pr",
+      "name": "پورتوریکو",
+      "scope": {
+        "countryCode": "PRI",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "pg",
+      "name": "پاپوا گینهٔ نو",
+      "scope": {
+        "countryCode": "PNG",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "pf",
+      "name": "پلی‌نزی فرانسه",
+      "scope": {
+        "countryCode": "PYF",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "pn",
+      "name": "جزایر پیت‌کرن",
+      "scope": {
+        "countryCode": "PCN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ps",
+      "name": "سرزمین‌های فلسطینی",
+      "scope": {
+        "countryCode": "PSE",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "pw",
+      "name": "پالائو",
+      "scope": {
+        "countryCode": "PLW",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "qa",
+      "name": "قطر",
+      "scope": {
+        "countryCode": "QAT",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "rs",
+      "name": "صربستان",
+      "scope": {
+        "countryCode": "SRB",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ro",
+      "name": "رومانی",
+      "scope": {
+        "countryCode": "ROU",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "rw",
+      "name": "رواندا",
+      "scope": {
+        "countryCode": "RWA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ru",
+      "name": "روسیه",
+      "scope": {
+        "countryCode": "RUS",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "re",
+      "name": "رئونیون",
+      "scope": {
+        "countryCode": "REU",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sg",
+      "name": "سنگاپور",
+      "scope": {
+        "countryCode": "SGP",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sa",
+      "name": "عربستان سعودی",
+      "scope": {
+        "countryCode": "SAU",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "se",
+      "name": "سوئد",
+      "scope": {
+        "countryCode": "SWE",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "si",
+      "name": "اسلوونی",
+      "scope": {
+        "countryCode": "SVN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sv",
+      "name": "السالوادور",
+      "scope": {
+        "countryCode": "SLV",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sk",
+      "name": "اسلواکی",
+      "scope": {
+        "countryCode": "SVK",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sc",
+      "name": "سیشل",
+      "scope": {
+        "countryCode": "SYC",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sm",
+      "name": "سان‌مارینو",
+      "scope": {
+        "countryCode": "SMR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sr",
+      "name": "سورینام",
+      "scope": {
+        "countryCode": "SUR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sn",
+      "name": "سنگال",
+      "scope": {
+        "countryCode": "SEN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sl",
+      "name": "سیرالئون",
+      "scope": {
+        "countryCode": "SLE",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sz",
+      "name": "اسواتینی",
+      "scope": {
+        "countryCode": "SWZ",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sb",
+      "name": "جزایر سلیمان",
+      "scope": {
+        "countryCode": "SLB",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sx",
+      "name": "سنت مارتن",
+      "scope": {
+        "countryCode": "SXM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sj",
+      "name": "سوالبارد و یان ماین",
+      "scope": {
+        "countryCode": "SJM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sh",
+      "name": "سنت هلن",
+      "scope": {
+        "countryCode": "SHN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "st",
+      "name": "سائوتومه و پرینسیپ",
+      "scope": {
+        "countryCode": "STP",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ss",
+      "name": "سودان جنوبی",
+      "scope": {
+        "countryCode": "SSD",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "so",
+      "name": "سومالی",
+      "scope": {
+        "countryCode": "SOM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "sd",
+      "name": "سودان",
+      "scope": {
+        "countryCode": "SDN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "tw",
+      "name": "تایوان",
+      "scope": {
+        "countryCode": "TWN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "th",
+      "name": "تایلند",
+      "scope": {
+        "countryCode": "THA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "tr",
+      "name": "ترکیه",
+      "scope": {
+        "countryCode": "TUR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "tz",
+      "name": "تانزانیا",
+      "scope": {
+        "countryCode": "TZA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "tt",
+      "name": "ترینیداد و توباگو",
+      "scope": {
+        "countryCode": "TTO",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "tn",
+      "name": "تونس",
+      "scope": {
+        "countryCode": "TUN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "tg",
+      "name": "توگو",
+      "scope": {
+        "countryCode": "TGO",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "tl",
+      "name": "تیمور-لسته",
+      "scope": {
+        "countryCode": "TLS",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "to",
+      "name": "تونگا",
+      "scope": {
+        "countryCode": "TON",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "tj",
+      "name": "تاجیکستان",
+      "scope": {
+        "countryCode": "TJK",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "td",
+      "name": "چاد",
+      "scope": {
+        "countryCode": "TCD",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "tm",
+      "name": "ترکمنستان",
+      "scope": {
+        "countryCode": "TKM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "tv",
+      "name": "تووالو",
+      "scope": {
+        "countryCode": "TUV",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "tc",
+      "name": "جزایر تورکس و کایکوس",
+      "scope": {
+        "countryCode": "TCA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "uk",
+      "name": "بریتانیا",
+      "scope": {
+        "countryCode": "GBR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "us",
+      "name": "ایالات متحده",
+      "scope": {
+        "countryCode": "USA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "uy",
+      "name": "اروگوئه",
+      "scope": {
+        "countryCode": "URY",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "uz",
+      "name": "ازبکستان",
+      "scope": {
+        "countryCode": "UZB",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ug",
+      "name": "اوگاندا",
+      "scope": {
+        "countryCode": "UGA",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ua",
+      "name": "اوکراین",
+      "scope": {
+        "countryCode": "UKR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "vn",
+      "name": "ویتنام",
+      "scope": {
+        "countryCode": "VNM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "vu",
+      "name": "وانواتو",
+      "scope": {
+        "countryCode": "VUT",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "vc",
+      "name": "سنت وینسنت و گرنادین",
+      "scope": {
+        "countryCode": "VCT",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "va",
+      "name": "واتیکان",
+      "scope": {
+        "countryCode": "VAT",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ve",
+      "name": "ونزوئلا",
+      "scope": {
+        "countryCode": "VEN",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "vg",
+      "name": "جزایر ویرجین بریتانیا",
+      "scope": {
+        "countryCode": "VGB",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "vi",
+      "name": "جزایر ویرجین ایالات متحده",
+      "scope": {
+        "countryCode": "VIR",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "wf",
+      "name": "والیس و فوتونا",
+      "scope": {
+        "countryCode": "WLF",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ws",
+      "name": "ساموآ",
+      "scope": {
+        "countryCode": "WSM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "xk",
+      "name": "کوزوو",
+      "scope": {
+        "countryCode": "XKX",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "yt",
+      "name": "مایوت",
+      "scope": {
+        "countryCode": "MYT",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "ye",
+      "name": "یمن",
+      "scope": {
+        "countryCode": "YEM",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "za",
+      "name": "افریقای جنوبی",
+      "scope": {
+        "countryCode": "ZAF",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "zm",
+      "name": "زامبیا",
+      "scope": {
+        "countryCode": "ZMB",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    },
+    {
+      "code": "zw",
+      "name": "زیمبابوه",
+      "scope": {
+        "countryCode": "ZWE",
+        "nationality": "IRN",
+        "originCountry": "IRN"
+      },
+      "status": "no_coverage",
+      "total_matches": 0,
+      "valid_datasets": 56,
+      "truncated": false
+    }
+  ]
+}

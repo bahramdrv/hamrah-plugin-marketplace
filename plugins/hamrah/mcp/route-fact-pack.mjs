@@ -1,6 +1,7 @@
 import Ajv from "ajv";
 import { BudgetExceededError, withDeadline } from "./budgets.mjs";
 import { pickRecordArray } from "./record-array.mjs";
+import { scopePublicRecord } from "./public-record-scope.mjs";
 
 export const ROUTE_FACT_DATASETS = Object.freeze([
   "getVisaRoutes",
@@ -17,7 +18,7 @@ export const ROUTE_FACT_DATASETS = Object.freeze([
 
 const MAX_DATASETS = 6;
 const MAX_RECORDS_PER_DATASET = 25;
-const MAX_RECORDS_SCANNED_PER_DATASET = 500;
+const MAX_RECORDS_SCANNED_PER_DATASET = 2000;
 
 // Used when the slug form omits datasets; it fits within MAX_DATASETS.
 const DEFAULT_SLUG_FORM_DATASETS = Object.freeze([
@@ -90,20 +91,6 @@ function recordArray(data) {
   return { records, metadata };
 }
 
-function matchesCountry(record, countryCode) {
-  const codes = [record.destinationIso, record.countryCode, record.countryIso, record.iso2,
-    record.destination, record.country,
-    record.destination?.iso, record.destination?.code, record.route?.destinationIso];
-  const accepted = countryCode === "GB" ? new Set(["GB", "UK"]) : new Set([countryCode]);
-  return codes.some((code) => typeof code === "string" && accepted.has(code.toUpperCase()));
-}
-
-function matchesRoute(record, routeSlug) {
-  const slugs = [record.slug, record.routeSlug, record.visaSlug, record.route?.slug, record.visa?.slug,
-    ...(Array.isArray(record.affectedVisas) ? record.affectedVisas.map((visa) => visa?.slug) : [])];
-  return slugs.some((slug) => slug === routeSlug);
-}
-
 export async function buildRouteFactPack(input, pathForOperation, fetchDataset, deadlineMs) {
   const args = packRequest(input);
   const selected = args.datasets;
@@ -117,9 +104,9 @@ export async function buildRouteFactPack(input, pathForOperation, fetchDataset, 
           const { records, metadata } = recordArray(raw);
           const recordsScanned = Math.min(records.length, MAX_RECORDS_SCANNED_PER_DATASET);
           const scanLimited = recordsScanned < records.length;
-          const matching = records.slice(0, recordsScanned).filter((record) => record && typeof record === "object" &&
-            matchesCountry(record, args.countryCode) &&
-            (name === "getDestinations" || matchesRoute(record, args.routeSlug)));
+          const matching = records.slice(0, recordsScanned)
+            .map(record => scopePublicRecord(record, args.countryCode, name === "getDestinations" ? undefined : args.routeSlug))
+            .filter(Boolean);
           completed.set(name, {
             name, endpoint, status: "success", retrievedAt: new Date().toISOString(),
             source: { provider: "Visa Atlas", endpointUrl: `https://visaatlas.org${endpoint}` },

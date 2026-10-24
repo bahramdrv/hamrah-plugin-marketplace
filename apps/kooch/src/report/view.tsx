@@ -49,6 +49,7 @@ export function SavedReport({ report, state, print = false }: { report: Guidance
       <h2>خلاصهٔ مسیرها و قدم بعدی</h2>
       {report.discovery.result ? <>
         {report.discovery.needs_review && <p className="notice">شواهد این خلاصه به بازبینی نیاز دارند؛ برای اقدام، نسخهٔ تازه لازم است.</p>}
+        {report.discovery.result.restricted_routes?.length > 0 && <details open={print || undefined}><summary>محدودیت‌های مسیر و بررسی استثنا</summary>{report.discovery.result.restricted_routes.map(route => <section key={route.id}><h3>{route.name_fa}</h3><p>{route.channel_note}</p><ul>{route.sources.map(source => <li key={source.id}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>)}</ul></section>)}</details>}
         <GuidanceSummary guidance={report.discovery.result.guidance} print={print}/>
         {report.discovery.result.routes.length > 1 && <details open={print || undefined}><summary>مقایسهٔ مسیرهای مرتبط</summary><RouteComparison routes={report.discovery.result.routes.slice(0, 3)} print={print}/></details>}
         {report.discovery.result.routes.length === 1 && <RouteComparison routes={report.discovery.result.routes} print={print}/>}

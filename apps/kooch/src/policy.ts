@@ -1,3 +1,4 @@
+import destinationRegistry from '../data/global-destinations.json';
 // Discovery prerequisites only; these are not a complete eligibility policy.
 export const policyVersion = 'compass-discovery-2';
 export const facts = {
@@ -26,7 +27,7 @@ export const facts = {
   'uk.job_offer': 'پیشنهاد کار از حامی مجاز بریتانیا برای مسیر موردنظر داری؟',
   'uk.admission': 'پذیرش تحصیلی و گواهی حمایت تحصیلی بریتانیا داری؟',
 } as const;
-export type FactId = keyof typeof facts;
+export type FactId = string;
 // Existing destination history is different from a prerequisite a newcomer can prepare.
 export const priorHistoryFacts = new Set<FactId>(['ca.work', 'ca.study', 'uk.degree']);
 export const preparationSteps: Partial<Record<FactId, string>> = {
@@ -77,9 +78,32 @@ export const policies: Record<string, DiscoveryPolicy> = {
   'uk:skilled-worker': route('work', ['uk.job_offer'], 'حامی مجاز این مسیر؛ شغل، حقوق و زبان بررسی شوند.'),
   'uk:student': route('study', ['uk.admission'], 'گواهی CAS؛ زبان و معیشت و سایر شروط جدا بررسی شوند.'),
 };
-export const countries: Record<string, { name: string; flag: string }> = {
-  am: { name: 'ارمنستان', flag: '🇦🇲' }, ca: { name: 'کانادا', flag: '🇨🇦' },
-  de: { name: 'آلمان', flag: '🇩🇪' }, es: { name: 'اسپانیا', flag: '🇪🇸' },
-  it: { name: 'ایتالیا', flag: '🇮🇹' }, pt: { name: 'پرتغال', flag: '🇵🇹' }, uk: { name: 'بریتانیا', flag: '🇬🇧' },
-};
+export const countries: Record<string, { name: string; flag: string; official_name?: string; alpha3?: string; source_code?: string; region?: string }> = destinationRegistry;
 export const goalLabels = { work: 'کار', study: 'تحصیل', family: 'پیوستن به خانواده', business: 'کارآفرینی', investment: 'سرمایه و درآمد مستقل', unknown: 'هنوز نمی‌دانم' };
+
+const genericQuestions: Record<string, string> = {
+  job_offer: 'پیشنهاد کار واجد شرایط از کارفرمای {country} داری؟',
+  admission: 'پذیرش از مؤسسهٔ آموزشی واجد شرایط {country} داری؟',
+  family: 'عضو خانواده یا حامی با وضعیت مرتبط در {country} داری؟',
+  project: 'طرح کسب‌وکار یا خوداشتغالی مشخص برای بررسی در {country} داری؟',
+  investment: 'منبع سرمایه یا درآمد مستقل برای بررسی مسیر {country} مشخص است؟',
+  remote_work: 'کار و درآمد دورکاری برای بررسی مسیر {country} داری؟',
+  skilled_profile: 'مدرک، سابقه و زبان مرتبط با مسیر مهارتی {country} را آماده کرده‌ای؟',
+  local_study: 'سابقهٔ تحصیل واجد شرایط در {country} داری؟',
+  local_work: 'سابقهٔ کار واجد شرایط در {country} داری؟',
+  eligible_passport: 'علاوه بر گذرنامهٔ ایران، تابعیت یا گذرنامهٔ مشمول همین برنامهٔ {country} داری؟',
+  qualification: 'مدرک یا صلاحیت حرفه‌ای مرتبط با مسیر {country} داری؟',
+  prior_status: 'اقامت یا وضعیت قبلیِ لازم در {country} را داری؟',
+};
+export function factTitle(id: string): string {
+  if (Object.hasOwn(facts, id)) return facts[id as keyof typeof facts];
+  const [code, kind] = id.split('.');
+  return genericQuestions[kind]?.replace('{country}', countries[code]?.name ?? code) ?? 'شرط اختصاصی این مسیر را بررسی کرده‌ای؟';
+}
+export function isFactId(id: string): boolean {
+  const parts = id.split('.');
+  return Object.hasOwn(facts, id) || (parts.length === 2 && Object.hasOwn(countries, parts[0]) && Object.hasOwn(genericQuestions, parts[1]));
+}
+export function isPriorHistoryFact(id: string): boolean {
+  return priorHistoryFacts.has(id) || /\.(local_study|local_work|prior_status)$/.test(id);
+}

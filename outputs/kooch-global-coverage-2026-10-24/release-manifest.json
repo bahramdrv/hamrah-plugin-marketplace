@@ -1,0 +1,55 @@
+{
+  "baseline_commit": "acbb3bb4a53b448881a46e81dc5d0e411199b4f6",
+  "app_files": 168,
+  "overlay": [
+    "apps/kooch/app/ux.css",
+    "apps/kooch/data/global-catalog.json",
+    "apps/kooch/data/global-destinations.json",
+    "apps/kooch/scripts/build-global-catalog.py",
+    "apps/kooch/src/api.ts",
+    "apps/kooch/src/catalog-browser-api.ts",
+    "apps/kooch/src/catalog-browser.tsx",
+    "apps/kooch/src/catalog.ts",
+    "apps/kooch/src/compass-transport.ts",
+    "apps/kooch/src/compass.tsx",
+    "apps/kooch/src/controls.tsx",
+    "apps/kooch/src/iran-context.ts",
+    "apps/kooch/src/journey.ts",
+    "apps/kooch/src/policy.ts",
+    "apps/kooch/src/questions.ts",
+    "apps/kooch/src/report/discovery.ts",
+    "apps/kooch/src/report/explanation.ts",
+    "apps/kooch/src/report/view.tsx",
+    "apps/kooch/src/research/api.ts",
+    "apps/kooch/src/research/community.ts",
+    "apps/kooch/src/result.tsx",
+    "apps/kooch/src/route-comparison.tsx",
+    "apps/kooch/src/runtime.ts",
+    "apps/kooch/tests/global-coverage.test.ts",
+    "apps/kooch/tests/report.test.ts",
+    "docs/research/iran-global-route-coverage-2026-10-24.md",
+    "plugins/hamrah/mcp/public-record-scope.mjs",
+    "plugins/hamrah/mcp/record-array.mjs",
+    "plugins/hamrah/mcp/route-fact-pack.mjs",
+    "plugins/hamrah/mcp/server.mjs",
+    "plugins/hamrah/mcp/tests/route-fact-pack.test.mjs",
+    "plugins/hamrah/mcp/tests/server.test.mjs"
+  ],
+  "credentials_included": false,
+  "deployed": false,
+  "packages": {
+    "kooch-global-app-source.zip": {
+      "bytes": 1938915,
+      "sha256": "ff3913b5c365ea2cf01f41d49f07593fb576691942dbd0466d277f0dd60613e4"
+    },
+    "hamrah-global-tool-source.zip": {
+      "bytes": 24050,
+      "sha256": "57ca0f6105304b6a51e0eb79286d227b846970f1fe04d859e232b803b30ea70b"
+    },
+    "coverage-source-evidence.zip": {
+      "bytes": 262297,
+      "sha256": "e3805313a1567d0da2770bd55052daf7e9b2315341c42b1353a0193cf6c8f977"
+    }
+  },
+  "note": "Hamrah tool archive is an overlay for the fixed repository baseline, not a standalone MCP server."
+}

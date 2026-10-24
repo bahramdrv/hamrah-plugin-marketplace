@@ -10,6 +10,7 @@ import { accountRequest, invalidateAccountRequests, StaleAccountRequest } from '
 import { consentVersion, type SavedCase } from './account/contract';
 import { AppFooter, AppHeader, CompassGuidance } from './shell';
 import type { InterviewQuestion } from './journey';
+import { CatalogBrowser } from './catalog-browser';
 
 const storageKey = 'kooch.compass.guest.v1';
 type View = 'form' | 'prerequisites' | 'result';
@@ -210,6 +211,7 @@ export function Compass() {
       </div>}
       {view === 'result' && !privateMode.current && <section className="save-invitation"><h2>خلاصه‌ات را نگه دار و ادامه بده</h2><p>{result?.guidance.report_kind === 'route_modules' ? 'خلاصهٔ مسیرها و بررسی تکمیلی تحصیل بریتانیا یا کانادا در حساب در دسترس است.' : 'خلاصهٔ همین مسیرها و قدم‌های آماده‌سازی در کارنامه ذخیره می‌شود؛ ارزیابی کامل شرایط این مسیرها هنوز پوشش داده نشده است.'}</p><a className="primary" href="/account?next=report">ذخیرهٔ پاسخ‌ها و دیدن کارنامه</a></section>}
       {error && <div className="error" role="alert"><p>{error}</p>{!config && <button className="secondary" onClick={() => void loadConfig()}>تلاش دوباره</button>}</div>}
+      {config && <CatalogBrowser countries={config.countries} choose={item => { const next = answersSchema.parse({ ...answers, goal: item.policy_goal, destinations: [item.destination], focus_route: item.id, answered: [...new Set([...answers.answered, 'goal', 'destinations'])] }); update(next); void run('interview', next); document.getElementById('main')?.scrollIntoView({ block: 'start' }); }}/>}
       {view !== 'result' && evidence && <Evidence result={evidence} retrieval={config?.retrieval} />}
     </main><AppFooter/>
   </div>;

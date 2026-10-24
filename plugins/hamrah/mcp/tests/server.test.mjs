@@ -8,6 +8,44 @@ import { fileURLToPath } from "node:url";
 
 import { executeTool, filterResponse, handleRequest, OPENAPI, TOOLS } from "../server.mjs";
 
+test("public figure tools retain the exact destination and route across Visa Atlas field names", async () => {
+  const fakeFetch = async () => Response.json([
+    { destinationIso: "de", visaSlug: "eu-blue-card", summary: "Requested German route" },
+    { destinationIso: "de", visaSlug: "chancenkarte", summary: "Different route" },
+    { destinationIso: "uk", visaSlug: "eu-blue-card", summary: "Different country" }
+  ]);
+  const result = await executeTool("getVisaFees", { countryCode: "DE", slug: "eu-blue-card" }, fakeFetch);
+  assert.equal(result.isError, false);
+  assert.equal(result.structuredContent.returned, 1);
+  assert.equal(result.structuredContent.data[0].summary, "Requested German route");
+});
+
+test("country aliases and nested salary thresholds keep only the requested route", async () => {
+  const fakeFetch = async () => Response.json([{ destinationIso: "uk", thresholds: [
+    { visaSlug: "skilled-worker", amountLocal: 41700 }, { visaSlug: "scale-up", amountLocal: 39800 }
+  ] }]);
+  const result = await executeTool("getSalaryThresholds", { countryCode: "GB", slug: "skilled-worker" }, fakeFetch);
+  assert.equal(result.structuredContent.returned, 1);
+  assert.deepEqual(result.structuredContent.data[0].thresholds, [{ visaSlug: "skilled-worker", amountLocal: 41700 }]);
+});
+
+test("route fact packs reach the global catalog tail and normalize destination aliases", async () => {
+  const records = Array.from({ length: 700 }, (_, i) => ({ destination: "de", slug: `other-${i}` }));
+  records.push({ destination: "no_dest", slug: "skilled-worker", name: "Norwegian skilled worker" });
+  const result = await executeTool("getRouteFactPack", { countryCode: "NO", slug: "skilled-worker", datasets: ["getVisaRoutes"] }, async () => Response.json(records));
+  assert.equal(result.isError, false);
+  assert.equal(result.structuredContent.datasets[0].records[0].name, "Norwegian skilled worker");
+  assert.equal(result.structuredContent.status, "all_selected_retrieved");
+});
+
+test("planning indexes expose only the requested route's rows", async () => {
+  const result = await executeTool("getProcessingReliability", { countryCode: "DE", slug: "eu-blue-card" }, async () => Response.json({
+    version: "2026", rows: [{ destinationIso: "de", visaSlug: "eu-blue-card" }, { destinationIso: "ca", visaSlug: "pnp" }]
+  }));
+  assert.equal(result.structuredContent.returned, 1);
+  assert.deepEqual(result.structuredContent.data.rows, [{ destinationIso: "de", visaSlug: "eu-blue-card" }]);
+});
+
 test("publishes every curated OpenAPI operation", async () => {
   assert.equal(TOOLS.length, 54);
   assert.equal(OPENAPI.info.version, "1.3.0");

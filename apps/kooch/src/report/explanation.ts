@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { GuidanceReport, State } from './evaluate';
-import { policies, facts } from '../policy';
+import { policies, factTitle } from '../policy';
 export const explanationInput = z.object({ request_id: z.uuid() }).strict();
 export const explanationContract = 'report-explanation-1';
 export type ExplanationCard = { id: string; route_id: string; title: string; text: string; state?: State; source_ids: string[] };
@@ -9,7 +9,7 @@ export type SavedExplanation = ExplanationResult & { id: string; report_id: stri
 export function explanationRoutes(report: GuidanceReport) {
   if (report.route_results.length) return report.route_results;
   return (report.discovery?.result?.routes ?? []).map(route => ({ route_id: route.id, status: 'discovery_only',
-    conditions: (policies[route.id]?.requires ?? []).map(id => ({ id, title: facts[id], reason: route.prerequisite,
+    conditions: (route.prerequisite_ids ?? policies[route.id]?.requires ?? []).map(id => ({ id, title: factTitle(id), reason: route.prerequisite,
       state: (report.dependencies.case.answers.facts[id] === 'yes' ? 'self_reported_met' : report.dependencies.case.answers.facts[id] === 'no' ? 'action_needed' : 'unknown') as State,
       source_ids: route.sources.map(source => source.id) })),
     next_actions: [{ id: 'next_step', title: 'قدم بعدی این مسیر', detail: route.next_step, source_ids: route.sources.map(source => source.id) }],

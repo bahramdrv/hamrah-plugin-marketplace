@@ -7,6 +7,7 @@ import Ajv from "ajv";
 
 import { BudgetExceededError, REQUEST_BUDGETS, withDeadline } from "./budgets.mjs";
 import { pickRecordArray } from "./record-array.mjs";
+import { scopePublicRecord } from "./public-record-scope.mjs";
 import { buildRouteFactPack, InvalidFactPackInput, ROUTE_FACT_PACK_TOOL } from "./route-fact-pack.mjs";
 import { answerCommunityQuestion } from "./community-answers.mjs";
 import { RouteClaimNotFoundError, validateRouteClaim } from "./community-claim-confidence.mjs";
@@ -524,11 +525,10 @@ export function filterResponse(data, args = {}) {
   const { records, key } = pickRecordArray(data);
   if (!records) return { data, total: null, returned: null };
 
-  const filtered = records.filter((record) => {
+  const scoped = records.map(record => args.countryCode || args.slug ? scopePublicRecord(record, args.countryCode, args.slug, true) : record).filter(record => record !== null);
+  const filtered = scoped.filter((record) => {
     if (!record || typeof record !== "object") return !args.query;
     if (args.destination && ![record.destination, record.country, record.name, record.title].some((v) => contains(v, args.destination))) return false;
-    if (args.countryCode && ![record.countryCode, record.destination].some((v) => contains(v, args.countryCode))) return false;
-    if (args.slug && !contains(record.slug, args.slug)) return false;
     if (args.category && !contains(record.category, args.category)) return false;
     if (args.query && !JSON.stringify(record).toLowerCase().includes(args.query.toLowerCase())) return false;
     return true;

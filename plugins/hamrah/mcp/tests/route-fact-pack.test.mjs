@@ -145,7 +145,7 @@ test("Route Fact Pack recognizes a route record with a destination code field", 
 });
 
 test("Route Fact Pack bounds record scans and discloses incomplete route matching", async () => {
-  const records = Array.from({ length: 500 }, () => ({ destination: "de", slug: "student" }));
+  const records = Array.from({ length: 2000 }, () => ({ destination: "de", slug: "student" }));
   records.push({ destination: "de", slug: "opportunity-card" });
   const fakeFetch = async () => new Response(JSON.stringify(records), { status: 200 });
   const result = await executeTool("getRouteFactPack", {
@@ -154,8 +154,8 @@ test("Route Fact Pack bounds record scans and discloses incomplete route matchin
   const dataset = result.structuredContent.datasets[0];
   assert.equal(result.structuredContent.status, "partial");
   assert.equal(dataset.status, "success");
-  assert.equal(dataset.totalRecords, 501);
-  assert.equal(dataset.recordsScanned, 500);
+  assert.equal(dataset.totalRecords, 2001);
+  assert.equal(dataset.recordsScanned, 2000);
   assert.equal(dataset.scanLimited, true);
   assert.deepEqual(dataset.records, []);
 });

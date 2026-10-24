@@ -58,6 +58,25 @@ test('a work applicant saves a dated route briefing with one shared next action 
   } finally { await h.close(); }
 });
 
+test('an Australian study applicant can save and print a research briefing without receiving unrelated legal modules', { skip: !enabled }, async () => {
+  const h = await harness(() => new Date('2026-10-24T20:00:00Z'));
+  try {
+    const c = await h.verifiedClient();
+    assert.equal((await c.request('case', { ...saveInput(), answers: { goal: 'study', destinations: ['au'], focus_route: 'au:student-au', facts: { 'au.admission': 'no' } } })).status, 200);
+    const response = await c.request('report', { expected_revision: 1, request_id: randomUUID() });
+    assert.equal(response.status, 200);
+    const { report } = await response.json();
+    assert.deepEqual(report.route_results, []);
+    assert.equal(report.discovery.result.routes[0].id, 'au:student-au');
+    assert.equal(report.discovery.needs_review, true);
+    const print = await c.request(`report/${report.id}/print`);
+    assert.equal(print.status, 200);
+    assert.match(await print.text(), /استرالیا/);
+    assert.deepEqual((await (await c.request(`report/${report.id}`)).json()).report, report);
+    assert.equal((await (await c.request('reports')).json()).reports.length, 1);
+  } finally { await h.close(); }
+});
+
 test('an old work briefing stays immutable and loses current status after its source window expires', { skip: !enabled }, async () => {
   let clock = new Date('2026-10-21T12:00:00Z');
   const h = await harness(() => clock);
@@ -72,8 +91,9 @@ test('an old work briefing stays immutable and loses current status after its so
     assert.equal(viewed.report_state.evidence_current, false);
     assert.deepEqual(viewed.report, saved.report);
     const next = await (await c.request('report', { expected_revision: 1, request_id: randomUUID() })).json();
-    assert.deepEqual(next.report.discovery.result.routes, []);
-    assert.deepEqual(next.report.discovery.result.guidance.actions, []);
+    assert.ok(next.report.discovery.result.routes.every((route: { coverage: string }) => route.coverage === 'catalog_research_required'));
+    assert.equal(next.report.discovery.needs_review, true);
+    assert.ok(!next.report.discovery.result.routes.some((route: { id: string }) => saved.report.discovery.result.routes.some((old: { id: string }) => old.id === route.id)));
   } finally { await h.close(); }
 });
 
