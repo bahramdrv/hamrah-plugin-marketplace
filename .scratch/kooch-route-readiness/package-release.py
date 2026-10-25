@@ -40,7 +40,7 @@ manifest = {
     'baseline_commit': subprocess.check_output(['git', 'rev-parse', base], cwd=root).decode().strip(),
     'app_files': len(files), 'overlay': changed, 'credentials_included': False, 'deployed': False,
     'packages': {p.name: {'bytes': p.stat().st_size, 'sha256': hashlib.sha256(p.read_bytes()).hexdigest()} for p in packages},
-    'note': 'Source-only app; no credentials, dependencies or deployment. Visual QA pending because browser control is disabled.',
+    'note': 'Source-only app; no credentials, dependencies or deployment. See ACCEPTANCE-fa.md and VISUAL-QA-fa.md for verification scope.',
 }
 (out / 'release-manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
 print(json.dumps({'isolated': str(isolated), 'files': len(files), 'packages': manifest['packages']}, indent=2))

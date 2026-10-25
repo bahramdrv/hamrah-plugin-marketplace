@@ -13,6 +13,8 @@ test('the full destination catalog and an Australian study route reach the inter
   const config = await (await api.GET()).json();
   assert.equal(Object.keys(config.countries).length, 233);
   assert.equal(config.countries.no.name, 'نروژ');
+  assert.equal(config.countries.iq.flag, '🇮🇶');
+  assert.equal(config.countries.ci.flag, '🇨🇮');
   const response = await api.POST(post({ goal: 'study', destinations: ['au'] }));
   assert.equal(response.status, 200);
   const result = await response.json();

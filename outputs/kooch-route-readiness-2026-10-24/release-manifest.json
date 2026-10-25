@@ -22,21 +22,25 @@
     "apps/kooch/data/route-readiness.json",
     "apps/kooch/scripts/build-route-readiness.py",
     "apps/kooch/tests/report.test.ts",
-    "apps/kooch/public/report-print.css"
+    "apps/kooch/public/report-print.css",
+    "apps/kooch/data/global-catalog.json",
+    "apps/kooch/data/global-destinations.json",
+    "apps/kooch/scripts/build-global-catalog.py",
+    "apps/kooch/tests/global-coverage.test.ts"
   ],
   "credentials_included": false,
   "deployed": false,
   "packages": {
     "kooch-readiness-app-source.zip": {
-      "bytes": 1973929,
-      "sha256": "fe7e01915a9e54f235c5f902f42876d88f9fefc59cff84d552884cc03e89be9e"
+      "bytes": 1973962,
+      "sha256": "1709ef2910773a59150463a9bb6f04eefe9a7262083864b98e2aaf2a39f8e462"
     },
     "readiness-source-evidence.zip": {
-      "bytes": 129041,
-      "sha256": "3025bd9e741e44e4cd68512b0c4c3d86d8ed5f0d6c01735e9da9eedf1095a216"
+      "bytes": 627787,
+      "sha256": "84e55b400ee1545cc84a12fd7d31471ad859a3b17f8dc4e55069389667752d91"
     }
   },
-  "note": "Source-only app; no credentials, dependencies or deployment. Visual QA pending because browser control is disabled.",
+  "note": "Source-only app; no credentials, dependencies or deployment. See ACCEPTANCE-fa.md and VISUAL-QA-fa.md for verification scope.",
   "accepted_on": "2026-10-25",
   "checks": {
     "app_tests": 171,
@@ -46,7 +50,7 @@
     "build": "passed",
     "verify_release": "passed",
     "static": "passed",
-    "visual": "blocked_browser_disabled",
+    "visual": "passed_scoped_scenarios_see_VISUAL-QA-fa.md",
     "deployed": false
   }
 }

@@ -1,6 +1,6 @@
 # بررسی آمادگی مسیرهای اصلی کوچ
 
-Status: in-progress
+Status: done
 Blocked by: None
 Baseline: 08d9255
 
@@ -40,3 +40,7 @@ Baseline: 08d9255
 ## Delivery status — 2026-10-25
 
 پیاده‌سازی، پژوهش، دو بازبینی مستقل، آزمون‌ها و بستهٔ مستقل تحویل آماده‌اند. پذیرش دیداری به‌علت خاموش‌بودن کنترل مرورگر باز است؛ انتشار عمومی یا push انجام نشده. گزارش: outputs/kooch-route-readiness-2026-10-24/ACCEPTANCE-fa.md
+
+## Visual acceptance — 2026-10-25
+
+اتصال مرورگر برقرار و QA دیداری محدودهٔ محلی تکمیل شد؛ دوپرچم اصلاح شدند. شواهد و حدود بررسی: outputs/kooch-route-readiness-2026-10-24/VISUAL-QA-fa.md. انتشار عمومی و push انجام نشده‌اند.

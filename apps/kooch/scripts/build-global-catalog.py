@@ -20,7 +20,8 @@ for c in countries:
     code = canonical(c['iso'])
     iso = 'gb' if code == 'uk' else code
     destinations[code] = {
-        'name': labels['countries'][c['iso']], 'official_name': c['name'], 'flag': c['flag'],
+        'name': labels['countries'][c['iso']], 'official_name': c['name'],
+        'flag': ''.join(chr(0x1F1E6 + ord(letter) - ord('a')) for letter in iso),
         'region': c['region'], 'source_code': c['iso'], 'alpha3': alpha3.get(iso, 'XKX' if iso == 'xk' else None),
         'portal': c['govPortal'], 'slug': c['slug'],
     }

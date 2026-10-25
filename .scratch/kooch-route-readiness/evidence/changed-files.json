@@ -19,5 +19,9 @@
   "apps/kooch/data/route-readiness.json",
   "apps/kooch/scripts/build-route-readiness.py",
   "apps/kooch/tests/report.test.ts",
-  "apps/kooch/public/report-print.css"
+  "apps/kooch/public/report-print.css",
+  "apps/kooch/data/global-catalog.json",
+  "apps/kooch/data/global-destinations.json",
+  "apps/kooch/scripts/build-global-catalog.py",
+  "apps/kooch/tests/global-coverage.test.ts"
 ]
