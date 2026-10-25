@@ -1,10 +1,12 @@
+import { AppIcon } from './icons';
+
 export function AppHeader({ current }: { current: 'compass' | 'form' | 'report' | 'account' | 'knowledge' }) {
   return <header className="app-header">
-    <a className="brand" href="/" aria-label="کوچ، پیدا کردن مسیر"><strong>کوچ</strong><span>یک شروع روشن‌تر</span></a>
+    <a className="brand" href="/" aria-label="کوچ، پیدا کردن مسیر"><img src="/kooch-logo.png" alt="کوچ" width={114} height={38}/><span>یک شروع روشن‌تر</span></a>
     <nav className="app-navigation" aria-label="بخش‌های کوچ">
-      {([['compass', '/', 'پیدا کردن مسیر'], ['form', '/form', 'پاسخ‌های من'], ['report', '/report', 'کارنامهٔ مقدماتی']] as const).map(([key, href, label]) => <a key={key} href={href} aria-current={current === key ? 'page' : undefined}>{label}</a>)}
+      {([['compass', '/', 'بررسی'], ['form', '/form', 'پاسخ‌ها'], ['report', '/report', 'کارنامه'], ['account', '/account', 'حساب']] as const).map(([key, href, label]) => <a key={key} href={href} aria-current={current === key ? 'page' : undefined}><AppIcon name={key}/><span>{label}</span></a>)}
     </nav>
-    <nav className="header-actions" aria-label="حساب و راهنما"><a href="/knowledge" target={current === 'knowledge' ? undefined : '_blank'} rel={current === 'knowledge' ? undefined : 'noopener'} aria-current={current === 'knowledge' ? 'page' : undefined}>راهنما<span className="sr-only">{current !== 'knowledge' && ' در تب تازه'}</span></a><a href="/account" aria-current={current === 'account' ? 'page' : undefined}>حساب و ادامهٔ بررسی</a></nav>
+    <nav className="header-actions" aria-label="راهنما"><a href="/knowledge" target={current === 'knowledge' ? undefined : '_blank'} rel={current === 'knowledge' ? undefined : 'noopener'} aria-current={current === 'knowledge' ? 'page' : undefined}><AppIcon name="help"/>راهنما<span className="sr-only">{current !== 'knowledge' && ' در تب تازه'}</span></a></nav>
   </header>;
 }
 
@@ -18,9 +20,8 @@ export function ReportCoverage() {
 
 export function CompassGuidance() {
   return <aside className="guidance compass-guidance">
-    <svg className="compass-mark" aria-hidden="true" viewBox="0 0 160 160" fill="none" stroke="currentColor"><circle cx="80" cy="80" r="64"/><circle cx="80" cy="80" r="45"/><path d="M80 4v17m0 118v17M4 80h17m118 0h17m-48-52L90 90l-38 18 18-38 38-18Z"/></svg>
     <h2>لازم نیست از همین اول همه‌چیز را بدانی.</h2><p>از شرایط امروزت شروع کن؛ قدم بعدی را روشن می‌کنیم.</p>
-    <ol className="outcome-list"><li><strong>مسیرهای مرتبط</strong><span>چه گزینه‌هایی را بررسی کنی؟</span></li><li><strong>چیزهایی که کم داری</strong><span>چه چیزی هنوز باید روشن شود؟</span></li><li><strong>یک قدم مشخص</strong><span>بعد از این صفحه از کجا شروع کنی؟</span></li></ol>
+    <ol className="outcome-list"><li><AppIcon name="map"/><div><strong>مسیرهای مرتبط</strong><span>چه گزینه‌هایی را بررسی کنی؟</span></div></li><li><AppIcon name="form"/><div><strong>چیزهایی که کم داری</strong><span>چه چیزی هنوز باید روشن شود؟</span></div></li><li><AppIcon name="check"/><div><strong>یک قدم مشخص</strong><span>بعد از این صفحه از کجا شروع کنی؟</span></div></li></ol>
     <details><summary>دربارهٔ این بررسی</summary><p>برای دارندهٔ گذرنامهٔ ایرانی ساکن ایران. شروع آنلاین ممکن است همچنان به سفر برای بیومتریک نیاز داشته باشد. این فهرست، تأیید شرایط یا احتمال ویزا نیست.</p></details>
   </aside>;
 }

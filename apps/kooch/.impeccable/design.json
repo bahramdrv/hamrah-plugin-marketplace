@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-25T11:35:55.125465+00:00",
+  "title": "Design System: کوچ",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "paper",
+        "tonalRamp": [
+          "oklch(15% 0.0070 88.64)",
+          "oklch(27% 0.0070 88.64)",
+          "oklch(38% 0.0070 88.64)",
+          "oklch(49% 0.0070 88.64)",
+          "oklch(61% 0.0070 88.64)",
+          "oklch(72% 0.0070 88.64)",
+          "oklch(84% 0.0070 88.64)",
+          "oklch(95% 0.0070 88.64)"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "ink",
+        "tonalRamp": [
+          "oklch(15% 0.0466 237.34)",
+          "oklch(27% 0.0466 237.34)",
+          "oklch(38% 0.0466 237.34)",
+          "oklch(49% 0.0466 237.34)",
+          "oklch(61% 0.0466 237.34)",
+          "oklch(72% 0.0466 237.34)",
+          "oklch(84% 0.0466 237.34)",
+          "oklch(95% 0.0466 237.34)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "muted",
+        "tonalRamp": [
+          "oklch(15% 0.0284 242.76)",
+          "oklch(27% 0.0284 242.76)",
+          "oklch(38% 0.0284 242.76)",
+          "oklch(49% 0.0284 242.76)",
+          "oklch(61% 0.0284 242.76)",
+          "oklch(72% 0.0284 242.76)",
+          "oklch(84% 0.0284 242.76)",
+          "oklch(95% 0.0284 242.76)"
+        ]
+      },
+      "teal": {
+        "role": "primary",
+        "displayName": "teal",
+        "tonalRamp": [
+          "oklch(15% 0.0821 197.19)",
+          "oklch(27% 0.0821 197.19)",
+          "oklch(38% 0.0821 197.19)",
+          "oklch(49% 0.0821 197.19)",
+          "oklch(61% 0.0821 197.19)",
+          "oklch(72% 0.0821 197.19)",
+          "oklch(84% 0.0821 197.19)",
+          "oklch(95% 0.0821 197.19)"
+        ]
+      },
+      "teal-strong": {
+        "role": "primary",
+        "displayName": "teal-strong",
+        "tonalRamp": [
+          "oklch(15% 0.0673 199.20)",
+          "oklch(27% 0.0673 199.20)",
+          "oklch(38% 0.0673 199.20)",
+          "oklch(49% 0.0673 199.20)",
+          "oklch(61% 0.0673 199.20)",
+          "oklch(72% 0.0673 199.20)",
+          "oklch(84% 0.0673 199.20)",
+          "oklch(95% 0.0673 199.20)"
+        ]
+      },
+      "tint": {
+        "role": "neutral",
+        "displayName": "tint",
+        "tonalRamp": [
+          "oklch(15% 0.0096 189.06)",
+          "oklch(27% 0.0096 189.06)",
+          "oklch(38% 0.0096 189.06)",
+          "oklch(49% 0.0096 189.06)",
+          "oklch(61% 0.0096 189.06)",
+          "oklch(72% 0.0096 189.06)",
+          "oklch(84% 0.0096 189.06)",
+          "oklch(95% 0.0096 189.06)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "line",
+        "tonalRamp": [
+          "oklch(15% 0.0077 207.14)",
+          "oklch(27% 0.0077 207.14)",
+          "oklch(38% 0.0077 207.14)",
+          "oklch(49% 0.0077 207.14)",
+          "oklch(61% 0.0077 207.14)",
+          "oklch(72% 0.0077 207.14)",
+          "oklch(84% 0.0077 207.14)",
+          "oklch(95% 0.0077 207.14)"
+        ]
+      },
+      "control-line": {
+        "role": "neutral",
+        "displayName": "control-line",
+        "tonalRamp": [
+          "oklch(15% 0.0186 229.09)",
+          "oklch(27% 0.0186 229.09)",
+          "oklch(38% 0.0186 229.09)",
+          "oklch(49% 0.0186 229.09)",
+          "oklch(61% 0.0186 229.09)",
+          "oklch(72% 0.0186 229.09)",
+          "oklch(84% 0.0186 229.09)",
+          "oklch(95% 0.0186 229.09)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "surface",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(27% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "error-bg": {
+        "role": "neutral",
+        "displayName": "error-bg",
+        "tonalRamp": [
+          "oklch(15% 0.0163 46.57)",
+          "oklch(27% 0.0163 46.57)",
+          "oklch(38% 0.0163 46.57)",
+          "oklch(49% 0.0163 46.57)",
+          "oklch(61% 0.0163 46.57)",
+          "oklch(72% 0.0163 46.57)",
+          "oklch(84% 0.0163 46.57)",
+          "oklch(95% 0.0163 46.57)"
+        ]
+      },
+      "error-ink": {
+        "role": "neutral",
+        "displayName": "error-ink",
+        "tonalRamp": [
+          "oklch(15% 0.1078 36.65)",
+          "oklch(27% 0.1078 36.65)",
+          "oklch(38% 0.1078 36.65)",
+          "oklch(49% 0.1078 36.65)",
+          "oklch(61% 0.1078 36.65)",
+          "oklch(72% 0.1078 36.65)",
+          "oklch(84% 0.1078 36.65)",
+          "oklch(95% 0.1078 36.65)"
+        ]
+      },
+      "danger": {
+        "role": "neutral",
+        "displayName": "danger",
+        "tonalRamp": [
+          "oklch(15% 0.1096 29.18)",
+          "oklch(27% 0.1096 29.18)",
+          "oklch(38% 0.1096 29.18)",
+          "oklch(49% 0.1096 29.18)",
+          "oklch(61% 0.1096 29.18)",
+          "oklch(72% 0.1096 29.18)",
+          "oklch(84% 0.1096 29.18)",
+          "oklch(95% 0.1096 29.18)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "عنوان اصلی",
+        "purpose": "عنوان اصلیِ صفحه؛ اندازه‌های واکنش‌گرا در Layout و Typography مستند شده‌اند."
+      },
+      "question": {
+        "displayName": "سؤال",
+        "purpose": "legend فرم."
+      },
+      "body": {
+        "displayName": "متن",
+        "purpose": "متن پایهٔ رابط."
+      },
+      "action": {
+        "displayName": "اقدام",
+        "purpose": "دکمهٔ اصلی و دوم."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "control-color",
+        "value": "180ms ease-out",
+        "purpose": "تغییر رنگ زمینه و مرز گزینه، و زمینهٔ دکمه."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition: none !important; animation: none !important; scroll-behavior: auto !important",
+        "purpose": "در prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stacked-workspace",
+        "value": "999px"
+      },
+      {
+        "name": "bottom-navigation",
+        "value": "700px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "اقدام اصلی",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "اقدام سرمه‌ای برای ادامهٔ کار.",
+      "html": "<button class=\"ds-primary\" dir=\"rtl\">ثبت پاسخ و ادامه<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M20 12H4m6-6-6 6 6 6\"/></svg></button>",
+      "css": ".ds-primary{font-family:Vazirmatn,Tahoma,sans-serif;display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 22px;border:0;border-radius:12px;background:var(--ink,#102d3e);color:#fff;font-size:14px;font-weight:700;line-height:1.8;cursor:pointer;transition:background .18s ease-out}.ds-primary:hover{background:#224a5b}.ds-primary:disabled{opacity:.5;cursor:not-allowed}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-choice:focus-within,.ds-disclosure summary:focus-visible{outline:3px solid var(--accent,#237e80);outline-offset:4px}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}} .ds-primary{position:relative;padding-inline:44px}.ds-primary svg{position:absolute;inset-inline-end:18px;width:21px;height:21px}"
+    },
+    {
+      "name": "اقدام دوم",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "دکمهٔ سفید و دورخط برای اقدام دوم.",
+      "html": "<button class=\"ds-secondary\" dir=\"rtl\">دیدن خلاصه با همین پاسخ‌ها</button>",
+      "css": ".ds-secondary{font-family:Vazirmatn,Tahoma,sans-serif;min-height:50px;padding:12px 22px;border:1px solid #8d9faa;border-radius:12px;background:#fff;color:var(--ink,#102d3e);font-size:14px;font-weight:700;line-height:1.8;cursor:pointer;transition:background .18s ease-out}.ds-secondary:hover{background:#eef3f2}.ds-secondary:disabled{opacity:.5;cursor:not-allowed}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-choice:focus-within,.ds-disclosure summary:focus-visible{outline:3px solid var(--accent,#237e80);outline-offset:4px}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "ورودی",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "ورودی بومی با label و مرز روشن.",
+      "html": "<label class=\"ds-label\" dir=\"rtl\">ایمیل<input class=\"ds-input\" type=\"email\" dir=\"ltr\" placeholder=\"name@example.com\"></label>",
+      "css": ".ds-label{font-family:Vazirmatn,Tahoma,sans-serif;display:grid;gap:8px;font-size:13px;color:var(--ink,#102d3e)}.ds-input{font-family:Vazirmatn,Tahoma,sans-serif;min-width:0;min-height:50px;padding:11px 14px;border:1px solid var(--control-line,#a4b2b9);border-radius:12px;background:#fff;color:var(--ink,#102d3e)}.ds-input::placeholder{color:var(--muted,#586875)}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-choice:focus-within,.ds-disclosure summary:focus-visible{outline:3px solid var(--accent,#237e80);outline-offset:4px}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "گزینهٔ پاسخ",
+      "kind": "custom",
+      "refersTo": "choice",
+      "description": "انتخاب بومی همراه با وضعیت مرزی و سطحی.",
+      "html": "<label class=\"ds-choice\" dir=\"rtl\"><input type=\"radio\" name=\"ds-goal\" checked>تحصیل</label>",
+      "css": ".ds-choice{font-family:Vazirmatn,Tahoma,sans-serif;display:flex;align-items:center;gap:12px;min-height:60px;padding:13px 15px;border:1px solid var(--control-line,#a4b2b9);border-radius:12px;background:#fff;color:var(--ink,#102d3e);cursor:pointer;transition:background .18s ease-out,border-color .18s ease-out}.ds-choice:hover{border-color:var(--accent,#237e80);background:#f6faf9}.ds-choice:has(input:checked){border-color:var(--accent,#237e80);background:#eaf5f4;color:#123e4b}.ds-choice input{width:20px;height:20px;accent-color:var(--accent,#237e80)}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-choice:focus-within,.ds-disclosure summary:focus-visible{outline:3px solid var(--accent,#237e80);outline-offset:4px}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "ناوبری",
+      "kind": "nav",
+      "description": "چهار مقصد واقعی با مورد فعال. نمایش نمونه در حالت افقی دسکتاپ است.",
+      "html": "<nav class=\"ds-nav\" dir=\"rtl\" aria-label=\"بخش‌های کوچ\"><a href=\"#\" aria-current=\"page\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m16 8-2.5 5.5L8 16l2.5-5.5L16 8Z\"/></svg>بررسی</a><a href=\"#\">پاسخ‌ها</a><a href=\"#\">کارنامه</a><a href=\"#\">حساب</a></nav>",
+      "css": ".ds-nav{font-family:Vazirmatn,Tahoma,sans-serif;display:flex;gap:8px;flex-wrap:wrap}.ds-nav a{display:flex;align-items:center;gap:9px;min-height:48px;padding:10px 16px;border-radius:10px;font-size:13px;color:var(--muted,#586875);text-decoration:none}.ds-nav a[aria-current]{background:#e5eeec;color:var(--accent-strong,#185f62);font-weight:700}.ds-nav a:hover{background:#eaece7}.ds-nav svg{width:20px;height:20px}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-choice:focus-within,.ds-disclosure summary:focus-visible{outline:3px solid var(--accent,#237e80);outline-offset:4px}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "ورق محتوا",
+      "kind": "card",
+      "refersTo": "sheet",
+      "description": "سطح اصلیِ سفید بدون سایه.",
+      "html": "<article class=\"ds-sheet\" dir=\"rtl\"><h2>یک قدم مشخص</h2><p>بعد از این صفحه از کجا شروع کنی؟</p></article>",
+      "css": ".ds-sheet{font-family:Vazirmatn,Tahoma,sans-serif;background:#fff;color:var(--ink,#102d3e);padding:28px;border-radius:16px}.ds-sheet h2{font-size:23px;font-weight:800;line-height:1.8;margin:0}.ds-sheet p{font-size:15px;line-height:1.95;color:var(--muted,#586875);margin:8px 0 0}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "جزئیات عضویت",
+      "kind": "custom",
+      "description": "افشای بومیِ قاعدهٔ اولین کارنامه؛ فقط هنگام فعال‌بودن قابلیت نمایش داده می‌شود.",
+      "html": "<details class=\"ds-disclosure\" dir=\"rtl\"><summary>اولین کارنامه با تأیید عضویت تلگرام</summary><p>برای اولین کارنامه، عضویت یک‌باره در کانال تلگرام کوچ و تأیید دنبال‌کردن اینستاگرام لازم است. دارندگان کارنامهٔ قبلی معاف‌اند.</p></details>",
+      "css": ".ds-disclosure{font-family:Vazirmatn,Tahoma,sans-serif;padding:9px 16px;background:#e4eeeb;border-radius:8px;font-size:12px;color:#31545c}.ds-disclosure summary{min-height:28px;cursor:pointer;font-weight:600}.ds-disclosure summary:hover{text-decoration:underline}.ds-disclosure p{padding:8px 0 2px;margin:0;line-height:1.95}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-choice:focus-within,.ds-disclosure summary:focus-visible{outline:3px solid var(--accent,#237e80);outline-offset:4px}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "دفتر کار معماری معاصر",
+    "overview": "دفتر کار معماری معاصر: زمینهٔ کاغذیِ صاف و گرم، ورق‌های سفید، نوشتهٔ سرمه‌ای و نشانه‌های محدودِ سبزآبی. رابط فارسی و راست‌به‌چپ است؛ وزن و فاصلهٔ متن، ردیف‌های مرتب و مرزهای ظریف، سلسله‌مراتب را می‌سازند. همان زبان در بررسی، پاسخ‌ها، حساب، کارنامه و تاریخچه، راهنما و حریم خصوصی اجرا شده است.\n\nاین سند از کد موجود ثبت شده است: `app/layout.tsx` ابتدا `styles.css`، سپس `ux.css` و در پایان `atelier.css` را وارد می‌کند؛ مقادیر نهاییِ لایهٔ آخر مبنا هستند. لوگوی اصلیِ `public/kooch-logo.png` با نسبت ۳ به ۱ و رنگ اصلی نمایش داده می‌شود. این ثبت، ادعای استقرار روی سرویس زنده یا پیش‌نمایش موفق MagicPath نیست.",
+    "keyCharacteristics": [
+      "زمینهٔ گرم و صاف، ورق سفید و مرز ظریف؛ بدون سایهٔ تزئینی.",
+      "قلم فارسی محلی، عنوان قوی و کنترل‌های بومی.",
+      "ناوبری چهارقسمتی و راهنمای جداگانه؛ چینش سازگار با موبایل.",
+      "وضعیت و قدم بعدی از دادهٔ واقعی؛ محدودیت پوشش و اخطارهای لازم آشکار."
+    ],
+    "rules": [
+      {
+        "name": "The Ink Action Rule",
+        "body": "دکمهٔ اصلی با مرکب سرمه‌ای از انتخابِ سبزآبی پاسخ جدا می‌شود.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sheet Rule",
+        "body": "محتوای اصلی روی سطح آرام می‌نشیند؛ مرزبندی و فاصله جای سایهٔ تزئینی را می‌گیرند.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do از لوگوی اصلیِ کوچ، قلم محلی و راست‌به‌چپ بودن سند استفاده کن.",
+      "Do دکمهٔ اصلی را سرمه‌ای و انتخاب پاسخ را سبزآبی نگه دار؛ وضعیت را با متن و کنترل بومی نیز نشان بده.",
+      "Do مرحله و شمار پاسخ‌های ثبت‌شده را از وضعیت واقعی جریان بگیر و حالت بارگذاری، خطا و نامعلوم را روشن نگه دار.",
+      "Do اخطار دادهٔ ساختگیِ پایلوت و جزئیات لازم عضویت را قابل دسترس نگه دار.",
+      "Do در موبایل برای ناوبری ثابت پایین فضای کافی بگذار و راهنمای کنار فرم را زیر آن بیاور."
+    ],
+    "donts": [
+      "Don't لوگو را بازطراحی، بازنویسی، کشیده یا رنگ‌آمیزی مجدد کن.",
+      "Don't زمینه را با بافت، گرادیان یا سایهٔ برجسته‌ای که در این سیستم وجود ندارد جایگزین کن.",
+      "Don't تعداد سؤال ثابت، زمان قطعی تکمیل، درصد پیشرفت ساختگی یا احتمال ویزا بساز.",
+      "Don't ظاهر کارنامه را به معنی ارزیابی کامل همهٔ مسیرها یا تأیید رسمی شرایط معرفی کن.",
+      "Don't رنگ را تنها نشانهٔ مرحلهٔ فعال، انتخاب، خطا یا نتیجه قرار بده."
+    ]
+  }
+}

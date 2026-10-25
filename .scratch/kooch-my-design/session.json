@@ -1,0 +1,29 @@
+{
+  "projectId": "465025604782297088",
+  "projectName": "کوچ — تجربهٔ تازهٔ my.kooch.app",
+  "componentId": "465065226279219200",
+  "codeSessionId": "mcs_f023ab8c-9d36-4f50-ad4e-da44342637c6",
+  "idempotencyKey": "kooch-my-design-a-approved-20261025",
+  "codeSessionExpiresAt": "2026-10-25T12:19:54.138Z",
+  "worldConfirmed": "contemporary-architecture-notebook",
+  "compositionApproval": "A — approved explicitly",
+  "comps": {
+    "A": {
+      "file": "apps/kooch/.impeccable/mocks/kooch-a.png",
+      "imageId": "465029447330959360"
+    },
+    "B": {
+      "file": "apps/kooch/.impeccable/mocks/kooch-b.png",
+      "imageId": "465029463411953664"
+    },
+    "C": {
+      "file": "apps/kooch/.impeccable/mocks/kooch-c.png",
+      "imageId": "465029478909890560"
+    }
+  },
+  "membershipCommit": "b797362c7df582355fb1b6ace4547d4f824b4da4",
+  "expiredComponentId": "465025656942649344",
+  "status": "blocked: MagicPath EXTERNAL_AGENT_API_QUOTA_EXCEEDED after archive upload",
+  "uploadedArchive": "/tmp/kooch-a-component.tgz",
+  "fontNote": "WOFF2 asset rejected by MagicPath asset validation; prototype uses existing public app font URL, app itself self-hosts font."
+}
