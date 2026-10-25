@@ -2,7 +2,7 @@ import { z } from 'zod';
 import type { ReportAccess } from '../membership/store';
 import { explanationInput } from '../report/explanation';
 import type { ReportExplanation } from '../ai/report-explanation';
-import { pilotNotice } from '../pilot';
+import { serviceNotice, serviceRelease } from '../release';
 import { AuthProvider } from './auth';
 import { AccountStore } from './store';
 import { AccountError, unauthorized, credentialsSchema, caseInputSchema } from './contract';
@@ -34,8 +34,10 @@ async function body(request: Request) {
   }
   try { return JSON.parse(Buffer.concat(chunks).toString('utf8')); } catch { throw invalid(); }
 }
-export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth; pilotAi?: () => 'disabled' | 'bounded_arvan'; pilotReportAi?: () => 'not_enabled' | 'bounded_arvan'; questionAssistance?: QuestionAssistance; accounting?: AiBudgetLedger; answerInterpretation?: AnswerInterpretation; reportExplanation?: ReportExplanation; interpretationDisclosure?: import('../ai/question-assistance').AssistedFormView['interpretation_disclosure']; reportAccess?: ReportAccess }) {
+export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; releaseEnvironment?: Readonly<Record<string, string | undefined>>; google?: GoogleOAuth; pilotAi?: () => 'disabled' | 'bounded_arvan'; pilotReportAi?: () => 'not_enabled' | 'bounded_arvan'; questionAssistance?: QuestionAssistance; accounting?: AiBudgetLedger; answerInterpretation?: AnswerInterpretation; reportExplanation?: ReportExplanation; interpretationDisclosure?: import('../ai/question-assistance').AssistedFormView['interpretation_disclosure']; reportAccess?: ReportAccess }) {
   const { store, auth } = options;
+  const service = serviceRelease({ ...options.releaseEnvironment, KOOCH_ACCOUNT_MODE: options.mode,
+    ...(!options.reportAccess ? { KOOCH_MEMBERSHIP_ENABLED: 'false' } : {}) });
   const formReply = (view: object) => reply({ ...view, interpretation_disclosure: options.interpretationDisclosure ?? null });
   const questionAssistance = options.questionAssistance ?? createQuestionAssistance();
   const cookie = (token: string, expiresAt?: Date) => `${cookieName}=${token}; Path=/; HttpOnly; SameSite=Strict; ${options.mode === 'hosted' ? 'Secure; ' : ''}${expiresAt ? `Expires=${expiresAt.toUTCString()}` : 'Max-Age=0'}`;
@@ -86,7 +88,7 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
           }
           return new Response(null, { status: 303, headers });
         }
-        if (operation === 'status' && method === 'GET') return reply({ configured: true, membership_enabled: Boolean(options.reportAccess), pilot: { ...pilotNotice, ai: options.pilotAi?.() ?? 'disabled', report_explanation: options.pilotReportAi?.() ?? 'not_enabled' }, mode: options.mode, google_enabled: Boolean(options.google), email_delivery: options.mode === 'local' ? 'local_test_only' : 'configured' });
+        if (operation === 'status' && method === 'GET') return reply({ configured: true, membership_enabled: Boolean(options.reportAccess), service, pilot: { ...serviceNotice(service), ai: options.pilotAi?.() ?? 'disabled', report_explanation: options.pilotReportAi?.() ?? 'not_enabled' }, mode: options.mode, google_enabled: Boolean(options.google), email_delivery: options.mode === 'local' ? 'local_test_only' : 'configured' });
         if (operation === 'session' && method === 'GET') {
           const state = await store.session(cookieToken(request));
           if (state.purpose === 'recovery') { await authenticated(request, 'recovery'); return reply({ signed_in: false, recovery: true }); }
