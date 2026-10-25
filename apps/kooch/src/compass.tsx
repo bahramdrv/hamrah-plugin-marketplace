@@ -168,7 +168,7 @@ export function Compass() {
   }
   function next() {
     const input = currentAnswers(); if (!input || !question) return;
-    const submitted = question.kind === 'fact' ? { ...input, facts: { ...input.facts, [question.id]: input.facts[question.id] ?? 'unknown' as const } } :
+    const submitted = question.kind === 'fact' ? { ...input, facts: { ...input.facts, [question.id]: input.facts[question.id] ?? 'unknown' as const }, fact_versions: { ...input.fact_versions, ...(question.answer_version ? { [question.id]: question.answer_version } : {}) } } :
       { ...input, answered: [...new Set([...input.answered, question.id as Answers['answered'][number]])] };
     void run('interview', submitted);
   }
@@ -188,7 +188,7 @@ export function Compass() {
       {undo && <div className="undo-notice" role="status"><span>پاسخ‌های فرم پاک شدند.</span><button className="text-button" onClick={restore}>بازگردانی</button><button className="text-button" onClick={() => setUndo(null)}>بستن</button></div>}
       {privateMode.current && <section className="case-toolbar"><details><summary>اطلاعات پرونده</summary><p>{privateCase ? `نسخهٔ ${privateCase.revision.toLocaleString('fa-IR')} · پاک‌شدن پس از بی‌فعالیتی: ${new Date(privateCase.delete_after).toLocaleDateString('fa-IR')}` : 'برای دریافت یا ادامهٔ پرونده به حساب برو.'}</p><p>تغییرات فقط با دکمهٔ ذخیره در حساب ثبت می‌شوند.</p></details>{privateCase && <button className="primary" disabled={busy} onClick={() => void savePrivateCase()}>ذخیرهٔ تغییرات پرونده</button>}</section>}
       {accountNotice && <p className="notice" role="status">{accountNotice}</p>}
-      {view === 'result' && result ? <Results result={result} busy={busy} retrieval={config?.retrieval} editPrerequisites={() => void run('edit-prerequisites')} edit={() => setView('prerequisites')} /> : <div className="workspace">
+      {view === 'result' && result ? <Results result={result} busy={busy} retrieval={config?.retrieval} editPrerequisites={() => void run('edit-prerequisites')} edit={() => setView('prerequisites')} focusRoute={id => { const route = result.routes.find(route => route.id === id); if (route) void run('interview', { ...answers, focus_route: id, destinations: [route.destination] }); }} /> : <div className="workspace">
         <section className="question-panel" aria-busy={busy}>
           <h1>{view === 'form' ? 'قدم بعدی مهاجرتت را روشن کن.' : 'یک قدم به مسیرهای مرتبط نزدیک‌تر'}</h1>
           <p className="intro">{view === 'form' ? 'چند پاسخ کوتاه، چند مسیر برای بررسی.' : 'فقط پیش‌نیازهایی که به هدف و مقصدت مربوط‌اند.'}</p>

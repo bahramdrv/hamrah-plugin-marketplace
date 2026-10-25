@@ -2,6 +2,7 @@ import type { GuidanceReport, RouteReport } from './evaluate';
 import type { ReportState } from './contract';
 import { GuidanceSummary } from '../guidance-summary';
 import { RouteComparison } from '../route-comparison';
+import { ReadinessView } from '../readiness-view';
 export const conditionLabels: Record<string, string> = { self_reported_met: 'بر پایهٔ پاسخ تو برقرار', action_needed: 'نیازمند اقدام', unknown: 'اطلاعات لازم است', needs_review: 'نیازمند بازبینی', not_applicable: 'طبق پاسخ تو لازم نیست', not_assessed: 'بررسی نشده' };
 const summary: Record<string, string> = { preliminary_conditions_met: 'موارد بررسی‌شده با پاسخ‌های تو سازگارند', action_needed: 'پیش از اقدام، چند شرط آماده نیست', needs_information: 'برای ادامه، اطلاعات بیشتری لازم است', needs_review: 'پیش از نتیجه‌گیری، بازبینی لازم است' };
 
@@ -53,6 +54,7 @@ export function SavedReport({ report, state, print = false }: { report: Guidance
         <GuidanceSummary guidance={report.discovery.result.guidance} print={print}/>
         {report.discovery.result.routes.length > 1 && <details open={print || undefined}><summary>مقایسهٔ مسیرهای مرتبط</summary><RouteComparison routes={report.discovery.result.routes.slice(0, 3)} print={print}/></details>}
         {report.discovery.result.routes.length === 1 && <RouteComparison routes={report.discovery.result.routes} print={print}/>}
+        {report.discovery.result.routes.filter(route => route.readiness).map(route => <section key={route.id}><h3>{route.name_fa}</h3><ReadinessView readiness={route.readiness!} print={print}/></section>)}
         <p className="help">این بخش برای شناخت مسیرها و آماده‌سازی است؛ شرط‌های کامل فردی و مدارک در آن تأیید نشده‌اند.</p>
       </> : <p className="notice">دریافت شواهد معتبر برای این خلاصه ممکن نشد. پاسخ‌ها محفوظ‌اند؛ پس از بازبینی شواهد، کارنامهٔ تازه بساز.</p>}
     </section>}

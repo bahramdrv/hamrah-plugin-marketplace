@@ -19,6 +19,7 @@ export const answersSchema = z.object({
   budget: z.object({ amount: z.number().finite().min(0).max(1e15), currency: z.enum(['EUR', 'USD', 'CAD', 'AUD', 'GBP', 'IRR', 'IRT']) }).strict().nullable().default(null),
   focus_route: z.string().regex(/^[a-z]{2}:[a-z0-9]+(?:-[a-z0-9]+)*$/).max(150).nullable().default(null),
   destinations: z.array(z.string().regex(/^[a-z]{2}$/)).max(10).refine(a => new Set(a).size === a.length).default([]),
+  fact_versions: z.record(z.string(), z.string().min(1).max(100)).refine(value => Object.keys(value).every(k => isFactId(k))).default({}),
   facts: z.record(z.string(), z.enum(['yes', 'no', 'unknown'])).refine(value => Object.keys(value).every(k => isFactId(k))).default({}),
   answered: z.array(z.enum(['goal', 'age', 'education', 'work', 'language', 'budget', 'destinations', 'timeline'])).max(8).refine(a => new Set(a).size === a.length).default([]),
 }).strict();

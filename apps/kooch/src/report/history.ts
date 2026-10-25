@@ -3,6 +3,7 @@ import { canadaPolicyDigest } from './canada-policy';
 import { policyDigest } from './policy';
 import type { ReportState, ReportChange, EvidenceReview } from './contract';
 import { buildDiscovery } from './discovery';
+import { readinessEvidence } from '../route-readiness';
 export function reportState(report: GuidanceReport, revision: number | undefined, latest: number, now: Date, review: EvidenceReview = { routeIds: [], retrievalFailed: false }): ReportState {
   const discovery = report.discovery ? buildDiscovery(report.dependencies.case, now, review) : undefined;
   const fresh = !review.retrievalFailed && (!discovery || (!discovery.needs_review && discovery.evidence_fingerprint === report.discovery?.evidence_fingerprint)) && report.route_results.every(route => !review.routeIds.includes(route.route_id) && route.evidence_current && route.evidence_version === ({ 'uk:student': policyDigest, 'ca:study-permit-ca': canadaPolicyDigest } as Record<string, string>)[route.route_id] &&
@@ -19,9 +20,9 @@ export function reportChanges(report: GuidanceReport, previous?: GuidanceReport)
   const shared = (r: GuidanceReport, other: GuidanceReport) => ({ ...r, route_results: r.route_results.filter(route => other.route_results.some(o => o.route_id === route.route_id)) });
   const sharedDiscovery = (r: GuidanceReport, other: GuidanceReport) => JSON.stringify(r.discovery?.result?.routes
     .filter(route => other.discovery?.result?.routes.some(o => o.id === route.id))
-    .map(route => [route.id, route.facts, route.sources, route.valid_until]).sort((a, b) => String(a[0]).localeCompare(String(b[0]))));
+    .map(route => [route.id, route.facts, route.sources, route.valid_until, readinessEvidence(route.readiness)]).sort((a, b) => String(a[0]).localeCompare(String(b[0]))));
   const discoveryChanged = report.discovery?.source_fingerprint !== previous.discovery?.source_fingerprint ||
-    sharedDiscovery(report, previous) !== sharedDiscovery(previous, report) || report.discovery?.needs_review !== previous.discovery?.needs_review;
+    sharedDiscovery(report, previous) !== sharedDiscovery(previous, report);
   if (evidence(shared(report, previous)) !== evidence(shared(previous, report)) || discoveryChanged) changes.push('evidence_changed');
   return changes.length ? changes : ['recreated'];
 }

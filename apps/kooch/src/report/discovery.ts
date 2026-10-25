@@ -4,6 +4,8 @@ import catalog from '../../data/global-catalog.json';
 import { evaluateCompass, type CompassResult } from '../api';
 import { snapshotSchema } from '../snapshot';
 import { policyVersion } from '../policy';
+import { readinessDefinitions } from '../readiness-registry';
+import { readinessEvidence } from '../route-readiness';
 import { answersSchema } from '../questions';
 import type { SavedCase } from '../account/contract';
 import type { EvidenceReview } from './contract';
@@ -18,9 +20,9 @@ export function buildDiscovery(saved: SavedCase, now: Date, review: EvidenceRevi
   }
   const evaluated = evaluateCompass(answersSchema.parse(saved.answers), { snapshot, catalog, blockedRouteIds: review.routeIds, now: () => now });
   const result = 'error' in evaluated ? null : evaluated;
-  const sourceFingerprint = createHash('sha256').update(JSON.stringify({ policyVersion, version: 'saved-discovery-2', snapshot, catalog })).digest('hex');
+  const sourceFingerprint = createHash('sha256').update(JSON.stringify({ policyVersion, version: 'saved-discovery-3', snapshot, catalog, readinessDefinitions })).digest('hex');
   const fingerprint = createHash('sha256').update(JSON.stringify({ sourceFingerprint,
-    consumed: result?.routes.map(route => [route.id, route.facts, route.sources, route.valid_until]) })).digest('hex');
-  return { version: 'saved-discovery-2', result, evidence_fingerprint: fingerprint, source_fingerprint: sourceFingerprint,
-    needs_review: !result || ['review_required', 'no_coverage', 'restricted_context'].includes(result.status) || result.routes.some(route => route.coverage !== 'application_channel_reviewed') };
+    consumed: result?.routes.map(route => [route.id, route.facts, route.sources, route.valid_until, readinessEvidence(route.readiness)]) })).digest('hex');
+  return { version: 'saved-discovery-3', result, evidence_fingerprint: fingerprint, source_fingerprint: sourceFingerprint,
+    needs_review: !result || ['review_required', 'no_coverage', 'restricted_context'].includes(result.status) || result.routes.some(route => route.coverage !== 'application_channel_reviewed' || route.readiness?.needs_review) };
 }

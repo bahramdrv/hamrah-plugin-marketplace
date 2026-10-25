@@ -1,7 +1,7 @@
 import { questions, type Answers } from './questions';
 import { countries, factTitle, goalLabels, policies, preparationSteps, type FactId } from './policy';
 
-export type InterviewQuestion = { id: string; title: string; help: string; kind: 'base' | 'fact'; options: { value: string; label: string }[] };
+export type InterviewQuestion = { id: string; title: string; help: string; kind: 'base' | 'fact'; answer_version?: string; options: { value: string; label: string }[] };
 const sequences: Record<string, string[]> = {
   work: ['work', 'education', 'language', 'budget', 'timeline'],
   study: ['education', 'language', 'budget', 'timeline'],
@@ -9,7 +9,7 @@ const sequences: Record<string, string[]> = {
   unknown: ['education', 'work', 'language', 'budget', 'timeline'],
 };
 
-export function buildJourney(answers: Answers, routeIds: string[], status: string, prerequisiteIds: FactId[], routePolicies = policies) {
+export function buildJourney(answers: Answers, routeIds: string[], status: string, prerequisiteIds: FactId[], routePolicies = policies, reviewIds: string[] = []) {
   const hasAnswer = (id: string) => (answers.answered ?? []).includes(id as Answers['answered'][number]) ||
     (id === 'destinations' ? answers.destinations.length > 0 : id === 'budget' ? answers.budget !== null : answers[id as keyof Answers] !== 'unknown');
   const required = [...new Set(prerequisiteIds)];
@@ -23,7 +23,7 @@ export function buildJourney(answers: Answers, routeIds: string[], status: strin
       options: [{ value: 'yes', label: 'بله' }, { value: 'no', label: 'خیر' }, { value: 'unknown', label: 'هنوز نمی‌دانم' }],
     };
   });
-  const answered = (q: InterviewQuestion) => q.kind === 'fact' ? Object.hasOwn(answers.facts, q.id) : hasAnswer(q.id);
+  const answered = (q: InterviewQuestion) => q.kind === 'fact' ? !reviewIds.includes(q.id) && Object.hasOwn(answers.facts, q.id) : hasAnswer(q.id);
   const next = descriptors.find(q => !answered(q)) ?? null;
   const profile = questions.flatMap(q => {
     const value = answers[q.id as keyof Answers];

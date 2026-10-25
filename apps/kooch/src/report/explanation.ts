@@ -9,10 +9,10 @@ export type SavedExplanation = ExplanationResult & { id: string; report_id: stri
 export function explanationRoutes(report: GuidanceReport) {
   if (report.route_results.length) return report.route_results;
   return (report.discovery?.result?.routes ?? []).map(route => ({ route_id: route.id, status: 'discovery_only',
-    conditions: (route.prerequisite_ids ?? policies[route.id]?.requires ?? []).map(id => ({ id, title: factTitle(id), reason: route.prerequisite,
+    conditions: route.readiness ? route.readiness.checks.map(check => ({ id: check.id, title: check.question, reason: check.reason, state: ({ reported_ready: 'self_reported_met', action_needed: 'action_needed', needs_information: 'unknown', needs_review: 'needs_review' } as const)[check.state], source_ids: check.source_ids })) : (route.prerequisite_ids ?? policies[route.id]?.requires ?? []).map(id => ({ id, title: factTitle(id), reason: route.prerequisite,
       state: (report.dependencies.case.answers.facts[id] === 'yes' ? 'self_reported_met' : report.dependencies.case.answers.facts[id] === 'no' ? 'action_needed' : 'unknown') as State,
       source_ids: route.sources.map(source => source.id) })),
-    next_actions: [{ id: 'next_step', title: 'قدم بعدی این مسیر', detail: route.next_step, source_ids: route.sources.map(source => source.id) }],
+    next_actions: [{ id: 'next_step', title: 'قدم بعدی این مسیر', detail: route.next_step, source_ids: route.readiness?.next_action?.source_ids ?? route.readiness?.sources.map(source => source.id) ?? route.sources.map(source => source.id) }],
   }));
 }
 // Explicit projection: no case, raw answers, contact information or report history.

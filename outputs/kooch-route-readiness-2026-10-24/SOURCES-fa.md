@@ -1,0 +1,73 @@
+# منابع بررسی آمادگی — ۲۴ اکتبر ۲۰۲۶
+
+۶۹ منبع رسمی: ۵۰ مشاهدهٔ مستقیم، ۱۶ متن نمایه‌شده، ۳ منبع تاریخی. منبع نمایه‌شده یا تاریخی شرط را جاری و آماده نمی‌کند.
+
+- [دولت امارات: همراه، شرط درآمد و وابستگی اقامت](https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/residence-visa-for-family-members) — ae_family؛ indexed؛ مشاهده: 2026-10-24؛ متن نتیجه نمایه‌شده رسمی با تاریخ ۲۷ فوریه ۲۰۲۶ خوانده شد؛ بازکردن مستقیم بدنه خالی برگرداند.
+- [GDRFA دبی: اقامت کار مجازی، درآمد و هزینه](https://gdrfad.gov.ae/en/services/f52024e3-b812-11ed-5210-4cd98f768936) — ae_remote؛ direct؛ مشاهده: 2026-10-24
+- [دولت دبی: برنامه یک‌ساله دورکاری و همراه](https://www.investindubai.gov.ae/live-and-work/visas-and-entry/work-remotely-from-dubai) — ae_remote_family؛ indexed؛ مشاهده: 2026-10-24؛ متن شروط از نتیجه نمایه‌شده رسمی دیده شد؛ بازیابی مستقیم فقط عنوان و پوسته صفحه را نشان داد.
+- [دولت دبی: ترتیب اجازه کار و اقامت](https://www.dubai.ae/en/web/dubai.ae/living/jobs-employment/employment-in-private-sector) — ae_work_process؛ direct؛ مشاهده: 2026-10-24
+- [دولت امارات: کار بخش خصوصی، پیشنهاد رسمی و هزینه کارفرما](https://u.ae/en/information-and-services/moving-to-the-uae/expatriates-working-in-the-uae/employment-of-expatriates-in-privately-held-companies) — ae_worker؛ indexed؛ مشاهده: 2026-10-24؛ متن نتیجه نمایه‌شده رسمی خوانده شد؛ بازکردن مستقیم بدنه خالی برگرداند.
+- [Home Affairs — 189 Points-tested](https://immi.homeaffairs.gov.au/Visa-subsite/Pages/work/189-skilled-independent-points-tested.aspx) — au_189؛ indexed؛ مشاهده: 2026-10-24
+- [Home Affairs — Skilled Nominated 190](https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190?595b0f15_page=2) — au_190؛ indexed؛ مشاهده: 2026-10-24
+- [South Australia — 190 nomination](https://migration.sa.gov.au/before-applying/visa-options-and-pathways/skilled-migrants/skilled-work-visa) — au_sa_190؛ direct؛ مشاهده: 2026-10-24
+- [Home Affairs — Skills in Demand 482, Core Skills](https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482/core-skills-stream?position=5) — au_sid؛ indexed؛ مشاهده: 2026-10-24
+- [Home Affairs — Student 500](https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500?bk=HowTo) — au_student؛ indexed؛ مشاهده: 2026-10-24
+- [IRCC: فهرست هزینه‌ها، اصلاح ۲۱ سپتامبر ۲۰۲۶](https://www.ircc.canada.ca/english/information/fees/fees.asp) — ca_fees؛ direct؛ مشاهده: 2026-10-24
+- [IRCC: شروط و عوامل انتخاب FSW](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html) — ca_fsw؛ direct؛ مشاهده: 2026-10-24
+- [IRCC: PAL/TAL و استثنای ارشد/دکتری دولتی از ۱ ژانویه ۲۰۲۶](https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/provincial-attestation-letter.html) — ca_pal؛ direct؛ مشاهده: 2026-10-24
+- [IRCC: تمکن استقرار Express Entry؛ جدول نمایان با برچسب ۷ ژوئیه ۲۰۲۵](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html) — ca_settlement؛ historical؛ مشاهده: 2026-10-24؛ متن صفحه مستقیم خوانده شد و تاریخ صفحه ۱۶ اکتبر ۲۰۲۶ بود، اما جدول مبلغ همچنان تاریخ ۷ ژوئیه ۲۰۲۵ دارد؛ برای رقم به‌روز ۲۰۲۶ تأیید اضافی لازم است.
+- [IRCC: اجازه کار مستقل همسر برخی دانشجویان](https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/help-your-spouse-common-law-partner-work-canada.html) — ca_student_spouse؛ direct؛ مشاهده: 2026-10-24
+- [IRCC: شرایط مجوز تحصیل](https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/eligibility.html) — ca_study؛ direct؛ مشاهده: 2026-10-24
+- [IRCC: تمکن تحصیل؛ جدول مؤثر از ۱ سپتامبر ۲۰۲۶](https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html) — ca_study_money؛ direct؛ مشاهده: 2026-10-24
+- [آلمان: شرایط کارت آبی اتحادیه اروپا در ۲۰۲۶](https://digital.diplo.de/Blaue-Karte) — de_blue؛ indexed؛ مشاهده: 2026-10-24؛ متن شرایط از نتیجه نمایه‌شده رسمی خوانده شد؛ بازکردن مستقیم فقط پوسته JavaScript برگرداند. چک‌ها به منبع مستقیم de_blue_detail منتقل شدند.
+- [آلمان: قرارداد، مدرک و آستانه حقوق کارت آبی](https://www.make-it-in-germany.com/en/visa-recognition/visa-types/eu-blue-card) — de_blue_detail؛ direct؛ مشاهده: 2026-10-24
+- [آلمان: پیوستن همسر به نیروی متخصص](https://www.make-it-in-germany.com/en/visa-recognition/family-reunification/spouses-joining-non-eu-citizens) — de_family؛ direct؛ مشاهده: 2026-10-24
+- [وزارت خارجه آلمان: هزینه ویزای ملی](https://www.auswaertiges-amt.de/de/service/visa-und-aufenthalt/visabestimmungen-allgemein) — de_fees؛ direct؛ مشاهده: 2026-10-24
+- [آلمان: دو شاخه کارت فرصت و شروط مالی ۲۰۲۶](https://www.make-it-in-germany.com/en/visa-recognition/opportunity-card/job-search) — de_opportunity؛ direct؛ مشاهده: 2026-10-24
+- [آلمان: پرسش‌های کارت فرصت، تأمین هزینه و خانواده](https://www.make-it-in-germany.com/en/visa-recognition/opportunity-card/questions-answers) — de_opportunity_faq؛ direct؛ مشاهده: 2026-10-24
+- [وزارت خارجه آلمان: خانواده دانشجو](https://www.auswaertiges-amt.de/en/visa-service/buergerservice/faq/09-familiennachzug-studenten/606700) — de_student_family؛ direct؛ مشاهده: 2026-10-24
+- [آلمان: ویزای تحصیل و تمکن ۲۰۲۶](https://www.make-it-in-germany.com/en/visa-recognition/visa-types/studying) — de_study؛ direct؛ مشاهده: 2026-10-24
+- [کنسولگری اسپانیا کیپ‌تاون: اقامت بدون کار؛ متن نمایان در جست‌وجو](https://exteriores.gob.es/Consulados/ciudaddelcabo/en/ServiciosConsulares/Paginas/Consular/Visado-de-residencia-no-lucrativa.aspx) — es_nlv؛ indexed؛ مشاهده: 2026-10-24؛ متن شرط از نتیجه نمایه‌شده همین صفحه رسمی مشاهده شد؛ بازیابی مستقیم متن شرط کامل نشد.
+- [کنسولگری اسپانیا واشنگتن: IPREM ۲۰۲۶؛ متن نمایان در جست‌وجو](https://www.exteriores.gob.es/Consulados/washington/en/ServiciosConsulares/Paginas/Consular/Visado-de-residencia-no-lucrativa.aspx) — es_nlv_2026؛ indexed؛ مشاهده: 2026-10-24؛ متن شرط از نتیجه نمایه‌شده همین صفحه رسمی مشاهده شد؛ بازیابی مستقیم متن شرط کامل نشد.
+- [کنسولگری اسپانیا واشنگتن: دورکاری و SMI ۲۰۲۶؛ متن نمایان در جست‌وجو](https://exteriores.gob.es/Consulados/washington/en/ServiciosConsulares/Paginas/Consular/Telework-visa.aspx) — es_nomad؛ indexed؛ مشاهده: 2026-10-24؛ متن شرط از نتیجه نمایه‌شده همین صفحه رسمی مشاهده شد؛ بازیابی مستقیم متن شرط کامل نشد.
+- [وزارت مهاجرت اسپانیا: پرسش‌های دورکاری، تأمین اجتماعی و همراه](https://www.inclusion.gob.es/documents/d/unidadgrandesempresas/digital-nomad-faqs-english) — es_nomad_faq؛ direct؛ مشاهده: 2026-10-24
+- [France-Visas — Étudiant](https://france-visas.gouv.fr/web/france-visas/etudiant) — fr_student؛ direct؛ مشاهده: 2026-10-24
+- [Service Public — Étudiant, 1 August 2026](https://www.service-public.gouv.fr/particuliers/vosdroits/F2231) — fr_student_means؛ direct؛ مشاهده: 2026-10-24
+- [Service Public — Carte talent, 1 June 2026](https://www.service-public.gouv.fr/particuliers/vosdroits/F16922?lang=fr&level0=on) — fr_talent؛ direct؛ مشاهده: 2026-10-24
+- [France-Visas — Talents internationaux](https://france-visas.gouv.fr/web/france-visas/talents-internationaux-et-attractivite-economique) — fr_talent_family؛ direct؛ مشاهده: 2026-10-24
+- [وزارت خارجه ایتالیا: تمکن و اقامتگاه](https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/mezzi_finanziari/) — it_entry_funds؛ direct؛ مشاهده: 2026-10-24
+- [کنسولگری ایتالیا بروکسل: تعرفه یورویی D و تحصیلی](https://consbruxelles.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/) — it_fees؛ direct؛ مشاهده: 2026-10-24
+- [کنسولگری ایتالیا بوستون: دورکاری و نیروی بسیار متخصص](https://consboston.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/digital-nomad-remote-worker/) — it_nomad؛ direct؛ مشاهده: 2026-10-24؛ متن مستقیم خوانده شد؛ رقم ۲۴٬۷۸۹ صریحاً مربوط به ۲۰۲۴ است و به‌عنوان مبلغ جاری استفاده نشده؛ فقط شروط و فرمول مبناست.
+- [سفارت ایتالیا دوبلین: صلاحیت تخصصی، تجربه دورکاری و مسکن/بیمه](https://ambdublino.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/digital-nomad-visas/) — it_nomad_general؛ direct؛ مشاهده: 2026-10-24
+- [وزارت خارجه ایتالیا: تحصیل، Universitaly و تمکن سال‌های ۲۰۲۶/۲۷ و ۲۰۲۷/۲۸](https://www.esteri.it/it/ministero/sportello_info/domandefrequenti/studiare-in-italia/) — it_study؛ direct؛ مشاهده: 2026-10-24
+- [IND — Highly skilled migrant](https://ind.nl/en/residence-permits/work/highly-skilled-migrant) — nl_hsm؛ direct؛ مشاهده: 2026-10-24
+- [IND — Required amounts income requirements 2026](https://ind.nl/en/required-amounts-income-requirements) — nl_income؛ direct؛ مشاهده: 2026-10-24
+- [IND — Orientation year](https://ind.nl/en/residence-permits/work/residence-permit-for-orientation-year) — nl_orientation؛ direct؛ مشاهده: 2026-10-24
+- [IND — Student university or higher professional education](https://ind.nl/en/residence-permits/study/student-residence-permit-for-university-or-higher-professional-education) — nl_student؛ direct؛ مشاهده: 2026-10-24
+- [Immigration New Zealand — Accredited Employer Work Visa](https://www.immigration.govt.nz/visas/accredited-employer-work-visa/) — nz_aewv؛ direct؛ مشاهده: 2026-10-24
+- [Immigration New Zealand — Fee Paying Student Visa](https://www.immigration.govt.nz/visas/fee-paying-student-visa/) — nz_student؛ direct؛ مشاهده: 2026-10-24
+- [DGACCP / gov.pt — Independent activity and entrepreneur residence visa](https://www2.gov.pt/pt-PT/servicos/pedir-visto-de-residencia-para-o-exercicio-de-atividade-profissional-independente-ou-para-imigrantes-empreendedores) — pt_d2؛ indexed؛ مشاهده: 2026-10-24
+- [AIMA — Independent activity with residence visa Article 89(1)](https://aima.gov.pt/pt/trabalhar/autorizacao-de-residencia-para-exercicio-de-atividade-profissional-independente-com-visto-de-residencia-art-89-o-n-o1) — pt_d2_permit؛ direct؛ مشاهده: 2026-10-24
+- [Embassy of Portugal Tehran — D7 checklist, December 2024, hosted by appointed provider](https://visa.vfsglobal.com/one-pager/portugal/iran/farsi/pdf/Retirement-purposes-people-living-from-individual-revenues.pdf) — pt_d7_tehran؛ historical؛ مشاهده: 2026-10-24
+- [AIMA — Meios de Subsistência](https://aima.gov.pt/pt/temas-transversais/meios-de-subsistencia) — pt_means؛ historical؛ مشاهده: 2026-10-24
+- [Diário da República — Decreto Regulamentar 4/2022, Article 31-A](https://diariodarepublica.pt/dr/detalhe/decreto-regulamentar/4-2022-201699171) — pt_remote_documents؛ indexed؛ مشاهده: 2026-10-24
+- [Diário da República — Consolidated Lei 23/2007, Article 61-B](https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2007-67564445) — pt_remote_law؛ indexed؛ مشاهده: 2026-10-24
+- [اداره مهاجرت ترکیه: اقامت دانشجویی و خانوادگی](https://en.goc.gov.tr/residence-permit-types) — tr_residence؛ indexed؛ مشاهده: 2026-10-24؛ متن انواع اقامت در نتیجه نمایه‌شده رسمی دیده شد؛ بازیابی مستقیم ۵۰۰ داد. ازFAQقدیمی با عبارات متعارض برای نتیجه‌گیری قطعی استفاده نشده است.
+- [اداره مهاجرت ترکیه: تأمین هزینه و تعرفه دانشجو](https://en.goc.gov.tr/residence-) — tr_residence_faq؛ indexed؛ مشاهده: 2026-10-24؛ متن نتیجه نمایه‌شده رسمی خوانده شد؛ بازکردن مستقیم ۵۰۰ داد.
+- [وزارت کار ترکیه: اجازه کار، اقدام خارج و محدودیت کارفرما](https://csgb.gov.tr/en/frequently-asked-questions/directorate-general-of-international-labour-force/work-permit/) — tr_work؛ direct؛ مشاهده: 2026-10-24
+- [وزارت کار ترکیه: معیارهای جاری استخدام و حقوق، شامل تغییرات ۲۰۲۶](https://www.csgb.gov.tr/uigm/en/calisma-izni/calisma-izni-degerlendirme-kriterleri/) — tr_work_criteria؛ direct؛ مشاهده: 2026-10-24
+- [وزارت کار ترکیه: قرارداد، مدرک و مدارک لازم](https://www.csgb.gov.tr/uigm/en/general-information/information-and-documents-required-in-the-work-permit-evaluation-process/) — tr_work_docs؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: عوارض سلامت و نحوه محاسبه مدت](https://www.gov.uk/healthcare-immigration-application/how-much-pay) — uk_ihs؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: ویزای دانشجویی و هزینه درخواست](https://www.gov.uk/student-visa) — uk_student؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: دوره و CAS](https://www.gov.uk/student-visa/course) — uk_student_course؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: زبان دانشجویی](https://www.gov.uk/student-visa/knowledge-of-english) — uk_student_english؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: همراه دانشجو](https://www.gov.uk/student-visa/family-members) — uk_student_family؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: تمکن دانشجویی](https://www.gov.uk/student-visa/money) — uk_student_money؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: Global Talent، حوزه‌ها و هزینه](https://www.gov.uk/global-talent) — uk_talent؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: همراه Global Talent](https://www.gov.uk/global-talent/your-partner-and-children) — uk_talent_family؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: Appendix Global Talent اصلاح ۸ اکتبر ۲۰۲۶](https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-global-talent) — uk_talent_rules؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: نمای کلی Skilled Worker](https://www.gov.uk/skilled-worker-visa) — uk_worker؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: انگلیسی B2 درخواست نخست از ۸ ژانویه ۲۰۲۶](https://www.gov.uk/skilled-worker-visa/knowledge-of-english) — uk_worker_english؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: همراه Skilled Worker و محدودیت مشاغل](https://www.gov.uk/skilled-worker-visa/your-partner-and-children) — uk_worker_family؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: شغل مجاز و آستانه حقوق Skilled Worker](https://www.gov.uk/skilled-worker-visa/your-job) — uk_worker_job؛ direct؛ مشاهده: 2026-10-24
+- [بریتانیا: هزینه و نگهداری Skilled Worker](https://www.gov.uk/skilled-worker-visa/how-much-it-costs) — uk_worker_money؛ direct؛ مشاهده: 2026-10-24

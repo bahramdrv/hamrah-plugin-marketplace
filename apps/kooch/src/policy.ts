@@ -1,3 +1,4 @@
+import { readinessQuestions } from './readiness-registry';
 import destinationRegistry from '../data/global-destinations.json';
 // Discovery prerequisites only; these are not a complete eligibility policy.
 export const policyVersion = 'compass-discovery-2';
@@ -96,14 +97,19 @@ const genericQuestions: Record<string, string> = {
   prior_status: 'اقامت یا وضعیت قبلیِ لازم در {country} را داری؟',
 };
 export function factTitle(id: string): string {
+  if (Object.hasOwn(readinessQuestions, id)) return readinessQuestions[id];
   if (Object.hasOwn(facts, id)) return facts[id as keyof typeof facts];
   const [code, kind] = id.split('.');
   return genericQuestions[kind]?.replace('{country}', countries[code]?.name ?? code) ?? 'شرط اختصاصی این مسیر را بررسی کرده‌ای؟';
 }
 export function isFactId(id: string): boolean {
   const parts = id.split('.');
-  return Object.hasOwn(facts, id) || (parts.length === 2 && Object.hasOwn(countries, parts[0]) && Object.hasOwn(genericQuestions, parts[1]));
+  return Object.hasOwn(readinessQuestions, id) || Object.hasOwn(facts, id) || (parts.length === 2 && Object.hasOwn(countries, parts[0]) && Object.hasOwn(genericQuestions, parts[1]));
 }
 export function isPriorHistoryFact(id: string): boolean {
   return priorHistoryFacts.has(id) || /\.(local_study|local_work|prior_status)$/.test(id);
+}
+
+export function isStableCoarseFact(id: string): boolean {
+  return Object.hasOwn(facts, id) || /\.(job_offer|admission|family|remote_work|project|investment|local_study|local_work|eligible_passport|skilled_profile|prior_status)$/.test(id);
 }

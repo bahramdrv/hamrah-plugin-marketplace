@@ -1,0 +1,52 @@
+{
+  "baseline_commit": "08d9255d8994e380787ed606835391b07de721a7",
+  "app_files": 174,
+  "overlay": [
+    "apps/kooch/app/ux.css",
+    "apps/kooch/src/api.ts",
+    "apps/kooch/src/catalog.ts",
+    "apps/kooch/src/compass.tsx",
+    "apps/kooch/src/journey.ts",
+    "apps/kooch/src/policy.ts",
+    "apps/kooch/src/questions.ts",
+    "apps/kooch/src/report/discovery.ts",
+    "apps/kooch/src/report/explanation-view.tsx",
+    "apps/kooch/src/report/explanation.ts",
+    "apps/kooch/src/report/history.ts",
+    "apps/kooch/src/report/view.tsx",
+    "apps/kooch/src/result.tsx",
+    "apps/kooch/src/readiness-registry.ts",
+    "apps/kooch/src/readiness-view.tsx",
+    "apps/kooch/src/route-readiness.ts",
+    "apps/kooch/tests/route-readiness.test.ts",
+    "apps/kooch/data/route-readiness.json",
+    "apps/kooch/scripts/build-route-readiness.py",
+    "apps/kooch/tests/report.test.ts",
+    "apps/kooch/public/report-print.css"
+  ],
+  "credentials_included": false,
+  "deployed": false,
+  "packages": {
+    "kooch-readiness-app-source.zip": {
+      "bytes": 1973929,
+      "sha256": "fe7e01915a9e54f235c5f902f42876d88f9fefc59cff84d552884cc03e89be9e"
+    },
+    "readiness-source-evidence.zip": {
+      "bytes": 129041,
+      "sha256": "3025bd9e741e44e4cd68512b0c4c3d86d8ed5f0d6c01735e9da9eedf1095a216"
+    }
+  },
+  "note": "Source-only app; no credentials, dependencies or deployment. Visual QA pending because browser control is disabled.",
+  "accepted_on": "2026-10-25",
+  "checks": {
+    "app_tests": 171,
+    "mcp_tests": 388,
+    "python_tests": 47,
+    "typecheck": "passed",
+    "build": "passed",
+    "verify_release": "passed",
+    "static": "passed",
+    "visual": "blocked_browser_disabled",
+    "deployed": false
+  }
+}

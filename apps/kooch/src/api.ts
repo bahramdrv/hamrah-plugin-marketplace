@@ -6,11 +6,13 @@ import type { RetrievalStatus } from './retrieval';
 import { iranContext } from './iran-context';
 import { browseCatalog } from './catalog-browser-api';
 import { buildJourney } from './journey';
+import { readinessDefinitions, readinessSchema } from './readiness-registry';
+import { routeReadiness, focusedReadinessQuestions } from './route-readiness';
 import { catalogSchema, catalogPolicy, catalogSummary, type DiscoveryRoute } from './catalog';
 
 const response = (body: unknown, status = 200) => Response.json(body, { status, headers: { 'Cache-Control': 'no-store' } });
 
-export function createCompassApi(options: { snapshot: unknown; catalog?: unknown; blockedRouteIds?: readonly string[]; now?: () => Date; retrieval?: RetrievalStatus }) {
+export function createCompassApi(options: { snapshot: unknown; catalog?: unknown; readiness?: unknown; blockedRouteIds?: readonly string[]; now?: () => Date; retrieval?: RetrievalStatus }) {
 
   return {
     async GET(request?: Request) {
@@ -54,7 +56,7 @@ export function createCompassApi(options: { snapshot: unknown; catalog?: unknown
 }
 
 
-export function evaluateCompass(answers: Answers, options: { snapshot: unknown; catalog?: unknown; blockedRouteIds?: readonly string[]; now?: () => Date }) {
+export function evaluateCompass(answers: Answers, options: { snapshot: unknown; catalog?: unknown; readiness?: unknown; blockedRouteIds?: readonly string[]; now?: () => Date }) {
     const now = options.now ?? (() => new Date());
     const parsed = snapshotSchema.safeParse(options.snapshot);
     if (!parsed.success || (parsed.success && Date.parse(parsed.data.retrieved_at) > now().getTime()))
@@ -127,7 +129,13 @@ export function evaluateCompass(answers: Answers, options: { snapshot: unknown; 
     const focusedRecord = catalog?.routes.find(record => record.id === answers.focus_route && !options.blockedRouteIds?.includes(record.id) && (!answers.destinations.length || answers.destinations.includes(record.destination)));
     const focusedPolicy = focusedRecord ? catalogPolicy(focusedRecord) : null;
     const focusPolicy = focusedPolicy && (answers.goal === 'unknown' || focusedPolicy.goal === answers.goal) && iranContext(focusedRecord!, catalog!, now()).ordinary ? focusedPolicy : null;
-    const prerequisiteIds = catalog ? [...new Set([...(focusPolicy?.requires ?? []), ...routes.flatMap(r => routePolicies[r.id].requires)])] : [...new Set(relevant.flatMap(r => policies[r.id].requires))];
+    const readiness = readinessSchema.safeParse(options.readiness ?? readinessDefinitions);
+    const focusedChecks = readiness.success && focusPolicy ? focusedReadinessQuestions(readiness.data, answers.focus_route) : [];
+    for (const route of routes) {
+      const detail = routeReadiness(options.readiness ?? readinessDefinitions, route.id, answers.facts, now(), answers.fact_versions);
+      if (detail) { route.readiness = detail; route.next_step = detail.next_action?.detail ?? 'موارد ثبت‌شده را با مدارک و مرجع رسمی تطبیق بده؛ پاسخ خوداظهاری، تأیید احراز شرایط نیست.'; }
+    }
+    const prerequisiteIds = catalog ? [...new Set([...(focusPolicy?.requires ?? []), ...focusedChecks.map(check => check.answer_id), ...routes.flatMap(r => routePolicies[r.id].requires)])] : [...new Set(relevant.flatMap(r => policies[r.id].requires))];
     const unknowns = questions.filter(q => q.id === 'budget' ? answers.budget === null : q.id === 'destinations' ? !answers.destinations.length : answers[q.id as keyof Answers] === 'unknown').map(q => q.title);
     const nextSteps = [
       answers.age === 'unknown' ? 'سن دقیق را برای بررسی شرط سنی آماده کن.' : 'شرط سن هر مسیر باید با سن دقیق تو بررسی شود.',
@@ -138,7 +146,15 @@ export function evaluateCompass(answers: Answers, options: { snapshot: unknown; 
       answers.timeline === 'under-6' ? 'برای افق کمتر از شش ماه، وقت، مدارک و زمان رسمی بررسی را پیش از اقدام بررسی کن.' : 'زمان آماده‌سازی و رسیدگی رسمی را برای برنامهٔ زمانی خودت جدا بررسی کن.',
     ];
     const status = routes.length ? 'routes_to_investigate' : restrictedRoutes.length ? 'restricted_context' : current.length ? 'no_matches' : (expired ? 'review_required' : 'no_coverage');
-    const journey = buildJourney(answers, routes.map(r => r.id), status, prerequisiteIds, routePolicies);
+    const focusedReadiness = focusPolicy ? routeReadiness(options.readiness ?? readinessDefinitions, answers.focus_route!, answers.facts, now(), answers.fact_versions) : null;
+    const reviewAnswers = focusedReadiness?.checks.filter(check => check.state_reason === 'answer_version_changed').map(check => check.answer_id) ?? [];
+    const journey = buildJourney(answers, routes.map(r => r.id), status, prerequisiteIds, routePolicies, reviewAnswers);
+    const focusReadiness = routes.find(route => route.id === answers.focus_route)?.readiness;
+    if (focusReadiness?.next_action) journey.guidance.main_action = focusReadiness.next_action.detail;
+    for (const question of journey.interview.questions) {
+      const check = focusedChecks.find(check => check.answer_id === question.id);
+      if (check) { question.title = check.question; question.help = check.reason; question.answer_version = focusedReadiness?.version; }
+    }
     return {
       status, ...journey,
       no_match_reason: relevant.length ? 'prerequisite_required' : 'coverage_gap',

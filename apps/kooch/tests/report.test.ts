@@ -323,3 +323,31 @@ test('a new evidence version is explained separately from unchanged applicant an
     assert.deepEqual((await (await c.request('reports')).json()).reports[0].changes, ['recreated']);
   } finally { await h.close(); }
 });
+
+test('readiness answers keep saved print immutable and answer changes separate from evidence changes', { skip: !enabled }, async () => {
+  const h = await harness(() => new Date('2026-10-24T20:00:00Z'));
+  try {
+    const c = await h.verifiedClient();
+    const answers = { goal: 'work', destinations: ['de'], focus_route: 'de:eu-blue-card', facts: { 'de.job_offer': 'yes', 'de.bluecard_salary': 'unknown' } };
+    assert.equal((await c.request('case', { ...saveInput(), answers })).status, 200);
+    const first = (await (await c.request('report', { expected_revision: 1, request_id: randomUUID() })).json()).report;
+    const detail = first.discovery.result.routes.find((route: any) => route.id === answers.focus_route).readiness;
+    assert.equal(detail.checks.find((check: any) => check.id === 'salary').state, 'needs_information');
+    assert.ok(detail.sources.length > 0);
+    const printed = await (await c.request(`report/${first.id}/print`)).text();
+    assert.match(printed, /حقوق ناخالص سالانه/);
+    assert.match(printed, /هنوز روشن نیست/);
+    assert.doesNotMatch(printed, /<details(?![^>]*\bopen\b)[^>]*>/);
+    assert.equal((await c.request('case', { ...saveInput(1), answers: { ...answers, facts: { ...answers.facts, 'de.bluecard_salary': 'no' } } })).status, 200);
+    assert.equal((await c.request('report', { expected_revision: 2, request_id: randomUUID() })).status, 200);
+    const list = await (await c.request('reports')).json();
+    assert.deepEqual(list.reports[0].changes, ['answers_changed']);
+    assert.deepEqual((await (await c.request(`report/${first.id}`)).json()).report, first);
+    const laterPrint = await (await c.request(`report/${first.id}/print`)).text();
+    assert.deepEqual(laterPrint.match(/<section class="readiness-panel"[\s\S]*?<\/section>/g), printed.match(/<section class="readiness-panel"[\s\S]*?<\/section>/g));
+    assert.equal((await c.request('case', { ...saveInput(2), answers: { ...answers, facts: { ...answers.facts, 'de.bluecard_salary': 'yes' }, fact_versions: { 'de.bluecard_salary': 'old-rule' } } })).status, 200);
+    const stale = await (await c.request('report', { expected_revision: 3, request_id: randomUUID() })).json();
+    assert.equal(stale.report.discovery.needs_review, true);
+    assert.equal(stale.report_state.current, false);
+  } finally { await h.close(); }
+});

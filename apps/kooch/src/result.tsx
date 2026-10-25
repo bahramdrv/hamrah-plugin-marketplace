@@ -6,6 +6,7 @@ import { GuidanceSummary } from './guidance-summary';
 import { RouteComparison } from './route-comparison';
 import { date } from './display';
 import { RouteResearch } from './research/view';
+import { ReadinessView } from './readiness-view';
 export { date } from './display';
 const num = (n: number) => n.toLocaleString('fa-IR');
 
@@ -20,7 +21,7 @@ export function Evidence({ result, retrieval }: { result: CompassResult; retriev
     {retrieval?.state === 'error' && <p role="status">آخرین دریافت در {date(retrieval.attempted_at)} ناموفق بود؛ نسخهٔ قبلی فقط تا پایان اعتبار شواهد استفاده می‌شود.</p>}
   </details>;
 }
-export function Results({ result, edit, editPrerequisites, busy, retrieval }: { result: CompassResult; edit: () => void; editPrerequisites: () => void; busy: boolean; retrieval?: RetrievalStatus }) {
+export function Results({ result, edit, editPrerequisites, busy, retrieval, focusRoute }: { result: CompassResult; edit: () => void; editPrerequisites: () => void; busy: boolean; retrieval?: RetrievalStatus; focusRoute?: (id: string) => void }) {
   const [selected, setSelected] = useState<string[]>([]);
   const [comparing, setComparing] = useState(false);
   const comparison = useRef<HTMLHeadingElement>(null);
@@ -48,6 +49,7 @@ export function Results({ result, edit, editPrerequisites, busy, retrieval }: { 
       {route.next_step !== result.guidance?.main_action && <p className="route-next-step"><strong>گام بعدی این مسیر: </strong>{route.next_step}</p>}
       <details><summary>منابع و تاریخ اطلاعات</summary><p lang="en" dir="ltr">{route.official_name}</p><p>{route.channel_note}</p>{route.followup && <p>{route.followup}</p>}<p>{route.coverage === 'application_channel_reviewed' ? 'بررسی روش اقدام' : 'بررسی ثبت‌شدهٔ منبع؛ نیازمند تأیید تازه'}: {date(route.checked_on)} · پایان بازهٔ بازبینی: {date(route.valid_until)}</p><ul>{[...new Map([...route.sources, ...route.facts.flatMap(fact => fact.sources)].map(source => [`${source.id}:${source.checked_on}`, source])).values()].map(source => <li key={`${source.id}:${source.checked_on}`}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a> · {date(source.checked_on)}</li>)}</ul></details>
       {route.page_url ? <a className="route-link" href={route.page_url} target="_blank" rel="noreferrer">خواندن راهنمای مسیر <span className="sr-only">در تب تازه؛ مسیرها در این صفحه می‌مانند</span><span aria-hidden="true">←</span></a> : route.reference_url ? <a className="route-link" href={route.reference_url} target="_blank" rel="noreferrer">مرجع رسمی مسیر ←</a> : <p className="muted">مرجع قابل نمایش هنوز در دسترس نیست.</p>}
+      {route.readiness && <><ReadinessView readiness={route.readiness}/>{focusRoute && <button className="secondary" disabled={busy} onClick={() => focusRoute(route.id)}>پاسخ به شرط‌های این مسیر</button>}</>}
       <RouteResearch routeId={route.id} academic={route.category === 'تحصیل'}/>
     </article>)}</div>
     {result.omitted_by_limit > 0 && <p>{num(result.omitted_by_limit)} مسیر مرتبط دیگر هم وجود دارد. با انتخاب مقصد، فهرست را محدود کن.</p>}

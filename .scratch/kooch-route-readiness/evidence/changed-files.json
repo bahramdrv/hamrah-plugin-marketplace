@@ -1,0 +1,23 @@
+[
+  "apps/kooch/app/ux.css",
+  "apps/kooch/src/api.ts",
+  "apps/kooch/src/catalog.ts",
+  "apps/kooch/src/compass.tsx",
+  "apps/kooch/src/journey.ts",
+  "apps/kooch/src/policy.ts",
+  "apps/kooch/src/questions.ts",
+  "apps/kooch/src/report/discovery.ts",
+  "apps/kooch/src/report/explanation-view.tsx",
+  "apps/kooch/src/report/explanation.ts",
+  "apps/kooch/src/report/history.ts",
+  "apps/kooch/src/report/view.tsx",
+  "apps/kooch/src/result.tsx",
+  "apps/kooch/src/readiness-registry.ts",
+  "apps/kooch/src/readiness-view.tsx",
+  "apps/kooch/src/route-readiness.ts",
+  "apps/kooch/tests/route-readiness.test.ts",
+  "apps/kooch/data/route-readiness.json",
+  "apps/kooch/scripts/build-route-readiness.py",
+  "apps/kooch/tests/report.test.ts",
+  "apps/kooch/public/report-print.css"
+]

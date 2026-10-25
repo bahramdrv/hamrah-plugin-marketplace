@@ -1,11 +1,12 @@
 import { z } from 'zod';
 import { countries, factTitle, policies, type DiscoveryPolicy } from './policy';
+import type { RouteReadiness } from './route-readiness';
 import type { Answers } from './questions';
 
-export type DiscoverySource = { id: string; title: string; url: string; authority: 'primary' | 'trusted'; checked_on: string };
+export type DiscoverySource = { id: string; title: string; url: string; authority: 'primary' | 'trusted'; checked_on: string; verification?: 'direct' | 'indexed' | 'historical' };
 export type DiscoveryRoute = {
   id: string; name_fa: string; official_name: string; destination: string; country: string; flag: string;
-  prerequisite_ids?: string[];
+  prerequisite_ids?: string[]; readiness?: RouteReadiness;
   category: string; page_url: string | null; reference_url?: string | null; reason: string; summary: string;
   facts: { label: string; value: string; sources: DiscoverySource[] }[];
   preparation_status: string; next_step: string; application_method: string; prerequisite: string;
