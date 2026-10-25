@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import type { ReportAccess } from '../membership/store';
 import { explanationInput } from '../report/explanation';
 import type { ReportExplanation } from '../ai/report-explanation';
 import { pilotNotice } from '../pilot';
@@ -33,7 +34,7 @@ async function body(request: Request) {
   }
   try { return JSON.parse(Buffer.concat(chunks).toString('utf8')); } catch { throw invalid(); }
 }
-export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth; pilotAi?: () => 'disabled' | 'bounded_arvan'; pilotReportAi?: () => 'not_enabled' | 'bounded_arvan'; questionAssistance?: QuestionAssistance; accounting?: AiBudgetLedger; answerInterpretation?: AnswerInterpretation; reportExplanation?: ReportExplanation; interpretationDisclosure?: import('../ai/question-assistance').AssistedFormView['interpretation_disclosure'] }) {
+export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; google?: GoogleOAuth; pilotAi?: () => 'disabled' | 'bounded_arvan'; pilotReportAi?: () => 'not_enabled' | 'bounded_arvan'; questionAssistance?: QuestionAssistance; accounting?: AiBudgetLedger; answerInterpretation?: AnswerInterpretation; reportExplanation?: ReportExplanation; interpretationDisclosure?: import('../ai/question-assistance').AssistedFormView['interpretation_disclosure']; reportAccess?: ReportAccess }) {
   const { store, auth } = options;
   const formReply = (view: object) => reply({ ...view, interpretation_disclosure: options.interpretationDisclosure ?? null });
   const questionAssistance = options.questionAssistance ?? createQuestionAssistance();
@@ -85,7 +86,7 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
           }
           return new Response(null, { status: 303, headers });
         }
-        if (operation === 'status' && method === 'GET') return reply({ configured: true, pilot: { ...pilotNotice, ai: options.pilotAi?.() ?? 'disabled', report_explanation: options.pilotReportAi?.() ?? 'not_enabled' }, mode: options.mode, google_enabled: Boolean(options.google), email_delivery: options.mode === 'local' ? 'local_test_only' : 'configured' });
+        if (operation === 'status' && method === 'GET') return reply({ configured: true, membership_enabled: Boolean(options.reportAccess), pilot: { ...pilotNotice, ai: options.pilotAi?.() ?? 'disabled', report_explanation: options.pilotReportAi?.() ?? 'not_enabled' }, mode: options.mode, google_enabled: Boolean(options.google), email_delivery: options.mode === 'local' ? 'local_test_only' : 'configured' });
         if (operation === 'session' && method === 'GET') {
           const state = await store.session(cookieToken(request));
           if (state.purpose === 'recovery') { await authenticated(request, 'recovery'); return reply({ signed_in: false, recovery: true }); }
@@ -136,6 +137,18 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
           return reply({ message: 'از حساب خارج شدی.' }, 200, { 'Set-Cookie': cookie('') });
         }
         const session = await authenticated(request, 'account', operation === 'delete');
+        if (operation === 'report-access' && method === 'GET') return reply(options.reportAccess ? await options.reportAccess.status(session.owner) : { unlocked: true, available: false });
+        if (operation === 'report-access' && method === 'POST') {
+          if (!options.reportAccess) return reply({ unlocked: true, available: false });
+          const input = z.discriminatedUnion('action', [
+            z.object({ action: z.literal('start'), instagram_confirmed: z.literal(true) }).strict(),
+            z.object({ action: z.literal('verify'), code: z.string().max(32).transform(value => value.trim().replace(/[۰-۹]/g, d => String('۰۱۲۳۴۵۶۷۸۹'.indexOf(d))).replace(/[٠-٩]/g, d => String('٠١٢٣٤٥٦٧٨٩'.indexOf(d)))).pipe(z.string().regex(/^\d{8}$/)) }).strict(),
+          ]).parse(await body(request));
+          await store.rateLimit(`membership:${input.action}:${session.owner}`);
+          return reply(input.action === 'start' ? await options.reportAccess.start(session.owner) : await options.reportAccess.redeem(session.owner, input.code));
+        }
+        if (options.reportAccess && ['report', 'reports'].includes(operation) && !(await options.reportAccess.status(session.owner)).unlocked)
+          throw new AccountError('membership_required', 403, 'برای بازشدن کارنامه، کد تأیید عضویت تلگرام را وارد کن.');
         if (operation === 'google-delete' && method === 'POST') {
           if (!options.google) throw unauthorized();
           z.object({}).strict().parse(await body(request));
@@ -250,7 +263,8 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
         }
         if (operation === 'export' && method === 'GET') {
           if (path.length !== 1) throw invalid();
-          return reply({ schema_version: 1, email: session.email, case: await store.read(session.owner), reports: await store.exportReports(session.owner), report_explanations: await store.readExplanations(session.owner), ...(options.accounting ? { ai_usage: await options.accounting.exportOwner(session.owner) } : {}) }, 200,
+          const access = !options.reportAccess || (await options.reportAccess.status(session.owner)).unlocked;
+          return reply({ schema_version: 1, email: session.email, case: await store.read(session.owner), reports: access ? await store.exportReports(session.owner) : [], report_explanations: access ? await store.readExplanations(session.owner) : [], ...(!access ? { report_access_required: true } : {}), ...(options.accounting ? { ai_usage: await options.accounting.exportOwner(session.owner) } : {}) }, 200,
             { 'Content-Disposition': 'attachment; filename="kooch-account.json"' });
         }
         if (operation === 'delete' && method === 'POST') {

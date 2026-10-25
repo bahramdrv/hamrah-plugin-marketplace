@@ -13,7 +13,7 @@ test('scheduled cleanup is bounded, cascades expired receipts and preserves acti
   const activeOwner = owners[501]; const key = `retention-test-${randomUUID()}`;
   try {
     await pool.query(`CREATE SCHEMA ${schema}`);
-    for (const table of ['account_state', 'cases', 'requests', 'sessions', 'rate_limits', 'ai_budget_requests', 'ai_detached_quota']) {
+    for (const table of ['account_state', 'cases', 'requests', 'sessions', 'rate_limits', 'ai_budget_requests', 'ai_detached_quota', 'membership_challenges']) {
       await pool.query(`CREATE TABLE ${schema}.${table} (LIKE kooch.${table} INCLUDING ALL)`);
     }
     await pool.query(`ALTER TABLE ${schema}.requests ADD FOREIGN KEY(case_id) REFERENCES ${schema}.cases(id) ON DELETE CASCADE`);
@@ -28,6 +28,7 @@ test('scheduled cleanup is bounded, cascades expired receipts and preserves acti
     await query(`INSERT INTO kooch.sessions(token_hash,owner,provider_session,purpose,expires_at) VALUES
       ($1,$3,'synthetic','account',now()-interval '1 day'),($2,$3,'synthetic','account',now()+interval '1 day')`, [key, `${key}-active`, activeOwner]);
     await query(`INSERT INTO kooch.rate_limits(key,count,reset_at) VALUES ($1,1,now()-interval '1 day'),($2,1,now()+interval '1 day')`, [key, `${key}-active`]);
+    await query(`INSERT INTO kooch.membership_challenges(owner,token_hash,expires_at) VALUES($1,'expired-member',now()-interval '1 minute'),($2,'active-member',now()+interval '10 minutes')`, [owners[0], activeOwner]);
     await query(`INSERT INTO kooch.ai_budget_requests(id,subject,policy,currency,reserved_minor,charged_minor,state,blocked,created_at,updated_at) VALUES
       (repeat('1',64),repeat('a',64),'old','TST',10,4,'settled',false,now()-interval '100 days',now()-interval '100 days'),
       (repeat('2',64),repeat('a',64),'unknown','TST',10,NULL,'unknown',false,now()-interval '100 days',now()-interval '100 days'),
@@ -59,6 +60,7 @@ test('scheduled cleanup is bounded, cascades expired receipts and preserves acti
     assert.equal(Number((await query('SELECT count(*) FROM kooch.requests WHERE owner=ANY($1::uuid[])', [owners])).rows[0].count), 1);
     assert.deepEqual((await query('SELECT token_hash FROM kooch.sessions WHERE owner=$1', [activeOwner])).rows.map(r => r.token_hash), [`${key}-active`]);
     assert.deepEqual((await query('SELECT key FROM kooch.rate_limits WHERE key=ANY($1::text[])', [[key, `${key}-active`]])).rows.map(r => r.key), [`${key}-active`]);
+    assert.deepEqual((await query('SELECT token_hash FROM kooch.membership_challenges')).rows.map(r => r.token_hash), ['active-member']);
   } finally {
     await pool.query(`DROP SCHEMA IF EXISTS ${schema} CASCADE`);
     await pool.end();

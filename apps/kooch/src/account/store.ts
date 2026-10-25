@@ -223,7 +223,8 @@ export class AccountStore {
     const client = await this.pool.connect();
     try {
       await client.query('BEGIN');
-      await client.query('UPDATE kooch.account_state SET deleted_at=COALESCE(deleted_at,$2) WHERE owner=$1', [owner, this.now()]);
+      await client.query('UPDATE kooch.account_state SET deleted_at=COALESCE(deleted_at,$2),report_access_granted_at=NULL,report_access_basis=NULL,instagram_declared_at=NULL WHERE owner=$1', [owner, this.now()]);
+      await client.query('DELETE FROM kooch.membership_challenges WHERE owner=$1', [owner]);
       await client.query('SET LOCAL ROLE kooch_runtime'); await client.query("SELECT set_config('kooch.owner',$1,true)", [owner]);
       await client.query('DELETE FROM kooch.cases WHERE owner=$1', [owner]);
       await client.query('COMMIT');
@@ -342,5 +343,6 @@ export class AccountStore {
     for (const row of rows) await this.owned(row.owner, async () => {});
     await this.pool.query('DELETE FROM kooch.sessions WHERE expires_at<=$1', [this.now()]);
     await this.pool.query('DELETE FROM kooch.rate_limits WHERE reset_at<=$1', [this.now()]);
+    await this.pool.query('DELETE FROM kooch.membership_challenges WHERE expires_at<=$1', [this.now()]);
   }
 }

@@ -7,9 +7,11 @@ import { ExplanationView } from './explanation-view';
 import type { SavedExplanation } from './explanation';
 import { SavedReport } from './view';
 import { AppFooter, AppHeader, ReportCoverage } from '../shell';
+import { MembershipGate } from '../membership/gate';
 export function GuidancePage() {
   const [revision, setRevision] = useState<number | null>(null);
   const [report, setReport] = useState<GuidanceReport | null>(null);
+  const [membershipRequired, setMembershipRequired] = useState(false);
   const [state, setState] = useState<ReportState | null>(null);
   const [busy, setBusy] = useState(false); const [error, setError] = useState(''); const [conflict, setConflict] = useState(false);
   const [explanation, setExplanation] = useState<SavedExplanation | null>(null);
@@ -42,7 +44,9 @@ export function GuidancePage() {
     try {
       const { currentCase: f, savedReport: r } = await readReportContext(new URLSearchParams(window.location.search).get('id') ?? undefined);
       if (started !== generation.current) return;
+      if (f.response.ok && r.data.error === 'membership_required') { setRevision(f.data.case?.revision ?? null); setReport(null); setState(null); setMembershipRequired(true); return; }
       if (!f.response.ok || !r.response.ok) { setRevision(null); setReport(null); setState(null); setError(f.response.ok ? r.data.message : f.data.message); return; }
+      setMembershipRequired(false);
       setRevision(f.data.case?.revision ?? null); setReport(r.data.report); setState(r.data.report_state); setConflict(false); retry.current = null;
       if (r.data.report) void explain(r.data.report, false, started);
     } catch (e) { if (started === generation.current && !(e instanceof StaleAccountRequest)) setError('دریافت پرونده ممکن نشد؛ دوباره تلاش کن.'); }
@@ -53,8 +57,8 @@ export function GuidancePage() {
     void accountRequest('status').then(({ response, data }) => { if (active) setExplanationEnabled(response.ok && data.pilot?.report_explanation === 'bounded_arvan'); }).catch(() => { if (active) setExplanationEnabled(false); });
     void load(); const channel = new BroadcastChannel('kooch.account');
     channel.onmessage = () => { invalidateAccountRequests(); generation.current++; lock.current = false; retry.current = null;
-      explanationRetry.current = null; clearExplanation(); setRevision(null); setReport(null); setState(null); setBusy(false); setError('از حساب خارج شدی؛ برای ادامه دوباره وارد شو.'); };
-    return () => { active = false; generation.current++; channel.close(); };
+      explanationRetry.current = null; clearExplanation(); setMembershipRequired(false); setRevision(null); setReport(null); setState(null); setBusy(false); setError('از حساب خارج شدی؛ برای ادامه دوباره وارد شو.'); };
+    return () => { active = false; generation.current++; lock.current = false; channel.close(); };
   }, []);
   async function generate() {
     if (!revision || lock.current || conflict) return;
@@ -63,7 +67,7 @@ export function GuidancePage() {
     try {
       const { response, data } = await accountRequest('report', input);
       if (started !== generation.current) return;
-      if (!response.ok) { if (response.status === 401) { setRevision(null); setReport(null); setState(null); } if (response.status === 409) setConflict(true); setError(data.message); return; }
+      if (!response.ok) { if (data.error === 'membership_required') { setMembershipRequired(true); setReport(null); setState(null); return; } if (response.status === 401) { setRevision(null); setReport(null); setState(null); } if (response.status === 409) setConflict(true); setError(data.message); return; }
       setReport(data.report); setState(data.report_state); retry.current = null;
       if (explanationEnabled) void explain(data.report, true, started);
       window.history.replaceState(null, '', `/report?id=${data.report.id}`);
@@ -71,19 +75,20 @@ export function GuidancePage() {
     finally { if (started === generation.current) { lock.current = false; setBusy(false); } }
   }
   useEffect(() => {
-    if (revision && !report && !busy && !error && !automaticReport.current && !new URLSearchParams(window.location.search).has('id')) {
+    if (revision && !report && !membershipRequired && !busy && !error && !automaticReport.current && !new URLSearchParams(window.location.search).has('id')) {
       automaticReport.current = true;
       void generate();
     }
-  }, [revision, report, busy, error]);
+  }, [revision, report, busy, error, membershipRequired]);
   return <div className="app-shell">
     <a className="skip-link" href="#report-main">رفتن به کارنامه</a>
     <AppHeader current="report"/>
     <main id="report-main"><h1>کارنامهٔ راهنمای من</h1>
       <p className="intro">مسیرهای بررسی‌شده، اطلاعات نامعلوم و قدم بعدی؛ بر اساس پاسخ‌های ذخیره‌شدهٔ تو.</p>
       {error && <p role="alert" className="error">{error}</p>}{busy && <p role="status">در حال دریافت یا ذخیرهٔ کارنامه…</p>}
+      {membershipRequired && <MembershipGate onUnlocked={() => { setMembershipRequired(false); automaticReport.current = false; void load(); }}/>}
       {report && <SavedReport report={report} state={state}/>}
-      {revision ? <section className="report-flow-actions"><a className={report ? 'primary' : 'secondary'} href="/form">اصلاح پاسخ‌های من</a>{(!report || !state?.current || Boolean(error)) && <button className="primary" disabled={busy || conflict} onClick={() => void generate()}>{busy ? 'در حال آماده‌سازی…' : report ? 'ساخت کارنامه از پاسخ‌های فعلی' : 'ساخت کارنامهٔ مقدماتی'}</button>}</section> : !busy && <section className="empty-state"><h2>کارنامه از پاسخ‌های ذخیره‌شده ساخته می‌شود.</h2><p>ابتدا وارد حساب شو و پاسخ‌هایت را ذخیره کن؛ بعد می‌توانی با اطلاعات ناقص هم کارنامه بسازی.</p><a className="primary" href="/account?next=report">ورود و ادامهٔ بررسی</a><a className="text-button" href="/">شروع بدون حساب</a></section>}
+      {!membershipRequired && (revision ? <section className="report-flow-actions"><a className={report ? 'primary' : 'secondary'} href="/form">اصلاح پاسخ‌های من</a>{(!report || !state?.current || Boolean(error)) && <button className="primary" disabled={busy || conflict} onClick={() => void generate()}>{busy ? 'در حال آماده‌سازی…' : report ? 'ساخت کارنامه از پاسخ‌های فعلی' : 'ساخت کارنامهٔ مقدماتی'}</button>}</section> : !busy && <section className="empty-state"><h2>کارنامه از پاسخ‌های ذخیره‌شده ساخته می‌شود.</h2><p>ابتدا وارد حساب شو و پاسخ‌هایت را ذخیره کن؛ بعد می‌توانی با اطلاعات ناقص هم کارنامه بسازی.</p><a className="primary" href="/account?next=report">ورود و ادامهٔ بررسی</a><a className="text-button" href="/">شروع بدون حساب</a></section>)}
       {(error || conflict) && <button className="secondary" disabled={busy} onClick={() => void load()}>تلاش دوباره برای دریافت پرونده</button>}
       {report && <>
         {explanationBusy && <p role="status">کارنامه آماده است؛ گزیدهٔ دلیل‌ها و قدم‌های بعدی در حال آماده‌شدن است…</p>}

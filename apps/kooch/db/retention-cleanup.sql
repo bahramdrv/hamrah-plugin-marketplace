@@ -25,6 +25,10 @@ WHERE reset_at <= now() AND key IN (
   ORDER BY reset_at, key LIMIT 5000 FOR UPDATE SKIP LOCKED
 );
 -- Financial holds and policy circuit breakers must survive ordinary retention.
+DELETE FROM kooch.membership_challenges WHERE owner IN (
+  SELECT owner FROM kooch.membership_challenges WHERE expires_at<=now()
+  ORDER BY expires_at,owner LIMIT 5000 FOR UPDATE SKIP LOCKED
+);
 -- Erase the subject link after 90 days without releasing an unresolved hold.
 UPDATE kooch.ai_budget_requests SET subject=repeat('0',64),operation_hash=NULL
 WHERE id IN (

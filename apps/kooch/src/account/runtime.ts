@@ -12,7 +12,9 @@ import { policyGate } from '../ai/policy';
 import { createGatewayReportExplanation } from '../ai/report-explanation';
 import { createGatewayAnswerInterpretation } from '../ai/answer-interpretation';
 import aiPolicy from '../../data/ai-gateway-policy.json';
-type Runtime = ReturnType<typeof createAccountApi>;
+import { ReportAccess } from '../membership/store';
+import { createTelegramWebhook, TelegramBot } from '../membership/telegram';
+type Runtime = ReturnType<typeof createAccountApi> & { telegramWebhook?: (request: Request) => Promise<Response> };
 let runtime: Promise<Runtime> | undefined;
 let evidenceStore: EvidenceStore | undefined;
 export async function publicEvidenceStore() { await accountRuntime(); return evidenceStore; }
@@ -47,6 +49,15 @@ export async function accountRuntime() {
       if (draft?.accounting_policy) await ledger.detachOperation(owner, `answer-interpretation:${saved.id}:${draft.revision}:${draft.id}`, draft.accounting_policy, client);
     }, client => evidenceStore!.reportReview(client));
     await store.validateRole();
+    let bot: TelegramBot | undefined;
+    const membershipEnabled = process.env.KOOCH_MEMBERSHIP_ENABLED === 'true';
+    const botUsername = process.env.KOOCH_TELEGRAM_BOT_USERNAME;
+    const webhookSecret = process.env.KOOCH_TELEGRAM_WEBHOOK_SECRET;
+    if (membershipEnabled && /^[a-zA-Z0-9_]{5,32}$/.test(botUsername ?? '') && /^[a-zA-Z0-9_-]{43,256}$/.test(webhookSecret ?? '')) {
+      try { bot = new TelegramBot(process.env.KOOCH_TELEGRAM_BOT_TOKEN ?? ''); } catch { /* Keep the gate closed; legacy grants remain usable. */ }
+    }
+    const reportAccess = membershipEnabled ? new ReportAccess(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!, bot ? botUsername : undefined) : undefined;
+    const telegramWebhook = bot && reportAccess ? createTelegramWebhook({ access: reportAccess, bot, secret: webhookSecret!, origin, rateLimit: key => store.rateLimit(key) }) : undefined;
     const auth = new AuthProvider({ url: authUrl.href.replace(/\/$/, ''),
       key: process.env.KOOCH_AUTH_PUBLISHABLE_KEY, serviceKey: process.env.KOOCH_AUTH_SERVICE_KEY!, origin });
     const google = process.env.KOOCH_GOOGLE_AUTH_ENABLED === 'true' ? new GoogleOAuth({ auth, origin,
@@ -65,7 +76,7 @@ export async function accountRuntime() {
     const reportExplanation: typeof explain = (report, operation, context) => !explanationRelease || (explanationRelease.mode === 'synthetic' && !explanationRelease.caseIds.includes(report.dependencies.case.id)) ? Promise.resolve({ status: 'capability_unaccepted' }) : explain(report, operation, context);
     const interpretationGate = policyGate(effectivePolicy, new Date(), 'answer-interpretation');
     const interpretationDisclosure = interpretationGate.status === 'accepted' ? { ...interpretationGate.policy.interpretation!, acceptance_notice: interpretationGate.policy.interpretation?.acceptance_basis?.kind === 'owner_accepted_unknowns' ? 'محل پردازش، گیرندهٔ بالادست و حدود نگهداری محتوایی احراز نشده‌اند؛ استفاده با پذیرش این نامعلومی‌ها توسط مالک سرویس فعال شده است. می‌توانی پاسخ ساختارمند بدهی.' : undefined } : null;
-    return createAccountApi({ store, mode, origin, auth, google, questionAssistance, answerInterpretation, reportExplanation, interpretationDisclosure, pilotReportAi: () => explanationRelease?.mode === 'public' && policyGate(explanationRelease.policy, new Date(), 'report-explanation').status === 'accepted' && stableKey && Boolean(process.env.KOOCH_ARVAN_API_KEY) ? 'bounded_arvan' : 'not_enabled', pilotAi: () => release?.mode === 'public' && policyGate(release.policy, new Date()).status === 'accepted' && stableKey && Boolean(process.env.KOOCH_ARVAN_API_KEY) ? 'bounded_arvan' : 'disabled', accounting: stableKey ? ledger : undefined });
+    return { ...createAccountApi({ store, mode, origin, auth, google, reportAccess, questionAssistance, answerInterpretation, reportExplanation, interpretationDisclosure, pilotReportAi: () => explanationRelease?.mode === 'public' && policyGate(explanationRelease.policy, new Date(), 'report-explanation').status === 'accepted' && stableKey && Boolean(process.env.KOOCH_ARVAN_API_KEY) ? 'bounded_arvan' : 'not_enabled', pilotAi: () => release?.mode === 'public' && policyGate(release.policy, new Date()).status === 'accepted' && stableKey && Boolean(process.env.KOOCH_ARVAN_API_KEY) ? 'bounded_arvan' : 'disabled', accounting: stableKey ? ledger : undefined }), telegramWebhook };
   })().catch(error => { runtime = undefined; throw error; });
   return runtime;
 }

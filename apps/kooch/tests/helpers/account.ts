@@ -7,7 +7,8 @@ import pg, { type PoolClient } from 'pg';
 import { createAccountApi } from '../../src/account/api';
 import { AuthProvider } from '../../src/account/auth';
 import { AccountStore } from '../../src/account/store';
-export async function harness(now: () => Date = () => new Date(), questionAssistance?: QuestionAssistance, accounting?: AiBudgetLedger, answerInterpretation?: AnswerInterpretation, evidenceReview?: (client?: PoolClient) => Promise<EvidenceReview>, poolOptions: { max?: number; connectionTimeoutMillis?: number } = {}, reportExplanation?: import('../../src/ai/report-explanation').ReportExplanation) {
+import { ReportAccess } from '../../src/membership/store';
+export async function harness(now: () => Date = () => new Date(), questionAssistance?: QuestionAssistance, accounting?: AiBudgetLedger, answerInterpretation?: AnswerInterpretation, evidenceReview?: (client?: PoolClient) => Promise<EvidenceReview>, poolOptions: { max?: number; connectionTimeoutMillis?: number } = {}, reportExplanation?: import('../../src/ai/report-explanation').ReportExplanation, membership = false) {
   const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL, ...poolOptions });
   const auth = new AuthProvider({ url: process.env.KOOCH_AUTH_URL!, serviceKey: process.env.KOOCH_AUTH_SERVICE_KEY!, origin: 'http://127.0.0.1:3100' });
   // Independent fixture keys prevent unrelated tests sharing the global rate bucket.
@@ -16,7 +17,8 @@ export async function harness(now: () => Date = () => new Date(), questionAssist
     if (draft?.accounting_policy) await accounting?.detachOperation(owner, `answer-interpretation:${saved.id}:${draft.revision}:${draft.id}`, draft.accounting_policy, client);
   }, evidenceReview);
   await store.validateRole();
-  const api = createAccountApi({ store, auth, origin: 'http://127.0.0.1:3100', mode: 'local', questionAssistance, accounting, answerInterpretation, reportExplanation });
+  const reportAccess = membership ? new ReportAccess(pool, randomBytes(32).toString('hex'), 'kooch_test_bot', now) : undefined;
+  const api = createAccountApi({ store, auth, origin: 'http://127.0.0.1:3100', mode: 'local', questionAssistance, accounting, answerInterpretation, reportExplanation, reportAccess });
   const clients: ReturnType<typeof client>[] = [];
   function client() {
     let cookie = '';
@@ -60,6 +62,6 @@ export async function harness(now: () => Date = () => new Date(), questionAssist
     }
     await pool.end();
   }
-  return { pool, auth, store, api, client, verifiedClient, mailToken, close };
+  return { pool, auth, store, api, reportAccess, client, verifiedClient, mailToken, close };
 }
 export const saveInput = (expected_revision = 0, goal = 'study') => ({ answers: { goal }, step: 2, expected_revision, request_id: randomUUID(), consent: 'account-save-1' });
