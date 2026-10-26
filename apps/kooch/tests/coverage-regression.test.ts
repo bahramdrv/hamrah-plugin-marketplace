@@ -41,7 +41,7 @@ test('an old empty report is historical, offers rebuilding, and never claims to 
 test('saved reports and print expose all matched destinations and source dates, not just three comparison columns', () => {
   const report = { ...buildReport(saved, now), id: 'new-report', version: 4 };
   const html = renderToStaticMarkup(createElement(SavedReport, { report, state: null, print: true }));
-  assert.match(html, /تمام مسیرهای مرتبط/);
+  assert.match(html, /غربال جهانی مسیرها برای شرایط تو/);
   assert.match(html, /استرالیا/);
   for (const id of ['au:subclass-189-skilled-independent', 'au:subclass-491-skilled-regional']) assert.ok(html.includes(catalog.routes.find(route => route.id === id)!.source.url));
   assert.match(html, /2026-07-01/);

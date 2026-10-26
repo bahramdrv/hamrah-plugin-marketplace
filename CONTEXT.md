@@ -4,6 +4,14 @@ Hamrah presents source-linked immigration evidence across destinations and route
 
 ## Language
 
+**Global Personal Route Screening**:
+A profile-specific review of the source-backed route universe across destinations and route families, with destination and purpose preferences affecting priority rather than membership. Each route retains its reasons and missing evidence; an unassessed catalog record is not a suitable route for the applicant.
+_Avoid_: Complete visa list, all eligible routes, country shortlist
+
+**Personal Route Possibility**:
+A provisional, route-specific conclusion based on the applicant's stated facts and applicable current requirements. Missing facts or unverified decisive requirements remain unresolved and never become an implicit pass or a reason to silently discard a route.
+_Avoid_: Catalog membership, guaranteed route, visa probability
+
 **Evidence Coverage**:
 The extent to which a country and route have current, attributable evidence for a specific question. Missing coverage means the answer is unknown or requires research; it is not evidence that the route is unavailable.
 _Avoid_: Route availability

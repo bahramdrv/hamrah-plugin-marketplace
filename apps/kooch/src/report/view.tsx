@@ -4,6 +4,7 @@ import { GuidanceSummary } from '../guidance-summary';
 import { RouteComparison } from '../route-comparison';
 import { ReadinessView } from '../readiness-view';
 import { RouteDirectory } from '../route-directory';
+import { PersonalScreeningView } from '../personal-screening-view';
 export const conditionLabels: Record<string, string> = { self_reported_met: 'بر پایهٔ پاسخ تو برقرار', action_needed: 'نیازمند اقدام', unknown: 'اطلاعات لازم است', needs_review: 'نیازمند بازبینی', not_applicable: 'طبق پاسخ تو لازم نیست', not_assessed: 'بررسی نشده' };
 const summary: Record<string, string> = { preliminary_conditions_met: 'موارد بررسی‌شده با پاسخ‌های تو سازگارند', action_needed: 'پیش از اقدام، چند شرط آماده نیست', needs_information: 'برای ادامه، اطلاعات بیشتری لازم است', needs_review: 'پیش از نتیجه‌گیری، بازبینی لازم است' };
 
@@ -47,7 +48,7 @@ export function ReportStatus({ state }: { state: ReportState | null }) {
 export function SavedReport({ report, state, print = false }: { report: GuidanceReport; state: ReportState | null; print?: boolean }) {
   return <div aria-label="کارنامهٔ مشترک"><p className="draft-notice">نسخهٔ کارنامه: {report.version.toLocaleString('fa-IR')} · بر پایهٔ نسخهٔ پاسخ‌ها: {report.case_revision.toLocaleString('fa-IR')} · {new Date(report.created_at).toLocaleDateString('fa-IR', { timeZone: 'Asia/Tehran' })}</p>
     <ReportStatus state={state} />
-    {report.discovery?.version !== 'saved-discovery-4' && <section className="notice" role="status"><h2>این کارنامه از قالب قدیمی است</h2><p>فهرست کامل مسیرها در این قالب ثبت نشده است. با «ساخت کارنامه از پاسخ‌های فعلی» نسخهٔ تازه بساز؛ پاسخ‌های ذخیره‌شده حفظ می‌شوند.</p></section>}
+    {!report.discovery?.result?.personal_screening && <section className="notice" role="status"><h2>این کارنامه از قالب قدیمی است</h2><p>غربال جهانی شرایط فردی در این قالب ثبت نشده است. با «ساخت کارنامه از پاسخ‌های فعلی» نسخهٔ تازه بساز؛ پاسخ‌های ذخیره‌شده حفظ می‌شوند.</p></section>}
     {report.discovery && <section className="saved-discovery" aria-label="خلاصهٔ مسیرهای تو">
       <h2>خلاصهٔ مسیرها و قدم بعدی</h2>
       {report.discovery.result ? <>
@@ -57,7 +58,7 @@ export function SavedReport({ report, state, print = false }: { report: Guidance
         {report.discovery.result.routes.length > 1 && <details open={print || undefined}><summary>مقایسهٔ مسیرهای مرتبط</summary><RouteComparison routes={report.discovery.result.routes.slice(0, 3)} print={print}/></details>}
         {report.discovery.result.routes.length === 1 && <RouteComparison routes={report.discovery.result.routes} print={print}/>}
         {report.discovery.result.routes.filter(route => route.readiness).map(route => <section key={route.id}><h3>{route.name_fa}</h3><ReadinessView readiness={route.readiness!} print={print}/></section>)}
-        <RouteDirectory routes={report.discovery.result.matching_routes ?? report.discovery.result.routes} print={print} coverage={report.discovery.result.global_coverage} destinationCoverage={report.discovery.result.destination_coverage}/>
+        {report.discovery.result.personal_screening ? <PersonalScreeningView screening={report.discovery.result.personal_screening} print={print}/> : <RouteDirectory routes={report.discovery.result.matching_routes ?? report.discovery.result.routes} print={print} coverage={report.discovery.result.global_coverage} destinationCoverage={report.discovery.result.destination_coverage}/>}
         <p className="help">این بخش برای شناخت مسیرها و آماده‌سازی است؛ شرط‌های کامل فردی و مدارک در آن تأیید نشده‌اند.</p>
       </> : <p className="notice">دریافت شواهد معتبر برای این خلاصه ممکن نشد. پاسخ‌ها محفوظ‌اند؛ پس از بازبینی شواهد، کارنامهٔ تازه بساز.</p>}
     </section>}

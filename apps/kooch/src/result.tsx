@@ -8,6 +8,7 @@ import { date } from './display';
 import { RouteResearch } from './research/view';
 import { ReadinessView } from './readiness-view';
 import { RouteDirectory } from './route-directory';
+import { PersonalScreeningView } from './personal-screening-view';
 export { date } from './display';
 const num = (n: number) => n.toLocaleString('fa-IR');
 
@@ -37,6 +38,7 @@ export function Results({ result, edit, editPrerequisites, busy, retrieval, focu
   }
   return <section aria-labelledby="result-title" className="results">
     <div className="result-heading"><div><h1 id="result-title" tabIndex={-1}>مسیرهای قابل بررسی</h1><p>این فهرست، تأیید شرایط یا احتمال ویزا نیست.</p></div><button className="secondary" disabled={busy} onClick={edit}>مرور و اصلاح پاسخ‌ها</button></div>
+    {result.personal_screening && <PersonalScreeningView screening={result.personal_screening} choose={focusRoute} busy={busy}/>}
     {result.routes.length > 0 && result.guidance && <GuidanceSummary guidance={result.guidance}/>}
     {!result.routes.length && result.restricted_routes?.length === 0 && <div className="empty-state"><h2>{result.status === 'review_required' ? 'اطلاعات مسیرها به بازبینی تازه نیاز دارند' : 'این انتخاب را با هدف یا مقصد دیگری بررسی کن'}</h2><p>{result.status === 'review_required' ? 'اعتبار شواهد تمام شده است؛ دادهٔ قدیمی را جایگزین نتیجه نمی‌کنیم.' : result.no_match_reason === 'prerequisite_required' ? 'مسیرهای این انتخاب به سابقه یا شرط مشخصی نیاز دارند که در پاسخ‌هایت تأیید نشده است. می‌توانی پاسخ‌های پیش‌نیاز را اصلاح کنی.' : 'برای ترکیب این هدف و مقصد، هنوز مسیر مستندی در داده‌های فعلی نداریم. این به معنی بسته‌بودن راه مهاجرت نیست.'}</p></div>}
     {result.restricted_routes?.length > 0 && <details className="evidence" open={result.routes.length === 0 || undefined}><summary>مسیرهای دارای محدودیت یا نیازمند بررسی استثنا ({num(result.restricted_routes.length)})</summary>{result.restricted_routes.map(route => <section key={route.id}><h3>{route.name_fa}</h3><p>{route.channel_note}</p><p>{route.application_method}</p><ul>{route.sources.map(source => <li key={source.id}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>)}</ul><RouteResearch routeId={route.id} academic={route.category === 'تحصیل'}/></section>)}</details>}
@@ -54,7 +56,7 @@ export function Results({ result, edit, editPrerequisites, busy, retrieval, focu
       {route.readiness && <><ReadinessView readiness={route.readiness}/>{focusRoute && <button className="secondary" disabled={busy} onClick={() => focusRoute(route.id)}>پاسخ به شرط‌های این مسیر</button>}</>}
       <RouteResearch routeId={route.id} academic={route.category === 'تحصیل'}/>
     </article>)}</div>
-    <RouteDirectory routes={result.matching_routes ?? result.routes} onChoose={focusRoute} busy={busy} coverage={result.global_coverage} destinationCoverage={result.destination_coverage}/>
+    <details className="context-details"><summary>کاتالوگ مرجع؛ مستقل از نتیجهٔ فردی</summary><RouteDirectory routes={result.matching_routes ?? result.routes} onChoose={focusRoute} busy={busy} coverage={result.global_coverage} destinationCoverage={result.destination_coverage}/></details>
     {result.unknowns.length > 0 && <details className="evidence"><summary>اطلاعاتی که هنوز نامعلوم‌اند</summary><ul>{result.unknowns.map(item => <li key={item}>{item}</li>)}</ul></details>}
     {result.routes.length > 0 && !result.guidance && <NextActions key={JSON.stringify(result.routes.map(route => [route.id, route.next_step]))} routes={result.routes}/>}
     <details className="next-steps context-details"><summary>موارد دیگر برای آماده‌سازی</summary><ul>{result.next_steps.map(item => <li key={item}>{item}</li>)}</ul></details>
