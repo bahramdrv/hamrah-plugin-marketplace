@@ -19,5 +19,8 @@ export function Destinations({ countries, value, onChange }: { countries: Compas
     <p className="help" role="status">{matching.length.toLocaleString('fa-IR')} مقصد · {value.length.toLocaleString('fa-IR')} انتخاب از حداکثر۱۰مقصد{value.length > 0 && ` · ${value.map(c => countries[c]?.name ?? c).join('، ')}`}</p>
     <div className="destinations">{shown.map(([code, country]) => <label key={code} className={`choice ${value.includes(code) ? 'selected' : ''}`}>
     <input type="checkbox" checked={value.includes(code)} disabled={!value.includes(code) && value.length >= 10} onChange={e => onChange(e.target.checked ? [...value, code] : value.filter(c => c !== code))} />{country.flag} {country.name}
-  </label>)}</div>{!query && !all && matching.length > shown.length && <button type="button" className="text-button" onClick={() => setAll(true)}>نمایش همهٔ مقصدها</button>}<button type="button" className="text-button" onClick={() => onChange([])}>{value.length ? 'پاک‌کردن انتخاب مقصدها' : 'هنوز نمی‌دانم / بدون ترجیح'}</button></>;
+  </label>)}</div>
+    {!query && !all && matching.length > shown.length && <button type="button" className="text-button" onClick={() => setAll(true)}>نمایش همهٔ مقصدها</button>}
+    {value.length ? <button type="button" className="text-button" onClick={e => { e.preventDefault(); onChange([]); }}>پاک‌کردن انتخاب مقصدها</button> : <button type="submit" className="text-button">هنوز نمی‌دانم / بدون ترجیح</button>}
+  </>;
 }

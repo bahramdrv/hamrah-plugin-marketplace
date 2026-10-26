@@ -1,11 +1,12 @@
 import snapshot from '../data/iran-start-snapshot.json';
-import catalog from '../data/global-catalog.json';
+import { currentCatalog } from './catalog-runtime';
 import { createCompassApi } from './api';
 import retrieval from '../data/retrieval-status.json';
 import type { RetrievalStatus } from './retrieval';
 import { accountConfigured, publicEvidenceStore } from './account/runtime';
 import { consumableSnapshot } from './evidence/sync';
 async function currentCompass() {
+  const catalog = await currentCatalog();
   if (!accountConfigured()) return createCompassApi({ snapshot, catalog, retrieval: retrieval as RetrievalStatus });
   try {
     const store = await publicEvidenceStore(); if (!store) throw new Error();

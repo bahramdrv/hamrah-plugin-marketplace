@@ -6,6 +6,19 @@ import { createCompassApi, type CompassResult } from '../src/api';
 import { Results, RouteComparison } from '../src/result';
 import snapshot from '../data/iran-start-snapshot.json';
 import { continuationPath } from '../src/account/navigation';
+import { Destinations } from '../src/controls';
+
+test('no destination preference submits the interview; clearing a selection does not submit', () => {
+  for (const value of [[], ['de']]) {
+    const html = renderToStaticMarkup(createElement(Destinations, {
+      countries: { de: { name: 'آلمان', flag: '🇩🇪' } }, value, onChange() {},
+    }));
+    const label = value.length ? 'پاک‌کردن انتخاب مقصدها' : 'هنوز نمی‌دانم / بدون ترجیح';
+    const button = html.match(new RegExp(`<button\\b[^>]*>${label}</button>`))?.[0];
+    assert.ok(button, `Missing ${label} action`);
+    assert.match(button, new RegExp(`type="${value.length ? 'button' : 'submit'}"`));
+  }
+});
 
 async function workResult(): Promise<CompassResult> {
   const api = createCompassApi({ snapshot, now: () => new Date('2026-10-15T12:00:00Z') });

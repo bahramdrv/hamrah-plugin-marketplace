@@ -7,12 +7,14 @@ import { RouteComparison } from './route-comparison';
 import { date } from './display';
 import { RouteResearch } from './research/view';
 import { ReadinessView } from './readiness-view';
+import { RouteDirectory } from './route-directory';
 export { date } from './display';
 const num = (n: number) => n.toLocaleString('fa-IR');
 
 export function Evidence({ result, retrieval }: { result: CompassResult; retrieval?: RetrievalStatus }) {
   return <details className="evidence"><summary>منبع، تاریخ و محدودهٔ پوشش</summary>
     {result.global_coverage && <p>کاتالوگ: {num(result.global_coverage.routes)} رکورد در {num(result.global_coverage.countries)} مقصد؛ پوشش روش اقدام و شرایط فردی محدودتر است.{result.global_coverage.status === 'stale' && ' دریافت کاتالوگ به تازه‌سازی نیاز دارد.'}</p>}
+    {result.global_coverage && <p>آخرین دریافت کاتالوگ: {date(result.global_coverage.retrieved_at)} · {num(result.global_coverage.primary_sources_due_review ?? 0)} منبع خارج از بازهٔ بررسی ۱۴روزه. {result.global_coverage.refresh?.state === 'updated' ? 'فهرست عمومی هنگام استفاده با فاصلهٔ ۲۴ساعته تازه‌سازی می‌شود؛ تأیید شروط رسمی مستقل است.' : result.global_coverage.refresh ? 'آخرین تازه‌سازی کامل نشد؛ کاتالوگ قبلی با تاریخ اصلی حفظ شده است.' : ''}</p>}
     <p>روش اقدام {num(result.coverage.current)} مسیر در این داده اعتبار دارد. از {num(result.coverage.catalog)} رکورد کاتالوگ، {num(result.coverage.unreviewed)} مورد هنوز بررسی روش اقدام ندارند. نبود پوشش، به معنی بسته‌بودن مسیر نیست.</p>
     <p>{num(result.coverage.expired)} مسیر منقضی، {num(result.coverage.excluded)} مسیر خارج از شرایط روش اقدام و {num(result.coverage.without_discovery_policy)} مسیر بدون نگاشت این قطب‌نماست؛ این موارد پیشنهاد مستقیم نمی‌شوند.</p>
     <p>دریافت: {date(result.evidence.retrieved_at)}{result.evidence.earliest_expiry && ` · نزدیک‌ترین انقضا: ${date(result.evidence.earliest_expiry)}`}</p>
@@ -52,7 +54,7 @@ export function Results({ result, edit, editPrerequisites, busy, retrieval, focu
       {route.readiness && <><ReadinessView readiness={route.readiness}/>{focusRoute && <button className="secondary" disabled={busy} onClick={() => focusRoute(route.id)}>پاسخ به شرط‌های این مسیر</button>}</>}
       <RouteResearch routeId={route.id} academic={route.category === 'تحصیل'}/>
     </article>)}</div>
-    {result.omitted_by_limit > 0 && <p>{num(result.omitted_by_limit)} مسیر مرتبط دیگر هم وجود دارد. با انتخاب مقصد، فهرست را محدود کن.</p>}
+    <RouteDirectory routes={result.matching_routes ?? result.routes} onChoose={focusRoute} busy={busy} coverage={result.global_coverage} destinationCoverage={result.destination_coverage}/>
     {result.unknowns.length > 0 && <details className="evidence"><summary>اطلاعاتی که هنوز نامعلوم‌اند</summary><ul>{result.unknowns.map(item => <li key={item}>{item}</li>)}</ul></details>}
     {result.routes.length > 0 && !result.guidance && <NextActions key={JSON.stringify(result.routes.map(route => [route.id, route.next_step]))} routes={result.routes}/>}
     <details className="next-steps context-details"><summary>موارد دیگر برای آماده‌سازی</summary><ul>{result.next_steps.map(item => <li key={item}>{item}</li>)}</ul></details>

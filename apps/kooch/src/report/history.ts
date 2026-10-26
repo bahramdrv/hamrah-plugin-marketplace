@@ -6,7 +6,7 @@ import { buildDiscovery } from './discovery';
 import { readinessEvidence } from '../route-readiness';
 export function reportState(report: GuidanceReport, revision: number | undefined, latest: number, now: Date, review: EvidenceReview = { routeIds: [], retrievalFailed: false }): ReportState {
   const discovery = report.discovery ? buildDiscovery(report.dependencies.case, now, review) : undefined;
-  const fresh = !review.retrievalFailed && (!discovery || (!discovery.needs_review && discovery.evidence_fingerprint === report.discovery?.evidence_fingerprint)) && report.route_results.every(route => !review.routeIds.includes(route.route_id) && route.evidence_current && route.evidence_version === ({ 'uk:student': policyDigest, 'ca:study-permit-ca': canadaPolicyDigest } as Record<string, string>)[route.route_id] &&
+  const fresh = Boolean(report.discovery) && !review.retrievalFailed && (!discovery || (!discovery.needs_review && discovery.evidence_fingerprint === report.discovery?.evidence_fingerprint)) && report.route_results.every(route => !review.routeIds.includes(route.route_id) && route.evidence_current && route.evidence_version === ({ 'uk:student': policyDigest, 'ca:study-permit-ca': canadaPolicyDigest } as Record<string, string>)[route.route_id] &&
     route.sources.every(s => Date.parse(s.checked_at) <= now.getTime() && now.getTime() < Date.parse(s.expires_at)));
   return { current: fresh && revision === report.case_revision && latest === report.version,
     evidence_current: fresh, answers_current: revision === report.case_revision, latest_version: latest };

@@ -13,6 +13,7 @@ import { createGatewayReportExplanation } from '../ai/report-explanation';
 import { createGatewayAnswerInterpretation } from '../ai/answer-interpretation';
 import aiPolicy from '../../data/ai-gateway-policy.json';
 import { ReportAccess } from '../membership/store';
+import { currentCatalog } from '../catalog-runtime';
 import { createTelegramWebhook, TelegramBot } from '../membership/telegram';
 type Runtime = ReturnType<typeof createAccountApi> & { telegramWebhook?: (request: Request) => Promise<Response> };
 let runtime: Promise<Runtime> | undefined;
@@ -47,7 +48,7 @@ export async function accountRuntime() {
     const store = new AccountStore(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!, undefined, async (owner, saved, client) => {
       const draft = saved.form?.draft;
       if (draft?.accounting_policy) await ledger.detachOperation(owner, `answer-interpretation:${saved.id}:${draft.revision}:${draft.id}`, draft.accounting_policy, client);
-    }, client => evidenceStore!.reportReview(client));
+    }, async client => ({ ...await evidenceStore!.reportReview(client), discoveryCatalog: await currentCatalog() }));
     await store.validateRole();
     let bot: TelegramBot | undefined;
     const membershipEnabled = process.env.KOOCH_MEMBERSHIP_ENABLED === 'true';

@@ -77,7 +77,7 @@ export function evaluateCompass(answers: Answers, options: { snapshot: unknown; 
       return Number(b.id === answers.focus_route) - Number(a.id === answers.focus_route) || pref(a.destination) - pref(b.destination) || reported(a) - reported(b) || a.id.localeCompare(b.id);
     });
     const missingFacts = [...new Set(relevant.flatMap(r => policies[r.id].requires).filter(id => answers.facts[id] === undefined || answers.facts[id] === 'unknown'))];
-    const routes: DiscoveryRoute[] = ordered.slice(0, 5).map(r => {
+    const routes: DiscoveryRoute[] = ordered.map(r => {
       const remaining = policies[r.id].requires.filter(id => answers.facts[id] !== 'yes');
       const today = now().toISOString().slice(0, 10);
       const routeFacts = r.id === 'ca:study-permit-ca' ? canadaCardFacts(now()) : r.facts.filter(fact => fact.sources.every(source => source.checked_on <= today && Date.parse(today) - Date.parse(source.checked_on) <= 14 * 86400000));
@@ -102,7 +102,7 @@ export function evaluateCompass(answers: Answers, options: { snapshot: unknown; 
     const routePolicies = { ...policies };
     const restrictedRoutes: DiscoveryRoute[] = [];
     const catalogCurrent = catalog && now().getTime() - Date.parse(catalog.retrieved_at) <= 14 * 86400000;
-    const globalCandidates = (catalogCurrent ? catalog.routes : undefined)?.flatMap(record => {
+    const globalCandidates = catalog?.routes.flatMap(record => {
       if (options.blockedRouteIds?.includes(record.id) || snapshot.routes.some(r => r.id === record.id) || (answers.destinations.length && !answers.destinations.includes(record.destination))) return [];
       const policy = catalogPolicy(record);
       if (!policy || (answers.goal !== 'unknown' && policy.goal !== answers.goal)) return [];
@@ -113,19 +113,34 @@ export function evaluateCompass(answers: Answers, options: { snapshot: unknown; 
         restrictedRoutes.push({ ...restricted, preparation_status: iran.status, channel_note: iran.note, application_method: iran.method, sources: [...restricted.sources, ...iran.sources] });
         return [];
       }
-      if (policy.requires.some(id => isPriorHistoryFact(id) && answers.facts[id] !== 'yes')) return [];
+      if (policy.requires.some(id => isPriorHistoryFact(id) && answers.facts[id] !== 'yes')) {
+        const restricted = catalogSummary(record, policy, answers);
+        restrictedRoutes.push({ ...restricted, preparation_status: 'prior_history_required', channel_note: `این مسیر به سابقهٔ تحصیل، کار یا وضعیت قبلی در مقصد وابسته است؛ آن سابقه در پاسخ‌ها تأیید نشده و مسیر به‌عنوان شروع معمول از ایران پیشنهاد نمی‌شود. ${iran.note}`, application_method: iran.method, sources: [...restricted.sources, ...iran.sources] });
+        return [];
+      }
       return [{ record, policy }];
     }).sort((a, b) => {
       const pref = (code: string) => answers.destinations.length ? answers.destinations.indexOf(code) : 0;
       return Number(b.record.id === answers.focus_route) - Number(a.record.id === answers.focus_route) || pref(a.record.destination) - pref(b.record.destination) || a.record.id.localeCompare(b.record.id);
     }) ?? [];
-    if (globalCandidates.some(r => r.record.id === answers.focus_route) && routes.length === 5) routes.pop();
-    const remainingSlots = Math.max(0, 5 - routes.length);
-    routes.push(...globalCandidates.slice(0, remainingSlots).map(({ record, policy }) => {
+    routes.push(...globalCandidates.map(({ record, policy }) => {
       const summary = catalogSummary(record, policy, answers); const iran = iranContext(record, catalog!, now());
       return { ...summary, application_method: iran.method, channel_note: `${summary.channel_note} ${iran.note}`, sources: [...summary.sources, ...iran.sources] };
     }));
-    routes.sort((a, b) => Number(b.id === answers.focus_route) - Number(a.id === answers.focus_route));
+    const preference = (code: string) => answers.destinations.length ? answers.destinations.indexOf(code) : 0;
+    routes.sort((a, b) => Number(b.id === answers.focus_route) - Number(a.id === answers.focus_route) || preference(a.destination) - preference(b.destination));
+    const matchingRoutes = [...routes];
+    // Keep the interview bounded, while retaining every match for browsing and saving.
+    // Represent destinations before repeating a country's routes in the brief overview.
+    const represented = new Set<string>();
+    const diverse = routes.filter(route => { if (represented.has(route.destination)) return false; represented.add(route.destination); return true; });
+    const briefing = [...new Set([...diverse, ...routes])].filter(route => catalogCurrent || route.coverage === 'application_channel_reviewed').slice(0, 5);
+    if (answers.focus_route) {
+      const focused = matchingRoutes.find(route => route.id === answers.focus_route);
+      if (focused && (catalogCurrent || focused.coverage === 'application_channel_reviewed') && !briefing.includes(focused)) briefing.splice(4, 1, focused);
+      briefing.sort((a, b) => Number(b.id === answers.focus_route) - Number(a.id === answers.focus_route));
+    }
+    routes.splice(0, routes.length, ...briefing);
     const focusedRecord = catalog?.routes.find(record => record.id === answers.focus_route && !options.blockedRouteIds?.includes(record.id) && (!answers.destinations.length || answers.destinations.includes(record.destination)));
     const focusedPolicy = focusedRecord ? catalogPolicy(focusedRecord) : null;
     const focusPolicy = focusedPolicy && (answers.goal === 'unknown' || focusedPolicy.goal === answers.goal) && iranContext(focusedRecord!, catalog!, now()).ordinary ? focusedPolicy : null;
@@ -159,10 +174,15 @@ export function evaluateCompass(answers: Answers, options: { snapshot: unknown; 
       status, ...journey,
       no_match_reason: relevant.length ? 'prerequisite_required' : 'coverage_gap',
       official_eligibility: 'not_assessed', policy_version: policyVersion,
-      routes, restricted_routes: restrictedRoutes, omitted_by_limit: Math.max(0, ordered.length + globalCandidates.length - 5), needs_information: pending.length - ready.length,
+      routes, matching_routes: matchingRoutes, restricted_routes: restrictedRoutes, omitted_by_limit: Math.max(0, matchingRoutes.length - routes.length), needs_information: pending.length - ready.length,
+      destination_coverage: answers.destinations.map(code => ({ code, name: countries[code]?.name ?? code,
+        catalog: catalog?.routes.filter(route => route.destination === code).length ?? 0,
+        matching: matchingRoutes.filter(route => route.destination === code).length,
+        restricted: restrictedRoutes.filter(route => route.destination === code).length })),
       questions: (catalog ? prerequisiteIds.filter(id => answers.facts[id] === undefined || answers.facts[id] === 'unknown') : missingFacts).map(id => ({ id, title: factTitle(id) })),
       editable_questions: prerequisiteIds.map(id => ({ id, title: factTitle(id) })),
-      global_coverage: catalog ? { countries: Object.keys(catalog.destinations).length, routes: catalog.routes.length, status: catalogCurrent ? 'retrieved' : 'stale', research_candidates: globalCandidates.length, retrieved_at: catalog.retrieved_at } : null,
+      global_coverage: catalog ? { countries: Object.keys(catalog.destinations).length, routes: catalog.routes.length, status: catalogCurrent ? 'retrieved' : 'stale', research_candidates: globalCandidates.length, retrieved_at: catalog.retrieved_at,
+        refresh: catalog.refresh ?? null, primary_sources_due_review: catalog.routes.filter(route => Date.parse(route.source.lastVerified) + 14 * 86400000 < now().getTime()).length } : null,
       unknowns, next_steps: nextSteps,
       coverage: { ...snapshot.coverage, current: current.length, expired, excluded: snapshot.total - current.length - expired,
         without_discovery_policy: current.filter(r => !policies[r.id]).length },

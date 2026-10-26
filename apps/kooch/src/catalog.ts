@@ -19,6 +19,7 @@ const record = z.object({ id: z.string(), source_id: z.string(), destination: z.
   name: z.string(), name_fa: z.string(), category: z.string(), summary: z.string(), source,
   reviewed_on: z.iso.date().nullable(), sponsorship_required: z.boolean().nullable(), settlement: z.boolean(), duration: z.string().nullable() });
 export const catalogSchema = z.object({ schema_version: z.literal(1), retrieved_at: z.iso.datetime({ offset: true }),
+  refresh: z.object({ state: z.enum(['updated', 'review_required', 'error']), attempted_at: z.iso.datetime({ offset: true }), reason: z.string().nullable() }).optional(),
   source_url: z.literal('https://visaatlas.org/api/public/visas'), provider: z.literal('Visa Atlas'),
   license: z.literal('CC BY 4.0'), license_url: z.url(),
   iran_application: z.record(z.string(), z.object({ iran_passport_status: z.string(), start_from_iran: z.string(), application_acceptance: z.string(), evidence_checked_on: z.iso.date(), valid_until: z.iso.date(), source_ids: z.array(z.string()), reason_fa: z.string() })),
