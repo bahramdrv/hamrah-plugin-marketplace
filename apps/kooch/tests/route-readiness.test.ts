@@ -78,11 +78,12 @@ test('all published preparation routes are reachable and only the selected route
   const { catalogSchema } = await import('../src/catalog');
   const { isStableCoarseFact } = await import('../src/policy');
   const parsedCatalog = catalogSchema.parse(catalog);
-  const api = createCompassApi({ snapshot, catalog, now: () => new Date('2026-10-24T22:00:00Z') });
-  assert.equal(readinessDefinitions.routes.length, 30);
+  const api = createCompassApi({ snapshot, catalog, now: () => new Date('2026-10-26T22:00:00Z') });
+  assert.ok(readinessDefinitions.routes.length >= 60);
   for (const plan of readinessDefinitions.routes) {
     const record = parsedCatalog.routes.find(route => route.id === plan.route_id)!;
-    const policy = catalogPolicy(record)!;
+    const policy = catalogPolicy(record);
+    if (!policy || plan.availability) continue; // General multi-purpose records remain in the global screening; restricted schemes are never ordinary suggestions.
     const response = await api.POST(post({ goal: policy.goal, destinations: [record.destination], focus_route: record.id, facts: Object.fromEntries(policy.requires.map(id => [id, 'yes'])) }));
     assert.equal(response.status, 200, record.id);
     const result = await response.json();

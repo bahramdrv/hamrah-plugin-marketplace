@@ -1,0 +1,1917 @@
+{
+  "version": "primary-conditions-2026-10-26-1",
+  "released_on": "2026-10-26",
+  "sources": [
+    {
+      "id": "primary26:ca-express-entry-fsw",
+      "title": "IRCC — Federal Skilled Worker",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:ca-express-entry-cec",
+      "title": "IRCC — Canadian Experience Class",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:ca-express-entry-fst",
+      "title": "IRCC — Federal Skilled Trades",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-trades.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:nz-partner-resident-visa",
+      "title": "INZ — Partner of a New Zealander Resident",
+      "url": "https://www.immigration.govt.nz/visas/partner-of-a-new-zealander-resident-visa/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:ke-class-k-ordinary-residents-permit",
+      "title": "Kenya Immigration — Class K",
+      "url": "https://immigration.go.ke/class-k-ordinary-residents/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:ke-class-g-trade-business-permit",
+      "title": "Kenya Immigration — Class G",
+      "url": "https://immigration.go.ke/class-g-specific-trade-business-or-consultancy/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:ke-class-d-work-permit",
+      "title": "Kenya Immigration — Class D",
+      "url": "https://immigration.go.ke/class-d-employment/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:ke-students-pass",
+      "title": "Kenya Immigration — Student Pass",
+      "url": "https://immigration.go.ke/students-pass/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:sg-employment-pass",
+      "title": "MOM — Employment Pass eligibility",
+      "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/eligibility",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:sg-s-pass",
+      "title": "MOM — S Pass eligibility",
+      "url": "https://www.mom.gov.sg/passes-and-permits/s-pass/eligibility",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:sg-personalised-employment-pass",
+      "title": "MOM — Personalised Employment Pass",
+      "url": "https://www.mom.gov.sg/passes-and-permits/personalised-employment-pass/eligibility",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:sg-one-pass",
+      "title": "MOM — Overseas Networks and Expertise Pass",
+      "url": "https://www.mom.gov.sg/passes-and-permits/overseas-networks-expertise-pass/eligibility",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:sg-entrepass",
+      "title": "MOM — EntrePass eligibility",
+      "url": "https://www.mom.gov.sg/passes-and-permits/entrepass/eligibility",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:sg-dependants-pass",
+      "title": "MOM — Dependant Pass eligibility",
+      "url": "https://www.mom.gov.sg/passes-and-permits/dependants-pass/eligibility",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:nl-highly-skilled-migrant",
+      "title": "IND — Highly skilled migrant",
+      "url": "https://ind.nl/en/residence-permits/work/highly-skilled-migrant",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:nl-eu-blue-card-nl",
+      "title": "IND — European Blue Card",
+      "url": "https://ind.nl/en/residence-permits/work/european-blue-card-residence-permit",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:nl-student-nl",
+      "title": "IND — University/HBO student",
+      "url": "https://ind.nl/en/residence-permits/study/student-residence-permit-for-university-or-higher-professional-education",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:at-startup-founder-austria",
+      "title": "Migration Austria — Startup founders",
+      "url": "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/start-up-founders/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:at-eu-blue-card-austria",
+      "title": "Migration Austria — EU Blue Card",
+      "url": "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/eu-blue-card/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:se-eu-blue-card-sweden",
+      "title": "Migrationsverket — EU Blue Card",
+      "url": "https://www.migrationsverket.se/en/you-want-to-apply/work/employee-or-self-employed/eu-blue-cards.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:se-self-employment-sweden",
+      "title": "Migrationsverket — Self-employed",
+      "url": "https://www.migrationsverket.se/en/you-want-to-apply/work/employee-or-self-employed/self-employed-people.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:hk-general-employment-policy",
+      "title": "Hong Kong Immigration — GEP",
+      "url": "https://www.immd.gov.hk/eng/services/visas/GEP.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:hk-top-talent-pass-scheme",
+      "title": "Hong Kong Immigration — TTPS",
+      "url": "https://www.immd.gov.hk/eng/services/visas/TTPS.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:hk-capital-investment-entrant-scheme",
+      "title": "Hong Kong Immigration — old CIES status",
+      "url": "https://www.immd.gov.hk/eng/services/visas/capital_investment_entrant_scheme.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:ar-migrant-worker-temporary-residence",
+      "title": "Argentina Migraciones — migrant worker",
+      "url": "https://www.argentina.gob.ar/servicio/obtener-una-residencia-temporaria-como-trabajador-migrante",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:jp-specified-skilled-worker-1",
+      "title": "Japan ISA — Specified Skilled Worker (i)",
+      "url": "https://www.ssw.go.jp/en/about/visa/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:mt-nomad",
+      "title": "Residency Malta — Nomad FAQ v14.1",
+      "url": "https://nomad.residencymalta.gov.mt/new-faqs/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:cl-temporary-residence-student",
+      "title": "SERMIG — Student residence",
+      "url": "https://serviciomigraciones.cl/en/residencia-temporal-permit/subcategories/students/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:cl-temporary-residence-family-reunification",
+      "title": "SERMIG — Family reunification",
+      "url": "https://serviciomigraciones.cl/en/residencia-temporal-permit/subcategories/family-reunification/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:ar-family-reunification-residence",
+      "title": "Argentina Migraciones — Family reunification",
+      "url": "https://www.argentina.gob.ar/servicio/obtener-una-residencia-temporaria-por-reunificacion-familiar",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:uy-residencia-temporaria",
+      "title": "Uruguay DNM — Temporary legal residence",
+      "url": "https://www.gub.uy/tramites/residencia-legal-temporaria",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:mu-premium-visa",
+      "title": "Mauritius EDB — Premium Visa",
+      "url": "https://residency.mu/live/mauritius-premium-visa/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:mu-retired-non-citizen-residence",
+      "title": "Mauritius EDB — Retired noncitizen",
+      "url": "https://residency.mu/retire/retired-non-citizen-50-years/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:ca-language",
+      "title": "IRCC — approved tests and program language levels",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-test.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "primary26:jp-ssw-tests",
+      "title": "Japan ISA — SSW tests and contracts",
+      "url": "https://www.ssw.go.jp/en/about/sswv/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "ca:express-entry-fsw",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "experience",
+          "answer_id": "ca.express_entry_fsw_experience",
+          "question": "حداقل یک سال سابقهٔ پیوسته، باحقوق و واجد NOC در ده سال اخیر داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ca-express-entry-fsw"
+          ]
+        },
+        {
+          "id": "language",
+          "answer_id": "ca.express_entry_fsw_language",
+          "question": "آزمون موردقبول و حداقلCLB/NCLC7 در هرچهارمهارت داری؛ نتیجه در ثبت پروفایل و درخواست کمتر از دوسال عمر دارد؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ca-express-entry-fsw",
+            "primary26:ca-language"
+          ]
+        },
+        {
+          "id": "education",
+          "answer_id": "ca.express_entry_fsw_education",
+          "question": "مدرک کانادایی یا مدرک خارجی به‌همراه ECA معتبر داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ca-express-entry-fsw"
+          ]
+        },
+        {
+          "id": "selection",
+          "answer_id": "ca.express_entry_fsw_selection",
+          "question": "حداقل ۶۷ امتیازِ عوامل انتخاب FSW، جدا از CRS، مستند شده است؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ca-express-entry-fsw"
+          ]
+        },
+        {
+          "id": "funds",
+          "answer_id": "ca.express_entry_fsw_funds",
+          "question": "تمکن خانوادگی یا معافیت معتبر و قصد اقامت خارج کبک بررسی شده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ca-express-entry-fsw"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ca:express-entry-cec",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "experience",
+          "answer_id": "ca.express_entry_cec_experience",
+          "question": "حداقل یک سال یا۱۵۶۰ساعت کار باحقوق و مجاز در کانادا، طی سه سال اخیر، در TEER0تا3 داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ca-express-entry-cec"
+          ]
+        },
+        {
+          "id": "exclusions",
+          "answer_id": "ca.express_entry_cec_exclusions",
+          "question": "سابقهٔ دانشجوی تمام‌وقت و خوداشتغالی نامشمول را کنار گذاشته‌ای؛ استثنای پزشکان جدا بررسی شده؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ca-express-entry-cec"
+          ]
+        },
+        {
+          "id": "language",
+          "answer_id": "ca.express_entry_cec_language",
+          "question": "برای TEER0/1حداقلCLB/NCLC7 و برایTEER2/3حداقل5 در هرچهارمهارت با آزمون معتبرِ کمتر ازدوسال داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ca-express-entry-cec",
+            "primary26:ca-language"
+          ]
+        },
+        {
+          "id": "settlement",
+          "answer_id": "ca.express_entry_cec_settlement",
+          "question": "قصد اقامت خارج کبک و شرایط پذیرش مهاجرتی بررسی شده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ca-express-entry-cec"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ca:express-entry-fst",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "experience",
+          "answer_id": "ca.express_entry_fst_experience",
+          "question": "دو سال سابقهٔ تمام‌وقت معادل در پنج سال اخیر، در حرفهٔ فنی مشمول و با صلاحیت کار مستقل داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ca-express-entry-fst"
+          ]
+        },
+        {
+          "id": "offer",
+          "answer_id": "ca.express_entry_fst_offer",
+          "question": "پیشنهاد معتبر تمام‌وقت حداقل یک‌ساله یا گواهی صلاحیت حرفه‌ای از مرجع کانادایی داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ca-express-entry-fst"
+          ]
+        },
+        {
+          "id": "language",
+          "answer_id": "ca.express_entry_fst_language",
+          "question": "برای گفتار/شنیدارحداقلCLB/NCLC5 و خواندن/نوشتنحداقل4 در آزمون معتبرِ کمتر ازدوسال داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ca-express-entry-fst",
+            "primary26:ca-language"
+          ]
+        },
+        {
+          "id": "funds",
+          "answer_id": "ca.express_entry_fst_funds",
+          "question": "تمکن یا معافیت معتبر، پذیرش مهاجرتی و اقامت خارج کبک بررسی شده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ca-express-entry-fst"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "nz:partner-resident-visa",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "adult",
+          "answer_id": "nz.partner_resident_visa_adult",
+          "question": "خودت هنگام درخواست حداقل۱۸سال داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nz-partner-resident-visa"
+          ],
+          "profile_rule": {
+            "field": "age_exact",
+            "operator": "gte",
+            "value": 18,
+            "scope_fa": "فقط سن متقاضی اصلی در زمان درخواست؛ سن شریک شرط جداست."
+          }
+        },
+        {
+          "id": "partner",
+          "answer_id": "nz.partner_resident_visa_partner",
+          "question": "شریک واجد حمایت، شهروند یا مقیم نیوزیلند است و خودش حداقل۱۸سال دارد؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nz-partner-resident-visa"
+          ]
+        },
+        {
+          "id": "cohabitation",
+          "answer_id": "nz.partner_resident_visa_cohabitation",
+          "question": "پس از۱۸سالگی هر دو، دست‌کم۱۲ماه باهم در رابطهٔ واقعی و پایدار زندگی کرده‌اید؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nz-partner-resident-visa"
+          ]
+        },
+        {
+          "id": "sponsor",
+          "answer_id": "nz.partner_resident_visa_sponsor",
+          "question": "محدودیت حمایت پنج‌ساله/تعداد حمایت‌های قبلی و سلامت و شخصیت بررسی شده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nz-partner-resident-visa"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ke:class-k-ordinary-residents-permit",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ اعلامی: بررسی۲۰هزارKES غیرقابل‌استرداد و صدور۲۵۰هزارKES درسال؛ معافیت EAC به ایرانی تعمیم ندارد.",
+      "cost_source_ids": [
+        "primary26:ke-class-k-ordinary-residents-permit"
+      ],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "age",
+          "answer_id": "ke.class_k_ordinary_residents_permit_age",
+          "question": "حداقل۳۵سال داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-class-k-ordinary-residents-permit"
+          ],
+          "profile_rule": {
+            "field": "age_exact",
+            "operator": "gte",
+            "value": 35,
+            "scope_fa": "سن متقاضی اصلی Class K."
+          }
+        },
+        {
+          "id": "income",
+          "answer_id": "ke.class_k_ordinary_residents_permit_income",
+          "question": "درآمد تضمین‌شدهٔ سالانه حداقل۲۴هزارUSD از منبع مجاز، در اختیار آزاد خودت، قابل اثبات است؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-class-k-ordinary-residents-permit"
+          ]
+        },
+        {
+          "id": "origin",
+          "answer_id": "ke.class_k_ordinary_residents_permit_origin",
+          "question": "منشأ درآمد خارج کنیا یا مستمری/سالانهٔ مجاز و امکان انتقال آن را مستند کرده‌ای؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-class-k-ordinary-residents-permit"
+          ]
+        },
+        {
+          "id": "documents",
+          "answer_id": "ke.class_k_ordinary_residents_permit_documents",
+          "question": "فرم۲۵، گذرنامه، نامه و مدرک درآمد آماده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-class-k-ordinary-residents-permit"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ke:class-g-trade-business-permit",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "capital",
+          "answer_id": "ke.class_g_trade_business_permit_capital",
+          "question": "مدرک سرمایهٔ قابل‌سرمایه‌گذاری حداقل۱۰۰هزارUSD برای کسب‌وکار داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-class-g-trade-business-permit"
+          ]
+        },
+        {
+          "id": "company",
+          "answer_id": "ke.class_g_trade_business_permit_company",
+          "question": "ثبت شرکت، سهامداران CR12 و PIN شرکت و فرد آماده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-class-g-trade-business-permit"
+          ]
+        },
+        {
+          "id": "tax",
+          "answer_id": "ke.class_g_trade_business_permit_tax",
+          "question": "گواهی مالیاتی معتبر و فرم‌های۲۵و۲۷ متناسب درخواست را داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-class-g-trade-business-permit"
+          ]
+        },
+        {
+          "id": "renewal",
+          "answer_id": "ke.class_g_trade_business_permit_renewal",
+          "question": "برای تمدید، حسابرسی دوسال پیش و مدارک مالیاتی فرد و شرکت آماده است؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-class-g-trade-business-permit"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ke:class-d-work-permit",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "offer",
+          "answer_id": "ke.class_d_work_permit_offer",
+          "question": "کارفرمای مشخص برای شغل مشخص به تو پیشنهاد داده است؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-class-d-work-permit"
+          ]
+        },
+        {
+          "id": "labour",
+          "answer_id": "ke.class_d_work_permit_labour",
+          "question": "کارفرما نیاز به مهارت تو و ناموفق‌بودن جذب داخلی را مستند می‌کند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-class-d-work-permit"
+          ]
+        },
+        {
+          "id": "understudy",
+          "answer_id": "ke.class_d_work_permit_understudy",
+          "question": "نیروی کنیاییِ جانشین آموزشی و مدارک حرفه‌ای هر دو مشخص‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-class-d-work-permit"
+          ]
+        },
+        {
+          "id": "documents",
+          "answer_id": "ke.class_d_work_permit_documents",
+          "question": "ثبت و مالیات کارفرما، مدارک تحصیلی/حرفه‌ای و ترجمه‌های مجاز آماده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-class-d-work-permit"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ke:students-pass",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "admission",
+          "answer_id": "ke.students_pass_admission",
+          "question": "مؤسسهٔ آموزشی ثبت‌شده تو را برای دورهٔ مشخص پذیرفته است؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-students-pass"
+          ]
+        },
+        {
+          "id": "institution",
+          "answer_id": "ke.students_pass_institution",
+          "question": "فرم۳۰ و نامهٔ دوره و مدت تحصیل را مؤسسه تأیید می‌کند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-students-pass"
+          ]
+        },
+        {
+          "id": "funds",
+          "answer_id": "ke.students_pass_funds",
+          "question": "حمایت مالی مستند یا تمکن خودپرداخت و گذرنامهٔ معتبر داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-students-pass"
+          ]
+        },
+        {
+          "id": "documents",
+          "answer_id": "ke.students_pass_documents",
+          "question": "برای بزرگسال گواهی پلیس و برای خردسال رضایت/اسناد والدین بررسی شده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ke-students-pass"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "sg:employment-pass",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "salary",
+          "answer_id": "sg.employment_pass_salary",
+          "question": "حقوق ثابت پیشنهادی با جدول سن/بخش EP تطبیق دارد؛ پایهٔ فعلی۵۶۰۰یا۶۲۰۰SGD حد همگانی نیست؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-employment-pass"
+          ]
+        },
+        {
+          "id": "compass",
+          "answer_id": "sg.employment_pass_compass",
+          "question": "حداقل۴۰امتیاز COMPASS یا معافیت مستند داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-employment-pass"
+          ]
+        },
+        {
+          "id": "advertising",
+          "answer_id": "sg.employment_pass_advertising",
+          "question": "کارفرما الزام آگهی و بررسی منصفانهٔ نیروهای داخلی را رعایت کرده است؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-employment-pass"
+          ]
+        },
+        {
+          "id": "effective",
+          "answer_id": "sg.employment_pass_effective",
+          "question": "برای درخواست از۱ژانویه۲۰۲۷ و تمدیدهای مشمول۲۰۲۸، جدول جدید جدا لحاظ شده؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-employment-pass"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "sg:s-pass",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "offer",
+          "answer_id": "sg.s_pass_offer",
+          "question": "پیشنهاد کار در سنگاپور داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-s-pass"
+          ]
+        },
+        {
+          "id": "salary",
+          "answer_id": "sg.s_pass_salary",
+          "question": "حقوق ثابت با سن و بخش تطبیق دارد؛ پایه۳۳۰۰یا۳۸۰۰SGD را حد همهٔ سنین فرض نکرده‌ای؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-s-pass"
+          ]
+        },
+        {
+          "id": "effective",
+          "answer_id": "sg.s_pass_effective",
+          "question": "تاریخ درخواست/تمدید با جدول افزایش از۲۰۲۷/۲۰۲۸ تطبیق داده شده؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-s-pass"
+          ]
+        },
+        {
+          "id": "quota",
+          "answer_id": "sg.s_pass_quota",
+          "question": "سهمیه و levy کارفرما در صفحهٔ جداگانه بررسی می‌شوند؛ صرف حقوق کافی نیست؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-s-pass"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "sg:personalised-employment-pass",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "salary",
+          "answer_id": "sg.personalised_employment_pass_salary",
+          "question": "حقوق ثابت ماهانهٔ واجد شرایط حداقل۲۲۵۰۰SGD داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-personalised-employment-pass"
+          ]
+        },
+        {
+          "id": "recent",
+          "answer_id": "sg.personalised_employment_pass_recent",
+          "question": "اگر متقاضی خارج سنگاپوری هستی، آخرین حقوق در شش ماه پیش از درخواست بوده؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-personalised-employment-pass"
+          ]
+        },
+        {
+          "id": "maintenance",
+          "answer_id": "sg.personalised_employment_pass_maintenance",
+          "question": "برای حفظ مجوز، بیش ازشش‌ماه بیکار نمی‌مانی و حداقل۲۷۰هزارSGD حقوق ثابت سالانهٔ مشمول را تأمین می‌کنی؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-personalised-employment-pass"
+          ]
+        },
+        {
+          "id": "exclusions",
+          "answer_id": "sg.personalised_employment_pass_exclusions",
+          "question": "فریلنسر، کسب‌وکار شخصی یا شریک/مدیر سهامدارِ غیرمجاز نیستی و شغلت در فهرست ممنوع قرار ندارد؟",
+          "reason": "PEP اجازهٔ کارآفرینی یا فعالیت آزاد نامشمول نمی‌دهد؛ شاخهٔ قدیمی پیش ازسپتامبر۲۰۲۳ شروط حفظ متفاوت دارد.",
+          "action": "نوع فعالیت و شروط حفظ مجوز را پیش از تغییر کار بررسی کن.",
+          "source_ids": [
+            "primary26:sg-personalised-employment-pass"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "sg:one-pass",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "branch",
+          "answer_id": "sg.one_pass_branch",
+          "question": "شاخهٔ حقوق قبلی، پیشنهاد آینده یا دستاورد ممتاز را انتخاب و تمام شروط همان شاخه را مستند کرده‌ای؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-one-pass"
+          ]
+        },
+        {
+          "id": "salary",
+          "answer_id": "sg.one_pass_salary",
+          "question": "در شاخهٔ حقوق،۳۰هزارSGD ثابت ماهانه و بازه/کارفرمای لازم را داری؛ جمع چندحقوق را بی‌قید حساب نکرده‌ای؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-one-pass"
+          ]
+        },
+        {
+          "id": "company",
+          "answer_id": "sg.one_pass_company",
+          "question": "شرکت مشمول، معیار۵۰۰میلیونUSD ارزش یا۲۰۰میلیونUSD درآمد و شروط زمانی را دارد؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-one-pass"
+          ]
+        },
+        {
+          "id": "future",
+          "answer_id": "sg.one_pass_future",
+          "question": "مسیر AI/Tech اعلام‌شده برای۲۸ژانویه۲۰۲۷ را با امکان فعلی اشتباه نگرفته‌ای؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-one-pass"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "sg:entrepass",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "company",
+          "answer_id": "sg.entrepass_company",
+          "question": "شرکت خصوصی ACRA دارای فناوری نوآور یا پشتوانهٔ سرمایه‌گذاری را تأسیس می‌کنی و حداقل۳۰٪سهم داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-entrepass"
+          ]
+        },
+        {
+          "id": "criterion",
+          "answer_id": "sg.entrepass_criterion",
+          "question": "حداقل یکی از معیارهای سرمایه‌گذاری، شتاب‌دهنده، فروش شرکت، مالکیت فکری یا پژوهشِ موردقبول را مستند می‌کنی؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-entrepass"
+          ]
+        },
+        {
+          "id": "age",
+          "answer_id": "sg.entrepass_age",
+          "question": "اگر شرکت بیش از۱۲ماه عمر دارد، معیارهای تمدید را هم بررسی کرده‌ای؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-entrepass"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "sg:dependants-pass",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "sponsor",
+          "answer_id": "sg.dependants_pass_sponsor",
+          "question": "حامی دارای EPیاS Pass با حقوق ثابت شخصی حداقل۶هزارSGD و حمایت شرکت ثبت‌شده است؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-dependants-pass"
+          ]
+        },
+        {
+          "id": "relationship",
+          "answer_id": "sg.dependants_pass_relationship",
+          "question": "رابطه، همسر قانونی یا فرزند مجرد زیر۲۱سالِ مشمول است؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-dependants-pass"
+          ]
+        },
+        {
+          "id": "exceptions",
+          "answer_id": "sg.dependants_pass_exceptions",
+          "question": "شروط متفاوت ONE/EntrePass و استثنای ICT را جدا بررسی کرده‌ای؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:sg-dependants-pass"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "nl:highly-skilled-migrant",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "offer",
+          "answer_id": "nl.highly_skilled_migrant_offer",
+          "question": "قرارداد با کارفرما یا مؤسسهٔ هلندیِ حامی شناخته‌شدهٔ IND داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nl-highly-skilled-migrant"
+          ]
+        },
+        {
+          "id": "salary",
+          "answer_id": "nl.highly_skilled_migrant_salary",
+          "question": "آستانهٔ جاریِ متناسب با سن/شاخه و نرخ متعارف بازار رعایت شده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nl-highly-skilled-migrant"
+          ]
+        },
+        {
+          "id": "profession",
+          "answer_id": "nl.highly_skilled_migrant_profession",
+          "question": "اگر حرفهٔ درمانی مشمول است، ثبت لازم BIG را داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nl-highly-skilled-migrant"
+          ]
+        },
+        {
+          "id": "procedure",
+          "answer_id": "nl.highly_skilled_migrant_procedure",
+          "question": "شرایط عمومی، MVV یا معافیت معتبر و دامنهٔ متفاوت انتقال درون‌شرکتی بررسی شده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nl-highly-skilled-migrant"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "nl:eu-blue-card-nl",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "qualification",
+          "answer_id": "nl.eu_blue_card_nl_qualification",
+          "question": "مدرک مرتبط حداقل سه‌ساله با ارزیابی لازم، یا تجربهٔ مرتبطِ جایگزین قانونی داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nl-eu-blue-card-nl"
+          ]
+        },
+        {
+          "id": "ict",
+          "answer_id": "nl.eu_blue_card_nl_ict",
+          "question": "اگر از استثنای IT استفاده می‌کنی، سه‌سال تجربه در هفت‌سال اخیر مستند است؛ برای بقیه حدپنج‌سال جدا بررسی شده؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nl-eu-blue-card-nl"
+          ]
+        },
+        {
+          "id": "contract",
+          "answer_id": "nl.eu_blue_card_nl_contract",
+          "question": "قرارداد کار تخصصی حداقل شش‌ماهه با شرکت فعال داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nl-eu-blue-card-nl"
+          ]
+        },
+        {
+          "id": "salary",
+          "answer_id": "nl.eu_blue_card_nl_salary",
+          "question": "شرط درآمد جاری و مجوز حرفه بررسی شده‌اند؛ recognised sponsor الزامیِ عمومی این کارت فرض نشده؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nl-eu-blue-card-nl"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "nl:student-nl",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "admission",
+          "answer_id": "nl.student_nl_admission",
+          "question": "ثبت‌نام یا پذیرش موقت در دورهٔ تمام‌وقتِ تأییدشده و مؤسسهٔ حامی شناخته‌شده داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nl-student-nl"
+          ]
+        },
+        {
+          "id": "funds",
+          "answer_id": "nl.student_nl_funds",
+          "question": "شرط مالی جاریِ تحصیل را جدا از شهریه بررسی کرده‌ای؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nl-student-nl"
+          ]
+        },
+        {
+          "id": "progress",
+          "answer_id": "nl.student_nl_progress",
+          "question": "قاعدهٔ پیشرفت حداقل۵۰٪واحد سالانه و عذرهای قابل‌بررسی مؤسسه را می‌دانی؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nl-student-nl"
+          ]
+        },
+        {
+          "id": "procedure",
+          "answer_id": "nl.student_nl_procedure",
+          "question": "درخواست توسط مؤسسه، ترجمه/تأیید مدارک و MVV یا معافیت بررسی شده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:nl-student-nl"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "at:startup-founder-austria",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "innovation",
+          "answer_id": "at.startup_founder_austria_innovation",
+          "question": "شرکت برای عرضهٔ محصول/خدمت/فناوری نوآور و طرح تجاری منسجم داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:at-startup-founder-austria"
+          ]
+        },
+        {
+          "id": "control",
+          "answer_id": "at.startup_founder_austria_control",
+          "question": "خودت در مدیریت شرکت نفوذ کنترل‌کننده داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:at-startup-founder-austria"
+          ]
+        },
+        {
+          "id": "capital",
+          "answer_id": "at.startup_founder_austria_capital",
+          "question": "حداقل۳۰هزارEUR سرمایهٔ شرکت با حداقل۵۰٪آوردهٔ مالکانه مستند است؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:at-startup-founder-austria"
+          ]
+        },
+        {
+          "id": "points",
+          "answer_id": "at.startup_founder_austria_points",
+          "question": "حداقل۵۰امتیاز طبق جدول مخصوص همین شاخه و مدارک آن داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:at-startup-founder-austria"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "at:eu-blue-card-austria",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "qualification",
+          "answer_id": "at.eu_blue_card_austria_qualification",
+          "question": "تحصیل عالی حداقل سه‌ساله یا استثنای تجربهٔ ICTِ سه‌سال در هفت‌سال را مستند می‌کنی؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:at-eu-blue-card-austria"
+          ]
+        },
+        {
+          "id": "offer",
+          "answer_id": "at.eu_blue_card_austria_offer",
+          "question": "پیشنهاد الزام‌آور کار متناسب با صلاحیت داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:at-eu-blue-card-austria"
+          ]
+        },
+        {
+          "id": "salary",
+          "answer_id": "at.eu_blue_card_austria_salary",
+          "question": "حقوق ناخالص سالانه۲۰۲۶ با پرداخت‌های ویژه حداقل۵۵۶۷۸EUR است؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:at-eu-blue-card-austria"
+          ]
+        },
+        {
+          "id": "labour",
+          "answer_id": "at.eu_blue_card_austria_labour",
+          "question": "آزمون بازارکار AMS و مجوز حرفه/اسناد درخواست بررسی شده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:at-eu-blue-card-austria"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "se:eu-blue-card-sweden",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "qualification",
+          "answer_id": "se.eu_blue_card_sweden_qualification",
+          "question": "تحصیلات معادل۱۸۰ECTS یا حداقل پنج‌سال تجربهٔ حرفه‌ای مرتبط داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:se-eu-blue-card-sweden"
+          ]
+        },
+        {
+          "id": "contract",
+          "answer_id": "se.eu_blue_card_sweden_contract",
+          "question": "قرارداد امضاشدهٔ کار تخصصی حداقل شش‌ماه داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:se-eu-blue-card-sweden"
+          ]
+        },
+        {
+          "id": "salary",
+          "answer_id": "se.eu_blue_card_sweden_salary",
+          "question": "حقوق ماهانه با آستانهٔ۵۳۶۲۵SEK از۱۵ژوئیه۲۰۲۶ تطبیق دارد؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:se-eu-blue-card-sweden"
+          ]
+        },
+        {
+          "id": "insurance",
+          "answer_id": "se.eu_blue_card_sweden_insurance",
+          "question": "بیمهٔ جامع لازم و گذرنامهٔ معتبر برای مدت مجوز را داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:se-eu-blue-card-sweden"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "se:self-employment-sweden",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "control",
+          "answer_id": "se.self_employment_sweden_control",
+          "question": "خودت مسئول اصلی ادارهٔ کسب‌وکار و مالک حداقل۵۱٪هستی؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:se-self-employment-sweden"
+          ]
+        },
+        {
+          "id": "experience",
+          "answer_id": "se.self_employment_sweden_experience",
+          "question": "تجربهٔ صنعت/ادارهٔ شرکت و زبان سوئدی یا انگلیسی متناسب داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:se-self-employment-sweden"
+          ]
+        },
+        {
+          "id": "business",
+          "answer_id": "se.self_employment_sweden_business",
+          "question": "طرح مالی معتبر، شبکهٔ مشتری و سرمایهٔ مستقل اجرای کسب‌وکار مستند است؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:se-self-employment-sweden"
+          ]
+        },
+        {
+          "id": "maintenance",
+          "answer_id": "se.self_employment_sweden_maintenance",
+          "question": "برای دوسال،۲۰۰هزارSEK خودت،۱۰۰هزارهمسر و۵۰هزارهرکودک با امکان انتقال قانونی آماده است؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:se-self-employment-sweden"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "hk:general-employment-policy",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "vacancy",
+          "answer_id": "hk.general_employment_policy_vacancy",
+          "question": "شغل واقعی و پیشنهاد قطعیِ مرتبط با مدرک یا تجربهٔ تو داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:hk-general-employment-policy"
+          ]
+        },
+        {
+          "id": "local",
+          "answer_id": "hk.general_employment_policy_local",
+          "question": "کارفرما نبود نیروی محلیِ به‌آسانی قابل جذب و تخصص موردنیاز را توضیح می‌دهد؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:hk-general-employment-policy"
+          ]
+        },
+        {
+          "id": "qualification",
+          "answer_id": "hk.general_employment_policy_qualification",
+          "question": "مدرک مرتبط یا استثنای مستندِ مهارت/تجربه داری و مزایا متناسب با بازارند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:hk-general-employment-policy"
+          ]
+        },
+        {
+          "id": "scope",
+          "answer_id": "hk.general_employment_policy_scope",
+          "question": "شاخهٔ خاص GEP(TP) و محدودیت تابعیت/شخصیت را با GEPعمومی قاطی نکرده‌ای؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:hk-general-employment-policy"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "hk:top-talent-pass-scheme",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "category",
+          "answer_id": "hk.top_talent_pass_scheme_category",
+          "question": "یکی از شاخه‌های Aدرآمد یا B/Cدانشگاه مشمول را دقیق انتخاب کرده‌ای؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:hk-top-talent-pass-scheme"
+          ]
+        },
+        {
+          "id": "income",
+          "answer_id": "hk.top_talent_pass_scheme_income",
+          "question": "در شاخهA، درآمد سال بلافاصله قبل حداقل۲٫۵میلیونHKD و تعریف درآمدِ مشمول را مستند می‌کنی؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:hk-top-talent-pass-scheme"
+          ]
+        },
+        {
+          "id": "degree",
+          "answer_id": "hk.top_talent_pass_scheme_degree",
+          "question": "در شاخهB/C، مدرک/دانشگاه، بازهٔ پنج‌ساله، سابقه و سهمیهٔ مخصوص شاخه بررسی شده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:hk-top-talent-pass-scheme"
+          ]
+        },
+        {
+          "id": "security",
+          "answer_id": "hk.top_talent_pass_scheme_security",
+          "question": "شرایط عمومی امنیت/سوءپیشینه و محدودیت تابعیت همین برنامه بررسی شده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:hk-top-talent-pass-scheme"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "hk:capital-investment-entrant-scheme",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "identity",
+          "answer_id": "hk.capital_investment_entrant_scheme_identity",
+          "question": "این پرونده واقعاً مشمول برنامهٔ قدیمی است و با New CIESبرنامهٔ جدا اشتباه نشده؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:hk-capital-investment-entrant-scheme"
+          ]
+        }
+      ],
+      "availability": {
+        "state": "legacy_only",
+        "reason_fa": "CIES قدیمی از۱۵ژانویه۲۰۱۵ پذیرش درخواست جدید ندارد. New CIES از۱مارس۲۰۲۴ هویت و شروط جدا دارد؛ این ردیف برای تازه‌وارد باز تلقی نمی‌شود.",
+        "effective_from": "2015-01-15",
+        "source_ids": [
+          "primary26:hk-capital-investment-entrant-scheme"
+        ]
+      }
+    },
+    {
+      "route_id": "ar:migrant-worker-temporary-residence",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "این بسته تمام قوانین، استثناها یا مدارک مسیر را تأیید نمی‌کند؛ خوداظهاری و سازگاری چند شرط، احراز صلاحیت رسمی نیست.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "entry",
+          "answer_id": "ar.migrant_worker_temporary_residence_entry",
+          "question": "ورود قانونی و نشانی محل اقامت در آرژانتین را داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ar-migrant-worker-temporary-residence"
+          ]
+        },
+        {
+          "id": "contract",
+          "answer_id": "ar.migrant_worker_temporary_residence_contract",
+          "question": "پیش‌قرارداد با وظایف، ساعات، مدت، محل و حقوق متناسب قراردادجمعی داری؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ar-migrant-worker-temporary-residence"
+          ]
+        },
+        {
+          "id": "employer",
+          "answer_id": "ar.migrant_worker_temporary_residence_employer",
+          "question": "شناسهٔ مالیاتی و ثبت/تعهدهای کارفرمای استخدام‌کننده بررسی شده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ar-migrant-worker-temporary-residence"
+          ]
+        },
+        {
+          "id": "documents",
+          "answer_id": "ar.migrant_worker_temporary_residence_documents",
+          "question": "گذرنامه، سوابق کیفریِ لازم و تأیید/ترجمهٔ مدارک آماده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:ar-migrant-worker-temporary-residence"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "jp:specified-skilled-worker-1",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "بررسی جزئیِ شروط مستند همین برنامه برای متقاضی اصلی؛ شمول محل درخواست و وضعیت فرد جدا بررسی می‌شود.",
+      "limits_fa": "شرط‌های جزئیِ SSW(i)؛ نمره/نوع آزمون مخصوص حوزه، محل آزمون و تمام شرایط درخواست هنوز به‌صورت کامل پوشش داده نشده‌اند.",
+      "costs_fa": "هزینهٔ نهایی و تمکن با تعداد همراه، نوع درخواست و تاریخ اقدام جدا بررسی می‌شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق و شروط همراه از پروندهٔ متقاضی اصلی مستقل است؛ خودکار تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "field",
+          "answer_id": "jp.specified_skilled_worker_1_field",
+          "question": "فعالیتت در یکی از حوزه‌های مجاز SSW(i) است؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:jp-specified-skilled-worker-1"
+          ]
+        },
+        {
+          "id": "conditions",
+          "answer_id": "jp.specified_skilled_worker_1_conditions",
+          "question": "قرارداد، حقوق هم‌تراز کارگر ژاپنی و حمایت الزامی کارفرما بررسی شده‌اند؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:jp-specified-skilled-worker-1"
+          ]
+        },
+        {
+          "id": "duration",
+          "answer_id": "jp.specified_skilled_worker_1_duration",
+          "question": "سقف مجموع پنج‌سال و نبود حق آوردن خانواده در نوع(i) را لحاظ کرده‌ای؟",
+          "reason": "این معیار فقط با دامنه و استثناهای منبع همین مسیر تطبیق داده می‌شود.",
+          "action": "مدرک و پاسخ همین شرط را با مرجع پیوندشده بررسی کن.",
+          "source_ids": [
+            "primary26:jp-specified-skilled-worker-1"
+          ]
+        },
+        {
+          "id": "tests",
+          "answer_id": "jp.ssw_tests",
+          "question": "آزمون ژاپنی و مهارت حوزه را گذرانده‌ای یا معافیت تکمیل موفق کارآموزی(ii) را داری؛ برای تغییرحوزه آزمون جدید بررسی شده؟",
+          "reason": "آزمون‌ها و معافیت‌ها به حوزه و سابقهٔ دقیق وابسته‌اند.",
+          "action": "گواهی آزمون یا مبنای معافیت را از مرجع همان حوزه بررسی کن.",
+          "source_ids": [
+            "primary26:jp-ssw-tests"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "mt:nomad-residence-permit",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "متقاضی اصلی Nomad، طبق فهرست ملیت‌های FAQ؛ دامنهٔ محصول دارندهٔ گذرنامهٔ ایران است.",
+      "limits_fa": "این ممنوعیت با داشتن بودجه یا دورکاری رفع‌شده فرض نمی‌شود؛ تغییر تابعیت/روابط یا تغییر آیندهٔ فهرست بررسی مستقل لازم دارد.",
+      "costs_fa": "هزینه برای فردی که در دامنهٔ ملیت‌های غیرمجاز است محاسبه نمی‌شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "مجوز همراه مبنای مستقل ورود متقاضی اصلی نیست.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "nationality",
+          "answer_id": "mt.nomad_nationality",
+          "question": "آیا ملیت و روابط نزدیک تو خارج از فهرست غیرمجازِ جاری‌اند؟",
+          "reason": "FAQ ملیت یا روابط نزدیک با ایران را در فهرست غیرمجاز آورده است.",
+          "action": "پیش از هر هزینه، دامنهٔ ملیت و روابط و فهرست جاریِ نهاد صادرکننده بررسی شود.",
+          "source_ids": [
+            "primary26:mt-nomad"
+          ]
+        }
+      ],
+      "availability": {
+        "state": "iran_passport_restricted",
+        "reason_fa": "FAQ جاری Nomad مالت، اتباع یا افراد دارای روابط نزدیک با ایران را غیرمجاز می‌داند؛ این ردیف برای دارندهٔ گذرنامهٔ ایران مسیر عادی تلقی نمی‌شود.",
+        "source_ids": [
+          "primary26:mt-nomad"
+        ]
+      }
+    },
+    {
+      "route_id": "cl:temporary-residence-student",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "شرط‌های جزئیِ مستند همین برنامه؛ مرحله و شاخهٔ درخواست فرد باید جدا تطبیق داده شود.",
+      "limits_fa": "پوشش همهٔ شروط و استثناها تأیید نشده است؛ این بسته نتیجهٔ رسمی صلاحیت نیست.",
+      "costs_fa": "هزینه و تمکنِ جاری و همراهان جدا بررسی شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "شروط و مجوز همراه جدا ارزیابی می‌شوند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "criterion_0",
+          "answer_id": "cl.temporary_residence_student_0",
+          "question": "برای دورهٔ مؤسسهٔ شناخته‌شده، گواهی ثبت‌نام/دانشجوی منظم داری؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:cl-temporary-residence-student"
+          ]
+        },
+        {
+          "id": "criterion_1",
+          "answer_id": "cl.temporary_residence_student_1",
+          "question": "از خارج شیلی درخواست می‌دهی و گذرنامه دست‌کم یک‌سال اعتبار دارد؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:cl-temporary-residence-student"
+          ]
+        },
+        {
+          "id": "criterion_2",
+          "answer_id": "cl.temporary_residence_student_2",
+          "question": "منابع مالی، حواله یا بورسیهٔ دارای مدت و پوشش مشخص داری؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:cl-temporary-residence-student"
+          ]
+        },
+        {
+          "id": "criterion_3",
+          "answer_id": "cl.temporary_residence_student_3",
+          "question": "گواهی کیفریِ لازم، اعتبار مدارک و ترجمه/تأیید رسمی را بررسی کرده‌ای؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:cl-temporary-residence-student"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "cl:temporary-residence-family-reunification",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "شرط‌های جزئیِ مستند همین برنامه؛ مرحله و شاخهٔ درخواست فرد باید جدا تطبیق داده شود.",
+      "limits_fa": "پوشش همهٔ شروط و استثناها تأیید نشده است؛ این بسته نتیجهٔ رسمی صلاحیت نیست.",
+      "costs_fa": "هزینه و تمکنِ جاری و همراهان جدا بررسی شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "شروط و مجوز همراه جدا ارزیابی می‌شوند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "criterion_0",
+          "answer_id": "cl.temporary_residence_family_reunification_0",
+          "question": "حامی، شهروند شیلی یا دارندهٔ اقامت قطعی است؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:cl-temporary-residence-family-reunification"
+          ]
+        },
+        {
+          "id": "criterion_1",
+          "answer_id": "cl.temporary_residence_family_reunification_1",
+          "question": "رابطهٔ مشمول همسر/معادل قانونی، والد، کودک یا فرزندِ واجد استثنای سن/تحصیل/معلولیت را مستند می‌کنی؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:cl-temporary-residence-family-reunification"
+          ]
+        },
+        {
+          "id": "criterion_2",
+          "answer_id": "cl.temporary_residence_family_reunification_2",
+          "question": "مدرک رابطه، هویت و سوابق لازم متناسب درخواست داخل یا خارج شیلی آماده‌اند؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:cl-temporary-residence-family-reunification"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ar:family-reunification-residence",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "شرط‌های جزئیِ مستند همین برنامه؛ مرحله و شاخهٔ درخواست فرد باید جدا تطبیق داده شود.",
+      "limits_fa": "پوشش همهٔ شروط و استثناها تأیید نشده است؛ این بسته نتیجهٔ رسمی صلاحیت نیست.",
+      "costs_fa": "هزینه و تمکنِ جاری و همراهان جدا بررسی شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "شروط و مجوز همراه جدا ارزیابی می‌شوند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "criterion_0",
+          "answer_id": "ar.family_reunification_residence_0",
+          "question": "همسر/والد/فرزندِ شهروند آرژانتین یا عضو خانوادهٔ مشمولِ مقیم موقت/دائم هستی؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:ar-family-reunification-residence"
+          ]
+        },
+        {
+          "id": "criterion_1",
+          "answer_id": "ar.family_reunification_residence_1",
+          "question": "برای فرزند مقیم خارجی، مجردبودن/سن یا استثنای قانونی مربوط بررسی شده است؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:ar-family-reunification-residence"
+          ]
+        },
+        {
+          "id": "criterion_2",
+          "answer_id": "ar.family_reunification_residence_2",
+          "question": "ورود قانونی، نشانی، مدرک تأییدشدهٔ رابطه و مدارک هویت/کیفری لازم را داری؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:ar-family-reunification-residence"
+          ]
+        },
+        {
+          "id": "criterion_3",
+          "answer_id": "ar.family_reunification_residence_3",
+          "question": "برای خردسال، رضایت و نمایندگی/سرپرستی متناسب با محل والدین آماده است؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:ar-family-reunification-residence"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "uy:residencia-temporaria",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "شرط‌های جزئیِ مستند همین برنامه؛ مرحله و شاخهٔ درخواست فرد باید جدا تطبیق داده شود.",
+      "limits_fa": "پوشش همهٔ شروط و استثناها تأیید نشده است؛ این بسته نتیجهٔ رسمی صلاحیت نیست.",
+      "costs_fa": "هزینه و تمکنِ جاری و همراهان جدا بررسی شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "شروط و مجوز همراه جدا ارزیابی می‌شوند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "criterion_0",
+          "answer_id": "uy.residencia_temporaria_0",
+          "question": "مبنای کار، تحصیل یا فعالیت قانونیِ اقامت شش‌ماهه تا دوساله‌ات روشن است؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:uy-residencia-temporaria"
+          ]
+        },
+        {
+          "id": "criterion_1",
+          "answer_id": "uy.residencia_temporaria_1",
+          "question": "اگر برای ورود ویزا لازم است، ویزا و مدرک ورودت معتبرند؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:uy-residencia-temporaria"
+          ]
+        },
+        {
+          "id": "criterion_2",
+          "answer_id": "uy.residencia_temporaria_2",
+          "question": "گواهی کیفریِ کشورهای مشمول، واکسیناسیون و کارت سلامت محلی آماده‌اند؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:uy-residencia-temporaria"
+          ]
+        },
+        {
+          "id": "criterion_3",
+          "answer_id": "uy.residencia_temporaria_3",
+          "question": "فعالیت/معیشت، تأیید و ترجمهٔ مدارک و مترجم در صورت ندانستن اسپانیایی فراهم است؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:uy-residencia-temporaria"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "mu:premium-visa",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "شرط‌های جزئیِ مستند همین برنامه؛ مرحله و شاخهٔ درخواست فرد باید جدا تطبیق داده شود.",
+      "limits_fa": "پوشش همهٔ شروط و استثناها تأیید نشده است؛ این بسته نتیجهٔ رسمی صلاحیت نیست.",
+      "costs_fa": "هزینه و تمکنِ جاری و همراهان جدا بررسی شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "شروط و مجوز همراه جدا ارزیابی می‌شوند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "criterion_0",
+          "answer_id": "mu.premium_visa_0",
+          "question": "کار و منبع درآمد/سودت خارج موریس است و وارد بازارکار محلی نمی‌شوی؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:mu-premium-visa"
+          ]
+        },
+        {
+          "id": "criterion_1",
+          "answer_id": "mu.premium_visa_1",
+          "question": "بیمهٔ سفر و درمان، اقامت و هدف حضورِ طولانی را مستند می‌کنی؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:mu-premium-visa"
+          ]
+        },
+        {
+          "id": "criterion_2",
+          "answer_id": "mu.premium_visa_2",
+          "question": "برای گذرنامهٔ خارج فهرست اولیه، حق ورود توریستی و مسیر ارائهٔ داخل کشور را جدا تأیید کرده‌ای؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:mu-premium-visa"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "mu:retired-non-citizen-residence",
+      "version": "primary-conditions-2026-10-26-1",
+      "scope_fa": "شرط‌های جزئیِ مستند همین برنامه؛ مرحله و شاخهٔ درخواست فرد باید جدا تطبیق داده شود.",
+      "limits_fa": "پوشش همهٔ شروط و استثناها تأیید نشده است؛ این بسته نتیجهٔ رسمی صلاحیت نیست.",
+      "costs_fa": "هزینه و تمکنِ جاری و همراهان جدا بررسی شوند.",
+      "cost_source_ids": [],
+      "dependants_fa": "شروط و مجوز همراه جدا ارزیابی می‌شوند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "criterion_0",
+          "answer_id": "mu.retired_non_citizen_residence_0",
+          "question": "حداقل۵۰سال داری؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:mu-retired-non-citizen-residence"
+          ],
+          "profile_rule": {
+            "field": "age_exact",
+            "operator": "gte",
+            "value": 50,
+            "scope_fa": "حداقل سن متقاضی اصلی اقامت بازنشستگی، نه حداقل سن برای سرمایه‌گذاری یا سایر مجوزهای موریس."
+          }
+        },
+        {
+          "id": "criterion_1",
+          "answer_id": "mu.retired_non_citizen_residence_1",
+          "question": "صورتحساب تأییدشدهٔ حداقل۲۴هزارUSD یا درآمد تضمین‌شدهٔ حداقل۲۰۰۰USDماهانه داری؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:mu-retired-non-citizen-residence"
+          ]
+        },
+        {
+          "id": "criterion_2",
+          "answer_id": "mu.retired_non_citizen_residence_2",
+          "question": "برای تمدید، دسترسی سالانه به۲۴هزارUSD در حساب محلی و شروط جاری را بررسی کرده‌ای؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:mu-retired-non-citizen-residence"
+          ]
+        },
+        {
+          "id": "criterion_3",
+          "answer_id": "mu.retired_non_citizen_residence_3",
+          "question": "در کسب‌وکاری که سرمایه‌گذاری می‌کنی استخدام نمی‌شوی و حقوق/مزایای استخدامی از آن نمی‌گیری؟",
+          "reason": "این شرط فقط در دامنهٔ منبع پیوندشده معتبر است.",
+          "action": "پاسخ و مدرک مرتبط را با مرجع همین مسیر تطبیق بده.",
+          "source_ids": [
+            "primary26:mu-retired-non-citizen-residence"
+          ]
+        }
+      ]
+    }
+  ]
+}

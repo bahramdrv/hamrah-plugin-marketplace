@@ -18,6 +18,7 @@ export function PersonalScreeningView({ screening, print = false, choose, busy =
     <p className="notice">این نسخه برای {screening.reviewed_routes.toLocaleString('fa-IR')} مسیر، مجموعه‌ای از شرط‌های قابل تطبیق با پاسخ‌های تو دارد؛ بقیه هنوز نتیجهٔ فردی ندارند. سازگاری شرط‌های بررسی‌شده، احراز همهٔ شرایط یا احتمال ویزا نیست.</p>
     <dl className="report-costs">{Object.entries(screeningLabels).map(([key, label]) => <div key={key}><dt>{label}</dt><dd>{screening.counts[key as ScreeningStatus].toLocaleString('fa-IR')}</dd></div>)}</dl>
     <details open={print || undefined}><summary>چه چیزی از شرایط من هنوز ارزیابی نشده است؟</summary>
+      {Boolean(screening.profile_criteria_coverage?.age_exact) && <p>سن ثبت‌شده، فعلاً در {screening.profile_criteria_coverage.age_exact.toLocaleString('fa-IR')} شرط مشخص به‌صورت محدود تطبیق داده می‌شود. اگر بازهٔ سنی پاسخ قطعی ندهد، همان شرط نامعلوم می‌ماند.</p>}
       <p>تطبیق خودکار سن، تحصیلات، سابقهٔ کار، زبان، بودجه و زمان‌بندی با شرط‌های اختصاصی تمام مسیرها هنوز پوشش کامل ندارد. برای این معیارها نتیجهٔ مثبت یا منفی نمی‌سازیم. قواعد فعلی، پاسخ‌های تو به شرط‌های مشخص هر مسیر و نسخهٔ منابع همان شرط‌ها را مصرف می‌کنند.</p>
       <p>مسیر فاقد شواهد یا پاسخ کافی، «نامعلوم» می‌ماند؛ نه مناسب تو اعلام می‌شود و نه بی‌دلیل کنار گذاشته می‌شود. فهرست مرجع برای تکمیل شواهد است و معادل مسیرهای ممکن برای تو نیست.</p>
     </details>
@@ -27,7 +28,7 @@ export function PersonalScreeningView({ screening, print = false, choose, busy =
       <ul>{route.reasons.map(reason => <li key={reason}>{reason}</li>)}</ul>
       {Boolean(route.missing_information.length) && <details open={print || undefined}><summary>برای نتیجهٔ شخصی چه چیزی کم است؟</summary><ul>{route.missing_information.map(item => <li key={item}>{item}</li>)}</ul></details>}
       <details open={print || undefined}><summary>منابع و تاریخ همین بررسی</summary><p>تاریخ منبع: <time dateTime={route.source_checked_on}>{date(route.source_checked_on)}</time> · احراز رسمی همهٔ شرایط: نامعلوم</p><ul>{route.source_urls.map(url => <li key={url}><a href={url} target="_blank" rel="noreferrer">مرجع همین مسیر</a></li>)}</ul></details>
-      {choose && route.goal && !['restricted_context', 'not_evaluated'].includes(route.status) && <button className="secondary" disabled={busy} onClick={() => choose(route.id)}>پاسخ به شرط‌های این مسیر</button>}
+      {choose && route.can_answer_conditions && <button className="secondary" disabled={busy} onClick={() => choose(route.id)}>پاسخ به شرط‌های این مسیر</button>}
     </article>)}</div>
     {!shown.length && <p className="notice">در این وضعیت، مسیری ثبت نشده است. مسیرهای نیازمند اطلاعات یا بازبینی را در بخش‌های دیگر همین غربال ببین.</p>}
     {!print && matching.length > 12 && <nav className="catalog-pagination" aria-label="صفحه‌های غربال فردی"><button className="secondary" disabled={!page} onClick={() => turn(page - 1)}>نتایج قبلی</button><span role="status">{(page * 12 + 1).toLocaleString('fa-IR')} تا {Math.min((page + 1) * 12, matching.length).toLocaleString('fa-IR')} از {matching.length.toLocaleString('fa-IR')}</span><button className="secondary" disabled={(page + 1) * 12 >= matching.length} onClick={() => turn(page + 1)}>نتایج بعدی</button></nav>}
