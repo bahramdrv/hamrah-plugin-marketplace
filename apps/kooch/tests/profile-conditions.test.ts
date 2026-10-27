@@ -76,6 +76,16 @@ test('new primary sources reach global personal screening without pruning other 
   }
 });
 
+test('regional alternatives stay within one scoped Belgian check instead of asking all regions as mandatory', async () => {
+  const api = createCompassApi({ snapshot, catalog, now: () => new Date('2026-10-27T12:00:00Z') });
+  const response = await api.POST(new Request('http://localhost/api/compass', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ goal: 'work', destinations: ['be'], focus_route: 'be:single-permit' }) }));
+  const data = await response.json();
+  const questions = data.interview.questions.map((question: { id: string }) => question.id);
+  for (const suffix of ['flanders_medium', 'brussels_market', 'wallonia_general']) assert.ok(!questions.includes(`be.next_single_permit_${suffix}`));
+  const route = data.personal_screening.routes.find((route: { id: string }) => route.id === 'be:single-permit');
+  assert.ok(route.reasons.some((reason: string) => reason.includes('دامنهٔ این بررسی')));
+});
+
 test('dated primary condition packs reference real routes and all sources, with no lost restrictions', async () => {
   const ids = new Set(catalog.routes.map(route => route.id));
   assert.ok(readinessDefinitions.routes.length > 30);
