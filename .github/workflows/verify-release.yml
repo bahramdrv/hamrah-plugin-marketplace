@@ -2,6 +2,7 @@ name: Verify release
 
 on:
   push:
+    branches-ignore: ['kooch-crawl-state']
   pull_request:
   workflow_dispatch:
 

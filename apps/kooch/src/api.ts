@@ -60,11 +60,13 @@ export function createCompassApi(options: { snapshot: unknown; catalog?: unknown
 
 export function evaluateCompass(answers: Answers, options: { snapshot: unknown; catalog?: unknown; readiness?: unknown; blockedRouteIds?: readonly string[]; now?: () => Date; profile?: ScreeningProfile }) {
     const now = options.now ?? (() => new Date());
+    const monitorCatalog = catalogSchema.safeParse(options.catalog);
+    options = { ...options, blockedRouteIds: [...new Set([...(options.blockedRouteIds ?? []), ...(monitorCatalog.success ? monitorCatalog.data.source_monitor?.blocked_route_ids ?? [] : [])])] };
     const parsed = snapshotSchema.safeParse(options.snapshot);
     if (!parsed.success || (parsed.success && Date.parse(parsed.data.retrieved_at) > now().getTime()))
       return { error: 'invalid_snapshot', message: 'دادهٔ معتبر شروع از ایران در دسترس نیست؛ دریافت و بررسی تازه لازم است.' };
     const snapshot = parsed.data;
-    const current = snapshot.routes.filter(r => channelState(r, snapshot, now()) === 'current');
+    const current = snapshot.routes.filter(r => !options.blockedRouteIds?.includes(r.id) && channelState(r, snapshot, now()) === 'current');
     const expired = snapshot.routes.filter(r => channelState(r, snapshot, now()) === 'expired').length;
     const eligibleGoal = (r: PublicRoute) => policies[r.id] && (answers.goal === 'unknown' || policies[r.id].goal === answers.goal || r.id === answers.focus_route);
     const relevant = current.filter(r => eligibleGoal(r) && (!answers.destinations.length || answers.destinations.includes(r.destination) || r.id === answers.focus_route));
@@ -187,6 +189,7 @@ export function evaluateCompass(answers: Answers, options: { snapshot: unknown; 
       official_eligibility: 'not_assessed', policy_version: policyVersion,
       routes, matching_routes: matchingRoutes, restricted_routes: restrictedRoutes, omitted_by_limit: Math.max(0, matchingRoutes.length - routes.length), needs_information: pending.length - ready.length,
       personal_screening: screenPersonalRoutes(answers, catalog, now(), { readiness: readinessInput, blockedRouteIds: options.blockedRouteIds, profile: options.profile ?? screeningProfile(answers) }),
+      source_monitor: catalog?.source_monitor ?? null,
       destination_coverage: answers.destinations.map(code => ({ code, name: countries[code]?.name ?? code,
         catalog: catalog?.routes.filter(route => route.destination === code).length ?? 0,
         matching: matchingRoutes.filter(route => route.destination === code).length,

@@ -1,6 +1,7 @@
 name: Verify Kooch local app
 on:
   push:
+    branches-ignore: ['kooch-crawl-state']
     paths: ['apps/kooch/**', '.github/workflows/verify-kooch.yml']
   pull_request:
     paths: ['apps/kooch/**', '.github/workflows/verify-kooch.yml']
@@ -21,6 +22,7 @@ jobs:
           cache: npm
           cache-dependency-path: apps/kooch/package-lock.json
       - run: npm ci --no-audit --no-fund
+      - run: python3 scripts/source_crawler_test.py
       - run: npm run account:setup
       - run: docker compose --env-file local/.env -f local/compose.yml up -d --wait
       - run: npm run account:migrate

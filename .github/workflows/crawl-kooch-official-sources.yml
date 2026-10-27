@@ -1,0 +1,92 @@
+name: Crawl Kooch official route sources
+on:
+  schedule:
+    - cron: '23 4 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: kooch-official-source-crawler
+  cancel-in-progress: false
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify crawler behavior
+        run: python apps/kooch/scripts/source_crawler_test.py
+      - name: Read previous public crawl state
+        run: |
+          mkdir -p "$RUNNER_TEMP/kooch-crawl-input"
+          python - <<'PY'
+          import pathlib, urllib.request, urllib.error
+          url = 'https://raw.githubusercontent.com/bahramdrv/hamrah-plugin-marketplace/kooch-crawl-state/state.json'
+          import os
+          path = pathlib.Path(os.environ['RUNNER_TEMP']) / 'kooch-crawl-input/state.json'
+          try:
+              with urllib.request.urlopen(url, timeout=25) as response:
+                  value = response.read(12_000_001)
+                  if len(value) > 12_000_000: raise ValueError('State exceeds limit')
+                  path.write_bytes(value)
+          except urllib.error.HTTPError as error:
+              if error.code != 404: raise
+          PY
+      - name: Crawl only sources whose thirty day interval is due
+        run: |
+          python apps/kooch/scripts/source_crawler.py --previous "$RUNNER_TEMP/kooch-crawl-input/state.json" --output "$RUNNER_TEMP/kooch-crawl-output"
+      - name: Publish public source status on isolated data branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          KOOCH_CRAWL_PUBLISH="$(python - <<'PY'
+          import json, os, pathlib
+          p = pathlib.Path(os.environ['RUNNER_TEMP']) / 'kooch-crawl-output/state.json'
+          state = json.loads(p.read_text())
+          print('true' if state['publish_required'] else 'false')
+          PY
+          )"
+          if [ "$KOOCH_CRAWL_PUBLISH" != 'true' ]; then exit 0; fi
+          gh auth setup-git
+          mkdir -p "$RUNNER_TEMP/kooch-crawl-publish"
+          cd "$RUNNER_TEMP/kooch-crawl-publish"
+          git init --initial-branch=kooch-crawl-state
+          git remote add origin 'https://github.com/bahramdrv/hamrah-plugin-marketplace.git'
+          if git ls-remote --exit-code --heads origin kooch-crawl-state; then
+            git fetch --depth=1 origin kooch-crawl-state
+            git checkout -B kooch-crawl-state FETCH_HEAD
+          fi
+          cp "$RUNNER_TEMP/kooch-crawl-output/state.json" state.json
+          cp "$RUNNER_TEMP/kooch-crawl-output/public-status.json" public-status.json
+          python - <<'PY'
+          import json, pathlib
+          config = json.dumps({'git': {'deploymentEnabled': False}}) + '\n'
+          pathlib.Path('vercel.json').write_text(config)
+          pathlib.Path('apps/kooch').mkdir(parents=True, exist_ok=True)
+          pathlib.Path('apps/kooch/vercel.json').write_text(config)
+          PY
+          mkdir -p history
+          python - <<'PY'
+          import json, pathlib
+          state = json.loads(pathlib.Path('state.json').read_text())
+          name = state['generated_at'][:10] + '.json'
+          pathlib.Path('history', name).write_bytes(pathlib.Path('public-status.json').read_bytes())
+          PY
+          git config user.name 'Kooch public source monitor'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add state.json public-status.json history vercel.json apps/kooch/vercel.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh public route source captures; legal review dates unchanged'
+            git push origin HEAD:kooch-crawl-state
+          fi
+      - name: Store bounded public capture and candidates
+        uses: actions/upload-artifact@v4
+        with:
+          name: kooch-official-source-crawl
+          path: ${{ runner.temp }}/kooch-crawl-output/*.json
+          retention-days: 7

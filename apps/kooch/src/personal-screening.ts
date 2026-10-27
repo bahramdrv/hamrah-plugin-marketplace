@@ -65,6 +65,7 @@ export function screenPersonalRoutes(answers: Answers, input: unknown, now: Date
   routes.sort((a, b) => priority[a.status] - priority[b.status] || Number(b.goal === answers.goal) - Number(a.goal === answers.goal) || Number(answers.destinations.includes(b.destination)) - Number(answers.destinations.includes(a.destination)) || a.id.localeCompare(b.id));
   return { version: 'global-personal-screening-1', scope: 'all_indexed_destinations_and_routes' as const,
     total: routes.length, destinations: new Set(routes.map(route => route.destination)).size, counts, routes,
+    source_monitor: catalog.source_monitor ?? null,
     complete_global_eligibility: false as const, reviewed_routes: routes.filter(route => route.reviewed_check_count > 0).length,
     // Do not pretend the broad intake bands have decisive route rules behind them.
     unassessed_profile_fields: ['age', 'education', 'work', 'language', 'budget', 'timeline'],

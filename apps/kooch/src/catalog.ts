@@ -2,6 +2,7 @@ import { z } from 'zod';
 import { countries, factTitle, policies, type DiscoveryPolicy } from './policy';
 import type { RouteReadiness } from './route-readiness';
 import type { Answers } from './questions';
+import { sourceMonitorSchema } from './source-monitor';
 
 export type DiscoverySource = { id: string; title: string; url: string; authority: 'primary' | 'trusted'; checked_on: string; verification?: 'direct' | 'indexed' | 'historical' };
 export type DiscoveryRoute = {
@@ -19,6 +20,7 @@ const record = z.object({ id: z.string(), source_id: z.string(), destination: z.
   name: z.string(), name_fa: z.string(), category: z.string(), summary: z.string(), source,
   reviewed_on: z.iso.date().nullable(), sponsorship_required: z.boolean().nullable(), settlement: z.boolean(), duration: z.string().nullable() });
 export const catalogSchema = z.object({ schema_version: z.literal(1), retrieved_at: z.iso.datetime({ offset: true }),
+  source_monitor: sourceMonitorSchema.optional(),
   refresh: z.object({ state: z.enum(['updated', 'review_required', 'error']), attempted_at: z.iso.datetime({ offset: true }), reason: z.string().nullable() }).optional(),
   source_url: z.literal('https://visaatlas.org/api/public/visas'), provider: z.literal('Visa Atlas'),
   license: z.literal('CC BY 4.0'), license_url: z.url(),

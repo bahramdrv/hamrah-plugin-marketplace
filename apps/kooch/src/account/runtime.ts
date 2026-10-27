@@ -48,7 +48,10 @@ export async function accountRuntime() {
     const store = new AccountStore(pool, process.env.KOOCH_SESSION_ENCRYPTION_KEY!, undefined, async (owner, saved, client) => {
       const draft = saved.form?.draft;
       if (draft?.accounting_policy) await ledger.detachOperation(owner, `answer-interpretation:${saved.id}:${draft.revision}:${draft.id}`, draft.accounting_policy, client);
-    }, async client => ({ ...await evidenceStore!.reportReview(client), discoveryCatalog: await currentCatalog() }));
+    }, async client => {
+      const review = await evidenceStore!.reportReview(client), catalog = await currentCatalog();
+      return { ...review, routeIds: [...new Set([...review.routeIds, ...(catalog.source_monitor?.blocked_route_ids ?? [])])], discoveryCatalog: catalog };
+    });
     await store.validateRole();
     let bot: TelegramBot | undefined;
     const membershipEnabled = process.env.KOOCH_MEMBERSHIP_ENABLED === 'true';

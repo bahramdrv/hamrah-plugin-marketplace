@@ -16,7 +16,7 @@ export function browseCatalog(input: unknown, params: URLSearchParams, now: Date
   const normalize = (text: string) => text.toLowerCase().replaceAll('ي', 'ی').replaceAll('ك', 'ک').replaceAll('‌', ' ');
   const matching = data.routes.filter(r => (!filter.destination || r.destination === filter.destination) && (!filter.category || r.category === filter.category) && (!filter.q || normalize(`${r.name} ${r.name_fa} ${r.slug} ${data.destinations[r.destination].name} ${data.destinations[r.destination].official_name}`).includes(normalize(filter.q)))).sort((a, b) => a.id.localeCompare(b.id));
   const items = matching.slice(filter.offset, filter.offset + filter.limit).map(record => {
-    const blocked = blockedRouteIds.includes(record.id);
+    const blocked = blockedRouteIds.includes(record.id) || Boolean(data.source_monitor?.blocked_route_ids.includes(record.id));
     const policy = catalogPolicy(record), iran = iranContext(record, data, now);
     const availability = routeAvailability(readinessDefinitionsFor(now), record.id, now);
     const summary = catalogSummary(record, policy ?? { goal: 'work', requires: [], prerequisite: 'این رکورد یک مرجع کاتالوگ است؛ نوع مجوز، شرایط اختصاصی و امکان اقدام ایرانیان باید جدا بررسی شوند.' }, emptyAnswers);
