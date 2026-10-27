@@ -51,6 +51,7 @@ class CrawlerTests(unittest.TestCase):
             with self.assertRaises(ValueError): c.public_target(TARGET['url'], lambda host: [address])
         self.assertFalse(c.allowed_redirect(TARGET['url'], 'https://other.gov/visa'))
         self.assertTrue(c.allowed_redirect(TARGET['url'], 'https://www.example.gov/new-visa'))
+        self.assertEqual(c.public_target(TARGET['url'], lambda host: ['2606:4700:4700::1111', '93.184.216.34'])[1], '93.184.216.34')
 
     def test_challenge_or_empty_document_is_not_captured(self):
         for html in [b'<html>Just a moment. Verify you are human</html>', b'<script>hello</script>']:

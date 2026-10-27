@@ -54,12 +54,26 @@ test('an affirmative checkbox cannot overrule contradictory profile facts or a d
 
 test('new editions do not rewrite historical rules and an expired criterion stops reporting readiness', () => {
   assert.equal(readinessDefinitionsFor(new Date('2026-10-24')).version, 'route-readiness-1');
+  assert.equal(readinessDefinitionsFor(new Date('2026-10-26T12:00:00Z')).routes.length, 60);
+  assert.ok(readinessDefinitionsFor(new Date('2026-10-27T12:00:00Z')).routes.length >= 95);
   const plan = readinessDefinitions.routes.find(route => route.route_id === 'ke:class-k-ordinary-residents-permit')!;
   const answers = answersSchema.parse({ age: '40-plus' });
   const current = routeReadiness(readinessDefinitions, plan.route_id, {}, now(), {}, screeningProfile(answers))!;
   assert.equal(current.checks.find(check => check.id === 'age')!.state, 'reported_ready');
   const expired = routeReadiness(readinessDefinitions, plan.route_id, {}, new Date('2026-11-11T12:00:00Z'), {}, screeningProfile(answers))!;
   assert.equal(expired.checks.find(check => check.id === 'age')!.state, 'needs_review');
+});
+
+test('new primary sources reach global personal screening without pruning other purposes or destinations', async () => {
+  const api = createCompassApi({ snapshot, catalog, now: () => new Date('2026-10-27T12:00:00Z') });
+  const response = await api.POST(new Request('http://localhost/api/compass', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ goal: 'study', destinations: ['au'], age: 'under-30' }) }));
+  const data = await response.json();
+  assert.equal(data.personal_screening.total, 1414);
+  for (const id of ['ie:critical-skills-employment-permit', 'om:employment-work-visa', 'py:temporary-residence', 'lu:salaried-worker']) {
+    const route = data.personal_screening.routes.find((r: { id: string }) => r.id === id);
+    assert.ok(route.reviewed_check_count >= 3, id);
+    assert.equal(route.official_eligibility, 'UNKNOWN');
+  }
 });
 
 test('dated primary condition packs reference real routes and all sources, with no lost restrictions', async () => {

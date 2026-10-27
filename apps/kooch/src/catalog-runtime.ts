@@ -3,7 +3,7 @@ import baseline from '../data/global-catalog.json';
 import { refreshCatalog } from './catalog-refresh';
 import { createHash } from 'node:crypto';
 import { catalogSchema } from './catalog';
-import { fetchSourceMonitor } from './source-monitor';
+import { fetchSourceMonitor, unavailableMonitor } from './source-monitor';
 const monitorCapture = unstable_cache(async () => {
   const status = await fetchSourceMonitor();
   if (status.state === 'unavailable') throw new Error('Public source monitor unavailable');
@@ -21,6 +21,6 @@ const cachedCapture = unstable_cache(async () => {
 
 export async function currentCatalog() {
   const catalog = await cachedCapture().catch(() => catalogSchema.parse({ ...baseline, refresh: { state: 'error', attempted_at: new Date().toISOString(), reason: 'refresh_unavailable' } }));
-  const source_monitor = await monitorCapture().catch(() => undefined);
-  return { ...catalog, ...(source_monitor ? { source_monitor } : {}) };
+  const source_monitor = await monitorCapture().catch(() => unavailableMonitor());
+  return { ...catalog, source_monitor };
 }

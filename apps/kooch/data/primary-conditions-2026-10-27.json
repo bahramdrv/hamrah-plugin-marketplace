@@ -1,0 +1,2201 @@
+{
+  "version": "primary-conditions-2026-10-27-1",
+  "released_on": "2026-10-27",
+  "sources": [
+    {
+      "id": "aa-sg-study",
+      "title": "ICA — Student's Pass",
+      "url": "https://www.ica.gov.sg/reside/STP/apply",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای صفحهٔ رسمی در تاریخ بررسی خوانده شد؛ تاریخ دریافت به‌تنهایی ملاک تأیید نیست."
+    },
+    {
+      "id": "aa-ke-a",
+      "title": "Kenya eFNS — Class A mining",
+      "url": "https://fns.immigration.go.ke/infopack/permits/classA/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شرط‌های زیر در صفحهٔ رسمی مستقیماً بررسی شد."
+    },
+    {
+      "id": "aa-ke-dependent",
+      "title": "Kenya Immigration — Dependant's Pass",
+      "url": "https://immigration.go.ke/dependants-pass/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شرط‌های زیر در صفحهٔ رسمی مستقیماً بررسی شد."
+    },
+    {
+      "id": "aa-hk-qmas-gpt",
+      "title": "Hong Kong ImmD — QMAS assessment routes",
+      "url": "https://www.immd.gov.hk/eng/services/visas/assessment-routes.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن معیارها، شاخه‌ها و محدودیت‌های صفحهٔ رسمی مستقیماً بررسی شد."
+    },
+    {
+      "id": "aa-hk-qmas",
+      "title": "Hong Kong ImmD — QMAS prerequisites",
+      "url": "https://www.immd.gov.hk/eng/services/visas/quality_migrant_admission_scheme.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن معیارها، شاخه‌ها و محدودیت‌های صفحهٔ رسمی مستقیماً بررسی شد."
+    },
+    {
+      "id": "aa-hk-tech",
+      "title": "Hong Kong ImmD — TechTAS",
+      "url": "https://www.immd.gov.hk/eng/services/visas/TECHTAS.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن معیارها، شاخه‌ها و محدودیت‌های صفحهٔ رسمی مستقیماً بررسی شد."
+    },
+    {
+      "id": "aa-hk-enterprise",
+      "title": "Hong Kong ImmD — Investment as entrepreneurs",
+      "url": "https://www.immd.gov.hk/eng/services/visas/investment.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن معیارها، شاخه‌ها و محدودیت‌های صفحهٔ رسمی مستقیماً بررسی شد."
+    },
+    {
+      "id": "aa-om-work",
+      "title": "Royal Oman Police / Gov.om — Work visa",
+      "url": "https://gov.om/en/w/get-a-work-visa",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شروط در صفحهٔ رسمی مستقیماً خوانده شد."
+    },
+    {
+      "id": "aa-na-nomad",
+      "title": "Namibia NIPDB — Digital nomad visa",
+      "url": "https://www.nipdb.com/digital-nomad-visa",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شروط در صفحهٔ رسمی مستقیماً خوانده شد."
+    },
+    {
+      "id": "aa-ae-green-skilled",
+      "title": "Dubai GDRFA — Green high-level skilled worker",
+      "url": "https://gdrfad.gov.ae/en/services/c4d66f28-408c-11ed-4fe5-0050569629e8",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شروط در صفحهٔ رسمی مستقیماً خوانده شد."
+    },
+    {
+      "id": "aa-ae-self",
+      "title": "Dubai GDRFA — Green self-employment residence",
+      "url": "https://www.gdrfad.gov.ae/en/services/f52024d1-b812-11ed-5210-4cd98f768936",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شروط در صفحهٔ رسمی مستقیماً خوانده شد."
+    },
+    {
+      "id": "eu-nl-startup",
+      "title": "IND — Start-up",
+      "url": "https://ind.nl/en/residence-permits/work/start-up",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش شرایط از صفحهٔ ملی در این تاریخ بررسی شد؛ این بسته تأیید همهٔ الزامات مسیر نیست."
+    },
+    {
+      "id": "eu-nl-income2026",
+      "title": "IND — Required income amounts 2026",
+      "url": "https://ind.nl/en/required-amounts-income-requirements",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش شرایط از صفحهٔ ملی در این تاریخ بررسی شد؛ این بسته تأیید همهٔ الزامات مسیر نیست."
+    },
+    {
+      "id": "eu-nl-partner",
+      "title": "IND — Residence permit for partner",
+      "url": "https://ind.nl/en/residence-permits/family-and-partner/residence-permit-for-partner",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش شرایط از صفحهٔ ملی در این تاریخ بررسی شد؛ این بسته تأیید همهٔ الزامات مسیر نیست."
+    },
+    {
+      "id": "eu-ie-critical",
+      "title": "DETE — Critical Skills Employment Permit",
+      "url": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/critical-skills-employment-permit/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش شرایط از صفحهٔ ملی در این تاریخ بررسی شد؛ این بسته تأیید همهٔ الزامات مسیر نیست."
+    },
+    {
+      "id": "eu-ie-general",
+      "title": "DETE — General Employment Permit",
+      "url": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/general-employment-permit/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش شرایط از صفحهٔ ملی در این تاریخ بررسی شد؛ این بسته تأیید همهٔ الزامات مسیر نیست."
+    },
+    {
+      "id": "eu-at-family",
+      "title": "Austrian government — Family reunification",
+      "url": "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/family-reunification/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش شرایط از صفحهٔ ملی در این تاریخ بررسی شد؛ این بسته تأیید همهٔ الزامات مسیر نیست."
+    },
+    {
+      "id": "eu-at-student",
+      "title": "OeAD — Residence Permit Student",
+      "url": "https://oead.at/en/to-austria/entry-and-residence/residence-permit-student-no-mobility-programme",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش شرایط از صفحهٔ ملی در این تاریخ بررسی شد؛ این بسته تأیید همهٔ الزامات مسیر نیست."
+    },
+    {
+      "id": "eu-se-work",
+      "title": "Migrationsverket — Employee permit",
+      "url": "https://www.migrationsverket.se/en/you-want-to-apply/work/employee-or-self-employed/employees.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش شروط ملی در این تاریخ خوانده شد؛ پوشش کامل نیست."
+    },
+    {
+      "id": "eu-se-study",
+      "title": "Migrationsverket — Higher education",
+      "url": "https://www.migrationsverket.se/en/you-want-to-apply/study/higher-education.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش شروط ملی در این تاریخ خوانده شد؛ پوشش کامل نیست."
+    },
+    {
+      "id": "eu-no-skilled",
+      "title": "UDI — Skilled workers, Iran nationality scope",
+      "url": "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/?c=irn",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش شروط ملی در این تاریخ خوانده شد؛ پوشش کامل نیست."
+    },
+    {
+      "id": "eu-no-jobseek",
+      "title": "UDI — Job seekers, Iran nationality scope",
+      "url": "https://www.udi.no/en/want-to-apply/work-immigration/job-seekers/?c=irn",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش شروط ملی در این تاریخ خوانده شد؛ پوشش کامل نیست."
+    },
+    {
+      "id": "eu-no-study",
+      "title": "UDI — Study permit, Iran nationality scope",
+      "url": "https://www.udi.no/en/want-to-apply/studies/studietillatelse/?c=irn",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش شروط ملی در این تاریخ خوانده شد؛ پوشش کامل نیست."
+    },
+    {
+      "id": "eu-dk-pay",
+      "title": "SIRI — Pay Limit Scheme",
+      "url": "https://www.nyidanmark.dk/en-GB/You-want-to-apply/Work/Pay-Limit-Scheme",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش شروط ملی در این تاریخ خوانده شد؛ پوشش کامل نیست."
+    },
+    {
+      "id": "ao-cl-work",
+      "title": "SERMIG — Lawful remunerated activities",
+      "url": "https://serviciomigraciones.cl/en/residencia-temporal-permit/subcategories/remunerated-activities/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "شروط مذکور در متن رسمی بررسی شد؛ پوشش این بسته جزئی است."
+    },
+    {
+      "id": "ao-cl-investor",
+      "title": "SERMIG — Investors and related personnel",
+      "url": "https://serviciomigraciones.cl/en/residencia-temporal-permit/subcategories/investors/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "شروط مذکور در متن رسمی بررسی شد؛ پوشش این بسته جزئی است."
+    },
+    {
+      "id": "ao-uy-retiree",
+      "title": "Uruguay — Retiree benefit Law 16340",
+      "url": "https://www.gub.uy/tramites/beneficio-extranjeros-jubilados-obtengan-residencia-permanente",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "شروط مذکور در متن رسمی بررسی شد؛ پوشش این بسته جزئی است."
+    },
+    {
+      "id": "ao-nz-investor",
+      "title": "INZ — Active Investor Plus",
+      "url": "https://www.immigration.govt.nz/visas/active-investor-plus-visa/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "شروط مذکور در متن رسمی خوانده شد؛ ادعای پوشش کامل همهٔ شاخه‌ها وجود ندارد."
+    },
+    {
+      "id": "ao-nz-poststudy",
+      "title": "INZ — Post Study Work Visa",
+      "url": "https://www.immigration.govt.nz/visas/post-study-work-visa/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "شروط مذکور در متن رسمی خوانده شد؛ ادعای پوشش کامل همهٔ شاخه‌ها وجود ندارد."
+    },
+    {
+      "id": "ao-py-temporary",
+      "title": "DNM Paraguay — Residencia temporal",
+      "url": "https://migraciones.gov.py/residencia-temporal/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شروط نوشته‌شده در صفحهٔ رسمی خوانده شد؛ پوشش جزئی است."
+    },
+    {
+      "id": "ao-bb-work",
+      "title": "Barbados Immigration — Work permits",
+      "url": "https://immigration.gov.bb/pages/WorkPermit.aspx",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شروط نوشته‌شده در صفحهٔ رسمی خوانده شد؛ پوشش جزئی است."
+    },
+    {
+      "id": "ao-bs-work",
+      "title": "Bahamas Immigration — Annual work permit",
+      "url": "https://www.immigration.gov.bs/residence/annual-work-permit/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شروط نوشته‌شده در صفحهٔ رسمی خوانده شد؛ پوشش جزئی است."
+    },
+    {
+      "id": "ao-bs-economic",
+      "title": "Bahamas Immigration — Permanent residence",
+      "url": "https://www.immigration.gov.bs/residence/permanent-residence/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شروط نوشته‌شده در صفحهٔ رسمی خوانده شد؛ پوشش جزئی است."
+    },
+    {
+      "id": "en26:fr-work-authority",
+      "title": "Service Public — Autorisation de travail d'un salarié étranger",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2728",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "source_updated_on": "2026-06-18"
+    },
+    {
+      "id": "en26:fr-employee",
+      "title": "Service Public — Carte salarié/travailleur temporaire",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F15898",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "source_updated_on": "2026-05-01"
+    },
+    {
+      "id": "en26:fr-family",
+      "title": "Service Public — Regroupement familial",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F11166",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "source_updated_on": "2026-06-01",
+      "verification_note": "فقط Cas général؛ ارقام تمکن به میانگین ۱۲ماه و اندازه خانواده مربوط‌اند."
+    },
+    {
+      "id": "en26:be-wallonia",
+      "title": "Wallonia — Catégorie générale",
+      "url": "https://emploi.wallonie.be/home/travailleurs-etrangers/permis-de-travail/vous-etes-employeur/que-devez-vous-faire/categorie-generale.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "شاخهٔ عمومی؛ شرایط دسته‌های خاص جداست."
+    },
+    {
+      "id": "en26:be-brussels-shortage",
+      "title": "Brussels — Professions with labour shortage",
+      "url": "https://economy-employment.brussels/authorisation-work-profession-shortage",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "فهرست تازه Actiris در۱ژوئیه۲۰۲۶ اعلام شده؛ خود فهرست در این بسته استخراج نشده است."
+    },
+    {
+      "id": "en26:be-brussels",
+      "title": "Brussels — Authorisations to work",
+      "url": "https://economy-employment.brussels/authorisation-work",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "قاعدهٔ ثبت فقط درگاه از۴مه۲۰۲۶ صریح است."
+    },
+    {
+      "id": "en26:be-brussels-other",
+      "title": "Brussels — Other cases / labour market analysis",
+      "url": "https://economy-employment.brussels/authorisation-work-other-cases",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "en26:be-flanders-medium",
+      "title": "Flanders — Medium-skilled position",
+      "url": "https://www.vlaanderen.be/en/working-enterprise-and-investment/working/employing-a-foreigner-in-flanders/categories/medium-skilled-position",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "فقط شاخهٔ medium-skilled؛ جدول حقوق سایر دسته‌ها را تأیید نمی‌کند."
+    },
+    {
+      "id": "en26:be-federal",
+      "title": "Immigration Office Belgium — Single Permit",
+      "url": "https://dofi.ibz.be/en/themas/onderdanen-van-derde-landen/werk/single-permit",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "قاعدهٔ فدرال از۲۰۱۹؛ تعیین شرایط کار منطقه‌ای است."
+    },
+    {
+      "id": "en26:lu-employee",
+      "title": "Guichet — Visa D salaried workers",
+      "url": "https://guichet.public.lu/en/citoyens/immigration/vivre/non-luxembourg/immigration/pays-tiers/salarie/salarie-pays-tiers.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "source_updated_on": "2026-10-01",
+      "verification_note": "خلاصهٔ انتظار۳هفته با صفحهٔ تخصصی ADEM تعارض دارد؛ سه‌هفته شرط قطعی نشده. بخش Bill8586 صریحاً هنوز جاری نیست."
+    },
+    {
+      "id": "en26:lu-first-permit",
+      "title": "Guichet — Délivrance du premier titre de séjour",
+      "url": "https://guichet.public.lu/en/citoyens/immigration/vivre/luxembourg/premier-titre-sejour.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "source_updated_on": "2026-10-01",
+      "verification_note": "صفحهٔ پس از ورود؛ بند درخواست کارت تا۳ماه پیش از انقضای VisaD صریح است."
+    },
+    {
+      "id": "en26:lu-adem",
+      "title": "ADEM — Embauche d'un ressortissant d'un pays tiers",
+      "url": "https://adem.public.lu/fr/employeurs/recruter/recruter-international/Embauche-ressortissant-pays-tiers.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "source_updated_on": "2026-01-20"
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "sg:student-pass-sg",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ صرف وجود مسیر، مجازبودن محل ثبت درخواست یا احراز همهٔ شرایط را ثابت نمی‌کند.",
+      "limits_fa": "این بسته بخشی از شروط اصلی است؛ بررسی هویت، امنیت، اصالت مدارک، وضعیت اقامت و رویهٔ نمایندگی جدا لازم است.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان باید جداگانه بررسی شوند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "stp_course",
+          "answer_id": "sg.stp_course",
+          "question": "در دورهٔ تمام‌وقتِ تأییدشده پذیرفته شده‌ای؟",
+          "reason": "دورهٔ پاره‌وقت، شبانه یا آخرهفته واجد Student's Pass نیست.",
+          "action": "این شرط و استثناهای ذکرشده را با مدارک خود و مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "aa-sg-study"
+          ]
+        },
+        {
+          "id": "stp_existing",
+          "answer_id": "sg.stp_existing",
+          "question": "وضعیت فعلی و معافیت‌های تحصیلِ بدون Student's Pass را بررسی کرده‌ای؟",
+          "reason": "DP،LTVP یا معافیت معتبر برای تحصیل غیرمذهبی و برخی دوره‌های مستقل کوتاه حداکثر۳۰روز قواعد متفاوت دارند.",
+          "action": "این شرط و استثناهای ذکرشده را با مدارک خود و مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "aa-sg-study"
+          ]
+        },
+        {
+          "id": "stp_school",
+          "answer_id": "sg.stp_school",
+          "question": "فرایند و مدارک نوع مؤسسهٔ خود را انتخاب کرده‌ای؟",
+          "reason": "ICA ضوابط را برای مدارس، مؤسسات خصوصی و آموزش عالی جدا می‌کند؛ برای کودک متولد خارج تا۱۲سال، ثبت اطلاعات واکسیناسیون لازم است.",
+          "action": "این شرط و استثناهای ذکرشده را با مدارک خود و مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "aa-sg-study"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ke:class-a-mining-permit",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ صلاحیت محل درخواست، ورود و اصالت مدارک باید مستقل بررسی شوند.",
+      "limits_fa": "پوشش این بسته جزئی است؛ خوداظهاری شرط‌ها احراز رسمی یا پذیرش درخواست نیست.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "قواعد همراه مستقل بررسی می‌شوند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "classa_licence",
+          "answer_id": "ke.classa_licence",
+          "question": "حق یا مجوز لازم اکتشاف/معدن را در کنیا داری؟",
+          "reason": "قصد فعالیت در معدن به‌تنهایی کافی نیست؛ مجوز و ثبت لازم باید ارائه شود.",
+          "action": "مدرک این شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "aa-ke-a"
+          ]
+        },
+        {
+          "id": "classa_capital",
+          "answer_id": "ke.classa_capital",
+          "question": "حداقل۱۰۰۰۰۰USD وجوه سرمایه‌گذاری و منابع کافی را در اختیار داری؟",
+          "reason": "مدرک منابع و منفعت فعالیت برای کنیا لازم است؛ این مقدار درآمد سالانه نیست.",
+          "action": "مدرک این شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "aa-ke-a"
+          ]
+        },
+        {
+          "id": "classa_tax",
+          "answer_id": "ke.classa_tax",
+          "question": "اسناد مالیاتی و برای تمدید مجوز جاری و حسابرسی یک‌سال را داری؟",
+          "reason": "تمدید مستندات جدا از درخواست نخست دارد.",
+          "action": "مدرک این شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "aa-ke-a"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ke:dependants-pass",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ صلاحیت محل درخواست، ورود و اصالت مدارک باید مستقل بررسی شوند.",
+      "limits_fa": "پوشش این بسته جزئی است؛ خوداظهاری شرط‌ها احراز رسمی یا پذیرش درخواست نیست.",
+      "costs_fa": "برای همسر/فرزند شهروند۲۰۰۰۰KES، و دارندهٔ ورک‌پرمیت/PR مقدار۱۰۰۰۰KES؛ گروه‌های دیگر و معافیتEAC جدا بررسی شوند.",
+      "cost_source_ids": [
+        "aa-ke-dependent"
+      ],
+      "dependants_fa": "قواعد همراه مستقل بررسی می‌شوند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "dep_sponsor",
+          "answer_id": "ke.dep_sponsor",
+          "question": "حامی، شهروند کنیا، دارندهٔ مجوز، مقیم دائم یا معاف‌شدهٔ واجد شرایط است؟",
+          "reason": "این مجوز به وابستگی به یکی از وضعیت‌های مشخص حامی متصل است.",
+          "action": "مدرک این شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "aa-ke-dependent"
+          ]
+        },
+        {
+          "id": "dep_relationship",
+          "answer_id": "ke.dep_relationship",
+          "question": "رابطه و علت وابستگی را مستند کرده‌ای؟",
+          "reason": "اثبات رابطه، وضعیت مهاجرتی طرفین و مدارک وابستگی خواسته می‌شود.",
+          "action": "مدرک این شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "aa-ke-dependent"
+          ]
+        },
+        {
+          "id": "dep_support",
+          "answer_id": "ke.dep_support",
+          "question": "درآمد کافی و تضمین‌شدهٔ حامی و اعتبار کافی مجوزش روشن است؟",
+          "reason": "برای حامی دارای ورک‌پرمیت، دست‌کم۶ماه تا انقضای مجوز لازم است؛ وابستگی و ناتوانی تأمین مخارج جدا مستند می‌شود.",
+          "action": "مدرک این شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "aa-ke-dependent"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "hk:quality-migrant-admission-scheme",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ شرایط عمومی مهاجرت و محل مجاز درخواست نیز مستقل لازم‌اند.",
+      "limits_fa": "چک‌لیست جزئی است؛ نتیجهٔ رسمی یا تضمین پذیرش ایجاد نمی‌کند.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "برای خانواده اثبات رابطه، حمایت و اقامت مناسب جدا لازم است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "qmas_age",
+          "answer_id": "hk.qmas_age",
+          "question": "هنگام درخواست دست‌کم۱۸سال داری؟",
+          "reason": "این حدِ پیش‌نیاز مستقل است؛ سن۵۰یاکمتر فقط یکی از معیارهایGPTاست و شرط سقف سنِ کل برنامه نیست.",
+          "action": "شاخه و مدرک مربوط به این شرط را با صفحهٔ رسمی بررسی کن.",
+          "source_ids": [
+            "aa-hk-qmas"
+          ],
+          "profile_rule": {
+            "field": "age_exact",
+            "operator": "gte",
+            "value": 18,
+            "scope_fa": "فقط حداقل سن متقاضی اصلی؛ سایر شروط، شاخه‌ها و اختیار انتخاب مستقل‌اند."
+          }
+        },
+        {
+          "id": "qmas_prerequisites",
+          "answer_id": "hk.qmas_prerequisites",
+          "question": "تمکن مستقل، پیشینهٔ مناسب و مدرک/استثنای مهارتی لازم را داری؟",
+          "reason": "حمایت از خود و همراه بدون کمک عمومی، نبود سابقهٔ کیفری/مهاجرتی منفی، و معمولاً مدرک اول معتبر یا استثنای مستند لازم است.",
+          "action": "شاخه و مدرک مربوط به این شرط را با صفحهٔ رسمی بررسی کن.",
+          "source_ids": [
+            "aa-hk-qmas"
+          ]
+        },
+        {
+          "id": "qmas_assessment",
+          "answer_id": "hk.qmas_assessment",
+          "question": "حداقل۶معیار از۱۲معیارGPT یا شاخهٔ دستاورد برجسته را احراز کرده‌ای؟",
+          "reason": "معیارهای سن، تحصیلات، زبان، کار تخصصی، درآمد و مالکیت کسب‌وکار بدیلِ درون آزمون‌اند؛ برآورد سابقهٔ کل جای سابقهٔ تخصصیِ تعریف‌شده نیست.",
+          "action": "شاخه و مدرک مربوط به این شرط را با صفحهٔ رسمی بررسی کن.",
+          "source_ids": [
+            "aa-hk-qmas-gpt"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "hk:technology-talent-admission-scheme",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ شرایط عمومی مهاجرت و محل مجاز درخواست نیز مستقل لازم‌اند.",
+      "limits_fa": "چک‌لیست جزئی است؛ نتیجهٔ رسمی یا تضمین پذیرش ایجاد نمی‌کند.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "برای خانواده اثبات رابطه، حمایت و اقامت مناسب جدا لازم است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "techtas_employer",
+          "answer_id": "hk.techtas_employer",
+          "question": "شرکت سهمیهٔ معتبرITC و موقعیت تمام‌وقتR&D متناظر برایت دارد؟",
+          "reason": "شرکت می‌تواند پیش از تخصیص سهمیه درخواست دهد، اما موافقت با ورود به سهمیهٔ معتبر و جزئیات شغل وابسته است.",
+          "action": "شاخه و مدرک مربوط به این شرط را با صفحهٔ رسمی بررسی کن.",
+          "source_ids": [
+            "aa-hk-tech"
+          ]
+        },
+        {
+          "id": "techtas_qualification",
+          "answer_id": "hk.techtas_qualification",
+          "question": "مدرکSTEM از دانشگاه مشمول یا استثنای مستند فنی داری؟",
+          "reason": "کارشناسی معمولاً۱سال تجربهٔ همان حوزه می‌خواهد؛ ارشد/دکتری الزام تجربه ندارند. جایگزین مهارتی موردی است.",
+          "action": "شاخه و مدرک مربوط به این شرط را با صفحهٔ رسمی بررسی کن.",
+          "source_ids": [
+            "aa-hk-tech"
+          ]
+        },
+        {
+          "id": "techtas_pay",
+          "answer_id": "hk.techtas_pay",
+          "question": "دستمزد بازار و سایر مشخصات نامهٔ سهمیه را برآورده می‌کنی؟",
+          "reason": "عنوان فناوری یا مدرک به‌تنهایی کافی نیست؛ شغل و شرکت باید واقعی و منطبق با سهمیه باشند.",
+          "action": "شاخه و مدرک مربوط به این شرط را با صفحهٔ رسمی بررسی کن.",
+          "source_ids": [
+            "aa-hk-tech"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "hk:investment-as-entrepreneurs",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ شرایط عمومی مهاجرت و محل مجاز درخواست نیز مستقل لازم‌اند.",
+      "limits_fa": "چک‌لیست جزئی است؛ نتیجهٔ رسمی یا تضمین پذیرش ایجاد نمی‌کند.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "برای خانواده اثبات رابطه، حمایت و اقامت مناسب جدا لازم است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "enterprise_plan",
+          "answer_id": "hk.enterprise_plan",
+          "question": "طرح سه‌ساله و پیش‌بینی مالیِ قابل‌دفاع برای ایجاد/پیوستن به کسب‌وکار داری؟",
+          "reason": "اثر اقتصادی، فروش، منابع مالی، مبلغ سرمایه، اشتغال محلی و فناوری بررسی می‌شود.",
+          "action": "شاخه و مدرک مربوط به این شرط را با صفحهٔ رسمی بررسی کن.",
+          "source_ids": [
+            "aa-hk-enterprise"
+          ]
+        },
+        {
+          "id": "enterprise_resources",
+          "answer_id": "hk.enterprise_resources",
+          "question": "اسناد سرمایه و توان تداوم عملیات و سابقهٔ مرتبط را داری؟",
+          "reason": "صورت‌حساب‌های شخصی/شرکت و صورت‌های مالی بررسی می‌شوند؛ صفحه حداقل سرمایهٔ واحد و تضمینی اعلام نمی‌کند.",
+          "action": "شاخه و مدرک مربوط به این شرط را با صفحهٔ رسمی بررسی کن.",
+          "source_ids": [
+            "aa-hk-enterprise"
+          ]
+        },
+        {
+          "id": "enterprise_qualification",
+          "answer_id": "hk.enterprise_qualification",
+          "question": "پیشینهٔ تحصیلی/تخصصی قابل‌قبول و شرایط عمومی مهاجرت را داری؟",
+          "reason": "مدرک اول مرتبط قاعدهٔ معمول است؛ صلاحیت فنی و دستاورد مستند می‌تواند موردی جایگزین شود.",
+          "action": "شاخه و مدرک مربوط به این شرط را با صفحهٔ رسمی بررسی کن.",
+          "source_ids": [
+            "aa-hk-enterprise"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "om:employment-work-visa",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ پذیرش تابعیت، محل قانونی درخواست و شرایط عمومی مستقل بررسی می‌شوند.",
+      "limits_fa": "بخشی از شروط اصلی پوشش داده شده؛ کامل‌بودن پرونده و پذیرش رسمی احراز نشده است.",
+      "costs_fa": "صدور ویزای کار۲۰OMR در صفحه؛ این کل هزینهٔ مهاجرت نیست.",
+      "cost_source_ids": [
+        "aa-om-work"
+      ],
+      "dependants_fa": "همراهان بررسی مستقل نیاز دارند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "work_age",
+          "answer_id": "om.work_age",
+          "question": "حداقل۲۱سال سن داری؟",
+          "reason": "این حداقل سنِ متقاضی ویزای کار است؛ از این صفحه سقف۶۰سال استنتاج نمی‌شود.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-om-work"
+          ],
+          "profile_rule": {
+            "field": "age_exact",
+            "operator": "gte",
+            "value": 21,
+            "scope_fa": "فقط حداقل سن متقاضی اصلی؛ سایر شروط، شاخه‌ها و اختیار انتخاب مستقل‌اند."
+          }
+        },
+        {
+          "id": "work_sponsor",
+          "answer_id": "om.work_sponsor",
+          "question": "کارفرما/حامی محلی واجد شرایط و مجوز وزارت کار داری؟",
+          "reason": "کارفرمای دولتی از الزام مجوز وزارت کارِ بیان‌شده در این صفحه مستثناست؛ مسئولیت درخواست با حامی است.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-om-work"
+          ]
+        },
+        {
+          "id": "work_consistency",
+          "answer_id": "om.work_consistency",
+          "question": "شغل و مشخصات مجوز وزارت کار با درخواست و مدارک سلامت هماهنگ است؟",
+          "reason": "حرفه و جنسیت در مجوز باید منطبق باشند؛ مدارک گذرنامه، تصویر،مجوزکار و معاینه خواسته می‌شود.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-om-work"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "na:digital-nomad-visa",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ پذیرش تابعیت، محل قانونی درخواست و شرایط عمومی مستقل بررسی می‌شوند.",
+      "limits_fa": "بخشی از شروط اصلی پوشش داده شده؛ کامل‌بودن پرونده و پذیرش رسمی احراز نشده است.",
+      "costs_fa": "۳۳۰۰NAD پس از موافقت؛ هزینه‌های دیگر مستقل‌اند.",
+      "cost_source_ids": [
+        "aa-na-nomad"
+      ],
+      "dependants_fa": "صورت‌حساب و درآمد افزودهٔ همسر۱۰۰۰USD و هر فرزند۵۰۰USD درماه، اسناد رابطه و درخواست جدا لازم است.",
+      "dependant_source_ids": [
+        "aa-na-nomad"
+      ],
+      "checks": [
+        {
+          "id": "nomad_foreign_work",
+          "answer_id": "na.nomad_foreign_work",
+          "question": "دورکار،فریلنسر یا خوداشتغال با شرکت/مشتری خارج نامیبیا هستی؟",
+          "reason": "این مجوز برای کار ازراه‌دور با منبع فعالیت خارجی است؛ کار محلی را مجاز فرض نکن.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-na-nomad"
+          ]
+        },
+        {
+          "id": "nomad_income_floor",
+          "answer_id": "na.nomad_income_floor",
+          "question": "حداقل۲۰۰۰USD درآمد ماهانه برای خودت داری؟",
+          "reason": "فقط مبلغ پایهٔ متقاضی است؛ منبع درآمد و افزودهٔ همراه باید جدا احراز شود.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-na-nomad"
+          ]
+        },
+        {
+          "id": "nomad_family_funds",
+          "answer_id": "na.nomad_family_funds",
+          "question": "در صورت همراه،۱۰۰۰USD ماهانه برای همسر و۵۰۰USD برای هر فرزند اضافه فراهم است؟",
+          "reason": "صورت‌حساب۶ماه و مدرک درآمد/قرارداد و رابطه خواسته می‌شود.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-na-nomad"
+          ]
+        },
+        {
+          "id": "nomad_health_term",
+          "answer_id": "na.nomad_health_term",
+          "question": "گذرنامه، بیمه و مدارک سلامت/پیشینه و محدودیت زمانی را رعایت می‌کنی؟",
+          "reason": "اقامت۶ماهه، غیرقابل تمدید و غیرقابل تغییر وضعیت است؛ درخواست دوباره تنها۱۲ماه پس از انقضا مجاز اعلام شده است.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-na-nomad"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ae:green-visa",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "فقط شاخهٔ نیروی ماهر Green، طبق سرویسGDRFA؛ نتیجه دربارهٔ شاخهٔ سرمایه‌گذار یا خوداشتغالی صادر نمی‌شود.",
+      "limits_fa": "بخشی از شروط اصلی پوشش داده شده؛ کامل‌بودن پرونده و پذیرش رسمی احراز نشده است.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان بررسی مستقل نیاز دارند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "green_skilled_contract",
+          "answer_id": "ae.green_skilled_contract",
+          "question": "در شاخهٔ نیروی ماهر، قرارداد معتبر و مجوز کارِ لازم داری؟",
+          "reason": "این چک‌لیست فقطشاخهٔhigh-level skilled worker است؛ خوداشتغالی و سرمایه‌گذار شاخه‌های متفاوت دارند.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-ae-green-skilled"
+          ]
+        },
+        {
+          "id": "green_skilled_level",
+          "answer_id": "ae.green_skilled_level",
+          "question": "شغل سطح۱،۲یا۳MOHRE و کارشناسی یا معادل داری؟",
+          "reason": "طبقه‌بندی شغل و معادل‌بودن مدرک باید مستند شوند.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-ae-green-skilled"
+          ]
+        },
+        {
+          "id": "green_skilled_salary",
+          "answer_id": "ae.green_skilled_salary",
+          "question": "حقوق قرارداد شاخهٔ نیروی ماهر دست‌کم۱۵۰۰۰AED ماهانه است؟",
+          "reason": "مبنای قراردادِ همین شغل است؛ درآمد خانوار یا بودجهٔ پس‌انداز جای آن نیست.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-ae-green-skilled"
+          ]
+        },
+        {
+          "id": "green_passport",
+          "answer_id": "ae.green_passport",
+          "question": "گذرنامهٔ حداقل۶ماه معتبر و مدارک entry/residence درست را داری؟",
+          "reason": "entry permit شصت‌روزه برای تکمیل اقامت است؛ خودِ آن اقامت نهایی یا مجوز مستقل همهٔ فعالیت‌ها نیست.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-ae-green-skilled"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ae:freelance-permit",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "فقط اقامتGreen خوداشتغالیِ دارای مجوزMOHRE؛ سایر مجوزهای فریلنس باید جدا شناسایی شوند.",
+      "limits_fa": "بخشی از شروط اصلی پوشش داده شده؛ کامل‌بودن پرونده و پذیرش رسمی احراز نشده است.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان بررسی مستقل نیاز دارند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "freelance_category",
+          "answer_id": "ae.freelance_category",
+          "question": "مدنظر تو مجوزفریلنسMOHRE همراه اقامتGreen خوداشتغالی است؟",
+          "reason": "مجوز فعالیت و اقامت دو مرحله‌اند؛ مجوز فری‌زونِ دیگری را به این شاخه تعمیم نده.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-ae-self"
+          ]
+        },
+        {
+          "id": "freelance_permit",
+          "answer_id": "ae.freelance_permit",
+          "question": "مجوز خوداشتغالیMOHRE و حداقل کارشناسی/دیپلم تخصصی/معادل داری؟",
+          "reason": "خودِ مهارت یا قرارداد مشتری، جای مجوز مربوط نیست.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-ae-self"
+          ]
+        },
+        {
+          "id": "freelance_income",
+          "answer_id": "ae.freelance_income",
+          "question": "درآمد خوداشتغالی۳۶۰۰۰۰AED سالانه برای دو سال پیش یا توان مالی جایگزینِ موردقبول داری؟",
+          "reason": "منبع، سابقهٔ دو سال و امکان اثبات توان مالی در تمام اقامت بررسی می‌شود؛ این شرط به درآمد عمومی یا بودجهٔ کلی فروکاسته نمی‌شود.",
+          "action": "مدارک و دامنهٔ همین شرط را با مرجع رسمی بررسی کن.",
+          "source_ids": [
+            "aa-ae-self"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "nl:startup-visa-nl",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "راه‌اندازی کسب‌وکار نوآور در هلند با facilitator.",
+      "limits_fa": "پوشش جزئی شروط؛ مدارک، استثناها و پذیرش درخواست ایرانی باید جدا احراز شوند. سازگاری پاسخ‌ها تأیید صلاحیت نیست.",
+      "costs_fa": "در صفحه هزینهٔ درخواست۴۲۳یورو آمده؛ معافیت و هزینه‌های دیگر مستقل‌اند.",
+      "cost_source_ids": [
+        "eu-nl-startup"
+      ],
+      "dependants_fa": "حق همراه و شروط مستقل او در این برش کامل بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "mentor",
+          "answer_id": "nl.startup_visa_nl_mentor",
+          "question": "قرارداد امضاشده با facilitator واجدشرایط داری؟",
+          "reason": "قابلیت و استقلال facilitator باید با شروط RVO سازگار باشد.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-nl-startup"
+          ]
+        },
+        {
+          "id": "innovation",
+          "answer_id": "nl.startup_visa_nl_innovation",
+          "question": "نوآوری، نقش فعال و برنامهٔ مرحله‌ای را مستند کرده‌ای؟",
+          "reason": "سهامداری صرف کافی نیست؛ RVO درباره نوآوری و برنامه اظهارنظر می‌کند.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-nl-startup"
+          ]
+        },
+        {
+          "id": "registration",
+          "answer_id": "nl.startup_visa_nl_registration",
+          "question": "ثبت KvK متقاضی و facilitator انجام شده است؟",
+          "reason": "ثبت هر دو در ثبت تجاری لازم است.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-nl-startup"
+          ]
+        },
+        {
+          "id": "funds",
+          "answer_id": "nl.startup_visa_nl_funds",
+          "question": "پشتوانهٔ مالی کل دوره را به روش مجاز داری؟",
+          "reason": "حساب مجاز یا تأمین facilitator باید اقامت حداکثر یک‌ساله را پوشش دهد.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-nl-startup"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "nl:partner-visa-nl",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "پیوستن شریک خارجی به sponsor در هلند؛ مسیر اتحادیه اروپا جداست.",
+      "limits_fa": "پوشش جزئی شروط؛ مدارک، استثناها و پذیرش درخواست ایرانی باید جدا احراز شوند. سازگاری پاسخ‌ها تأیید صلاحیت نیست.",
+      "costs_fa": "هزینهٔ قابل اتکا در این برش ثبت نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق همراه و شروط مستقل او در این برش کامل بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "relationship",
+          "answer_id": "nl.partner_visa_nl_relationship",
+          "question": "رابطهٔ قابل اثبات و برنامهٔ زندگی مشترک در هلند داری؟",
+          "reason": "ازدواج، شراکت ثبت‌شده یا رابطهٔ قابل احراز و نشانی مشترک لازم‌اند.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-nl-partner",
+            "eu-nl-income2026"
+          ]
+        },
+        {
+          "id": "age",
+          "answer_id": "nl.partner_visa_nl_age",
+          "question": "سن هر دو نفر با قاعده و استثنای قانونی سازگار است؟",
+          "reason": "قاعده۲۱سال؛ ازدواج قبلی هنگام زندگی هر دو خارج هلند می‌تواند۱۸سال باشد.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-nl-partner",
+            "eu-nl-income2026"
+          ]
+        },
+        {
+          "id": "income",
+          "answer_id": "nl.partner_visa_nl_income",
+          "question": "درآمد sponsor با شاخه و بازهٔ زمانی لازم تطبیق شده؟",
+          "reason": "نوع خانوار و درآمد مستقل، کافی و پایدار باید دقیق بررسی شوند.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-nl-partner",
+            "eu-nl-income2026"
+          ]
+        },
+        {
+          "id": "integration",
+          "answer_id": "nl.partner_visa_nl_integration",
+          "question": "آزمون ادغام خارج کشور و TB یا معافیت‌ها روشن‌اند؟",
+          "reason": "برای MVV آزمون یا معافیت لازم است؛ شمول TB و استثناها جداست.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-nl-partner",
+            "eu-nl-income2026"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ie:critical-skills-employment-permit",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "اشتغال تخصصی با پیشنهاد کار در ایرلند؛ مجوز کار از ویزای ورود جداست.",
+      "limits_fa": "پوشش جزئی شروط؛ مدارک، استثناها و پذیرش درخواست ایرانی باید جدا احراز شوند. سازگاری پاسخ‌ها تأیید صلاحیت نیست.",
+      "costs_fa": "هزینهٔ قابل اتکا در این برش ثبت نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق همراه و شروط مستقل او در این برش کامل بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "offer",
+          "answer_id": "ie.critical_skills_employment_permit_offer",
+          "question": "پیشنهاد حداقل۲ساله از کارفرمای واقعی ایرلندی داری؟",
+          "reason": "کارفرما باید در ایرلند فعال و ثبت‌شده باشد.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-ie-critical"
+          ]
+        },
+        {
+          "id": "occupation",
+          "answer_id": "ie.critical_skills_employment_permit_occupation",
+          "question": "شغل و مدرک با شاخهٔ Critical Skills تطبیق دارند؟",
+          "reason": "شاخهٔ فهرست تخصصی، مدرک مرتبط می‌خواهد؛ سایر شاخه‌ها شرایط خود دارند.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-ie-critical"
+          ]
+        },
+        {
+          "id": "salary",
+          "answer_id": "ie.critical_skills_employment_permit_salary",
+          "question": "حقوق با شاخهٔ قانونی جاری سازگار است؟",
+          "reason": "فهرست تخصصی۴۰۹۰۴یورو؛ فارغ‌التحصیل واجدشرط۱۲ماه اخیر۳۶۸۴۸یورو؛ سایر شاخه‌ها جدا بررسی شوند.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-ie-critical"
+          ]
+        },
+        {
+          "id": "employer",
+          "answer_id": "ie.critical_skills_employment_permit_employer",
+          "question": "شرایط employer و هر استثنای50:50 را بررسی کرده‌ای؟",
+          "reason": "دسترسی به مجوز فقط از نام شغل نتیجه نمی‌شود؛ مقررات کارفرما مستقل‌اند.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-ie-critical"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ie:general-employment-permit",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "مجوز اشتغال عمومی ایرلند، نه اجازهٔ خودکار ورود.",
+      "limits_fa": "پوشش جزئی شروط؛ مدارک، استثناها و پذیرش درخواست ایرانی باید جدا احراز شوند. سازگاری پاسخ‌ها تأیید صلاحیت نیست.",
+      "costs_fa": "هزینهٔ قابل اتکا در این برش ثبت نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق همراه و شروط مستقل او در این برش کامل بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "job",
+          "answer_id": "ie.general_employment_permit_job",
+          "question": "کارفرمای واقعی و شغل خارج از فهرست ممنوع داری؟",
+          "reason": "مهارت، صلاحیت یا سابقهٔ متناسب با همان شغل لازم است.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-ie-general"
+          ]
+        },
+        {
+          "id": "salary",
+          "answer_id": "ie.general_employment_permit_salary",
+          "question": "حقوق و شاخهٔ استثنای شغل را بررسی کرده‌ای؟",
+          "reason": "حد معمول۳۶۶۰۵یورو؛ برخی مشاغل۳۲۶۹۱ و فارغ‌التحصیل ایرلندی واجدشرط۳۴۰۰۹یورو.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-ie-general"
+          ]
+        },
+        {
+          "id": "labour",
+          "answer_id": "ie.general_employment_permit_labour",
+          "question": "آزمون بازارکار یا استثنای مستند داری؟",
+          "reason": "در بیشتر پرونده‌ها آگهی EURES و پلتفرم آنلاین لازم است.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-ie-general"
+          ]
+        },
+        {
+          "id": "ratio",
+          "answer_id": "ie.general_employment_permit_ratio",
+          "question": "قاعدهٔ50:50 یا معافیت کارفرما مستند است؟",
+          "reason": "نسبت کارکنان EEA و رابطهٔ مستقیم استخدام باید بررسی شوند.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-ie-general"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "at:family-reunification-austria",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "خانوادهٔ تبعهٔ کشور ثالث یا اتریشی؛ نوع عنوان sponsor تعیین‌کننده است.",
+      "limits_fa": "پوشش جزئی شروط؛ مدارک، استثناها و پذیرش درخواست ایرانی باید جدا احراز شوند. سازگاری پاسخ‌ها تأیید صلاحیت نیست.",
+      "costs_fa": "هزینهٔ قابل اتکا در این برش ثبت نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق همراه و شروط مستقل او در این برش کامل بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "relation",
+          "answer_id": "at.family_reunification_austria_relation",
+          "question": "رابطه و سن اعضای خانواده مشمول تعریف قانونی‌اند؟",
+          "reason": "همسر/شریک ثبت‌شده۲۱سال؛ کودک مجرد زیر۱۸سال در زمان درخواست.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-at-family"
+          ]
+        },
+        {
+          "id": "sponsor",
+          "answer_id": "at.family_reunification_austria_sponsor",
+          "question": "عنوان sponsor و نیاز سهمیه روشن‌اند؟",
+          "reason": "برای برخی عنوان‌ها سهمیه هست؛ خانوادهٔ RWR،Blue Card،پژوهشگر و اتریشی استثنا دارند.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-at-family"
+          ]
+        },
+        {
+          "id": "support",
+          "answer_id": "at.family_reunification_austria_support",
+          "question": "درآمد، بیمه و مسکن مناسب خانواده مستند است؟",
+          "reason": "درآمد جاری باید متناسب با اندازهٔ خانوار و قواعد محاسبه باشد.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-at-family"
+          ]
+        },
+        {
+          "id": "german",
+          "answer_id": "at.family_reunification_austria_german",
+          "question": "A1 آلمانی یا معافیت مربوط به عنوان sponsor احراز شده؟",
+          "reason": "برای درخواست نخست برخی عنوان‌ها لازم است؛ زیر۱۴سال و چند گروه sponsor معاف‌اند.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-at-family"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "at:student-permit-austria",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "اقامت دانشجوی کشور ثالث برای دورهٔ مشمول بیش از۶ماه.",
+      "limits_fa": "پوشش جزئی شروط؛ مدارک، استثناها و پذیرش درخواست ایرانی باید جدا احراز شوند. سازگاری پاسخ‌ها تأیید صلاحیت نیست.",
+      "costs_fa": "هزینهٔ قابل اتکا در این برش ثبت نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "حق همراه و شروط مستقل او در این برش کامل بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "admission",
+          "answer_id": "at.student_permit_austria_admission",
+          "question": "پذیرش دورهٔ مشمول اتریش داری؟",
+          "reason": "همهٔ دوره‌های زبان یا تک‌درس به‌تنهایی واجد این اقامت نیستند.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-at-student"
+          ]
+        },
+        {
+          "id": "funds",
+          "answer_id": "at.student_permit_austria_funds",
+          "question": "تمکن۱۲ماه و افزایش‌های مسکن/بیمه را آماده کرده‌ای؟",
+          "reason": "۲۰۲۶: زیر۲۴سال۷۲۲٫۵۸ و از۲۴سال۱۳۰۸٫۳۹یورو ماهانه؛ هزینهٔ مسکن بالاتر از۳۸۶٫۴۳ افزوده می‌شود.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-at-student"
+          ]
+        },
+        {
+          "id": "insurance",
+          "answer_id": "at.student_permit_austria_insurance",
+          "question": "بیمهٔ درمانی و مدارک اقامت مناسب داری؟",
+          "reason": "بیمه، محل اقامت و دسترسی واقعی به منابع باید احراز شوند.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-at-student"
+          ]
+        },
+        {
+          "id": "filing",
+          "answer_id": "at.student_permit_austria_filing",
+          "question": "محل و زمان قانونی ارائهٔ درخواست را بررسی کرده‌ای؟",
+          "reason": "معمولاً نمایندگی کشور اقامت؛ ورود یا درخواست داخلی مجوز بیش‌اقامتی ایجاد نمی‌کند.",
+          "action": "مدرک و شمول این شرط را بررسی کن.",
+          "source_ids": [
+            "eu-at-student"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "se:work-permit-sweden",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "مجوز کار سوئد؛ قواعد جاری از ژوئن۲۰۲۶.",
+      "limits_fa": "پوشش جزئی است؛ مدارک و استثناها و امکان ارائه از ایران جدا بررسی شوند. پاسخ مثبت تأیید صلاحیت کامل نیست.",
+      "costs_fa": "هزینهٔ کارمند۲۲۰۰SEK؛ معافیت‌ها و هزینهٔ همراه مستقل‌اند.",
+      "cost_source_ids": [
+        "eu-se-work"
+      ],
+      "dependants_fa": "همراهان و شروطشان نیازمند بررسی مستقل‌اند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "contract",
+          "answer_id": "se.work_permit_sweden_contract",
+          "question": "قرارداد امضاشده و شرایط مطابق عرف/توافق جمعی داری؟",
+          "reason": "چند شغل را نمی‌توان برای احراز شرایط این مجوز با هم جمع کرد.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-se-work"
+          ]
+        },
+        {
+          "id": "salary",
+          "answer_id": "se.work_permit_sweden_salary",
+          "question": "شاخهٔ حقوق جاری و معافیت احتمالی را بررسی کرده‌ای؟",
+          "reason": "کف معمول۳۴۴۷۰SEK ماهانه؛ برخی مشاغل/گروه‌ها استثنای۷۵٪میانه دارند.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-se-work"
+          ]
+        },
+        {
+          "id": "insurance",
+          "answer_id": "se.work_permit_sweden_insurance",
+          "question": "بیمه‌های کارفرما و بیمهٔ جامعِ اقامت کوتاه‌تر را داری؟",
+          "reason": "بیمه‌های درمان،عمر،حوادث و بازنشستگی لازم‌اند؛ تا۱سال بیمهٔ جامع جدا مطرح است.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-se-work"
+          ]
+        },
+        {
+          "id": "occupation",
+          "answer_id": "se.work_permit_sweden_occupation",
+          "question": "کد شغلی در فهرستِ غیرمجاز قرار ندارد؟",
+          "reason": "از۱ژوئن۲۰۲۶ personal assistant و forest berry picker از این مجوز کنار رفته‌اند.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-se-work"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "se:student-permit-sweden",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "اقامت تحصیلات عالیِ حضوری و تمام‌وقت، نه دورهٔ صرفاً از راه دور.",
+      "limits_fa": "پوشش جزئی است؛ مدارک و استثناها و امکان ارائه از ایران جدا بررسی شوند. پاسخ مثبت تأیید صلاحیت کامل نیست.",
+      "costs_fa": "هزینه در این برش احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان و شروطشان نیازمند بررسی مستقل‌اند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "admission",
+          "answer_id": "se.student_permit_sweden_admission",
+          "question": "پذیرش نهاییِ تمام‌وقت و حضوری داری؟",
+          "reason": "در دانشگاه۳۰اعتبار در ترم مبنای تمام‌وقت است.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-se-study"
+          ]
+        },
+        {
+          "id": "tuition",
+          "answer_id": "se.student_permit_sweden_tuition",
+          "question": "شهریهٔ لازم را پیش از درخواست پرداخته‌ای؟",
+          "reason": "پرداخت شهریه در نهایی‌شدن پذیرش اثر دارد.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-se-study"
+          ]
+        },
+        {
+          "id": "support",
+          "answer_id": "se.student_permit_sweden_support",
+          "question": "تمکن کل دوره و خانواده را مستند کرده‌ای؟",
+          "reason": "منابع بانکی، بورسیه یا سایر مبانی پذیرفته‌شده مدارک مخصوص دارند.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-se-study"
+          ]
+        },
+        {
+          "id": "insurance",
+          "answer_id": "se.student_permit_sweden_insurance",
+          "question": "بیمهٔ جامع لازم برای مدت تحصیل فراهم است؟",
+          "reason": "برای دورهٔ زیر۱سال، بیمهٔ جامع متناسب لازم است.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-se-study"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "no:skilled-worker-permit",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "کارگر ماهر با employer نروژی؛ دامنهٔ اعلامی برای تبعهٔ ایران.",
+      "limits_fa": "پوشش جزئی است؛ مدارک و استثناها و امکان ارائه از ایران جدا بررسی شوند. پاسخ مثبت تأیید صلاحیت کامل نیست.",
+      "costs_fa": "هزینه در این برش احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان و شروطشان نیازمند بررسی مستقل‌اند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "qualification",
+          "answer_id": "no.skilled_worker_permit_qualification",
+          "question": "صلاحیت فنی/دانشگاهی یا مهارت استثنایی را داری؟",
+          "reason": "فنی حداقل۳ساله یا مدرک دانشگاهی؛ مسیر تجربهٔ خاص معمولاً۶سال و مستندات تفصیلی می‌خواهد.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-no-skilled"
+          ]
+        },
+        {
+          "id": "offer",
+          "answer_id": "no.skilled_worker_permit_offer",
+          "question": "پیشنهاد مشخص و شغل حداقل۸۰٪ِ متناسب داری؟",
+          "reason": "برای ارائه از خارج، تأیید کارفرما و کد پیشنهاد معمولاً لازم است.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-no-skilled"
+          ]
+        },
+        {
+          "id": "terms",
+          "answer_id": "no.skilled_worker_permit_terms",
+          "question": "حقوق متعارف و مجوز حرفه‌ای موردنیاز احراز شده‌اند؟",
+          "reason": "فهرست assignment و ثبت بنگاه واسط در صورت شمول لازم‌اند.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-no-skilled"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "no:job-seeker-norway",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "استثنای جست‌وجوی کار پس از تحصیل/پژوهش یا شناسایی مدرک در نروژ.",
+      "limits_fa": "پوشش جزئی است؛ مدارک و استثناها و امکان ارائه از ایران جدا بررسی شوند. پاسخ مثبت تأیید صلاحیت کامل نیست.",
+      "costs_fa": "هزینه در این برش احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان و شروطشان نیازمند بررسی مستقل‌اند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "prior_status",
+          "answer_id": "no.job_seeker_norway_prior_status",
+          "question": "اقامت قبلیِ واجدشرط نروژ و اقدام پیش از انقضا داری؟",
+          "reason": "این مسیر عمومیِ ورود هر تازه‌وارد از ایران نیست.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-no-jobseek"
+          ]
+        },
+        {
+          "id": "qualification",
+          "answer_id": "no.job_seeker_norway_qualification",
+          "question": "تحصیل تکمیل‌شده یا پژوهش/شناسایی مدرک واجدشرط داری؟",
+          "reason": "نوع اقامت قبلی و ماهر بودن شغل مورد جست‌وجو تعیین‌کننده‌اند.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-no-jobseek"
+          ]
+        },
+        {
+          "id": "funds",
+          "answer_id": "no.job_seeker_norway_funds",
+          "question": "تمکن متناسب با دوره و استثنای پژوهشگر را بررسی کرده‌ای؟",
+          "reason": "معمول۲۸۴۴۸NOK ماهانه؛ برای برخی PhD با اقامت ماهر،۸۵۳۴۴NOK مستقل از مدت.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-no-jobseek"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "no:student-permit-norway",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "دانشگاه/دانشکدهٔ معتبر نروژ؛ پروندهٔ تبعهٔ ایران.",
+      "limits_fa": "پوشش جزئی است؛ مدارک و استثناها و امکان ارائه از ایران جدا بررسی شوند. پاسخ مثبت تأیید صلاحیت کامل نیست.",
+      "costs_fa": "هزینه در این برش احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان و شروطشان نیازمند بررسی مستقل‌اند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "admission",
+          "answer_id": "no.student_permit_norway_admission",
+          "question": "پذیرش تمام‌وقت در مؤسسهٔ معتبر و مدرک لازم داری؟",
+          "reason": "مدرک دانشگاهی برای دامنهٔ ایران باید نسخهٔ تأییدشده و قانونی‌شده داشته باشد.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-no-study"
+          ]
+        },
+        {
+          "id": "funds",
+          "answer_id": "no.student_permit_norway_funds",
+          "question": "تمکن زندگی و شهریهٔ سال تحصیلی مربوط را آماده کرده‌ای؟",
+          "reason": "عدد نمایش‌داده‌شده برای زندگی۱۷۰۳۶۸NOKسالانه است؛ بازهٔ سال و شهریه جدا تأیید شوند.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-no-study"
+          ]
+        },
+        {
+          "id": "housing",
+          "answer_id": "no.student_permit_norway_housing",
+          "question": "محل اقامت و شرایط بازگشت قابل دفاع‌اند؟",
+          "reason": "UDI برای ایرانیانِ زیرمقطع ارشد بررسی دشوارتر و موردی را تصریح می‌کند.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-no-study"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "dk:pay-limit-scheme",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "مجوز کار دانمارک بر مبنای حقوق پیشنهادی، نه مدرک خاص.",
+      "limits_fa": "پوشش جزئی است؛ مدارک و استثناها و امکان ارائه از ایران جدا بررسی شوند. پاسخ مثبت تأیید صلاحیت کامل نیست.",
+      "costs_fa": "هزینهٔ پردازش نمایش‌داده‌شده۶۸۱۰DKK؛ معافیت و مخارج دیگر مستقل‌اند.",
+      "cost_source_ids": [
+        "eu-dk-pay"
+      ],
+      "dependants_fa": "همراهان و شروطشان نیازمند بررسی مستقل‌اند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "salary",
+          "answer_id": "dk.pay_limit_scheme_salary",
+          "question": "اجزای قابل‌محاسبهٔ حقوق سالانه حداقل۵۵۲۰۰۰DKK است؟",
+          "reason": "کف۲۰۲۶؛ مزایای مسکن،خودرو،تلفن و مانند آن در این مبلغ حساب نمی‌شوند.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-dk-pay"
+          ]
+        },
+        {
+          "id": "hours",
+          "answer_id": "dk.pay_limit_scheme_hours",
+          "question": "کار حداقل۳۰ساعت هفتگی با شرایط متعارف داری؟",
+          "reason": "کف سالانه مستقل از کاهش ساعات باقی می‌ماند.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-dk-pay"
+          ]
+        },
+        {
+          "id": "bank",
+          "answer_id": "dk.pay_limit_scheme_bank",
+          "question": "واریز به حساب دانمارکی به نام خودت برنامه‌ریزی شده؟",
+          "reason": "قاعدهٔ بازکردن حساب۱۸۰روزه و وضع اقامت قبلی باید رعایت شود.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-dk-pay"
+          ]
+        },
+        {
+          "id": "authorisation",
+          "answer_id": "dk.pay_limit_scheme_authorisation",
+          "question": "مجوز حرفه و نبود اختلاف کار قانونی احراز شده‌اند؟",
+          "reason": "شغل‌های دارای authorization و اختلاف کار الزامات مستقل دارند.",
+          "action": "این شرط و مدارکش را روشن کن.",
+          "source_ids": [
+            "eu-dk-pay"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "cl:temporary-residence-remunerated-work",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "شاخهٔ فعالیت استخدامیِ قانونی؛ درخواست از خارج شیلی.",
+      "limits_fa": "مدت تا دوسال، تمدید طبق شروط؛ جزئیات نوع شخصیت کارفرما جدا بررسی شوند.",
+      "costs_fa": "مبلغ هزینه در این بسته تأیید نشده؛ روز اقدام بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "شرایط همراه در این بسته کامل بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "employer",
+          "answer_id": "cl.work_employer",
+          "question": "کارفرما در شیلی مستقر است؟",
+          "reason": "رابطهٔ استخدامی با کارفرمای دارای اقامتگاه یا شعبهٔ شیلی لازم است.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-cl-work"
+          ]
+        },
+        {
+          "id": "solvency",
+          "answer_id": "cl.work_solvency",
+          "question": "اسناد قرارداد و توان کارفرما آماده‌اند؟",
+          "reason": "قرارداد و پوشهٔ مالیاتی کارفرما یا اثبات توان ایفای تعهدات لازم است.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-cl-work"
+          ]
+        },
+        {
+          "id": "abroad",
+          "answer_id": "cl.work_abroad",
+          "question": "از خارج شیلی درخواست می‌دهی؟",
+          "reason": "درخواست این زیرگروه فقط از خارج، در پرتال SERMIG ارائه می‌شود.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-cl-work"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "cl:temporary-residence-investor",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "دو شاخهٔ سرمایه‌گذارِ نماینده/مدیر و کارکنان مرتبط؛ آستانه را به همه تعمیم نده.",
+      "limits_fa": "پوشش جزئی است؛ پرسش‌ها تأیید تمام شروط یا مدارک نیست.",
+      "costs_fa": "مبلغ هزینه در این بسته تأیید نشده؛ روز اقدام بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "شرایط همراه در این بسته کامل بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "branch",
+          "answer_id": "cl.investor_branch",
+          "question": "شاخهٔ سرمایه‌گذار یا نیروی مرتبط را مشخص کرده‌ای؟",
+          "reason": "نماینده/مدیر شرکت خارجی با سرمایه‌گذاری تولیدی حداقل۵۰۰هزارUSD؛ یا کارکنان واجدتعریف شرکتِ باکنترل خارجی.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-cl-investor"
+          ]
+        },
+        {
+          "id": "ownership",
+          "answer_id": "cl.investor_ownership",
+          "question": "اگر نیروی مرتبطی، کنترل خارجی لازم احراز است؟",
+          "reason": "سرمایه‌گذار خارجی باید حداقل۱۰٪ حق‌رأی یا مشارکت معادل مقرر را داشته باشد.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-cl-investor"
+          ]
+        },
+        {
+          "id": "abroad",
+          "answer_id": "cl.investor_abroad",
+          "question": "درخواست از خارج و اسناد متناسب فراهم‌اند؟",
+          "reason": "درخواست این زیرگروه از خارج است؛ مدارک شاخهٔ انتخابی مستقل‌اند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-cl-investor"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "uy:beneficio-jubilados-pensionistas",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "مزیت قانون۱۶۳۴۰ برای بازنشستهٔ متقاضی اقامت دائم؛ معادل مسیر عمومی اقامت نیست.",
+      "limits_fa": "صفحهٔ جاری، آخرین ویرایش۲۰۲۰ دارد؛ این بسته فقط شروط نوشته‌شدهٔ همان مزیت را تأیید می‌کند.",
+      "costs_fa": "برای خود این درخواست مزیت، هزینه‌ای درج نشده؛ سایر هزینه‌های اقامت جدا هستند.",
+      "cost_source_ids": [
+        "ao-uy-retiree"
+      ],
+      "dependants_fa": "شرایط همراه در این بسته کامل بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "retired",
+          "answer_id": "uy.retiree_retired",
+          "question": "بازنشستگی یا وضعیت مستمری مستند است؟",
+          "reason": "وضعیت بازنشسته/مستمری‌بگیر با رسید لازم است.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-uy-retiree"
+          ]
+        },
+        {
+          "id": "income",
+          "answer_id": "uy.retiree_income",
+          "question": "درآمد خارجیِ کافی داری؟",
+          "reason": "حداقل۱۵۰۰USD ماهانه از مستمری یا سایر درآمدهای خارج لازم است.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-uy-retiree"
+          ]
+        },
+        {
+          "id": "capital",
+          "answer_id": "uy.retiree_capital",
+          "question": "سرمایهٔ نگهداری‌شوندهٔ مقرر داری؟",
+          "reason": "خانهٔ مسکونی حداقل۱۰۰هزارUSD یا اوراق دولتی هم‌ارز، با تعهد ده‌ساله لازم است.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-uy-retiree"
+          ]
+        },
+        {
+          "id": "documents",
+          "answer_id": "uy.retiree_documents",
+          "question": "اسناد خارجی ترجمه و قانونی‌سازی شده‌اند؟",
+          "reason": "مدارک صادرشده در خارج باید تأیید و ترجمه شوند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-uy-retiree"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "nz:active-investor-plus",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "Growth و Balanced دو شاخهٔ سرمایه‌گذاری متفاوت‌اند.",
+      "limits_fa": "پوشش جزئی است؛ پرسش‌ها تأیید تمام شروط یا مدارک نیست.",
+      "costs_fa": "هزینهٔ درج‌شده از۲۷۴۷۰NZD است؛ تمکن و سرمایه‌گذاری با هزینه یکی نیستند.",
+      "cost_source_ids": [
+        "ao-nz-investor"
+      ],
+      "dependants_fa": "شریک و فرزند وابسته تا۲۴سال با شروط رابطه/وابستگی؛ جزئیات مستقل بررسی شوند.",
+      "dependant_source_ids": [
+        "ao-nz-investor"
+      ],
+      "checks": [
+        {
+          "id": "category",
+          "answer_id": "nz.aip_category",
+          "question": "شاخه و مبلغ سرمایه را مشخص کرده‌ای؟",
+          "reason": "حداقل۵میلیونNZD در Growth یا۱۰میلیونNZD در Balanced لازم است.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-nz-investor"
+          ]
+        },
+        {
+          "id": "legal",
+          "answer_id": "nz.aip_legal",
+          "question": "منشأ قانونی و انتقال سرمایه مستند است؟",
+          "reason": "سرمایه باید قانونی حاصل شده و طبق قواعد به نیوزیلند منتقل شود.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-nz-investor"
+          ]
+        },
+        {
+          "id": "investment",
+          "answer_id": "nz.aip_investment",
+          "question": "سرمایه‌گذاری و نگهداری پذیرفتنی‌اند؟",
+          "reason": "فهرست سرمایه‌گذاری مجاز و نگهداری۳۶ماهGrowth یا۶۰ماهBalanced باید رعایت شوند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-nz-investor"
+          ]
+        },
+        {
+          "id": "character",
+          "answer_id": "nz.aip_character",
+          "question": "صلاحیت تجاری، سلامت و شخصیت بررسی شده‌اند؟",
+          "reason": "fit and proper و مدارک سلامت/سوابق مستقل‌اند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-nz-investor"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "nz:post-study-work-visa",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "تحصیل واجدشرایط در نیوزیلند؛ شروع مستقیم بدون سابقهٔ محلی نیست.",
+      "limits_fa": "پوشش جزئی تا۲۶اکتبر۲۰۲۶. گسترش اعلام‌شدهٔ واجدشرایط‌ها از۱۶نوامبر هنوز مؤثر نیست؛ بعد آن بازبینی شود.",
+      "costs_fa": "هزینهٔ درج‌شده از۱۶۷۰NZD؛ معاش حداقل۵۰۰۰NZD هزینهٔ دولتی نیست.",
+      "cost_source_ids": [
+        "ao-nz-poststudy"
+      ],
+      "dependants_fa": "امکان حمایت ویزای شریک/فرزند، تابع شروط جداگانه است.",
+      "dependant_source_ids": [
+        "ao-nz-poststudy"
+      ],
+      "checks": [
+        {
+          "id": "qualification",
+          "answer_id": "nz.pswv_qualification",
+          "question": "مدرک و مدت تحصیل نیوزیلندی مشمول‌اند؟",
+          "reason": "درجهٔ سطح۷به‌بالا معمولاً۳۰هفته تمام‌وقت؛ پایین‌تر/غیردرجه‌ای باید در فهرست مجاز باشد.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-nz-poststudy"
+          ]
+        },
+        {
+          "id": "deadline",
+          "answer_id": "nz.pswv_deadline",
+          "question": "مهلت درستِ شاخهٔ خود را رعایت می‌کنی؟",
+          "reason": "عموماًسه‌ماه پس از پایان ویزای تحصیل؛ دکتری‌شش‌ماه و بعضی توالی‌هادوازده‌ماه.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-nz-poststudy"
+          ]
+        },
+        {
+          "id": "funds",
+          "answer_id": "nz.pswv_funds",
+          "question": "حداقل۵۰۰۰NZD برای معاش مستند داری؟",
+          "reason": "مبلغ در مدارک مالیِ قابل‌قبول باید قابل اثبات باشد.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-nz-poststudy"
+          ]
+        },
+        {
+          "id": "prior",
+          "answer_id": "nz.pswv_prior",
+          "question": "قبلاً از این ویزا استفاده نکرده‌ای؟",
+          "reason": "این ویزا فقط یک‌بار قابل دریافت است؛ شروط عمومی نیز باقی‌اند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-nz-poststudy"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "py:temporary-residence",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "اقامت موقت طبق قانون۶۹۸۴/۲۰۲۲؛ حضور و ورود قانونی لازم‌اند.",
+      "limits_fa": "مراجعهٔ شخصی و حضوری؛ اقامت تا دوسال قابل تمدید. این بسته تمام استثناهای سوابق صغار را خودکار ارزیابی نمی‌کند.",
+      "costs_fa": "در صفحه هزینهٔ پایه۲٬۹۲۶٬۹۲۵PYG آمده؛ پرداخت الکترونیک کارمزد جدا دارد.",
+      "cost_source_ids": [
+        "ao-py-temporary"
+      ],
+      "dependants_fa": "شرایط همراه در این بسته کامل بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "entry",
+          "answer_id": "py.temporary_entry",
+          "question": "ورود، ویزا و گذرنامهٔ لازم معتبرند؟",
+          "reason": "مدرک ورود و در موارد لازم ویزای کنسولی با تأیید وزارت خارجه ارائه می‌شود.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-py-temporary"
+          ]
+        },
+        {
+          "id": "civil",
+          "answer_id": "py.temporary_civil",
+          "question": "اسناد هویت و وضعیت مدنی قانونی شده‌اند؟",
+          "reason": "تولد و حسب مورد ازدواج/طلاق/فوت با تأیید و ترجمهٔ مقرر لازم‌اند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-py-temporary"
+          ]
+        },
+        {
+          "id": "criminal",
+          "answer_id": "py.temporary_criminal",
+          "question": "گواهی‌های سوابق متناسب سن و اقامت آماده‌اند؟",
+          "reason": "از۱۴سال به بعد، سوابق ملی/فدرال، INTERPOL و پلیس خارجیان حسب مورد لازم‌اند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-py-temporary"
+          ]
+        },
+        {
+          "id": "minor",
+          "answer_id": "py.temporary_minor",
+          "question": "برای صغیر، مجوز و نمایندگی قانونی فراهم است؟",
+          "reason": "حضور/رضایت والد یا حکم سرپرستی و وضعیت اقامت والدِ لازم باید احراز شوند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-py-temporary"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "bb:work-permit",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "مجوز کوتاه‌مدت یا بلندمدت؛ کارفرما/اسپانسر درخواست می‌دهد.",
+      "limits_fa": "کوتاه‌مدت تا۱۱ماه؛ بلندمدت تا۳سال. این‌ها دورهٔ اعتبارند، تضمین صدور نیستند.",
+      "costs_fa": "درخواست۳۰۰BBD؛ هزینهٔ نهایی به دسته و مدت وابسته است.",
+      "cost_source_ids": [
+        "ao-bb-work"
+      ],
+      "dependants_fa": "شرایط همراه در این بسته کامل بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "sponsor",
+          "answer_id": "bb.work_sponsor",
+          "question": "کارفرما درخواست را پیش از شروع کار ثبت می‌کند؟",
+          "reason": "اتباع خارجی باید پیش از اشتغال ثبت شوند؛ کارفرما مسئول درخواست است.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-bb-work"
+          ]
+        },
+        {
+          "id": "labour",
+          "answer_id": "bb.work_labour",
+          "question": "اگر بلندمدت است، نبود نیروی محلی اثبات شده؟",
+          "reason": "کارفرما باید نبود فرد مقیم یا تبعهٔ مایل و قادر برای شغل را ثابت کند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-bb-work"
+          ]
+        },
+        {
+          "id": "documents",
+          "answer_id": "bb.work_documents",
+          "question": "مدارک شاخهٔ مجوز آماده‌اند؟",
+          "reason": "بلندمدت، صلاحیت حرفه‌ای، فرم پزشکی و معرفی‌نامه‌ها را نیز می‌خواهد.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-bb-work"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "bs:work-permit",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "اشتغال بیشتر از۹۰روز؛ مجوز کوتاه‌مدت مسیر متفاوتی است.",
+      "limits_fa": "پوشش جزئی است؛ پرسش‌ها تأیید تمام شروط یا مدارک نیست.",
+      "costs_fa": "هزینهٔ رسیدگی۲۰۰دلار و تمبر۱۰دلارِ باهاما؛ هزینهٔ مجوز طبق رده‌بندی جداست.",
+      "cost_source_ids": [
+        "ao-bs-work"
+      ],
+      "dependants_fa": "همراه باید برای Permit to Reside جدا اقدام کند.",
+      "dependant_source_ids": [
+        "ao-bs-work"
+      ],
+      "checks": [
+        {
+          "id": "employer",
+          "answer_id": "bs.work_employer",
+          "question": "کارفرما/اسپانسر و مجوز کسب‌وکار مستندند؟",
+          "reason": "درخواست کار و وضعیت قانونی کارفرما باید ارائه شوند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-bs-work"
+          ]
+        },
+        {
+          "id": "labour",
+          "answer_id": "bs.work_labour",
+          "question": "تأیید بازارکار و آگهی یا استثنا را داری؟",
+          "reason": "گواهی کار و آگهی سه‌روز متوالی عموماً لازم‌اند؛ استثناهای رده‌بندی باید دقیق احراز شوند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-bs-work"
+          ]
+        },
+        {
+          "id": "records",
+          "answer_id": "bs.work_records",
+          "question": "گذرنامه و گواهی‌های تازه آماده‌اند؟",
+          "reason": "پزشکی حداکثر۳۰روز؛ سوابق حداکثرشش‌ماه برای۱۴سال‌به‌بالا و مدارک هویت لازم‌اند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-bs-work"
+          ]
+        },
+        {
+          "id": "licence",
+          "answer_id": "bs.work_licence",
+          "question": "اگر شغلت تنظیم‌شده است، تأیید حرفه‌ای داری؟",
+          "reason": "پزشک، پرستار، وکیل و مشاغل فهرست‌شده تأیید مرجع مربوط می‌خواهند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-bs-work"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "bs:economic-permanent-residence",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "شاخهٔ اقامت دائم اقتصادی؛ سایر مبانی اقامت دائم یکسان نیستند.",
+      "limits_fa": "پوشش جزئی است؛ پرسش‌ها تأیید تمام شروط یا مدارک نیست.",
+      "costs_fa": "رسیدگی۲۰۰دلار و تمبر۱۰دلار؛ هزینه‌های نهایی و مالیات جدا بررسی شوند.",
+      "cost_source_ids": [
+        "ao-bs-economic"
+      ],
+      "dependants_fa": "شرایط همراه در این بسته کامل بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "investment",
+          "answer_id": "bs.economic_investment",
+          "question": "سرمایه‌گذاری واجدشرط حداقل یک‌میلیون‌دلار داری؟",
+          "reason": "ملک یا اوراق Zero Coupon بانک مرکزی مجاز است؛ واحدپول و ارزش روز باید تأیید شوند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-bs-economic"
+          ]
+        },
+        {
+          "id": "holding",
+          "answer_id": "bs.economic_holding",
+          "question": "نگهداری دست‌کم ده‌ساله را می‌پذیری؟",
+          "reason": "صفحه برای هر دو شاخهٔ دارایی حداقل۱۰سال نگهداری مقرر کرده است.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-bs-economic"
+          ]
+        },
+        {
+          "id": "documents",
+          "answer_id": "bs.economic_documents",
+          "question": "وضعیت مهاجرتی و اسناد پرونده کامل‌اند؟",
+          "reason": "گواهی‌های پزشکی/سوابق، هویت، اسناد ملکی یا سرمایه و وضعیت اقامت حسب مورد لازم‌اند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "ao-bs-economic"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "fr:vls-ts-salaried",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "کارمند غیراروپایی در رویهٔ عمومی؛ CDI عنوان salarié و CDD عنوان travailleur temporaire.",
+      "limits_fa": "پوشش جزئی؛ اتباع الجزایر و دارندهٔ حق کار مستقل تابع رویهٔ جدا؛ در تغییر وضعیت، عنوان فعلی تعیین‌کننده است.",
+      "costs_fa": "اعتباردهی VLS-TS salarié: مالیات۳۰۰ EUR؛ هزینهٔ کنسولی جدا.",
+      "cost_source_ids": [
+        "en26:fr-employee"
+      ],
+      "dependants_fa": "شرایط و حقوق همراه در این بسته تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "contract",
+          "answer_id": "fr.next_vls_ts_salaried_contract",
+          "question": "قرارداد فرانسوی CDI یا CDD و عنوان اقامت متناظر آن مشخص است؟",
+          "reason": "نوع قرارداد شاخه را تعیین می‌کند.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:fr-employee"
+          ]
+        },
+        {
+          "id": "authority",
+          "answer_id": "fr.next_vls_ts_salaried_authority",
+          "question": "کارفرما برای همین قرارداد مجوز کار گرفته یا معافیت قانونیِ وضعیت اقامتی مستند است؟",
+          "reason": "پیشنهاد کار جای مجوز نیست؛ قرارداد تازه مجوز تازه می‌خواهد.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:fr-work-authority"
+          ]
+        },
+        {
+          "id": "market",
+          "answer_id": "fr.next_vls_ts_salaried_market",
+          "question": "شغل در فهرست کمبود معتبر است، یا۳هفته پیاپی در۶ماه اخیر آگهی شده و داوطلب معتبر نداشته، یا معافیت فارغ‌التحصیلی/وضعیت خاص احراز شده؟",
+          "reason": "فهرست منطقه‌ای و شروط معافیت یکسان نیستند.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:fr-work-authority"
+          ]
+        },
+        {
+          "id": "employment",
+          "answer_id": "fr.next_vls_ts_salaried_employment",
+          "question": "حقوق حداقل SMIC یا قرارداد جمعیِ بالاتر و مجوز حرفهٔ مقررات‌گذاری‌شده رعایت می‌شود؟",
+          "reason": "صلاحیت حرفه و مزد مستقل از داشتن پیشنهادند.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:fr-work-authority"
+          ]
+        },
+        {
+          "id": "employer",
+          "answer_id": "fr.next_vls_ts_salaried_employer",
+          "question": "کارفرما الزامات اجتماعی و نبود تخلف/محکومیت مانع و تناسب استخدام با فعالیت را احراز می‌کند؟",
+          "reason": "وضعیت کارفرما شرط صدور است.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:fr-work-authority"
+          ]
+        },
+        {
+          "id": "filing",
+          "answer_id": "fr.next_vls_ts_salaried_filing",
+          "question": "برای اقدام از خارج، مجوز پیش از ورود و سپس VLS-TS اخذ می‌شود؛ برای تغییر وضعیت، درخواست پیش از انقضای اقامت است؟",
+          "reason": "شاخهٔ محل درخواست متفاوت است.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:fr-employee"
+          ]
+        },
+        {
+          "id": "entry",
+          "answer_id": "fr.next_vls_ts_salaried_entry",
+          "question": "اعتباردهی VLS-TS ظرف۳ماه و درخواست کارت پیش از موعد برنامه‌ریزی شده و مانع اقامتی/اسناد جعلی وجود ندارد؟",
+          "reason": "اولین ورود و تمدید تشریفات جدا دارند.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:fr-employee"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "fr:family-reunification-france",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "Regroupement familial عمومی برای حامی غیراروپایی در فرانسه؛ خانواده خارج فرانسه.",
+      "limits_fa": "پوشش جزئی؛ خانوادهٔ فرانسوی/اروپایی، حمایت بین‌المللی، Talent و Mayotte جدا؛ سن در روز ثبت سنجیده می‌شود.",
+      "costs_fa": "هزینهٔ ویزا/تمبر و معاینه جدا کنترل شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "همسر و فرزندان صغیرِ واجد نسبت؛ قواعد حضانت و سن تعیین‌کننده‌اند.",
+      "dependant_source_ids": [
+        "en26:fr-family"
+      ],
+      "checks": [
+        {
+          "id": "sponsor",
+          "answer_id": "fr.next_family_reunification_france_sponsor",
+          "question": "حامی۱۸ماه اقامت قانونی قابل احتساب و اکنون کارت حداقل یک‌ساله/چندساله، کارت اقامت یا رسید تمدید معتبر دارد؟",
+          "reason": "نوع و توالی وضعیت مهم است.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:fr-family"
+          ]
+        },
+        {
+          "id": "relationship",
+          "answer_id": "fr.next_family_reunification_france_relationship",
+          "question": "خانواده شامل همسر قانونی۱۸ساله یا فرزند زیر۱۸سال با نسب/حضانت مستند است؟",
+          "reason": "والدین، همسر دوم در چندهمسری و پیوست جزئیِ بدون استثنا مشمول نیستند.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:fr-family"
+          ]
+        },
+        {
+          "id": "means",
+          "answer_id": "fr.next_family_reunification_france_means",
+          "question": "میانگین منابع مجاز۱۲ماه اخیر متناسب با۲–۳نفر۱۸۶۷٫۰۲،۴–۵نفر۲۰۵۳٫۷۲،۶نفر+۲۲۴۰٫۴۲ EUR است، یا معافیت AAH/ASI یا استثنای سالمندی احراز شده؟",
+          "reason": "مزایای اجتماعیِ مستثنا و تداوم درآمد همسر باید بررسی شود.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:fr-family"
+          ]
+        },
+        {
+          "id": "housing",
+          "answer_id": "fr.next_family_reunification_france_housing",
+          "question": "خانهٔ سالم و مجهز در زمان ورود، با حد مساحت منطقه و تعداد نفرات آماده است؟",
+          "reason": "حد زوج در مناطقA،B،C به‌ترتیب۲۲،۲۴،۲۸مترمربع است؛ افزودهٔ نفرات لازم است.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:fr-family"
+          ]
+        },
+        {
+          "id": "family_abroad",
+          "answer_id": "fr.next_family_reunification_france_family_abroad",
+          "question": "خانواده خارج فرانسه است یا استثنای پیوست در داخل مستند؛ الزامات نظم عمومی و اصول خانوادگی رعایت می‌شود؟",
+          "reason": "ورود/حضور قبلی استثنای خودکار نیست.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:fr-family"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "be:single-permit",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "استخدام/اقامت بیش از۹۰روز؛ هستهٔ فدرال با شاخه‌های محدود بروکسل، فلاندر و والونی.",
+      "limits_fa": "پوشش جزئی؛ آزمون‌ها شرط همزمان همهٔ مناطق نیستند؛ منطقهٔ محل اصلی کار و دسته ابتدا تعیین شود. جامعهٔ آلمانی‌زبان و تمام دسته‌های خاص پوشش داده نشده‌اند.",
+      "costs_fa": "جمع هزینهٔ ویزا، خدمات، اقامت و ترجمه در این مرور تأیید نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "شرایط و حقوق همراه در این بسته تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "jurisdiction",
+          "answer_id": "be.next_single_permit_jurisdiction",
+          "question": "محل اصلی کار و دستهٔ منطقه‌ای، بیش از۹۰روز بودن اقامت/کار و نیاز به مجوز در برابر معافیت وضعیت مشخص است؟",
+          "reason": "اقامت موجود یا کار مرزی می‌تواند رویه را تغییر دهد.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:be-federal",
+            "en26:be-brussels"
+          ]
+        },
+        {
+          "id": "employer",
+          "answer_id": "be.next_single_permit_employer",
+          "question": "کارفرما/نمایندهٔ مجاز پروندهٔ کار و اقامت را در One-Stop برای منطقهٔ صالح ثبت می‌کند؟",
+          "reason": "مجوز کار منطقه‌ای و تأیید اقامت فدرال هر دو لازم‌اند.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:be-federal",
+            "en26:be-brussels"
+          ]
+        },
+        {
+          "id": "residence_docs",
+          "answer_id": "be.next_single_permit_residence_docs",
+          "question": "گذرنامه، منابع/مدت کار، گواهی پزشکی، بیمهٔ خود و خانواده، هزینه و برای بالای۱۸سال سابقهٔ کیفری آماده است؟",
+          "reason": "مدارک تکمیلی ممکن است مطالبه شود.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:be-federal"
+          ]
+        },
+        {
+          "id": "regional_branch",
+          "answer_id": "be.next_single_permit_regional_branch",
+          "question": "آیا فقط شروط دسته و منطقهٔ مربوط از میان شاخه‌های زیر تأیید شده‌اند؟",
+          "reason": "پاسخ بدون تعیین شاخه کافی نیست.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:be-brussels",
+            "en26:be-flanders-medium",
+            "en26:be-wallonia"
+          ]
+        },
+        {
+          "id": "flanders_medium",
+          "answer_id": "be.next_single_permit_flanders_medium",
+          "question": "اگر شاخهٔ medium-skilled فلاندر است: کارفرمای بلژیکی، شغل در فهرست مهاجرتی درست، مدرک/سابقه و صلاحیت، قرارداد حداقل۸۰٪ و مزد مقرر وجود دارد؟",
+          "reason": "فهرست VDAB با فهرست مهاجرتی فرق دارد؛ اعزام از کارفرمای خارجی این شاخه را ندارد.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:be-flanders-medium"
+          ]
+        },
+        {
+          "id": "brussels_market",
+          "answer_id": "be.next_single_permit_brussels_market",
+          "question": "اگر شاخهٔ عمومی بروکسل است، نبود نیروی مناسب در بازار بروکسل با بررسی Actiris احراز می‌شود؛ یا دستهٔ کمبودِ فهرست۱ژوئیه۲۰۲۶/دستهٔ خاص درست است؟",
+          "reason": "صرف کمبود در کشور دیگر کافی نیست.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:be-brussels-other",
+            "en26:be-brussels-shortage"
+          ]
+        },
+        {
+          "id": "wallonia_general",
+          "answer_id": "be.next_single_permit_wallonia_general",
+          "question": "اگر عمومی والونی است: نبود نیروی مناسب حتی با آموزش، عدم ورود با هدف کار پیش از مجوز، قرارداد کامل و تعهد کارفرما به سفر و پوشش پزشکی اولیه احراز شده؟",
+          "reason": "دسته‌های خاص قواعد جدا دارند.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:be-wallonia"
+          ]
+        },
+        {
+          "id": "visa_entry",
+          "answer_id": "be.next_single_permit_visa_entry",
+          "question": "در اقدام از خارج، پس از تصمیم مثبت به نمایندگی صالح محل اقامت برای VisaD مراجعه و پس از ورود ظرف۸روزکاری ثبت انجام می‌شود؟",
+          "reason": "تأیید کار به‌تنهایی حق اقامت نیست.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:be-federal"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "lu:salaried-worker",
+      "version": "primary-conditions-2026-10-27-1",
+      "scope_fa": "کارمند کشور ثالثِ مقیم خارج، اقامت بیش از۹۰روز؛ روند VisaD از۱اکتبر۲۰۲۶.",
+      "limits_fa": "پوشش جزئی؛ گواهی ADEM از مرجع اجرایی خوانده شده؛ انتظار۳هفتهٔ خلاصه شرط قطعی نشده. مقررات اعلام‌شدهٔ لایحه8586 هنوز جاری معرفی نمی‌شوند.",
+      "costs_fa": "مالیات صدور کارت۸۰ EUR؛ ویزا، بیمه و ترجمه جدا.",
+      "cost_source_ids": [
+        "en26:lu-first-permit"
+      ],
+      "dependants_fa": "شرایط و حقوق همراه در این بسته تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "employment",
+          "answer_id": "lu.next_salaried_worker_employment",
+          "question": "قرارداد امضاشدهٔ کارفرمای لوکزامبورگی با حقوق حداقل مزد اجتماعی ماهانهٔ جاری و مدارک صلاحیت دارید؟",
+          "reason": "عدد مزد و نوع صلاحیت در روز اقدام کنترل شود.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:lu-employee"
+          ]
+        },
+        {
+          "id": "adem",
+          "answer_id": "lu.next_salaried_worker_adem",
+          "question": "کارفرما شغل را به ADEM اعلام کرده و گواهی معتبر استخدام کشور ثالث دارد؟",
+          "reason": "اعتبار گواهی۳ماه و غیرقابل تمدید است.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:lu-adem"
+          ]
+        },
+        {
+          "id": "market_branch",
+          "answer_id": "lu.next_salaried_worker_market_branch",
+          "question": "برای شغلِ فهرست کمبود شدید شاخهٔ سریع، وگرنه بررسی متقاضیان ADEM و توضیح مستند رد داوطلبان طی شده است؟",
+          "reason": "گواهی صرفاً از پیشنهاد کار نتیجه نمی‌شود.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:lu-adem"
+          ]
+        },
+        {
+          "id": "visa_location",
+          "answer_id": "lu.next_salaried_worker_visa_location",
+          "question": "درخواست VisaD پیش از ورود در سفارت لوکزامبورگ/بلژیکِ کشور مبدأ/اقامت یا کشور همسایهٔ صالح ثبت و تأیید می‌شود؛ یا استثنای اقامت موجود مستند است؟",
+          "reason": "درخواست داخل کشور در رویهٔ عادی پذیرفته نیست.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:lu-employee"
+          ]
+        },
+        {
+          "id": "documents",
+          "answer_id": "lu.next_salaried_worker_documents",
+          "question": "گذرنامه، سوءپیشینه کمتر از۳ماه/سوگندنامهٔ موجه، بیمهٔ شنگن و ترجمهٔ رسمی EN/FR/DE آماده است؟",
+          "reason": "شرایط مدارک مستقل از گواهی ADEM است.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:lu-employee"
+          ]
+        },
+        {
+          "id": "arrival",
+          "answer_id": "lu.next_salaried_worker_arrival",
+          "question": "ثبت ورود در۳روز، نشانی قانونی/مسکن مناسب، معاینه و درخواست کارت همان دسته تا۳ماه پیش از انقضای VisaD برنامه‌ریزی شده؟",
+          "reason": "ویزای ورود پایان تشریفات اقامت نیست.",
+          "action": "مدارک و شاخهٔ قابل اعمال را با مرجع پیوندشده تطبیق دهید.",
+          "source_ids": [
+            "en26:lu-first-permit"
+          ]
+        }
+      ]
+    }
+  ]
+}

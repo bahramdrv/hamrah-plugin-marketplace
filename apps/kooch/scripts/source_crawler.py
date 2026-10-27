@@ -42,7 +42,7 @@ def public_target(url, resolver=None):
     addresses = resolver(host) if resolver else list({x[4][0] for x in socket.getaddrinfo(host, 443, type=socket.SOCK_STREAM)})
     if not addresses or any(not ipaddress.ip_address(address).is_global for address in addresses):
         raise ValueError('non_public_address')
-    return p, addresses[0]
+    return p, sorted(addresses, key=lambda address: (ipaddress.ip_address(address).version, address))[0]
 
 def allowed_redirect(source, target):
     a, b = urllib.parse.urlsplit(source), urllib.parse.urlsplit(target)

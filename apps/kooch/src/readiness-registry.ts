@@ -1,9 +1,10 @@
 import { z } from 'zod';
 import definitions from '../data/route-readiness.json';
 import primaryEdition from '../data/primary-conditions-2026-10-26.json';
+import nextEdition from '../data/primary-conditions-2026-10-27.json';
 import { profileRuleSchema } from './profile-constraints';
 const publicUrl = z.url().refine(value => { const u = new URL(value); return u.protocol === 'https:' && !u.username && !u.password; });
-const source = z.object({ id: z.string().min(1), title: z.string().min(1), url: publicUrl, checked_on: z.iso.date(), verification: z.enum(['direct', 'indexed', 'historical']).default('direct'), verification_note: z.string().min(1).optional() }).strict();
+const source = z.object({ id: z.string().min(1), title: z.string().min(1), url: publicUrl, checked_on: z.iso.date(), source_updated_on: z.iso.date().optional(), verification: z.enum(['direct', 'indexed', 'historical']).default('direct'), verification_note: z.string().min(1).optional() }).strict();
 const check = z.object({ id: z.string().regex(/^[a-z][a-z0-9_]*$/), answer_id: z.string().regex(/^[a-z]{2}\.[a-z][a-z0-9_]*$/), question: z.string().min(1), reason: z.string().min(1), action: z.string().min(1), source_ids: z.array(z.string()).min(1).max(16), profile_rule: profileRuleSchema.optional() }).strict();
 const route = z.object({ route_id: z.string().regex(/^[a-z]{2}:[a-z0-9]+(?:-[a-z0-9]+)*$/), version: z.string().min(1).max(100).optional(), released_on: z.iso.date().optional(), scope_fa: z.string().min(1), limits_fa: z.string().min(1),
   costs_fa: z.string().min(1), cost_source_ids: z.array(z.string()).max(32), dependants_fa: z.string().min(1), dependant_source_ids: z.array(z.string()).max(32), checks: z.array(check).min(1).max(64),
@@ -19,12 +20,15 @@ export const readinessSchema = z.object({ version: z.string().min(1), released_o
   }
 });
 export type ReadinessDefinitions = z.infer<typeof readinessSchema>;
-const edition = readinessSchema.parse(primaryEdition);
-const replaced = new Set(edition.routes.map(route => route.route_id));
-export const readinessDefinitions = readinessSchema.parse({ version: edition.version, released_on: definitions.released_on,
-  sources: [...definitions.sources, ...edition.sources], routes: [...definitions.routes.filter(route => !replaced.has(route.route_id)).map(route => ({ ...route, version: route.version ?? definitions.version })), ...edition.routes.map(route => ({ ...route, released_on: edition.released_on }))] });
 const previousDefinitions = readinessSchema.parse(definitions);
+const editions = [primaryEdition, nextEdition].map(input => readinessSchema.parse(input));
+function mergeEdition(previous: ReadinessDefinitions, edition: ReadinessDefinitions) {
+  const replaced = new Set(edition.routes.map(route => route.route_id));
+  return readinessSchema.parse({ version: edition.version, released_on: previous.released_on,
+    sources: [...previous.sources, ...edition.sources], routes: [...previous.routes.filter(route => !replaced.has(route.route_id)).map(route => ({ ...route, version: route.version ?? previous.version })), ...edition.routes.map(route => ({ ...route, released_on: edition.released_on }))] });
+}
+export const readinessDefinitions = editions.reduce(mergeEdition, previousDefinitions);
 export function readinessDefinitionsFor(now: Date) {
-  return edition.released_on && edition.released_on > now.toISOString().slice(0, 10) ? previousDefinitions : readinessDefinitions;
+  return editions.filter(edition => !edition.released_on || edition.released_on <= now.toISOString().slice(0, 10)).reduce(mergeEdition, previousDefinitions);
 }
 export const readinessQuestions = Object.fromEntries(readinessDefinitions.routes.flatMap(route => route.checks.map(check => [check.answer_id, check.question])));
