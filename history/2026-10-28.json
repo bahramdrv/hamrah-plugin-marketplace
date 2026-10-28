@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T10:40:01.956017Z",
+  "generated_at": "2026-10-28T13:50:00.232961Z",
   "next_due_at": "2026-10-29T09:11:39.351516Z",
   "interval_days": 30,
   "complete_global_conditions": false,
   "legal_reviews_renewed": 0,
   "blocked_route_ids": [],
   "coverage": {
-    "planned": 1320,
-    "captured": 951,
-    "unavailable": 369,
+    "planned": 1332,
+    "captured": 962,
+    "unavailable": 370,
     "review_required": 0,
-    "unreviewed_authority": 981
+    "unreviewed_authority": 980
   }
 }

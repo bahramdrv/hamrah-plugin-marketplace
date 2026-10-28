@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T10:40:01.956017Z",
+  "generated_at": "2026-10-28T13:50:00.232961Z",
   "next_due_at": "2026-10-29T09:11:39.351516Z",
   "sources": [
     {
@@ -4264,11 +4264,13 @@
         "cz:business-residence"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-05-24"
+        "2026-05-24",
+        "2026-10-28"
       ],
       "status": "captured",
       "final_url": "https://ipc.gov.cz/en/visa-and-residence-permit-types/third-country-nationals/long-term-residence-permits/long-term-residence-permit-for-the-purpose-of-doing-business/",
@@ -8494,6 +8496,7 @@
       "route_ids": [
         "ge:family-residence-permit",
         "ge:investment-residence-permit",
+        "ge:it-residence-permit",
         "ge:permanent-residence-permit",
         "ge:short-term-residence-real-estate",
         "ge:student-residence-permit",
@@ -8502,6 +8505,7 @@
       ],
       "roles": [
         "condition_reference",
+        "official_route_reference",
         "route_reference"
       ],
       "authority": "published_primary",
@@ -40720,6 +40724,7 @@
       "route_ids": [
         "ge:family-residence-permit",
         "ge:investment-residence-permit",
+        "ge:it-residence-permit",
         "ge:permanent-residence-permit",
         "ge:short-term-residence-real-estate",
         "ge:student-residence-permit"
@@ -40729,7 +40734,8 @@
       ],
       "authority": "published_primary",
       "legal_checked_on": [
-        "2026-10-27"
+        "2026-10-27",
+        "2026-10-28"
       ],
       "status": "captured",
       "final_url": "https://matsne.gov.ge/en/document/view/2278806",
@@ -41125,6 +41131,226 @@
       "discovery_links": [],
       "semantic_sha256": "e9c0c46e854183a0d17a8be086df9f699313c04fb6bfe93a40ae8a112d5ec983",
       "extraction_state": "pdf_requires_review",
+      "last_attempt_at": "2026-10-28T09:11:39.351516Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T09:11:39.351516Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://ipc.gov.cz/en/forms-and-documents/documents/proof-of-funds-for-the-residence-finances/",
+      "route_ids": [
+        "cz:business-residence"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-28"
+      ],
+      "status": "captured",
+      "final_url": "https://ipc.gov.cz/en/forms-and-documents/documents/proof-of-funds-for-the-residence-finances/",
+      "body_sha256": "bd966b5018c25bcda9abf5ced0eb06e9a07b6b3ddba77352eb01a5973442b428",
+      "content_type": "text/html",
+      "bytes": 198935,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://ipc.gov.cz/en/forms-and-documents/documents/proof-of-funds-for-the-residence-finances/",
+        "https://ipc.gov.cz/en/forms-and-documents/documents/proof-of-funds-for-the-residence-finances/"
+      ],
+      "semantic_sha256": "befba35b6310c0551cf20f95b290c48444221e8d19c45adcb6aee2cd73352ad4",
+      "last_attempt_at": "2026-10-28T13:50:00.232961Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T13:50:00.232961Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://ipc.gov.cz/en/forms-and-documents/documents/proof-of-no-outstanding-debts/",
+      "route_ids": [
+        "cz:business-residence"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-28"
+      ],
+      "status": "captured",
+      "final_url": "https://ipc.gov.cz/en/forms-and-documents/documents/proof-of-no-outstanding-debts/",
+      "body_sha256": "d11b9ad83c4107d2fdf368fe49b4a3e5fc1e56f7a450854c3ff8fc624b2d765e",
+      "content_type": "text/html",
+      "bytes": 167276,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://ipc.gov.cz/en/visa-and-residence-permit-types/third-country-nationals/long-term-residence-permits/long-term-residence-permit-for-the-purpose-of-doing-business/",
+        "https://ipc.gov.cz/en/visa-and-residence-permit-types/third-country-nationals/long-term-residence-permits/long-term-residence-permit-for-the-purpose-of-investment/"
+      ],
+      "semantic_sha256": "9b18a95213e801ad84302d9724fa22b971e11961d97f697d0ae1698807154e16",
+      "last_attempt_at": "2026-10-28T13:50:00.232961Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T13:50:00.232961Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://ipc.gov.cz/en/forms-and-documents/documents/medical-insurance/",
+      "route_ids": [
+        "cz:business-residence"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-28"
+      ],
+      "status": "captured",
+      "final_url": "https://ipc.gov.cz/en/forms-and-documents/documents/medical-insurance/",
+      "body_sha256": "226b8af977d8faa04875aa85878d1298cf6373d014d4d7423370b6595019fe2a",
+      "content_type": "text/html",
+      "bytes": 184574,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://ipc.gov.cz/en/visa-and-residence-permit-types/third-country-nationals/long-term-residence-permits/",
+        "https://ipc.gov.cz/en/visa-and-residence-permit-types/third-country-nationals/residence-of-a-child-born-in-the-czech-republic/"
+      ],
+      "semantic_sha256": "f6d3b6067d18353b93493a063b39f4590bacd12ac771160a132a2c05fc7edeac",
+      "last_attempt_at": "2026-10-28T13:50:00.232961Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T13:50:00.232961Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://ipc.gov.cz/en/forms-and-documents/documents/formal-requirements/",
+      "route_ids": [
+        "cz:business-residence"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-28"
+      ],
+      "status": "captured",
+      "final_url": "https://ipc.gov.cz/en/forms-and-documents/documents/formal-requirements/",
+      "body_sha256": "fa058d0aa87f2ed7702e94043bf2fcef8341e7fbfae00b46eb79299c6f014c87",
+      "content_type": "text/html",
+      "bytes": 168046,
+      "condition_candidates": [
+        {
+          "heading": "Formal Requirements (Third-country Nationals)",
+          "excerpt": "The documents cannot be older than 180 days. This does not apply to travel documents, civil registry office documents or",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Formal Requirements (Third-country Nationals)",
+          "excerpt": "Documents in other than Czech or Slovak languages need to be provided in their original versions together with certified translations",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Formal Requirements (Third-country Nationals)",
+          "excerpt": "Travel documents, civil registry documents and documents proving the purpose of residence must be provided in their original versions.",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Formal Requirements (Third-country Nationals)",
+          "excerpt": "Documents issued by a court, notary public or an authority outside of the Czech Republic must be certified with an",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Formal Requirements (Third-country Nationals)",
+          "excerpt": "The documents must be originals or certified copies . The Ministry of the Interior employees will only make copies of",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [],
+      "semantic_sha256": "5958ceca1df1c8da8b71505b69597d094e949c0f28b2e5dfa65b49878beb74fe",
+      "last_attempt_at": "2026-10-28T13:50:00.232961Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T13:50:00.232961Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://ipc.gov.cz/en/forms-and-documents/documents/proof-of-accommodation/",
+      "route_ids": [
+        "cz:business-residence"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-28"
+      ],
+      "status": "captured",
+      "final_url": "https://ipc.gov.cz/en/forms-and-documents/documents/proof-of-accommodation/",
+      "body_sha256": "1fce5f967fb744f55a6e46aee96f50e7188b2837e998947808697b24b3b0c945",
+      "content_type": "text/html",
+      "bytes": 185952,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "c99a175b5458f9a85fa1759edcebc0641c482ded86374e81fd921ed0549e2cb2",
+      "last_attempt_at": "2026-10-28T13:50:00.232961Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T13:50:00.232961Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://ipc.gov.cz/en/forms-and-documents/documents/travel-document/",
+      "route_ids": [
+        "cz:business-residence"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-28"
+      ],
+      "status": "captured",
+      "final_url": "https://ipc.gov.cz/en/forms-and-documents/documents/travel-document/",
+      "body_sha256": "5e8c1272d8c452f53771bd9a26812bafdd8779497c232f6325e3a877d35fa35c",
+      "content_type": "text/html",
+      "bytes": 168811,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "3e24a92cd3b61a3520a0a4fe9ae900d68115ac5d92ebb8e184f9de52ef786613",
+      "last_attempt_at": "2026-10-28T13:50:00.232961Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T13:50:00.232961Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://mzv.gov.cz/teheran/cz/viza_a_konzularni_informace/index.html",
+      "route_ids": [
+        "cz:blue-card",
+        "cz:business-residence",
+        "cz:employee-card"
+      ],
+      "roles": [
+        "condition_reference",
+        "iran_context_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-28"
+      ],
+      "status": "captured",
+      "final_url": "https://mzv.gov.cz/teheran/cz/viza_a_konzularni_informace/index.html",
+      "body_sha256": "64460363ffeeb7c127b1c30a2adebc64e9b5ec6127ed6b8529321d7498627b6f",
+      "content_type": "text/html",
+      "bytes": 18847,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "babb1aa39b743e77b01e85f5562e4f079ed3c9b72cda460a8426642bc824514f",
       "last_attempt_at": "2026-10-28T09:11:39.351516Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
@@ -41745,6 +41971,155 @@
       "review_reasons": []
     },
     {
+      "url": "https://www.matsne.gov.ge/en/document/view/2806732",
+      "route_ids": [
+        "ge:it-residence-permit"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-28"
+      ],
+      "status": "captured",
+      "final_url": "https://www.matsne.gov.ge/en/document/view/2806732",
+      "body_sha256": "9639d848fb6ea3ecec08b2ae45d8cd62ecf3337f54b111131875a7ca4a7818b8",
+      "content_type": "text/html",
+      "bytes": 211647,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "2e6d8bfa1df299f1d7bbaf55d99b8585d7e31666d2cb61d559a4c54f12a92570",
+      "last_attempt_at": "2026-10-28T13:50:00.232961Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T13:50:00.232961Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://matsne.gov.ge/ka/document/view/6615969",
+      "route_ids": [
+        "ge:it-residence-permit"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-28"
+      ],
+      "status": "captured",
+      "final_url": "https://matsne.gov.ge/ka/document/view/6615969",
+      "body_sha256": "2b3e403526f3254b2111c8ffa2850ed4ff4347e8efa24c20f0258d10ea2ca886",
+      "content_type": "text/html",
+      "bytes": 136420,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "b6b6fc17b960b24d0929d0abb6df5165aae1d44a247d8e34c9328d67107ecc72",
+      "last_attempt_at": "2026-10-28T13:50:00.232961Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T13:50:00.232961Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://matsne.gov.ge/ka/document/view/6831591",
+      "route_ids": [
+        "ge:it-residence-permit"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-28"
+      ],
+      "status": "captured",
+      "final_url": "https://matsne.gov.ge/ka/document/view/6831591",
+      "body_sha256": "51e2c264d4803d66452dd110ef52dfbe2c53a5f088f295818eb8bd7a9c24feb7",
+      "content_type": "text/html",
+      "bytes": 116205,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "bba369bc188dd84274b0e4660083941c5d3d42c33ce1e48a2704a7e887d390a3",
+      "last_attempt_at": "2026-10-28T13:50:00.232961Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T13:50:00.232961Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://matsne.gov.ge/ka/document/view/6939703",
+      "route_ids": [
+        "ge:it-residence-permit"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-28"
+      ],
+      "status": "captured",
+      "final_url": "https://matsne.gov.ge/ka/document/view/6939703",
+      "body_sha256": "b36978fdc8202928237b7ebd98cb393ce416a1e6c3a3248a650ecc9ea1b2388d",
+      "content_type": "text/html",
+      "bytes": 94873,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "fd7e058b62c216c1a326343b7d831fc6e56e28af1aa3465747aaaa8b3885a97b",
+      "last_attempt_at": "2026-10-28T13:50:00.232961Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T13:50:00.232961Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://matsne.gov.ge/ka/document/view/6910359",
+      "route_ids": [
+        "ge:it-residence-permit"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-28"
+      ],
+      "status": "captured",
+      "final_url": "https://matsne.gov.ge/ka/document/view/6910359",
+      "body_sha256": "1d74c85526cc64a36de6ebc83287455395df0f0dd4c26b423146af2a1f051001",
+      "content_type": "text/html",
+      "bytes": 234285,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "5a760b41379ad56bd758ade32c069d3ae7fce5c3d913adb7e0a750773c148cbf",
+      "last_attempt_at": "2026-10-28T13:50:00.232961Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T13:50:00.232961Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://iran.mfa.gov.ge/en/e-visa-portal",
+      "route_ids": [
+        "ge:it-residence-permit"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-28"
+      ],
+      "status": "http_error",
+      "http_status": 403,
+      "last_attempt_at": "2026-10-28T13:50:00.232961Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "review_reasons": []
+    },
+    {
       "url": "https://travel.state.gov/en/newsroom/visas/2026/suspension-of-visa-issuance-to-foreign-nationals-to-protect-the-security-of-the-united-states.html",
       "route_ids": [
         "gu:employment-based-green-card",
@@ -41896,34 +42271,6 @@
       "discovery_links": [],
       "semantic_sha256": "a76224c34d7ffa1da67596ddc78a54860efc6e395e0a0300f14aaff74145b1cc",
       "extraction_state": "pdf_requires_review",
-      "last_attempt_at": "2026-10-28T09:11:39.351516Z",
-      "review_required": false,
-      "legal_reviews_renewed": 0,
-      "last_success_at": "2026-10-28T09:11:39.351516Z",
-      "review_reasons": []
-    },
-    {
-      "url": "https://mzv.gov.cz/teheran/cz/viza_a_konzularni_informace/index.html",
-      "route_ids": [
-        "cz:blue-card",
-        "cz:business-residence",
-        "cz:employee-card"
-      ],
-      "roles": [
-        "iran_context_reference"
-      ],
-      "authority": "published_primary",
-      "legal_checked_on": [
-        "2026-10-28"
-      ],
-      "status": "captured",
-      "final_url": "https://mzv.gov.cz/teheran/cz/viza_a_konzularni_informace/index.html",
-      "body_sha256": "64460363ffeeb7c127b1c30a2adebc64e9b5ec6127ed6b8529321d7498627b6f",
-      "content_type": "text/html",
-      "bytes": 18847,
-      "condition_candidates": [],
-      "discovery_links": [],
-      "semantic_sha256": "babb1aa39b743e77b01e85f5562e4f079ed3c9b72cda460a8426642bc824514f",
       "last_attempt_at": "2026-10-28T09:11:39.351516Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
@@ -42448,6 +42795,6 @@
       "last_success_at": "2026-10-28T10:40:01.956017Z"
     }
   ],
-  "attempted_sources": 518,
+  "attempted_sources": 12,
   "publish_required": true
 }
