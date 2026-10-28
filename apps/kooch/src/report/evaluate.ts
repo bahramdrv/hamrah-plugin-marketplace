@@ -131,7 +131,7 @@ export function buildReport(saved: SavedCase, now: Date, review: EvidenceReview 
       ...(!destinations.length || destinations.includes('uk') ? [evaluateStudent(saved, now, review.routeIds.includes('uk:student'), review.retrievalFailed)] : []),
       ...(!destinations.length || destinations.includes('ca') ? [evaluateCanada(saved, now, review.routeIds.includes('ca:study-permit-ca'), review.retrievalFailed)] : []),
     ] : [],
-    coverage_note: 'پوشش ارزیابی فعلی شامل تحصیل بریتانیا و درخواست اولیهٔ مجوز تحصیل کاناداست؛ نبود نتیجه برای مقصد یا هدف دیگر به معنی بسته‌بودن مسیر نیست.',
+    coverage_note: 'این کارنامه غربال جهانیِ مسیرهای فهرست‌شده را با پوشش جزئی ثبت می‌کند؛ شرط‌های بررسی‌شده و اطلاعات نامعلوم برای هر مسیر جدا مشخص‌اند. نبود نتیجه برای مقصد یا هدف دیگر به معنی بسته‌بودن مسیر نیست.',
   };
 }
 export type GuidanceReport = Omit<ReturnType<typeof buildReport>, 'discovery'> & { id: string; version: number; discovery?: DiscoveryBriefing };
