@@ -4,7 +4,7 @@ import { createCompassApi } from '../src/api';
 import snapshot from '../data/iran-start-snapshot.json';
 import catalog from '../data/global-catalog.json';
 import { readinessDefinitions, readinessDefinitionsFor } from '../src/readiness-registry';
-import { routeReadiness } from '../src/route-readiness';
+import { routeReadiness, readinessEvidence } from '../src/route-readiness';
 import { screeningProfile } from '../src/profile-constraints';
 import { answersSchema } from '../src/questions';
 
@@ -39,6 +39,24 @@ test('stale source evidence cannot become a positive condition via a valid profi
   assert.equal(r.status, 'needs_source_review');
 });
 
+test('an announced end of a rule window stops positive checks even while its source review is still fresh', async () => {
+  const rules = registry([check('fixture_age', 'age_exact', 'lte', 45)]);
+  Object.assign(rules.routes[0], { valid_until: '2026-10-31' });
+  for (const [date, expected] of [['2026-10-31T12:00:00Z', 'reported_checks_ready'], ['2026-11-01T00:00:00Z', 'needs_source_review']]) {
+    const api = createCompassApi({ snapshot, catalog, readiness: rules, now: () => new Date(date) });
+    const response = await api.POST(new Request('http://localhost/api/compass', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ age: '30-39' }) }));
+    const data = await response.json();
+    assert.equal(data.personal_screening.routes.find((route: { id: string }) => route.id === 'de:eu-blue-card').status, expected);
+  }
+  Object.assign(rules.routes[0], { valid_until: '2026-10-31T23:59:59+04:00' });
+  const profile = screeningProfile(answersSchema.parse({ age: '30-39' }));
+  const before = routeReadiness(rules, 'de:eu-blue-card', {}, new Date('2026-10-31T19:59:59Z'), {}, profile)!;
+  const after = routeReadiness(rules, 'de:eu-blue-card', {}, new Date('2026-10-31T20:00:00Z'), {}, profile)!;
+  assert.equal(before.counts.reported_ready, 1);
+  assert.equal(after.checks[0].state_reason, 'rule_window_expired');
+  assert.notDeepEqual(readinessEvidence(before), readinessEvidence(after), 'expiry must change the evidence used to explain saved reports');
+});
+
 test('an affirmative checkbox cannot overrule contradictory profile facts or a different money unit', async () => {
   const rules = registry([check('fixture_age', 'age_exact', 'gte', 35)]);
   rules.routes[0].checks = [{ ...check('fixture_age', 'age_exact', 'gte', 35), answer_id: 'de.job_offer' }];
@@ -55,7 +73,8 @@ test('an affirmative checkbox cannot overrule contradictory profile facts or a d
 test('new editions do not rewrite historical rules and an expired criterion stops reporting readiness', () => {
   assert.equal(readinessDefinitionsFor(new Date('2026-10-24')).version, 'route-readiness-1');
   assert.equal(readinessDefinitionsFor(new Date('2026-10-26T12:00:00Z')).routes.length, 60);
-  assert.ok(readinessDefinitionsFor(new Date('2026-10-27T12:00:00Z')).routes.length >= 95);
+  assert.equal(readinessDefinitionsFor(new Date('2026-10-27T12:00:00Z')).routes.length, 95);
+  assert.equal(readinessDefinitionsFor(new Date('2026-10-28T12:00:00Z')).routes.length, 108);
   const plan = readinessDefinitions.routes.find(route => route.route_id === 'ke:class-k-ordinary-residents-permit')!;
   const answers = answersSchema.parse({ age: '40-plus' });
   const current = routeReadiness(readinessDefinitions, plan.route_id, {}, now(), {}, screeningProfile(answers))!;
@@ -74,6 +93,29 @@ test('new primary sources reach global personal screening without pruning other 
     assert.ok(route.reviewed_check_count >= 3, id);
     assert.equal(route.official_eligibility, 'UNKNOWN');
   }
+});
+
+test('a researched checklist retains its separate Iranian filing context and current references', async () => {
+  const api = createCompassApi({ snapshot, catalog, now: () => new Date('2026-10-28T12:00:00Z') });
+  const response = await api.POST(new Request('http://localhost/api/compass', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ goal: 'work', destinations: ['de'] }) }));
+  const data = await response.json();
+  const route = data.personal_screening.routes.find((route: { id: string }) => route.id === 'de:eu-blue-card');
+  assert.ok(route.source_urls.includes('https://teheran.diplo.de/ir-de/2752046-2752046'));
+  assert.ok(route.reasons.some((reason: string) => reason.includes('ظرفیت نمایندگی محدود')));
+  assert.equal(route.official_eligibility, 'UNKNOWN');
+});
+
+test('Armenian employment checks stop at the announced local reform boundary', () => {
+  const plan = readinessDefinitions.routes.find(route => route.route_id === 'am:work-residence-permit');
+  assert.ok(plan);
+  assert.equal(plan.valid_until, '2026-10-31T23:59:59+04:00');
+  const facts = Object.fromEntries(plan.checks.map(check => [check.answer_id, 'yes' as const]));
+  const versions = Object.fromEntries(plan.checks.map(check => [check.answer_id, plan.version!]));
+  const before = routeReadiness(readinessDefinitions, plan.route_id, facts, new Date('2026-10-31T19:59:59Z'), versions)!;
+  const after = routeReadiness(readinessDefinitions, plan.route_id, facts, new Date('2026-10-31T20:00:00Z'), versions)!;
+  assert.equal(before.counts.reported_ready, plan.checks.length);
+  assert.ok(after.checks.every(check => check.state_reason === 'rule_window_expired'));
+  assert.equal(after.costs.current, false);
 });
 
 test('regional alternatives stay within one scoped Belgian check instead of asking all regions as mandatory', async () => {

@@ -1,0 +1,836 @@
+{
+  "version": "primary-conditions-expanded-2026-10-28-1",
+  "released_on": "2026-10-28",
+  "sources": [
+    {
+      "id": "int-europe28:es-family-hoja",
+      "title": "Migraciones: Reagrupación familiar",
+      "url": "https://www.inclusion.gob.es/web/migraciones/w/autorizacion-de-residencia-temporal-por-reagrupacion-familiar",
+      "checked_on": "2026-10-27",
+      "verification": "direct"
+    },
+    {
+      "id": "int-europe28:gr-docs2024",
+      "title": "Υπουργείο Μετανάστευσης: απόφαση 95391/2024",
+      "url": "https://migration.gov.gr/wp-content/uploads/2024/10/1_ΚΥΑ-ΔΙΚΑΙΟΛΟΓΗΤΙΚΩΝ.pdf",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "مواد مدارک ملی خوانده شد؛ شاخهٔ داخلیِ قدیمی نومد به‌علت قانون جدید فعال فرض نمی‌شود."
+    },
+    {
+      "id": "int-europe28:gr-golden-mitos-listed",
+      "title": "Μίτος: Golden visa programme, listed real property",
+      "url": "https://en.mitos.gov.gr/index.php/ΔΔ:Golden_visa_programme_(investment_in_a_listed_real_property)_–_Initial_issuance",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "source_updated_on": "2026-10-27",
+      "verification_note": "رجیستری ملی، فقط شاخهٔ بنای ثبت‌شده؛ شامل مدارک و هزینه است، نه تمام گلدن‌ویزا."
+    },
+    {
+      "id": "int-europe28:gr-law2026",
+      "title": "Εθνικό Τυπογραφείο: Νόμος 5275/2026",
+      "url": "https://api.et.gr/apiLAW/1/2026/5275/pdf",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "انتشار و اجرای عمومی ۶ فوریهٔ ۲۰۲۶؛ مادهٔ ۱۳ حذف ۱۲(۷) و مادهٔ ۱۹ اعتبار سه‌سالهٔ Blue Card را تأیید می‌کند."
+    },
+    {
+      "id": "int-europe28:gr-nomad-faq",
+      "title": "Αποκεντρωμένη Διοίκηση Ηπείρου–Δυτικής Μακεδονίας: FAQ",
+      "url": "https://e-dm.gov.gr/allodapoi-metanastefsi/",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "مقام اداری ملی/منطقه‌ای، ضابطهٔ منابع نومد و افزایش همراه را تأیید می‌کند."
+    },
+    {
+      "id": "int-europe28:hr-nomad",
+      "title": "MUP: Temporary stay of digital nomads",
+      "url": "https://mup.gov.hr/aliens-281621/stay-and-work/temporary-stay-of-digital-nomads/286833",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "قواعد ۱۸ماه و ضابطهٔ منابع/محل درخواست مستقیماً خوانده شد."
+    },
+    {
+      "id": "int-europe28:hr-seasonal-current",
+      "title": "MUP: Državljani trećih zemalja, sezonski rad",
+      "url": "https://mup.gov.hr/gradjani-281562/moji-dokumenti-281563/stranci-333/drzavljani-trecih-zemalja/281820",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "متن جاری کرواتی به قانون 55/26 اشاره دارد؛ با صفحهٔ انگلیسی شش‌ماهه تعارض دارد."
+    },
+    {
+      "id": "int-europe28:it-blue-ministry",
+      "title": "Ministero del Lavoro: nuove regole Carta blu UE",
+      "url": "https://integrazionemigranti.gov.it/it-it/Ricerca-news/Dettaglio-news/id/1978",
+      "checked_on": "2026-10-27",
+      "verification": "direct"
+    },
+    {
+      "id": "int-europe28:ni26:dk-fast",
+      "title": "SIRI — Fast Track",
+      "url": "https://www.nyidanmark.dk/en-GB/Applying/Work/Fast-track",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "int-europe28:ni26:dk-study",
+      "title": "SIRI — Higher educational programmes",
+      "url": "https://www.nyidanmark.dk/en-GB/You-want-to-apply/Study/Higher-education/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن کامل مستقیم دور قبل؛ تلاش۲۷اکتبر timeout شد. تغییرات۱اکتبر۲۰۲۶ در متن دیده شد؛ تمامیت partial."
+    },
+    {
+      "id": "int-europe28:ni26:ie-family",
+      "title": "ISD — Join an Irish national",
+      "url": "https://www.irishimmigration.ie/coming-to-join-family-in-ireland/joining-an-irish-national/join-family-visa/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "int-europe28:ni26:ie-family-faq",
+      "title": "ISD — Family reunification FAQ",
+      "url": "https://www.irishimmigration.ie/coming-to-join-family-in-ireland/frequently-asked-questions-for-joining-family/",
+      "checked_on": "2026-10-27",
+      "verification": "direct"
+    },
+    {
+      "id": "int-europe28:ni26:ie-family-money",
+      "title": "ISD — Family financial thresholds",
+      "url": "https://www.irishimmigration.ie/coming-to-join-family-in-ireland/financial-thresholds/",
+      "checked_on": "2026-10-27",
+      "verification": "direct"
+    },
+    {
+      "id": "int-europe28:ni26:ie-study",
+      "title": "ISD — Long term study visa",
+      "url": "https://www.irishimmigration.ie/coming-to-study-in-ireland/what-are-my-study-visa-options/how-to-apply-for-long-term-study-visa/",
+      "checked_on": "2026-10-26",
+      "verification": "direct"
+    },
+    {
+      "id": "int-europe28:ni26:ie-study-finance",
+      "title": "ISD — Student finances",
+      "url": "https://www.irishimmigration.ie/coming-to-study-in-ireland/what-are-my-study-options/a-fee-paying-private-primary-or-secondary-school/information-on-student-finances/",
+      "checked_on": "2026-10-27",
+      "verification": "direct"
+    },
+    {
+      "id": "int-europe28:pt-family-law2025",
+      "title": "DR: Lei n.º 61/2025",
+      "url": "https://diariodarepublica.pt/dr/detalhe/lei/61-2025-941547426",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "قانون مصوب ۲۲ اکتبر، مؤثر ۲۳ اکتبر ۲۰۲۵؛ ادامهٔ خواندن در ۲۸ اکتبر تاریخ مشاهدهٔ قبلی را عوض نکرد."
+    },
+    {
+      "id": "int-europe28:gr-code2023",
+      "title": "Εθνικό Τυπογραφείο: Νόμος 5038/2023",
+      "url": "https://api.et.gr/apiLAW/1/2023/5038/pdf",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "مواد مشخص ۱۲ و ۳۱ خوانده شد؛ قانون پایهٔ ۲۰۲۳ متن تلفیقی همهٔ اصلاحات امروز نیست."
+    },
+    {
+      "id": "int28:am-work",
+      "title": "National Services Gateway: employer-led employment residence",
+      "url": "https://english.hartak.am/services/2a92cf25-8d17-4f4d-9653-0801cbee54fd/online/",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "Root re-read official text on October 28; statutory amendments and service change take effect November 1, 2026. Current branch is deliberately time-bounded."
+    },
+    {
+      "id": "int28:am-law",
+      "title": "ARLIS: Law on Foreigners, articles 22 and 22.1, pre-November 2026 text",
+      "url": "https://www.arlis.am/en/acts/231843",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "Root re-read official text on October 28; statutory amendments and service change take effect November 1, 2026. Current branch is deliberately time-bounded."
+    },
+    {
+      "id": "int28:am-transition",
+      "title": "Migration and Citizenship Service: residency digitization from November 1",
+      "url": "https://migration.mia.gov.am/en/articles/news/notice-services-provided-within-the-framework-of-obtaining-residency-status-in-the-republic-of-armenia-will-be-digitized",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "Root re-read official text on October 28; statutory amendments and service change take effect November 1, 2026. Current branch is deliberately time-bounded."
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "ie:student-visa",
+      "version": "primary-conditions-expanded-2026-10-28-1",
+      "scope_fa": "ویزای بلندمدت تحصیلِ فرد بالغِ نیازمند ویزا، دورهٔ تمام‌وقت بیش از هشت ماه، درخواست از کشور مبدأ/اقامت قانونی.",
+      "limits_fa": "پوشش جزئیِ همین شاخه؛ پاسخ مثبت فقط آمادگی شروط ثبت‌شده است، نه احراز تمام شرایط یا PASS رسمی. دورهٔ هشت‌ماهه یا کوتاه‌تر، صغیر، همهٔ انواع مدرسه و فهرست کامل مؤسسات/آزمون‌ها خارج این برش‌اند.",
+      "costs_fa": "شهریه و زندگی جدا از هزینهٔ پرونده‌اند؛ جمع هزینه تأیید نشد.",
+      "cost_source_ids": [],
+      "dependants_fa": "دانشجوی عادی زیر این سیاست حق خودکار حمایت خانواده ندارد؛ دکتری/بورسیهٔ مصوب شاخه‌های استثنا دارند.",
+      "dependant_source_ids": [
+        "int-europe28:ni26:ie-family-faq"
+      ],
+      "checks": [
+        {
+          "id": "admission",
+          "answer_id": "ie.int28_student_visa_admission",
+          "question": "پذیرش تمام‌وقت با حداقل ۱۵ ساعت آموزش روزانه در هفته و مشخصات دوره دارید؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:ie-study"
+          ]
+        },
+        {
+          "id": "fees",
+          "answer_id": "ie.int28_student_visa_fees",
+          "question": "اگر شهریه کمتر از ۶۰۰۰ یورو است کل آن، وگرنه دست‌کم ۶۰۰۰ یورو را پرداخت کرده‌ای و رسید مبلغ بیشتری که مؤسسه الزام کرده آماده است؟",
+          "reason": "دو حالتِ مقدار شهریه جایگزین یکدیگرند؛ پرداخت کل شهریهٔ کمتر از ۶۰۰۰ کافی است. مؤسسه می‌تواند مبلغ بیشتری بخواهد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:ie-study"
+          ]
+        },
+        {
+          "id": "academic",
+          "answer_id": "ie.int28_student_visa_academic",
+          "question": "توان تحصیلی و زبان مورد نیاز، وقفه‌ها و تغییر مسیر تحصیلی مستند است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:ie-study"
+          ]
+        },
+        {
+          "id": "funds",
+          "answer_id": "ie.int28_student_visa_funds",
+          "question": "۱۰۰۰۰ یورو منابع قابل دسترس برای سال اول و دسترسی به همین مبلغ به‌علاوه شهریه برای سال‌های بعد مستند است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:ie-study-finance"
+          ]
+        },
+        {
+          "id": "documents",
+          "answer_id": "ie.int28_student_visa_documents",
+          "question": "بیمهٔ خصوصی، گذرنامه با ۱۲ ماه اعتبار پس از ورود، ترجمه و سوابق رد ویزا آماده‌اند؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:ie-study"
+          ]
+        },
+        {
+          "id": "filing",
+          "answer_id": "ie.int28_student_visa_filing",
+          "question": "از کشور مبدأ/اقامت قانونی درخواست می‌دهید و تعهد رعایت شرایط و خروج مستند است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:ie-study"
+          ]
+        }
+      ],
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "ie:join-family-of-irish-national",
+      "version": "primary-conditions-expanded-2026-10-28-1",
+      "scope_fa": "فقط همسرِ قانونیِ شهروند ایرلند، پیوست از خارج در شاخهٔ خانوادهٔ هسته‌ایِ سیاست ۲۰۲۶.",
+      "limits_fa": "پوشش جزئیِ همین شاخه؛ پاسخ مثبت فقط آمادگی شروط ثبت‌شده است، نه احراز تمام شرایط یا PASS رسمی. شریک بدون ازدواج، کودک، والد و بزرگسال وابسته باید با شاخهٔ مستقل بررسی شوند؛ شروط مخصوص آنان به همسر تحمیل نشده است.",
+      "costs_fa": "هزینهٔ ویزا/ثبت و مدارک با محل اقدام تأیید شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "این ماژول خودِ پیوست همسر است؛ دامنهٔ سایر وابستگان پوشش ندارد.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "sponsor",
+          "answer_id": "ie.int28_join_family_of_irish_national_sponsor",
+          "question": "تابعیت ایرلندی حامی و ازدواج معتبر و واقعی مستند است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:ie-family"
+          ]
+        },
+        {
+          "id": "income",
+          "answer_id": "ie.int28_join_family_of_irish_national_income",
+          "question": "حامی مجموع حداقل ۷۵۰۰۰ یورو درآمد ناخالصِ غیرحمایت‌دولتی طی سه سال و تداوم آن را ثابت می‌کند؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:ie-family-money"
+          ]
+        },
+        {
+          "id": "public_support",
+          "answer_id": "ie.int28_join_family_of_irish_national_public_support",
+          "question": "حامی در دو سال گذشته عمدتاً وابسته به حمایت دولتی نبوده و فقط درآمد همان حامی برای آستانه شمرده شده است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:ie-family-money"
+          ]
+        },
+        {
+          "id": "filing",
+          "answer_id": "ie.int28_join_family_of_irish_national_filing",
+          "question": "قبل از سفر ویزای بلندمدت/اجازهٔ لازم را درخواست می‌کنید و پس از ورود ثبت اقامت در مهلت مقرر انجام می‌شود؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:ie-family-faq"
+          ]
+        }
+      ],
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "dk:fast-track-dk",
+      "version": "primary-conditions-expanded-2026-10-28-1",
+      "scope_fa": "فقط شاخهٔ Pay Limit در Fast Track، استخدام تمام‌وقت نزد شرکتِ تأییدشدهٔ SIRI در سال ۲۰۲۶.",
+      "limits_fa": "پوشش جزئیِ همین شاخه؛ پاسخ مثبت فقط آمادگی شروط ثبت‌شده است، نه احراز تمام شرایط یا PASS رسمی. شاخه‌های Supplementary، کوتاه‌مدت، پژوهشگر و آموزش اینجا ارزیابی نمی‌شوند؛ شرط آگهی/بیکاری Supplementary به این شاخه تحمیل نشده است.",
+      "costs_fa": "رسیدگی 6810 DKK ؛ هزینهٔ نهایی جدا.",
+      "cost_source_ids": [
+        "int-europe28:ni26:dk-fast"
+      ],
+      "dependants_fa": "شروط همراه در این مرور احراز نشده‌اند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "certified",
+          "answer_id": "dk.int28_fast_track_dk_certified",
+          "question": "شرکت با همان CVR در فهرست تأیید SIRI است و اختیار ثبت درخواست دارد؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:dk-fast"
+          ]
+        },
+        {
+          "id": "salary",
+          "answer_id": "dk.int28_fast_track_dk_salary",
+          "question": "حقوق سالانهٔ اجزای مجاز حداقل ۵۵۲۰۰۰ کرون دانمارک و شرایط مزدی مطابق عرف همان حرفه است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:dk-fast"
+          ]
+        },
+        {
+          "id": "terms",
+          "answer_id": "dk.int28_fast_track_dk_terms",
+          "question": "اشتغال تمام‌وقت و شرایط کار دانمارکی، نبود نزاع قانونی و مجوز حرفه در صورت شمول احراز شده است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:dk-fast"
+          ]
+        }
+      ],
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "dk:student-permit-dk",
+      "version": "primary-conditions-expanded-2026-10-28-1",
+      "scope_fa": "دانشجوی بالغ آموزش عالی تمام‌وقت حضوری در مؤسسه/دورهٔ مورد تأیید دولت؛ شاخهٔ اثبات تمکن از منابع نقدی خود در ۲۰۲۶.",
+      "limits_fa": "پوشش جزئیِ همین شاخه؛ پاسخ مثبت فقط آمادگی شروط ثبت‌شده است، نه احراز تمام شرایط یا PASS رسمی. دورهٔ غیرتأییدشده، آمادگی، صغیر، بدل بورس/وام/پرداخت شهریه جداست. منبع تغییر همراهان indexed است؛ هیچ حق همراه از آن وارد این candidate نشد.",
+      "costs_fa": "هزینهٔ رسیدگی 3060 DKK ؛ شهریه و مخارج جدا.",
+      "cost_source_ids": [
+        "int-europe28:ni26:dk-study"
+      ],
+      "dependants_fa": "قواعد همراهِ مؤثر از اکتبر ۲۰۲۶ در این ماژول از منبع مستقیم تکمیل نشده است؛ حق همراه تأیید نمی‌شود.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "admission",
+          "answer_id": "dk.int28_student_permit_dk_admission",
+          "question": "پذیرش تمام‌وقت حضوری و تأیید مؤسسه/دورهٔ آموزش عالی احراز شده است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:dk-study"
+          ]
+        },
+        {
+          "id": "language",
+          "answer_id": "dk.int28_student_permit_dk_language",
+          "question": "زبان تدریس را برای مشارکت فعال می‌دانید؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:dk-study"
+          ]
+        },
+        {
+          "id": "funds",
+          "answer_id": "dk.int28_student_permit_dk_funds",
+          "question": "برای مدت لازم تا حداکثر دوازده ماه، ماهانه ۷۴۲۶ کرون منابع نقدِ قابل تصرف به نام خود دارید؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:dk-study"
+          ]
+        },
+        {
+          "id": "filing",
+          "answer_id": "dk.int28_student_permit_dk_filing",
+          "question": "در مرجع صالح محل اقامت، یا در دانمارک با حضور قانونی، درخواست و زیست‌سنجی انجام می‌شود؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:ni26:dk-study"
+          ]
+        }
+      ],
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "es:family-reunification-es",
+      "version": "primary-conditions-expanded-2026-10-28-1",
+      "scope_fa": "فقط پیوست همسرِ بالغ به حامی غیراروپایی در رژیم عمومی اسپانیا؛ خانوادهٔ شهروند اتحادیه/اسپانیا و شاخهٔ والدین جداست.",
+      "limits_fa": "پوشش جزئیِ همین شاخه؛ پاسخ مثبت فقط آمادگی شروط ثبت‌شده است، نه احراز تمام شرایط یا PASS رسمی. همباشی، والد، فرزند وابسته و معافیت‌های هرکدام فقط پس از تطبیق شاخه بررسی شوند؛ چک‌لیست ارائهٔ مقیم ایران کامل نیست.",
+      "costs_fa": "تعرفه و هزینهٔ کل پرونده در این بسته کامل تأیید نشده است؛ پیش از اقدام مرجع رسمی همان شاخه کنترل شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "پوشش کامل همراهان در این بسته انجام نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "sponsor",
+          "answer_id": "es.int28_family_reunification_es_sponsor",
+          "question": "حامی یک سال اقامت داشته و تمدید دست‌کم سال بعد را درخواست کرده؛ برای صدور، تمدید لازم تأیید شده است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:es-family-hoja"
+          ]
+        },
+        {
+          "id": "relationship",
+          "answer_id": "es.int28_family_reunification_es_relationship",
+          "question": "ازدواج معتبر، واقعی و مطابق قاعدهٔ یک همسر و سن لازم مستند است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:es-family-hoja"
+          ]
+        },
+        {
+          "id": "means",
+          "answer_id": "es.int28_family_reunification_es_means",
+          "question": "درآمد ثابت و منظم حداقل ۱۵۰٪ IPREM برای دو نفر و ۵۰٪ برای هر نفر اضافه دارید؛ یا کاهش قانونیِ مربوط با سند اعمال می‌شود؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:es-family-hoja"
+          ]
+        },
+        {
+          "id": "housing",
+          "answer_id": "es.int28_family_reunification_es_housing",
+          "question": "مسکن مناسب و پوشش درمانی لازم برای خانواده آماده است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:es-family-hoja"
+          ]
+        },
+        {
+          "id": "admissible",
+          "answer_id": "es.int28_family_reunification_es_admissible",
+          "question": "سوابق کیفری مقرر، نبود مانع ورود/سلامت و سایر شروط مشترک درخواست طبق همین برگه احراز شده‌اند؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:es-family-hoja"
+          ]
+        }
+      ],
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "it:eu-blue-card-italy",
+      "version": "primary-conditions-expanded-2026-10-28-1",
+      "scope_fa": "فقط نخستین Blue Card برای استخدام عالی با مدرک پسامتوسطهٔ حداقل سه‌سالهٔ مرتبط؛ شاخهٔ مدرک در حرفهٔ غیرتنظیم‌شده.",
+      "limits_fa": "پوشش جزئیِ همین شاخه؛ پاسخ مثبت فقط آمادگی شروط ثبت‌شده است، نه احراز تمام شرایط یا PASS رسمی. بدیل تجربهٔ پنج‌ساله، تجربهٔ ICT و حرفهٔ تنظیم‌شده جداست؛ معافیت موقت سلامتِ منقضی در ۲۰۲۵ استفاده نشده؛ تمام مدارک کنسولی تکمیل نیست.",
+      "costs_fa": "تعرفه و هزینهٔ کل پرونده در این بسته کامل تأیید نشده است؛ پیش از اقدام مرجع رسمی همان شاخه کنترل شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "پوشش کامل همراهان در این بسته انجام نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "qualification",
+          "answer_id": "it.int28_eu_blue_card_italy_qualification",
+          "question": "مدرک آموزش عالی/پسامتوسطهٔ حرفه‌ای حداقل سه‌سالهٔ مرتبط، با تأیید/ترجمهٔ لازم، دارید؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:it-blue-ministry"
+          ]
+        },
+        {
+          "id": "contract",
+          "answer_id": "it.int28_eu_blue_card_italy_contract",
+          "question": "قرارداد یا پیشنهاد الزام‌آور حداقل شش‌ماهه با حقوق مطابق قرارداد جمعی و حداقل میانگین ناخالص سالانهٔ ISTAT دارید؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:it-blue-ministry"
+          ]
+        },
+        {
+          "id": "employer",
+          "answer_id": "it.int28_eu_blue_card_italy_employer",
+          "question": "کارفرما درخواست nulla osta و بررسی نیروی موجود CPI را انجام داده یا استثنای همان بررسی مستند است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:it-blue-ministry"
+          ]
+        }
+      ],
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "pt:family-reunification-pt",
+      "version": "primary-conditions-expanded-2026-10-28-1",
+      "scope_fa": "پیوست همسرِ بالغ از خارج پرتغال به حامیِ رژیم عمومیِ مشمول انتظار مادهٔ ۹۸، طبق قانون 61/2025.",
+      "limits_fa": "پوشش جزئیِ همین شاخه؛ پاسخ مثبت فقط آمادگی شروط ثبت‌شده است، نه احراز تمام شرایط یا PASS رسمی. حامی معاف از انتظار (مانند مواد ۹۰/90-A/121-A)، شاخهٔ کودک/ناتوان و پروندهٔ داخل باید جدا بررسی شوند؛ معافیت از انتظار، شرط همزمان این شاخه نیست. انتقال داخلی ۱۸۰روزه منقضی است.",
+      "costs_fa": "هزینهٔ کل/تعرفهٔ اقامت و ویزا هنوز کامل تأیید نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان به قواعد و مجوز خانوادگی مربوط‌اند؛ تمامیت آن پوشش ندارد.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "wait",
+          "answer_id": "pt.int28_family_reunification_pt_wait",
+          "question": "حامی دو سال مجوز معتبر دارد؛ یا برای شاخهٔ انتظار پانزده‌ماهه، هجده ماه زندگی مشترک پیش از ورود حامی مستند است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:pt-family-law2025"
+          ]
+        },
+        {
+          "id": "relationship",
+          "answer_id": "pt.int28_family_reunification_pt_relationship",
+          "question": "هر دو همسر دست‌کم هجده سال دارید و ازدواج معتبر و قابل شناسایی است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:pt-family-law2025"
+          ]
+        },
+        {
+          "id": "support",
+          "answer_id": "pt.int28_family_reunification_pt_support",
+          "question": "مسکن مناسب و منابع کافی بدون کمک رفاهی احراز شده است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:pt-family-law2025"
+          ]
+        },
+        {
+          "id": "integration",
+          "answer_id": "pt.int28_family_reunification_pt_integration",
+          "question": "تعهدات ادغام/آموزش مربوط قابل رعایت است، یا معافیت قانونی همان تعهد مستند است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:pt-family-law2025"
+          ]
+        }
+      ],
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "hr:seasonal-worker",
+      "version": "primary-conditions-expanded-2026-10-28-1",
+      "scope_fa": "فقط کار فصلی تا نود روز در سال در کشاورزی، جنگل‌داری، پذیرایی یا گردشگری؛ درخواست تازه طبق متن جاری کرواتی.",
+      "limits_fa": "پوشش جزئیِ همین شاخه؛ پاسخ مثبت فقط آمادگی شروط ثبت‌شده است، نه احراز تمام شرایط یا PASS رسمی. شاخهٔ نه‌ماهه و چندفصل نیاز به ماژول جدا دارد. در این برش نودروزه، شرط HZZ مربوط به دورهٔ بلندتر تحمیل نشده؛ معیار متن ملی جاری است.",
+      "costs_fa": "تعرفهٔ کامل و هزینهٔ کل هنوز تأیید نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "شروط همراه از منبع مستقیم در این candidate تکمیل نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "contract",
+          "answer_id": "hr.int28_seasonal_worker_contract",
+          "question": "قرارداد معتبر کار فصلی و گذرنامهٔ معتبر برای دورهٔ مجوز دارید؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:hr-seasonal-current"
+          ]
+        },
+        {
+          "id": "housing",
+          "answer_id": "hr.int28_seasonal_worker_housing",
+          "question": "اسکان مناسبِ مقرر برای کل دورهٔ کار فراهم است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:hr-seasonal-current"
+          ]
+        },
+        {
+          "id": "duration",
+          "answer_id": "hr.int28_seasonal_worker_duration",
+          "question": "فعالیت در یکی از بخش‌های مقرر است و مجموع آن از نود روز سالانه بیشتر نیست؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:hr-seasonal-current"
+          ]
+        },
+        {
+          "id": "admissible",
+          "answer_id": "hr.int28_seasonal_worker_admissible",
+          "question": "کنترل کیفری/سلامت/امنیت و نبود منع ورود طبق شروط همین شاخه احراز شده است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:hr-seasonal-current"
+          ]
+        }
+      ],
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "hr:digital-nomad-residence",
+      "version": "primary-conditions-expanded-2026-10-28-1",
+      "scope_fa": "نخستین درخواست اقامت نومد برای کار دیجیتال نزد شرکت خارجی و متقاضی نیازمند ویزا؛ مطابق صفحهٔ ملیِ خوانده‌شده در ۲۷ اکتبر.",
+      "limits_fa": "پوشش جزئیِ همین شاخه؛ پاسخ مثبت فقط آمادگی شروط ثبت‌شده است، نه احراز تمام شرایط یا PASS رسمی. تمدید و تمام حالات همسر/وابسته/اسناد ایران پوشش کامل ندارد؛ اجزای منابع و دورهٔ اثبات باید با همان متن کنترل شود.",
+      "costs_fa": "تعرفهٔ کامل و هزینهٔ کل هنوز تأیید نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "خانواده پس از تأیید حامی درخواست می‌دهد؛ منابع هر همراه ۱۰٪ میانگین خالص پایه افزوده می‌شود، نه ۱۰٪ آستانهٔ نومد.",
+      "dependant_source_ids": [
+        "int-europe28:hr-nomad"
+      ],
+      "checks": [
+        {
+          "id": "work",
+          "answer_id": "hr.int28_digital_nomad_residence_work",
+          "question": "برای شرکت/کارفرمای خارج کرواسی کار می‌کنید و به کارفرمای کرواسی خدمت نمی‌دهید؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:hr-nomad"
+          ]
+        },
+        {
+          "id": "means",
+          "answer_id": "hr.int28_digital_nomad_residence_means",
+          "question": "منابع به روش مجاز معادل حداقل ۲٫۵ میانگین خالص ماهانهٔ سال قبل دارید؛ مبلغ صفحه ۳۶۲۲٫۵۰ یورو ماهانه و افزایش قانونی هر همراه مستند است؟",
+          "reason": "مدرک درآمد منظم یا حقوق شش ماه اخیر پذیرفته است؛ بدیلِ موجودی حساب برای ۱۲ماه ۴۳۴۷۰ و برای ۱۸ماه ۶۵۲۰۵ یورو است. افزودهٔ هر همراه، ۱۰٪ میانگین خالص حقوق است؛ نه ۱۰٪ آستانهٔ متقاضی. این مبالغ و دوره‌ها را با هم جمع نکن.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:hr-nomad"
+          ]
+        },
+        {
+          "id": "documents",
+          "answer_id": "hr.int28_digital_nomad_residence_documents",
+          "question": "بیمهٔ معتبر برای کرواسی، سوابق کیفریِ لازمِ نخستین درخواست، نشانی و مدارک شغل خارجی آماده‌اند؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:hr-nomad"
+          ]
+        },
+        {
+          "id": "filing",
+          "answer_id": "hr.int28_digital_nomad_residence_filing",
+          "question": "درخواست آنلاین/کنسولی و ویزای لازم ورود رعایت می‌شود؛ درخواست محلی پلیس یا اقامت بیش از اعتبار C تا تصمیم را مجاز فرض نکرده‌اید؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:hr-nomad"
+          ]
+        },
+        {
+          "id": "previous",
+          "answer_id": "hr.int28_digital_nomad_residence_previous",
+          "question": "اگر اقامت قبلیِ مشمول داشته‌اید، فاصلهٔ شش‌ماهه رعایت شده؛ طول درخواستی هم در سقف هجده‌ماه است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:hr-nomad"
+          ]
+        }
+      ],
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "gr:digital-nomad-greece",
+      "version": "primary-conditions-expanded-2026-10-28-1",
+      "scope_fa": "فقط کارمندِ دورکارِ شرکت فعال خارج یونان، مسیر درخواست ویزای ملی نومد؛ منابع خالص و خانواده طبق ضابطهٔ رسمی.",
+      "limits_fa": "پوشش جزئیِ همین شاخه؛ پاسخ مثبت فقط آمادگی شروط ثبت‌شده است، نه احراز تمام شرایط یا PASS رسمی. فریلنسر و صاحب شرکت بدیل‌های جدا هستند؛ شرط بیش از یک قرارداد به کارمند تحمیل نشده؛ مدارک عمومی/تمدید و حوزهٔ تهران کامل نیست.",
+      "costs_fa": "تعرفهٔ فعلی و هزینهٔ کل پرونده کامل تأیید نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "افزایش منابع همراه در پرسش مالی آمده است؛ دامنهٔ کامل همراه و حق کار هنوز تأیید نشده است.",
+      "dependant_source_ids": [
+        "int-europe28:gr-nomad-faq"
+      ],
+      "checks": [
+        {
+          "id": "work",
+          "answer_id": "gr.int28_digital_nomad_greece_work",
+          "question": "کار دیجیتال برای کارفرمای خارج یونان دارید و برای کارفرمای مستقر یونان کار/خدمت انجام نمی‌دهید؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:gr-docs2024"
+          ]
+        },
+        {
+          "id": "contract",
+          "answer_id": "gr.int28_digital_nomad_greece_contract",
+          "question": "شرکت خارجی فعال و قرارداد/رابطهٔ کاری با امکان دورکاری و اعتبار پوشانندهٔ دورهٔ ویزا مستند است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:gr-docs2024"
+          ]
+        },
+        {
+          "id": "means",
+          "answer_id": "gr.int28_digital_nomad_greece_means",
+          "question": "حداقل ۳۵۰۰ یورو خالص ماهانه و در صورت همراه، ۲۰٪ همسر/شریک و ۱۵٪ هر کودک، با منابع معتبر دارید؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:gr-nomad-faq"
+          ]
+        },
+        {
+          "id": "filing",
+          "answer_id": "gr.int28_digital_nomad_greece_filing",
+          "question": "مسیر ویزای ملی را طی می‌کنید و به تبدیل قدیمی ورود کوتاه‌مدت طبق مادهٔ حذف‌شدهٔ ۱۲(۷) تکیه ندارید؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:gr-law2026",
+            "int-europe28:gr-code2023"
+          ]
+        }
+      ],
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "gr:golden-visa-greece",
+      "version": "primary-conditions-expanded-2026-10-28-1",
+      "scope_fa": "فقط سرمایه‌گذاری ملکی در بنای رسماً ثبت‌شده برای بازسازی/مرمت، شاخهٔ مادهٔ 100(2)(d)؛ رجیستری ملی با به‌روزرسانی ۲۷ اکتبر ۲۰۲۶.",
+      "limits_fa": "پوشش جزئیِ همین شاخه؛ پاسخ مثبت فقط آمادگی شروط ثبت‌شده است، نه احراز تمام شرایط یا PASS رسمی. خرید عادی، تغییر کاربری، اجاره، ارث و مقررات انتقالی دیگر خارج دامنه‌اند. شروط تمدید/تکمیل مرمت و محدودیت استفاده باید جدا کنترل شوند.",
+      "costs_fa": "در شاخهٔ بنای ثبت‌شده، رجیستری ملی ۲۰۰۰یورو هزینهٔ مجوز و ۱۶یورو کارت ذکر می‌کند؛ هزینهٔ ویزا، معامله، مالیات و خانواده در این مبلغ نیست.",
+      "cost_source_ids": [
+        "int-europe28:gr-golden-mitos-listed"
+      ],
+      "dependants_fa": "پیوست خانواده و حقوق آنان کامل بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "ownership",
+          "answer_id": "gr.int28_golden_visa_greece_ownership",
+          "question": "مالکیت/تصرف کامل بنای رسماً ثبت‌شدهٔ مشمول، با حداقل ارزش تحصیل ۲۵۰۰۰۰ یورو، مستند است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:gr-golden-mitos-listed"
+          ]
+        },
+        {
+          "id": "property_documents",
+          "answer_id": "gr.int28_golden_visa_greece_property_documents",
+          "question": "گواهی دفتر اسناد با مشخصات بنا و ثبت رسمی عنوان آن و ثبت مالکیت آماده است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:gr-golden-mitos-listed"
+          ]
+        },
+        {
+          "id": "payment",
+          "answer_id": "gr.int28_golden_visa_greece_payment",
+          "question": "کل مبلغ با روش پرداخت مجاز تسویه و گواهی شده است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:gr-golden-mitos-listed"
+          ]
+        },
+        {
+          "id": "admissible",
+          "answer_id": "gr.int28_golden_visa_greece_admissible",
+          "question": "گذرنامه، بیمهٔ خصوصی و نبود موانع سلامت/امنیت و ورود احراز شده است؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:gr-golden-mitos-listed"
+          ]
+        },
+        {
+          "id": "filing",
+          "answer_id": "gr.int28_golden_visa_greece_filing",
+          "question": "درخواست با وضعیت ورود/اقامت مجاز انجام می‌شود، یا پیش از ورود وکیل با وکالت‌نامهٔ تصدیق‌شدهٔ قابل قبول دارید؟",
+          "reason": "این شرط به شاخهٔ مشخص‌شده تعلق دارد.",
+          "action": "مدرک و وضعیت واقعی این شرط را با منبع مستقیم پیوندشده تطبیق دهید؛ نامعلوم تأیید نیست.",
+          "source_ids": [
+            "int-europe28:gr-golden-mitos-listed"
+          ]
+        }
+      ],
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "am:work-residence-permit",
+      "version": "primary-conditions-expanded-2026-10-28-1",
+      "valid_until": "2026-10-31T23:59:59+04:00",
+      "scope_fa": "آمادگی اقامت کاری ارمنستان فقط در شاخهٔ استخدام معمول با کارفرمای ارمنی و نیاز به مجوز؛ مقررات پیش از ۱ نوامبر ۲۰۲۶. معافیت‌های مادهٔ ۲۳ و داوطلبی بیرون این بررسی‌اند.",
+      "limits_fa": "پوشش جزئی فرایند کارفرما، بازار کار و دریافت کارت است؛ تکمیل این کنترل‌ها احراز همهٔ شروط یا اجازهٔ شروع کار نیست. ورود کوتاه‌مدت، حق کار ایجاد نمی‌کند. اصلاح قانون و سامانه از ۱ نوامبر اعلام شده؛ پس از نیمه‌شب محلی، این نسخه باید دوباره بررسی شود. شرایط ورود از ایران، مدارک شخصی، استثناها و حق همراه مستقل‌اند.",
+      "costs_fa": "تعرفهٔ اعلامی کارت اقامت موقت کارمند خارجی در صفحهٔ رسمی ۱۰۵٬۰۰۰ درام است؛ هزینه‌های جانبی و تعرفهٔ پس از تغییر مقررات بررسی نشده‌اند.",
+      "cost_source_ids": [
+        "int28:am-work",
+        "int28:am-transition"
+      ],
+      "dependants_fa": "این بررسی حق اقامت همراه را تأیید نمی‌کند؛ هر عضو خانواده نیازمند بررسی مستقلِ مبنای اقامت و مدارک است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "employment_employer",
+          "answer_id": "am.int28_employment_employer",
+          "question": "کارفرمای ارمنی برای شغل مشخص، درخواست استخدام تو را در سامانهٔ یکپارچه ثبت می‌کند؟",
+          "reason": "در شاخهٔ معمول، درخواست را کارفرما یا نمایندهٔ مجاز او ثبت می‌کند؛ این وظیفه با داشتن پیشنهاد شفاهی یا ورود کوتاه‌مدت انجام‌شده محسوب نمی‌شود.",
+          "action": "ثبت کارفرما، مشخصات شغل و رسید درخواست را آماده کن.",
+          "source_ids": [
+            "int28:am-work",
+            "int28:am-law"
+          ]
+        },
+        {
+          "id": "employment_labour",
+          "answer_id": "am.int28_employment_labour",
+          "question": "کارفرما موافقت لازم پس از بررسی بازار کار را برای استخدام تو دریافت کرده است؟",
+          "reason": "برای این شاخهٔ غیرمعاف، اعلام جای خالی و بررسی بازار کار پیش از تکمیل اطلاعات خارجی لازم است؛ مهلت حداقل پانزده روز کاری در متن جاری آمده است. زمان اعلامی تضمین صدور نیست.",
+          "action": "موافقت مرجع کار و تطبیق شغل و شخص را بررسی کن؛ اگر مشمول معافیت هستی، شاخهٔ معافیت جداگانه بررسی شود.",
+          "source_ids": [
+            "int28:am-law",
+            "int28:am-work"
+          ]
+        },
+        {
+          "id": "employment_card",
+          "answer_id": "am.int28_employment_card",
+          "question": "برای قرارداد در این شاخه، کارت اقامت موقت مبتنی بر کار و دریافت حضوری آن را آماده می‌کنی؟",
+          "reason": "مادهٔ ۲۲ برای شاخهٔ معمول قرارداد را به کارت مربوط پیوند می‌دهد؛ کارت باید حضوری دریافت شود. این کنترل مرحلهٔ آماده‌سازی است و صرف پاسخ بله اجازهٔ شروع کار نمی‌دهد.",
+          "action": "پس از تصمیم مثبت، مراجعهٔ حضوری و کارت را با کارفرما هماهنگ کن و پیش از شروع کار، وضعیت مجاز قرارداد را کنترل کن.",
+          "source_ids": [
+            "int28:am-law",
+            "int28:am-work"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -47,6 +47,8 @@ export function screenPersonalRoutes(answers: Answers, input: unknown, now: Date
       status = detail.needs_review ? 'needs_source_review' : detail.counts.action_needed ? 'preparation_needed' : detail.counts.needs_information ? 'needs_information' : 'reported_checks_ready';
       reasons = [`دامنهٔ این بررسی: ${detail.scope}`, detail.limitations, ...detail.checks.map(check => `${check.question} ${check.state_reason === 'profile_criterion' ? check.state === 'reported_ready' ? 'معیار با مشخصات خوداظهاری تو سازگار است.' : 'مشخصات ثبت‌شده این معیار را برآورده نمی‌کند؛ دامنه و استثناهای شرط را بررسی کن.' : check.state === 'reported_ready' ? 'پاسخ تو: بله.' : check.state === 'action_needed' ? 'پاسخ تو: خیر؛ آماده‌سازی لازم است.' : check.state === 'needs_information' ? 'پاسخ تو هنوز روشن نیست.' : 'منبع یا نسخهٔ پاسخ نیازمند بازبینی است.'}`)];
       missingInformation = detail.checks.filter(check => check.state !== 'reported_ready').map(check => check.question);
+      reasons.splice(2, 0, context.note);
+      if (context.status === 'iran_channel_unknown' || context.review_required) missingInformation.push('پذیرش گذرنامهٔ ایران و محل مجاز درخواست، نیازمند بررسی مستقل و جاری است.');
     } else if (!catalogCurrent || Date.parse(record.source.lastVerified) > now.getTime() || now.getTime() - Date.parse(record.source.lastVerified) > 14 * 86400000) {
       status = 'needs_source_review'; reasons = ['تاریخ بررسی ثبت‌شدهٔ منبع گذشته است؛ وجود رکورد برای نتیجه‌گیری دربارهٔ شرایط تو کافی نیست.'];
     } else if (policy?.requires.some(id => isPriorHistoryFact(id) && answers.facts[id] !== 'yes')) {
@@ -56,8 +58,8 @@ export function screenPersonalRoutes(answers: Answers, input: unknown, now: Date
     return { id: record.id, title: record.name_fa, destination: record.destination, country: countries[record.destination]?.name ?? record.destination,
       flag: countries[record.destination]?.flag ?? '', category: record.category, goal: policy?.goal ?? null, status, reasons,
       missing_information: missingInformation, official_eligibility: 'UNKNOWN' as const,
-      source_urls: [...new Set([record.source.url, ...(detail?.sources.map(source => source.url) ?? context.sources.map(source => source.url))])],
-      source_checked_on: detail?.sources.map(source => source.checked_on).sort()[0] ?? record.source.lastVerified,
+      source_urls: [...new Set([...(detail?.sources.map(source => source.url) ?? []), ...context.sources.map(source => source.url), record.source.url])],
+      source_checked_on: [...(detail?.sources ?? []), ...context.sources].map(source => source.checked_on).sort()[0] ?? record.source.lastVerified,
       can_answer_conditions: Boolean(detail && !detail.availability && context.ordinary && !options.blockedRouteIds?.includes(record.id)),
       reviewed_check_count: detail?.checks.length ?? 0 };
   });

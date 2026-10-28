@@ -3,11 +3,12 @@ import definitions from '../data/route-readiness.json';
 import primaryEdition from '../data/primary-conditions-2026-10-26.json';
 import nextEdition from '../data/primary-conditions-2026-10-27.json';
 import restrictionEdition from '../data/primary-conditions-2026-10-28.json';
+import expandedEdition from '../data/primary-conditions-2026-10-28-expanded.json';
 import { profileRuleSchema } from './profile-constraints';
 const publicUrl = z.url().refine(value => { const u = new URL(value); return u.protocol === 'https:' && !u.username && !u.password; });
 const source = z.object({ id: z.string().min(1), title: z.string().min(1), url: publicUrl, checked_on: z.iso.date(), source_updated_on: z.iso.date().optional(), verification: z.enum(['direct', 'indexed', 'historical']).default('direct'), verification_note: z.string().min(1).optional() }).strict();
 const check = z.object({ id: z.string().regex(/^[a-z][a-z0-9_]*$/), answer_id: z.string().regex(/^[a-z]{2}\.[a-z][a-z0-9_]*$/), question: z.string().min(1), reason: z.string().min(1), action: z.string().min(1), source_ids: z.array(z.string()).min(1).max(16), profile_rule: profileRuleSchema.optional() }).strict();
-const route = z.object({ route_id: z.string().regex(/^[a-z]{2}:[a-z0-9]+(?:-[a-z0-9]+)*$/), version: z.string().min(1).max(100).optional(), released_on: z.iso.date().optional(), scope_fa: z.string().min(1), limits_fa: z.string().min(1),
+const route = z.object({ route_id: z.string().regex(/^[a-z]{2}:[a-z0-9]+(?:-[a-z0-9]+)*$/), version: z.string().min(1).max(100).optional(), released_on: z.iso.date().optional(), valid_until: z.union([z.iso.date(), z.iso.datetime({ offset: true })]).optional(), scope_fa: z.string().min(1), limits_fa: z.string().min(1),
   costs_fa: z.string().min(1), cost_source_ids: z.array(z.string()).max(32), dependants_fa: z.string().min(1), dependant_source_ids: z.array(z.string()).max(32), checks: z.array(check).min(1).max(64),
   availability: z.object({ state: z.enum(['closed_to_new_applicants', 'paused', 'legacy_only', 'announced_not_open', 'iran_passport_restricted']), reason_fa: z.string().min(1), effective_from: z.iso.date().optional(), source_ids: z.array(z.string()).min(1).max(16) }).strict().optional(),
 }).strict();
@@ -22,7 +23,7 @@ export const readinessSchema = z.object({ version: z.string().min(1), released_o
 });
 export type ReadinessDefinitions = z.infer<typeof readinessSchema>;
 const previousDefinitions = readinessSchema.parse(definitions);
-const editions = [primaryEdition, nextEdition, restrictionEdition].map(input => readinessSchema.parse(input));
+const editions = [primaryEdition, nextEdition, restrictionEdition, expandedEdition].map(input => readinessSchema.parse(input));
 function mergeEdition(previous: ReadinessDefinitions, edition: ReadinessDefinitions) {
   const replaced = new Set(edition.routes.map(route => route.route_id));
   return readinessSchema.parse({ version: edition.version, released_on: previous.released_on,
