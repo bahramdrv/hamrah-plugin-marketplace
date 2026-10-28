@@ -40,6 +40,6 @@ export function CatalogBrowser({ countries, choose }: { countries: CompassConfig
       {item.policy_goal && item.ordinary && <button className="secondary" onClick={() => choose(item)}>بررسی این مسیر با پاسخ‌های من</button>}<RouteResearch routeId={item.id} academic={item.category_id === 'study'}/>
     </article>)}</div>
     {page && <div className="catalog-pagination"><button className="secondary" disabled={busy || page.offset === 0} onClick={() => void load(Math.max(0, page.offset - 12), true)}>صفحهٔ قبل</button><span>{page.total ? `${(page.offset + 1).toLocaleString('fa-IR')} تا ${Math.min(page.offset + 12, page.total).toLocaleString('fa-IR')}` : 'نتیجه‌ای برای این فیلتر نیست'}</span><button className="secondary" disabled={busy || page.next_offset === null} onClick={() => void load(page.next_offset ?? 0, true)}>صفحهٔ بعد</button></div>}
-    <p className="help"><a href="https://visaatlas.org/data" target="_blank" rel="noreferrer">Visa Atlas</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a></p>
+    <p className="help">کاتالوگ پایه: <a href="https://visaatlas.org/data" target="_blank" rel="noreferrer">Visa Atlas</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a> · مسیرهای افزودهٔ کوچ با ارجاع مستقیم به مرجع رسمی مشخص‌اند.</p>
   </details>;
 }

@@ -61,7 +61,7 @@ export function createCompassApi(options: { snapshot: unknown; catalog?: unknown
 export function evaluateCompass(answers: Answers, options: { snapshot: unknown; catalog?: unknown; readiness?: unknown; blockedRouteIds?: readonly string[]; now?: () => Date; profile?: ScreeningProfile }) {
     const now = options.now ?? (() => new Date());
     const monitorCatalog = catalogSchema.safeParse(options.catalog);
-    options = { ...options, blockedRouteIds: [...new Set([...(options.blockedRouteIds ?? []), ...(monitorCatalog.success ? monitorCatalog.data.source_monitor?.blocked_route_ids ?? [] : [])])] };
+    options = { ...options, blockedRouteIds: [...new Set([...(options.blockedRouteIds ?? []), ...(monitorCatalog.success ? [...(monitorCatalog.data.source_monitor?.blocked_route_ids ?? []), ...(monitorCatalog.data.official_supplement_conflicts ?? [])] : [])])] };
     const parsed = snapshotSchema.safeParse(options.snapshot);
     if (!parsed.success || (parsed.success && Date.parse(parsed.data.retrieved_at) > now().getTime()))
       return { error: 'invalid_snapshot', message: 'دادهٔ معتبر شروع از ایران در دسترس نیست؛ دریافت و بررسی تازه لازم است.' };
@@ -197,7 +197,8 @@ export function evaluateCompass(answers: Answers, options: { snapshot: unknown; 
       questions: (catalog ? prerequisiteIds.filter(id => answers.facts[id] === undefined || answers.facts[id] === 'unknown') : missingFacts).map(id => ({ id, title: factTitle(id) })),
       editable_questions: prerequisiteIds.map(id => ({ id, title: factTitle(id) })),
       global_coverage: catalog ? { countries: Object.keys(catalog.destinations).length, routes: catalog.routes.length, status: catalogCurrent ? 'retrieved' : 'stale', research_candidates: globalCandidates.length, retrieved_at: catalog.retrieved_at,
-        refresh: catalog.refresh ?? null, primary_sources_due_review: catalog.routes.filter(route => Date.parse(route.source.lastVerified) + 14 * 86400000 < now().getTime()).length } : null,
+        refresh: catalog.refresh ?? null, official_supplement_version: catalog.official_supplement_version ?? null, official_supplement_routes: catalog.routes.filter(route => route.origin === 'official_supplement').length,
+        primary_sources_due_review: catalog.routes.filter(route => Date.parse(route.source.lastVerified) + 14 * 86400000 < now().getTime()).length } : null,
       unknowns, next_steps: nextSteps,
       coverage: { ...snapshot.coverage, current: current.length, expired, excluded: snapshot.total - current.length - expired,
         without_discovery_policy: current.filter(r => !policies[r.id]).length },

@@ -37,8 +37,14 @@ export async function refreshCatalog(input: unknown, options: { fetch?: typeof f
     // A missing route may be a partial response or an actual removal. Require review,
     // rather than silently deleting it or announcing a route closure.
     const ids = new Set(routes.map(route => route.id));
-    if (previous.routes.some(route => !ids.has(route.id))) { reason = 'incomplete_or_removed_routes'; throw new Error(); }
-    return catalogSchema.parse({ ...previous, retrieved_at: attempted_at, routes, refresh: { state: 'updated', attempted_at, reason: null } });
+    if (previous.routes.some(route => route.origin !== 'official_supplement' && !ids.has(route.id))) { reason = 'incomplete_or_removed_routes'; throw new Error(); }
+    const official = previous.routes.filter(route => route.origin === 'official_supplement');
+    const officialIds = new Set(official.map(route => route.id));
+    const conflicts = routes.filter(route => officialIds.has(route.id)).map(route => route.id);
+    if (conflicts.length) return catalogSchema.parse({ ...previous, official_supplement_conflicts: [...new Set([...(previous.official_supplement_conflicts ?? []), ...conflicts])].sort(), refresh: { state: 'review_required', attempted_at, reason: 'official_route_identity_collision' } });
+    // An upstream record cannot silently replace a separately reviewed identity.
+    const combined = [...routes.filter(route => !officialIds.has(route.id)), ...official];
+    return catalogSchema.parse({ ...previous, retrieved_at: attempted_at, routes: combined, refresh: { state: 'updated', attempted_at, reason: null } });
   } catch {
     return { ...previous, refresh: { state: reason === 'fetch_failed' ? 'error' : 'review_required', attempted_at, reason } };
   }

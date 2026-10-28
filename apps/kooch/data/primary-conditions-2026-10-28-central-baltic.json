@@ -1,0 +1,201 @@
+{
+  "version": "primary-conditions-central-baltic-2026-10-28-1",
+  "released_on": "2026-10-28",
+  "sources": [
+    {
+      "id": "icb28:cz-business",
+      "title": "IPC — اقامت بلندمدت تجارت، درخواست داخل چک",
+      "url": "https://ipc.gov.cz/en/visa-and-residence-permit-types/third-country-nationals/long-term-residence-permits/long-term-residence-permit-for-the-purpose-of-doing-business/",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "متن مربوط مستقیماً خوانده شد؛ تاریخ به‌روزرسانی صریح صفحه در دسترس نبود."
+    },
+    {
+      "id": "icb28:cz-funds",
+      "title": "IPC — درآمد ماهانه و حداقل معیشت/مسکن، قواعد مؤثر اکتبر۲۰۲۶",
+      "url": "https://ipc.gov.cz/en/forms-and-documents/documents/proof-of-funds-for-the-residence-finances/",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "جدول مسکن از۱اکتبر۲۰۲۶ مؤثر است؛ تاریخ اجرا با تاریخ به‌روزرسانی صفحه یکسان فرض نشده است."
+    },
+    {
+      "id": "icb28:cz-debts",
+      "title": "IPC — گواهی نبود بدهی",
+      "url": "https://ipc.gov.cz/en/forms-and-documents/documents/proof-of-no-outstanding-debts/",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "متن مربوط مستقیماً خوانده شد؛ تاریخ به‌روزرسانی صریح صفحه در دسترس نبود."
+    },
+    {
+      "id": "icb28:cz-insurance",
+      "title": "IPC — بیمهٔ درمانی، درخواست داخل چک",
+      "url": "https://ipc.gov.cz/en/forms-and-documents/documents/medical-insurance/",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "متن مربوط مستقیماً خوانده شد؛ تاریخ به‌روزرسانی صریح صفحه در دسترس نبود."
+    },
+    {
+      "id": "icb28:cz-formal",
+      "title": "IPC — تشریفات اسناد اتباع کشور ثالث",
+      "url": "https://ipc.gov.cz/en/forms-and-documents/documents/formal-requirements/",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "متن مربوط مستقیماً خوانده شد؛ تاریخ به‌روزرسانی صریح صفحه در دسترس نبود."
+    },
+    {
+      "id": "icb28:cz-accommodation",
+      "title": "IPC — اثبات اسکان و بدیل‌های آن",
+      "url": "https://ipc.gov.cz/en/forms-and-documents/documents/proof-of-accommodation/",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "متن مربوط مستقیماً خوانده شد؛ تاریخ به‌روزرسانی صریح صفحه در دسترس نبود."
+    },
+    {
+      "id": "icb28:cz-passport",
+      "title": "IPC — سند سفر معتبر",
+      "url": "https://ipc.gov.cz/en/forms-and-documents/documents/travel-document/",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "متن مربوط مستقیماً خوانده شد؛ تاریخ به‌روزرسانی صریح صفحه در دسترس نبود."
+    },
+    {
+      "id": "icb28:cz-tehran",
+      "title": "سفارت چک در تهران — دامنهٔ خدمات از۱سپتامبر۲۰۲۶",
+      "url": "https://mzv.gov.cz/teheran/cz/viza_a_konzularni_informace/index.html",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "تاریخ اجرای دامنهٔ خدمات۱سپتامبر۲۰۲۶ است؛ تاریخ به‌روزرسانی صفحه درج نشده است."
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "cz:business-residence",
+      "version": "primary-conditions-central-baltic-2026-10-28-1",
+      "scope_fa": "پوشش جزئی؛ فقط خوداشتغال انفرادیِ داخل چک با ویزای بلندمدتِ تجارتِ موجود، برای نخستین اقامت بلندمدت تجارت؛ این اقامت موقت است.",
+      "limits_fa": "تبدیل از سایر مجوزها، اعضای هیئت شرکت، تمدید و همراهان پوشش ندارند. برای دریافت نخستین ویزا از ایران، تهران از۱سپتامبر۲۰۲۶ فقط دسته‌ها/برنامه‌های اعلام‌شده را می‌پذیرد؛ تجارت عمومی به آن تعمیم ندارد.",
+      "costs_fa": "درخواست داخل:۲۵۰۰کرون؛ ترجمه، تصدیق و بیمه جدا و محاسبه‌نشده‌اند.",
+      "cost_source_ids": [
+        "icb28:cz-business"
+      ],
+      "dependants_fa": "صلاحیت و حقوق همراهان در این برش بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "existing_status",
+          "answer_id": "cz.icb28_business_existing_status",
+          "question": "اکنون داخل چک و دارندهٔ ویزای بلندمدتِ تجارت هستید؟",
+          "reason": "این برش فقط همین وضعیت قبلی را می‌سنجد.",
+          "action": "سایر وضعیت‌ها نیازمند ماژول شاخهٔ جدا هستند.",
+          "source_ids": [
+            "icb28:cz-business"
+          ]
+        },
+        {
+          "id": "registered_sole_trade",
+          "answer_id": "cz.icb28_business_registered_sole_trade",
+          "question": "خوداشتغالیِ انفرادی با ثبت معتبر در دفتر تجاری/حرفه‌ای مربوط دارید؟",
+          "reason": "ثبت فعالیت لازم است.",
+          "action": "تأیید ثبت و مجوزِ مدت‌دارِ لازم را ارائه کنید.",
+          "source_ids": [
+            "icb28:cz-business"
+          ]
+        },
+        {
+          "id": "income_threshold",
+          "answer_id": "cz.icb28_business_income_threshold",
+          "question": "درآمد خالصِ منظم و پایدار حداقل جمع معیشت خانوار و هزینهٔ مسکنِ مقرر یا هزینهٔ واقعیِ اثبات‌شده است؟",
+          "reason": "موجودی یک‌باره و کمک فرزند، بیکاری، بازآموزی و نیازمندی درآمد محسوب نمی‌شوند.",
+          "action": "اعضای مشترک را تعیین کنید؛ معیشت نفر اول۵۰۰۰کرون و معیار مسکن تک‌نفره۱۵۶۸۰کرون است؛ رقم خانوار دیگر از جدول منبع گرفته شود.",
+          "source_ids": [
+            "icb28:cz-funds"
+          ]
+        },
+        {
+          "id": "income_evidence",
+          "answer_id": "cz.icb28_business_income_evidence",
+          "question": "مدارک درآمد متناسب با منبع و روش مالیاتی‌تان آماده است؟",
+          "reason": "روش‌های اثبات درآمد بدیل‌اند و هم‌زمان لازم نیستند. فقط در بدیلِ نبود امکان اثبات به روش‌های دیگر، صورت‌حساب به نام صاحب درآمد باید درآمد منظم و پایدارِ حداقل شش ماه گذشته را نشان دهد؛ این دوره به همهٔ روش‌های دیگر تعمیم ندارد.",
+          "action": "خوداشتغال: ارزیابی مالیات و حق‌بیمه؛ شروع فعالیت: صورت مالی؛ مقطوع: صورت/دفتر مالیاتی، گردش متناظر و عضویت رژیم. برای درآمد استخدامی، سود، مزایای خارجی یا نبود روش دیگر، بدیل مرتبطِ منبع اجرا شود. فقط اگر اثبات به روش دیگری ممکن نیست، صورت‌حساب بانک/مؤسسهٔ مالی به نام صاحب درآمد با نمایش درآمد منظم و پایدار حداقل شش ماه گذشته ارائه شود.",
+          "source_ids": [
+            "icb28:cz-funds"
+          ]
+        },
+        {
+          "id": "no_debts",
+          "answer_id": "cz.icb28_business_no_debts",
+          "question": "گواهی حداکثر۳۰روزهٔ نبود بدهی مالیاتی، گمرکی، تأمین اجتماعی و در صورت بیمهٔ عمومی، بیمهٔ درمانی دارید؟",
+          "reason": "بدهی و جریمهٔ حق‌بیمه نیز بررسی می‌شود.",
+          "action": "گواهی مرجع هر مورد را بگیرید.",
+          "source_ids": [
+            "icb28:cz-debts"
+          ]
+        },
+        {
+          "id": "insurance",
+          "answer_id": "cz.icb28_business_insurance",
+          "question": "بیمهٔ جامعِ مجاز در چک با حداقل۴۰۰هزاریورو پوشش و بدون فرانشیز دارید، یا مشمول بیمهٔ عمومی/معافیت مستند هستید؟",
+          "reason": "این‌ها بدیل‌اند.",
+          "action": "عمومی: کارت و گواهی نبود بدهی؛ معافیت: پوشش بر پایهٔ توافق بین‌المللی یا تعهد پوششِ واجد شرایطِ منبع. بیمهٔ خصوصی باید معتبر و جامع باشد.",
+          "source_ids": [
+            "icb28:cz-business",
+            "icb28:cz-insurance",
+            "icb28:cz-debts"
+          ]
+        },
+        {
+          "id": "accommodation",
+          "answer_id": "cz.icb28_business_accommodation",
+          "question": "یکی از مدارک معتبر اسکان دارید: مالکیت، اجاره/اجارهٔ فرعی یا تأیید اسکان؟",
+          "reason": "بدیل‌ها همزمان لازم نیستند؛ ملک باید کاربری مجاز داشته باشد.",
+          "action": "در اجارهٔ فرعی پیوند مالک تا میزبان و در تأیید کاغذی امضای تصدیق‌شده/امضا نزد اداره لازم است؛ استثناهای منبع لحاظ شوند.",
+          "source_ids": [
+            "icb28:cz-accommodation"
+          ]
+        },
+        {
+          "id": "basic_documents",
+          "answer_id": "cz.icb28_business_basic_documents",
+          "question": "فرم، گذرنامهٔ معتبر و عکس آماده‌اند؟",
+          "reason": "اسناد پایه لازم‌اند.",
+          "action": "فرم چکی با حروف لاتینِ خوانا و امضا ارائه کنید.",
+          "source_ids": [
+            "icb28:cz-business",
+            "icb28:cz-passport"
+          ]
+        },
+        {
+          "id": "formal_documents",
+          "answer_id": "cz.icb28_business_formal_documents",
+          "question": "اصل/کپی مصدق و ترجمهٔ رسمی چکیِ اسناد غیرچکی/اسلواکی با تصدیق لازم آماده است؟",
+          "reason": "عموماً سند حداکثر۱۸۰روز دارد؛ استثناهای منبع محفوظ‌اند.",
+          "action": "اصل گذرنامه/اسناد مدنی لازم است؛ تصدیق خارجی مطابق کشور صادرکننده بررسی شود.",
+          "source_ids": [
+            "icb28:cz-formal"
+          ]
+        },
+        {
+          "id": "requested_supplements",
+          "answer_id": "cz.icb28_business_requested_supplements",
+          "question": "اگر اداره اسنادی را مشخصاً مطالبه کند، فقط همان موارد را با شرایط مرتبط آماده می‌کنی؟",
+          "reason": "اسناد مطالبه‌ای با مدارک همیشگی متفاوت‌اند؛ مطالبهٔ یک مورد، همهٔ فهرست را اجباری نمی‌کند. حسب درخواست: گواهی پزشکی، گواهی کیفریِ کشورهای دیگری که در سه سال پیش از درخواست در مجموع شش ماه در آن‌ها اقامت داشته‌ای، مجوز افشای مالیاتی، ارزیابی مالیات یا رسید بیمه.",
+          "action": "همان مدارک مشخصاً مطالبه‌شده را تهیه کن؛ شش ماه می‌تواند از چند اقامت در یک کشور جمع شود و شرط یک اقامت پیوسته نیست.",
+          "source_ids": [
+            "icb28:cz-business",
+            "icb28:cz-funds"
+          ]
+        },
+        {
+          "id": "in_country_filing",
+          "answer_id": "cz.icb28_business_in_country_filing",
+          "question": "تا آخرین روز اعتبار ویزا، حضوری در وزارت کشورِ چک درخواست می‌دهید؟",
+          "reason": "این درخواست داخل چک است.",
+          "action": "وقتِ دیرتر مهلت را تمدید نمی‌کند؛ هزینه۲۵۰۰کرون است.",
+          "source_ids": [
+            "icb28:cz-business",
+            "icb28:cz-tehran"
+          ]
+        }
+      ]
+    }
+  ]
+}

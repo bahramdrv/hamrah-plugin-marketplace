@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createCompassApi } from '../src/api';
 import snapshot from '../data/iran-start-snapshot.json';
 import catalog from '../data/global-catalog.json';
+import officialSupplement from '../data/official-route-supplement.json';
 import { readinessDefinitions, readinessDefinitionsFor } from '../src/readiness-registry';
 import { routeReadiness, readinessEvidence } from '../src/route-readiness';
 import { screeningProfile } from '../src/profile-constraints';
@@ -74,7 +75,7 @@ test('new editions do not rewrite historical rules and an expired criterion stop
   assert.equal(readinessDefinitionsFor(new Date('2026-10-24')).version, 'route-readiness-1');
   assert.equal(readinessDefinitionsFor(new Date('2026-10-26T12:00:00Z')).routes.length, 60);
   assert.equal(readinessDefinitionsFor(new Date('2026-10-27T12:00:00Z')).routes.length, 95);
-  assert.equal(readinessDefinitionsFor(new Date('2026-10-28T12:00:00Z')).routes.length, 169);
+  assert.equal(readinessDefinitionsFor(new Date('2026-10-28T12:00:00Z')).routes.length, 171);
   const plan = readinessDefinitions.routes.find(route => route.route_id === 'ke:class-k-ordinary-residents-permit')!;
   const answers = answersSchema.parse({ age: '40-plus' });
   const current = routeReadiness(readinessDefinitions, plan.route_id, {}, now(), {}, screeningProfile(answers))!;
@@ -153,7 +154,7 @@ test('regional alternatives stay within one scoped Belgian check instead of aski
 });
 
 test('dated primary condition packs reference real routes and all sources, with no lost restrictions', async () => {
-  const ids = new Set(catalog.routes.map(route => route.id));
+  const ids = new Set([...catalog.routes, ...officialSupplement.routes].map(route => route.id));
   assert.ok(readinessDefinitions.routes.length > 30);
   for (const route of readinessDefinitions.routes) assert.ok(ids.has(route.route_id), `Unknown catalog route ${route.route_id}`);
   for (const id of ['hk:capital-investment-entrant-scheme', 'mt:nomad-residence-permit']) {

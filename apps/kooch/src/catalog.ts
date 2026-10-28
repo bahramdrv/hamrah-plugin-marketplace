@@ -16,17 +16,19 @@ export type DiscoveryRoute = {
 };
 const safeUrl = z.url().refine(value => { const u = new URL(value); return ['https:', 'http:'].includes(u.protocol) && !u.username && !u.password; });
 const source = z.object({ label: z.string(), url: safeUrl, authority: z.string(), lastVerified: z.iso.date() });
-const record = z.object({ id: z.string(), source_id: z.string(), destination: z.string(), slug: z.string(),
+export const catalogRecordSchema = z.object({ id: z.string(), source_id: z.string(), destination: z.string(), slug: z.string(), origin: z.literal('official_supplement').optional(),
   name: z.string(), name_fa: z.string(), category: z.string(), summary: z.string(), source,
-  reviewed_on: z.iso.date().nullable(), sponsorship_required: z.boolean().nullable(), settlement: z.boolean(), duration: z.string().nullable() });
+  reviewed_on: z.iso.date().nullable(), sponsorship_required: z.boolean().nullable(), settlement: z.boolean().nullable(), duration: z.string().nullable() });
 export const catalogSchema = z.object({ schema_version: z.literal(1), retrieved_at: z.iso.datetime({ offset: true }),
   source_monitor: sourceMonitorSchema.optional(),
+  official_supplement_version: z.string().min(1).optional(),
+  official_supplement_conflicts: z.array(z.string()).max(500).optional(),
   refresh: z.object({ state: z.enum(['updated', 'review_required', 'error']), attempted_at: z.iso.datetime({ offset: true }), reason: z.string().nullable() }).optional(),
   source_url: z.literal('https://visaatlas.org/api/public/visas'), provider: z.literal('Visa Atlas'),
   license: z.literal('CC BY 4.0'), license_url: z.url(),
   iran_application: z.record(z.string(), z.object({ iran_passport_status: z.string(), start_from_iran: z.string(), application_acceptance: z.string(), evidence_checked_on: z.iso.date(), valid_until: z.iso.date(), source_ids: z.array(z.string()), reason_fa: z.string() })),
   iran_sources: z.record(z.string(), z.object({ id: z.string(), title: z.string(), url: z.url(), authority: z.literal('primary'), checked_on: z.iso.date() })),
-  routes: z.array(record).max(2000), destinations: z.record(z.string(), z.object({ name: z.string(), official_name: z.string(), flag: z.string(), alpha3: z.string(), source_code: z.string(), region: z.string(), portal: z.string().nullable(), slug: z.string() })),
+  routes: z.array(catalogRecordSchema).max(2000), destinations: z.record(z.string(), z.object({ name: z.string(), official_name: z.string(), flag: z.string(), alpha3: z.string(), source_code: z.string(), region: z.string(), portal: z.string().nullable(), slug: z.string() })),
 }).superRefine((data, ctx) => {
   if (Object.values(data.iran_application).some(a => a.source_ids.length === 0 || a.source_ids.some(id => data.iran_sources[id]?.id !== id))) ctx.addIssue({ code: 'custom', message: 'Unlinked Iranian application evidence' });
   if (new Set(data.routes.map(r => r.id)).size !== data.routes.length || data.routes.some(r => r.id !== `${r.destination}:${r.slug}` || !data.destinations[r.destination])) ctx.addIssue({ code: 'custom', message: 'Inconsistent global catalog' });
@@ -53,7 +55,8 @@ export function catalogPolicy(route: CatalogRecord): DiscoveryPolicy | null {
 }
 export function catalogSummary(route: CatalogRecord, policy: DiscoveryPolicy, answers: Answers): DiscoveryRoute {
   const country = countries[route.destination];
-  const source: DiscoverySource = { id: `atlas:${route.source_id}`, title: route.source.label, url: route.source.url, authority: 'trusted', checked_on: route.source.lastVerified };
+  const official = route.origin === 'official_supplement';
+  const source: DiscoverySource = { id: official ? route.source_id : `atlas:${route.source_id}`, title: route.source.label, url: route.source.url, authority: official ? 'primary' : 'trusted', checked_on: route.source.lastVerified };
   const checked = route.source.lastVerified;
   const remaining = policy.requires.filter(id => answers.facts[id] !== 'yes');
   return { id: route.id, name_fa: route.name_fa, official_name: route.name, destination: route.destination,
@@ -62,7 +65,7 @@ export function catalogSummary(route: CatalogRecord, policy: DiscoveryPolicy, an
     summary: policy.prerequisite, facts: [], preparation_status: 'research_required',
     next_step: `پیش از اقدام، پذیرش گذرنامهٔ ایران، محل مجاز درخواست و شرط‌های همین برنامه را از مرجع رسمی بررسی کن.${remaining.length ? ` ${factTitle(remaining[0])}` : ''}`,
     application_method: 'نیازمند بررسی روش اقدام از ایران', prerequisite: policy.prerequisite,
-    coverage: 'catalog_research_required', coverage_label: 'کاتالوگ منبع‌دار؛ روش اقدام ایران تأیید نشده',
+    coverage: 'catalog_research_required', coverage_label: official ? 'هویت مسیر از مرجع رسمی؛ شرایط فردی و اقدام ایران جدا بررسی شوند' : 'کاتالوگ منبع‌دار؛ روش اقدام ایران تأیید نشده',
     checked_on: checked, valid_until: new Date(Date.parse(checked) + 14 * 86400000).toISOString().slice(0, 10),
-    channel_note: 'تاریخ زیر، تاریخ بررسی ثبت‌شده در ویزا اطلس است؛ دریافت کاتالوگ، تأیید روش اقدام یا تمدید اعتبار بررسی نیست.', followup: null, sources: [source] };
+    channel_note: official ? 'این رکورد با شناسهٔ داخلی کوچ از مرجع رسمی بررسی شده است؛ هویت مسیر، احراز شروط فردی یا امکان درخواست از ایران نیست.' : 'تاریخ زیر، تاریخ بررسی ثبت‌شده در ویزا اطلس است؛ دریافت کاتالوگ، تأیید روش اقدام یا تمدید اعتبار بررسی نیست.', followup: null, sources: [source] };
 }

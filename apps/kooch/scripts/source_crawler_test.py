@@ -11,6 +11,18 @@ NOW = dt.datetime(2026, 10, 26, 12, tzinfo=dt.timezone.utc)
 TARGET = {'url': 'https://example.gov/visa', 'route_ids': ['xx:work'], 'roles': ['route_reference'], 'authority': 'published_primary', 'legal_checked_on': ['2026-10-24']}
 
 class CrawlerTests(unittest.TestCase):
+    def test_official_supplement_route_is_dated_and_monitored_as_a_separate_primary_reference(self):
+        row = {'id': 'ge:it-residence-permit', 'source_id': 'kooch:ge-it-residence-permit', 'origin': 'official_supplement', 'reviewed_on': '2026-10-26', 'source': {'url': 'https://example.gov/it-residence', 'lastVerified': '2026-10-26'}}
+        supplement = {'version': 'fixture-1', 'released_on': '2026-10-26', 'routes': [row]}
+        catalog = {'routes': [], 'destinations': {}}
+        plan = c.source_plan(catalog, [], {'routes': []}, None, supplement, NOW)
+        self.assertEqual(plan[0]['route_ids'], ['ge:it-residence-permit'])
+        self.assertEqual(plan[0]['authority'], 'published_primary')
+        self.assertIn('official_route_reference', plan[0]['roles'])
+        self.assertEqual(plan[0]['legal_checked_on'], ['2026-10-26'])
+        self.assertEqual(c.source_plan(catalog, [], {'routes': []}, None, supplement, NOW - dt.timedelta(days=1)), [])
+        with self.assertRaises(ValueError): c.source_plan(catalog, [], {'routes': []}, None, {**supplement, 'routes': [{**row, 'origin': 'unreviewed'}]}, NOW)
+
     def test_iranian_filing_and_restriction_context_is_monitored_and_blocks_only_linked_routes(self):
         context = {'sources': [{'id': 'us-context', 'url': 'https://example.gov/entry-rules', 'checked_on': '2026-10-24'}], 'routes': [{'route_id': 'us:f-1', 'source_ids': ['us-context']}, {'route_id': 'us:eb-2-niw', 'source_ids': ['us-context']}]}
         plan = c.source_plan({'routes': [], 'destinations': {}}, [], {'routes': []}, context)
@@ -26,9 +38,11 @@ class CrawlerTests(unittest.TestCase):
         read = lambda name: json.loads((data / name).read_text())
         catalog = read('global-catalog.json')
         context = read('iran-context-evidence.json')
-        plan = c.source_plan(catalog, [read('route-readiness.json'), read('primary-conditions-2026-10-26.json')], read('iran-start-snapshot.json'), context)
+        official = read('official-route-supplement.json')
+        plan = c.source_plan(catalog, [read('route-readiness.json'), read('primary-conditions-2026-10-26.json')], read('iran-start-snapshot.json'), context, official, dt.datetime(2026, 10, 28, 12, tzinfo=dt.timezone.utc))
         ids = {route for row in plan for route in row['route_ids']}
         self.assertTrue(all(route['id'] in ids for route in catalog['routes']))
+        self.assertTrue(all(route['id'] in ids for route in official['routes']))
         self.assertTrue(any(row['authority'] == 'atlas_link_unreviewed' for row in plan))
         by_url = {row['url']: row for row in plan}
         actual_routes = {route['id'] for route in catalog['routes']}

@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { countries, policies } from '../policy';
-import globalCatalog from '../../data/global-catalog.json';
+import { publishedCatalog } from '../published-catalog';
+const globalCatalog = publishedCatalog();
 const routeIds = new Set([...Object.keys(policies), ...globalCatalog.routes.map(route => route.id)]);
 
 import { researchTopics, type Topic, type EvidenceCard, type ResearchResult } from './contract';

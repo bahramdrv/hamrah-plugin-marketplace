@@ -1,0 +1,27 @@
+{
+  "version": "official-routes-2026-10-28-1",
+  "released_on": "2026-10-28",
+  "routes": [
+    {
+      "id": "ge:it-residence-permit",
+      "source_id": "kooch:ge-it-residence-permit",
+      "destination": "ge",
+      "slug": "it-residence-permit",
+      "origin": "official_supplement",
+      "name": "Temporary residence permit for persons employed in information technology",
+      "name_fa": "اقامت متخصصان فناوری اطلاعات گرجستان",
+      "category": "residence-general",
+      "summary": "مسیر رسمی سه‌سالهٔ IT برای کارمند واجد، خوداشتغال Small Business یا نمایندهٔ شرکت بین‌المللیِ واجد؛ شروط هر شاخه، حق کار و اقامت قانونی مستقل‌اند.",
+      "source": {
+        "label": "Georgia Public Service Development Agency — IT residence permit",
+        "url": "https://sda.gov.ge/en/products/migration-residence-permits/",
+        "authority": "Public Service Development Agency of Georgia",
+        "lastVerified": "2026-10-28"
+      },
+      "reviewed_on": "2026-10-28",
+      "sponsorship_required": null,
+      "settlement": null,
+      "duration": "Initial three years; three-year extensions up to twelve years, subject to continuing conditions."
+    }
+  ]
+}

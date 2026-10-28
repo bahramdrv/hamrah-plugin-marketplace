@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 import baseline from '../../data/iran-start-snapshot.json';
-import baselineCatalog from '../../data/global-catalog.json';
+import { publishedCatalog } from '../published-catalog';
 import { evaluateCompass, type CompassResult } from '../api';
 import { snapshotSchema } from '../snapshot';
 import { policyVersion } from '../policy';
@@ -14,7 +14,7 @@ import { formRecords } from '../form/workflow';
 
 export type DiscoveryBriefing = { version: string; result: CompassResult | null; evidence_fingerprint: string; source_fingerprint?: string; needs_review: boolean };
 export function buildDiscovery(saved: SavedCase, now: Date, review: EvidenceReview): DiscoveryBriefing {
-  const catalog = review.discoveryCatalog ?? baselineCatalog;
+  const catalog = review.discoveryCatalog ?? publishedCatalog(undefined, now);
   const parsed = snapshotSchema.safeParse(review.discoverySnapshot ?? baseline);
   let snapshot: unknown = null;
   if (parsed.success && !review.retrievalFailed) {

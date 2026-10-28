@@ -1,0 +1,180 @@
+{
+  "version": "primary-conditions-official-supplement-2026-10-28-1",
+  "released_on": "2026-10-28",
+  "sources": [
+    {
+      "id": "geit28-sda",
+      "title": "Public Service Development Agency — current IT residence checklist",
+      "url": "https://sda.gov.ge/en/products/migration-residence-permits/",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "Direct official-source review on October28; route identity and stated branch only. Full decree520 consolidation and all work-authorisation exemptions remain unresolved."
+    },
+    {
+      "id": "geit28-aliens",
+      "title": "Matsne — Law on the Legal Status of Aliens, current consolidation",
+      "url": "https://matsne.gov.ge/en/document/view/2278806",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "Direct official-source review on October28; route identity and stated branch only. Full decree520 consolidation and all work-authorisation exemptions remain unresolved."
+    },
+    {
+      "id": "geit28-labour",
+      "title": "Matsne — Labour Migration Law, articles 13(5),13(7)",
+      "url": "https://www.matsne.gov.ge/en/document/view/2806732",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "Direct official-source review on October28; route identity and stated branch only. Full decree520 consolidation and all work-authorisation exemptions remain unresolved."
+    },
+    {
+      "id": "geit28-procedure389",
+      "title": "Matsne — Resolution389, IT residence procedures",
+      "url": "https://matsne.gov.ge/ka/document/view/6615969",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "Direct official-source review on October28; route identity and stated branch only. Full decree520 consolidation and all work-authorisation exemptions remain unresolved."
+    },
+    {
+      "id": "geit28-work146",
+      "title": "Matsne — Resolution146, right-to-work evidence",
+      "url": "https://matsne.gov.ge/ka/document/view/6831591",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "Direct official-source review on October28; route identity and stated branch only. Full decree520 consolidation and all work-authorisation exemptions remain unresolved."
+    },
+    {
+      "id": "geit28-exceptions317",
+      "title": "Matsne — Resolution317, amended exception scope",
+      "url": "https://matsne.gov.ge/ka/document/view/6939703",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "Direct official-source review on October28; route identity and stated branch only. Full decree520 consolidation and all work-authorisation exemptions remain unresolved."
+    },
+    {
+      "id": "geit28-refusal1803",
+      "title": "Matsne — Law1803, refusal and termination provisions",
+      "url": "https://matsne.gov.ge/ka/document/view/6910359",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "Direct official-source review on October28; route identity and stated branch only. Full decree520 consolidation and all work-authorisation exemptions remain unresolved."
+    },
+    {
+      "id": "geit28-iran",
+      "title": "Georgian Embassy Iran — short-stay eVisa information",
+      "url": "https://iran.mfa.gov.ge/en/e-visa-portal",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "Direct official-source review on October28; route identity and stated branch only. Full decree520 consolidation and all work-authorisation exemptions remain unresolved."
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "ge:it-residence-permit",
+      "version": "primary-conditions-official-supplement-2026-10-28-1",
+      "scope_fa": "متقاضی اصلیِ یکی از سه شاخهٔ رسمی IT، با حق کارِ واقعاً اعطاشده و معتبر؛ شاخه‌های معافیتِ حل‌نشده و همراه در این برش تأیید نمی‌شوند.",
+      "limits_fa": "پوشش جزئی است و همهٔ شروط صدور/رد را احراز نمی‌کند. مقررات اولیه سه‌سال و تمدید سه‌ساله تا سقف دوازده‌سال را پیش‌بینی کرده‌اند؛ تمدید تضمینی یا اقامت دائم نیست. دسترسی به متن تجمیعی کامل مصوبه۵۲۰ و دامنهٔ همهٔ معافیت‌های حق کار تکمیل نشده؛ معافیت قانون مهاجرت کار خودکار به IT منتقل نمی‌شود. پذیرش عملی D1 برای ایرانی و ورود مرزی امروز مستقل و نامعلوم است؛ eVisa کوتاه‌مدت اجازهٔ کار یا اقامت IT نیست. مهلت انتقالی نودروزهٔ پرونده‌های پیش از سپتامبر۲۰۲۶ به درخواست امروز تعمیم ندارد.",
+      "costs_fa": "هزینهٔ بررسی اعلامی برای۳۰/۲۰/۱۰روز به‌ترتیب۵۰۰/۷۵۰/۱۰۰۰لاری است؛ این کل هزینهٔ مهاجرت، اجازهٔ کار، ترجمه یا همراه نیست.",
+      "cost_source_ids": [
+        "geit28-sda"
+      ],
+      "dependants_fa": "همراهِ دارندهٔ یکی از سه مجوز، مبنای قانونی جدا با مدرک اقامت حامی و نسبت خانوادگی دارد؛ تجربه و درآمد IT متقاضی اصلی به همراه تعمیم داده نمی‌شود. این برش، شرایط همراه را احراز نمی‌کند.",
+      "dependant_source_ids": [
+        "geit28-sda",
+        "geit28-aliens"
+      ],
+      "checks": [
+        {
+          "id": "branch",
+          "answer_id": "ge.geit28_branch",
+          "question": "یکی از سه مبنای زیر را با تمام شروطِ همان مبنا مستند می‌کنی؟",
+          "reason": "بدیل اول: کارمند IT درISCO-08کد۲۵/زیرکد، مجموعاً حداقل۲سال فعالیتIT و حداقل معادل۲۵هزارUSD به لاری دریافتیIT در سال گذشته، دست‌کم دو وصول به فاصلهٔ۳۰روز. بدیل دوم: شخص حقیقیِ کارآفرین ثبت‌شده در گرجستان باSmall Business و فعالیت یکی از58.21،58.29،62.01،62.02،62.03،62.09،63.1،63.12، با همان سابقه و دریافتی. بدیل سوم: اختیار مدیریت/نمایندگی سازمان دارایInternational Company Status درIT؛ شروط دوسال و۲۵هزار به این بدیل تعمیم داده نمی‌شوند. بودجه یا تجربهٔ عمومی جای این مدارک نیست.",
+          "action": "فقط مدارک تمام شروط همان شاخهٔ واقعی را تکمیل کن؛ سه شاخه هم‌زمان لازم نیستند.",
+          "source_ids": [
+            "geit28-sda",
+            "geit28-aliens",
+            "geit28-procedure389"
+          ]
+        },
+        {
+          "id": "work_right",
+          "answer_id": "ge.geit28_work_right",
+          "question": "حق کار معتبرِ مربوط به کارفرما یا حوزهٔ واقعی همین شاخه، همراه کد قابل بررسی سامانه را داری؟",
+          "reason": "این برش فقط حق کارِ اعطاشده را می‌سنجد. در صورت احراز الکترونیکی، نسخهٔ جداگانهٔ تصمیم لازم نیست؛ در غیر این صورت مدرک تصمیم/ثبت مطالبه می‌شود. معافیتِ ادعایی یا ثبت انتقالی به‌تنهایی جای حق کار فعلی نیست.",
+          "action": "اعتبار، کارفرما/حوزه و کد یا تصمیم حق کار را از مرجع صالح بررسی کن؛ استثناهای حل‌نشده را پاسخ مثبت فرض نکن.",
+          "source_ids": [
+            "geit28-sda",
+            "geit28-labour",
+            "geit28-work146",
+            "geit28-exceptions317"
+          ]
+        },
+        {
+          "id": "lawful_presence",
+          "answer_id": "ge.geit28_lawful_presence",
+          "question": "در زمان ارائه، حضور قانونی در گرجستان و مدارک معتبر ورود و وضعیتت را داری؟",
+          "reason": "اقامت IT از بعضی محدودیت‌های معمولِ نوع ورود و تقدم چهل‌روزه مستثناست؛ این استثنا اجازهٔ ورود یا اشتغال نیست. پناه‌جویی یا تعویق الزام خروج، مبنای این درخواست فرض نمی‌شود. پذیرش امروز پاسپورت ایران باید مستقل احراز شود.",
+          "action": "مدارک حضور قانونی و امکان ورود واقعی را با مرجع مسئول تطبیق بده؛ از eVisa کوتاه‌مدت حق کار نتیجه نگیر.",
+          "source_ids": [
+            "geit28-sda",
+            "geit28-aliens",
+            "geit28-procedure389",
+            "geit28-iran"
+          ]
+        },
+        {
+          "id": "work_deadline",
+          "answer_id": "ge.geit28_work_deadline",
+          "question": "مهلت قابل اعمال پس از اعطای حق کار را، یا استثنای مستندِ همان تکلیف را رعایت کرده‌ای؟",
+          "reason": "برای مشمولی که هنگام اعطا خارج است، درخواستD1حداکثر۳۰روز از حق کار؛ برای مشمول داخل، درخواست کار/ITحداکثر۱۰روز از حق کار است. دارندهٔ هر مجوز اقامت و دورکارِ بدون نیاز به ورود، استثناهای صریح همین تکلیف‌اند؛ این‌ها خودکار مجوزIT نمی‌سازند. ده‌روز از ورود، جای ده‌روز از اعطا نوشته نمی‌شود.",
+          "action": "موقعیت واقعی هنگام اعطا، تاریخ و مبنای استثنا را بررسی کن؛ اگر منطبق نیست، راه‌حل قانونی را از مرجع صالح بگیر.",
+          "source_ids": [
+            "geit28-labour"
+          ]
+        },
+        {
+          "id": "foreign_documents",
+          "answer_id": "ge.geit28_foreign_documents",
+          "question": "مدارک خارجی با تصدیق قانونی/آپوستیلِ لازم، یا استثنای معاهده‌ایِ قابل اعمال آماده‌اند؟",
+          "reason": "نسخهٔ الکترونیکیِ بدون اصل فقط با امکان بررسی اصالت تصدیق در سامانه یا روش معتبر پذیرفته می‌شود؛ هر تصویر سند کافی نیست.",
+          "action": "فهرست اسناد همان شاخه، تصدیق و امکان احراز اصالت را تکمیل کن.",
+          "source_ids": [
+            "geit28-sda",
+            "geit28-procedure389"
+          ]
+        },
+        {
+          "id": "application_documents",
+          "answer_id": "ge.geit28_application_documents",
+          "question": "فرم، گذرنامه، عکس الکترونیکی۳×۴، مدارک مبنای شاخه و رسید هزینهٔ مربوط آماده‌اند؟",
+          "reason": "فهرست اسناد مشترک جای مدرک اختصاصی کارمند، خوداشتغال یا نماینده را نمی‌گیرد. مرجع می‌تواند مدارک ثبت را در صورت احرازنشدن الکترونیکی درخواست کند.",
+          "action": "پروندهٔ همان شاخه را با فهرست جاری آژانس تطبیق بده.",
+          "source_ids": [
+            "geit28-sda"
+          ]
+        },
+        {
+          "id": "refusal_review",
+          "answer_id": "ge.geit28_refusal_review",
+          "question": "صحت اسناد و اظهارات و نبود مانع قانونیِ رد یا اخراجِ قابل اعمال به پرونده‌ات بررسی شده است؟",
+          "reason": "جعل/کتمان، امنیت و نظم عمومی، برخی سوابق یا وضعیت‌های مقرر و از دست‌دادن شروط/حق کار می‌توانند مانع یا موجب خاتمه باشند. خوداظهاری تو جای تصمیم یا بررسی امنیتی مرجع نیست.",
+          "action": "هر سابقهٔ مرتبط یا ابهام را پیش از اقدام با مرجع صالح روشن کن؛ این کنترل تأیید رسمی ایجاد نمی‌کند.",
+          "source_ids": [
+            "geit28-aliens",
+            "geit28-refusal1803"
+          ]
+        },
+        {
+          "id": "continuing_obligations",
+          "answer_id": "ge.geit28_continuing_obligations",
+          "question": "برای دریافت کارت در مهلت قانونی و رعایت شرط حضور پس از صدور برنامهٔ قابل اجرا داری؟",
+          "reason": "ماده۲۰ دریافت کارت ظرف یک‌ماه را می‌خواهد. غیبت واقعی۱۸۳روز یا بیشتر در هر دوازده‌ماهٔ پیوسته می‌تواند موجب لغو IT شود؛ زمان درمانِ مستند طبق قانون حضور حساب می‌شود. این شرط،۱۸۳روز حضور در سال تقویمی یا اقامت مالیاتی نیست.",
+          "action": "زمان دریافت کارت و غیبت‌ها را طبق همین وضعیت برنامه‌ریزی و مدارک درمانِ مرتبط را نگهداری کن.",
+          "source_ids": [
+            "geit28-aliens",
+            "geit28-procedure389"
+          ]
+        }
+      ]
+    }
+  ]
+}

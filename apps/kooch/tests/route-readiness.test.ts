@@ -78,9 +78,10 @@ test('all published preparation routes are reachable and only the selected route
   const { catalogSchema } = await import('../src/catalog');
   const { isStableCoarseFact } = await import('../src/policy');
   const { iranContext } = await import('../src/iran-context');
-  const parsedCatalog = catalogSchema.parse(catalog);
-  const api = createCompassApi({ snapshot, catalog, now: () => new Date('2026-10-28T22:00:00Z') });
-  assert.ok(readinessDefinitions.routes.length >= 169);
+  const { publishedCatalog } = await import('../src/published-catalog');
+  const parsedCatalog = catalogSchema.parse(publishedCatalog(catalog, new Date('2026-10-28T22:00:00Z')));
+  const api = createCompassApi({ snapshot, catalog: parsedCatalog, now: () => new Date('2026-10-28T22:00:00Z') });
+  assert.ok(readinessDefinitions.routes.length >= 171);
   for (const plan of readinessDefinitions.routes) {
     const record = parsedCatalog.routes.find(route => route.id === plan.route_id)!;
     const policy = catalogPolicy(record);

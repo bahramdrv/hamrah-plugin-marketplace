@@ -16,6 +16,10 @@ _Avoid_: Catalog membership, guaranteed route, visa probability
 The extent to which a country and route have current, attributable evidence for a specific question. Missing coverage means the answer is unknown or requires research; it is not evidence that the route is unavailable.
 _Avoid_: Route availability
 
+**Official Route Supplement**:
+A versioned set of locally identified routes whose existence is documented directly by a primary issuing or legislative source, including routes missing from Visa Atlas. Its provenance stays separate from Atlas, and its existence does not establish complete conditions, Iranian filing access, or official applicant eligibility.
+_Avoid_: Verified eligible route, Visa Atlas record, complete official catalog
+
 **Route Fact Pack**:
 A source-linked collection of route facts and coverage results assembled for one route at one retrieval point. It can be partial when a contributing source fails or times out.
 _Avoid_: Complete route assessment
