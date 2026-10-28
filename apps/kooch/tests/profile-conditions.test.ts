@@ -101,6 +101,18 @@ test('dated primary condition packs reference real routes and all sources, with 
   }
 });
 
+test('a closed Spanish investor route stays visible as legacy context and never becomes a fresh investment suggestion', async () => {
+  const api = createCompassApi({ snapshot, catalog, now: () => new Date('2026-10-28T12:00:00Z') });
+  const response = await api.POST(new Request('http://localhost/api/compass', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ goal: 'investment', destinations: ['es'], focus_route: 'es:golden-visa-ending' }) }));
+  const data = await response.json();
+  assert.ok(!data.routes.some((route: { id: string }) => route.id === 'es:golden-visa-ending'));
+  const route = data.personal_screening.routes.find((route: { id: string }) => route.id === 'es:golden-visa-ending');
+  assert.equal(route.status, 'restricted_context');
+  assert.equal(route.can_answer_conditions, false);
+  assert.equal(route.official_eligibility, 'UNKNOWN');
+  assert.ok(route.source_urls.some((url: string) => url.startsWith('https://www.boe.es/')));
+});
+
 test('a general residence program can ask its researched conditions without inventing a work or investment classification', async () => {
   const api = createCompassApi({ snapshot, catalog, now });
   const response = await api.POST(new Request('http://localhost/api/compass', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ goal: 'work', destinations: ['de'], focus_route: 'ke:class-k-ordinary-residents-permit', age: '30-39' }) }));

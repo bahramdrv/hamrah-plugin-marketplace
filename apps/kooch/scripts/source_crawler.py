@@ -184,6 +184,7 @@ class CaptureClient:
 
 def due(previous, now):
     if not previous: return True
+    if previous.get('superseded_by'): return False
     reference = previous.get('last_attempt_at') if previous.get('status') != 'captured' else previous.get('last_success_at')
     return not reference or (now - instant(reference)).total_seconds() >= (DAY if previous.get('status') != 'captured' else 30 * DAY)
 
@@ -196,7 +197,21 @@ def merge_capture(target, previous, capture, now):
     row['review_reasons'] = sorted(set(old.get('review_reasons', []) + (['content_changed'] if changed else []) + (['source_unavailable'] if failed else [])))
     return row
 
-def acknowledge(row, acknowledgement, now):
+def acknowledge(row, acknowledgement, now, replacements=None):
+    # An explicit reviewed replacement can resolve a permanently broken URL.
+    # Retrieval alone never makes this decision, and the old capture is retained.
+    if acknowledgement and acknowledgement.get('replaced_by_urls') and acknowledgement.get('review_reference') and acknowledgement.get('semantic_sha256') == row.get('semantic_sha256'):
+        try:
+            reviewed = dt.date.fromisoformat(acknowledgement['reviewed_on'])
+            urls = acknowledgement['replaced_by_urls']
+            targets = [(replacements or {})[url] for url in urls]
+            covered = {route for target in targets for route in target['route_ids']}
+            if isinstance(urls, list) and 0 < len(urls) <= 10 and row['url'] not in urls and instant(row['last_attempt_at']).date() <= reviewed <= now.date() and set(row['route_ids']) <= covered and all(target.get('authority') == 'published_primary' and target.get('status') == 'captured' and not target.get('superseded_by') and 0 <= (now - instant(target['last_success_at'])).total_seconds() <= 30 * DAY and instant(target['last_success_at']).date() <= reviewed for target in targets):
+                return {**row, 'review_required': False, 'review_reasons': [], 'review_acknowledgement': acknowledgement, 'superseded_by': urls}
+        except (ValueError, KeyError, TypeError): pass
+    if row.get('superseded_by'):
+        row = {key: value for key, value in row.items() if key != 'superseded_by'}
+        row = {**row, 'review_required': True, 'review_reasons': sorted(set(row.get('review_reasons', []) + ['replacement_review_required']))}
     if acknowledgement and acknowledgement.get('semantic_sha256') == row.get('semantic_sha256') and acknowledgement.get('review_reference'):
         try:
             reviewed = dt.date.fromisoformat(acknowledgement['reviewed_on'])
@@ -253,7 +268,7 @@ def public_status(state):
 def run(plan, previous, now, client, workers=4, acknowledgements=None, max_seconds=3000):
     old = {row['url']: row for row in validate_state(previous, now)['sources']} if previous else {}
     pending = [row for row in plan if due(old.get(row['url']), now)]
-    results = {}
+    results = {}; attempted = 0
     deadline = time.monotonic() + max_seconds
     def capture(target):
         return client.capture(target['url']) if time.monotonic() < deadline else {'status': 'deferred'}
@@ -262,13 +277,16 @@ def run(plan, previous, now, client, workers=4, acknowledgements=None, max_secon
         for index, future in enumerate(concurrent.futures.as_completed(futures), 1):
             target = futures[future]
             result = future.result()
+            if result['status'] != 'deferred': attempted += 1
             results[target['url']] = ({**old.get(target['url'], {'status': 'pending', 'review_required': False}), **target} if result['status'] == 'deferred' else merge_capture(target, old.get(target['url']), result, now))
-            if index % 50 == 0: print(json.dumps({'captured_attempts': index, 'due_sources': len(pending)}), flush=True)
-    sources = [acknowledge(results.get(target['url']) or {**old[target['url']], **target}, (acknowledgements or {}).get(target['url']), now) for target in plan]
+            if index % 50 == 0: print(json.dumps({'processed_sources': index, 'attempted_sources': attempted, 'due_sources': len(pending)}), flush=True)
+    available = {target['url']: results.get(target['url']) or {**old[target['url']], **target} for target in plan}
+    replacement_candidates = {url: row for url, row in available.items() if not (acknowledgements or {}).get(url, {}).get('replaced_by_urls')}
+    sources = [acknowledge(available[target['url']], (acknowledgements or {}).get(target['url']), now, replacement_candidates) for target in plan]
     # A vanished reference is not silently deleted or declared closed.
-    sources += [{**row, 'review_required': True, 'review_reasons': sorted(set(row.get('review_reasons', []) + ['reference_removed']))} for url, row in old.items() if url not in {r['url'] for r in plan}]
-    times = [instant(row.get('last_attempt_at') or iso(now)) + dt.timedelta(days=1) if row.get('status') != 'captured' else instant(row['last_success_at']) + dt.timedelta(days=30) for row in sources]
-    state = {'schema_version': 1, 'generated_at': iso(now), 'next_due_at': iso(min(times) if times else now + dt.timedelta(days=30)), 'sources': sources, 'attempted_sources': len(pending),
+    sources += [acknowledge({**row, 'review_required': True, 'review_reasons': sorted(set(row.get('review_reasons', []) + ['reference_removed']))}, (acknowledgements or {}).get(url), now, replacement_candidates) for url, row in old.items() if url not in {r['url'] for r in plan}]
+    times = [instant(row.get('last_attempt_at') or iso(now)) + dt.timedelta(days=1) if row.get('status') != 'captured' else instant(row['last_success_at']) + dt.timedelta(days=30) for row in sources if not row.get('superseded_by')]
+    state = {'schema_version': 1, 'generated_at': iso(now), 'next_due_at': iso(min(times) if times else now + dt.timedelta(days=30)), 'sources': sources, 'attempted_sources': attempted,
              'publish_required': sources != (previous or {}).get('sources', [])}
     return validate_state(state, now)
 

@@ -1,0 +1,50 @@
+{
+  "version": "primary-conditions-2026-10-28-1",
+  "released_on": "2026-10-28",
+  "sources": [
+    {
+      "id": "primary28-es-golden-law",
+      "title": "BOE — Ley Orgánica 1/2025، حکم پایانی ۲۱ و زمان اجرا",
+      "url": "https://www.boe.es/eli/es/lo/2025/01/02/1",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "حذف مواد ۶۳ تا ۶۷، استثنای درخواست ثبت‌شده و تمدید، و تاریخ ۳ آوریل ۲۰۲۵ در متن رسمی خوانده شد."
+    },
+    {
+      "id": "primary28-es-golden-current-text",
+      "title": "BOE — متن تجمیعی قانون 14/2013، مواد ۶۳ تا ۶۷ و احکام انتقالی",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "حذف مواد در نسخهٔ تجمیعی جاری نیز کنترل شد؛ مبنای حقوقی نتیجه، انتشار رسمی قانون اصلاحی است."
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "es:golden-visa-ending",
+      "version": "primary-conditions-2026-10-28-1",
+      "scope_fa": "تشخیص توقف درخواست تازه و وجود احکام انتقالیِ برنامهٔ سرمایه‌گذار؛ پروندهٔ شخصی ارزیابی نشده است.",
+      "limits_fa": "بسته‌شدن درخواست تازه به معنی ابطال همهٔ مجوزهای قدیمی نیست. شرایط پروندهٔ ثبت‌شده یا تمدید باید مستقل بررسی شود.",
+      "costs_fa": "هزینهٔ پروندهٔ انتقالی یا تمدید در این بسته تأیید نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "درخواست خانوادهٔ سرمایه‌گذار که پیش از تاریخ اجرا ثبت شده نیز در حکم انتقالی آمده است؛ شمول پرونده مستقل بررسی شود.",
+      "dependant_source_ids": ["primary28-es-golden-law"],
+      "checks": [
+        {
+          "id": "legacy_context",
+          "answer_id": "es.golden_legacy_context",
+          "question": "درخواست پیش از ۳ آوریل ۲۰۲۵ ثبت شده، یا مجوز قبلیِ مشمول حکم انتقالی برای تمدید داری؟",
+          "reason": "درخواست تازه از این تاریخ بسته است؛ قانون برای پرونده‌های ثبت‌شده و اعتبار و تمدید مجوزهای قبلی احکام انتقالی دارد.",
+          "action": "تاریخ ثبت، اعتبار مجوز و مقررات انتقالیِ قابل اعمال به همان پرونده را بررسی کن.",
+          "source_ids": ["primary28-es-golden-law", "primary28-es-golden-current-text"]
+        }
+      ],
+      "availability": {
+        "state": "closed_to_new_applicants",
+        "reason_fa": "برنامهٔ سرمایه‌گذار اسپانیا از ۳ آوریل ۲۰۲۵ درخواست تازه نمی‌پذیرد. پرونده‌های قبلاً ثبت‌شده و مجوزهای قبلی، احکام انتقالی جدا دارند؛ این وضعیت FAIL فردی نیست.",
+        "effective_from": "2025-04-03",
+        "source_ids": ["primary28-es-golden-law", "primary28-es-golden-current-text"]
+      }
+    }
+  ]
+}

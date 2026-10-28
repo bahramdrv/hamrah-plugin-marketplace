@@ -108,5 +108,24 @@ class CrawlerTests(unittest.TestCase):
         self.assertEqual(state['sources'][0]['status'], 'pending')
         self.assertFalse(state['sources'][0]['review_required'])
         self.assertTrue(c.due(state['sources'][0], NOW))
+        self.assertEqual(state['attempted_sources'], 0)
+
+    def test_a_reviewed_official_replacement_can_retire_a_broken_reference_but_not_lose_its_history(self):
+        old = {**TARGET, 'status': 'http_error', 'http_status': 404, 'review_required': True, 'review_reasons': ['source_unavailable'], 'semantic_sha256': 'a'*64, 'last_success_at': c.iso(NOW - dt.timedelta(days=30)), 'last_attempt_at': c.iso(NOW)}
+        replacement = {**TARGET, 'url': 'https://example.gov/new-visa', 'status': 'captured', 'last_success_at': c.iso(NOW), 'semantic_sha256': 'b'*64}
+        review = {'semantic_sha256': 'a'*64, 'reviewed_on': '2026-10-26', 'review_reference': 'commit:updated-primary-url', 'replaced_by_urls': [replacement['url']]}
+        accepted = c.acknowledge(old, review, NOW, {replacement['url']: replacement})
+        self.assertFalse(accepted['review_required'])
+        self.assertEqual(accepted['http_status'], 404)
+        self.assertEqual(accepted['semantic_sha256'], 'a'*64)
+        self.assertEqual(accepted['superseded_by'], [replacement['url']])
+        self.assertFalse(c.due(accepted, NOW + dt.timedelta(days=31)))
+        for changed in [{**replacement, 'authority': 'atlas_link_unreviewed'}, {**replacement, 'status': 'unavailable'}, {**replacement, 'route_ids': ['xx:other']}, {**replacement, 'last_success_at': c.iso(NOW - dt.timedelta(days=40))}]:
+            self.assertTrue(c.acknowledge(old, review, NOW, {replacement['url']: changed})['review_required'])
+        previous = {'schema_version': 1, 'generated_at': c.iso(NOW), 'sources': [old, replacement]}
+        class Client:
+            def capture(self, url): raise AssertionError('No new fetch is due')
+        retired = c.run([{key: replacement[key] for key in TARGET}], previous, NOW, Client(), acknowledgements={old['url']: review})
+        self.assertFalse(next(row for row in retired['sources'] if row['url'] == old['url'])['review_required'])
 
 if __name__ == '__main__': unittest.main()
