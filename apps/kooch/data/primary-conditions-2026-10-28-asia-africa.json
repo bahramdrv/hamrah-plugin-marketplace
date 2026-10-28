@@ -1,0 +1,2691 @@
+{
+  "version": "primary-conditions-asia-africa-2026-10-28-1",
+  "released_on": "2026-10-28",
+  "sources": [
+    {
+      "id": "iaaf28-aa-hk-dependent",
+      "title": "Hong Kong ImmD — Dependants",
+      "url": "https://www.immd.gov.hk/eng/services/visas/residence_as_dependant.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن معیارها، شاخه‌ها و محدودیت‌های صفحهٔ رسمی مستقیماً بررسی شد."
+    },
+    {
+      "id": "iaaf28-aa-hk-iang",
+      "title": "Hong Kong ImmD — IANG",
+      "url": "https://www.immd.gov.hk/eng/services/visas/IANG.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن معیارها، شاخه‌ها و محدودیت‌های صفحهٔ رسمی مستقیماً بررسی شد."
+    },
+    {
+      "id": "iaaf28-aa-ke-special",
+      "title": "Kenya Immigration — Special Pass",
+      "url": "https://immigration.go.ke/kenya-special-pass/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شرط‌های زیر در صفحهٔ رسمی مستقیماً بررسی شد."
+    },
+    {
+      "id": "iaaf28-aa-rw-study",
+      "title": "Rwanda DGIE — Study and research",
+      "url": "https://www.migration.gov.rw/our-services/permit/study-research",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شرط‌های زیر در صفحهٔ رسمی مستقیماً بررسی شد."
+    },
+    {
+      "id": "iaaf28-aa-rw-work",
+      "title": "Rwanda DGIE — Employment permit classes",
+      "url": "https://www.migration.gov.rw/our-services/permit/employment",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شرط‌های زیر در صفحهٔ رسمی مستقیماً بررسی شد."
+    },
+    {
+      "id": "iaaf28-aa-zm-permits",
+      "title": "Zambia Immigration — Permit types",
+      "url": "https://www.zambiaimmigration.gov.zm/permit-types/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "محتوای شروط در صفحهٔ رسمی مستقیماً خوانده شد."
+    },
+    {
+      "id": "iaaf28-ea-kr-invest",
+      "title": "InvestKorea — visa FAQ",
+      "url": "https://www.investkorea.org/ik-en/bbs/i-461/list.do?pageIndex=2&pageItm=10&searchCl1=9",
+      "checked_on": "2026-10-27",
+      "verification": "direct"
+    },
+    {
+      "id": "iaaf28-ea-ph-9gdocs",
+      "title": "BI — commercial9g checklist",
+      "url": "https://immigration.gov.ph/wp-content/uploads/pdf/visas/V-NI-007-Rev_1Conversion.pdf",
+      "checked_on": "2026-10-27",
+      "verification": "direct"
+    },
+    {
+      "id": "iaaf28-ea-ph-policy",
+      "title": "DFA production eVisa policy",
+      "url": "https://evisa.gov.ph/page/policy",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "بازخوانی Production بخش نومد ندارد؛ نبود بخش به‌تنهایی شاهد بسته‌بودن نیست."
+    },
+    {
+      "id": "iaaf28-ea-ph-sveg",
+      "title": "BI — SVEG service",
+      "url": "https://immigration.gov.ph/visas/special-visa-for-employment-generation/",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "هزینه مارس ۲۰۱۴؛ قیمت جاری نیست."
+    },
+    {
+      "id": "iaaf28-ea-ph-svegdocs",
+      "title": "BI — SVEG checklist",
+      "url": "https://immigration.gov.ph/wp-content/uploads/pdf/visas/BI%20FORM%20V-NI-026-Rev%201.1.pdf",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "شروط پرونده و AEP مستقیم خوانده شد؛ سن ۲۱ در نمایه آمده ولی استخراج مستقیم عدد را ناقص نشان می‌دهد. با EO زیر ۱۸ تعارض احتمالی و نیاز به بررسی بصری اصل فرم دارد؛ سن از این فرم مبنای تصمیم مثبت نیست."
+    },
+    {
+      "id": "iaaf28-ea-ph-sveglaw",
+      "title": "Supreme Court — EO758",
+      "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/5/17011",
+      "checked_on": "2026-10-27",
+      "verification": "direct"
+    },
+    {
+      "id": "iaaf28-ea-tw-digital",
+      "title": "Gold Card — digital criteria",
+      "url": "https://goldcard.nat.gov.tw/en/qualification/field-of-digital/",
+      "checked_on": "2026-10-27",
+      "verification": "direct"
+    },
+    {
+      "id": "iaaf28-ea-tw-docs",
+      "title": "Gold Card — document authentication",
+      "url": "https://goldcard.nat.gov.tw/en/apply/step-2/upload-document/",
+      "checked_on": "2026-10-27",
+      "verification": "direct"
+    },
+    {
+      "id": "iaaf28-ea-tw-entry",
+      "title": "Gold Card — application entry restrictions",
+      "url": "https://goldcard.nat.gov.tw/en/apply/step-2/new-applicant/",
+      "checked_on": "2026-10-27",
+      "verification": "direct"
+    },
+    {
+      "id": "iaaf28-ea-tw-family",
+      "title": "Gold Card — holder and family benefits",
+      "url": "https://goldcard.nat.gov.tw/en/faq/what-are-the-special-benefits-of-the-employment-gold-card/",
+      "checked_on": "2026-10-27",
+      "verification": "direct"
+    },
+    {
+      "id": "iaaf28-ea-vn-work",
+      "title": "ASEMConnect — Decree219/2025 foreign workers",
+      "url": "https://asemconnectvietnam.gov.vn/law.aspx?ID1=2&MaVB_id=3074&ZID1=10",
+      "checked_on": "2026-10-27",
+      "verification": "direct"
+    },
+    {
+      "id": "iaaf28-int28-ke-category-b",
+      "title": "Kenya Immigration — Lawful Residents Category B",
+      "url": "https://immigration.go.ke/lawful-residents-category-b/",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "حداقل ۷ سال مجوز،۳ سال پیوسته، مشارکت اجتماعی‌اقتصادی، مصاحبه و مدارک CategoryB خوانده شد."
+    },
+    {
+      "id": "iaaf28-jp-next-dependent",
+      "title": "MOFA Dependent visa",
+      "url": "https://www.mofa.go.jp/j_info/visit/visa/long/visa9.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "وجود وضعیت و مسیر ویزا تأیید مستقیم؛ جزئیات حامی از ISA فقط نمایهٔ جست‌وجو است."
+    },
+    {
+      "id": "iaaf28-jp-next-iran-coe",
+      "title": "Embassy Japan Iran COE holders",
+      "url": "https://www.ir.emb-japan.go.jp/itpr_fa/00_000327.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "مدارک ایرانی و ترجمه خوانده شد؛ صفحه تاریخ ۲۰۱۸ دارد و محل ارائه تابع اطلاعیهٔ JVAC است."
+    },
+    {
+      "id": "iaaf28-jp-next-iran-fee",
+      "title": "Embassy Japan Iran Visa information",
+      "url": "https://www.ir.emb-japan.go.jp/itpr_fa/visa.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "هزینهٔ یکبار ورود از ژوئیه ۲۰۲۶ و بازگشایی خوانده شد؛ روش تحویل قدیمی با JVAC جایگزین می‌شود."
+    },
+    {
+      "id": "iaaf28-jp-next-iran-jvac",
+      "title": "Embassy Japan Iran JVAC opening, 3 August 2026",
+      "url": "https://www.ir.emb-japan.go.jp/itpr_ja/11_000001_01140.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "رویهٔ مؤثر ۱۶ اوت ۲۰۲۶ خوانده شد؛ بر متن قدیمی تحویل مستقیم سفارت مقدم است."
+    },
+    {
+      "id": "iaaf28-jp-next-jasso-parttime",
+      "title": "JASSO part time work",
+      "url": "https://www.studyinjapan.go.jp/en/work-in-japan/part-time-jobs/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "اجازهٔ جدا، محدودیت ساعت و حفظ تحصیل خوانده شد."
+    },
+    {
+      "id": "iaaf28-jp-next-jasso-study",
+      "title": "JASSO Immigration and Student Visas",
+      "url": "https://www.studyinjapan.go.jp/en/planning/immigration-procedures/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "مؤسسهٔ پذیرنده، COE و اثبات منابع مالی خوانده شد."
+    },
+    {
+      "id": "iaaf28-jp-next-student",
+      "title": "MOFA Student visa",
+      "url": "https://www.mofa.go.jp/j_info/visit/visa/long/visa6.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "مدت و مدارک خوانده شد."
+    },
+    {
+      "id": "iaaf28-na27-am-digital-notice",
+      "title": "MCS June 2026 November digitisation notice",
+      "url": "https://migration.mia.gov.am/en/articles/news/notice-services-provided-within-the-framework-of-obtaining-residency-status-in-the-republic-of-armenia-will-be-digitized",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "تاریخ اجرای اعلامی ۱ نوامبر ۲۰۲۶ خوانده شد؛ قانون جدید را برای ۲۷ اکتبر جاری نکردیم."
+    },
+    {
+      "id": "iaaf28-na27-am-fees",
+      "title": "Armenia MFA residence guidance",
+      "url": "https://www.mfa.am/ru/residency",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "هزینه و مدت موقت/دائم خوانده شد؛ محل مراجعه ممکن است با MCS متفاوت باشد، نشانی قدیمی قطعی نشد."
+    },
+    {
+      "id": "iaaf28-na27-am-iran-treaty",
+      "title": "Armenia Iran visa waiver memorandum",
+      "url": "https://www.arlis.am/ru/acts/109433/print/act",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "متن انگلیسی معاهده فعال: ۹۰ روز در ۱۸۰ روز، از ۱۰ اوت ۲۰۱۶ ؛ عمومی ۱۸۰ روز سالانه به ایرانی تعمیم نیافت."
+    },
+    {
+      "id": "iaaf28-na27-am-law",
+      "title": "Armenia Law on Foreigners, official translation",
+      "url": "https://www.arlis.am/en/acts/231843",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "مواد ۱۵ تا ۱۸ و کار خوانده شد؛ اصلاح ۱ نوامبر هنوز اجرا نشده و این نسخه هشدار تاریخ دارد."
+    },
+    {
+      "id": "iaaf28-na27-am-mcs",
+      "title": "MCS current residence documents",
+      "url": "https://migration.e-gov.am/en/service/residency_application/info",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "مدارک مرتبط خوانده شد؛ سامانه از ۱ نوامبر تغییر می‌کند."
+    },
+    {
+      "id": "iaaf28-na27-az-entry",
+      "title": "Azerbaijan SMS visa information",
+      "url": "https://migration.gov.az/en/page/49",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "اهداف ویزا و ثبت محل خوانده شد؛ جدول ورود فرودگاهی ایران جدا از اقامت/کار است."
+    },
+    {
+      "id": "iaaf28-na27-az-residence",
+      "title": "Azerbaijan SMS temporary and permanent residence",
+      "url": "https://migration.gov.az/en/page/73",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "شاخه‌ها، مبالغ متفاوت موقت/دائم، شرط سابقهٔ واجد و آزمون خوانده شد؛ بعضی جدول‌ها تکراری و تیتر قدیمی دارند."
+    },
+    {
+      "id": "iaaf28-na27-az-work",
+      "title": "Azerbaijan SMS work permits",
+      "url": "https://migration.gov.az/en/page/75",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "کارفرما، بازار کار، استثناها، تمدید و خروج خوانده شد."
+    },
+    {
+      "id": "iaaf28-na27-ge-sda",
+      "title": "SDA residence permits",
+      "url": "https://sda.gov.ge/en/products/migration-residence-permits/",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "بخش‌های مرتبط خوانده شد؛ متن کار با قانون نهایی مقابله شد."
+    },
+    {
+      "id": "iaaf28-na27-ge-status",
+      "title": "Georgia Aliens Law, final consolidated",
+      "url": "https://matsne.gov.ge/en/document/view/2278806",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "مواد مرتبط در نسخهٔ نهایی خوانده شد."
+    },
+    {
+      "id": "iaaf28-na27-my-ep",
+      "title": "ESD Employment Pass service",
+      "url": "https://esd.imi.gov.my/portal/expatriates/myxpats/key-services/employment-pass/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "ماهیت کارفرمامحور و شبه‌جزیره خوانده شد؛ حقوق/مدت عمومی قدیمی با اطلاعیه ۲۰۲۶ جایگزین می‌شود."
+    },
+    {
+      "id": "iaaf28-na27-my-ep-2026",
+      "title": "ESD revised EP salary policy",
+      "url": "https://esd.imi.gov.my/portal/latest-news/announcement/announcement-266-ep-salary-policy-2026/",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "جدول اجرای ۱ ژوئن ۲۰۲۶ برای درخواست تازه و تمدید خوانده شد."
+    },
+    {
+      "id": "iaaf28-na27-my-mida-2026",
+      "title": "MIDA implementation expatriate policy",
+      "url": "https://www.mida.gov.my/media-release/announcement-implementation-of-new-expatriate-employment-policy/",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "استثنای کف ۷۰۰۰ بخش تولید و همراه هر سه طبقه خوانده شد."
+    },
+    {
+      "id": "iaaf28-na27-my-pvp",
+      "title": "Immigration PVP Expert",
+      "url": "https://www.imi.gov.my/index.php/en/main-services/pass/professional-visitor-pass-expert/",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "کارفرمای خارجی/پرداخت، یک پروژه، ورود پس از تأیید و همراه خوانده شد."
+    },
+    {
+      "id": "iaaf28-na27-my-rpt",
+      "title": "TalentCorp RP-T eligibility",
+      "url": "https://www.talentcorp.com.my/our-initiatives/for-professionals/rpt/",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "شرایط حداقلی و همسر/فرزند مستقیم خوانده شد؛ از ایران ورود اول مستقیم به RP-T نتیجه نمی‌شود."
+    },
+    {
+      "id": "iaaf28-na27-th-iran",
+      "title": "Thai Embassy Tehran visa information",
+      "url": "https://tehran.thaiembassy.org/en/publicservice/visa-information",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "صلاحیت محل درخواست ایران/سوریه، پرداخت و منع درخواست از داخل تایلند خوانده شد."
+    },
+    {
+      "id": "iaaf28-na27-th-ltr-2025",
+      "title": "BOI LTR 2025 revised brochure",
+      "url": "https://ltr.boi.go.th/documents/BOI-brochure%202025-LTR.pdf",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "صفحه ۲ خوانده شد؛ حذف سابقه، دامنهٔ همراه و شاخه‌های جایگزین درآمد بررسی شد."
+    },
+    {
+      "id": "iaaf28-na27-th-ltr-home",
+      "title": "BOI LTR current home",
+      "url": "https://ltr.boi.go.th/",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "شاخه‌های درآمد/کارفرما و فرایند خوانده شد؛ سقف ۴ همراه با بروشور ۲۰۲۵ تعارض دارد."
+    },
+    {
+      "id": "iaaf28-na27-th-smart-s",
+      "title": "BOI SMART S",
+      "url": "https://smart-visa.boi.go.th/smart/pages/smart_s.html",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "فقط شاخه startup دوساله با شرکت از قبلتأسیس تأیید شد."
+    },
+    {
+      "id": "iaaf28-na27-th-work-iran",
+      "title": "Thai Embassy Tehran Non B employment",
+      "url": "https://tehran.thaiembassy.org/en/publicservice/non-immigrant-b-visa-working%3Fpage=5d84667b15e39c3cbc002dc0&menu=5d84667b15e39c3cbc002dd7",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "WP32 و تمکن/هزینهٔ ایران خوانده شد."
+    },
+    {
+      "id": "iaaf28-na27-th-work-mfa",
+      "title": "Thai MFA Non B",
+      "url": "https://www.mfa.go.th/en/publicservice/non-immigrant-visa-b-for-business-and-work",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "حق کار جدا و ممنوعیت شروع بدون آن خوانده شد؛ WP3/تمکن قدیمی با صفحه جدید تهران مخلوط نشود."
+    },
+    {
+      "id": "iaaf28-za-next-business",
+      "title": "DIRCO Copenhagen Business Visa",
+      "url": "https://dirco.gov.za/copenhagen/wp-content/uploads/sites/10/2025/12/BUSINESS-VISA.pdf",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "شروط ماهوی خوانده شد؛ هزینه، اقامت در دانمارک و رویهٔ آن نمایندگی به ایران منتقل نشود."
+    },
+    {
+      "id": "iaaf28-za-next-iran-embassy",
+      "title": "South African Embassy Tehran Visa Services",
+      "url": "https://southafricanembassy.ir/visa-services",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "پیوند رسمی سفارت به VFS ایران خوانده شد."
+    },
+    {
+      "id": "iaaf28-za-next-iran-vfs",
+      "title": "Embassy linked VFS South Africa Iran, long stay",
+      "url": "https://visa.vfsglobal.com/one-pager/SouthAfrica/Iran/english/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش بلندمدت و محل تهران خوانده شد؛ خدمت‌رسان است، مرجع قانون‌گذار نیست."
+    },
+    {
+      "id": "iaaf28-za-next-study",
+      "title": "DIRCO Benin Study checklist",
+      "url": "https://dirco.gov.za/benin/wp-content/uploads/sites/13/2025/06/Requirements-for-Study-permit.pdf",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "پذیرش/تمکن/مدارک خوانده شد؛ قواعد محلی بنین، واکسن و زمان‌بندی آن به ایران منتقل نشود."
+    },
+    {
+      "id": "iaaf28-za-next-types",
+      "title": "DHA Types of temporary visas",
+      "url": "https://www.dha.gov.za/index.php/immigration-services/types-of-visas",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "بخش تحصیل، خانواده و کسب‌وکار خوانده شد؛ بخش General Work دارای متن نامتناسب کسب‌وکار است و برای آن استفاده نشد."
+    },
+    {
+      "id": "int28-ge-funding",
+      "title": "SDA — study and family lawful income and personal bank alternatives",
+      "url": "https://sda.gov.ge/en/products/migration-residence-permits/",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "Root re-read study and family clause(e), including income location/person and bank alternative; other source review dates are unchanged."
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "ke:special-pass",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ صلاحیت محل درخواست، ورود و اصالت مدارک باید مستقل بررسی شوند.",
+      "limits_fa": "پوشش این بسته جزئی است؛ خوداظهاری شرط‌ها احراز رسمی یا پذیرش درخواست نیست.",
+      "costs_fa": "برای غیر EAC،۲۰۰USD به‌ازای هرماه پس از موافقت.",
+      "cost_source_ids": [
+        "iaaf28-aa-ke-special"
+      ],
+      "dependants_fa": "قواعد همراه مستقل بررسی می‌شوند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "temporary_purpose",
+          "answer_id": "ke.iaaf28_special_pass_temporary_purpose",
+          "question": "فعالیت تجاری/حرفه‌ای موقت حداکثر ۶ ماهه داری؟",
+          "reason": "این مجوز کوتاه‌مدت است.",
+          "action": "نوع و مدت فعالیت مستند شود.",
+          "source_ids": [
+            "iaaf28-aa-ke-special"
+          ]
+        },
+        {
+          "id": "organisation",
+          "answer_id": "ke.iaaf28_special_pass_organisation",
+          "question": "نامهٔ توجیهی و فرم ۳۲ و ثبت سازمان آماده است؟",
+          "reason": "مدرک فعالیت و سازمان درخواست می‌شود.",
+          "action": "اسناد فعالیت/سازمان ارائه شود.",
+          "source_ids": [
+            "iaaf28-aa-ke-special"
+          ]
+        },
+        {
+          "id": "qualifications",
+          "answer_id": "ke.iaaf28_special_pass_qualifications",
+          "question": "مدارک تخصصی، رزومه و در صورت لزوم clearance نهاد حرفه‌ای داری؟",
+          "reason": "حرفهٔ تنظیم‌شده تأیید جدا دارد؛ اسناد خارجی ترجمهٔ انگلیسی می‌خواهند.",
+          "action": "مجوز حرفه و ترجمهٔ معتبر تکمیل شود.",
+          "source_ids": [
+            "iaaf28-aa-ke-special"
+          ]
+        },
+        {
+          "id": "lawful_documents",
+          "answer_id": "ke.iaaf28_special_pass_lawful_documents",
+          "question": "پاسپورت معتبر و در صورت حضور در کنیا وضعیت فعلی و مجوزهای قبلی قابل ارائه است؟",
+          "reason": "مدارک هویت و سابقه در فهرست رسمی‌اند.",
+          "action": "اسناد جاری و قبلی را ارائه کن.",
+          "source_ids": [
+            "iaaf28-aa-ke-special"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "ke:permanent-residence",
+      "scope_fa": "فقط Category B متقاضی دارای سابقهٔ مجوز کار کنیا؛ سایر شاخه‌های دائم خارج این برش‌اند.",
+      "limits_fa": "پوشش این بسته جزئی است؛ خوداظهاری شرط‌ها احراز رسمی یا پذیرش درخواست نیست.",
+      "costs_fa": "CategoryB: پردازش KES50000 غیرقابل‌استرداد؛ پس ازموافقت KES750000؛ سایر دسته‌ها متفاوت‌اند.",
+      "cost_source_ids": [
+        "iaaf28-int28-ke-category-b"
+      ],
+      "dependants_fa": "پس ازصدور برای متقاضی اصلی، همسر و کودک می‌توانند مستقل درخواست کنند؛ شمول و مدارک هر فرد جدا.",
+      "dependant_source_ids": [
+        "iaaf28-int28-ke-category-b"
+      ],
+      "checks": [
+        {
+          "id": "work_permits",
+          "answer_id": "ke.iaaf28_permanent_residence_work_permits",
+          "question": "حداقل ۷ سال مجوز کار کنیا را مستند می‌کنی؟",
+          "reason": "سابقهٔ عمومی خارج کنیا حساب نمی‌شود.",
+          "action": "همهٔ مجوزها ارائه شود.",
+          "source_ids": [
+            "iaaf28-int28-ke-category-b"
+          ]
+        },
+        {
+          "id": "continuous_residence",
+          "answer_id": "ke.iaaf28_permanent_residence_continuous_residence",
+          "question": "سه سال پیش ازدرخواست در کنیا پیوسته مقیم بوده‌ای؟",
+          "reason": "دورهٔ بلافاصله قبل ازاقدام لازم است.",
+          "action": "سوابق ورود و اقامت بررسی شود.",
+          "source_ids": [
+            "iaaf28-int28-ke-category-b"
+          ]
+        },
+        {
+          "id": "contribution",
+          "answer_id": "ke.iaaf28_permanent_residence_contribution",
+          "question": "توان مشارکت ملموس اجتماعی‌اقتصادی و حضور در مصاحبه قابل اثبات است؟",
+          "reason": "CategoryB این بررسی را مستقل ازسال‌ها دارد.",
+          "action": "مدارک فعالیت و مشارکت و مصاحبه آماده شود.",
+          "source_ids": [
+            "iaaf28-int28-ke-category-b"
+          ]
+        },
+        {
+          "id": "clearances",
+          "answer_id": "ke.iaaf28_permanent_residence_clearances",
+          "question": "گواهی حسن‌رفتار، انطباق مالیاتی، AlienCard و گذرنامهٔ معتبر داری؟",
+          "reason": "شرط پروندهٔ همین دسته است.",
+          "action": "مدارک جاری تکمیل شود.",
+          "source_ids": [
+            "iaaf28-int28-ke-category-b"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "rw:work-permit",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ صلاحیت محل درخواست، ورود و اصالت مدارک باید مستقل بررسی شوند.",
+      "limits_fa": "این چک‌لیست فقط H1/H2 را بررسی می‌کند؛ کلاس‌های دولتی/هنری/NGO/رسانه‌ای و انتقال شرکتی شرایط جدا دارند.",
+      "costs_fa": "H1/H2 در صفحه ۱۵۰۰۰۰RWF؛ اعتبار H1 تا ۳ سال و H2 تا ۲ سال، به کلاس وابسته است.",
+      "cost_source_ids": [
+        "iaaf28-aa-rw-work"
+      ],
+      "dependants_fa": "قواعد همراه مستقل بررسی می‌شوند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "h_branch",
+          "answer_id": "rw.iaaf28_work_permit_h_branch",
+          "question": "H1 شغل موجود در ODL با صلاحیت/تجربه، یا H2 با حمایت کارفرما و صلاحیت/تجربهٔ مربوط داری؟",
+          "reason": "دو شاخه بدیل‌اند؛ H4 منطقه‌ای و سایر کلاس‌ها خارج این برش‌اند.",
+          "action": "کلاس و اسناد مرتبط انتخاب شود.",
+          "source_ids": [
+            "iaaf28-aa-rw-work"
+          ]
+        },
+        {
+          "id": "h_contract",
+          "answer_id": "rw.iaaf28_work_permit_h_contract",
+          "question": "قرارداد کار و توصیه‌نامهٔ کارفرما داری؟",
+          "reason": "برای H1/H2 اسناد استخدام لازم است.",
+          "action": "قرارداد و نامه ارائه شود.",
+          "source_ids": [
+            "iaaf28-aa-rw-work"
+          ]
+        },
+        {
+          "id": "h_credentials",
+          "answer_id": "rw.iaaf28_work_permit_h_credentials",
+          "question": "مدارک علمی لازم و رزومه و اصل گواهی پلیس کشور اقامت شش‌ماه پیش را داری؟",
+          "reason": "پروفایل کلی جای اسناد صلاحیت/سابقه را نمی‌گیرد.",
+          "action": "اسناد مطابق کلاس تکمیل شود.",
+          "source_ids": [
+            "iaaf28-aa-rw-work"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "rw:student-permit",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ صلاحیت محل درخواست، ورود و اصالت مدارک باید مستقل بررسی شوند.",
+      "limits_fa": "پوشش این بسته جزئی است؛ خوداظهاری شرط‌ها احراز رسمی یا پذیرش درخواست نیست.",
+      "costs_fa": "U1:۲۰۰۰۰RWF و اعتبار ۱ سال؛ مبالغ شاخه‌های دیگر متفاوت است.",
+      "cost_source_ids": [
+        "iaaf28-aa-rw-study"
+      ],
+      "dependants_fa": "قواعد همراه مستقل بررسی می‌شوند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "u1_school",
+          "answer_id": "rw.iaaf28_student_permit_u1_school",
+          "question": "برای تحصیل U1 توصیه‌نامهٔ مدرسه داری؟",
+          "reason": "U2 کارآموزی،H7 پژوهش و P2 کار دانشجویی جدا هستند.",
+          "action": "مرکز و هدف تحصیل اثبات شود.",
+          "source_ids": [
+            "iaaf28-aa-rw-study"
+          ]
+        },
+        {
+          "id": "u1_sponsor",
+          "answer_id": "rw.iaaf28_student_permit_u1_sponsor",
+          "question": "نامهٔ حمایت برای پروندهٔ U1 داری؟",
+          "reason": "فهرست رسمی نامهٔ حامی می‌خواهد.",
+          "action": "حمایت مستند ارائه شود.",
+          "source_ids": [
+            "iaaf28-aa-rw-study"
+          ]
+        },
+        {
+          "id": "u1_documents",
+          "answer_id": "rw.iaaf28_student_permit_u1_documents",
+          "question": "مدرک سفر حداقل ۶ ماه و اگر بالای ۱۸ سالی اصل گواهی پلیس داری؟",
+          "reason": "گواهی پلیس شرط شاخهٔ سنی است.",
+          "action": "اسناد هویت و سابقهٔ لازم آماده شود.",
+          "source_ids": [
+            "iaaf28-aa-rw-study"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "hk:immigration-arrangements-non-local-graduates",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ شرایط عمومی مهاجرت و محل مجاز درخواست نیز مستقل لازم‌اند.",
+      "limits_fa": "چک‌لیست جزئی است؛ نتیجهٔ رسمی یا تضمین پذیرش ایجاد نمی‌کند.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "برای خانواده اثبات رابطه، حمایت و اقامت مناسب جدا لازم است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "iang_qualification",
+          "answer_id": "hk.iaaf28_immigration_arrangements_non_local_graduates_iang_qualification",
+          "question": "مدرک واجد محلی هنگ‌کنگ یا پردیس مشترک GBA مشمول داری؟",
+          "reason": "محلی: تمام‌وقتِ معتبر، کارشناسی/ارشد/دکتری≥یک‌سال تحصیلی، یا QF≥5 و≥120 اعتبار و≥یک‌سال؛ GBA تعریف مستقل مؤسسهٔ مشترک دارد.",
+          "action": "مدرک و اعتبار مرکز مطابق شاخه بررسی شود.",
+          "source_ids": [
+            "iaaf28-aa-hk-iang"
+          ]
+        },
+        {
+          "id": "iang_timing_job",
+          "answer_id": "hk.iaaf28_immigration_arrangements_non_local_graduates_iang_timing_job",
+          "question": "در ۶ ماه پس ازفراغت اقدام می‌کنی، یا اگر دیرتر است شغل مناسب سطح مدرک با حقوق بازار داری؟",
+          "reason": "recent پیشنهاد شغل اولیه نمی‌خواهد؛ non-recent می‌خواهد.",
+          "action": "تاریخ گواهی و در صورت لزوم قرارداد بررسی شود.",
+          "source_ids": [
+            "iaaf28-aa-hk-iang"
+          ]
+        },
+        {
+          "id": "iang_general",
+          "answer_id": "hk.iaaf28_immigration_arrangements_non_local_graduates_iang_general",
+          "question": "مدرک سفر با امکان بازگشت و سابقهٔ پاک/نبود نگرانی امنیتی و عدم وابستگی به کمک عمومی داری؟",
+          "reason": "شروط عمومی مهاجرت مستقل ازتحصیل هستند.",
+          "action": "اسناد عمومی و منابع بررسی شود.",
+          "source_ids": [
+            "iaaf28-aa-hk-iang"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "hk:dependant-visa",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ شرایط عمومی مهاجرت و محل مجاز درخواست نیز مستقل لازم‌اند.",
+      "limits_fa": "چک‌لیست جزئی است؛ نتیجهٔ رسمی یا تضمین پذیرش ایجاد نمی‌کند.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "برای خانواده اثبات رابطه، حمایت و اقامت مناسب جدا لازم است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "sponsor_relation",
+          "answer_id": "hk.iaaf28_dependant_visa_sponsor_relation",
+          "question": "وضعیت حامی، رابطهٔ همسر/شریک رسمی یا کودک مجرد زیر ۱۸ را پوشش می‌دهد، یا برای والد≥۶۰ حامی PR/بی‌قید داری؟",
+          "reason": "گروه‌های بدیل‌اند؛ حامی باید در وضعیت مشمول باشد.",
+          "action": "کد اقامت حامی و شاخهٔ رابطه تعیین شود.",
+          "source_ids": [
+            "iaaf28-aa-hk-dependent"
+          ]
+        },
+        {
+          "id": "genuine_relation",
+          "answer_id": "hk.iaaf28_dependant_visa_genuine_relation",
+          "question": "رابطهٔ واقعی و قانوناً ثبت‌شده با سند معتبر اثبات می‌شود؟",
+          "reason": "هم‌باشی/نامزدی به‌تنهایی شریک رسمی نیست.",
+          "action": "سند رابطه مطابق قانون محل وقوع ارائه شود.",
+          "source_ids": [
+            "iaaf28-aa-hk-dependent"
+          ]
+        },
+        {
+          "id": "sufficient_support",
+          "answer_id": "hk.iaaf28_dependant_visa_sufficient_support",
+          "question": "حامی معیشت بالاتر ازحداقل و مسکن مناسب تأمین می‌کند؟",
+          "reason": "توان حمایت شرط مستقل است.",
+          "action": "منابع و محل سکونت مستند شود.",
+          "source_ids": [
+            "iaaf28-aa-hk-dependent"
+          ]
+        },
+        {
+          "id": "no_detriment",
+          "answer_id": "hk.iaaf28_dependant_visa_no_detriment",
+          "question": "سابقهٔ شناخته‌شدهٔ منفی یا نگرانی امنیتی/کیفری وجود ندارد؟",
+          "reason": "شرایط عمومی برای وابسته نیز لازم است.",
+          "action": "clearance و پیشینه بررسی شود.",
+          "source_ids": [
+            "iaaf28-aa-hk-dependent"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "zm:employment-permit",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ پذیرش تابعیت، محل قانونی درخواست و شرایط عمومی مستقل بررسی می‌شوند.",
+      "limits_fa": "بخشی از شروط اصلی پوشش داده شده؛ کامل‌بودن پرونده و پذیرش رسمی احراز نشده است.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان بررسی مستقل نیاز دارند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "employment_term",
+          "answer_id": "zm.iaaf28_employment_permit_employment_term",
+          "question": "قرارداد/پیشنهاد کار برای بیش از ۶ ماه داری؟",
+          "reason": "این مدت شاخهٔ Employment است.",
+          "action": "کارفرما، شغل و مدت قرارداد مشخص شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "employment_filing",
+          "answer_id": "zm.iaaf28_employment_permit_employment_filing",
+          "question": "کارفرما/وکیل/مشاور مجاز ازجانب تو اقدام می‌کند و تا تصویب خارج زامبیا می‌مانی؟",
+          "reason": "متقاضی شخصاً درخواست Employment را ثبت نمی‌کند؛ ویزای ورود حسب ملیت همچنان جداست.",
+          "action": "ثبت و روش ورود پس ازتصویب تعیین شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "employment_skills",
+          "answer_id": "zm.iaaf28_employment_permit_employment_skills",
+          "question": "مدرک صلاحیت، ثبت حرفه‌ای لازم و رزومه و گواهی پلیس کشور اقامت داری؟",
+          "reason": "مدارک مربوط به سمت و حرفه لازم است.",
+          "action": "اصالت و تطبیق صلاحیت تکمیل شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "employment_local_case",
+          "answer_id": "zm.iaaf28_employment_permit_employment_local_case",
+          "question": "ثبت بنگاه، آگهی‌های لازم و نتیجهٔ انتخاب و طرح آموزش جانشین محلی آماده‌اند؟",
+          "reason": "برای پروژه‌ها قرارداد/مشخصات و تاریخ و ارزش پروژه نیز درخواست می‌شود.",
+          "action": "کارفرما پروندهٔ جذب و انتقال مهارت را کامل کند.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "zm:temporary-employment-permit",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ پذیرش تابعیت، محل قانونی درخواست و شرایط عمومی مستقل بررسی می‌شوند.",
+      "limits_fa": "بخشی از شروط اصلی پوشش داده شده؛ کامل‌بودن پرونده و پذیرش رسمی احراز نشده است.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان بررسی مستقل نیاز دارند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "temporary_term",
+          "answer_id": "zm.iaaf28_temporary_employment_permit_temporary_term",
+          "question": "دیدار تجاری بیش از ۳۰ روز و حداکثر ۶ ماه در ۱۲ ماه داری؟",
+          "reason": "این شاخه مجوز کار بیش از ۶ ماه نیست.",
+          "action": "مدت و فعالیت واقعی تطبیق یابد.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "temporary_host",
+          "answer_id": "zm.iaaf28_temporary_employment_permit_temporary_host",
+          "question": "نامهٔ مؤسسهٔ تجاری میزبان برای حمایت داری؟",
+          "reason": "حمایت فعالیت موقت باید مستند باشد.",
+          "action": "نامهٔ هدف و فعالیت ارائه شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "temporary_documents",
+          "answer_id": "zm.iaaf28_temporary_employment_permit_temporary_documents",
+          "question": "فرم ۲۵، گذرنامهٔ معتبر و هزینهٔ مقرر آماده است؟",
+          "reason": "اسناد همین درخواست باید تکمیل شود.",
+          "action": "اسناد فعلی و وضعیت ورود بررسی شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "zm:investors-permit",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ پذیرش تابعیت، محل قانونی درخواست و شرایط عمومی مستقل بررسی می‌شوند.",
+      "limits_fa": "بخشی از شروط اصلی پوشش داده شده؛ کامل‌بودن پرونده و پذیرش رسمی احراز نشده است.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان بررسی مستقل نیاز دارند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "investor_age_business",
+          "answer_id": "zm.iaaf28_investors_permit_investor_age_business",
+          "question": "بیش از ۱۸ سال داری و بنگاه جدید/سرمایه‌گذاری یا پیوستن به شرکت موجود واقعی است؟",
+          "reason": "منبع حد سنی و هدف کسب‌وکار دارد.",
+          "action": "سن و نوع فعالیت مشخص شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "investor_amount",
+          "answer_id": "zm.iaaf28_investors_permit_investor_amount",
+          "question": "سرمایهٔ شخصی انجام‌شده برای بنگاه جدید USD250000 یا پیوستن به موجود USD150000 را اثبات می‌کنی؟",
+          "reason": "دو شاخه بدیل‌اند؛ بودجهٔ آزاد جای سرمایهٔ اثبات‌شده نیست.",
+          "action": "انتقال، بانک یا ارزش تجهیزات مستند شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "investor_registration",
+          "answer_id": "zm.iaaf28_investors_permit_investor_registration",
+          "question": "ثبت شرکت، مدیران، اسناد سرمایه و مالکیت/اجاره و مجوزهای لازم داری؟",
+          "reason": "ثبت و مجوز متناسب با فعالیت لازم است.",
+          "action": "اسناد شرکتی و محل فعالیت تکمیل شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "investor_renewal",
+          "answer_id": "zm.iaaf28_investors_permit_investor_renewal",
+          "question": "برای ادامه مالیات، حسابرسی واجد ZICA و بانک و بازرسی لازم فراهم می‌شود؟",
+          "reason": "تمدید پروندهٔ عملیاتی مستقل می‌خواهد.",
+          "action": "مدارک عملکرد و نظارت حفظ شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "zm:spouse-permit",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ پذیرش تابعیت، محل قانونی درخواست و شرایط عمومی مستقل بررسی می‌شوند.",
+      "limits_fa": "بخشی از شروط اصلی پوشش داده شده؛ کامل‌بودن پرونده و پذیرش رسمی احراز نشده است.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان بررسی مستقل نیاز دارند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "spouse_sponsor",
+          "answer_id": "zm.iaaf28_spouse_permit_spouse_sponsor",
+          "question": "همسر شهروند،EstablishedResident دارای گواهی یا دارندهٔ ResidencePermit هستی؟",
+          "reason": "این گروه‌ها بدیل‌اند؛ هر مجوز موقتی مبنای همسر نیست.",
+          "action": "وضعیت حامی ارائه شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "spouse_consent",
+          "answer_id": "zm.iaaf28_spouse_permit_spouse_consent",
+          "question": "ازدواج رسمی و رضایت‌نامهٔ همسر و پاسپورت معتبر قابل ارائه است؟",
+          "reason": "مدارک رابطه و حمایت لازم است.",
+          "action": "اسناد تصدیق‌شده و نامهٔ رضایت تکمیل شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "spouse_sustenance",
+          "answer_id": "zm.iaaf28_spouse_permit_spouse_sustenance",
+          "question": "مدرک تأمین معیشت داری و برای تمدید رضایت همسر ادامه دارد؟",
+          "reason": "توان معیشت و حمایت باید مستند باشد.",
+          "action": "منابع و بقای حمایت بررسی شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "zm:study-permit",
+      "scope_fa": "متقاضی دارندهٔ گذرنامهٔ ایران؛ پذیرش تابعیت، محل قانونی درخواست و شرایط عمومی مستقل بررسی می‌شوند.",
+      "limits_fa": "بخشی از شروط اصلی پوشش داده شده؛ کامل‌بودن پرونده و پذیرش رسمی احراز نشده است.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان بررسی مستقل نیاز دارند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "study_acceptance",
+          "answer_id": "zm.iaaf28_study_permit_study_acceptance",
+          "question": "برای تحصیل تمام‌وقت یا پاره‌وقت در مؤسسهٔ زامبیایی پذیرش داری؟",
+          "reason": "کودک/همراه برای تحصیل بیش از ۳ ماه هم معمولاً این مجوز می‌خواهد؛ دارندهٔ Residence با شغل student استثناست.",
+          "action": "نوع مؤسسه و وضعیت شخص مشخص شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "study_sponsor",
+          "answer_id": "zm.iaaf28_study_permit_study_sponsor",
+          "question": "نامهٔ حمایت و وضعیت قانونی و توان مالی حامی قابل اثبات است؟",
+          "reason": "حامی می‌تواند مؤسسه،والد،قیم یا خود فرد واجد منابع باشد.",
+          "action": "حمایت و منابع مستند شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "study_medical",
+          "answer_id": "zm.iaaf28_study_permit_study_medical",
+          "question": "گذرنامهٔ معتبر و گزارش پزشکی مرکز دولتی زامبیا فراهم است؟",
+          "reason": "گزارش پزشکی در چک‌لیست این شاخه است.",
+          "action": "مدارک هویت و پزشکی آماده شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "study_progress",
+          "answer_id": "zm.iaaf28_study_permit_study_progress",
+          "question": "برای تمدید نامهٔ مدرسه و نتیجه/پیشرفت و محدودیت فعالیت مجوز رعایت می‌شود؟",
+          "reason": "فعالیت درآمدزا خارج مجوز مجاز فرض نشود.",
+          "action": "ثبت و پیشرفت و اجازهٔ فعالیت جدا بررسی شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "zm:residence-permit",
+      "scope_fa": "برش بزرگسال: سابقهٔ Employment بیش از ۱۰ سال پیوسته، Investor بیش از ۳ سال،Spouse حداقل ۵ سال یا بازنشستگی مستند؛ شاخهٔ کودک/نسب/Entry قدیمی پوشش ندارد.",
+      "limits_fa": "بخشی از شروط اصلی پوشش داده شده؛ کامل‌بودن پرونده و پذیرش رسمی احراز نشده است.",
+      "costs_fa": "هزینهٔ جاری در این بسته احراز نشده است.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان بررسی مستقل نیاز دارند.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "residence_branch",
+          "answer_id": "zm.iaaf28_residence_permit_residence_branch",
+          "question": "یکی ازسابقه‌های محلیِ بیش از ۱۰ سال Employment پیوسته،بیش از ۳ سال Investor،حداقل ۵ سال Spouse یا بازنشستگی دارای منابع را داری؟",
+          "reason": "شاخه‌ها OR هستند؛ سابقهٔ خارج زامبیا جای سابقهٔ محلی نیست.",
+          "action": "نوع مجوز و تاریخ‌ها یا مستمری مشخص شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "residence_evidence",
+          "answer_id": "zm.iaaf28_residence_permit_residence_evidence",
+          "question": "اسناد همان شاخهٔ انتخابی را آماده داری؟",
+          "reason": "کار:قرارداد/صلاحیت/معرف؛ سرمایه‌گذار:مالیات/بانک/حسابرسی/بازرسی؛ بازنشسته:حساب و مستمری/حساب بازنشستگی؛ اسناد سایر شاخه‌ها اجباری نیست.",
+          "action": "فقط اسناد شاخهٔ منطبق تکمیل شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        },
+        {
+          "id": "residence_absence",
+          "answer_id": "zm.iaaf28_residence_permit_residence_absence",
+          "question": "ورود اولیه طی ۶ ماه و اطلاع کتبی برای غیبت بیش از ۶ ماه و پرهیز ازغیبت بیش از ۱۲ ماه قابل رعایت است؟",
+          "reason": "این شرایط می‌توانند بر بقای اعتبار اثر بگذارند.",
+          "action": "تقویم ورود/غیبت و نامهٔ لازم بررسی شود.",
+          "source_ids": [
+            "iaaf28-aa-zm-permits"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "za:business-visa",
+      "scope_fa": "ایرانی مقیم ایران؛ ایجاد یا سرمایه‌گذاری در کسب‌وکار مقصد، بخش ۱۵؛ بازدید تجاری کوتاه‌مدت متفاوت است.",
+      "limits_fa": "سرمایه، اشتغال محلی، ثبت و توصیهٔ DTIC هم‌زمان بررسی می‌شوند. معافیت سرمایه اختیار قانونی است، امتیاز تضمین‌شده نیست.",
+      "costs_fa": "هزینهٔ کنسولی روز ایران تأیید تازه لازم دارد؛ VFS علاوه بر آن ۵۷ یورو خدمت غیرقابل‌استرداد اعلام می‌کند.",
+      "cost_source_ids": [
+        "iaaf28-za-next-iran-vfs"
+      ],
+      "dependants_fa": "خانوادهٔ درجهٔ نزدیک می‌تواند ویزای متناسب با مدت متقاضی درخواست کند؛ اثبات نسبت/حضانت لازم و حق کار مستقل بررسی می‌شود.",
+      "dependant_source_ids": [
+        "iaaf28-za-next-business"
+      ],
+      "checks": [
+        {
+          "id": "capital",
+          "answer_id": "za.iaaf28_business_visa_capital",
+          "question": "پنج میلیون رند نقد/تجهیزات نو از خارج برای سرمایه‌گذاری، یا کاهش/معافیت رسمی داری؟",
+          "reason": "گواهی حسابدار حرفه‌ای؛ سرمایه جزو ارزش دفتری کسب‌وکار.",
+          "action": "شاخهٔ سرمایه را مستند کن.",
+          "source_ids": [
+            "iaaf28-za-next-business"
+          ]
+        },
+        {
+          "id": "local_jobs",
+          "answer_id": "za.iaaf28_business_visa_local_jobs",
+          "question": "حداقل ۶۰٪ کارکنان دائمی شهروند/مقیم دائم خواهند بود؟",
+          "reason": "جدید: اثبات طی ۱۲ ماه؛ موجود: اثبات اکنون.",
+          "action": "ترکیب استخدام.",
+          "source_ids": [
+            "iaaf28-za-next-business"
+          ]
+        },
+        {
+          "id": "endorsement",
+          "answer_id": "za.iaaf28_business_visa_endorsement",
+          "question": "توصیهٔ DTIC دربارهٔ امکان‌پذیری و منفعت ملی فراهم است؟",
+          "reason": "شرط مستقل.",
+          "action": "توصیه را درخواست کن.",
+          "source_ids": [
+            "iaaf28-za-next-business"
+          ]
+        },
+        {
+          "id": "registration",
+          "answer_id": "za.iaaf28_business_visa_registration",
+          "question": "ثبت‌های مالیاتی، UIF، جبران صدمات و CIPC/حرفه‌ای حسب مورد انجام می‌شوند؟",
+          "reason": "کسب‌وکار موجود: صورت مالی سال قبل و اثبات سرمایه‌گذاری.",
+          "action": "ثبت‌ها را تطبیق بده.",
+          "source_ids": [
+            "iaaf28-za-next-business"
+          ]
+        },
+        {
+          "id": "restricted",
+          "answer_id": "za.iaaf28_business_visa_restricted",
+          "question": "فعالیت در امنیت، سرگرمی نامتعارف یا ورود خودرو دست‌دوم برای بازصادرات نیست؟",
+          "reason": "این فعالیت‌ها ویزای کسب‌وکار نمی‌گیرند/تمدید نمی‌شوند.",
+          "action": "طبقهٔ فعالیت را کنترل کن.",
+          "source_ids": [
+            "iaaf28-za-next-business"
+          ]
+        },
+        {
+          "id": "continuing",
+          "answer_id": "za.iaaf28_business_visa_continuing",
+          "question": "اثبات سرمایه در ۲۴ ماه و هر دو سال بعد، و کار فقط در همان کسب‌وکار را رعایت می‌کنی؟",
+          "reason": "مدت هر بار حداکثر سه سال.",
+          "action": "مهلت‌ها را ثبت کن.",
+          "source_ids": [
+            "iaaf28-za-next-business"
+          ]
+        },
+        {
+          "id": "iran_submission",
+          "answer_id": "za.iaaf28_business_visa_iran_submission",
+          "question": "امکان ارائهٔ حضوری پروندهٔ بلندمدت در مرکز تهران را داری؟",
+          "reason": "محل درخواست ایران.",
+          "action": "فهرست محلی روز را کنترل کن.",
+          "source_ids": [
+            "iaaf28-za-next-iran-vfs",
+            "iaaf28-za-next-iran-embassy"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "za:study-visa",
+      "scope_fa": "متقاضی ایرانی مقیم ایران؛ تحصیل بیش از سه ماه در مؤسسهٔ واجد شرایط، بخش ۱۳.",
+      "limits_fa": "پذیرش و تمکن جای تأیید ویزا را نمی‌گیرند؛ شروط علمی/زبان هر دوره مستقل است و این بسته جست‌وجوی برنامهٔ دانشگاهی نیست. رقم مالی و شروط کهنهٔ فهرست تهران وارد کنترل‌ها نشده؛ مسیر ارائهٔ ایران فقط ازسفارت/VFS استناد دارد.",
+      "costs_fa": "هزینهٔ کنسولی روز ایران تأیید تازه لازم دارد؛ VFS علاوه بر آن ۵۷ یورو خدمت غیرقابل‌استرداد اعلام می‌کند.",
+      "cost_source_ids": [
+        "iaaf28-za-next-iran-vfs"
+      ],
+      "dependants_fa": "شرایط مستقل همراه به‌طور کامل تأیید نشده؛ از پذیرش دانشجو برای خانواده مجوز خودکار ساخته نشود.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "admission",
+          "answer_id": "za.iaaf28_study_visa_admission",
+          "question": "پذیرش رسمی/مشروط با نام و مدت دوره از مؤسسهٔ واجد ثبت داری؟",
+          "reason": "دامنهٔ مؤسسه و دوره لازم است.",
+          "action": "اعتبار مؤسسه را بررسی کن.",
+          "source_ids": [
+            "iaaf28-za-next-study"
+          ]
+        },
+        {
+          "id": "institution",
+          "answer_id": "za.iaaf28_study_visa_institution",
+          "question": "مؤسسه تعهد گزارش ثبت ۶۰ روز، عدم ثبت ۷ روز و ترک/پایان ۳۰ روز می‌دهد؟",
+          "reason": "تعهد مؤسسه.",
+          "action": "نامه را بگیر.",
+          "source_ids": [
+            "iaaf28-za-next-study"
+          ]
+        },
+        {
+          "id": "funds",
+          "answer_id": "za.iaaf28_study_visa_funds",
+          "question": "برای شهریه، کتاب، مسکن و زندگی کل مدت، منابع خودت یا حامی قابل اثبات است؟",
+          "reason": "حامی باید خود و دانشجو را پوشش دهد؛ مبلغ وابسته به مدت.",
+          "action": "صورت‌حساب و منشأ حمایت.",
+          "source_ids": [
+            "iaaf28-za-next-study"
+          ]
+        },
+        {
+          "id": "medical",
+          "answer_id": "za.iaaf28_study_visa_medical",
+          "question": "پوشش درمانی نزد طرح ثبت‌شدهٔ آفریقای جنوبی در کل تحصیل داری؟",
+          "reason": "برای کودک آموزش پایه، تعهد والد/قیم شاخهٔ جدا دارد.",
+          "action": "پوشش را بررسی کن.",
+          "source_ids": [
+            "iaaf28-za-next-types"
+          ]
+        },
+        {
+          "id": "minor",
+          "answer_id": "za.iaaf28_study_visa_minor",
+          "question": "اگر زیر ۱۸ سال هستی، رضایت/حضانت، مشخصات قیم و تأمین هزینه تکمیل است؟",
+          "reason": "ویژهٔ خردسال؛ برای بزرگسال نامرتبط.",
+          "action": "قیم/رضایت را مستند کن.",
+          "source_ids": [
+            "iaaf28-za-next-study"
+          ]
+        },
+        {
+          "id": "continuation",
+          "answer_id": "za.iaaf28_study_visa_continuation",
+          "question": "ثبت‌نام را حفظ می‌کنی و کار پاره‌وقت مجاز را از ۲۰ ساعت در هفته بیشتر نمی‌کنی؟",
+          "reason": "حق کار پاره‌وقت مؤسسهٔ آموزش عالی/کالج واجدشرایط؛ ثبت و دوره معتبر بماند.",
+          "action": "کار را با نوع مؤسسه تطبیق بده.",
+          "source_ids": [
+            "iaaf28-za-next-types"
+          ]
+        },
+        {
+          "id": "iran_submission",
+          "answer_id": "za.iaaf28_study_visa_iran_submission",
+          "question": "امکان ارائهٔ حضوری پروندهٔ بلندمدت در مرکز تهران را داری؟",
+          "reason": "محل درخواست ایران.",
+          "action": "فهرست محلی روز را کنترل کن.",
+          "source_ids": [
+            "iaaf28-za-next-iran-vfs",
+            "iaaf28-za-next-iran-embassy"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "jp:student-visa-japan",
+      "scope_fa": "متقاضی ایرانی مقیم ایران؛ وضعیت Student برای مؤسسهٔ آموزشی واجدشرایط ژاپن، با پذیرش/COE متناسب.",
+      "limits_fa": "شروط دقیق زبان/مدرک تابع نوع مؤسسه و دوره است؛ حدنصاب عمومی برای همهٔ دوره‌ها از این منابع ساخته نشود. مدت وضعیت Student موردی و حداکثر۴سال۳ماه است؛ ثبت محل سکونت باید ظرف۱۴روز پس از تعیین نشانی انجام شود. این تکلیف پس از استقرار، آزمون دانستن عدد یا مدرک صلاحیت اولیه نیست.",
+      "costs_fa": "هزینهٔ ویزای یکبار ورود اعلامی سفارت ۶۸۰۰۰۰۰۰ ریال ازژوئیه ۲۰۲۶؛ هزینهٔ JVAC، شهریه و زندگی جدا هستند.",
+      "cost_source_ids": [
+        "iaaf28-jp-next-iran-fee",
+        "iaaf28-jp-next-iran-jvac"
+      ],
+      "dependants_fa": "وضعیت Dependent درصفحهٔMOFA وجوددارد؛ شروط کامل حامی/ایرانی به علت منبع ISA نمایه‌ای خارج این برش است و همراه خودکار نیست.",
+      "dependant_source_ids": [
+        "iaaf28-jp-next-dependent"
+      ],
+      "checks": [
+        {
+          "id": "school",
+          "answer_id": "jp.iaaf28_student_visa_japan_school",
+          "question": "مؤسسهٔ آموزشی پذیرنده برای فعالیت واقعی Student داری؟",
+          "reason": "دانشگاه/کالج/مدرسهٔ حرفه‌ای یا زبان؛ مدارک نوع مؤسسه جدا.",
+          "action": "پذیرش و مدارک COE مؤسسه.",
+          "source_ids": [
+            "iaaf28-jp-next-jasso-study"
+          ]
+        },
+        {
+          "id": "funding",
+          "answer_id": "jp.iaaf28_student_visa_japan_funding",
+          "question": "هزینهٔ تحصیل و زندگی از خود یا حامی با پس‌انداز/درآمد/منشأ وجه قابل اثبات است؟",
+          "reason": "کف عمومی ثابت در این منبع نیست.",
+          "action": "منبع و استمرار حمایت.",
+          "source_ids": [
+            "iaaf28-jp-next-jasso-study"
+          ]
+        },
+        {
+          "id": "coe",
+          "answer_id": "jp.iaaf28_student_visa_japan_coe",
+          "question": "COE معمولاً از طریق مؤسسه/نمایندهٔ ژاپن یا پروندهٔ کامل بدون آن آماده است؟",
+          "reason": "COE تضمین نیست؛ نبودش لزوماً ممنوعیت درخواست نیست.",
+          "action": "با مؤسسه تطبیق بده.",
+          "source_ids": [
+            "iaaf28-jp-next-jasso-study",
+            "iaaf28-jp-next-student"
+          ]
+        },
+        {
+          "id": "work",
+          "answer_id": "jp.iaaf28_student_visa_japan_work",
+          "question": "اگر قصد کار پاره‌وقت داری اجازهٔ جدا و سقف ۲۸ ساعت هفتگی را رعایت می‌کنی؟",
+          "reason": "تعطیلات طولانی ۸ ساعت روزانه؛ کار بزرگسالان ممنوع؛ حفظ تحصیل لازم.",
+          "action": "بودجه را بر کار آینده متکی نکن.",
+          "source_ids": [
+            "iaaf28-jp-next-jasso-parttime"
+          ]
+        },
+        {
+          "id": "iran_submission",
+          "answer_id": "jp.iaaf28_student_visa_japan_iran_submission",
+          "question": "برای ارائهٔ عادی از JVAC تهران و مدارک ایرانی آماده‌ای؟",
+          "reason": "از ۱۶ اوت ۲۰۲۶؛ استثنای سفارت موردی است.",
+          "action": "اصل گذرنامه، شناسنامه و ترجمهٔ رسمی را طبق فهرست آماده کن.",
+          "source_ids": [
+            "iaaf28-jp-next-iran-jvac",
+            "iaaf28-jp-next-iran-coe"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "am:entrepreneur-residence",
+      "scope_fa": "ایرانی مقیم ایران؛ قانون جاری ۲۸ اکتبر، پیش از اصلاح ۱ نوامبر ۲۰۲۶.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است. این برش فقط تا ۳۱ اکتبر ۲۰۲۶ معتبر است؛ اصلاحات/سامانهٔ اعلامی ۱ نوامبر خودکار حدس زده نشده است.",
+      "costs_fa": "موقت ۱۰۵۰۰۰ درام؛ زیر ۱۸ سال معاف. نرخ پس از ۱ نوامبر جدا.",
+      "cost_source_ids": [
+        "iaaf28-na27-am-fees",
+        "iaaf28-na27-am-mcs"
+      ],
+      "dependants_fa": "خانواده نیازمند پروندهٔ جداست.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "business_real_activity",
+          "answer_id": "am.iaaf28_entrepreneur_residence_business_real_activity",
+          "question": "فعالیت واقعی کسب‌وکار قابل اثبات داری؟",
+          "reason": "ثبت شرکت تنها شاهد کافی فرض نشود.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-am-law",
+            "iaaf28-na27-am-mcs"
+          ]
+        },
+        {
+          "id": "business_documents",
+          "answer_id": "am.iaaf28_entrepreneur_residence_business_documents",
+          "question": "مدرک فعالیت، اقامت قانونی و ترجمه آماده است؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs"
+          ]
+        },
+        {
+          "id": "current_documents",
+          "answer_id": "am.iaaf28_entrepreneur_residence_current_documents",
+          "question": "گذرنامه و ترجمهٔ محضری ارمنی، سلامت، عکس و مدرک مبنای همین اقامت آماده است؟",
+          "reason": "اسناد عمومی باید همراه دلیل اختصاصی مسیر ارائه شوند؛ ثبت شرکت به‌تنهایی پروندهٔ کامل نیست.",
+          "action": "مدارک همین نوع اقامت و وضعیت قانونی تکمیل شود.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs",
+            "iaaf28-na27-am-digital-notice"
+          ]
+        },
+        {
+          "id": "lawful_residence",
+          "answer_id": "am.iaaf28_entrepreneur_residence_lawful_residence",
+          "question": "اقامت قانونی در زمان درخواست داری؛ برای ورود عادی ایرانی سقف ۹۰ روز در ۱۸۰ روز رعایت شده؟",
+          "reason": "بی‌ویزا حق کار یا اقامت نامحدود نیست؛ مجوز اقامت دیگری می‌تواند مبنای قانونی جدا باشد.",
+          "action": "مهر ورود و روزها یا مجوز اقامت دیگر بررسی شود.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs",
+            "iaaf28-na27-am-iran-treaty"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28",
+      "valid_until": "2026-10-31T23:59:59+04:00"
+    },
+    {
+      "route_id": "am:residence-by-descent",
+      "scope_fa": "ایرانی مقیم ایران؛ قانون جاری ۲۸ اکتبر، پیش از اصلاح ۱ نوامبر ۲۰۲۶.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است. این برش فقط تا ۳۱ اکتبر ۲۰۲۶ معتبر است؛ اصلاحات/سامانهٔ اعلامی ۱ نوامبر خودکار حدس زده نشده است.",
+      "costs_fa": "موقت ۱۰۵۰۰۰ درام؛ زیر ۱۸ سال معاف. نرخ پس از ۱ نوامبر جدا.",
+      "cost_source_ids": [
+        "iaaf28-na27-am-fees",
+        "iaaf28-na27-am-mcs"
+      ],
+      "dependants_fa": "خانواده نیازمند پروندهٔ جداست.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "descent_proof",
+          "answer_id": "am.iaaf28_residence_by_descent_descent_proof",
+          "question": "تبار ارمنی با اسناد معتبر اثبات می‌شود؟",
+          "reason": "اسناد تبار خویشاوند به اثبات پیوند نیاز دارند.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs"
+          ]
+        },
+        {
+          "id": "descent_status",
+          "answer_id": "am.iaaf28_residence_by_descent_descent_status",
+          "question": "شاخهٔ موقت/دائم/ویژه متناسب مشخص است؟",
+          "reason": "تبار با شهروندی خودکار یکی نیست.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-am-law"
+          ]
+        },
+        {
+          "id": "current_documents",
+          "answer_id": "am.iaaf28_residence_by_descent_current_documents",
+          "question": "گذرنامه و ترجمهٔ محضری ارمنی، سلامت، عکس و مدرک مبنای همین اقامت آماده است؟",
+          "reason": "اسناد عمومی باید همراه دلیل اختصاصی مسیر ارائه شوند؛ ثبت شرکت به‌تنهایی پروندهٔ کامل نیست.",
+          "action": "مدارک همین نوع اقامت و وضعیت قانونی تکمیل شود.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs",
+            "iaaf28-na27-am-digital-notice"
+          ]
+        },
+        {
+          "id": "lawful_residence",
+          "answer_id": "am.iaaf28_residence_by_descent_lawful_residence",
+          "question": "اقامت قانونی در زمان درخواست داری؛ برای ورود عادی ایرانی سقف ۹۰ روز در ۱۸۰ روز رعایت شده؟",
+          "reason": "بی‌ویزا حق کار یا اقامت نامحدود نیست؛ مجوز اقامت دیگری می‌تواند مبنای قانونی جدا باشد.",
+          "action": "مهر ورود و روزها یا مجوز اقامت دیگر بررسی شود.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs",
+            "iaaf28-na27-am-iran-treaty"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28",
+      "valid_until": "2026-10-31T23:59:59+04:00"
+    },
+    {
+      "route_id": "am:study-residence",
+      "scope_fa": "ایرانی مقیم ایران؛ قانون جاری ۲۸ اکتبر، پیش از اصلاح ۱ نوامبر ۲۰۲۶.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است. این برش فقط تا ۳۱ اکتبر ۲۰۲۶ معتبر است؛ اصلاحات/سامانهٔ اعلامی ۱ نوامبر خودکار حدس زده نشده است.",
+      "costs_fa": "موقت ۱۰۵۰۰۰ درام؛ زیر ۱۸ سال معاف. نرخ پس از ۱ نوامبر جدا.",
+      "cost_source_ids": [
+        "iaaf28-na27-am-fees",
+        "iaaf28-na27-am-mcs"
+      ],
+      "dependants_fa": "خانواده نیازمند پروندهٔ جداست.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "study_enrollment",
+          "answer_id": "am.iaaf28_study_residence_study_enrollment",
+          "question": "ثبت‌نام دورهٔ آموزشی مستند داری؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs"
+          ]
+        },
+        {
+          "id": "study_lawful_documents",
+          "answer_id": "am.iaaf28_study_residence_study_lawful_documents",
+          "question": "اقامت قانونی و مدارک عمومی کامل است؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs"
+          ]
+        },
+        {
+          "id": "current_documents",
+          "answer_id": "am.iaaf28_study_residence_current_documents",
+          "question": "گذرنامه و ترجمهٔ محضری ارمنی، سلامت، عکس و مدرک مبنای همین اقامت آماده است؟",
+          "reason": "اسناد عمومی باید همراه دلیل اختصاصی مسیر ارائه شوند؛ ثبت شرکت به‌تنهایی پروندهٔ کامل نیست.",
+          "action": "مدارک همین نوع اقامت و وضعیت قانونی تکمیل شود.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs",
+            "iaaf28-na27-am-digital-notice"
+          ]
+        },
+        {
+          "id": "lawful_residence",
+          "answer_id": "am.iaaf28_study_residence_lawful_residence",
+          "question": "اقامت قانونی در زمان درخواست داری؛ برای ورود عادی ایرانی سقف ۹۰ روز در ۱۸۰ روز رعایت شده؟",
+          "reason": "بی‌ویزا حق کار یا اقامت نامحدود نیست؛ مجوز اقامت دیگری می‌تواند مبنای قانونی جدا باشد.",
+          "action": "مهر ورود و روزها یا مجوز اقامت دیگر بررسی شود.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs",
+            "iaaf28-na27-am-iran-treaty"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28",
+      "valid_until": "2026-10-31T23:59:59+04:00"
+    },
+    {
+      "route_id": "am:family-residence",
+      "scope_fa": "ایرانی مقیم ایران؛ قانون جاری ۲۸ اکتبر، پیش از اصلاح ۱ نوامبر ۲۰۲۶.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است. این برش فقط تا ۳۱ اکتبر ۲۰۲۶ معتبر است؛ اصلاحات/سامانهٔ اعلامی ۱ نوامبر خودکار حدس زده نشده است.",
+      "costs_fa": "موقت ۱۰۵۰۰۰ درام؛ زیر ۱۸ سال معاف. نرخ پس از ۱ نوامبر جدا.",
+      "cost_source_ids": [
+        "iaaf28-na27-am-fees",
+        "iaaf28-na27-am-mcs"
+      ],
+      "dependants_fa": "خانواده نیازمند پروندهٔ جداست.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "family_sponsor_branch",
+          "answer_id": "am.iaaf28_family_residence_family_sponsor_branch",
+          "question": "وضعیت حامی و نسبت مجاز مشخص است؟",
+          "reason": "حامی موقت: همسر/والد/فرزند؛ شهروند/دائم/ویژه: دامنهٔ خویشاوند نزدیک گسترده‌تر.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-am-law"
+          ]
+        },
+        {
+          "id": "family_relationship",
+          "answer_id": "am.iaaf28_family_residence_family_relationship",
+          "question": "نسبت و وضعیت حامی قابل اثبات است؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs"
+          ]
+        },
+        {
+          "id": "family_after_divorce",
+          "answer_id": "am.iaaf28_family_residence_family_after_divorce",
+          "question": "پرونده متکی به تمدید پس ازجدایی همسر نیست،یا استثنای قانونی این تمدید را احراز می‌کنی؟",
+          "reason": "برای همسرِ متقاضی این استثنا، حداقل یک‌سال ازدواج و اقامت پیشین مطرح است؛ به فرزند/والد یا ازدواج برقرار تحمیل نشود.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-am-law"
+          ]
+        },
+        {
+          "id": "current_documents",
+          "answer_id": "am.iaaf28_family_residence_current_documents",
+          "question": "گذرنامه و ترجمهٔ محضری ارمنی، سلامت، عکس و مدرک مبنای همین اقامت آماده است؟",
+          "reason": "اسناد عمومی باید همراه دلیل اختصاصی مسیر ارائه شوند؛ ثبت شرکت به‌تنهایی پروندهٔ کامل نیست.",
+          "action": "مدارک همین نوع اقامت و وضعیت قانونی تکمیل شود.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs",
+            "iaaf28-na27-am-digital-notice"
+          ]
+        },
+        {
+          "id": "lawful_residence",
+          "answer_id": "am.iaaf28_family_residence_lawful_residence",
+          "question": "اقامت قانونی در زمان درخواست داری؛ برای ورود عادی ایرانی سقف ۹۰ روز در ۱۸۰ روز رعایت شده؟",
+          "reason": "بی‌ویزا حق کار یا اقامت نامحدود نیست؛ مجوز اقامت دیگری می‌تواند مبنای قانونی جدا باشد.",
+          "action": "مهر ورود و روزها یا مجوز اقامت دیگر بررسی شود.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs",
+            "iaaf28-na27-am-iran-treaty"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28",
+      "valid_until": "2026-10-31T23:59:59+04:00"
+    },
+    {
+      "route_id": "am:permanent-residence",
+      "scope_fa": "ایرانی مقیم ایران؛ قانون جاری ۲۸ اکتبر، پیش از اصلاح ۱ نوامبر ۲۰۲۶.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است. این برش فقط تا ۳۱ اکتبر ۲۰۲۶ معتبر است؛ اصلاحات/سامانهٔ اعلامی ۱ نوامبر خودکار حدس زده نشده است.",
+      "costs_fa": "کارت دائم ۵ ساله ۱۴۰۰۰۰ درام؛ تمدید ۳۰ روز پیش از انقضا.",
+      "cost_source_ids": [
+        "iaaf28-na27-am-fees",
+        "iaaf28-na27-am-law"
+      ],
+      "dependants_fa": "خانواده نیازمند پروندهٔ جداست.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "permanent_qualifying_branch",
+          "answer_id": "am.iaaf28_permanent_residence_permanent_qualifying_branch",
+          "question": "شاخهٔ تبار، فعالیت تجاری یا خویشاوند واجد شرایط داری؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-am-law"
+          ]
+        },
+        {
+          "id": "permanent_family_duration",
+          "answer_id": "am.iaaf28_permanent_residence_permanent_family_duration",
+          "question": "شاخهٔ تبار/تجارت داری،یا اگر مبنای تو خویشاوندی است سه سال اقامت قانونی،مسکن و معاش لازم را داری؟",
+          "reason": "سابقه/مسکن/معاش شاخهٔ خانواده را به‌عنوان شرط اجباری شاخهٔ تبار یا تجارت قرار نده.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-am-law"
+          ]
+        },
+        {
+          "id": "permanent_absence",
+          "answer_id": "am.iaaf28_permanent_residence_permanent_absence",
+          "question": "غیبت بیش از ۶ ماه را کتبی اعلام می‌کنی؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-am-law"
+          ]
+        },
+        {
+          "id": "current_documents",
+          "answer_id": "am.iaaf28_permanent_residence_current_documents",
+          "question": "گذرنامه و ترجمهٔ محضری ارمنی، سلامت، عکس و مدرک مبنای همین اقامت آماده است؟",
+          "reason": "اسناد عمومی باید همراه دلیل اختصاصی مسیر ارائه شوند؛ ثبت شرکت به‌تنهایی پروندهٔ کامل نیست.",
+          "action": "مدارک همین نوع اقامت و وضعیت قانونی تکمیل شود.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs",
+            "iaaf28-na27-am-digital-notice"
+          ]
+        },
+        {
+          "id": "lawful_residence",
+          "answer_id": "am.iaaf28_permanent_residence_lawful_residence",
+          "question": "اقامت قانونی در زمان درخواست داری؛ برای ورود عادی ایرانی سقف ۹۰ روز در ۱۸۰ روز رعایت شده؟",
+          "reason": "بی‌ویزا حق کار یا اقامت نامحدود نیست؛ مجوز اقامت دیگری می‌تواند مبنای قانونی جدا باشد.",
+          "action": "مهر ورود و روزها یا مجوز اقامت دیگر بررسی شود.",
+          "source_ids": [
+            "iaaf28-na27-am-mcs",
+            "iaaf28-na27-am-iran-treaty"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28",
+      "valid_until": "2026-10-31T23:59:59+04:00"
+    },
+    {
+      "route_id": "az:work-permit-residence",
+      "scope_fa": "ایرانی؛ اشتغال مزدبگیر با مجوز کار و اقامت مستقل.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است. دسترسی مرز/کانال روزِ درخواست و هزینهٔ ایرانی کامل تأیید نشده؛ ورود توریستی مبنای کار نیست.",
+      "costs_fa": "هزینه روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "هر عضو پرونده و مبنای مستقل دارد.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "work_employer",
+          "answer_id": "az.iaaf28_work_permit_residence_work_employer",
+          "question": "کارفرما درخواست مجوز و ضرورت استخدام خارجی را اثبات می‌کند؟",
+          "reason": "نبود نیروی واجد محلی؛ صلاحیت شغلی مستند.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-work"
+          ]
+        },
+        {
+          "id": "work_age",
+          "answer_id": "az.iaaf28_work_permit_residence_work_age",
+          "question": "بالای ۱۸ سال و واجد شرایط کار هستی؟",
+          "reason": "شرط سنی و استخدام باید مطابق مجوز کار همان شغل رعایت شود؛ حق ورود جای مجوز نیست.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-work"
+          ]
+        },
+        {
+          "id": "work_exemption",
+          "answer_id": "az.iaaf28_work_permit_residence_work_exemption",
+          "question": "مجوز لازم است یا استثنا داری؟",
+          "reason": "ازجمله دائم، کارآفرین، همسر شهروند ثبت‌شده و برخی تخصص‌ها؛ دامنه جدا.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-work"
+          ]
+        },
+        {
+          "id": "work_renewal",
+          "answer_id": "az.iaaf28_work_permit_residence_work_renewal",
+          "question": "مجوز/قرارداد و تمدید ۳۰ روزقبل پیگیری می‌شود؟",
+          "reason": "عادی ۱ سال؛ قلمرو آزادشده تمدیدتا ۲ سال؛ بی‌مبنای دیگر: خروج ۱۰ روزکاری.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-work"
+          ]
+        },
+        {
+          "id": "temporary_filing",
+          "answer_id": "az.iaaf28_work_permit_residence_temporary_filing",
+          "question": "درخواست موقت حداقل ۳۰ روز پیش و گذرنامه با ۳ ماه اعتبار پس ازکارت و اسناد مسکن/سلامت آماده است؟",
+          "reason": "موقت ابتدا عموماًتا ۱ سال و تمدیدتا ۲ سال؛ مبنای سرمایهٔاقتصادی ۵۰۰ هزارمنات و highly-skilled استثنای تا ۳ سال دارند. این اعداد را به اقامت دائم تحمیل نکن.",
+          "action": "مبنا،اسناد و مهلت همین درخواست تکمیل شود.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "entry_registration",
+          "answer_id": "az.iaaf28_work_permit_residence_entry_registration",
+          "question": "وضعیت ورود/اقامت قانونی و ثبت محل برای ماندن بیش از ۱۵ روز فراهم است؟",
+          "reason": "ورود یا ویزای فرودگاهی به‌تنهایی حق کار نمی‌دهد؛ مسیر تحویل ایرانی هنوز باید با نمایندگی تطبیق شود.",
+          "action": "هدف ویزا و ثبت محل را جدا بررسی کن.",
+          "source_ids": [
+            "iaaf28-na27-az-entry"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "az:temporary-residence-investment",
+      "scope_fa": "ایرانی؛ چهار مبنای مالی موقت از هم جدا.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است. دسترسی مرز/کانال روزِ درخواست و هزینهٔ ایرانی کامل تأیید نشده؛ ورود توریستی مبنای کار نیست.",
+      "costs_fa": "هزینه روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "هر عضو پرونده و مبنای مستقل دارد.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "investment_branch",
+          "answer_id": "az.iaaf28_temporary_residence_investment_investment_branch",
+          "question": "۵۰۰ هزار منات اقتصاد یا ۱۰۰ هزار منات ملک/سپرده/اوراق واجد داری؟",
+          "reason": "پول نقد آزاد با سرمایه‌گذاری انجام‌شده یکی نیست.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "investment_maintain",
+          "answer_id": "az.iaaf28_temporary_residence_investment_investment_maintain",
+          "question": "دارایی/سپرده/اوراق و شرایط را حفظ می‌کنی؟",
+          "reason": "افت سپرده یا ارزش اسمی اوراق ازحد لازم/پایان قرارداد می‌تواند به اطلاع SMS و بررسی اعتبار مجوز منجر شود.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "temporary_filing",
+          "answer_id": "az.iaaf28_temporary_residence_investment_temporary_filing",
+          "question": "درخواست موقت حداقل ۳۰ روز پیش و گذرنامه با ۳ ماه اعتبار پس ازکارت و اسناد مسکن/سلامت آماده است؟",
+          "reason": "موقت ابتدا عموماًتا ۱ سال و تمدیدتا ۲ سال؛ مبنای سرمایهٔاقتصادی ۵۰۰ هزارمنات و highly-skilled استثنای تا ۳ سال دارند. این اعداد را به اقامت دائم تحمیل نکن.",
+          "action": "مبنا،اسناد و مهلت همین درخواست تکمیل شود.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "entry_registration",
+          "answer_id": "az.iaaf28_temporary_residence_investment_entry_registration",
+          "question": "وضعیت ورود/اقامت قانونی و ثبت محل برای ماندن بیش از ۱۵ روز فراهم است؟",
+          "reason": "ورود یا ویزای فرودگاهی به‌تنهایی حق کار نمی‌دهد؛ مسیر تحویل ایرانی هنوز باید با نمایندگی تطبیق شود.",
+          "action": "هدف ویزا و ثبت محل را جدا بررسی کن.",
+          "source_ids": [
+            "iaaf28-na27-az-entry"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "az:family-residence",
+      "scope_fa": "فقط همسرِ شهروند آذربایجان با سند ازدواج؛ سایر خویشاوندان و خانوادهٔمقیم خارجی خارج این برش‌اند.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است. دسترسی مرز/کانال روزِ درخواست و هزینهٔ ایرانی کامل تأیید نشده؛ ورود توریستی مبنای کار نیست.",
+      "costs_fa": "هزینه روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "هر عضو پرونده و مبنای مستقل دارد.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "family_sponsor",
+          "answer_id": "az.iaaf28_family_residence_family_sponsor",
+          "question": "همسر شهروند آذربایجان هستی و تابعیت او و ازدواج رسمی را مستند می‌کنی؟",
+          "reason": "مدرک رابطه و وضعیت حامی باید به همین مبنا مربوط باشد؛ رابطهٔ غیررسمی به‌تنهایی ازدواج نیست.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "family_basis",
+          "answer_id": "az.iaaf28_family_residence_family_basis",
+          "question": "بقای نسبت/مبنای حامی بررسی شده؟",
+          "reason": "حق کار مستقل خودکار فرض نشود.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "temporary_filing",
+          "answer_id": "az.iaaf28_family_residence_temporary_filing",
+          "question": "درخواست موقت حداقل ۳۰ روز پیش و گذرنامه با ۳ ماه اعتبار پس ازکارت و اسناد مسکن/سلامت آماده است؟",
+          "reason": "موقت ابتدا عموماًتا ۱ سال و تمدیدتا ۲ سال؛ مبنای سرمایهٔاقتصادی ۵۰۰ هزارمنات و highly-skilled استثنای تا ۳ سال دارند. این اعداد را به اقامت دائم تحمیل نکن.",
+          "action": "مبنا،اسناد و مهلت همین درخواست تکمیل شود.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "entry_registration",
+          "answer_id": "az.iaaf28_family_residence_entry_registration",
+          "question": "وضعیت ورود/اقامت قانونی و ثبت محل برای ماندن بیش از ۱۵ روز فراهم است؟",
+          "reason": "ورود یا ویزای فرودگاهی به‌تنهایی حق کار نمی‌دهد؛ مسیر تحویل ایرانی هنوز باید با نمایندگی تطبیق شود.",
+          "action": "هدف ویزا و ثبت محل را جدا بررسی کن.",
+          "source_ids": [
+            "iaaf28-na27-az-entry"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "az:student-residence",
+      "scope_fa": "ایرانی؛ تحصیل تمام‌وقت عالی/فنی یا تحصیل مدرسه.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است. دسترسی مرز/کانال روزِ درخواست و هزینهٔ ایرانی کامل تأیید نشده؛ ورود توریستی مبنای کار نیست.",
+      "costs_fa": "هزینه روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "هر عضو پرونده و مبنای مستقل دارد.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "study_full_time",
+          "answer_id": "az.iaaf28_student_residence_study_full_time",
+          "question": "ثبت‌نام مطابق نوع مؤسسه و آموزش لازم داری؟",
+          "reason": "آموزش عالی/فنی تمام‌وقت و آموزش مدرسه/حرفه‌ایِ مقرر شاخه‌های مجازند؛ نامهٔمرکز یا وزارت و اسناد دوره لازم است.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "study_continuing",
+          "answer_id": "az.iaaf28_student_residence_study_continuing",
+          "question": "ادامهٔ ثبت‌نام و مبنای اقامت مستند است؟",
+          "reason": "نامهٔمرکز باید دوره،تاریخ پایان و شمارهٔدانشجویی و تأیید مسئول/مهر لازم را نشان دهد؛ تداوم مبنای آموزش بررسی می‌شود.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "temporary_filing",
+          "answer_id": "az.iaaf28_student_residence_temporary_filing",
+          "question": "درخواست موقت حداقل ۳۰ روز پیش و گذرنامه با ۳ ماه اعتبار پس ازکارت و اسناد مسکن/سلامت آماده است؟",
+          "reason": "موقت ابتدا عموماًتا ۱ سال و تمدیدتا ۲ سال؛ مبنای سرمایهٔاقتصادی ۵۰۰ هزارمنات و highly-skilled استثنای تا ۳ سال دارند. این اعداد را به اقامت دائم تحمیل نکن.",
+          "action": "مبنا،اسناد و مهلت همین درخواست تکمیل شود.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "entry_registration",
+          "answer_id": "az.iaaf28_student_residence_entry_registration",
+          "question": "وضعیت ورود/اقامت قانونی و ثبت محل برای ماندن بیش از ۱۵ روز فراهم است؟",
+          "reason": "ورود یا ویزای فرودگاهی به‌تنهایی حق کار نمی‌دهد؛ مسیر تحویل ایرانی هنوز باید با نمایندگی تطبیق شود.",
+          "action": "هدف ویزا و ثبت محل را جدا بررسی کن.",
+          "source_ids": [
+            "iaaf28-na27-az-entry"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "az:permanent-residence-permit",
+      "scope_fa": "فقط شاخهٔ دائم با پیوند شهروندیِ مقرر یا مبنای مالی ۵۰۰ هزاراقتصاد/۲۰۰ هزارملک،سپرده،اوراق؛ مبناهای تجارت و تخصص و خانوادهٔمقیم خارجی خارج برش‌اند.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است.",
+      "costs_fa": "هزینه روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "هر عضو پرونده و مبنای مستقل دارد.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "permanent_history",
+          "answer_id": "az.iaaf28_permanent_residence_permit_permanent_history",
+          "question": "دو سال اقامت در مبناهای قانونیِ مجاز داری؟",
+          "reason": "همهٔ اقامت‌های کار/تحصیل و خانوادهٔ آنان شمارش نمی‌شوند.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "permanent_basis",
+          "answer_id": "az.iaaf28_permanent_residence_permit_permanent_basis",
+          "question": "والد/همسر/فرزند/خواهر/برادرِ شهروند داری،یا اقتصاد≥AZN500000،یا ملک/سپرده/اوراق واجد≥AZN200000 را مستند می‌کنی؟",
+          "reason": "مبناهای این برش OR هستند؛ آستانهٔ موقت ۱۰۰ هزار جای حد دائم ۲۰۰ هزار نیست.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "permanent_test",
+          "answer_id": "az.iaaf28_permanent_residence_permit_permanent_test",
+          "question": "آزمون زبان/حقوق یا معافیت معتبر داری؟",
+          "reason": "زیر ۱۸ ، ۶۵ به‌بالا، اختلال ۸۱ تا ۱۰۰ ٪، highly skilled معاف.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "permanent_deadline",
+          "answer_id": "az.iaaf28_permanent_residence_permit_permanent_deadline",
+          "question": "سه ماه قبل درخواست می‌دهی؟",
+          "reason": "کارت ۵ ساله قابل تمدید.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        },
+        {
+          "id": "permanent_documents",
+          "answer_id": "az.iaaf28_permanent_residence_permit_permanent_documents",
+          "question": "پاسپورت، مسکن، سلامت و مدارک سابقه و مبنای دائم و وضعیت قانونی فراهم است؟",
+          "reason": "مدرک معاش حداقل یا حمایت واجدِ خویشاوند شهروند/مقیم دائم و رضایت محضری درشاخهٔخانواده لازم بررسی است؛ مهلت ۳۰ روز موقت به دائم منتقل نشود.",
+          "action": "فهرست دائم و مهلت ۳ ماههٔ آن بررسی شود.",
+          "source_ids": [
+            "iaaf28-na27-az-residence"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "ge:investment-residence-permit",
+      "scope_fa": "ایرانی؛ سرمایه‌گذاری انجام‌شده یا ملک واجد.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است.",
+      "costs_fa": "هزینه روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "هر عضو پرونده و مبنای مستقل دارد.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "invest_amount",
+          "answer_id": "ge.iaaf28_investment_residence_permit_invest_amount",
+          "question": "سرمایه‌گذاری ≥ ۳۰۰ هزار دلار یا ملک غیرکشاورزی > ۳۰۰ هزار با ارزیابی داری؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-ge-sda"
+          ]
+        },
+        {
+          "id": "invest_recommendation",
+          "answer_id": "ge.iaaf28_investment_residence_permit_invest_recommendation",
+          "question": "حسابرسی/ارزیابی و توصیهٔ مقام یا ۳ نمایندهٔ تجاری آماده است؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-ge-sda"
+          ]
+        },
+        {
+          "id": "invest_continuing",
+          "answer_id": "ge.iaaf28_investment_residence_permit_invest_continuing",
+          "question": "حفظ ملک یا گردش سال‌های ۱ تا ۵ مستند می‌شود؟",
+          "reason": "گردش ۵۰ ، ۱۰۰ ، ۱۲۰ ، ۱۲۰ ، ۱۲۰ هزار دلار؛ شاخه‌ها جدا.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-ge-status"
+          ]
+        },
+        {
+          "id": "lawful_filing",
+          "answer_id": "ge.iaaf28_investment_residence_permit_lawful_filing",
+          "question": "اقامت قانونی و مبنای ورودِ قابل‌قبول و مهلت قابل‌اعمال همین شاخه فراهم است؟",
+          "reason": "سرمایه‌گذاری از مهلت عادی ۴۰ روز و منع معمول مبنای ورود C/ویزای ثالث استثنا دارد.",
+          "action": "مهلت و نوع ورود را طبق همین شاخه بررسی کن؛ قواعد شاخهٔ دیگر اجباری نشود.",
+          "source_ids": [
+            "iaaf28-na27-ge-sda"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "ge:short-term-residence-real-estate",
+      "scope_fa": "ایرانی؛ تملک ملک غیرکشاورزی واجد.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است.",
+      "costs_fa": "هزینه روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "همسر و فرزندان با اثبات نسبت؛ تعریف دقیق سن/نوع پرونده کنترل شود.",
+      "dependant_source_ids": [
+        "iaaf28-na27-ge-status"
+      ],
+      "checks": [
+        {
+          "id": "property_valuation",
+          "answer_id": "ge.iaaf28_short_term_residence_real_estate_property_valuation",
+          "question": "مالکیت با ارزش بازار بیش از ۱۵۰ هزار دلارِ ارزیابی معتبر داری؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-ge-status"
+          ]
+        },
+        {
+          "id": "property_maintain",
+          "answer_id": "ge.iaaf28_short_term_residence_real_estate_property_maintain",
+          "question": "مالکیت مبنا ادامه می‌یابد؟",
+          "reason": "فروش می‌تواند اعتبار را پایان دهد.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-ge-status"
+          ]
+        },
+        {
+          "id": "lawful_filing",
+          "answer_id": "ge.iaaf28_short_term_residence_real_estate_lawful_filing",
+          "question": "اقامت قانونی و مبنای ورودِ قابل‌قبول و مهلت قابل‌اعمال همین شاخه فراهم است؟",
+          "reason": "ملک ازمهلت عادی ۴۰ روز مستثناست؛ منع معمول مبنای ورود C/ویزای ثالث مگر استثنای قانونی جدا باقی است.",
+          "action": "مهلت و نوع ورود را طبق همین شاخه بررسی کن؛ قواعد شاخهٔ دیگر اجباری نشود.",
+          "source_ids": [
+            "iaaf28-na27-ge-sda"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "ge:student-residence-permit",
+      "scope_fa": "ایرانی؛ شاخهٔ بزرگسالِ آموزش عالی/حرفه‌ای مجاز.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است.",
+      "costs_fa": "هزینه روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "هر عضو پرونده و مبنای مستقل دارد.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "study_enrollment",
+          "answer_id": "ge.iaaf28_student_residence_permit_study_enrollment",
+          "question": "بزرگسال و دانشجوی مؤسسه/برنامهٔ واجد هستی؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-ge-status"
+          ]
+        },
+        {
+          "id": "study_funding",
+          "answer_id": "ge.iaaf28_student_residence_permit_study_funding",
+          "question": "درآمد قانونیِ کسب‌شده در گرجستان از شخصِ مجاز همین شاخه، یا ماندهٔ حساب شخصی با تخصیص ماهانهٔ دست‌کم دوبرابر حد معیشت برای مدت اقامت داری؟",
+          "reason": "بدیل اول: درآمد قانونی در گرجستان توسط خود متقاضی، شهروند گرجستان یا خویشاوندِ دارای حق اقامت طبق بند مربوط؛ برای خویشاوند، نسبت و وضعیت لازم مستند شود. بدیل دوم: ماندهٔ حساب شخصی با تخصیص ماهانهٔ مقرر. حد دوبرابرِ مانده به همهٔ انواع درآمد تعمیم داده نمی‌شود و هر حمایت خارجی کافی فرض نمی‌شود.",
+          "action": "یکی از دو روش را با مدارکِ شخص، محل درآمد یا ماندهٔ شخصی و مدت اقامت ثابت کن؛ دو روش هم‌زمان لازم نیستند.",
+          "source_ids": [
+            "int28-ge-funding"
+          ]
+        },
+        {
+          "id": "study_continuation",
+          "answer_id": "ge.iaaf28_student_residence_permit_study_continuation",
+          "question": "پیشرفت، ثبت و حضور لازم ادامه دارد؟",
+          "reason": "غیبت ≥ ۱۸۳ روز در ۱۲ ماه؛ استثنای درمان/تبادل آموزشی بررسی شود.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-ge-status"
+          ]
+        },
+        {
+          "id": "lawful_filing",
+          "answer_id": "ge.iaaf28_student_residence_permit_lawful_filing",
+          "question": "اقامت قانونی و مبنای ورودِ قابل‌قبول و مهلت قابل‌اعمال همین شاخه فراهم است؟",
+          "reason": "قاعدهٔ عادی درخواست ۴۰ روز پیش ازپایان اقامت و محدودیت معمول مبنای ورود C/ویزای ثالث باید رعایت شود؛ استثنای قانونی جدا بررسی می‌شود.",
+          "action": "مهلت و نوع ورود را طبق همین شاخه بررسی کن؛ قواعد شاخهٔ دیگر اجباری نشود.",
+          "source_ids": [
+            "iaaf28-na27-ge-sda"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "ge:family-residence-permit",
+      "scope_fa": "ایرانی؛ خانوادهٔ دارندهٔ اقامت خارجی گرجستان.",
+      "limits_fa": "همسر شهروند مسیر مستقل جدید است؛ به این مبنا خودکار نگاشت نشود.",
+      "costs_fa": "هزینه روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "هر عضو پرونده و مبنای مستقل دارد.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "family_permitted_sponsor",
+          "answer_id": "ge.iaaf28_family_residence_permit_family_permitted_sponsor",
+          "question": "حامی خارجیِ مقیم و نسبت قانونی مجاز داری؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک مرتبط با همین شرط را آماده و با مرجع رسمی تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-ge-status"
+          ]
+        },
+        {
+          "id": "family_funds",
+          "answer_id": "ge.iaaf28_family_residence_permit_family_funds",
+          "question": "درآمد قانونیِ کسب‌شده در گرجستان از شخصِ مجاز همین شاخه، یا ماندهٔ حساب شخصی با تخصیص ماهانهٔ دست‌کم دوبرابر حد معیشت برای مدت اقامت داری؟",
+          "reason": "بدیل اول: درآمد قانونی در گرجستان توسط خود متقاضی، شهروند گرجستان یا خویشاوندِ دارای حق اقامت طبق بند مربوط؛ برای خویشاوند، نسبت و وضعیت لازم مستند شود. بدیل دوم: ماندهٔ حساب شخصی با تخصیص ماهانهٔ مقرر. حد دوبرابرِ مانده به همهٔ انواع درآمد تعمیم داده نمی‌شود و هر حمایت خارجی کافی فرض نمی‌شود.",
+          "action": "یکی از دو روش را با مدارکِ شخص، محل درآمد یا ماندهٔ شخصی و مدت اقامت ثابت کن؛ دو روش هم‌زمان لازم نیستند.",
+          "source_ids": [
+            "int28-ge-funding"
+          ]
+        },
+        {
+          "id": "lawful_filing",
+          "answer_id": "ge.iaaf28_family_residence_permit_lawful_filing",
+          "question": "اقامت قانونی و مبنای ورودِ قابل‌قبول و مهلت قابل‌اعمال همین شاخه فراهم است؟",
+          "reason": "قاعدهٔ عادی درخواست ۴۰ روز پیش ازپایان اقامت و محدودیت معمول مبنای ورود C/ویزای ثالث باید رعایت شود؛ استثنای قانونی جدا بررسی می‌شود.",
+          "action": "مهلت و نوع ورود را طبق همین شاخه بررسی کن؛ قواعد شاخهٔ دیگر اجباری نشود.",
+          "source_ids": [
+            "iaaf28-na27-ge-sda"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "ge:permanent-residence-permit",
+      "scope_fa": "ایرانی؛ شاخهٔ سابقه یا پیوند مشخص.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است.",
+      "costs_fa": "هزینه روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "هر عضو پرونده و مبنای مستقل دارد.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "permanent_qualifying_branch",
+          "answer_id": "ge.iaaf28_permanent_residence_permit_permanent_qualifying_branch",
+          "question": "یکی ازمبناهای قانونیِ کودک خردسالِ شهروند/والدِ شهروند خردسال،۱۰ سال اقامت واجد،یا همسرشهروند با ۵ سال همان اقامت منطبق است؟",
+          "reason": "این مبناها بدیل‌اند؛ تحصیل،درمان و خدمت دیپلماتیک در سابقهٔ مقرر شمارش نمی‌شوند.",
+          "action": "پیوند یا سابقهٔ دقیق همان شاخه مستند شود.",
+          "source_ids": [
+            "iaaf28-na27-ge-status"
+          ]
+        },
+        {
+          "id": "lawful_filing",
+          "answer_id": "ge.iaaf28_permanent_residence_permit_lawful_filing",
+          "question": "اقامت قانونی و مبنای ورودِ قابل‌قبول و مهلت قابل‌اعمال همین شاخه فراهم است؟",
+          "reason": "قاعدهٔ عادی درخواست ۴۰ روز پیش ازپایان اقامت و محدودیت معمول مبنای ورود C/ویزای ثالث باید رعایت شود؛ استثنای قانونی جدا بررسی می‌شود.",
+          "action": "مهلت و نوع ورود را طبق همین شاخه بررسی کن؛ قواعد شاخهٔ دیگر اجباری نشود.",
+          "source_ids": [
+            "iaaf28-na27-ge-sda"
+          ]
+        },
+        {
+          "id": "permanent_branch_documents",
+          "answer_id": "ge.iaaf28_permanent_residence_permit_permanent_branch_documents",
+          "question": "مدارک پیوند شهروندی یا سابقهٔ همان نوع اقامت و اسناد درخواست دائم را داری؟",
+          "reason": "فقط مدارک شاخهٔ انتخاب‌شده لازم است؛ شاخه‌های نامرتبط اجباری نیستند.",
+          "action": "سند رابطه/تابعیت یا مجوزها و سوابق ورود مربوط تطبیق یابد.",
+          "source_ids": [
+            "iaaf28-na27-ge-status",
+            "iaaf28-na27-ge-sda"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "my:employment-pass",
+      "scope_fa": "ایرانی؛ استخدام تخصصی از طریق شرکت واجد ESD؛ شبه‌جزیره.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است. حقوق پیشنهاد از ۱ ژوئن ۲۰۲۶ ملاک است؛ VDR،بررسی امنیتی و انتقال وجه ایرانی تضمین نشده.",
+      "costs_fa": "هزینه روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "طبق اصلاح ۲۰۲۶ هر سه طبقه امکان همراه دارند؛ نوع نسبت/گواهی ایرانی جدا بررسی شود.",
+      "dependant_source_ids": [
+        "iaaf28-na27-my-mida-2026"
+      ],
+      "checks": [
+        {
+          "id": "ep_sponsor",
+          "answer_id": "my.iaaf28_employment_pass_ep_sponsor",
+          "question": "شرکت/سمت از مرجع صالح تأیید دارد؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک/دامنه را تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-my-ep"
+          ]
+        },
+        {
+          "id": "ep_salary_category",
+          "answer_id": "my.iaaf28_employment_pass_ep_salary_category",
+          "question": "حقوق پایهٔ پیشنهاد شغل در طبقهٔ جاری است؟",
+          "reason": "از ۱ ژوئن: I ≥ ۲۰ هزار، II۱۰ تا ۱۹۹۹۹ ، III۵ تا ۹۹۹۹ رینگیت؛ برخی تولید III ≥ ۷ هزار.",
+          "action": "مدرک/دامنه را تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-my-ep-2026",
+            "iaaf28-na27-my-mida-2026"
+          ]
+        },
+        {
+          "id": "ep_localisation",
+          "answer_id": "my.iaaf28_employment_pass_ep_localisation",
+          "question": "درطبقه I هستی،یا برای II/III برنامهٔ جانشینی/بومی‌سازی لازم فراهم است؟",
+          "reason": "برنامه برای شاخهٔ مربوط اعمال می‌شود؛ سقف I/II تا ۱۰ سال و III تا ۵ سال با قرارداد و تصمیم مرجع محدود می‌شود.",
+          "action": "مدرک/دامنه را تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-my-ep-2026"
+          ]
+        },
+        {
+          "id": "ep_named_employer",
+          "answer_id": "my.iaaf28_employment_pass_ep_named_employer",
+          "question": "فقط نزد شرکت مجوز کار می‌کنی؟",
+          "reason": "تغییرشرکت درخواست جدید.",
+          "action": "مدرک/دامنه را تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-my-ep"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "my:residence-pass-talent",
+      "scope_fa": "برای فرد از قبل مستقر در مالزی؛ ورود اول مستقیم از ایران نیست.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است.",
+      "costs_fa": "هزینه روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "همسر قانونی/وابستهٔ زیر ۱۸ ، RP-TDP؛ همسر می‌تواند بدون EP کار کند طبق شرایط.",
+      "dependant_source_ids": [
+        "iaaf28-na27-my-rpt"
+      ],
+      "checks": [
+        {
+          "id": "rpt_local_history",
+          "answer_id": "my.iaaf28_residence_pass_talent_rpt_local_history",
+          "question": "۳ سال پیوسته کار در مالزی، EP با > ۳ ماه اعتبار و ۲ سال مالیات داری؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک/دامنه را تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-my-rpt"
+          ]
+        },
+        {
+          "id": "rpt_salary",
+          "answer_id": "my.iaaf28_residence_pass_talent_rpt_salary",
+          "question": "حقوق پایهٔ ماهانه ≥ ۱۵ هزار رینگیت بدون پاداش/مزایا داری؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک/دامنه را تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-my-rpt"
+          ]
+        },
+        {
+          "id": "rpt_credentials",
+          "answer_id": "my.iaaf28_residence_pass_talent_rpt_credentials",
+          "question": "۵ سال سابقهٔ کل و مدرک/گواهی حرفه‌ای شناخته‌شده داری؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک/دامنه را تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-my-rpt"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "my:professional-visit-pass",
+      "scope_fa": "ایرانی؛ PVP Expert برای خدمت موقت/پروژه نزد شرکت مقصد.",
+      "limits_fa": "جزئی؛ تأیید رسمی نهایی/جزئیات حل‌نشده باقی است. این برش PVPExpert و خدمت موقتِ حقوق‌بگیر خارج است؛ سایر PVP ها و ورود بدون تأیید پوشش ندارد.",
+      "costs_fa": "هزینه روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "برای PVP Expert مجوز بلندمدت همسر/وابسته / خدمتکار پیش‌بینی نشده.",
+      "dependant_source_ids": [
+        "iaaf28-na27-my-pvp"
+      ],
+      "checks": [
+        {
+          "id": "pvp_foreign_employer",
+          "answer_id": "my.iaaf28_professional_visit_pass_pvp_foreign_employer",
+          "question": "در انتقال تخصص/پژوهش، کارفرما و پرداخت اصلی خارج مالزی است؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک/دامنه را تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-my-pvp"
+          ]
+        },
+        {
+          "id": "pvp_project",
+          "answer_id": "my.iaaf28_professional_visit_pass_pvp_project",
+          "question": "یک پروژه و مجوز پیش از ورود داری؟",
+          "reason": "حداکثر ۱۲ ماه؛ ورودبا VDR یا روش مجاز ملیت.",
+          "action": "مدرک/دامنه را تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-my-pvp"
+          ]
+        },
+        {
+          "id": "pvp_documents",
+          "answer_id": "my.iaaf28_professional_visit_pass_pvp_documents",
+          "question": "نامهٔ شرکت، bond، قرارداد و حمایت بخشی لازم آماده است؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک/دامنه را تطبیق بده.",
+          "source_ids": [
+            "iaaf28-na27-my-pvp"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "th:non-immigrant-b-work",
+      "scope_fa": "ایرانی مقیم ایران؛ Non B استخدام و مجوز کار جدا.",
+      "limits_fa": "جزئی؛ تأیید نهایی و شکاف‌های ثبت‌شده باقی است.",
+      "costs_fa": "تهران ۸۰ یورو، ویزای یک‌ورود با اعتبار ۳ ماه؛ اعتبار ورود با مدت اقامت متفاوت است.",
+      "cost_source_ids": [
+        "iaaf28-na27-th-work-iran"
+      ],
+      "dependants_fa": "هر عضو مبنای مستقل دارد.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "work_approval",
+          "answer_id": "th.iaaf28_non_immigrant_b_work_work_approval",
+          "question": "WP32 یا برای تمدید مجوز کار داری؟",
+          "reason": "معافیت ژاپنی به ایرانی تعمیم ندارد.",
+          "action": "مدرک و دامنه را بررسی کن.",
+          "source_ids": [
+            "iaaf28-na27-th-work-iran"
+          ]
+        },
+        {
+          "id": "work_funds",
+          "answer_id": "th.iaaf28_non_immigrant_b_work_work_funds",
+          "question": "تمکن حداقل ۳۰ هزاربات و مدارک محل زندگی داری؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک و دامنه را بررسی کن.",
+          "source_ids": [
+            "iaaf28-na27-th-work-iran"
+          ]
+        },
+        {
+          "id": "work_separate_permission",
+          "answer_id": "th.iaaf28_non_immigrant_b_work_work_separate_permission",
+          "question": "قبل شروع، مجوز کار لازم را می‌گیری؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک و دامنه را بررسی کن.",
+          "source_ids": [
+            "iaaf28-na27-th-work-mfa"
+          ]
+        },
+        {
+          "id": "iran_filing",
+          "answer_id": "th.iaaf28_non_immigrant_b_work_iran_filing",
+          "question": "اگر ازتهران اقدام می‌کنی مقیم ایران/سوریه و هنگام درخواست خارج تایلند هستی؛ یا نزد نمایندگی صالح محل اقامتت اقدام می‌کنی؟",
+          "reason": "ایرانی ساکن کشور دیگر ازنمایندگی محل اقامت استفاده می‌کند؛ درخواست eVisa ازداخل تایلند پذیرفته نیست. پرداختکنسولی تهران طبق راهنمای محلی نقدی است؛ این حکم به مسیر صدورداخلی BOI منتقل نمی‌شود.",
+          "action": "صلاحیت محل، حضور قانونی و پرداخت محلی بررسی شود.",
+          "source_ids": [
+            "iaaf28-na27-th-iran"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "th:smart-visa",
+      "scope_fa": "شاخهٔ مستقیم تأییدشده SMART S دوساله؛ شرکت نوپای قبلاً تأسیس‌شده.",
+      "limits_fa": "صفحهٔ فعلی S / O را نمایش می‌دهد؛ شاخه‌های قدیمی T / I / E را جاری یا بسته اعلام نکردیم. تاریخ گذار و امکان درخواست تازهٔ آنها نیازمند ادامه است. این ماژول فقط SMART-S دوسالهٔ شرکت ازقبلتأسیس است؛ T/I/E و سایر SMART-S خارج برش‌اند.",
+      "costs_fa": "هزینهٔ روز بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "همسر/فرزندان مدت همسان؛ همسر بدون مجوز کار طبق شرایط. دامنهٔ سن و کودکان نیازمند جزئیات.",
+      "dependant_source_ids": [
+        "iaaf28-na27-th-smart-s"
+      ],
+      "checks": [
+        {
+          "id": "smart_company",
+          "answer_id": "th.iaaf28_smart_visa_smart_company",
+          "question": "استارتاپ مقصد با تأیید صنعت هدف و مدیر/۲۵ ٪سهم داری؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک و دامنه را بررسی کن.",
+          "source_ids": [
+            "iaaf28-na27-th-smart-s"
+          ]
+        },
+        {
+          "id": "smart_deposit",
+          "answer_id": "th.iaaf28_smart_visa_smart_deposit",
+          "question": "سپرده ۶۰۰ هزاربات برای ۳ ماه و ۱۸۰ هزار برای هر همراه داری؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک و دامنه را بررسی کن.",
+          "source_ids": [
+            "iaaf28-na27-th-smart-s"
+          ]
+        },
+        {
+          "id": "smart_insurance",
+          "answer_id": "th.iaaf28_smart_visa_smart_insurance",
+          "question": "بیمهٔ کل اقامت برای خود / خانواده داری؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک و دامنه را بررسی کن.",
+          "source_ids": [
+            "iaaf28-na27-th-smart-s"
+          ]
+        },
+        {
+          "id": "smart_endorsed_work",
+          "answer_id": "th.iaaf28_smart_visa_smart_endorsed_work",
+          "question": "فقط فعالیت تأییدشده، با تأیید اضافی تغییر شغل انجام می‌دهی؟",
+          "reason": "این شرط به مبنای قانونیِ همین شاخه مربوط است؛ عنوان کلی کشور یا مسیر جای سند آن را نمی‌گیرد.",
+          "action": "مدرک و دامنه را بررسی کن.",
+          "source_ids": [
+            "iaaf28-na27-th-smart-s"
+          ]
+        },
+        {
+          "id": "smart_issue_location",
+          "answer_id": "th.iaaf28_smart_visa_smart_issue_location",
+          "question": "پس ازتأیید SMART ازمسیر صالح صدور داخل تایلند یا نمایندگی محل اقامت اقدام می‌کنی؟",
+          "reason": "برای صدورکنسولی تهران، اقامت ایران/سوریه و درخواست ازخارج تایلند لازم است؛ مسیر BOI داخلیِ مجاز را با eVisa کنسولی یکی نکن. پرداختکنسولی تهران طبق راهنمای محلی نقدی است؛ این حکم به مسیر صدورداخلی BOI منتقل نمی‌شود.",
+          "action": "مرجع صدور و اقامت قانونی همین مسیر تعیین شود.",
+          "source_ids": [
+            "iaaf28-na27-th-smart-s",
+            "iaaf28-na27-th-iran"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "th:long-term-resident-visa",
+      "scope_fa": "فقط متقاضی اصلیِ Wealthy Pensioner در LTR؛ سایر سه شاخه و وابستگان خارج برش‌اند.",
+      "limits_fa": "فقط بازنشستهٔ اصلیِ شاخهٔ مشخص بررسی می‌شود؛ WealthyGlobal،Work-from-Thailand،HighlySkilled و پروندهٔ همراه بررسی جدا می‌خواهند. قبولی حقوقی/صدور تضمین نمی‌شود.",
+      "costs_fa": "صدور داخل تایلند ۵۰ هزاربات؛ کنسولی متغیر؛ تأیید BOI رایگان. ابتدا ۵ سال + ۵ سال مشروط.",
+      "cost_source_ids": [
+        "iaaf28-na27-th-ltr-home",
+        "iaaf28-na27-th-ltr-2025"
+      ],
+      "dependants_fa": "پوشش همراهان در این برش نیست؛ تعارض سقف/والد/وابسته در منابع LTR حل نشده و نباید به نتیجهٔ فرد اصلی سرایت داده شود.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "pensioner_branch",
+          "answer_id": "th.iaaf28_long_term_resident_visa_pensioner_branch",
+          "question": "حداقل ۵۰ سال داری و درآمد غیرفعال سالانه≥USD80000،یا≥USD40000 همراه سرمایه‌گذاری واجد تایلند≥USD250000 داری؟",
+          "reason": "این دو گزینه بدیل‌اند؛ شروط ثروتمند جهانی/دورکار/متخصص را بر بازنشسته اجباری نکن.",
+          "action": "سن،نوع درآمد و در صورت گزینهٔ دوم سرمایه‌گذاری واجد مستند شود.",
+          "source_ids": [
+            "iaaf28-na27-th-ltr-home"
+          ]
+        },
+        {
+          "id": "pensioner_health",
+          "answer_id": "th.iaaf28_long_term_resident_visa_pensioner_health",
+          "question": "بیمهٔ حداقل USD50000 با اعتبار باقی‌مانده لازم،یا پوشش SSO،یا سپردهٔUSD100000 نگهداری‌شده ۱۲ ماه داری؟",
+          "reason": "بیمهٔ مسیر مربوط در بروشور حداقل ۱۰ ماه اعتبار می‌خواهد؛ بدیل سپرده/SSO جداست.",
+          "action": "فقط یکی ازبدیل‌های سلامتِ مجاز مستند شود.",
+          "source_ids": [
+            "iaaf28-na27-th-ltr-2025"
+          ]
+        },
+        {
+          "id": "ltr_issuance",
+          "answer_id": "th.iaaf28_long_term_resident_visa_ltr_issuance",
+          "question": "پس ازتأیید BOI ظرف ۶۰ روز ازمرجع صالح صدور اقدام می‌کنی؟",
+          "reason": "تأییدصلاحیت جای صدور ویزا نیست؛ مسیر داخل مجاز و نمایندگی خارج متفاوت‌اند.",
+          "action": "مرجع صدور،حضور قانونی و اسناد درخواست بررسی شود.",
+          "source_ids": [
+            "iaaf28-na27-th-ltr-home"
+          ]
+        },
+        {
+          "id": "ltr_maintain_work",
+          "answer_id": "th.iaaf28_long_term_resident_visa_ltr_maintain_work",
+          "question": "شرایط مالی/سلامت حفظ می‌شوند و اگر کارداخلی می‌خواهی اجازهٔ کار لازم را جدا می‌گیری؟",
+          "reason": "حفظ شرط در طول اعتبار لازم است؛ مجوز کارداخلی خودکار ساخته نشود.",
+          "action": "اسناد تداوم و اجازهٔ فعالیت لازم بررسی شود.",
+          "source_ids": [
+            "iaaf28-na27-th-ltr-home"
+          ]
+        },
+        {
+          "id": "ltr_consular_scope",
+          "answer_id": "th.iaaf28_long_term_resident_visa_ltr_consular_scope",
+          "question": "برای صدورکنسولی ازنمایندگی صالح محل اقامت و ازخارج تایلند اقدام می‌کنی،یا مسیر BOI داخلیِ مجاز داری؟",
+          "reason": "قواعد eVisa تهران به تمام صدورهای LTR داخل تایلند تعمیم داده نمی‌شود. پرداختکنسولی تهران طبق راهنمای محلی نقدی است؛ این حکم به مسیر صدورداخلی BOI منتقل نمی‌شود.",
+          "action": "مسیر صحیح با توجه به حضور فعلی انتخاب شود.",
+          "source_ids": [
+            "iaaf28-na27-th-ltr-home",
+            "iaaf28-na27-th-iran"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "kr:d-8-corporate-investment",
+      "scope_fa": "فقط D8-1 شرکت سرمایه‌پذیر خارجی؛ سرمایه‌گذار یا نیروی ضروری اعزامی. D8-2/3/4 خارج برش.",
+      "limits_fa": "رقم و مالکیت شرط شرکت سرمایه‌پذیر است؛ برای هر نیروی اعزامی خرید شخصی سهام فرض نشود. شمول تشریفات بانکی/کنسولی روز ایران و هزینه جدا بررسی می‌شود؛ این برش پروندهٔ خانواده نیست.",
+      "costs_fa": "تعرفهٔ جاری تأیید نشده؛ یادداشت منبع و جدول مشترک بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان در این برش بررسی نشده‌اند؛ منبع نمایه‌ای F3 و دستور محلی نروژ وارد ماژول نشد.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "corporate_role",
+          "answer_id": "kr.iaaf28_d_8_corporate_investment_corporate_role",
+          "question": "سرمایه‌گذار/مدیر یا نیروی فنی ضروریِ اعزامی شرکت سرمایه‌پذیر هستی؟",
+          "reason": "نیروی ضروری ازشرکت مادر/شعبهٔ ثالث اعزام می‌شود؛ استخدام محلی،کار اداری عمومی یا خدمت قابل جایگزینی به‌تنهایی کافی نیست.",
+          "action": "نقش و ضرورت و منشأ اعزام مستند شود.",
+          "source_ids": [
+            "iaaf28-ea-kr-invest"
+          ]
+        },
+        {
+          "id": "corporate_capital",
+          "answer_id": "kr.iaaf28_d_8_corporate_investment_corporate_capital",
+          "question": "سرمایهٔ خارجیِ شرکت در حالت عادی حداقل KRW100m و سهم ۱۰٪ واجد را اثبات می‌کند؟",
+          "reason": "شرط سرمایه و سهم به بنگاه/سرمایه‌گذار مربوط است؛ D8-3 شراکت فردی و D9 خارج این برش‌اند.",
+          "action": "ثبت سرمایه‌پذیری و سهم شرکت با مرجع بررسی شود.",
+          "source_ids": [
+            "iaaf28-ea-kr-invest"
+          ]
+        },
+        {
+          "id": "corporate_real_operation",
+          "answer_id": "kr.iaaf28_d_8_corporate_investment_corporate_real_operation",
+          "question": "ثبت،منشأ ورود و مصرف سرمایه،دفتر واقعی و اسناد عملیاتی/مالیاتی لازم آماده است؟",
+          "reason": "ثبت صوری به‌تنهایی پروندهٔ سرمایه‌گذاری کامل نیست.",
+          "action": "ورود سرمایه،اجاره و فعالیت واقعی ارائه شود.",
+          "source_ids": [
+            "iaaf28-ea-kr-invest"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "tw:employment-gold-card",
+      "scope_fa": "فقط متقاضی خارجیِ حوزهٔ دیجیتال با گزینهٔ۸ سال تجربه،حقوق آخرین سمت یا دکتری ۵۰۰ برتر؛ سایر حوزه‌ها و گزینهٔ چهارم خارج این برش.",
+      "limits_fa": "گلدکارت ۱۲ حوزه دارد و نبود این سه گزینه رد کل برنامه نیست. گزینهٔ دکتری+جایزه/تجربهٔ۴ ساله و ۱۱ حوزهٔ دیگر به دلیل ناتمام‌بودن/مرز عددی در این برش نیستند. مرجع صالح تصدیق مدارک ایران باید پیش ازارسال تعیین شود.",
+      "costs_fa": "تعرفهٔ جاری تأیید نشده؛ یادداشت منبع و جدول مشترک بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "همسر و فرزند صغیر اقامت وابسته؛ والدین مسیر بازدید با تشریفات جدا.",
+      "dependant_source_ids": [
+        "iaaf28-ea-tw-family"
+      ],
+      "checks": [
+        {
+          "id": "digital_alternative",
+          "answer_id": "tw.iaaf28_employment_gold_card_digital_alternative",
+          "question": "یکی ازاین سه گزینه را داری:≥۸ سال تجربهٔ حرفه‌ای دیجیتال،آخرین حقوق ماهانه≥TWD160000 درسمت دیجیتال،یا دکتری دانشگاه ۵۰۰ برترِ آخرین QS/THE/USNews؟",
+          "reason": "این گزینه‌ها OR هستند؛ درآمد عمومی/سابقهٔ نامرتبط جانشین تجربه یا حقوق تخصصی نیست.",
+          "action": "مدرک همان گزینه،اشتغال/مالیات یا رتبه و دکتری ارائه شود.",
+          "source_ids": [
+            "iaaf28-ea-tw-digital"
+          ]
+        },
+        {
+          "id": "digital_proof",
+          "answer_id": "tw.iaaf28_employment_gold_card_digital_proof",
+          "question": "مدارک تخصصی همان بند و ترجمهٔ انگلیسی/چینی و تصدیق نمایندگی برای اسناد ایران آماده است؟",
+          "reason": "اسناد باید با معیار انتخابی مطابقت کنند؛ ایران درفهرست تصدیق است،نه فهرست ممنوعیت.",
+          "action": "مرجع صلاحیت‌دار اسناد ایران و مستندات حرفه‌ای تعیین شود.",
+          "source_ids": [
+            "iaaf28-ea-tw-docs",
+            "iaaf28-ea-tw-digital"
+          ]
+        },
+        {
+          "id": "digital_entry",
+          "answer_id": "tw.iaaf28_employment_gold_card_digital_entry",
+          "question": "پاسپورت حداقل ۶ ماه داری و ازخارج،یا ازوضعیت ورودِ قابل تبدیل داخل تایوان اقدام می‌کنی؟",
+          "reason": "ABTC،FL،FO،FR،IM،M و WH معمولاً قابل تبدیل نیستند؛ استثنای بریتانیایی YM/WH در متن کنترل شود. اگر مهلت تمام شود خروج لازم است.",
+          "action": "نوع ورود و مهلت و بازرسی پاسپورت در مسیر خارجی بررسی شود.",
+          "source_ids": [
+            "iaaf28-ea-tw-entry",
+            "iaaf28-ea-tw-docs"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "vn:work-permit",
+      "scope_fa": "فقط شاخهٔ عادیِ نیازمند مجوز کار برای مدیر، اجرایی، متخصص یا تکنسین فرمان۲۱۹؛ شاخه‌های معافیت/گواهی/صرف اطلاع‌رسانی، ویزای ورود و خانواده بیرون این برش‌اند.",
+      "limits_fa": "فرمان ۲۱۹ از ۷ اوت ۲۰۲۵ مبناست؛ سابقهٔ مرتبط با شغل به سابقهٔکل شخص نگاشت نشود. تمامی استثناها و روادید/تصدیق/هزینهٔ روز محل درخواست ایران در این برش احراز نشده‌اند؛ عدم احراز معافیت به معنی بسته‌بودن مسیر نیست. معافیت‌های ماده۹ از این برش حذف‌اند و مهلت۱۰تا۶۰روز مجوز عادی به آن‌ها تعمیم داده نمی‌شود؛ حذف از این بررسی به معنی ناممکن‌بودن آن بدیل‌ها نیست.",
+      "costs_fa": "تعرفهٔ جاری تأیید نشده؛ یادداشت منبع و جدول مشترک بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "TT و اصلاحات قانون مهاجرت ۲۰۲۶ خارج برش‌اند؛ ازمجوز کار حق همراه خودکار ساخته نشود.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "worker_position",
+          "answer_id": "vn.iaaf28_work_permit_worker_position",
+          "question": "یکی ازطبقاتِ مدیر،اجرایی،متخصص یا تکنسین با شرط همان طبقه بر شغل منطبق است؟",
+          "reason": "مدیر قانونی/رئیس یا معاون؛ اجرایی رئیس شعبه/نمایندگی/محل،یا اداره‌کنندهٔحوزه با≥۳ سال مرتبط؛ متخصص دانشگاه+۲ سال مرتبط یا دانشگاه مرتبط+۱ سال دربخش اولویتِ تعیین‌شده؛ تکنسین آموزش≥۱ سال+۲ سال مرتبط یا ۳ سال مرتبط. طبقات بدیل‌اند.",
+          "action": "سمت،مدرک و تجربهٔمرتبط و درصورت لازم تعیین اولویت بخش مستند شود.",
+          "source_ids": [
+            "iaaf28-ea-vn-work"
+          ]
+        },
+        {
+          "id": "worker_evidence",
+          "answer_id": "vn.iaaf28_work_permit_worker_evidence",
+          "question": "مدارک صلاحیت/نوع کار و گذرنامه و سلامت و سابقهٔ لازم آماده است؟",
+          "reason": "مجوز قبلی/گواهی معافیت ویتنام درموارد مقرر می‌تواند جای اثبات سابقه بیاید؛ شرط تصدیق و ترجمه باید طبق سند بررسی شود.",
+          "action": "پروندهٔ همان سمت و نوع استخدام نزد کارفرما تکمیل شود.",
+          "source_ids": [
+            "iaaf28-ea-vn-work"
+          ]
+        },
+        {
+          "id": "worker_authorisation",
+          "answer_id": "vn.iaaf28_work_permit_worker_authorisation",
+          "question": "در این شاخهٔ غیرمعاف، کارفرما برای مجوز کارِ مربوط به شغل تو از مرجع صالح اقدام می‌کند؟",
+          "reason": "این کنترل فقط مجوز عادی را می‌سنجد؛ اشخاص مشمول معافیت یا صرف اطلاع‌رسانی باید با مهلت و مدارک همان شاخه جدا بررسی شوند.",
+          "action": "پروندهٔ مجوز عادی را با کارفرما تکمیل کن؛ اگر مبنای معافیت داری، به جای تطبیق خودکار با این مهلت، آن مبنا جدا احراز شود.",
+          "source_ids": [
+            "iaaf28-ea-vn-work"
+          ]
+        },
+        {
+          "id": "worker_process",
+          "answer_id": "vn.iaaf28_work_permit_worker_process",
+          "question": "برای مجوز عادی، کارفرما۱۰تا۶۰روز پیش از شروع از مرجع صالح درخواست می‌دهد و تغییر کارفرما/نقش با اجازهٔ لازم انجام می‌شود؟",
+          "reason": "اعتبار تا ۲ سال و نه بیش ازسند مبنا؛ تغییر شغل/کارفرما ممکن است مجوز تازه بخواهد.",
+          "action": "زمان شروع و مدت و تغییرات به مجوز مرتبط شود.",
+          "source_ids": [
+            "iaaf28-ea-vn-work"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "ph:9g-work-visa",
+      "scope_fa": "تبدیل داخل کشور به 9g تجاری؛ ورود از ایران جدا. فقط متقاضی اصلی؛ خانواده و سن فرزند خارج این برش.",
+      "limits_fa": "چک‌لیست همهٔ اصلاحات DOLE را ثابت نمی‌کند؛ غیرتجاری/مأموریت پوشش ندارد. این ماژول تبدیل داخل بااقامت مجاز است؛ دستور ورود اولیه ازایران و اصلاحات اختصاصی AEP باید جدا بررسی شود.",
+      "costs_fa": "تعرفهٔ جاری تأیید نشده؛ یادداشت منبع و جدول مشترک بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان به‌علت تعارض سن دراسناد قدیمی خارج این برش‌اند؛ این شکاف رد خانواده نیست.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "ph_9g_employer",
+          "answer_id": "ph.iaaf28_9g_work_visa_ph_9g_employer",
+          "question": "کارفرمای ثبت‌شده و قراردادِ سمت/مدت/حقوق دارید؟",
+          "reason": "BI ثبت و مالیات کارفرما می‌خواهد.",
+          "action": "پروندهٔ درخواست مشترک آماده شود.",
+          "source_ids": [
+            "iaaf28-ea-ph-9gdocs"
+          ]
+        },
+        {
+          "id": "ph_9g_aep",
+          "answer_id": "ph.iaaf28_9g_work_visa_ph_9g_aep",
+          "question": "AEP و انتشار/معافیت معتبر و مجوز حرفه تعیین شده؟",
+          "reason": "فرم AEP و برای حرفهٔ تنظیم‌شده PRC می‌خواهد.",
+          "action": "مجوز کار و حرفه جدا بررسی شود.",
+          "source_ids": [
+            "iaaf28-ea-ph-9gdocs"
+          ]
+        },
+        {
+          "id": "ph_9g_entry",
+          "answer_id": "ph.iaaf28_9g_work_visa_ph_9g_entry",
+          "question": "نوع ورود و اقامت مجاز امکان تبدیل BI دارد؟",
+          "reason": "eVisa صادره طبق سیاست تولید قابل تبدیل نیست.",
+          "action": "نوع ویزای ورود پیش از سفر تأیید شود.",
+          "source_ids": [
+            "iaaf28-ea-ph-9gdocs",
+            "iaaf28-ea-ph-policy"
+          ]
+        },
+        {
+          "id": "commercial_foreign_documents",
+          "answer_id": "ph.iaaf28_9g_work_visa_commercial_foreign_documents",
+          "question": "اسناد خارجیِ لازم با اصل،ترجمهٔ انگلیسی و تصدیق FSP/DFA طبق مورد و clearance پزشکی/BI لازم آماده است؟",
+          "reason": "چک‌لیست رسمی شاخهٔتبدیل این مدارک را می‌خواهد؛ شرط پزشکی به ملیت و وضعیت پرونده وابسته است.",
+          "action": "ضمیمهٔپزشکی و تصدیقِ همان سند و اقامت مجاز بررسی شود.",
+          "source_ids": [
+            "iaaf28-ea-ph-9gdocs"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    },
+    {
+      "route_id": "ph:sveg",
+      "scope_fa": "ادارهٔ بنگاه واقعی و پایدار با حفظ حداقل ۱۰ شغل فیلیپینی. فقط متقاضی اصلی؛ خانواده و سن فرزند خارج این برش.",
+      "limits_fa": "سرمایهٔ منفعل کافی نیست؛ سن همراه بین فرم و EO متعارض است و ۱۸ تا ۲۰ سال نتیجهٔ مثبت نگیرد.",
+      "costs_fa": "تعرفهٔ جاری تأیید نشده؛ یادداشت منبع و جدول مشترک بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراهان به‌علت تعارض سن دراسناد قدیمی خارج این برش‌اند؛ این شکاف رد خانواده نیست.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "ph_sveg_manage",
+          "answer_id": "ph.iaaf28_sveg_ph_sveg_manage",
+          "question": "ادارهٔ واقعی یا اختیار استخدام/ارتقا/اخراج دارید؟",
+          "reason": "فرمان نقش فعال و قصد اقامت و نبود خطر امنیتی می‌خواهد.",
+          "action": "سمت و عملیات واقعی مستند شود.",
+          "source_ids": [
+            "iaaf28-ea-ph-sveglaw"
+          ]
+        },
+        {
+          "id": "ph_sveg_jobs",
+          "answer_id": "ph.iaaf28_sveg_ph_sveg_jobs",
+          "question": "۱۰ شغل واقعی و پایدار مطابق قانون کار حفظ می‌شود؟",
+          "reason": "برای حفظ مجوز تداوم شرط لازم است.",
+          "action": "گواهی DOLE و فهرست مشاغل آماده شود.",
+          "source_ids": [
+            "iaaf28-ea-ph-sveglaw",
+            "iaaf28-ea-ph-svegdocs"
+          ]
+        },
+        {
+          "id": "ph_sveg_filing",
+          "answer_id": "ph.iaaf28_sveg_ph_sveg_filing",
+          "question": "درخواست BI و مجوز کار سمت اجرایی روشن است؟",
+          "reason": "فرم در صورت تصدی سمت AEP می‌خواهد.",
+          "action": "ثبت بنگاه، اقامت مجاز و clearance بررسی شود.",
+          "source_ids": [
+            "iaaf28-ea-ph-svegdocs",
+            "iaaf28-ea-ph-sveg"
+          ]
+        },
+        {
+          "id": "sveg_foreign_documents",
+          "answer_id": "ph.iaaf28_sveg_sveg_foreign_documents",
+          "question": "اسناد ثبت بنگاه،اقامت مجاز،پزشکی/clearance و مدارک خارجیِ تصدیق/ترجمه‌شدهٔلازم آماده است؟",
+          "reason": "اگر سمت شرکتی داری AEP لازم درچک‌لیست مطرح است؛ بندسن همراه ازاین فرم استفاده نشده.",
+          "action": "مدارک متقاضی اصلی و اجازهٔسمت جدا تکمیل شود.",
+          "source_ids": [
+            "iaaf28-ea-ph-svegdocs"
+          ]
+        },
+        {
+          "id": "ph_sveg_intent_security",
+          "answer_id": "ph.iaaf28_sveg_intent_security",
+          "question": "قصد واقعیِ اقامت نامحدود در فیلیپین داری و نبود خطر برای امنیت ملی را در پروندهٔ خودت مستند می‌کنی؟",
+          "reason": "بندهای۲(b,c) فرمان۷۵۸ این دو شرط را مستقل از اختیار مدیریت بنگاه لازم می‌دانند؛ پاسخ تو جای بررسی امنیتی مرجع را نمی‌گیرد. استمرار شرایط نیز لازم است.",
+          "action": "قصد اقامت و مدارک بررسی امنیتی متقاضی اصلی را مستقل از مدارک سمت و مشاغل تکمیل کن.",
+          "source_ids": [
+            "iaaf28-ea-ph-sveglaw"
+          ]
+        }
+      ],
+      "version": "primary-conditions-asia-africa-2026-10-28-1",
+      "released_on": "2026-10-28"
+    }
+  ]
+}

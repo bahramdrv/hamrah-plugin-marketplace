@@ -11,14 +11,38 @@ NOW = dt.datetime(2026, 10, 26, 12, tzinfo=dt.timezone.utc)
 TARGET = {'url': 'https://example.gov/visa', 'route_ids': ['xx:work'], 'roles': ['route_reference'], 'authority': 'published_primary', 'legal_checked_on': ['2026-10-24']}
 
 class CrawlerTests(unittest.TestCase):
+    def test_iranian_filing_and_restriction_context_is_monitored_and_blocks_only_linked_routes(self):
+        context = {'sources': [{'id': 'us-context', 'url': 'https://example.gov/entry-rules', 'checked_on': '2026-10-24'}], 'routes': [{'route_id': 'us:f-1', 'source_ids': ['us-context']}, {'route_id': 'us:eb-2-niw', 'source_ids': ['us-context']}]}
+        plan = c.source_plan({'routes': [], 'destinations': {}}, [], {'routes': []}, context)
+        self.assertEqual(len(plan), 1)
+        self.assertEqual(plan[0]['authority'], 'published_primary')
+        self.assertIn('iran_context_reference', plan[0]['roles'])
+        self.assertEqual(plan[0]['legal_checked_on'], ['2026-10-24'])
+        state = {'sources': [{**plan[0], 'status': 'captured', 'review_required': True}], 'generated_at': c.iso(NOW), 'next_due_at': c.iso(NOW)}
+        self.assertEqual(c.public_status(state)['blocked_route_ids'], ['us:eb-2-niw', 'us:f-1'])
+
     def test_real_source_plan_covers_every_catalog_route_without_claiming_primary_authority(self):
         data = pathlib.Path(__file__).resolve().parents[1] / 'data'
         read = lambda name: json.loads((data / name).read_text())
         catalog = read('global-catalog.json')
-        plan = c.source_plan(catalog, [read('route-readiness.json'), read('primary-conditions-2026-10-26.json')], read('iran-start-snapshot.json'))
+        context = read('iran-context-evidence.json')
+        plan = c.source_plan(catalog, [read('route-readiness.json'), read('primary-conditions-2026-10-26.json')], read('iran-start-snapshot.json'), context)
         ids = {route for row in plan for route in row['route_ids']}
         self.assertTrue(all(route['id'] in ids for route in catalog['routes']))
         self.assertTrue(any(row['authority'] == 'atlas_link_unreviewed' for row in plan))
+        by_url = {row['url']: row for row in plan}
+        actual_routes = {route['id'] for route in catalog['routes']}
+        self.assertTrue(all(route['route_id'] in actual_routes for route in context['routes']))
+        for source in context['sources']:
+            monitored = by_url[source['url']]
+            self.assertIn('iran_context_reference', monitored['roles'])
+            self.assertTrue(monitored['route_ids'])
+            self.assertIn(source['checked_on'], monitored['legal_checked_on'])
+        for route_id, application in catalog['iran_application'].items():
+            for source_id in application['source_ids']:
+                source = catalog['iran_sources'][source_id]
+                self.assertIn(route_id, by_url[source['url']]['route_ids'])
+                self.assertIn('iran_application_reference', by_url[source['url']]['roles'])
     def test_thirty_days_not_calendar_months_and_failures_retry(self):
         old = {'last_attempt_at': '2026-09-27T12:00:00Z', 'last_success_at': '2026-09-27T12:00:00Z', 'status': 'captured'}
         self.assertFalse(c.due(old, NOW))

@@ -1,0 +1,408 @@
+{
+  "version": "iran-context-evidence-2026-10-28",
+  "sources": [
+    {
+      "id": "iran:us-10998",
+      "title": "U.S. Department of State — Proclamation 10998",
+      "url": "https://travel.state.gov/en/newsroom/visas/2026/suspension-of-visa-issuance-to-foreign-nationals-to-protect-the-security-of-the-united-states.html",
+      "checked_on": "2026-10-28",
+      "source_updated_on": "2026-02-02"
+    },
+    {
+      "id": "iran:nl-daft",
+      "title": "IND — Self-employed person and treaties",
+      "url": "https://ind.nl/en/residence-permits/work/residence-permit-self-employed-person",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "iran:uk-yms",
+      "title": "GOV.UK — YMS eligible nationals",
+      "url": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-youth-mobility-scheme-eligible-nationals",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "iran:au-whm",
+      "title": "Australia — LIN 26/048",
+      "url": "https://www.legislation.gov.au/F2026L00878/asmade/2026-06-30/text/original/pdf",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "iran:nz-whm",
+      "title": "INZ — Working Holiday eligibility",
+      "url": "https://www.immigration.govt.nz/work/working-holiday-visas/who-can-apply-for-a-working-holiday-visa/",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "iran:au-whm462",
+      "title": "Australia — LIN 26/072",
+      "url": "https://www.legislation.gov.au/F2026L00883/asmade/2026-06-30/text/original/pdf",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "iran:de-tehran",
+      "title": "سفارت آلمان — فعالیت محدود",
+      "url": "https://teheran.diplo.de/ir-de/2752046-2752046",
+      "checked_on": "2026-10-24"
+    },
+    {
+      "id": "iran:cz-tehran",
+      "title": "سفارت چک تهران — خدمات ویزا",
+      "url": "https://mzv.gov.cz/teheran/cz/viza_a_konzularni_informace/index.html",
+      "checked_on": "2026-10-28"
+    },
+    {
+      "id": "iran:us-10998-text",
+      "title": "White House — Proclamation 10998, scope and exceptions",
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/12/restricting-and-limiting-the-entry-of-foreign-nationals-to-protect-the-security-of-the-united-states/",
+      "checked_on": "2026-10-28",
+      "source_updated_on": "2025-12-16"
+    },
+    {
+      "id": "iran:cz-programs",
+      "title": "Czech Embassy Tehran — economic migration programs",
+      "url": "https://mzv.gov.cz/teheran/cz/viza_a_konzularni_informace/vizove_informace/programy_ekonomicke_migrace/index.html",
+      "checked_on": "2026-10-28"
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "au:working-holiday",
+      "source_ids": [
+        "iran:au-whm",
+        "iran:au-whm462"
+      ]
+    },
+    {
+      "route_id": "cz:blue-card",
+      "source_ids": [
+        "iran:cz-tehran",
+        "iran:cz-programs"
+      ]
+    },
+    {
+      "route_id": "cz:business-residence",
+      "source_ids": [
+        "iran:cz-tehran",
+        "iran:cz-programs"
+      ]
+    },
+    {
+      "route_id": "cz:employee-card",
+      "source_ids": [
+        "iran:cz-tehran",
+        "iran:cz-programs"
+      ]
+    },
+    {
+      "route_id": "de:chancenkarte",
+      "source_ids": [
+        "iran:de-tehran"
+      ]
+    },
+    {
+      "route_id": "de:eu-blue-card",
+      "source_ids": [
+        "iran:de-tehran"
+      ]
+    },
+    {
+      "route_id": "de:family-reunion-de",
+      "source_ids": [
+        "iran:de-tehran"
+      ]
+    },
+    {
+      "route_id": "de:freelancer-visa",
+      "source_ids": [
+        "iran:de-tehran"
+      ]
+    },
+    {
+      "route_id": "de:job-seeker-visa",
+      "source_ids": [
+        "iran:de-tehran"
+      ]
+    },
+    {
+      "route_id": "de:recognition-partnership",
+      "source_ids": [
+        "iran:de-tehran"
+      ]
+    },
+    {
+      "route_id": "de:skilled-worker-de",
+      "source_ids": [
+        "iran:de-tehran"
+      ]
+    },
+    {
+      "route_id": "de:student-de",
+      "source_ids": [
+        "iran:de-tehran"
+      ]
+    },
+    {
+      "route_id": "gu:employment-based-green-card",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "gu:family-immigration",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "gu:student-or-exchange-visitor-status",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "gu:temporary-worker-visa",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "gu:visitor-visa-or-esta",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "mp:cw-1-cnmi-only-transitional-worker",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "mp:employment-based-green-card",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "mp:family-immigration",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "mp:student-or-exchange-visitor-status",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "mp:temporary-worker-visa",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "mp:visitor-visa-or-esta",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "nl:daft",
+      "source_ids": [
+        "iran:nl-daft"
+      ]
+    },
+    {
+      "route_id": "nz:working-holiday-nz",
+      "source_ids": [
+        "iran:nz-whm"
+      ]
+    },
+    {
+      "route_id": "pr:employment-based-green-card",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "pr:family-immigration",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "pr:student-or-exchange-visitor-status",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "pr:temporary-worker-visa",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "pr:visitor-visa-or-esta",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "uk:youth-mobility-scheme",
+      "source_ids": [
+        "iran:uk-yms"
+      ]
+    },
+    {
+      "route_id": "us:e-2",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "us:eb-1a",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "us:eb-2-niw",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "us:eb-3",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "us:eb-5",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "us:f-1",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "us:h-1b",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "us:j-1",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "us:k-1",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "us:l-1a",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "us:l-1b",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "us:o-1",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "us:spousal-green-card",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "us:tn",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "vi:employment-based-green-card",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "vi:family-immigration",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "vi:student-or-exchange-visitor-status",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "vi:temporary-worker-visa",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    },
+    {
+      "route_id": "vi:visitor-visa-or-esta",
+      "source_ids": [
+        "iran:us-10998",
+        "iran:us-10998-text"
+      ]
+    }
+  ]
+}

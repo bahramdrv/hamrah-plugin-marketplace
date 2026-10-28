@@ -74,7 +74,7 @@ test('new editions do not rewrite historical rules and an expired criterion stop
   assert.equal(readinessDefinitionsFor(new Date('2026-10-24')).version, 'route-readiness-1');
   assert.equal(readinessDefinitionsFor(new Date('2026-10-26T12:00:00Z')).routes.length, 60);
   assert.equal(readinessDefinitionsFor(new Date('2026-10-27T12:00:00Z')).routes.length, 95);
-  assert.equal(readinessDefinitionsFor(new Date('2026-10-28T12:00:00Z')).routes.length, 108);
+  assert.equal(readinessDefinitionsFor(new Date('2026-10-28T12:00:00Z')).routes.length, 169);
   const plan = readinessDefinitions.routes.find(route => route.route_id === 'ke:class-k-ordinary-residents-permit')!;
   const answers = answersSchema.parse({ age: '40-plus' });
   const current = routeReadiness(readinessDefinitions, plan.route_id, {}, now(), {}, screeningProfile(answers))!;
@@ -105,17 +105,41 @@ test('a researched checklist retains its separate Iranian filing context and cur
   assert.equal(route.official_eligibility, 'UNKNOWN');
 });
 
-test('Armenian employment checks stop at the announced local reform boundary', () => {
-  const plan = readinessDefinitions.routes.find(route => route.route_id === 'am:work-residence-permit');
-  assert.ok(plan);
-  assert.equal(plan.valid_until, '2026-10-31T23:59:59+04:00');
-  const facts = Object.fromEntries(plan.checks.map(check => [check.answer_id, 'yes' as const]));
-  const versions = Object.fromEntries(plan.checks.map(check => [check.answer_id, plan.version!]));
-  const before = routeReadiness(readinessDefinitions, plan.route_id, facts, new Date('2026-10-31T19:59:59Z'), versions)!;
-  const after = routeReadiness(readinessDefinitions, plan.route_id, facts, new Date('2026-10-31T20:00:00Z'), versions)!;
-  assert.equal(before.counts.reported_ready, plan.checks.length);
-  assert.ok(after.checks.every(check => check.state_reason === 'rule_window_expired'));
-  assert.equal(after.costs.current, false);
+test('all six Armenian condition windows stop at the announced local reform boundary', () => {
+  const plans = readinessDefinitions.routes.filter(route => route.route_id.startsWith('am:'));
+  assert.equal(plans.length, 6);
+  for (const plan of plans) {
+    assert.equal(plan.valid_until, '2026-10-31T23:59:59+04:00');
+    const facts = Object.fromEntries(plan.checks.map(check => [check.answer_id, 'yes' as const]));
+    const versions = Object.fromEntries(plan.checks.map(check => [check.answer_id, plan.version!]));
+    const before = routeReadiness(readinessDefinitions, plan.route_id, facts, new Date('2026-10-31T19:59:59Z'), versions)!;
+    const after = routeReadiness(readinessDefinitions, plan.route_id, facts, new Date('2026-10-31T20:00:00Z'), versions)!;
+    assert.equal(before.counts.reported_ready, plan.checks.length);
+    assert.ok(after.checks.every(check => check.state_reason === 'rule_window_expired'));
+    assert.equal(after.costs.current, false);
+  }
+});
+
+test('US restriction context retains the reviewed primary scope and exceptions alongside the consular notice', async () => {
+  const api = createCompassApi({ snapshot, catalog, now: () => new Date('2026-10-28T12:00:00Z') });
+  const response = await api.POST(new Request('http://localhost/api/compass', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ goal: 'study', destinations: ['us'] }) }));
+  const data = await response.json();
+  const route = data.personal_screening.routes.find((route: { id: string }) => route.id === 'us:f-1');
+  assert.equal(route.status, 'restricted_context');
+  assert.equal(route.official_eligibility, 'UNKNOWN');
+  assert.ok(route.source_urls.includes('https://www.whitehouse.gov/presidential-actions/2025/12/restricting-and-limiting-the-entry-of-foreign-nationals-to-protect-the-security-of-the-united-states/'));
+  assert.ok(route.reasons.some((reason: string) => reason.includes('پاسپورت دوم')));
+});
+
+test('the expanded Americas checks retain distinct livelihood, employer and optional-document conditions', async () => {
+  const api = createCompassApi({ snapshot, catalog, now: () => new Date('2026-10-28T12:00:00Z') });
+  for (const [id, checkId] of [['ec:permanent-residence', 'lawful_means'], ['cl:temporary-residence-employment-opportunity', 'employer_evidence'], ['co:visa-v-digital-nomad', 'foreign_company_evidence']]) {
+    const response = await api.POST(new Request('http://localhost/api/compass', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ focus_route: id }) }));
+    const data = await response.json();
+    const route = data.personal_screening.routes.find((route: { id: string }) => route.id === id);
+    assert.ok(data.interview.questions.some((q: { id: string }) => q.id === readinessDefinitions.routes.find(plan => plan.route_id === id)?.checks.find(check => check.id === checkId)?.answer_id), `${id} must expose its researched condition`);
+    assert.equal(route.official_eligibility, 'UNKNOWN');
+  }
 });
 
 test('regional alternatives stay within one scoped Belgian check instead of asking all regions as mandatory', async () => {

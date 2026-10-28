@@ -234,7 +234,7 @@ def validate_state(value, now):
     except (KeyError, TypeError): raise ValueError('invalid_state')
     return value
 
-def source_plan(catalog, registries, snapshot):
+def source_plan(catalog, registries, snapshot, iran_context=None):
     rows = {}
     def add(url, ids, role, primary=False, checked=None):
         if not url: return
@@ -244,10 +244,19 @@ def source_plan(catalog, registries, snapshot):
         if checked: row['legal_checked_on'] = sorted(set(row['legal_checked_on'] + [checked]))
     for route in catalog['routes']: add(route['source']['url'], [route['id']], 'route_reference', checked=route['source']['lastVerified'])
     for code, country in catalog['destinations'].items(): add(country.get('portal'), [r['id'] for r in catalog['routes'] if r['destination'] == code], 'country_portal')
+    for route_id, application in catalog.get('iran_application', {}).items():
+        for source_id in application['source_ids']:
+            source = catalog['iran_sources'][source_id]
+            add(source['url'], [route_id], 'iran_application_reference', source.get('authority') == 'primary', source['checked_on'])
     for registry in registries:
         for source in registry['sources']:
             ids = [r['route_id'] for r in registry['routes'] if source['id'] in r.get('cost_source_ids', []) + r.get('dependant_source_ids', []) + r.get('availability', {}).get('source_ids', []) + [i for check in r['checks'] for i in check['source_ids']]]
             add(source['url'], ids, 'condition_reference', source.get('verification', 'direct') == 'direct', source['checked_on'])
+    if iran_context:
+        for source in iran_context['sources']:
+            ids = [route['route_id'] for route in iran_context['routes'] if source['id'] in route['source_ids']]
+            if not ids: raise ValueError('unlinked_iran_context_source')
+            add(source['url'], ids, 'iran_context_reference', True, source['checked_on'])
     for route in snapshot['routes']:
         ids = route['application']['source_ids']
         for fact in route['facts']:
@@ -295,7 +304,8 @@ def main():
     args = parser.parse_args(); now = dt.datetime.now(dt.timezone.utc)
     data = args.root / 'data'; catalog = json.loads((data / 'global-catalog.json').read_text()); snapshot = json.loads((data / 'iran-start-snapshot.json').read_text())
     registries = [json.loads((data / 'route-readiness.json').read_text())] + [json.loads(path.read_text()) for path in sorted(data.glob('primary-conditions-*.json'))]
-    plan = source_plan(catalog, registries, snapshot)
+    iran_context = json.loads((data / 'iran-context-evidence.json').read_text())
+    plan = source_plan(catalog, registries, snapshot, iran_context)
     if args.max_sources: plan = plan[:args.max_sources]
     previous = json.loads(args.previous.read_text()) if args.previous and args.previous.exists() else None
     acknowledgements = json.loads((data / 'source-crawl-reviews.json').read_text()) if (data / 'source-crawl-reviews.json').exists() else {}

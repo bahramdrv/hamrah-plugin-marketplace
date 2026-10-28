@@ -77,9 +77,10 @@ test('all published preparation routes are reachable and only the selected route
   const { catalogPolicy } = await import('../src/catalog');
   const { catalogSchema } = await import('../src/catalog');
   const { isStableCoarseFact } = await import('../src/policy');
+  const { iranContext } = await import('../src/iran-context');
   const parsedCatalog = catalogSchema.parse(catalog);
   const api = createCompassApi({ snapshot, catalog, now: () => new Date('2026-10-28T22:00:00Z') });
-  assert.ok(readinessDefinitions.routes.length >= 108);
+  assert.ok(readinessDefinitions.routes.length >= 169);
   for (const plan of readinessDefinitions.routes) {
     const record = parsedCatalog.routes.find(route => route.id === plan.route_id)!;
     const policy = catalogPolicy(record);
@@ -87,6 +88,14 @@ test('all published preparation routes are reachable and only the selected route
     const response = await api.POST(post({ goal: policy.goal, destinations: [record.destination], focus_route: record.id, facts: Object.fromEntries(policy.requires.map(id => [id, 'yes'])) }));
     assert.equal(response.status, 200, record.id);
     const result = await response.json();
+    if (!iranContext(record, parsedCatalog, new Date('2026-10-28T22:00:00Z')).ordinary) {
+      assert.ok(!result.routes.some((route: { id: string }) => route.id === record.id), `${record.id} must not bypass its Iranian restriction`);
+      const context = result.personal_screening.routes.find((route: { id: string }) => route.id === record.id);
+      assert.equal(context.status, 'restricted_context');
+      assert.equal(context.can_answer_conditions, false);
+      assert.equal(context.reviewed_check_count, plan.checks.length);
+      continue;
+    }
     assert.equal(result.routes[0].id, record.id);
     assert.ok(result.routes[0].readiness.checks.length >= 3);
     const selected = new Set(plan.checks.map(check => check.answer_id));

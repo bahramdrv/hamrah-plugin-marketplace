@@ -1,0 +1,1666 @@
+{
+  "version": "primary-conditions-americas-2026-10-28-1",
+  "released_on": "2026-10-28",
+  "sources": [
+    {
+      "id": "iam28-ao-ar-nomad",
+      "title": "Argentina DNM — Nómada Digital",
+      "url": "https://www.argentina.gob.ar/servicio/obtener-una-residencia-transitoria-como-nomada-digital",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن مربوط به شروط مشخص‌شده در صفحهٔ رسمی خوانده شد؛ تکمیل همهٔ استثناها ادعا نمی‌شود."
+    },
+    {
+      "id": "iam28-ao-cl-work",
+      "title": "SERMIG — Lawful remunerated activities",
+      "url": "https://serviciomigraciones.cl/en/residencia-temporal-permit/subcategories/remunerated-activities/",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "شروط مذکور در متن رسمی بررسی شد؛ پوشش این بسته جزئی است."
+    },
+    {
+      "id": "iam28-an-br-nomad",
+      "title": "MJSP: متن RN45/2021، نُومَد",
+      "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/migracoes/portal-de-imigracao-laboral/navegacao-guiada-1/possui-autorizacao-de-residencia/o-que-deseja/qual-a-finalidade-desejada-1/trabalho-sem-contrato-de-trabalho-no-brasil/nomade-digital/nomade-digital",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن مرجع رسمی در ۲۰۲۶/۱۰/۲۶ خوانده شد؛ تاریخ بازدید به‌معنای تاریخ اصلاح قانون نیست."
+    },
+    {
+      "id": "iam28-an-br-docs",
+      "title": "Polícia Federal: ماتریس مدارک همهٔ ملیت‌ها",
+      "url": "https://www.gov.br/pf/pt-br/assuntos/imigracao/pt/nacionalidade/objetivo/servico/documentos",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن مرجع رسمی در ۲۰۲۶/۱۰/۲۶ خوانده شد؛ تاریخ بازدید به‌معنای تاریخ اصلاح قانون نیست."
+    },
+    {
+      "id": "iam28-an-br-faq",
+      "title": "Polícia Federal: FAQ مهاجرت و پیوست",
+      "url": "https://www.gov.br/pf/pt-br/assuntos/imigracao/pt/duvidas",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن مرجع رسمی در ۲۰۲۶/۱۰/۲۶ خوانده شد؛ تاریخ بازدید به‌معنای تاریخ اصلاح قانون نیست."
+    },
+    {
+      "id": "iam28-an-co-nomad",
+      "title": "Cancillería: VisaV Nómadas digitales",
+      "url": "https://cancilleria.gov.co/node/26950",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن مرجع رسمی در ۲۰۲۶/۱۰/۲۶ خوانده شد؛ تاریخ بازدید به‌معنای تاریخ اصلاح قانون نیست."
+    },
+    {
+      "id": "iam28-an-co-exemption-2026",
+      "title": "Cancillería: Resolución12189/2026",
+      "url": "https://cancilleria.gov.co/normograma/compilacion/docs/resolucion_minrelaciones_12189_2026.htm",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "منتشرشده۳سپتامبر۲۰۲۶، لازم‌الاجرا۴سپتامبر۲۰۲۶. تغییر فهرست معافیت در متن رسمی مستقیم تأیید شد."
+    },
+    {
+      "id": "iam28-an-co-law",
+      "title": "Cancillería: Resolución5477/2022، متن تجمیعی",
+      "url": "https://cancilleria.gov.co/normograma/compilacion/docs/resolucion_minrelaciones_5477_2022.htm",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "مواد۸،۱۰تا۱۲،۲۹،۳۶،۶۸،۹۰ و یادداشت اصلاحات خوانده شد؛ مبنا از۲۱اکتبر۲۰۲۲ لازم‌الاجراست. تعارض صفحهٔ همسر با ماده۹۰ ثبت شد."
+    },
+    {
+      "id": "iam28-an-co-consular-jurisdiction",
+      "title": "Cancillería: Decreto1067/2015، حوزهٔ کنسولی آنکارا، اصلاح1406/2024",
+      "url": "https://cancilleria.gov.co/normograma/compilacion/docs/decreto_1067_2015.htm",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "ماده۲.۲.۱.۲.۴.۱۱ در متن تجمیعی و Decreto1406/2024 مستقیم خوانده شد؛ ایران در حوزهٔ آنکارا است. زمان/نحوهٔ حضور فیزیکی و پذیرش عملی پرونده هنوز تأیید نشده."
+    },
+    {
+      "id": "iam28-an-co-consular-iran",
+      "title": "Cancillería: قطع روابط دیپلماتیک و استمرار روابط کنسولی با ایران",
+      "url": "https://cancilleria.gov.co/sala-de-prensa/noticias/colombia-anuncia-la-ruptura-de-relaciones-diplomaticas-con-iran",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "متن اعلامیه۲۴سپتامبر۲۰۲۶ مستقیم خوانده شد؛ اعلام می‌کند قطع دیپلماتیک از۱۹سپتامبر، به‌معنای قطع کنسولی نیست. این خبر خود دلیلی بر بسته‌شدن همهٔ مسیرهای ویزا نیست."
+    },
+    {
+      "id": "iam28-an-co-exemption",
+      "title": "Cancillería: Resolución5488/2022، معافیت ورود",
+      "url": "https://cancilleria.gov.co/normograma/compilacion/docs/resolucion_minrelaciones_5488_2022.htm",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن مرجع رسمی در ۲۰۲۶/۱۰/۲۶ خوانده شد؛ تاریخ بازدید به‌معنای تاریخ اصلاح قانون نیست."
+    },
+    {
+      "id": "iam28-an-co-socio",
+      "title": "Cancillería: VisaM Socio o Propietario",
+      "url": "https://cancilleria.gov.co/node/26972",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن مرجع رسمی در ۲۰۲۶/۱۰/۲۶ خوانده شد؛ تاریخ بازدید به‌معنای تاریخ اصلاح قانون نیست."
+    },
+    {
+      "id": "iam28-an-co-spouse",
+      "title": "Cancillería: VisaM Cónyuge",
+      "url": "https://cancilleria.gov.co/node/26965",
+      "checked_on": "2026-10-26",
+      "verification": "direct",
+      "verification_note": "متن مرجع رسمی در ۲۰۲۶/۱۰/۲۶ خوانده شد؛ تاریخ بازدید به‌معنای تاریخ اصلاح قانون نیست."
+    },
+    {
+      "id": "iam28-ca-mx-2026",
+      "title": "SEGOB/SRE: اصلاح ویزاها، 15/05/2026",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5787660",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "متن اصلاح شروط Trámites5 و10 مستقیم دوباره خوانده شد؛ از روز بعد انتشار، ۱۶مه۲۰۲۶ لازم‌الاجراست."
+    },
+    {
+      "id": "iam28-ca-mx-2025",
+      "title": "SEGOB/SRE: Lineamientos Generales de Visas 25/07/2025",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5763837",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "متن عمومی قانون در۲۸اکتبر دوباره خوانده شد؛ واحد UMA، شرط حساب۱۱۴۶۰واحد/۱۲ماه، درآمد بیش‌از۶۸۰واحد/۶ماه و شروع اجرا۱۵روز بعد انتشار مستقیم کنترل شد. سایر تاریخ‌های منابع تمدید نشد."
+    },
+    {
+      "id": "iam28-ca-ec-work",
+      "title": "MREMH/Gob.ec: کار با رابطه استخدامی",
+      "url": "https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-trabajo-actividades-laborales-relacion-dependencia",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "صفحه کامل مستقیم خوانده شد؛ فوتر آخرین به‌روزرسانی2024/12/31 است، درحالی‌که فرایند eVISAS2025 را هم دارد. تاریخ اجرای تمام اصلاحات بعدی احراز نشده است."
+    },
+    {
+      "id": "iam28-ca-ec-pension",
+      "title": "MREMH/Gob.ec: Jubilado",
+      "url": "https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-jubilado",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "صفحه کامل مستقیم خوانده شد؛ فوتر آخرین به‌روزرسانی2024/12/31 است، درحالی‌که فرایند eVISAS2025 را هم دارد. تاریخ اجرای تمام اصلاحات بعدی احراز نشده است."
+    },
+    {
+      "id": "iam28-ca-ec-rentista",
+      "title": "MREMH/Gob.ec: Rentista",
+      "url": "https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-rentista",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "صفحه کامل مستقیم خوانده شد؛ فوتر آخرین به‌روزرسانی2024/12/31 است، درحالی‌که فرایند eVISAS2025 را هم دارد. تاریخ اجرای تمام اصلاحات بعدی احراز نشده است."
+    },
+    {
+      "id": "iam28-ca-ec-investor",
+      "title": "MREMH/Gob.ec: Inversionista",
+      "url": "https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-inversionista",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "صفحه کامل مستقیم خوانده شد؛ فوتر آخرین به‌روزرسانی2024/12/31 است، درحالی‌که فرایند eVISAS2025 را هم دارد. تاریخ اجرای تمام اصلاحات بعدی احراز نشده است."
+    },
+    {
+      "id": "iam28-ca-ec-nomad",
+      "title": "MREMH/Gob.ec: Rentista trabajo remoto",
+      "url": "https://www.gob.ec/mremh/tramites/concesion-visa-residencia-temporal-rentista-trabajo-remoto-visa-nomada",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "صفحه کامل مستقیم خوانده شد؛ فوتر آخرین به‌روزرسانی2024/12/31 است، درحالی‌که فرایند eVISAS2025 را هم دارد. تاریخ اجرای تمام اصلاحات بعدی احراز نشده است."
+    },
+    {
+      "id": "iam28-ca-ec-pr",
+      "title": "MREMH/Gob.ec: PR پس از21ماه",
+      "url": "https://www.gob.ec/mremh/tramites/concesion-visa-residencia-permanente-tiempo-permanencia-mayor-21-meses",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "صفحه کامل مستقیم خوانده شد؛ فوتر آخرین به‌روزرسانی2024/12/31 است، درحالی‌که فرایند eVISAS2025 را هم دارد. تاریخ اجرای تمام اصلاحات بعدی احراز نشده است."
+    },
+    {
+      "id": "iam28-ca-pa-mici",
+      "title": "MICI: Inversionista calificado، صفحه جاری",
+      "url": "https://mici.gob.pa/inversionista-calificado/",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "متن مستقیم خوانده شد؛ تاریخ بازدید به‌معنای تاریخ اصلاح یا تأیید تمام اصلاحات قانون نیست."
+    },
+    {
+      "id": "iam28-ca-pa-entry",
+      "title": "سفارت پاناما: Visas و اصلاح Decreto196/2024",
+      "url": "https://www.embassyofpanama.org/visas",
+      "checked_on": "2026-10-27",
+      "verification": "direct",
+      "verification_note": "متن مستقیم خوانده شد؛ تاریخ بازدید به‌معنای تاریخ اصلاح یا تأیید تمام اصلاحات قانون نیست."
+    },
+    {
+      "id": "iam28-ca-pa-pension",
+      "title": "SNM PE2: Jubilado pensionado",
+      "url": "https://www.migracion.gob.pa/wp-content/uploads/2026/04/PE2.pdf",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "PDF مستقیم از فهرست عمومی SNM خوانده شد؛ پوشهٔ آوریل۲۰۲۶ تاریخ اثرگذاری قانون نیست. تاریخ اجرای خاص این فرم احراز نشد."
+    },
+    {
+      "id": "iam28-ca-pa-property",
+      "title": "SNM RP5: Solvencia propia، ملک",
+      "url": "https://www.migracion.gob.pa/wp-content/uploads/2026/04/RP5.pdf",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "PDF مستقیم از فهرست عمومی SNM خوانده شد؛ پوشهٔ آوریل۲۰۲۶ تاریخ اثرگذاری قانون نیست. تاریخ اجرای خاص این فرم احراز نشد."
+    },
+    {
+      "id": "iam28-ca-pa-marriage",
+      "title": "SNM RD1: Casado con panameño",
+      "url": "https://www.migracion.gob.pa/wp-content/uploads/2026/04/RD1.pdf",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "PDF مستقیم از فهرست عمومی SNM خوانده شد؛ پوشهٔ آوریل۲۰۲۶ تاریخ اثرگذاری قانون نیست. تاریخ اجرای خاص این فرم احراز نشد."
+    },
+    {
+      "id": "iam28-ca-pa-work-marrakech",
+      "title": "SNM RT6: Marrakech",
+      "url": "https://www.migracion.gob.pa/wp-content/uploads/2026/04/RT6.pdf",
+      "checked_on": "2026-10-28",
+      "verification": "direct",
+      "verification_note": "PDF مستقیم از فهرست عمومی SNM خوانده شد؛ پوشهٔ آوریل۲۰۲۶ تاریخ اثرگذاری قانون نیست. تاریخ اجرای خاص این فرم احراز نشد."
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "ar:digital-nomad-residence",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "درخواست حضوری اولیهٔ اقامت گذرای دورکار داخل آرژانتین، فقط برای دارنده تابعیتِ معاف ویزای گردشگری؛ بدون همراه.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. هیچ معافیت ورود برای پاسپورت صرفاً ایرانی فرض نشده؛ اخذ تابعیت دوم و شرایط تمدید جداست.",
+      "costs_fa": "مبلغ هزینه در این بسته تأیید نشده؛ روز اقدام بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ شروط همراه و حق کار او در این برش تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "passport",
+          "answer_id": "ar.iam28_digital_nomad_residence_passport",
+          "question": "تابعیت تو در گروه معاف ویزای توریستی است؟",
+          "reason": "صرف ایرانی‌بودن مبنای معافیت این برنامه نیست؛ گذرنامهٔ مشمول باید احراز شود.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "iam28-ao-ar-nomad"
+          ]
+        },
+        {
+          "id": "foreign",
+          "answer_id": "ar.iam28_digital_nomad_residence_foreign",
+          "question": "کار دورکاری برای خارج آرژانتین داری؟",
+          "reason": "خدمت از راه ابزار ارتباطی باید برای شخص یا شرکت مقیم خارج باشد.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "iam28-ao-ar-nomad"
+          ]
+        },
+        {
+          "id": "evidence",
+          "answer_id": "ar.iam28_digital_nomad_residence_evidence",
+          "question": "مدرک پذیرفته‌شدهٔ فعالیت دورکاری، همراه رزومه و دست‌کم یک مرجع مرتبط با شغل داری؟",
+          "reason": "مدرک فعالیت می‌تواند قرارداد، تأیید شرکت، گواهی درخواست کار، گواهی حرفه‌ای یا رسید درآمد/حق‌الزحمهٔ پذیرفته‌شده باشد؛ همهٔ این نمونه‌ها هم‌زمان لازم نیستند. رزومه و مرجع شغلی جدا لازم‌اند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "iam28-ao-ar-nomad"
+          ]
+        },
+        {
+          "id": "entry",
+          "answer_id": "ar.iam28_digital_nomad_residence_entry",
+          "question": "ورود منظم و ارائه حضوری ممکن است؟",
+          "reason": "این درخواست از داخل آرژانتین حضوری است؛ اقامت حداکثر۱۸۰روز و تمدید مشابه دارد.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "iam28-ao-ar-nomad"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "cl:temporary-residence-employment-opportunity",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "شاخه پیشنهاد شغلی پذیرفته‌شده از شخص/شرکت شیلی؛ درخواست اولیه از خارج شیلی، بدون همراه.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. شاخه قراردادِ ازپیش‌موجود یا کار مستقل و دیگر هدف‌ها پذیرفته نشده؛ اقامت اولیه۹۰روز و درخواست قرارداد ظرف۴۵روز از ورود است.",
+      "costs_fa": "مبلغ هزینه در این بسته تأیید نشده؛ روز اقدام بررسی شود.",
+      "cost_source_ids": [],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ شروط همراه و حق کار او در این برش تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "offer",
+          "answer_id": "cl.iam28_temporary_residence_employment_opportunity_offer",
+          "question": "پیشنهاد کارِ محضری در شیلی و نامهٔ پذیرش با امضای تو در کنسولگری مربوط را داری؟",
+          "reason": "پیشنهاد باید از شخص یا شرکت شیلیایی با تشریفات رسمی همان شاخه باشد؛ پذیرش غیررسمی جای نامهٔ امضاشده در کنسولگری نیست.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "iam28-ao-cl-work"
+          ]
+        },
+        {
+          "id": "deadline",
+          "answer_id": "cl.iam28_temporary_residence_employment_opportunity_deadline",
+          "question": "مهلت تبدیل پیشنهاد به قرارداد را رعایت می‌کنی؟",
+          "reason": "مجوز اولیهٔ این شاخه نودروزه است، اما قرارداد باید در چهل‌وپنج روز نخست پس از ورود ارائه شود؛ نباید تا پایان نودروز منتظر ماند.",
+          "action": "مدرک متناسب را آماده کن.",
+          "source_ids": [
+            "iam28-ao-cl-work"
+          ]
+        },
+        {
+          "id": "application_abroad",
+          "answer_id": "cl.iam28_temporary_residence_employment_opportunity_application_abroad",
+          "question": "درخواست این شاخه را از خارج شیلی ارائه می‌کنی؟",
+          "reason": "این مبنای پیشنهاد شغلی، آغاز درخواست خارج کشور می‌خواهد.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-ao-cl-work"
+          ]
+        },
+        {
+          "id": "employer_evidence",
+          "answer_id": "cl.iam28_job_offer_employer_evidence",
+          "question": "کارفرما توان مالی استخدام و اسناد هویتی/ثبتی متناسب با نوع خود را اثبات می‌کند؟",
+          "reason": "مدارک باید مطابق شخص حقیقی، شرکت انتفاعی یا نهاد غیرانتفاعی باشند. برای شرکت انتفاعی، آغاز فعالیت و اختیار نماینده؛ برای غیرانتفاعی، شخصیت حقوقی و هیئت‌مدیره طبق فهرست مربوط بررسی می‌شوند. همهٔ انواع کارفرما هم‌زمان فرض نمی‌شوند.",
+          "action": "تمکن و فهرست مدارک همان نوع کارفرما را با بخش پیشنهاد شغلی مرجع تطبیق بده.",
+          "source_ids": [
+            "iam28-ao-cl-work"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "br:digital-nomad",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "فقط درخواست اولیهٔ مجوز اقامت داخلی RN45 برای شخصی که اکنون در برزیل است و برای خارج دورکار است؛ بدون همراه.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. پذیرش فقط مدارک اولیهٔ شاخه داخلی است. رژیم ورود ایرانی، صلاحیت/پذیرش کنسولی تهران و شروط همه وضعیت‌های قبلی unknown؛ حق ورود یا قابل‌قبول‌بودن تمام وضعیت‌های مهاجرتی نتیجه نمی‌شود.",
+      "costs_fa": "هزینهٔ ویزای کنسولی unknown؛ CRNM داخلی در ماتریسPF برابر۲۰۴٫۷۷رئال، حسب مورد است.",
+      "cost_source_ids": [
+        "iam28-an-br-docs"
+      ],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ شروط همراه و حق کار او در این برش تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "domestic_scope",
+          "answer_id": "br.iam28_digital_nomad_domestic_scope",
+          "question": "درخواست اولیه مجوز داخلیRN45را از داخل برزیل ارائه می‌کنی؟",
+          "reason": "پرونده کنسولی خارج کشور و تمدید، شاخه‌های جدا هستند.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-an-br-nomad"
+          ]
+        },
+        {
+          "id": "foreign_employer",
+          "answer_id": "br.iam28_digital_nomad_foreign_employer",
+          "question": "فعالیت با فناوری ارتباطی برای کارفرمای خارج برزیل است؟",
+          "reason": "کارفرمای برزیلی این مقرره را پوشش نمی‌دهد.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-an-br-nomad"
+          ]
+        },
+        {
+          "id": "foreign_work_proof",
+          "answer_id": "br.iam28_digital_nomad_foreign_work_proof",
+          "question": "قرارداد/خدمات یا مدرک رابطه خارجی و امکان دورکاری را داری؟",
+          "reason": "اظهار فعالیت و سند رابطه شغلی/خدمات باید قابل اثبات باشند.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-an-br-nomad"
+          ]
+        },
+        {
+          "id": "nomad_finance",
+          "answer_id": "br.iam28_digital_nomad_nomad_finance",
+          "question": "درآمد خارجی ماهانه≥۱۵۰۰دلار آمریکا یا موجودی بانکی≥۱۸۰۰۰دلار داری؟",
+          "reason": "دو گزینه جایگزین‌اند؛ درآمد و پس‌انداز یکی نیستند.",
+          "action": "منبع خارجی یا موجودی را مستند کن.",
+          "source_ids": [
+            "iam28-an-br-nomad"
+          ]
+        },
+        {
+          "id": "nomad_domestic",
+          "answer_id": "br.iam28_digital_nomad_nomad_domestic",
+          "question": "برای درخواست داخلی، اسناد هویت/نسب و سوءپیشینهٔ محل‌های اقامت پنج‌سال و اظهارنامه آماده است؟",
+          "reason": "مسیر داخل کشور مدارک جدا دارد.",
+          "action": "فرم و هزینهٔ مجوز را تکمیل کن.",
+          "source_ids": [
+            "iam28-an-br-nomad"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "br:family-reunion",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "فقط درخواست مجوز اقامت داخلیِ همسر بالغ با ازدواج قانونی به تبعهٔ برزیل؛ بدون درخواست کنسولی یا همراهِ اضافی.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. فهرست نسبت‌های ناتنی/خواهر/برادر و شرایط سن/وابستگی به همسر بالغ تعمیم داده نشد. مدت ویزای کنسولیXI، ورود ایرانی، وضعیت فعلی غیرمجاز و حق همراه اضافه تأیید نشده.",
+      "costs_fa": "ماتریسPF: مجوز۱۶۸٫۱۳ وCRNM۲۰۴٫۷۷رئال، حسب مورد؛ هزینهٔ ویزا جدا unknown.",
+      "cost_source_ids": [
+        "iam28-an-br-docs"
+      ],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ شروط همراه و حق کار او در این برش تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "sponsor_brazilian",
+          "answer_id": "br.iam28_family_reunion_sponsor_brazilian",
+          "question": "همسر پیونددهنده تبعه برزیل است و هویت/تابعیتش مستند است؟",
+          "reason": "حضور ساده خویشاوند یا نامزدی کافی نیست.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-an-br-faq",
+            "iam28-an-br-docs"
+          ]
+        },
+        {
+          "id": "marriage_evidence",
+          "answer_id": "br.iam28_family_reunion_marriage_evidence",
+          "question": "سند معتبر ازدواج و شناسه حامی با تصدیق/ترجمه لازم داری؟",
+          "reason": "این برش فقط همسر قانونی است، نه تمام رابطه‌های فهرست.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-an-br-docs"
+          ]
+        },
+        {
+          "id": "family_ongoing",
+          "answer_id": "br.iam28_family_reunion_family_ongoing",
+          "question": "اقامت حامی در برزیل و استمرار هم‌زیستی، حسب رابطه، قابل اثبات است؟",
+          "reason": "اظهارنامه‌های اقامت و رابطه لازم‌اند.",
+          "action": "مدارک استمرار را تکمیل کن.",
+          "source_ids": [
+            "iam28-an-br-docs"
+          ]
+        },
+        {
+          "id": "family_criminal",
+          "answer_id": "br.iam28_family_reunion_family_criminal",
+          "question": "مدارک کیفری محل‌های اقامت پنج‌سال و اظهارنامهٔ لازم آماده است؟",
+          "reason": "معافیت زیر۱۸ و مدارک جایگزین باید مطابق شاخه اعمال شود.",
+          "action": "چک‌لیستPF را اجرا کن.",
+          "source_ids": [
+            "iam28-an-br-docs"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "co:visa-v-digital-nomad",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "فقط شاخه کار دورکار برای شرکت خارجی، متقاضی اصلی بدون همراه و پاسپورت مشمول معافیت ملیتیِ خود برنامه؛ پروژه کارآفرینی خارج این برش.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. اقامت ثالث را جای شرط پاسپورتِ کشور معاف نگذار. دو تابعیتی باید پاسپورتِ واقعاً مشمول ارائه کند؛ معافیت مستقل ورود به‌تنهایی eligibilityبرنامه نیست. خدمات کنسولی با قطع دیپلماتیک خودکار پایان نیافته.",
+      "costs_fa": "هزینهٔ جاری بررسی و صدور، جداگانه؛ مبلغ۲۰۲۶ unknown.",
+      "cost_source_ids": [
+        "iam28-an-co-law"
+      ],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ شروط همراه و حق کار او در این برش تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "nomad_passport",
+          "answer_id": "co.iam28_visa_v_digital_nomad_nomad_passport",
+          "question": "پاسپورتِ کشورِ معاف از ویزای کوتاه‌مدت داری؟",
+          "reason": "شرط خودِ برنامه، ملیت پاسپورت است؛ ایران در فهرست پایه نیست.",
+          "action": "همهٔ تابعیت‌ها را بررسی کن؛ استثنای اقامت ثالث را خودکار قبول نکن.",
+          "source_ids": [
+            "iam28-an-co-nomad",
+            "iam28-an-co-exemption-2026"
+          ]
+        },
+        {
+          "id": "foreign_remote_activity",
+          "answer_id": "co.iam28_visa_v_digital_nomad_foreign_remote_activity",
+          "question": "صرفاً برای شرکت خارجی با ابزار دیجیتال دورکاری می‌کنی؟",
+          "reason": "کارآفرینی دیجیتال شاخه‌ای مستقل است که این برش نمی‌سنجد.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-an-co-nomad"
+          ]
+        },
+        {
+          "id": "foreign_company_evidence",
+          "answer_id": "co.iam28_visa_v_digital_nomad_foreign_company_evidence",
+          "question": "نامهٔ شرکت خارجی با نوع رابطه و دستمزد، و اگر قرارداد داری نسخهٔ آن، یا مدارک شاخهٔ مالک/شریک را داری؟",
+          "reason": "در شاخهٔ نامهٔ شرکت، قرارداد فقط در صورت وجود ارائه می‌شود. در شاخهٔ مالک/شریک، سند همین رابطه و نامهٔ امکان دورکاری لازم است؛ داشتن مالکیت و قرارداد برای همه هم‌زمان الزامی نیست.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-an-co-nomad"
+          ]
+        },
+        {
+          "id": "nomad_income",
+          "answer_id": "co.iam28_visa_v_digital_nomad_nomad_income",
+          "question": "صورت‌حساب سه‌ماه اخیر درآمد حداقل۳SMMLV را نشان می‌دهد؟",
+          "reason": "مقیاس قانونی به سال درخواست وابسته است.",
+          "action": "درآمد را با حداقل مزد جاری بسنج؛ budget را جایگزین نکن.",
+          "source_ids": [
+            "iam28-an-co-nomad"
+          ]
+        },
+        {
+          "id": "nomad_health",
+          "answer_id": "co.iam28_visa_v_digital_nomad_nomad_health",
+          "question": "بیمهٔ تمام‌خطرِ مدت اقامت، از جمله درمان و بازگردانی، داری؟",
+          "reason": "بیمهٔ ناقص کافی نیست.",
+          "action": "پوشش کامل را کنترل کن.",
+          "source_ids": [
+            "iam28-an-co-nomad"
+          ]
+        },
+        {
+          "id": "nomad_no_local_pay",
+          "answer_id": "co.iam28_visa_v_digital_nomad_nomad_no_local_pay",
+          "question": "فعالیت دارای پرداخت از شخص/شرکت مستقر در کلمبیا نداری؟",
+          "reason": "اینV کار محلی را اجازه نمی‌دهد.",
+          "action": "فعالیت محلی را در مسیر دیگری بررسی کن.",
+          "source_ids": [
+            "iam28-an-co-nomad"
+          ]
+        },
+        {
+          "id": "application_location",
+          "answer_id": "co.iam28_visa_v_digital_nomad_application_location",
+          "question": "برای درخواست آنلاین، مرجع حوزه اقامت و وضعیت قانونی لازم را احراز کرده‌ای؟",
+          "reason": "برای ساکن ایران حوزه آنکاراست؛ انتخاب دفتر کشور ثالثِ بیرون حوزه اقامت، اقامت موقت/دائم آن کشور می‌خواهد. داخل کلمبیا مرجع بوگوتا و وضعیت قانونی لازم است.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-an-co-law",
+            "iam28-an-co-consular-jurisdiction",
+            "iam28-an-co-consular-iran"
+          ]
+        },
+        {
+          "id": "iran_entry",
+          "answer_id": "co.iam28_visa_v_digital_nomad_iran_entry",
+          "question": "پیش از سفر ویزای لازمِ پاسپورتت یا استثنای شخصی مستند را احراز کرده‌ای؟",
+          "reason": "ایران در فهرست پایه یا معافیت مشروطUS/Schengen نیست؛ اقامت‌های خاصPacificAlliance/Andean قواعد جدا دارند. تغییر روابط دیپلماتیک، قطع خودکار خدمات کنسولی نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-an-co-exemption",
+            "iam28-an-co-exemption-2026",
+            "iam28-an-co-consular-iran"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "co:visa-m-business-investor",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "فقط شاخهM Socio/Propietario شرکت فعال، درخواست اولیه و متقاضی اصلی بدون همراه؛ ملک و FDI در این برش نیست.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. مجوز کار این شاخه محدود به همان شرکت است. شرایط تمدید، Rو آستانه ملک۳۵۰/FDIبیش‌از۶۵۰SMMLV و بیمه شاخه Inversionista اعمال نشدند.",
+      "costs_fa": "هزینهٔ جاری بررسی و صدور، جداگانه؛ مبلغ۲۰۲۶ unknown.",
+      "cost_source_ids": [],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ شروط همراه و حق کار او در این برش تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "socio_paid_capital",
+          "answer_id": "co.iam28_visa_m_business_investor_socio_paid_capital",
+          "question": "سهمِ پرداخت‌شده خودت حداقل۱۰۰SMMLV روز درخواست و خارج خرید ثانویه سهام است؟",
+          "reason": "بودجه، ارزش کل شرکت و بازار ثانویه جای سرمایه پرداخت‌شده شخص نیستند.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-an-co-socio"
+          ]
+        },
+        {
+          "id": "socio_company_identity",
+          "answer_id": "co.iam28_visa_m_business_investor_socio_company_identity",
+          "question": "NIT، ثبت/فعالیت شرکت، اشتغال‌زایی و گواهی حسابدارِ لازمِ شرکت سهامی داری؟",
+          "reason": "وجود شرکت کاغذی بدون اسناد فعالیت کافی فرض نمی‌شود.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-an-co-socio"
+          ]
+        },
+        {
+          "id": "socio_branch_documents",
+          "answer_id": "co.iam28_visa_m_business_investor_socio_branch_documents",
+          "question": "مدارک تأسیس/مالکیت سهم و شواهد بانکی مرتبط، و در معدن عنوان معدنی را داری؟",
+          "reason": "سند باید متعلق به همین بنگاه و فعالیت قانونی مربوط باشد.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-an-co-socio"
+          ]
+        },
+        {
+          "id": "application_location",
+          "answer_id": "co.iam28_visa_m_business_investor_application_location",
+          "question": "برای درخواست آنلاین، مرجع حوزه اقامت و وضعیت قانونی لازم را احراز کرده‌ای؟",
+          "reason": "برای ساکن ایران حوزه آنکاراست؛ انتخاب دفتر کشور ثالثِ بیرون حوزه اقامت، اقامت موقت/دائم آن کشور می‌خواهد. داخل کلمبیا مرجع بوگوتا و وضعیت قانونی لازم است.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-an-co-law",
+            "iam28-an-co-consular-jurisdiction",
+            "iam28-an-co-consular-iran"
+          ]
+        },
+        {
+          "id": "iran_entry",
+          "answer_id": "co.iam28_visa_m_business_investor_iran_entry",
+          "question": "پیش از سفر ویزای لازمِ پاسپورتت یا استثنای شخصی مستند را احراز کرده‌ای؟",
+          "reason": "ایران در فهرست پایه یا معافیت مشروطUS/Schengen نیست؛ اقامت‌های خاصPacificAlliance/Andean قواعد جدا دارند. تغییر روابط دیپلماتیک، قطع خودکار خدمات کنسولی نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-an-co-exemption",
+            "iam28-an-co-exemption-2026",
+            "iam28-an-co-consular-iran"
+          ]
+        },
+        {
+          "id": "m_application_transition",
+          "answer_id": "co.iam28_visa_m_business_investor_m_application_transition",
+          "question": "درخواستMاز خارج است، یا اگر داخل هستی منع تغییرVبهMبرای ملیت غیرمعاف به پرونده‌ات اعمال نمی‌شود؟",
+          "reason": "برای ملیت غیرمعافِ واردشده باV، تغییر بهM/Rدر داخل ممنوع است؛ استثنای شخصی باید مشخصاً احراز شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-an-co-law"
+          ]
+        },
+        {
+          "id": "m_absence",
+          "answer_id": "co.iam28_visa_m_business_investor_m_absence",
+          "question": "برنامه حضور داری که غیبت پیوسته بیش‌از۱۸۰روز در۳۶۵روزِ مقرر رخ ندهد؟",
+          "reason": "این غیبت اعتبارMرا پایان می‌دهد؛ حق کار همراه از حق متقاضی اصلی نتیجه نمی‌شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-an-co-law"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "co:visa-m-spouse",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "فقط ویزای اولیهMبرای همسر قانونیِ شهروند کلمبیا، متقاضی اصلی بالغ؛ شریکde factoوگذاربهRخارج این برش‌اند.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. تعارض۵سال/۳سال برایRدر این برش اصلاً ارزیابی نمی‌شود. محدودیت دامنه مانع تبدیل منبعindexedشریک دائمی به تأیید رسمی است.",
+      "costs_fa": "هزینهٔ جاری بررسی و صدور، جداگانه؛ مبلغ۲۰۲۶ unknown.",
+      "cost_source_ids": [],
+      "dependants_fa": "همراه اضافه بررسی نشده؛ اجازه کار باز متقاضی اصلی جای مجوز حرفه تنظیم‌شده را نمی‌گیرد.",
+      "dependant_source_ids": [
+        "iam28-an-co-spouse"
+      ],
+      "checks": [
+        {
+          "id": "spouse_citizenship",
+          "answer_id": "co.iam28_visa_m_spouse_spouse_citizenship",
+          "question": "همسر تبعه کلمبیا است و قصد زندگی مشترک واقعی مستند است؟",
+          "reason": "رابطه صوری مبنای این شاخه نیست.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-an-co-spouse"
+          ]
+        },
+        {
+          "id": "spouse_registry",
+          "answer_id": "co.iam28_visa_m_spouse_spouse_registry",
+          "question": "رونوشت معتبر ثبت ازدواج کلمبیایی صادرشده در۳ماه اخیر داری؟",
+          "reason": "ازدواج خارجی باید با سند ثبت کلمبیا در این شاخه منعکس شود.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-an-co-spouse"
+          ]
+        },
+        {
+          "id": "spouse_supporting_documents",
+          "answer_id": "co.iam28_visa_m_spouse_spouse_supporting_documents",
+          "question": "نامه همسر کلمبیایی، شناسه، وکالت و گواهی تردد هر دو آماده است؟",
+          "reason": "ممکن است بررسی بیشتر/مصاحبه بخواهند.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-an-co-spouse"
+          ]
+        },
+        {
+          "id": "application_location",
+          "answer_id": "co.iam28_visa_m_spouse_application_location",
+          "question": "برای درخواست آنلاین، مرجع حوزه اقامت و وضعیت قانونی لازم را احراز کرده‌ای؟",
+          "reason": "برای ساکن ایران حوزه آنکاراست؛ انتخاب دفتر کشور ثالثِ بیرون حوزه اقامت، اقامت موقت/دائم آن کشور می‌خواهد. داخل کلمبیا مرجع بوگوتا و وضعیت قانونی لازم است.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-an-co-law",
+            "iam28-an-co-consular-jurisdiction",
+            "iam28-an-co-consular-iran"
+          ]
+        },
+        {
+          "id": "iran_entry",
+          "answer_id": "co.iam28_visa_m_spouse_iran_entry",
+          "question": "پیش از سفر ویزای لازمِ پاسپورتت یا استثنای شخصی مستند را احراز کرده‌ای؟",
+          "reason": "ایران در فهرست پایه یا معافیت مشروطUS/Schengen نیست؛ اقامت‌های خاصPacificAlliance/Andean قواعد جدا دارند. تغییر روابط دیپلماتیک، قطع خودکار خدمات کنسولی نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-an-co-exemption",
+            "iam28-an-co-exemption-2026",
+            "iam28-an-co-consular-iran"
+          ]
+        },
+        {
+          "id": "m_application_transition",
+          "answer_id": "co.iam28_visa_m_spouse_m_application_transition",
+          "question": "درخواستMاز خارج است، یا اگر داخل هستی منع تغییرVبهMبرای ملیت غیرمعاف به پرونده‌ات اعمال نمی‌شود؟",
+          "reason": "برای ملیت غیرمعافِ واردشده باV، تغییر بهM/Rدر داخل ممنوع است؛ استثنای شخصی باید مشخصاً احراز شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-an-co-law"
+          ]
+        },
+        {
+          "id": "m_absence",
+          "answer_id": "co.iam28_visa_m_spouse_m_absence",
+          "question": "برنامه حضور داری که غیبت پیوسته بیش‌از۱۸۰روز در۳۶۵روزِ مقرر رخ ندهد؟",
+          "reason": "این غیبت اعتبارMرا پایان می‌دهد؛ حق کار همراه از حق متقاضی اصلی نتیجه نمی‌شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-an-co-law"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "mx:temporary-resident",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "فقط Trámite5(h) کمک فنی/انتقال دانش تخصصیِ پروژه راهبردی با دعوت شخص حقوقی مکزیکی؛ درخواست کنسولی اولیه خارج ایران، بدون همراه.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. پذیرش عملی این نوع ویزا در تهران از منابع مستقیم احراز نشد و خارج حوزه است. تمکن مالی، ملک، سرمایه‌گذاری، خانواده و دعوت معمول در این شناسه هنوز پوشش این برش نیستند.",
+      "costs_fa": "هزینهٔ کامل جاری و مخارج جانبی تأیید نشده.",
+      "cost_source_ids": [],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ شروط همراه و حق کار او در این برش تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "strategic_invitation",
+          "answer_id": "mx.iam28_temporary_resident_strategic_invitation",
+          "question": "شخص حقوقی عمومی/خصوصی مکزیکی دعوت مسئولانه با هدف، مدت، مکان‌ها و ضرورت متخصص صادر کرده؟",
+          "reason": "شاخه خاص اصلاح۱۶مه۲۰۲۶است.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-ca-mx-2026"
+          ]
+        },
+        {
+          "id": "knowledge_transfer",
+          "answer_id": "mx.iam28_temporary_resident_knowledge_transfer",
+          "question": "نامه، برنامه انتقال دانش/آموزش کارکنان مکزیکی برای کاهش وابستگی را تعهد می‌کند؟",
+          "reason": "این شاخه صرف دعوت معمول یا پیشنهاد استخدام نیست.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-ca-mx-2026"
+          ]
+        },
+        {
+          "id": "non_employment",
+          "answer_id": "mx.iam28_temporary_resident_non_employment",
+          "question": "اعلام عدم رابطه استخدامی تابع، عدم جابه‌جایی نیروی بومی و نبود پرداخت داخل مکزیک ارائه می‌شود؟",
+          "reason": "این شاخه با استخدام حقوق‌بگیر داخلی متفاوت است.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-ca-mx-2026"
+          ]
+        },
+        {
+          "id": "expertise",
+          "answer_id": "mx.iam28_temporary_resident_expertise",
+          "question": "مدارک تخصص، دانش فنی و تجربه لازم پروژه را داری؟",
+          "reason": "دعوت بدون اثبات تخصص کافی فرض نمی‌شود.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-ca-mx-2026"
+          ]
+        },
+        {
+          "id": "host_responsibility",
+          "answer_id": "mx.iam28_temporary_resident_host_responsibility",
+          "question": "تعهد همبسته معیشت و بازگشت و شناسه امضاکننده مجاز را داری؟",
+          "reason": "میزبان مسئولیت‌های مشخص دارد.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-ca-mx-2026"
+          ]
+        },
+        {
+          "id": "consular_location",
+          "answer_id": "mx.iam28_temporary_resident_consular_location",
+          "question": "در نمایندگی خارج ایران که برای این نوع ویزا مرجع صالح است، حضور شخصی و اقامت قانونیِ لازم را اثبات می‌کنی؟",
+          "reason": "در کشور غیرتابعیت، اقامت قانونی لازم است؛ پذیرش این نوع ویزا در تهران از این برش خارج است.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-mx-2025"
+          ]
+        },
+        {
+          "id": "card_after_entry",
+          "answer_id": "mx.iam28_temporary_resident_card_after_entry",
+          "question": "برای گرفتن کارت اقامت ظرف۳۰روز پس از ورود آماده‌ای؟",
+          "reason": "ویزای ورود جای کارت اقامت نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-mx-2026"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "mx:temporary-resident-work",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "استخدام عادی با مجوز اولیهINMبرای اقامت موقت بیش‌از۱۸۰روز؛ درخواست کنسولی خارج ایران، بدون همراه؛ پروژه تخصصی راهبردی خارج برش.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. اگر حرفه تنظیم‌شده نیست، کنترل صلاحیت حرفه‌ای فقط تأیید بی‌نیازی معتبر است. Trámite10برای≤۱۸۰روز visitorکار است و در این برش اقامت موقت نیست. پذیرش تهران هنوزunknown.",
+      "costs_fa": "هزینهٔ کامل جاری و مخارج جانبی تأیید نشده.",
+      "cost_source_ids": [],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ شروط همراه و حق کار او در این برش تأیید نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "work_employer",
+          "answer_id": "mx.iam28_temporary_resident_work_work_employer",
+          "question": "کارفرما در INM ثبت شده و پیشنهاد کارِ معتبر داری؟",
+          "reason": "کارفرما آغازگر مجوزِ پیشنهاد شغلی است.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-mx-2025"
+          ]
+        },
+        {
+          "id": "work_offer_details",
+          "answer_id": "mx.iam28_temporary_resident_work_work_offer_details",
+          "question": "نامهٔ پیشنهاد مدت، شغل، همه نشانی‌ها، حالت حضوری/دورکار/ترکیبی و مبلغ و تناوب حقوق دارد؟",
+          "reason": "اصلاح۱۶مه۲۰۲۶ جزئیات نامه را افزوده.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-mx-2026"
+          ]
+        },
+        {
+          "id": "work_professional_license",
+          "answer_id": "mx.iam28_temporary_resident_work_work_professional_license",
+          "question": "حرفه نیاز به مجوز/اعتبار حرفه‌ای ندارد، یا اگر تنظیم‌شده است مجوز/اعتبار مستقل لازم را گرفته‌ای؟",
+          "reason": "دو وضعیت جایگزین‌اند؛ ویزای کار به‌تنهایی تأیید صلاحیت حرفه‌ای نیست.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-mx-2026"
+          ]
+        },
+        {
+          "id": "inm_authorization",
+          "answer_id": "mx.iam28_temporary_resident_work_inm_authorization",
+          "question": "مجوز اولیهINMدر مهلت اعتبار۳۰روزکاری برای مرحله کنسولی داری؟",
+          "reason": "قبولی کارفرما یا شماره پرونده به‌تنهایی ویزای صادرشده نیست.",
+          "action": "مدرک متناسب همین شرط را آماده و بررسی کن.",
+          "source_ids": [
+            "iam28-ca-mx-2025"
+          ]
+        },
+        {
+          "id": "consular_location",
+          "answer_id": "mx.iam28_temporary_resident_work_consular_location",
+          "question": "در نمایندگی خارج ایران که برای این نوع ویزا مرجع صالح است، حضور شخصی و اقامت قانونیِ لازم را اثبات می‌کنی؟",
+          "reason": "در کشور غیرتابعیت، اقامت قانونی لازم است؛ پذیرش این نوع ویزا در تهران از این برش خارج است.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-mx-2025"
+          ]
+        },
+        {
+          "id": "card_after_entry",
+          "answer_id": "mx.iam28_temporary_resident_work_card_after_entry",
+          "question": "برای گرفتن کارت اقامت ظرف۳۰روز پس از ورود آماده‌ای؟",
+          "reason": "ویزای ورود جای کارت اقامت نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-mx-2026"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ec:work-visa",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "درخواست اولیه داخل اکوادور با وضعیت قانونی برای کار استخدامیِ خصوصی/عمومی و متقاضی اصلی بدون همراه.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. همه انواع خوداشتغالی/حرفه‌ای مستقل نیست؛ جزئیات کامل Acuerdo70و استثناهای مدارک مستقل هنوز پوشش کامل نیست.",
+      "costs_fa": "۵۰دلار درخواست +۲۷۰دلار صدور؛ تخفیف۶۵سالبه‌بالا۵۰٪ و معلولیت حداقل۳۰٪ با کارت وزارت بهداشت اکوادور۱۰۰٪ طبق صفحه؛ مخارج مدارک/بیمه جدا.",
+      "cost_source_ids": [
+        "iam28-ca-ec-work"
+      ],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ رابطه/حق کار همراه در این برش بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "work_contract",
+          "answer_id": "ec.iam28_work_visa_work_contract",
+          "question": "قرارداد استخدامی خصوصی یا حکم پرسنلی بخش عمومی داری؟",
+          "reason": "اصل مبنای کار این صفحه است.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        },
+        {
+          "id": "work_registered",
+          "answer_id": "ec.iam28_work_visa_work_registered",
+          "question": "گواهی ثبت قرارداد وزارت کار داری؟",
+          "reason": "قراردادِ تنها کافی نیست.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        },
+        {
+          "id": "work_employer_clearance",
+          "answer_id": "ec.iam28_work_visa_work_employer_clearance",
+          "question": "کارفرما گواهی نداشتن بدهی SRI، IESS و Superintendencia مربوط دارد؟",
+          "reason": "مدارک انطباق کارفرما مطالبه می‌شود.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        },
+        {
+          "id": "legal_presence",
+          "answer_id": "ec.iam28_work_visa_legal_presence",
+          "question": "اکنون داخل اکوادور با وضعیت قانونی معتبر و گذرنامه باحداقل۶ماه اعتبار هستی؟",
+          "reason": "این برش فقط تسلیم داخلی آنلاین eVISAS را بررسی می‌کند؛ ورود آینده ایرانی از آن نتیجه نمی‌شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        },
+        {
+          "id": "criminal_documents",
+          "answer_id": "ec.iam28_work_visa_criminal_documents",
+          "question": "گواهی کیفریِ لازمِ بالای۱۸سال، از مبدا/اقامت۵سال اخیر، با اعتبار و تصدیق/ترجمه مقرر آماده است؟",
+          "reason": "صفحه خدمت اعتبار۱۸۰روز و مدارک سن/سابقه اقامت را توضیح می‌دهد؛ برای افراد مشمول معافیت همان قاعده اجرا شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        },
+        {
+          "id": "lawful_means",
+          "answer_id": "ec.iam28_work_visa_lawful_means",
+          "question": "مدرک وسایل معیشت قانونیِ خواسته‌شده در صفحه خدمت را داری؟",
+          "reason": "صفحه به Acuerdo70/2024 ارجاع می‌دهد؛ جزئیات کامل آن مقرره و همه استثناها در این برش تأیید نشده است.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ec:pensioner-visa",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "درخواست داخلی اولیهٔ فرد بالغ بدون همراه، بر پایه مستمری خارجی و وضعیت قانونی فعلی در اکوادور.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. SBUسال درخواست باید با مرجع جاری محاسبه شود؛ این بسته مبلغ ثابت دلاری نمی‌دهد.",
+      "costs_fa": "۵۰دلار درخواست +۲۷۰دلار صدور؛ تخفیف۶۵سالبه‌بالا۵۰٪ و معلولیت حداقل۳۰٪ با کارت وزارت بهداشت اکوادور۱۰۰٪ طبق صفحه؛ مخارج مدارک/بیمه جدا.",
+      "cost_source_ids": [
+        "iam28-ca-ec-pension"
+      ],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ رابطه/حق کار همراه در این برش بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "pension_foreign_certificate",
+          "answer_id": "ec.iam28_pensioner_visa_pension_foreign_certificate",
+          "question": "گواهی مستمری نهاد دولتی/خصوصی خارجی با تصدیق قانونی لازم داری؟",
+          "reason": "منبع مستمری و سند رسمی لازم است؛ درآمد اشتغال یا موجودی حساب جای مستمری نیست.",
+          "action": "مدرک همین شرط را با توجه به شاخه بررسی کن.",
+          "source_ids": [
+            "iam28-ca-ec-pension"
+          ]
+        },
+        {
+          "id": "pension_threshold",
+          "answer_id": "ec.iam28_pensioner_visa_pension_threshold",
+          "question": "گواهی مستمریِ خارجیِ تأییدشده حداقل۳برابرSBUماهانه داری؟",
+          "reason": "مبلغ باید بر اساس SBU معتبر محاسبه شود.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-ec-pension"
+          ]
+        },
+        {
+          "id": "pension_insurance",
+          "answer_id": "ec.iam28_pensioner_visa_pension_insurance",
+          "question": "بیمه معتبر در اکوادور برای کل اعتبار ویزا داری؟",
+          "reason": "پوشش کامل مدت شرط مستقل است.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-ec-pension"
+          ]
+        },
+        {
+          "id": "legal_presence",
+          "answer_id": "ec.iam28_pensioner_visa_legal_presence",
+          "question": "اکنون داخل اکوادور با وضعیت قانونی معتبر و گذرنامه باحداقل۶ماه اعتبار هستی؟",
+          "reason": "این برش فقط تسلیم داخلی آنلاین eVISAS را بررسی می‌کند؛ ورود آینده ایرانی از آن نتیجه نمی‌شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        },
+        {
+          "id": "criminal_documents",
+          "answer_id": "ec.iam28_pensioner_visa_criminal_documents",
+          "question": "گواهی کیفریِ لازمِ بالای۱۸سال، از مبدا/اقامت۵سال اخیر، با اعتبار و تصدیق/ترجمه مقرر آماده است؟",
+          "reason": "صفحه خدمت اعتبار۱۸۰روز و مدارک سن/سابقه اقامت را توضیح می‌دهد؛ برای افراد مشمول معافیت همان قاعده اجرا شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        },
+        {
+          "id": "lawful_means",
+          "answer_id": "ec.iam28_pensioner_visa_lawful_means",
+          "question": "مدرک وسایل معیشت قانونیِ خواسته‌شده در صفحه خدمت را داری؟",
+          "reason": "صفحه به Acuerdo70/2024 ارجاع می‌دهد؛ جزئیات کامل آن مقرره و همه استثناها در این برش تأیید نشده است.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ec:rentista-visa",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "فقط درخواست اولیه داخلیِ فرد بالغ بدون همراه با درآمد شخصی از خارج اکوادور و وضعیت قانونی فعلی.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. منبع خارجی، حوزه مشترک دو قسمت صفحه است؛ تفسیر منبع داخلی هنوزunknown. سرمایه حساب به‌تنهایی درآمد ماهانه نیست.",
+      "costs_fa": "۵۰دلار درخواست +۲۷۰دلار صدور؛ تخفیف۶۵سالبه‌بالا۵۰٪ و معلولیت حداقل۳۰٪ با کارت وزارت بهداشت اکوادور۱۰۰٪ طبق صفحه؛ مخارج مدارک/بیمه جدا.",
+      "cost_source_ids": [
+        "iam28-ca-ec-rentista"
+      ],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ رابطه/حق کار همراه در این برش بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "rentista_foreign_evidence",
+          "answer_id": "ec.iam28_rentista_visa_rentista_foreign_evidence",
+          "question": "قرارداد اجاره/اسناد سرمایه‌گذاری یا مدرک معتبرِ عواید شخصی قانونیِ خارجی را داری؟",
+          "reason": "این برش درآمد داخلی را به‌سبب تفاوت مقدمه و متن شروط نمی‌پذیرد.",
+          "action": "مدرک همین شرط را با توجه به شاخه بررسی کن.",
+          "source_ids": [
+            "iam28-ca-ec-rentista"
+          ]
+        },
+        {
+          "id": "rentista_income",
+          "answer_id": "ec.iam28_rentista_visa_rentista_income",
+          "question": "مدارک معتبر درآمد قانونی ماهانه حداقل۳SBU از اجاره/سرمایه یا منبع پذیرفته‌شده داری؟",
+          "reason": "صرف داشتن سرمایه، درآمد ماهانه را ثابت نمی‌کند.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-ec-rentista"
+          ]
+        },
+        {
+          "id": "rentista_insurance",
+          "answer_id": "ec.iam28_rentista_visa_rentista_insurance",
+          "question": "بیمه کل اعتبار اقامت با پوشش اکوادور داری؟",
+          "reason": "بیمه شرط مستقل است.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-ec-rentista"
+          ]
+        },
+        {
+          "id": "legal_presence",
+          "answer_id": "ec.iam28_rentista_visa_legal_presence",
+          "question": "اکنون داخل اکوادور با وضعیت قانونی معتبر و گذرنامه باحداقل۶ماه اعتبار هستی؟",
+          "reason": "این برش فقط تسلیم داخلی آنلاین eVISAS را بررسی می‌کند؛ ورود آینده ایرانی از آن نتیجه نمی‌شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        },
+        {
+          "id": "criminal_documents",
+          "answer_id": "ec.iam28_rentista_visa_criminal_documents",
+          "question": "گواهی کیفریِ لازمِ بالای۱۸سال، از مبدا/اقامت۵سال اخیر، با اعتبار و تصدیق/ترجمه مقرر آماده است؟",
+          "reason": "صفحه خدمت اعتبار۱۸۰روز و مدارک سن/سابقه اقامت را توضیح می‌دهد؛ برای افراد مشمول معافیت همان قاعده اجرا شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        },
+        {
+          "id": "lawful_means",
+          "answer_id": "ec.iam28_rentista_visa_lawful_means",
+          "question": "مدرک وسایل معیشت قانونیِ خواسته‌شده در صفحه خدمت را داری؟",
+          "reason": "صفحه به Acuerdo70/2024 ارجاع می‌دهد؛ جزئیات کامل آن مقرره و همه استثناها در این برش تأیید نشده است.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ec:investor-visa",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "فقط شاخه سپردهٔ بانکی درخواست موقت داخلی، متقاضی اصلی بالغ بدون همراه با وضعیت قانونی اکوادور.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. صدبرابرSBUشرط سپرده است؛ به قراردادهای دولتی تعمیم داده نشد.",
+      "costs_fa": "۵۰دلار درخواست +۲۷۰دلار صدور؛ تخفیف۶۵سالبه‌بالا۵۰٪ و معلولیت حداقل۳۰٪ با کارت وزارت بهداشت اکوادور۱۰۰٪ طبق صفحه؛ مخارج مدارک/بیمه جدا.",
+      "cost_source_ids": [
+        "iam28-ca-ec-investor"
+      ],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ رابطه/حق کار همراه در این برش بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "deposit_amount",
+          "answer_id": "ec.iam28_investor_visa_deposit_amount",
+          "question": "سپرده سرمایه‌گذاری حداقل۱۰۰SBU روزِ مبنا را به نام خودت اثبات می‌کنی؟",
+          "reason": "بودجه هنوز سرمایه‌گذاری‌نشده جای سپرده نیست.",
+          "action": "مدرک همین شرط را با توجه به شاخه بررسی کن.",
+          "source_ids": [
+            "iam28-ca-ec-investor"
+          ]
+        },
+        {
+          "id": "deposit_term",
+          "answer_id": "ec.iam28_investor_visa_deposit_term",
+          "question": "مدت سپرده حداقل۷۳۰روز است؟",
+          "reason": "مدت شرط مستقلِ همین شاخه است.",
+          "action": "مدرک همین شرط را با توجه به شاخه بررسی کن.",
+          "source_ids": [
+            "iam28-ca-ec-investor"
+          ]
+        },
+        {
+          "id": "deposit_institution",
+          "answer_id": "ec.iam28_investor_visa_deposit_institution",
+          "question": "سپرده نزد بانک یا نهاد مجازِ تحت نظارت مربوط و ثبت/گواهی لازم مستند است؟",
+          "reason": "هر سپرده خارجی یا نهاد خارج از نظارت، مشمول این شرح نیست.",
+          "action": "مدرک همین شرط را با توجه به شاخه بررسی کن.",
+          "source_ids": [
+            "iam28-ca-ec-investor"
+          ]
+        },
+        {
+          "id": "legal_presence",
+          "answer_id": "ec.iam28_investor_visa_legal_presence",
+          "question": "اکنون داخل اکوادور با وضعیت قانونی معتبر و گذرنامه باحداقل۶ماه اعتبار هستی؟",
+          "reason": "این برش فقط تسلیم داخلی آنلاین eVISAS را بررسی می‌کند؛ ورود آینده ایرانی از آن نتیجه نمی‌شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        },
+        {
+          "id": "criminal_documents",
+          "answer_id": "ec.iam28_investor_visa_criminal_documents",
+          "question": "گواهی کیفریِ لازمِ بالای۱۸سال، از مبدا/اقامت۵سال اخیر، با اعتبار و تصدیق/ترجمه مقرر آماده است؟",
+          "reason": "صفحه خدمت اعتبار۱۸۰روز و مدارک سن/سابقه اقامت را توضیح می‌دهد؛ برای افراد مشمول معافیت همان قاعده اجرا شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        },
+        {
+          "id": "lawful_means",
+          "answer_id": "ec.iam28_investor_visa_lawful_means",
+          "question": "مدرک وسایل معیشت قانونیِ خواسته‌شده در صفحه خدمت را داری؟",
+          "reason": "صفحه به Acuerdo70/2024 ارجاع می‌دهد؛ جزئیات کامل آن مقرره و همه استثناها در این برش تأیید نشده است.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ec:digital-nomad-visa",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "درخواست داخلی اولیهٔ دورکار با وضعیت قانونی فعلی اکوادور، متقاضی اصلی بدون همراه؛ صفحه همه ملیت‌ها را می‌پذیرد.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. آستانه مالی۳SBUماهانه۳ماه یا۳۶SBUسالانه دو بدیل‌اند؛ صرف موجودی بانکی کافی نیست. نامحدودبودن ملیتِ این برنامه، معافیت ورود نیست.",
+      "costs_fa": "۵۰دلار درخواست +۲۷۰دلار صدور؛ تخفیف۶۵سالبه‌بالا۵۰٪ و معلولیت حداقل۳۰٪ با کارت وزارت بهداشت اکوادور۱۰۰٪ طبق صفحه؛ مخارج مدارک/بیمه جدا.",
+      "cost_source_ids": [
+        "iam28-ca-ec-nomad"
+      ],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ رابطه/حق کار همراه در این برش بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "nomad_foreign_work",
+          "answer_id": "ec.iam28_digital_nomad_visa_nomad_foreign_work",
+          "question": "اشتغال/خدمات از راه دور برای خارج یا مالکیت شرکت ثبت‌شده خارجی را اثبات می‌کنی؟",
+          "reason": "کار محلی را نباید به این شاخه بدل کرد.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-ec-nomad"
+          ]
+        },
+        {
+          "id": "nomad_income",
+          "answer_id": "ec.iam28_digital_nomad_visa_nomad_income",
+          "question": "درآمد خارجی۳SBUماهانه در۳ماه گذشته یا۳۶SBUدرسال را با صورت‌حساب ثابت می‌کنی؟",
+          "reason": "دو مبنای درآمدند؛ سرمایه بانکی تنها جای درآمد نیست.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-ec-nomad"
+          ]
+        },
+        {
+          "id": "nomad_insurance",
+          "answer_id": "ec.iam28_digital_nomad_visa_nomad_insurance",
+          "question": "بیمه با پوشش اکوادور در کل مدت اقامت داری؟",
+          "reason": "اعتبار بیمه شرط جداست.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-ec-nomad"
+          ]
+        },
+        {
+          "id": "legal_presence",
+          "answer_id": "ec.iam28_digital_nomad_visa_legal_presence",
+          "question": "اکنون داخل اکوادور با وضعیت قانونی معتبر و گذرنامه باحداقل۶ماه اعتبار هستی؟",
+          "reason": "این برش فقط تسلیم داخلی آنلاین eVISAS را بررسی می‌کند؛ ورود آینده ایرانی از آن نتیجه نمی‌شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        },
+        {
+          "id": "criminal_documents",
+          "answer_id": "ec.iam28_digital_nomad_visa_criminal_documents",
+          "question": "گواهی کیفریِ لازمِ بالای۱۸سال، از مبدا/اقامت۵سال اخیر، با اعتبار و تصدیق/ترجمه مقرر آماده است؟",
+          "reason": "صفحه خدمت اعتبار۱۸۰روز و مدارک سن/سابقه اقامت را توضیح می‌دهد؛ برای افراد مشمول معافیت همان قاعده اجرا شود.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        },
+        {
+          "id": "lawful_means",
+          "answer_id": "ec.iam28_digital_nomad_visa_lawful_means",
+          "question": "مدرک وسایل معیشت قانونیِ خواسته‌شده در صفحه خدمت را داری؟",
+          "reason": "صفحه به Acuerdo70/2024 ارجاع می‌دهد؛ جزئیات کامل آن مقرره و همه استثناها در این برش تأیید نشده است.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-ec-work"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "ec:permanent-residence",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "فقط شاخهٔ زمانیِ متقاضی اصلی بالغ بدون همراه با بیش‌از۲۱ماه کامل اقامت موقت پیوسته و وضعیت معتبر داخل اکوادور.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. هیچ قاعده خودکار برای روز دقیق۲۱ماه یا جمع غیبت‌ها ساخته نشده. همه مبانی دیگر دائم و حق همراه خارج حوزه‌اند.",
+      "costs_fa": "۵۰دلار درخواست +۲۲۵دلار صدور؛ تخفیف‌های سن/معلولیت طبق صفحه، مخارج جانبی جدا.",
+      "cost_source_ids": [
+        "iam28-ca-ec-pr"
+      ],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ رابطه/حق کار همراه در این برش بررسی نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "continuous_more_than_21",
+          "answer_id": "ec.iam28_permanent_residence_continuous_more_than_21",
+          "question": "در حوزه این برش، بیش‌از۲۱ماه کامل اقامت موقت پیوستهٔ مستند داری؟",
+          "reason": "این برش عمداً فقط بیش‌از۲۱ماه را می‌سنجد؛ واجدبودن دقیقاً در مرز۲۱ماه از تفاوت عنوان/متن صفحه حل نشده.",
+          "action": "مدرک همین شرط را با توجه به شاخه بررسی کن.",
+          "source_ids": [
+            "iam28-ca-ec-pr"
+          ]
+        },
+        {
+          "id": "pr_before_expiry",
+          "answer_id": "ec.iam28_permanent_residence_pr_before_expiry",
+          "question": "پیش از انقضای وضعیت معتبر درخواست می‌دهی؟",
+          "reason": "مهلت و وضعیت قانونی جداست.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-ec-pr"
+          ]
+        },
+        {
+          "id": "pr_underlying_basis",
+          "answer_id": "ec.iam28_permanent_residence_pr_underlying_basis",
+          "question": "مدارک استمرار شرط اقامت موقت مبنا را داری؟",
+          "reason": "صرف گذشت زمان، تمام شروط را اثبات نمی‌کند.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-ec-pr"
+          ]
+        },
+        {
+          "id": "ec_pr_legal_presence",
+          "answer_id": "ec.iam28_permanent_residence_ec_pr_legal_presence",
+          "question": "با گذرنامهٔ دارای حداقل شش ماه اعتبار و وضعیت قانونی، پیش از انقضا از داخل اکوادور درخواست می‌دهی؟",
+          "reason": "صفحه فرایند eVISAS و استمرار وضعیت قانونی را می‌خواهد.",
+          "action": "مدرک همین شرط را با توجه به شاخه بررسی کن.",
+          "source_ids": [
+            "iam28-ca-ec-pr"
+          ]
+        },
+        {
+          "id": "ec_pr_background",
+          "answer_id": "ec.iam28_permanent_residence_ec_pr_background",
+          "question": "گواهی کیفری صادرشده در اکوادور برای متقاضی بالغ را داری؟",
+          "reason": "چک‌لیست این شاخه گواهی داخلی می‌خواهد؛ اسناد کشور خارجی از چک‌لیست کار بی‌دلیل به آن اضافه نشده.",
+          "action": "مدرک همین شرط را با توجه به شاخه بررسی کن.",
+          "source_ids": [
+            "iam28-ca-ec-pr"
+          ]
+        },
+        {
+          "id": "lawful_means",
+          "answer_id": "ec.iam28_permanent_residence_lawful_means",
+          "question": "وسایل معیشت قانونی را با مدارک مورد قبولِ این شاخه اثبات می‌کنی؟",
+          "reason": "فهرست الزامی اقامت دائم، اثبات معیشت قانونی را مستقل از استمرار مبنای اقامت موقت با ارجاع به Acuerdo70/2024 می‌خواهد. تمام استثناهای آن مقرره در این برش حل نشده‌اند.",
+          "action": "مدرک منابع و معیشت قانونی را طبق فهرست اقامت دائم آماده کن و استثنای احتمالی را جدا تأیید کن.",
+          "source_ids": [
+            "iam28-ca-ec-pr"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "pa:qualified-investor",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "متقاضی اصلی بدون همراه؛ سه شاخه جایگزین سرمایه‌گذار واجدشرایط بر اساس صفحه جاری MICI، با امکان اقدام وکیل از خارج.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. ازخارج با وکیل می‌توان اقدام کرد؛ ورود خودکار نیست. تاریخ اجرای تمام تغییرات اخیرDecreto17و هزینه کامل unknown؛ آستانه صفحه قدیمیPROPANAMA استفاده نشد.",
+      "costs_fa": "هزینهٔ کامل جاری و مخارج جانبی تأیید نشده.",
+      "cost_source_ids": [],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ شروط همراه و حق کار او در این برش پذیرفته نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "qualified_branch_amount",
+          "answer_id": "pa.iam28_qualified_investor_qualified_branch_amount",
+          "question": "دست‌کم یکی را داری: ملک۳۰۰هزارUSD، بورس مجاز۵۰۰هزارUSD، یا سپرده بانک مجاز۷۵۰هزارUSD؟",
+          "reason": "فقط آستانه شاخه انتخابی لازم است؛ سه سرمایه‌گذاری همزمان لازم نیست.",
+          "action": "مدارک متناسب همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-mici"
+          ]
+        },
+        {
+          "id": "qualified_foreign_funds",
+          "answer_id": "pa.iam28_qualified_investor_qualified_foreign_funds",
+          "question": "منبع خارجی سرمایه و زنجیره انتقال/مالک نهایی را اثبات می‌کنی؟",
+          "reason": "صرف داشتن بودجه یا مالکیت صوری کافی نیست.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-pa-mici"
+          ]
+        },
+        {
+          "id": "qualified_hold",
+          "answer_id": "pa.iam28_qualified_investor_qualified_hold",
+          "question": "تعهد نگهداری۵سال، تأیید سالانه و حضور دست‌کم یک‌بار در۲سال را رعایت می‌کنی؟",
+          "reason": "MICI استمرار سرمایه و حضور را مطالبه می‌کند.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-pa-mici"
+          ]
+        },
+        {
+          "id": "qualified_branch_proof",
+          "answer_id": "pa.iam28_qualified_investor_qualified_branch_proof",
+          "question": "ثبت ملک/قرارداد و تضمین مجاز، کارگزار دارایمجوز یا گواهی بانکِ مربوط را داری؟",
+          "reason": "هر شاخه سند مستقل دارد.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-pa-mici"
+          ]
+        },
+        {
+          "id": "authorized_entry",
+          "answer_id": "pa.iam28_qualified_investor_authorized_entry",
+          "question": "اگر در این مرحله سفر می‌کنی، مجوز ورود یا استثنای شخصیِ معتبر داری؛ یا فعلاً با وکیل از خارج درخواست را آغاز می‌کنی؟",
+          "reason": "ایران visa autorizada می‌خواهد. ویزای معتبرِ کانادا/آمریکا/استرالیا/کره/ژاپن/بریتانیا/سنگاپور/EU و USPRطبق منبع شاخه‌های جایگزین‌اند؛ هر اقامت ثالث کافی نیست. امکان شروع پرونده با وکیل از خارج، جای اجازهٔ ورود پیش از سفر را نمی‌گیرد؛ در شروع پروندهٔ خارج، ورودِ بالفعل شرط این کنترل نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-entry",
+            "iam28-ca-pa-mici"
+          ]
+        },
+        {
+          "id": "travel_documents",
+          "answer_id": "pa.iam28_qualified_investor_travel_documents",
+          "question": "اگر اکنون قصد ورود داری، گذرنامهٔ حداقل سه‌ماه، ادامهٔ سفر و وسیلهٔ مالی ورود آماده‌اند؛ یا فعلاً پرونده با وکیل از خارج آغاز می‌شود؟",
+          "reason": "سفارت حداقل پایه۵۰۰بالـبوا را ذکر می‌کند؛ صدور اقامت جای مجوز ورود نیست. مدارک هنگام ورود به مرحلهٔ شروع پرونده از خارج تعمیم داده نمی‌شوند؛ پیش از سفر باید دوباره احراز شوند.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-entry",
+            "iam28-ca-pa-mici"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "pa:pensionado-jubilado",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "فقط متقاضی اصلی بدون همراه با مستمری مادام‌العمر دولت خارجی حداقل۱۰۰۰بالـبوا؛ تخفیف ملک و تجمیع همسر خارج این برش.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. شاخه‌های خصوصی، استثنای۷۵۰با ملک، جمع مستمری همسران و فرزندان مشمول، مستقلاً معتبرند ولی این برش آنها را نپذیرفته؛ خارج‌بودن از برش یعنی پوشش ناقص، نه نامناسب‌بودن.",
+      "costs_fa": "هزینهٔ کامل جاری و مخارج جانبی تأیید نشده.",
+      "cost_source_ids": [],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ شروط همراه و حق کار او در این برش پذیرفته نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "government_pension",
+          "answer_id": "pa.iam28_pensionado_jubilado_government_pension",
+          "question": "مستمری را دولت خارجی می‌پردازد و گواهی رسمی آن را داری؟",
+          "reason": "این برش شرکت خصوصی و صندوق خصوصی را بررسی نمی‌کند.",
+          "action": "مدارک متناسب همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-pension"
+          ]
+        },
+        {
+          "id": "lifetime_pension",
+          "answer_id": "pa.iam28_pensionado_jubilado_lifetime_pension",
+          "question": "گواهی رسمی، مادام‌العمر بودن مستمری را نشان می‌دهد؟",
+          "reason": "سن بازنشستگی یا پرداخت موقت، خودبه‌خود این شرط را ثابت نمی‌کند.",
+          "action": "مدارک متناسب همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-pension"
+          ]
+        },
+        {
+          "id": "pension_amount",
+          "answer_id": "pa.iam28_pensionado_jubilado_pension_amount",
+          "question": "مستمری ماهانه حداقل۱۰۰۰بالـبوا یا معادل ارز خارجی است؟",
+          "reason": "در این برش کاهش۷۵۰با ملک یا جمع مستمری دو همسر اعمال نمی‌شود.",
+          "action": "مدارک متناسب همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-pension"
+          ]
+        },
+        {
+          "id": "authorized_entry",
+          "answer_id": "pa.iam28_pensionado_jubilado_authorized_entry",
+          "question": "برای ورود پاناما مجوز لازم ایران را گرفته‌ای یا یکی از استثناهای دقیقِ سند معتبر را داری؟",
+          "reason": "ایران visa autorizada می‌خواهد. ویزای معتبرِ کانادا/آمریکا/استرالیا/کره/ژاپن/بریتانیا/سنگاپور/EU و USPRطبق منبع شاخه‌های جایگزین‌اند؛ هر اقامت ثالث کافی نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-entry"
+          ]
+        },
+        {
+          "id": "travel_documents",
+          "answer_id": "pa.iam28_pensionado_jubilado_travel_documents",
+          "question": "گذرنامه باحداقل۳ماه اعتبار، ادامه سفر و وسیله مالی ورود را داری؟",
+          "reason": "سفارت حداقل پایه۵۰۰بالـبوا را ذکر می‌کند؛ صدور اقامت جای مجوز ورود نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-entry"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "pa:solvencia-economica",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "فقط درخواست اولیه۲ساله با ملک شخصی مستقیم و بدون رهن؛ متقاضی اصلی بدون همراه، سپس امکان درخواست دائم با شروط جدا.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. درخواست اولیه دائم مستقیم نیست. سپرده مستقل، ترکیبی، بنیاد/شرکت، رهن مازاد و مرحله دائم در این برش نیستند.",
+      "costs_fa": "فرم‌ها۲۵۰بالـبوا خزانه+۸۰۰بالـبوا سپرده بازگشت را می‌خواهند؛ کل هزینه/معافیت هر فرد جدا است.",
+      "cost_source_ids": [
+        "iam28-ca-pa-property"
+      ],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ شروط همراه و حق کار او در این برش پذیرفته نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "property_threshold",
+          "answer_id": "pa.iam28_solvencia_economica_property_threshold",
+          "question": "ارزش ملک واجدشاخه حداقل۳۰۰هزاربالـبوا است؟",
+          "reason": "حداقل داراییِ سرمایه‌گذاری‌شده لازم است، نه صرف بودجه.",
+          "action": "مدارک متناسب همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-property"
+          ]
+        },
+        {
+          "id": "property_registered_ownership",
+          "answer_id": "pa.iam28_solvencia_economica_property_registered_ownership",
+          "question": "ثبت عمومی ملک به نام شخصی خودت و آزادبودن از وثیقه مستند است؟",
+          "reason": "بنیاد/شرکت و تأمین مالیِ مازاد، شاخه‌های استثنایی خارج این برش‌اند.",
+          "action": "مدارک متناسب همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-property"
+          ]
+        },
+        {
+          "id": "property_foreign_funds",
+          "answer_id": "pa.iam28_solvencia_economica_property_foreign_funds",
+          "question": "مدارک نشان می‌دهند وجوه سرمایه‌گذاری از خارج آمده‌اند؟",
+          "reason": "تأمین سرمایه خارجی شرط مستقل است.",
+          "action": "مدارک متناسب همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-property"
+          ]
+        },
+        {
+          "id": "authorized_entry",
+          "answer_id": "pa.iam28_solvencia_economica_authorized_entry",
+          "question": "برای ورود پاناما مجوز لازم ایران را گرفته‌ای یا یکی از استثناهای دقیقِ سند معتبر را داری؟",
+          "reason": "ایران visa autorizada می‌خواهد. ویزای معتبرِ کانادا/آمریکا/استرالیا/کره/ژاپن/بریتانیا/سنگاپور/EU و USPRطبق منبع شاخه‌های جایگزین‌اند؛ هر اقامت ثالث کافی نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-entry"
+          ]
+        },
+        {
+          "id": "travel_documents",
+          "answer_id": "pa.iam28_solvencia_economica_travel_documents",
+          "question": "گذرنامه باحداقل۳ماه اعتبار، ادامه سفر و وسیله مالی ورود را داری؟",
+          "reason": "سفارت حداقل پایه۵۰۰بالـبوا را ذکر می‌کند؛ صدور اقامت جای مجوز ورود نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-entry"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "pa:married-to-panamanian",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "درخواست اولیه۲ساله با ازدواج قانونی و زندگی مشترک واقعی با شهروند پاناما؛ متقاضی اصلی، بدون همراه اضافه.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. معافیت مصاحبه با۲فرزند مشترک در اختیارSNMاست، نه حق خودکار. مرحله دائم پس از۲سال و بیوه/طلاق با فرزند در این برش ارزیابی نمی‌شوند.",
+      "costs_fa": "فرم۲۵۰بالـبوا خزانه می‌خواهد؛ سایر هزینه‌ها احراز نشده.",
+      "cost_source_ids": [
+        "iam28-ca-pa-marriage"
+      ],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ شروط همراه و حق کار او در این برش پذیرفته نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "marriage_real_cohabitation",
+          "answer_id": "pa.iam28_married_to_panamanian_marriage_real_cohabitation",
+          "question": "ازدواج ثبت احوال و زندگی مشترک واقعی و مستمر با همسر پانامایی داری؟",
+          "reason": "صرف گواهی ازدواج کافی نیست.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-pa-marriage"
+          ]
+        },
+        {
+          "id": "marriage_sponsor_documents",
+          "answer_id": "pa.iam28_married_to_panamanian_marriage_sponsor_documents",
+          "question": "سند تولد/هویت همسر، تعهد محضری مسئولیت/بازگرداندن و مدرک منزل مشترک داری؟",
+          "reason": "مدارک حامی و نشانی لازم‌اند.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-pa-marriage"
+          ]
+        },
+        {
+          "id": "marriage_interview",
+          "answer_id": "pa.iam28_married_to_panamanian_marriage_interview",
+          "question": "آماده مصاحبه و بررسی واقعیت رابطه هستید؟",
+          "reason": "SNM می‌تواند با۲فرزند مشترک پانامایی معاف کند؛ معافیت خودکار نیست.",
+          "action": "شاخه و مدارک مرتبط را مشخص کن؛ مورد نامعلوم نیازمند بررسی است.",
+          "source_ids": [
+            "iam28-ca-pa-marriage"
+          ]
+        },
+        {
+          "id": "authorized_entry",
+          "answer_id": "pa.iam28_married_to_panamanian_authorized_entry",
+          "question": "برای ورود پاناما مجوز لازم ایران را گرفته‌ای یا یکی از استثناهای دقیقِ سند معتبر را داری؟",
+          "reason": "ایران visa autorizada می‌خواهد. ویزای معتبرِ کانادا/آمریکا/استرالیا/کره/ژاپن/بریتانیا/سنگاپور/EU و USPRطبق منبع شاخه‌های جایگزین‌اند؛ هر اقامت ثالث کافی نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-entry"
+          ]
+        },
+        {
+          "id": "travel_documents",
+          "answer_id": "pa.iam28_married_to_panamanian_travel_documents",
+          "question": "گذرنامه باحداقل۳ماه اعتبار، ادامه سفر و وسیله مالی ورود را داری؟",
+          "reason": "سفارت حداقل پایه۵۰۰بالـبوا را ذکر می‌کند؛ صدور اقامت جای مجوز ورود نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-entry"
+          ]
+        }
+      ]
+    },
+    {
+      "route_id": "pa:work-permit",
+      "version": "primary-conditions-americas-2026-10-28-1",
+      "scope_fa": "فقط برش اقامت استخدامیSNMدر شاخهMarrakechبرای دارنده مجوزکار معتبرMITRADEL؛ شرکت باکمتر۱۰کارمند پانامایی، متقاضی اصلی بدون همراه. این برش اخذ اولیه خودِ مجوزکار را ارزیابی نمی‌کند.",
+      "limits_fa": "پوشش محدود شروط اولیه همین برش؛ پاسخ مثبت احراز تمام شروط یا تضمین صدور نیست. این ماژول همه مجوزهای کار یا کل قانون کار نیست. مشاغل محفوظ اتباع، شرایط کاملMITRADELو اثر آخرین اصلاحات باید جدا احراز شوند؛ تایید چک‌هایSNMحق کار بی‌قید ایجاد نمی‌کند.",
+      "costs_fa": "در این فرم‌ها۲۵۰بالـبواخزانه+۸۰۰بالـبواSNM؛ هزینه و قواعد MITRADEL جدا تأیید نشده.",
+      "cost_source_ids": [
+        "iam28-ca-pa-work-marrakech"
+      ],
+      "dependants_fa": "متقاضی اصلی بدون همراه؛ شروط همراه و حق کار او در این برش پذیرفته نشده است.",
+      "dependant_source_ids": [],
+      "checks": [
+        {
+          "id": "marrakech_employer",
+          "answer_id": "pa.iam28_work_permit_marrakech_employer",
+          "question": "شرکت استخدام‌کننده کمتر از۱۰کارمند پانامایی و مبنایMarrakechرا مستند می‌کند؟",
+          "reason": "این شرط به همه کارفرمایان پاناما تعمیم داده نمی‌شود.",
+          "action": "مدارک متناسب همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-work-marrakech"
+          ]
+        },
+        {
+          "id": "marrakech_salary",
+          "answer_id": "pa.iam28_work_permit_marrakech_salary",
+          "question": "حقوق قراردادی ماهانه حداقل۱۰۰۰بالـبوا است؟",
+          "reason": "آستانه مختص این شاخه است.",
+          "action": "مدارک متناسب همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-work-marrakech"
+          ]
+        },
+        {
+          "id": "marrakech_contract",
+          "answer_id": "pa.iam28_work_permit_marrakech_contract",
+          "question": "قرارداد تأییدشده وزارت کار و نامه کارفرمای امضاشده داری؟",
+          "reason": "پیشنهاد غیررسمی جای قرارداد تأییدشده نیست.",
+          "action": "مدارک متناسب همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-work-marrakech"
+          ]
+        },
+        {
+          "id": "marrakech_work_permit",
+          "answer_id": "pa.iam28_work_permit_marrakech_work_permit",
+          "question": "مجوزکار و کارت آن مطابق فرم ارائه می‌شود؟",
+          "reason": "این فرم اقامت، جای خودِ صدور مجوزکارMITRADELنیست.",
+          "action": "مدارک متناسب همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-work-marrakech"
+          ]
+        },
+        {
+          "id": "marrakech_company_social",
+          "answer_id": "pa.iam28_work_permit_marrakech_company_social",
+          "question": "ثبت شرکت، مجوز فعالیت، تسویه مالیاتی و عضویت بیمه اجتماعی لازم را داری؟",
+          "reason": "مدارک کارفرما/بیمه در درخواست اولیه مطالبه می‌شوند.",
+          "action": "مدارک متناسب همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-work-marrakech"
+          ]
+        },
+        {
+          "id": "authorized_entry",
+          "answer_id": "pa.iam28_work_permit_authorized_entry",
+          "question": "برای ورود پاناما مجوز لازم ایران را گرفته‌ای یا یکی از استثناهای دقیقِ سند معتبر را داری؟",
+          "reason": "ایران visa autorizada می‌خواهد. ویزای معتبرِ کانادا/آمریکا/استرالیا/کره/ژاپن/بریتانیا/سنگاپور/EU و USPRطبق منبع شاخه‌های جایگزین‌اند؛ هر اقامت ثالث کافی نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-entry"
+          ]
+        },
+        {
+          "id": "travel_documents",
+          "answer_id": "pa.iam28_work_permit_travel_documents",
+          "question": "گذرنامه باحداقل۳ماه اعتبار، ادامه سفر و وسیله مالی ورود را داری؟",
+          "reason": "سفارت حداقل پایه۵۰۰بالـبوا را ذکر می‌کند؛ صدور اقامت جای مجوز ورود نیست.",
+          "action": "مدرک متناسب با همین شاخه را بررسی و آماده کن.",
+          "source_ids": [
+            "iam28-ca-pa-entry"
+          ]
+        }
+      ]
+    }
+  ]
+}
