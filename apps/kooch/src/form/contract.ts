@@ -20,6 +20,7 @@ const extra = (q: Partial<Question> & Pick<Question, 'id' | 'title' | 'help' | '
 });
 export const formQuestions: Question[] = [
   { ...choice('goal'), priority: 'important' },
+  ...['job_offer', 'admission', 'family_connection', 'remote_work', 'business_plan', 'investment_basis'].map(id => ({ ...choice(id), priority: 'important' as const })),
   extra({ id: 'age_exact', title: 'سن دقیق تو چند سال است؟', help: 'بازهٔ قطب‌نما برای شرط‌های سنی کافی نیست؛ سن را به سال کامل وارد کن. این پاسخ خوداظهاری است.', input: 'number', unit: 'years', min: 0, max: 120, integer: true }),
   choice('education'),
   extra({ id: 'study_level', title: 'برای کدام مقطع می‌خواهی اقدام کنی؟', help: 'برای مرتبط‌ماندن سؤال‌های آماده‌سازی تحصیل؛ شرایط هر مسیر جداگانه بررسی می‌شوند.', input: 'choice', depends_on: ['goal'], options: [

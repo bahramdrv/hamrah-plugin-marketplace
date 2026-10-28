@@ -18,7 +18,7 @@ test('the full destination catalog and an Australian study route reach the inter
   const response = await api.POST(post({ goal: 'study', destinations: ['au'] }));
   assert.equal(response.status, 200);
   const result = await response.json();
-  assert.equal(result.interview.next_question.id, 'au.admission');
+  assert.equal(result.interview.next_question.id, 'admission');
   assert.ok(result.routes.some((route: { id: string }) => route.id === 'au:student-au'));
   assert.equal(result.routes[0].coverage, 'catalog_research_required');
   assert.equal(result.official_eligibility, 'not_assessed');

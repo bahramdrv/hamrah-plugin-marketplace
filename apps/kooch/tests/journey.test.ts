@@ -16,8 +16,8 @@ test('a work interview asks the decisive route prerequisite before general profi
   const start = await result({});
   assert.equal(start.interview.next_question.id, 'goal');
   const work = await result({ goal: 'work', destinations: ['de'] });
-  assert.equal(work.interview.next_question.id, 'de.job_offer');
-  assert.equal(work.interview.next_question.kind, 'fact');
+  assert.equal(work.interview.next_question.id, 'job_offer');
+  assert.equal(work.interview.next_question.kind, 'base');
   const answered = await result({ goal: 'work', destinations: ['de'], facts: { 'de.job_offer': 'no' } });
   assert.equal(answered.interview.next_question.id, 'work');
   assert.equal(answered.guidance.main_action, 'ابتدا پیشنهاد کار تخصصی از کارفرمای آلمانی پیدا کن.');

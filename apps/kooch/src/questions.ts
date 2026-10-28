@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { isFactId, goalLabels } from './policy';
+import { sharedPrerequisites } from './shared-prerequisites';
 
 const unknown = ['unknown', 'نمی‌دانم'] as const;
 const options = (items: readonly (readonly [string, string])[]) => [...items, unknown].map(([value, label]) => ({ value, label }));
@@ -12,16 +13,24 @@ export const questions = [
   { id: 'budget', title: 'بودجهٔ اولیه‌ات چقدر است؟', help: 'مقدار و ارز را با هم بنویس. تبدیل ارز یا تأیید تمکن انجام نمی‌دهیم.', options: [] },
   { id: 'destinations', title: 'کدام مقصدها را ترجیح می‌دهی؟', help: 'چند مقصد را انتخاب کن یا بدون ترجیح ادامه بده. کشورها و قلمروهای کاتالوگ را جست‌وجو کن؛ پوشش شرایط اقدام در هر مسیر جدا مشخص می‌شود.', options: [] },
   { id: 'timeline', title: 'برای شروع چه زمانی در نظر داری؟', help: 'برای ترتیب آماده‌سازی؛ این پاسخ زمان صدور ویزا را پیش‌بینی نمی‌کند.', options: options([['under-6', 'کمتر از شش ماه'], ['6-12', 'شش تا دوازده ماه'], ['over-12', 'بیشتر از یک سال']]) },
+  ...Object.entries(sharedPrerequisites).map(([id, definition]) => ({ id, title: definition.title, help: definition.help, options: [{ value: 'none', label: 'خیر، در هیچ کشوری ندارم' }, { value: 'some', label: 'بله، دارم' }, { value: 'unknown', label: 'هنوز مطمئن نیستم' }] })),
+  { id: 'job_offer_countries', title: 'از کدام کشورها پیشنهاد کار داری؟', help: 'کشورهای پیشنهادهای فعلی‌ات را ثبت کن؛ این فهرست، ترجیح مقصد نیست و اعتبار پیشنهاد را تأیید نمی‌کند.', options: [] },
+  { id: 'admission_countries', title: 'از کدام کشورها پذیرش تحصیلی داری؟', help: 'کشورهای پذیرش‌های فعلی را ثبت کن؛ شرایط مؤسسه، دوره و مدرک بعداً جدا بررسی می‌شوند.', options: [] },
 ];
 const choice = (id: string) => z.enum(questions.find(q => q.id === id)!.options.map(o => o.value) as [string, ...string[]]).default('unknown');
 export const answersSchema = z.object({
   goal: choice('goal'), age: choice('age'), education: choice('education'), work: choice('work'), language: choice('language'), timeline: choice('timeline'),
+  job_offer: z.enum(['none', 'some', 'unknown']).default('unknown'), admission: z.enum(['none', 'some', 'unknown']).default('unknown'),
+  family_connection: z.enum(['none', 'some', 'unknown']).default('unknown'), remote_work: z.enum(['none', 'some', 'unknown']).default('unknown'),
+  business_plan: z.enum(['none', 'some', 'unknown']).default('unknown'), investment_basis: z.enum(['none', 'some', 'unknown']).default('unknown'),
+  job_offer_countries: z.array(z.string().regex(/^[a-z]{2}$/)).max(10).refine(a => new Set(a).size === a.length).nullable().default(null),
+  admission_countries: z.array(z.string().regex(/^[a-z]{2}$/)).max(10).refine(a => new Set(a).size === a.length).nullable().default(null),
   budget: z.object({ amount: z.number().finite().min(0).max(1e15), currency: z.enum(['EUR', 'USD', 'CAD', 'AUD', 'GBP', 'IRR', 'IRT']) }).strict().nullable().default(null),
   focus_route: z.string().regex(/^[a-z]{2}:[a-z0-9]+(?:-[a-z0-9]+)*$/).max(150).nullable().default(null),
   destinations: z.array(z.string().regex(/^[a-z]{2}$/)).max(10).refine(a => new Set(a).size === a.length).default([]),
   fact_versions: z.record(z.string(), z.string().min(1).max(100)).refine(value => Object.keys(value).every(k => isFactId(k))).default({}),
   facts: z.record(z.string(), z.enum(['yes', 'no', 'unknown'])).refine(value => Object.keys(value).every(k => isFactId(k))).default({}),
-  answered: z.array(z.enum(['goal', 'age', 'education', 'work', 'language', 'budget', 'destinations', 'timeline'])).max(8).refine(a => new Set(a).size === a.length).default([]),
+  answered: z.array(z.enum(['goal', 'age', 'education', 'work', 'language', 'budget', 'destinations', 'timeline', 'job_offer', 'admission', 'family_connection', 'remote_work', 'business_plan', 'investment_basis', 'job_offer_countries', 'admission_countries'])).max(16).refine(a => new Set(a).size === a.length).default([]),
 }).strict();
 export type Answers = z.infer<typeof answersSchema>;
 export const emptyAnswers = answersSchema.parse({});

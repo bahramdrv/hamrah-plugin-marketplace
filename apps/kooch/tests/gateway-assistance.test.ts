@@ -8,7 +8,7 @@ import { formView } from '../src/form/workflow';
 import { answersSchema } from '../src/questions';
 import { acceptanceFingerprint } from '../src/ai/policy';
 
-const view = () => formView({ id: 'private-case', revision: 7, answers: answersSchema.parse({ goal: 'study' }), step: 2, consent_version: 'account-save-1', last_activity_at: '2026-10-18T00:00:00Z', delete_after: '2027-01-16T00:00:00Z' });
+const view = () => formView({ id: 'private-case', revision: 7, answers: answersSchema.parse({ goal: 'study', admission: 'some' }), step: 2, consent_version: 'account-save-1', last_activity_at: '2026-10-18T00:00:00Z', delete_after: '2027-01-16T00:00:00Z' });
 
 test('the unaccepted deployed policy cannot read credentials, touch the ledger or contact a provider', async () => {
   const pool = new pg.Pool({ connectionString: 'postgres://invalid.invalid/never' });
@@ -215,7 +215,7 @@ test('the owner-scoped form continues after its daily AI allowance is spent and 
   const h = await harness(undefined, assist, ledger);
   try {
     const alice = await h.verifiedClient(), bob = await h.verifiedClient();
-    await alice.request('case', saveInput()); await bob.request('case', saveInput());
+    await alice.request('case', { ...saveInput(), answers: { goal: 'study', admission: 'some' } }); await bob.request('case', { ...saveInput(), answers: { goal: 'study', admission: 'some' } });
     const first = await (await alice.request('form')).json();
     assert.equal(first.question_assistance.status, 'worded');
     assert.equal(first.question_assistance.daily_request_limit, 1);

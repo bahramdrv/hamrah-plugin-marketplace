@@ -8,7 +8,7 @@ import { createAccountApi } from '../../src/account/api';
 import { AuthProvider } from '../../src/account/auth';
 import { AccountStore } from '../../src/account/store';
 import { ReportAccess } from '../../src/membership/store';
-export async function harness(now: () => Date = () => new Date(), questionAssistance?: QuestionAssistance, accounting?: AiBudgetLedger, answerInterpretation?: AnswerInterpretation, evidenceReview?: (client?: PoolClient) => Promise<EvidenceReview>, poolOptions: { max?: number; connectionTimeoutMillis?: number } = {}, reportExplanation?: import('../../src/ai/report-explanation').ReportExplanation, membership = false) {
+export async function harness(now: () => Date = () => new Date(), questionAssistance?: QuestionAssistance, accounting?: AiBudgetLedger, answerInterpretation?: AnswerInterpretation, evidenceReview?: (client?: PoolClient) => Promise<EvidenceReview>, poolOptions: { max?: number; connectionTimeoutMillis?: number } = {}, reportExplanation?: import('../../src/ai/report-explanation').ReportExplanation, membership = false, interview: { interviewPlanner?: import('../../src/ai/interview-planner').InterviewPlanner; interviewResult?: (answers: import('../../src/questions').Answers) => Promise<ReturnType<typeof import('../../src/api').evaluateCompass>> } = {}) {
   const pool = new pg.Pool({ connectionString: process.env.KOOCH_DATABASE_URL, ...poolOptions });
   const auth = new AuthProvider({ url: process.env.KOOCH_AUTH_URL!, serviceKey: process.env.KOOCH_AUTH_SERVICE_KEY!, origin: 'http://127.0.0.1:3100' });
   // Independent fixture keys prevent unrelated tests sharing the global rate bucket.
@@ -18,7 +18,7 @@ export async function harness(now: () => Date = () => new Date(), questionAssist
   }, evidenceReview);
   await store.validateRole();
   const reportAccess = membership ? new ReportAccess(pool, randomBytes(32).toString('hex'), 'kooch_test_bot', now) : undefined;
-  const api = createAccountApi({ store, auth, origin: 'http://127.0.0.1:3100', mode: 'local', questionAssistance, accounting, answerInterpretation, reportExplanation, reportAccess });
+  const api = createAccountApi({ store, auth, origin: 'http://127.0.0.1:3100', mode: 'local', questionAssistance, accounting, answerInterpretation, reportExplanation, reportAccess, ...interview });
   const clients: ReturnType<typeof client>[] = [];
   function client() {
     let cookie = '';

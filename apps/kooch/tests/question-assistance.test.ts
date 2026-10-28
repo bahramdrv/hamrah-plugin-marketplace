@@ -6,7 +6,7 @@ import { answersSchema } from '../src/questions';
 import { formQuestions } from '../src/form/contract';
 import arvanEnvelope from './fixtures/arvan-wording-envelope.json';
 
-const view = () => formView({ id: 'private-case', revision: 7, answers: answersSchema.parse({ goal: 'study', age: 'under-30' }), step: 2, consent_version: 'account-save-1', last_activity_at: '2026-10-18T00:00:00Z', delete_after: '2027-01-16T00:00:00Z' });
+const view = () => formView({ id: 'private-case', revision: 7, answers: answersSchema.parse({ goal: 'study', admission: 'some', age: 'under-30' }), step: 2, consent_version: 'account-save-1', last_activity_at: '2026-10-18T00:00:00Z', delete_after: '2027-01-16T00:00:00Z' });
 
 test('zero budget does not invoke any transport and immediately preserves the fixed next question', async () => {
   let calls = 0;

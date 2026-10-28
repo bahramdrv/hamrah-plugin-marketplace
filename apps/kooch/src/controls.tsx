@@ -10,7 +10,7 @@ export function Budget({ amount, currency, changeAmount, changeCurrency }: { amo
   return <div className="budget"><label>مقدار<input name="budgetAmount" type="text" inputMode="decimal" maxLength={22} placeholder="مثلاً ۱۵۰۰۰" value={amount} onChange={e => changeAmount(e.target.value)} /></label>
     <label>ارز<select value={currency} onChange={e => changeCurrency(e.target.value)}>{[['EUR', 'یورو'], ['USD', 'دلار آمریکا'], ['CAD', 'دلار کانادا'], ['AUD', 'دلار استرالیا'], ['GBP', 'پوند بریتانیا'], ['IRR', 'ریال'], ['IRT', 'تومان']].map(([code, name]) => <option key={code} value={code}>{name}</option>)}</select></label></div>;
 }
-export function Destinations({ countries, value, onChange }: { countries: CompassConfig['countries']; value: Answers['destinations']; onChange: (v: string[]) => void }) {
+export function Destinations({ countries, value, onChange, inventory = false }: { countries: CompassConfig['countries']; value: Answers['destinations']; onChange: (v: string[]) => void; inventory?: boolean }) {
   const [query, setQuery] = useState(''); const [all, setAll] = useState(false);
   const normalize = (text: string) => text.toLowerCase().replaceAll('ي', 'ی').replaceAll('ك', 'ک');
   const matching = Object.entries(countries).filter(([code, c]) => normalize(`${code} ${c.name} ${c.official_name ?? ''}`).includes(normalize(query))).sort(([a], [b]) => Number(value.includes(b)) - Number(value.includes(a)) || countries[a].name.localeCompare(countries[b].name, 'fa'));
@@ -21,6 +21,6 @@ export function Destinations({ countries, value, onChange }: { countries: Compas
     <input type="checkbox" checked={value.includes(code)} disabled={!value.includes(code) && value.length >= 10} onChange={e => onChange(e.target.checked ? [...value, code] : value.filter(c => c !== code))} />{country.flag} {country.name}
   </label>)}</div>
     {!query && !all && matching.length > shown.length && <button type="button" className="text-button" onClick={() => setAll(true)}>نمایش همهٔ مقصدها</button>}
-    {value.length ? <button type="button" className="text-button" onClick={e => { e.preventDefault(); onChange([]); }}>پاک‌کردن انتخاب مقصدها</button> : <button type="submit" className="text-button">هنوز نمی‌دانم / بدون ترجیح</button>}
+    {value.length ? <button type="button" className="text-button" onClick={e => { e.preventDefault(); onChange([]); }}>پاک‌کردن انتخاب مقصدها</button> : <button type="submit" className="text-button">{inventory ? 'کشور را هنوز مشخص نکرده‌ام' : 'هنوز نمی‌دانم / بدون ترجیح'}</button>}
   </>;
 }

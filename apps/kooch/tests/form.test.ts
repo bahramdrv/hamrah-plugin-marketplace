@@ -15,14 +15,14 @@ test('an explicitly unknown guest answer is reused and family intake omits unrel
     await c.request('case', { ...saveInput(1), answers: { goal: 'family' } });
     const family = await (await c.request('form')).json();
     assert.ok(!family.questions.some((q: any) => ['work_years', 'age_exact', 'study_level', 'education', 'language'].includes(q.id)));
-    assert.equal(family.next_question.id, 'timeline');
+    assert.equal(family.next_question.id, 'family_connection');
   } finally { await h.close(); }
 });
 test('saved compass answers are reused and the next question exposes a versioned exact input without AI', { skip: !enabled }, async () => {
   const h = await harness();
   try {
     const c = await h.verifiedClient();
-    await c.request('case', { ...saveInput(), answers: { goal: 'study', age: 'under-30', education: 'bachelor', language: 'learning', budget: { amount: 12000, currency: 'EUR' } } });
+    await c.request('case', { ...saveInput(), answers: { goal: 'study', admission: 'some', age: 'under-30', education: 'bachelor', language: 'learning', budget: { amount: 12000, currency: 'EUR' } } });
     const response = await c.request('form');
     assert.equal(response.status, 200);
     assert.equal(response.headers.get('cache-control'), 'no-store');
@@ -46,7 +46,7 @@ test('editing guest budget reopens only dependent finance answers and preserves 
   const h = await harness();
   try {
     const c = await h.verifiedClient();
-    await c.request('case', { ...saveInput(), answers: { goal: 'study', age: 'under-30', language: 'certified', budget: { amount: 10000, currency: 'GBP' } } });
+    await c.request('case', { ...saveInput(), answers: { goal: 'study', admission: 'some', age: 'under-30', language: 'certified', budget: { amount: 10000, currency: 'GBP' } } });
     await c.request('form', answerInput(1, 'age_exact', 27));
     await c.request('form', answerInput(2, 'language_exam', 'ielts'));
     await c.request('form', answerInput(3, 'uk_student_funds_held_days', 28));
@@ -62,7 +62,7 @@ test('editing guest budget reopens only dependent finance answers and preserves 
 test('answers are validated, saved once across retries and resumed after signout; stale answers never overwrite a newer revision', { skip: !enabled }, async () => {
   const h = await harness();
   try {
-    const c = await h.verifiedClient(); await c.request('case', { ...saveInput(), answers: { goal: 'study', age: 'under-30' } });
+    const c = await h.verifiedClient(); await c.request('case', { ...saveInput(), answers: { goal: 'study', admission: 'some', age: 'under-30' } });
     const input = answerInput(1, 'age_exact');
     assert.equal((await c.request('form', { ...input, question_version: 99 })).status, 409);
     assert.equal((await c.request('form', { ...input, answer: { state: 'known', value: 27.5 } })).status, 400);
@@ -89,7 +89,7 @@ test('answers are validated, saved once across retries and resumed after signout
 test('conflicts precede missing information and editing an upstream answer reopens dependent answers', { skip: !enabled }, async () => {
   const h = await harness();
   try {
-    const c = await h.verifiedClient(); await c.request('case', { ...saveInput(), answers: { goal: 'study', age: 'under-30' } });
+    const c = await h.verifiedClient(); await c.request('case', { ...saveInput(), answers: { goal: 'study', admission: 'some', age: 'under-30' } });
     let form = await (await c.request('form', answerInput(1, 'age_exact', 38))).json();
     assert.equal(form.next_question.id, 'age_exact');
     assert.deepEqual(form.review_required, ['age_exact']);
@@ -159,7 +159,7 @@ test('saving an answer automatically returns the next fixed question with zero-b
   const h = await harness();
   try {
     const c = await h.verifiedClient();
-    await c.request('case', { ...saveInput(), answers: { goal: 'study', age: 'under-30' } });
+    await c.request('case', { ...saveInput(), answers: { goal: 'study', admission: 'some', age: 'under-30' } });
     const first = await (await c.request('form')).json();
     assert.equal(first.question_assistance.status, 'budget_zero');
     const response = await c.request('form', answerInput(first.revision, first.next_question.id));
@@ -187,7 +187,7 @@ test('a simulated response for an older revision cannot replace the current ques
   const h = await harness(undefined, assistance);
   try {
     const c = await h.verifiedClient();
-    await c.request('case', { ...saveInput(), answers: { goal: 'study', age: 'under-30' } });
+    await c.request('case', { ...saveInput(), answers: { goal: 'study', admission: 'some', age: 'under-30' } });
     const delayed = c.request('form');
     await waiting;
     const updated = await (await c.request('form', answerInput(1, 'age_exact'))).json();

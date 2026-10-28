@@ -11,6 +11,7 @@ import { routeReadiness, routeAvailability, focusedReadinessQuestions } from './
 import { catalogSchema, catalogPolicy, catalogSummary, type DiscoveryRoute } from './catalog';
 import { screenPersonalRoutes } from './personal-screening';
 import { screeningProfile, type ScreeningProfile } from './profile-constraints';
+import { projectSharedFacts, sharedAbsence } from './shared-prerequisites';
 
 const response = (body: unknown, status = 200) => Response.json(body, { status, headers: { 'Cache-Control': 'no-store' } });
 
@@ -59,6 +60,8 @@ export function createCompassApi(options: { snapshot: unknown; catalog?: unknown
 
 
 export function evaluateCompass(answers: Answers, options: { snapshot: unknown; catalog?: unknown; readiness?: unknown; blockedRouteIds?: readonly string[]; now?: () => Date; profile?: ScreeningProfile }) {
+    const submittedAnswers = answers;
+    answers = projectSharedFacts(answers, Object.keys(countries));
     const now = options.now ?? (() => new Date());
     const monitorCatalog = catalogSchema.safeParse(options.catalog);
     options = { ...options, blockedRouteIds: [...new Set([...(options.blockedRouteIds ?? []), ...(monitorCatalog.success ? [...(monitorCatalog.data.source_monitor?.blocked_route_ids ?? []), ...(monitorCatalog.data.official_supplement_conflicts ?? [])] : [])])] };
@@ -157,10 +160,12 @@ export function evaluateCompass(answers: Answers, options: { snapshot: unknown; 
     const focusedPolicy = focusedRecord ? catalogPolicy(focusedRecord) : null;
     const focusAllowed = Boolean(focusedRecord && iranContext(focusedRecord, catalog!, now()).ordinary && !(readiness.success && routeAvailability(readiness.data, focusedRecord.id, now())));
     const focusPolicy = focusAllowed ? focusedPolicy : null;
-    const focusedChecks = readiness.success && focusAllowed ? focusedReadinessQuestions(readiness.data, answers.focus_route) : [];
+    const sharedGateMissing = focusedPolicy?.requires.some(id => sharedAbsence(submittedAnswers, id));
+    const focusedChecks = readiness.success && focusAllowed && !sharedGateMissing ? focusedReadinessQuestions(readiness.data, answers.focus_route) : [];
     for (const route of routes) {
       const detail = routeReadiness(readinessInput, route.id, answers.facts, now(), answers.fact_versions, options.profile ?? screeningProfile(answers));
       if (detail) { route.readiness = detail; route.next_step = detail.next_action?.detail ?? 'موارد ثبت‌شده را با مدارک و مرجع رسمی تطبیق بده؛ پاسخ خوداظهاری، تأیید احراز شرایط نیست.'; }
+      if (routePolicies[route.id]?.requires.some(id => sharedAbsence(submittedAnswers, id))) route.next_step = 'طبق پاسخ مشترک، ابتدا پیش‌نیاز فعلی این مسیر را آماده کن؛ اکنون لازم نیست جزئیات وابسته را پاسخ بدهی. مسیرهای مستقل همچنان بررسی می‌شوند.';
     }
     const prerequisiteIds = catalog ? [...new Set([...(focusPolicy?.requires ?? []), ...focusedChecks.map(check => check.answer_id), ...routes.flatMap(r => routePolicies[r.id].requires)])] : [...new Set(relevant.flatMap(r => policies[r.id].requires))];
     const unknowns = questions.filter(q => q.id === 'budget' ? answers.budget === null : q.id === 'destinations' ? !answers.destinations.length : answers[q.id as keyof Answers] === 'unknown').map(q => q.title);
@@ -176,9 +181,9 @@ export function evaluateCompass(answers: Answers, options: { snapshot: unknown; 
     const focusedReadiness = focusAllowed ? routeReadiness(readinessInput, answers.focus_route!, answers.facts, now(), answers.fact_versions, options.profile ?? screeningProfile(answers)) : null;
     const reviewAnswers = focusedReadiness?.checks.filter(check => ['answer_version_changed', 'profile_answer_conflict'].includes(check.state_reason)).map(check => check.answer_id) ?? [];
     const derivedFacts = Object.fromEntries((focusedReadiness?.checks ?? []).filter(check => check.state_reason === 'profile_criterion').map(check => [check.answer_id, check.state === 'reported_ready' ? 'yes' as const : 'no' as const]));
-    const journey = buildJourney({ ...answers, facts: { ...answers.facts, ...derivedFacts } }, routes.map(r => r.id), status, prerequisiteIds, routePolicies, reviewAnswers);
+    const journey = buildJourney({ ...submittedAnswers, facts: { ...submittedAnswers.facts, ...derivedFacts } }, routes.map(r => r.id), status, prerequisiteIds, routePolicies, reviewAnswers);
     const focusReadiness = routes.find(route => route.id === answers.focus_route)?.readiness;
-    if (focusReadiness?.next_action) journey.guidance.main_action = focusReadiness.next_action.detail;
+    if (focusReadiness?.next_action && !sharedGateMissing) journey.guidance.main_action = focusReadiness.next_action.detail;
     for (const question of journey.interview.questions) {
       const check = focusedChecks.find(check => check.answer_id === question.id);
       if (check) { question.title = check.question; question.help = check.reason; question.answer_version = focusedReadiness?.version; }

@@ -5,6 +5,7 @@ import { readinessDefinitionsFor, readinessSchema } from './readiness-registry';
 import { routeReadiness } from './route-readiness';
 import type { Answers } from './questions';
 import { screeningProfile, type ScreeningProfile } from './profile-constraints';
+import { sharedAbsence } from './shared-prerequisites';
 
 export const screeningLabels = {
   reported_checks_ready: 'موارد بررسی‌شده با پاسخ تو سازگارند',
@@ -47,6 +48,12 @@ export function screenPersonalRoutes(answers: Answers, input: unknown, now: Date
       status = detail.needs_review ? 'needs_source_review' : detail.counts.action_needed ? 'preparation_needed' : detail.counts.needs_information ? 'needs_information' : 'reported_checks_ready';
       reasons = [`دامنهٔ این بررسی: ${detail.scope}`, detail.limitations, ...detail.checks.map(check => `${check.question} ${check.state_reason === 'profile_criterion' ? check.state === 'reported_ready' ? 'معیار با مشخصات خوداظهاری تو سازگار است.' : 'مشخصات ثبت‌شده این معیار را برآورده نمی‌کند؛ دامنه و استثناهای شرط را بررسی کن.' : check.state === 'reported_ready' ? 'پاسخ تو: بله.' : check.state === 'action_needed' ? 'پاسخ تو: خیر؛ آماده‌سازی لازم است.' : check.state === 'needs_information' ? 'پاسخ تو هنوز روشن نیست.' : 'منبع یا نسخهٔ پاسخ نیازمند بازبینی است.'}`)];
       missingInformation = detail.checks.filter(check => check.state !== 'reported_ready').map(check => check.question);
+      const absent = policy?.requires.filter(id => sharedAbsence(answers, id)) ?? [];
+      if (absent.length) {
+        if (!detail.needs_review) status = 'preparation_needed';
+        reasons.unshift('طبق پاسخ مشترک تو، پیش‌نیاز فعلی این مسیر هنوز فراهم نیست؛ ابتدا آن را آماده کن. این به معنی بسته‌بودن مسیر نیست.');
+        missingInformation.unshift(...absent.map(factTitle));
+      }
       reasons.splice(2, 0, context.note);
       if (context.status === 'iran_channel_unknown' || context.review_required) missingInformation.push('پذیرش گذرنامهٔ ایران و محل مجاز درخواست، نیازمند بررسی مستقل و جاری است.');
     } else if (!catalogCurrent || Date.parse(record.source.lastVerified) > now.getTime() || now.getTime() - Date.parse(record.source.lastVerified) > 14 * 86400000) {

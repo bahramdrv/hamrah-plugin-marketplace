@@ -3,10 +3,11 @@ import { formQuestions, type FormState, type Question, type AnswerRecord, type F
 import { canadaFactsSchema, canadaQuestionId } from '../report/canada-policy';
 import { reportFactsSchema } from '../report/contract';
 import { routeQuestionId } from '../report/questions';
+import { updateSharedAnswer, type SharedPrerequisite, type SharedPresence } from '../shared-prerequisites';
 
 export function formRecords(saved: SavedCase): Record<string, AnswerRecord> {
   const records: Record<string, AnswerRecord> = {};
-  for (const id of ['goal', 'education', 'language', 'budget', 'timeline'] as const) {
+  for (const id of ['goal', 'education', 'language', 'budget', 'timeline', 'job_offer', 'admission', 'family_connection', 'remote_work', 'business_plan', 'investment_basis'] as const) {
     const value = saved.answers[id];
     if (value !== null && value !== 'unknown') records[id] = { answer: { state: 'known', value }, question_version: 1, source: 'compass', answered_at: saved.last_activity_at };
     else if (saved.answers.answered?.includes(id)) records[id] = { answer: { state: 'unknown' }, question_version: 1, source: 'compass', answered_at: saved.last_activity_at };
@@ -18,10 +19,16 @@ export function relevantQuestions(records: Record<string, AnswerRecord>, destina
   const value = (id: string) => { const r = records[id]; return r && !r.needs_review && r.answer.state === 'known' ? r.answer.value : undefined; };
   return formQuestions.filter(q => {
     const goal = String(value('goal') ?? 'unknown');
+    if (q.id === 'job_offer') return ['work', 'unknown'].includes(goal);
+    if (q.id === 'admission') return ['study', 'unknown'].includes(goal);
+    if (q.id === 'family_connection') return ['family', 'unknown'].includes(goal);
+    if (q.id === 'remote_work') return ['work', 'unknown'].includes(goal);
+    if (q.id === 'business_plan') return ['business', 'unknown'].includes(goal);
+    if (q.id === 'investment_basis') return ['investment', 'unknown'].includes(goal);
     if (q.id === 'age_exact') return goal === 'study';
     if (['education', 'language', 'language_exam', 'language_score'].includes(q.id) && !['study', 'work', 'unknown'].includes(goal)) return false;
     if (q.id === 'budget' && goal === 'family') return false;
-    if (q.route_id && (value('goal') !== 'study' || (destinations.length > 0 && !destinations.includes(q.route_id.split(':')[0])))) return false;
+    if (q.route_id && (value('admission') === 'none' || value('goal') !== 'study' || (destinations.length > 0 && !destinations.includes(q.route_id.split(':')[0])))) return false;
     if (['passport', 'dependants'].includes(q.id)) return value('goal') === 'study';
     if (q.id === 'ca_study_caq') return value('ca_study_province') === 'quebec';
     if (['ca_study_pal', 'ca_study_pal_expires_on'].includes(q.id)) {
@@ -34,7 +41,7 @@ export function relevantQuestions(records: Record<string, AnswerRecord>, destina
     if (q.id === 'uk_student_atas_issued_on') return value('uk_student_atas') === 'valid_certificate';
     if (q.id === 'uk_student_tb_issued_on') return value('uk_student_tb') === 'valid_certificate';
     if (q.id === 'study_level') return value('goal') === 'study';
-    if (q.id === 'study_offer') return ['bachelor', 'master', 'phd'].includes(String(value('study_level')));
+    if (q.id === 'study_offer') return value('admission') !== 'none' && ['bachelor', 'master', 'phd'].includes(String(value('study_level')));
     if (q.id === 'work_years') return ['work', 'business'].includes(String(value('goal')));
     if (q.id === 'language_exam') return value('language') === 'certified';
     if (q.id === 'language_score') return ['ielts', 'toefl'].includes(String(value('language_exam')));
@@ -91,7 +98,7 @@ export function applyFormAnswer(saved: SavedCase, input: FormInput, now: Date) {
     }
   }
   const entry: AnswerRecord = { answer: input.answer, question_version: input.question_version, source: 'self_reported', answered_at: now.toISOString() };
-  const answers = structuredClone(saved.answers);
+  let answers = structuredClone(saved.answers);
   if (input.question_id === 'age_exact' && input.answer.state === 'known' && typeof input.answer.value === 'number') {
     const range = ageRange(input.answer.value);
     if (answers.age !== 'unknown' && answers.age !== range && !(input.confirm_conflict && previous?.review_reason === 'compass_conflict' && !changed)) {
@@ -106,6 +113,8 @@ export function applyFormAnswer(saved: SavedCase, input: FormInput, now: Date) {
       entry.needs_review = true; entry.review_reason = 'compass_conflict';
     } else answers.work = work === 'not-working' && years > 0 ? 'not-working' : years === 0 ? 'none' : years < 3 ? 'under-3' : '3-plus';
   }
+  if (['job_offer', 'admission', 'family_connection', 'remote_work', 'business_plan', 'investment_basis'].includes(input.question_id)) answers = updateSharedAnswer(answers, input.question_id as SharedPrerequisite, (input.answer.state === 'known' ? input.answer.value : 'unknown') as SharedPresence);
+  if (input.question_id === 'admission' && changed) for (const q of formQuestions.filter(q => q.route_id || q.id === 'study_offer')) if (form.answers[q.id]) form.answers[q.id] = { ...form.answers[q.id], needs_review: true, review_reason: 'dependency_changed' };
   if (['goal', 'education', 'language', 'timeline', 'budget'].includes(input.question_id)) {
     const shared = input.question_id as 'goal' | 'education' | 'language' | 'timeline' | 'budget';
     Object.assign(answers, { [shared]: input.answer.state === 'known' ? input.answer.value : shared === 'budget' ? null : 'unknown' });
@@ -120,9 +129,10 @@ export function reconcileCompass(saved: SavedCase, next: SavedCase['answers']): 
   delete form.draft;
   const changed = (id: keyof SavedCase['answers']) => JSON.stringify(saved.answers[id]) !== JSON.stringify(next[id]);
   const affected = new Set<string>();
-  for (const id of ['goal', 'education', 'language', 'timeline', 'budget'] as const) {
+  for (const id of ['goal', 'education', 'language', 'timeline', 'budget', 'job_offer', 'admission', 'family_connection', 'remote_work', 'business_plan', 'investment_basis'] as const) {
     if (changed(id)) { affected.add(id); delete form.answers[id]; }
   }
+  if (changed('admission')) for (const q of formQuestions) if (q.route_id || q.id === 'study_offer') affected.add(q.id);
   if (changed('age')) affected.add('age_exact');
   if (changed('work')) affected.add('work_years');
   const inScope = (destinations: string[], route: string) => !destinations.length || destinations.includes(route.split(':')[0]);

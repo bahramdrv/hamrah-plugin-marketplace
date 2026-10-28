@@ -44,7 +44,7 @@ test('a person can inspect a route outside the preferred country and purpose wit
   const response = await api.POST(new Request('http://localhost/api/compass', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ goal: 'work', destinations: ['de'], focus_route: 'au:student-au' }) }));
   const result = await response.json();
   assert.equal(result.routes[0].id, 'au:student-au');
-  assert.ok(result.interview.question_order.includes('au.admission'));
+  assert.ok(result.interview.question_order.includes('admission'));
   assert.equal(result.personal_screening.total, catalog.routes.length);
 });
 

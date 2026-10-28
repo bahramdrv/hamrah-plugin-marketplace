@@ -12,6 +12,7 @@ import { AppFooter, AppHeader, CompassGuidance } from './shell';
 import type { InterviewQuestion } from './journey';
 import { CatalogBrowser } from './catalog-browser';
 import { AppIcon } from './icons';
+import { sharedPrerequisites, updateSharedAnswer, updateCountryInventory, type SharedPrerequisite, type SharedPresence } from './shared-prerequisites';
 
 const storageKey = 'kooch.compass.guest.v1';
 type View = 'form' | 'prerequisites' | 'result';
@@ -33,6 +34,8 @@ export function Compass() {
   const [currency, setCurrency] = useState('EUR');
   const [privateCase, setPrivateCase] = useState<SavedCase | null>(null);
   const [accountNotice, setAccountNotice] = useState('');
+  const [useModel, setUseModel] = useState(false);
+  const [planningNotice, setPlanningNotice] = useState('');
   const [undo, setUndo] = useState<{ answers: Answers; step: number; view: View; result: CompassResult | null; amount: string; currency: string; editingPrerequisites: boolean; question: InterviewQuestion | null; plan: CompassResult['interview'] | null } | null>(null);
   const privateMode = useRef(false);
   const revision = useRef(0);
@@ -156,13 +159,20 @@ export function Compass() {
       const response = await compassRequest('/api/compass', { method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(input), cache: 'no-store', signal: controller.signal }, { origin: window.location.origin });
       const body = await response.json();
+      if (privateMode.current && privateCase && useModel && mode === 'interview' && response.ok && body.interview?.next_question) {
+        try {
+          const planned = await accountRequest('interview', { answers: input, case_id: privateCase.id, expected_revision: privateCase.revision, use_model: true });
+          if (planned.response.ok && planned.data.interview) body.interview = planned.data.interview;
+        } catch { /* The local adaptive interview stays usable. */ }
+      }
       if (requestRevision !== revision.current) return;
       if (!response.ok) { setError(body.message ?? 'دریافت نتیجه ناموفق بود.'); return; }
       setEditingPrerequisites(mode === 'edit-prerequisites');
       setResult(body); setPlan(body.interview);
+      setPlanningNotice(body.interview?.selection?.method === 'model' ? 'سؤال بعدی با کمک هوش مصنوعی از سؤال‌های مرتبط انتخاب شد.' : useModel ? 'انتخاب محلیِ سؤال فعال است؛ پاسخ‌های مشترک تکرار نمی‌شوند.' : '');
       const nextQuestion = body.interview.next_question;
       setQuestion(nextQuestion);
-      if (nextQuestion) setStep(Math.max(0, config?.questions.findIndex(q => q.id === nextQuestion.id) ?? 0));
+      if (nextQuestion) setStep(Math.min(7, Math.max(0, config?.questions.findIndex(q => q.id === nextQuestion.id) ?? 0)));
       setView(mode === 'edit-prerequisites' ? 'prerequisites' : mode === 'interview' && nextQuestion ? 'form' : 'result');
     } catch { if (requestRevision === revision.current) setError('دریافت نتیجه ناموفق بود. پاسخ‌هایت حفظ شده‌اند؛ دوباره تلاش کن.'); }
     finally { clearTimeout(timeout); if (requestRevision === revision.current) setBusy(false); }
@@ -178,7 +188,7 @@ export function Compass() {
   const stage = view === 'result' ? 2 : question?.kind === 'fact' || view === 'prerequisites' ? 1 : 0;
   function editQuestion(q: InterviewQuestion) {
     setQuestion(q); setView('form'); setError('');
-    setStep(Math.max(0, config?.questions.findIndex(item => item.id === q.id) ?? 0));
+    setStep(Math.min(7, Math.max(0, config?.questions.findIndex(item => item.id === q.id) ?? 0)));
     if (q.id === 'budget') { setAmount(answers.budget?.amount.toString() ?? ''); setCurrency(answers.budget?.currency ?? 'EUR'); }
   }
   return <div className="app-shell">
@@ -193,15 +203,18 @@ export function Compass() {
         <section className="question-panel" aria-busy={busy}>
           <h1>{view === 'form' ? 'قدم بعدی مهاجرتت را روشن کن.' : 'یک قدم به مسیرهای مرتبط نزدیک‌تر'}</h1>
           <p className="intro">{view === 'form' ? 'چند پاسخ کوتاه، چند مسیر برای بررسی.' : 'فقط پیش‌نیازهایی که به هدف و مقصدت مربوط‌اند.'}</p>
+          {planningNotice && <p className="help" role="status">{planningNotice}</p>}
+          {privateCase && <label className="help"><input type="checkbox" checked={useModel} onChange={e => setUseModel(e.target.checked)} /> کمک هوش مصنوعی برای انتخاب سؤال بعدی</label>}
+          {privateCase && useModel && <p className="help">فقط هدف، وضعیت کلیِ پیش‌نیازها و سؤال‌های مجاز به درگاه آروان فرستاده می‌شوند؛ مبلغ‌ها، مدارک و متن پاسخ‌ها ارسال نمی‌شوند. محل پردازش و نگهداری بالادستی احراز نشده است. در صورت خطا یا رسیدن به سقف مصرف، انتخاب محلی ادامه می‌یابد.</p>}
           {!ready || (!config && !error) ? <p role="status">در حال آماده‌سازی…</p> : view === 'form' && question ? <form onSubmit={e => { e.preventDefault(); next(); }}>
             <fieldset disabled={busy}><legend ref={heading as React.Ref<HTMLLegendElement>} tabIndex={-1}>{question.title}</legend><details className="question-help"><summary>چرا این سؤال؟</summary><p className="help">{question.help}</p></details>
-              {question.id === 'budget' ? <><Budget amount={amount} currency={currency} changeAmount={value => { setAmount(value); update({ ...answers, budget: null }); }} changeCurrency={value => { setCurrency(value); update({ ...answers, budget: null }); }} /><button type="button" className="text-button" onClick={() => { setAmount(''); update({ ...answers, budget: null }); }}>نمی‌دانم / بدون بودجهٔ مشخص</button></> : question.id === 'destinations' ? <Destinations countries={config!.countries} value={answers.destinations} onChange={destinations => update({ ...answers, destinations })} /> : <Choices name={question.id} options={question.options} value={question.kind === 'fact' ? answers.facts[question.id] ?? 'unknown' : String(answers[question.id as keyof Answers])} onChange={value => update(question.kind === 'fact' ? { ...answers, facts: { ...answers.facts, [question.id]: value as 'yes' | 'no' | 'unknown' } } : { ...answers, [question.id]: value })} />}
+              {question.id === 'budget' ? <><Budget amount={amount} currency={currency} changeAmount={value => { setAmount(value); update({ ...answers, budget: null }); }} changeCurrency={value => { setCurrency(value); update({ ...answers, budget: null }); }} /><button type="button" className="text-button" onClick={() => { setAmount(''); update({ ...answers, budget: null }); }}>نمی‌دانم / بدون بودجهٔ مشخص</button></> : ['destinations', 'job_offer_countries', 'admission_countries'].includes(question.id) ? <Destinations key={question.id} countries={config!.countries} inventory={question.id !== 'destinations'} value={question.id === 'destinations' ? answers.destinations : answers[question.id as 'job_offer_countries' | 'admission_countries'] ?? []} onChange={value => update(question.id === 'destinations' ? { ...answers, destinations: value } : updateCountryInventory(answers, question.id as 'job_offer_countries' | 'admission_countries', value))} /> : <Choices name={question.id} options={question.options} value={question.kind === 'fact' ? answers.facts[question.id] ?? 'unknown' : String(answers[question.id as keyof Answers])} onChange={value => update(question.kind === 'fact' ? { ...answers, facts: { ...answers.facts, [question.id]: value as 'yes' | 'no' | 'unknown' } } : Object.hasOwn(sharedPrerequisites, question.id) ? updateSharedAnswer(answers, question.id as SharedPrerequisite, value as SharedPresence) : { ...answers, [question.id]: value })} />}
             </fieldset>
             <div className="actions"><button className="primary" disabled={busy} type="submit">{busy ? 'در حال بررسی…' : 'ثبت پاسخ و ادامه'}<AppIcon name="arrow"/></button><button type="button" className="secondary" disabled={busy} onClick={() => void run('result')}>دیدن خلاصه با همین پاسخ‌ها</button></div>
             <p className="privacy-note">این بررسی، تأیید شرایط یا احتمال ویزا نیست.</p>
             {plan && plan.question_order.indexOf(question.id) > 0 && <button type="button" className="back text-button" disabled={busy} onClick={() => { const input = currentAnswers(); const previous = plan.questions[plan.question_order.indexOf(question.id) - 1]; if (input && previous) { update(input); editQuestion(previous); } }}>→ سؤال قبلی</button>}
           </form> : view === 'prerequisites' ? <div>
-            <h2 ref={heading} tabIndex={-1}>مرور پاسخ‌های تو</h2><dl className="answer-review">{reviewQuestions.map(q => <div key={q.id}><dt>{q.title}</dt><dd><span>{q.kind === 'fact' ? ({ yes: 'بله', no: 'خیر', unknown: 'نمی‌دانم' }[answers.facts[q.id] ?? 'unknown']) : q.id === 'budget' ? answers.budget ? `${answers.budget.amount.toLocaleString('fa-IR')} ${answers.budget.currency}` : 'نامعلوم' : q.id === 'destinations' ? answers.destinations.map(c => config?.countries[c]?.name ?? c).join('، ') || 'بدون ترجیح' : q.options.find(o => o.value === answers[q.id as keyof Answers])?.label ?? 'نامعلوم'}</span><button className="text-button" disabled={busy} onClick={() => editQuestion(q)}>اصلاح<span className="sr-only"> {q.title}</span></button></dd></div>)}</dl>
+            <h2 ref={heading} tabIndex={-1}>مرور پاسخ‌های تو</h2><dl className="answer-review">{reviewQuestions.map(q => <div key={q.id}><dt>{q.title}</dt><dd><span>{q.kind === 'fact' ? ({ yes: 'بله', no: 'خیر', unknown: 'نمی‌دانم' }[answers.facts[q.id] ?? 'unknown']) : q.id === 'budget' ? answers.budget ? `${answers.budget.amount.toLocaleString('fa-IR')} ${answers.budget.currency}` : 'نامعلوم' : q.id === 'destinations' || q.id.endsWith('_countries') ? ((answers[q.id as 'destinations' | 'job_offer_countries' | 'admission_countries'] ?? []).map(c => config?.countries[c]?.name ?? c).join('، ') || (q.id === 'destinations' ? 'بدون ترجیح' : 'کشور نامشخص')) : q.options.find(o => o.value === answers[q.id as keyof Answers])?.label ?? 'نامعلوم'}</span><button className="text-button" disabled={busy} onClick={() => editQuestion(q)}>اصلاح<span className="sr-only"> {q.title}</span></button></dd></div>)}</dl>
             <div className="actions"><button className="primary" disabled={busy} onClick={() => void run('result')}>{busy ? 'در حال بررسی…' : 'دیدن خلاصه و قدم بعدی'}</button><button className="text-button" disabled={busy} onClick={() => { if (plan?.next_question) editQuestion(plan.next_question); else if (reviewQuestions[0]) editQuestion(reviewQuestions[0]); }}>ادامهٔ سؤال‌ها</button></div>
           </div> : null}
           {config && 'error' in config.data && <p className="error" role="status">{config.data.message}</p>}

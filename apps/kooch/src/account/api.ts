@@ -1,4 +1,7 @@
 import { z } from 'zod';
+import { answersSchema, type Answers } from '../questions';
+import type { evaluateCompass } from '../api';
+import type { InterviewPlanner } from '../ai/interview-planner';
 import type { ReportAccess } from '../membership/store';
 import { explanationInput } from '../report/explanation';
 import type { ReportExplanation } from '../ai/report-explanation';
@@ -34,7 +37,7 @@ async function body(request: Request) {
   }
   try { return JSON.parse(Buffer.concat(chunks).toString('utf8')); } catch { throw invalid(); }
 }
-export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; releaseEnvironment?: Readonly<Record<string, string | undefined>>; google?: GoogleOAuth; pilotAi?: () => 'disabled' | 'bounded_arvan'; pilotReportAi?: () => 'not_enabled' | 'bounded_arvan'; questionAssistance?: QuestionAssistance; accounting?: AiBudgetLedger; answerInterpretation?: AnswerInterpretation; reportExplanation?: ReportExplanation; interpretationDisclosure?: import('../ai/question-assistance').AssistedFormView['interpretation_disclosure']; reportAccess?: ReportAccess }) {
+export function createAccountApi(options: { store: AccountStore; auth: AuthProvider; origin: string; mode: 'local' | 'hosted'; releaseEnvironment?: Readonly<Record<string, string | undefined>>; google?: GoogleOAuth; pilotAi?: () => 'disabled' | 'bounded_arvan'; pilotReportAi?: () => 'not_enabled' | 'bounded_arvan'; interviewPlanner?: InterviewPlanner; interviewResult?: (answers: Answers) => Promise<ReturnType<typeof evaluateCompass>>; questionAssistance?: QuestionAssistance; accounting?: AiBudgetLedger; answerInterpretation?: AnswerInterpretation; reportExplanation?: ReportExplanation; interpretationDisclosure?: import('../ai/question-assistance').AssistedFormView['interpretation_disclosure']; reportAccess?: ReportAccess }) {
   const { store, auth } = options;
   const service = serviceRelease({ ...options.releaseEnvironment, KOOCH_ACCOUNT_MODE: options.mode,
     ...(!options.reportAccess ? { KOOCH_MEMBERSHIP_ENABLED: 'false' } : {}) });
@@ -139,6 +142,23 @@ export function createAccountApi(options: { store: AccountStore; auth: AuthProvi
           return reply({ message: 'از حساب خارج شدی.' }, 200, { 'Set-Cookie': cookie('') });
         }
         const session = await authenticated(request, 'account', operation === 'delete');
+        if (operation === 'interview' && method === 'POST') {
+          const input = z.object({ answers: answersSchema, case_id: z.uuid(), expected_revision: z.number().int().positive(), use_model: z.boolean().default(false) }).strict().parse(await body(request));
+          const saved = await store.read(session.owner, input.case_id);
+          if (!saved || saved.revision !== input.expected_revision) throw new AccountError('revision_conflict', 409, 'پرونده تغییر کرده است؛ پاسخ‌ها را دوباره دریافت کن.');
+          if (!options.interviewResult) return reply({ error: 'interview_unavailable', message: 'انتخاب سؤال در دسترس نیست؛ فرم محلی را ادامه بده.' }, 503);
+          const result = await options.interviewResult(input.answers);
+          if ('error' in result) return reply(result, 503);
+          const isCurrent = async () => {
+            const active = await store.session(cookieToken(request));
+            if (active.owner !== session.owner || active.purpose !== 'account') return false;
+            const current = await store.read(session.owner, input.case_id);
+            return current?.revision === saved.revision;
+          };
+          if (input.use_model && options.interviewPlanner) result.interview = await options.interviewPlanner(input.answers, result.interview, { owner: session.owner, caseId: saved.id, revision: saved.revision, isCurrent });
+          if (!await isCurrent()) throw new AccountError('revision_conflict', 409, 'پرونده تغییر کرده است؛ پاسخ دیررس استفاده نشد.');
+          return reply(result);
+        }
         if (operation === 'report-access' && method === 'GET') return reply(options.reportAccess ? await options.reportAccess.status(session.owner) : { unlocked: true, available: false });
         if (operation === 'report-access' && method === 'POST') {
           if (!options.reportAccess) return reply({ unlocked: true, available: false });

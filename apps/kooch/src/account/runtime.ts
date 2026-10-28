@@ -14,6 +14,10 @@ import { createGatewayAnswerInterpretation } from '../ai/answer-interpretation';
 import aiPolicy from '../../data/ai-gateway-policy.json';
 import { ReportAccess } from '../membership/store';
 import { currentCatalog } from '../catalog-runtime';
+import { createGatewayInterviewPlanner } from '../ai/interview-planner';
+import { evaluateCompass } from '../api';
+import { consumableSnapshot } from '../evidence/sync';
+import { adaptiveInterviewPolicy } from '../ai/adaptive-policy';
 import { createTelegramWebhook, TelegramBot } from '../membership/telegram';
 type Runtime = ReturnType<typeof createAccountApi> & { telegramWebhook?: (request: Request) => Promise<Response> };
 let runtime: Promise<Runtime> | undefined;
@@ -68,6 +72,12 @@ export async function accountRuntime() {
       key: process.env.KOOCH_SESSION_ENCRYPTION_KEY!, secure: mode === 'hosted' }) : undefined;
     const release = productionAcceptanceProfile(aiPolicy, process.env, new Date());
     const effectivePolicy = release?.policy ?? aiPolicy;
+    const planningPolicy = adaptiveInterviewPolicy(process.env, new Date());
+    const interviewPlanner = createGatewayInterviewPlanner({ policy: planningPolicy, ledger, getCredential: () => stableKey ? process.env.KOOCH_ARVAN_API_KEY : undefined });
+    const interviewResult = async (answers: import('../questions').Answers) => {
+      const state = await evidenceStore!.read();
+      return evaluateCompass(answers, { snapshot: consumableSnapshot(state), catalog: await currentCatalog(), blockedRouteIds: state.reviews.map(review => review.route_id) });
+    };
     const interpret = createGatewayAnswerInterpretation({ policy: effectivePolicy, ledger,
       getCredential: () => stableKey ? process.env.KOOCH_ARVAN_API_KEY : undefined });
     // A fixed question needs no paid wording call. Keep inference for interpreting
@@ -80,7 +90,7 @@ export async function accountRuntime() {
     const reportExplanation: typeof explain = (report, operation, context) => !explanationRelease || (explanationRelease.mode === 'synthetic' && !explanationRelease.caseIds.includes(report.dependencies.case.id)) ? Promise.resolve({ status: 'capability_unaccepted' }) : explain(report, operation, context);
     const interpretationGate = policyGate(effectivePolicy, new Date(), 'answer-interpretation');
     const interpretationDisclosure = interpretationGate.status === 'accepted' ? { ...interpretationGate.policy.interpretation!, acceptance_notice: interpretationGate.policy.interpretation?.acceptance_basis?.kind === 'owner_accepted_unknowns' ? 'محل پردازش، گیرندهٔ بالادست و حدود نگهداری محتوایی احراز نشده‌اند؛ استفاده با پذیرش این نامعلومی‌ها توسط مالک سرویس فعال شده است. می‌توانی پاسخ ساختارمند بدهی.' : undefined } : null;
-    return { ...createAccountApi({ store, mode, origin, auth, google, reportAccess, releaseEnvironment: process.env, questionAssistance, answerInterpretation, reportExplanation, interpretationDisclosure, pilotReportAi: () => explanationRelease?.mode === 'public' && policyGate(explanationRelease.policy, new Date(), 'report-explanation').status === 'accepted' && stableKey && Boolean(process.env.KOOCH_ARVAN_API_KEY) ? 'bounded_arvan' : 'not_enabled', pilotAi: () => release?.mode === 'public' && policyGate(release.policy, new Date()).status === 'accepted' && stableKey && Boolean(process.env.KOOCH_ARVAN_API_KEY) ? 'bounded_arvan' : 'disabled', accounting: stableKey ? ledger : undefined }), telegramWebhook };
+    return { ...createAccountApi({ store, mode, origin, auth, google, reportAccess, releaseEnvironment: process.env, questionAssistance, answerInterpretation, reportExplanation, interpretationDisclosure, interviewPlanner, interviewResult, pilotReportAi: () => explanationRelease?.mode === 'public' && policyGate(explanationRelease.policy, new Date(), 'report-explanation').status === 'accepted' && stableKey && Boolean(process.env.KOOCH_ARVAN_API_KEY) ? 'bounded_arvan' : 'not_enabled', pilotAi: () => planningPolicy && stableKey && process.env.KOOCH_ARVAN_API_KEY && policyGate(planningPolicy, new Date(), 'interview-planning').status === 'accepted' ? 'bounded_arvan' : release?.mode === 'public' && policyGate(release.policy, new Date()).status === 'accepted' && stableKey && Boolean(process.env.KOOCH_ARVAN_API_KEY) ? 'bounded_arvan' : 'disabled', accounting: stableKey ? ledger : undefined }), telegramWebhook };
   })().catch(error => { runtime = undefined; throw error; });
   return runtime;
 }
