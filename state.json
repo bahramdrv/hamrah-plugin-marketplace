@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-27T09:13:47.116395Z",
+  "generated_at": "2026-10-28T06:04:52.009987Z",
   "next_due_at": "2026-10-28T09:13:47.116395Z",
   "sources": [
     {
@@ -455,11 +455,13 @@
         "at:student-permit-austria"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-07-21"
+        "2026-07-21",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://oead.at/en/to-austria/entry-and-residence/residence-permit-student-no-mobility-programme",
@@ -494,11 +496,13 @@
         "at:family-reunification-austria"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-04-18"
+        "2026-04-18",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/family-reunification/",
@@ -1725,12 +1729,14 @@
         "be:single-permit"
       ],
       "roles": [
+        "condition_reference",
         "country_portal",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-05-24"
+        "2026-05-24",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://dofi.ibz.be/en/themas/onderdanen-van-derde-landen/werk/single-permit",
@@ -2009,11 +2015,13 @@
         "bb:work-permit"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-01"
+        "2026-06-01",
+        "2026-10-26"
       ],
       "status": "robots_unavailable",
       "last_attempt_at": "2026-10-27T09:13:47.116395Z",
@@ -2108,11 +2116,13 @@
         "bs:work-permit"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-01"
+        "2026-06-01",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://www.immigration.gov.bs/residence/annual-work-permit/",
@@ -2164,11 +2174,13 @@
         "bs:economic-permanent-residence"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-01"
+        "2026-06-01",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://www.immigration.gov.bs/residence/permanent-residence/",
@@ -4112,12 +4124,14 @@
         "cl:temporary-residence-remunerated-work"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
         "2026-06-01",
-        "2026-06-22"
+        "2026-06-22",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://serviciomigraciones.cl/en/residencia-temporal-permit/subcategories/remunerated-activities/",
@@ -4173,11 +4187,13 @@
         "cl:temporary-residence-investor"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-01"
+        "2026-06-01",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://serviciomigraciones.cl/en/residencia-temporal-permit/subcategories/investors/",
@@ -9442,11 +9458,13 @@
         "hk:quality-migrant-admission-scheme"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-01"
+        "2026-06-01",
+        "2026-10-26"
       ],
       "status": "unavailable",
       "error": "OSError",
@@ -9501,11 +9519,13 @@
         "hk:technology-talent-admission-scheme"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-01"
+        "2026-06-01",
+        "2026-10-26"
       ],
       "status": "unavailable",
       "error": "OSError",
@@ -9520,11 +9540,13 @@
         "hk:investment-as-entrepreneurs"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-01"
+        "2026-06-01",
+        "2026-10-26"
       ],
       "status": "unavailable",
       "error": "OSError",
@@ -10242,11 +10264,13 @@
         "ie:critical-skills-employment-permit"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-09-10"
+        "2026-09-10",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/critical-skills-employment-permit/",
@@ -10296,11 +10320,13 @@
         "ie:general-employment-permit"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-22"
+        "2026-06-22",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/general-employment-permit/",
@@ -12092,11 +12118,13 @@
         "ke:class-a-mining-permit"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-01"
+        "2026-06-01",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://fns.immigration.go.ke/infopack/permits/classA/",
@@ -12173,11 +12201,13 @@
         "ke:dependants-pass"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-01"
+        "2026-06-01",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://immigration.go.ke/dependants-pass/",
@@ -16238,11 +16268,13 @@
         "nl:startup-visa-nl"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-22"
+        "2026-06-22",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://ind.nl/en/residence-permits/work/start-up",
@@ -16293,11 +16325,13 @@
         "nl:partner-visa-nl"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-09-10"
+        "2026-09-10",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://ind.nl/en/residence-permits/family-and-partner/residence-permit-for-partner",
@@ -16693,11 +16727,13 @@
         "nz:active-investor-plus"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-22"
+        "2026-06-22",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://www.immigration.govt.nz/visas/active-investor-plus-visa/",
@@ -17136,11 +17172,13 @@
         "na:digital-nomad-visa"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-01"
+        "2026-06-01",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://www.nipdb.com/digital-nomad-visa",
@@ -18116,11 +18154,13 @@
         "py:temporary-residence"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-01"
+        "2026-06-01",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://migraciones.gov.py/residencia-temporal/",
@@ -19690,11 +19730,13 @@
         "sg:student-pass-sg"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-09-10"
+        "2026-09-10",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://www.ica.gov.sg/reside/STP/apply",
@@ -19805,11 +19847,13 @@
         "se:work-permit-sweden"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-07-21"
+        "2026-07-21",
+        "2026-10-26"
       ],
       "status": "unavailable",
       "error": "OSError",
@@ -19866,11 +19910,13 @@
         "se:student-permit-sweden"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-07-01"
+        "2026-07-01",
+        "2026-10-26"
       ],
       "status": "unavailable",
       "error": "OSError",
@@ -23563,11 +23609,13 @@
         "uy:beneficio-jubilados-pensionistas"
       ],
       "roles": [
+        "condition_reference",
         "route_reference"
       ],
-      "authority": "atlas_link_unreviewed",
+      "authority": "published_primary",
       "legal_checked_on": [
-        "2026-06-01"
+        "2026-06-01",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://www.gub.uy/tramites/beneficio-extranjeros-jubilados-obtengan-residencia-permanente",
@@ -32040,6 +32088,7 @@
       "url": "https://ind.nl/en/required-amounts-income-requirements",
       "route_ids": [
         "nl:highly-skilled-migrant",
+        "nl:partner-visa-nl",
         "nl:student-nl"
       ],
       "roles": [
@@ -32047,7 +32096,8 @@
       ],
       "authority": "published_primary",
       "legal_checked_on": [
-        "2026-10-24"
+        "2026-10-24",
+        "2026-10-26"
       ],
       "status": "captured",
       "final_url": "https://ind.nl/en/required-amounts-income-requirements",
@@ -33081,6 +33131,760 @@
       "review_reasons": []
     },
     {
+      "url": "https://www.immd.gov.hk/eng/services/visas/assessment-routes.html",
+      "route_ids": [
+        "hk:quality-migrant-admission-scheme"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://www.immd.gov.hk/eng/services/visas/assessment-routes.html",
+      "body_sha256": "6c807494e069892152507ca111229abce532d82eb230610fcb01138fe15df0e7",
+      "content_type": "text/html",
+      "bytes": 13654,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.immd.gov.hk/eng/services/visas/quality_migrant_admission_scheme.html"
+      ],
+      "semantic_sha256": "9a3a5a1b90c83377433d4408ff2fa80e5496438d20ad0398917aae5094790ee5",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://gov.om/en/w/get-a-work-visa",
+      "route_ids": [
+        "om:employment-work-visa"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://gov.om/en/w/get-a-work-visa",
+      "body_sha256": "5b657e625614a96328538a54d75809c5847621b7bb019a9647347aea6cda721b",
+      "content_type": "text/html",
+      "bytes": 245972,
+      "condition_candidates": [
+        {
+          "heading": "Special conditions",
+          "excerpt": "The sponsor must be a local, fully qualified individual and is responsible for the accuracy of the information provided in",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Special conditions",
+          "excerpt": "The applicant for the work visa must be at least (21) years old.",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Special conditions",
+          "excerpt": "The gender of the sponsored individual must align with the gender specified on the work permit issued by the Ministry",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Special conditions",
+          "excerpt": "The profession on the work permit must match the profession on the visa application.",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [],
+      "semantic_sha256": "89fcca8ad38663204b1842e9a2927ddf63755527f22394787eabdaa723cbdefd",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://gdrfad.gov.ae/en/services/c4d66f28-408c-11ed-4fe5-0050569629e8",
+      "route_ids": [
+        "ae:green-visa"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://gdrfad.gov.ae/en/services/c4d66f28-408c-11ed-4fe5-0050569629e8",
+      "body_sha256": "461bb00db5aaf3daa2ffcc4486aefd01df9118fca36dbdb03e094a6876345c20",
+      "content_type": "text/html",
+      "bytes": 247881,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "e6de5ef32f75716225e0ef9613723d818427e016e3adb6cac8945b3a4acef017",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://www.gdrfad.gov.ae/en/services/f52024d1-b812-11ed-5210-4cd98f768936",
+      "route_ids": [
+        "ae:freelance-permit"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://www.gdrfad.gov.ae/en/services/f52024d1-b812-11ed-5210-4cd98f768936",
+      "body_sha256": "684c447a85d5a3c23cd8a6f21ce86d26f3fd05c9ebd9f3bbfa7cb9da94aba52c",
+      "content_type": "text/html",
+      "bytes": 247255,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "ec8d504103e8ee2c52fc5dd043b9075f926f1f6b026f93195ee3c8351b72d6aa",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/?c=irn",
+      "route_ids": [
+        "no:skilled-worker-permit"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/?c=irn",
+      "body_sha256": "9033eb43d8190250422f7e58b6a5e94435a01d899e92f8d30c70fef6a9d52304",
+      "content_type": "text/html",
+      "bytes": 87081,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.udi.no/en/want-to-apply/family-immigration/",
+        "https://www.udi.no/en/want-to-apply/immigrants-passport-and-travel-document/",
+        "https://www.udi.no/en/want-to-apply/permanent-residence/",
+        "https://www.udi.no/en/want-to-apply/residence-permit-for-victims-of-abuse/",
+        "https://www.udi.no/en/want-to-apply/residence-under-the-eueeu-regulations/",
+        "https://www.udi.no/en/want-to-apply/residence-under-the-eueeu-regulations/nordic-nationals-who-are-going-to-live-in-norway/",
+        "https://www.udi.no/en/want-to-apply/work-immigration/",
+        "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/",
+        "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/",
+        "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/",
+        "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/assignment-in-norway/how-to-apply-employees-of-foreign-companies-who-are-going-on-assignment-in-norway/?c=irn",
+        "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/athletes-or-coaches/how-to-apply-athletes-or-coaches/?c=irn",
+        "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/employees-of-international-companies-who-are-going-on-assignment-for-the-norwegian-branch-of-the-company/how-to-apply-employees-of-international-companies/?c=irn",
+        "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/religious-leadersteachers/how-to-apply-religious-leadersteachers/?c=irn",
+        "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/self-employed-persons-with-a-company-abroad/how-to-apply-self-employed-persons-with-a-company-abroada/?c=irn",
+        "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/self-employed-persons-with-a-company-in-norway/how-to-apply-self-employed-persons-with-a-company-in-norway/?c=irn",
+        "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/skilled-worker-with-a-norwegian-employer/how-to-apply-skilled-worker-with-a-norwegian-employer/?c=irn",
+        "https://www.udi.no/en/word-definitions/guide-to-case-processing-times-for-application-for-work-immigration/",
+        "https://www.udi.no/en/word-definitions/people-who-can-work-in-norway-for-less-than-three-months-without-a-residence-permit/",
+        "https://www.udi.no/en/word-definitions/persons-who-do-not-need-a-visa-to-visit-norway-/"
+      ],
+      "semantic_sha256": "6fc65ef087f3842d6553c8394b0cc59cc65b96ce6a7e910c00b02f69e6d6a423",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://www.udi.no/en/want-to-apply/work-immigration/job-seekers/?c=irn",
+      "route_ids": [
+        "no:job-seeker-norway"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://www.udi.no/en/want-to-apply/work-immigration/job-seekers/?c=irn",
+      "body_sha256": "d55a72f39e7f0ecb17a48f994dad5bc41673c9064e0cb8fe658b8201dd50d1cf",
+      "content_type": "text/html",
+      "bytes": 53244,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.udi.no/en/have-applied/work-immigration/",
+        "https://www.udi.no/en/want-to-apply/family-immigration/",
+        "https://www.udi.no/en/want-to-apply/immigrants-passport-and-travel-document/",
+        "https://www.udi.no/en/want-to-apply/permanent-residence/",
+        "https://www.udi.no/en/want-to-apply/residence-permit-for-victims-of-abuse/",
+        "https://www.udi.no/en/want-to-apply/residence-under-the-eueeu-regulations/",
+        "https://www.udi.no/en/want-to-apply/residence-under-the-eueeu-regulations/nordic-nationals-who-are-going-to-live-in-norway/",
+        "https://www.udi.no/en/want-to-apply/work-immigration/",
+        "https://www.udi.no/en/want-to-apply/work-immigration/job-seekers/a-job-seeker-who-has-recently-graduated-or-is-a-researcher/how-to-apply-for-a-residence-permit-for-job-seekers-who-has-recently-graduated-or-is-a-researcher/?c=irn",
+        "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/",
+        "https://www.udi.no/en/want-to-apply/work-immigration/vocational-training-and-research/",
+        "https://www.udi.no/en/want-to-renew/family-immigration/",
+        "https://www.udi.no/en/word-definitions/guide-to-case-processing-times-for-application-for-work-immigration/"
+      ],
+      "semantic_sha256": "a1d7dcf1fd70ad99fa3e7262608c8ffaaeebe2793fae724979f2bc9d8e1e0722",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://www.udi.no/en/want-to-apply/studies/studietillatelse/?c=irn",
+      "route_ids": [
+        "no:student-permit-norway"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://www.udi.no/en/want-to-apply/studies/studietillatelse/?c=irn",
+      "body_sha256": "3e6a4f99316fcf61c590ca8893207fa2f7e778e2ba370eb5c6d9458bffe0bd1f",
+      "content_type": "text/html",
+      "bytes": 74570,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.udi.no/en/want-to-apply/family-immigration/",
+        "https://www.udi.no/en/want-to-apply/immigrants-passport-and-travel-document/",
+        "https://www.udi.no/en/want-to-apply/permanent-residence/",
+        "https://www.udi.no/en/want-to-apply/residence-permit-for-victims-of-abuse/",
+        "https://www.udi.no/en/want-to-apply/residence-under-the-eueeu-regulations/",
+        "https://www.udi.no/en/want-to-apply/residence-under-the-eueeu-regulations/nordic-nationals-who-are-going-to-live-in-norway/",
+        "https://www.udi.no/en/want-to-apply/studies/studietillatelse/additional-education/how-to-apply-for-a-residence-permit-for-skilled-workers-who-are-going-to-take-additional-education/?c=irn",
+        "https://www.udi.no/en/want-to-apply/studies/studietillatelse/folk-high-schools/how-to-apply-for-a-residence-permit-for-a-student-at-a-folk-high-school/?c=irn",
+        "https://www.udi.no/en/want-to-apply/studies/studietillatelse/religionbelief-based-school-bible-school/how-to-apply-for-a-residence-permit-for-a-student-at-a-bible-school/?c=irn",
+        "https://www.udi.no/en/want-to-apply/studies/studietillatelse/university-college-or-university/how-to-apply-for-a-residence-permit-for-a-student-at-a-university-college-or-university/?c=irn",
+        "https://www.udi.no/en/want-to-apply/studies/studietillatelse/upper-secondary-school/how-to-apply-for-a-residence-permit-for-a-student-at-an-upper-secondary-school/?c=irn",
+        "https://www.udi.no/en/want-to-apply/studies/studietillatelse/vocational-school/how-to-apply-for-a-residence-permit-for-a-student-at-a-vocational-school/?c=irn",
+        "https://www.udi.no/en/want-to-apply/work-immigration/",
+        "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/",
+        "https://www.udi.no/en/word-definitions/students-and-pupils-who-can-travel-to-norway-before-their-application-for-a-study-permit-has-been-decided/"
+      ],
+      "semantic_sha256": "101bef591c722b81445d6283be3131a9bec01394b5bd6e01bafa5c79145f8bb1",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://www.nyidanmark.dk/en-GB/You-want-to-apply/Work/Pay-Limit-Scheme",
+      "route_ids": [
+        "dk:pay-limit-scheme"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://www.nyidanmark.dk/en-GB/You-want-to-apply/Work/Pay-Limit-Scheme",
+      "body_sha256": "5d9e8d239f31b419b7f5259aac66d1e36dd12b4260eac30f7dc2130ffc37295b",
+      "content_type": "text/html",
+      "bytes": 161589,
+      "condition_candidates": [
+        {
+          "heading": "What are the conditions?",
+          "excerpt": "Salary in the form of liquid assets, including fixed supplements which are, therefore, guaranteed salary",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "What are the conditions?",
+          "excerpt": "Payments to labour market pension schemes, including the pension contributions paid by both the employer and the applicant",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "What are the conditions?",
+          "excerpt": "Paid holiday allowance",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "What are the conditions?",
+          "excerpt": "Salary in the form of liquid assets, including fixed supplements which are, therefore, guaranteed salary",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "What are the conditions?",
+          "excerpt": "Payments to labour market pension schemes, including the pension contributions paid by both the employer and the applicant",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Public-benefits-when-you-have-a-residence-permit-or-an-EU-residence-document-from-SIRI/Public-benefits-when-you-have-been-granted-a-permit-by-SIRI/?anchor=C5A419E3B77C416F83262C84B1A0FF7A&callbackItem=F0A07B23EDAE4452B62D95CB84704289&callbackAnchor=616070D50FD7449A87102103076A4C83C5A419E3B77C416F83262C84B1A0FF7A",
+        "https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family/Accompanying-family-members/Accompanying-family---work/?anchor=353F3BB107AF4B1DBCD8630A40CCA90B&callbackItem=F0A07B23EDAE4452B62D95CB84704289&callbackAnchor=6664FBBE5B3C4E45BC9ACCB814BB1BAE353F3BB107AF4B1DBCD8630A40CCA90B",
+        "https://um.dk/en/travel-and-residence"
+      ],
+      "semantic_sha256": "30c8d3057b16f64fb7176423ed11a5683208314e09f47c7cd39e22270eda7676",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://www.immigration.govt.nz/visas/post-study-work-visa/",
+      "route_ids": [
+        "nz:post-study-work-visa"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://www.immigration.govt.nz/visas/post-study-work-visa/",
+      "body_sha256": "a3130485501660935079d96d4c301c15dad26d8b15b743ee64ddfc858dd67614",
+      "content_type": "text/html",
+      "bytes": 880573,
+      "condition_candidates": [
+        {
+          "heading": "Who can apply",
+          "excerpt": "a degree level 7 or higher qualification — level 8 postgraduate Diploma, level 9 masters degree or level 10 doctoral",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Who can apply",
+          "excerpt": "a non-degree level 7 or lower qualification that is on the list of qualifications eligible for a Post-Study Work Visa",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Who can apply",
+          "excerpt": "be in good health",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Who can apply",
+          "excerpt": "have a good character",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Who can apply",
+          "excerpt": "have a genuine reason for coming to New Zealand",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.immigration.govt.nz/about-us/news-centre/new-and-updated-post-study-work-visa-options/",
+        "https://www.immigration.govt.nz/about-us/news-centre/update-on-medical-certificate-requests-on-immigration-online/",
+        "https://www.immigration.govt.nz/assets/inz/documents/forms-and-guides/Work-Visa-Application-INZ-1015.pdf",
+        "https://www.immigration.govt.nz/assets/inz/documents/forms-and-guides/Work-Visa-Guide-INZ-1016.pdf",
+        "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/applying-online/",
+        "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/character-requirements-third-party-checks-and-police-certificates/get-a-police-certificate/",
+        "https://www.immigration.govt.nz/process-to-apply/once-you-have-a-visa/bringing-family-to-new-zealand/bringing-family-if-you-have-a-work-visa/",
+        "https://www.immigration.govt.nz/process-to-apply/once-you-have-a-visa/manage-your-visa-and-passport/check-or-change-your-visa-conditions/",
+        "https://www.immigration.govt.nz/process-to-apply/once-you-have-a-visa/manage-your-visa-and-passport/using-evisas-and-visa-labels/",
+        "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/",
+        "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/check-your-application-progress/",
+        "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/",
+        "https://immigration.govt.nz/visas/interim-visa/",
+        "https://online.immigration.govt.nz/"
+      ],
+      "semantic_sha256": "c4e375bbda61d114ac1690c3181cfcef84a365666fa83e5acfecec5512ec65ef",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2728",
+      "route_ids": [
+        "fr:vls-ts-salaried"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2728",
+      "body_sha256": "35d3eb89a7ea2b949798f7b32f64ba18326f843d7824dd2cf7729302d6f70741",
+      "content_type": "text/html",
+      "bytes": 384387,
+      "condition_candidates": [
+        {
+          "heading": "Conditions liées à l'employeur, au donneur d'ordre, à l'entreprise utilisatrice ou d'accueil",
+          "excerpt": "Respecter les obligations sociales liées à leur statut ou à leur activité",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Conditions liées à l'employeur, au donneur d'ordre, à l'entreprise utilisatrice ou d'accueil",
+          "excerpt": "Ne pas avoir été condamnés pénalement ou fait l'objet de sanctions administratives pour les faits suivants : Travail illégal ou",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Conditions liées à l'employeur, au donneur d'ordre, à l'entreprise utilisatrice ou d'accueil",
+          "excerpt": "Fournir une attestation, datant de moins de 6 mois , du versement des cotisations sociales à l'organisme chargé de leur",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Conditions liées à l'employeur, au donneur d'ordre, à l'entreprise utilisatrice ou d'accueil",
+          "excerpt": "Fournir la preuve, lorsque la demande concerne un emploi saisonnier , que le travailleur aura, pour la durée de son",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.immigration.interieur.gouv.fr/limmigration-en-france/accords-internationaux/accords-bilateraux-en-matiere-de-mobilite-professionnelle",
+        "https://www.interieur.gouv.fr/Media/Immigration/Files/Circulaire-DPM-DMI2-2007-323-du-22-aout-2007-relative-aux-autorisations-de-travail"
+      ],
+      "semantic_sha256": "1935c28ea5443a109dea0edbea4bf961f2dce9196bccf7d545fc389649fb709f",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F15898",
+      "route_ids": [
+        "fr:vls-ts-salaried"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F15898",
+      "body_sha256": "fa18e57dd564ffa2e20af9fcba3de784dafc33624223d64269fdc00c08f60b8b",
+      "content_type": "text/html",
+      "bytes": 232967,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "9a198353a524a67576f53e4c8bf0e8ab317a1b0fc19e981483ba68820aac422c",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F11166",
+      "route_ids": [
+        "fr:family-reunification-france"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F11166",
+      "body_sha256": "1b2dac1c93a80248466a01b0ab1df313ad036d0bdafd239400cb5cfcae2739b1",
+      "content_type": "text/html",
+      "bytes": 240628,
+      "condition_candidates": [
+        {
+          "heading": "1 Vérifier que vous remplissez les conditions",
+          "excerpt": "Carte de séjour temporaire d'au moins 1 an (mention salarié , vie privée et familiale , étudiant , visiteur ,",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "1 Vérifier que vous remplissez les conditions",
+          "excerpt": "Carte de résident ou carte de résident de longue durée-UE (délivrée par la France) de 10 ans",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "1 Vérifier que vous remplissez les conditions",
+          "excerpt": "Récépissé de demande de renouvellement d'un de ces titres.",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "1 Vérifier que vous remplissez les conditions",
+          "excerpt": "Carte de séjour d'au moins 1 an (mention salarié , vie privée et familiale , étudiant , visiteur , etc.)",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "1 Vérifier que vous remplissez les conditions",
+          "excerpt": "Carte de résident ou carte de résident de longue durée-UE (délivrée par la France) de 10 ans",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [],
+      "semantic_sha256": "8df161cda5caabb098cd9ed8fd449436c3e6f7b9a19ed39da0714b19158c3273",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://emploi.wallonie.be/home/travailleurs-etrangers/permis-de-travail/vous-etes-employeur/que-devez-vous-faire/categorie-generale.html",
+      "route_ids": [
+        "be:single-permit"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://emploi.wallonie.be/home/travailleurs-etrangers/permis-de-travail/vous-etes-employeur/que-devez-vous-faire/categorie-generale.html",
+      "body_sha256": "3e277130b7ffbe368d4b8623ddf724898d9aabaf12c3d5825ffd6743ab3ba3a4",
+      "content_type": "text/html",
+      "bytes": 104785,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "98fc2513802f5779bbe0a5d84788ddeb3af0481c88d7ea91e2aa2f59ca134ebd",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://economy-employment.brussels/authorisation-work-profession-shortage",
+      "route_ids": [
+        "be:single-permit"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://economy-employment.brussels/authorisation-work-profession-shortage",
+      "body_sha256": "2d9d7c393981a58b4063f25331647627df1bb67b6fcf2949f9bf725d00105d58",
+      "content_type": "text/html",
+      "bytes": 52151,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://economy-employment.brussels/work-permit-contact"
+      ],
+      "semantic_sha256": "61600a937532637b52c6e306088be942b3c6ad8ca685c24b3326c7e654c1f295",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://economy-employment.brussels/authorisation-work",
+      "route_ids": [
+        "be:single-permit"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://economy-employment.brussels/authorisation-work",
+      "body_sha256": "4388c4092b8942d23c538af539c21fa9bf9a75c2e0b9ce9527e1e0bd2d6cb483",
+      "content_type": "text/html",
+      "bytes": 60593,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://economy-employment.brussels/work-permit-contact"
+      ],
+      "semantic_sha256": "00e61c4c1a0388c6eb3d0cad2358063f10b75e0f68940b203e5d9531676af5db",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://economy-employment.brussels/authorisation-work-other-cases",
+      "route_ids": [
+        "be:single-permit"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://economy-employment.brussels/authorisation-work-other-cases",
+      "body_sha256": "0204a2446d240da057492b0408f0284252fff6faaf487f5540eeed74a2f40b66",
+      "content_type": "text/html",
+      "bytes": 51479,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://economy-employment.brussels/work-permit-contact"
+      ],
+      "semantic_sha256": "c5ca19e35d35a59dea384a2e6b914cd5de38619443356af256d2fa5b2d11a2a5",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://www.vlaanderen.be/en/working-enterprise-and-investment/working/employing-a-foreigner-in-flanders/categories/medium-skilled-position",
+      "route_ids": [
+        "be:single-permit"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://www.vlaanderen.be/en/working-enterprise-and-investment/working/employing-a-foreigner-in-flanders/categories/medium-skilled-position",
+      "body_sha256": "4249fc89eb294c7b27bd8844bdcbb1b75f6846a8813be33d10f56320308aec9f",
+      "content_type": "text/html",
+      "bytes": 198274,
+      "condition_candidates": [
+        {
+          "heading": "Conditions for holding a medium-skilled position in Flanders",
+          "excerpt": "He has a Belgian employer .",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Conditions for holding a medium-skilled position in Flanders",
+          "excerpt": "His position appears on the migration list of medium-skilled positions .",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.vlaanderen.be/en/working-enterprise-and-investment/working/employing-a-foreigner-in-flanders/appealing-a-refusal-or-withdrawal",
+        "https://www.vlaanderen.be/en/working-enterprise-and-investment/working/employing-a-foreigner-in-flanders/for-who",
+        "https://www.vlaanderen.be/en/working-enterprise-and-investment/working/employing-a-foreigner-in-flanders/wages-and-allowances",
+        "https://dofi.ibz.be/en/themes/ressortissants-dun-pays-tiers/court-sejour/schengen-area-entry-visa-application-visa-c",
+        "https://ec.europa.eu/assets/home/visa-calculator-2/calculator.htm?lang=en"
+      ],
+      "semantic_sha256": "e321320cab621d4643141c4fbedd6874ecc0ee6b6794931d9558dafbb90276d3",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://guichet.public.lu/en/citoyens/immigration/vivre/non-luxembourg/immigration/pays-tiers/salarie/salarie-pays-tiers.html",
+      "route_ids": [
+        "lu:salaried-worker"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://guichet.public.lu/en/citoyens/immigration/vivre/non-luxembourg/immigration/pays-tiers/salarie/salarie-pays-tiers.html",
+      "body_sha256": "147e0f892074e7a8dd62d8c186214f51cba5e076364dfaecfb992a5642c69f3d",
+      "content_type": "text/html",
+      "bytes": 234210,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://guichet.public.lu/en/citoyens/immigration/vivre/luxembourg/autres/premier-titre-sejour.html",
+        "https://guichet.public.lu/en/citoyens/immigration/vivre/luxembourg/premier-titre-sejour.html",
+        "https://guichet.public.lu/en/citoyens/organismes/organismes/ministere-affaires-interieures/direction-immigration/departement-etrangers.html",
+        "https://www.facebook.com/sharer/sharer.php?u=http://guichet.public.lu/en/citoyens/immigration/vivre/non-luxembourg/immigration/pays-tiers/salarie/salarie-pays-tiers.html&t=Visa+type+D+for+a+residence+permit+for+%27salaried+workers%27",
+        "https://www.linkedin.com/sharing/share-offsite/?mini=true&url=http://guichet.public.lu/en/citoyens/immigration/vivre/non-luxembourg/immigration/pays-tiers/salarie/salarie-pays-tiers.html&title=Visa+type+D+for+a+residence+permit+for+%27salaried+workers%27",
+        "https://app-eu.readspeaker.com/cgi-bin/rsent?customerid=5534&lang=en&voice=Alice&readclass=cmp-read&url=https://guichet.public.lu/en/citoyens/immigration/vivre/non-luxembourg/immigration/pays-tiers/salarie/salarie-pays-tiers"
+      ],
+      "semantic_sha256": "d993e482ff72561ce7c40d0cc04fc0ec9eb128949f11a8c9f036f1d5e14c6981",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://guichet.public.lu/en/citoyens/immigration/vivre/luxembourg/premier-titre-sejour.html",
+      "route_ids": [
+        "lu:salaried-worker"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://guichet.public.lu/en/citoyens/immigration/vivre/luxembourg/premier-titre-sejour.html",
+      "body_sha256": "a81bdfabd155e3ff1271a742f1fdbcea54745d03085f2a2a55a001d4c5c7fe05",
+      "content_type": "text/html",
+      "bytes": 985810,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://guichet.public.lu/dam-assets/catalogue-formulaires/immigration/document/docs-communs/observations-titre-sejour/observations-titre-sejour.pdf",
+        "https://guichet.public.lu/dam-assets/catalogue-formulaires/immigration/document/tiers/titre-sejour/demande-titre-sejour/demande-titre-sejour.pdf",
+        "https://guichet.public.lu/fr/citoyens/immigration/vivre/non-luxembourg/immigration/pays-tiers.html",
+        "https://guichet.public.lu/fr/citoyens/organismes/organismes/ministere-affaires-interieures/direction-immigration/departement-etrangers.html",
+        "https://guichet.public.lu/fr/citoyens/organismes/organismes_citoyens/ministere-sante/direction-sante/service-medical-immigration.html",
+        "https://www.facebook.com/sharer/sharer.php?u=http://guichet.public.lu/en/citoyens/immigration/vivre/luxembourg/premier-titre-sejour.html&t=D%C3%A9livrance+de+votre+1%E1%B5%89%CA%B3+titre+de+s%C3%A9jour+",
+        "https://www.linkedin.com/sharing/share-offsite/?mini=true&url=http://guichet.public.lu/en/citoyens/immigration/vivre/luxembourg/premier-titre-sejour.html&title=D%C3%A9livrance+de+votre+1%E1%B5%89%CA%B3+titre+de+s%C3%A9jour+",
+        "https://app-eu.readspeaker.com/cgi-bin/rsent?customerid=5534&lang=en&voice=Alice&readclass=cmp-read&url=https://guichet.public.lu/en/citoyens/immigration/vivre/luxembourg/premier-titre-sejour"
+      ],
+      "semantic_sha256": "33a4dabe06856a6dfe03876ddd0bfccf7223ceee44491d87c2e2ecb1809efd25",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://adem.public.lu/fr/employeurs/recruter/recruter-international/Embauche-ressortissant-pays-tiers.html",
+      "route_ids": [
+        "lu:salaried-worker"
+      ],
+      "roles": [
+        "condition_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-26"
+      ],
+      "status": "captured",
+      "final_url": "https://adem.public.lu/fr/employeurs/recruter/recruter-international/Embauche-ressortissant-pays-tiers.html",
+      "body_sha256": "fdf5293b1c95e0f40d3d6bd133188bc0f691b14e9eceba2fc057ffbf2c4d6f6b",
+      "content_type": "text/html",
+      "bytes": 95519,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "0870cd7974969cc5d69cbc445a87a97197d57fa353d192fe8de913d51365df04",
+      "last_attempt_at": "2026-10-28T06:04:52.009987Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "last_success_at": "2026-10-28T06:04:52.009987Z",
+      "review_reasons": []
+    },
+    {
       "url": "https://migration.mia.gov.am/en/acquiring-employment-based-residence-status",
       "route_ids": [
         "am:work-residence-permit"
@@ -33142,6 +33946,31 @@
       "review_required": false,
       "legal_reviews_renewed": 0,
       "last_success_at": "2026-10-27T09:13:47.116395Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://cbsa.gc.ca/transparency-transparence/pd-dp/bbp-rpp/cimm/2026-04-20/factsheets-fichesinfo-eng.html",
+      "route_ids": [
+        "ca:express-entry-cec",
+        "ca:express-entry-fst",
+        "ca:express-entry-fsw",
+        "ca:pgwp",
+        "ca:pnp",
+        "ca:spousal-sponsorship",
+        "ca:study-permit-ca"
+      ],
+      "roles": [
+        "application_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-15"
+      ],
+      "status": "unavailable",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cbsa.gc.ca'. (_ssl.c:1010)",
+      "last_attempt_at": "2026-10-27T09:13:47.116395Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
       "review_reasons": []
     },
     {
@@ -33250,31 +34079,6 @@
       "review_required": false,
       "legal_reviews_renewed": 0,
       "last_success_at": "2026-10-27T09:13:47.116395Z",
-      "review_reasons": []
-    },
-    {
-      "url": "https://cbsa.gc.ca/transparency-transparence/pd-dp/bbp-rpp/cimm/2026-04-20/factsheets-fichesinfo-eng.html",
-      "route_ids": [
-        "ca:express-entry-cec",
-        "ca:express-entry-fst",
-        "ca:express-entry-fsw",
-        "ca:pgwp",
-        "ca:pnp",
-        "ca:spousal-sponsorship",
-        "ca:study-permit-ca"
-      ],
-      "roles": [
-        "application_reference"
-      ],
-      "authority": "published_primary",
-      "legal_checked_on": [
-        "2026-10-15"
-      ],
-      "status": "unavailable",
-      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cbsa.gc.ca'. (_ssl.c:1010)",
-      "last_attempt_at": "2026-10-27T09:13:47.116395Z",
-      "review_required": false,
-      "legal_reviews_renewed": 0,
       "review_reasons": []
     },
     {
@@ -33710,6 +34514,24 @@
       "review_reasons": []
     },
     {
+      "url": "https://www.inclusion.gob.es/documents/1823432/1826098/Instrucciones%2Bsolicitud%2Bemprendedores.pdf/3a4d0b60-71bf-1c53-9f9d-fff7f94cbf5d?t=1682675484705",
+      "route_ids": [
+        "es:entrepreneur-visa"
+      ],
+      "roles": [
+        "application_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-15"
+      ],
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-10-27T09:13:47.116395Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "review_reasons": []
+    },
+    {
       "url": "https://www.exteriores.gob.es/Embajadas/teheran/es/Embajada/Paginas/Horarios%2C-Localizaci%C3%B3n-y-Contacto.aspx",
       "route_ids": [
         "es:entrepreneur-visa",
@@ -33725,24 +34547,6 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-10-27T09:13:47.116395Z",
-      "review_required": false,
-      "legal_reviews_renewed": 0,
-      "review_reasons": []
-    },
-    {
-      "url": "https://www.inclusion.gob.es/documents/1823432/1826098/Instrucciones%2Bsolicitud%2Bemprendedores.pdf/3a4d0b60-71bf-1c53-9f9d-fff7f94cbf5d?t=1682675484705",
-      "route_ids": [
-        "es:entrepreneur-visa"
-      ],
-      "roles": [
-        "application_reference"
-      ],
-      "authority": "published_primary",
-      "legal_checked_on": [
-        "2026-10-15"
-      ],
-      "status": "robots_unavailable",
       "last_attempt_at": "2026-10-27T09:13:47.116395Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
@@ -33775,25 +34579,6 @@
       "review_reasons": []
     },
     {
-      "url": "https://www.esteri.it/it/servizi-opportunita/italiani-all-estero/cittadinanza/",
-      "route_ids": [
-        "it:citizenship-by-descent"
-      ],
-      "roles": [
-        "application_reference"
-      ],
-      "authority": "published_primary",
-      "legal_checked_on": [
-        "2026-10-15"
-      ],
-      "status": "unavailable",
-      "error": "redirect_requires_review",
-      "last_attempt_at": "2026-10-27T09:13:47.116395Z",
-      "review_required": false,
-      "legal_reviews_renewed": 0,
-      "review_reasons": []
-    },
-    {
       "url": "https://ambteheran.esteri.it/it/news/dall_ambasciata/2026/08/lambasciata-ditalia-comunica-la-ripresa-delle-attivita-a-teheran-a-partire-dal-19-giugno-2026/",
       "route_ids": [
         "it:citizenship-by-descent",
@@ -33823,6 +34608,25 @@
       "review_required": false,
       "legal_reviews_renewed": 0,
       "last_success_at": "2026-10-27T09:13:47.116395Z",
+      "review_reasons": []
+    },
+    {
+      "url": "https://www.esteri.it/it/servizi-opportunita/italiani-all-estero/cittadinanza/",
+      "route_ids": [
+        "it:citizenship-by-descent"
+      ],
+      "roles": [
+        "application_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-15"
+      ],
+      "status": "unavailable",
+      "error": "redirect_requires_review",
+      "last_attempt_at": "2026-10-27T09:13:47.116395Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
       "review_reasons": []
     },
     {
@@ -33984,6 +34788,25 @@
       "review_reasons": []
     },
     {
+      "url": "https://aima.gov.pt/en/viver/autorizacao-de-residencia-para-investimento-art-90-o-a",
+      "route_ids": [
+        "pt:golden-visa"
+      ],
+      "roles": [
+        "application_reference"
+      ],
+      "authority": "published_primary",
+      "legal_checked_on": [
+        "2026-10-15"
+      ],
+      "status": "unavailable",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+      "last_attempt_at": "2026-10-27T09:13:47.116395Z",
+      "review_required": false,
+      "legal_reviews_renewed": 0,
+      "review_reasons": []
+    },
+    {
       "url": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari",
       "route_ids": [
         "pt:golden-visa"
@@ -34004,25 +34827,6 @@
     },
     {
       "url": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/autorizacao-de-residencia-para-investimento-ari",
-      "route_ids": [
-        "pt:golden-visa"
-      ],
-      "roles": [
-        "application_reference"
-      ],
-      "authority": "published_primary",
-      "legal_checked_on": [
-        "2026-10-15"
-      ],
-      "status": "unavailable",
-      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-10-27T09:13:47.116395Z",
-      "review_required": false,
-      "legal_reviews_renewed": 0,
-      "review_reasons": []
-    },
-    {
-      "url": "https://aima.gov.pt/en/viver/autorizacao-de-residencia-para-investimento-art-90-o-a",
       "route_ids": [
         "pt:golden-visa"
       ],
@@ -34079,7 +34883,7 @@
       "review_reasons": []
     },
     {
-      "url": "https://www.gov.uk/world/iran/news",
+      "url": "https://www.gov.uk/guidance/visa-brake-changes-to-the-uk-visa-system",
       "route_ids": [
         "uk:family-spouse",
         "uk:global-talent",
@@ -34106,7 +34910,7 @@
       "review_reasons": []
     },
     {
-      "url": "https://www.gov.uk/guidance/visa-brake-changes-to-the-uk-visa-system",
+      "url": "https://www.gov.uk/world/iran/news",
       "route_ids": [
         "uk:family-spouse",
         "uk:global-talent",
@@ -34171,7 +34975,7 @@
       "review_reasons": []
     },
     {
-      "url": "https://www.gov.uk/health-care-worker-visa/apply-from-outside-the-uk",
+      "url": "https://www.gov.uk/health-care-worker-visa/your-job",
       "route_ids": [
         "uk:health-and-care-worker"
       ],
@@ -34190,7 +34994,7 @@
       "review_reasons": []
     },
     {
-      "url": "https://www.gov.uk/health-care-worker-visa/your-job",
+      "url": "https://www.gov.uk/health-care-worker-visa/apply-from-outside-the-uk",
       "route_ids": [
         "uk:health-and-care-worker"
       ],
@@ -34323,6 +35127,6 @@
       "review_reasons": []
     }
   ],
-  "attempted_sources": 1179,
+  "attempted_sources": 20,
   "publish_required": true
 }
