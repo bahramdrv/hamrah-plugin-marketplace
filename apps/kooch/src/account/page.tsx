@@ -107,6 +107,7 @@ export function AccountPage() {
       <h1>{recovery ? 'رمز تازهٔ تو' : signedEmail ? 'پروندهٔ من' : 'ادامهٔ مسیر با حساب کوچ'}</h1>
       {local && <p className="notice">نسخهٔ آزمایشی محلی؛ ایمیل‌ها فقط در صندوق تست همین رایانه تحویل می‌شوند. از ایمیل و رمز واقعی استفاده نکن.</p>}
       <p className="intro">{signedEmail ? 'پاسخ‌ها و کارنامه‌هایت را از همین‌جا ادامه بده.' : 'بررسی‌ات را ذخیره کن و بعداً از همین‌جا ادامه بده.'}</p>
+      <details className="account-section"><summary>قبلاً در سایت کوچ حساب داشتی؟</summary><p>حساب وردپرس و حساب این اپ مستقل‌اند؛ حتی با ایمیل یکسان، هویت یا پرونده‌ای خودکار منتقل یا ادغام نمی‌شود. برای ادامهٔ بررسی در اپ، با حساب همین اپ وارد شو یا حساب بساز.</p><p><a href="https://kooch.app/login/?legacy=1" target="_blank" rel="noopener">ورود حساب قدیمی وردپرس در تب تازه</a> · <a href="mailto:info@kooch.app">پشتیبانی کوچ</a></p><p>پاسخ ثبت‌نشدهٔ فرم قدیمی را پیش از بستن آن تکمیل کن؛ این پیوند فرم را به اپ منتقل نمی‌کند. رمز و مدارک را ایمیل نکن.</p></details>
       {loading && <p role="status">در حال دریافت وضعیت…</p>}
       {configured === false && <p className="notice">سرویس حساب هنوز متصل نشده است. می‌توانی قطب‌نما را به‌صورت مهمان ادامه بدهی.</p>}
       {link && <section className="account-section"><h2>{link.type === 'recovery' ? 'تأیید پیوند بازیابی' : 'تأیید ایمیل'}</h2><p>برای مصرف پیوند یک‌بارمصرف، دکمه را بزن.</p><button className="primary" disabled={busy || !configured} onClick={() => void action(async () => {
