@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-29T10:57:28.704410Z",
-  "next_due_at": "2026-10-29T13:50:00.232961Z",
+  "generated_at": "2026-10-30T10:55:42.364884Z",
+  "next_due_at": "2026-10-30T10:57:28.704410Z",
   "sources": [
     {
       "url": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa",
@@ -42189,7 +42189,7 @@
       ],
       "status": "http_error",
       "http_status": 403,
-      "last_attempt_at": "2026-10-28T13:50:00.232961Z",
+      "last_attempt_at": "2026-10-30T10:55:42.364884Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -42870,6 +42870,6 @@
       "last_success_at": "2026-10-28T10:40:01.956017Z"
     }
   ],
-  "attempted_sources": 369,
+  "attempted_sources": 1,
   "publish_required": true
 }
