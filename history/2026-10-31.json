@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-31T10:28:08.764578Z",
+  "next_due_at": "2026-10-31T10:55:42.364884Z",
+  "interval_days": 30,
+  "complete_global_conditions": false,
+  "legal_reviews_renewed": 0,
+  "blocked_route_ids": [],
+  "coverage": {
+    "planned": 1332,
+    "captured": 969,
+    "unavailable": 363,
+    "review_required": 0,
+    "unreviewed_authority": 980
+  }
+}
