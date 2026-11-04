@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T12:37:44.535403Z",
-  "next_due_at": "2026-11-03T12:37:44.535403Z",
+  "generated_at": "2026-11-04T12:17:49.526013Z",
+  "next_due_at": "2026-11-05T12:17:49.526013Z",
   "sources": [
     {
       "url": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa",
@@ -155,7 +155,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -174,7 +174,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -193,7 +193,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -212,7 +212,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -233,7 +233,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -252,7 +252,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -271,7 +271,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -290,7 +290,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -311,7 +311,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -330,7 +330,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -349,7 +349,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -590,7 +590,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -732,7 +732,7 @@
       ],
       "status": "http_error",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -751,7 +751,7 @@
       ],
       "status": "http_error",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1121,7 +1121,7 @@
       ],
       "status": "unavailable",
       "error": "ConnectionResetError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1382,7 +1382,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1401,7 +1401,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1420,7 +1420,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1439,7 +1439,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1458,7 +1458,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1666,7 +1666,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1976,7 +1976,7 @@
       ],
       "status": "unavailable",
       "error": "RemoteDisconnected",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2049,7 +2049,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2067,7 +2067,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2086,7 +2086,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2105,7 +2105,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2124,7 +2124,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2144,7 +2144,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2207,7 +2207,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2225,7 +2225,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2504,12 +2504,23 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "http_error",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
-      "http_status": 403
+      "http_status": 403,
+      "final_url": "https://www.mvr.bg/migration/en",
+      "body_sha256": "6794583f710b343925acf5f06dc433194bbf1ccd526fa39b59fb88dd1e9f7ca1",
+      "content_type": "text/html",
+      "bytes": 28364,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.mvr.bg/migration/en/administrative-services/administrative-servces/issue-of-documents-to-eu-citizens-and-their-family-members",
+        "https://www.mvr.bg/migration/en/administrative-services/administrative-servces/issue-of-residence-permits-to-third-country-nationals"
+      ],
+      "semantic_sha256": "47805d582ce6e1aba990b964d1164c671206b0ac9bdbcc68a8edc05cdcd98a81",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://gov.bw/residency-and-work/work-permit-application",
@@ -2526,7 +2537,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'gov.bw'. (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2699,7 +2710,7 @@
       ],
       "status": "http_error",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -2769,12 +2780,48 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.belizetourismboard.org/programs-events/retirement-program/",
+      "body_sha256": "7f22197ce051a4eaf9010702fe51bec7e72c2157dd45a475864e2afc20dc4524",
+      "content_type": "text/html",
+      "bytes": 414080,
+      "condition_candidates": [
+        {
+          "heading": "Who Qualifies",
+          "excerpt": "Any person 40 years or older",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Who Qualifies",
+          "excerpt": "Dependents include spouse and children under 18 years",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Who Qualifies",
+          "excerpt": "Must be the beneficial recipient of a retirement income of $2K monthly or $24K annually generated from a source outside",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Who Qualifies",
+          "excerpt": "Must be able to provide a written undertaking to deposit the requisite amount in a bank, credit union or licensed",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Who Qualifies",
+          "excerpt": "Must pass a security clearance check carried out by the Ministry of National Security in Belize",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.belizetourismboard.org/wp-content/uploads/2026/09/QRP-INVESTOR-BROCHURE-FINAL-07.17.2026.pdf"
+      ],
+      "semantic_sha256": "4479bbfc3a945351fa33754c930e20ccdfe4e36184ac661e83108040581484d2",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://immigration.gov.bz/residence/",
@@ -3432,7 +3479,7 @@
         "2026-06-29"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -3451,7 +3498,7 @@
         "2026-06-29"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -3472,7 +3519,7 @@
         "2026-06-29"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -3520,7 +3567,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -3539,7 +3586,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4020,7 +4067,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4337,7 +4384,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4356,7 +4403,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4375,7 +4422,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4640,9 +4687,9 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "http_error",
+      "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -4662,8 +4709,8 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "http_error",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -4681,9 +4728,9 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "http_error",
+      "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -4707,8 +4754,8 @@
         "2026-06-01"
       ],
       "status": "http_error",
-      "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "http_status": 404,
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4726,8 +4773,8 @@
         "2026-06-01"
       ],
       "status": "http_error",
-      "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "http_status": 404,
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4750,7 +4797,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -4796,7 +4843,7 @@
       ],
       "status": "unavailable",
       "error": "unexpected_compression",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -5144,7 +5191,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -5193,7 +5240,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -5213,11 +5260,50 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://immigrationcur.org/dep/vergunning-en-verklaring/",
+      "body_sha256": "3130f4e9ccdf5b3e7d9ef821454a50feb78331ed2be8ddd0f7afe1c91f85c7c1",
+      "content_type": "text/html",
+      "bytes": 120378,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://immigrationcur.org",
+        "https://immigrationcur.org/",
+        "https://immigrationcur.org/contact/",
+        "https://immigrationcur.org/dep/afschrift/",
+        "https://immigrationcur.org/dep/bewijs-van-terugkeer/",
+        "https://immigrationcur.org/dep/consuls-en-consulaire-personeel/",
+        "https://immigrationcur.org/dep/definitiefvertrek/",
+        "https://immigrationcur.org/dep/gezinshereniging-vorming/",
+        "https://immigrationcur.org/dep/investeer/",
+        "https://immigrationcur.org/dep/kort-verblijf/",
+        "https://immigrationcur.org/dep/militaire-personeel/",
+        "https://immigrationcur.org/dep/naturalisatie/",
+        "https://immigrationcur.org/dep/niet-van-toepassing/",
+        "https://immigrationcur.org/dep/rentenier-gepensioneerd/",
+        "https://immigrationcur.org/dep/rentenier/",
+        "https://immigrationcur.org/dep/stage-studie-2/",
+        "https://immigrationcur.org/dep/studie-stage/",
+        "https://immigrationcur.org/dep/uitgezonden-personeel/",
+        "https://immigrationcur.org/dep/van-rechtswege/",
+        "https://immigrationcur.org/dep/verblijfsvergunning-bij-familie/",
+        "https://immigrationcur.org/dep/vergunning-en-verklaring/",
+        "https://immigrationcur.org/dep/verniewing/",
+        "https://immigrationcur.org/dep/werken-eenmanszaak/",
+        "https://immigrationcur.org/dep/werken/",
+        "https://immigrationcur.org/en/dep/vergunning-en-verklaring/",
+        "https://immigrationcur.org/es/dep/vergunning-en-verklaring/",
+        "https://immigrationcur.org/faq/",
+        "https://immigrationcur.org/grensbewaking-en-toezicht/",
+        "https://immigrationcur.org/klachten/",
+        "https://immigrationcur.org/media/"
+      ],
+      "semantic_sha256": "e0ea390ca8be324a06183743acbb348627c264c740b5868651b002d7363b1ba4",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://immigrationcur.org/toelating/",
@@ -5231,11 +5317,40 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://immigrationcur.org/toelatingsorganisatie/",
+      "body_sha256": "ec894b87b15a553e106cc980411335fa31a60bbaf8c336424c8941a03439eee1",
+      "content_type": "text/html",
+      "bytes": 135174,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://immigrationcur.org/",
+        "https://immigrationcur.org/contact/",
+        "https://immigrationcur.org/dep/aanvraag-indienen/",
+        "https://immigrationcur.org/dep/afspraak/",
+        "https://immigrationcur.org/dep/bezwaar-en-beroep/",
+        "https://immigrationcur.org/dep/leges-waarborgsom-en-restitutie/",
+        "https://immigrationcur.org/dep/status/",
+        "https://immigrationcur.org/dep/toerist/",
+        "https://immigrationcur.org/dep/vergunning-en-verklaring/",
+        "https://immigrationcur.org/dep/wet-en-regelgeving/",
+        "https://immigrationcur.org/en/toelatingsorganisatie/",
+        "https://immigrationcur.org/es/toelatingsorganisatie/",
+        "https://immigrationcur.org/faq/",
+        "https://immigrationcur.org/grensbewaking-en-toezicht/",
+        "https://immigrationcur.org/klachten/",
+        "https://immigrationcur.org/media/",
+        "https://immigrationcur.org/nieuws/",
+        "https://immigrationcur.org/over-ons/",
+        "https://immigrationcur.org/pap/toelatingsorganisatie/",
+        "https://immigrationcur.org/toelatingsorganisatie/"
+      ],
+      "semantic_sha256": "2ad0f8e3972676c6a38a907723e0f23ffa3820572b3dcf6a25ac1625e2860866",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://immigrationcur.org/dep/status/",
@@ -5249,11 +5364,12 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "unavailable",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "error": "capture_limit"
     },
     {
       "url": "https://mfai.gov.ck/visa-and-permit-criteria",
@@ -5809,7 +5925,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -5829,7 +5945,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -5849,7 +5965,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -5869,7 +5985,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -5889,7 +6005,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -5909,7 +6025,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -6337,7 +6453,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6356,7 +6472,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6375,7 +6491,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6420,7 +6536,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6440,7 +6556,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6460,7 +6576,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6481,7 +6597,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6502,7 +6618,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6552,7 +6668,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6575,7 +6691,7 @@
         "2026-10-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6592,12 +6708,28 @@
       "legal_checked_on": [
         "2026-06-22"
       ],
-      "status": "robots_unavailable",
+      "status": "captured",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.politsei.ee/en/instructions/residence-permit-for-employment",
+      "body_sha256": "353504748d0db223dd7843e446028c2bc803eb38936fcb1e38e809194b97006b",
+      "content_type": "text/html",
+      "bytes": 61178,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.politsei.ee/en/instructions/applying-for-a-residence-permit",
+        "https://www.politsei.ee/en/instructions/residence-permit-for-a-family-member",
+        "https://www.politsei.ee/en/instructions/residence-permit-for-a-permanent-resident",
+        "https://www.politsei.ee/en/instructions/residence-permit-for-business",
+        "https://www.politsei.ee/en/instructions/residence-permit-for-employment",
+        "https://www.politsei.ee/en/instructions/residence-permit-for-study",
+        "https://www.politsei.ee/en/instructions/residence-permit-card-for-an-adult"
+      ],
+      "semantic_sha256": "f92b66d292f21573900d761f8265be37c3f6758b5e4f8a2778636b0abfe2594c",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://startupestonia.ee/startup-visa/",
@@ -6612,7 +6744,7 @@
         "2026-06-22"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7399,8 +7531,8 @@
         "2026-07-01"
       ],
       "status": "unavailable",
-      "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "error": "redirect_requires_review",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7418,8 +7550,8 @@
         "2026-04-18"
       ],
       "status": "unavailable",
-      "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "error": "redirect_requires_review",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7437,8 +7569,8 @@
         "2026-04-18"
       ],
       "status": "unavailable",
-      "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "error": "redirect_requires_review",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7485,8 +7617,8 @@
         "2026-04-18"
       ],
       "status": "unavailable",
-      "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "error": "redirect_requires_review",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7504,7 +7636,7 @@
         "2026-07-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7522,7 +7654,7 @@
         "2026-05-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7540,7 +7672,7 @@
         "2026-05-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -8305,7 +8437,7 @@
         "2026-05-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -8665,12 +8797,13 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "http_error",
+      "status": "unavailable",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "error": "TimeoutError"
     },
     {
       "url": "https://igm.gob.gt/informacion-residencias-permanentes/",
@@ -8684,12 +8817,13 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "http_error",
+      "status": "unavailable",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "error": "TimeoutError"
     },
     {
       "url": "https://eservices.iss.gov.gy/visitor-visa",
@@ -9054,7 +9188,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9073,7 +9207,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9092,7 +9226,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9111,7 +9245,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9130,7 +9264,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9149,7 +9283,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9168,7 +9302,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9187,7 +9321,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9209,7 +9343,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9230,7 +9364,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9249,7 +9383,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9268,7 +9402,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9599,7 +9733,7 @@
       ],
       "status": "unavailable",
       "error": "'ascii' codec can't encode character '\\xf8' in position 73: ordinal not in range(128)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9957,7 +10091,7 @@
         "2026-06-29"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9977,11 +10111,27 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/temporary-nonimmigrant-workers",
+      "body_sha256": "93e62de093d4e2207758abba5f1581fa8fced744ec9b951b3a1803e3fa24153c",
+      "content_type": "text/html",
+      "bytes": 100785,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.uscis.gov/archive/uscis-updates-guidance-on-employment-authorization-for-e-and-l-nonimmigrant-spouses",
+        "https://www.uscis.gov/working-in-the-united-states/temporary-workers/e-2-treaty-investors",
+        "https://www.uscis.gov/working-in-the-united-states/temporary-workers/e-2-visa-cnmi-only-investor",
+        "https://www.uscis.gov/working-in-the-united-states/temporary-workers/h-3-nonimmigrant-trainee-or-special-education-exchange-visitor",
+        "https://www.uscis.gov/working-in-the-united-states/temporary-workers/o-1-visa-individuals-with-extraordinary-ability-or-achievement",
+        "https://www.uscis.gov/working-in-the-united-states/temporary-workers/r-1-nonimmigrant-religious-workers",
+        "https://www.irs.gov/individuals/international-taxpayers/taxation-of-nonresident-aliens"
+      ],
+      "semantic_sha256": "8fa860878a27b5258227411e0c009564959d224bd7213f386a98ec85929b1c5a",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/family",
@@ -9998,11 +10148,30 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/family",
+      "body_sha256": "b3095cbd77e448a9dacfed1f111a4bcff7b1554a624ff416e5db7b29d4f46b41",
+      "content_type": "text/html",
+      "bytes": 81586,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.uscis.gov/family/family-of-green-card-holders-permanent-residents",
+        "https://www.uscis.gov/family/family-of-refugees-and-asylees",
+        "https://www.uscis.gov/family/family-of-us-citizens",
+        "https://www.uscis.gov/family/family-of-us-citizens/visas-for-fiancees-of-us-citizens",
+        "https://travel.state.gov/content/travel/en/us-visas/immigrate/family-immigration.html",
+        "https://travel.state.gov/content/travel/en/us-visas/immigrate/the-immigrant-visa-process.html",
+        "https://travel.state.gov/content/visas/en/immigrate/employment.html",
+        "https://travel.state.gov/content/visas/en/immigrate/family/fiance.html",
+        "https://travel.state.gov/content/visas/en/immigrate/nvc.html",
+        "https://travel.state.gov/content/visas/en/visit/visitor.html"
+      ],
+      "semantic_sha256": "5fa59b81a3a9dee823db984061630223552644d1c44db82ae8eccbe12a0e9c91",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/green-card/green-card-eligibility-categories",
@@ -10019,11 +10188,57 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/green-card/green-card-eligibility-categories",
+      "body_sha256": "d111e071e3b609bb35c136f5ffff37a9625e6d4b64f1d1da92f80703b0bdbe44",
+      "content_type": "text/html",
+      "bytes": 100156,
+      "condition_candidates": [
+        {
+          "heading": "Green Card Eligibility Categories",
+          "excerpt": "Spouse of a U.S. citizen",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Green Card Eligibility Categories",
+          "excerpt": "Unmarried child under the age of 21 of a U.S. citizen",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Green Card Eligibility Categories",
+          "excerpt": "Parent of a U.S. citizen who is at least 21 years old",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Green Card Eligibility Categories",
+          "excerpt": "Family member of a U.S. citizen, meaning you are the: Unmarried son or daughter of a U.S. citizen and you",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Green Card Eligibility Categories",
+          "excerpt": "Family member of a lawful permanent resident, meaning you are the: Spouse of a lawful permanent resident Unmarried child under",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.uscis.gov/green-card/green-card-eligibility/green-card-based-on-special-immigrant-juvenile-classification",
+        "https://www.uscis.gov/green-card/green-card-eligibility/green-card-for-a-victim-of-a-crime-u-nonimmigrant",
+        "https://www.uscis.gov/green-card/green-card-eligibility/green-card-for-a-victim-of-trafficking-t-nonimmigrant",
+        "https://www.uscis.gov/green-card/green-card-eligibility/green-card-for-employment-based-immigrants",
+        "https://www.uscis.gov/green-card/green-card-eligibility/green-card-for-family-preference-immigrants",
+        "https://www.uscis.gov/green-card/green-card-eligibility/green-card-for-immigrant-investors",
+        "https://www.uscis.gov/green-card/green-card-eligibility/green-card-through-the-diversity-immigrant-visa-program",
+        "https://www.uscis.gov/green-card/green-card-eligibility/liberian-refugee-immigration-fairness",
+        "https://www.uscis.gov/humanitarian/victims-of-criminal-activity-u-nonimmigrant-status",
+        "https://www.uscis.gov/humanitarian/victims-of-human-trafficking-t-nonimmigrant-status",
+        "https://www.federalregister.gov/public-inspection/2026-18345/registration-of-lawful-permanent-residence-for-children-born-to-foreign-government-employees-in-the"
+      ],
+      "semantic_sha256": "12dd61862c227950d58a711d386737845097aabea02cd766557cd64944dd3d9d",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors",
@@ -10040,11 +10255,23 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors",
+      "body_sha256": "4413119259a13d1af2adf85fc74da2d7a0b9cf51f54031f589bfaa1a864241f2",
+      "content_type": "text/html",
+      "bytes": 83252,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/students-and-employment/changing-to-a-nonimmigrant-f-or-m-student-status",
+        "https://travel.state.gov/content/travel/en/us-visas/study/exchange.html",
+        "https://www.irs.gov/individuals/international-taxpayers/foreign-students-and-scholars"
+      ],
+      "semantic_sha256": "9254c059ad5646ab1b592cdfacb1c9a4eaa5e73d74e4d3e1308ec93ceb6a34e5",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.rgb-visa.com/",
@@ -10157,7 +10384,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -10187,8 +10414,8 @@
         "2026-06-29"
       ],
       "status": "unavailable",
-      "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "error": "redirect_requires_review",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -10212,8 +10439,8 @@
         "2026-06-29"
       ],
       "status": "unavailable",
-      "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "error": "redirect_requires_review",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11169,7 +11396,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11188,7 +11415,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11208,7 +11435,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11227,7 +11454,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11246,7 +11473,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11265,7 +11492,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11284,7 +11511,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11303,7 +11530,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11718,7 +11945,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11888,7 +12115,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -12022,7 +12249,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -12042,7 +12269,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -12062,7 +12289,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -12082,7 +12309,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -12108,7 +12335,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -12126,7 +12353,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -12144,7 +12371,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -12512,7 +12739,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -12540,7 +12767,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -13087,7 +13314,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -13638,7 +13865,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -13657,7 +13884,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -13977,7 +14204,7 @@
         "2026-09-11"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -13995,7 +14222,7 @@
         "2026-09-10"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14096,8 +14323,8 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -14115,8 +14342,8 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -14134,8 +14361,8 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -14158,8 +14385,8 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -14177,8 +14404,8 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -14414,7 +14641,7 @@
       ],
       "status": "unavailable",
       "error": "unsupported_url",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14436,7 +14663,7 @@
       ],
       "status": "unavailable",
       "error": "unsupported_url",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14455,7 +14682,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14474,7 +14701,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14493,7 +14720,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14895,7 +15122,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14913,7 +15140,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14931,7 +15158,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14949,7 +15176,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14967,7 +15194,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15498,7 +15725,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15521,7 +15748,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15664,7 +15891,7 @@
         "2026-05-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15682,7 +15909,7 @@
         "2026-05-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15766,7 +15993,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15998,7 +16225,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -16106,7 +16333,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -17911,11 +18138,45 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/cw-1-cnmi-only-transitional-worker",
+      "body_sha256": "cf746d6c73ebd3ff3e4b18ab3fc7c7d42de6c455e445f8ddc2f192c3bbb58a6c",
+      "content_type": "text/html",
+      "bytes": 123113,
+      "condition_candidates": [
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "Obtain an approved temporary labor certification (TLC) from the U.S. Department of Labor (DOL) and consider all available U.S. workers",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "Be engaged in a legitimate business, including participation in the E-Verify program , as defined at 8 CFR 214.2(w)(1)(vii);",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "Offer terms and conditions of employment consistent with the nature of the employer’s business in the CNMI;",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "Comply with all federal and CNMI requirements relating to employment. Examples include: nondiscrimination, occupational safety, and minimum wage requirements;",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "Pay reasonable transportation costs if the worker is involuntarily dismissed from employment for any reason before the end of the",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [],
+      "semantic_sha256": "e8b174b7e43179902ea1cb01cccfe3553b4036b1ed3a094894a65690fd144f9d",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://ind.nl/en/residence-permits/work/highly-skilled-migrant",
@@ -18794,7 +19055,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -18814,7 +19075,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -18832,7 +19093,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -18850,7 +19111,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -18868,7 +19129,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -18889,7 +19150,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -18908,7 +19169,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -18927,7 +19188,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -18946,7 +19207,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -18968,7 +19229,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19153,7 +19414,7 @@
       ],
       "status": "unavailable",
       "error": "response_too_large",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19229,7 +19490,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19248,7 +19509,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19272,7 +19533,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19400,7 +19661,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19473,7 +19734,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19492,7 +19753,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19511,7 +19772,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19559,7 +19820,7 @@
         "2026-06-22"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19578,7 +19839,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19599,7 +19860,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19618,7 +19879,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19637,7 +19898,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19811,7 +20072,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19971,7 +20232,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19993,7 +20254,7 @@
       ],
       "status": "unavailable",
       "error": "unsupported_document",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20012,7 +20273,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20031,7 +20292,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20410,7 +20671,7 @@
         "2026-06-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20428,7 +20689,7 @@
         "2026-06-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20446,7 +20707,7 @@
         "2026-06-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20464,7 +20725,7 @@
         "2026-06-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20482,7 +20743,7 @@
         "2026-06-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20500,7 +20761,7 @@
         "2026-06-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20519,7 +20780,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -20539,7 +20800,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -20559,7 +20820,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -20579,7 +20840,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -20648,7 +20909,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -20807,8 +21068,8 @@
         "2026-06-01"
       ],
       "status": "unavailable",
-      "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "error": "SSLError",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20826,8 +21087,8 @@
         "2026-06-28"
       ],
       "status": "unavailable",
-      "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "error": "SSLError",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20845,8 +21106,8 @@
         "2026-06-01"
       ],
       "status": "unavailable",
-      "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "error": "SSLError",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -21683,7 +21944,7 @@
       ],
       "status": "unavailable",
       "error": "robots_disallowed",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -22061,7 +22322,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -22115,7 +22376,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -22178,7 +22439,7 @@
         "2026-06-01"
       ],
       "status": "unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -22630,7 +22891,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -22715,7 +22976,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -22762,7 +23023,7 @@
         "2026-06-29"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -22821,7 +23082,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -22845,7 +23106,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -22864,7 +23125,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -23863,7 +24124,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -23881,7 +24142,7 @@
         "2026-06-01"
       ],
       "status": "robots_disallowed",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24032,7 +24293,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24053,7 +24314,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24104,7 +24365,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24123,7 +24384,7 @@
       ],
       "status": "unavailable",
       "error": "ConnectionRefusedError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24142,7 +24403,7 @@
       ],
       "status": "unavailable",
       "error": "ConnectionRefusedError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24165,7 +24426,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24594,7 +24855,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24614,7 +24875,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24633,7 +24894,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24652,7 +24913,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24671,7 +24932,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24690,7 +24951,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24709,7 +24970,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24797,7 +25058,7 @@
       ],
       "status": "http_error",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -24984,7 +25245,7 @@
       ],
       "status": "unavailable",
       "error": "response_too_large",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -25633,7 +25894,7 @@
         "2026-09-10"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -25650,11 +25911,50 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/h-1b-specialty-occupations",
+      "body_sha256": "7f7ca51d5c445bd667922656b142c2aeb47f023a15aac76b2a50929df75cf6d1",
+      "content_type": "text/html",
+      "bytes": 121343,
+      "condition_candidates": [
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "Theoretical and practical application of a body of highly specialized knowledge; and",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "Attainment of a bachelor's or higher degree in a directly related* specific specialty (or its equivalent) as a minimum for",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "A U.S. bachelor’s or higher degree in a directly related specific specialty, or its equivalent, is normally the minimum entry",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "A U.S. bachelor’s or higher degree in a directly related specific specialty, or its equivalent, is normally required to perform",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "The employer, or third party if the beneficiary will be staffed to that third party, normally requires a U.S. bachelor’s",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.uscis.gov/ProtectAmerica/combating-fraud-and-abuse-in-the-h-1b-visa-program",
+        "https://www.uscis.gov/archive/options-for-nonimmigrant-workers-following-termination-of-employment-0",
+        "https://www.uscis.gov/working-in-the-united-states/temporary-workers/frequently-asked-questions-about-part-6-of-form-i-129-petition-for-a-nonimmigrant-worker",
+        "https://www.federalregister.gov/public-inspection/2026-16231/9-11-response-and-biometric-entry-exit-fee-for-h-1b-and-l-1-visas"
+      ],
+      "semantic_sha256": "14e5ca0f0fbe597d9c939bea037051efe7df9030b01aeab4b4d72bb00e1e9782",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/l-1a-intracompany-transferee-executive-or-manager",
@@ -25668,11 +25968,45 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/l-1a-intracompany-transferee-executive-or-manager",
+      "body_sha256": "3d9b21d3263d417864edac99527f057053e76e92e9abfd49247ded6a53685fe2",
+      "content_type": "text/html",
+      "bytes": 100432,
+      "condition_candidates": [
+        {
+          "heading": "General Qualifications of the Employer and Employee",
+          "excerpt": "Have a qualifying relationship with a foreign company (parent company, branch, subsidiary, or affiliate, collectively referred to as qualifying organizations",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "General Qualifications of the Employer and Employee",
+          "excerpt": "Currently be, or will be, doing business as an employer in the United States and in at least one other",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "General Qualifications of the Employer and Employee",
+          "excerpt": "Generally have been working for a qualifying organization abroad for one continuous year within the three years immediately preceding his",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "General Qualifications of the Employer and Employee",
+          "excerpt": "Be seeking to enter the United States to provide service in an executive or managerial capacity for a branch of",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.uscis.gov/archive/form-i-129i-129s-pilot-program-for-canadian-l-1-nonimmigrants",
+        "https://www.uscis.gov/archive/uscis-updates-guidance-on-employment-authorization-for-e-and-l-nonimmigrant-spouses",
+        "https://www.uscis.gov/working-in-the-united-states/temporary-workers/frequently-asked-questions-about-part-6-of-form-i-129-petition-for-a-nonimmigrant-worker",
+        "https://www.federalregister.gov/public-inspection/2026-16231/9-11-response-and-biometric-entry-exit-fee-for-h-1b-and-l-1-visas"
+      ],
+      "semantic_sha256": "44251f67b291803f6d4412376c89c8f42ece746bac692077c0b420cee6db217f",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/l-1b-intracompany-transferee-specialized-knowledge",
@@ -25686,11 +26020,45 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/l-1b-intracompany-transferee-specialized-knowledge",
+      "body_sha256": "672501448e4955ed45bbb4dd5b7ad630fefd89ad0558c0ea2b377847e1d433e8",
+      "content_type": "text/html",
+      "bytes": 100012,
+      "condition_candidates": [
+        {
+          "heading": "General Qualifications of the Employer and Employee",
+          "excerpt": "Have a qualifying relationship with a foreign company (parent company, branch, subsidiary, or affiliate, collectively referred to as qualifying organizations);",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "General Qualifications of the Employer and Employee",
+          "excerpt": "Currently be, or will be, doing business as an employer in the United States and in at least one other",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "General Qualifications of the Employer and Employee",
+          "excerpt": "Generally have been working for a qualifying organization abroad for one continuous year within the three years immediately preceding his",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "General Qualifications of the Employer and Employee",
+          "excerpt": "Be seeking to enter the United States to provide services in a specialized knowledge capacity to a branch of the",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.uscis.gov/archive/form-i-129i-129s-pilot-program-for-canadian-l-1-nonimmigrants",
+        "https://www.uscis.gov/archive/uscis-updates-guidance-on-employment-authorization-for-e-and-l-nonimmigrant-spouses",
+        "https://www.uscis.gov/working-in-the-united-states/temporary-workers/frequently-asked-questions-about-part-6-of-form-i-129-petition-for-a-nonimmigrant-worker",
+        "https://www.federalregister.gov/public-inspection/2026-16231/9-11-response-and-biometric-entry-exit-fee-for-h-1b-and-l-1-visas"
+      ],
+      "semantic_sha256": "d33ecfb776f217790796d6b8136019aa634f9383aee75456f469fce196cedfea",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/o-1-visa-individuals-with-extraordinary-ability-or-achievement",
@@ -25704,11 +26072,24 @@
       "legal_checked_on": [
         "2026-07-01"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/o-1-visa-individuals-with-extraordinary-ability-or-achievement",
+      "body_sha256": "1ed882184812414e2f47e670c26f72ffc61c6d8772029f3b213ac45b9f9e5f63",
+      "content_type": "text/html",
+      "bytes": 104802,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.uscis.gov/archive/listening-session-on-o-nonimmigrant-classifications-question-and-answers",
+        "https://www.uscis.gov/working-in-the-united-states/temporary-workers/frequently-asked-questions-about-part-6-of-form-i-129-petition-for-a-nonimmigrant-worker",
+        "https://www.uscis.gov/working-in-the-united-states/temporary-workers/o-1-individuals-with-extraordinary-ability-or-achievement/o-nonimmigrant-classifications-question-and-answers",
+        "https://travel.state.gov/content/travel/en/us-visas/employment/temporary-worker-visas.html"
+      ],
+      "semantic_sha256": "04c647a94e91e4dbb0a140f85faea626370003eed88b6eae526a8d1daa01060e",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1",
@@ -25722,11 +26103,45 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1",
+      "body_sha256": "06dbaed16bb61b8e40285c785a41257312d35cc2fa662658080ca3282d188bee",
+      "content_type": "text/html",
+      "bytes": 89109,
+      "condition_candidates": [
+        {
+          "heading": "* Criteria for Demonstrating Extraordinary Ability",
+          "excerpt": "Evidence of receipt of lesser nationally or internationally recognized prizes or awards for excellence",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "* Criteria for Demonstrating Extraordinary Ability",
+          "excerpt": "Evidence of your membership in associations in the field which demand outstanding achievement of their members",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "* Criteria for Demonstrating Extraordinary Ability",
+          "excerpt": "Evidence of published material about you in professional or major trade publications or other major media",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "* Criteria for Demonstrating Extraordinary Ability",
+          "excerpt": "Evidence that you have been asked to judge the work of others, either individually or on a panel",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "* Criteria for Demonstrating Extraordinary Ability",
+          "excerpt": "Evidence of your original scientific, scholarly, artistic, athletic, or business-related contributions of major significance to the field",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [],
+      "semantic_sha256": "e0b9378b11358fe95f1a7fe7dffda5e2251b2379794295214e69ed3103bfe2be",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2",
@@ -25740,11 +26155,47 @@
       "legal_checked_on": [
         "2026-07-21"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2",
+      "body_sha256": "fe40ea8e6d4dfa4fc752d642c41b43845861d4a1b9f8b5e9e7c43bb613508a70",
+      "content_type": "text/html",
+      "bytes": 106142,
+      "condition_candidates": [
+        {
+          "heading": "* Criteria for Exceptional Ability (must meet at least 3)",
+          "excerpt": "Official academic record showing that you have a degree, diploma, certificate, or similar award from a college, university, school, or",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "* Criteria for Exceptional Ability (must meet at least 3)",
+          "excerpt": "Letters from current or former employers documenting at least 10 years of full-time experience in your occupation",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "* Criteria for Exceptional Ability (must meet at least 3)",
+          "excerpt": "A license to practice your profession or certification for your profession or occupation",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "* Criteria for Exceptional Ability (must meet at least 3)",
+          "excerpt": "Evidence that you have commanded a salary or other remuneration for services that demonstrates your exceptional ability",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "* Criteria for Exceptional Ability (must meet at least 3)",
+          "excerpt": "Membership in a professional association(s)",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.uscis.gov/forms/all-forms/petition-filing-and-processing-procedures-for-form-i-140-immigrant-petition-for-alien-workers"
+      ],
+      "semantic_sha256": "93169b32c8bfe3dd104a5d4df91f72d61ae6fdd50bd95c9edeb384b46b5e9bf3",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-third-preference-eb-3",
@@ -25758,11 +26209,21 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-third-preference-eb-3",
+      "body_sha256": "3fdf3454fb9d038487e0f5bbb1400de2aa96c8f1694d6d189b59ccedb6be7a26",
+      "content_type": "text/html",
+      "bytes": 91052,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.uscis.gov/forms/all-forms/petition-filing-and-processing-procedures-for-form-i-140-immigrant-petition-for-alien-workers"
+      ],
+      "semantic_sha256": "4d4e7c2d678dd88c12f6f7571a903152991d895033fece2f31ac1e49c253dd91",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/working-in-the-united-states/permanent-workers/eb-5-immigrant-investor-program",
@@ -25776,11 +26237,26 @@
       "legal_checked_on": [
         "2026-06-22"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/permanent-workers/eb-5-immigrant-investor-program",
+      "body_sha256": "1d7058d823d9ec5e5e83be51be7ffe4c5f0b4c4746be198dd3b1df1dd65b809d",
+      "content_type": "text/html",
+      "bytes": 91989,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-fifth-preference-eb-5/about-the-eb-5-visa-classification",
+        "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-fifth-preference-eb-5/eb-5-immigrant-investor-process",
+        "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-fifth-preference-eb-5/eb-5-immigrant-investor-regional-centers",
+        "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-fifth-preference-eb-5/eb-5-resources",
+        "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-fifth-preference-eb-5/eb-5-support",
+        "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-fifth-preference-eb-5/eb-5-whats-new"
+      ],
+      "semantic_sha256": "6ce1bde7b7259dc3cfdd7dc223a222e451357f7e89e8844cc6d53116e51062e3",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/e-2-treaty-investors",
@@ -25794,11 +26270,49 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/e-2-treaty-investors",
+      "body_sha256": "63b62ab785192e6d28a5c2f82b3c2b831e87994314fdc0cc894a93f27e2d7982",
+      "content_type": "text/html",
+      "bytes": 105446,
+      "condition_candidates": [
+        {
+          "heading": "General Qualifications of a Treaty Investor",
+          "excerpt": "Be a national of a country with which the United States maintains a treaty of commerce and navigation;",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "General Qualifications of a Treaty Investor",
+          "excerpt": "Have invested, or be actively in the process of investing, a substantial amount of capital in a bona fide enterprise",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "General Qualifications of a Treaty Investor",
+          "excerpt": "Be seeking to enter the United States solely to develop and direct the investment enterprise. This is established by showing",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "General Qualifications of a Treaty Investor",
+          "excerpt": "Substantial in relationship to the total cost of either purchasing an established enterprise or establishing a new one",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "General Qualifications of a Treaty Investor",
+          "excerpt": "Sufficient to ensure the treaty investor’s financial commitment to the successful operation of the enterprise",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.uscis.gov/archive/uscis-updates-guidance-on-employment-authorization-for-e-and-l-nonimmigrant-spouses",
+        "https://evisaforms.state.gov/Instructions/SchedulingSystem.asp",
+        "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/treaty.html"
+      ],
+      "semantic_sha256": "3af2c53aa2fba8a4e1ef54d3bdd97e9b9ccb84fd2979b755adad0be358d9b843",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/students-and-employment",
@@ -25812,11 +26326,23 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/students-and-employment",
+      "body_sha256": "97318c89e86186ff1fa74611e840fbae45e8e7cec02b242d864239d0e5601812",
+      "content_type": "text/html",
+      "bytes": 85573,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.uscis.gov/newsroom/immigration-relief-in-emergencies-or-unforeseen-circumstances",
+        "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-extension-for-stem-students-stem-opt",
+        "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/students-and-employment/changing-to-a-nonimmigrant-f-or-m-student-status"
+      ],
+      "semantic_sha256": "d3193f15bdbe7b2bb5b809eaa7f2d350a4ade4ff0c270b2d9578f27f04658e03",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://j1visa.state.gov/",
@@ -25887,11 +26413,47 @@
       "legal_checked_on": [
         "2026-07-01"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/tn-usmca-professionals",
+      "body_sha256": "0d4d569cb2f23e4277ac9e5dbb71e7c566b49ef37d9997a3ff6e01daf35d2124",
+      "content_type": "text/html",
+      "bytes": 92024,
+      "condition_candidates": [
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "You are a citizen of Canada or Mexico;",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "Your profession is included in the USMCA;",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "The position in the United States requires a USMCA professional;",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "You will work in a prearranged full-time or part-time job for a U.S. employer or entity; and",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "excerpt": "You have the qualifications to practice in the profession in question.",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://travel.state.gov/content/travel/en/us-visas/employment/visas-canadian-mexican-usmca-professional-workers.html"
+      ],
+      "semantic_sha256": "32bbbd60bd33360b8b6f68b3f6844ca3ded5769181f96b4faacdca6a95e32570",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/family/family-of-us-citizens/visas-for-fiancees-of-us-citizens",
@@ -25905,11 +26467,44 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/family/family-of-us-citizens/visas-for-fiancees-of-us-citizens",
+      "body_sha256": "28d4ae28a91640d47821bdfd9cbb2a2b2cb51d9e75c32e206291130186418cfa",
+      "content_type": "text/html",
+      "bytes": 94491,
+      "condition_candidates": [
+        {
+          "heading": "Eligibility for Fiancé(e) Visas",
+          "excerpt": "You are a U.S. citizen;",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility for Fiancé(e) Visas",
+          "excerpt": "You and your fiancé(e) intend to marry one another within 90 days of your fiancé(e)’s admission to the United States",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility for Fiancé(e) Visas",
+          "excerpt": "You and your fiancé(e) are both legally free to marry (this means you both are legally able to marry in",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Eligibility for Fiancé(e) Visas",
+          "excerpt": "You and your fiancé(e) met each other in person at least once within the 2-year period before you file your",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.uscis.gov/family/bring-spouse-to-live-in-US",
+        "https://www.uscis.gov/green-card/after-we-grant-your-green-card/conditional-permanent-residence/removing-conditions-on-permanent-residence-based-on-marriage",
+        "https://travel.state.gov/content/travel/en/us-visas/immigrate/family-immigration/nonimmigrant-visa-for-a-fiance-k-1.html"
+      ],
+      "semantic_sha256": "49c218ee4506a5861014d30040a5a0720f2bd97f578d90b457c5cc453c954c44",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.uscis.gov/family/family-of-us-citizens/bringing-spouses-to-live-in-the-united-states-as-permanent-residents",
@@ -25923,11 +26518,23 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/family/bring-spouse-to-live-in-US",
+      "body_sha256": "5a7fff733488b3b83ef5812a8cd43702c33c4764a7b5cfc5ef8a5b0fc378b460",
+      "content_type": "text/html",
+      "bytes": 94180,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.uscis.gov/family/family-of-green-card-holders-permanent-residents/v-nonimmigrant-visas",
+        "https://www.uscis.gov/family/family-of-us-citizens/k-3k-4-nonimmigrant-visas",
+        "https://www.uscis.gov/green-card/after-we-grant-your-green-card/conditional-permanent-residence/removing-conditions-on-permanent-residence-based-on-marriage"
+      ],
+      "semantic_sha256": "a08c8cb7d076e5aaed92f5a8e08f21374bd358ab8acc8fe8b7cc40bb7071e568",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.gub.uy/tramites/residencia-legal-permanente",
@@ -26294,7 +26901,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -26311,12 +26918,22 @@
       "legal_checked_on": [
         "2026-06-27"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.immigration.go.ug/services/tourist-visa",
+      "body_sha256": "87d97e92dd747e4470bc84d094a9f7ca2a4672def6572529082b8852479c65a6",
+      "content_type": "text/html",
+      "bytes": 60122,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.visas.immigration.go.ug/"
+      ],
+      "semantic_sha256": "a32629755087b31a1f293068ecf47a625efddeb1b57309e2865b109af34b6e31",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.immigration.go.ug/services/multiple-entry-visa",
@@ -26330,12 +26947,28 @@
       "legal_checked_on": [
         "2026-06-27"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.immigration.go.ug/services/multiple-entry-visa",
+      "body_sha256": "c320e360803314535fe22186540d07d78a427e4dd869581811222360282dbeac",
+      "content_type": "text/html",
+      "bytes": 58304,
+      "condition_candidates": [
+        {
+          "heading": "Requirements",
+          "excerpt": "Attachments Passport (Bio-data page) with at least 6 months validity Recent Passport size Photograph Valid Police clearance from Interpol or",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.visas.immigration.go.ug/"
+      ],
+      "semantic_sha256": "f0bc0a2f10718e374f769f9cc76074015e57b4072e4456650a836f4350cc580a",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.immigration.go.ug/services/east-african-tourist-visa",
@@ -26349,12 +26982,28 @@
       "legal_checked_on": [
         "2026-06-27"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.immigration.go.ug/services/east-african-tourist-visa",
+      "body_sha256": "d3d65c880750849d0bbc11da7706367e0a11a8da49494b994bb4dd3e87c8a221",
+      "content_type": "text/html",
+      "bytes": 58538,
+      "condition_candidates": [
+        {
+          "heading": "Requirements",
+          "excerpt": "Attachments Copy of the passport (Bio-data page) with at least 6 months validity Copy of recent Passport size Photograph Vaccination",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://www.visas.immigration.go.ug/"
+      ],
+      "semantic_sha256": "9dc922c4904c9b659427d24a9eba9c6025b8eb5c6f2e5c09861e57181c26d219",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.immigration.go.ug/permit/entry-permit",
@@ -26368,12 +27017,20 @@
       "legal_checked_on": [
         "2026-06-27"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.immigration.go.ug/permit/entry-permit",
+      "body_sha256": "d8fbeb003f421f3734bd18be1b2bf5c9b023c4ee7a2c07e42a2b1faa70c04641",
+      "content_type": "text/html",
+      "bytes": 60523,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "03b5dff5ca4023b473075ff9ff526f7b4bd46da02638377b0f1bb0ea16061e7d",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.immigration.go.ug/services/special-pass",
@@ -26387,12 +27044,22 @@
       "legal_checked_on": [
         "2026-06-27"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.immigration.go.ug/services/special-pass",
+      "body_sha256": "89a241b4c05d6cec7b40ebda81b6af8c57b6826794f3c4bdbfa5deb0511abe30",
+      "content_type": "text/html",
+      "bytes": 59776,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.visas.immigration.go.ug/"
+      ],
+      "semantic_sha256": "b9fccd5f7f599d7bfdc1528c1c2e24bea6828437351ba9add19bcb6a17f9e201",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.immigration.go.ug/services/student-pass",
@@ -26406,12 +27073,13 @@
       "legal_checked_on": [
         "2026-06-27"
       ],
-      "status": "http_error",
+      "status": "unavailable",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "error": "TimeoutError"
     },
     {
       "url": "https://www.immigration.go.ug/services/dependant-pass",
@@ -26425,12 +27093,22 @@
       "legal_checked_on": [
         "2026-09-10"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.immigration.go.ug/services/dependant-pass",
+      "body_sha256": "9342dba06e67306da1e1c0aa6810353d551c81ab63c035e370ccead578761266",
+      "content_type": "text/html",
+      "bytes": 59427,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.visas.immigration.go.ug/"
+      ],
+      "semantic_sha256": "8341f8b8dd3de17d9d28067b93b116e02ee0000cf45eb754c1aaf46478832ed7",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.immigration.go.ug/services/certificate-residence",
@@ -26444,12 +27122,24 @@
       "legal_checked_on": [
         "2026-06-27"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.immigration.go.ug/services/certificate-residence",
+      "body_sha256": "0fa5f71cefc0d16ba2f9b4c60ceae5474808e88f31ed881e666f5c4bf5706c68",
+      "content_type": "text/html",
+      "bytes": 56535,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.immigration.go.ug/certificate-residence/due-long-stay",
+        "https://www.immigration.go.ug/certificate-residence/due-marriage",
+        "https://www.immigration.go.ug/certificate-residence/former-ugandan"
+      ],
+      "semantic_sha256": "53c962cbf5edd212548d32fdc9817dde51c101de58aaf366f6d46318007421f8",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://dmsu.gov.ua/en-home/services/documenting-foreigners/extending-the-duration-of-stay-on-the-territory-of-ukraine-calculation-of-the-allowed-duration-of-stay.html",
@@ -26635,7 +27325,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -26656,12 +27346,50 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://immigration.gov.vu/residence-visa/",
+      "body_sha256": "2e2d8b2500cf44ae106a9d4bbd85eb1f1319c9d11c228e7286abe4ea70555b21",
+      "content_type": "text/html",
+      "bytes": 118941,
+      "condition_candidates": [
+        {
+          "heading": "General Visa Conditions",
+          "excerpt": "Comply with all Vanuatu laws.",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "General Visa Conditions",
+          "excerpt": "Conduct themselves in a manner conducive to peace, good order, good government, and public morality in Vanuatu.",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "General Visa Conditions",
+          "excerpt": "Notify Vanuatu Immigration of significant personal or financial changes.",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/APPLICATION_FOR_RESIDENCY_VISA.pdf",
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/RESIDENCY_VISA-EMPLOYEE_CHECKLIST_V2.pdf",
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/RESIDENCY_VISA-FOREIGN_INVESTOR_CHECKLIST_V2.pdf",
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/RESIDENCY_VISA-LEASEHOLD_HOLDER_CHECKLIST_V2.pdf",
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/RESIDENCY_VISA-PARTNER_CHECKLIST_V2.pdf",
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/RESIDENCY_VISA-SELF-FUNDED_CHECKLIST_V2.pdf",
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/RESIDENCY_VISA-__CHILD_CHECKLIST_V2.pdf",
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/RESIDENCY_VISA_RENEWAL_-_CHILD_CHECKLIST.pdf",
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/RESIDENCY_VISA_RENEWAL_-_EMPLOYEE_CHECKLIST.pdf",
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/RESIDENCY_VISA_RENEWAL_-_FOREIGN_INVESTOR_CHECKLIST.pdf",
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/RESIDENCY_VISA_RENEWAL_-_LEASEHOLD_HOLDER_CHECKLIST.pdf",
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/RESIDENCY_VISA_RENEWAL_-_PARTNER_CHECKLIST.pdf",
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/RESIDENCY_VISA_RENEWAL_-_SELF-FUNDED_CHECKLIST.pdf"
+      ],
+      "semantic_sha256": "c92cdf32dc007781eee4ab1dc9fc1031ead8246539c2e73e3e3b75a2d672c39f",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://immigration.gov.vu/permanent-resident-visa/",
@@ -26675,12 +27403,38 @@
       "legal_checked_on": [
         "2026-07-22"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://immigration.gov.vu/permanent-resident-visa/",
+      "body_sha256": "726aea666569d17de2294c7d1ed3039740835a611a873b1db78318bd866eb1bf",
+      "content_type": "text/html",
+      "bytes": 116237,
+      "condition_candidates": [
+        {
+          "heading": "Documentary Requirements",
+          "excerpt": "Proof of Identity: Applicants who are 18 years of age or over are required to provide at least three documents",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Documentary Requirements",
+          "excerpt": "Evidence of Penal Clearance: If you have lived or traveled outside Vanuatu for periods totaling 90 days or more since",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Documentary Requirements",
+          "excerpt": "Supporting Documents: This may vary depending on your individual circumstances and the specific subclass of permanent residence visa you are",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [
+        "https://immigration.gov.vu/wp-content/uploads/2023/09/Application_for_Permenant_Residence_Visa.pdf"
+      ],
+      "semantic_sha256": "02684c98a6abb29f1881f8d0e6e9fdcb5024b1ded8d786932e20851c7e74d0fb",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://vancitizenship.gov.vu/",
@@ -26722,12 +27476,46 @@
       "legal_checked_on": [
         "2026-06-27"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 503,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://security.gov.vc/security/index.php?option=com_content&view=article&id=708:entry-visa-application-form&catid=70&Itemid=426",
+      "body_sha256": "8c4c4d29e7f1ff0848514d20c9c40e64442fc51273b949a45bd556a708c1b244",
+      "content_type": "text/html",
+      "bytes": 23681,
+      "condition_candidates": [
+        {
+          "heading": "Visa Requirements for St. Vincent and The Grenadines",
+          "excerpt": "A clear, legible, coloured copy of Bio-page of Passport",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Visa Requirements for St. Vincent and The Grenadines",
+          "excerpt": "A clear, legible, coloured standard Passport size photo (A 2” x 2” photo taken within the last six (6) months)",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Visa Requirements for St. Vincent and The Grenadines",
+          "excerpt": "Letter from Sponsor",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Visa Requirements for St. Vincent and The Grenadines",
+          "excerpt": "A VALID Police Certificate of Character",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Visa Requirements for St. Vincent and The Grenadines",
+          "excerpt": "Financial Statement (Applicant and/or Sponsor)",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [],
+      "semantic_sha256": "d8da57639e8388f6b89f1a60efc625e559133aacf93eb0727b616c6ed305bf18",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://security.gov.vc/security/index.php?option=com_content&view=article&id=56&Itemid=112",
@@ -26745,12 +27533,22 @@
       "legal_checked_on": [
         "2026-06-27"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 503,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://security.gov.vc/security/index.php?option=com_content&view=article&id=56&Itemid=112",
+      "body_sha256": "ec1179ccdfb043cdb11b7f5b8ac0b4286b360f141883b9f8f39aa1ed216058d9",
+      "content_type": "text/html",
+      "bytes": 23661,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://security.gov.vc/security/index.php?option=com_content&view=article&id=708:entry-visa-application-form&catid=70&Itemid=426"
+      ],
+      "semantic_sha256": "725730665d1bf4861d6f580e3de5e206208ad52d7c330a41549e889df1559c27",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://pmoffice.gov.vc/pmoffice/index.php/citizenship",
@@ -26764,12 +27562,46 @@
       "legal_checked_on": [
         "2026-06-27"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 503,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://pmoffice.gov.vc/pmoffice/index.php/citizenship",
+      "body_sha256": "181a4913ffc7caed8bc91bd206fff1512eee42471eb2f3f5c5941e2238f67e4b",
+      "content_type": "text/html",
+      "bytes": 40296,
+      "condition_candidates": [
+        {
+          "heading": "Requirements for Work Permit Only",
+          "excerpt": "1. Letter from employer.",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Requirements for Work Permit Only",
+          "excerpt": "2. Certified copy of passport (information page/s).",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Requirements for Work Permit Only",
+          "excerpt": "3. Proof that the position applied for has been advertised.",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Requirements for Work Permit Only",
+          "excerpt": "4. Police record.",
+          "verification": "unreviewed"
+        },
+        {
+          "heading": "Requirements for Work Permit Only",
+          "excerpt": "5. Pay application fee of $150.00 (non-refundable). (See list of fees for payment rates upon approval)",
+          "verification": "unreviewed"
+        }
+      ],
+      "discovery_links": [],
+      "semantic_sha256": "29a7e1536f3bbf215043d76d4177b556ee78470c63501e3730a0b4212b37daf3",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.vaticanstate.va/phocadownload/leggi-decreti/Leggesullacittadinanzalaresidenzaelaccesso.pdf",
@@ -27102,7 +27934,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -27121,7 +27953,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -27140,7 +27972,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -27159,7 +27991,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -27178,7 +28010,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -27506,8 +28338,8 @@
       "legal_checked_on": [
         "2026-06-01"
       ],
-      "status": "unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -27526,7 +28358,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -27551,7 +28383,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -27570,7 +28402,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -28211,7 +29043,7 @@
       ],
       "status": "unavailable",
       "error": "ConnectionRefusedError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -28315,7 +29147,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -28334,7 +29166,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -28354,7 +29186,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -28651,7 +29483,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -28671,7 +29503,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -28910,7 +29742,7 @@
       "legal_checked_on": [],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -28931,7 +29763,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -29147,7 +29979,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -29482,7 +30314,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -29696,7 +30528,7 @@
       "legal_checked_on": [],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -29749,8 +30581,8 @@
       ],
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
-      "status": "http_error",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -29773,8 +30605,8 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "http_error",
-      "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "http_status": 404,
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -29854,7 +30686,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -29874,11 +30706,50 @@
       ],
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://immigrationcur.org/en/",
+      "body_sha256": "e48c7240a6c86afb87797d53b664792c51218196de55ab871aeb69cf022c2048",
+      "content_type": "text/html",
+      "bytes": 186745,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://immigrationcur.org/",
+        "https://immigrationcur.org/dep/aanvraag-indienen/",
+        "https://immigrationcur.org/dep/afspraak/",
+        "https://immigrationcur.org/dep/status/",
+        "https://immigrationcur.org/dep/vergunning-en-verklaring/",
+        "https://immigrationcur.org/en/",
+        "https://immigrationcur.org/en/admission-office-launches-project-tuma-bo-permit/",
+        "https://immigrationcur.org/en/admission-office-moves-back-to-punda/",
+        "https://immigrationcur.org/en/contact/",
+        "https://immigrationcur.org/en/dep/aanvraag-indienen/",
+        "https://immigrationcur.org/en/dep/afspraak/",
+        "https://immigrationcur.org/en/dep/status/",
+        "https://immigrationcur.org/en/dep/submit-application/",
+        "https://immigrationcur.org/en/dep/vergunning-en-verklaring/",
+        "https://immigrationcur.org/en/faq/",
+        "https://immigrationcur.org/en/first-ribe-luga-decision-letters-issued/",
+        "https://immigrationcur.org/en/great-interest-in-the-tuma-bo-permit-project/",
+        "https://immigrationcur.org/en/grensbewaking-en-toezicht/",
+        "https://immigrationcur.org/en/klachten/",
+        "https://immigrationcur.org/en/media/",
+        "https://immigrationcur.org/en/nieuws/",
+        "https://immigrationcur.org/en/over-ons/",
+        "https://immigrationcur.org/en/ribe-luga-enters-its-final-week/",
+        "https://immigrationcur.org/en/ribe-luga-extended/",
+        "https://immigrationcur.org/en/ribe-luga-registration-period-extended/",
+        "https://immigrationcur.org/en/ribe-luga/",
+        "https://immigrationcur.org/en/strong-interest-and-participation-during-ribe-luga-registration/",
+        "https://immigrationcur.org/en/the-ribe-luga-legalization-process/",
+        "https://immigrationcur.org/en/toelatingsorganisatie/",
+        "https://immigrationcur.org/en/website-and-registration-portal-of-the-ribe-luga/"
+      ],
+      "semantic_sha256": "9c48a56ca2f42e611baaf0d41897a80da3910447f57c15c8d4ba8c2ad3dff65d",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://mfai.gov.ck/immigration",
@@ -30086,7 +30957,7 @@
       "legal_checked_on": [],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -30152,7 +31023,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -30174,7 +31045,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -30191,12 +31062,23 @@
       ],
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
-      "status": "robots_unavailable",
+      "status": "captured",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.politsei.ee/en",
+      "body_sha256": "b939bd6a8830fa55884ef41c376c4d08493a90dfc0e1908c8c2b84b245980e2b",
+      "content_type": "text/html",
+      "bytes": 64988,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.politsei.ee/en/news/police-detained-46-people-over-a-week-and-arrested-a-suspected-immigration-facilitator-13787",
+        "https://eresident.politsei.ee"
+      ],
+      "semantic_sha256": "868783b02d2a2ba42f11d5758d5d12f7714557765b91211d3a3e8cdc8eafd17f",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.cancilleria.gob.ec/",
@@ -30216,7 +31098,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -30269,7 +31151,7 @@
       "legal_checked_on": [],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -30287,7 +31169,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -30627,7 +31509,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -30652,7 +31534,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -30729,11 +31611,24 @@
       ],
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
-      "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "status": "captured",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.uscis.gov/",
+      "body_sha256": "087118fc3dd182c2df91c179d3dc7253e1c8e762a4a5cf76b790b97a69cd1817",
+      "content_type": "text/html",
+      "bytes": 98616,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.uscis.gov/newsroom/news-releases/homeland-security-task-force-investigation-yields-federal-charges-for-13-aliens-charged-with-fraud",
+        "https://www.uscis.gov/newsroom/news-releases/under-president-trumps-leadership-uscis-takes-unprecedented-22-million-enforcement-actions",
+        "https://www.uscis.gov/tools/reports-and-studies/immigration-and-citizenship-data",
+        "https://www.uscis.gov/newsroom/news-releases/making-america-safe-again-us-citizenship-and-immigration-services-end-of-year-review-demonstrates"
+      ],
+      "semantic_sha256": "be95cc8fab95ebb6fe287ae0c0dd440e554573ca6d652dde4ecba529d7520d62",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.immd.gov.hk/eng/",
@@ -30937,7 +31832,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -30957,7 +31852,7 @@
       "legal_checked_on": [],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -31265,7 +32160,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -31504,7 +32399,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -31705,7 +32600,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "challenge_or_empty",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32018,7 +32913,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32149,7 +33044,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32171,7 +33066,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32193,7 +33088,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32246,7 +33141,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32269,7 +33164,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32476,7 +33371,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32496,7 +33391,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -32518,7 +33413,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32567,7 +33462,7 @@
       "legal_checked_on": [],
       "status": "http_error",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32987,7 +33882,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -33232,7 +34127,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -33255,7 +34150,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -33561,12 +34456,36 @@
       ],
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.immigration.go.ug/",
+      "body_sha256": "7a64c471b02d39e5ce07e67bfdc4ffb1cca8078345a4bd580c21a480e75d3483",
+      "content_type": "text/html",
+      "bytes": 148782,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.immigration.go.ug/extendvisa.immigration.go.ug/index.php",
+        "https://www.immigration.go.ug/services/certificate-residence",
+        "https://www.immigration.go.ug/services/diplomatic-visa",
+        "https://www.immigration.go.ug/services/east-african-tourist-visa",
+        "https://www.immigration.go.ug/services/multiple-entry-visa",
+        "https://www.immigration.go.ug/services/student-pass",
+        "https://www.immigration.go.ug/services/tourist-visa",
+        "https://www.immigration.go.ug/services/transit-visas",
+        "https://www.immigration.go.ug/services/visa-passes",
+        "https://www.immigration.go.ug/services/work-permit",
+        "https://extendvisa.immigration.go.ug/",
+        "https://extendvisa.immigration.go.ug/index.php",
+        "https://passports.immigration.go.ug",
+        "https://visas.immigration.go.ug",
+        "https://visas.immigration.go.ug/"
+      ],
+      "semantic_sha256": "e475d25400091cfb95aa5657d2bfa2760ce6aedf3b4a3814155954cc029e7df1",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://dmsu.gov.ua/en-home.html",
@@ -33617,12 +34536,33 @@
       ],
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://immigration.gov.vu/",
+      "body_sha256": "c2922fa65a7e949becee52f43d228381df1ac56b60aa83b352c49ef9d197e7ea",
+      "content_type": "text/html",
+      "bytes": 183499,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://evisa.gov.vu/",
+        "https://immigration.gov.vu/citizenship-by-naturalization/",
+        "https://immigration.gov.vu/eu-halts-vanuatu-visa-free-access/",
+        "https://immigration.gov.vu/fake-white-permanent-residency-pr-cards-issued-as-of-27th-march-2024/",
+        "https://immigration.gov.vu/important-notice-unauthorized-agent-vanuatu-permanent-residency/",
+        "https://immigration.gov.vu/live/",
+        "https://immigration.gov.vu/passport-forms",
+        "https://immigration.gov.vu/pr-official-directive-notice-no-2-for-2023/",
+        "https://immigration.gov.vu/specialist/",
+        "https://immigration.gov.vu/study/",
+        "https://immigration.gov.vu/vanuatu-unhappy-with-uk-termination/",
+        "https://immigration.gov.vu/work/"
+      ],
+      "semantic_sha256": "94cc3d24ca7c2e08379d70d3ca9020764b23ab57c44cfdb7a21705578adcc150",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://security.gov.vc/security/",
@@ -33640,12 +34580,22 @@
       ],
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 503,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://security.gov.vc/security/",
+      "body_sha256": "4841cc12025fb1a41d58c72a6f80f7b7a5002a530535e97afa58e7f9eaeb249b",
+      "content_type": "text/html",
+      "bytes": 37213,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://security.gov.vc/security/index.php?option=com_content&view=article&id=708:entry-visa-application-form&catid=70&Itemid=426"
+      ],
+      "semantic_sha256": "e03ca48ef42ab05ae9ce59c41418b20fc360c3d6266f7d731c23a1c3b493c2d0",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://www.vaticanstate.va/it/",
@@ -33733,7 +34683,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -33786,7 +34736,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -34334,7 +35284,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cbsa.gc.ca'. (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -34892,7 +35842,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.migraciones.gov.ar'. (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -35274,7 +36224,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -35299,7 +36249,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -35354,7 +36304,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -35372,7 +36322,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -35390,7 +36340,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -35408,7 +36358,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -35426,7 +36376,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -35447,7 +36397,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -35465,7 +36415,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -35977,7 +36927,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36001,7 +36951,7 @@
       ],
       "status": "unavailable",
       "error": "challenge_or_empty",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36022,7 +36972,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36041,7 +36991,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36061,7 +37011,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36081,7 +37031,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36101,7 +37051,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36120,7 +37070,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36200,7 +37150,7 @@
         "2026-10-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36249,7 +37199,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36269,7 +37219,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36457,7 +37407,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36506,7 +37456,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36550,7 +37500,7 @@
         "2026-10-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36627,7 +37577,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36646,7 +37596,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36699,7 +37649,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37301,7 +38251,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37431,7 +38381,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37450,7 +38400,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37630,7 +38580,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37649,7 +38599,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37695,7 +38645,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37714,7 +38664,7 @@
       ],
       "status": "unavailable",
       "error": "challenge_or_empty",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37733,7 +38683,7 @@
       ],
       "status": "unavailable",
       "error": "challenge_or_empty",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -39716,12 +40666,20 @@
       "legal_checked_on": [
         "2026-10-26"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://cancilleria.gov.co/node/26950",
+      "body_sha256": "8b8f5441a45b3dcb27b3e4ba3a1d02a029517260401fe5e472fcaa14848432a5",
+      "content_type": "text/html",
+      "bytes": 52724,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "6eb46e46a716cf37354bc96dd3ae959e4bc1c3febff51d469ab751189764f3c1",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://cancilleria.gov.co/normograma/compilacion/docs/resolucion_minrelaciones_12189_2026.htm",
@@ -39737,12 +40695,20 @@
       "legal_checked_on": [
         "2026-10-26"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://cancilleria.gov.co/normograma/compilacion/docs/resolucion_minrelaciones_12189_2026.htm",
+      "body_sha256": "87f8bf20323ff3f17efe45a5c210ac5af0585b00bb939f80d7a0256c5cddfea1",
+      "content_type": "text/html",
+      "bytes": 78974,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "cfa47ccd806fae6b7458b729d0d1c041d515878a68854a91cf78fc4c530ad953",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://cancilleria.gov.co/normograma/compilacion/docs/resolucion_minrelaciones_5477_2022.htm",
@@ -39758,12 +40724,20 @@
       "legal_checked_on": [
         "2026-10-26"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://cancilleria.gov.co/normograma/compilacion/docs/resolucion_minrelaciones_5477_2022.htm",
+      "body_sha256": "a08e5e1ea6b8ecbc39926e16a7de9d6fa76be987443d84ea71f444114c9e448c",
+      "content_type": "text/html",
+      "bytes": 304603,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "4c8f61f4b21717b9526ff8ee54435a898a338eaa982cdbc1ab287fd4dd754942",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://cancilleria.gov.co/normograma/compilacion/docs/decreto_1067_2015.htm",
@@ -39779,12 +40753,20 @@
       "legal_checked_on": [
         "2026-10-27"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://cancilleria.gov.co/normograma/compilacion/docs/decreto_1067_2015.htm",
+      "body_sha256": "f784e132d13c0e75b73acaa648bbe9815c9d35566c0a80ff76d5decc87cf694f",
+      "content_type": "text/html",
+      "bytes": 900844,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "9ee8bcba08887a34ebfbcb455616f6572ae641d8fcf994b0acc3e038459e16af",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://cancilleria.gov.co/sala-de-prensa/noticias/colombia-anuncia-la-ruptura-de-relaciones-diplomaticas-con-iran",
@@ -39800,12 +40782,20 @@
       "legal_checked_on": [
         "2026-10-27"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://cancilleria.gov.co/sala-de-prensa/noticias/colombia-anuncia-la-ruptura-de-relaciones-diplomaticas-con-iran",
+      "body_sha256": "805e99721d8a9605a0b92df38661c191dd93c7e10695ac4970f9023cfd2dc5c1",
+      "content_type": "text/html",
+      "bytes": 52440,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "51fc1b79d09e6f97b6b283e99af7a15329680563791403dfea2abc6bc85f392f",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://cancilleria.gov.co/normograma/compilacion/docs/resolucion_minrelaciones_5488_2022.htm",
@@ -39821,12 +40811,20 @@
       "legal_checked_on": [
         "2026-10-26"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://cancilleria.gov.co/normograma/compilacion/docs/resolucion_minrelaciones_5488_2022.htm",
+      "body_sha256": "2457847e7942ffb3a875597456adfd780c7aab7e1b9058298f092e43c8929f45",
+      "content_type": "text/html",
+      "bytes": 88299,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "608ef96e32b6bd73e44b5485a95b40ab810f85d220422c4f1d515f06a6294f69",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://cancilleria.gov.co/node/26972",
@@ -39840,12 +40838,20 @@
       "legal_checked_on": [
         "2026-10-26"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://cancilleria.gov.co/node/26972",
+      "body_sha256": "b8b962078f1d939932a2ff8560a4ec86fbaa11dbe6f4e23b7bf7ac290e60fd16",
+      "content_type": "text/html",
+      "bytes": 53542,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "843a96cea25ab715991aa870ca8ed9cfb162ff5630cb615a4ecf055c19714531",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://cancilleria.gov.co/node/26965",
@@ -39859,12 +40865,20 @@
       "legal_checked_on": [
         "2026-10-26"
       ],
-      "status": "http_error",
+      "status": "captured",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://cancilleria.gov.co/node/26965",
+      "body_sha256": "207543a2f6bf132d37e8de2baf82ff1f54687dd37f8ed80a7fd1bd8e33ce8563",
+      "content_type": "text/html",
+      "bytes": 51873,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "ce21fe779c527b3fa935545606888fb0128f6c06d2657050780120cad46a34fd",
+      "last_success_at": "2026-11-04T12:17:49.526013Z"
     },
     {
       "url": "https://sidof.segob.gob.mx/notas/docFuente/5787660",
@@ -40501,7 +41515,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -40519,7 +41533,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -40537,7 +41551,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -40555,7 +41569,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -40639,7 +41653,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -40907,7 +41921,7 @@
       ],
       "status": "unavailable",
       "error": "unexpected_compression",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -41451,7 +42465,7 @@
       ],
       "status": "unavailable",
       "error": "'ascii' codec can't encode characters in position 34-36: ordinal not in range(128)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -41470,7 +42484,7 @@
       ],
       "status": "unavailable",
       "error": "'ascii' codec can't encode characters in position 15-16: ordinal not in range(128)",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -41992,7 +43006,7 @@
       ],
       "status": "unavailable",
       "error": "challenge_or_empty",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -42192,12 +43206,13 @@
       "legal_checked_on": [
         "2026-10-28"
       ],
-      "status": "http_error",
+      "status": "unavailable",
       "http_status": 403,
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "error": "TimeoutError"
     },
     {
       "url": "https://travel.state.gov/en/newsroom/visas/2026/suspension-of-visa-issuance-to-foreign-nationals-to-protect-the-security-of-the-united-states.html",
@@ -42246,7 +43261,7 @@
         "2026-10-28"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -42508,7 +43523,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -42528,7 +43543,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-02T12:37:44.535403Z",
+      "last_attempt_at": "2026-11-04T12:17:49.526013Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
