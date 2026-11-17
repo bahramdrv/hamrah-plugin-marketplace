@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-16T12:54:46.364408Z",
-  "next_due_at": "2026-11-17T12:54:46.364408Z",
+  "generated_at": "2026-11-17T13:37:32.017906Z",
+  "next_due_at": "2026-11-18T13:37:32.017906Z",
   "interval_days": 30,
   "complete_global_conditions": false,
   "legal_reviews_renewed": 0,
