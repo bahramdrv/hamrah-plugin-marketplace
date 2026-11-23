@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T12:47:43.737609Z",
-  "next_due_at": "2026-11-22T12:47:43.737609Z",
+  "generated_at": "2026-11-23T14:55:15.060938Z",
+  "next_due_at": "2026-11-24T14:55:15.060938Z",
   "sources": [
     {
       "url": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa",
@@ -155,7 +155,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -175,7 +175,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -194,7 +194,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -213,7 +213,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -234,7 +234,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -253,7 +253,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -272,7 +272,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -291,7 +291,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -312,7 +312,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -331,7 +331,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -350,7 +350,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -591,7 +591,7 @@
       ],
       "status": "http_error",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -734,7 +734,7 @@
       ],
       "status": "http_error",
       "http_status": 403,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -754,7 +754,7 @@
       ],
       "status": "http_error",
       "http_status": 403,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -1394,7 +1394,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1413,7 +1413,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1432,7 +1432,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1451,7 +1451,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1470,7 +1470,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1678,7 +1678,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -1988,7 +1988,7 @@
       ],
       "status": "unavailable",
       "error": "RemoteDisconnected",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2061,7 +2061,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2079,7 +2079,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2098,7 +2098,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2117,7 +2117,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2136,7 +2136,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2156,7 +2156,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2219,7 +2219,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2237,7 +2237,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2549,7 +2549,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -2722,7 +2722,7 @@
       ],
       "status": "http_error",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -3491,7 +3491,7 @@
         "2026-06-29"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -3510,7 +3510,7 @@
         "2026-06-29"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -3531,7 +3531,7 @@
         "2026-06-29"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -3579,7 +3579,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -3598,7 +3598,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4079,7 +4079,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4396,7 +4396,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4415,7 +4415,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4434,7 +4434,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4701,7 +4701,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -4722,7 +4722,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -4742,7 +4742,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -4767,7 +4767,7 @@
       ],
       "status": "robots_unavailable",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4786,7 +4786,7 @@
       ],
       "status": "robots_unavailable",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -4809,7 +4809,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -4855,7 +4855,7 @@
       ],
       "status": "unavailable",
       "error": "unexpected_compression",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -5203,7 +5203,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -5252,7 +5252,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -5377,7 +5377,7 @@
         "2026-06-29"
       ],
       "status": "unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -5937,7 +5937,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -5957,7 +5957,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -5977,7 +5977,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -5997,7 +5997,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -6017,7 +6017,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -6037,7 +6037,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -6465,7 +6465,7 @@
       ],
       "status": "unavailable",
       "error": "gaierror",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6484,7 +6484,7 @@
       ],
       "status": "unavailable",
       "error": "gaierror",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6503,7 +6503,7 @@
       ],
       "status": "unavailable",
       "error": "gaierror",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6548,7 +6548,7 @@
       ],
       "status": "unavailable",
       "error": "gaierror",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6568,7 +6568,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6588,7 +6588,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6609,7 +6609,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6630,7 +6630,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6680,7 +6680,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6703,7 +6703,7 @@
         "2026-10-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -6756,7 +6756,7 @@
         "2026-06-22"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7544,7 +7544,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7563,7 +7563,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7582,7 +7582,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7630,7 +7630,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7648,7 +7648,7 @@
         "2026-07-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7666,7 +7666,7 @@
         "2026-05-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -7684,7 +7684,7 @@
         "2026-05-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -8449,7 +8449,7 @@
         "2026-05-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -8811,7 +8811,7 @@
       ],
       "status": "robots_unavailable",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -8831,7 +8831,7 @@
       ],
       "status": "robots_unavailable",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -9200,7 +9200,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9219,7 +9219,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9238,7 +9238,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9257,7 +9257,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9276,7 +9276,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9295,7 +9295,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9314,7 +9314,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9333,7 +9333,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9355,7 +9355,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9376,7 +9376,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9395,7 +9395,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9414,7 +9414,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -9745,7 +9745,7 @@
       ],
       "status": "unavailable",
       "error": "'ascii' codec can't encode character '\\xf8' in position 73: ordinal not in range(128)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -10103,7 +10103,7 @@
         "2026-06-29"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -10396,7 +10396,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -10427,7 +10427,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -10452,7 +10452,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11408,7 +11408,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11427,7 +11427,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11447,7 +11447,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11466,7 +11466,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11485,7 +11485,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11504,7 +11504,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11523,7 +11523,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11542,7 +11542,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -11957,7 +11957,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -12127,7 +12127,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -12261,7 +12261,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -12281,7 +12281,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -12301,7 +12301,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -12321,7 +12321,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -12814,7 +12814,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -12842,7 +12842,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -13389,7 +13389,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -13940,7 +13940,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -13959,7 +13959,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14279,7 +14279,7 @@
         "2026-09-11"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14297,7 +14297,7 @@
         "2026-09-10"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14398,8 +14398,8 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -14417,8 +14417,8 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -14436,8 +14436,8 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -14460,8 +14460,8 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -14479,8 +14479,8 @@
       "legal_checked_on": [
         "2026-06-29"
       ],
-      "status": "unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "status": "robots_unavailable",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -14716,7 +14716,7 @@
       ],
       "status": "unavailable",
       "error": "unsupported_url",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14738,7 +14738,7 @@
       ],
       "status": "unavailable",
       "error": "unsupported_url",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14757,7 +14757,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14776,7 +14776,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -14795,7 +14795,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15197,7 +15197,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15215,7 +15215,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15233,7 +15233,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15251,7 +15251,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15269,7 +15269,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15800,7 +15800,7 @@
       ],
       "status": "robots_disallowed",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15823,7 +15823,7 @@
       ],
       "status": "robots_disallowed",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15966,7 +15966,7 @@
         "2026-05-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -15984,7 +15984,7 @@
         "2026-05-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -16068,7 +16068,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -16301,7 +16301,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -16409,7 +16409,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19131,7 +19131,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -19152,7 +19152,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19170,7 +19170,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19188,7 +19188,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19206,7 +19206,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -19228,7 +19228,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19247,7 +19247,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19266,7 +19266,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19285,7 +19285,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19307,7 +19307,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19492,7 +19492,7 @@
       ],
       "status": "unavailable",
       "error": "response_too_large",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19568,7 +19568,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19587,7 +19587,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -19611,7 +19611,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20019,7 +20019,7 @@
         "2026-06-22"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20038,7 +20038,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20059,7 +20059,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20076,12 +20076,13 @@
       "legal_checked_on": [
         "2026-05-24"
       ],
-      "status": "unavailable",
+      "status": "http_error",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "http_status": 404
     },
     {
       "url": "https://www.mos.cudzoziemcy.gov.pl/en/checklists-for-procedures/temporary-stays/",
@@ -20095,12 +20096,20 @@
       "legal_checked_on": [
         "2026-05-24"
       ],
-      "status": "unavailable",
+      "status": "captured",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.mos.cudzoziemcy.gov.pl/en/checklists-for-procedures/temporary-stays/",
+      "body_sha256": "ce7ff24f4661d50d3b2e0ed0b354ad648ca68baa5f1822b0c45efa4cfa23cba3",
+      "content_type": "text/html",
+      "bytes": 32952,
+      "condition_candidates": [],
+      "discovery_links": [],
+      "semantic_sha256": "4521b8f47a75d0a5d261dea5c99054b0e5e4533eb81f8078631470c9296269cf",
+      "last_success_at": "2026-11-23T14:55:15.060938Z"
     },
     {
       "url": "https://www.gov.pl/web/udsc-en/basic-information-about-the-mos-system",
@@ -20271,7 +20280,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20431,7 +20440,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20453,7 +20462,7 @@
       ],
       "status": "unavailable",
       "error": "unsupported_document",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20472,7 +20481,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20491,7 +20500,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20870,7 +20879,7 @@
         "2026-06-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20888,7 +20897,7 @@
         "2026-06-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20906,7 +20915,7 @@
         "2026-06-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20924,7 +20933,7 @@
         "2026-06-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20942,7 +20951,7 @@
         "2026-06-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20960,7 +20969,7 @@
         "2026-06-27"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -20979,7 +20988,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -20999,7 +21008,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -21019,7 +21028,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -21039,7 +21048,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -21108,7 +21117,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -21268,7 +21277,7 @@
       ],
       "status": "unavailable",
       "error": "SSLError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -21287,7 +21296,7 @@
       ],
       "status": "unavailable",
       "error": "SSLError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -21306,7 +21315,7 @@
       ],
       "status": "unavailable",
       "error": "SSLError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -22143,7 +22152,7 @@
       ],
       "status": "unavailable",
       "error": "robots_disallowed",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -22521,7 +22530,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -22575,7 +22584,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -22638,7 +22647,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -23090,7 +23099,7 @@
       ],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -23175,7 +23184,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -23222,7 +23231,7 @@
         "2026-06-29"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -23281,7 +23290,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -23305,7 +23314,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -23324,7 +23333,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24323,7 +24332,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24341,7 +24350,7 @@
         "2026-06-01"
       ],
       "status": "robots_disallowed",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24492,7 +24501,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24513,7 +24522,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24564,7 +24573,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24583,7 +24592,7 @@
       ],
       "status": "unavailable",
       "error": "ConnectionRefusedError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24602,7 +24611,7 @@
       ],
       "status": "unavailable",
       "error": "ConnectionRefusedError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -24625,7 +24634,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -25054,7 +25063,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -25074,7 +25083,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -25093,7 +25102,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -25112,7 +25121,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -25131,7 +25140,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -25150,7 +25159,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -25169,7 +25178,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -25257,7 +25266,7 @@
       ],
       "status": "http_error",
       "error": "redirect_limit",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -25444,7 +25453,7 @@
       ],
       "status": "unavailable",
       "error": "response_too_large",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -26093,7 +26102,7 @@
         "2026-09-10"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -27100,7 +27109,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -27534,7 +27543,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -28143,7 +28152,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -28162,7 +28171,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -28181,7 +28190,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -28200,7 +28209,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -28219,7 +28228,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -28548,7 +28557,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -28567,7 +28576,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -28592,7 +28601,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -28611,7 +28620,7 @@
         "2026-06-01"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -29364,7 +29373,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -29383,7 +29392,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -29403,7 +29412,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -29700,7 +29709,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -29720,7 +29729,7 @@
       ],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -29959,7 +29968,7 @@
       "legal_checked_on": [],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -29978,12 +29987,29 @@
       ],
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
-      "status": "unavailable",
+      "status": "captured",
       "error": "challenge_or_empty",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
-      "review_reasons": []
+      "review_reasons": [],
+      "final_url": "https://www.migration.gv.at/en/",
+      "body_sha256": "9104af5f62e990e28c0520b8064a6de16762d83ef782c63b6dd69ac6b86e3d4d",
+      "content_type": "text/html",
+      "bytes": 30618,
+      "condition_candidates": [],
+      "discovery_links": [
+        "https://www.migration.gv.at/en/types-of-immigration/index.html",
+        "https://www.migration.gv.at/en/types-of-immigration/mobility-within-the-eu/index.html",
+        "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/graduates/index.html",
+        "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/index.html",
+        "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/other-key-workers/index.html",
+        "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/skilled-workers-in-shortage-occupations/index.html",
+        "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/start-up-founders/index.html",
+        "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/very-highly-qualified-workers/index.html"
+      ],
+      "semantic_sha256": "bfea971830ad091af1d65ef13454cfdadf37a378f9f1e9874daf5296f2e4e37c",
+      "last_success_at": "2026-11-23T14:55:15.060938Z"
     },
     {
       "url": "https://www.argentina.gob.ar/migraciones/residencias",
@@ -30196,7 +30222,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -30531,7 +30557,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -30745,7 +30771,7 @@
       "legal_checked_on": [],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -30799,7 +30825,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -30823,7 +30849,7 @@
       "legal_checked_on": [],
       "status": "robots_unavailable",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -30903,7 +30929,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -31174,7 +31200,7 @@
       "legal_checked_on": [],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -31240,7 +31266,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "gaierror",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -31262,7 +31288,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -31315,7 +31341,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -31368,7 +31394,7 @@
       "legal_checked_on": [],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -31386,7 +31412,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -31726,7 +31752,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -31751,7 +31777,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32049,7 +32075,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32069,7 +32095,7 @@
       "legal_checked_on": [],
       "status": "http_error",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -32377,7 +32403,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32616,7 +32642,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -32816,8 +32842,8 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "unavailable",
-      "error": "capture_limit",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "error": "challenge_or_empty",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -33130,7 +33156,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -33261,7 +33287,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -33283,7 +33309,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -33305,7 +33331,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -33389,7 +33415,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -33596,7 +33622,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -33616,7 +33642,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -33638,7 +33664,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -33687,7 +33713,7 @@
       "legal_checked_on": [],
       "status": "http_error",
       "http_status": 403,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -34107,7 +34133,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "TimeoutError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -34352,7 +34378,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -34375,7 +34401,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -34908,7 +34934,7 @@
       "legal_checked_on": [],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -34961,7 +34987,7 @@
       "authority": "atlas_link_unreviewed",
       "legal_checked_on": [],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -35509,7 +35535,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cbsa.gc.ca'. (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36067,7 +36093,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.migraciones.gov.ar'. (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36449,7 +36475,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36474,7 +36500,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36529,7 +36555,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36547,7 +36573,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36565,7 +36591,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36583,7 +36609,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36601,7 +36627,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36622,7 +36648,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -36640,7 +36666,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37152,7 +37178,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -37177,7 +37203,7 @@
       ],
       "status": "unavailable",
       "error": "challenge_or_empty",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37198,7 +37224,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37217,7 +37243,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -37238,7 +37264,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37258,7 +37284,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37278,7 +37304,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37297,7 +37323,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -37378,7 +37404,7 @@
         "2026-10-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37427,7 +37453,7 @@
         "2026-10-15"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37447,7 +37473,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37635,7 +37661,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37684,7 +37710,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -37729,7 +37755,7 @@
         "2026-10-24"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37806,7 +37832,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37825,7 +37851,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -37878,7 +37904,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -38480,7 +38506,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -38610,7 +38636,7 @@
       ],
       "status": "robots_unavailable",
       "error": "OSError",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -38629,7 +38655,7 @@
       ],
       "status": "unavailable",
       "error": "redirect_requires_review",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -38809,7 +38835,7 @@
       ],
       "status": "http_error",
       "http_status": 404,
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": [],
@@ -38829,7 +38855,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -38875,7 +38901,7 @@
       ],
       "status": "unavailable",
       "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -38894,7 +38920,7 @@
       ],
       "status": "unavailable",
       "error": "challenge_or_empty",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -38913,7 +38939,7 @@
       ],
       "status": "unavailable",
       "error": "challenge_or_empty",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -41745,7 +41771,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -41763,7 +41789,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -41781,7 +41807,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -41799,7 +41825,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -41883,7 +41909,7 @@
         "2026-10-26"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -42151,7 +42177,7 @@
       ],
       "status": "unavailable",
       "error": "unexpected_compression",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -42695,7 +42721,7 @@
       ],
       "status": "unavailable",
       "error": "'ascii' codec can't encode characters in position 34-36: ordinal not in range(128)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -42714,7 +42740,7 @@
       ],
       "status": "unavailable",
       "error": "'ascii' codec can't encode characters in position 15-16: ordinal not in range(128)",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -43236,7 +43262,7 @@
       ],
       "status": "unavailable",
       "error": "challenge_or_empty",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -43502,7 +43528,7 @@
         "2026-10-28"
       ],
       "status": "robots_unavailable",
-      "last_attempt_at": "2026-11-21T12:47:43.737609Z",
+      "last_attempt_at": "2026-11-23T14:55:15.060938Z",
       "review_required": false,
       "legal_reviews_renewed": 0,
       "review_reasons": []
@@ -44147,6 +44173,6 @@
       "last_success_at": "2026-10-28T10:40:01.956017Z"
     }
   ],
-  "attempted_sources": 301,
+  "attempted_sources": 300,
   "publish_required": true
 }
